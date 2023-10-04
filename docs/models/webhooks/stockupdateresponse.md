@@ -1,0 +1,12 @@
+# StockUpdateResponse
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `api_error`                                                                           | [Optional[shared.APIError]](../../models/shared/apierror.md)                          | :heavy_minus_sign:                                                                    | An error occurred interacting with the API.                                           |
+| `content_type`                                                                        | *str*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `error`                                                                               | [Optional[shared.Error]](../../models/shared/error.md)                                | :heavy_minus_sign:                                                                    | An unknown error occurred interacting with the API.                                   |
+| `status_code`                                                                         | *int*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `raw_response`                                                                        | [requests.Response](https://requests.readthedocs.io/en/latest/api/#requests.Response) | :heavy_minus_sign:                                                                    | N/A                                                                                   |

@@ -1,0 +1,10 @@
+# IngredientInput
+
+
+## Fields
+
+| Field                                                                  | Type                                                                   | Required                                                               | Description                                                            | Example                                                                |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `name`                                                                 | *str*                                                                  | :heavy_check_mark:                                                     | The name of the ingredient.                                            | Sugar Syrup                                                            |
+| `product_code`                                                         | *Optional[str]*                                                        | :heavy_minus_sign:                                                     | The product code of the ingredient, only available when authenticated. | AC-A2DF3                                                               |
+| `type`                                                                 | [IngredientType](../../models/shared/ingredienttype.md)                | :heavy_check_mark:                                                     | The type of ingredient.                                                |                                                                        |

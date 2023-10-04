@@ -1,0 +1,12 @@
+# ListDrinksResponse
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `content_type`                                                                        | *str*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `drinks`                                                                              | list[[shared.Drink](../../models/shared/drink.md)]                                    | :heavy_minus_sign:                                                                    | A list of drinks.                                                                     |
+| `error`                                                                               | [Optional[shared.Error]](../../models/shared/error.md)                                | :heavy_minus_sign:                                                                    | An unknown error occurred interacting with the API.                                   |
+| `status_code`                                                                         | *int*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `raw_response`                                                                        | [requests.Response](https://requests.readthedocs.io/en/latest/api/#requests.Response) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
