@@ -19,7 +19,7 @@ jobs:
     with:
       force: ${{ github.event.inputs.force }}
       languages: |
-        - python
+        - ruby
       mode: pr
       openapi_docs: |
         - ./openapi.yaml
