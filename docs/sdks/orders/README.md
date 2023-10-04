@@ -1,4 +1,5 @@
-# orders
+# Orders
+(*orders*)
 
 ## Overview
 
@@ -14,38 +15,49 @@ Create an order for a drink.
 
 ### Example Usage
 
-```python
-import speakeasybar
-from speakeasybar.models import callbacks, operations, shared
+```ruby
+require_relative openapi
 
-s = speakeasybar.Speakeasybar(
-    security=shared.Security(
-        api_key="",
+
+s = OpenApiSDK::Speakeasybar.new
+
+   
+req = Operations::CreateOrderRequest.new(
+  query_params=Operations::CreateOrderRequest.new(
+    request_body=.new[
+      Shared::OrderInput.new(
+        product_code="APM-1F2D3",
+        quantity=26535,
+        type=Shared::OrderType::DRINK,
+      ),
+    ],
+    callback_url="corrupti",
+  ),
+  request_body=.new[
+    Shared::OrderInput.new(
+      product_code="APM-1F2D3",
+      quantity=738316,
+      type=Shared::OrderType::DRINK,
     ),
+  ],
 )
+    
+res = s.orders.create_order(req)
 
+if ! res.order.nil?
+  # handle response
+end
 
-res = s.orders.create_order(request_body=[
-    shared.OrderInput(
-        product_code='APM-1F2D3',
-        quantity=272656,
-        type=shared.OrderType.DRINK,
-    ),
-], callback_url='molestiae')
-
-if res.order is not None:
-    # handle response
 ```
 
 ### Parameters
 
-| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `request_body`                                               | list[[shared.OrderInput](../../models/shared/orderinput.md)] | :heavy_check_mark:                                           | N/A                                                          |
-| `callback_url`                                               | *Optional[str]*                                              | :heavy_minus_sign:                                           | The url to call when the order is updated.                   |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [Operations::CreateOrderRequest](../../models/operations/createorderrequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[operations.CreateOrderResponse](../../models/operations/createorderresponse.md)**
+**[T.nilable(Operations::CreateOrderResponse)](../../models/operations/createorderresponse.md)**
 
