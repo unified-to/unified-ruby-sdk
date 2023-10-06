@@ -1,4 +1,5 @@
-# drinks
+# Drinks
+(*drinks*)
 
 ## Overview
 
@@ -15,33 +16,37 @@ Get a drink by name, if authenticated this will include stock levels and product
 
 ### Example Usage
 
-```python
-import speakeasybar
-from speakeasybar.models import operations, shared
+```ruby
+require_relative openapi
 
-s = speakeasybar.Speakeasybar(
-    security=shared.Security(
-        api_key="",
-    ),
+
+s = OpenApiSDK::Speakeasybar.new
+
+   
+req = Operations::GetDrinkRequest.new(
+  path_params=Operations::GetDrinkRequest.new(
+    name="North District",
+  ),
 )
+    
+res = s.drinks.get_drink(req)
 
+if ! res.drink.nil?
+  # handle response
+end
 
-res = s.drinks.get_drink(name='deserunt')
-
-if res.drink is not None:
-    # handle response
 ```
 
 ### Parameters
 
-| Parameter          | Type               | Required           | Description        |
-| ------------------ | ------------------ | ------------------ | ------------------ |
-| `name`             | *str*              | :heavy_check_mark: | N/A                |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [Operations::GetDrinkRequest](../../models/operations/getdrinkrequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 
 ### Response
 
-**[operations.GetDrinkResponse](../../models/operations/getdrinkresponse.md)**
+**[T.nilable(Operations::GetDrinkResponse)](../../models/operations/getdrinkresponse.md)**
 
 
 ## list_drinks
@@ -50,31 +55,35 @@ Get a list of drinks, if authenticated this will include stock levels and produc
 
 ### Example Usage
 
-```python
-import speakeasybar
-from speakeasybar.models import operations, shared
+```ruby
+require_relative openapi
 
-s = speakeasybar.Speakeasybar(
-    security=shared.Security(
-        api_key="",
-    ),
+
+s = OpenApiSDK::Speakeasybar.new
+
+   
+req = Operations::ListDrinksRequest.new(
+  query_params=Operations::ListDrinksRequest.new(
+    drink_type=Shared::DrinkType::SPIRIT,
+  ),
 )
+    
+res = s.drinks.list_drinks(req)
 
+if ! res.drinks.nil?
+  # handle response
+end
 
-res = s.drinks.list_drinks(drink_type=shared.DrinkType.BEER)
-
-if res.drinks is not None:
-    # handle response
 ```
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `drink_type`                                                                 | [Optional[shared.DrinkType]](../../models/shared/drinktype.md)               | :heavy_minus_sign:                                                           | The type of drink to filter by. If not provided all drinks will be returned. |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [Operations::ListDrinksRequest](../../models/operations/listdrinksrequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 
 ### Response
 
-**[operations.ListDrinksResponse](../../models/operations/listdrinksresponse.md)**
+**[T.nilable(Operations::ListDrinksResponse)](../../models/operations/listdrinksresponse.md)**
 
