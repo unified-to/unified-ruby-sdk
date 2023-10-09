@@ -1,4 +1,5 @@
-# ingredients
+# Ingredients
+(*ingredients*)
 
 ## Overview
 
@@ -14,34 +15,37 @@ Get a list of ingredients, if authenticated this will include stock levels and p
 
 ### Example Usage
 
-```python
-import speakeasybar
-from speakeasybar.models import operations, shared
+```ruby
+require_relative openapi
 
-s = speakeasybar.Speakeasybar(
-    security=shared.Security(
-        api_key="",
-    ),
+
+s = OpenApiSDK::Speakeasybar.new
+
+   
+req = Operations::ListIngredientsRequest.new(
+  query_params=Operations::ListIngredientsRequest.new(
+    ingredients=.new[
+      "Cloned",
+    ],
+  ),
 )
+    
+res = s.ingredients.list_ingredients(req)
 
+if ! res.ingredients.nil?
+  # handle response
+end
 
-res = s.ingredients.list_ingredients(ingredients=[
-    'magnam',
-    'debitis',
-])
-
-if res.ingredients is not None:
-    # handle response
 ```
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `ingredients`                                                                         | list[*str*]                                                                           | :heavy_minus_sign:                                                                    | A list of ingredients to filter by. If not provided all ingredients will be returned. |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [Operations::ListIngredientsRequest](../../models/operations/listingredientsrequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 
 ### Response
 
-**[operations.ListIngredientsResponse](../../models/operations/listingredientsresponse.md)**
+**[T.nilable(Operations::ListIngredientsResponse)](../../models/operations/listingredientsresponse.md)**
 
