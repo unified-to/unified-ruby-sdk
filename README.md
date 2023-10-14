@@ -59,27 +59,37 @@ Once you're finished iterating and happy with the output push only the latest ve
 ## SDK Installation
 
 ```bash
-pip install git+https://github.com/speakeasy-sdks/template-sdk.git
+gem install specific_install
+gem specific_install https://github.com/unified-to/unified-ruby-sdk 
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```ruby
+require_relative openapi
 
-```python
-import speakeasybar
-from speakeasybar.models import operations, shared
 
-s = speakeasybar.Speakeasybar(
-    security=shared.Security(
-        api_key="",
-    ),
+s = OpenApiSDK::Speakeasybar.new
+s.config_security(
+  security=Shared::Security.new(
+    api_key=.foo"",
+  )
 )
 
-res = s.drinks.list_drinks(drink_type=shared.DrinkType.WINE)
+   
+req = Operations::ListDrinksRequest.new(
+  query_params=Operations::ListDrinksRequest.new(
+    drink_type=Shared::DrinkType::SPIRIT,
+  ),
+)
+    
+res = s.drinks.list_drinks(req)
 
-if res.drinks is not None:
-    # handle response
+if ! res.drinks.nil?
+  # handle response
+end
+
 ```
 <!-- End SDK Example Usage -->
 
@@ -108,6 +118,18 @@ if res.drinks is not None:
 
 * [create_order](docs/sdks/orders/README.md#create_order) - Create an order.
 <!-- End SDK Available Operations -->
+
+
+
+<!-- Start Dev Containers -->
+
+
+
+<!-- End Dev Containers -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+
 
 ### Maturity
 
