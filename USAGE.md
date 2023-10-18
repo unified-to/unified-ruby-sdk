@@ -1,20 +1,29 @@
 <!-- Start SDK Example Usage -->
 
 
-```python
-import speakeasybar
-from speakeasybar.models import operations, shared
+```ruby
+require_relative openapi
 
-s = speakeasybar.Speakeasybar(
-    security=shared.Security(
-        api_key="",
-    ),
+
+s = OpenApiSDK::Speakeasybar.new
+s.config_security(
+  security=Shared::Security.new(
+    api_key=.foo"",
+  )
 )
 
+   
+req = Operations::ListDrinksRequest.new(
+  query_params=Operations::ListDrinksRequest.new(
+    drink_type=Shared::DrinkType::SPIRIT,
+  ),
+)
+    
+res = s.drinks.list_drinks(req)
 
-res = s.drinks.list_drinks(drink_type=shared.DrinkType.WINE)
+if ! res.drinks.nil?
+  # handle response
+end
 
-if res.drinks is not None:
-    # handle response
 ```
 <!-- End SDK Example Usage -->
