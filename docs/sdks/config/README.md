@@ -1,4 +1,5 @@
-# config
+# Config
+(*config*)
 
 ### Available Operations
 
@@ -10,45 +11,43 @@ Subscribe to webhooks.
 
 ### Example Usage
 
-```python
-import speakeasybar
-from speakeasybar.models import operations, shared
+```ruby
+require_relative openapi
 
-s = speakeasybar.Speakeasybar(
-    security=shared.Security(
-        api_key="",
-    ),
+
+s = OpenApiSDK::Speakeasybar.new
+s.config_security(
+  security=Shared::Security.new(
+    api_key=.foo"",
+  )
 )
 
-req = [
-    operations.SubscribeToWebhooksRequestBody(
-        url='illum',
-        webhook=operations.SubscribeToWebhooksRequestBodyWebhook.STOCK_UPDATE,
+   
+req = ::.new(
+  request=.new[
+    Operations::SubscribeToWebhooksRequestBody.new(
+      url="https://well-worn-diver.biz",
+      webhook=Operations::SubscribeToWebhooksRequestBodyWebhook::STOCK_UPDATE,
     ),
-    operations.SubscribeToWebhooksRequestBody(
-        url='vel',
-        webhook=operations.SubscribeToWebhooksRequestBodyWebhook.STOCK_UPDATE,
-    ),
-    operations.SubscribeToWebhooksRequestBody(
-        url='error',
-        webhook=operations.SubscribeToWebhooksRequestBodyWebhook.STOCK_UPDATE,
-    ),
-]
-
+  ],
+)
+    
 res = s.config.subscribe_to_webhooks(req)
 
-if res.status_code == 200:
-    # handle response
+if res.status == 200
+  # handle response
+end
+
 ```
 
 ### Parameters
 
-| Parameter                                                            | Type                                                                 | Required                                                             | Description                                                          |
-| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| `request`                                                            | [list[operations.SubscribeToWebhooksRequestBody]](../../models//.md) | :heavy_check_mark:                                                   | The request object to use for the request.                           |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [T::Array[Operations::SubscribeToWebhooksRequestBody]](../../models//.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 
 ### Response
 
-**[operations.SubscribeToWebhooksResponse](../../models/operations/subscribetowebhooksresponse.md)**
+**[T.nilable(Operations::SubscribeToWebhooksResponse)](../../models/operations/subscribetowebhooksresponse.md)**
 
