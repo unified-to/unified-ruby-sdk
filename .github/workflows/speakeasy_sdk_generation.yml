@@ -20,10 +20,11 @@ jobs:
       force: ${{ github.event.inputs.force }}
       languages: |
         - ruby
-      mode: pr
+      mode: direct
       openapi_docs: |
-        - ./openapi.yaml
+        - https://api-eu.unified.to/openapi.json
       speakeasy_version: latest
     secrets:
       github_access_token: ${{ secrets.GITHUB_TOKEN }}
-      speakeasy_api_key: ${{ secrets.SPEAKEASY_API_KEY }} #Get an API Key from your workspace at https://app.speakeasyapi.dev/
+      openapi_doc_auth_token: ${{ secrets.SPEC_TOKEN }}
+      speakeasy_api_key: ${{ secrets.SPEAKEASY_API_KEY }}
