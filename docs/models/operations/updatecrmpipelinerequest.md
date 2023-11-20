@@ -1,0 +1,10 @@
+# UpdateCrmPipelineRequest
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `connection_id`                                                      | *String*                                                             | :heavy_check_mark:                                                   | ID of the connection                                                 |
+| `id`                                                                 | *String*                                                             | :heavy_check_mark:                                                   | ID of the Pipeline                                                   |
+| `crm_pipeline`                                                       | [T.nilable(Shared::CrmPipeline)](../../models/shared/crmpipeline.md) | :heavy_minus_sign:                                                   | N/A                                                                  |
