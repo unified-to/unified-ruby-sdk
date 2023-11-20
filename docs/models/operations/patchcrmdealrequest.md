@@ -1,0 +1,10 @@
+# PatchCrmDealRequest
+
+
+## Fields
+
+| Field                                                           | Type                                                            | Required                                                        | Description                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `connection_id`                                                 | *String*                                                        | :heavy_check_mark:                                              | ID of the connection                                            |
+| `id`                                                            | *String*                                                        | :heavy_check_mark:                                              | ID of the Deal                                                  |
+| `crm_deal`                                                      | [T.nilable(Shared::CrmDeal)](../../models/shared/crmdeal.md)    | :heavy_minus_sign:                                              | A deal represents an opportunity with companies and/or contacts |
