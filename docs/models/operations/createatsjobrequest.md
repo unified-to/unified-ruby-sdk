@@ -1,0 +1,9 @@
+# CreateAtsJobRequest
+
+
+## Fields
+
+| Field                                                      | Type                                                       | Required                                                   | Description                                                |
+| ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- |
+| `connection_id`                                            | *String*                                                   | :heavy_check_mark:                                         | ID of the connection                                       |
+| `ats_job`                                                  | [T.nilable(Shared::AtsJob)](../../models/shared/atsjob.md) | :heavy_minus_sign:                                         | N/A                                                        |
