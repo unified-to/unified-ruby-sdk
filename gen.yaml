@@ -1,13 +1,13 @@
 configVersion: 1.0.0
 management:
-  docChecksum: 8db86c8597b22945c2b3f77241037075
-  docVersion: 1.0.0
-  speakeasyVersion: 1.78.8
-  generationVersion: 2.96.6
+  docChecksum: 48141d070052399b50fd75ba9841a3a5
+  docVersion: "1.0"
+  speakeasyVersion: 1.124.0
+  generationVersion: 2.202.2
 generation:
   comments: {}
   sdkClassName: Unified-to
-  repoURL: https://github.com/unified-to/unified-python-sdk.git
+  repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   usageSnippets:
     optionalPropertyRendering: withExample
   baseServerURL: ""
@@ -23,6 +23,11 @@ features:
     globalServerURLs: 2.82.0
     inputOutputModels: 2.81.1
     serverIDs: 2.81.1
+  ruby:
+    core: 3.0.3
+    flattening: 2.81.1
+    globalSecurity: 2.81.1
+    globalServerURLs: 2.82.1
 python:
   version: 1.26.0
   author: Speakeasy
@@ -31,7 +36,7 @@ python:
   maxPathParams: 4
   packageName: speakeasybar
 ruby:
-  version: 0.0.1
+  version: 0.1.0
   author: Unified
   description: Ruby Client SDK for Unified.to
   imports:
@@ -43,7 +48,9 @@ ruby:
       shared: models/shared
       webhooks: models/webhooks
   inputModelSuffix: input
+  installationURL: https://github.com/unified-to/unified-ruby-sdk
   maxMethodParams: 4
   module: OpenApiSdk
   outputModelSuffix: output
   packageName: Unified-ruby-sdk
+  repoSubDirectory: .
