@@ -1,0 +1,9 @@
+# CreateAccountingInvoiceRequest
+
+
+## Fields
+
+| Field                                                                            | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `connection_id`                                                                  | *String*                                                                         | :heavy_check_mark:                                                               | ID of the connection                                                             |
+| `accounting_invoice`                                                             | [T.nilable(Shared::AccountingInvoice)](../../models/shared/accountinginvoice.md) | :heavy_minus_sign:                                                               | N/A                                                                              |
