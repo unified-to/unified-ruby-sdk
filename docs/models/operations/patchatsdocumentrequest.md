@@ -1,0 +1,10 @@
+# PatchAtsDocumentRequest
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `connection_id`                                                      | *String*                                                             | :heavy_check_mark:                                                   | ID of the connection                                                 |
+| `id`                                                                 | *String*                                                             | :heavy_check_mark:                                                   | ID of the Document                                                   |
+| `ats_document`                                                       | [T.nilable(Shared::AtsDocument)](../../models/shared/atsdocument.md) | :heavy_minus_sign:                                                   | N/A                                                                  |
