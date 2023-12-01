@@ -1,3 +1,6 @@
+*.gem
+Gemfile.lock
+.rbenv-gemsets
 .python-version
 .DS_Store
 venv/
