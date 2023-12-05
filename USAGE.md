@@ -1,20 +1,32 @@
-<!-- Start SDK Example Usage -->
+<!-- Start SDK Example Usage [usage] -->
+```ruby
+require_relative unified_ruby_sdk
 
 
-```python
-import speakeasybar
-from speakeasybar.models import operations, shared
-
-s = speakeasybar.Speakeasybar(
-    security=shared.Security(
-        api_key="",
-    ),
+s = UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  security=Shared::Security.new(
+    jwt="",
+  )
 )
 
 
-res = s.drinks.list_drinks(drink_type=shared.DrinkType.WINE)
+req = Operations::CreateAccountingAccountRequest.new(
+  connection_id="string",
+  accounting_account=Shared::AccountingAccount.new(
+    name="string",
+    raw=Shared::PropertyAccountingAccountRaw.new(),
+  ),
+)
+    
+res = s.accounting.create_accounting_account(connection_id="string", accounting_account=Shared::AccountingAccount.new(
+    name="string",
+    raw=Shared::PropertyAccountingAccountRaw.new(),
+  ))
 
-if res.drinks is not None:
-    # handle response
+if ! res.accounting_account.nil?
+  # handle response
+end
+
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->
