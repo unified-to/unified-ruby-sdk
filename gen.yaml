@@ -1,6 +1,6 @@
 configVersion: 1.0.0
 management:
-  docChecksum: 48141d070052399b50fd75ba9841a3a5
+  docChecksum: c7fba951c5401aed070e23f0715adc11
   docVersion: "1.0"
   speakeasyVersion: 1.125.2
   generationVersion: 2.210.6
@@ -20,7 +20,7 @@ features:
     globalSecurity: 2.81.1
     globalServerURLs: 2.82.1
 ruby:
-  version: 0.1.0
+  version: 0.1.1
   author: Unified
   description: Ruby Client SDK for Unified.to
   imports:
