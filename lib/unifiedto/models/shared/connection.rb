@@ -26,6 +26,8 @@ module UnifiedRubySDK
 
       field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+      field :cursors_cache, T.nilable(T::Array[Shared::Undefined]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('cursors_cache') } }
+
       field :environment, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('environment') } }
 
       field :external_xref, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('external_xref') } }
@@ -34,23 +36,30 @@ module UnifiedRubySDK
 
       field :is_paused, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('is_paused') } }
 
+      field :last_healthy_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('last_healthy_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+      field :last_unhealthy_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('last_unhealthy_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
       field :workspace_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('workspace_id') } }
 
 
-      sig { params(categories: T::Array[Shared::PropertyConnectionCategories], integration_type: String, permissions: T::Array[Shared::PropertyConnectionPermissions], auth: T.nilable(Shared::PropertyConnectionAuth), auth_aws_arn: T.nilable(String), created_at: T.nilable(DateTime), environment: T.nilable(String), external_xref: T.nilable(String), id: T.nilable(String), is_paused: T.nilable(T::Boolean), updated_at: T.nilable(DateTime), workspace_id: T.nilable(String)).void }
-      def initialize(categories: nil, integration_type: nil, permissions: nil, auth: nil, auth_aws_arn: nil, created_at: nil, environment: nil, external_xref: nil, id: nil, is_paused: nil, updated_at: nil, workspace_id: nil)
+      sig { params(categories: T::Array[Shared::PropertyConnectionCategories], integration_type: String, permissions: T::Array[Shared::PropertyConnectionPermissions], auth: T.nilable(Shared::PropertyConnectionAuth), auth_aws_arn: T.nilable(String), created_at: T.nilable(DateTime), cursors_cache: T.nilable(T::Array[Shared::Undefined]), environment: T.nilable(String), external_xref: T.nilable(String), id: T.nilable(String), is_paused: T.nilable(T::Boolean), last_healthy_at: T.nilable(DateTime), last_unhealthy_at: T.nilable(DateTime), updated_at: T.nilable(DateTime), workspace_id: T.nilable(String)).void }
+      def initialize(categories: nil, integration_type: nil, permissions: nil, auth: nil, auth_aws_arn: nil, created_at: nil, cursors_cache: nil, environment: nil, external_xref: nil, id: nil, is_paused: nil, last_healthy_at: nil, last_unhealthy_at: nil, updated_at: nil, workspace_id: nil)
         @categories = categories
         @integration_type = integration_type
         @permissions = permissions
         @auth = auth
         @auth_aws_arn = auth_aws_arn
         @created_at = created_at
+        @cursors_cache = cursors_cache
         @environment = environment
         @external_xref = external_xref
         @id = id
         @is_paused = is_paused
+        @last_healthy_at = last_healthy_at
+        @last_unhealthy_at = last_unhealthy_at
         @updated_at = updated_at
         @workspace_id = workspace_id
       end

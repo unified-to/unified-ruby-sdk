@@ -51,6 +51,9 @@ req = Shared::Connection.new(
   categories=[
     Shared::PropertyConnectionCategories::ACCOUNTING,
   ],
+  cursors_cache=[
+    Shared::Undefined.new(),
+  ],
   integration_type="string",
   permissions=[
     Shared::PropertyConnectionPermissions::ATS_DOCUMENT_WRITE,
@@ -615,6 +618,9 @@ req = Operations::PatchUnifiedConnectionRequest.new(
     categories=[
       Shared::PropertyConnectionCategories::MARTECH,
     ],
+    cursors_cache=[
+      Shared::Undefined.new(),
+    ],
     integration_type="string",
     permissions=[
       Shared::PropertyConnectionPermissions::MARTECH_LIST_READ,
@@ -634,6 +640,9 @@ res = s.unified.patch_unified_connection(id="string", connection=Shared::Connect
     ),
     categories=[
       Shared::PropertyConnectionCategories::ACCOUNTING,
+    ],
+    cursors_cache=[
+      Shared::Undefined.new(),
     ],
     integration_type="string",
     permissions=[
@@ -777,6 +786,9 @@ req = Operations::UpdateUnifiedConnectionRequest.new(
     categories=[
       Shared::PropertyConnectionCategories::TICKETING,
     ],
+    cursors_cache=[
+      Shared::Undefined.new(),
+    ],
     integration_type="string",
     permissions=[
       Shared::PropertyConnectionPermissions::CRM_DEAL_READ,
@@ -796,6 +808,9 @@ res = s.unified.update_unified_connection(id="string", connection=Shared::Connec
     ),
     categories=[
       Shared::PropertyConnectionCategories::ACCOUNTING,
+    ],
+    cursors_cache=[
+      Shared::Undefined.new(),
     ],
     integration_type="string",
     permissions=[
