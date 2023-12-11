@@ -13,10 +13,10 @@ module UnifiedRubySDK
       extend T::Sig
 
 
-      field :jwt, String, { 'security': { 'scheme': true, 'type': 'apiKey', 'sub_type': 'header', 'field_name': 'authorization' } }
+      field :jwt, T.nilable(String), { 'security': { 'scheme': true, 'type': 'apiKey', 'sub_type': 'header', 'field_name': 'authorization' } }
 
 
-      sig { params(jwt: String).void }
+      sig { params(jwt: T.nilable(String)).void }
       def initialize(jwt: nil)
         @jwt = jwt
       end

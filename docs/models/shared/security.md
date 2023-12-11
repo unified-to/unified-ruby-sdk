@@ -3,6 +3,6 @@
 
 ## Fields
 
-| Field              | Type               | Required           | Description        | Example            |
-| ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
-| `jwt`              | *String*           | :heavy_check_mark: | N/A                |                    |
+| Field               | Type                | Required            | Description         |
+| ------------------- | ------------------- | ------------------- | ------------------- |
+| `jwt`               | *T.nilable(String)* | :heavy_minus_sign:  | N/A                 |

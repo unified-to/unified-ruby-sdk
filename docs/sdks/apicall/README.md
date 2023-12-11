@@ -19,7 +19,7 @@ require_relative unified_ruby_sdk
 s = UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
-    jwt="",
+    jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
@@ -61,7 +61,7 @@ require_relative unified_ruby_sdk
 s = UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
-    jwt="",
+    jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
