@@ -40,6 +40,8 @@ module UnifiedRubySDK
 
       field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+      field :hired_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('hired_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
       field :id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('id') } }
 
       field :job_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('job_id') } }
@@ -57,11 +59,12 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(applied_at: T.nilable(DateTime), candidate_id: T.nilable(String), created_at: T.nilable(DateTime), id: T.nilable(String), job_id: T.nilable(String), raw: T.nilable(Shared::PropertyAtsApplicationRaw), rejected_at: T.nilable(DateTime), rejected_reason: T.nilable(String), source: T.nilable(String), status: T.nilable(Shared::AtsApplicationStatus), updated_at: T.nilable(DateTime)).void }
-      def initialize(applied_at: nil, candidate_id: nil, created_at: nil, id: nil, job_id: nil, raw: nil, rejected_at: nil, rejected_reason: nil, source: nil, status: nil, updated_at: nil)
+      sig { params(applied_at: T.nilable(DateTime), candidate_id: T.nilable(String), created_at: T.nilable(DateTime), hired_at: T.nilable(DateTime), id: T.nilable(String), job_id: T.nilable(String), raw: T.nilable(Shared::PropertyAtsApplicationRaw), rejected_at: T.nilable(DateTime), rejected_reason: T.nilable(String), source: T.nilable(String), status: T.nilable(Shared::AtsApplicationStatus), updated_at: T.nilable(DateTime)).void }
+      def initialize(applied_at: nil, candidate_id: nil, created_at: nil, hired_at: nil, id: nil, job_id: nil, raw: nil, rejected_at: nil, rejected_reason: nil, source: nil, status: nil, updated_at: nil)
         @applied_at = applied_at
         @candidate_id = candidate_id
         @created_at = created_at
+        @hired_at = hired_at
         @id = id
         @job_id = job_id
         @raw = raw
