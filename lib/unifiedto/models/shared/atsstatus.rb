@@ -34,22 +34,22 @@ module UnifiedRubySDK
       extend T::Sig
 
 
-      field :original_status, String, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('original_status') } }
-
       field :description, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('description') } }
 
       field :id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('id') } }
+
+      field :original_status, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('original_status') } }
 
       field :raw, T.nilable(Shared::PropertyAtsStatusRaw), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('raw') } }
 
       field :status, T.nilable(Shared::AtsStatusStatus), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Shared::AtsStatusStatus, true) } }
 
 
-      sig { params(original_status: String, description: T.nilable(String), id: T.nilable(String), raw: T.nilable(Shared::PropertyAtsStatusRaw), status: T.nilable(Shared::AtsStatusStatus)).void }
-      def initialize(original_status: nil, description: nil, id: nil, raw: nil, status: nil)
-        @original_status = original_status
+      sig { params(description: T.nilable(String), id: T.nilable(String), original_status: T.nilable(String), raw: T.nilable(Shared::PropertyAtsStatusRaw), status: T.nilable(Shared::AtsStatusStatus)).void }
+      def initialize(description: nil, id: nil, original_status: nil, raw: nil, status: nil)
         @description = description
         @id = id
+        @original_status = original_status
         @raw = raw
         @status = status
       end

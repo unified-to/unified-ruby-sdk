@@ -311,3 +311,11 @@ Based on:
 - Speakeasy CLI 1.126.3 (2.214.3) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [ruby v0.2.3] .
+
+## 2023-12-13 04:00:57
+### Changes
+Based on:
+- OpenAPI Doc 1.0 
+- Speakeasy CLI 1.126.3 (2.214.3) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [ruby v0.2.4] .
