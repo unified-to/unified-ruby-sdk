@@ -12,7 +12,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :customer, :invoice, :payment, :transaction, :ats, :application, :candidate, :document, :interview, :job, :scorecard, :crm, :company, :contact, :deal, :event, :file, :lead, :pipeline, :enrich, :person, :hris, :employee, :group, :martech, :list, :member, :passthrough, :ticketing, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :webhook
+    attr_accessor :accounting, :account, :customer, :invoice, :payment, :transaction, :ats, :application, :applicationstatus, :candidate, :document, :interview, :job, :scorecard, :crm, :company, :contact, :deal, :event, :file, :lead, :pipeline, :enrich, :person, :hris, :employee, :group, :martech, :list, :member, :passthrough, :ticketing, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :webhook
 
     attr_accessor :security, :language, :sdk_version, :gen_version
 
@@ -82,6 +82,7 @@ module UnifiedRubySDK
       @transaction = Transaction.new(@sdk_configuration)
       @ats = Ats.new(@sdk_configuration)
       @application = Application.new(@sdk_configuration)
+      @applicationstatus = Applicationstatus.new(@sdk_configuration)
       @candidate = Candidate.new(@sdk_configuration)
       @document = Document.new(@sdk_configuration)
       @interview = Interview.new(@sdk_configuration)

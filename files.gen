@@ -7,6 +7,7 @@ lib/unifiedto/payment.rb
 lib/unifiedto/transaction.rb
 lib/unifiedto/ats.rb
 lib/unifiedto/application.rb
+lib/unifiedto/applicationstatus.rb
 lib/unifiedto/candidate.rb
 lib/unifiedto/document.rb
 lib/unifiedto/interview.rb
@@ -137,6 +138,7 @@ lib/unifiedto/models/operations/getatsinterview.rb
 lib/unifiedto/models/operations/getatsjob.rb
 lib/unifiedto/models/operations/getatsscorecard.rb
 lib/unifiedto/models/operations/listatsapplications.rb
+lib/unifiedto/models/operations/listatsapplicationstatuses.rb
 lib/unifiedto/models/operations/listatscandidates.rb
 lib/unifiedto/models/operations/listatsdocuments.rb
 lib/unifiedto/models/operations/listatsinterviews.rb
@@ -306,6 +308,8 @@ lib/unifiedto/models/shared/atscompensation.rb
 lib/unifiedto/models/shared/atsaddress.rb
 lib/unifiedto/models/shared/atsscorecard.rb
 lib/unifiedto/models/shared/property_atsscorecard_raw.rb
+lib/unifiedto/models/shared/atsstatus.rb
+lib/unifiedto/models/shared/property_atsstatus_raw.rb
 lib/unifiedto/models/shared/crmcompany.rb
 lib/unifiedto/models/shared/crmtelephone.rb
 lib/unifiedto/models/shared/property_crmcompany_raw.rb
@@ -477,6 +481,8 @@ docs/models/operations/getatsscorecardrequest.md
 docs/models/operations/getatsscorecardresponse.md
 docs/models/operations/listatsapplicationsrequest.md
 docs/models/operations/listatsapplicationsresponse.md
+docs/models/operations/listatsapplicationstatusesrequest.md
+docs/models/operations/listatsapplicationstatusesresponse.md
 docs/models/operations/listatscandidatesrequest.md
 docs/models/operations/listatscandidatesresponse.md
 docs/models/operations/listatsdocumentsrequest.md
@@ -800,6 +806,9 @@ docs/models/shared/atsaddress.md
 docs/models/shared/recommendation.md
 docs/models/shared/atsscorecard.md
 docs/models/shared/propertyatsscorecardraw.md
+docs/models/shared/atsstatusstatus.md
+docs/models/shared/atsstatus.md
+docs/models/shared/propertyatsstatusraw.md
 docs/models/shared/crmcompany.md
 docs/models/shared/crmtelephonetype.md
 docs/models/shared/crmtelephone.md
@@ -902,6 +911,7 @@ docs/sdks/payment/README.md
 docs/sdks/transaction/README.md
 docs/sdks/ats/README.md
 docs/sdks/application/README.md
+docs/sdks/applicationstatus/README.md
 docs/sdks/candidate/README.md
 docs/sdks/document/README.md
 docs/sdks/interview/README.md

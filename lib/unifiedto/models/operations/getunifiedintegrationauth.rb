@@ -26,6 +26,7 @@ module UnifiedRubySDK
         ATS_SCORECARD_WRITE = new('ats_scorecard_write')
         ATS_APPLICATION_READ = new('ats_application_read')
         ATS_APPLICATION_WRITE = new('ats_application_write')
+        ATS_APPLICATIONSTATUS_READ = new('ats_applicationstatus_read')
         ATS_CANDIDATE_READ = new('ats_candidate_read')
         ATS_CANDIDATE_WRITE = new('ats_candidate_write')
         ATS_INTERVIEW_READ = new('ats_interview_read')

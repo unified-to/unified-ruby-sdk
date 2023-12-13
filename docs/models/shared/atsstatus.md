@@ -1,0 +1,12 @@
+# AtsStatus
+
+
+## Fields
+
+| Field                                                                                  | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `description`                                                                          | *T.nilable(String)*                                                                    | :heavy_minus_sign:                                                                     | N/A                                                                                    |
+| `id`                                                                                   | *T.nilable(String)*                                                                    | :heavy_minus_sign:                                                                     | N/A                                                                                    |
+| `original_status`                                                                      | *String*                                                                               | :heavy_check_mark:                                                                     | N/A                                                                                    |
+| `raw`                                                                                  | [T.nilable(Shared::PropertyAtsStatusRaw)](../../models/shared/propertyatsstatusraw.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
+| `status`                                                                               | [T.nilable(Shared::AtsStatusStatus)](../../models/shared/atsstatusstatus.md)           | :heavy_minus_sign:                                                                     | N/A                                                                                    |

@@ -203,6 +203,7 @@ end
 * [get_ats_job](docs/sdks/ats/README.md#get_ats_job) - Retrieve a job
 * [get_ats_scorecard](docs/sdks/ats/README.md#get_ats_scorecard) - Retrieve a scorecard
 * [list_ats_applications](docs/sdks/ats/README.md#list_ats_applications) - List all applications
+* [list_ats_applicationstatuses](docs/sdks/ats/README.md#list_ats_applicationstatuses) - List all application statuss
 * [list_ats_candidates](docs/sdks/ats/README.md#list_ats_candidates) - List all candidates
 * [list_ats_documents](docs/sdks/ats/README.md#list_ats_documents) - List all documents
 * [list_ats_interviews](docs/sdks/ats/README.md#list_ats_interviews) - List all interviews
@@ -235,6 +236,10 @@ end
 * [patch_ats_application](docs/sdks/application/README.md#patch_ats_application) - Update an application
 * [remove_ats_application](docs/sdks/application/README.md#remove_ats_application) - Remove an application
 * [update_ats_application](docs/sdks/application/README.md#update_ats_application) - Update an application
+
+### [Applicationstatus](docs/sdks/applicationstatus/README.md)
+
+* [list_ats_applicationstatuses](docs/sdks/applicationstatus/README.md#list_ats_applicationstatuses) - List all application statuss
 
 ### [Candidate](docs/sdks/candidate/README.md)
 

@@ -16,6 +16,7 @@
 * [get_ats_job](#get_ats_job) - Retrieve a job
 * [get_ats_scorecard](#get_ats_scorecard) - Retrieve a scorecard
 * [list_ats_applications](#list_ats_applications) - List all applications
+* [list_ats_applicationstatuses](#list_ats_applicationstatuses) - List all application statuss
 * [list_ats_candidates](#list_ats_candidates) - List all candidates
 * [list_ats_documents](#list_ats_documents) - List all documents
 * [list_ats_interviews](#list_ats_interviews) - List all interviews
@@ -751,6 +752,51 @@ end
 ### Response
 
 **[T.nilable(Operations::ListAtsApplicationsResponse)](../../models/operations/listatsapplicationsresponse.md)**
+
+
+## list_ats_applicationstatuses
+
+List all application statuss
+
+### Example Usage
+
+```ruby
+require_relative unified_ruby_sdk
+
+
+s = UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  security=Shared::Security.new(
+    jwt="<YOUR_API_KEY_HERE>",
+  )
+)
+
+
+req = Operations::ListAtsApplicationstatusesRequest.new(
+  connection_id="string",
+  fields=[
+    "string",
+  ],
+)
+    
+res = s.ats.list_ats_applicationstatuses(req)
+
+if ! res.ats_statuses.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [Operations::ListAtsApplicationstatusesRequest](../../models/operations/listatsapplicationstatusesrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+
+
+### Response
+
+**[T.nilable(Operations::ListAtsApplicationstatusesResponse)](../../models/operations/listatsapplicationstatusesresponse.md)**
 
 
 ## list_ats_candidates
