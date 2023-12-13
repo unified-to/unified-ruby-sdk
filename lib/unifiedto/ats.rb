@@ -595,7 +595,7 @@ module UnifiedRubySDK
 
     sig { params(request: T.nilable(Operations::ListAtsApplicationstatusesRequest)).returns(Utils::FieldAugmented) }
     def list_ats_applicationstatuses(request)
-      # list_ats_applicationstatuses - List all application statuss
+      # list_ats_applicationstatuses - List all application statuses
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
