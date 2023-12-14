@@ -35,7 +35,7 @@ module UnifiedRubySDK
     end
 
 
-
+    # A user's bank account
     class AccountingAccount < UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 

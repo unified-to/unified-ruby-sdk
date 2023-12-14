@@ -52,7 +52,7 @@ end
 | Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
 | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | `connection_id`                                                       | *String*                                                              | :heavy_check_mark:                                                    | ID of the connection                                                  |
-| `accounting_account`                                                  | [Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `accounting_account`                                                  | [Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                    | A user's bank account                                                 |
 
 
 ### Response
@@ -199,7 +199,7 @@ end
 | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | `connection_id`                                                       | *String*                                                              | :heavy_check_mark:                                                    | ID of the connection                                                  |
 | `id`                                                                  | *String*                                                              | :heavy_check_mark:                                                    | ID of the Account                                                     |
-| `accounting_account`                                                  | [Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `accounting_account`                                                  | [Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                    | A user's bank account                                                 |
 
 
 ### Response
@@ -295,7 +295,7 @@ end
 | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | `connection_id`                                                       | *String*                                                              | :heavy_check_mark:                                                    | ID of the connection                                                  |
 | `id`                                                                  | *String*                                                              | :heavy_check_mark:                                                    | ID of the Account                                                     |
-| `accounting_account`                                                  | [Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `accounting_account`                                                  | [Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                    | A user's bank account                                                 |
 
 
 ### Response

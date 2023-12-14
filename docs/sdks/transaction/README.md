@@ -35,7 +35,6 @@ req = Operations::CreateAccountingTransactionRequest.new(
     id="<ID>",
     line_items=[
       Shared::AccountingTransactionLineitem.new(
-        id="<ID>",
         total_amount=4969.62,
       ),
     ],
@@ -50,7 +49,6 @@ res = s.transaction.create_accounting_transaction(connection_id="string", accoun
     id="<ID>",
     line_items=[
       Shared::AccountingTransactionLineitem.new(
-        id="<ID>",
         total_amount=1284.64,
       ),
     ],
@@ -199,7 +197,6 @@ req = Operations::PatchAccountingTransactionRequest.new(
     id="<ID>",
     line_items=[
       Shared::AccountingTransactionLineitem.new(
-        id="<ID>",
         total_amount=5633.69,
       ),
     ],
@@ -214,7 +211,6 @@ res = s.transaction.patch_accounting_transaction(connection_id="string", id="str
     id="<ID>",
     line_items=[
       Shared::AccountingTransactionLineitem.new(
-        id="<ID>",
         total_amount=3798.28,
       ),
     ],
@@ -313,7 +309,6 @@ req = Operations::UpdateAccountingTransactionRequest.new(
     id="<ID>",
     line_items=[
       Shared::AccountingTransactionLineitem.new(
-        id="<ID>",
         total_amount=6498.37,
       ),
     ],
@@ -328,7 +323,6 @@ res = s.transaction.update_accounting_transaction(connection_id="string", id="st
     id="<ID>",
     line_items=[
       Shared::AccountingTransactionLineitem.new(
-        id="<ID>",
         total_amount=7024.11,
       ),
     ],

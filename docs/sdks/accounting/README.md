@@ -76,7 +76,7 @@ end
 | Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
 | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | `connection_id`                                                       | *String*                                                              | :heavy_check_mark:                                                    | ID of the connection                                                  |
-| `accounting_account`                                                  | [Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `accounting_account`                                                  | [Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                    | A user's bank account                                                 |
 
 
 ### Response
@@ -293,7 +293,6 @@ req = Operations::CreateAccountingTransactionRequest.new(
     id="<ID>",
     line_items=[
       Shared::AccountingTransactionLineitem.new(
-        id="<ID>",
         total_amount=4969.62,
       ),
     ],
@@ -308,7 +307,6 @@ res = s.accounting.create_accounting_transaction(connection_id="string", account
     id="<ID>",
     line_items=[
       Shared::AccountingTransactionLineitem.new(
-        id="<ID>",
         total_amount=1284.64,
       ),
     ],
@@ -855,7 +853,7 @@ end
 | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | `connection_id`                                                       | *String*                                                              | :heavy_check_mark:                                                    | ID of the connection                                                  |
 | `id`                                                                  | *String*                                                              | :heavy_check_mark:                                                    | ID of the Account                                                     |
-| `accounting_account`                                                  | [Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `accounting_account`                                                  | [Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                    | A user's bank account                                                 |
 
 
 ### Response
@@ -1079,7 +1077,6 @@ req = Operations::PatchAccountingTransactionRequest.new(
     id="<ID>",
     line_items=[
       Shared::AccountingTransactionLineitem.new(
-        id="<ID>",
         total_amount=5633.69,
       ),
     ],
@@ -1094,7 +1091,6 @@ res = s.accounting.patch_accounting_transaction(connection_id="string", id="stri
     id="<ID>",
     line_items=[
       Shared::AccountingTransactionLineitem.new(
-        id="<ID>",
         total_amount=3798.28,
       ),
     ],
@@ -1387,7 +1383,7 @@ end
 | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | `connection_id`                                                       | *String*                                                              | :heavy_check_mark:                                                    | ID of the connection                                                  |
 | `id`                                                                  | *String*                                                              | :heavy_check_mark:                                                    | ID of the Account                                                     |
-| `accounting_account`                                                  | [Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `accounting_account`                                                  | [Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                    | A user's bank account                                                 |
 
 
 ### Response
@@ -1611,7 +1607,6 @@ req = Operations::UpdateAccountingTransactionRequest.new(
     id="<ID>",
     line_items=[
       Shared::AccountingTransactionLineitem.new(
-        id="<ID>",
         total_amount=6498.37,
       ),
     ],
@@ -1626,7 +1621,6 @@ res = s.accounting.update_accounting_transaction(connection_id="string", id="str
     id="<ID>",
     line_items=[
       Shared::AccountingTransactionLineitem.new(
-        id="<ID>",
         total_amount=7024.11,
       ),
     ],
