@@ -30,39 +30,43 @@ req = Operations::CreateUnifiedWebhookRequest.new(
   connection_id="string",
   object="string",
   webhook=Shared::Webhook.new(
-    connection_id="string",
-    events=[
-      Shared::PropertyWebhookEvents::CREATED,
-    ],
-    hook_url="string",
-    integration_type="string",
-    interval=188.12,
-    object_type=Shared::ObjectType::CRM_DEAL,
-    subscriptions=[
-      "string",
-    ],
-    workspace_id="string",
-  ),
-  events=[
-    Operations::Events::CREATED,
-  ],
-)
-    
-res = s.webhook.create_unified_webhook(connection_id="string", object="string", webhook=Shared::Webhook.new(
-    connection_id="string",
+    event=Shared::Event::CREATED,
     events=[
       Shared::PropertyWebhookEvents::UPDATED,
     ],
     hook_url="string",
-    integration_type="string",
-    interval=5349.08,
-    object_type=Shared::ObjectType::MARTECH_LIST,
+    interval=4583.16,
+    meta=Shared::PropertyWebhookMeta.new(),
+    object_type=Shared::ObjectType::HRIS_EMPLOYEE,
+    runs=[
+      "string",
+    ],
     subscriptions=[
       "string",
     ],
-    workspace_id="string",
+  ),
+  events=[
+    Operations::Events::UPDATED,
+  ],
+)
+    
+res = s.webhook.create_unified_webhook(connection_id="string", object="string", webhook=Shared::Webhook.new(
+    event=Shared::Event::CREATED,
+    events=[
+      Shared::PropertyWebhookEvents::CREATED,
+    ],
+    hook_url="string",
+    interval=9505.78,
+    meta=Shared::PropertyWebhookMeta.new(),
+    object_type=Shared::ObjectType::UC_CALL,
+    runs=[
+      "string",
+    ],
+    subscriptions=[
+      "string",
+    ],
   ), events=[
-    Operations::Events::CREATED,
+    Operations::Events::UPDATED,
   ])
 
 if ! res.webhook.nil?

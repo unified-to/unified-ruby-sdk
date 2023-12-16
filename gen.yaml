@@ -1,9 +1,9 @@
 configVersion: 1.0.0
 management:
-  docChecksum: 3d8ee0622da933e471f2108b357924c2
+  docChecksum: 0adbf8dc2a3af95ec6674f6fb0fc6ef7
   docVersion: "1.0"
-  speakeasyVersion: 1.126.3
-  generationVersion: 2.214.3
+  speakeasyVersion: 1.126.4
+  generationVersion: 2.214.10
 generation:
   comments: {}
   sdkClassName: Unified-to
@@ -11,16 +11,18 @@ generation:
   usageSnippets:
     optionalPropertyRendering: withExample
   baseServerURL: ""
+  fixes:
+    nameResolutionDec2023: false
   flattenGlobalSecurity: true
   telemetryEnabled: false
 features:
   ruby:
-    core: 3.1.0
+    core: 3.1.1
     flattening: 2.81.1
     globalSecurity: 2.81.2
     globalServerURLs: 2.82.1
 ruby:
-  version: 0.2.6
+  version: 0.2.7
   author: Unified
   description: Ruby Client SDK for Unified.to
   imports:
