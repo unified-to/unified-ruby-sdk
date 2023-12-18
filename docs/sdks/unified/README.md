@@ -56,7 +56,7 @@ req = Shared::Connection.new(
   ],
   integration_type="string",
   permissions=[
-    Shared::PropertyConnectionPermissions::ATS_DOCUMENT_READ,
+    Shared::PropertyConnectionPermissions::ATS_JOB_WRITE,
   ],
 )
     
@@ -109,7 +109,7 @@ req = Operations::CreateUnifiedWebhookRequest.new(
     hook_url="string",
     interval=4583.16,
     meta=Shared::PropertyWebhookMeta.new(),
-    object_type=Shared::ObjectType::HRIS_EMPLOYEE,
+    object_type=Shared::ObjectType::CRM_PIPELINE,
     runs=[
       "string",
     ],
@@ -309,7 +309,7 @@ s.config_security(
 req = Operations::GetUnifiedIntegrationAuthRequest.new(
   integration_type="string",
   scopes=[
-    Operations::Scopes::HRIS_EMPLOYEE_WRITE,
+    Operations::Scopes::HRIS_EMPLOYEE_READ,
   ],
   workspace_id="string",
 )
@@ -795,7 +795,7 @@ req = Operations::UpdateUnifiedConnectionRequest.new(
     ],
     integration_type="string",
     permissions=[
-      Shared::PropertyConnectionPermissions::CRM_CONTACT_WRITE,
+      Shared::PropertyConnectionPermissions::CRM_CONTACT_READ,
     ],
   ),
 )
@@ -818,7 +818,7 @@ res = s.unified.update_unified_connection(id="string", connection=Shared::Connec
     ],
     integration_type="string",
     permissions=[
-      Shared::PropertyConnectionPermissions::MARTECH_MEMBER_READ,
+      Shared::PropertyConnectionPermissions::MARTECH_LIST_WRITE,
     ],
   ))
 

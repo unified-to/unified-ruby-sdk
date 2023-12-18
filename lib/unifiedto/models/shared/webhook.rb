@@ -26,6 +26,8 @@ module UnifiedRubySDK
         ACCOUNTING_CUSTOMER = new('accounting_customer')
         ACCOUNTING_INVOICE = new('accounting_invoice')
         ACCOUNTING_PAYMENT = new('accounting_payment')
+        ACCOUNTING_TAXRATE = new('accounting_taxrate')
+        ACCOUNTING_ORGANIZATION = new('accounting_organization')
         ATS_APPLICATION = new('ats_application')
         ATS_APPLICATIONSTATUS = new('ats_applicationstatus')
         ATS_CANDIDATE = new('ats_candidate')

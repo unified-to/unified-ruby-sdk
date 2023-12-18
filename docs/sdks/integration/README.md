@@ -71,7 +71,7 @@ s.config_security(
 req = Operations::GetUnifiedIntegrationAuthRequest.new(
   integration_type="string",
   scopes=[
-    Operations::Scopes::HRIS_EMPLOYEE_WRITE,
+    Operations::Scopes::HRIS_EMPLOYEE_READ,
   ],
   workspace_id="string",
 )

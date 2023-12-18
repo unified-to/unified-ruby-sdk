@@ -7,31 +7,39 @@
 * [create_accounting_customer](#create_accounting_customer) - Create a customer
 * [create_accounting_invoice](#create_accounting_invoice) - Create a invoice
 * [create_accounting_payment](#create_accounting_payment) - Create a payment
+* [create_accounting_taxrate](#create_accounting_taxrate) - Create a taxrate
 * [create_accounting_transaction](#create_accounting_transaction) - Create a transaction
 * [get_accounting_account](#get_accounting_account) - Retrieve an account
 * [get_accounting_customer](#get_accounting_customer) - Retrieve a customer
 * [get_accounting_invoice](#get_accounting_invoice) - Retrieve a invoice
+* [get_accounting_organization](#get_accounting_organization) - Retrieve an organization
 * [get_accounting_payment](#get_accounting_payment) - Retrieve a payment
+* [get_accounting_taxrate](#get_accounting_taxrate) - Retrieve a taxrate
 * [get_accounting_transaction](#get_accounting_transaction) - Retrieve a transaction
 * [list_accounting_accounts](#list_accounting_accounts) - List all accounts
 * [list_accounting_customers](#list_accounting_customers) - List all customers
 * [list_accounting_invoices](#list_accounting_invoices) - List all invoices
+* [list_accounting_organizations](#list_accounting_organizations) - List all organizations
 * [list_accounting_payments](#list_accounting_payments) - List all payments
+* [list_accounting_taxrates](#list_accounting_taxrates) - List all taxrates
 * [list_accounting_transactions](#list_accounting_transactions) - List all transactions
 * [patch_accounting_account](#patch_accounting_account) - Update an account
 * [patch_accounting_customer](#patch_accounting_customer) - Update a customer
 * [patch_accounting_invoice](#patch_accounting_invoice) - Update a invoice
 * [patch_accounting_payment](#patch_accounting_payment) - Update a payment
+* [patch_accounting_taxrate](#patch_accounting_taxrate) - Update a taxrate
 * [patch_accounting_transaction](#patch_accounting_transaction) - Update a transaction
 * [remove_accounting_account](#remove_accounting_account) - Remove an account
 * [remove_accounting_customer](#remove_accounting_customer) - Remove a customer
 * [remove_accounting_invoice](#remove_accounting_invoice) - Remove a invoice
 * [remove_accounting_payment](#remove_accounting_payment) - Remove a payment
+* [remove_accounting_taxrate](#remove_accounting_taxrate) - Remove a taxrate
 * [remove_accounting_transaction](#remove_accounting_transaction) - Remove a transaction
 * [update_accounting_account](#update_accounting_account) - Update an account
 * [update_accounting_customer](#update_accounting_customer) - Update a customer
 * [update_accounting_invoice](#update_accounting_invoice) - Update a invoice
 * [update_accounting_payment](#update_accounting_payment) - Update a payment
+* [update_accounting_taxrate](#update_accounting_taxrate) - Update a taxrate
 * [update_accounting_transaction](#update_accounting_transaction) - Update a transaction
 
 ## create_accounting_account
@@ -268,6 +276,58 @@ end
 **[T.nilable(Operations::CreateAccountingPaymentResponse)](../../models/operations/createaccountingpaymentresponse.md)**
 
 
+## create_accounting_taxrate
+
+Create a taxrate
+
+### Example Usage
+
+```ruby
+require_relative unified_ruby_sdk
+
+
+s = UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  security=Shared::Security.new(
+    jwt="<YOUR_API_KEY_HERE>",
+  )
+)
+
+
+req = Operations::CreateAccountingTaxrateRequest.new(
+  connection_id="string",
+  accounting_taxrate=Shared::AccountingTaxrate.new(
+    name="string",
+    rate=1719.1,
+    raw=Shared::PropertyAccountingTaxrateRaw.new(),
+  ),
+)
+    
+res = s.accounting.create_accounting_taxrate(connection_id="string", accounting_taxrate=Shared::AccountingTaxrate.new(
+    name="string",
+    rate=2397.01,
+    raw=Shared::PropertyAccountingTaxrateRaw.new(),
+  ))
+
+if ! res.accounting_taxrate.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `connection_id`                                                       | *String*                                                              | :heavy_check_mark:                                                    | ID of the connection                                                  |
+| `accounting_taxrate`                                                  | [Shared::AccountingTaxrate](../../models/shared/accountingtaxrate.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+
+
+### Response
+
+**[T.nilable(Operations::CreateAccountingTaxrateResponse)](../../models/operations/createaccountingtaxrateresponse.md)**
+
+
 ## create_accounting_transaction
 
 Create a transaction
@@ -484,6 +544,56 @@ end
 **[T.nilable(Operations::GetAccountingInvoiceResponse)](../../models/operations/getaccountinginvoiceresponse.md)**
 
 
+## get_accounting_organization
+
+Retrieve an organization
+
+### Example Usage
+
+```ruby
+require_relative unified_ruby_sdk
+
+
+s = UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  security=Shared::Security.new(
+    jwt="<YOUR_API_KEY_HERE>",
+  )
+)
+
+
+req = Operations::GetAccountingOrganizationRequest.new(
+  connection_id="string",
+  id="<ID>",
+  fields=[
+    "string",
+  ],
+)
+    
+res = s.accounting.get_accounting_organization(connection_id="string", id="string", fields=[
+    "string",
+  ])
+
+if ! res.accounting_organization.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                        | Type                             | Required                         | Description                      |
+| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
+| `connection_id`                  | *String*                         | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *String*                         | :heavy_check_mark:               | ID of the Organization           |
+| `fields`                         | T::Array<*String*>               | :heavy_minus_sign:               | Comma-delimited fields to return |
+
+
+### Response
+
+**[T.nilable(Operations::GetAccountingOrganizationResponse)](../../models/operations/getaccountingorganizationresponse.md)**
+
+
 ## get_accounting_payment
 
 Retrieve a payment
@@ -532,6 +642,56 @@ end
 ### Response
 
 **[T.nilable(Operations::GetAccountingPaymentResponse)](../../models/operations/getaccountingpaymentresponse.md)**
+
+
+## get_accounting_taxrate
+
+Retrieve a taxrate
+
+### Example Usage
+
+```ruby
+require_relative unified_ruby_sdk
+
+
+s = UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  security=Shared::Security.new(
+    jwt="<YOUR_API_KEY_HERE>",
+  )
+)
+
+
+req = Operations::GetAccountingTaxrateRequest.new(
+  connection_id="string",
+  id="<ID>",
+  fields=[
+    "string",
+  ],
+)
+    
+res = s.accounting.get_accounting_taxrate(connection_id="string", id="string", fields=[
+    "string",
+  ])
+
+if ! res.accounting_taxrate.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                        | Type                             | Required                         | Description                      |
+| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
+| `connection_id`                  | *String*                         | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *String*                         | :heavy_check_mark:               | ID of the Taxrate                |
+| `fields`                         | T::Array<*String*>               | :heavy_minus_sign:               | Comma-delimited fields to return |
+
+
+### Response
+
+**[T.nilable(Operations::GetAccountingTaxrateResponse)](../../models/operations/getaccountingtaxrateresponse.md)**
 
 
 ## get_accounting_transaction
@@ -719,6 +879,51 @@ end
 **[T.nilable(Operations::ListAccountingInvoicesResponse)](../../models/operations/listaccountinginvoicesresponse.md)**
 
 
+## list_accounting_organizations
+
+List all organizations
+
+### Example Usage
+
+```ruby
+require_relative unified_ruby_sdk
+
+
+s = UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  security=Shared::Security.new(
+    jwt="<YOUR_API_KEY_HERE>",
+  )
+)
+
+
+req = Operations::ListAccountingOrganizationsRequest.new(
+  connection_id="string",
+  fields=[
+    "string",
+  ],
+)
+    
+res = s.accounting.list_accounting_organizations(req)
+
+if ! res.accounting_organizations.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [Operations::ListAccountingOrganizationsRequest](../../models/operations/listaccountingorganizationsrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+
+
+### Response
+
+**[T.nilable(Operations::ListAccountingOrganizationsResponse)](../../models/operations/listaccountingorganizationsresponse.md)**
+
+
 ## list_accounting_payments
 
 List all payments
@@ -762,6 +967,51 @@ end
 ### Response
 
 **[T.nilable(Operations::ListAccountingPaymentsResponse)](../../models/operations/listaccountingpaymentsresponse.md)**
+
+
+## list_accounting_taxrates
+
+List all taxrates
+
+### Example Usage
+
+```ruby
+require_relative unified_ruby_sdk
+
+
+s = UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  security=Shared::Security.new(
+    jwt="<YOUR_API_KEY_HERE>",
+  )
+)
+
+
+req = Operations::ListAccountingTaxratesRequest.new(
+  connection_id="string",
+  fields=[
+    "string",
+  ],
+)
+    
+res = s.accounting.list_accounting_taxrates(req)
+
+if ! res.accounting_taxrates.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Operations::ListAccountingTaxratesRequest](../../models/operations/listaccountingtaxratesrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+
+
+### Response
+
+**[T.nilable(Operations::ListAccountingTaxratesResponse)](../../models/operations/listaccountingtaxratesresponse.md)**
 
 
 ## list_accounting_transactions
@@ -1051,6 +1301,60 @@ end
 **[T.nilable(Operations::PatchAccountingPaymentResponse)](../../models/operations/patchaccountingpaymentresponse.md)**
 
 
+## patch_accounting_taxrate
+
+Update a taxrate
+
+### Example Usage
+
+```ruby
+require_relative unified_ruby_sdk
+
+
+s = UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  security=Shared::Security.new(
+    jwt="<YOUR_API_KEY_HERE>",
+  )
+)
+
+
+req = Operations::PatchAccountingTaxrateRequest.new(
+  connection_id="string",
+  id="<ID>",
+  accounting_taxrate=Shared::AccountingTaxrate.new(
+    name="string",
+    rate=5991.47,
+    raw=Shared::PropertyAccountingTaxrateRaw.new(),
+  ),
+)
+    
+res = s.accounting.patch_accounting_taxrate(connection_id="string", id="string", accounting_taxrate=Shared::AccountingTaxrate.new(
+    name="string",
+    rate=6924.44,
+    raw=Shared::PropertyAccountingTaxrateRaw.new(),
+  ))
+
+if ! res.accounting_taxrate.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `connection_id`                                                       | *String*                                                              | :heavy_check_mark:                                                    | ID of the connection                                                  |
+| `id`                                                                  | *String*                                                              | :heavy_check_mark:                                                    | ID of the Taxrate                                                     |
+| `accounting_taxrate`                                                  | [Shared::AccountingTaxrate](../../models/shared/accountingtaxrate.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+
+
+### Response
+
+**[T.nilable(Operations::PatchAccountingTaxrateResponse)](../../models/operations/patchaccountingtaxrateresponse.md)**
+
+
 ## patch_accounting_transaction
 
 Update a transaction
@@ -1293,6 +1597,50 @@ end
 ### Response
 
 **[T.nilable(Operations::RemoveAccountingPaymentResponse)](../../models/operations/removeaccountingpaymentresponse.md)**
+
+
+## remove_accounting_taxrate
+
+Remove a taxrate
+
+### Example Usage
+
+```ruby
+require_relative unified_ruby_sdk
+
+
+s = UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  security=Shared::Security.new(
+    jwt="<YOUR_API_KEY_HERE>",
+  )
+)
+
+
+req = Operations::RemoveAccountingTaxrateRequest.new(
+  connection_id="string",
+  id="<ID>",
+)
+    
+res = s.accounting.remove_accounting_taxrate(connection_id="string", id="string")
+
+if res.status == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *String*             | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *String*             | :heavy_check_mark:   | ID of the Taxrate    |
+
+
+### Response
+
+**[T.nilable(Operations::RemoveAccountingTaxrateResponse)](../../models/operations/removeaccountingtaxrateresponse.md)**
 
 
 ## remove_accounting_transaction
@@ -1579,6 +1927,60 @@ end
 ### Response
 
 **[T.nilable(Operations::UpdateAccountingPaymentResponse)](../../models/operations/updateaccountingpaymentresponse.md)**
+
+
+## update_accounting_taxrate
+
+Update a taxrate
+
+### Example Usage
+
+```ruby
+require_relative unified_ruby_sdk
+
+
+s = UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  security=Shared::Security.new(
+    jwt="<YOUR_API_KEY_HERE>",
+  )
+)
+
+
+req = Operations::UpdateAccountingTaxrateRequest.new(
+  connection_id="string",
+  id="<ID>",
+  accounting_taxrate=Shared::AccountingTaxrate.new(
+    name="string",
+    rate=3382.78,
+    raw=Shared::PropertyAccountingTaxrateRaw.new(),
+  ),
+)
+    
+res = s.accounting.update_accounting_taxrate(connection_id="string", id="string", accounting_taxrate=Shared::AccountingTaxrate.new(
+    name="string",
+    rate=8458.57,
+    raw=Shared::PropertyAccountingTaxrateRaw.new(),
+  ))
+
+if ! res.accounting_taxrate.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `connection_id`                                                       | *String*                                                              | :heavy_check_mark:                                                    | ID of the connection                                                  |
+| `id`                                                                  | *String*                                                              | :heavy_check_mark:                                                    | ID of the Taxrate                                                     |
+| `accounting_taxrate`                                                  | [Shared::AccountingTaxrate](../../models/shared/accountingtaxrate.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+
+
+### Response
+
+**[T.nilable(Operations::UpdateAccountingTaxrateResponse)](../../models/operations/updateaccountingtaxrateresponse.md)**
 
 
 ## update_accounting_transaction
