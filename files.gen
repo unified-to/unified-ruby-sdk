@@ -3,6 +3,7 @@ lib/unifiedto/accounting.rb
 lib/unifiedto/account.rb
 lib/unifiedto/customer.rb
 lib/unifiedto/invoice.rb
+lib/unifiedto/item.rb
 lib/unifiedto/organization.rb
 lib/unifiedto/payment.rb
 lib/unifiedto/taxrate.rb
@@ -94,12 +95,14 @@ unified_ruby_sdk.gemspec
 lib/unifiedto/models/operations/createaccountingaccount.rb
 lib/unifiedto/models/operations/createaccountingcustomer.rb
 lib/unifiedto/models/operations/createaccountinginvoice.rb
+lib/unifiedto/models/operations/createaccountingitem.rb
 lib/unifiedto/models/operations/createaccountingpayment.rb
 lib/unifiedto/models/operations/createaccountingtaxrate.rb
 lib/unifiedto/models/operations/createaccountingtransaction.rb
 lib/unifiedto/models/operations/getaccountingaccount.rb
 lib/unifiedto/models/operations/getaccountingcustomer.rb
 lib/unifiedto/models/operations/getaccountinginvoice.rb
+lib/unifiedto/models/operations/getaccountingitem.rb
 lib/unifiedto/models/operations/getaccountingorganization.rb
 lib/unifiedto/models/operations/getaccountingpayment.rb
 lib/unifiedto/models/operations/getaccountingtaxrate.rb
@@ -107,6 +110,7 @@ lib/unifiedto/models/operations/getaccountingtransaction.rb
 lib/unifiedto/models/operations/listaccountingaccounts.rb
 lib/unifiedto/models/operations/listaccountingcustomers.rb
 lib/unifiedto/models/operations/listaccountinginvoices.rb
+lib/unifiedto/models/operations/listaccountingitems.rb
 lib/unifiedto/models/operations/listaccountingorganizations.rb
 lib/unifiedto/models/operations/listaccountingpayments.rb
 lib/unifiedto/models/operations/listaccountingtaxrates.rb
@@ -114,18 +118,21 @@ lib/unifiedto/models/operations/listaccountingtransactions.rb
 lib/unifiedto/models/operations/patchaccountingaccount.rb
 lib/unifiedto/models/operations/patchaccountingcustomer.rb
 lib/unifiedto/models/operations/patchaccountinginvoice.rb
+lib/unifiedto/models/operations/patchaccountingitem.rb
 lib/unifiedto/models/operations/patchaccountingpayment.rb
 lib/unifiedto/models/operations/patchaccountingtaxrate.rb
 lib/unifiedto/models/operations/patchaccountingtransaction.rb
 lib/unifiedto/models/operations/removeaccountingaccount.rb
 lib/unifiedto/models/operations/removeaccountingcustomer.rb
 lib/unifiedto/models/operations/removeaccountinginvoice.rb
+lib/unifiedto/models/operations/removeaccountingitem.rb
 lib/unifiedto/models/operations/removeaccountingpayment.rb
 lib/unifiedto/models/operations/removeaccountingtaxrate.rb
 lib/unifiedto/models/operations/removeaccountingtransaction.rb
 lib/unifiedto/models/operations/updateaccountingaccount.rb
 lib/unifiedto/models/operations/updateaccountingcustomer.rb
 lib/unifiedto/models/operations/updateaccountinginvoice.rb
+lib/unifiedto/models/operations/updateaccountingitem.rb
 lib/unifiedto/models/operations/updateaccountingpayment.rb
 lib/unifiedto/models/operations/updateaccountingtaxrate.rb
 lib/unifiedto/models/operations/updateaccountingtransaction.rb
@@ -292,6 +299,8 @@ lib/unifiedto/models/shared/property_accountingcustomer_billing_address.rb
 lib/unifiedto/models/shared/accountinginvoice.rb
 lib/unifiedto/models/shared/property_accountinginvoice_raw.rb
 lib/unifiedto/models/shared/accountinglineitem.rb
+lib/unifiedto/models/shared/accountingitem.rb
+lib/unifiedto/models/shared/property_accountingitem_raw.rb
 lib/unifiedto/models/shared/accountingpayment.rb
 lib/unifiedto/models/shared/property_accountingpayment_raw.rb
 lib/unifiedto/models/shared/accountingtaxrate.rb
@@ -405,6 +414,8 @@ docs/models/operations/createaccountingcustomerrequest.md
 docs/models/operations/createaccountingcustomerresponse.md
 docs/models/operations/createaccountinginvoicerequest.md
 docs/models/operations/createaccountinginvoiceresponse.md
+docs/models/operations/createaccountingitemrequest.md
+docs/models/operations/createaccountingitemresponse.md
 docs/models/operations/createaccountingpaymentrequest.md
 docs/models/operations/createaccountingpaymentresponse.md
 docs/models/operations/createaccountingtaxraterequest.md
@@ -417,6 +428,8 @@ docs/models/operations/getaccountingcustomerrequest.md
 docs/models/operations/getaccountingcustomerresponse.md
 docs/models/operations/getaccountinginvoicerequest.md
 docs/models/operations/getaccountinginvoiceresponse.md
+docs/models/operations/getaccountingitemrequest.md
+docs/models/operations/getaccountingitemresponse.md
 docs/models/operations/getaccountingorganizationrequest.md
 docs/models/operations/getaccountingorganizationresponse.md
 docs/models/operations/getaccountingpaymentrequest.md
@@ -431,6 +444,8 @@ docs/models/operations/listaccountingcustomersrequest.md
 docs/models/operations/listaccountingcustomersresponse.md
 docs/models/operations/listaccountinginvoicesrequest.md
 docs/models/operations/listaccountinginvoicesresponse.md
+docs/models/operations/listaccountingitemsrequest.md
+docs/models/operations/listaccountingitemsresponse.md
 docs/models/operations/listaccountingorganizationsrequest.md
 docs/models/operations/listaccountingorganizationsresponse.md
 docs/models/operations/listaccountingpaymentsrequest.md
@@ -445,6 +460,8 @@ docs/models/operations/patchaccountingcustomerrequest.md
 docs/models/operations/patchaccountingcustomerresponse.md
 docs/models/operations/patchaccountinginvoicerequest.md
 docs/models/operations/patchaccountinginvoiceresponse.md
+docs/models/operations/patchaccountingitemrequest.md
+docs/models/operations/patchaccountingitemresponse.md
 docs/models/operations/patchaccountingpaymentrequest.md
 docs/models/operations/patchaccountingpaymentresponse.md
 docs/models/operations/patchaccountingtaxraterequest.md
@@ -457,6 +474,8 @@ docs/models/operations/removeaccountingcustomerrequest.md
 docs/models/operations/removeaccountingcustomerresponse.md
 docs/models/operations/removeaccountinginvoicerequest.md
 docs/models/operations/removeaccountinginvoiceresponse.md
+docs/models/operations/removeaccountingitemrequest.md
+docs/models/operations/removeaccountingitemresponse.md
 docs/models/operations/removeaccountingpaymentrequest.md
 docs/models/operations/removeaccountingpaymentresponse.md
 docs/models/operations/removeaccountingtaxraterequest.md
@@ -469,6 +488,8 @@ docs/models/operations/updateaccountingcustomerrequest.md
 docs/models/operations/updateaccountingcustomerresponse.md
 docs/models/operations/updateaccountinginvoicerequest.md
 docs/models/operations/updateaccountinginvoiceresponse.md
+docs/models/operations/updateaccountingitemrequest.md
+docs/models/operations/updateaccountingitemresponse.md
 docs/models/operations/updateaccountingpaymentrequest.md
 docs/models/operations/updateaccountingpaymentresponse.md
 docs/models/operations/updateaccountingtaxraterequest.md
@@ -799,6 +820,8 @@ docs/models/shared/propertyaccountingcustomerbillingaddress.md
 docs/models/shared/accountinginvoice.md
 docs/models/shared/propertyaccountinginvoiceraw.md
 docs/models/shared/accountinglineitem.md
+docs/models/shared/accountingitem.md
+docs/models/shared/propertyaccountingitemraw.md
 docs/models/shared/accountingpayment.md
 docs/models/shared/propertyaccountingpaymentraw.md
 docs/models/shared/accountingtaxrate.md
@@ -947,6 +970,7 @@ docs/sdks/accounting/README.md
 docs/sdks/account/README.md
 docs/sdks/customer/README.md
 docs/sdks/invoice/README.md
+docs/sdks/item/README.md
 docs/sdks/organization/README.md
 docs/sdks/payment/README.md
 docs/sdks/taxrate/README.md

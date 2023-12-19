@@ -56,7 +56,7 @@ req = Shared::Connection.new(
   ],
   integration_type="string",
   permissions=[
-    Shared::PropertyConnectionPermissions::ATS_JOB_WRITE,
+    Shared::PropertyConnectionPermissions::ATS_JOB_READ,
   ],
 )
     
@@ -109,7 +109,7 @@ req = Operations::CreateUnifiedWebhookRequest.new(
     hook_url="string",
     interval=4583.16,
     meta=Shared::PropertyWebhookMeta.new(),
-    object_type=Shared::ObjectType::CRM_PIPELINE,
+    object_type=Shared::ObjectType::CRM_LEAD,
     runs=[
       "string",
     ],
@@ -627,7 +627,7 @@ req = Operations::PatchUnifiedConnectionRequest.new(
     ],
     integration_type="string",
     permissions=[
-      Shared::PropertyConnectionPermissions::CRM_PIPELINE_WRITE,
+      Shared::PropertyConnectionPermissions::CRM_PIPELINE_READ,
     ],
   ),
 )
@@ -795,7 +795,7 @@ req = Operations::UpdateUnifiedConnectionRequest.new(
     ],
     integration_type="string",
     permissions=[
-      Shared::PropertyConnectionPermissions::CRM_CONTACT_READ,
+      Shared::PropertyConnectionPermissions::CRM_COMPANY_WRITE,
     ],
   ),
 )

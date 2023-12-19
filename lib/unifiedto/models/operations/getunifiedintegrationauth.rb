@@ -25,6 +25,7 @@ module UnifiedRubySDK
         ACCOUNTING_TAXRATE_READ = new('accounting_taxrate_read')
         ACCOUNTING_TAXRATE_WRITE = new('accounting_taxrate_write')
         ACCOUNTING_ORGANIZATION_READ = new('accounting_organization_read')
+        ACCOUNTING_ITEM_READ = new('accounting_item_read')
         ATS_SCORECARD_READ = new('ats_scorecard_read')
         ATS_SCORECARD_WRITE = new('ats_scorecard_write')
         ATS_APPLICATION_READ = new('ats_application_read')

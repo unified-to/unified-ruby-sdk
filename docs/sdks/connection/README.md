@@ -46,7 +46,7 @@ req = Shared::Connection.new(
   ],
   integration_type="string",
   permissions=[
-    Shared::PropertyConnectionPermissions::ATS_JOB_WRITE,
+    Shared::PropertyConnectionPermissions::ATS_JOB_READ,
   ],
 )
     
@@ -194,7 +194,7 @@ req = Operations::PatchUnifiedConnectionRequest.new(
     ],
     integration_type="string",
     permissions=[
-      Shared::PropertyConnectionPermissions::CRM_PIPELINE_WRITE,
+      Shared::PropertyConnectionPermissions::CRM_PIPELINE_READ,
     ],
   ),
 )
@@ -320,7 +320,7 @@ req = Operations::UpdateUnifiedConnectionRequest.new(
     ],
     integration_type="string",
     permissions=[
-      Shared::PropertyConnectionPermissions::CRM_CONTACT_READ,
+      Shared::PropertyConnectionPermissions::CRM_COMPANY_WRITE,
     ],
   ),
 )
