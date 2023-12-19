@@ -23,9 +23,11 @@ module UnifiedRubySDK
 
       field :item_description, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('item_description') } }
 
-      field :item_identifier, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('item_identifier') } }
+      field :item_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('item_id') } }
 
       field :item_name, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('item_name') } }
+
+      field :item_sku, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('item_sku') } }
 
       field :notes, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('notes') } }
 
@@ -44,15 +46,16 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(total_amount: Float, created_at: T.nilable(DateTime), discount_amount: T.nilable(Float), id: T.nilable(String), item_description: T.nilable(String), item_identifier: T.nilable(String), item_name: T.nilable(String), notes: T.nilable(String), refunded_amount: T.nilable(Float), refunded_at: T.nilable(DateTime), tax_amount: T.nilable(Float), taxrate_id: T.nilable(String), unit_amount: T.nilable(Float), unit_quantity: T.nilable(Float), updated_at: T.nilable(DateTime)).void }
-      def initialize(total_amount: nil, created_at: nil, discount_amount: nil, id: nil, item_description: nil, item_identifier: nil, item_name: nil, notes: nil, refunded_amount: nil, refunded_at: nil, tax_amount: nil, taxrate_id: nil, unit_amount: nil, unit_quantity: nil, updated_at: nil)
+      sig { params(total_amount: Float, created_at: T.nilable(DateTime), discount_amount: T.nilable(Float), id: T.nilable(String), item_description: T.nilable(String), item_id: T.nilable(String), item_name: T.nilable(String), item_sku: T.nilable(String), notes: T.nilable(String), refunded_amount: T.nilable(Float), refunded_at: T.nilable(DateTime), tax_amount: T.nilable(Float), taxrate_id: T.nilable(String), unit_amount: T.nilable(Float), unit_quantity: T.nilable(Float), updated_at: T.nilable(DateTime)).void }
+      def initialize(total_amount: nil, created_at: nil, discount_amount: nil, id: nil, item_description: nil, item_id: nil, item_name: nil, item_sku: nil, notes: nil, refunded_amount: nil, refunded_at: nil, tax_amount: nil, taxrate_id: nil, unit_amount: nil, unit_quantity: nil, updated_at: nil)
         @total_amount = total_amount
         @created_at = created_at
         @discount_amount = discount_amount
         @id = id
         @item_description = item_description
-        @item_identifier = item_identifier
+        @item_id = item_id
         @item_name = item_name
+        @item_sku = item_sku
         @notes = notes
         @refunded_amount = refunded_amount
         @refunded_at = refunded_at
