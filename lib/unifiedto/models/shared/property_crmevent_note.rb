@@ -13,11 +13,14 @@ module UnifiedRubySDK
       extend T::Sig
 
 
+      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
       field :description, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('description') } }
 
 
-      sig { params(description: T.nilable(String)).void }
-      def initialize(description: nil)
+      sig { params(created_at: T.nilable(DateTime), description: T.nilable(String)).void }
+      def initialize(created_at: nil, description: nil)
+        @created_at = created_at
         @description = description
       end
     end

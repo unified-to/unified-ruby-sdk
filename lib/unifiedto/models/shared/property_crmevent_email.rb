@@ -17,6 +17,8 @@ module UnifiedRubySDK
       # The event email's cc name & email (name <test@test.com>)
       field :cc, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('cc') } }
 
+      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
       field :from, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('from') } }
 
       field :subject, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('subject') } }
@@ -24,10 +26,11 @@ module UnifiedRubySDK
       field :to, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('to') } }
 
 
-      sig { params(body: T.nilable(String), cc: T.nilable(T::Array[String]), from: T.nilable(String), subject: T.nilable(String), to: T.nilable(T::Array[String])).void }
-      def initialize(body: nil, cc: nil, from: nil, subject: nil, to: nil)
+      sig { params(body: T.nilable(String), cc: T.nilable(T::Array[String]), created_at: T.nilable(DateTime), from: T.nilable(String), subject: T.nilable(String), to: T.nilable(T::Array[String])).void }
+      def initialize(body: nil, cc: nil, created_at: nil, from: nil, subject: nil, to: nil)
         @body = body
         @cc = cc
+        @created_at = created_at
         @from = from
         @subject = subject
         @to = to

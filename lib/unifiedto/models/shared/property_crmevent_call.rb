@@ -17,11 +17,14 @@ module UnifiedRubySDK
 
       field :duration, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('duration') } }
 
+      field :start_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      sig { params(description: T.nilable(String), duration: T.nilable(Float)).void }
-      def initialize(description: nil, duration: nil)
+
+      sig { params(description: T.nilable(String), duration: T.nilable(Float), start_at: T.nilable(DateTime)).void }
+      def initialize(description: nil, duration: nil, start_at: nil)
         @description = description
         @duration = duration
+        @start_at = start_at
       end
     end
   end

@@ -15,14 +15,17 @@ module UnifiedRubySDK
 
       field :description, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('description') } }
 
+      field :due_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('due_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
       field :name, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('name') } }
 
       field :status, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('status') } }
 
 
-      sig { params(description: T.nilable(String), name: T.nilable(String), status: T.nilable(String)).void }
-      def initialize(description: nil, name: nil, status: nil)
+      sig { params(description: T.nilable(String), due_at: T.nilable(DateTime), name: T.nilable(String), status: T.nilable(String)).void }
+      def initialize(description: nil, due_at: nil, name: nil, status: nil)
         @description = description
+        @due_at = due_at
         @name = name
         @status = status
       end
