@@ -272,6 +272,7 @@ lib/unifiedto/models/operations/updateticketingnote.rb
 lib/unifiedto/models/operations/updateticketingticket.rb
 lib/unifiedto/models/operations/listuccalls.rb
 lib/unifiedto/models/operations/createunifiedconnection.rb
+lib/unifiedto/models/operations/createunifiedwebhook.rb
 lib/unifiedto/models/operations/getunifiedapicall.rb
 lib/unifiedto/models/operations/getunifiedconnection.rb
 lib/unifiedto/models/operations/getunifiedintegration.rb
@@ -396,6 +397,9 @@ lib/unifiedto/models/shared/property_connection_permissions.rb
 lib/unifiedto/models/shared/property_connection_categories.rb
 lib/unifiedto/models/shared/property_connection_auth.rb
 lib/unifiedto/models/shared/property_property_connection_auth_meta.rb
+lib/unifiedto/models/shared/webhook.rb
+lib/unifiedto/models/shared/property_webhook_meta.rb
+lib/unifiedto/models/shared/property_webhook_events.rb
 lib/unifiedto/models/shared/apicall.rb
 lib/unifiedto/models/shared/integration.rb
 lib/unifiedto/models/shared/integrationsupport.rb
@@ -403,9 +407,6 @@ lib/unifiedto/models/shared/property_integrationsupport_webhook_events.rb
 lib/unifiedto/models/shared/property_integrationsupport_outbound_fields.rb
 lib/unifiedto/models/shared/property_integrationsupport_inbound_fields.rb
 lib/unifiedto/models/shared/property_integration_categories.rb
-lib/unifiedto/models/shared/webhook.rb
-lib/unifiedto/models/shared/property_webhook_meta.rb
-lib/unifiedto/models/shared/property_webhook_events.rb
 lib/unifiedto/models/shared/security.rb
 lib/unified_ruby_sdk.rb
 docs/models/operations/createaccountingaccountrequest.md
@@ -767,6 +768,8 @@ docs/models/operations/updateticketingticketresponse.md
 docs/models/operations/listuccallsrequest.md
 docs/models/operations/listuccallsresponse.md
 docs/models/operations/createunifiedconnectionresponse.md
+docs/models/operations/createunifiedwebhookrequest.md
+docs/models/operations/createunifiedwebhookresponse.md
 docs/models/operations/getunifiedapicallrequest.md
 docs/models/operations/getunifiedapicallresponse.md
 docs/models/operations/getunifiedconnectionrequest.md
@@ -947,6 +950,12 @@ docs/models/shared/propertyconnectionpermissions.md
 docs/models/shared/propertyconnectioncategories.md
 docs/models/shared/propertyconnectionauth.md
 docs/models/shared/propertypropertyconnectionauthmeta.md
+docs/models/shared/event.md
+docs/models/shared/objecttype.md
+docs/models/shared/webhookwebhooktype.md
+docs/models/shared/webhook.md
+docs/models/shared/propertywebhookmeta.md
+docs/models/shared/propertywebhookevents.md
 docs/models/shared/apicalltype.md
 docs/models/shared/apicall.md
 docs/models/shared/integration.md
@@ -956,12 +965,6 @@ docs/models/shared/propertyintegrationsupportwebhookevents.md
 docs/models/shared/propertyintegrationsupportoutboundfields.md
 docs/models/shared/propertyintegrationsupportinboundfields.md
 docs/models/shared/propertyintegrationcategories.md
-docs/models/shared/event.md
-docs/models/shared/objecttype.md
-docs/models/shared/webhookwebhooktype.md
-docs/models/shared/webhook.md
-docs/models/shared/propertywebhookmeta.md
-docs/models/shared/propertywebhookevents.md
 docs/models/shared/security.md
 docs/sdks/unifiedto/README.md
 docs/sdks/accounting/README.md

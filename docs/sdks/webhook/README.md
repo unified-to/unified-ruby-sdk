@@ -3,9 +3,83 @@
 
 ### Available Operations
 
+* [create_unified_webhook](#create_unified_webhook) - Create webhook subscription
 * [get_unified_webhook](#get_unified_webhook) - Retrieve webhook by its ID
 * [list_unified_webhooks](#list_unified_webhooks) - Returns all registered webhooks
 * [remove_unified_webhook](#remove_unified_webhook) - Remove webhook subscription
+
+## create_unified_webhook
+
+The data payload received by your server is described at https://docs.unified.to/unified/overview.  The `interval` field can be set as low as 15 minutes for paid accounts, and 60 minutes for free accounts.
+
+### Example Usage
+
+```ruby
+require_relative unified_ruby_sdk
+
+
+s = UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  security=Shared::Security.new(
+    jwt="<YOUR_API_KEY_HERE>",
+  )
+)
+
+
+req = Operations::CreateUnifiedWebhookRequest.new(
+  webhook=Shared::Webhook.new(
+    event=Shared::Event::CREATED,
+    events=[
+      Shared::PropertyWebhookEvents::UPDATED,
+    ],
+    hook_url="string",
+    interval=4583.16,
+    meta=Shared::PropertyWebhookMeta.new(),
+    object_type=Shared::ObjectType::CRM_LEAD,
+    runs=[
+      "string",
+    ],
+    subscriptions=[
+      "string",
+    ],
+  ),
+)
+    
+res = s.webhook.create_unified_webhook(webhook=Shared::Webhook.new(
+    event=Shared::Event::UPDATED,
+    events=[
+      Shared::PropertyWebhookEvents::CREATED,
+    ],
+    hook_url="string",
+    interval=6806.55,
+    meta=Shared::PropertyWebhookMeta.new(),
+    object_type=Shared::ObjectType::ENRICH_PERSON,
+    runs=[
+      "string",
+    ],
+    subscriptions=[
+      "string",
+    ],
+  ), include_all=false)
+
+if ! res.webhook.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `webhook`                                                         | [Shared::Webhook](../../models/shared/webhook.md)                 | :heavy_minus_sign:                                                | N/A                                                               |
+| `include_all`                                                     | *T::Boolean*                                                      | :heavy_minus_sign:                                                | When set, all of the existing data will sent back to your server. |
+
+
+### Response
+
+**[T.nilable(Operations::CreateUnifiedWebhookResponse)](../../models/operations/createunifiedwebhookresponse.md)**
+
 
 ## get_unified_webhook
 
