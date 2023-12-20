@@ -76,8 +76,6 @@ module UnifiedRubySDK
 
       field :event, Shared::Event, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('event'), 'decoder': Utils.enum_from_string(Shared::Event, false) } }
 
-      field :events, T::Array[Shared::PropertyWebhookEvents], { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('events') } }
-
       field :hook_url, String, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('hook_url') } }
 
       field :interval, Float, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('interval') } }
@@ -91,6 +89,8 @@ module UnifiedRubySDK
       field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
       field :environment, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('environment') } }
+
+      field :events, T.nilable(T::Array[Shared::PropertyWebhookEvents]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('events') } }
 
       field :fields, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('fields') } }
 
@@ -115,10 +115,9 @@ module UnifiedRubySDK
       field :workspace_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('workspace_id') } }
 
 
-      sig { params(event: Shared::Event, events: T::Array[Shared::PropertyWebhookEvents], hook_url: String, interval: Float, object_type: Shared::ObjectType, checked_at: T.nilable(DateTime), connection_id: T.nilable(String), created_at: T.nilable(DateTime), environment: T.nilable(String), fields: T.nilable(String), id: T.nilable(String), include_raw: T.nilable(T::Boolean), integration_type: T.nilable(String), is_healthy: T.nilable(T::Boolean), meta: T.nilable(Shared::PropertyWebhookMeta), runs: T.nilable(T::Array[String]), subscriptions: T.nilable(T::Array[String]), updated_at: T.nilable(DateTime), webhook_type: T.nilable(Shared::WebhookWebhookType), workspace_id: T.nilable(String)).void }
-      def initialize(event: nil, events: nil, hook_url: nil, interval: nil, object_type: nil, checked_at: nil, connection_id: nil, created_at: nil, environment: nil, fields: nil, id: nil, include_raw: nil, integration_type: nil, is_healthy: nil, meta: nil, runs: nil, subscriptions: nil, updated_at: nil, webhook_type: nil, workspace_id: nil)
+      sig { params(event: Shared::Event, hook_url: String, interval: Float, object_type: Shared::ObjectType, checked_at: T.nilable(DateTime), connection_id: T.nilable(String), created_at: T.nilable(DateTime), environment: T.nilable(String), events: T.nilable(T::Array[Shared::PropertyWebhookEvents]), fields: T.nilable(String), id: T.nilable(String), include_raw: T.nilable(T::Boolean), integration_type: T.nilable(String), is_healthy: T.nilable(T::Boolean), meta: T.nilable(Shared::PropertyWebhookMeta), runs: T.nilable(T::Array[String]), subscriptions: T.nilable(T::Array[String]), updated_at: T.nilable(DateTime), webhook_type: T.nilable(Shared::WebhookWebhookType), workspace_id: T.nilable(String)).void }
+      def initialize(event: nil, hook_url: nil, interval: nil, object_type: nil, checked_at: nil, connection_id: nil, created_at: nil, environment: nil, events: nil, fields: nil, id: nil, include_raw: nil, integration_type: nil, is_healthy: nil, meta: nil, runs: nil, subscriptions: nil, updated_at: nil, webhook_type: nil, workspace_id: nil)
         @event = event
-        @events = events
         @hook_url = hook_url
         @interval = interval
         @object_type = object_type
@@ -126,6 +125,7 @@ module UnifiedRubySDK
         @connection_id = connection_id
         @created_at = created_at
         @environment = environment
+        @events = events
         @fields = fields
         @id = id
         @include_raw = include_raw
