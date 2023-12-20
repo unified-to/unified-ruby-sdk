@@ -100,36 +100,26 @@ s.config_security(
 
 req = Operations::CreateUnifiedWebhookRequest.new(
   webhook=Shared::Webhook.new(
+    connection_id="string",
     event=Shared::Event::CREATED,
-    events=[
-      Shared::PropertyWebhookEvents::UPDATED,
-    ],
     hook_url="string",
-    interval=4583.16,
+    interval=188.12,
     meta=Shared::PropertyWebhookMeta.new(),
-    object_type=Shared::ObjectType::CRM_LEAD,
+    object_type=Shared::ObjectType::CRM_COMPANY,
     runs=[
-      "string",
-    ],
-    subscriptions=[
       "string",
     ],
   ),
 )
     
 res = s.unified.create_unified_webhook(webhook=Shared::Webhook.new(
-    event=Shared::Event::UPDATED,
-    events=[
-      Shared::PropertyWebhookEvents::CREATED,
-    ],
+    connection_id="string",
+    event=Shared::Event::CREATED,
     hook_url="string",
-    interval=6806.55,
+    interval=738.04,
     meta=Shared::PropertyWebhookMeta.new(),
-    object_type=Shared::ObjectType::ENRICH_PERSON,
+    object_type=Shared::ObjectType::CRM_EVENT,
     runs=[
-      "string",
-    ],
-    subscriptions=[
       "string",
     ],
   ), include_all=false)
