@@ -20,7 +20,7 @@ module UnifiedRubySDK
     sig { params(request: T.nilable(Operations::GetUnifiedIntegrationLoginRequest)).returns(Utils::FieldAugmented) }
     def get_unified_integration_login(request)
       # get_unified_integration_login - Sign in a user
-      # Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and emails are returned.
+      # Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

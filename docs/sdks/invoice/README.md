@@ -33,6 +33,7 @@ req = Operations::CreateAccountingInvoiceRequest.new(
   accounting_invoice=Shared::AccountingInvoice.new(
     lineitems=[
       Shared::AccountingLineitem.new(
+        raw=Shared::PropertyAccountingLineitemRaw.new(),
         total_amount=6736.06,
       ),
     ],
@@ -43,6 +44,7 @@ req = Operations::CreateAccountingInvoiceRequest.new(
 res = s.invoice.create_accounting_invoice(connection_id="string", accounting_invoice=Shared::AccountingInvoice.new(
     lineitems=[
       Shared::AccountingLineitem.new(
+        raw=Shared::PropertyAccountingLineitemRaw.new(),
         total_amount=1618.47,
       ),
     ],
@@ -187,6 +189,7 @@ req = Operations::PatchAccountingInvoiceRequest.new(
   accounting_invoice=Shared::AccountingInvoice.new(
     lineitems=[
       Shared::AccountingLineitem.new(
+        raw=Shared::PropertyAccountingLineitemRaw.new(),
         total_amount=7374.1,
       ),
     ],
@@ -197,6 +200,7 @@ req = Operations::PatchAccountingInvoiceRequest.new(
 res = s.invoice.patch_accounting_invoice(connection_id="string", id="string", accounting_invoice=Shared::AccountingInvoice.new(
     lineitems=[
       Shared::AccountingLineitem.new(
+        raw=Shared::PropertyAccountingLineitemRaw.new(),
         total_amount=9876.61,
       ),
     ],
@@ -291,6 +295,7 @@ req = Operations::UpdateAccountingInvoiceRequest.new(
   accounting_invoice=Shared::AccountingInvoice.new(
     lineitems=[
       Shared::AccountingLineitem.new(
+        raw=Shared::PropertyAccountingLineitemRaw.new(),
         total_amount=6974.28,
       ),
     ],
@@ -301,6 +306,7 @@ req = Operations::UpdateAccountingInvoiceRequest.new(
 res = s.invoice.update_accounting_invoice(connection_id="string", id="string", accounting_invoice=Shared::AccountingInvoice.new(
     lineitems=[
       Shared::AccountingLineitem.new(
+        raw=Shared::PropertyAccountingLineitemRaw.new(),
         total_amount=4728.85,
       ),
     ],

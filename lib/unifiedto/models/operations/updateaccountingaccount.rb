@@ -17,7 +17,7 @@ module UnifiedRubySDK
       field :connection_id, String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
       # ID of the Account
       field :id, String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
-      # A user's bank account
+
       field :accounting_account, T.nilable(Shared::AccountingAccount), { 'request': { 'media_type': 'application/json' } }
 
 

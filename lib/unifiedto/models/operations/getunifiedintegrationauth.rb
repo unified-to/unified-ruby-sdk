@@ -97,7 +97,7 @@ module UnifiedRubySDK
       field :state, T.nilable(String), { 'query_param': { 'field_name': 'state', 'style': 'form', 'explode': true } }
 
       field :subdomain, T.nilable(String), { 'query_param': { 'field_name': 'subdomain', 'style': 'form', 'explode': true } }
-      # The URL where you want the user to be redirect to after a successful authentication.  The connection ID will be appended with (id=<connectionId>) to this URL, as will the state that was provided.
+      # The URL where you want the user to be redirect to after a successful authorization.  The connection ID will be appended with (id=<connectionId>) to this URL, as will the state that was provided.
       field :success_redirect, T.nilable(String), { 'query_param': { 'field_name': 'success_redirect', 'style': 'form', 'explode': true } }
 
 

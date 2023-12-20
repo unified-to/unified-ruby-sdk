@@ -55,59 +55,6 @@ module UnifiedRubySDK
       res
     end
 
-    sig { params(connection_id: String, object: String, webhook: T.nilable(Shared::Webhook), events: T.nilable(T::Array[Operations::Events])).returns(Utils::FieldAugmented) }
-    def create_unified_webhook(connection_id, object, webhook = nil, events = nil)
-      # create_unified_webhook - Create webhook subscription
-      # To maintain compatibility with the webhooks specification and Zapier webhooks, only the hook_url field is required in the payload when creating a Webhook.  When updated/new objects are found, the array of objects will be POSTed to the hook_url with the paramater hookId=<hookId>. The data payload received by your server is described at https://docs.unified.to/unified/overview.  The `interval` field can be set as low as 15 minutes for paid accounts, and 60 minutes for free accounts.
-      request = Operations::CreateUnifiedWebhookRequest.new(
-        
-        connection_id: connection_id,
-        object: object,
-        webhook: webhook,
-        events: events
-      )
-      url, params = @sdk_configuration.get_server_details
-      base_url = Utils.template_url(url, params)
-      url = Utils.generate_url(
-        Operations::CreateUnifiedWebhookRequest,
-        base_url,
-        '/unified/webhook/{connection_id}/{object}',
-        request
-      )
-      headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :webhook, :json)
-      headers['content-type'] = req_content_type
-      query_params = Utils.get_query_params(Operations::CreateUnifiedWebhookRequest, request)
-      headers['Accept'] = 'application/json'
-      headers['user-agent'] = @sdk_configuration.user_agent
-
-      r = @sdk_configuration.client.post(url) do |req|
-        req.headers = headers
-        req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
-        if form
-          req.body = Utils.encode_form(form)
-        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-          req.body = URI.encode_www_form(data)
-        else
-          req.body = data
-        end
-      end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = Operations::CreateUnifiedWebhookResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-      if r.status == 200
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, Shared::Webhook)
-          res.webhook = out
-        end
-      end
-      res
-    end
-
     sig { params(id: String).returns(Utils::FieldAugmented) }
     def get_unified_apicall(id)
       # get_unified_apicall - Retrieve specific API Call by its ID

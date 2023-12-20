@@ -24,7 +24,7 @@ module UnifiedRubySDK
       field :redirect, T.nilable(T::Boolean), { 'query_param': { 'field_name': 'redirect', 'style': 'form', 'explode': true } }
       # Extra state to send back to your success URL
       field :state, T.nilable(String), { 'query_param': { 'field_name': 'state', 'style': 'form', 'explode': true } }
-      # The URL where you want the user to be redirect to after a successful authentication.  The connection ID will be appended with (id=<connectionId>) to this URL, as will the state that was provided.
+      # The URL where you want the user to be redirect to after a successful authentication/sign-in.  A "jwt" parameter will be appended to the URL which will contain a name and email of the user who just signed-in.
       field :success_redirect, T.nilable(String), { 'query_param': { 'field_name': 'success_redirect', 'style': 'form', 'explode': true } }
 
 

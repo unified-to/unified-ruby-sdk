@@ -90,7 +90,7 @@ end
 | Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
 | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | `connection_id`                                                       | *String*                                                              | :heavy_check_mark:                                                    | ID of the connection                                                  |
-| `accounting_account`                                                  | [Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                    | A user's bank account                                                 |
+| `accounting_account`                                                  | [Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
 
 
 ### Response
@@ -193,6 +193,7 @@ req = Operations::CreateAccountingInvoiceRequest.new(
   accounting_invoice=Shared::AccountingInvoice.new(
     lineitems=[
       Shared::AccountingLineitem.new(
+        raw=Shared::PropertyAccountingLineitemRaw.new(),
         total_amount=6736.06,
       ),
     ],
@@ -203,6 +204,7 @@ req = Operations::CreateAccountingInvoiceRequest.new(
 res = s.accounting.create_accounting_invoice(connection_id="string", accounting_invoice=Shared::AccountingInvoice.new(
     lineitems=[
       Shared::AccountingLineitem.new(
+        raw=Shared::PropertyAccountingLineitemRaw.new(),
         total_amount=1618.47,
       ),
     ],
@@ -1254,7 +1256,7 @@ end
 | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | `connection_id`                                                       | *String*                                                              | :heavy_check_mark:                                                    | ID of the connection                                                  |
 | `id`                                                                  | *String*                                                              | :heavy_check_mark:                                                    | ID of the Account                                                     |
-| `accounting_account`                                                  | [Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                    | A user's bank account                                                 |
+| `accounting_account`                                                  | [Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
 
 
 ### Response
@@ -1360,6 +1362,7 @@ req = Operations::PatchAccountingInvoiceRequest.new(
   accounting_invoice=Shared::AccountingInvoice.new(
     lineitems=[
       Shared::AccountingLineitem.new(
+        raw=Shared::PropertyAccountingLineitemRaw.new(),
         total_amount=7374.1,
       ),
     ],
@@ -1370,6 +1373,7 @@ req = Operations::PatchAccountingInvoiceRequest.new(
 res = s.accounting.patch_accounting_invoice(connection_id="string", id="string", accounting_invoice=Shared::AccountingInvoice.new(
     lineitems=[
       Shared::AccountingLineitem.new(
+        raw=Shared::PropertyAccountingLineitemRaw.new(),
         total_amount=9876.61,
       ),
     ],
@@ -1978,7 +1982,7 @@ end
 | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | `connection_id`                                                       | *String*                                                              | :heavy_check_mark:                                                    | ID of the connection                                                  |
 | `id`                                                                  | *String*                                                              | :heavy_check_mark:                                                    | ID of the Account                                                     |
-| `accounting_account`                                                  | [Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                    | A user's bank account                                                 |
+| `accounting_account`                                                  | [Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
 
 
 ### Response
@@ -2084,6 +2088,7 @@ req = Operations::UpdateAccountingInvoiceRequest.new(
   accounting_invoice=Shared::AccountingInvoice.new(
     lineitems=[
       Shared::AccountingLineitem.new(
+        raw=Shared::PropertyAccountingLineitemRaw.new(),
         total_amount=6974.28,
       ),
     ],
@@ -2094,6 +2099,7 @@ req = Operations::UpdateAccountingInvoiceRequest.new(
 res = s.accounting.update_accounting_invoice(connection_id="string", id="string", accounting_invoice=Shared::AccountingInvoice.new(
     lineitems=[
       Shared::AccountingLineitem.new(
+        raw=Shared::PropertyAccountingLineitemRaw.new(),
         total_amount=4728.85,
       ),
     ],
