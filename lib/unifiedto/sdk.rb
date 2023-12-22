@@ -12,7 +12,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :customer, :invoice, :item, :organization, :payment, :taxrate, :transaction, :ats, :application, :applicationstatus, :candidate, :document, :interview, :job, :scorecard, :crm, :company, :contact, :deal, :event, :file, :lead, :pipeline, :enrich, :person, :hris, :employee, :group, :martech, :list, :member, :passthrough, :ticketing, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :webhook
+    attr_accessor :accounting, :account, :customer, :invoice, :item, :organization, :payment, :taxrate, :transaction, :ats, :application, :applicationstatus, :candidate, :document, :interview, :job, :scorecard, :crm, :company, :contact, :deal, :event, :file, :lead, :pipeline, :enrich, :person, :hris, :employee, :group, :martech, :list, :member, :passthrough, :storage, :ticketing, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :webhook
 
     attr_accessor :security, :language, :sdk_version, :gen_version
 
@@ -108,6 +108,7 @@ module UnifiedRubySDK
       @list = List.new(@sdk_configuration)
       @member = Member.new(@sdk_configuration)
       @passthrough = Passthrough.new(@sdk_configuration)
+      @storage = Storage.new(@sdk_configuration)
       @ticketing = Ticketing.new(@sdk_configuration)
       @note = Note.new(@sdk_configuration)
       @ticket = Ticket.new(@sdk_configuration)

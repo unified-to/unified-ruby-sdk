@@ -21,6 +21,7 @@ module UnifiedRubySDK
         TICKETING = new('ticketing')
         UC = new('uc')
         ACCOUNTING = new('accounting')
+        STORAGE = new('storage')
       end
     end
 

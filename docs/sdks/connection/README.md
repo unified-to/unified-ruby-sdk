@@ -39,14 +39,14 @@ req = Shared::Connection.new(
     ],
   ),
   categories=[
-    Shared::PropertyConnectionCategories::ACCOUNTING,
+    Shared::PropertyConnectionCategories::STORAGE,
   ],
   cursors_cache=[
     Shared::Undefined.new(),
   ],
   integration_type="string",
   permissions=[
-    Shared::PropertyConnectionPermissions::ATS_JOB_READ,
+    Shared::PropertyConnectionPermissions::ATS_JOB_WRITE,
   ],
 )
     
@@ -187,14 +187,14 @@ req = Operations::PatchUnifiedConnectionRequest.new(
       ],
     ),
     categories=[
-      Shared::PropertyConnectionCategories::MARTECH,
+      Shared::PropertyConnectionCategories::TICKETING,
     ],
     cursors_cache=[
       Shared::Undefined.new(),
     ],
     integration_type="string",
     permissions=[
-      Shared::PropertyConnectionPermissions::CRM_PIPELINE_READ,
+      Shared::PropertyConnectionPermissions::MARTECH_LIST_READ,
     ],
   ),
 )
@@ -210,14 +210,14 @@ res = s.connection.patch_unified_connection(id="string", connection=Shared::Conn
       ],
     ),
     categories=[
-      Shared::PropertyConnectionCategories::ACCOUNTING,
+      Shared::PropertyConnectionCategories::STORAGE,
     ],
     cursors_cache=[
       Shared::Undefined.new(),
     ],
     integration_type="string",
     permissions=[
-      Shared::PropertyConnectionPermissions::TICKETING_TICKET_WRITE,
+      Shared::PropertyConnectionPermissions::TICKETING_NOTE_READ,
     ],
   ))
 
@@ -313,14 +313,14 @@ req = Operations::UpdateUnifiedConnectionRequest.new(
       ],
     ),
     categories=[
-      Shared::PropertyConnectionCategories::TICKETING,
+      Shared::PropertyConnectionCategories::UC,
     ],
     cursors_cache=[
       Shared::Undefined.new(),
     ],
     integration_type="string",
     permissions=[
-      Shared::PropertyConnectionPermissions::CRM_COMPANY_WRITE,
+      Shared::PropertyConnectionPermissions::CRM_CONTACT_READ,
     ],
   ),
 )
@@ -336,14 +336,14 @@ res = s.connection.update_unified_connection(id="string", connection=Shared::Con
       ],
     ),
     categories=[
-      Shared::PropertyConnectionCategories::ACCOUNTING,
+      Shared::PropertyConnectionCategories::STORAGE,
     ],
     cursors_cache=[
       Shared::Undefined.new(),
     ],
     integration_type="string",
     permissions=[
-      Shared::PropertyConnectionPermissions::MARTECH_LIST_WRITE,
+      Shared::PropertyConnectionPermissions::MARTECH_MEMBER_READ,
     ],
   ))
 

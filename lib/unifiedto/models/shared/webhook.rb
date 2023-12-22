@@ -55,6 +55,7 @@ module UnifiedRubySDK
         UC_CALL = new('uc_call')
         ENRICH_PERSON = new('enrich_person')
         ENRICH_COMPANY = new('enrich_company')
+        STORAGE_FILE = new('storage_file')
       end
     end
 

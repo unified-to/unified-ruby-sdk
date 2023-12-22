@@ -33,7 +33,7 @@ req = Operations::CreateUnifiedWebhookRequest.new(
     hook_url="string",
     interval=188.12,
     meta=Shared::PropertyWebhookMeta.new(),
-    object_type=Shared::ObjectType::CRM_COMPANY,
+    object_type=Shared::ObjectType::CRM_CONTACT,
     runs=[
       "string",
     ],

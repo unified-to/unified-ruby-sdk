@@ -49,14 +49,14 @@ req = Shared::Connection.new(
     ],
   ),
   categories=[
-    Shared::PropertyConnectionCategories::ACCOUNTING,
+    Shared::PropertyConnectionCategories::STORAGE,
   ],
   cursors_cache=[
     Shared::Undefined.new(),
   ],
   integration_type="string",
   permissions=[
-    Shared::PropertyConnectionPermissions::ATS_JOB_READ,
+    Shared::PropertyConnectionPermissions::ATS_JOB_WRITE,
   ],
 )
     
@@ -105,7 +105,7 @@ req = Operations::CreateUnifiedWebhookRequest.new(
     hook_url="string",
     interval=188.12,
     meta=Shared::PropertyWebhookMeta.new(),
-    object_type=Shared::ObjectType::CRM_COMPANY,
+    object_type=Shared::ObjectType::CRM_CONTACT,
     runs=[
       "string",
     ],
@@ -290,7 +290,7 @@ s.config_security(
 req = Operations::GetUnifiedIntegrationAuthRequest.new(
   integration_type="string",
   scopes=[
-    Operations::Scopes::HRIS_EMPLOYEE_READ,
+    Operations::Scopes::HRIS_GROUP_READ,
   ],
   workspace_id="string",
 )
@@ -461,7 +461,7 @@ s.config_security(
 
 req = Operations::ListUnifiedIntegrationWorkspacesRequest.new(
   categories=[
-    Operations::QueryParamCategories::TICKETING,
+    Operations::QueryParamCategories::UC,
   ],
   workspace_id="string",
 )
@@ -601,14 +601,14 @@ req = Operations::PatchUnifiedConnectionRequest.new(
       ],
     ),
     categories=[
-      Shared::PropertyConnectionCategories::MARTECH,
+      Shared::PropertyConnectionCategories::TICKETING,
     ],
     cursors_cache=[
       Shared::Undefined.new(),
     ],
     integration_type="string",
     permissions=[
-      Shared::PropertyConnectionPermissions::CRM_PIPELINE_READ,
+      Shared::PropertyConnectionPermissions::MARTECH_LIST_READ,
     ],
   ),
 )
@@ -624,14 +624,14 @@ res = s.unified.patch_unified_connection(id="string", connection=Shared::Connect
       ],
     ),
     categories=[
-      Shared::PropertyConnectionCategories::ACCOUNTING,
+      Shared::PropertyConnectionCategories::STORAGE,
     ],
     cursors_cache=[
       Shared::Undefined.new(),
     ],
     integration_type="string",
     permissions=[
-      Shared::PropertyConnectionPermissions::TICKETING_TICKET_WRITE,
+      Shared::PropertyConnectionPermissions::TICKETING_NOTE_READ,
     ],
   ))
 
@@ -769,14 +769,14 @@ req = Operations::UpdateUnifiedConnectionRequest.new(
       ],
     ),
     categories=[
-      Shared::PropertyConnectionCategories::TICKETING,
+      Shared::PropertyConnectionCategories::UC,
     ],
     cursors_cache=[
       Shared::Undefined.new(),
     ],
     integration_type="string",
     permissions=[
-      Shared::PropertyConnectionPermissions::CRM_COMPANY_WRITE,
+      Shared::PropertyConnectionPermissions::CRM_CONTACT_READ,
     ],
   ),
 )
@@ -792,14 +792,14 @@ res = s.unified.update_unified_connection(id="string", connection=Shared::Connec
       ],
     ),
     categories=[
-      Shared::PropertyConnectionCategories::ACCOUNTING,
+      Shared::PropertyConnectionCategories::STORAGE,
     ],
     cursors_cache=[
       Shared::Undefined.new(),
     ],
     integration_type="string",
     permissions=[
-      Shared::PropertyConnectionPermissions::MARTECH_LIST_WRITE,
+      Shared::PropertyConnectionPermissions::MARTECH_MEMBER_READ,
     ],
   ))
 

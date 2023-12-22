@@ -68,6 +68,8 @@ module UnifiedRubySDK
         HRIS_GROUP_READ = new('hris_group_read')
         HRIS_GROUP_WRITE = new('hris_group_write')
         UC_CALL_READ = new('uc_call_read')
+        STORAGE_FILE_READ = new('storage_file_read')
+        STORAGE_FILE_WRITE = new('storage_file_write')
         WEBHOOK = new('webhook')
       end
     end
