@@ -74,6 +74,9 @@ req = Operations::CreateCrmCompanyRequest.new(
     emails=[
       Shared::CrmEmail.new(),
     ],
+    link_urls=[
+      "string",
+    ],
     raw=Shared::PropertyCrmCompanyRaw.new(),
     tags=[
       "string",
@@ -96,6 +99,9 @@ res = s.crm.create_crm_company(connection_id="string", crm_company=Shared::CrmCo
     ],
     emails=[
       Shared::CrmEmail.new(),
+    ],
+    link_urls=[
+      "string",
     ],
     raw=Shared::PropertyCrmCompanyRaw.new(),
     tags=[
@@ -1214,6 +1220,9 @@ req = Operations::PatchCrmCompanyRequest.new(
     emails=[
       Shared::CrmEmail.new(),
     ],
+    link_urls=[
+      "string",
+    ],
     raw=Shared::PropertyCrmCompanyRaw.new(),
     tags=[
       "string",
@@ -1236,6 +1245,9 @@ res = s.crm.patch_crm_company(connection_id="string", id="string", crm_company=S
     ],
     emails=[
       Shared::CrmEmail.new(),
+    ],
+    link_urls=[
+      "string",
     ],
     raw=Shared::PropertyCrmCompanyRaw.new(),
     tags=[
@@ -2010,6 +2022,9 @@ req = Operations::UpdateCrmCompanyRequest.new(
     emails=[
       Shared::CrmEmail.new(),
     ],
+    link_urls=[
+      "string",
+    ],
     raw=Shared::PropertyCrmCompanyRaw.new(),
     tags=[
       "string",
@@ -2032,6 +2047,9 @@ res = s.crm.update_crm_company(connection_id="string", id="string", crm_company=
     ],
     emails=[
       Shared::CrmEmail.new(),
+    ],
+    link_urls=[
+      "string",
     ],
     raw=Shared::PropertyCrmCompanyRaw.new(),
     tags=[

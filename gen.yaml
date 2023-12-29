@@ -1,21 +1,21 @@
 configVersion: 1.0.0
 management:
-  docChecksum: e3b0fa817f6bbf89903e69969ea4a236
+  docChecksum: a9825a86d81034301b0f56cc9b76ba30
   docVersion: "1.0"
-  speakeasyVersion: 1.128.1
-  generationVersion: 2.223.0
+  speakeasyVersion: 1.129.1
+  generationVersion: 2.223.3
 generation:
   comments: {}
   sdkClassName: Unified-to
-  repoURL: https://github.com/unified-to/unified-typescript-sdk.git
+  repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   usageSnippets:
     optionalPropertyRendering: withExample
-  useClassNamesForArrayFields: true
+  baseServerURL: ""
   fixes:
     nameResolutionDec2023: false
-  baseServerURL: ""
   flattenGlobalSecurity: true
   telemetryEnabled: false
+  useClassNamesForArrayFields: true
 features:
   ruby:
     core: 3.1.1
@@ -23,7 +23,7 @@ features:
     globalSecurity: 2.81.2
     globalServerURLs: 2.82.1
 ruby:
-  version: 0.2.16
+  version: 0.2.17
   author: Unified
   description: Ruby Client SDK for Unified.to
   imports:

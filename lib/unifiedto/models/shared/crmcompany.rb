@@ -21,11 +21,19 @@ module UnifiedRubySDK
       # An array of deal IDs associated with this contact
       field :deal_ids, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('deal_ids') } }
 
+      field :description, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('description') } }
+
       field :emails, T.nilable(T::Array[Shared::CrmEmail]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('emails') } }
+
+      field :employees, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('employees') } }
 
       field :id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('id') } }
 
+      field :industry, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('industry') } }
+
       field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('is_active') } }
+
+      field :link_urls, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('link_urls') } }
 
       field :name, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('name') } }
       # The raw data returned by the integration for this company
@@ -35,23 +43,30 @@ module UnifiedRubySDK
 
       field :telephones, T.nilable(T::Array[Shared::CrmTelephone]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('telephones') } }
 
+      field :timezone, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('timezone') } }
+
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
       field :websites, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('websites') } }
 
 
-      sig { params(address: T.nilable(Shared::PropertyCrmCompanyAddress), created_at: T.nilable(DateTime), deal_ids: T.nilable(T::Array[String]), emails: T.nilable(T::Array[Shared::CrmEmail]), id: T.nilable(String), is_active: T.nilable(T::Boolean), name: T.nilable(String), raw: T.nilable(Shared::PropertyCrmCompanyRaw), tags: T.nilable(T::Array[String]), telephones: T.nilable(T::Array[Shared::CrmTelephone]), updated_at: T.nilable(DateTime), websites: T.nilable(T::Array[String])).void }
-      def initialize(address: nil, created_at: nil, deal_ids: nil, emails: nil, id: nil, is_active: nil, name: nil, raw: nil, tags: nil, telephones: nil, updated_at: nil, websites: nil)
+      sig { params(address: T.nilable(Shared::PropertyCrmCompanyAddress), created_at: T.nilable(DateTime), deal_ids: T.nilable(T::Array[String]), description: T.nilable(String), emails: T.nilable(T::Array[Shared::CrmEmail]), employees: T.nilable(Float), id: T.nilable(String), industry: T.nilable(String), is_active: T.nilable(T::Boolean), link_urls: T.nilable(T::Array[String]), name: T.nilable(String), raw: T.nilable(Shared::PropertyCrmCompanyRaw), tags: T.nilable(T::Array[String]), telephones: T.nilable(T::Array[Shared::CrmTelephone]), timezone: T.nilable(String), updated_at: T.nilable(DateTime), websites: T.nilable(T::Array[String])).void }
+      def initialize(address: nil, created_at: nil, deal_ids: nil, description: nil, emails: nil, employees: nil, id: nil, industry: nil, is_active: nil, link_urls: nil, name: nil, raw: nil, tags: nil, telephones: nil, timezone: nil, updated_at: nil, websites: nil)
         @address = address
         @created_at = created_at
         @deal_ids = deal_ids
+        @description = description
         @emails = emails
+        @employees = employees
         @id = id
+        @industry = industry
         @is_active = is_active
+        @link_urls = link_urls
         @name = name
         @raw = raw
         @tags = tags
         @telephones = telephones
+        @timezone = timezone
         @updated_at = updated_at
         @websites = websites
       end

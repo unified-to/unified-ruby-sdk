@@ -8,6 +8,17 @@ require 'faraday'
 
 module UnifiedRubySDK
   module Shared
+
+    class PropertyCrmEventTaskStatus < T::Enum
+      enums do
+        COMPLETED = new('COMPLETED')
+        NOT_STARTED = new('NOT_STARTED')
+        WORK_IN_PROGRESS = new('WORK_IN_PROGRESS')
+        DEFERRED = new('DEFERRED')
+      end
+    end
+
+
     # The task object, when type = task
     class PropertyCrmEventTask < UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
@@ -19,10 +30,10 @@ module UnifiedRubySDK
 
       field :name, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('name') } }
 
-      field :status, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('status') } }
+      field :status, T.nilable(Shared::PropertyCrmEventTaskStatus), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Shared::PropertyCrmEventTaskStatus, true) } }
 
 
-      sig { params(description: T.nilable(String), due_at: T.nilable(DateTime), name: T.nilable(String), status: T.nilable(String)).void }
+      sig { params(description: T.nilable(String), due_at: T.nilable(DateTime), name: T.nilable(String), status: T.nilable(Shared::PropertyCrmEventTaskStatus)).void }
       def initialize(description: nil, due_at: nil, name: nil, status: nil)
         @description = description
         @due_at = due_at

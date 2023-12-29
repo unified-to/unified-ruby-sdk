@@ -22,7 +22,7 @@ module UnifiedRubySDK
       field :from, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('from') } }
 
       field :subject, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('subject') } }
-      # The event email's to name & email (name <test@test.com>)
+      # The event email's "to" name & email (name <test@test.com>)
       field :to, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('to') } }
 
 
