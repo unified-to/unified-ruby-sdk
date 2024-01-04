@@ -31,17 +31,11 @@ s.config_security(
 req = Operations::CreateAccountingPaymentRequest.new(
   connection_id="string",
   accounting_payment=Shared::AccountingPayment.new(
-    invoice_ids=[
-      "string",
-    ],
     raw=Shared::PropertyAccountingPaymentRaw.new(),
   ),
 )
     
 res = s.payment.create_accounting_payment(connection_id="string", accounting_payment=Shared::AccountingPayment.new(
-    invoice_ids=[
-      "string",
-    ],
     raw=Shared::PropertyAccountingPaymentRaw.new(),
   ))
 
@@ -181,17 +175,11 @@ req = Operations::PatchAccountingPaymentRequest.new(
   connection_id="string",
   id="<ID>",
   accounting_payment=Shared::AccountingPayment.new(
-    invoice_ids=[
-      "string",
-    ],
     raw=Shared::PropertyAccountingPaymentRaw.new(),
   ),
 )
     
 res = s.payment.patch_accounting_payment(connection_id="string", id="string", accounting_payment=Shared::AccountingPayment.new(
-    invoice_ids=[
-      "string",
-    ],
     raw=Shared::PropertyAccountingPaymentRaw.new(),
   ))
 
@@ -281,17 +269,11 @@ req = Operations::UpdateAccountingPaymentRequest.new(
   connection_id="string",
   id="<ID>",
   accounting_payment=Shared::AccountingPayment.new(
-    invoice_ids=[
-      "string",
-    ],
     raw=Shared::PropertyAccountingPaymentRaw.new(),
   ),
 )
     
 res = s.payment.update_accounting_payment(connection_id="string", id="string", accounting_payment=Shared::AccountingPayment.new(
-    invoice_ids=[
-      "string",
-    ],
     raw=Shared::PropertyAccountingPaymentRaw.new(),
   ))
 
