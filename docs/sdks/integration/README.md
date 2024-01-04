@@ -3,52 +3,9 @@
 
 ### Available Operations
 
-* [get_unified_integration](#get_unified_integration) - Retrieve an integration
 * [get_unified_integration_auth](#get_unified_integration_auth) - Create connection indirectly
 * [list_unified_integration_workspaces](#list_unified_integration_workspaces) - Returns all activated integrations in a workspace
 * [list_unified_integrations](#list_unified_integrations) - Returns all integrations
-
-## get_unified_integration
-
-Retrieve an integration
-
-### Example Usage
-
-```ruby
-require_relative unified_ruby_sdk
-
-
-s = UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  security=Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
-  )
-)
-
-
-req = Operations::GetUnifiedIntegrationRequest.new(
-  integration_type="string",
-)
-    
-res = s.integration.get_unified_integration(integration_type="string")
-
-if ! res.integration.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter                         | Type                              | Required                          | Description                       |
-| --------------------------------- | --------------------------------- | --------------------------------- | --------------------------------- |
-| `integration_type`                | *String*                          | :heavy_check_mark:                | Type of the supported integration |
-
-
-### Response
-
-**[T.nilable(Operations::GetUnifiedIntegrationResponse)](../../models/operations/getunifiedintegrationresponse.md)**
-
 
 ## get_unified_integration_auth
 

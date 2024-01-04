@@ -7,7 +7,6 @@
 * [create_unified_webhook](#create_unified_webhook) - Create webhook subscription
 * [get_unified_apicall](#get_unified_apicall) - Retrieve specific API Call by its ID
 * [get_unified_connection](#get_unified_connection) - Retrieve connection
-* [get_unified_integration](#get_unified_integration) - Retrieve an integration
 * [get_unified_integration_auth](#get_unified_integration_auth) - Create connection indirectly
 * [get_unified_webhook](#get_unified_webhook) - Retrieve webhook by its ID
 * [list_unified_apicalls](#list_unified_apicalls) - Returns API Calls
@@ -225,48 +224,6 @@ end
 ### Response
 
 **[T.nilable(Operations::GetUnifiedConnectionResponse)](../../models/operations/getunifiedconnectionresponse.md)**
-
-
-## get_unified_integration
-
-Retrieve an integration
-
-### Example Usage
-
-```ruby
-require_relative unified_ruby_sdk
-
-
-s = UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  security=Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
-  )
-)
-
-
-req = Operations::GetUnifiedIntegrationRequest.new(
-  integration_type="string",
-)
-    
-res = s.unified.get_unified_integration(integration_type="string")
-
-if ! res.integration.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter                         | Type                              | Required                          | Description                       |
-| --------------------------------- | --------------------------------- | --------------------------------- | --------------------------------- |
-| `integration_type`                | *String*                          | :heavy_check_mark:                | Type of the supported integration |
-
-
-### Response
-
-**[T.nilable(Operations::GetUnifiedIntegrationResponse)](../../models/operations/getunifiedintegrationresponse.md)**
 
 
 ## get_unified_integration_auth

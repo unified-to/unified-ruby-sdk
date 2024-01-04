@@ -17,44 +17,6 @@ module UnifiedRubySDK
       @sdk_configuration = sdk_config
     end
 
-    sig { params(integration_type: String).returns(Utils::FieldAugmented) }
-    def get_unified_integration(integration_type)
-      # get_unified_integration - Retrieve an integration
-      request = Operations::GetUnifiedIntegrationRequest.new(
-        
-        integration_type: integration_type
-      )
-      url, params = @sdk_configuration.get_server_details
-      base_url = Utils.template_url(url, params)
-      url = Utils.generate_url(
-        Operations::GetUnifiedIntegrationRequest,
-        base_url,
-        '/unified/integration/{integration_type}',
-        request
-      )
-      headers = {}
-      headers['Accept'] = 'application/json'
-      headers['user-agent'] = @sdk_configuration.user_agent
-
-      r = @sdk_configuration.client.get(url) do |req|
-        req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
-      end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = Operations::GetUnifiedIntegrationResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-      if r.status == 200
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, Shared::Integration)
-          res.integration = out
-        end
-      end
-      res
-    end
-
     sig { params(request: T.nilable(Operations::GetUnifiedIntegrationAuthRequest)).returns(Utils::FieldAugmented) }
     def get_unified_integration_auth(request)
       # get_unified_integration_auth - Create connection indirectly

@@ -46,12 +46,14 @@ module UnifiedRubySDK
       field :sort, T.nilable(String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
 
       field :summary, T.nilable(T::Boolean), { 'query_param': { 'field_name': 'summary', 'style': 'form', 'explode': true } }
+      # Filter the results for only this integration type
+      field :type, T.nilable(String), { 'query_param': { 'field_name': 'type', 'style': 'form', 'explode': true } }
 
       field :updated_gte, T.nilable(String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
 
-      sig { params(active: T.nilable(T::Boolean), categories: T.nilable(T::Array[Operations::ListUnifiedIntegrationsQueryParamCategories]), env: T.nilable(String), limit: T.nilable(Float), offset: T.nilable(Float), order: T.nilable(String), sort: T.nilable(String), summary: T.nilable(T::Boolean), updated_gte: T.nilable(String)).void }
-      def initialize(active: nil, categories: nil, env: nil, limit: nil, offset: nil, order: nil, sort: nil, summary: nil, updated_gte: nil)
+      sig { params(active: T.nilable(T::Boolean), categories: T.nilable(T::Array[Operations::ListUnifiedIntegrationsQueryParamCategories]), env: T.nilable(String), limit: T.nilable(Float), offset: T.nilable(Float), order: T.nilable(String), sort: T.nilable(String), summary: T.nilable(T::Boolean), type: T.nilable(String), updated_gte: T.nilable(String)).void }
+      def initialize(active: nil, categories: nil, env: nil, limit: nil, offset: nil, order: nil, sort: nil, summary: nil, type: nil, updated_gte: nil)
         @active = active
         @categories = categories
         @env = env
@@ -60,6 +62,7 @@ module UnifiedRubySDK
         @order = order
         @sort = sort
         @summary = summary
+        @type = type
         @updated_gte = updated_gte
       end
     end
