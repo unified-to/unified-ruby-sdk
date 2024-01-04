@@ -1,27 +1,14 @@
-configVersion: 1.0.0
-management:
-  docChecksum: e3411ce3831f158718f8cc0477e33856
-  docVersion: "1.0"
-  speakeasyVersion: 1.129.1
-  generationVersion: 2.223.3
+configVersion: 2.0.0
 generation:
-  comments: {}
   sdkClassName: Unified-to
-  repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   usageSnippets:
     optionalPropertyRendering: withExample
-  baseServerURL: ""
+  useClassNamesForArrayFields: true
   fixes:
     nameResolutionDec2023: false
+  baseServerURL: ""
   flattenGlobalSecurity: true
   telemetryEnabled: false
-  useClassNamesForArrayFields: true
-features:
-  ruby:
-    core: 3.1.1
-    flattening: 2.81.1
-    globalSecurity: 2.81.2
-    globalServerURLs: 2.82.1
 ruby:
   version: 0.2.18
   author: Unified
@@ -35,9 +22,7 @@ ruby:
       shared: models/shared
       webhooks: models/webhooks
   inputModelSuffix: input
-  installationURL: https://github.com/unified-to/unified-ruby-sdk
   maxMethodParams: 4
   module: UnifiedRubySDK
   outputModelSuffix: output
   packageName: unified_ruby_sdk
-  repoSubDirectory: .
