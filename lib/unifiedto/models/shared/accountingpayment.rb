@@ -14,6 +14,8 @@ module UnifiedRubySDK
       extend T::Sig
 
 
+      field :account_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('account_id') } }
+
       field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
       field :currency, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('currency') } }
@@ -37,8 +39,9 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(created_at: T.nilable(DateTime), currency: T.nilable(String), customer_id: T.nilable(String), id: T.nilable(String), invoice_id: T.nilable(String), notes: T.nilable(String), payment_method: T.nilable(String), raw: T.nilable(Shared::PropertyAccountingPaymentRaw), reference: T.nilable(String), total_amount: T.nilable(Float), updated_at: T.nilable(DateTime)).void }
-      def initialize(created_at: nil, currency: nil, customer_id: nil, id: nil, invoice_id: nil, notes: nil, payment_method: nil, raw: nil, reference: nil, total_amount: nil, updated_at: nil)
+      sig { params(account_id: T.nilable(String), created_at: T.nilable(DateTime), currency: T.nilable(String), customer_id: T.nilable(String), id: T.nilable(String), invoice_id: T.nilable(String), notes: T.nilable(String), payment_method: T.nilable(String), raw: T.nilable(Shared::PropertyAccountingPaymentRaw), reference: T.nilable(String), total_amount: T.nilable(Float), updated_at: T.nilable(DateTime)).void }
+      def initialize(account_id: nil, created_at: nil, currency: nil, customer_id: nil, id: nil, invoice_id: nil, notes: nil, payment_method: nil, raw: nil, reference: nil, total_amount: nil, updated_at: nil)
+        @account_id = account_id
         @created_at = created_at
         @currency = currency
         @customer_id = customer_id
