@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 01195f78bbf8ee1be66b14db611dedcf
+  docChecksum: 950b786dbc2a674691ac70d56758142c
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.230.1
-  releaseVersion: 0.2.20
-  configChecksum: d8e4ed3a5d1a86088698595a26ce336e
+  generationVersion: 2.230.3
+  releaseVersion: 0.2.21
+  configChecksum: 8e1adc7eaec0d60f1c086b0d267cafe0
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -309,9 +309,11 @@ generatedFiles:
   - lib/unifiedto/models/operations/listunifiedintegrations.rb
   - lib/unifiedto/models/operations/listunifiedwebhooks.rb
   - lib/unifiedto/models/operations/patchunifiedconnection.rb
+  - lib/unifiedto/models/operations/patchunifiedwebhooktrigger.rb
   - lib/unifiedto/models/operations/removeunifiedconnection.rb
   - lib/unifiedto/models/operations/removeunifiedwebhook.rb
   - lib/unifiedto/models/operations/updateunifiedconnection.rb
+  - lib/unifiedto/models/operations/updateunifiedwebhooktrigger.rb
   - lib/unifiedto/models/operations/getunifiedintegrationlogin.rb
   - lib/unifiedto/models/shared/accountingaccount.rb
   - lib/unifiedto/models/shared/property_accountingaccount_raw.rb
@@ -834,12 +836,16 @@ generatedFiles:
   - docs/models/operations/listunifiedwebhooksresponse.md
   - docs/models/operations/patchunifiedconnectionrequest.md
   - docs/models/operations/patchunifiedconnectionresponse.md
+  - docs/models/operations/patchunifiedwebhooktriggerrequest.md
+  - docs/models/operations/patchunifiedwebhooktriggerresponse.md
   - docs/models/operations/removeunifiedconnectionrequest.md
   - docs/models/operations/removeunifiedconnectionresponse.md
   - docs/models/operations/removeunifiedwebhookrequest.md
   - docs/models/operations/removeunifiedwebhookresponse.md
   - docs/models/operations/updateunifiedconnectionrequest.md
   - docs/models/operations/updateunifiedconnectionresponse.md
+  - docs/models/operations/updateunifiedwebhooktriggerrequest.md
+  - docs/models/operations/updateunifiedwebhooktriggerresponse.md
   - docs/models/operations/getunifiedintegrationloginrequest.md
   - docs/models/operations/getunifiedintegrationloginresponse.md
   - docs/models/shared/status.md

@@ -133,6 +133,43 @@ module UnifiedRubySDK
     end
 
     sig { params(id: String).returns(Utils::FieldAugmented) }
+    def patch_unified_webhook_trigger(id)
+      # patch_unified_webhook_trigger - Trigger webhook
+      request = Operations::PatchUnifiedWebhookTriggerRequest.new(
+        
+        id: id
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        Operations::PatchUnifiedWebhookTriggerRequest,
+        base_url,
+        '/unified/webhook/{id}/trigger',
+        request
+      )
+      headers = {}
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.patch(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = Operations::PatchUnifiedWebhookTriggerResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if True
+                
+        res.res = r.env.response_body if Utils.match_content_type(content_type, 'application/json')
+      
+      end
+      res
+    end
+
+    sig { params(id: String).returns(Utils::FieldAugmented) }
     def remove_unified_webhook(id)
       # remove_unified_webhook - Remove webhook subscription
       request = Operations::RemoveUnifiedWebhookRequest.new(
@@ -159,6 +196,43 @@ module UnifiedRubySDK
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
 
       res = Operations::RemoveUnifiedWebhookResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if True
+                
+        res.res = r.env.response_body if Utils.match_content_type(content_type, 'application/json')
+      
+      end
+      res
+    end
+
+    sig { params(id: String).returns(Utils::FieldAugmented) }
+    def update_unified_webhook_trigger(id)
+      # update_unified_webhook_trigger - Trigger webhook
+      request = Operations::UpdateUnifiedWebhookTriggerRequest.new(
+        
+        id: id
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        Operations::UpdateUnifiedWebhookTriggerRequest,
+        base_url,
+        '/unified/webhook/{id}/trigger',
+        request
+      )
+      headers = {}
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.put(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = Operations::UpdateUnifiedWebhookTriggerResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
       if True

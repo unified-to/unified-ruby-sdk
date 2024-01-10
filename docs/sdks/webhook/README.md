@@ -6,7 +6,9 @@
 * [create_unified_webhook](#create_unified_webhook) - Create webhook subscription
 * [get_unified_webhook](#get_unified_webhook) - Retrieve webhook by its ID
 * [list_unified_webhooks](#list_unified_webhooks) - Returns all registered webhooks
+* [patch_unified_webhook_trigger](#patch_unified_webhook_trigger) - Trigger webhook
 * [remove_unified_webhook](#remove_unified_webhook) - Remove webhook subscription
+* [update_unified_webhook_trigger](#update_unified_webhook_trigger) - Trigger webhook
 
 ## create_unified_webhook
 
@@ -153,6 +155,48 @@ end
 **[T.nilable(Operations::ListUnifiedWebhooksResponse)](../../models/operations/listunifiedwebhooksresponse.md)**
 
 
+## patch_unified_webhook_trigger
+
+Trigger webhook
+
+### Example Usage
+
+```ruby
+require_relative unified_ruby_sdk
+
+
+s = UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  security=Shared::Security.new(
+    jwt="<YOUR_API_KEY_HERE>",
+  )
+)
+
+
+req = Operations::PatchUnifiedWebhookTriggerRequest.new(
+  id="<ID>",
+)
+    
+res = s.webhook.patch_unified_webhook_trigger(id="string")
+
+if res.status == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `id`               | *String*           | :heavy_check_mark: | ID of the Webhook  |
+
+
+### Response
+
+**[T.nilable(Operations::PatchUnifiedWebhookTriggerResponse)](../../models/operations/patchunifiedwebhooktriggerresponse.md)**
+
+
 ## remove_unified_webhook
 
 Remove webhook subscription
@@ -193,4 +237,46 @@ end
 ### Response
 
 **[T.nilable(Operations::RemoveUnifiedWebhookResponse)](../../models/operations/removeunifiedwebhookresponse.md)**
+
+
+## update_unified_webhook_trigger
+
+Trigger webhook
+
+### Example Usage
+
+```ruby
+require_relative unified_ruby_sdk
+
+
+s = UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  security=Shared::Security.new(
+    jwt="<YOUR_API_KEY_HERE>",
+  )
+)
+
+
+req = Operations::UpdateUnifiedWebhookTriggerRequest.new(
+  id="<ID>",
+)
+    
+res = s.webhook.update_unified_webhook_trigger(id="string")
+
+if res.status == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `id`               | *String*           | :heavy_check_mark: | ID of the Webhook  |
+
+
+### Response
+
+**[T.nilable(Operations::UpdateUnifiedWebhookTriggerResponse)](../../models/operations/updateunifiedwebhooktriggerresponse.md)**
 
