@@ -10,6 +10,16 @@ require_relative '../shared/property_accountinginvoice_raw'
 module UnifiedRubySDK
   module Shared
 
+    class AccountingInvoiceStatus < T::Enum
+      enums do
+        DRAFT = new('DRAFT')
+        VOIDED = new('VOIDED')
+        AUTHORIZED = new('AUTHORIZED')
+      end
+    end
+
+
+
     class AccountingInvoice < UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
@@ -48,6 +58,8 @@ module UnifiedRubySDK
 
       field :refunded_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('refunded_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+      field :status, T.nilable(Shared::AccountingInvoiceStatus), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Shared::AccountingInvoiceStatus, true) } }
+
       field :tax_amount, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('tax_amount') } }
 
       field :total_amount, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('total_amount') } }
@@ -55,8 +67,8 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(balance_amount: T.nilable(Float), cancelled_at: T.nilable(DateTime), created_at: T.nilable(DateTime), currency: T.nilable(String), customer_id: T.nilable(String), discount_amount: T.nilable(Float), due_at: T.nilable(DateTime), id: T.nilable(String), invoice_number: T.nilable(String), lineitems: T.nilable(T::Array[Shared::AccountingLineitem]), notes: T.nilable(String), paid_amount: T.nilable(Float), paid_at: T.nilable(DateTime), raw: T.nilable(Shared::PropertyAccountingInvoiceRaw), refund_amount: T.nilable(Float), refund_reason: T.nilable(String), refunded_at: T.nilable(DateTime), tax_amount: T.nilable(Float), total_amount: T.nilable(Float), updated_at: T.nilable(DateTime)).void }
-      def initialize(balance_amount: nil, cancelled_at: nil, created_at: nil, currency: nil, customer_id: nil, discount_amount: nil, due_at: nil, id: nil, invoice_number: nil, lineitems: nil, notes: nil, paid_amount: nil, paid_at: nil, raw: nil, refund_amount: nil, refund_reason: nil, refunded_at: nil, tax_amount: nil, total_amount: nil, updated_at: nil)
+      sig { params(balance_amount: T.nilable(Float), cancelled_at: T.nilable(DateTime), created_at: T.nilable(DateTime), currency: T.nilable(String), customer_id: T.nilable(String), discount_amount: T.nilable(Float), due_at: T.nilable(DateTime), id: T.nilable(String), invoice_number: T.nilable(String), lineitems: T.nilable(T::Array[Shared::AccountingLineitem]), notes: T.nilable(String), paid_amount: T.nilable(Float), paid_at: T.nilable(DateTime), raw: T.nilable(Shared::PropertyAccountingInvoiceRaw), refund_amount: T.nilable(Float), refund_reason: T.nilable(String), refunded_at: T.nilable(DateTime), status: T.nilable(Shared::AccountingInvoiceStatus), tax_amount: T.nilable(Float), total_amount: T.nilable(Float), updated_at: T.nilable(DateTime)).void }
+      def initialize(balance_amount: nil, cancelled_at: nil, created_at: nil, currency: nil, customer_id: nil, discount_amount: nil, due_at: nil, id: nil, invoice_number: nil, lineitems: nil, notes: nil, paid_amount: nil, paid_at: nil, raw: nil, refund_amount: nil, refund_reason: nil, refunded_at: nil, status: nil, tax_amount: nil, total_amount: nil, updated_at: nil)
         @balance_amount = balance_amount
         @cancelled_at = cancelled_at
         @created_at = created_at
@@ -74,6 +86,7 @@ module UnifiedRubySDK
         @refund_amount = refund_amount
         @refund_reason = refund_reason
         @refunded_at = refunded_at
+        @status = status
         @tax_amount = tax_amount
         @total_amount = total_amount
         @updated_at = updated_at

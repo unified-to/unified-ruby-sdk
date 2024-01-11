@@ -14,8 +14,6 @@ module UnifiedRubySDK
 
       # ID of the connection
       field :connection_id, String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-      # The agent ID to filter results
-      field :agent_id, T.nilable(String), { 'query_param': { 'field_name': 'agent_id', 'style': 'form', 'explode': true } }
       # The customer ID to filter results
       field :customer_id, T.nilable(String), { 'query_param': { 'field_name': 'customer_id', 'style': 'form', 'explode': true } }
       # Comma-delimited fields to return
@@ -32,12 +30,13 @@ module UnifiedRubySDK
       field :sort, T.nilable(String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
       # Return only results whose updated date is equal or greater to this value
       field :updated_gte, T.nilable(DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
+      # The user/agent ID to filter results
+      field :user_id, T.nilable(String), { 'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: String, agent_id: T.nilable(String), customer_id: T.nilable(String), fields: T.nilable(T::Array[String]), limit: T.nilable(Float), offset: T.nilable(Float), order: T.nilable(String), query: T.nilable(String), sort: T.nilable(String), updated_gte: T.nilable(DateTime)).void }
-      def initialize(connection_id: nil, agent_id: nil, customer_id: nil, fields: nil, limit: nil, offset: nil, order: nil, query: nil, sort: nil, updated_gte: nil)
+      sig { params(connection_id: String, customer_id: T.nilable(String), fields: T.nilable(T::Array[String]), limit: T.nilable(Float), offset: T.nilable(Float), order: T.nilable(String), query: T.nilable(String), sort: T.nilable(String), updated_gte: T.nilable(DateTime), user_id: T.nilable(String)).void }
+      def initialize(connection_id: nil, customer_id: nil, fields: nil, limit: nil, offset: nil, order: nil, query: nil, sort: nil, updated_gte: nil, user_id: nil)
         @connection_id = connection_id
-        @agent_id = agent_id
         @customer_id = customer_id
         @fields = fields
         @limit = limit
@@ -46,6 +45,7 @@ module UnifiedRubySDK
         @query = query
         @sort = sort
         @updated_gte = updated_gte
+        @user_id = user_id
       end
     end
 

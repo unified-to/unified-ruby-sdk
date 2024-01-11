@@ -47,11 +47,13 @@ module UnifiedRubySDK
 
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+      field :user_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('user_id') } }
+
       field :websites, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('websites') } }
 
 
-      sig { params(address: T.nilable(Shared::PropertyCrmCompanyAddress), created_at: T.nilable(DateTime), deal_ids: T.nilable(T::Array[String]), description: T.nilable(String), emails: T.nilable(T::Array[Shared::CrmEmail]), employees: T.nilable(Float), id: T.nilable(String), industry: T.nilable(String), is_active: T.nilable(T::Boolean), link_urls: T.nilable(T::Array[String]), name: T.nilable(String), raw: T.nilable(Shared::PropertyCrmCompanyRaw), tags: T.nilable(T::Array[String]), telephones: T.nilable(T::Array[Shared::CrmTelephone]), timezone: T.nilable(String), updated_at: T.nilable(DateTime), websites: T.nilable(T::Array[String])).void }
-      def initialize(address: nil, created_at: nil, deal_ids: nil, description: nil, emails: nil, employees: nil, id: nil, industry: nil, is_active: nil, link_urls: nil, name: nil, raw: nil, tags: nil, telephones: nil, timezone: nil, updated_at: nil, websites: nil)
+      sig { params(address: T.nilable(Shared::PropertyCrmCompanyAddress), created_at: T.nilable(DateTime), deal_ids: T.nilable(T::Array[String]), description: T.nilable(String), emails: T.nilable(T::Array[Shared::CrmEmail]), employees: T.nilable(Float), id: T.nilable(String), industry: T.nilable(String), is_active: T.nilable(T::Boolean), link_urls: T.nilable(T::Array[String]), name: T.nilable(String), raw: T.nilable(Shared::PropertyCrmCompanyRaw), tags: T.nilable(T::Array[String]), telephones: T.nilable(T::Array[Shared::CrmTelephone]), timezone: T.nilable(String), updated_at: T.nilable(DateTime), user_id: T.nilable(String), websites: T.nilable(T::Array[String])).void }
+      def initialize(address: nil, created_at: nil, deal_ids: nil, description: nil, emails: nil, employees: nil, id: nil, industry: nil, is_active: nil, link_urls: nil, name: nil, raw: nil, tags: nil, telephones: nil, timezone: nil, updated_at: nil, user_id: nil, websites: nil)
         @address = address
         @created_at = created_at
         @deal_ids = deal_ids
@@ -68,6 +70,7 @@ module UnifiedRubySDK
         @telephones = telephones
         @timezone = timezone
         @updated_at = updated_at
+        @user_id = user_id
         @websites = websites
       end
     end

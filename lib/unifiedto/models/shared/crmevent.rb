@@ -59,9 +59,11 @@ module UnifiedRubySDK
 
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+      field :user_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('user_id') } }
 
-      sig { params(call: T.nilable(Shared::PropertyCrmEventCall), company_ids: T.nilable(T::Array[String]), contact_ids: T.nilable(T::Array[String]), created_at: T.nilable(DateTime), deal_ids: T.nilable(T::Array[String]), email: T.nilable(Shared::PropertyCrmEventEmail), id: T.nilable(String), lead_ids: T.nilable(T::Array[String]), meeting: T.nilable(Shared::PropertyCrmEventMeeting), note: T.nilable(Shared::PropertyCrmEventNote), raw: T.nilable(Shared::PropertyCrmEventRaw), task: T.nilable(Shared::PropertyCrmEventTask), type: T.nilable(Shared::CrmEventType), updated_at: T.nilable(DateTime)).void }
-      def initialize(call: nil, company_ids: nil, contact_ids: nil, created_at: nil, deal_ids: nil, email: nil, id: nil, lead_ids: nil, meeting: nil, note: nil, raw: nil, task: nil, type: nil, updated_at: nil)
+
+      sig { params(call: T.nilable(Shared::PropertyCrmEventCall), company_ids: T.nilable(T::Array[String]), contact_ids: T.nilable(T::Array[String]), created_at: T.nilable(DateTime), deal_ids: T.nilable(T::Array[String]), email: T.nilable(Shared::PropertyCrmEventEmail), id: T.nilable(String), lead_ids: T.nilable(T::Array[String]), meeting: T.nilable(Shared::PropertyCrmEventMeeting), note: T.nilable(Shared::PropertyCrmEventNote), raw: T.nilable(Shared::PropertyCrmEventRaw), task: T.nilable(Shared::PropertyCrmEventTask), type: T.nilable(Shared::CrmEventType), updated_at: T.nilable(DateTime), user_id: T.nilable(String)).void }
+      def initialize(call: nil, company_ids: nil, contact_ids: nil, created_at: nil, deal_ids: nil, email: nil, id: nil, lead_ids: nil, meeting: nil, note: nil, raw: nil, task: nil, type: nil, updated_at: nil, user_id: nil)
         @call = call
         @company_ids = company_ids
         @contact_ids = contact_ids
@@ -76,6 +78,7 @@ module UnifiedRubySDK
         @task = task
         @type = type
         @updated_at = updated_at
+        @user_id = user_id
       end
     end
   end

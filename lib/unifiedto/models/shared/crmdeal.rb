@@ -42,11 +42,13 @@ module UnifiedRubySDK
 
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+      field :user_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('user_id') } }
+
       field :won_reason, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('won_reason') } }
 
 
-      sig { params(amount: T.nilable(Float), closed_at: T.nilable(DateTime), created_at: T.nilable(DateTime), currency: T.nilable(String), id: T.nilable(String), lost_reason: T.nilable(String), name: T.nilable(String), pipeline: T.nilable(String), probability: T.nilable(Float), raw: T.nilable(Shared::PropertyCrmDealRaw), source: T.nilable(String), stage: T.nilable(String), tags: T.nilable(T::Array[String]), updated_at: T.nilable(DateTime), won_reason: T.nilable(String)).void }
-      def initialize(amount: nil, closed_at: nil, created_at: nil, currency: nil, id: nil, lost_reason: nil, name: nil, pipeline: nil, probability: nil, raw: nil, source: nil, stage: nil, tags: nil, updated_at: nil, won_reason: nil)
+      sig { params(amount: T.nilable(Float), closed_at: T.nilable(DateTime), created_at: T.nilable(DateTime), currency: T.nilable(String), id: T.nilable(String), lost_reason: T.nilable(String), name: T.nilable(String), pipeline: T.nilable(String), probability: T.nilable(Float), raw: T.nilable(Shared::PropertyCrmDealRaw), source: T.nilable(String), stage: T.nilable(String), tags: T.nilable(T::Array[String]), updated_at: T.nilable(DateTime), user_id: T.nilable(String), won_reason: T.nilable(String)).void }
+      def initialize(amount: nil, closed_at: nil, created_at: nil, currency: nil, id: nil, lost_reason: nil, name: nil, pipeline: nil, probability: nil, raw: nil, source: nil, stage: nil, tags: nil, updated_at: nil, user_id: nil, won_reason: nil)
         @amount = amount
         @closed_at = closed_at
         @created_at = created_at
@@ -61,6 +63,7 @@ module UnifiedRubySDK
         @stage = stage
         @tags = tags
         @updated_at = updated_at
+        @user_id = user_id
         @won_reason = won_reason
       end
     end

@@ -51,9 +51,11 @@ module UnifiedRubySDK
 
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+      field :user_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('user_id') } }
 
-      sig { params(category: T.nilable(String), closed_at: T.nilable(DateTime), created_at: T.nilable(DateTime), customer_id: T.nilable(String), description: T.nilable(String), id: T.nilable(String), priority: T.nilable(String), raw: T.nilable(Shared::PropertyTicketingTicketRaw), source: T.nilable(String), source_ref: T.nilable(String), status: T.nilable(Shared::TicketingTicketStatus), subject: T.nilable(String), tags: T.nilable(T::Array[String]), updated_at: T.nilable(DateTime)).void }
-      def initialize(category: nil, closed_at: nil, created_at: nil, customer_id: nil, description: nil, id: nil, priority: nil, raw: nil, source: nil, source_ref: nil, status: nil, subject: nil, tags: nil, updated_at: nil)
+
+      sig { params(category: T.nilable(String), closed_at: T.nilable(DateTime), created_at: T.nilable(DateTime), customer_id: T.nilable(String), description: T.nilable(String), id: T.nilable(String), priority: T.nilable(String), raw: T.nilable(Shared::PropertyTicketingTicketRaw), source: T.nilable(String), source_ref: T.nilable(String), status: T.nilable(Shared::TicketingTicketStatus), subject: T.nilable(String), tags: T.nilable(T::Array[String]), updated_at: T.nilable(DateTime), user_id: T.nilable(String)).void }
+      def initialize(category: nil, closed_at: nil, created_at: nil, customer_id: nil, description: nil, id: nil, priority: nil, raw: nil, source: nil, source_ref: nil, status: nil, subject: nil, tags: nil, updated_at: nil, user_id: nil)
         @category = category
         @closed_at = closed_at
         @created_at = created_at
@@ -68,6 +70,7 @@ module UnifiedRubySDK
         @subject = subject
         @tags = tags
         @updated_at = updated_at
+        @user_id = user_id
       end
     end
   end

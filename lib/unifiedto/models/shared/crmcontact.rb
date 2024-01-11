@@ -39,9 +39,11 @@ module UnifiedRubySDK
 
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+      field :user_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('user_id') } }
 
-      sig { params(address: T.nilable(Shared::PropertyCrmContactAddress), company: T.nilable(String), company_ids: T.nilable(T::Array[String]), created_at: T.nilable(DateTime), deal_ids: T.nilable(T::Array[String]), emails: T.nilable(T::Array[Shared::CrmEmail]), id: T.nilable(String), name: T.nilable(String), raw: T.nilable(Shared::PropertyCrmContactRaw), telephones: T.nilable(T::Array[Shared::CrmTelephone]), title: T.nilable(String), updated_at: T.nilable(DateTime)).void }
-      def initialize(address: nil, company: nil, company_ids: nil, created_at: nil, deal_ids: nil, emails: nil, id: nil, name: nil, raw: nil, telephones: nil, title: nil, updated_at: nil)
+
+      sig { params(address: T.nilable(Shared::PropertyCrmContactAddress), company: T.nilable(String), company_ids: T.nilable(T::Array[String]), created_at: T.nilable(DateTime), deal_ids: T.nilable(T::Array[String]), emails: T.nilable(T::Array[Shared::CrmEmail]), id: T.nilable(String), name: T.nilable(String), raw: T.nilable(Shared::PropertyCrmContactRaw), telephones: T.nilable(T::Array[Shared::CrmTelephone]), title: T.nilable(String), updated_at: T.nilable(DateTime), user_id: T.nilable(String)).void }
+      def initialize(address: nil, company: nil, company_ids: nil, created_at: nil, deal_ids: nil, emails: nil, id: nil, name: nil, raw: nil, telephones: nil, title: nil, updated_at: nil, user_id: nil)
         @address = address
         @company = company
         @company_ids = company_ids
@@ -54,6 +56,7 @@ module UnifiedRubySDK
         @telephones = telephones
         @title = title
         @updated_at = updated_at
+        @user_id = user_id
       end
     end
   end

@@ -15,8 +15,6 @@ module UnifiedRubySDK
       # ID of the connection
       field :connection_id, String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
 
-      field :agent_id, T.nilable(String), { 'query_param': { 'field_name': 'agent_id', 'style': 'form', 'explode': true } }
-
       field :contact_id, T.nilable(String), { 'query_param': { 'field_name': 'contact_id', 'style': 'form', 'explode': true } }
       # Comma-delimited fields to return
       field :fields, T.nilable(T::Array[String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
@@ -33,11 +31,12 @@ module UnifiedRubySDK
       # Return only results whose updated date is equal or greater to this value
       field :updated_gte, T.nilable(DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
+      field :user_id, T.nilable(String), { 'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': true } }
 
-      sig { params(connection_id: String, agent_id: T.nilable(String), contact_id: T.nilable(String), fields: T.nilable(T::Array[String]), limit: T.nilable(Float), offset: T.nilable(Float), order: T.nilable(String), query: T.nilable(String), sort: T.nilable(String), updated_gte: T.nilable(DateTime)).void }
-      def initialize(connection_id: nil, agent_id: nil, contact_id: nil, fields: nil, limit: nil, offset: nil, order: nil, query: nil, sort: nil, updated_gte: nil)
+
+      sig { params(connection_id: String, contact_id: T.nilable(String), fields: T.nilable(T::Array[String]), limit: T.nilable(Float), offset: T.nilable(Float), order: T.nilable(String), query: T.nilable(String), sort: T.nilable(String), updated_gte: T.nilable(DateTime), user_id: T.nilable(String)).void }
+      def initialize(connection_id: nil, contact_id: nil, fields: nil, limit: nil, offset: nil, order: nil, query: nil, sort: nil, updated_gte: nil, user_id: nil)
         @connection_id = connection_id
-        @agent_id = agent_id
         @contact_id = contact_id
         @fields = fields
         @limit = limit
@@ -46,6 +45,7 @@ module UnifiedRubySDK
         @query = query
         @sort = sort
         @updated_gte = updated_gte
+        @user_id = user_id
       end
     end
 

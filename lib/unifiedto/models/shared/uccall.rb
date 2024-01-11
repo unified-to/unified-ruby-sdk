@@ -15,8 +15,6 @@ module UnifiedRubySDK
       extend T::Sig
 
 
-      field :agency_id, String, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('agency_id') } }
-
       field :contact_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('contact_id') } }
 
       field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -33,10 +31,11 @@ module UnifiedRubySDK
 
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+      field :user_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('user_id') } }
 
-      sig { params(agency_id: String, contact_id: T.nilable(String), created_at: T.nilable(DateTime), end_at: T.nilable(DateTime), id: T.nilable(String), raw: T.nilable(Shared::PropertyUcCallRaw), start_at: T.nilable(DateTime), telephone: T.nilable(Shared::PropertyUcCallTelephone), updated_at: T.nilable(DateTime)).void }
-      def initialize(agency_id: nil, contact_id: nil, created_at: nil, end_at: nil, id: nil, raw: nil, start_at: nil, telephone: nil, updated_at: nil)
-        @agency_id = agency_id
+
+      sig { params(contact_id: T.nilable(String), created_at: T.nilable(DateTime), end_at: T.nilable(DateTime), id: T.nilable(String), raw: T.nilable(Shared::PropertyUcCallRaw), start_at: T.nilable(DateTime), telephone: T.nilable(Shared::PropertyUcCallTelephone), updated_at: T.nilable(DateTime), user_id: T.nilable(String)).void }
+      def initialize(contact_id: nil, created_at: nil, end_at: nil, id: nil, raw: nil, start_at: nil, telephone: nil, updated_at: nil, user_id: nil)
         @contact_id = contact_id
         @created_at = created_at
         @end_at = end_at
@@ -45,6 +44,7 @@ module UnifiedRubySDK
         @start_at = start_at
         @telephone = telephone
         @updated_at = updated_at
+        @user_id = user_id
       end
     end
   end
