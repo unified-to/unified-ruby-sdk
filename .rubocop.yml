@@ -70,3 +70,5 @@ Style/RedundantAssignment:
   Enabled: false
 Lint/LiteralAsCondition:
   Enabled: false
+Naming/VariableNumber:
+  Enabled: false
