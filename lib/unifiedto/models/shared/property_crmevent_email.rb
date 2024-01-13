@@ -13,6 +13,8 @@ module UnifiedRubySDK
       extend T::Sig
 
 
+      field :attachment_file_ids, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('attachment_file_ids') } }
+
       field :body, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('body') } }
       # The event email's cc name & email (name <test@test.com>)
       field :cc, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('cc') } }
@@ -26,8 +28,9 @@ module UnifiedRubySDK
       field :to, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('to') } }
 
 
-      sig { params(body: T.nilable(String), cc: T.nilable(T::Array[String]), created_at: T.nilable(DateTime), from: T.nilable(String), subject: T.nilable(String), to: T.nilable(T::Array[String])).void }
-      def initialize(body: nil, cc: nil, created_at: nil, from: nil, subject: nil, to: nil)
+      sig { params(attachment_file_ids: T.nilable(T::Array[String]), body: T.nilable(String), cc: T.nilable(T::Array[String]), created_at: T.nilable(DateTime), from: T.nilable(String), subject: T.nilable(String), to: T.nilable(T::Array[String])).void }
+      def initialize(attachment_file_ids: nil, body: nil, cc: nil, created_at: nil, from: nil, subject: nil, to: nil)
+        @attachment_file_ids = attachment_file_ids
         @body = body
         @cc = cc
         @created_at = created_at

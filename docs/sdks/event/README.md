@@ -42,6 +42,9 @@ req = Operations::CreateCrmEventRequest.new(
       "string",
     ],
     email=Shared::PropertyCrmEventEmail.new(
+      attachment_file_ids=[
+        "string",
+      ],
       cc=[
         "string",
       ],
@@ -71,6 +74,9 @@ res = s.event.create_crm_event(connection_id="string", crm_event=Shared::CrmEven
       "string",
     ],
     email=Shared::PropertyCrmEventEmail.new(
+      attachment_file_ids=[
+        "string",
+      ],
       cc=[
         "string",
       ],
@@ -234,6 +240,9 @@ req = Operations::PatchCrmEventRequest.new(
       "string",
     ],
     email=Shared::PropertyCrmEventEmail.new(
+      attachment_file_ids=[
+        "string",
+      ],
       cc=[
         "string",
       ],
@@ -263,6 +272,9 @@ res = s.event.patch_crm_event(connection_id="string", id="string", crm_event=Sha
       "string",
     ],
     email=Shared::PropertyCrmEventEmail.new(
+      attachment_file_ids=[
+        "string",
+      ],
       cc=[
         "string",
       ],
@@ -376,6 +388,9 @@ req = Operations::UpdateCrmEventRequest.new(
       "string",
     ],
     email=Shared::PropertyCrmEventEmail.new(
+      attachment_file_ids=[
+        "string",
+      ],
       cc=[
         "string",
       ],
@@ -405,6 +420,9 @@ res = s.event.update_crm_event(connection_id="string", id="string", crm_event=Sh
       "string",
     ],
     email=Shared::PropertyCrmEventEmail.new(
+      attachment_file_ids=[
+        "string",
+      ],
       cc=[
         "string",
       ],

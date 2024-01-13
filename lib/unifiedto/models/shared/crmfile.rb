@@ -14,8 +14,6 @@ module UnifiedRubySDK
       extend T::Sig
 
 
-      field :activity_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('activity_id') } }
-
       field :company_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('company_id') } }
 
       field :contact_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('contact_id') } }
@@ -26,13 +24,9 @@ module UnifiedRubySDK
 
       field :description, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('description') } }
 
-      field :file_name, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('file_name') } }
+      field :download_url, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('download_url') } }
 
-      field :file_size, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('file_size') } }
-
-      field :file_type, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('file_type') } }
-
-      field :file_url, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('file_url') } }
+      field :event_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('event_id') } }
 
       field :id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('id') } }
 
@@ -40,29 +34,35 @@ module UnifiedRubySDK
 
       field :lead_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('lead_id') } }
 
+      field :mime_type, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('mime_type') } }
+
+      field :name, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('name') } }
+
       field :raw, T.nilable(Shared::PropertyCrmFileRaw), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('raw') } }
+
+      field :size, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('size') } }
 
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
       field :user_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('user_id') } }
 
 
-      sig { params(activity_id: T.nilable(String), company_id: T.nilable(String), contact_id: T.nilable(String), created_at: T.nilable(DateTime), deal_id: T.nilable(String), description: T.nilable(String), file_name: T.nilable(String), file_size: T.nilable(Float), file_type: T.nilable(String), file_url: T.nilable(String), id: T.nilable(String), is_active: T.nilable(T::Boolean), lead_id: T.nilable(String), raw: T.nilable(Shared::PropertyCrmFileRaw), updated_at: T.nilable(DateTime), user_id: T.nilable(String)).void }
-      def initialize(activity_id: nil, company_id: nil, contact_id: nil, created_at: nil, deal_id: nil, description: nil, file_name: nil, file_size: nil, file_type: nil, file_url: nil, id: nil, is_active: nil, lead_id: nil, raw: nil, updated_at: nil, user_id: nil)
-        @activity_id = activity_id
+      sig { params(company_id: T.nilable(String), contact_id: T.nilable(String), created_at: T.nilable(DateTime), deal_id: T.nilable(String), description: T.nilable(String), download_url: T.nilable(String), event_id: T.nilable(String), id: T.nilable(String), is_active: T.nilable(T::Boolean), lead_id: T.nilable(String), mime_type: T.nilable(String), name: T.nilable(String), raw: T.nilable(Shared::PropertyCrmFileRaw), size: T.nilable(Float), updated_at: T.nilable(DateTime), user_id: T.nilable(String)).void }
+      def initialize(company_id: nil, contact_id: nil, created_at: nil, deal_id: nil, description: nil, download_url: nil, event_id: nil, id: nil, is_active: nil, lead_id: nil, mime_type: nil, name: nil, raw: nil, size: nil, updated_at: nil, user_id: nil)
         @company_id = company_id
         @contact_id = contact_id
         @created_at = created_at
         @deal_id = deal_id
         @description = description
-        @file_name = file_name
-        @file_size = file_size
-        @file_type = file_type
-        @file_url = file_url
+        @download_url = download_url
+        @event_id = event_id
         @id = id
         @is_active = is_active
         @lead_id = lead_id
+        @mime_type = mime_type
+        @name = name
         @raw = raw
+        @size = size
         @updated_at = updated_at
         @user_id = user_id
       end
