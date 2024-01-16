@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Operations
 
-    class RemoveMartechListRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveMartechListRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -26,7 +26,7 @@ module UnifiedRubySDK
     end
 
 
-    class RemoveMartechListResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveMartechListResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

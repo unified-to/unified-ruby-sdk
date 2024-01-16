@@ -27,7 +27,7 @@ module UnifiedRubySDK
 
 
 
-    class ListUnifiedConnectionsRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class ListUnifiedConnectionsRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # Filter the results on these categories
@@ -62,7 +62,7 @@ module UnifiedRubySDK
     end
 
 
-    class ListUnifiedConnectionsResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class ListUnifiedConnectionsResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

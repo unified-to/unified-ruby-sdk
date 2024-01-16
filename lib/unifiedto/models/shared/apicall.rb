@@ -19,39 +19,39 @@ module UnifiedRubySDK
 
 
 
-    class ApiCall < UnifiedRubySDK::Utils::FieldAugmented
+    class ApiCall < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :integration_type, String, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('integration_type') } }
+      field :integration_type, String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('integration_type') } }
 
-      field :method, String, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('method') } }
+      field :method, String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('method') } }
 
-      field :name, String, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('name') } }
+      field :name, String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-      field :path, String, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('path') } }
+      field :path, String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('path') } }
 
-      field :status, String, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('status') } }
+      field :status, String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status') } }
 
-      field :type, Shared::ApiCallType, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Shared::ApiCallType, false) } }
+      field :type, Shared::ApiCallType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Shared::ApiCallType, false) } }
 
-      field :workspace_id, String, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('workspace_id') } }
+      field :workspace_id, String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
 
-      field :connection_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('connection_id') } }
+      field :connection_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('connection_id') } }
 
-      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :environment, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('environment') } }
+      field :environment, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('environment') } }
 
-      field :error, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('error') } }
+      field :error, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('error') } }
 
-      field :external_xref, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('external_xref') } }
+      field :external_xref, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_xref') } }
 
-      field :id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('id') } }
+      field :id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :ip_address, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('ip_address') } }
+      field :ip_address, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ip_address') } }
 
-      field :size, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('size') } }
+      field :size, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
 
 
       sig { params(integration_type: String, method: String, name: String, path: String, status: String, type: Shared::ApiCallType, workspace_id: String, connection_id: T.nilable(String), created_at: T.nilable(DateTime), environment: T.nilable(String), error: T.nilable(String), external_xref: T.nilable(String), id: T.nilable(String), ip_address: T.nilable(String), size: T.nilable(Float)).void }

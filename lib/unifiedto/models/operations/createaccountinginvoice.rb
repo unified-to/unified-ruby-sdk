@@ -10,7 +10,7 @@ require_relative '../shared/accountinginvoice'
 module UnifiedRubySDK
   module Operations
 
-    class CreateAccountingInvoiceRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class CreateAccountingInvoiceRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -27,7 +27,7 @@ module UnifiedRubySDK
     end
 
 
-    class CreateAccountingInvoiceResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class CreateAccountingInvoiceResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

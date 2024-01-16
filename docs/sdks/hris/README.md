@@ -26,37 +26,19 @@ Create an employee
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateHrisEmployeeRequest.new(
-  connection_id="string",
-  hris_employee=Shared::HrisEmployee.new(
-    address=Shared::PropertyHrisEmployeeAddress.new(),
-    emails=[
-      Shared::HrisEmail.new(
-        email="Adriel_Hansen@hotmail.com",
-      ),
-    ],
-    raw=Shared::PropertyHrisEmployeeRaw.new(),
-    telephones=[
-      Shared::HrisTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.hris.create_hris_employee(connection_id="string", hris_employee=Shared::HrisEmployee.new(
     address=Shared::PropertyHrisEmployeeAddress.new(),
     emails=[
       Shared::HrisEmail.new(
-        email="Corene_Gutmann57@yahoo.com",
+        email="Adriel_Hansen@hotmail.com",
       ),
     ],
     raw=Shared::PropertyHrisEmployeeRaw.new(),
@@ -96,26 +78,13 @@ Create a group
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateHrisGroupRequest.new(
-  connection_id="string",
-  hris_group=Shared::HrisGroup.new(
-    employee_ids=[
-      "string",
-    ],
-    manager_ids=[
-      "string",
-    ],
-    raw=Shared::PropertyHrisGroupRaw.new(),
-  ),
-)
     
 res = s.hris.create_hris_group(connection_id="string", hris_group=Shared::HrisGroup.new(
     employee_ids=[
@@ -156,21 +125,13 @@ Retrieve an employee
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetHrisEmployeeRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.hris.get_hris_employee(connection_id="string", id="string", fields=[
     "string",
@@ -206,21 +167,13 @@ Retrieve a group
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetHrisGroupRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.hris.get_hris_group(connection_id="string", id="string", fields=[
     "string",
@@ -256,7 +209,7 @@ List all employees
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -301,7 +254,7 @@ List all groups
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -346,38 +299,19 @@ Update an employee
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchHrisEmployeeRequest.new(
-  connection_id="string",
-  id="<ID>",
-  hris_employee=Shared::HrisEmployee.new(
-    address=Shared::PropertyHrisEmployeeAddress.new(),
-    emails=[
-      Shared::HrisEmail.new(
-        email="Zetta.Cassin@yahoo.com",
-      ),
-    ],
-    raw=Shared::PropertyHrisEmployeeRaw.new(),
-    telephones=[
-      Shared::HrisTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.hris.patch_hris_employee(connection_id="string", id="string", hris_employee=Shared::HrisEmployee.new(
     address=Shared::PropertyHrisEmployeeAddress.new(),
     emails=[
       Shared::HrisEmail.new(
-        email="Savannah_Robel26@gmail.com",
+        email="Zetta.Cassin@yahoo.com",
       ),
     ],
     raw=Shared::PropertyHrisEmployeeRaw.new(),
@@ -418,27 +352,13 @@ Update a group
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchHrisGroupRequest.new(
-  connection_id="string",
-  id="<ID>",
-  hris_group=Shared::HrisGroup.new(
-    employee_ids=[
-      "string",
-    ],
-    manager_ids=[
-      "string",
-    ],
-    raw=Shared::PropertyHrisGroupRaw.new(),
-  ),
-)
     
 res = s.hris.patch_hris_group(connection_id="string", id="string", hris_group=Shared::HrisGroup.new(
     employee_ids=[
@@ -480,18 +400,13 @@ Remove an employee
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveHrisEmployeeRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.hris.remove_hris_employee(connection_id="string", id="string")
 
@@ -524,18 +439,13 @@ Remove a group
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveHrisGroupRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.hris.remove_hris_group(connection_id="string", id="string")
 
@@ -568,38 +478,19 @@ Update an employee
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateHrisEmployeeRequest.new(
-  connection_id="string",
-  id="<ID>",
-  hris_employee=Shared::HrisEmployee.new(
-    address=Shared::PropertyHrisEmployeeAddress.new(),
-    emails=[
-      Shared::HrisEmail.new(
-        email="Abbie_Aufderhar@gmail.com",
-      ),
-    ],
-    raw=Shared::PropertyHrisEmployeeRaw.new(),
-    telephones=[
-      Shared::HrisTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.hris.update_hris_employee(connection_id="string", id="string", hris_employee=Shared::HrisEmployee.new(
     address=Shared::PropertyHrisEmployeeAddress.new(),
     emails=[
       Shared::HrisEmail.new(
-        email="Lola61@hotmail.com",
+        email="Abbie_Aufderhar@gmail.com",
       ),
     ],
     raw=Shared::PropertyHrisEmployeeRaw.new(),
@@ -640,27 +531,13 @@ Update a group
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateHrisGroupRequest.new(
-  connection_id="string",
-  id="<ID>",
-  hris_group=Shared::HrisGroup.new(
-    employee_ids=[
-      "string",
-    ],
-    manager_ids=[
-      "string",
-    ],
-    raw=Shared::PropertyHrisGroupRaw.new(),
-  ),
-)
     
 res = s.hris.update_hris_group(connection_id="string", id="string", hris_group=Shared::HrisGroup.new(
     employee_ids=[

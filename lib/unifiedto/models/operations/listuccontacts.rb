@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Operations
 
-    class ListUcContactsRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class ListUcContactsRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -47,7 +47,7 @@ module UnifiedRubySDK
     end
 
 
-    class ListUcContactsResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class ListUcContactsResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

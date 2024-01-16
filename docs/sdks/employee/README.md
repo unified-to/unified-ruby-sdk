@@ -20,37 +20,19 @@ Create an employee
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateHrisEmployeeRequest.new(
-  connection_id="string",
-  hris_employee=Shared::HrisEmployee.new(
-    address=Shared::PropertyHrisEmployeeAddress.new(),
-    emails=[
-      Shared::HrisEmail.new(
-        email="Adriel_Hansen@hotmail.com",
-      ),
-    ],
-    raw=Shared::PropertyHrisEmployeeRaw.new(),
-    telephones=[
-      Shared::HrisTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.employee.create_hris_employee(connection_id="string", hris_employee=Shared::HrisEmployee.new(
     address=Shared::PropertyHrisEmployeeAddress.new(),
     emails=[
       Shared::HrisEmail.new(
-        email="Corene_Gutmann57@yahoo.com",
+        email="Adriel_Hansen@hotmail.com",
       ),
     ],
     raw=Shared::PropertyHrisEmployeeRaw.new(),
@@ -90,21 +72,13 @@ Retrieve an employee
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetHrisEmployeeRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.employee.get_hris_employee(connection_id="string", id="string", fields=[
     "string",
@@ -140,7 +114,7 @@ List all employees
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -185,38 +159,19 @@ Update an employee
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchHrisEmployeeRequest.new(
-  connection_id="string",
-  id="<ID>",
-  hris_employee=Shared::HrisEmployee.new(
-    address=Shared::PropertyHrisEmployeeAddress.new(),
-    emails=[
-      Shared::HrisEmail.new(
-        email="Zetta.Cassin@yahoo.com",
-      ),
-    ],
-    raw=Shared::PropertyHrisEmployeeRaw.new(),
-    telephones=[
-      Shared::HrisTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.employee.patch_hris_employee(connection_id="string", id="string", hris_employee=Shared::HrisEmployee.new(
     address=Shared::PropertyHrisEmployeeAddress.new(),
     emails=[
       Shared::HrisEmail.new(
-        email="Savannah_Robel26@gmail.com",
+        email="Zetta.Cassin@yahoo.com",
       ),
     ],
     raw=Shared::PropertyHrisEmployeeRaw.new(),
@@ -257,18 +212,13 @@ Remove an employee
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveHrisEmployeeRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.employee.remove_hris_employee(connection_id="string", id="string")
 
@@ -301,38 +251,19 @@ Update an employee
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateHrisEmployeeRequest.new(
-  connection_id="string",
-  id="<ID>",
-  hris_employee=Shared::HrisEmployee.new(
-    address=Shared::PropertyHrisEmployeeAddress.new(),
-    emails=[
-      Shared::HrisEmail.new(
-        email="Abbie_Aufderhar@gmail.com",
-      ),
-    ],
-    raw=Shared::PropertyHrisEmployeeRaw.new(),
-    telephones=[
-      Shared::HrisTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.employee.update_hris_employee(connection_id="string", id="string", hris_employee=Shared::HrisEmployee.new(
     address=Shared::PropertyHrisEmployeeAddress.new(),
     emails=[
       Shared::HrisEmail.new(
-        email="Lola61@hotmail.com",
+        email="Abbie_Aufderhar@gmail.com",
       ),
     ],
     raw=Shared::PropertyHrisEmployeeRaw.new(),

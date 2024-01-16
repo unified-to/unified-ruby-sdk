@@ -3,21 +3,13 @@
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAccountingAccountRequest.new(
-  connection_id="string",
-  accounting_account=Shared::AccountingAccount.new(
-    name="string",
-    raw=Shared::PropertyAccountingAccountRaw.new(),
-  ),
-)
     
 res = s.accounting.create_accounting_account(connection_id="string", accounting_account=Shared::AccountingAccount.new(
     name="string",

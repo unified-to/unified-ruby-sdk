@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Operations
 
-    class RemoveAtsScorecardRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveAtsScorecardRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -26,7 +26,7 @@ module UnifiedRubySDK
     end
 
 
-    class RemoveAtsScorecardResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveAtsScorecardResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

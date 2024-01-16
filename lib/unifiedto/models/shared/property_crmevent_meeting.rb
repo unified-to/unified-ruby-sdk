@@ -9,17 +9,17 @@ require 'faraday'
 module UnifiedRubySDK
   module Shared
     # The meeting object, when type = meeting
-    class PropertyCrmEventMeeting < UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyCrmEventMeeting < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :description, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('description') } }
+      field :description, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-      field :end_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :end_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :start_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :start_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :title, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('title') } }
+      field :title, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
 
 
       sig { params(description: T.nilable(String), end_at: T.nilable(DateTime), start_at: T.nilable(DateTime), title: T.nilable(String)).void }

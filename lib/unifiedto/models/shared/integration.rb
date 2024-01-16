@@ -9,47 +9,47 @@ require 'faraday'
 module UnifiedRubySDK
   module Shared
     # Informational object for supported integrations.
-    class Integration < UnifiedRubySDK::Utils::FieldAugmented
+    class Integration < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # The categories of support solutions that this integration has
-      field :categories, T::Array[Shared::PropertyIntegrationCategories], { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('categories') } }
+      field :categories, T::Array[Shared::PropertyIntegrationCategories], { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('categories') } }
 
-      field :in_progress, T::Boolean, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('in_progress') } }
+      field :in_progress, T::Boolean, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('in_progress') } }
 
-      field :name, String, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('name') } }
+      field :name, String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-      field :support, T::Hash[Symbol, Shared::IntegrationSupport], { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('support') } }
+      field :support, T::Hash[Symbol, Shared::IntegrationSupport], { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('support') } }
 
-      field :type, String, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('type') } }
+      field :type, String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
 
-      field :api_docs_url, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('api_docs_url') } }
+      field :api_docs_url, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('api_docs_url') } }
 
-      field :beta, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('beta') } }
+      field :beta, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('beta') } }
 
-      field :color, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('color') } }
+      field :color, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('color') } }
 
-      field :created_at, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at') } }
+      field :created_at, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
 
-      field :fa_icon, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('fa_icon') } }
+      field :fa_icon, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fa_icon') } }
 
-      field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('is_active') } }
+      field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
-      field :logo_url, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('logo_url') } }
+      field :logo_url, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('logo_url') } }
 
-      field :rate_limit_description, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('rate_limit_description') } }
+      field :rate_limit_description, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rate_limit_description') } }
 
-      field :tested_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('tested_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :tested_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tested_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :text_color, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('text_color') } }
+      field :text_color, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('text_color') } }
       # instructions for the user on how to find the token/key
-      field :token_instructions, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('token_instructions') } }
+      field :token_instructions, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('token_instructions') } }
       # if auth_types = 'token'
-      field :token_names, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('token_names') } }
+      field :token_names, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('token_names') } }
 
-      field :updated_at, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at') } }
+      field :updated_at, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
 
-      field :web_url, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('web_url') } }
+      field :web_url, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
 
       sig { params(categories: T::Array[Shared::PropertyIntegrationCategories], in_progress: T::Boolean, name: String, support: T::Hash[Symbol, Shared::IntegrationSupport], type: String, api_docs_url: T.nilable(String), beta: T.nilable(T::Boolean), color: T.nilable(String), created_at: T.nilable(String), fa_icon: T.nilable(String), is_active: T.nilable(T::Boolean), logo_url: T.nilable(String), rate_limit_description: T.nilable(String), tested_at: T.nilable(DateTime), text_color: T.nilable(String), token_instructions: T.nilable(T::Array[String]), token_names: T.nilable(T::Array[String]), updated_at: T.nilable(String), web_url: T.nilable(String)).void }

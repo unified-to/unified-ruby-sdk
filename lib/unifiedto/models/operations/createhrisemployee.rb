@@ -10,7 +10,7 @@ require_relative '../shared/hrisemployee'
 module UnifiedRubySDK
   module Operations
 
-    class CreateHrisEmployeeRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class CreateHrisEmployeeRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -27,7 +27,7 @@ module UnifiedRubySDK
     end
 
 
-    class CreateHrisEmployeeResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class CreateHrisEmployeeResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

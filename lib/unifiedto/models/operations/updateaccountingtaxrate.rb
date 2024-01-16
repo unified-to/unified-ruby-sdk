@@ -10,7 +10,7 @@ require_relative '../shared/accountingtaxrate'
 module UnifiedRubySDK
   module Operations
 
-    class UpdateAccountingTaxrateRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class UpdateAccountingTaxrateRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -30,7 +30,7 @@ module UnifiedRubySDK
     end
 
 
-    class UpdateAccountingTaxrateResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class UpdateAccountingTaxrateResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

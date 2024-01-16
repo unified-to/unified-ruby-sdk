@@ -16,17 +16,13 @@ Retrieve enrichment information for a company
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::ListEnrichCompaniesRequest.new(
-  connection_id="string",
-)
     
 res = s.enrich.list_enrich_companies(connection_id="string", domain="string", name="string")
 
@@ -60,7 +56,7 @@ Retrieve enrichment information for a person
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",

@@ -10,7 +10,7 @@ require_relative '../shared/atsscorecard'
 module UnifiedRubySDK
   module Operations
 
-    class GetAtsScorecardRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class GetAtsScorecardRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -30,7 +30,7 @@ module UnifiedRubySDK
     end
 
 
-    class GetAtsScorecardResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class GetAtsScorecardResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

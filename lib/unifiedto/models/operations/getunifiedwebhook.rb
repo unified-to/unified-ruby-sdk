@@ -10,7 +10,7 @@ require_relative '../shared/webhook'
 module UnifiedRubySDK
   module Operations
 
-    class GetUnifiedWebhookRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class GetUnifiedWebhookRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the Webhook
@@ -24,7 +24,7 @@ module UnifiedRubySDK
     end
 
 
-    class GetUnifiedWebhookResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class GetUnifiedWebhookResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

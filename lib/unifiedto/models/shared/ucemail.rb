@@ -19,13 +19,13 @@ module UnifiedRubySDK
 
 
 
-    class UcEmail < UnifiedRubySDK::Utils::FieldAugmented
+    class UcEmail < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :email, String, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('email') } }
+      field :email, String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
 
-      field :type, T.nilable(Shared::UcEmailType), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Shared::UcEmailType, true) } }
+      field :type, T.nilable(Shared::UcEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Shared::UcEmailType, true) } }
 
 
       sig { params(email: String, type: T.nilable(Shared::UcEmailType)).void }

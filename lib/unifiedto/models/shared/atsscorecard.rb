@@ -21,31 +21,31 @@ module UnifiedRubySDK
 
 
 
-    class AtsScorecard < UnifiedRubySDK::Utils::FieldAugmented
+    class AtsScorecard < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :application_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('application_id') } }
+      field :application_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('application_id') } }
 
-      field :candidate_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('candidate_id') } }
+      field :candidate_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('candidate_id') } }
 
-      field :comment, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('comment') } }
+      field :comment, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('comment') } }
 
-      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('id') } }
+      field :id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :interview_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('interview_id') } }
+      field :interview_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('interview_id') } }
 
-      field :interviewer_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('interviewer_id') } }
+      field :interviewer_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('interviewer_id') } }
 
-      field :job_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('job_id') } }
+      field :job_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('job_id') } }
 
-      field :raw, T.nilable(Shared::PropertyAtsScorecardRaw), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(Shared::PropertyAtsScorecardRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-      field :recommendation, T.nilable(Shared::Recommendation), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('recommendation'), 'decoder': Utils.enum_from_string(Shared::Recommendation, true) } }
+      field :recommendation, T.nilable(Shared::Recommendation), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recommendation'), 'decoder': Utils.enum_from_string(Shared::Recommendation, true) } }
 
-      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
       sig { params(application_id: T.nilable(String), candidate_id: T.nilable(String), comment: T.nilable(String), created_at: T.nilable(DateTime), id: T.nilable(String), interview_id: T.nilable(String), interviewer_id: T.nilable(String), job_id: T.nilable(String), raw: T.nilable(Shared::PropertyAtsScorecardRaw), recommendation: T.nilable(Shared::Recommendation), updated_at: T.nilable(DateTime)).void }

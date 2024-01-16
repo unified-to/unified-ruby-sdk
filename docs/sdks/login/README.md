@@ -15,7 +15,7 @@ Returns an authentication URL for the specified integration.  Once a successful 
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",

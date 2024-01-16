@@ -36,33 +36,33 @@ module UnifiedRubySDK
 
 
 
-    class AccountingAccount < UnifiedRubySDK::Utils::FieldAugmented
+    class AccountingAccount < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :name, String, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('name') } }
+      field :name, String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-      field :balance, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('balance') } }
+      field :balance, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('balance') } }
 
-      field :bank_account_number, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('bank_account_number') } }
+      field :bank_account_number, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('bank_account_number') } }
 
-      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :currency, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('currency') } }
+      field :currency, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-      field :customer_defined_code, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('customer_defined_code') } }
+      field :customer_defined_code, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('customer_defined_code') } }
 
-      field :description, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('description') } }
+      field :description, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-      field :id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('id') } }
+      field :id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :raw, T.nilable(Shared::PropertyAccountingAccountRaw), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(Shared::PropertyAccountingAccountRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-      field :status, T.nilable(Shared::Status), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Shared::Status, true) } }
+      field :status, T.nilable(Shared::Status), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Shared::Status, true) } }
 
-      field :type, T.nilable(Shared::Type), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Shared::Type, true) } }
+      field :type, T.nilable(Shared::Type), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Shared::Type, true) } }
 
-      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
       sig { params(name: String, balance: T.nilable(Float), bank_account_number: T.nilable(String), created_at: T.nilable(DateTime), currency: T.nilable(String), customer_defined_code: T.nilable(String), description: T.nilable(String), id: T.nilable(String), raw: T.nilable(Shared::PropertyAccountingAccountRaw), status: T.nilable(Shared::Status), type: T.nilable(Shared::Type), updated_at: T.nilable(DateTime)).void }

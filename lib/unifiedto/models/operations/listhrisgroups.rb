@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Operations
 
-    class ListHrisGroupsRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class ListHrisGroupsRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -44,7 +44,7 @@ module UnifiedRubySDK
     end
 
 
-    class ListHrisGroupsResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class ListHrisGroupsResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

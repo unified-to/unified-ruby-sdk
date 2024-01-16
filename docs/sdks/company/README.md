@@ -21,41 +21,13 @@ Create a company
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateCrmCompanyRequest.new(
-  connection_id="string",
-  crm_company=Shared::CrmCompany.new(
-    address=Shared::PropertyCrmCompanyAddress.new(),
-    deal_ids=[
-      "string",
-    ],
-    emails=[
-      Shared::CrmEmail.new(),
-    ],
-    link_urls=[
-      "string",
-    ],
-    raw=Shared::PropertyCrmCompanyRaw.new(),
-    tags=[
-      "string",
-    ],
-    telephones=[
-      Shared::CrmTelephone.new(
-        telephone="string",
-      ),
-    ],
-    websites=[
-      "string",
-    ],
-  ),
-)
     
 res = s.company.create_crm_company(connection_id="string", crm_company=Shared::CrmCompany.new(
     address=Shared::PropertyCrmCompanyAddress.new(),
@@ -111,21 +83,13 @@ Retrieve a company
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetCrmCompanyRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.company.get_crm_company(connection_id="string", id="string", fields=[
     "string",
@@ -161,7 +125,7 @@ List all companies
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -206,17 +170,13 @@ Retrieve enrichment information for a company
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::ListEnrichCompaniesRequest.new(
-  connection_id="string",
-)
     
 res = s.company.list_enrich_companies(connection_id="string", domain="string", name="string")
 
@@ -250,42 +210,13 @@ Update a company
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchCrmCompanyRequest.new(
-  connection_id="string",
-  id="<ID>",
-  crm_company=Shared::CrmCompany.new(
-    address=Shared::PropertyCrmCompanyAddress.new(),
-    deal_ids=[
-      "string",
-    ],
-    emails=[
-      Shared::CrmEmail.new(),
-    ],
-    link_urls=[
-      "string",
-    ],
-    raw=Shared::PropertyCrmCompanyRaw.new(),
-    tags=[
-      "string",
-    ],
-    telephones=[
-      Shared::CrmTelephone.new(
-        telephone="string",
-      ),
-    ],
-    websites=[
-      "string",
-    ],
-  ),
-)
     
 res = s.company.patch_crm_company(connection_id="string", id="string", crm_company=Shared::CrmCompany.new(
     address=Shared::PropertyCrmCompanyAddress.new(),
@@ -342,18 +273,13 @@ Remove a company
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveCrmCompanyRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.company.remove_crm_company(connection_id="string", id="string")
 
@@ -386,42 +312,13 @@ Update a company
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateCrmCompanyRequest.new(
-  connection_id="string",
-  id="<ID>",
-  crm_company=Shared::CrmCompany.new(
-    address=Shared::PropertyCrmCompanyAddress.new(),
-    deal_ids=[
-      "string",
-    ],
-    emails=[
-      Shared::CrmEmail.new(),
-    ],
-    link_urls=[
-      "string",
-    ],
-    raw=Shared::PropertyCrmCompanyRaw.new(),
-    tags=[
-      "string",
-    ],
-    telephones=[
-      Shared::CrmTelephone.new(
-        telephone="string",
-      ),
-    ],
-    websites=[
-      "string",
-    ],
-  ),
-)
     
 res = s.company.update_crm_company(connection_id="string", id="string", crm_company=Shared::CrmCompany.new(
     address=Shared::PropertyCrmCompanyAddress.new(),

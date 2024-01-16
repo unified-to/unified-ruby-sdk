@@ -26,20 +26,13 @@ Create a file
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateCrmFileRequest.new(
-  connection_id="string",
-  crm_file=Shared::CrmFile.new(
-    raw=Shared::PropertyCrmFileRaw.new(),
-  ),
-)
     
 res = s.file.create_crm_file(connection_id="string", crm_file=Shared::CrmFile.new(
     raw=Shared::PropertyCrmFileRaw.new(),
@@ -74,33 +67,19 @@ Create a file
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateStorageFileRequest.new(
-  connection_id="string",
-  storage_file=Shared::StorageFile.new(
-    permissions=[
-      Shared::StoragePermission.new(
-        roles=[
-          Shared::PropertyStoragePermissionRoles::WRITE,
-        ],
-      ),
-    ],
-    raw=Shared::PropertyStorageFileRaw.new(),
-  ),
-)
     
 res = s.file.create_storage_file(connection_id="string", storage_file=Shared::StorageFile.new(
     permissions=[
       Shared::StoragePermission.new(
         roles=[
-          Shared::PropertyStoragePermissionRoles::OWNER,
+          Shared::PropertyStoragePermissionRoles::WRITE,
         ],
       ),
     ],
@@ -136,21 +115,13 @@ Retrieve a file
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetCrmFileRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.file.get_crm_file(connection_id="string", id="string", fields=[
     "string",
@@ -186,21 +157,13 @@ Retrieve a file
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetStorageFileRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.file.get_storage_file(connection_id="string", id="string", fields=[
     "string",
@@ -236,7 +199,7 @@ List all files
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -281,7 +244,7 @@ List all files
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -326,21 +289,13 @@ Update a file
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchCrmFileRequest.new(
-  connection_id="string",
-  id="<ID>",
-  crm_file=Shared::CrmFile.new(
-    raw=Shared::PropertyCrmFileRaw.new(),
-  ),
-)
     
 res = s.file.patch_crm_file(connection_id="string", id="string", crm_file=Shared::CrmFile.new(
     raw=Shared::PropertyCrmFileRaw.new(),
@@ -376,28 +331,13 @@ Update a file
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchStorageFileRequest.new(
-  connection_id="string",
-  id="<ID>",
-  storage_file=Shared::StorageFile.new(
-    permissions=[
-      Shared::StoragePermission.new(
-        roles=[
-          Shared::PropertyStoragePermissionRoles::OWNER,
-        ],
-      ),
-    ],
-    raw=Shared::PropertyStorageFileRaw.new(),
-  ),
-)
     
 res = s.file.patch_storage_file(connection_id="string", id="string", storage_file=Shared::StorageFile.new(
     permissions=[
@@ -440,18 +380,13 @@ Remove a file
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveCrmFileRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.file.remove_crm_file(connection_id="string", id="string")
 
@@ -484,18 +419,13 @@ Remove a file
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveStorageFileRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.file.remove_storage_file(connection_id="string", id="string")
 
@@ -528,21 +458,13 @@ Update a file
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateCrmFileRequest.new(
-  connection_id="string",
-  id="<ID>",
-  crm_file=Shared::CrmFile.new(
-    raw=Shared::PropertyCrmFileRaw.new(),
-  ),
-)
     
 res = s.file.update_crm_file(connection_id="string", id="string", crm_file=Shared::CrmFile.new(
     raw=Shared::PropertyCrmFileRaw.new(),
@@ -578,34 +500,19 @@ Update a file
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateStorageFileRequest.new(
-  connection_id="string",
-  id="<ID>",
-  storage_file=Shared::StorageFile.new(
-    permissions=[
-      Shared::StoragePermission.new(
-        roles=[
-          Shared::PropertyStoragePermissionRoles::WRITE,
-        ],
-      ),
-    ],
-    raw=Shared::PropertyStorageFileRaw.new(),
-  ),
-)
     
 res = s.file.update_storage_file(connection_id="string", id="string", storage_file=Shared::StorageFile.new(
     permissions=[
       Shared::StoragePermission.new(
         roles=[
-          Shared::PropertyStoragePermissionRoles::READ,
+          Shared::PropertyStoragePermissionRoles::WRITE,
         ],
       ),
     ],

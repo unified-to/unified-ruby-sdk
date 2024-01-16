@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Operations
 
-    class ListCrmEventsRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class ListCrmEventsRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -59,7 +59,7 @@ module UnifiedRubySDK
     end
 
 
-    class ListCrmEventsResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class ListCrmEventsResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

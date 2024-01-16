@@ -19,33 +19,33 @@ module UnifiedRubySDK
 
 
 
-    class AccountingTransaction < UnifiedRubySDK::Utils::FieldAugmented
+    class AccountingTransaction < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :account_id, String, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('account_id') } }
+      field :account_id, String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_id') } }
 
-      field :id, String, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('id') } }
+      field :id, String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :total_amount, Float, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('total_amount') } }
+      field :total_amount, Float, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
 
-      field :type, Shared::AccountingTransactionType, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Shared::AccountingTransactionType, false) } }
+      field :type, Shared::AccountingTransactionType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Shared::AccountingTransactionType, false) } }
 
-      field :created_at, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at') } }
+      field :created_at, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
 
-      field :currency, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('currency') } }
+      field :currency, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-      field :description, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('description') } }
+      field :description, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-      field :line_items, T.nilable(T::Array[Shared::AccountingTransactionLineitem]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('line_items') } }
+      field :line_items, T.nilable(T::Array[Shared::AccountingTransactionLineitem]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('line_items') } }
 
-      field :raw, T.nilable(Shared::PropertyAccountingTransactionRaw), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(Shared::PropertyAccountingTransactionRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-      field :reference, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('reference') } }
+      field :reference, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference') } }
 
-      field :tax_amount, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('tax_amount') } }
+      field :tax_amount, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_amount') } }
 
-      field :updated_at, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at') } }
+      field :updated_at, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
 
 
       sig { params(account_id: String, id: String, total_amount: Float, type: Shared::AccountingTransactionType, created_at: T.nilable(String), currency: T.nilable(String), description: T.nilable(String), line_items: T.nilable(T::Array[Shared::AccountingTransactionLineitem]), raw: T.nilable(Shared::PropertyAccountingTransactionRaw), reference: T.nilable(String), tax_amount: T.nilable(Float), updated_at: T.nilable(String)).void }

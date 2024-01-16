@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Operations
 
-    class ListAtsApplicationsRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class ListAtsApplicationsRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -50,7 +50,7 @@ module UnifiedRubySDK
     end
 
 
-    class ListAtsApplicationsResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class ListAtsApplicationsResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

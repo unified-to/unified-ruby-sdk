@@ -20,23 +20,13 @@ Create a interview
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAtsInterviewRequest.new(
-  connection_id="string",
-  ats_interview=Shared::AtsInterview.new(
-    raw=Shared::PropertyAtsInterviewRaw.new(),
-    user_ids=[
-      "string",
-    ],
-  ),
-)
     
 res = s.interview.create_ats_interview(connection_id="string", ats_interview=Shared::AtsInterview.new(
     raw=Shared::PropertyAtsInterviewRaw.new(),
@@ -74,21 +64,13 @@ Retrieve a interview
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAtsInterviewRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.interview.get_ats_interview(connection_id="string", id="string", fields=[
     "string",
@@ -124,7 +106,7 @@ List all interviews
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -169,24 +151,13 @@ Update a interview
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAtsInterviewRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ats_interview=Shared::AtsInterview.new(
-    raw=Shared::PropertyAtsInterviewRaw.new(),
-    user_ids=[
-      "string",
-    ],
-  ),
-)
     
 res = s.interview.patch_ats_interview(connection_id="string", id="string", ats_interview=Shared::AtsInterview.new(
     raw=Shared::PropertyAtsInterviewRaw.new(),
@@ -225,18 +196,13 @@ Remove a interview
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAtsInterviewRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.interview.remove_ats_interview(connection_id="string", id="string")
 
@@ -269,24 +235,13 @@ Update a interview
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAtsInterviewRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ats_interview=Shared::AtsInterview.new(
-    raw=Shared::PropertyAtsInterviewRaw.new(),
-    user_ids=[
-      "string",
-    ],
-  ),
-)
     
 res = s.interview.update_ats_interview(connection_id="string", id="string", ats_interview=Shared::AtsInterview.new(
     raw=Shared::PropertyAtsInterviewRaw.new(),

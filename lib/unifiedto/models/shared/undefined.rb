@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Shared
     # integration-specific result
-    class Undefined < UnifiedRubySDK::Utils::FieldAugmented
+    class Undefined < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 

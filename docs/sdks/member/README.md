@@ -20,36 +20,18 @@ Create a member
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateMartechMemberRequest.new(
-  connection_id="string",
-  marketing_member=Shared::MarketingMember.new(
-    emails=[
-      Shared::MarketingEmail.new(
-        email="Eldridge.Marvin@gmail.com",
-      ),
-    ],
-    list_ids=[
-      "string",
-    ],
-    raw=Shared::PropertyMarketingMemberRaw.new(),
-    tags=[
-      "string",
-    ],
-  ),
-)
     
 res = s.member.create_martech_member(connection_id="string", marketing_member=Shared::MarketingMember.new(
     emails=[
       Shared::MarketingEmail.new(
-        email="Ole_Kohler@yahoo.com",
+        email="Eldridge.Marvin@gmail.com",
       ),
     ],
     list_ids=[
@@ -90,21 +72,13 @@ Retrieve a member
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetMartechMemberRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.member.get_martech_member(connection_id="string", id="string", fields=[
     "string",
@@ -140,7 +114,7 @@ List all members
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -185,37 +159,18 @@ Update a member
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchMartechMemberRequest.new(
-  connection_id="string",
-  id="<ID>",
-  marketing_member=Shared::MarketingMember.new(
-    emails=[
-      Shared::MarketingEmail.new(
-        email="Shana_Boyle@yahoo.com",
-      ),
-    ],
-    list_ids=[
-      "string",
-    ],
-    raw=Shared::PropertyMarketingMemberRaw.new(),
-    tags=[
-      "string",
-    ],
-  ),
-)
     
 res = s.member.patch_martech_member(connection_id="string", id="string", marketing_member=Shared::MarketingMember.new(
     emails=[
       Shared::MarketingEmail.new(
-        email="Maye_Herman22@gmail.com",
+        email="Shana_Boyle@yahoo.com",
       ),
     ],
     list_ids=[
@@ -257,18 +212,13 @@ Remove member
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveMartechMemberRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.member.remove_martech_member(connection_id="string", id="string")
 
@@ -301,37 +251,18 @@ Update a member
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateMartechMemberRequest.new(
-  connection_id="string",
-  id="<ID>",
-  marketing_member=Shared::MarketingMember.new(
-    emails=[
-      Shared::MarketingEmail.new(
-        email="Antonette.Kerluke@hotmail.com",
-      ),
-    ],
-    list_ids=[
-      "string",
-    ],
-    raw=Shared::PropertyMarketingMemberRaw.new(),
-    tags=[
-      "string",
-    ],
-  ),
-)
     
 res = s.member.update_martech_member(connection_id="string", id="string", marketing_member=Shared::MarketingMember.new(
     emails=[
       Shared::MarketingEmail.new(
-        email="Jean.Will@yahoo.com",
+        email="Antonette.Kerluke@hotmail.com",
       ),
     ],
     list_ids=[

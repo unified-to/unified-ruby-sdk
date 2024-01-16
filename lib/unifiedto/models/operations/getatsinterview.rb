@@ -10,7 +10,7 @@ require_relative '../shared/atsinterview'
 module UnifiedRubySDK
   module Operations
 
-    class GetAtsInterviewRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class GetAtsInterviewRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -30,7 +30,7 @@ module UnifiedRubySDK
     end
 
 
-    class GetAtsInterviewResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class GetAtsInterviewResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

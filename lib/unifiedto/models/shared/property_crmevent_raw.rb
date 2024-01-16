@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Shared
     # The raw data returned by the integration for this event.
-    class PropertyCrmEventRaw < UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyCrmEventRaw < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 

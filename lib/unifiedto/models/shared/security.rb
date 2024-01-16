@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Shared
 
-    class Security < UnifiedRubySDK::Utils::FieldAugmented
+    class Security < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 

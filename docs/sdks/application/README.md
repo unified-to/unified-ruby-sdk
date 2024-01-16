@@ -20,20 +20,13 @@ Create an application
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAtsApplicationRequest.new(
-  connection_id="string",
-  ats_application=Shared::AtsApplication.new(
-    raw=Shared::PropertyAtsApplicationRaw.new(),
-  ),
-)
     
 res = s.application.create_ats_application(connection_id="string", ats_application=Shared::AtsApplication.new(
     raw=Shared::PropertyAtsApplicationRaw.new(),
@@ -68,21 +61,13 @@ Retrieve an application
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAtsApplicationRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.application.get_ats_application(connection_id="string", id="string", fields=[
     "string",
@@ -118,7 +103,7 @@ List all applications
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -163,21 +148,13 @@ Update an application
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAtsApplicationRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ats_application=Shared::AtsApplication.new(
-    raw=Shared::PropertyAtsApplicationRaw.new(),
-  ),
-)
     
 res = s.application.patch_ats_application(connection_id="string", id="string", ats_application=Shared::AtsApplication.new(
     raw=Shared::PropertyAtsApplicationRaw.new(),
@@ -213,18 +190,13 @@ Remove an application
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAtsApplicationRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.application.remove_ats_application(connection_id="string", id="string")
 
@@ -257,21 +229,13 @@ Update an application
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAtsApplicationRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ats_application=Shared::AtsApplication.new(
-    raw=Shared::PropertyAtsApplicationRaw.new(),
-  ),
-)
     
 res = s.application.update_ats_application(connection_id="string", id="string", ats_application=Shared::AtsApplication.new(
     raw=Shared::PropertyAtsApplicationRaw.new(),

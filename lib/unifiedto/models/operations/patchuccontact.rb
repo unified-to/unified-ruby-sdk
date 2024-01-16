@@ -10,7 +10,7 @@ require_relative '../shared/uccontact'
 module UnifiedRubySDK
   module Operations
 
-    class PatchUcContactRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class PatchUcContactRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -30,7 +30,7 @@ module UnifiedRubySDK
     end
 
 
-    class PatchUcContactResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class PatchUcContactResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

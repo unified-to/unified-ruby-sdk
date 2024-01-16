@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Operations
 
-    class ListUnifiedWebhooksRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class ListUnifiedWebhooksRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
@@ -41,7 +41,7 @@ module UnifiedRubySDK
     end
 
 
-    class ListUnifiedWebhooksResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class ListUnifiedWebhooksResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

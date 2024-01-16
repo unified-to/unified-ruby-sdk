@@ -10,7 +10,7 @@ require_relative '../shared/crmpipeline'
 module UnifiedRubySDK
   module Operations
 
-    class PatchCrmPipelineRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class PatchCrmPipelineRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -30,7 +30,7 @@ module UnifiedRubySDK
     end
 
 
-    class PatchCrmPipelineResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class PatchCrmPipelineResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

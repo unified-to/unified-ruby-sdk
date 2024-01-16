@@ -26,38 +26,19 @@ Create a customer
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAccountingCustomerRequest.new(
-  connection_id="string",
-  accounting_customer=Shared::AccountingCustomer.new(
-    billing_address=Shared::PropertyAccountingCustomerBillingAddress.new(),
-    emails=[
-      Shared::AccountingEmail.new(
-        email="Kevon_Schultz42@gmail.com",
-      ),
-    ],
-    raw=Shared::PropertyAccountingCustomerRaw.new(),
-    shipping_address=Shared::PropertyAccountingCustomerShippingAddress.new(),
-    telephones=[
-      Shared::AccountingTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.customer.create_accounting_customer(connection_id="string", accounting_customer=Shared::AccountingCustomer.new(
     billing_address=Shared::PropertyAccountingCustomerBillingAddress.new(),
     emails=[
       Shared::AccountingEmail.new(
-        email="Craig39@gmail.com",
+        email="Kevon_Schultz42@gmail.com",
       ),
     ],
     raw=Shared::PropertyAccountingCustomerRaw.new(),
@@ -98,38 +79,18 @@ Create a customer
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateTicketingCustomerRequest.new(
-  connection_id="string",
-  ticketing_customer=Shared::TicketingCustomer.new(
-    emails=[
-      Shared::TicketingEmail.new(
-        email="Guadalupe78@yahoo.com",
-      ),
-    ],
-    raw=Shared::PropertyTicketingCustomerRaw.new(),
-    tags=[
-      "string",
-    ],
-    telephones=[
-      Shared::TicketingTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.customer.create_ticketing_customer(connection_id="string", ticketing_customer=Shared::TicketingCustomer.new(
     emails=[
       Shared::TicketingEmail.new(
-        email="Jodie.Thompson19@gmail.com",
+        email="Guadalupe78@yahoo.com",
       ),
     ],
     raw=Shared::PropertyTicketingCustomerRaw.new(),
@@ -172,21 +133,13 @@ Retrieve a customer
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAccountingCustomerRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.customer.get_accounting_customer(connection_id="string", id="string", fields=[
     "string",
@@ -222,21 +175,13 @@ Retrieve a customer
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetTicketingCustomerRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.customer.get_ticketing_customer(connection_id="string", id="string", fields=[
     "string",
@@ -272,7 +217,7 @@ List all customers
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -317,7 +262,7 @@ List all customers
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -362,39 +307,19 @@ Update a customer
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAccountingCustomerRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_customer=Shared::AccountingCustomer.new(
-    billing_address=Shared::PropertyAccountingCustomerBillingAddress.new(),
-    emails=[
-      Shared::AccountingEmail.new(
-        email="Trever_Orn@hotmail.com",
-      ),
-    ],
-    raw=Shared::PropertyAccountingCustomerRaw.new(),
-    shipping_address=Shared::PropertyAccountingCustomerShippingAddress.new(),
-    telephones=[
-      Shared::AccountingTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.customer.patch_accounting_customer(connection_id="string", id="string", accounting_customer=Shared::AccountingCustomer.new(
     billing_address=Shared::PropertyAccountingCustomerBillingAddress.new(),
     emails=[
       Shared::AccountingEmail.new(
-        email="Adonis_Wilkinson72@yahoo.com",
+        email="Trever_Orn@hotmail.com",
       ),
     ],
     raw=Shared::PropertyAccountingCustomerRaw.new(),
@@ -436,39 +361,18 @@ Update a customer
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchTicketingCustomerRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ticketing_customer=Shared::TicketingCustomer.new(
-    emails=[
-      Shared::TicketingEmail.new(
-        email="Raymundo93@hotmail.com",
-      ),
-    ],
-    raw=Shared::PropertyTicketingCustomerRaw.new(),
-    tags=[
-      "string",
-    ],
-    telephones=[
-      Shared::TicketingTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.customer.patch_ticketing_customer(connection_id="string", id="string", ticketing_customer=Shared::TicketingCustomer.new(
     emails=[
       Shared::TicketingEmail.new(
-        email="Bianka_Franey73@gmail.com",
+        email="Raymundo93@hotmail.com",
       ),
     ],
     raw=Shared::PropertyTicketingCustomerRaw.new(),
@@ -512,18 +416,13 @@ Remove a customer
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAccountingCustomerRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.customer.remove_accounting_customer(connection_id="string", id="string")
 
@@ -556,18 +455,13 @@ Remove a customer
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveTicketingCustomerRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.customer.remove_ticketing_customer(connection_id="string", id="string")
 
@@ -600,39 +494,19 @@ Update a customer
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAccountingCustomerRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_customer=Shared::AccountingCustomer.new(
-    billing_address=Shared::PropertyAccountingCustomerBillingAddress.new(),
-    emails=[
-      Shared::AccountingEmail.new(
-        email="Myrtice_Jacobi77@hotmail.com",
-      ),
-    ],
-    raw=Shared::PropertyAccountingCustomerRaw.new(),
-    shipping_address=Shared::PropertyAccountingCustomerShippingAddress.new(),
-    telephones=[
-      Shared::AccountingTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.customer.update_accounting_customer(connection_id="string", id="string", accounting_customer=Shared::AccountingCustomer.new(
     billing_address=Shared::PropertyAccountingCustomerBillingAddress.new(),
     emails=[
       Shared::AccountingEmail.new(
-        email="Eda40@hotmail.com",
+        email="Myrtice_Jacobi77@hotmail.com",
       ),
     ],
     raw=Shared::PropertyAccountingCustomerRaw.new(),
@@ -674,39 +548,18 @@ Update a customer
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateTicketingCustomerRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ticketing_customer=Shared::TicketingCustomer.new(
-    emails=[
-      Shared::TicketingEmail.new(
-        email="Mohamed.Friesen@hotmail.com",
-      ),
-    ],
-    raw=Shared::PropertyTicketingCustomerRaw.new(),
-    tags=[
-      "string",
-    ],
-    telephones=[
-      Shared::TicketingTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.customer.update_ticketing_customer(connection_id="string", id="string", ticketing_customer=Shared::TicketingCustomer.new(
     emails=[
       Shared::TicketingEmail.new(
-        email="Jaquelin.Goldner@hotmail.com",
+        email="Mohamed.Friesen@hotmail.com",
       ),
     ],
     raw=Shared::PropertyTicketingCustomerRaw.new(),

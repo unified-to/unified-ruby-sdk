@@ -10,7 +10,7 @@ require_relative '../shared/atscandidate'
 module UnifiedRubySDK
   module Operations
 
-    class GetAtsCandidateRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class GetAtsCandidateRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -30,7 +30,7 @@ module UnifiedRubySDK
     end
 
 
-    class GetAtsCandidateResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class GetAtsCandidateResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

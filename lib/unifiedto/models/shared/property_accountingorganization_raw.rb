@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Shared
 
-    class PropertyAccountingOrganizationRaw < UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyAccountingOrganizationRaw < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 

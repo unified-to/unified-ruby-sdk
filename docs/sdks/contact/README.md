@@ -26,35 +26,13 @@ Create a contact
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateCrmContactRequest.new(
-  connection_id="string",
-  crm_contact=Shared::CrmContact.new(
-    address=Shared::PropertyCrmContactAddress.new(),
-    company_ids=[
-      "string",
-    ],
-    deal_ids=[
-      "string",
-    ],
-    emails=[
-      Shared::CrmEmail.new(),
-    ],
-    raw=Shared::PropertyCrmContactRaw.new(),
-    telephones=[
-      Shared::CrmTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.contact.create_crm_contact(connection_id="string", crm_contact=Shared::CrmContact.new(
     address=Shared::PropertyCrmContactAddress.new(),
@@ -104,35 +82,18 @@ Create a contact
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateUcContactRequest.new(
-  connection_id="string",
-  uc_contact=Shared::UcContact.new(
-    emails=[
-      Shared::UcEmail.new(
-        email="Dulce_Becker30@yahoo.com",
-      ),
-    ],
-    raw=Shared::PropertyUcContactRaw.new(),
-    telephones=[
-      Shared::UcTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.contact.create_uc_contact(connection_id="string", uc_contact=Shared::UcContact.new(
     emails=[
       Shared::UcEmail.new(
-        email="Cassidy.Schaefer22@yahoo.com",
+        email="Dulce_Becker30@yahoo.com",
       ),
     ],
     raw=Shared::PropertyUcContactRaw.new(),
@@ -172,21 +133,13 @@ Retrieve a contact
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetCrmContactRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.contact.get_crm_contact(connection_id="string", id="string", fields=[
     "string",
@@ -222,21 +175,13 @@ Retrieve a contact
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetUcContactRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.contact.get_uc_contact(connection_id="string", id="string", fields=[
     "string",
@@ -272,7 +217,7 @@ List all contacts
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -317,7 +262,7 @@ List all contacts
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -362,36 +307,13 @@ Update a contact
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchCrmContactRequest.new(
-  connection_id="string",
-  id="<ID>",
-  crm_contact=Shared::CrmContact.new(
-    address=Shared::PropertyCrmContactAddress.new(),
-    company_ids=[
-      "string",
-    ],
-    deal_ids=[
-      "string",
-    ],
-    emails=[
-      Shared::CrmEmail.new(),
-    ],
-    raw=Shared::PropertyCrmContactRaw.new(),
-    telephones=[
-      Shared::CrmTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.contact.patch_crm_contact(connection_id="string", id="string", crm_contact=Shared::CrmContact.new(
     address=Shared::PropertyCrmContactAddress.new(),
@@ -442,36 +364,18 @@ Update a contact
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchUcContactRequest.new(
-  connection_id="string",
-  id="<ID>",
-  uc_contact=Shared::UcContact.new(
-    emails=[
-      Shared::UcEmail.new(
-        email="Norene_Boehm97@hotmail.com",
-      ),
-    ],
-    raw=Shared::PropertyUcContactRaw.new(),
-    telephones=[
-      Shared::UcTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.contact.patch_uc_contact(connection_id="string", id="string", uc_contact=Shared::UcContact.new(
     emails=[
       Shared::UcEmail.new(
-        email="Lea_Collins1@gmail.com",
+        email="Norene_Boehm97@hotmail.com",
       ),
     ],
     raw=Shared::PropertyUcContactRaw.new(),
@@ -512,18 +416,13 @@ Remove a contact
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveCrmContactRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.contact.remove_crm_contact(connection_id="string", id="string")
 
@@ -556,18 +455,13 @@ Remove a contact
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveUcContactRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.contact.remove_uc_contact(connection_id="string", id="string")
 
@@ -600,36 +494,13 @@ Update a contact
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateCrmContactRequest.new(
-  connection_id="string",
-  id="<ID>",
-  crm_contact=Shared::CrmContact.new(
-    address=Shared::PropertyCrmContactAddress.new(),
-    company_ids=[
-      "string",
-    ],
-    deal_ids=[
-      "string",
-    ],
-    emails=[
-      Shared::CrmEmail.new(),
-    ],
-    raw=Shared::PropertyCrmContactRaw.new(),
-    telephones=[
-      Shared::CrmTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.contact.update_crm_contact(connection_id="string", id="string", crm_contact=Shared::CrmContact.new(
     address=Shared::PropertyCrmContactAddress.new(),
@@ -680,36 +551,18 @@ Update a contact
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateUcContactRequest.new(
-  connection_id="string",
-  id="<ID>",
-  uc_contact=Shared::UcContact.new(
-    emails=[
-      Shared::UcEmail.new(
-        email="Kianna.Witting90@gmail.com",
-      ),
-    ],
-    raw=Shared::PropertyUcContactRaw.new(),
-    telephones=[
-      Shared::UcTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.contact.update_uc_contact(connection_id="string", id="string", uc_contact=Shared::UcContact.new(
     emails=[
       Shared::UcEmail.new(
-        email="Brandy10@hotmail.com",
+        email="Kianna.Witting90@gmail.com",
       ),
     ],
     raw=Shared::PropertyUcContactRaw.new(),

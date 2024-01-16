@@ -58,59 +58,59 @@ module UnifiedRubySDK
 
 
 
-    class HrisEmployee < UnifiedRubySDK::Utils::FieldAugmented
+    class HrisEmployee < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :address, T.nilable(Shared::PropertyHrisEmployeeAddress), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('address') } }
+      field :address, T.nilable(Shared::PropertyHrisEmployeeAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
 
-      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :currency, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('currency') } }
+      field :currency, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-      field :date_of_birth, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('date_of_birth'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :date_of_birth, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('date_of_birth'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :department, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('department') } }
+      field :department, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('department') } }
 
-      field :division, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('division') } }
+      field :division, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('division') } }
 
-      field :emails, T.nilable(T::Array[Shared::HrisEmail]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('emails') } }
+      field :emails, T.nilable(T::Array[Shared::HrisEmail]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
 
-      field :employee_number, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('employee_number') } }
+      field :employee_number, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employee_number') } }
 
-      field :employment_status, T.nilable(Shared::EmploymentStatus), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('employment_status'), 'decoder': Utils.enum_from_string(Shared::EmploymentStatus, true) } }
+      field :employment_status, T.nilable(Shared::EmploymentStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employment_status'), 'decoder': Utils.enum_from_string(Shared::EmploymentStatus, true) } }
 
-      field :employment_type, T.nilable(Shared::HrisEmployeeEmploymentType), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('employment_type'), 'decoder': Utils.enum_from_string(Shared::HrisEmployeeEmploymentType, true) } }
+      field :employment_type, T.nilable(Shared::HrisEmployeeEmploymentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employment_type'), 'decoder': Utils.enum_from_string(Shared::HrisEmployeeEmploymentType, true) } }
 
-      field :gender, T.nilable(Shared::HrisEmployeeGender), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('gender'), 'decoder': Utils.enum_from_string(Shared::HrisEmployeeGender, true) } }
+      field :gender, T.nilable(Shared::HrisEmployeeGender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gender'), 'decoder': Utils.enum_from_string(Shared::HrisEmployeeGender, true) } }
 
-      field :hired_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('hired_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :hired_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('hired_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('id') } }
+      field :id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :image_url, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('image_url') } }
+      field :image_url, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('image_url') } }
 
-      field :language_locale, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('language_locale') } }
+      field :language_locale, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language_locale') } }
 
-      field :location, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('location') } }
+      field :location, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location') } }
 
-      field :manager_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('manager_id') } }
+      field :manager_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('manager_id') } }
 
-      field :marital_status, T.nilable(Shared::MaritalStatus), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('marital_status'), 'decoder': Utils.enum_from_string(Shared::MaritalStatus, true) } }
+      field :marital_status, T.nilable(Shared::MaritalStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('marital_status'), 'decoder': Utils.enum_from_string(Shared::MaritalStatus, true) } }
 
-      field :name, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('name') } }
+      field :name, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-      field :raw, T.nilable(Shared::PropertyHrisEmployeeRaw), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(Shared::PropertyHrisEmployeeRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-      field :telephones, T.nilable(T::Array[Shared::HrisTelephone]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('telephones') } }
+      field :telephones, T.nilable(T::Array[Shared::HrisTelephone]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
 
-      field :terminated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('terminated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :terminated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('terminated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :timezone, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('timezone') } }
+      field :timezone, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
 
-      field :title, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('title') } }
+      field :title, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
 
-      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
       sig { params(address: T.nilable(Shared::PropertyHrisEmployeeAddress), created_at: T.nilable(DateTime), currency: T.nilable(String), date_of_birth: T.nilable(DateTime), department: T.nilable(String), division: T.nilable(String), emails: T.nilable(T::Array[Shared::HrisEmail]), employee_number: T.nilable(String), employment_status: T.nilable(Shared::EmploymentStatus), employment_type: T.nilable(Shared::HrisEmployeeEmploymentType), gender: T.nilable(Shared::HrisEmployeeGender), hired_at: T.nilable(DateTime), id: T.nilable(String), image_url: T.nilable(String), language_locale: T.nilable(String), location: T.nilable(String), manager_id: T.nilable(String), marital_status: T.nilable(Shared::MaritalStatus), name: T.nilable(String), raw: T.nilable(Shared::PropertyHrisEmployeeRaw), telephones: T.nilable(T::Array[Shared::HrisTelephone]), terminated_at: T.nilable(DateTime), timezone: T.nilable(String), title: T.nilable(String), updated_at: T.nilable(DateTime)).void }

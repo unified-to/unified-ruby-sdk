@@ -9,18 +9,15 @@ require 'faraday'
 module UnifiedRubySDK
   module Shared
     # The note object, when type = note
-    class PropertyCrmEventNote < UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyCrmEventNote < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :description, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('description') } }
+      field :description, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
 
-      sig { params(created_at: T.nilable(DateTime), description: T.nilable(String)).void }
-      def initialize(created_at: nil, description: nil)
-        @created_at = created_at
+      sig { params(description: T.nilable(String)).void }
+      def initialize(description: nil)
         @description = description
       end
     end

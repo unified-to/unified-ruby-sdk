@@ -20,20 +20,13 @@ Create a list
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateMartechListRequest.new(
-  connection_id="string",
-  marketing_list=Shared::MarketingList.new(
-    raw=Shared::PropertyMarketingListRaw.new(),
-  ),
-)
     
 res = s.list.create_martech_list(connection_id="string", marketing_list=Shared::MarketingList.new(
     raw=Shared::PropertyMarketingListRaw.new(),
@@ -68,21 +61,13 @@ Retrieve a list
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetMartechListRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.list.get_martech_list(connection_id="string", id="string", fields=[
     "string",
@@ -118,7 +103,7 @@ List all lists
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -163,21 +148,13 @@ Update a list
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchMartechListRequest.new(
-  connection_id="string",
-  id="<ID>",
-  marketing_list=Shared::MarketingList.new(
-    raw=Shared::PropertyMarketingListRaw.new(),
-  ),
-)
     
 res = s.list.patch_martech_list(connection_id="string", id="string", marketing_list=Shared::MarketingList.new(
     raw=Shared::PropertyMarketingListRaw.new(),
@@ -213,18 +190,13 @@ Remove a list
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveMartechListRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.list.remove_martech_list(connection_id="string", id="string")
 
@@ -257,21 +229,13 @@ Update a list
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateMartechListRequest.new(
-  connection_id="string",
-  id="<ID>",
-  marketing_list=Shared::MarketingList.new(
-    raw=Shared::PropertyMarketingListRaw.new(),
-  ),
-)
     
 res = s.list.update_martech_list(connection_id="string", id="string", marketing_list=Shared::MarketingList.new(
     raw=Shared::PropertyMarketingListRaw.new(),

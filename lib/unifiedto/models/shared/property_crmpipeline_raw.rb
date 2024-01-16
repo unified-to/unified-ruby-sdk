@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Shared
 
-    class PropertyCrmPipelineRaw < UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyCrmPipelineRaw < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 

@@ -11,33 +11,33 @@ require_relative '../shared/property_accountingorganization_raw'
 module UnifiedRubySDK
   module Shared
 
-    class AccountingOrganization < UnifiedRubySDK::Utils::FieldAugmented
+    class AccountingOrganization < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :name, String, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('name') } }
+      field :name, String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-      field :address, T.nilable(Shared::PropertyAccountingOrganizationAddress), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('address') } }
+      field :address, T.nilable(Shared::PropertyAccountingOrganizationAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
 
-      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :currency, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('currency') } }
+      field :currency, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-      field :fiscal_year_end_month, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('fiscal_year_end_month') } }
+      field :fiscal_year_end_month, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fiscal_year_end_month') } }
 
-      field :id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('id') } }
+      field :id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :legal_name, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('legal_name') } }
+      field :legal_name, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('legal_name') } }
 
-      field :raw, T.nilable(Shared::PropertyAccountingOrganizationRaw), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(Shared::PropertyAccountingOrganizationRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-      field :tax_number, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('tax_number') } }
+      field :tax_number, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_number') } }
 
-      field :timezone, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('timezone') } }
+      field :timezone, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
 
-      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :website, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('website') } }
+      field :website, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('website') } }
 
 
       sig { params(name: String, address: T.nilable(Shared::PropertyAccountingOrganizationAddress), created_at: T.nilable(DateTime), currency: T.nilable(String), fiscal_year_end_month: T.nilable(Float), id: T.nilable(String), legal_name: T.nilable(String), raw: T.nilable(Shared::PropertyAccountingOrganizationRaw), tax_number: T.nilable(String), timezone: T.nilable(String), updated_at: T.nilable(DateTime), website: T.nilable(String)).void }

@@ -20,35 +20,21 @@ The data payload received by your server is described at https://docs.unified.to
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateUnifiedWebhookRequest.new(
-  webhook=Shared::Webhook.new(
+    
+res = s.webhook.create_unified_webhook(webhook=Shared::Webhook.new(
     connection_id="string",
     event=Shared::Event::CREATED,
     hook_url="string",
     interval=188.12,
     meta=Shared::PropertyWebhookMeta.new(),
     object_type=Shared::ObjectType::CRM_CONTACT,
-    runs=[
-      "string",
-    ],
-  ),
-)
-    
-res = s.webhook.create_unified_webhook(webhook=Shared::Webhook.new(
-    connection_id="string",
-    event=Shared::Event::CREATED,
-    hook_url="string",
-    interval=738.04,
-    meta=Shared::PropertyWebhookMeta.new(),
-    object_type=Shared::ObjectType::CRM_EVENT,
     runs=[
       "string",
     ],
@@ -83,17 +69,13 @@ Retrieve webhook by its ID
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetUnifiedWebhookRequest.new(
-  id="<ID>",
-)
     
 res = s.webhook.get_unified_webhook(id="string")
 
@@ -125,7 +107,7 @@ Returns all registered webhooks
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -165,17 +147,13 @@ Trigger webhook
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchUnifiedWebhookTriggerRequest.new(
-  id="<ID>",
-)
     
 res = s.webhook.patch_unified_webhook_trigger(id="string")
 
@@ -207,17 +185,13 @@ Remove webhook subscription
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveUnifiedWebhookRequest.new(
-  id="<ID>",
-)
     
 res = s.webhook.remove_unified_webhook(id="string")
 
@@ -249,17 +223,13 @@ Trigger webhook
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateUnifiedWebhookTriggerRequest.new(
-  id="<ID>",
-)
     
 res = s.webhook.update_unified_webhook_trigger(id="string")
 

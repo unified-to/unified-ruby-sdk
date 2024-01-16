@@ -10,7 +10,7 @@ require_relative '../shared/crmdeal'
 module UnifiedRubySDK
   module Operations
 
-    class UpdateCrmDealRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class UpdateCrmDealRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -30,7 +30,7 @@ module UnifiedRubySDK
     end
 
 
-    class UpdateCrmDealResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class UpdateCrmDealResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

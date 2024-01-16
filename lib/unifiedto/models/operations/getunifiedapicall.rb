@@ -10,7 +10,7 @@ require_relative '../shared/apicall'
 module UnifiedRubySDK
   module Operations
 
-    class GetUnifiedApicallRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class GetUnifiedApicallRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the Apicall
@@ -24,7 +24,7 @@ module UnifiedRubySDK
     end
 
 
-    class GetUnifiedApicallResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class GetUnifiedApicallResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

@@ -11,63 +11,63 @@ require_relative '../shared/property_enrichcompany_raw'
 module UnifiedRubySDK
   module Shared
     # A company object from an enrichment integration
-    class EnrichCompany < UnifiedRubySDK::Utils::FieldAugmented
+    class EnrichCompany < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # The address of the company
-      field :address, T.nilable(Shared::PropertyEnrichCompanyAddress), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('address') } }
+      field :address, T.nilable(Shared::PropertyEnrichCompanyAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
 
-      field :alexa_rank, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('alexa_rank') } }
+      field :alexa_rank, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('alexa_rank') } }
 
-      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :crunchbase_url, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('crunchbase_url') } }
+      field :crunchbase_url, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('crunchbase_url') } }
 
-      field :description, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('description') } }
+      field :description, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-      field :domain, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('domain') } }
+      field :domain, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('domain') } }
 
-      field :employees, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('employees') } }
+      field :employees, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employees') } }
 
-      field :exchange, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('exchange') } }
+      field :exchange, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('exchange') } }
 
-      field :facebook_url, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('facebook_url') } }
+      field :facebook_url, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('facebook_url') } }
 
-      field :id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('id') } }
+      field :id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :industry, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('industry') } }
+      field :industry, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('industry') } }
 
-      field :instagram_url, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('instagram_url') } }
+      field :instagram_url, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('instagram_url') } }
 
-      field :linkedin_url, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('linkedin_url') } }
+      field :linkedin_url, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('linkedin_url') } }
 
-      field :logo_url, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('logo_url') } }
+      field :logo_url, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('logo_url') } }
 
-      field :naics_code, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('naics_code') } }
+      field :naics_code, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('naics_code') } }
 
-      field :name, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('name') } }
+      field :name, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
       # The raw data returned by the integration for this company
-      field :raw, T.nilable(Shared::PropertyEnrichCompanyRaw), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(Shared::PropertyEnrichCompanyRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-      field :revenue, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('revenue') } }
+      field :revenue, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('revenue') } }
 
-      field :sic_code, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('sic_code') } }
+      field :sic_code, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sic_code') } }
 
-      field :stock, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('stock') } }
+      field :stock, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('stock') } }
       # An array of telephones for this company
-      field :telephones, T.nilable(T::Array[Shared::EnrichTelephone]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('telephones') } }
+      field :telephones, T.nilable(T::Array[Shared::EnrichTelephone]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
 
-      field :twitter_handle, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('twitter_handle') } }
+      field :twitter_handle, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('twitter_handle') } }
 
-      field :twitter_url, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('twitter_url') } }
+      field :twitter_url, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('twitter_url') } }
 
-      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :year_founded, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('year_founded') } }
+      field :year_founded, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('year_founded') } }
 
-      field :yelp_url, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('yelp_url') } }
+      field :yelp_url, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('yelp_url') } }
 
-      field :youtube_url, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('youtube_url') } }
+      field :youtube_url, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('youtube_url') } }
 
 
       sig { params(address: T.nilable(Shared::PropertyEnrichCompanyAddress), alexa_rank: T.nilable(Float), created_at: T.nilable(DateTime), crunchbase_url: T.nilable(String), description: T.nilable(String), domain: T.nilable(String), employees: T.nilable(String), exchange: T.nilable(String), facebook_url: T.nilable(String), id: T.nilable(String), industry: T.nilable(String), instagram_url: T.nilable(String), linkedin_url: T.nilable(String), logo_url: T.nilable(String), naics_code: T.nilable(Float), name: T.nilable(String), raw: T.nilable(Shared::PropertyEnrichCompanyRaw), revenue: T.nilable(String), sic_code: T.nilable(Float), stock: T.nilable(String), telephones: T.nilable(T::Array[Shared::EnrichTelephone]), twitter_handle: T.nilable(String), twitter_url: T.nilable(String), updated_at: T.nilable(DateTime), year_founded: T.nilable(Float), yelp_url: T.nilable(String), youtube_url: T.nilable(String)).void }

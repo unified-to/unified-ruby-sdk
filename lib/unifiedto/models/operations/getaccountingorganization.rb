@@ -10,7 +10,7 @@ require_relative '../shared/accountingorganization'
 module UnifiedRubySDK
   module Operations
 
-    class GetAccountingOrganizationRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class GetAccountingOrganizationRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -30,7 +30,7 @@ module UnifiedRubySDK
     end
 
 
-    class GetAccountingOrganizationResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class GetAccountingOrganizationResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

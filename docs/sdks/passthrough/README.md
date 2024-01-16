@@ -19,19 +19,13 @@ Passthrough POST
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreatePassthroughRequest.new(
-  connection_id="string",
-  path="/etc/periodic",
-  undefined=Shared::Undefined.new(),
-)
     
 res = s.passthrough.create_passthrough(connection_id="string", path="string", undefined=Shared::Undefined.new())
 
@@ -65,18 +59,13 @@ Passthrough GET
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::ListPassthroughsRequest.new(
-  connection_id="string",
-  path="/selinux",
-)
     
 res = s.passthrough.list_passthroughs(connection_id="string", path="string")
 
@@ -109,19 +98,13 @@ Passthrough PUT
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchPassthroughRequest.new(
-  connection_id="string",
-  path="/mnt",
-  undefined=Shared::Undefined.new(),
-)
     
 res = s.passthrough.patch_passthrough(connection_id="string", path="string", undefined=Shared::Undefined.new())
 
@@ -155,18 +138,13 @@ Passthrough DELETE
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemovePassthroughRequest.new(
-  connection_id="string",
-  path="/Applications",
-)
     
 res = s.passthrough.remove_passthrough(connection_id="string", path="string")
 
@@ -199,19 +177,13 @@ Passthrough PUT
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdatePassthroughRequest.new(
-  connection_id="string",
-  path="/dev",
-  undefined=Shared::Undefined.new(),
-)
     
 res = s.passthrough.update_passthrough(connection_id="string", path="string", undefined=Shared::Undefined.new())
 

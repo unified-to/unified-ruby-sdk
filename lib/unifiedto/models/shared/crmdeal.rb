@@ -10,41 +10,41 @@ require_relative '../shared/property_crmdeal_raw'
 module UnifiedRubySDK
   module Shared
     # A deal represents an opportunity with companies and/or contacts
-    class CrmDeal < UnifiedRubySDK::Utils::FieldAugmented
+    class CrmDeal < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :amount, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('amount') } }
+      field :amount, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
 
-      field :closed_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('closed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :closed_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :currency, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('currency') } }
+      field :currency, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-      field :id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('id') } }
+      field :id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :lost_reason, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('lost_reason') } }
+      field :lost_reason, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lost_reason') } }
 
-      field :name, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('name') } }
+      field :name, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-      field :pipeline, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('pipeline') } }
+      field :pipeline, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pipeline') } }
 
-      field :probability, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('probability') } }
+      field :probability, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('probability') } }
       # The raw data returned by the integration for this deal
-      field :raw, T.nilable(Shared::PropertyCrmDealRaw), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(Shared::PropertyCrmDealRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-      field :source, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('source') } }
+      field :source, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source') } }
 
-      field :stage, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('stage') } }
+      field :stage, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('stage') } }
 
-      field :tags, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('tags') } }
+      field :tags, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
 
-      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :user_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('user_id') } }
+      field :user_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-      field :won_reason, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('won_reason') } }
+      field :won_reason, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('won_reason') } }
 
 
       sig { params(amount: T.nilable(Float), closed_at: T.nilable(DateTime), created_at: T.nilable(DateTime), currency: T.nilable(String), id: T.nilable(String), lost_reason: T.nilable(String), name: T.nilable(String), pipeline: T.nilable(String), probability: T.nilable(Float), raw: T.nilable(Shared::PropertyCrmDealRaw), source: T.nilable(String), stage: T.nilable(String), tags: T.nilable(T::Array[String]), updated_at: T.nilable(DateTime), user_id: T.nilable(String), won_reason: T.nilable(String)).void }

@@ -20,17 +20,15 @@ Create a transaction
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAccountingTransactionRequest.new(
-  connection_id="string",
-  accounting_transaction=Shared::AccountingTransaction.new(
+    
+res = s.transaction.create_accounting_transaction(connection_id="string", accounting_transaction=Shared::AccountingTransaction.new(
     account_id="string",
     id="<ID>",
     line_items=[
@@ -40,20 +38,6 @@ req = Operations::CreateAccountingTransactionRequest.new(
     ],
     raw=Shared::PropertyAccountingTransactionRaw.new(),
     total_amount=6267.93,
-    type=Shared::AccountingTransactionType::SPEND,
-  ),
-)
-    
-res = s.transaction.create_accounting_transaction(connection_id="string", accounting_transaction=Shared::AccountingTransaction.new(
-    account_id="string",
-    id="<ID>",
-    line_items=[
-      Shared::AccountingTransactionLineitem.new(
-        total_amount=1284.64,
-      ),
-    ],
-    raw=Shared::PropertyAccountingTransactionRaw.new(),
-    total_amount=2477.45,
     type=Shared::AccountingTransactionType::SPEND,
   ))
 
@@ -86,21 +70,13 @@ Retrieve a transaction
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAccountingTransactionRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.transaction.get_accounting_transaction(connection_id="string", id="string", fields=[
     "string",
@@ -136,7 +112,7 @@ List all transactions
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -181,18 +157,15 @@ Update a transaction
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAccountingTransactionRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_transaction=Shared::AccountingTransaction.new(
+    
+res = s.transaction.patch_accounting_transaction(connection_id="string", id="string", accounting_transaction=Shared::AccountingTransaction.new(
     account_id="string",
     id="<ID>",
     line_items=[
@@ -203,20 +176,6 @@ req = Operations::PatchAccountingTransactionRequest.new(
     raw=Shared::PropertyAccountingTransactionRaw.new(),
     total_amount=4558.63,
     type=Shared::AccountingTransactionType::SPEND,
-  ),
-)
-    
-res = s.transaction.patch_accounting_transaction(connection_id="string", id="string", accounting_transaction=Shared::AccountingTransaction.new(
-    account_id="string",
-    id="<ID>",
-    line_items=[
-      Shared::AccountingTransactionLineitem.new(
-        total_amount=3798.28,
-      ),
-    ],
-    raw=Shared::PropertyAccountingTransactionRaw.new(),
-    total_amount=535.65,
-    type=Shared::AccountingTransactionType::RECEIVE,
   ))
 
 if ! res.accounting_transaction.nil?
@@ -249,18 +208,13 @@ Remove a transaction
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAccountingTransactionRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.transaction.remove_accounting_transaction(connection_id="string", id="string")
 
@@ -293,18 +247,15 @@ Update a transaction
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAccountingTransactionRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_transaction=Shared::AccountingTransaction.new(
+    
+res = s.transaction.update_accounting_transaction(connection_id="string", id="string", accounting_transaction=Shared::AccountingTransaction.new(
     account_id="string",
     id="<ID>",
     line_items=[
@@ -315,20 +266,6 @@ req = Operations::UpdateAccountingTransactionRequest.new(
     raw=Shared::PropertyAccountingTransactionRaw.new(),
     total_amount=5659.17,
     type=Shared::AccountingTransactionType::SPEND,
-  ),
-)
-    
-res = s.transaction.update_accounting_transaction(connection_id="string", id="string", accounting_transaction=Shared::AccountingTransaction.new(
-    account_id="string",
-    id="<ID>",
-    line_items=[
-      Shared::AccountingTransactionLineitem.new(
-        total_amount=7024.11,
-      ),
-    ],
-    raw=Shared::PropertyAccountingTransactionRaw.new(),
-    total_amount=2397.73,
-    type=Shared::AccountingTransactionType::RECEIVE,
   ))
 
 if ! res.accounting_transaction.nil?

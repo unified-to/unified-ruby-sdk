@@ -20,20 +20,13 @@ Create a document
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAtsDocumentRequest.new(
-  connection_id="string",
-  ats_document=Shared::AtsDocument.new(
-    raw=Shared::PropertyAtsDocumentRaw.new(),
-  ),
-)
     
 res = s.document.create_ats_document(connection_id="string", ats_document=Shared::AtsDocument.new(
     raw=Shared::PropertyAtsDocumentRaw.new(),
@@ -68,21 +61,13 @@ Retrieve a document
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAtsDocumentRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.document.get_ats_document(connection_id="string", id="string", fields=[
     "string",
@@ -118,7 +103,7 @@ List all documents
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -163,21 +148,13 @@ Update a document
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAtsDocumentRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ats_document=Shared::AtsDocument.new(
-    raw=Shared::PropertyAtsDocumentRaw.new(),
-  ),
-)
     
 res = s.document.patch_ats_document(connection_id="string", id="string", ats_document=Shared::AtsDocument.new(
     raw=Shared::PropertyAtsDocumentRaw.new(),
@@ -213,18 +190,13 @@ Remove a document
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAtsDocumentRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.document.remove_ats_document(connection_id="string", id="string")
 
@@ -257,21 +229,13 @@ Update a document
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAtsDocumentRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ats_document=Shared::AtsDocument.new(
-    raw=Shared::PropertyAtsDocumentRaw.new(),
-  ),
-)
     
 res = s.document.update_ats_document(connection_id="string", id="string", ats_document=Shared::AtsDocument.new(
     raw=Shared::PropertyAtsDocumentRaw.new(),

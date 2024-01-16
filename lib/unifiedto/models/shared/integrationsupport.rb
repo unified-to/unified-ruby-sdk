@@ -21,65 +21,65 @@ module UnifiedRubySDK
 
 
 
-    class IntegrationSupport < UnifiedRubySDK::Utils::FieldAugmented
+    class IntegrationSupport < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :inbound_fields, T.nilable(Shared::PropertyIntegrationSupportInboundFields), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('inbound_fields') } }
+      field :inbound_fields, T.nilable(Shared::PropertyIntegrationSupportInboundFields), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('inbound_fields') } }
 
-      field :list_application_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('list_application_id') } }
+      field :list_application_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_application_id') } }
 
-      field :list_candidate_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('list_candidate_id') } }
+      field :list_candidate_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_candidate_id') } }
 
-      field :list_company_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('list_company_id') } }
+      field :list_company_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_company_id') } }
 
-      field :list_contact_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('list_contact_id') } }
+      field :list_contact_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_contact_id') } }
 
-      field :list_customer_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('list_customer_id') } }
+      field :list_customer_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_customer_id') } }
 
-      field :list_deal_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('list_deal_id') } }
+      field :list_deal_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_deal_id') } }
 
-      field :list_invoice_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('list_invoice_id') } }
+      field :list_invoice_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_invoice_id') } }
 
-      field :list_job_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('list_job_id') } }
+      field :list_job_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_job_id') } }
 
-      field :list_limit, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('list_limit') } }
+      field :list_limit, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_limit') } }
 
-      field :list_offset, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('list_offset') } }
+      field :list_offset, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_offset') } }
 
-      field :list_order, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('list_order') } }
+      field :list_order, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_order') } }
 
-      field :list_parent_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('list_parent_id') } }
+      field :list_parent_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_parent_id') } }
 
-      field :list_query, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('list_query') } }
+      field :list_query, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_query') } }
 
-      field :list_sort_by_created_at, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('list_sort_by_created_at') } }
+      field :list_sort_by_created_at, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_sort_by_created_at') } }
 
-      field :list_sort_by_name, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('list_sort_by_name') } }
+      field :list_sort_by_name, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_sort_by_name') } }
 
-      field :list_sort_by_updated_at, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('list_sort_by_updated_at') } }
+      field :list_sort_by_updated_at, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_sort_by_updated_at') } }
 
-      field :list_updated_gte, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('list_updated_gte') } }
+      field :list_updated_gte, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_updated_gte') } }
 
-      field :list_user_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('list_user_id') } }
+      field :list_user_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_user_id') } }
 
-      field :methods, T.nilable(T::Hash[Symbol, T::Boolean]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('methods') } }
+      field :methods, T.nilable(T::Hash[Symbol, T::Boolean]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('methods') } }
 
-      field :outbound_fields, T.nilable(Shared::PropertyIntegrationSupportOutboundFields), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('outbound_fields') } }
+      field :outbound_fields, T.nilable(Shared::PropertyIntegrationSupportOutboundFields), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('outbound_fields') } }
 
-      field :search_domain, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('search_domain') } }
+      field :search_domain, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('search_domain') } }
 
-      field :search_email, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('search_email') } }
+      field :search_email, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('search_email') } }
 
-      field :search_linkedin_url, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('search_linkedin_url') } }
+      field :search_linkedin_url, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('search_linkedin_url') } }
 
-      field :search_name, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('search_name') } }
+      field :search_name, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('search_name') } }
 
-      field :search_twitter, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('search_twitter') } }
+      field :search_twitter, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('search_twitter') } }
 
-      field :webhook_events, T.nilable(T::Array[Shared::PropertyIntegrationSupportWebhookEvents]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('webhook_events') } }
+      field :webhook_events, T.nilable(T::Array[Shared::PropertyIntegrationSupportWebhookEvents]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('webhook_events') } }
 
-      field :webhook_type, T.nilable(Shared::WebhookType), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('webhook_type'), 'decoder': Utils.enum_from_string(Shared::WebhookType, true) } }
+      field :webhook_type, T.nilable(Shared::WebhookType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('webhook_type'), 'decoder': Utils.enum_from_string(Shared::WebhookType, true) } }
 
 
       sig { params(inbound_fields: T.nilable(Shared::PropertyIntegrationSupportInboundFields), list_application_id: T.nilable(T::Boolean), list_candidate_id: T.nilable(T::Boolean), list_company_id: T.nilable(T::Boolean), list_contact_id: T.nilable(T::Boolean), list_customer_id: T.nilable(T::Boolean), list_deal_id: T.nilable(T::Boolean), list_invoice_id: T.nilable(T::Boolean), list_job_id: T.nilable(T::Boolean), list_limit: T.nilable(T::Boolean), list_offset: T.nilable(T::Boolean), list_order: T.nilable(T::Boolean), list_parent_id: T.nilable(T::Boolean), list_query: T.nilable(T::Boolean), list_sort_by_created_at: T.nilable(T::Boolean), list_sort_by_name: T.nilable(T::Boolean), list_sort_by_updated_at: T.nilable(T::Boolean), list_updated_gte: T.nilable(T::Boolean), list_user_id: T.nilable(T::Boolean), methods: T.nilable(T::Hash[Symbol, T::Boolean]), outbound_fields: T.nilable(Shared::PropertyIntegrationSupportOutboundFields), search_domain: T.nilable(T::Boolean), search_email: T.nilable(T::Boolean), search_linkedin_url: T.nilable(T::Boolean), search_name: T.nilable(T::Boolean), search_twitter: T.nilable(T::Boolean), webhook_events: T.nilable(T::Array[Shared::PropertyIntegrationSupportWebhookEvents]), webhook_type: T.nilable(Shared::WebhookType)).void }

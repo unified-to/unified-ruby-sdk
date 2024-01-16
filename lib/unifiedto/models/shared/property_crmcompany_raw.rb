@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Shared
     # The raw data returned by the integration for this company
-    class PropertyCrmCompanyRaw < UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyCrmCompanyRaw < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 

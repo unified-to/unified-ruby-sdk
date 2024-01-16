@@ -10,7 +10,7 @@ require_relative '../shared/enrichcompany'
 module UnifiedRubySDK
   module Operations
 
-    class ListEnrichCompaniesRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class ListEnrichCompaniesRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -30,7 +30,7 @@ module UnifiedRubySDK
     end
 
 
-    class ListEnrichCompaniesResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class ListEnrichCompaniesResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

@@ -20,17 +20,17 @@ module UnifiedRubySDK
 
 
     # The task object, when type = task
-    class PropertyCrmEventTask < UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyCrmEventTask < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :description, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('description') } }
+      field :description, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-      field :due_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('due_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :due_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('due_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :name, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('name') } }
+      field :name, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-      field :status, T.nilable(Shared::PropertyCrmEventTaskStatus), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Shared::PropertyCrmEventTaskStatus, true) } }
+      field :status, T.nilable(Shared::PropertyCrmEventTaskStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Shared::PropertyCrmEventTaskStatus, true) } }
 
 
       sig { params(description: T.nilable(String), due_at: T.nilable(DateTime), name: T.nilable(String), status: T.nilable(Shared::PropertyCrmEventTaskStatus)).void }

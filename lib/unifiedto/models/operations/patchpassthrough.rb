@@ -10,7 +10,7 @@ require_relative '../shared/undefined'
 module UnifiedRubySDK
   module Operations
 
-    class PatchPassthroughRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class PatchPassthroughRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -30,7 +30,7 @@ module UnifiedRubySDK
     end
 
 
-    class PatchPassthroughResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class PatchPassthroughResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

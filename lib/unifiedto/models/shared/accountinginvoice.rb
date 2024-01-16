@@ -20,51 +20,51 @@ module UnifiedRubySDK
 
 
 
-    class AccountingInvoice < UnifiedRubySDK::Utils::FieldAugmented
+    class AccountingInvoice < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :balance_amount, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('balance_amount') } }
+      field :balance_amount, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('balance_amount') } }
 
-      field :cancelled_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('cancelled_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :cancelled_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cancelled_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :currency, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('currency') } }
+      field :currency, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-      field :customer_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('customer_id') } }
+      field :customer_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('customer_id') } }
 
-      field :discount_amount, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('discount_amount') } }
+      field :discount_amount, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('discount_amount') } }
 
-      field :due_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('due_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :due_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('due_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('id') } }
+      field :id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :invoice_number, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('invoice_number') } }
+      field :invoice_number, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('invoice_number') } }
 
-      field :lineitems, T.nilable(T::Array[Shared::AccountingLineitem]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('lineitems') } }
+      field :lineitems, T.nilable(T::Array[Shared::AccountingLineitem]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lineitems') } }
 
-      field :notes, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('notes') } }
+      field :notes, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
 
-      field :paid_amount, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('paid_amount') } }
+      field :paid_amount, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paid_amount') } }
 
-      field :paid_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('paid_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :paid_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paid_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :raw, T.nilable(Shared::PropertyAccountingInvoiceRaw), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(Shared::PropertyAccountingInvoiceRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-      field :refund_amount, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('refund_amount') } }
+      field :refund_amount, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refund_amount') } }
 
-      field :refund_reason, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('refund_reason') } }
+      field :refund_reason, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refund_reason') } }
 
-      field :refunded_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('refunded_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :refunded_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refunded_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :status, T.nilable(Shared::AccountingInvoiceStatus), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Shared::AccountingInvoiceStatus, true) } }
+      field :status, T.nilable(Shared::AccountingInvoiceStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Shared::AccountingInvoiceStatus, true) } }
 
-      field :tax_amount, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('tax_amount') } }
+      field :tax_amount, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_amount') } }
 
-      field :total_amount, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('total_amount') } }
+      field :total_amount, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
 
-      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
       sig { params(balance_amount: T.nilable(Float), cancelled_at: T.nilable(DateTime), created_at: T.nilable(DateTime), currency: T.nilable(String), customer_id: T.nilable(String), discount_amount: T.nilable(Float), due_at: T.nilable(DateTime), id: T.nilable(String), invoice_number: T.nilable(String), lineitems: T.nilable(T::Array[Shared::AccountingLineitem]), notes: T.nilable(String), paid_amount: T.nilable(Float), paid_at: T.nilable(DateTime), raw: T.nilable(Shared::PropertyAccountingInvoiceRaw), refund_amount: T.nilable(Float), refund_reason: T.nilable(String), refunded_at: T.nilable(DateTime), status: T.nilable(Shared::AccountingInvoiceStatus), tax_amount: T.nilable(Float), total_amount: T.nilable(Float), updated_at: T.nilable(DateTime)).void }

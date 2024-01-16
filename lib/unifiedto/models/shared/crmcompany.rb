@@ -11,45 +11,45 @@ require_relative '../shared/property_crmcompany_raw'
 module UnifiedRubySDK
   module Shared
     # A company represents an organization that optionally is associated with a deal and/or contacts
-    class CrmCompany < UnifiedRubySDK::Utils::FieldAugmented
+    class CrmCompany < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :address, T.nilable(Shared::PropertyCrmCompanyAddress), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('address') } }
+      field :address, T.nilable(Shared::PropertyCrmCompanyAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
 
-      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
       # An array of deal IDs associated with this contact
-      field :deal_ids, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('deal_ids') } }
+      field :deal_ids, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('deal_ids') } }
 
-      field :description, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('description') } }
+      field :description, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-      field :emails, T.nilable(T::Array[Shared::CrmEmail]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('emails') } }
+      field :emails, T.nilable(T::Array[Shared::CrmEmail]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
 
-      field :employees, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('employees') } }
+      field :employees, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employees') } }
 
-      field :id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('id') } }
+      field :id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :industry, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('industry') } }
+      field :industry, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('industry') } }
 
-      field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('is_active') } }
+      field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
-      field :link_urls, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('link_urls') } }
+      field :link_urls, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('link_urls') } }
 
-      field :name, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('name') } }
+      field :name, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
       # The raw data returned by the integration for this company
-      field :raw, T.nilable(Shared::PropertyCrmCompanyRaw), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(Shared::PropertyCrmCompanyRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-      field :tags, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('tags') } }
+      field :tags, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
 
-      field :telephones, T.nilable(T::Array[Shared::CrmTelephone]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('telephones') } }
+      field :telephones, T.nilable(T::Array[Shared::CrmTelephone]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
 
-      field :timezone, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('timezone') } }
+      field :timezone, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
 
-      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :user_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('user_id') } }
+      field :user_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-      field :websites, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('websites') } }
+      field :websites, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('websites') } }
 
 
       sig { params(address: T.nilable(Shared::PropertyCrmCompanyAddress), created_at: T.nilable(DateTime), deal_ids: T.nilable(T::Array[String]), description: T.nilable(String), emails: T.nilable(T::Array[Shared::CrmEmail]), employees: T.nilable(Float), id: T.nilable(String), industry: T.nilable(String), is_active: T.nilable(T::Boolean), link_urls: T.nilable(T::Array[String]), name: T.nilable(String), raw: T.nilable(Shared::PropertyCrmCompanyRaw), tags: T.nilable(T::Array[String]), telephones: T.nilable(T::Array[Shared::CrmTelephone]), timezone: T.nilable(String), updated_at: T.nilable(DateTime), user_id: T.nilable(String), websites: T.nilable(T::Array[String])).void }

@@ -20,33 +20,19 @@ Create a file
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateStorageFileRequest.new(
-  connection_id="string",
-  storage_file=Shared::StorageFile.new(
-    permissions=[
-      Shared::StoragePermission.new(
-        roles=[
-          Shared::PropertyStoragePermissionRoles::WRITE,
-        ],
-      ),
-    ],
-    raw=Shared::PropertyStorageFileRaw.new(),
-  ),
-)
     
 res = s.storage.create_storage_file(connection_id="string", storage_file=Shared::StorageFile.new(
     permissions=[
       Shared::StoragePermission.new(
         roles=[
-          Shared::PropertyStoragePermissionRoles::OWNER,
+          Shared::PropertyStoragePermissionRoles::WRITE,
         ],
       ),
     ],
@@ -82,21 +68,13 @@ Retrieve a file
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetStorageFileRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.storage.get_storage_file(connection_id="string", id="string", fields=[
     "string",
@@ -132,7 +110,7 @@ List all files
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -177,28 +155,13 @@ Update a file
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchStorageFileRequest.new(
-  connection_id="string",
-  id="<ID>",
-  storage_file=Shared::StorageFile.new(
-    permissions=[
-      Shared::StoragePermission.new(
-        roles=[
-          Shared::PropertyStoragePermissionRoles::OWNER,
-        ],
-      ),
-    ],
-    raw=Shared::PropertyStorageFileRaw.new(),
-  ),
-)
     
 res = s.storage.patch_storage_file(connection_id="string", id="string", storage_file=Shared::StorageFile.new(
     permissions=[
@@ -241,18 +204,13 @@ Remove a file
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveStorageFileRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.storage.remove_storage_file(connection_id="string", id="string")
 
@@ -285,34 +243,19 @@ Update a file
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateStorageFileRequest.new(
-  connection_id="string",
-  id="<ID>",
-  storage_file=Shared::StorageFile.new(
-    permissions=[
-      Shared::StoragePermission.new(
-        roles=[
-          Shared::PropertyStoragePermissionRoles::WRITE,
-        ],
-      ),
-    ],
-    raw=Shared::PropertyStorageFileRaw.new(),
-  ),
-)
     
 res = s.storage.update_storage_file(connection_id="string", id="string", storage_file=Shared::StorageFile.new(
     permissions=[
       Shared::StoragePermission.new(
         roles=[
-          Shared::PropertyStoragePermissionRoles::READ,
+          Shared::PropertyStoragePermissionRoles::WRITE,
         ],
       ),
     ],

@@ -30,35 +30,35 @@ module UnifiedRubySDK
 
 
 
-    class AccountingCustomer < UnifiedRubySDK::Utils::FieldAugmented
+    class AccountingCustomer < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :billing_address, T.nilable(Shared::PropertyAccountingCustomerBillingAddress), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('billing_address') } }
+      field :billing_address, T.nilable(Shared::PropertyAccountingCustomerBillingAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('billing_address') } }
 
-      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :currency, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('currency') } }
+      field :currency, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-      field :emails, T.nilable(T::Array[Shared::AccountingEmail]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('emails') } }
+      field :emails, T.nilable(T::Array[Shared::AccountingEmail]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
 
-      field :id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('id') } }
+      field :id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('is_active') } }
+      field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
-      field :name, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('name') } }
+      field :name, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-      field :raw, T.nilable(Shared::PropertyAccountingCustomerRaw), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(Shared::PropertyAccountingCustomerRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-      field :shipping_address, T.nilable(Shared::PropertyAccountingCustomerShippingAddress), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('shipping_address') } }
+      field :shipping_address, T.nilable(Shared::PropertyAccountingCustomerShippingAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('shipping_address') } }
 
-      field :tax_exemption, T.nilable(Shared::TaxExemption), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('tax_exemption'), 'decoder': Utils.enum_from_string(Shared::TaxExemption, true) } }
+      field :tax_exemption, T.nilable(Shared::TaxExemption), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_exemption'), 'decoder': Utils.enum_from_string(Shared::TaxExemption, true) } }
 
-      field :tax_number, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('tax_number') } }
+      field :tax_number, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_number') } }
 
-      field :telephones, T.nilable(T::Array[Shared::AccountingTelephone]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('telephones') } }
+      field :telephones, T.nilable(T::Array[Shared::AccountingTelephone]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
 
-      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
       sig { params(billing_address: T.nilable(Shared::PropertyAccountingCustomerBillingAddress), created_at: T.nilable(DateTime), currency: T.nilable(String), emails: T.nilable(T::Array[Shared::AccountingEmail]), id: T.nilable(String), is_active: T.nilable(T::Boolean), name: T.nilable(String), raw: T.nilable(Shared::PropertyAccountingCustomerRaw), shipping_address: T.nilable(Shared::PropertyAccountingCustomerShippingAddress), tax_exemption: T.nilable(Shared::TaxExemption), tax_number: T.nilable(String), telephones: T.nilable(T::Array[Shared::AccountingTelephone]), updated_at: T.nilable(DateTime)).void }

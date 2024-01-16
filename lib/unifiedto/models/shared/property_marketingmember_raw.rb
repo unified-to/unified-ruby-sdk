@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Shared
     # The raw data returned by the integration for this member
-    class PropertyMarketingMemberRaw < UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyMarketingMemberRaw < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 

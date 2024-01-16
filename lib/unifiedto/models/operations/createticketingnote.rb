@@ -10,7 +10,7 @@ require_relative '../shared/ticketingnote'
 module UnifiedRubySDK
   module Operations
 
-    class CreateTicketingNoteRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class CreateTicketingNoteRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -27,7 +27,7 @@ module UnifiedRubySDK
     end
 
 
-    class CreateTicketingNoteResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class CreateTicketingNoteResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

@@ -20,21 +20,13 @@ Create an item
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAccountingItemRequest.new(
-  connection_id="string",
-  accounting_item=Shared::AccountingItem.new(
-    name="string",
-    raw=Shared::PropertyAccountingItemRaw.new(),
-  ),
-)
     
 res = s.item.create_accounting_item(connection_id="string", accounting_item=Shared::AccountingItem.new(
     name="string",
@@ -70,21 +62,13 @@ Retrieve an item
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAccountingItemRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.item.get_accounting_item(connection_id="string", id="string", fields=[
     "string",
@@ -120,7 +104,7 @@ List all items
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -165,22 +149,13 @@ Update an item
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAccountingItemRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_item=Shared::AccountingItem.new(
-    name="string",
-    raw=Shared::PropertyAccountingItemRaw.new(),
-  ),
-)
     
 res = s.item.patch_accounting_item(connection_id="string", id="string", accounting_item=Shared::AccountingItem.new(
     name="string",
@@ -217,18 +192,13 @@ Remove an item
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAccountingItemRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.item.remove_accounting_item(connection_id="string", id="string")
 
@@ -261,22 +231,13 @@ Update an item
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAccountingItemRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_item=Shared::AccountingItem.new(
-    name="string",
-    raw=Shared::PropertyAccountingItemRaw.new(),
-  ),
-)
     
 res = s.item.update_accounting_item(connection_id="string", id="string", accounting_item=Shared::AccountingItem.new(
     name="string",

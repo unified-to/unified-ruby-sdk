@@ -20,57 +20,57 @@ module UnifiedRubySDK
 
 
     # A person object from an enrichment integration
-    class EnrichPerson < UnifiedRubySDK::Utils::FieldAugmented
+    class EnrichPerson < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # The address of the person
-      field :address, T.nilable(Shared::PropertyEnrichPersonAddress), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('address') } }
+      field :address, T.nilable(Shared::PropertyEnrichPersonAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
 
-      field :bio, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('bio') } }
+      field :bio, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('bio') } }
 
-      field :birthdate, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('birthdate') } }
+      field :birthdate, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('birthdate') } }
 
-      field :company, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('company') } }
+      field :company, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company') } }
 
-      field :company_domain, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('company_domain') } }
+      field :company_domain, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_domain') } }
 
-      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
       # An array of email addresses for this person
-      field :emails, T.nilable(T::Array[Shared::EnrichEmail]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('emails') } }
+      field :emails, T.nilable(T::Array[Shared::EnrichEmail]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
 
-      field :facebook_url, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('facebook_url') } }
+      field :facebook_url, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('facebook_url') } }
 
-      field :gender, T.nilable(Shared::Gender), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('gender'), 'decoder': Utils.enum_from_string(Shared::Gender, true) } }
+      field :gender, T.nilable(Shared::Gender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gender'), 'decoder': Utils.enum_from_string(Shared::Gender, true) } }
 
-      field :github_url, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('github_url') } }
+      field :github_url, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('github_url') } }
 
-      field :github_username, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('github_username') } }
+      field :github_username, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('github_username') } }
 
-      field :id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('id') } }
+      field :id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :image_url, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('image_url') } }
+      field :image_url, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('image_url') } }
 
-      field :linkedin_url, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('linkedin_url') } }
+      field :linkedin_url, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('linkedin_url') } }
 
-      field :name, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('name') } }
+      field :name, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
       # The raw data returned by the integration for this person
-      field :raw, T.nilable(Shared::PropertyEnrichPersonRaw), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(Shared::PropertyEnrichPersonRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
       # An array of telephones for this person
-      field :telephones, T.nilable(T::Array[Shared::EnrichTelephone]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('telephones') } }
+      field :telephones, T.nilable(T::Array[Shared::EnrichTelephone]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
 
-      field :timezone, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('timezone') } }
+      field :timezone, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
 
-      field :title, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('title') } }
+      field :title, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
 
-      field :twitter_handle, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('twitter_handle') } }
+      field :twitter_handle, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('twitter_handle') } }
 
-      field :twitter_url, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('twitter_url') } }
+      field :twitter_url, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('twitter_url') } }
 
-      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :utc_offset, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('utc_offset') } }
+      field :utc_offset, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('utc_offset') } }
 
-      field :work_histories, T.nilable(T::Array[Shared::EnrichPersonWorkHistory]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('work_histories') } }
+      field :work_histories, T.nilable(T::Array[Shared::EnrichPersonWorkHistory]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('work_histories') } }
 
 
       sig { params(address: T.nilable(Shared::PropertyEnrichPersonAddress), bio: T.nilable(String), birthdate: T.nilable(String), company: T.nilable(String), company_domain: T.nilable(String), created_at: T.nilable(DateTime), emails: T.nilable(T::Array[Shared::EnrichEmail]), facebook_url: T.nilable(String), gender: T.nilable(Shared::Gender), github_url: T.nilable(String), github_username: T.nilable(String), id: T.nilable(String), image_url: T.nilable(String), linkedin_url: T.nilable(String), name: T.nilable(String), raw: T.nilable(Shared::PropertyEnrichPersonRaw), telephones: T.nilable(T::Array[Shared::EnrichTelephone]), timezone: T.nilable(String), title: T.nilable(String), twitter_handle: T.nilable(String), twitter_url: T.nilable(String), updated_at: T.nilable(DateTime), utc_offset: T.nilable(Float), work_histories: T.nilable(T::Array[Shared::EnrichPersonWorkHistory])).void }

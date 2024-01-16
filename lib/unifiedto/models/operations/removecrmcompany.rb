@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Operations
 
-    class RemoveCrmCompanyRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveCrmCompanyRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -26,7 +26,7 @@ module UnifiedRubySDK
     end
 
 
-    class RemoveCrmCompanyResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveCrmCompanyResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

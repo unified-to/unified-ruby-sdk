@@ -20,20 +20,13 @@ Create a scorecard
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAtsScorecardRequest.new(
-  connection_id="string",
-  ats_scorecard=Shared::AtsScorecard.new(
-    raw=Shared::PropertyAtsScorecardRaw.new(),
-  ),
-)
     
 res = s.scorecard.create_ats_scorecard(connection_id="string", ats_scorecard=Shared::AtsScorecard.new(
     raw=Shared::PropertyAtsScorecardRaw.new(),
@@ -68,21 +61,13 @@ Retrieve a scorecard
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAtsScorecardRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.scorecard.get_ats_scorecard(connection_id="string", id="string", fields=[
     "string",
@@ -118,7 +103,7 @@ List all scorecards
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -163,21 +148,13 @@ Update a scorecard
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAtsScorecardRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ats_scorecard=Shared::AtsScorecard.new(
-    raw=Shared::PropertyAtsScorecardRaw.new(),
-  ),
-)
     
 res = s.scorecard.patch_ats_scorecard(connection_id="string", id="string", ats_scorecard=Shared::AtsScorecard.new(
     raw=Shared::PropertyAtsScorecardRaw.new(),
@@ -213,18 +190,13 @@ Remove a scorecard
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAtsScorecardRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.scorecard.remove_ats_scorecard(connection_id="string", id="string")
 
@@ -257,21 +229,13 @@ Update a scorecard
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAtsScorecardRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ats_scorecard=Shared::AtsScorecard.new(
-    raw=Shared::PropertyAtsScorecardRaw.new(),
-  ),
-)
     
 res = s.scorecard.update_ats_scorecard(connection_id="string", id="string", ats_scorecard=Shared::AtsScorecard.new(
     raw=Shared::PropertyAtsScorecardRaw.new(),

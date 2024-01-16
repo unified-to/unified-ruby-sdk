@@ -20,29 +20,13 @@ Create a lead
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateCrmLeadRequest.new(
-  connection_id="string",
-  crm_lead=Shared::CrmLead.new(
-    address=Shared::PropertyCrmLeadAddress.new(),
-    emails=[
-      Shared::CrmEmail.new(),
-    ],
-    raw=Shared::PropertyCrmLeadRaw.new(),
-    telephones=[
-      Shared::CrmTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.lead.create_crm_lead(connection_id="string", crm_lead=Shared::CrmLead.new(
     address=Shared::PropertyCrmLeadAddress.new(),
@@ -86,21 +70,13 @@ Retrieve a lead
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetCrmLeadRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.lead.get_crm_lead(connection_id="string", id="string", fields=[
     "string",
@@ -136,7 +112,7 @@ List all leads
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -181,30 +157,13 @@ Update a lead
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchCrmLeadRequest.new(
-  connection_id="string",
-  id="<ID>",
-  crm_lead=Shared::CrmLead.new(
-    address=Shared::PropertyCrmLeadAddress.new(),
-    emails=[
-      Shared::CrmEmail.new(),
-    ],
-    raw=Shared::PropertyCrmLeadRaw.new(),
-    telephones=[
-      Shared::CrmTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.lead.patch_crm_lead(connection_id="string", id="string", crm_lead=Shared::CrmLead.new(
     address=Shared::PropertyCrmLeadAddress.new(),
@@ -249,18 +208,13 @@ Remove a lead
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveCrmLeadRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.lead.remove_crm_lead(connection_id="string", id="string")
 
@@ -293,30 +247,13 @@ Update a lead
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateCrmLeadRequest.new(
-  connection_id="string",
-  id="<ID>",
-  crm_lead=Shared::CrmLead.new(
-    address=Shared::PropertyCrmLeadAddress.new(),
-    emails=[
-      Shared::CrmEmail.new(),
-    ],
-    raw=Shared::PropertyCrmLeadRaw.new(),
-    telephones=[
-      Shared::CrmTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.lead.update_crm_lead(connection_id="string", id="string", crm_lead=Shared::CrmLead.new(
     address=Shared::PropertyCrmLeadAddress.new(),

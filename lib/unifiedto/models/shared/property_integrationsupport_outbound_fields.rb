@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Shared
 
-    class PropertyIntegrationSupportOutboundFields < UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyIntegrationSupportOutboundFields < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 

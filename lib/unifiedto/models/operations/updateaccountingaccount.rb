@@ -10,7 +10,7 @@ require_relative '../shared/accountingaccount'
 module UnifiedRubySDK
   module Operations
 
-    class UpdateAccountingAccountRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class UpdateAccountingAccountRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -30,7 +30,7 @@ module UnifiedRubySDK
     end
 
 
-    class UpdateAccountingAccountResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class UpdateAccountingAccountResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

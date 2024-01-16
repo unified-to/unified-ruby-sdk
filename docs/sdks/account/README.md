@@ -20,21 +20,13 @@ Create an account
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAccountingAccountRequest.new(
-  connection_id="string",
-  accounting_account=Shared::AccountingAccount.new(
-    name="string",
-    raw=Shared::PropertyAccountingAccountRaw.new(),
-  ),
-)
     
 res = s.account.create_accounting_account(connection_id="string", accounting_account=Shared::AccountingAccount.new(
     name="string",
@@ -70,21 +62,13 @@ Retrieve an account
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAccountingAccountRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.account.get_accounting_account(connection_id="string", id="string", fields=[
     "string",
@@ -120,7 +104,7 @@ List all accounts
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -165,22 +149,13 @@ Update an account
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAccountingAccountRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_account=Shared::AccountingAccount.new(
-    name="string",
-    raw=Shared::PropertyAccountingAccountRaw.new(),
-  ),
-)
     
 res = s.account.patch_accounting_account(connection_id="string", id="string", accounting_account=Shared::AccountingAccount.new(
     name="string",
@@ -217,18 +192,13 @@ Remove an account
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAccountingAccountRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.account.remove_accounting_account(connection_id="string", id="string")
 
@@ -261,22 +231,13 @@ Update an account
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAccountingAccountRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_account=Shared::AccountingAccount.new(
-    name="string",
-    raw=Shared::PropertyAccountingAccountRaw.new(),
-  ),
-)
     
 res = s.account.update_accounting_account(connection_id="string", id="string", accounting_account=Shared::AccountingAccount.new(
     name="string",

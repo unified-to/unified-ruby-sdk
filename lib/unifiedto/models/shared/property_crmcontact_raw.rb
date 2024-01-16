@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Shared
     # The raw data returned by the integration for this contact
-    class PropertyCrmContactRaw < UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyCrmContactRaw < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 

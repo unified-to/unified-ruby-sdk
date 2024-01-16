@@ -9,25 +9,25 @@ require 'faraday'
 module UnifiedRubySDK
   module Shared
 
-    class PropertyAccountingOrganizationAddress < UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyAccountingOrganizationAddress < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :address1, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('address1') } }
+      field :address1, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address1') } }
 
-      field :address2, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('address2') } }
+      field :address2, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address2') } }
 
-      field :city, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('city') } }
+      field :city, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('city') } }
 
-      field :country, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('country') } }
+      field :country, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('country') } }
 
-      field :country_code, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('country_code') } }
+      field :country_code, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('country_code') } }
 
-      field :postal_code, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('postal_code') } }
+      field :postal_code, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('postal_code') } }
 
-      field :region, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('region') } }
+      field :region, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('region') } }
 
-      field :region_code, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('region_code') } }
+      field :region_code, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('region_code') } }
 
 
       sig { params(address1: T.nilable(String), address2: T.nilable(String), city: T.nilable(String), country: T.nilable(String), country_code: T.nilable(String), postal_code: T.nilable(String), region: T.nilable(String), region_code: T.nilable(String)).void }

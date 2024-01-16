@@ -10,7 +10,7 @@ require_relative '../shared/atsapplication'
 module UnifiedRubySDK
   module Operations
 
-    class PatchAtsApplicationRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class PatchAtsApplicationRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -30,7 +30,7 @@ module UnifiedRubySDK
     end
 
 
-    class PatchAtsApplicationResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class PatchAtsApplicationResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

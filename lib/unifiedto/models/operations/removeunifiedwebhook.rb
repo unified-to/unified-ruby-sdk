@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Operations
 
-    class RemoveUnifiedWebhookRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveUnifiedWebhookRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the Webhook
@@ -23,7 +23,7 @@ module UnifiedRubySDK
     end
 
 
-    class RemoveUnifiedWebhookResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveUnifiedWebhookResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

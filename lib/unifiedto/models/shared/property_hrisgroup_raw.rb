@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Shared
 
-    class PropertyHrisGroupRaw < UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyHrisGroupRaw < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 

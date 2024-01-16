@@ -9,15 +9,15 @@ require 'faraday'
 module UnifiedRubySDK
   module Shared
 
-    class StoragePermission < UnifiedRubySDK::Utils::FieldAugmented
+    class StoragePermission < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :roles, T::Array[Shared::PropertyStoragePermissionRoles], { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('roles') } }
+      field :roles, T::Array[Shared::PropertyStoragePermissionRoles], { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('roles') } }
 
-      field :group_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('group_id') } }
+      field :group_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_id') } }
 
-      field :user_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('user_id') } }
+      field :user_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
 
       sig { params(roles: T::Array[Shared::PropertyStoragePermissionRoles], group_id: T.nilable(String), user_id: T.nilable(String)).void }

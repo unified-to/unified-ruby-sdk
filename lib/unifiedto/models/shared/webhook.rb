@@ -71,43 +71,43 @@ module UnifiedRubySDK
 
 
     # A webhook is used to POST new/updated information to your server.
-    class Webhook < UnifiedRubySDK::Utils::FieldAugmented
+    class Webhook < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :connection_id, String, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('connection_id') } }
+      field :connection_id, String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('connection_id') } }
 
-      field :event, Shared::Event, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('event'), 'decoder': Utils.enum_from_string(Shared::Event, false) } }
+      field :event, Shared::Event, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('event'), 'decoder': Utils.enum_from_string(Shared::Event, false) } }
 
-      field :hook_url, String, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('hook_url') } }
+      field :hook_url, String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('hook_url') } }
 
-      field :interval, Float, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('interval') } }
+      field :interval, Float, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('interval') } }
 
-      field :object_type, Shared::ObjectType, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('object_type'), 'decoder': Utils.enum_from_string(Shared::ObjectType, false) } }
+      field :object_type, Shared::ObjectType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_type'), 'decoder': Utils.enum_from_string(Shared::ObjectType, false) } }
 
-      field :checked_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('checked_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :checked_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('checked_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :environment, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('environment') } }
+      field :environment, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('environment') } }
 
-      field :fields, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('fields') } }
+      field :fields, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fields') } }
 
-      field :id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('id') } }
+      field :id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :integration_type, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('integration_type') } }
+      field :integration_type, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('integration_type') } }
 
-      field :is_healthy, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('is_healthy') } }
+      field :is_healthy, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_healthy') } }
 
-      field :meta, T.nilable(Shared::PropertyWebhookMeta), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('meta') } }
+      field :meta, T.nilable(Shared::PropertyWebhookMeta), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('meta') } }
       # An array of the most revent virtual webhook runs
-      field :runs, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('runs') } }
+      field :runs, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('runs') } }
 
-      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :webhook_type, T.nilable(Shared::WebhookWebhookType), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('webhook_type'), 'decoder': Utils.enum_from_string(Shared::WebhookWebhookType, true) } }
+      field :webhook_type, T.nilable(Shared::WebhookWebhookType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('webhook_type'), 'decoder': Utils.enum_from_string(Shared::WebhookWebhookType, true) } }
 
-      field :workspace_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('workspace_id') } }
+      field :workspace_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
 
 
       sig { params(connection_id: String, event: Shared::Event, hook_url: String, interval: Float, object_type: Shared::ObjectType, checked_at: T.nilable(DateTime), created_at: T.nilable(DateTime), environment: T.nilable(String), fields: T.nilable(String), id: T.nilable(String), integration_type: T.nilable(String), is_healthy: T.nilable(T::Boolean), meta: T.nilable(Shared::PropertyWebhookMeta), runs: T.nilable(T::Array[String]), updated_at: T.nilable(DateTime), webhook_type: T.nilable(Shared::WebhookWebhookType), workspace_id: T.nilable(String)).void }

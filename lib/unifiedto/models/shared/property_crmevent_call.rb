@@ -9,15 +9,15 @@ require 'faraday'
 module UnifiedRubySDK
   module Shared
     # The call object, when type = call
-    class PropertyCrmEventCall < UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyCrmEventCall < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :description, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('description') } }
+      field :description, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-      field :duration, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('duration') } }
+      field :duration, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('duration') } }
 
-      field :start_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :start_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
       sig { params(description: T.nilable(String), duration: T.nilable(Float), start_at: T.nilable(DateTime)).void }

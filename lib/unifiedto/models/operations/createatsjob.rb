@@ -10,7 +10,7 @@ require_relative '../shared/atsjob'
 module UnifiedRubySDK
   module Operations
 
-    class CreateAtsJobRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class CreateAtsJobRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -27,7 +27,7 @@ module UnifiedRubySDK
     end
 
 
-    class CreateAtsJobResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class CreateAtsJobResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

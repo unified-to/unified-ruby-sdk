@@ -20,20 +20,13 @@ Create a note
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateTicketingNoteRequest.new(
-  connection_id="string",
-  ticketing_note=Shared::TicketingNote.new(
-    raw=Shared::PropertyTicketingNoteRaw.new(),
-  ),
-)
     
 res = s.note.create_ticketing_note(connection_id="string", ticketing_note=Shared::TicketingNote.new(
     raw=Shared::PropertyTicketingNoteRaw.new(),
@@ -68,21 +61,13 @@ Retrieve a note
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetTicketingNoteRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.note.get_ticketing_note(connection_id="string", id="string", fields=[
     "string",
@@ -118,7 +103,7 @@ List all notes
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -163,21 +148,13 @@ Update a note
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchTicketingNoteRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ticketing_note=Shared::TicketingNote.new(
-    raw=Shared::PropertyTicketingNoteRaw.new(),
-  ),
-)
     
 res = s.note.patch_ticketing_note(connection_id="string", id="string", ticketing_note=Shared::TicketingNote.new(
     raw=Shared::PropertyTicketingNoteRaw.new(),
@@ -213,18 +190,13 @@ Remove a note
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveTicketingNoteRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.note.remove_ticketing_note(connection_id="string", id="string")
 
@@ -257,21 +229,13 @@ Update a note
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateTicketingNoteRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ticketing_note=Shared::TicketingNote.new(
-    raw=Shared::PropertyTicketingNoteRaw.new(),
-  ),
-)
     
 res = s.note.update_ticketing_note(connection_id="string", id="string", ticketing_note=Shared::TicketingNote.new(
     raw=Shared::PropertyTicketingNoteRaw.new(),

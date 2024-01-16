@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Shared
 
-    class PropertyWebhookMeta < UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyWebhookMeta < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 

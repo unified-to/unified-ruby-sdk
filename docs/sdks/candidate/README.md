@@ -20,43 +20,19 @@ Create a candidate
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAtsCandidateRequest.new(
-  connection_id="string",
-  ats_candidate=Shared::AtsCandidate.new(
-    address=Shared::PropertyAtsCandidateAddress.new(),
-    emails=[
-      Shared::AtsEmail.new(
-        email="Robin_Feeney@hotmail.com",
-      ),
-    ],
-    link_urls=[
-      "string",
-    ],
-    raw=Shared::PropertyAtsCandidateRaw.new(),
-    tags=[
-      "string",
-    ],
-    telephones=[
-      Shared::AtsTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.candidate.create_ats_candidate(connection_id="string", ats_candidate=Shared::AtsCandidate.new(
     address=Shared::PropertyAtsCandidateAddress.new(),
     emails=[
       Shared::AtsEmail.new(
-        email="Delilah.Turner59@hotmail.com",
+        email="Robin_Feeney@hotmail.com",
       ),
     ],
     link_urls=[
@@ -102,21 +78,13 @@ Retrieve a candidate
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAtsCandidateRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.candidate.get_ats_candidate(connection_id="string", id="string", fields=[
     "string",
@@ -152,7 +120,7 @@ List all candidates
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -197,44 +165,19 @@ Update a candidate
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAtsCandidateRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ats_candidate=Shared::AtsCandidate.new(
-    address=Shared::PropertyAtsCandidateAddress.new(),
-    emails=[
-      Shared::AtsEmail.new(
-        email="Tracy.Collins13@gmail.com",
-      ),
-    ],
-    link_urls=[
-      "string",
-    ],
-    raw=Shared::PropertyAtsCandidateRaw.new(),
-    tags=[
-      "string",
-    ],
-    telephones=[
-      Shared::AtsTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.candidate.patch_ats_candidate(connection_id="string", id="string", ats_candidate=Shared::AtsCandidate.new(
     address=Shared::PropertyAtsCandidateAddress.new(),
     emails=[
       Shared::AtsEmail.new(
-        email="Lowell.Boyle@yahoo.com",
+        email="Tracy.Collins13@gmail.com",
       ),
     ],
     link_urls=[
@@ -281,18 +224,13 @@ Remove a candidate
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAtsCandidateRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.candidate.remove_ats_candidate(connection_id="string", id="string")
 
@@ -325,44 +263,19 @@ Update a candidate
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAtsCandidateRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ats_candidate=Shared::AtsCandidate.new(
-    address=Shared::PropertyAtsCandidateAddress.new(),
-    emails=[
-      Shared::AtsEmail.new(
-        email="Gaetano86@hotmail.com",
-      ),
-    ],
-    link_urls=[
-      "string",
-    ],
-    raw=Shared::PropertyAtsCandidateRaw.new(),
-    tags=[
-      "string",
-    ],
-    telephones=[
-      Shared::AtsTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.candidate.update_ats_candidate(connection_id="string", id="string", ats_candidate=Shared::AtsCandidate.new(
     address=Shared::PropertyAtsCandidateAddress.new(),
     emails=[
       Shared::AtsEmail.new(
-        email="Elnora.Upton@gmail.com",
+        email="Gaetano86@hotmail.com",
       ),
     ],
     link_urls=[

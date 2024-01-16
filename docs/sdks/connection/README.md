@@ -20,7 +20,7 @@ Create connection
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -80,17 +80,13 @@ Retrieve connection
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetUnifiedConnectionRequest.new(
-  id="<ID>",
-)
     
 res = s.connection.get_unified_connection(id="string")
 
@@ -122,7 +118,7 @@ List all connections
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -166,17 +162,15 @@ Update connection
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchUnifiedConnectionRequest.new(
-  id="<ID>",
-  connection=Shared::Connection.new(
+    
+res = s.connection.patch_unified_connection(id="string", connection=Shared::Connection.new(
     auth=Shared::PropertyConnectionAuth.new(
       emails=[
         "string",
@@ -195,29 +189,6 @@ req = Operations::PatchUnifiedConnectionRequest.new(
     integration_type="string",
     permissions=[
       Shared::PropertyConnectionPermissions::MARTECH_LIST_READ,
-    ],
-  ),
-)
-    
-res = s.connection.patch_unified_connection(id="string", connection=Shared::Connection.new(
-    auth=Shared::PropertyConnectionAuth.new(
-      emails=[
-        "string",
-      ],
-      meta=Shared::PropertyPropertyConnectionAuthMeta.new(),
-      other_auth_info=[
-        "string",
-      ],
-    ),
-    categories=[
-      Shared::PropertyConnectionCategories::STORAGE,
-    ],
-    cursors_cache=[
-      Shared::Undefined.new(),
-    ],
-    integration_type="string",
-    permissions=[
-      Shared::PropertyConnectionPermissions::TICKETING_NOTE_READ,
     ],
   ))
 
@@ -250,17 +221,13 @@ Remove connection
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveUnifiedConnectionRequest.new(
-  id="<ID>",
-)
     
 res = s.connection.remove_unified_connection(id="string")
 
@@ -292,17 +259,15 @@ Update connection
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateUnifiedConnectionRequest.new(
-  id="<ID>",
-  connection=Shared::Connection.new(
+    
+res = s.connection.update_unified_connection(id="string", connection=Shared::Connection.new(
     auth=Shared::PropertyConnectionAuth.new(
       emails=[
         "string",
@@ -321,29 +286,6 @@ req = Operations::UpdateUnifiedConnectionRequest.new(
     integration_type="string",
     permissions=[
       Shared::PropertyConnectionPermissions::CRM_CONTACT_READ,
-    ],
-  ),
-)
-    
-res = s.connection.update_unified_connection(id="string", connection=Shared::Connection.new(
-    auth=Shared::PropertyConnectionAuth.new(
-      emails=[
-        "string",
-      ],
-      meta=Shared::PropertyPropertyConnectionAuthMeta.new(),
-      other_auth_info=[
-        "string",
-      ],
-    ),
-    categories=[
-      Shared::PropertyConnectionCategories::STORAGE,
-    ],
-    cursors_cache=[
-      Shared::Undefined.new(),
-    ],
-    integration_type="string",
-    permissions=[
-      Shared::PropertyConnectionPermissions::MARTECH_MEMBER_READ,
     ],
   ))
 

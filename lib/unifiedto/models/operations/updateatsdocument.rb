@@ -10,7 +10,7 @@ require_relative '../shared/atsdocument'
 module UnifiedRubySDK
   module Operations
 
-    class UpdateAtsDocumentRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class UpdateAtsDocumentRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -30,7 +30,7 @@ module UnifiedRubySDK
     end
 
 
-    class UpdateAtsDocumentResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class UpdateAtsDocumentResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

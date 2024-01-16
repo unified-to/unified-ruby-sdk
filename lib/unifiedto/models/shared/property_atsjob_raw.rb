@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Shared
 
-    class PropertyAtsJobRaw < UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyAtsJobRaw < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 

@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Operations
 
-    class GetUnifiedIntegrationLoginRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class GetUnifiedIntegrationLoginRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # Type of the supported integration
@@ -41,7 +41,7 @@ module UnifiedRubySDK
     end
 
 
-    class GetUnifiedIntegrationLoginResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class GetUnifiedIntegrationLoginResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

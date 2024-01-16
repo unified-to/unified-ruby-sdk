@@ -27,7 +27,7 @@ module UnifiedRubySDK
 
 
 
-    class ListUnifiedIntegrationsRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class ListUnifiedIntegrationsRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # Filter the results for only the workspace's active integrations
@@ -68,7 +68,7 @@ module UnifiedRubySDK
     end
 
 
-    class ListUnifiedIntegrationsResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class ListUnifiedIntegrationsResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

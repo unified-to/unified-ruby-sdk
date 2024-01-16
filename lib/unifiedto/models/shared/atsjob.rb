@@ -39,43 +39,43 @@ module UnifiedRubySDK
 
 
 
-    class AtsJob < UnifiedRubySDK::Utils::FieldAugmented
+    class AtsJob < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :addresses, T.nilable(T::Array[Shared::AtsAddress]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('addresses') } }
+      field :addresses, T.nilable(T::Array[Shared::AtsAddress]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('addresses') } }
 
-      field :closed_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('closed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :closed_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :compensation, T.nilable(T::Array[Shared::AtsCompensation]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('compensation') } }
+      field :compensation, T.nilable(T::Array[Shared::AtsCompensation]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('compensation') } }
 
-      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :departments, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('departments') } }
+      field :departments, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('departments') } }
 
-      field :description, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('description') } }
+      field :description, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-      field :employment_type, T.nilable(Shared::EmploymentType), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('employment_type'), 'decoder': Utils.enum_from_string(Shared::EmploymentType, true) } }
+      field :employment_type, T.nilable(Shared::EmploymentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employment_type'), 'decoder': Utils.enum_from_string(Shared::EmploymentType, true) } }
 
-      field :hiring_manager_ids, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('hiring_manager_ids') } }
+      field :hiring_manager_ids, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('hiring_manager_ids') } }
 
-      field :id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('id') } }
+      field :id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :language_locale, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('language_locale') } }
+      field :language_locale, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language_locale') } }
 
-      field :name, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('name') } }
+      field :name, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-      field :public_job_urls, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('public_job_urls') } }
+      field :public_job_urls, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('public_job_urls') } }
 
-      field :raw, T.nilable(Shared::PropertyAtsJobRaw), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(Shared::PropertyAtsJobRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-      field :recruiter_ids, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('recruiter_ids') } }
+      field :recruiter_ids, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recruiter_ids') } }
 
-      field :remote, T.nilable(T::Boolean), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('remote') } }
+      field :remote, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('remote') } }
 
-      field :status, T.nilable(Shared::AtsJobStatus), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Shared::AtsJobStatus, true) } }
+      field :status, T.nilable(Shared::AtsJobStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Shared::AtsJobStatus, true) } }
 
-      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
       sig { params(addresses: T.nilable(T::Array[Shared::AtsAddress]), closed_at: T.nilable(DateTime), compensation: T.nilable(T::Array[Shared::AtsCompensation]), created_at: T.nilable(DateTime), departments: T.nilable(T::Array[String]), description: T.nilable(String), employment_type: T.nilable(Shared::EmploymentType), hiring_manager_ids: T.nilable(T::Array[String]), id: T.nilable(String), language_locale: T.nilable(String), name: T.nilable(String), public_job_urls: T.nilable(T::Array[String]), raw: T.nilable(Shared::PropertyAtsJobRaw), recruiter_ids: T.nilable(T::Array[String]), remote: T.nilable(T::Boolean), status: T.nilable(Shared::AtsJobStatus), updated_at: T.nilable(DateTime)).void }

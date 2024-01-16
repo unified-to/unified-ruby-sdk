@@ -10,7 +10,7 @@ require_relative '../shared/marketingmember'
 module UnifiedRubySDK
   module Operations
 
-    class UpdateMartechMemberRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class UpdateMartechMemberRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -30,7 +30,7 @@ module UnifiedRubySDK
     end
 
 
-    class UpdateMartechMemberResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class UpdateMartechMemberResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

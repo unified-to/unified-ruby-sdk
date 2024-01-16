@@ -20,20 +20,13 @@ Create a payment
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAccountingPaymentRequest.new(
-  connection_id="string",
-  accounting_payment=Shared::AccountingPayment.new(
-    raw=Shared::PropertyAccountingPaymentRaw.new(),
-  ),
-)
     
 res = s.payment.create_accounting_payment(connection_id="string", accounting_payment=Shared::AccountingPayment.new(
     raw=Shared::PropertyAccountingPaymentRaw.new(),
@@ -68,21 +61,13 @@ Retrieve a payment
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAccountingPaymentRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.payment.get_accounting_payment(connection_id="string", id="string", fields=[
     "string",
@@ -118,7 +103,7 @@ List all payments
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -163,21 +148,13 @@ Update a payment
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAccountingPaymentRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_payment=Shared::AccountingPayment.new(
-    raw=Shared::PropertyAccountingPaymentRaw.new(),
-  ),
-)
     
 res = s.payment.patch_accounting_payment(connection_id="string", id="string", accounting_payment=Shared::AccountingPayment.new(
     raw=Shared::PropertyAccountingPaymentRaw.new(),
@@ -213,18 +190,13 @@ Remove a payment
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAccountingPaymentRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.payment.remove_accounting_payment(connection_id="string", id="string")
 
@@ -257,21 +229,13 @@ Update a payment
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAccountingPaymentRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_payment=Shared::AccountingPayment.new(
-    raw=Shared::PropertyAccountingPaymentRaw.new(),
-  ),
-)
     
 res = s.payment.update_accounting_payment(connection_id="string", id="string", accounting_payment=Shared::AccountingPayment.new(
     raw=Shared::PropertyAccountingPaymentRaw.new(),

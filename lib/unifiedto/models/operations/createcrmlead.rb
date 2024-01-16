@@ -10,7 +10,7 @@ require_relative '../shared/crmlead'
 module UnifiedRubySDK
   module Operations
 
-    class CreateCrmLeadRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class CreateCrmLeadRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -27,7 +27,7 @@ module UnifiedRubySDK
     end
 
 
-    class CreateCrmLeadResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class CreateCrmLeadResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

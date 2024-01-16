@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Shared
     # The raw data returned by the integration for this person
-    class PropertyEnrichPersonRaw < UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyEnrichPersonRaw < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 

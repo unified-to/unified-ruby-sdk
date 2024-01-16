@@ -51,20 +51,13 @@ Create an application
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAtsApplicationRequest.new(
-  connection_id="string",
-  ats_application=Shared::AtsApplication.new(
-    raw=Shared::PropertyAtsApplicationRaw.new(),
-  ),
-)
     
 res = s.ats.create_ats_application(connection_id="string", ats_application=Shared::AtsApplication.new(
     raw=Shared::PropertyAtsApplicationRaw.new(),
@@ -99,43 +92,19 @@ Create a candidate
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAtsCandidateRequest.new(
-  connection_id="string",
-  ats_candidate=Shared::AtsCandidate.new(
-    address=Shared::PropertyAtsCandidateAddress.new(),
-    emails=[
-      Shared::AtsEmail.new(
-        email="Robin_Feeney@hotmail.com",
-      ),
-    ],
-    link_urls=[
-      "string",
-    ],
-    raw=Shared::PropertyAtsCandidateRaw.new(),
-    tags=[
-      "string",
-    ],
-    telephones=[
-      Shared::AtsTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.ats.create_ats_candidate(connection_id="string", ats_candidate=Shared::AtsCandidate.new(
     address=Shared::PropertyAtsCandidateAddress.new(),
     emails=[
       Shared::AtsEmail.new(
-        email="Delilah.Turner59@hotmail.com",
+        email="Robin_Feeney@hotmail.com",
       ),
     ],
     link_urls=[
@@ -181,20 +150,13 @@ Create a document
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAtsDocumentRequest.new(
-  connection_id="string",
-  ats_document=Shared::AtsDocument.new(
-    raw=Shared::PropertyAtsDocumentRaw.new(),
-  ),
-)
     
 res = s.ats.create_ats_document(connection_id="string", ats_document=Shared::AtsDocument.new(
     raw=Shared::PropertyAtsDocumentRaw.new(),
@@ -229,23 +191,13 @@ Create a interview
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAtsInterviewRequest.new(
-  connection_id="string",
-  ats_interview=Shared::AtsInterview.new(
-    raw=Shared::PropertyAtsInterviewRaw.new(),
-    user_ids=[
-      "string",
-    ],
-  ),
-)
     
 res = s.ats.create_ats_interview(connection_id="string", ats_interview=Shared::AtsInterview.new(
     raw=Shared::PropertyAtsInterviewRaw.new(),
@@ -283,40 +235,13 @@ Create a job
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAtsJobRequest.new(
-  connection_id="string",
-  ats_job=Shared::AtsJob.new(
-    addresses=[
-      Shared::AtsAddress.new(),
-    ],
-    compensation=[
-      Shared::AtsCompensation.new(
-        type=Shared::AtsCompensationType::SALARY,
-      ),
-    ],
-    departments=[
-      "string",
-    ],
-    hiring_manager_ids=[
-      "string",
-    ],
-    public_job_urls=[
-      "string",
-    ],
-    raw=Shared::PropertyAtsJobRaw.new(),
-    recruiter_ids=[
-      "string",
-    ],
-  ),
-)
     
 res = s.ats.create_ats_job(connection_id="string", ats_job=Shared::AtsJob.new(
     addresses=[
@@ -324,7 +249,7 @@ res = s.ats.create_ats_job(connection_id="string", ats_job=Shared::AtsJob.new(
     ],
     compensation=[
       Shared::AtsCompensation.new(
-        type=Shared::AtsCompensationType::STOCK_OPTIONS,
+        type=Shared::AtsCompensationType::SALARY,
       ),
     ],
     departments=[
@@ -371,20 +296,13 @@ Create a scorecard
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAtsScorecardRequest.new(
-  connection_id="string",
-  ats_scorecard=Shared::AtsScorecard.new(
-    raw=Shared::PropertyAtsScorecardRaw.new(),
-  ),
-)
     
 res = s.ats.create_ats_scorecard(connection_id="string", ats_scorecard=Shared::AtsScorecard.new(
     raw=Shared::PropertyAtsScorecardRaw.new(),
@@ -419,21 +337,13 @@ Retrieve an application
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAtsApplicationRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.ats.get_ats_application(connection_id="string", id="string", fields=[
     "string",
@@ -469,21 +379,13 @@ Retrieve a candidate
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAtsCandidateRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.ats.get_ats_candidate(connection_id="string", id="string", fields=[
     "string",
@@ -519,21 +421,13 @@ Retrieve a document
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAtsDocumentRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.ats.get_ats_document(connection_id="string", id="string", fields=[
     "string",
@@ -569,21 +463,13 @@ Retrieve a interview
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAtsInterviewRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.ats.get_ats_interview(connection_id="string", id="string", fields=[
     "string",
@@ -619,21 +505,13 @@ Retrieve a job
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAtsJobRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.ats.get_ats_job(connection_id="string", id="string", fields=[
     "string",
@@ -669,21 +547,13 @@ Retrieve a scorecard
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAtsScorecardRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.ats.get_ats_scorecard(connection_id="string", id="string", fields=[
     "string",
@@ -719,7 +589,7 @@ List all applications
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -764,7 +634,7 @@ List all application statuses
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -809,7 +679,7 @@ List all candidates
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -854,7 +724,7 @@ List all documents
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -899,7 +769,7 @@ List all interviews
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -944,7 +814,7 @@ List all jobs
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -989,7 +859,7 @@ List all scorecards
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -1034,21 +904,13 @@ Update an application
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAtsApplicationRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ats_application=Shared::AtsApplication.new(
-    raw=Shared::PropertyAtsApplicationRaw.new(),
-  ),
-)
     
 res = s.ats.patch_ats_application(connection_id="string", id="string", ats_application=Shared::AtsApplication.new(
     raw=Shared::PropertyAtsApplicationRaw.new(),
@@ -1084,44 +946,19 @@ Update a candidate
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAtsCandidateRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ats_candidate=Shared::AtsCandidate.new(
-    address=Shared::PropertyAtsCandidateAddress.new(),
-    emails=[
-      Shared::AtsEmail.new(
-        email="Tracy.Collins13@gmail.com",
-      ),
-    ],
-    link_urls=[
-      "string",
-    ],
-    raw=Shared::PropertyAtsCandidateRaw.new(),
-    tags=[
-      "string",
-    ],
-    telephones=[
-      Shared::AtsTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.ats.patch_ats_candidate(connection_id="string", id="string", ats_candidate=Shared::AtsCandidate.new(
     address=Shared::PropertyAtsCandidateAddress.new(),
     emails=[
       Shared::AtsEmail.new(
-        email="Lowell.Boyle@yahoo.com",
+        email="Tracy.Collins13@gmail.com",
       ),
     ],
     link_urls=[
@@ -1168,21 +1005,13 @@ Update a document
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAtsDocumentRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ats_document=Shared::AtsDocument.new(
-    raw=Shared::PropertyAtsDocumentRaw.new(),
-  ),
-)
     
 res = s.ats.patch_ats_document(connection_id="string", id="string", ats_document=Shared::AtsDocument.new(
     raw=Shared::PropertyAtsDocumentRaw.new(),
@@ -1218,24 +1047,13 @@ Update a interview
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAtsInterviewRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ats_interview=Shared::AtsInterview.new(
-    raw=Shared::PropertyAtsInterviewRaw.new(),
-    user_ids=[
-      "string",
-    ],
-  ),
-)
     
 res = s.ats.patch_ats_interview(connection_id="string", id="string", ats_interview=Shared::AtsInterview.new(
     raw=Shared::PropertyAtsInterviewRaw.new(),
@@ -1274,41 +1092,13 @@ Update a job
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAtsJobRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ats_job=Shared::AtsJob.new(
-    addresses=[
-      Shared::AtsAddress.new(),
-    ],
-    compensation=[
-      Shared::AtsCompensation.new(
-        type=Shared::AtsCompensationType::BONUS,
-      ),
-    ],
-    departments=[
-      "string",
-    ],
-    hiring_manager_ids=[
-      "string",
-    ],
-    public_job_urls=[
-      "string",
-    ],
-    raw=Shared::PropertyAtsJobRaw.new(),
-    recruiter_ids=[
-      "string",
-    ],
-  ),
-)
     
 res = s.ats.patch_ats_job(connection_id="string", id="string", ats_job=Shared::AtsJob.new(
     addresses=[
@@ -1316,7 +1106,7 @@ res = s.ats.patch_ats_job(connection_id="string", id="string", ats_job=Shared::A
     ],
     compensation=[
       Shared::AtsCompensation.new(
-        type=Shared::AtsCompensationType::SALARY,
+        type=Shared::AtsCompensationType::BONUS,
       ),
     ],
     departments=[
@@ -1364,21 +1154,13 @@ Update a scorecard
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAtsScorecardRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ats_scorecard=Shared::AtsScorecard.new(
-    raw=Shared::PropertyAtsScorecardRaw.new(),
-  ),
-)
     
 res = s.ats.patch_ats_scorecard(connection_id="string", id="string", ats_scorecard=Shared::AtsScorecard.new(
     raw=Shared::PropertyAtsScorecardRaw.new(),
@@ -1414,18 +1196,13 @@ Remove an application
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAtsApplicationRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.ats.remove_ats_application(connection_id="string", id="string")
 
@@ -1458,18 +1235,13 @@ Remove a candidate
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAtsCandidateRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.ats.remove_ats_candidate(connection_id="string", id="string")
 
@@ -1502,18 +1274,13 @@ Remove a document
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAtsDocumentRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.ats.remove_ats_document(connection_id="string", id="string")
 
@@ -1546,18 +1313,13 @@ Remove a interview
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAtsInterviewRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.ats.remove_ats_interview(connection_id="string", id="string")
 
@@ -1590,18 +1352,13 @@ Remove a job
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAtsJobRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.ats.remove_ats_job(connection_id="string", id="string")
 
@@ -1634,18 +1391,13 @@ Remove a scorecard
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAtsScorecardRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.ats.remove_ats_scorecard(connection_id="string", id="string")
 
@@ -1678,21 +1430,13 @@ Update an application
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAtsApplicationRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ats_application=Shared::AtsApplication.new(
-    raw=Shared::PropertyAtsApplicationRaw.new(),
-  ),
-)
     
 res = s.ats.update_ats_application(connection_id="string", id="string", ats_application=Shared::AtsApplication.new(
     raw=Shared::PropertyAtsApplicationRaw.new(),
@@ -1728,44 +1472,19 @@ Update a candidate
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAtsCandidateRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ats_candidate=Shared::AtsCandidate.new(
-    address=Shared::PropertyAtsCandidateAddress.new(),
-    emails=[
-      Shared::AtsEmail.new(
-        email="Gaetano86@hotmail.com",
-      ),
-    ],
-    link_urls=[
-      "string",
-    ],
-    raw=Shared::PropertyAtsCandidateRaw.new(),
-    tags=[
-      "string",
-    ],
-    telephones=[
-      Shared::AtsTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.ats.update_ats_candidate(connection_id="string", id="string", ats_candidate=Shared::AtsCandidate.new(
     address=Shared::PropertyAtsCandidateAddress.new(),
     emails=[
       Shared::AtsEmail.new(
-        email="Elnora.Upton@gmail.com",
+        email="Gaetano86@hotmail.com",
       ),
     ],
     link_urls=[
@@ -1812,21 +1531,13 @@ Update a document
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAtsDocumentRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ats_document=Shared::AtsDocument.new(
-    raw=Shared::PropertyAtsDocumentRaw.new(),
-  ),
-)
     
 res = s.ats.update_ats_document(connection_id="string", id="string", ats_document=Shared::AtsDocument.new(
     raw=Shared::PropertyAtsDocumentRaw.new(),
@@ -1862,24 +1573,13 @@ Update a interview
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAtsInterviewRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ats_interview=Shared::AtsInterview.new(
-    raw=Shared::PropertyAtsInterviewRaw.new(),
-    user_ids=[
-      "string",
-    ],
-  ),
-)
     
 res = s.ats.update_ats_interview(connection_id="string", id="string", ats_interview=Shared::AtsInterview.new(
     raw=Shared::PropertyAtsInterviewRaw.new(),
@@ -1918,41 +1618,13 @@ Update a job
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAtsJobRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ats_job=Shared::AtsJob.new(
-    addresses=[
-      Shared::AtsAddress.new(),
-    ],
-    compensation=[
-      Shared::AtsCompensation.new(
-        type=Shared::AtsCompensationType::EQUITY,
-      ),
-    ],
-    departments=[
-      "string",
-    ],
-    hiring_manager_ids=[
-      "string",
-    ],
-    public_job_urls=[
-      "string",
-    ],
-    raw=Shared::PropertyAtsJobRaw.new(),
-    recruiter_ids=[
-      "string",
-    ],
-  ),
-)
     
 res = s.ats.update_ats_job(connection_id="string", id="string", ats_job=Shared::AtsJob.new(
     addresses=[
@@ -1960,7 +1632,7 @@ res = s.ats.update_ats_job(connection_id="string", id="string", ats_job=Shared::
     ],
     compensation=[
       Shared::AtsCompensation.new(
-        type=Shared::AtsCompensationType::BONUS,
+        type=Shared::AtsCompensationType::EQUITY,
       ),
     ],
     departments=[
@@ -2008,21 +1680,13 @@ Update a scorecard
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAtsScorecardRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ats_scorecard=Shared::AtsScorecard.new(
-    raw=Shared::PropertyAtsScorecardRaw.new(),
-  ),
-)
     
 res = s.ats.update_ats_scorecard(connection_id="string", id="string", ats_scorecard=Shared::AtsScorecard.new(
     raw=Shared::PropertyAtsScorecardRaw.new(),

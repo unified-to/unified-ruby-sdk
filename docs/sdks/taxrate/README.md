@@ -20,26 +20,17 @@ Create a taxrate
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAccountingTaxrateRequest.new(
-  connection_id="string",
-  accounting_taxrate=Shared::AccountingTaxrate.new(
-    name="string",
-    rate=1719.1,
-    raw=Shared::PropertyAccountingTaxrateRaw.new(),
-  ),
-)
     
 res = s.taxrate.create_accounting_taxrate(connection_id="string", accounting_taxrate=Shared::AccountingTaxrate.new(
     name="string",
-    rate=2397.01,
+    rate=1719.1,
     raw=Shared::PropertyAccountingTaxrateRaw.new(),
   ))
 
@@ -72,21 +63,13 @@ Retrieve a taxrate
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAccountingTaxrateRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.taxrate.get_accounting_taxrate(connection_id="string", id="string", fields=[
     "string",
@@ -122,7 +105,7 @@ List all taxrates
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -167,27 +150,17 @@ Update a taxrate
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAccountingTaxrateRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_taxrate=Shared::AccountingTaxrate.new(
-    name="string",
-    rate=5991.47,
-    raw=Shared::PropertyAccountingTaxrateRaw.new(),
-  ),
-)
     
 res = s.taxrate.patch_accounting_taxrate(connection_id="string", id="string", accounting_taxrate=Shared::AccountingTaxrate.new(
     name="string",
-    rate=6924.44,
+    rate=5991.47,
     raw=Shared::PropertyAccountingTaxrateRaw.new(),
   ))
 
@@ -221,18 +194,13 @@ Remove a taxrate
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAccountingTaxrateRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.taxrate.remove_accounting_taxrate(connection_id="string", id="string")
 
@@ -265,27 +233,17 @@ Update a taxrate
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAccountingTaxrateRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_taxrate=Shared::AccountingTaxrate.new(
-    name="string",
-    rate=3382.78,
-    raw=Shared::PropertyAccountingTaxrateRaw.new(),
-  ),
-)
     
 res = s.taxrate.update_accounting_taxrate(connection_id="string", id="string", accounting_taxrate=Shared::AccountingTaxrate.new(
     name="string",
-    rate=8458.57,
+    rate=3382.78,
     raw=Shared::PropertyAccountingTaxrateRaw.new(),
   ))
 

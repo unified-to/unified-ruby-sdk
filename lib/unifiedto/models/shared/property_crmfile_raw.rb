@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Shared
 
-    class PropertyCrmFileRaw < UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyCrmFileRaw < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 

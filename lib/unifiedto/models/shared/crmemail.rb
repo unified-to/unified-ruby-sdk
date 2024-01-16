@@ -19,13 +19,13 @@ module UnifiedRubySDK
 
 
 
-    class CrmEmail < UnifiedRubySDK::Utils::FieldAugmented
+    class CrmEmail < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :email, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('email') } }
+      field :email, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
 
-      field :type, T.nilable(Shared::CrmEmailType), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Shared::CrmEmailType, true) } }
+      field :type, T.nilable(Shared::CrmEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Shared::CrmEmailType, true) } }
 
 
       sig { params(email: T.nilable(String), type: T.nilable(Shared::CrmEmailType)).void }

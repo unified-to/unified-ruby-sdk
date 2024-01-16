@@ -27,7 +27,7 @@ module UnifiedRubySDK
 
 
 
-    class ListUnifiedIntegrationWorkspacesRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class ListUnifiedIntegrationWorkspacesRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # The ID of the workspace
@@ -62,7 +62,7 @@ module UnifiedRubySDK
     end
 
 
-    class ListUnifiedIntegrationWorkspacesResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class ListUnifiedIntegrationWorkspacesResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

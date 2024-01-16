@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Operations
 
-    class RemoveHrisEmployeeRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveHrisEmployeeRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -26,7 +26,7 @@ module UnifiedRubySDK
     end
 
 
-    class RemoveHrisEmployeeResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveHrisEmployeeResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

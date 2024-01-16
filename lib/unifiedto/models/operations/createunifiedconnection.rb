@@ -10,7 +10,7 @@ require_relative '../shared/connection'
 module UnifiedRubySDK
   module Operations
 
-    class CreateUnifiedConnectionResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class CreateUnifiedConnectionResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Operations
 
-    class ListTicketingNotesRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class ListTicketingNotesRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -47,7 +47,7 @@ module UnifiedRubySDK
     end
 
 
-    class ListTicketingNotesResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class ListTicketingNotesResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

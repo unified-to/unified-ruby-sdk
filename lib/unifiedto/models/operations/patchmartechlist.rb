@@ -10,7 +10,7 @@ require_relative '../shared/marketinglist'
 module UnifiedRubySDK
   module Operations
 
-    class PatchMartechListRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class PatchMartechListRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -30,7 +30,7 @@ module UnifiedRubySDK
     end
 
 
-    class PatchMartechListResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class PatchMartechListResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

@@ -19,13 +19,13 @@ module UnifiedRubySDK
 
 
 
-    class AccountingEmail < UnifiedRubySDK::Utils::FieldAugmented
+    class AccountingEmail < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :email, String, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('email') } }
+      field :email, String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
 
-      field :type, T.nilable(Shared::AccountingEmailType), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Shared::AccountingEmailType, true) } }
+      field :type, T.nilable(Shared::AccountingEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Shared::AccountingEmailType, true) } }
 
 
       sig { params(email: String, type: T.nilable(Shared::AccountingEmailType)).void }

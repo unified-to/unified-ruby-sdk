@@ -35,19 +35,19 @@ module UnifiedRubySDK
 
 
 
-    class AtsCompensation < UnifiedRubySDK::Utils::FieldAugmented
+    class AtsCompensation < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :type, Shared::AtsCompensationType, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Shared::AtsCompensationType, false) } }
+      field :type, Shared::AtsCompensationType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Shared::AtsCompensationType, false) } }
 
-      field :currency, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('currency') } }
+      field :currency, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-      field :frequency, T.nilable(Shared::Frequency), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('frequency'), 'decoder': Utils.enum_from_string(Shared::Frequency, true) } }
+      field :frequency, T.nilable(Shared::Frequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency'), 'decoder': Utils.enum_from_string(Shared::Frequency, true) } }
 
-      field :max, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('max') } }
+      field :max, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max') } }
 
-      field :min, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('min') } }
+      field :min, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('min') } }
 
 
       sig { params(type: Shared::AtsCompensationType, currency: T.nilable(String), frequency: T.nilable(Shared::Frequency), max: T.nilable(Float), min: T.nilable(Float)).void }

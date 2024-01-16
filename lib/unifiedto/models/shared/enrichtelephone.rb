@@ -21,13 +21,13 @@ module UnifiedRubySDK
 
 
 
-    class EnrichTelephone < UnifiedRubySDK::Utils::FieldAugmented
+    class EnrichTelephone < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :telephone, String, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('telephone') } }
+      field :telephone, String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephone') } }
 
-      field :type, T.nilable(Shared::EnrichTelephoneType), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Shared::EnrichTelephoneType, true) } }
+      field :type, T.nilable(Shared::EnrichTelephoneType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Shared::EnrichTelephoneType, true) } }
 
 
       sig { params(telephone: String, type: T.nilable(Shared::EnrichTelephoneType)).void }

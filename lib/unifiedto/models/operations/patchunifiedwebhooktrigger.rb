@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Operations
 
-    class PatchUnifiedWebhookTriggerRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class PatchUnifiedWebhookTriggerRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the Webhook
@@ -23,7 +23,7 @@ module UnifiedRubySDK
     end
 
 
-    class PatchUnifiedWebhookTriggerResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class PatchUnifiedWebhookTriggerResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

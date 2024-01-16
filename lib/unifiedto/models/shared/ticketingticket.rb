@@ -19,39 +19,39 @@ module UnifiedRubySDK
 
 
 
-    class TicketingTicket < UnifiedRubySDK::Utils::FieldAugmented
+    class TicketingTicket < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :category, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('category') } }
+      field :category, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category') } }
 
-      field :closed_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('closed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :closed_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :customer_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('customer_id') } }
+      field :customer_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('customer_id') } }
 
-      field :description, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('description') } }
+      field :description, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-      field :id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('id') } }
+      field :id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :priority, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('priority') } }
+      field :priority, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('priority') } }
 
-      field :raw, T.nilable(Shared::PropertyTicketingTicketRaw), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(Shared::PropertyTicketingTicketRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-      field :source, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('source') } }
+      field :source, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source') } }
 
-      field :source_ref, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('source_ref') } }
+      field :source_ref, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source_ref') } }
 
-      field :status, T.nilable(Shared::TicketingTicketStatus), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Shared::TicketingTicketStatus, true) } }
+      field :status, T.nilable(Shared::TicketingTicketStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Shared::TicketingTicketStatus, true) } }
 
-      field :subject, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('subject') } }
+      field :subject, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subject') } }
 
-      field :tags, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('tags') } }
+      field :tags, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
 
-      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :user_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('user_id') } }
+      field :user_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
 
       sig { params(category: T.nilable(String), closed_at: T.nilable(DateTime), created_at: T.nilable(DateTime), customer_id: T.nilable(String), description: T.nilable(String), id: T.nilable(String), priority: T.nilable(String), raw: T.nilable(Shared::PropertyTicketingTicketRaw), source: T.nilable(String), source_ref: T.nilable(String), status: T.nilable(Shared::TicketingTicketStatus), subject: T.nilable(String), tags: T.nilable(T::Array[String]), updated_at: T.nilable(DateTime), user_id: T.nilable(String)).void }

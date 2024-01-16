@@ -76,7 +76,7 @@ module UnifiedRubySDK
 
 
 
-    class GetUnifiedIntegrationAuthRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class GetUnifiedIntegrationAuthRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # Type of the supported integration
@@ -120,7 +120,7 @@ module UnifiedRubySDK
     end
 
 
-    class GetUnifiedIntegrationAuthResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class GetUnifiedIntegrationAuthResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

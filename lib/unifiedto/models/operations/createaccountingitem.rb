@@ -10,7 +10,7 @@ require_relative '../shared/accountingitem'
 module UnifiedRubySDK
   module Operations
 
-    class CreateAccountingItemRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class CreateAccountingItemRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -27,7 +27,7 @@ module UnifiedRubySDK
     end
 
 
-    class CreateAccountingItemResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class CreateAccountingItemResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

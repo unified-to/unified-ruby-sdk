@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Operations
 
-    class RemoveUnifiedConnectionRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveUnifiedConnectionRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the Connection
@@ -23,7 +23,7 @@ module UnifiedRubySDK
     end
 
 
-    class RemoveUnifiedConnectionResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveUnifiedConnectionResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

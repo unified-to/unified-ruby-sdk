@@ -19,13 +19,13 @@ module UnifiedRubySDK
 
 
 
-    class TicketingEmail < UnifiedRubySDK::Utils::FieldAugmented
+    class TicketingEmail < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :email, String, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('email') } }
+      field :email, String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
 
-      field :type, T.nilable(Shared::TicketingEmailType), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Shared::TicketingEmailType, true) } }
+      field :type, T.nilable(Shared::TicketingEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Shared::TicketingEmailType, true) } }
 
 
       sig { params(email: String, type: T.nilable(Shared::TicketingEmailType)).void }

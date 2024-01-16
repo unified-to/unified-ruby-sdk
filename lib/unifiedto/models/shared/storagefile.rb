@@ -19,35 +19,35 @@ module UnifiedRubySDK
 
 
 
-    class StorageFile < UnifiedRubySDK::Utils::FieldAugmented
+    class StorageFile < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :description, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('description') } }
+      field :description, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-      field :download_url, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('download_url') } }
+      field :download_url, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('download_url') } }
 
-      field :id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('id') } }
+      field :id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :mime_type, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('mime_type') } }
+      field :mime_type, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mime_type') } }
 
-      field :name, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('name') } }
+      field :name, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-      field :parent_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('parent_id') } }
+      field :parent_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
-      field :permissions, T.nilable(T::Array[Shared::StoragePermission]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('permissions') } }
+      field :permissions, T.nilable(T::Array[Shared::StoragePermission]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('permissions') } }
 
-      field :raw, T.nilable(Shared::PropertyStorageFileRaw), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(Shared::PropertyStorageFileRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-      field :size, T.nilable(Float), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('size') } }
+      field :size, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
 
-      field :type, T.nilable(Shared::StorageFileType), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Shared::StorageFileType, true) } }
+      field :type, T.nilable(Shared::StorageFileType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Shared::StorageFileType, true) } }
 
-      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :user_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('user_id') } }
+      field :user_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
 
       sig { params(created_at: T.nilable(DateTime), description: T.nilable(String), download_url: T.nilable(String), id: T.nilable(String), mime_type: T.nilable(String), name: T.nilable(String), parent_id: T.nilable(String), permissions: T.nilable(T::Array[Shared::StoragePermission]), raw: T.nilable(Shared::PropertyStorageFileRaw), size: T.nilable(Float), type: T.nilable(Shared::StorageFileType), updated_at: T.nilable(DateTime), user_id: T.nilable(String)).void }

@@ -10,7 +10,7 @@ require_relative '../shared/connection'
 module UnifiedRubySDK
   module Operations
 
-    class UpdateUnifiedConnectionRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class UpdateUnifiedConnectionRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the Connection
@@ -27,7 +27,7 @@ module UnifiedRubySDK
     end
 
 
-    class UpdateUnifiedConnectionResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class UpdateUnifiedConnectionResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

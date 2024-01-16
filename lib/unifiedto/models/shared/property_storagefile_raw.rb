@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Shared
 
-    class PropertyStorageFileRaw < UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyStorageFileRaw < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 

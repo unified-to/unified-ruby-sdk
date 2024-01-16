@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Shared
 
-    class PropertyTicketingTicketRaw < UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyTicketingTicketRaw < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 

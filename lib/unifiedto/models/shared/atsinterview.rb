@@ -20,35 +20,35 @@ module UnifiedRubySDK
 
 
 
-    class AtsInterview < UnifiedRubySDK::Utils::FieldAugmented
+    class AtsInterview < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :application_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('application_id') } }
+      field :application_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('application_id') } }
 
-      field :candidate_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('candidate_id') } }
+      field :candidate_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('candidate_id') } }
 
-      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :end_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :end_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :external_event_xref, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('external_event_xref') } }
+      field :external_event_xref, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_event_xref') } }
 
-      field :id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('id') } }
+      field :id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :job_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('job_id') } }
+      field :job_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('job_id') } }
 
-      field :location, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('location') } }
+      field :location, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location') } }
 
-      field :raw, T.nilable(Shared::PropertyAtsInterviewRaw), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(Shared::PropertyAtsInterviewRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-      field :start_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :start_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :status, T.nilable(Shared::AtsInterviewStatus), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Shared::AtsInterviewStatus, true) } }
+      field :status, T.nilable(Shared::AtsInterviewStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Shared::AtsInterviewStatus, true) } }
 
-      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :user_ids, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('user_ids') } }
+      field :user_ids, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
 
 
       sig { params(application_id: T.nilable(String), candidate_id: T.nilable(String), created_at: T.nilable(DateTime), end_at: T.nilable(DateTime), external_event_xref: T.nilable(String), id: T.nilable(String), job_id: T.nilable(String), location: T.nilable(String), raw: T.nilable(Shared::PropertyAtsInterviewRaw), start_at: T.nilable(DateTime), status: T.nilable(Shared::AtsInterviewStatus), updated_at: T.nilable(DateTime), user_ids: T.nilable(T::Array[String])).void }

@@ -20,32 +20,19 @@ Create a invoice
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAccountingInvoiceRequest.new(
-  connection_id="string",
-  accounting_invoice=Shared::AccountingInvoice.new(
-    lineitems=[
-      Shared::AccountingLineitem.new(
-        raw=Shared::PropertyAccountingLineitemRaw.new(),
-        total_amount=6736.06,
-      ),
-    ],
-    raw=Shared::PropertyAccountingInvoiceRaw.new(),
-  ),
-)
     
 res = s.invoice.create_accounting_invoice(connection_id="string", accounting_invoice=Shared::AccountingInvoice.new(
     lineitems=[
       Shared::AccountingLineitem.new(
         raw=Shared::PropertyAccountingLineitemRaw.new(),
-        total_amount=1618.47,
+        total_amount=6736.06,
       ),
     ],
     raw=Shared::PropertyAccountingInvoiceRaw.new(),
@@ -80,21 +67,13 @@ Retrieve a invoice
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAccountingInvoiceRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.invoice.get_accounting_invoice(connection_id="string", id="string", fields=[
     "string",
@@ -130,7 +109,7 @@ List all invoices
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -175,33 +154,19 @@ Update a invoice
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAccountingInvoiceRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_invoice=Shared::AccountingInvoice.new(
-    lineitems=[
-      Shared::AccountingLineitem.new(
-        raw=Shared::PropertyAccountingLineitemRaw.new(),
-        total_amount=7374.1,
-      ),
-    ],
-    raw=Shared::PropertyAccountingInvoiceRaw.new(),
-  ),
-)
     
 res = s.invoice.patch_accounting_invoice(connection_id="string", id="string", accounting_invoice=Shared::AccountingInvoice.new(
     lineitems=[
       Shared::AccountingLineitem.new(
         raw=Shared::PropertyAccountingLineitemRaw.new(),
-        total_amount=9876.61,
+        total_amount=7374.1,
       ),
     ],
     raw=Shared::PropertyAccountingInvoiceRaw.new(),
@@ -237,18 +202,13 @@ Remove a invoice
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAccountingInvoiceRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.invoice.remove_accounting_invoice(connection_id="string", id="string")
 
@@ -281,33 +241,19 @@ Update a invoice
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAccountingInvoiceRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_invoice=Shared::AccountingInvoice.new(
-    lineitems=[
-      Shared::AccountingLineitem.new(
-        raw=Shared::PropertyAccountingLineitemRaw.new(),
-        total_amount=6974.28,
-      ),
-    ],
-    raw=Shared::PropertyAccountingInvoiceRaw.new(),
-  ),
-)
     
 res = s.invoice.update_accounting_invoice(connection_id="string", id="string", accounting_invoice=Shared::AccountingInvoice.new(
     lineitems=[
       Shared::AccountingLineitem.new(
         raw=Shared::PropertyAccountingLineitemRaw.new(),
-        total_amount=4728.85,
+        total_amount=6974.28,
       ),
     ],
     raw=Shared::PropertyAccountingInvoiceRaw.new(),

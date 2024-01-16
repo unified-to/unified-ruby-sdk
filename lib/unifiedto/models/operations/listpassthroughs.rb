@@ -10,7 +10,7 @@ require_relative '../shared/undefined'
 module UnifiedRubySDK
   module Operations
 
-    class ListPassthroughsRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class ListPassthroughsRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -27,7 +27,7 @@ module UnifiedRubySDK
     end
 
 
-    class ListPassthroughsResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class ListPassthroughsResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

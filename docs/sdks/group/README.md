@@ -20,26 +20,13 @@ Create a group
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateHrisGroupRequest.new(
-  connection_id="string",
-  hris_group=Shared::HrisGroup.new(
-    employee_ids=[
-      "string",
-    ],
-    manager_ids=[
-      "string",
-    ],
-    raw=Shared::PropertyHrisGroupRaw.new(),
-  ),
-)
     
 res = s.group.create_hris_group(connection_id="string", hris_group=Shared::HrisGroup.new(
     employee_ids=[
@@ -80,21 +67,13 @@ Retrieve a group
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetHrisGroupRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.group.get_hris_group(connection_id="string", id="string", fields=[
     "string",
@@ -130,7 +109,7 @@ List all groups
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -175,27 +154,13 @@ Update a group
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchHrisGroupRequest.new(
-  connection_id="string",
-  id="<ID>",
-  hris_group=Shared::HrisGroup.new(
-    employee_ids=[
-      "string",
-    ],
-    manager_ids=[
-      "string",
-    ],
-    raw=Shared::PropertyHrisGroupRaw.new(),
-  ),
-)
     
 res = s.group.patch_hris_group(connection_id="string", id="string", hris_group=Shared::HrisGroup.new(
     employee_ids=[
@@ -237,18 +202,13 @@ Remove a group
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveHrisGroupRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.group.remove_hris_group(connection_id="string", id="string")
 
@@ -281,27 +241,13 @@ Update a group
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateHrisGroupRequest.new(
-  connection_id="string",
-  id="<ID>",
-  hris_group=Shared::HrisGroup.new(
-    employee_ids=[
-      "string",
-    ],
-    manager_ids=[
-      "string",
-    ],
-    raw=Shared::PropertyHrisGroupRaw.new(),
-  ),
-)
     
 res = s.group.update_hris_group(connection_id="string", id="string", hris_group=Shared::HrisGroup.new(
     employee_ids=[

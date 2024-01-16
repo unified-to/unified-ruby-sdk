@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Shared
     # The raw data returned by the integration for this call
-    class PropertyUcCallRaw < UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyUcCallRaw < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 

@@ -20,23 +20,13 @@ Create a deal
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateCrmDealRequest.new(
-  connection_id="string",
-  crm_deal=Shared::CrmDeal.new(
-    raw=Shared::PropertyCrmDealRaw.new(),
-    tags=[
-      "string",
-    ],
-  ),
-)
     
 res = s.deal.create_crm_deal(connection_id="string", crm_deal=Shared::CrmDeal.new(
     raw=Shared::PropertyCrmDealRaw.new(),
@@ -74,21 +64,13 @@ Retrieve a deal
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetCrmDealRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.deal.get_crm_deal(connection_id="string", id="string", fields=[
     "string",
@@ -124,7 +106,7 @@ List all deals
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -169,24 +151,13 @@ Update a deal
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchCrmDealRequest.new(
-  connection_id="string",
-  id="<ID>",
-  crm_deal=Shared::CrmDeal.new(
-    raw=Shared::PropertyCrmDealRaw.new(),
-    tags=[
-      "string",
-    ],
-  ),
-)
     
 res = s.deal.patch_crm_deal(connection_id="string", id="string", crm_deal=Shared::CrmDeal.new(
     raw=Shared::PropertyCrmDealRaw.new(),
@@ -225,18 +196,13 @@ Remove a deal
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveCrmDealRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.deal.remove_crm_deal(connection_id="string", id="string")
 
@@ -269,24 +235,13 @@ Update a deal
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateCrmDealRequest.new(
-  connection_id="string",
-  id="<ID>",
-  crm_deal=Shared::CrmDeal.new(
-    raw=Shared::PropertyCrmDealRaw.new(),
-    tags=[
-      "string",
-    ],
-  ),
-)
     
 res = s.deal.update_crm_deal(connection_id="string", id="string", crm_deal=Shared::CrmDeal.new(
     raw=Shared::PropertyCrmDealRaw.new(),

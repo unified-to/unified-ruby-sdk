@@ -30,19 +30,19 @@ module UnifiedRubySDK
 
 
 
-    class AtsStatus < UnifiedRubySDK::Utils::FieldAugmented
+    class AtsStatus < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :description, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('description') } }
+      field :description, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-      field :id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('id') } }
+      field :id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :original_status, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('original_status') } }
+      field :original_status, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('original_status') } }
 
-      field :raw, T.nilable(Shared::PropertyAtsStatusRaw), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(Shared::PropertyAtsStatusRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-      field :status, T.nilable(Shared::AtsStatusStatus), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Shared::AtsStatusStatus, true) } }
+      field :status, T.nilable(Shared::AtsStatusStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Shared::AtsStatusStatus, true) } }
 
 
       sig { params(description: T.nilable(String), id: T.nilable(String), original_status: T.nilable(String), raw: T.nilable(Shared::PropertyAtsStatusRaw), status: T.nilable(Shared::AtsStatusStatus)).void }

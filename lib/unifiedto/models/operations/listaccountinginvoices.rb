@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Operations
 
-    class ListAccountingInvoicesRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class ListAccountingInvoicesRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -47,7 +47,7 @@ module UnifiedRubySDK
     end
 
 
-    class ListAccountingInvoicesResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class ListAccountingInvoicesResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

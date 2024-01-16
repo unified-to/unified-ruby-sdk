@@ -58,21 +58,13 @@ Create an account
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAccountingAccountRequest.new(
-  connection_id="string",
-  accounting_account=Shared::AccountingAccount.new(
-    name="string",
-    raw=Shared::PropertyAccountingAccountRaw.new(),
-  ),
-)
     
 res = s.accounting.create_accounting_account(connection_id="string", accounting_account=Shared::AccountingAccount.new(
     name="string",
@@ -108,38 +100,19 @@ Create a customer
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAccountingCustomerRequest.new(
-  connection_id="string",
-  accounting_customer=Shared::AccountingCustomer.new(
-    billing_address=Shared::PropertyAccountingCustomerBillingAddress.new(),
-    emails=[
-      Shared::AccountingEmail.new(
-        email="Kevon_Schultz42@gmail.com",
-      ),
-    ],
-    raw=Shared::PropertyAccountingCustomerRaw.new(),
-    shipping_address=Shared::PropertyAccountingCustomerShippingAddress.new(),
-    telephones=[
-      Shared::AccountingTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.accounting.create_accounting_customer(connection_id="string", accounting_customer=Shared::AccountingCustomer.new(
     billing_address=Shared::PropertyAccountingCustomerBillingAddress.new(),
     emails=[
       Shared::AccountingEmail.new(
-        email="Craig39@gmail.com",
+        email="Kevon_Schultz42@gmail.com",
       ),
     ],
     raw=Shared::PropertyAccountingCustomerRaw.new(),
@@ -180,32 +153,19 @@ Create a invoice
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAccountingInvoiceRequest.new(
-  connection_id="string",
-  accounting_invoice=Shared::AccountingInvoice.new(
-    lineitems=[
-      Shared::AccountingLineitem.new(
-        raw=Shared::PropertyAccountingLineitemRaw.new(),
-        total_amount=6736.06,
-      ),
-    ],
-    raw=Shared::PropertyAccountingInvoiceRaw.new(),
-  ),
-)
     
 res = s.accounting.create_accounting_invoice(connection_id="string", accounting_invoice=Shared::AccountingInvoice.new(
     lineitems=[
       Shared::AccountingLineitem.new(
         raw=Shared::PropertyAccountingLineitemRaw.new(),
-        total_amount=1618.47,
+        total_amount=6736.06,
       ),
     ],
     raw=Shared::PropertyAccountingInvoiceRaw.new(),
@@ -240,21 +200,13 @@ Create an item
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAccountingItemRequest.new(
-  connection_id="string",
-  accounting_item=Shared::AccountingItem.new(
-    name="string",
-    raw=Shared::PropertyAccountingItemRaw.new(),
-  ),
-)
     
 res = s.accounting.create_accounting_item(connection_id="string", accounting_item=Shared::AccountingItem.new(
     name="string",
@@ -290,20 +242,13 @@ Create a payment
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAccountingPaymentRequest.new(
-  connection_id="string",
-  accounting_payment=Shared::AccountingPayment.new(
-    raw=Shared::PropertyAccountingPaymentRaw.new(),
-  ),
-)
     
 res = s.accounting.create_accounting_payment(connection_id="string", accounting_payment=Shared::AccountingPayment.new(
     raw=Shared::PropertyAccountingPaymentRaw.new(),
@@ -338,26 +283,17 @@ Create a taxrate
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAccountingTaxrateRequest.new(
-  connection_id="string",
-  accounting_taxrate=Shared::AccountingTaxrate.new(
-    name="string",
-    rate=1719.1,
-    raw=Shared::PropertyAccountingTaxrateRaw.new(),
-  ),
-)
     
 res = s.accounting.create_accounting_taxrate(connection_id="string", accounting_taxrate=Shared::AccountingTaxrate.new(
     name="string",
-    rate=2397.01,
+    rate=1719.1,
     raw=Shared::PropertyAccountingTaxrateRaw.new(),
   ))
 
@@ -390,17 +326,15 @@ Create a transaction
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateAccountingTransactionRequest.new(
-  connection_id="string",
-  accounting_transaction=Shared::AccountingTransaction.new(
+    
+res = s.accounting.create_accounting_transaction(connection_id="string", accounting_transaction=Shared::AccountingTransaction.new(
     account_id="string",
     id="<ID>",
     line_items=[
@@ -410,20 +344,6 @@ req = Operations::CreateAccountingTransactionRequest.new(
     ],
     raw=Shared::PropertyAccountingTransactionRaw.new(),
     total_amount=6267.93,
-    type=Shared::AccountingTransactionType::SPEND,
-  ),
-)
-    
-res = s.accounting.create_accounting_transaction(connection_id="string", accounting_transaction=Shared::AccountingTransaction.new(
-    account_id="string",
-    id="<ID>",
-    line_items=[
-      Shared::AccountingTransactionLineitem.new(
-        total_amount=1284.64,
-      ),
-    ],
-    raw=Shared::PropertyAccountingTransactionRaw.new(),
-    total_amount=2477.45,
     type=Shared::AccountingTransactionType::SPEND,
   ))
 
@@ -456,21 +376,13 @@ Retrieve an account
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAccountingAccountRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.accounting.get_accounting_account(connection_id="string", id="string", fields=[
     "string",
@@ -506,21 +418,13 @@ Retrieve a customer
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAccountingCustomerRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.accounting.get_accounting_customer(connection_id="string", id="string", fields=[
     "string",
@@ -556,21 +460,13 @@ Retrieve a invoice
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAccountingInvoiceRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.accounting.get_accounting_invoice(connection_id="string", id="string", fields=[
     "string",
@@ -606,21 +502,13 @@ Retrieve an item
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAccountingItemRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.accounting.get_accounting_item(connection_id="string", id="string", fields=[
     "string",
@@ -656,21 +544,13 @@ Retrieve an organization
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAccountingOrganizationRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.accounting.get_accounting_organization(connection_id="string", id="string", fields=[
     "string",
@@ -706,21 +586,13 @@ Retrieve a payment
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAccountingPaymentRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.accounting.get_accounting_payment(connection_id="string", id="string", fields=[
     "string",
@@ -756,21 +628,13 @@ Retrieve a taxrate
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAccountingTaxrateRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.accounting.get_accounting_taxrate(connection_id="string", id="string", fields=[
     "string",
@@ -806,21 +670,13 @@ Retrieve a transaction
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetAccountingTransactionRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.accounting.get_accounting_transaction(connection_id="string", id="string", fields=[
     "string",
@@ -856,7 +712,7 @@ List all accounts
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -901,7 +757,7 @@ List all customers
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -946,7 +802,7 @@ List all invoices
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -991,7 +847,7 @@ List all items
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -1036,7 +892,7 @@ List all organizations
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -1081,7 +937,7 @@ List all payments
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -1126,7 +982,7 @@ List all taxrates
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -1171,7 +1027,7 @@ List all transactions
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -1216,22 +1072,13 @@ Update an account
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAccountingAccountRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_account=Shared::AccountingAccount.new(
-    name="string",
-    raw=Shared::PropertyAccountingAccountRaw.new(),
-  ),
-)
     
 res = s.accounting.patch_accounting_account(connection_id="string", id="string", accounting_account=Shared::AccountingAccount.new(
     name="string",
@@ -1268,39 +1115,19 @@ Update a customer
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAccountingCustomerRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_customer=Shared::AccountingCustomer.new(
-    billing_address=Shared::PropertyAccountingCustomerBillingAddress.new(),
-    emails=[
-      Shared::AccountingEmail.new(
-        email="Trever_Orn@hotmail.com",
-      ),
-    ],
-    raw=Shared::PropertyAccountingCustomerRaw.new(),
-    shipping_address=Shared::PropertyAccountingCustomerShippingAddress.new(),
-    telephones=[
-      Shared::AccountingTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.accounting.patch_accounting_customer(connection_id="string", id="string", accounting_customer=Shared::AccountingCustomer.new(
     billing_address=Shared::PropertyAccountingCustomerBillingAddress.new(),
     emails=[
       Shared::AccountingEmail.new(
-        email="Adonis_Wilkinson72@yahoo.com",
+        email="Trever_Orn@hotmail.com",
       ),
     ],
     raw=Shared::PropertyAccountingCustomerRaw.new(),
@@ -1342,33 +1169,19 @@ Update a invoice
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAccountingInvoiceRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_invoice=Shared::AccountingInvoice.new(
-    lineitems=[
-      Shared::AccountingLineitem.new(
-        raw=Shared::PropertyAccountingLineitemRaw.new(),
-        total_amount=7374.1,
-      ),
-    ],
-    raw=Shared::PropertyAccountingInvoiceRaw.new(),
-  ),
-)
     
 res = s.accounting.patch_accounting_invoice(connection_id="string", id="string", accounting_invoice=Shared::AccountingInvoice.new(
     lineitems=[
       Shared::AccountingLineitem.new(
         raw=Shared::PropertyAccountingLineitemRaw.new(),
-        total_amount=9876.61,
+        total_amount=7374.1,
       ),
     ],
     raw=Shared::PropertyAccountingInvoiceRaw.new(),
@@ -1404,22 +1217,13 @@ Update an item
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAccountingItemRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_item=Shared::AccountingItem.new(
-    name="string",
-    raw=Shared::PropertyAccountingItemRaw.new(),
-  ),
-)
     
 res = s.accounting.patch_accounting_item(connection_id="string", id="string", accounting_item=Shared::AccountingItem.new(
     name="string",
@@ -1456,21 +1260,13 @@ Update a payment
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAccountingPaymentRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_payment=Shared::AccountingPayment.new(
-    raw=Shared::PropertyAccountingPaymentRaw.new(),
-  ),
-)
     
 res = s.accounting.patch_accounting_payment(connection_id="string", id="string", accounting_payment=Shared::AccountingPayment.new(
     raw=Shared::PropertyAccountingPaymentRaw.new(),
@@ -1506,27 +1302,17 @@ Update a taxrate
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAccountingTaxrateRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_taxrate=Shared::AccountingTaxrate.new(
-    name="string",
-    rate=5991.47,
-    raw=Shared::PropertyAccountingTaxrateRaw.new(),
-  ),
-)
     
 res = s.accounting.patch_accounting_taxrate(connection_id="string", id="string", accounting_taxrate=Shared::AccountingTaxrate.new(
     name="string",
-    rate=6924.44,
+    rate=5991.47,
     raw=Shared::PropertyAccountingTaxrateRaw.new(),
   ))
 
@@ -1560,18 +1346,15 @@ Update a transaction
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchAccountingTransactionRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_transaction=Shared::AccountingTransaction.new(
+    
+res = s.accounting.patch_accounting_transaction(connection_id="string", id="string", accounting_transaction=Shared::AccountingTransaction.new(
     account_id="string",
     id="<ID>",
     line_items=[
@@ -1582,20 +1365,6 @@ req = Operations::PatchAccountingTransactionRequest.new(
     raw=Shared::PropertyAccountingTransactionRaw.new(),
     total_amount=4558.63,
     type=Shared::AccountingTransactionType::SPEND,
-  ),
-)
-    
-res = s.accounting.patch_accounting_transaction(connection_id="string", id="string", accounting_transaction=Shared::AccountingTransaction.new(
-    account_id="string",
-    id="<ID>",
-    line_items=[
-      Shared::AccountingTransactionLineitem.new(
-        total_amount=3798.28,
-      ),
-    ],
-    raw=Shared::PropertyAccountingTransactionRaw.new(),
-    total_amount=535.65,
-    type=Shared::AccountingTransactionType::RECEIVE,
   ))
 
 if ! res.accounting_transaction.nil?
@@ -1628,18 +1397,13 @@ Remove an account
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAccountingAccountRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.accounting.remove_accounting_account(connection_id="string", id="string")
 
@@ -1672,18 +1436,13 @@ Remove a customer
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAccountingCustomerRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.accounting.remove_accounting_customer(connection_id="string", id="string")
 
@@ -1716,18 +1475,13 @@ Remove a invoice
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAccountingInvoiceRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.accounting.remove_accounting_invoice(connection_id="string", id="string")
 
@@ -1760,18 +1514,13 @@ Remove an item
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAccountingItemRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.accounting.remove_accounting_item(connection_id="string", id="string")
 
@@ -1804,18 +1553,13 @@ Remove a payment
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAccountingPaymentRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.accounting.remove_accounting_payment(connection_id="string", id="string")
 
@@ -1848,18 +1592,13 @@ Remove a taxrate
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAccountingTaxrateRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.accounting.remove_accounting_taxrate(connection_id="string", id="string")
 
@@ -1892,18 +1631,13 @@ Remove a transaction
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveAccountingTransactionRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.accounting.remove_accounting_transaction(connection_id="string", id="string")
 
@@ -1936,22 +1670,13 @@ Update an account
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAccountingAccountRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_account=Shared::AccountingAccount.new(
-    name="string",
-    raw=Shared::PropertyAccountingAccountRaw.new(),
-  ),
-)
     
 res = s.accounting.update_accounting_account(connection_id="string", id="string", accounting_account=Shared::AccountingAccount.new(
     name="string",
@@ -1988,39 +1713,19 @@ Update a customer
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAccountingCustomerRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_customer=Shared::AccountingCustomer.new(
-    billing_address=Shared::PropertyAccountingCustomerBillingAddress.new(),
-    emails=[
-      Shared::AccountingEmail.new(
-        email="Myrtice_Jacobi77@hotmail.com",
-      ),
-    ],
-    raw=Shared::PropertyAccountingCustomerRaw.new(),
-    shipping_address=Shared::PropertyAccountingCustomerShippingAddress.new(),
-    telephones=[
-      Shared::AccountingTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.accounting.update_accounting_customer(connection_id="string", id="string", accounting_customer=Shared::AccountingCustomer.new(
     billing_address=Shared::PropertyAccountingCustomerBillingAddress.new(),
     emails=[
       Shared::AccountingEmail.new(
-        email="Eda40@hotmail.com",
+        email="Myrtice_Jacobi77@hotmail.com",
       ),
     ],
     raw=Shared::PropertyAccountingCustomerRaw.new(),
@@ -2062,33 +1767,19 @@ Update a invoice
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAccountingInvoiceRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_invoice=Shared::AccountingInvoice.new(
-    lineitems=[
-      Shared::AccountingLineitem.new(
-        raw=Shared::PropertyAccountingLineitemRaw.new(),
-        total_amount=6974.28,
-      ),
-    ],
-    raw=Shared::PropertyAccountingInvoiceRaw.new(),
-  ),
-)
     
 res = s.accounting.update_accounting_invoice(connection_id="string", id="string", accounting_invoice=Shared::AccountingInvoice.new(
     lineitems=[
       Shared::AccountingLineitem.new(
         raw=Shared::PropertyAccountingLineitemRaw.new(),
-        total_amount=4728.85,
+        total_amount=6974.28,
       ),
     ],
     raw=Shared::PropertyAccountingInvoiceRaw.new(),
@@ -2124,22 +1815,13 @@ Update an item
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAccountingItemRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_item=Shared::AccountingItem.new(
-    name="string",
-    raw=Shared::PropertyAccountingItemRaw.new(),
-  ),
-)
     
 res = s.accounting.update_accounting_item(connection_id="string", id="string", accounting_item=Shared::AccountingItem.new(
     name="string",
@@ -2176,21 +1858,13 @@ Update a payment
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAccountingPaymentRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_payment=Shared::AccountingPayment.new(
-    raw=Shared::PropertyAccountingPaymentRaw.new(),
-  ),
-)
     
 res = s.accounting.update_accounting_payment(connection_id="string", id="string", accounting_payment=Shared::AccountingPayment.new(
     raw=Shared::PropertyAccountingPaymentRaw.new(),
@@ -2226,27 +1900,17 @@ Update a taxrate
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAccountingTaxrateRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_taxrate=Shared::AccountingTaxrate.new(
-    name="string",
-    rate=3382.78,
-    raw=Shared::PropertyAccountingTaxrateRaw.new(),
-  ),
-)
     
 res = s.accounting.update_accounting_taxrate(connection_id="string", id="string", accounting_taxrate=Shared::AccountingTaxrate.new(
     name="string",
-    rate=8458.57,
+    rate=3382.78,
     raw=Shared::PropertyAccountingTaxrateRaw.new(),
   ))
 
@@ -2280,18 +1944,15 @@ Update a transaction
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateAccountingTransactionRequest.new(
-  connection_id="string",
-  id="<ID>",
-  accounting_transaction=Shared::AccountingTransaction.new(
+    
+res = s.accounting.update_accounting_transaction(connection_id="string", id="string", accounting_transaction=Shared::AccountingTransaction.new(
     account_id="string",
     id="<ID>",
     line_items=[
@@ -2302,20 +1963,6 @@ req = Operations::UpdateAccountingTransactionRequest.new(
     raw=Shared::PropertyAccountingTransactionRaw.new(),
     total_amount=5659.17,
     type=Shared::AccountingTransactionType::SPEND,
-  ),
-)
-    
-res = s.accounting.update_accounting_transaction(connection_id="string", id="string", accounting_transaction=Shared::AccountingTransaction.new(
-    account_id="string",
-    id="<ID>",
-    line_items=[
-      Shared::AccountingTransactionLineitem.new(
-        total_amount=7024.11,
-      ),
-    ],
-    raw=Shared::PropertyAccountingTransactionRaw.new(),
-    total_amount=2397.73,
-    type=Shared::AccountingTransactionType::RECEIVE,
   ))
 
 if ! res.accounting_transaction.nil?

@@ -20,23 +20,13 @@ Create a ticket
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateTicketingTicketRequest.new(
-  connection_id="string",
-  ticketing_ticket=Shared::TicketingTicket.new(
-    raw=Shared::PropertyTicketingTicketRaw.new(),
-    tags=[
-      "string",
-    ],
-  ),
-)
     
 res = s.ticket.create_ticketing_ticket(connection_id="string", ticketing_ticket=Shared::TicketingTicket.new(
     raw=Shared::PropertyTicketingTicketRaw.new(),
@@ -74,21 +64,13 @@ Retrieve a ticket
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetTicketingTicketRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.ticket.get_ticketing_ticket(connection_id="string", id="string", fields=[
     "string",
@@ -124,7 +106,7 @@ List all tickets
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -169,24 +151,13 @@ Update a ticket
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchTicketingTicketRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ticketing_ticket=Shared::TicketingTicket.new(
-    raw=Shared::PropertyTicketingTicketRaw.new(),
-    tags=[
-      "string",
-    ],
-  ),
-)
     
 res = s.ticket.patch_ticketing_ticket(connection_id="string", id="string", ticketing_ticket=Shared::TicketingTicket.new(
     raw=Shared::PropertyTicketingTicketRaw.new(),
@@ -225,18 +196,13 @@ Remove a ticket
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveTicketingTicketRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.ticket.remove_ticketing_ticket(connection_id="string", id="string")
 
@@ -269,24 +235,13 @@ Update a ticket
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateTicketingTicketRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ticketing_ticket=Shared::TicketingTicket.new(
-    raw=Shared::PropertyTicketingTicketRaw.new(),
-    tags=[
-      "string",
-    ],
-  ),
-)
     
 res = s.ticket.update_ticketing_ticket(connection_id="string", id="string", ticketing_ticket=Shared::TicketingTicket.new(
     raw=Shared::PropertyTicketingTicketRaw.new(),

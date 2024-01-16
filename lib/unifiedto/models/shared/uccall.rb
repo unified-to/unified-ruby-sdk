@@ -11,27 +11,27 @@ require_relative '../shared/property_uccall_telephone'
 module UnifiedRubySDK
   module Shared
 
-    class UcCall < UnifiedRubySDK::Utils::FieldAugmented
+    class UcCall < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :contact_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('contact_id') } }
+      field :contact_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
 
-      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :end_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :end_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('id') } }
+      field :id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
       # The raw data returned by the integration for this call
-      field :raw, T.nilable(Shared::PropertyUcCallRaw), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(Shared::PropertyUcCallRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-      field :start_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :start_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
       # The telephone number called
-      field :telephone, T.nilable(Shared::PropertyUcCallTelephone), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('telephone') } }
+      field :telephone, T.nilable(Shared::PropertyUcCallTelephone), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephone') } }
 
-      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :user_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('user_id') } }
+      field :user_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
 
       sig { params(contact_id: T.nilable(String), created_at: T.nilable(DateTime), end_at: T.nilable(DateTime), id: T.nilable(String), raw: T.nilable(Shared::PropertyUcCallRaw), start_at: T.nilable(DateTime), telephone: T.nilable(Shared::PropertyUcCallTelephone), updated_at: T.nilable(DateTime), user_id: T.nilable(String)).void }

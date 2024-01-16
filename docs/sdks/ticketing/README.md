@@ -32,38 +32,18 @@ Create a customer
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateTicketingCustomerRequest.new(
-  connection_id="string",
-  ticketing_customer=Shared::TicketingCustomer.new(
-    emails=[
-      Shared::TicketingEmail.new(
-        email="Guadalupe78@yahoo.com",
-      ),
-    ],
-    raw=Shared::PropertyTicketingCustomerRaw.new(),
-    tags=[
-      "string",
-    ],
-    telephones=[
-      Shared::TicketingTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.ticketing.create_ticketing_customer(connection_id="string", ticketing_customer=Shared::TicketingCustomer.new(
     emails=[
       Shared::TicketingEmail.new(
-        email="Jodie.Thompson19@gmail.com",
+        email="Guadalupe78@yahoo.com",
       ),
     ],
     raw=Shared::PropertyTicketingCustomerRaw.new(),
@@ -106,20 +86,13 @@ Create a note
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateTicketingNoteRequest.new(
-  connection_id="string",
-  ticketing_note=Shared::TicketingNote.new(
-    raw=Shared::PropertyTicketingNoteRaw.new(),
-  ),
-)
     
 res = s.ticketing.create_ticketing_note(connection_id="string", ticketing_note=Shared::TicketingNote.new(
     raw=Shared::PropertyTicketingNoteRaw.new(),
@@ -154,23 +127,13 @@ Create a ticket
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateTicketingTicketRequest.new(
-  connection_id="string",
-  ticketing_ticket=Shared::TicketingTicket.new(
-    raw=Shared::PropertyTicketingTicketRaw.new(),
-    tags=[
-      "string",
-    ],
-  ),
-)
     
 res = s.ticketing.create_ticketing_ticket(connection_id="string", ticketing_ticket=Shared::TicketingTicket.new(
     raw=Shared::PropertyTicketingTicketRaw.new(),
@@ -208,21 +171,13 @@ Retrieve a customer
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetTicketingCustomerRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.ticketing.get_ticketing_customer(connection_id="string", id="string", fields=[
     "string",
@@ -258,21 +213,13 @@ Retrieve a note
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetTicketingNoteRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.ticketing.get_ticketing_note(connection_id="string", id="string", fields=[
     "string",
@@ -308,21 +255,13 @@ Retrieve a ticket
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetTicketingTicketRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.ticketing.get_ticketing_ticket(connection_id="string", id="string", fields=[
     "string",
@@ -358,7 +297,7 @@ List all customers
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -403,7 +342,7 @@ List all notes
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -448,7 +387,7 @@ List all tickets
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -493,39 +432,18 @@ Update a customer
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchTicketingCustomerRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ticketing_customer=Shared::TicketingCustomer.new(
-    emails=[
-      Shared::TicketingEmail.new(
-        email="Raymundo93@hotmail.com",
-      ),
-    ],
-    raw=Shared::PropertyTicketingCustomerRaw.new(),
-    tags=[
-      "string",
-    ],
-    telephones=[
-      Shared::TicketingTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.ticketing.patch_ticketing_customer(connection_id="string", id="string", ticketing_customer=Shared::TicketingCustomer.new(
     emails=[
       Shared::TicketingEmail.new(
-        email="Bianka_Franey73@gmail.com",
+        email="Raymundo93@hotmail.com",
       ),
     ],
     raw=Shared::PropertyTicketingCustomerRaw.new(),
@@ -569,21 +487,13 @@ Update a note
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchTicketingNoteRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ticketing_note=Shared::TicketingNote.new(
-    raw=Shared::PropertyTicketingNoteRaw.new(),
-  ),
-)
     
 res = s.ticketing.patch_ticketing_note(connection_id="string", id="string", ticketing_note=Shared::TicketingNote.new(
     raw=Shared::PropertyTicketingNoteRaw.new(),
@@ -619,24 +529,13 @@ Update a ticket
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchTicketingTicketRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ticketing_ticket=Shared::TicketingTicket.new(
-    raw=Shared::PropertyTicketingTicketRaw.new(),
-    tags=[
-      "string",
-    ],
-  ),
-)
     
 res = s.ticketing.patch_ticketing_ticket(connection_id="string", id="string", ticketing_ticket=Shared::TicketingTicket.new(
     raw=Shared::PropertyTicketingTicketRaw.new(),
@@ -675,18 +574,13 @@ Remove a customer
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveTicketingCustomerRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.ticketing.remove_ticketing_customer(connection_id="string", id="string")
 
@@ -719,18 +613,13 @@ Remove a note
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveTicketingNoteRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.ticketing.remove_ticketing_note(connection_id="string", id="string")
 
@@ -763,18 +652,13 @@ Remove a ticket
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveTicketingTicketRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.ticketing.remove_ticketing_ticket(connection_id="string", id="string")
 
@@ -807,39 +691,18 @@ Update a customer
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateTicketingCustomerRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ticketing_customer=Shared::TicketingCustomer.new(
-    emails=[
-      Shared::TicketingEmail.new(
-        email="Mohamed.Friesen@hotmail.com",
-      ),
-    ],
-    raw=Shared::PropertyTicketingCustomerRaw.new(),
-    tags=[
-      "string",
-    ],
-    telephones=[
-      Shared::TicketingTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ),
-)
     
 res = s.ticketing.update_ticketing_customer(connection_id="string", id="string", ticketing_customer=Shared::TicketingCustomer.new(
     emails=[
       Shared::TicketingEmail.new(
-        email="Jaquelin.Goldner@hotmail.com",
+        email="Mohamed.Friesen@hotmail.com",
       ),
     ],
     raw=Shared::PropertyTicketingCustomerRaw.new(),
@@ -883,21 +746,13 @@ Update a note
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateTicketingNoteRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ticketing_note=Shared::TicketingNote.new(
-    raw=Shared::PropertyTicketingNoteRaw.new(),
-  ),
-)
     
 res = s.ticketing.update_ticketing_note(connection_id="string", id="string", ticketing_note=Shared::TicketingNote.new(
     raw=Shared::PropertyTicketingNoteRaw.new(),
@@ -933,24 +788,13 @@ Update a ticket
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateTicketingTicketRequest.new(
-  connection_id="string",
-  id="<ID>",
-  ticketing_ticket=Shared::TicketingTicket.new(
-    raw=Shared::PropertyTicketingTicketRaw.new(),
-    tags=[
-      "string",
-    ],
-  ),
-)
     
 res = s.ticketing.update_ticketing_ticket(connection_id="string", id="string", ticketing_ticket=Shared::TicketingTicket.new(
     raw=Shared::PropertyTicketingTicketRaw.new(),

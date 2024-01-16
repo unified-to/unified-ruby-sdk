@@ -10,7 +10,7 @@ require_relative '../shared/crmpipeline'
 module UnifiedRubySDK
   module Operations
 
-    class CreateCrmPipelineRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class CreateCrmPipelineRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -27,7 +27,7 @@ module UnifiedRubySDK
     end
 
 
-    class CreateCrmPipelineResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class CreateCrmPipelineResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

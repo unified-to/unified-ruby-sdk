@@ -10,7 +10,7 @@ require_relative '../shared/storagefile'
 module UnifiedRubySDK
   module Operations
 
-    class CreateStorageFileRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class CreateStorageFileRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -27,7 +27,7 @@ module UnifiedRubySDK
     end
 
 
-    class CreateStorageFileResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class CreateStorageFileResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

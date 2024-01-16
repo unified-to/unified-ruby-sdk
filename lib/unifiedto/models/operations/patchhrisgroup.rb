@@ -10,7 +10,7 @@ require_relative '../shared/hrisgroup'
 module UnifiedRubySDK
   module Operations
 
-    class PatchHrisGroupRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class PatchHrisGroupRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -30,7 +30,7 @@ module UnifiedRubySDK
     end
 
 
-    class PatchHrisGroupResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class PatchHrisGroupResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

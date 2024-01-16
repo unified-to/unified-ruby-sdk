@@ -10,7 +10,7 @@ require_relative '../shared/webhook'
 module UnifiedRubySDK
   module Operations
 
-    class CreateUnifiedWebhookRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class CreateUnifiedWebhookRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # When set, all of the existing data will sent back to your server.
@@ -27,7 +27,7 @@ module UnifiedRubySDK
     end
 
 
-    class CreateUnifiedWebhookResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class CreateUnifiedWebhookResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

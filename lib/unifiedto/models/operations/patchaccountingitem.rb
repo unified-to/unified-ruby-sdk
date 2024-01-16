@@ -10,7 +10,7 @@ require_relative '../shared/accountingitem'
 module UnifiedRubySDK
   module Operations
 
-    class PatchAccountingItemRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class PatchAccountingItemRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -30,7 +30,7 @@ module UnifiedRubySDK
     end
 
 
-    class PatchAccountingItemResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class PatchAccountingItemResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

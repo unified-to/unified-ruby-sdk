@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Operations
 
-    class ListUnifiedApicallsRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class ListUnifiedApicallsRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # Filter the results to just this integration's API calls
@@ -53,7 +53,7 @@ module UnifiedRubySDK
     end
 
 
-    class ListUnifiedApicallsResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class ListUnifiedApicallsResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

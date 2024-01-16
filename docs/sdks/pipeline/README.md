@@ -20,20 +20,13 @@ Create a pipeline
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::CreateCrmPipelineRequest.new(
-  connection_id="string",
-  crm_pipeline=Shared::CrmPipeline.new(
-    raw=Shared::PropertyCrmPipelineRaw.new(),
-  ),
-)
     
 res = s.pipeline.create_crm_pipeline(connection_id="string", crm_pipeline=Shared::CrmPipeline.new(
     raw=Shared::PropertyCrmPipelineRaw.new(),
@@ -68,21 +61,13 @@ Retrieve a pipeline
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetCrmPipelineRequest.new(
-  connection_id="string",
-  id="<ID>",
-  fields=[
-    "string",
-  ],
-)
     
 res = s.pipeline.get_crm_pipeline(connection_id="string", id="string", fields=[
     "string",
@@ -118,7 +103,7 @@ List all pipelines
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
@@ -163,21 +148,13 @@ Update a pipeline
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::PatchCrmPipelineRequest.new(
-  connection_id="string",
-  id="<ID>",
-  crm_pipeline=Shared::CrmPipeline.new(
-    raw=Shared::PropertyCrmPipelineRaw.new(),
-  ),
-)
     
 res = s.pipeline.patch_crm_pipeline(connection_id="string", id="string", crm_pipeline=Shared::CrmPipeline.new(
     raw=Shared::PropertyCrmPipelineRaw.new(),
@@ -213,18 +190,13 @@ Remove a pipeline
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::RemoveCrmPipelineRequest.new(
-  connection_id="string",
-  id="<ID>",
-)
     
 res = s.pipeline.remove_crm_pipeline(connection_id="string", id="string")
 
@@ -257,21 +229,13 @@ Update a pipeline
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::UpdateCrmPipelineRequest.new(
-  connection_id="string",
-  id="<ID>",
-  crm_pipeline=Shared::CrmPipeline.new(
-    raw=Shared::PropertyCrmPipelineRaw.new(),
-  ),
-)
     
 res = s.pipeline.update_crm_pipeline(connection_id="string", id="string", crm_pipeline=Shared::CrmPipeline.new(
     raw=Shared::PropertyCrmPipelineRaw.new(),

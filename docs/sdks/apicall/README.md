@@ -16,17 +16,13 @@ Retrieve specific API Call by its ID
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
-
-req = Operations::GetUnifiedApicallRequest.new(
-  id="<ID>",
-)
     
 res = s.apicall.get_unified_apicall(id="string")
 
@@ -58,7 +54,7 @@ Returns API Calls
 require_relative unified_ruby_sdk
 
 
-s = UnifiedRubySDK::UnifiedTo.new
+s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
   security=Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",

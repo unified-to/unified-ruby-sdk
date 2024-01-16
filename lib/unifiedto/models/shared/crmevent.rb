@@ -27,39 +27,39 @@ module UnifiedRubySDK
 
 
     # An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
-    class CrmEvent < UnifiedRubySDK::Utils::FieldAugmented
+    class CrmEvent < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # The call object, when type = call
-      field :call, T.nilable(Shared::PropertyCrmEventCall), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('call') } }
+      field :call, T.nilable(Shared::PropertyCrmEventCall), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('call') } }
       # An array of company IDs associated with this event
-      field :company_ids, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('company_ids') } }
+      field :company_ids, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_ids') } }
       # An array of contact IDs associated with this event
-      field :contact_ids, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('contact_ids') } }
+      field :contact_ids, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_ids') } }
 
-      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
       # An array of deal IDs associated with this event
-      field :deal_ids, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('deal_ids') } }
+      field :deal_ids, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('deal_ids') } }
       # The email object, when type = email
-      field :email, T.nilable(Shared::PropertyCrmEventEmail), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('email') } }
+      field :email, T.nilable(Shared::PropertyCrmEventEmail), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
 
-      field :id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('id') } }
+      field :id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :lead_ids, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('lead_ids') } }
+      field :lead_ids, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lead_ids') } }
       # The meeting object, when type = meeting
-      field :meeting, T.nilable(Shared::PropertyCrmEventMeeting), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('meeting') } }
+      field :meeting, T.nilable(Shared::PropertyCrmEventMeeting), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('meeting') } }
       # The note object, when type = note
-      field :note, T.nilable(Shared::PropertyCrmEventNote), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('note') } }
+      field :note, T.nilable(Shared::PropertyCrmEventNote), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('note') } }
       # The raw data returned by the integration for this event.
-      field :raw, T.nilable(Shared::PropertyCrmEventRaw), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(Shared::PropertyCrmEventRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
       # The task object, when type = task
-      field :task, T.nilable(Shared::PropertyCrmEventTask), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('task') } }
+      field :task, T.nilable(Shared::PropertyCrmEventTask), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('task') } }
 
-      field :type, T.nilable(Shared::CrmEventType), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Shared::CrmEventType, true) } }
+      field :type, T.nilable(Shared::CrmEventType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Shared::CrmEventType, true) } }
 
-      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :user_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('user_id') } }
+      field :user_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
 
       sig { params(call: T.nilable(Shared::PropertyCrmEventCall), company_ids: T.nilable(T::Array[String]), contact_ids: T.nilable(T::Array[String]), created_at: T.nilable(DateTime), deal_ids: T.nilable(T::Array[String]), email: T.nilable(Shared::PropertyCrmEventEmail), id: T.nilable(String), lead_ids: T.nilable(T::Array[String]), meeting: T.nilable(Shared::PropertyCrmEventMeeting), note: T.nilable(Shared::PropertyCrmEventNote), raw: T.nilable(Shared::PropertyCrmEventRaw), task: T.nilable(Shared::PropertyCrmEventTask), type: T.nilable(Shared::CrmEventType), updated_at: T.nilable(DateTime), user_id: T.nilable(String)).void }

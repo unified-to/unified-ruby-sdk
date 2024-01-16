@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Operations
 
-    class RemoveTicketingTicketRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveTicketingTicketRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -26,7 +26,7 @@ module UnifiedRubySDK
     end
 
 
-    class RemoveTicketingTicketResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveTicketingTicketResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

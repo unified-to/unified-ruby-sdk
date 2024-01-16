@@ -9,23 +9,23 @@ require 'faraday'
 module UnifiedRubySDK
   module Shared
 
-    class EnrichPersonWorkHistory < UnifiedRubySDK::Utils::FieldAugmented
+    class EnrichPersonWorkHistory < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 
-      field :title, String, { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('title') } }
+      field :title, String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
 
-      field :company_domain, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('company_domain') } }
+      field :company_domain, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_domain') } }
 
-      field :company_id, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('company_id') } }
+      field :company_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
 
-      field :company_name, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('company_name') } }
+      field :company_name, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_name') } }
 
-      field :end_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :end_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :location, T.nilable(String), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('location') } }
+      field :location, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location') } }
 
-      field :start_at, T.nilable(DateTime), { 'format_json': { 'letter_case': OpenApiSDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      field :start_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
       sig { params(title: String, company_domain: T.nilable(String), company_id: T.nilable(String), company_name: T.nilable(String), end_at: T.nilable(DateTime), location: T.nilable(String), start_at: T.nilable(DateTime)).void }

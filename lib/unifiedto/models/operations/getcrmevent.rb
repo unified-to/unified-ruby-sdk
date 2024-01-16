@@ -10,7 +10,7 @@ require_relative '../shared/crmevent'
 module UnifiedRubySDK
   module Operations
 
-    class GetCrmEventRequest < UnifiedRubySDK::Utils::FieldAugmented
+    class GetCrmEventRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -30,7 +30,7 @@ module UnifiedRubySDK
     end
 
 
-    class GetCrmEventResponse < UnifiedRubySDK::Utils::FieldAugmented
+    class GetCrmEventResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation
