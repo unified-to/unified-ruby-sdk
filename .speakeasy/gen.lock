@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: fcf38ba1245f7399c1338dc1ef8df2e7
+  docChecksum: ede9055e4403162b0dc1469530be3da9
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.234.3
-  releaseVersion: 0.2.25
-  configChecksum: 3d5b930e8a0ecf158005d00c509fa628
+  generationVersion: 2.235.3
+  releaseVersion: 0.2.26
+  configChecksum: da133c0c6038964d810e8adf59c4ad8a
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -40,7 +40,6 @@ generatedFiles:
   - lib/unifiedto/contact.rb
   - lib/unifiedto/deal.rb
   - lib/unifiedto/event.rb
-  - lib/unifiedto/file.rb
   - lib/unifiedto/lead.rb
   - lib/unifiedto/pipeline.rb
   - lib/unifiedto/enrich.rb
@@ -53,6 +52,7 @@ generatedFiles:
   - lib/unifiedto/member.rb
   - lib/unifiedto/passthrough.rb
   - lib/unifiedto/storage.rb
+  - lib/unifiedto/file.rb
   - lib/unifiedto/ticketing.rb
   - lib/unifiedto/note.rb
   - lib/unifiedto/ticket.rb
@@ -203,42 +203,36 @@ generatedFiles:
   - lib/unifiedto/models/operations/createcrmcontact.rb
   - lib/unifiedto/models/operations/createcrmdeal.rb
   - lib/unifiedto/models/operations/createcrmevent.rb
-  - lib/unifiedto/models/operations/createcrmfile.rb
   - lib/unifiedto/models/operations/createcrmlead.rb
   - lib/unifiedto/models/operations/createcrmpipeline.rb
   - lib/unifiedto/models/operations/getcrmcompany.rb
   - lib/unifiedto/models/operations/getcrmcontact.rb
   - lib/unifiedto/models/operations/getcrmdeal.rb
   - lib/unifiedto/models/operations/getcrmevent.rb
-  - lib/unifiedto/models/operations/getcrmfile.rb
   - lib/unifiedto/models/operations/getcrmlead.rb
   - lib/unifiedto/models/operations/getcrmpipeline.rb
   - lib/unifiedto/models/operations/listcrmcompanies.rb
   - lib/unifiedto/models/operations/listcrmcontacts.rb
   - lib/unifiedto/models/operations/listcrmdeals.rb
   - lib/unifiedto/models/operations/listcrmevents.rb
-  - lib/unifiedto/models/operations/listcrmfiles.rb
   - lib/unifiedto/models/operations/listcrmleads.rb
   - lib/unifiedto/models/operations/listcrmpipelines.rb
   - lib/unifiedto/models/operations/patchcrmcompany.rb
   - lib/unifiedto/models/operations/patchcrmcontact.rb
   - lib/unifiedto/models/operations/patchcrmdeal.rb
   - lib/unifiedto/models/operations/patchcrmevent.rb
-  - lib/unifiedto/models/operations/patchcrmfile.rb
   - lib/unifiedto/models/operations/patchcrmlead.rb
   - lib/unifiedto/models/operations/patchcrmpipeline.rb
   - lib/unifiedto/models/operations/removecrmcompany.rb
   - lib/unifiedto/models/operations/removecrmcontact.rb
   - lib/unifiedto/models/operations/removecrmdeal.rb
   - lib/unifiedto/models/operations/removecrmevent.rb
-  - lib/unifiedto/models/operations/removecrmfile.rb
   - lib/unifiedto/models/operations/removecrmlead.rb
   - lib/unifiedto/models/operations/removecrmpipeline.rb
   - lib/unifiedto/models/operations/updatecrmcompany.rb
   - lib/unifiedto/models/operations/updatecrmcontact.rb
   - lib/unifiedto/models/operations/updatecrmdeal.rb
   - lib/unifiedto/models/operations/updatecrmevent.rb
-  - lib/unifiedto/models/operations/updatecrmfile.rb
   - lib/unifiedto/models/operations/updatecrmlead.rb
   - lib/unifiedto/models/operations/updatecrmpipeline.rb
   - lib/unifiedto/models/operations/listenrichcompanies.rb
@@ -248,12 +242,6 @@ generatedFiles:
   - lib/unifiedto/models/operations/patchuccontact.rb
   - lib/unifiedto/models/operations/removeuccontact.rb
   - lib/unifiedto/models/operations/updateuccontact.rb
-  - lib/unifiedto/models/operations/createstoragefile.rb
-  - lib/unifiedto/models/operations/getstoragefile.rb
-  - lib/unifiedto/models/operations/liststoragefiles.rb
-  - lib/unifiedto/models/operations/patchstoragefile.rb
-  - lib/unifiedto/models/operations/removestoragefile.rb
-  - lib/unifiedto/models/operations/updatestoragefile.rb
   - lib/unifiedto/models/operations/listenrichpeople.rb
   - lib/unifiedto/models/operations/createhrisemployee.rb
   - lib/unifiedto/models/operations/createhrisgroup.rb
@@ -284,6 +272,12 @@ generatedFiles:
   - lib/unifiedto/models/operations/patchpassthrough.rb
   - lib/unifiedto/models/operations/removepassthrough.rb
   - lib/unifiedto/models/operations/updatepassthrough.rb
+  - lib/unifiedto/models/operations/createstoragefile.rb
+  - lib/unifiedto/models/operations/getstoragefile.rb
+  - lib/unifiedto/models/operations/liststoragefiles.rb
+  - lib/unifiedto/models/operations/patchstoragefile.rb
+  - lib/unifiedto/models/operations/removestoragefile.rb
+  - lib/unifiedto/models/operations/updatestoragefile.rb
   - lib/unifiedto/models/operations/createticketingnote.rb
   - lib/unifiedto/models/operations/createticketingticket.rb
   - lib/unifiedto/models/operations/getticketingnote.rb
@@ -379,8 +373,6 @@ generatedFiles:
   - lib/unifiedto/models/shared/property_crmevent_meeting.rb
   - lib/unifiedto/models/shared/property_crmevent_email.rb
   - lib/unifiedto/models/shared/property_crmevent_call.rb
-  - lib/unifiedto/models/shared/crmfile.rb
-  - lib/unifiedto/models/shared/property_crmfile_raw.rb
   - lib/unifiedto/models/shared/crmlead.rb
   - lib/unifiedto/models/shared/property_crmlead_raw.rb
   - lib/unifiedto/models/shared/property_crmlead_address.rb
@@ -394,10 +386,6 @@ generatedFiles:
   - lib/unifiedto/models/shared/uctelephone.rb
   - lib/unifiedto/models/shared/property_uccontact_raw.rb
   - lib/unifiedto/models/shared/ucemail.rb
-  - lib/unifiedto/models/shared/storagefile.rb
-  - lib/unifiedto/models/shared/property_storagefile_raw.rb
-  - lib/unifiedto/models/shared/storagepermission.rb
-  - lib/unifiedto/models/shared/property_storagepermission_roles.rb
   - lib/unifiedto/models/shared/enrichperson.rb
   - lib/unifiedto/models/shared/enrichpersonworkhistory.rb
   - lib/unifiedto/models/shared/property_enrichperson_raw.rb
@@ -416,6 +404,10 @@ generatedFiles:
   - lib/unifiedto/models/shared/property_marketingmember_raw.rb
   - lib/unifiedto/models/shared/marketingemail.rb
   - lib/unifiedto/models/shared/undefined.rb
+  - lib/unifiedto/models/shared/storagefile.rb
+  - lib/unifiedto/models/shared/property_storagefile_raw.rb
+  - lib/unifiedto/models/shared/storagepermission.rb
+  - lib/unifiedto/models/shared/property_storagepermission_roles.rb
   - lib/unifiedto/models/shared/ticketingnote.rb
   - lib/unifiedto/models/shared/property_ticketingnote_raw.rb
   - lib/unifiedto/models/shared/ticketingticket.rb
@@ -621,8 +613,6 @@ generatedFiles:
   - docs/models/operations/createcrmdealresponse.md
   - docs/models/operations/createcrmeventrequest.md
   - docs/models/operations/createcrmeventresponse.md
-  - docs/models/operations/createcrmfilerequest.md
-  - docs/models/operations/createcrmfileresponse.md
   - docs/models/operations/createcrmleadrequest.md
   - docs/models/operations/createcrmleadresponse.md
   - docs/models/operations/createcrmpipelinerequest.md
@@ -635,8 +625,6 @@ generatedFiles:
   - docs/models/operations/getcrmdealresponse.md
   - docs/models/operations/getcrmeventrequest.md
   - docs/models/operations/getcrmeventresponse.md
-  - docs/models/operations/getcrmfilerequest.md
-  - docs/models/operations/getcrmfileresponse.md
   - docs/models/operations/getcrmleadrequest.md
   - docs/models/operations/getcrmleadresponse.md
   - docs/models/operations/getcrmpipelinerequest.md
@@ -649,8 +637,6 @@ generatedFiles:
   - docs/models/operations/listcrmdealsresponse.md
   - docs/models/operations/listcrmeventsrequest.md
   - docs/models/operations/listcrmeventsresponse.md
-  - docs/models/operations/listcrmfilesrequest.md
-  - docs/models/operations/listcrmfilesresponse.md
   - docs/models/operations/listcrmleadsrequest.md
   - docs/models/operations/listcrmleadsresponse.md
   - docs/models/operations/listcrmpipelinesrequest.md
@@ -663,8 +649,6 @@ generatedFiles:
   - docs/models/operations/patchcrmdealresponse.md
   - docs/models/operations/patchcrmeventrequest.md
   - docs/models/operations/patchcrmeventresponse.md
-  - docs/models/operations/patchcrmfilerequest.md
-  - docs/models/operations/patchcrmfileresponse.md
   - docs/models/operations/patchcrmleadrequest.md
   - docs/models/operations/patchcrmleadresponse.md
   - docs/models/operations/patchcrmpipelinerequest.md
@@ -677,8 +661,6 @@ generatedFiles:
   - docs/models/operations/removecrmdealresponse.md
   - docs/models/operations/removecrmeventrequest.md
   - docs/models/operations/removecrmeventresponse.md
-  - docs/models/operations/removecrmfilerequest.md
-  - docs/models/operations/removecrmfileresponse.md
   - docs/models/operations/removecrmleadrequest.md
   - docs/models/operations/removecrmleadresponse.md
   - docs/models/operations/removecrmpipelinerequest.md
@@ -691,8 +673,6 @@ generatedFiles:
   - docs/models/operations/updatecrmdealresponse.md
   - docs/models/operations/updatecrmeventrequest.md
   - docs/models/operations/updatecrmeventresponse.md
-  - docs/models/operations/updatecrmfilerequest.md
-  - docs/models/operations/updatecrmfileresponse.md
   - docs/models/operations/updatecrmleadrequest.md
   - docs/models/operations/updatecrmleadresponse.md
   - docs/models/operations/updatecrmpipelinerequest.md
@@ -711,18 +691,6 @@ generatedFiles:
   - docs/models/operations/removeuccontactresponse.md
   - docs/models/operations/updateuccontactrequest.md
   - docs/models/operations/updateuccontactresponse.md
-  - docs/models/operations/createstoragefilerequest.md
-  - docs/models/operations/createstoragefileresponse.md
-  - docs/models/operations/getstoragefilerequest.md
-  - docs/models/operations/getstoragefileresponse.md
-  - docs/models/operations/liststoragefilesrequest.md
-  - docs/models/operations/liststoragefilesresponse.md
-  - docs/models/operations/patchstoragefilerequest.md
-  - docs/models/operations/patchstoragefileresponse.md
-  - docs/models/operations/removestoragefilerequest.md
-  - docs/models/operations/removestoragefileresponse.md
-  - docs/models/operations/updatestoragefilerequest.md
-  - docs/models/operations/updatestoragefileresponse.md
   - docs/models/operations/listenrichpeoplerequest.md
   - docs/models/operations/listenrichpeopleresponse.md
   - docs/models/operations/createhrisemployeerequest.md
@@ -783,6 +751,18 @@ generatedFiles:
   - docs/models/operations/removepassthroughresponse.md
   - docs/models/operations/updatepassthroughrequest.md
   - docs/models/operations/updatepassthroughresponse.md
+  - docs/models/operations/createstoragefilerequest.md
+  - docs/models/operations/createstoragefileresponse.md
+  - docs/models/operations/getstoragefilerequest.md
+  - docs/models/operations/getstoragefileresponse.md
+  - docs/models/operations/liststoragefilesrequest.md
+  - docs/models/operations/liststoragefilesresponse.md
+  - docs/models/operations/patchstoragefilerequest.md
+  - docs/models/operations/patchstoragefileresponse.md
+  - docs/models/operations/removestoragefilerequest.md
+  - docs/models/operations/removestoragefileresponse.md
+  - docs/models/operations/updatestoragefilerequest.md
+  - docs/models/operations/updatestoragefileresponse.md
   - docs/models/operations/createticketingnoterequest.md
   - docs/models/operations/createticketingnoteresponse.md
   - docs/models/operations/createticketingticketrequest.md
@@ -936,8 +916,6 @@ generatedFiles:
   - docs/models/shared/propertycrmeventmeeting.md
   - docs/models/shared/propertycrmeventemail.md
   - docs/models/shared/propertycrmeventcall.md
-  - docs/models/shared/crmfile.md
-  - docs/models/shared/propertycrmfileraw.md
   - docs/models/shared/crmlead.md
   - docs/models/shared/propertycrmleadraw.md
   - docs/models/shared/propertycrmleadaddress.md
@@ -954,11 +932,6 @@ generatedFiles:
   - docs/models/shared/propertyuccontactraw.md
   - docs/models/shared/ucemailtype.md
   - docs/models/shared/ucemail.md
-  - docs/models/shared/storagefiletype.md
-  - docs/models/shared/storagefile.md
-  - docs/models/shared/propertystoragefileraw.md
-  - docs/models/shared/storagepermission.md
-  - docs/models/shared/propertystoragepermissionroles.md
   - docs/models/shared/gender.md
   - docs/models/shared/enrichperson.md
   - docs/models/shared/enrichpersonworkhistory.md
@@ -987,6 +960,11 @@ generatedFiles:
   - docs/models/shared/marketingemailtype.md
   - docs/models/shared/marketingemail.md
   - docs/models/shared/undefined.md
+  - docs/models/shared/storagefiletype.md
+  - docs/models/shared/storagefile.md
+  - docs/models/shared/propertystoragefileraw.md
+  - docs/models/shared/storagepermission.md
+  - docs/models/shared/propertystoragepermissionroles.md
   - docs/models/shared/ticketingnote.md
   - docs/models/shared/propertyticketingnoteraw.md
   - docs/models/shared/ticketingticketstatus.md
@@ -1039,7 +1017,6 @@ generatedFiles:
   - docs/sdks/contact/README.md
   - docs/sdks/deal/README.md
   - docs/sdks/event/README.md
-  - docs/sdks/file/README.md
   - docs/sdks/lead/README.md
   - docs/sdks/pipeline/README.md
   - docs/sdks/enrich/README.md
@@ -1052,6 +1029,7 @@ generatedFiles:
   - docs/sdks/member/README.md
   - docs/sdks/passthrough/README.md
   - docs/sdks/storage/README.md
+  - docs/sdks/file/README.md
   - docs/sdks/ticketing/README.md
   - docs/sdks/note/README.md
   - docs/sdks/ticket/README.md

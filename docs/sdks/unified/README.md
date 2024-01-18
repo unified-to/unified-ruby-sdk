@@ -57,7 +57,7 @@ req = Shared::Connection.new(
   ],
   integration_type="string",
   permissions=[
-    Shared::PropertyConnectionPermissions::ATS_JOB_WRITE,
+    Shared::PropertyConnectionPermissions::ATS_JOB_READ,
   ],
 )
     
@@ -105,7 +105,7 @@ res = s.unified.create_unified_webhook(webhook=Shared::Webhook.new(
     hook_url="string",
     interval=188.12,
     meta=Shared::PropertyWebhookMeta.new(),
-    object_type=Shared::ObjectType::CRM_CONTACT,
+    object_type=Shared::ObjectType::CRM_COMPANY,
     runs=[
       "string",
     ],
@@ -712,7 +712,7 @@ res = s.unified.update_unified_connection(id="string", connection=Shared::Connec
     ],
     integration_type="string",
     permissions=[
-      Shared::PropertyConnectionPermissions::CRM_CONTACT_READ,
+      Shared::PropertyConnectionPermissions::CRM_COMPANY_WRITE,
     ],
   ))
 

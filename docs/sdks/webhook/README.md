@@ -34,7 +34,7 @@ res = s.webhook.create_unified_webhook(webhook=Shared::Webhook.new(
     hook_url="string",
     interval=188.12,
     meta=Shared::PropertyWebhookMeta.new(),
-    object_type=Shared::ObjectType::CRM_CONTACT,
+    object_type=Shared::ObjectType::CRM_COMPANY,
     runs=[
       "string",
     ],

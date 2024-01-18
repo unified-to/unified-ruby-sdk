@@ -12,7 +12,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :customer, :invoice, :item, :organization, :payment, :taxrate, :transaction, :ats, :application, :applicationstatus, :candidate, :document, :interview, :job, :scorecard, :crm, :company, :contact, :deal, :event, :file, :lead, :pipeline, :enrich, :person, :hris, :employee, :group, :martech, :list, :member, :passthrough, :storage, :ticketing, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :webhook
+    attr_accessor :accounting, :account, :customer, :invoice, :item, :organization, :payment, :taxrate, :transaction, :ats, :application, :applicationstatus, :candidate, :document, :interview, :job, :scorecard, :crm, :company, :contact, :deal, :event, :lead, :pipeline, :enrich, :person, :hris, :employee, :group, :martech, :list, :member, :passthrough, :storage, :file, :ticketing, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :webhook
 
     attr_accessor :security, :language, :sdk_version, :gen_version
 
@@ -96,7 +96,6 @@ module UnifiedRubySDK
       @contact = Contact.new(@sdk_configuration)
       @deal = Deal.new(@sdk_configuration)
       @event = Event.new(@sdk_configuration)
-      @file = File.new(@sdk_configuration)
       @lead = Lead.new(@sdk_configuration)
       @pipeline = Pipeline.new(@sdk_configuration)
       @enrich = Enrich.new(@sdk_configuration)
@@ -109,6 +108,7 @@ module UnifiedRubySDK
       @member = Member.new(@sdk_configuration)
       @passthrough = Passthrough.new(@sdk_configuration)
       @storage = Storage.new(@sdk_configuration)
+      @file = File.new(@sdk_configuration)
       @ticketing = Ticketing.new(@sdk_configuration)
       @note = Note.new(@sdk_configuration)
       @ticket = Ticket.new(@sdk_configuration)

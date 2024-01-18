@@ -40,7 +40,6 @@ module UnifiedRubySDK
         CRM_CONTACT = new('crm_contact')
         CRM_DEAL = new('crm_deal')
         CRM_EVENT = new('crm_event')
-        CRM_FILE = new('crm_file')
         CRM_LEAD = new('crm_lead')
         CRM_PIPELINE = new('crm_pipeline')
         HRIS_EMPLOYEE = new('hris_employee')

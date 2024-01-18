@@ -49,8 +49,6 @@ module UnifiedRubySDK
         CRM_EVENT_WRITE = new('crm_event_write')
         CRM_LEAD_READ = new('crm_lead_read')
         CRM_LEAD_WRITE = new('crm_lead_write')
-        CRM_FILE_READ = new('crm_file_read')
-        CRM_FILE_WRITE = new('crm_file_write')
         CRM_PIPELINE_READ = new('crm_pipeline_read')
         CRM_PIPELINE_WRITE = new('crm_pipeline_write')
         MARTECH_LIST_READ = new('martech_list_read')

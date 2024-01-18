@@ -46,7 +46,7 @@ req = Shared::Connection.new(
   ],
   integration_type="string",
   permissions=[
-    Shared::PropertyConnectionPermissions::ATS_JOB_WRITE,
+    Shared::PropertyConnectionPermissions::ATS_JOB_READ,
   ],
 )
     
@@ -285,7 +285,7 @@ res = s.connection.update_unified_connection(id="string", connection=Shared::Con
     ],
     integration_type="string",
     permissions=[
-      Shared::PropertyConnectionPermissions::CRM_CONTACT_READ,
+      Shared::PropertyConnectionPermissions::CRM_COMPANY_WRITE,
     ],
   ))
 
