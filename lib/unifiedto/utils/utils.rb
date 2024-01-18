@@ -448,9 +448,9 @@ module UnifiedRubySDK
           raise StandardError, 'not supported'
         end
       when 'openIdConnect'
-        req.headers[header_name] = value
+        req.headers[header_name] = value.downcase.start_with?('bearer ') ? value : "Bearer #{value}"
       when 'oauth2'
-        req.headers[header_name] = value
+        req.headers[header_name] = value.downcase.start_with?('bearer ') ? value : "Bearer #{value}"
       when 'http'
         if sub_type == 'bearer'
           req.headers[header_name] = value.downcase.start_with?('bearer ') ? value : "Bearer #{value}"
