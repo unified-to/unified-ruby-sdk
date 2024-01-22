@@ -44,8 +44,6 @@ module UnifiedRubySDK
 
       field :balance, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('balance') } }
 
-      field :bank_account_number, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('bank_account_number') } }
-
       field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
       field :currency, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
@@ -65,11 +63,10 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(name: String, balance: T.nilable(Float), bank_account_number: T.nilable(String), created_at: T.nilable(DateTime), currency: T.nilable(String), customer_defined_code: T.nilable(String), description: T.nilable(String), id: T.nilable(String), raw: T.nilable(Shared::PropertyAccountingAccountRaw), status: T.nilable(Shared::Status), type: T.nilable(Shared::Type), updated_at: T.nilable(DateTime)).void }
-      def initialize(name: nil, balance: nil, bank_account_number: nil, created_at: nil, currency: nil, customer_defined_code: nil, description: nil, id: nil, raw: nil, status: nil, type: nil, updated_at: nil)
+      sig { params(name: String, balance: T.nilable(Float), created_at: T.nilable(DateTime), currency: T.nilable(String), customer_defined_code: T.nilable(String), description: T.nilable(String), id: T.nilable(String), raw: T.nilable(Shared::PropertyAccountingAccountRaw), status: T.nilable(Shared::Status), type: T.nilable(Shared::Type), updated_at: T.nilable(DateTime)).void }
+      def initialize(name: nil, balance: nil, created_at: nil, currency: nil, customer_defined_code: nil, description: nil, id: nil, raw: nil, status: nil, type: nil, updated_at: nil)
         @name = name
         @balance = balance
-        @bank_account_number = bank_account_number
         @created_at = created_at
         @currency = currency
         @customer_defined_code = customer_defined_code

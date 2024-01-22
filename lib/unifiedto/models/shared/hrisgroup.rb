@@ -32,8 +32,6 @@ module UnifiedRubySDK
 
       field :description, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-      field :employee_ids, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employee_ids') } }
-
       field :id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
       field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
@@ -50,12 +48,13 @@ module UnifiedRubySDK
 
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+      field :user_ids, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
 
-      sig { params(created_at: T.nilable(DateTime), description: T.nilable(String), employee_ids: T.nilable(T::Array[String]), id: T.nilable(String), is_active: T.nilable(T::Boolean), manager_ids: T.nilable(T::Array[String]), name: T.nilable(String), parent_id: T.nilable(String), raw: T.nilable(Shared::PropertyHrisGroupRaw), type: T.nilable(Shared::HrisGroupType), updated_at: T.nilable(DateTime)).void }
-      def initialize(created_at: nil, description: nil, employee_ids: nil, id: nil, is_active: nil, manager_ids: nil, name: nil, parent_id: nil, raw: nil, type: nil, updated_at: nil)
+
+      sig { params(created_at: T.nilable(DateTime), description: T.nilable(String), id: T.nilable(String), is_active: T.nilable(T::Boolean), manager_ids: T.nilable(T::Array[String]), name: T.nilable(String), parent_id: T.nilable(String), raw: T.nilable(Shared::PropertyHrisGroupRaw), type: T.nilable(Shared::HrisGroupType), updated_at: T.nilable(DateTime), user_ids: T.nilable(T::Array[String])).void }
+      def initialize(created_at: nil, description: nil, id: nil, is_active: nil, manager_ids: nil, name: nil, parent_id: nil, raw: nil, type: nil, updated_at: nil, user_ids: nil)
         @created_at = created_at
         @description = description
-        @employee_ids = employee_ids
         @id = id
         @is_active = is_active
         @manager_ids = manager_ids
@@ -64,6 +63,7 @@ module UnifiedRubySDK
         @raw = raw
         @type = type
         @updated_at = updated_at
+        @user_ids = user_ids
       end
     end
   end

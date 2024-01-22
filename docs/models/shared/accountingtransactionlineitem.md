@@ -5,6 +5,7 @@
 
 | Field               | Type                | Required            | Description         |
 | ------------------- | ------------------- | ------------------- | ------------------- |
+| `account_id`        | *String*            | :heavy_check_mark:  | N/A                 |
 | `customer_id`       | *T.nilable(String)* | :heavy_minus_sign:  | N/A                 |
 | `description`       | *T.nilable(String)* | :heavy_minus_sign:  | N/A                 |
 | `id`                | *T.nilable(String)* | :heavy_minus_sign:  | N/A                 |

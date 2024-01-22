@@ -29,16 +29,14 @@ s.config_security(
 
     
 res = s.transaction.create_accounting_transaction(connection_id="string", accounting_transaction=Shared::AccountingTransaction.new(
-    account_id="string",
     id="<ID>",
     line_items=[
       Shared::AccountingTransactionLineitem.new(
+        account_id="string",
         total_amount=4969.62,
       ),
     ],
     raw=Shared::PropertyAccountingTransactionRaw.new(),
-    total_amount=6267.93,
-    type=Shared::AccountingTransactionType::SPEND,
   ))
 
 if ! res.accounting_transaction.nil?
@@ -166,16 +164,14 @@ s.config_security(
 
     
 res = s.transaction.patch_accounting_transaction(connection_id="string", id="string", accounting_transaction=Shared::AccountingTransaction.new(
-    account_id="string",
     id="<ID>",
     line_items=[
       Shared::AccountingTransactionLineitem.new(
+        account_id="string",
         total_amount=5633.69,
       ),
     ],
     raw=Shared::PropertyAccountingTransactionRaw.new(),
-    total_amount=4558.63,
-    type=Shared::AccountingTransactionType::SPEND,
   ))
 
 if ! res.accounting_transaction.nil?
@@ -256,16 +252,14 @@ s.config_security(
 
     
 res = s.transaction.update_accounting_transaction(connection_id="string", id="string", accounting_transaction=Shared::AccountingTransaction.new(
-    account_id="string",
     id="<ID>",
     line_items=[
       Shared::AccountingTransactionLineitem.new(
+        account_id="string",
         total_amount=6498.37,
       ),
     ],
     raw=Shared::PropertyAccountingTransactionRaw.new(),
-    total_amount=5659.17,
-    type=Shared::AccountingTransactionType::SPEND,
   ))
 
 if ! res.accounting_transaction.nil?

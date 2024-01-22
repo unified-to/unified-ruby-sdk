@@ -87,13 +87,13 @@ s.config_security(
 
     
 res = s.hris.create_hris_group(connection_id="string", hris_group=Shared::HrisGroup.new(
-    employee_ids=[
-      "string",
-    ],
     manager_ids=[
       "string",
     ],
     raw=Shared::PropertyHrisGroupRaw.new(),
+    user_ids=[
+      "string",
+    ],
   ))
 
 if ! res.hris_group.nil?
@@ -361,13 +361,13 @@ s.config_security(
 
     
 res = s.hris.patch_hris_group(connection_id="string", id="string", hris_group=Shared::HrisGroup.new(
-    employee_ids=[
-      "string",
-    ],
     manager_ids=[
       "string",
     ],
     raw=Shared::PropertyHrisGroupRaw.new(),
+    user_ids=[
+      "string",
+    ],
   ))
 
 if ! res.hris_group.nil?
@@ -540,13 +540,13 @@ s.config_security(
 
     
 res = s.hris.update_hris_group(connection_id="string", id="string", hris_group=Shared::HrisGroup.new(
-    employee_ids=[
-      "string",
-    ],
     manager_ids=[
       "string",
     ],
     raw=Shared::PropertyHrisGroupRaw.new(),
+    user_ids=[
+      "string",
+    ],
   ))
 
 if ! res.hris_group.nil?
