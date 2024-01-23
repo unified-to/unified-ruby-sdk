@@ -12,7 +12,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :customer, :invoice, :item, :organization, :payment, :taxrate, :transaction, :ats, :application, :applicationstatus, :candidate, :document, :interview, :job, :scorecard, :crm, :company, :contact, :deal, :event, :lead, :pipeline, :enrich, :person, :hris, :employee, :group, :martech, :list, :member, :passthrough, :storage, :file, :ticketing, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :webhook
+    attr_accessor :accounting, :account, :contact, :invoice, :item, :organization, :payment, :taxrate, :transaction, :ats, :application, :applicationstatus, :candidate, :document, :interview, :job, :scorecard, :crm, :company, :deal, :event, :lead, :pipeline, :enrich, :person, :hris, :employee, :group, :martech, :list, :member, :passthrough, :storage, :file, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :webhook
 
     attr_accessor :security, :language, :sdk_version, :gen_version
 
@@ -76,7 +76,7 @@ module UnifiedRubySDK
     def init_sdks
       @accounting = Accounting.new(@sdk_configuration)
       @account = Account.new(@sdk_configuration)
-      @customer = Customer.new(@sdk_configuration)
+      @contact = Contact.new(@sdk_configuration)
       @invoice = Invoice.new(@sdk_configuration)
       @item = Item.new(@sdk_configuration)
       @organization = Organization.new(@sdk_configuration)
@@ -93,7 +93,6 @@ module UnifiedRubySDK
       @scorecard = Scorecard.new(@sdk_configuration)
       @crm = Crm.new(@sdk_configuration)
       @company = Company.new(@sdk_configuration)
-      @contact = Contact.new(@sdk_configuration)
       @deal = Deal.new(@sdk_configuration)
       @event = Event.new(@sdk_configuration)
       @lead = Lead.new(@sdk_configuration)
@@ -110,6 +109,7 @@ module UnifiedRubySDK
       @storage = Storage.new(@sdk_configuration)
       @file = File.new(@sdk_configuration)
       @ticketing = Ticketing.new(@sdk_configuration)
+      @customer = Customer.new(@sdk_configuration)
       @note = Note.new(@sdk_configuration)
       @ticket = Ticket.new(@sdk_configuration)
       @uc = Uc.new(@sdk_configuration)

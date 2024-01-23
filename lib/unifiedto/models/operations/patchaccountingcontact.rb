@@ -5,32 +5,32 @@
 
 require 'sorbet-runtime'
 require 'faraday'
-require_relative '../shared/accountingcustomer'
+require_relative '../shared/accountingcontact'
 
 module UnifiedRubySDK
   module Operations
 
-    class UpdateAccountingCustomerRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchAccountingContactRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
       field :connection_id, String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-      # ID of the Customer
+      # ID of the Contact
       field :id, String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
 
-      field :accounting_customer, T.nilable(Shared::AccountingCustomer), { 'request': { 'media_type': 'application/json' } }
+      field :accounting_contact, T.nilable(Shared::AccountingContact), { 'request': { 'media_type': 'application/json' } }
 
 
-      sig { params(connection_id: String, id: String, accounting_customer: T.nilable(Shared::AccountingCustomer)).void }
-      def initialize(connection_id: nil, id: nil, accounting_customer: nil)
+      sig { params(connection_id: String, id: String, accounting_contact: T.nilable(Shared::AccountingContact)).void }
+      def initialize(connection_id: nil, id: nil, accounting_contact: nil)
         @connection_id = connection_id
         @id = id
-        @accounting_customer = accounting_customer
+        @accounting_contact = accounting_contact
       end
     end
 
 
-    class UpdateAccountingCustomerResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchAccountingContactResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation
@@ -40,15 +40,15 @@ module UnifiedRubySDK
       # HTTP response status code for this operation
       field :status_code, Integer
       # Successful
-      field :accounting_customer, T.nilable(Shared::AccountingCustomer)
+      field :accounting_contact, T.nilable(Shared::AccountingContact)
 
 
-      sig { params(content_type: String, raw_response: Faraday::Response, status_code: Integer, accounting_customer: T.nilable(Shared::AccountingCustomer)).void }
-      def initialize(content_type: nil, raw_response: nil, status_code: nil, accounting_customer: nil)
+      sig { params(content_type: String, raw_response: Faraday::Response, status_code: Integer, accounting_contact: T.nilable(Shared::AccountingContact)).void }
+      def initialize(content_type: nil, raw_response: nil, status_code: nil, accounting_contact: nil)
         @content_type = content_type
         @raw_response = raw_response
         @status_code = status_code
-        @accounting_customer = accounting_customer
+        @accounting_contact = accounting_contact
       end
     end
   end

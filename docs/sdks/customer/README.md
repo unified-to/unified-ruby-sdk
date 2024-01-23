@@ -3,71 +3,12 @@
 
 ### Available Operations
 
-* [create_accounting_customer](#create_accounting_customer) - Create a customer
 * [create_ticketing_customer](#create_ticketing_customer) - Create a customer
-* [get_accounting_customer](#get_accounting_customer) - Retrieve a customer
 * [get_ticketing_customer](#get_ticketing_customer) - Retrieve a customer
-* [list_accounting_customers](#list_accounting_customers) - List all customers
 * [list_ticketing_customers](#list_ticketing_customers) - List all customers
-* [patch_accounting_customer](#patch_accounting_customer) - Update a customer
 * [patch_ticketing_customer](#patch_ticketing_customer) - Update a customer
-* [remove_accounting_customer](#remove_accounting_customer) - Remove a customer
 * [remove_ticketing_customer](#remove_ticketing_customer) - Remove a customer
-* [update_accounting_customer](#update_accounting_customer) - Update a customer
 * [update_ticketing_customer](#update_ticketing_customer) - Update a customer
-
-## create_accounting_customer
-
-Create a customer
-
-### Example Usage
-
-```ruby
-require_relative unified_ruby_sdk
-
-
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  security=Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
-res = s.customer.create_accounting_customer(connection_id="string", accounting_customer=Shared::AccountingCustomer.new(
-    billing_address=Shared::PropertyAccountingCustomerBillingAddress.new(),
-    emails=[
-      Shared::AccountingEmail.new(
-        email="Kevon_Schultz42@gmail.com",
-      ),
-    ],
-    raw=Shared::PropertyAccountingCustomerRaw.new(),
-    shipping_address=Shared::PropertyAccountingCustomerShippingAddress.new(),
-    telephones=[
-      Shared::AccountingTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ))
-
-if ! res.accounting_customer.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `connection_id`                                                         | *String*                                                                | :heavy_check_mark:                                                      | ID of the connection                                                    |
-| `accounting_customer`                                                   | [Shared::AccountingCustomer](../../models/shared/accountingcustomer.md) | :heavy_minus_sign:                                                      | N/A                                                                     |
-
-
-### Response
-
-**[T.nilable(Operations::CreateAccountingCustomerResponse)](../../models/operations/createaccountingcustomerresponse.md)**
-
 
 ## create_ticketing_customer
 
@@ -123,48 +64,6 @@ end
 **[T.nilable(Operations::CreateTicketingCustomerResponse)](../../models/operations/createticketingcustomerresponse.md)**
 
 
-## get_accounting_customer
-
-Retrieve a customer
-
-### Example Usage
-
-```ruby
-require_relative unified_ruby_sdk
-
-
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  security=Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
-res = s.customer.get_accounting_customer(connection_id="string", id="string", fields=[
-    "string",
-  ])
-
-if ! res.accounting_customer.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter                        | Type                             | Required                         | Description                      |
-| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *String*                         | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *String*                         | :heavy_check_mark:               | ID of the Customer               |
-| `fields`                         | T::Array<*String*>               | :heavy_minus_sign:               | Comma-delimited fields to return |
-
-
-### Response
-
-**[T.nilable(Operations::GetAccountingCustomerResponse)](../../models/operations/getaccountingcustomerresponse.md)**
-
-
 ## get_ticketing_customer
 
 Retrieve a customer
@@ -205,51 +104,6 @@ end
 ### Response
 
 **[T.nilable(Operations::GetTicketingCustomerResponse)](../../models/operations/getticketingcustomerresponse.md)**
-
-
-## list_accounting_customers
-
-List all customers
-
-### Example Usage
-
-```ruby
-require_relative unified_ruby_sdk
-
-
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  security=Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
-  )
-)
-
-
-req = Operations::ListAccountingCustomersRequest.new(
-  connection_id="string",
-  fields=[
-    "string",
-  ],
-)
-    
-res = s.customer.list_accounting_customers(req)
-
-if ! res.accounting_customers.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                               | [Operations::ListAccountingCustomersRequest](../../models/operations/listaccountingcustomersrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
-
-
-### Response
-
-**[T.nilable(Operations::ListAccountingCustomersResponse)](../../models/operations/listaccountingcustomersresponse.md)**
 
 
 ## list_ticketing_customers
@@ -295,60 +149,6 @@ end
 ### Response
 
 **[T.nilable(Operations::ListTicketingCustomersResponse)](../../models/operations/listticketingcustomersresponse.md)**
-
-
-## patch_accounting_customer
-
-Update a customer
-
-### Example Usage
-
-```ruby
-require_relative unified_ruby_sdk
-
-
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  security=Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
-res = s.customer.patch_accounting_customer(connection_id="string", id="string", accounting_customer=Shared::AccountingCustomer.new(
-    billing_address=Shared::PropertyAccountingCustomerBillingAddress.new(),
-    emails=[
-      Shared::AccountingEmail.new(
-        email="Trever_Orn@hotmail.com",
-      ),
-    ],
-    raw=Shared::PropertyAccountingCustomerRaw.new(),
-    shipping_address=Shared::PropertyAccountingCustomerShippingAddress.new(),
-    telephones=[
-      Shared::AccountingTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ))
-
-if ! res.accounting_customer.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `connection_id`                                                         | *String*                                                                | :heavy_check_mark:                                                      | ID of the connection                                                    |
-| `id`                                                                    | *String*                                                                | :heavy_check_mark:                                                      | ID of the Customer                                                      |
-| `accounting_customer`                                                   | [Shared::AccountingCustomer](../../models/shared/accountingcustomer.md) | :heavy_minus_sign:                                                      | N/A                                                                     |
-
-
-### Response
-
-**[T.nilable(Operations::PatchAccountingCustomerResponse)](../../models/operations/patchaccountingcustomerresponse.md)**
 
 
 ## patch_ticketing_customer
@@ -406,45 +206,6 @@ end
 **[T.nilable(Operations::PatchTicketingCustomerResponse)](../../models/operations/patchticketingcustomerresponse.md)**
 
 
-## remove_accounting_customer
-
-Remove a customer
-
-### Example Usage
-
-```ruby
-require_relative unified_ruby_sdk
-
-
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  security=Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
-res = s.customer.remove_accounting_customer(connection_id="string", id="string")
-
-if res.status == 200
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter            | Type                 | Required             | Description          |
-| -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *String*             | :heavy_check_mark:   | ID of the connection |
-| `id`                 | *String*             | :heavy_check_mark:   | ID of the Customer   |
-
-
-### Response
-
-**[T.nilable(Operations::RemoveAccountingCustomerResponse)](../../models/operations/removeaccountingcustomerresponse.md)**
-
-
 ## remove_ticketing_customer
 
 Remove a customer
@@ -482,60 +243,6 @@ end
 ### Response
 
 **[T.nilable(Operations::RemoveTicketingCustomerResponse)](../../models/operations/removeticketingcustomerresponse.md)**
-
-
-## update_accounting_customer
-
-Update a customer
-
-### Example Usage
-
-```ruby
-require_relative unified_ruby_sdk
-
-
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  security=Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
-res = s.customer.update_accounting_customer(connection_id="string", id="string", accounting_customer=Shared::AccountingCustomer.new(
-    billing_address=Shared::PropertyAccountingCustomerBillingAddress.new(),
-    emails=[
-      Shared::AccountingEmail.new(
-        email="Myrtice_Jacobi77@hotmail.com",
-      ),
-    ],
-    raw=Shared::PropertyAccountingCustomerRaw.new(),
-    shipping_address=Shared::PropertyAccountingCustomerShippingAddress.new(),
-    telephones=[
-      Shared::AccountingTelephone.new(
-        telephone="string",
-      ),
-    ],
-  ))
-
-if ! res.accounting_customer.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `connection_id`                                                         | *String*                                                                | :heavy_check_mark:                                                      | ID of the connection                                                    |
-| `id`                                                                    | *String*                                                                | :heavy_check_mark:                                                      | ID of the Customer                                                      |
-| `accounting_customer`                                                   | [Shared::AccountingCustomer](../../models/shared/accountingcustomer.md) | :heavy_minus_sign:                                                      | N/A                                                                     |
-
-
-### Response
-
-**[T.nilable(Operations::UpdateAccountingCustomerResponse)](../../models/operations/updateaccountingcustomerresponse.md)**
 
 
 ## update_ticketing_customer

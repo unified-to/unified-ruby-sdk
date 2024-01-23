@@ -17,6 +17,54 @@ module UnifiedRubySDK
       @sdk_configuration = sdk_config
     end
 
+    sig { params(connection_id: String, accounting_contact: T.nilable(Shared::AccountingContact)).returns(Utils::FieldAugmented) }
+    def create_accounting_contact(connection_id, accounting_contact = nil)
+      # create_accounting_contact - Create a contact
+      request = Operations::CreateAccountingContactRequest.new(
+        
+        connection_id: connection_id,
+        accounting_contact: accounting_contact
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        Operations::CreateAccountingContactRequest,
+        base_url,
+        '/accounting/{connection_id}/contact',
+        request
+      )
+      headers = {}
+      req_content_type, data, form = Utils.serialize_request_body(request, :accounting_contact, :json)
+      headers['content-type'] = req_content_type
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.post(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        if form
+          req.body = Utils.encode_form(form)
+        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+          req.body = URI.encode_www_form(data)
+        else
+          req.body = data
+        end
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = Operations::CreateAccountingContactResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, Shared::AccountingContact)
+          res.accounting_contact = out
+        end
+      end
+      res
+    end
+
     sig { params(connection_id: String, crm_contact: T.nilable(Shared::CrmContact)).returns(Utils::FieldAugmented) }
     def create_crm_contact(connection_id, crm_contact = nil)
       # create_crm_contact - Create a contact
@@ -114,6 +162,48 @@ module UnifiedRubySDK
     end
 
     sig { params(connection_id: String, id: String, fields: T.nilable(T::Array[String])).returns(Utils::FieldAugmented) }
+    def get_accounting_contact(connection_id, id, fields = nil)
+      # get_accounting_contact - Retrieve a contact
+      request = Operations::GetAccountingContactRequest.new(
+        
+        connection_id: connection_id,
+        id: id,
+        fields: fields
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        Operations::GetAccountingContactRequest,
+        base_url,
+        '/accounting/{connection_id}/contact/{id}',
+        request
+      )
+      headers = {}
+      query_params = Utils.get_query_params(Operations::GetAccountingContactRequest, request)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.get(url) do |req|
+        req.headers = headers
+        req.params = query_params
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = Operations::GetAccountingContactResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, Shared::AccountingContact)
+          res.accounting_contact = out
+        end
+      end
+      res
+    end
+
+    sig { params(connection_id: String, id: String, fields: T.nilable(T::Array[String])).returns(Utils::FieldAugmented) }
     def get_crm_contact(connection_id, id, fields = nil)
       # get_crm_contact - Retrieve a contact
       request = Operations::GetCrmContactRequest.new(
@@ -197,6 +287,42 @@ module UnifiedRubySDK
       res
     end
 
+    sig { params(request: T.nilable(Operations::ListAccountingContactsRequest)).returns(Utils::FieldAugmented) }
+    def list_accounting_contacts(request)
+      # list_accounting_contacts - List all contacts
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        Operations::ListAccountingContactsRequest,
+        base_url,
+        '/accounting/{connection_id}/contact',
+        request
+      )
+      headers = {}
+      query_params = Utils.get_query_params(Operations::ListAccountingContactsRequest, request)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.get(url) do |req|
+        req.headers = headers
+        req.params = query_params
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = Operations::ListAccountingContactsResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, T::Array[Shared::AccountingContact])
+          res.accounting_contacts = out
+        end
+      end
+      res
+    end
+
     sig { params(request: T.nilable(Operations::ListCrmContactsRequest)).returns(Utils::FieldAugmented) }
     def list_crm_contacts(request)
       # list_crm_contacts - List all contacts
@@ -264,6 +390,55 @@ module UnifiedRubySDK
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, T::Array[Shared::UcContact])
           res.uc_contacts = out
+        end
+      end
+      res
+    end
+
+    sig { params(connection_id: String, id: String, accounting_contact: T.nilable(Shared::AccountingContact)).returns(Utils::FieldAugmented) }
+    def patch_accounting_contact(connection_id, id, accounting_contact = nil)
+      # patch_accounting_contact - Update a contact
+      request = Operations::PatchAccountingContactRequest.new(
+        
+        connection_id: connection_id,
+        id: id,
+        accounting_contact: accounting_contact
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        Operations::PatchAccountingContactRequest,
+        base_url,
+        '/accounting/{connection_id}/contact/{id}',
+        request
+      )
+      headers = {}
+      req_content_type, data, form = Utils.serialize_request_body(request, :accounting_contact, :json)
+      headers['content-type'] = req_content_type
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.patch(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        if form
+          req.body = Utils.encode_form(form)
+        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+          req.body = URI.encode_www_form(data)
+        else
+          req.body = data
+        end
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = Operations::PatchAccountingContactResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, Shared::AccountingContact)
+          res.accounting_contact = out
         end
       end
       res
@@ -368,6 +543,44 @@ module UnifiedRubySDK
     end
 
     sig { params(connection_id: String, id: String).returns(Utils::FieldAugmented) }
+    def remove_accounting_contact(connection_id, id)
+      # remove_accounting_contact - Remove a contact
+      request = Operations::RemoveAccountingContactRequest.new(
+        
+        connection_id: connection_id,
+        id: id
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        Operations::RemoveAccountingContactRequest,
+        base_url,
+        '/accounting/{connection_id}/contact/{id}',
+        request
+      )
+      headers = {}
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.delete(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = Operations::RemoveAccountingContactResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if True
+                
+        res.res = r.env.response_body if Utils.match_content_type(content_type, 'application/json')
+      
+      end
+      res
+    end
+
+    sig { params(connection_id: String, id: String).returns(Utils::FieldAugmented) }
     def remove_crm_contact(connection_id, id)
       # remove_crm_contact - Remove a contact
       request = Operations::RemoveCrmContactRequest.new(
@@ -439,6 +652,55 @@ module UnifiedRubySDK
                 
         res.res = r.env.response_body if Utils.match_content_type(content_type, 'application/json')
       
+      end
+      res
+    end
+
+    sig { params(connection_id: String, id: String, accounting_contact: T.nilable(Shared::AccountingContact)).returns(Utils::FieldAugmented) }
+    def update_accounting_contact(connection_id, id, accounting_contact = nil)
+      # update_accounting_contact - Update a contact
+      request = Operations::UpdateAccountingContactRequest.new(
+        
+        connection_id: connection_id,
+        id: id,
+        accounting_contact: accounting_contact
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        Operations::UpdateAccountingContactRequest,
+        base_url,
+        '/accounting/{connection_id}/contact/{id}',
+        request
+      )
+      headers = {}
+      req_content_type, data, form = Utils.serialize_request_body(request, :accounting_contact, :json)
+      headers['content-type'] = req_content_type
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.put(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        if form
+          req.body = Utils.encode_form(form)
+        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+          req.body = URI.encode_www_form(data)
+        else
+          req.body = data
+        end
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = Operations::UpdateAccountingContactResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, Shared::AccountingContact)
+          res.accounting_contact = out
+        end
       end
       res
     end

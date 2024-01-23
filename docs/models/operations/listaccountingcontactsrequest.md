@@ -1,4 +1,4 @@
-# ListAccountingCustomersRequest
+# ListAccountingContactsRequest
 
 
 ## Fields
@@ -12,4 +12,5 @@
 | `order`                                                                  | *T.nilable(String)*                                                      | :heavy_minus_sign:                                                       | N/A                                                                      |
 | `query`                                                                  | *T.nilable(String)*                                                      | :heavy_minus_sign:                                                       | Query string to search. eg. email address or name                        |
 | `sort`                                                                   | *T.nilable(String)*                                                      | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `type`                                                                   | *T.nilable(String)*                                                      | :heavy_minus_sign:                                                       | The type of contact to filter results                                    |
 | `updated_gte`                                                            | [Date](https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html)     | :heavy_minus_sign:                                                       | Return only results whose updated date is equal or greater to this value |

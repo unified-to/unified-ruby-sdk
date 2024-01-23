@@ -17,7 +17,7 @@ module UnifiedRubySDK
 
       field :total_amount, Float, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
 
-      field :customer_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('customer_id') } }
+      field :contact_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
 
       field :description, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
@@ -30,11 +30,11 @@ module UnifiedRubySDK
       field :tax_amount, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_amount') } }
 
 
-      sig { params(account_id: String, total_amount: Float, customer_id: T.nilable(String), description: T.nilable(String), id: T.nilable(String), invoice_id: T.nilable(String), payment_id: T.nilable(String), tax_amount: T.nilable(Float)).void }
-      def initialize(account_id: nil, total_amount: nil, customer_id: nil, description: nil, id: nil, invoice_id: nil, payment_id: nil, tax_amount: nil)
+      sig { params(account_id: String, total_amount: Float, contact_id: T.nilable(String), description: T.nilable(String), id: T.nilable(String), invoice_id: T.nilable(String), payment_id: T.nilable(String), tax_amount: T.nilable(Float)).void }
+      def initialize(account_id: nil, total_amount: nil, contact_id: nil, description: nil, id: nil, invoice_id: nil, payment_id: nil, tax_amount: nil)
         @account_id = account_id
         @total_amount = total_amount
-        @customer_id = customer_id
+        @contact_id = contact_id
         @description = description
         @id = id
         @invoice_id = invoice_id

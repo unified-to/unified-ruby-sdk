@@ -5,28 +5,32 @@
 
 require 'sorbet-runtime'
 require 'faraday'
+require_relative '../shared/accountingcontact'
 
 module UnifiedRubySDK
   module Operations
 
-    class RemoveAccountingCustomerRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetAccountingContactRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
       field :connection_id, String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-      # ID of the Customer
+      # ID of the Contact
       field :id, String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
+      # Comma-delimited fields to return
+      field :fields, T.nilable(T::Array[String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: String, id: String).void }
-      def initialize(connection_id: nil, id: nil)
+      sig { params(connection_id: String, id: String, fields: T.nilable(T::Array[String])).void }
+      def initialize(connection_id: nil, id: nil, fields: nil)
         @connection_id = connection_id
         @id = id
+        @fields = fields
       end
     end
 
 
-    class RemoveAccountingCustomerResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetAccountingContactResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation
@@ -36,15 +40,15 @@ module UnifiedRubySDK
       # HTTP response status code for this operation
       field :status_code, Integer
       # Successful
-      field :res, T.nilable(String)
+      field :accounting_contact, T.nilable(Shared::AccountingContact)
 
 
-      sig { params(content_type: String, raw_response: Faraday::Response, status_code: Integer, res: T.nilable(String)).void }
-      def initialize(content_type: nil, raw_response: nil, status_code: nil, res: nil)
+      sig { params(content_type: String, raw_response: Faraday::Response, status_code: Integer, accounting_contact: T.nilable(Shared::AccountingContact)).void }
+      def initialize(content_type: nil, raw_response: nil, status_code: nil, accounting_contact: nil)
         @content_type = content_type
         @raw_response = raw_response
         @status_code = status_code
-        @res = res
+        @accounting_contact = accounting_contact
       end
     end
   end

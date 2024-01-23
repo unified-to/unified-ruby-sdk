@@ -17,54 +17,6 @@ module UnifiedRubySDK
       @sdk_configuration = sdk_config
     end
 
-    sig { params(connection_id: String, accounting_customer: T.nilable(Shared::AccountingCustomer)).returns(Utils::FieldAugmented) }
-    def create_accounting_customer(connection_id, accounting_customer = nil)
-      # create_accounting_customer - Create a customer
-      request = Operations::CreateAccountingCustomerRequest.new(
-        
-        connection_id: connection_id,
-        accounting_customer: accounting_customer
-      )
-      url, params = @sdk_configuration.get_server_details
-      base_url = Utils.template_url(url, params)
-      url = Utils.generate_url(
-        Operations::CreateAccountingCustomerRequest,
-        base_url,
-        '/accounting/{connection_id}/customer',
-        request
-      )
-      headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :accounting_customer, :json)
-      headers['content-type'] = req_content_type
-      headers['Accept'] = 'application/json'
-      headers['user-agent'] = @sdk_configuration.user_agent
-
-      r = @sdk_configuration.client.post(url) do |req|
-        req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
-        if form
-          req.body = Utils.encode_form(form)
-        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-          req.body = URI.encode_www_form(data)
-        else
-          req.body = data
-        end
-      end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = Operations::CreateAccountingCustomerResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-      if r.status == 200
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, Shared::AccountingCustomer)
-          res.accounting_customer = out
-        end
-      end
-      res
-    end
-
     sig { params(connection_id: String, ticketing_customer: T.nilable(Shared::TicketingCustomer)).returns(Utils::FieldAugmented) }
     def create_ticketing_customer(connection_id, ticketing_customer = nil)
       # create_ticketing_customer - Create a customer
@@ -114,48 +66,6 @@ module UnifiedRubySDK
     end
 
     sig { params(connection_id: String, id: String, fields: T.nilable(T::Array[String])).returns(Utils::FieldAugmented) }
-    def get_accounting_customer(connection_id, id, fields = nil)
-      # get_accounting_customer - Retrieve a customer
-      request = Operations::GetAccountingCustomerRequest.new(
-        
-        connection_id: connection_id,
-        id: id,
-        fields: fields
-      )
-      url, params = @sdk_configuration.get_server_details
-      base_url = Utils.template_url(url, params)
-      url = Utils.generate_url(
-        Operations::GetAccountingCustomerRequest,
-        base_url,
-        '/accounting/{connection_id}/customer/{id}',
-        request
-      )
-      headers = {}
-      query_params = Utils.get_query_params(Operations::GetAccountingCustomerRequest, request)
-      headers['Accept'] = 'application/json'
-      headers['user-agent'] = @sdk_configuration.user_agent
-
-      r = @sdk_configuration.client.get(url) do |req|
-        req.headers = headers
-        req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
-      end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = Operations::GetAccountingCustomerResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-      if r.status == 200
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, Shared::AccountingCustomer)
-          res.accounting_customer = out
-        end
-      end
-      res
-    end
-
-    sig { params(connection_id: String, id: String, fields: T.nilable(T::Array[String])).returns(Utils::FieldAugmented) }
     def get_ticketing_customer(connection_id, id, fields = nil)
       # get_ticketing_customer - Retrieve a customer
       request = Operations::GetTicketingCustomerRequest.new(
@@ -197,42 +107,6 @@ module UnifiedRubySDK
       res
     end
 
-    sig { params(request: T.nilable(Operations::ListAccountingCustomersRequest)).returns(Utils::FieldAugmented) }
-    def list_accounting_customers(request)
-      # list_accounting_customers - List all customers
-      url, params = @sdk_configuration.get_server_details
-      base_url = Utils.template_url(url, params)
-      url = Utils.generate_url(
-        Operations::ListAccountingCustomersRequest,
-        base_url,
-        '/accounting/{connection_id}/customer',
-        request
-      )
-      headers = {}
-      query_params = Utils.get_query_params(Operations::ListAccountingCustomersRequest, request)
-      headers['Accept'] = 'application/json'
-      headers['user-agent'] = @sdk_configuration.user_agent
-
-      r = @sdk_configuration.client.get(url) do |req|
-        req.headers = headers
-        req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
-      end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = Operations::ListAccountingCustomersResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-      if r.status == 200
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, T::Array[Shared::AccountingCustomer])
-          res.accounting_customers = out
-        end
-      end
-      res
-    end
-
     sig { params(request: T.nilable(Operations::ListTicketingCustomersRequest)).returns(Utils::FieldAugmented) }
     def list_ticketing_customers(request)
       # list_ticketing_customers - List all customers
@@ -264,55 +138,6 @@ module UnifiedRubySDK
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, T::Array[Shared::TicketingCustomer])
           res.ticketing_customers = out
-        end
-      end
-      res
-    end
-
-    sig { params(connection_id: String, id: String, accounting_customer: T.nilable(Shared::AccountingCustomer)).returns(Utils::FieldAugmented) }
-    def patch_accounting_customer(connection_id, id, accounting_customer = nil)
-      # patch_accounting_customer - Update a customer
-      request = Operations::PatchAccountingCustomerRequest.new(
-        
-        connection_id: connection_id,
-        id: id,
-        accounting_customer: accounting_customer
-      )
-      url, params = @sdk_configuration.get_server_details
-      base_url = Utils.template_url(url, params)
-      url = Utils.generate_url(
-        Operations::PatchAccountingCustomerRequest,
-        base_url,
-        '/accounting/{connection_id}/customer/{id}',
-        request
-      )
-      headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :accounting_customer, :json)
-      headers['content-type'] = req_content_type
-      headers['Accept'] = 'application/json'
-      headers['user-agent'] = @sdk_configuration.user_agent
-
-      r = @sdk_configuration.client.patch(url) do |req|
-        req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
-        if form
-          req.body = Utils.encode_form(form)
-        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-          req.body = URI.encode_www_form(data)
-        else
-          req.body = data
-        end
-      end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = Operations::PatchAccountingCustomerResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-      if r.status == 200
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, Shared::AccountingCustomer)
-          res.accounting_customer = out
         end
       end
       res
@@ -368,44 +193,6 @@ module UnifiedRubySDK
     end
 
     sig { params(connection_id: String, id: String).returns(Utils::FieldAugmented) }
-    def remove_accounting_customer(connection_id, id)
-      # remove_accounting_customer - Remove a customer
-      request = Operations::RemoveAccountingCustomerRequest.new(
-        
-        connection_id: connection_id,
-        id: id
-      )
-      url, params = @sdk_configuration.get_server_details
-      base_url = Utils.template_url(url, params)
-      url = Utils.generate_url(
-        Operations::RemoveAccountingCustomerRequest,
-        base_url,
-        '/accounting/{connection_id}/customer/{id}',
-        request
-      )
-      headers = {}
-      headers['Accept'] = 'application/json'
-      headers['user-agent'] = @sdk_configuration.user_agent
-
-      r = @sdk_configuration.client.delete(url) do |req|
-        req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
-      end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = Operations::RemoveAccountingCustomerResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-      if True
-                
-        res.res = r.env.response_body if Utils.match_content_type(content_type, 'application/json')
-      
-      end
-      res
-    end
-
-    sig { params(connection_id: String, id: String).returns(Utils::FieldAugmented) }
     def remove_ticketing_customer(connection_id, id)
       # remove_ticketing_customer - Remove a customer
       request = Operations::RemoveTicketingCustomerRequest.new(
@@ -439,55 +226,6 @@ module UnifiedRubySDK
                 
         res.res = r.env.response_body if Utils.match_content_type(content_type, 'application/json')
       
-      end
-      res
-    end
-
-    sig { params(connection_id: String, id: String, accounting_customer: T.nilable(Shared::AccountingCustomer)).returns(Utils::FieldAugmented) }
-    def update_accounting_customer(connection_id, id, accounting_customer = nil)
-      # update_accounting_customer - Update a customer
-      request = Operations::UpdateAccountingCustomerRequest.new(
-        
-        connection_id: connection_id,
-        id: id,
-        accounting_customer: accounting_customer
-      )
-      url, params = @sdk_configuration.get_server_details
-      base_url = Utils.template_url(url, params)
-      url = Utils.generate_url(
-        Operations::UpdateAccountingCustomerRequest,
-        base_url,
-        '/accounting/{connection_id}/customer/{id}',
-        request
-      )
-      headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :accounting_customer, :json)
-      headers['content-type'] = req_content_type
-      headers['Accept'] = 'application/json'
-      headers['user-agent'] = @sdk_configuration.user_agent
-
-      r = @sdk_configuration.client.put(url) do |req|
-        req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
-        if form
-          req.body = Utils.encode_form(form)
-        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-          req.body = URI.encode_www_form(data)
-        else
-          req.body = data
-        end
-      end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = Operations::UpdateAccountingCustomerResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-      if r.status == 200
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, Shared::AccountingCustomer)
-          res.accounting_customer = out
-        end
       end
       res
     end

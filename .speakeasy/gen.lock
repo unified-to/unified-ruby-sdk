@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 74c9cb4660cb247c06eff86dea00135b
+  docChecksum: 981c0e1adf4c484c9cc54a29b1e6b7a6
   docVersion: "1.0"
   speakeasyVersion: internal
   generationVersion: 2.237.3
-  releaseVersion: 0.2.30
-  configChecksum: e59123c24b8607833adf0507921a9978
+  releaseVersion: 0.2.31
+  configChecksum: e124af116fa459a89fbcc072f467a2b2
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -20,7 +20,7 @@ generatedFiles:
   - lib/unifiedto/sdkconfiguration.rb
   - lib/unifiedto/accounting.rb
   - lib/unifiedto/account.rb
-  - lib/unifiedto/customer.rb
+  - lib/unifiedto/contact.rb
   - lib/unifiedto/invoice.rb
   - lib/unifiedto/item.rb
   - lib/unifiedto/organization.rb
@@ -37,7 +37,6 @@ generatedFiles:
   - lib/unifiedto/scorecard.rb
   - lib/unifiedto/crm.rb
   - lib/unifiedto/company.rb
-  - lib/unifiedto/contact.rb
   - lib/unifiedto/deal.rb
   - lib/unifiedto/event.rb
   - lib/unifiedto/lead.rb
@@ -54,6 +53,7 @@ generatedFiles:
   - lib/unifiedto/storage.rb
   - lib/unifiedto/file.rb
   - lib/unifiedto/ticketing.rb
+  - lib/unifiedto/customer.rb
   - lib/unifiedto/note.rb
   - lib/unifiedto/ticket.rb
   - lib/unifiedto/uc.rb
@@ -113,14 +113,14 @@ generatedFiles:
   - sorbet/tapioca/require.rb
   - unified_ruby_sdk.gemspec
   - lib/unifiedto/models/operations/createaccountingaccount.rb
-  - lib/unifiedto/models/operations/createaccountingcustomer.rb
+  - lib/unifiedto/models/operations/createaccountingcontact.rb
   - lib/unifiedto/models/operations/createaccountinginvoice.rb
   - lib/unifiedto/models/operations/createaccountingitem.rb
   - lib/unifiedto/models/operations/createaccountingpayment.rb
   - lib/unifiedto/models/operations/createaccountingtaxrate.rb
   - lib/unifiedto/models/operations/createaccountingtransaction.rb
   - lib/unifiedto/models/operations/getaccountingaccount.rb
-  - lib/unifiedto/models/operations/getaccountingcustomer.rb
+  - lib/unifiedto/models/operations/getaccountingcontact.rb
   - lib/unifiedto/models/operations/getaccountinginvoice.rb
   - lib/unifiedto/models/operations/getaccountingitem.rb
   - lib/unifiedto/models/operations/getaccountingorganization.rb
@@ -128,7 +128,7 @@ generatedFiles:
   - lib/unifiedto/models/operations/getaccountingtaxrate.rb
   - lib/unifiedto/models/operations/getaccountingtransaction.rb
   - lib/unifiedto/models/operations/listaccountingaccounts.rb
-  - lib/unifiedto/models/operations/listaccountingcustomers.rb
+  - lib/unifiedto/models/operations/listaccountingcontacts.rb
   - lib/unifiedto/models/operations/listaccountinginvoices.rb
   - lib/unifiedto/models/operations/listaccountingitems.rb
   - lib/unifiedto/models/operations/listaccountingorganizations.rb
@@ -136,32 +136,38 @@ generatedFiles:
   - lib/unifiedto/models/operations/listaccountingtaxrates.rb
   - lib/unifiedto/models/operations/listaccountingtransactions.rb
   - lib/unifiedto/models/operations/patchaccountingaccount.rb
-  - lib/unifiedto/models/operations/patchaccountingcustomer.rb
+  - lib/unifiedto/models/operations/patchaccountingcontact.rb
   - lib/unifiedto/models/operations/patchaccountinginvoice.rb
   - lib/unifiedto/models/operations/patchaccountingitem.rb
   - lib/unifiedto/models/operations/patchaccountingpayment.rb
   - lib/unifiedto/models/operations/patchaccountingtaxrate.rb
   - lib/unifiedto/models/operations/patchaccountingtransaction.rb
   - lib/unifiedto/models/operations/removeaccountingaccount.rb
-  - lib/unifiedto/models/operations/removeaccountingcustomer.rb
+  - lib/unifiedto/models/operations/removeaccountingcontact.rb
   - lib/unifiedto/models/operations/removeaccountinginvoice.rb
   - lib/unifiedto/models/operations/removeaccountingitem.rb
   - lib/unifiedto/models/operations/removeaccountingpayment.rb
   - lib/unifiedto/models/operations/removeaccountingtaxrate.rb
   - lib/unifiedto/models/operations/removeaccountingtransaction.rb
   - lib/unifiedto/models/operations/updateaccountingaccount.rb
-  - lib/unifiedto/models/operations/updateaccountingcustomer.rb
+  - lib/unifiedto/models/operations/updateaccountingcontact.rb
   - lib/unifiedto/models/operations/updateaccountinginvoice.rb
   - lib/unifiedto/models/operations/updateaccountingitem.rb
   - lib/unifiedto/models/operations/updateaccountingpayment.rb
   - lib/unifiedto/models/operations/updateaccountingtaxrate.rb
   - lib/unifiedto/models/operations/updateaccountingtransaction.rb
-  - lib/unifiedto/models/operations/createticketingcustomer.rb
-  - lib/unifiedto/models/operations/getticketingcustomer.rb
-  - lib/unifiedto/models/operations/listticketingcustomers.rb
-  - lib/unifiedto/models/operations/patchticketingcustomer.rb
-  - lib/unifiedto/models/operations/removeticketingcustomer.rb
-  - lib/unifiedto/models/operations/updateticketingcustomer.rb
+  - lib/unifiedto/models/operations/createcrmcontact.rb
+  - lib/unifiedto/models/operations/createuccontact.rb
+  - lib/unifiedto/models/operations/getcrmcontact.rb
+  - lib/unifiedto/models/operations/getuccontact.rb
+  - lib/unifiedto/models/operations/listcrmcontacts.rb
+  - lib/unifiedto/models/operations/listuccontacts.rb
+  - lib/unifiedto/models/operations/patchcrmcontact.rb
+  - lib/unifiedto/models/operations/patchuccontact.rb
+  - lib/unifiedto/models/operations/removecrmcontact.rb
+  - lib/unifiedto/models/operations/removeuccontact.rb
+  - lib/unifiedto/models/operations/updatecrmcontact.rb
+  - lib/unifiedto/models/operations/updateuccontact.rb
   - lib/unifiedto/models/operations/createatsapplication.rb
   - lib/unifiedto/models/operations/createatscandidate.rb
   - lib/unifiedto/models/operations/createatsdocument.rb
@@ -200,48 +206,36 @@ generatedFiles:
   - lib/unifiedto/models/operations/updateatsjob.rb
   - lib/unifiedto/models/operations/updateatsscorecard.rb
   - lib/unifiedto/models/operations/createcrmcompany.rb
-  - lib/unifiedto/models/operations/createcrmcontact.rb
   - lib/unifiedto/models/operations/createcrmdeal.rb
   - lib/unifiedto/models/operations/createcrmevent.rb
   - lib/unifiedto/models/operations/createcrmlead.rb
   - lib/unifiedto/models/operations/createcrmpipeline.rb
   - lib/unifiedto/models/operations/getcrmcompany.rb
-  - lib/unifiedto/models/operations/getcrmcontact.rb
   - lib/unifiedto/models/operations/getcrmdeal.rb
   - lib/unifiedto/models/operations/getcrmevent.rb
   - lib/unifiedto/models/operations/getcrmlead.rb
   - lib/unifiedto/models/operations/getcrmpipeline.rb
   - lib/unifiedto/models/operations/listcrmcompanies.rb
-  - lib/unifiedto/models/operations/listcrmcontacts.rb
   - lib/unifiedto/models/operations/listcrmdeals.rb
   - lib/unifiedto/models/operations/listcrmevents.rb
   - lib/unifiedto/models/operations/listcrmleads.rb
   - lib/unifiedto/models/operations/listcrmpipelines.rb
   - lib/unifiedto/models/operations/patchcrmcompany.rb
-  - lib/unifiedto/models/operations/patchcrmcontact.rb
   - lib/unifiedto/models/operations/patchcrmdeal.rb
   - lib/unifiedto/models/operations/patchcrmevent.rb
   - lib/unifiedto/models/operations/patchcrmlead.rb
   - lib/unifiedto/models/operations/patchcrmpipeline.rb
   - lib/unifiedto/models/operations/removecrmcompany.rb
-  - lib/unifiedto/models/operations/removecrmcontact.rb
   - lib/unifiedto/models/operations/removecrmdeal.rb
   - lib/unifiedto/models/operations/removecrmevent.rb
   - lib/unifiedto/models/operations/removecrmlead.rb
   - lib/unifiedto/models/operations/removecrmpipeline.rb
   - lib/unifiedto/models/operations/updatecrmcompany.rb
-  - lib/unifiedto/models/operations/updatecrmcontact.rb
   - lib/unifiedto/models/operations/updatecrmdeal.rb
   - lib/unifiedto/models/operations/updatecrmevent.rb
   - lib/unifiedto/models/operations/updatecrmlead.rb
   - lib/unifiedto/models/operations/updatecrmpipeline.rb
   - lib/unifiedto/models/operations/listenrichcompanies.rb
-  - lib/unifiedto/models/operations/createuccontact.rb
-  - lib/unifiedto/models/operations/getuccontact.rb
-  - lib/unifiedto/models/operations/listuccontacts.rb
-  - lib/unifiedto/models/operations/patchuccontact.rb
-  - lib/unifiedto/models/operations/removeuccontact.rb
-  - lib/unifiedto/models/operations/updateuccontact.rb
   - lib/unifiedto/models/operations/listenrichpeople.rb
   - lib/unifiedto/models/operations/createhrisemployee.rb
   - lib/unifiedto/models/operations/createhrisgroup.rb
@@ -278,16 +272,22 @@ generatedFiles:
   - lib/unifiedto/models/operations/patchstoragefile.rb
   - lib/unifiedto/models/operations/removestoragefile.rb
   - lib/unifiedto/models/operations/updatestoragefile.rb
+  - lib/unifiedto/models/operations/createticketingcustomer.rb
   - lib/unifiedto/models/operations/createticketingnote.rb
   - lib/unifiedto/models/operations/createticketingticket.rb
+  - lib/unifiedto/models/operations/getticketingcustomer.rb
   - lib/unifiedto/models/operations/getticketingnote.rb
   - lib/unifiedto/models/operations/getticketingticket.rb
+  - lib/unifiedto/models/operations/listticketingcustomers.rb
   - lib/unifiedto/models/operations/listticketingnotes.rb
   - lib/unifiedto/models/operations/listticketingtickets.rb
+  - lib/unifiedto/models/operations/patchticketingcustomer.rb
   - lib/unifiedto/models/operations/patchticketingnote.rb
   - lib/unifiedto/models/operations/patchticketingticket.rb
+  - lib/unifiedto/models/operations/removeticketingcustomer.rb
   - lib/unifiedto/models/operations/removeticketingnote.rb
   - lib/unifiedto/models/operations/removeticketingticket.rb
+  - lib/unifiedto/models/operations/updateticketingcustomer.rb
   - lib/unifiedto/models/operations/updateticketingnote.rb
   - lib/unifiedto/models/operations/updateticketingticket.rb
   - lib/unifiedto/models/operations/listuccalls.rb
@@ -311,12 +311,12 @@ generatedFiles:
   - lib/unifiedto/models/operations/getunifiedintegrationlogin.rb
   - lib/unifiedto/models/shared/accountingaccount.rb
   - lib/unifiedto/models/shared/property_accountingaccount_raw.rb
-  - lib/unifiedto/models/shared/accountingcustomer.rb
+  - lib/unifiedto/models/shared/accountingcontact.rb
   - lib/unifiedto/models/shared/accountingtelephone.rb
-  - lib/unifiedto/models/shared/property_accountingcustomer_shipping_address.rb
-  - lib/unifiedto/models/shared/property_accountingcustomer_raw.rb
+  - lib/unifiedto/models/shared/property_accountingcontact_shipping_address.rb
+  - lib/unifiedto/models/shared/property_accountingcontact_raw.rb
   - lib/unifiedto/models/shared/accountingemail.rb
-  - lib/unifiedto/models/shared/property_accountingcustomer_billing_address.rb
+  - lib/unifiedto/models/shared/property_accountingcontact_billing_address.rb
   - lib/unifiedto/models/shared/accountinginvoice.rb
   - lib/unifiedto/models/shared/property_accountinginvoice_raw.rb
   - lib/unifiedto/models/shared/accountinglineitem.rb
@@ -333,10 +333,15 @@ generatedFiles:
   - lib/unifiedto/models/shared/accountingorganization.rb
   - lib/unifiedto/models/shared/property_accountingorganization_raw.rb
   - lib/unifiedto/models/shared/property_accountingorganization_address.rb
-  - lib/unifiedto/models/shared/ticketingcustomer.rb
-  - lib/unifiedto/models/shared/ticketingtelephone.rb
-  - lib/unifiedto/models/shared/property_ticketingcustomer_raw.rb
-  - lib/unifiedto/models/shared/ticketingemail.rb
+  - lib/unifiedto/models/shared/crmcontact.rb
+  - lib/unifiedto/models/shared/crmtelephone.rb
+  - lib/unifiedto/models/shared/property_crmcontact_raw.rb
+  - lib/unifiedto/models/shared/crmemail.rb
+  - lib/unifiedto/models/shared/property_crmcontact_address.rb
+  - lib/unifiedto/models/shared/uccontact.rb
+  - lib/unifiedto/models/shared/uctelephone.rb
+  - lib/unifiedto/models/shared/property_uccontact_raw.rb
+  - lib/unifiedto/models/shared/ucemail.rb
   - lib/unifiedto/models/shared/atsapplication.rb
   - lib/unifiedto/models/shared/property_atsapplication_raw.rb
   - lib/unifiedto/models/shared/atscandidate.rb
@@ -357,13 +362,8 @@ generatedFiles:
   - lib/unifiedto/models/shared/atsstatus.rb
   - lib/unifiedto/models/shared/property_atsstatus_raw.rb
   - lib/unifiedto/models/shared/crmcompany.rb
-  - lib/unifiedto/models/shared/crmtelephone.rb
   - lib/unifiedto/models/shared/property_crmcompany_raw.rb
-  - lib/unifiedto/models/shared/crmemail.rb
   - lib/unifiedto/models/shared/property_crmcompany_address.rb
-  - lib/unifiedto/models/shared/crmcontact.rb
-  - lib/unifiedto/models/shared/property_crmcontact_raw.rb
-  - lib/unifiedto/models/shared/property_crmcontact_address.rb
   - lib/unifiedto/models/shared/crmdeal.rb
   - lib/unifiedto/models/shared/property_crmdeal_raw.rb
   - lib/unifiedto/models/shared/crmevent.rb
@@ -382,10 +382,6 @@ generatedFiles:
   - lib/unifiedto/models/shared/enrichtelephone.rb
   - lib/unifiedto/models/shared/property_enrichcompany_raw.rb
   - lib/unifiedto/models/shared/property_enrichcompany_address.rb
-  - lib/unifiedto/models/shared/uccontact.rb
-  - lib/unifiedto/models/shared/uctelephone.rb
-  - lib/unifiedto/models/shared/property_uccontact_raw.rb
-  - lib/unifiedto/models/shared/ucemail.rb
   - lib/unifiedto/models/shared/enrichperson.rb
   - lib/unifiedto/models/shared/enrichpersonworkhistory.rb
   - lib/unifiedto/models/shared/property_enrichperson_raw.rb
@@ -408,6 +404,10 @@ generatedFiles:
   - lib/unifiedto/models/shared/property_storagefile_raw.rb
   - lib/unifiedto/models/shared/storagepermission.rb
   - lib/unifiedto/models/shared/property_storagepermission_roles.rb
+  - lib/unifiedto/models/shared/ticketingcustomer.rb
+  - lib/unifiedto/models/shared/ticketingtelephone.rb
+  - lib/unifiedto/models/shared/property_ticketingcustomer_raw.rb
+  - lib/unifiedto/models/shared/ticketingemail.rb
   - lib/unifiedto/models/shared/ticketingnote.rb
   - lib/unifiedto/models/shared/property_ticketingnote_raw.rb
   - lib/unifiedto/models/shared/ticketingticket.rb
@@ -433,8 +433,8 @@ generatedFiles:
   - lib/unified_ruby_sdk.rb
   - docs/models/operations/createaccountingaccountrequest.md
   - docs/models/operations/createaccountingaccountresponse.md
-  - docs/models/operations/createaccountingcustomerrequest.md
-  - docs/models/operations/createaccountingcustomerresponse.md
+  - docs/models/operations/createaccountingcontactrequest.md
+  - docs/models/operations/createaccountingcontactresponse.md
   - docs/models/operations/createaccountinginvoicerequest.md
   - docs/models/operations/createaccountinginvoiceresponse.md
   - docs/models/operations/createaccountingitemrequest.md
@@ -447,8 +447,8 @@ generatedFiles:
   - docs/models/operations/createaccountingtransactionresponse.md
   - docs/models/operations/getaccountingaccountrequest.md
   - docs/models/operations/getaccountingaccountresponse.md
-  - docs/models/operations/getaccountingcustomerrequest.md
-  - docs/models/operations/getaccountingcustomerresponse.md
+  - docs/models/operations/getaccountingcontactrequest.md
+  - docs/models/operations/getaccountingcontactresponse.md
   - docs/models/operations/getaccountinginvoicerequest.md
   - docs/models/operations/getaccountinginvoiceresponse.md
   - docs/models/operations/getaccountingitemrequest.md
@@ -463,8 +463,8 @@ generatedFiles:
   - docs/models/operations/getaccountingtransactionresponse.md
   - docs/models/operations/listaccountingaccountsrequest.md
   - docs/models/operations/listaccountingaccountsresponse.md
-  - docs/models/operations/listaccountingcustomersrequest.md
-  - docs/models/operations/listaccountingcustomersresponse.md
+  - docs/models/operations/listaccountingcontactsrequest.md
+  - docs/models/operations/listaccountingcontactsresponse.md
   - docs/models/operations/listaccountinginvoicesrequest.md
   - docs/models/operations/listaccountinginvoicesresponse.md
   - docs/models/operations/listaccountingitemsrequest.md
@@ -479,8 +479,8 @@ generatedFiles:
   - docs/models/operations/listaccountingtransactionsresponse.md
   - docs/models/operations/patchaccountingaccountrequest.md
   - docs/models/operations/patchaccountingaccountresponse.md
-  - docs/models/operations/patchaccountingcustomerrequest.md
-  - docs/models/operations/patchaccountingcustomerresponse.md
+  - docs/models/operations/patchaccountingcontactrequest.md
+  - docs/models/operations/patchaccountingcontactresponse.md
   - docs/models/operations/patchaccountinginvoicerequest.md
   - docs/models/operations/patchaccountinginvoiceresponse.md
   - docs/models/operations/patchaccountingitemrequest.md
@@ -493,8 +493,8 @@ generatedFiles:
   - docs/models/operations/patchaccountingtransactionresponse.md
   - docs/models/operations/removeaccountingaccountrequest.md
   - docs/models/operations/removeaccountingaccountresponse.md
-  - docs/models/operations/removeaccountingcustomerrequest.md
-  - docs/models/operations/removeaccountingcustomerresponse.md
+  - docs/models/operations/removeaccountingcontactrequest.md
+  - docs/models/operations/removeaccountingcontactresponse.md
   - docs/models/operations/removeaccountinginvoicerequest.md
   - docs/models/operations/removeaccountinginvoiceresponse.md
   - docs/models/operations/removeaccountingitemrequest.md
@@ -507,8 +507,8 @@ generatedFiles:
   - docs/models/operations/removeaccountingtransactionresponse.md
   - docs/models/operations/updateaccountingaccountrequest.md
   - docs/models/operations/updateaccountingaccountresponse.md
-  - docs/models/operations/updateaccountingcustomerrequest.md
-  - docs/models/operations/updateaccountingcustomerresponse.md
+  - docs/models/operations/updateaccountingcontactrequest.md
+  - docs/models/operations/updateaccountingcontactresponse.md
   - docs/models/operations/updateaccountinginvoicerequest.md
   - docs/models/operations/updateaccountinginvoiceresponse.md
   - docs/models/operations/updateaccountingitemrequest.md
@@ -519,18 +519,30 @@ generatedFiles:
   - docs/models/operations/updateaccountingtaxrateresponse.md
   - docs/models/operations/updateaccountingtransactionrequest.md
   - docs/models/operations/updateaccountingtransactionresponse.md
-  - docs/models/operations/createticketingcustomerrequest.md
-  - docs/models/operations/createticketingcustomerresponse.md
-  - docs/models/operations/getticketingcustomerrequest.md
-  - docs/models/operations/getticketingcustomerresponse.md
-  - docs/models/operations/listticketingcustomersrequest.md
-  - docs/models/operations/listticketingcustomersresponse.md
-  - docs/models/operations/patchticketingcustomerrequest.md
-  - docs/models/operations/patchticketingcustomerresponse.md
-  - docs/models/operations/removeticketingcustomerrequest.md
-  - docs/models/operations/removeticketingcustomerresponse.md
-  - docs/models/operations/updateticketingcustomerrequest.md
-  - docs/models/operations/updateticketingcustomerresponse.md
+  - docs/models/operations/createcrmcontactrequest.md
+  - docs/models/operations/createcrmcontactresponse.md
+  - docs/models/operations/createuccontactrequest.md
+  - docs/models/operations/createuccontactresponse.md
+  - docs/models/operations/getcrmcontactrequest.md
+  - docs/models/operations/getcrmcontactresponse.md
+  - docs/models/operations/getuccontactrequest.md
+  - docs/models/operations/getuccontactresponse.md
+  - docs/models/operations/listcrmcontactsrequest.md
+  - docs/models/operations/listcrmcontactsresponse.md
+  - docs/models/operations/listuccontactsrequest.md
+  - docs/models/operations/listuccontactsresponse.md
+  - docs/models/operations/patchcrmcontactrequest.md
+  - docs/models/operations/patchcrmcontactresponse.md
+  - docs/models/operations/patchuccontactrequest.md
+  - docs/models/operations/patchuccontactresponse.md
+  - docs/models/operations/removecrmcontactrequest.md
+  - docs/models/operations/removecrmcontactresponse.md
+  - docs/models/operations/removeuccontactrequest.md
+  - docs/models/operations/removeuccontactresponse.md
+  - docs/models/operations/updatecrmcontactrequest.md
+  - docs/models/operations/updatecrmcontactresponse.md
+  - docs/models/operations/updateuccontactrequest.md
+  - docs/models/operations/updateuccontactresponse.md
   - docs/models/operations/createatsapplicationrequest.md
   - docs/models/operations/createatsapplicationresponse.md
   - docs/models/operations/createatscandidaterequest.md
@@ -607,8 +619,6 @@ generatedFiles:
   - docs/models/operations/updateatsscorecardresponse.md
   - docs/models/operations/createcrmcompanyrequest.md
   - docs/models/operations/createcrmcompanyresponse.md
-  - docs/models/operations/createcrmcontactrequest.md
-  - docs/models/operations/createcrmcontactresponse.md
   - docs/models/operations/createcrmdealrequest.md
   - docs/models/operations/createcrmdealresponse.md
   - docs/models/operations/createcrmeventrequest.md
@@ -619,8 +629,6 @@ generatedFiles:
   - docs/models/operations/createcrmpipelineresponse.md
   - docs/models/operations/getcrmcompanyrequest.md
   - docs/models/operations/getcrmcompanyresponse.md
-  - docs/models/operations/getcrmcontactrequest.md
-  - docs/models/operations/getcrmcontactresponse.md
   - docs/models/operations/getcrmdealrequest.md
   - docs/models/operations/getcrmdealresponse.md
   - docs/models/operations/getcrmeventrequest.md
@@ -631,8 +639,6 @@ generatedFiles:
   - docs/models/operations/getcrmpipelineresponse.md
   - docs/models/operations/listcrmcompaniesrequest.md
   - docs/models/operations/listcrmcompaniesresponse.md
-  - docs/models/operations/listcrmcontactsrequest.md
-  - docs/models/operations/listcrmcontactsresponse.md
   - docs/models/operations/listcrmdealsrequest.md
   - docs/models/operations/listcrmdealsresponse.md
   - docs/models/operations/listcrmeventsrequest.md
@@ -643,8 +649,6 @@ generatedFiles:
   - docs/models/operations/listcrmpipelinesresponse.md
   - docs/models/operations/patchcrmcompanyrequest.md
   - docs/models/operations/patchcrmcompanyresponse.md
-  - docs/models/operations/patchcrmcontactrequest.md
-  - docs/models/operations/patchcrmcontactresponse.md
   - docs/models/operations/patchcrmdealrequest.md
   - docs/models/operations/patchcrmdealresponse.md
   - docs/models/operations/patchcrmeventrequest.md
@@ -655,8 +659,6 @@ generatedFiles:
   - docs/models/operations/patchcrmpipelineresponse.md
   - docs/models/operations/removecrmcompanyrequest.md
   - docs/models/operations/removecrmcompanyresponse.md
-  - docs/models/operations/removecrmcontactrequest.md
-  - docs/models/operations/removecrmcontactresponse.md
   - docs/models/operations/removecrmdealrequest.md
   - docs/models/operations/removecrmdealresponse.md
   - docs/models/operations/removecrmeventrequest.md
@@ -667,8 +669,6 @@ generatedFiles:
   - docs/models/operations/removecrmpipelineresponse.md
   - docs/models/operations/updatecrmcompanyrequest.md
   - docs/models/operations/updatecrmcompanyresponse.md
-  - docs/models/operations/updatecrmcontactrequest.md
-  - docs/models/operations/updatecrmcontactresponse.md
   - docs/models/operations/updatecrmdealrequest.md
   - docs/models/operations/updatecrmdealresponse.md
   - docs/models/operations/updatecrmeventrequest.md
@@ -679,18 +679,6 @@ generatedFiles:
   - docs/models/operations/updatecrmpipelineresponse.md
   - docs/models/operations/listenrichcompaniesrequest.md
   - docs/models/operations/listenrichcompaniesresponse.md
-  - docs/models/operations/createuccontactrequest.md
-  - docs/models/operations/createuccontactresponse.md
-  - docs/models/operations/getuccontactrequest.md
-  - docs/models/operations/getuccontactresponse.md
-  - docs/models/operations/listuccontactsrequest.md
-  - docs/models/operations/listuccontactsresponse.md
-  - docs/models/operations/patchuccontactrequest.md
-  - docs/models/operations/patchuccontactresponse.md
-  - docs/models/operations/removeuccontactrequest.md
-  - docs/models/operations/removeuccontactresponse.md
-  - docs/models/operations/updateuccontactrequest.md
-  - docs/models/operations/updateuccontactresponse.md
   - docs/models/operations/listenrichpeoplerequest.md
   - docs/models/operations/listenrichpeopleresponse.md
   - docs/models/operations/createhrisemployeerequest.md
@@ -763,26 +751,38 @@ generatedFiles:
   - docs/models/operations/removestoragefileresponse.md
   - docs/models/operations/updatestoragefilerequest.md
   - docs/models/operations/updatestoragefileresponse.md
+  - docs/models/operations/createticketingcustomerrequest.md
+  - docs/models/operations/createticketingcustomerresponse.md
   - docs/models/operations/createticketingnoterequest.md
   - docs/models/operations/createticketingnoteresponse.md
   - docs/models/operations/createticketingticketrequest.md
   - docs/models/operations/createticketingticketresponse.md
+  - docs/models/operations/getticketingcustomerrequest.md
+  - docs/models/operations/getticketingcustomerresponse.md
   - docs/models/operations/getticketingnoterequest.md
   - docs/models/operations/getticketingnoteresponse.md
   - docs/models/operations/getticketingticketrequest.md
   - docs/models/operations/getticketingticketresponse.md
+  - docs/models/operations/listticketingcustomersrequest.md
+  - docs/models/operations/listticketingcustomersresponse.md
   - docs/models/operations/listticketingnotesrequest.md
   - docs/models/operations/listticketingnotesresponse.md
   - docs/models/operations/listticketingticketsrequest.md
   - docs/models/operations/listticketingticketsresponse.md
+  - docs/models/operations/patchticketingcustomerrequest.md
+  - docs/models/operations/patchticketingcustomerresponse.md
   - docs/models/operations/patchticketingnoterequest.md
   - docs/models/operations/patchticketingnoteresponse.md
   - docs/models/operations/patchticketingticketrequest.md
   - docs/models/operations/patchticketingticketresponse.md
+  - docs/models/operations/removeticketingcustomerrequest.md
+  - docs/models/operations/removeticketingcustomerresponse.md
   - docs/models/operations/removeticketingnoterequest.md
   - docs/models/operations/removeticketingnoteresponse.md
   - docs/models/operations/removeticketingticketrequest.md
   - docs/models/operations/removeticketingticketresponse.md
+  - docs/models/operations/updateticketingcustomerrequest.md
+  - docs/models/operations/updateticketingcustomerresponse.md
   - docs/models/operations/updateticketingnoterequest.md
   - docs/models/operations/updateticketingnoteresponse.md
   - docs/models/operations/updateticketingticketrequest.md
@@ -833,14 +833,14 @@ generatedFiles:
   - docs/models/shared/accountingaccount.md
   - docs/models/shared/propertyaccountingaccountraw.md
   - docs/models/shared/taxexemption.md
-  - docs/models/shared/accountingcustomer.md
+  - docs/models/shared/accountingcontact.md
   - docs/models/shared/accountingtelephonetype.md
   - docs/models/shared/accountingtelephone.md
-  - docs/models/shared/propertyaccountingcustomershippingaddress.md
-  - docs/models/shared/propertyaccountingcustomerraw.md
+  - docs/models/shared/propertyaccountingcontactshippingaddress.md
+  - docs/models/shared/propertyaccountingcontactraw.md
   - docs/models/shared/accountingemailtype.md
   - docs/models/shared/accountingemail.md
-  - docs/models/shared/propertyaccountingcustomerbillingaddress.md
+  - docs/models/shared/propertyaccountingcontactbillingaddress.md
   - docs/models/shared/accountinginvoicestatus.md
   - docs/models/shared/accountinginvoice.md
   - docs/models/shared/propertyaccountinginvoiceraw.md
@@ -858,15 +858,23 @@ generatedFiles:
   - docs/models/shared/accountingorganization.md
   - docs/models/shared/propertyaccountingorganizationraw.md
   - docs/models/shared/propertyaccountingorganizationaddress.md
-  - docs/models/shared/ticketingcustomer.md
-  - docs/models/shared/ticketingtelephonetype.md
-  - docs/models/shared/ticketingtelephone.md
-  - docs/models/shared/propertyticketingcustomerraw.md
-  - docs/models/shared/ticketingemailtype.md
-  - docs/models/shared/ticketingemail.md
+  - docs/models/shared/crmcontact.md
+  - docs/models/shared/crmtelephonetype.md
+  - docs/models/shared/crmtelephone.md
+  - docs/models/shared/propertycrmcontactraw.md
+  - docs/models/shared/crmemailtype.md
+  - docs/models/shared/crmemail.md
+  - docs/models/shared/propertycrmcontactaddress.md
+  - docs/models/shared/uccontact.md
+  - docs/models/shared/uctelephonetype.md
+  - docs/models/shared/uctelephone.md
+  - docs/models/shared/propertyuccontactraw.md
+  - docs/models/shared/ucemailtype.md
+  - docs/models/shared/ucemail.md
   - docs/models/shared/atsapplicationstatus.md
   - docs/models/shared/atsapplication.md
   - docs/models/shared/propertyatsapplicationraw.md
+  - docs/models/shared/origin.md
   - docs/models/shared/atscandidate.md
   - docs/models/shared/atstelephonetype.md
   - docs/models/shared/atstelephone.md
@@ -895,15 +903,8 @@ generatedFiles:
   - docs/models/shared/atsstatus.md
   - docs/models/shared/propertyatsstatusraw.md
   - docs/models/shared/crmcompany.md
-  - docs/models/shared/crmtelephonetype.md
-  - docs/models/shared/crmtelephone.md
   - docs/models/shared/propertycrmcompanyraw.md
-  - docs/models/shared/crmemailtype.md
-  - docs/models/shared/crmemail.md
   - docs/models/shared/propertycrmcompanyaddress.md
-  - docs/models/shared/crmcontact.md
-  - docs/models/shared/propertycrmcontactraw.md
-  - docs/models/shared/propertycrmcontactaddress.md
   - docs/models/shared/crmdeal.md
   - docs/models/shared/propertycrmdealraw.md
   - docs/models/shared/crmeventtype.md
@@ -925,12 +926,6 @@ generatedFiles:
   - docs/models/shared/enrichtelephone.md
   - docs/models/shared/propertyenrichcompanyraw.md
   - docs/models/shared/propertyenrichcompanyaddress.md
-  - docs/models/shared/uccontact.md
-  - docs/models/shared/uctelephonetype.md
-  - docs/models/shared/uctelephone.md
-  - docs/models/shared/propertyuccontactraw.md
-  - docs/models/shared/ucemailtype.md
-  - docs/models/shared/ucemail.md
   - docs/models/shared/gender.md
   - docs/models/shared/enrichperson.md
   - docs/models/shared/enrichpersonworkhistory.md
@@ -964,6 +959,12 @@ generatedFiles:
   - docs/models/shared/propertystoragefileraw.md
   - docs/models/shared/storagepermission.md
   - docs/models/shared/propertystoragepermissionroles.md
+  - docs/models/shared/ticketingcustomer.md
+  - docs/models/shared/ticketingtelephonetype.md
+  - docs/models/shared/ticketingtelephone.md
+  - docs/models/shared/propertyticketingcustomerraw.md
+  - docs/models/shared/ticketingemailtype.md
+  - docs/models/shared/ticketingemail.md
   - docs/models/shared/ticketingnote.md
   - docs/models/shared/propertyticketingnoteraw.md
   - docs/models/shared/ticketingticketstatus.md
@@ -996,7 +997,7 @@ generatedFiles:
   - docs/sdks/unifiedto/README.md
   - docs/sdks/accounting/README.md
   - docs/sdks/account/README.md
-  - docs/sdks/customer/README.md
+  - docs/sdks/contact/README.md
   - docs/sdks/invoice/README.md
   - docs/sdks/item/README.md
   - docs/sdks/organization/README.md
@@ -1013,7 +1014,6 @@ generatedFiles:
   - docs/sdks/scorecard/README.md
   - docs/sdks/crm/README.md
   - docs/sdks/company/README.md
-  - docs/sdks/contact/README.md
   - docs/sdks/deal/README.md
   - docs/sdks/event/README.md
   - docs/sdks/lead/README.md
@@ -1030,6 +1030,7 @@ generatedFiles:
   - docs/sdks/storage/README.md
   - docs/sdks/file/README.md
   - docs/sdks/ticketing/README.md
+  - docs/sdks/customer/README.md
   - docs/sdks/note/README.md
   - docs/sdks/ticket/README.md
   - docs/sdks/uc/README.md

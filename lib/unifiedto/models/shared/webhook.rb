@@ -23,7 +23,7 @@ module UnifiedRubySDK
       enums do
         ACCOUNTING_ACCOUNT = new('accounting_account')
         ACCOUNTING_TRANSACTION = new('accounting_transaction')
-        ACCOUNTING_CUSTOMER = new('accounting_customer')
+        ACCOUNTING_CONTACT = new('accounting_contact')
         ACCOUNTING_INVOICE = new('accounting_invoice')
         ACCOUNTING_PAYMENT = new('accounting_payment')
         ACCOUNTING_TAXRATE = new('accounting_taxrate')

@@ -28,11 +28,11 @@ module UnifiedRubySDK
 
       field :cancelled_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cancelled_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+      field :contact_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
+
       field :created_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
       field :currency, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
-
-      field :customer_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('customer_id') } }
 
       field :discount_amount, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('discount_amount') } }
 
@@ -67,13 +67,13 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(balance_amount: T.nilable(Float), cancelled_at: T.nilable(DateTime), created_at: T.nilable(DateTime), currency: T.nilable(String), customer_id: T.nilable(String), discount_amount: T.nilable(Float), due_at: T.nilable(DateTime), id: T.nilable(String), invoice_number: T.nilable(String), lineitems: T.nilable(T::Array[Shared::AccountingLineitem]), notes: T.nilable(String), paid_amount: T.nilable(Float), paid_at: T.nilable(DateTime), raw: T.nilable(Shared::PropertyAccountingInvoiceRaw), refund_amount: T.nilable(Float), refund_reason: T.nilable(String), refunded_at: T.nilable(DateTime), status: T.nilable(Shared::AccountingInvoiceStatus), tax_amount: T.nilable(Float), total_amount: T.nilable(Float), updated_at: T.nilable(DateTime)).void }
-      def initialize(balance_amount: nil, cancelled_at: nil, created_at: nil, currency: nil, customer_id: nil, discount_amount: nil, due_at: nil, id: nil, invoice_number: nil, lineitems: nil, notes: nil, paid_amount: nil, paid_at: nil, raw: nil, refund_amount: nil, refund_reason: nil, refunded_at: nil, status: nil, tax_amount: nil, total_amount: nil, updated_at: nil)
+      sig { params(balance_amount: T.nilable(Float), cancelled_at: T.nilable(DateTime), contact_id: T.nilable(String), created_at: T.nilable(DateTime), currency: T.nilable(String), discount_amount: T.nilable(Float), due_at: T.nilable(DateTime), id: T.nilable(String), invoice_number: T.nilable(String), lineitems: T.nilable(T::Array[Shared::AccountingLineitem]), notes: T.nilable(String), paid_amount: T.nilable(Float), paid_at: T.nilable(DateTime), raw: T.nilable(Shared::PropertyAccountingInvoiceRaw), refund_amount: T.nilable(Float), refund_reason: T.nilable(String), refunded_at: T.nilable(DateTime), status: T.nilable(Shared::AccountingInvoiceStatus), tax_amount: T.nilable(Float), total_amount: T.nilable(Float), updated_at: T.nilable(DateTime)).void }
+      def initialize(balance_amount: nil, cancelled_at: nil, contact_id: nil, created_at: nil, currency: nil, discount_amount: nil, due_at: nil, id: nil, invoice_number: nil, lineitems: nil, notes: nil, paid_amount: nil, paid_at: nil, raw: nil, refund_amount: nil, refund_reason: nil, refunded_at: nil, status: nil, tax_amount: nil, total_amount: nil, updated_at: nil)
         @balance_amount = balance_amount
         @cancelled_at = cancelled_at
+        @contact_id = contact_id
         @created_at = created_at
         @currency = currency
-        @customer_id = customer_id
         @discount_amount = discount_amount
         @due_at = due_at
         @id = id

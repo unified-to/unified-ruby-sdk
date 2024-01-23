@@ -9,7 +9,7 @@ require 'faraday'
 module UnifiedRubySDK
   module Operations
 
-    class ListAccountingCustomersRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListAccountingContactsRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -26,12 +26,14 @@ module UnifiedRubySDK
       field :query, T.nilable(String), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
 
       field :sort, T.nilable(String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
+      # The type of contact to filter results
+      field :type, T.nilable(String), { 'query_param': { 'field_name': 'type', 'style': 'form', 'explode': true } }
       # Return only results whose updated date is equal or greater to this value
       field :updated_gte, T.nilable(DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: String, fields: T.nilable(T::Array[String]), limit: T.nilable(Float), offset: T.nilable(Float), order: T.nilable(String), query: T.nilable(String), sort: T.nilable(String), updated_gte: T.nilable(DateTime)).void }
-      def initialize(connection_id: nil, fields: nil, limit: nil, offset: nil, order: nil, query: nil, sort: nil, updated_gte: nil)
+      sig { params(connection_id: String, fields: T.nilable(T::Array[String]), limit: T.nilable(Float), offset: T.nilable(Float), order: T.nilable(String), query: T.nilable(String), sort: T.nilable(String), type: T.nilable(String), updated_gte: T.nilable(DateTime)).void }
+      def initialize(connection_id: nil, fields: nil, limit: nil, offset: nil, order: nil, query: nil, sort: nil, type: nil, updated_gte: nil)
         @connection_id = connection_id
         @fields = fields
         @limit = limit
@@ -39,12 +41,13 @@ module UnifiedRubySDK
         @order = order
         @query = query
         @sort = sort
+        @type = type
         @updated_gte = updated_gte
       end
     end
 
 
-    class ListAccountingCustomersResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListAccountingContactsResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation
@@ -54,15 +57,15 @@ module UnifiedRubySDK
       # HTTP response status code for this operation
       field :status_code, Integer
       # Successful
-      field :accounting_customers, T.nilable(T::Array[Shared::AccountingCustomer])
+      field :accounting_contacts, T.nilable(T::Array[Shared::AccountingContact])
 
 
-      sig { params(content_type: String, raw_response: Faraday::Response, status_code: Integer, accounting_customers: T.nilable(T::Array[Shared::AccountingCustomer])).void }
-      def initialize(content_type: nil, raw_response: nil, status_code: nil, accounting_customers: nil)
+      sig { params(content_type: String, raw_response: Faraday::Response, status_code: Integer, accounting_contacts: T.nilable(T::Array[Shared::AccountingContact])).void }
+      def initialize(content_type: nil, raw_response: nil, status_code: nil, accounting_contacts: nil)
         @content_type = content_type
         @raw_response = raw_response
         @status_code = status_code
-        @accounting_customers = accounting_customers
+        @accounting_contacts = accounting_contacts
       end
     end
   end
