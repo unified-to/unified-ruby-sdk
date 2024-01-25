@@ -54,6 +54,8 @@ module UnifiedRubySDK
 
       field :id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+      field :is_payable, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_payable') } }
+
       field :raw, T.nilable(Shared::PropertyAccountingAccountRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :status, T.nilable(Shared::Status), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Shared::Status, true) } }
@@ -63,8 +65,8 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(name: String, balance: T.nilable(Float), created_at: T.nilable(DateTime), currency: T.nilable(String), customer_defined_code: T.nilable(String), description: T.nilable(String), id: T.nilable(String), raw: T.nilable(Shared::PropertyAccountingAccountRaw), status: T.nilable(Shared::Status), type: T.nilable(Shared::Type), updated_at: T.nilable(DateTime)).void }
-      def initialize(name: nil, balance: nil, created_at: nil, currency: nil, customer_defined_code: nil, description: nil, id: nil, raw: nil, status: nil, type: nil, updated_at: nil)
+      sig { params(name: String, balance: T.nilable(Float), created_at: T.nilable(DateTime), currency: T.nilable(String), customer_defined_code: T.nilable(String), description: T.nilable(String), id: T.nilable(String), is_payable: T.nilable(T::Boolean), raw: T.nilable(Shared::PropertyAccountingAccountRaw), status: T.nilable(Shared::Status), type: T.nilable(Shared::Type), updated_at: T.nilable(DateTime)).void }
+      def initialize(name: nil, balance: nil, created_at: nil, currency: nil, customer_defined_code: nil, description: nil, id: nil, is_payable: nil, raw: nil, status: nil, type: nil, updated_at: nil)
         @name = name
         @balance = balance
         @created_at = created_at
@@ -72,6 +74,7 @@ module UnifiedRubySDK
         @customer_defined_code = customer_defined_code
         @description = description
         @id = id
+        @is_payable = is_payable
         @raw = raw
         @status = status
         @type = type
