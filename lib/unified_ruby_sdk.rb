@@ -17,7 +17,6 @@ require_relative 'unified-to/models/shared/property_accountingcontact_billing_ad
 require_relative 'unified-to/models/shared/accountinginvoice'
 require_relative 'unified-to/models/shared/property_accountinginvoice_raw'
 require_relative 'unified-to/models/shared/accountinglineitem'
-require_relative 'unified-to/models/shared/property_accountinglineitem_raw'
 require_relative 'unified-to/models/shared/accountingitem'
 require_relative 'unified-to/models/shared/property_accountingitem_raw'
 require_relative 'unified-to/models/shared/accountingpayment'

@@ -5,7 +5,6 @@
 
 require 'sorbet-runtime'
 require 'faraday'
-require_relative '../shared/property_accountinglineitem_raw'
 
 module UnifiedRubySDK
   module Shared
@@ -34,8 +33,6 @@ module UnifiedRubySDK
 
       field :notes, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
 
-      field :raw, T.nilable(Shared::PropertyAccountingLineitemRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
       field :refunded_amount, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refunded_amount') } }
 
       field :refunded_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refunded_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -51,8 +48,8 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(total_amount: Float, account_id: T.nilable(String), created_at: T.nilable(DateTime), discount_amount: T.nilable(Float), id: T.nilable(String), item_description: T.nilable(String), item_id: T.nilable(String), item_name: T.nilable(String), item_sku: T.nilable(String), notes: T.nilable(String), raw: T.nilable(Shared::PropertyAccountingLineitemRaw), refunded_amount: T.nilable(Float), refunded_at: T.nilable(DateTime), tax_amount: T.nilable(Float), taxrate_id: T.nilable(String), unit_amount: T.nilable(Float), unit_quantity: T.nilable(Float), updated_at: T.nilable(DateTime)).void }
-      def initialize(total_amount: nil, account_id: nil, created_at: nil, discount_amount: nil, id: nil, item_description: nil, item_id: nil, item_name: nil, item_sku: nil, notes: nil, raw: nil, refunded_amount: nil, refunded_at: nil, tax_amount: nil, taxrate_id: nil, unit_amount: nil, unit_quantity: nil, updated_at: nil)
+      sig { params(total_amount: Float, account_id: T.nilable(String), created_at: T.nilable(DateTime), discount_amount: T.nilable(Float), id: T.nilable(String), item_description: T.nilable(String), item_id: T.nilable(String), item_name: T.nilable(String), item_sku: T.nilable(String), notes: T.nilable(String), refunded_amount: T.nilable(Float), refunded_at: T.nilable(DateTime), tax_amount: T.nilable(Float), taxrate_id: T.nilable(String), unit_amount: T.nilable(Float), unit_quantity: T.nilable(Float), updated_at: T.nilable(DateTime)).void }
+      def initialize(total_amount: nil, account_id: nil, created_at: nil, discount_amount: nil, id: nil, item_description: nil, item_id: nil, item_name: nil, item_sku: nil, notes: nil, refunded_amount: nil, refunded_at: nil, tax_amount: nil, taxrate_id: nil, unit_amount: nil, unit_quantity: nil, updated_at: nil)
         @total_amount = total_amount
         @account_id = account_id
         @created_at = created_at
@@ -63,7 +60,6 @@ module UnifiedRubySDK
         @item_name = item_name
         @item_sku = item_sku
         @notes = notes
-        @raw = raw
         @refunded_amount = refunded_amount
         @refunded_at = refunded_at
         @tax_amount = tax_amount

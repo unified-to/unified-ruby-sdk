@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 5160b83a94b66b2e0ad89d7f5d90cf8c
+  docChecksum: e6d7bb30e178bd0903f2f07c8ad4601f
   docVersion: "1.0"
   speakeasyVersion: internal
   generationVersion: 2.239.4
-  releaseVersion: 0.2.32
-  configChecksum: 29fb6b445a4c0d8b82bf5cc2126694e1
+  releaseVersion: 0.2.33
+  configChecksum: 5d3cb93ebe8a5ff854e1e3ab4543762b
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -320,7 +320,6 @@ generatedFiles:
   - lib/unifiedto/models/shared/accountinginvoice.rb
   - lib/unifiedto/models/shared/property_accountinginvoice_raw.rb
   - lib/unifiedto/models/shared/accountinglineitem.rb
-  - lib/unifiedto/models/shared/property_accountinglineitem_raw.rb
   - lib/unifiedto/models/shared/accountingitem.rb
   - lib/unifiedto/models/shared/property_accountingitem_raw.rb
   - lib/unifiedto/models/shared/accountingpayment.rb
@@ -845,7 +844,6 @@ generatedFiles:
   - docs/models/shared/accountinginvoice.md
   - docs/models/shared/propertyaccountinginvoiceraw.md
   - docs/models/shared/accountinglineitem.md
-  - docs/models/shared/propertyaccountinglineitemraw.md
   - docs/models/shared/accountingitem.md
   - docs/models/shared/propertyaccountingitemraw.md
   - docs/models/shared/accountingpayment.md

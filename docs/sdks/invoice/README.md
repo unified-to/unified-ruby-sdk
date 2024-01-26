@@ -31,7 +31,6 @@ s.config_security(
 res = s.invoice.create_accounting_invoice(connection_id="string", accounting_invoice=Shared::AccountingInvoice.new(
     lineitems=[
       Shared::AccountingLineitem.new(
-        raw=Shared::PropertyAccountingLineitemRaw.new(),
         total_amount=6736.06,
       ),
     ],
@@ -165,7 +164,6 @@ s.config_security(
 res = s.invoice.patch_accounting_invoice(connection_id="string", id="string", accounting_invoice=Shared::AccountingInvoice.new(
     lineitems=[
       Shared::AccountingLineitem.new(
-        raw=Shared::PropertyAccountingLineitemRaw.new(),
         total_amount=7374.1,
       ),
     ],
@@ -252,7 +250,6 @@ s.config_security(
 res = s.invoice.update_accounting_invoice(connection_id="string", id="string", accounting_invoice=Shared::AccountingInvoice.new(
     lineitems=[
       Shared::AccountingLineitem.new(
-        raw=Shared::PropertyAccountingLineitemRaw.new(),
         total_amount=6974.28,
       ),
     ],
