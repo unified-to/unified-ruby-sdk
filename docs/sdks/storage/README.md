@@ -36,7 +36,9 @@ res = s.storage.create_storage_file(connection_id="string", storage_file=Shared:
         ],
       ),
     ],
-    raw=Shared::PropertyStorageFileRaw.new(),
+    raw={
+      "Sports": "string",
+    },
   ))
 
 if ! res.storage_file.nil?
@@ -171,7 +173,9 @@ res = s.storage.patch_storage_file(connection_id="string", id="string", storage_
         ],
       ),
     ],
-    raw=Shared::PropertyStorageFileRaw.new(),
+    raw={
+      "Mexico": "string",
+    },
   ))
 
 if ! res.storage_file.nil?
@@ -259,7 +263,9 @@ res = s.storage.update_storage_file(connection_id="string", id="string", storage
         ],
       ),
     ],
-    raw=Shared::PropertyStorageFileRaw.new(),
+    raw={
+      "Male": "string",
+    },
   ))
 
 if ! res.storage_file.nil?

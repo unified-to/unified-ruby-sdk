@@ -5,7 +5,6 @@
 
 require 'sorbet-runtime'
 require 'faraday'
-require_relative '../shared/property_uccontact_raw'
 
 module UnifiedRubySDK
   module Shared
@@ -24,7 +23,7 @@ module UnifiedRubySDK
 
       field :name, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
       # The raw data returned by the integration for this contact
-      field :raw, T.nilable(Shared::PropertyUcContactRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
       # An array of telephones for this contact
       field :telephones, T.nilable(T::Array[Shared::UcTelephone]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
 
@@ -33,7 +32,7 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(company: T.nilable(String), created_at: T.nilable(DateTime), emails: T.nilable(T::Array[Shared::UcEmail]), id: T.nilable(String), name: T.nilable(String), raw: T.nilable(Shared::PropertyUcContactRaw), telephones: T.nilable(T::Array[Shared::UcTelephone]), title: T.nilable(String), updated_at: T.nilable(DateTime)).void }
+      sig { params(company: T.nilable(String), created_at: T.nilable(DateTime), emails: T.nilable(T::Array[Shared::UcEmail]), id: T.nilable(String), name: T.nilable(String), raw: T.nilable(T::Hash[Symbol, Object]), telephones: T.nilable(T::Array[Shared::UcTelephone]), title: T.nilable(String), updated_at: T.nilable(DateTime)).void }
       def initialize(company: nil, created_at: nil, emails: nil, id: nil, name: nil, raw: nil, telephones: nil, title: nil, updated_at: nil)
         @company = company
         @created_at = created_at

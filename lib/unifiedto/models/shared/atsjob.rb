@@ -5,7 +5,6 @@
 
 require 'sorbet-runtime'
 require 'faraday'
-require_relative '../shared/property_atsjob_raw'
 
 module UnifiedRubySDK
   module Shared
@@ -67,7 +66,7 @@ module UnifiedRubySDK
 
       field :public_job_urls, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('public_job_urls') } }
 
-      field :raw, T.nilable(Shared::PropertyAtsJobRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :recruiter_ids, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recruiter_ids') } }
 
@@ -78,7 +77,7 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(addresses: T.nilable(T::Array[Shared::AtsAddress]), closed_at: T.nilable(DateTime), compensation: T.nilable(T::Array[Shared::AtsCompensation]), created_at: T.nilable(DateTime), departments: T.nilable(T::Array[String]), description: T.nilable(String), employment_type: T.nilable(Shared::EmploymentType), hiring_manager_ids: T.nilable(T::Array[String]), id: T.nilable(String), language_locale: T.nilable(String), name: T.nilable(String), public_job_urls: T.nilable(T::Array[String]), raw: T.nilable(Shared::PropertyAtsJobRaw), recruiter_ids: T.nilable(T::Array[String]), remote: T.nilable(T::Boolean), status: T.nilable(Shared::AtsJobStatus), updated_at: T.nilable(DateTime)).void }
+      sig { params(addresses: T.nilable(T::Array[Shared::AtsAddress]), closed_at: T.nilable(DateTime), compensation: T.nilable(T::Array[Shared::AtsCompensation]), created_at: T.nilable(DateTime), departments: T.nilable(T::Array[String]), description: T.nilable(String), employment_type: T.nilable(Shared::EmploymentType), hiring_manager_ids: T.nilable(T::Array[String]), id: T.nilable(String), language_locale: T.nilable(String), name: T.nilable(String), public_job_urls: T.nilable(T::Array[String]), raw: T.nilable(T::Hash[Symbol, Object]), recruiter_ids: T.nilable(T::Array[String]), remote: T.nilable(T::Boolean), status: T.nilable(Shared::AtsJobStatus), updated_at: T.nilable(DateTime)).void }
       def initialize(addresses: nil, closed_at: nil, compensation: nil, created_at: nil, departments: nil, description: nil, employment_type: nil, hiring_manager_ids: nil, id: nil, language_locale: nil, name: nil, public_job_urls: nil, raw: nil, recruiter_ids: nil, remote: nil, status: nil, updated_at: nil)
         @addresses = addresses
         @closed_at = closed_at

@@ -34,7 +34,9 @@ res = s.invoice.create_accounting_invoice(connection_id="string", accounting_inv
         total_amount=6736.06,
       ),
     ],
-    raw=Shared::PropertyAccountingInvoiceRaw.new(),
+    raw={
+      "green": "string",
+    },
   ))
 
 if ! res.accounting_invoice.nil?
@@ -167,7 +169,9 @@ res = s.invoice.patch_accounting_invoice(connection_id="string", id="string", ac
         total_amount=7374.1,
       ),
     ],
-    raw=Shared::PropertyAccountingInvoiceRaw.new(),
+    raw={
+      "kink": "string",
+    },
   ))
 
 if ! res.accounting_invoice.nil?
@@ -253,7 +257,9 @@ res = s.invoice.update_accounting_invoice(connection_id="string", id="string", a
         total_amount=6974.28,
       ),
     ],
-    raw=Shared::PropertyAccountingInvoiceRaw.new(),
+    raw={
+      "CSS": "string",
+    },
   ))
 
 if ! res.accounting_invoice.nil?

@@ -5,7 +5,6 @@
 
 require 'sorbet-runtime'
 require 'faraday'
-require_relative '../shared/property_accountingtaxrate_raw'
 
 module UnifiedRubySDK
   module Shared
@@ -26,12 +25,12 @@ module UnifiedRubySDK
 
       field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
-      field :raw, T.nilable(Shared::PropertyAccountingTaxrateRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(name: String, rate: Float, created_at: T.nilable(DateTime), description: T.nilable(String), id: T.nilable(String), is_active: T.nilable(T::Boolean), raw: T.nilable(Shared::PropertyAccountingTaxrateRaw), updated_at: T.nilable(DateTime)).void }
+      sig { params(name: String, rate: Float, created_at: T.nilable(DateTime), description: T.nilable(String), id: T.nilable(String), is_active: T.nilable(T::Boolean), raw: T.nilable(T::Hash[Symbol, Object]), updated_at: T.nilable(DateTime)).void }
       def initialize(name: nil, rate: nil, created_at: nil, description: nil, id: nil, is_active: nil, raw: nil, updated_at: nil)
         @name = name
         @rate = rate

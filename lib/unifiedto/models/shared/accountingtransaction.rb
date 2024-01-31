@@ -5,7 +5,6 @@
 
 require 'sorbet-runtime'
 require 'faraday'
-require_relative '../shared/property_accountingtransaction_raw'
 
 module UnifiedRubySDK
   module Shared
@@ -24,7 +23,7 @@ module UnifiedRubySDK
 
       field :line_items, T.nilable(T::Array[Shared::AccountingTransactionLineitem]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('line_items') } }
 
-      field :raw, T.nilable(Shared::PropertyAccountingTransactionRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :reference, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference') } }
 
@@ -35,7 +34,7 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
 
 
-      sig { params(id: String, created_at: T.nilable(String), currency: T.nilable(String), description: T.nilable(String), line_items: T.nilable(T::Array[Shared::AccountingTransactionLineitem]), raw: T.nilable(Shared::PropertyAccountingTransactionRaw), reference: T.nilable(String), tax_amount: T.nilable(Float), taxrate_id: T.nilable(String), updated_at: T.nilable(String)).void }
+      sig { params(id: String, created_at: T.nilable(String), currency: T.nilable(String), description: T.nilable(String), line_items: T.nilable(T::Array[Shared::AccountingTransactionLineitem]), raw: T.nilable(T::Hash[Symbol, Object]), reference: T.nilable(String), tax_amount: T.nilable(Float), taxrate_id: T.nilable(String), updated_at: T.nilable(String)).void }
       def initialize(id: nil, created_at: nil, currency: nil, description: nil, line_items: nil, raw: nil, reference: nil, tax_amount: nil, taxrate_id: nil, updated_at: nil)
         @id = id
         @created_at = created_at

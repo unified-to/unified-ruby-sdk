@@ -30,7 +30,9 @@ s.config_security(
     
 res = s.account.create_accounting_account(connection_id="string", accounting_account=Shared::AccountingAccount.new(
     name="string",
-    raw=Shared::PropertyAccountingAccountRaw.new(),
+    raw={
+      "Executive": "string",
+    },
   ))
 
 if ! res.accounting_account.nil?
@@ -159,7 +161,9 @@ s.config_security(
     
 res = s.account.patch_accounting_account(connection_id="string", id="string", accounting_account=Shared::AccountingAccount.new(
     name="string",
-    raw=Shared::PropertyAccountingAccountRaw.new(),
+    raw={
+      "Garden": "string",
+    },
   ))
 
 if ! res.accounting_account.nil?
@@ -241,7 +245,9 @@ s.config_security(
     
 res = s.account.update_accounting_account(connection_id="string", id="string", accounting_account=Shared::AccountingAccount.new(
     name="string",
-    raw=Shared::PropertyAccountingAccountRaw.new(),
+    raw={
+      "Pop": "string",
+    },
   ))
 
 if ! res.accounting_account.nil?

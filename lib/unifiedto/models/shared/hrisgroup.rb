@@ -5,7 +5,6 @@
 
 require 'sorbet-runtime'
 require 'faraday'
-require_relative '../shared/property_hrisgroup_raw'
 
 module UnifiedRubySDK
   module Shared
@@ -42,7 +41,7 @@ module UnifiedRubySDK
 
       field :parent_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
-      field :raw, T.nilable(Shared::PropertyHrisGroupRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :type, T.nilable(Shared::HrisGroupType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Shared::HrisGroupType, true) } }
 
@@ -51,7 +50,7 @@ module UnifiedRubySDK
       field :user_ids, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
 
 
-      sig { params(created_at: T.nilable(DateTime), description: T.nilable(String), id: T.nilable(String), is_active: T.nilable(T::Boolean), manager_ids: T.nilable(T::Array[String]), name: T.nilable(String), parent_id: T.nilable(String), raw: T.nilable(Shared::PropertyHrisGroupRaw), type: T.nilable(Shared::HrisGroupType), updated_at: T.nilable(DateTime), user_ids: T.nilable(T::Array[String])).void }
+      sig { params(created_at: T.nilable(DateTime), description: T.nilable(String), id: T.nilable(String), is_active: T.nilable(T::Boolean), manager_ids: T.nilable(T::Array[String]), name: T.nilable(String), parent_id: T.nilable(String), raw: T.nilable(T::Hash[Symbol, Object]), type: T.nilable(Shared::HrisGroupType), updated_at: T.nilable(DateTime), user_ids: T.nilable(T::Array[String])).void }
       def initialize(created_at: nil, description: nil, id: nil, is_active: nil, manager_ids: nil, name: nil, parent_id: nil, raw: nil, type: nil, updated_at: nil, user_ids: nil)
         @created_at = created_at
         @description = description

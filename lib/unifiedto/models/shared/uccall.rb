@@ -5,7 +5,6 @@
 
 require 'sorbet-runtime'
 require 'faraday'
-require_relative '../shared/property_uccall_raw'
 require_relative '../shared/property_uccall_telephone'
 
 module UnifiedRubySDK
@@ -23,7 +22,7 @@ module UnifiedRubySDK
 
       field :id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
       # The raw data returned by the integration for this call
-      field :raw, T.nilable(Shared::PropertyUcCallRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :start_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
       # The telephone number called
@@ -34,7 +33,7 @@ module UnifiedRubySDK
       field :user_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
 
-      sig { params(contact_id: T.nilable(String), created_at: T.nilable(DateTime), end_at: T.nilable(DateTime), id: T.nilable(String), raw: T.nilable(Shared::PropertyUcCallRaw), start_at: T.nilable(DateTime), telephone: T.nilable(Shared::PropertyUcCallTelephone), updated_at: T.nilable(DateTime), user_id: T.nilable(String)).void }
+      sig { params(contact_id: T.nilable(String), created_at: T.nilable(DateTime), end_at: T.nilable(DateTime), id: T.nilable(String), raw: T.nilable(T::Hash[Symbol, Object]), start_at: T.nilable(DateTime), telephone: T.nilable(Shared::PropertyUcCallTelephone), updated_at: T.nilable(DateTime), user_id: T.nilable(String)).void }
       def initialize(contact_id: nil, created_at: nil, end_at: nil, id: nil, raw: nil, start_at: nil, telephone: nil, updated_at: nil, user_id: nil)
         @contact_id = contact_id
         @created_at = created_at

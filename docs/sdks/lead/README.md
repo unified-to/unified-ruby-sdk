@@ -33,7 +33,9 @@ res = s.lead.create_crm_lead(connection_id="string", crm_lead=Shared::CrmLead.ne
     emails=[
       Shared::CrmEmail.new(),
     ],
-    raw=Shared::PropertyCrmLeadRaw.new(),
+    raw={
+      "Designer": "string",
+    },
     telephones=[
       Shared::CrmTelephone.new(
         telephone="string",
@@ -170,7 +172,9 @@ res = s.lead.patch_crm_lead(connection_id="string", id="string", crm_lead=Shared
     emails=[
       Shared::CrmEmail.new(),
     ],
-    raw=Shared::PropertyCrmLeadRaw.new(),
+    raw={
+      "deposit": "string",
+    },
     telephones=[
       Shared::CrmTelephone.new(
         telephone="string",
@@ -260,7 +264,9 @@ res = s.lead.update_crm_lead(connection_id="string", id="string", crm_lead=Share
     emails=[
       Shared::CrmEmail.new(),
     ],
-    raw=Shared::PropertyCrmLeadRaw.new(),
+    raw={
+      "Northwest": "string",
+    },
     telephones=[
       Shared::CrmTelephone.new(
         telephone="string",

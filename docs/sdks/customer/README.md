@@ -34,7 +34,9 @@ res = s.customer.create_ticketing_customer(connection_id="string", ticketing_cus
         email="Guadalupe78@yahoo.com",
       ),
     ],
-    raw=Shared::PropertyTicketingCustomerRaw.new(),
+    raw={
+      "Borders": "string",
+    },
     tags=[
       "string",
     ],
@@ -175,7 +177,9 @@ res = s.customer.patch_ticketing_customer(connection_id="string", id="string", t
         email="Raymundo93@hotmail.com",
       ),
     ],
-    raw=Shared::PropertyTicketingCustomerRaw.new(),
+    raw={
+      "Brownsville": "string",
+    },
     tags=[
       "string",
     ],
@@ -269,7 +273,9 @@ res = s.customer.update_ticketing_customer(connection_id="string", id="string", 
         email="Mohamed.Friesen@hotmail.com",
       ),
     ],
-    raw=Shared::PropertyTicketingCustomerRaw.new(),
+    raw={
+      "Barium": "string",
+    },
     tags=[
       "string",
     ],

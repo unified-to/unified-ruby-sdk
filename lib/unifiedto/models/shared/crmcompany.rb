@@ -6,7 +6,6 @@
 require 'sorbet-runtime'
 require 'faraday'
 require_relative '../shared/property_crmcompany_address'
-require_relative '../shared/property_crmcompany_raw'
 
 module UnifiedRubySDK
   module Shared
@@ -37,7 +36,7 @@ module UnifiedRubySDK
 
       field :name, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
       # The raw data returned by the integration for this company
-      field :raw, T.nilable(Shared::PropertyCrmCompanyRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :tags, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
 
@@ -52,7 +51,7 @@ module UnifiedRubySDK
       field :websites, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('websites') } }
 
 
-      sig { params(address: T.nilable(Shared::PropertyCrmCompanyAddress), created_at: T.nilable(DateTime), deal_ids: T.nilable(T::Array[String]), description: T.nilable(String), emails: T.nilable(T::Array[Shared::CrmEmail]), employees: T.nilable(Float), id: T.nilable(String), industry: T.nilable(String), is_active: T.nilable(T::Boolean), link_urls: T.nilable(T::Array[String]), name: T.nilable(String), raw: T.nilable(Shared::PropertyCrmCompanyRaw), tags: T.nilable(T::Array[String]), telephones: T.nilable(T::Array[Shared::CrmTelephone]), timezone: T.nilable(String), updated_at: T.nilable(DateTime), user_id: T.nilable(String), websites: T.nilable(T::Array[String])).void }
+      sig { params(address: T.nilable(Shared::PropertyCrmCompanyAddress), created_at: T.nilable(DateTime), deal_ids: T.nilable(T::Array[String]), description: T.nilable(String), emails: T.nilable(T::Array[Shared::CrmEmail]), employees: T.nilable(Float), id: T.nilable(String), industry: T.nilable(String), is_active: T.nilable(T::Boolean), link_urls: T.nilable(T::Array[String]), name: T.nilable(String), raw: T.nilable(T::Hash[Symbol, Object]), tags: T.nilable(T::Array[String]), telephones: T.nilable(T::Array[Shared::CrmTelephone]), timezone: T.nilable(String), updated_at: T.nilable(DateTime), user_id: T.nilable(String), websites: T.nilable(T::Array[String])).void }
       def initialize(address: nil, created_at: nil, deal_ids: nil, description: nil, emails: nil, employees: nil, id: nil, industry: nil, is_active: nil, link_urls: nil, name: nil, raw: nil, tags: nil, telephones: nil, timezone: nil, updated_at: nil, user_id: nil, websites: nil)
         @address = address
         @created_at = created_at

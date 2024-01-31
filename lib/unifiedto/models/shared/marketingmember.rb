@@ -5,7 +5,6 @@
 
 require 'sorbet-runtime'
 require 'faraday'
-require_relative '../shared/property_marketingmember_raw'
 
 module UnifiedRubySDK
   module Shared
@@ -24,14 +23,14 @@ module UnifiedRubySDK
 
       field :name, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
       # The raw data returned by the integration for this member
-      field :raw, T.nilable(Shared::PropertyMarketingMemberRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
       # An array of tags associated with this member
       field :tags, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
 
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(created_at: T.nilable(DateTime), emails: T.nilable(T::Array[Shared::MarketingEmail]), id: T.nilable(String), list_ids: T.nilable(T::Array[String]), name: T.nilable(String), raw: T.nilable(Shared::PropertyMarketingMemberRaw), tags: T.nilable(T::Array[String]), updated_at: T.nilable(DateTime)).void }
+      sig { params(created_at: T.nilable(DateTime), emails: T.nilable(T::Array[Shared::MarketingEmail]), id: T.nilable(String), list_ids: T.nilable(T::Array[String]), name: T.nilable(String), raw: T.nilable(T::Hash[Symbol, Object]), tags: T.nilable(T::Array[String]), updated_at: T.nilable(DateTime)).void }
       def initialize(created_at: nil, emails: nil, id: nil, list_ids: nil, name: nil, raw: nil, tags: nil, updated_at: nil)
         @created_at = created_at
         @emails = emails

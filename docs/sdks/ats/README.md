@@ -60,7 +60,9 @@ s.config_security(
 
     
 res = s.ats.create_ats_application(connection_id="string", ats_application=Shared::AtsApplication.new(
-    raw=Shared::PropertyAtsApplicationRaw.new(),
+    raw={
+      "Hassium": "string",
+    },
   ))
 
 if ! res.ats_application.nil?
@@ -110,7 +112,9 @@ res = s.ats.create_ats_candidate(connection_id="string", ats_candidate=Shared::A
     link_urls=[
       "string",
     ],
-    raw=Shared::PropertyAtsCandidateRaw.new(),
+    raw={
+      "radian": "string",
+    },
     tags=[
       "string",
     ],
@@ -159,7 +163,9 @@ s.config_security(
 
     
 res = s.ats.create_ats_document(connection_id="string", ats_document=Shared::AtsDocument.new(
-    raw=Shared::PropertyAtsDocumentRaw.new(),
+    raw={
+      "Southeast": "string",
+    },
   ))
 
 if ! res.ats_document.nil?
@@ -200,7 +206,9 @@ s.config_security(
 
     
 res = s.ats.create_ats_interview(connection_id="string", ats_interview=Shared::AtsInterview.new(
-    raw=Shared::PropertyAtsInterviewRaw.new(),
+    raw={
+      "Metrics": "string",
+    },
     user_ids=[
       "string",
     ],
@@ -261,7 +269,9 @@ res = s.ats.create_ats_job(connection_id="string", ats_job=Shared::AtsJob.new(
     public_job_urls=[
       "string",
     ],
-    raw=Shared::PropertyAtsJobRaw.new(),
+    raw={
+      "Loan": "string",
+    },
     recruiter_ids=[
       "string",
     ],
@@ -305,7 +315,9 @@ s.config_security(
 
     
 res = s.ats.create_ats_scorecard(connection_id="string", ats_scorecard=Shared::AtsScorecard.new(
-    raw=Shared::PropertyAtsScorecardRaw.new(),
+    raw={
+      "Brunei": "string",
+    },
   ))
 
 if ! res.ats_scorecard.nil?
@@ -913,7 +925,9 @@ s.config_security(
 
     
 res = s.ats.patch_ats_application(connection_id="string", id="string", ats_application=Shared::AtsApplication.new(
-    raw=Shared::PropertyAtsApplicationRaw.new(),
+    raw={
+      "Lead": "string",
+    },
   ))
 
 if ! res.ats_application.nil?
@@ -964,7 +978,9 @@ res = s.ats.patch_ats_candidate(connection_id="string", id="string", ats_candida
     link_urls=[
       "string",
     ],
-    raw=Shared::PropertyAtsCandidateRaw.new(),
+    raw={
+      "Credit": "string",
+    },
     tags=[
       "string",
     ],
@@ -1014,7 +1030,9 @@ s.config_security(
 
     
 res = s.ats.patch_ats_document(connection_id="string", id="string", ats_document=Shared::AtsDocument.new(
-    raw=Shared::PropertyAtsDocumentRaw.new(),
+    raw={
+      "Northeast": "string",
+    },
   ))
 
 if ! res.ats_document.nil?
@@ -1056,7 +1074,9 @@ s.config_security(
 
     
 res = s.ats.patch_ats_interview(connection_id="string", id="string", ats_interview=Shared::AtsInterview.new(
-    raw=Shared::PropertyAtsInterviewRaw.new(),
+    raw={
+      "courageously": "string",
+    },
     user_ids=[
       "string",
     ],
@@ -1118,7 +1138,9 @@ res = s.ats.patch_ats_job(connection_id="string", id="string", ats_job=Shared::A
     public_job_urls=[
       "string",
     ],
-    raw=Shared::PropertyAtsJobRaw.new(),
+    raw={
+      "indigo": "string",
+    },
     recruiter_ids=[
       "string",
     ],
@@ -1163,7 +1185,9 @@ s.config_security(
 
     
 res = s.ats.patch_ats_scorecard(connection_id="string", id="string", ats_scorecard=Shared::AtsScorecard.new(
-    raw=Shared::PropertyAtsScorecardRaw.new(),
+    raw={
+      "Falls": "string",
+    },
   ))
 
 if ! res.ats_scorecard.nil?
@@ -1439,7 +1463,9 @@ s.config_security(
 
     
 res = s.ats.update_ats_application(connection_id="string", id="string", ats_application=Shared::AtsApplication.new(
-    raw=Shared::PropertyAtsApplicationRaw.new(),
+    raw={
+      "Keyboard": "string",
+    },
   ))
 
 if ! res.ats_application.nil?
@@ -1490,7 +1516,9 @@ res = s.ats.update_ats_candidate(connection_id="string", id="string", ats_candid
     link_urls=[
       "string",
     ],
-    raw=Shared::PropertyAtsCandidateRaw.new(),
+    raw={
+      "B2C": "string",
+    },
     tags=[
       "string",
     ],
@@ -1540,7 +1568,9 @@ s.config_security(
 
     
 res = s.ats.update_ats_document(connection_id="string", id="string", ats_document=Shared::AtsDocument.new(
-    raw=Shared::PropertyAtsDocumentRaw.new(),
+    raw={
+      "turquoise": "string",
+    },
   ))
 
 if ! res.ats_document.nil?
@@ -1582,7 +1612,9 @@ s.config_security(
 
     
 res = s.ats.update_ats_interview(connection_id="string", id="string", ats_interview=Shared::AtsInterview.new(
-    raw=Shared::PropertyAtsInterviewRaw.new(),
+    raw={
+      "maroon": "string",
+    },
     user_ids=[
       "string",
     ],
@@ -1644,7 +1676,9 @@ res = s.ats.update_ats_job(connection_id="string", id="string", ats_job=Shared::
     public_job_urls=[
       "string",
     ],
-    raw=Shared::PropertyAtsJobRaw.new(),
+    raw={
+      "Plastic": "string",
+    },
     recruiter_ids=[
       "string",
     ],
@@ -1689,7 +1723,9 @@ s.config_security(
 
     
 res = s.ats.update_ats_scorecard(connection_id="string", id="string", ats_scorecard=Shared::AtsScorecard.new(
-    raw=Shared::PropertyAtsScorecardRaw.new(),
+    raw={
+      "East": "string",
+    },
   ))
 
 if ! res.ats_scorecard.nil?

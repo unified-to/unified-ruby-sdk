@@ -5,7 +5,6 @@
 
 require 'sorbet-runtime'
 require 'faraday'
-require_relative '../shared/property_atsstatus_raw'
 
 module UnifiedRubySDK
   module Shared
@@ -40,12 +39,12 @@ module UnifiedRubySDK
 
       field :original_status, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('original_status') } }
 
-      field :raw, T.nilable(Shared::PropertyAtsStatusRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :status, T.nilable(Shared::AtsStatusStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Shared::AtsStatusStatus, true) } }
 
 
-      sig { params(description: T.nilable(String), id: T.nilable(String), original_status: T.nilable(String), raw: T.nilable(Shared::PropertyAtsStatusRaw), status: T.nilable(Shared::AtsStatusStatus)).void }
+      sig { params(description: T.nilable(String), id: T.nilable(String), original_status: T.nilable(String), raw: T.nilable(T::Hash[Symbol, Object]), status: T.nilable(Shared::AtsStatusStatus)).void }
       def initialize(description: nil, id: nil, original_status: nil, raw: nil, status: nil)
         @description = description
         @id = id

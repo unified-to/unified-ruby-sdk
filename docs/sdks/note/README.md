@@ -29,7 +29,9 @@ s.config_security(
 
     
 res = s.note.create_ticketing_note(connection_id="string", ticketing_note=Shared::TicketingNote.new(
-    raw=Shared::PropertyTicketingNoteRaw.new(),
+    raw={
+      "Cruiser": "string",
+    },
   ))
 
 if ! res.ticketing_note.nil?
@@ -157,7 +159,9 @@ s.config_security(
 
     
 res = s.note.patch_ticketing_note(connection_id="string", id="string", ticketing_note=Shared::TicketingNote.new(
-    raw=Shared::PropertyTicketingNoteRaw.new(),
+    raw={
+      "soon": "string",
+    },
   ))
 
 if ! res.ticketing_note.nil?
@@ -238,7 +242,9 @@ s.config_security(
 
     
 res = s.note.update_ticketing_note(connection_id="string", id="string", ticketing_note=Shared::TicketingNote.new(
-    raw=Shared::PropertyTicketingNoteRaw.new(),
+    raw={
+      "lavender": "string",
+    },
   ))
 
 if ! res.ticketing_note.nil?

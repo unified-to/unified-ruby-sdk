@@ -6,7 +6,6 @@
 require 'sorbet-runtime'
 require 'faraday'
 require_relative '../shared/property_enrichcompany_address'
-require_relative '../shared/property_enrichcompany_raw'
 
 module UnifiedRubySDK
   module Shared
@@ -47,7 +46,7 @@ module UnifiedRubySDK
 
       field :name, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
       # The raw data returned by the integration for this company
-      field :raw, T.nilable(Shared::PropertyEnrichCompanyRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :revenue, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('revenue') } }
 
@@ -70,7 +69,7 @@ module UnifiedRubySDK
       field :youtube_url, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('youtube_url') } }
 
 
-      sig { params(address: T.nilable(Shared::PropertyEnrichCompanyAddress), alexa_rank: T.nilable(Float), created_at: T.nilable(DateTime), crunchbase_url: T.nilable(String), description: T.nilable(String), domain: T.nilable(String), employees: T.nilable(String), exchange: T.nilable(String), facebook_url: T.nilable(String), id: T.nilable(String), industry: T.nilable(String), instagram_url: T.nilable(String), linkedin_url: T.nilable(String), logo_url: T.nilable(String), naics_code: T.nilable(Float), name: T.nilable(String), raw: T.nilable(Shared::PropertyEnrichCompanyRaw), revenue: T.nilable(String), sic_code: T.nilable(Float), stock: T.nilable(String), telephones: T.nilable(T::Array[Shared::EnrichTelephone]), twitter_handle: T.nilable(String), twitter_url: T.nilable(String), updated_at: T.nilable(DateTime), year_founded: T.nilable(Float), yelp_url: T.nilable(String), youtube_url: T.nilable(String)).void }
+      sig { params(address: T.nilable(Shared::PropertyEnrichCompanyAddress), alexa_rank: T.nilable(Float), created_at: T.nilable(DateTime), crunchbase_url: T.nilable(String), description: T.nilable(String), domain: T.nilable(String), employees: T.nilable(String), exchange: T.nilable(String), facebook_url: T.nilable(String), id: T.nilable(String), industry: T.nilable(String), instagram_url: T.nilable(String), linkedin_url: T.nilable(String), logo_url: T.nilable(String), naics_code: T.nilable(Float), name: T.nilable(String), raw: T.nilable(T::Hash[Symbol, Object]), revenue: T.nilable(String), sic_code: T.nilable(Float), stock: T.nilable(String), telephones: T.nilable(T::Array[Shared::EnrichTelephone]), twitter_handle: T.nilable(String), twitter_url: T.nilable(String), updated_at: T.nilable(DateTime), year_founded: T.nilable(Float), yelp_url: T.nilable(String), youtube_url: T.nilable(String)).void }
       def initialize(address: nil, alexa_rank: nil, created_at: nil, crunchbase_url: nil, description: nil, domain: nil, employees: nil, exchange: nil, facebook_url: nil, id: nil, industry: nil, instagram_url: nil, linkedin_url: nil, logo_url: nil, naics_code: nil, name: nil, raw: nil, revenue: nil, sic_code: nil, stock: nil, telephones: nil, twitter_handle: nil, twitter_url: nil, updated_at: nil, year_founded: nil, yelp_url: nil, youtube_url: nil)
         @address = address
         @alexa_rank = alexa_rank

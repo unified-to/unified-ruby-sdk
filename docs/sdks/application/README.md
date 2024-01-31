@@ -29,7 +29,9 @@ s.config_security(
 
     
 res = s.application.create_ats_application(connection_id="string", ats_application=Shared::AtsApplication.new(
-    raw=Shared::PropertyAtsApplicationRaw.new(),
+    raw={
+      "Hassium": "string",
+    },
   ))
 
 if ! res.ats_application.nil?
@@ -157,7 +159,9 @@ s.config_security(
 
     
 res = s.application.patch_ats_application(connection_id="string", id="string", ats_application=Shared::AtsApplication.new(
-    raw=Shared::PropertyAtsApplicationRaw.new(),
+    raw={
+      "Lead": "string",
+    },
   ))
 
 if ! res.ats_application.nil?
@@ -238,7 +242,9 @@ s.config_security(
 
     
 res = s.application.update_ats_application(connection_id="string", id="string", ats_application=Shared::AtsApplication.new(
-    raw=Shared::PropertyAtsApplicationRaw.new(),
+    raw={
+      "Keyboard": "string",
+    },
   ))
 
 if ! res.ats_application.nil?

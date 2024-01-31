@@ -5,7 +5,6 @@
 
 require 'sorbet-runtime'
 require 'faraday'
-require_relative '../shared/property_atsdocument_raw'
 
 module UnifiedRubySDK
   module Shared
@@ -43,7 +42,7 @@ module UnifiedRubySDK
 
       field :job_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('job_id') } }
 
-      field :raw, T.nilable(Shared::PropertyAtsDocumentRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :type, T.nilable(Shared::AtsDocumentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Shared::AtsDocumentType, true) } }
 
@@ -52,7 +51,7 @@ module UnifiedRubySDK
       field :user_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
 
-      sig { params(application_id: T.nilable(String), candidate_id: T.nilable(String), created_at: T.nilable(DateTime), document_data: T.nilable(String), document_url: T.nilable(String), filename: T.nilable(String), id: T.nilable(String), job_id: T.nilable(String), raw: T.nilable(Shared::PropertyAtsDocumentRaw), type: T.nilable(Shared::AtsDocumentType), updated_at: T.nilable(DateTime), user_id: T.nilable(String)).void }
+      sig { params(application_id: T.nilable(String), candidate_id: T.nilable(String), created_at: T.nilable(DateTime), document_data: T.nilable(String), document_url: T.nilable(String), filename: T.nilable(String), id: T.nilable(String), job_id: T.nilable(String), raw: T.nilable(T::Hash[Symbol, Object]), type: T.nilable(Shared::AtsDocumentType), updated_at: T.nilable(DateTime), user_id: T.nilable(String)).void }
       def initialize(application_id: nil, candidate_id: nil, created_at: nil, document_data: nil, document_url: nil, filename: nil, id: nil, job_id: nil, raw: nil, type: nil, updated_at: nil, user_id: nil)
         @application_id = application_id
         @candidate_id = candidate_id

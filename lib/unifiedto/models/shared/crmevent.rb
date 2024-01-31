@@ -9,7 +9,6 @@ require_relative '../shared/property_crmevent_call'
 require_relative '../shared/property_crmevent_email'
 require_relative '../shared/property_crmevent_meeting'
 require_relative '../shared/property_crmevent_note'
-require_relative '../shared/property_crmevent_raw'
 require_relative '../shared/property_crmevent_task'
 
 module UnifiedRubySDK
@@ -51,7 +50,7 @@ module UnifiedRubySDK
       # The note object, when type = note
       field :note, T.nilable(Shared::PropertyCrmEventNote), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('note') } }
       # The raw data returned by the integration for this event.
-      field :raw, T.nilable(Shared::PropertyCrmEventRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
       # The task object, when type = task
       field :task, T.nilable(Shared::PropertyCrmEventTask), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('task') } }
 
@@ -62,7 +61,7 @@ module UnifiedRubySDK
       field :user_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
 
-      sig { params(call: T.nilable(Shared::PropertyCrmEventCall), company_ids: T.nilable(T::Array[String]), contact_ids: T.nilable(T::Array[String]), created_at: T.nilable(DateTime), deal_ids: T.nilable(T::Array[String]), email: T.nilable(Shared::PropertyCrmEventEmail), id: T.nilable(String), lead_ids: T.nilable(T::Array[String]), meeting: T.nilable(Shared::PropertyCrmEventMeeting), note: T.nilable(Shared::PropertyCrmEventNote), raw: T.nilable(Shared::PropertyCrmEventRaw), task: T.nilable(Shared::PropertyCrmEventTask), type: T.nilable(Shared::CrmEventType), updated_at: T.nilable(DateTime), user_id: T.nilable(String)).void }
+      sig { params(call: T.nilable(Shared::PropertyCrmEventCall), company_ids: T.nilable(T::Array[String]), contact_ids: T.nilable(T::Array[String]), created_at: T.nilable(DateTime), deal_ids: T.nilable(T::Array[String]), email: T.nilable(Shared::PropertyCrmEventEmail), id: T.nilable(String), lead_ids: T.nilable(T::Array[String]), meeting: T.nilable(Shared::PropertyCrmEventMeeting), note: T.nilable(Shared::PropertyCrmEventNote), raw: T.nilable(T::Hash[Symbol, Object]), task: T.nilable(Shared::PropertyCrmEventTask), type: T.nilable(Shared::CrmEventType), updated_at: T.nilable(DateTime), user_id: T.nilable(String)).void }
       def initialize(call: nil, company_ids: nil, contact_ids: nil, created_at: nil, deal_ids: nil, email: nil, id: nil, lead_ids: nil, meeting: nil, note: nil, raw: nil, task: nil, type: nil, updated_at: nil, user_id: nil)
         @call = call
         @company_ids = company_ids

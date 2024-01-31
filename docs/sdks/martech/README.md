@@ -35,7 +35,9 @@ s.config_security(
 
     
 res = s.martech.create_martech_list(connection_id="string", marketing_list=Shared::MarketingList.new(
-    raw=Shared::PropertyMarketingListRaw.new(),
+    raw={
+      "Latin": "string",
+    },
   ))
 
 if ! res.marketing_list.nil?
@@ -84,7 +86,9 @@ res = s.martech.create_martech_member(connection_id="string", marketing_member=S
     list_ids=[
       "string",
     ],
-    raw=Shared::PropertyMarketingMemberRaw.new(),
+    raw={
+      "input": "string",
+    },
     tags=[
       "string",
     ],
@@ -302,7 +306,9 @@ s.config_security(
 
     
 res = s.martech.patch_martech_list(connection_id="string", id="string", marketing_list=Shared::MarketingList.new(
-    raw=Shared::PropertyMarketingListRaw.new(),
+    raw={
+      "Classical": "string",
+    },
   ))
 
 if ! res.marketing_list.nil?
@@ -352,7 +358,9 @@ res = s.martech.patch_martech_member(connection_id="string", id="string", market
     list_ids=[
       "string",
     ],
-    raw=Shared::PropertyMarketingMemberRaw.new(),
+    raw={
+      "Handcrafted": "string",
+    },
     tags=[
       "string",
     ],
@@ -475,7 +483,9 @@ s.config_security(
 
     
 res = s.martech.update_martech_list(connection_id="string", id="string", marketing_list=Shared::MarketingList.new(
-    raw=Shared::PropertyMarketingListRaw.new(),
+    raw={
+      "innocently": "string",
+    },
   ))
 
 if ! res.marketing_list.nil?
@@ -525,7 +535,9 @@ res = s.martech.update_martech_member(connection_id="string", id="string", marke
     list_ids=[
       "string",
     ],
-    raw=Shared::PropertyMarketingMemberRaw.new(),
+    raw={
+      "connect": "string",
+    },
     tags=[
       "string",
     ],

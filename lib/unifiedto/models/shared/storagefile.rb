@@ -5,7 +5,6 @@
 
 require 'sorbet-runtime'
 require 'faraday'
-require_relative '../shared/property_storagefile_raw'
 
 module UnifiedRubySDK
   module Shared
@@ -39,7 +38,7 @@ module UnifiedRubySDK
 
       field :permissions, T.nilable(T::Array[Shared::StoragePermission]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('permissions') } }
 
-      field :raw, T.nilable(Shared::PropertyStorageFileRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :size, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
 
@@ -50,7 +49,7 @@ module UnifiedRubySDK
       field :user_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
 
-      sig { params(created_at: T.nilable(DateTime), description: T.nilable(String), download_url: T.nilable(String), id: T.nilable(String), mime_type: T.nilable(String), name: T.nilable(String), parent_id: T.nilable(String), permissions: T.nilable(T::Array[Shared::StoragePermission]), raw: T.nilable(Shared::PropertyStorageFileRaw), size: T.nilable(Float), type: T.nilable(Shared::StorageFileType), updated_at: T.nilable(DateTime), user_id: T.nilable(String)).void }
+      sig { params(created_at: T.nilable(DateTime), description: T.nilable(String), download_url: T.nilable(String), id: T.nilable(String), mime_type: T.nilable(String), name: T.nilable(String), parent_id: T.nilable(String), permissions: T.nilable(T::Array[Shared::StoragePermission]), raw: T.nilable(T::Hash[Symbol, Object]), size: T.nilable(Float), type: T.nilable(Shared::StorageFileType), updated_at: T.nilable(DateTime), user_id: T.nilable(String)).void }
       def initialize(created_at: nil, description: nil, download_url: nil, id: nil, mime_type: nil, name: nil, parent_id: nil, permissions: nil, raw: nil, size: nil, type: nil, updated_at: nil, user_id: nil)
         @created_at = created_at
         @description = description

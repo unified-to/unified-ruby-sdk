@@ -30,7 +30,9 @@ s.config_security(
     
 res = s.item.create_accounting_item(connection_id="string", accounting_item=Shared::AccountingItem.new(
     name="string",
-    raw=Shared::PropertyAccountingItemRaw.new(),
+    raw={
+      "visionary": "string",
+    },
   ))
 
 if ! res.accounting_item.nil?
@@ -159,7 +161,9 @@ s.config_security(
     
 res = s.item.patch_accounting_item(connection_id="string", id="string", accounting_item=Shared::AccountingItem.new(
     name="string",
-    raw=Shared::PropertyAccountingItemRaw.new(),
+    raw={
+      "Sleek": "string",
+    },
   ))
 
 if ! res.accounting_item.nil?
@@ -241,7 +245,9 @@ s.config_security(
     
 res = s.item.update_accounting_item(connection_id="string", id="string", accounting_item=Shared::AccountingItem.new(
     name="string",
-    raw=Shared::PropertyAccountingItemRaw.new(),
+    raw={
+      "Northwest": "string",
+    },
   ))
 
 if ! res.accounting_item.nil?

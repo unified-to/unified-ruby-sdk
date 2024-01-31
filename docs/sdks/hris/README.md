@@ -41,7 +41,9 @@ res = s.hris.create_hris_employee(connection_id="string", hris_employee=Shared::
         email="Adriel_Hansen@hotmail.com",
       ),
     ],
-    raw=Shared::PropertyHrisEmployeeRaw.new(),
+    raw={
+      "composite": "string",
+    },
     telephones=[
       Shared::HrisTelephone.new(
         telephone="string",
@@ -90,7 +92,9 @@ res = s.hris.create_hris_group(connection_id="string", hris_group=Shared::HrisGr
     manager_ids=[
       "string",
     ],
-    raw=Shared::PropertyHrisGroupRaw.new(),
+    raw={
+      "transmitter": "string",
+    },
     user_ids=[
       "string",
     ],
@@ -314,7 +318,9 @@ res = s.hris.patch_hris_employee(connection_id="string", id="string", hris_emplo
         email="Zetta.Cassin@yahoo.com",
       ),
     ],
-    raw=Shared::PropertyHrisEmployeeRaw.new(),
+    raw={
+      "cyan": "string",
+    },
     telephones=[
       Shared::HrisTelephone.new(
         telephone="string",
@@ -364,7 +370,9 @@ res = s.hris.patch_hris_group(connection_id="string", id="string", hris_group=Sh
     manager_ids=[
       "string",
     ],
-    raw=Shared::PropertyHrisGroupRaw.new(),
+    raw={
+      "scalable": "string",
+    },
     user_ids=[
       "string",
     ],
@@ -493,7 +501,9 @@ res = s.hris.update_hris_employee(connection_id="string", id="string", hris_empl
         email="Abbie_Aufderhar@gmail.com",
       ),
     ],
-    raw=Shared::PropertyHrisEmployeeRaw.new(),
+    raw={
+      "Mazda": "string",
+    },
     telephones=[
       Shared::HrisTelephone.new(
         telephone="string",
@@ -543,7 +553,9 @@ res = s.hris.update_hris_group(connection_id="string", id="string", hris_group=S
     manager_ids=[
       "string",
     ],
-    raw=Shared::PropertyHrisGroupRaw.new(),
+    raw={
+      "disintermediate": "string",
+    },
     user_ids=[
       "string",
     ],

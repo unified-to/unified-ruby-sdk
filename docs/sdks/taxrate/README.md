@@ -31,7 +31,9 @@ s.config_security(
 res = s.taxrate.create_accounting_taxrate(connection_id="string", accounting_taxrate=Shared::AccountingTaxrate.new(
     name="string",
     rate=1719.1,
-    raw=Shared::PropertyAccountingTaxrateRaw.new(),
+    raw={
+      "Gorgeous": "string",
+    },
   ))
 
 if ! res.accounting_taxrate.nil?
@@ -161,7 +163,9 @@ s.config_security(
 res = s.taxrate.patch_accounting_taxrate(connection_id="string", id="string", accounting_taxrate=Shared::AccountingTaxrate.new(
     name="string",
     rate=5991.47,
-    raw=Shared::PropertyAccountingTaxrateRaw.new(),
+    raw={
+      "Representative": "string",
+    },
   ))
 
 if ! res.accounting_taxrate.nil?
@@ -244,7 +248,9 @@ s.config_security(
 res = s.taxrate.update_accounting_taxrate(connection_id="string", id="string", accounting_taxrate=Shared::AccountingTaxrate.new(
     name="string",
     rate=3382.78,
-    raw=Shared::PropertyAccountingTaxrateRaw.new(),
+    raw={
+      "Hatchback": "string",
+    },
   ))
 
 if ! res.accounting_taxrate.nil?

@@ -55,7 +55,9 @@ res = s.event.create_crm_event(connection_id="string", crm_event=Shared::CrmEven
     ],
     meeting=Shared::PropertyCrmEventMeeting.new(),
     note=Shared::PropertyCrmEventNote.new(),
-    raw=Shared::PropertyCrmEventRaw.new(),
+    raw={
+      "repeatedly": "string",
+    },
     task=Shared::PropertyCrmEventTask.new(),
   ))
 
@@ -210,7 +212,9 @@ res = s.event.patch_crm_event(connection_id="string", id="string", crm_event=Sha
     ],
     meeting=Shared::PropertyCrmEventMeeting.new(),
     note=Shared::PropertyCrmEventNote.new(),
-    raw=Shared::PropertyCrmEventRaw.new(),
+    raw={
+      "XML": "string",
+    },
     task=Shared::PropertyCrmEventTask.new(),
   ))
 
@@ -318,7 +322,9 @@ res = s.event.update_crm_event(connection_id="string", id="string", crm_event=Sh
     ],
     meeting=Shared::PropertyCrmEventMeeting.new(),
     note=Shared::PropertyCrmEventNote.new(),
-    raw=Shared::PropertyCrmEventRaw.new(),
+    raw={
+      "Account": "string",
+    },
     task=Shared::PropertyCrmEventTask.new(),
   ))
 

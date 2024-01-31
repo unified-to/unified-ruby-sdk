@@ -37,7 +37,9 @@ res = s.member.create_martech_member(connection_id="string", marketing_member=Sh
     list_ids=[
       "string",
     ],
-    raw=Shared::PropertyMarketingMemberRaw.new(),
+    raw={
+      "input": "string",
+    },
     tags=[
       "string",
     ],
@@ -176,7 +178,9 @@ res = s.member.patch_martech_member(connection_id="string", id="string", marketi
     list_ids=[
       "string",
     ],
-    raw=Shared::PropertyMarketingMemberRaw.new(),
+    raw={
+      "Handcrafted": "string",
+    },
     tags=[
       "string",
     ],
@@ -268,7 +272,9 @@ res = s.member.update_martech_member(connection_id="string", id="string", market
     list_ids=[
       "string",
     ],
-    raw=Shared::PropertyMarketingMemberRaw.new(),
+    raw={
+      "connect": "string",
+    },
     tags=[
       "string",
     ],

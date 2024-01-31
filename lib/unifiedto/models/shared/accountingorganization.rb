@@ -6,7 +6,6 @@
 require 'sorbet-runtime'
 require 'faraday'
 require_relative '../shared/property_accountingorganization_address'
-require_relative '../shared/property_accountingorganization_raw'
 
 module UnifiedRubySDK
   module Shared
@@ -29,7 +28,7 @@ module UnifiedRubySDK
 
       field :legal_name, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('legal_name') } }
 
-      field :raw, T.nilable(Shared::PropertyAccountingOrganizationRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :tax_number, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_number') } }
 
@@ -40,7 +39,7 @@ module UnifiedRubySDK
       field :website, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('website') } }
 
 
-      sig { params(name: String, address: T.nilable(Shared::PropertyAccountingOrganizationAddress), created_at: T.nilable(DateTime), currency: T.nilable(String), fiscal_year_end_month: T.nilable(Float), id: T.nilable(String), legal_name: T.nilable(String), raw: T.nilable(Shared::PropertyAccountingOrganizationRaw), tax_number: T.nilable(String), timezone: T.nilable(String), updated_at: T.nilable(DateTime), website: T.nilable(String)).void }
+      sig { params(name: String, address: T.nilable(Shared::PropertyAccountingOrganizationAddress), created_at: T.nilable(DateTime), currency: T.nilable(String), fiscal_year_end_month: T.nilable(Float), id: T.nilable(String), legal_name: T.nilable(String), raw: T.nilable(T::Hash[Symbol, Object]), tax_number: T.nilable(String), timezone: T.nilable(String), updated_at: T.nilable(DateTime), website: T.nilable(String)).void }
       def initialize(name: nil, address: nil, created_at: nil, currency: nil, fiscal_year_end_month: nil, id: nil, legal_name: nil, raw: nil, tax_number: nil, timezone: nil, updated_at: nil, website: nil)
         @name = name
         @address = address

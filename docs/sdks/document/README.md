@@ -29,7 +29,9 @@ s.config_security(
 
     
 res = s.document.create_ats_document(connection_id="string", ats_document=Shared::AtsDocument.new(
-    raw=Shared::PropertyAtsDocumentRaw.new(),
+    raw={
+      "Southeast": "string",
+    },
   ))
 
 if ! res.ats_document.nil?
@@ -157,7 +159,9 @@ s.config_security(
 
     
 res = s.document.patch_ats_document(connection_id="string", id="string", ats_document=Shared::AtsDocument.new(
-    raw=Shared::PropertyAtsDocumentRaw.new(),
+    raw={
+      "Northeast": "string",
+    },
   ))
 
 if ! res.ats_document.nil?
@@ -238,7 +242,9 @@ s.config_security(
 
     
 res = s.document.update_ats_document(connection_id="string", id="string", ats_document=Shared::AtsDocument.new(
-    raw=Shared::PropertyAtsDocumentRaw.new(),
+    raw={
+      "turquoise": "string",
+    },
   ))
 
 if ! res.ats_document.nil?

@@ -29,7 +29,9 @@ s.config_security(
 
     
 res = s.deal.create_crm_deal(connection_id="string", crm_deal=Shared::CrmDeal.new(
-    raw=Shared::PropertyCrmDealRaw.new(),
+    raw={
+      "Toys": "string",
+    },
     tags=[
       "string",
     ],
@@ -160,7 +162,9 @@ s.config_security(
 
     
 res = s.deal.patch_crm_deal(connection_id="string", id="string", crm_deal=Shared::CrmDeal.new(
-    raw=Shared::PropertyCrmDealRaw.new(),
+    raw={
+      "consign": "string",
+    },
     tags=[
       "string",
     ],
@@ -244,7 +248,9 @@ s.config_security(
 
     
 res = s.deal.update_crm_deal(connection_id="string", id="string", crm_deal=Shared::CrmDeal.new(
-    raw=Shared::PropertyCrmDealRaw.new(),
+    raw={
+      "South": "string",
+    },
     tags=[
       "string",
     ],

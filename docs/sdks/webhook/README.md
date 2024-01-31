@@ -33,8 +33,10 @@ res = s.webhook.create_unified_webhook(webhook=Shared::Webhook.new(
     event=Shared::Event::CREATED,
     hook_url="string",
     interval=188.12,
-    meta=Shared::PropertyWebhookMeta.new(),
-    object_type=Shared::ObjectType::CRM_COMPANY,
+    meta={
+      "payment": "string",
+    },
+    object_type=Shared::ObjectType::ACCOUNTING_CONTACT,
     runs=[
       "string",
     ],

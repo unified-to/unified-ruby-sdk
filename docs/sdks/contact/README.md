@@ -47,7 +47,9 @@ res = s.contact.create_accounting_contact(connection_id="string", accounting_con
         email="Mac36@gmail.com",
       ),
     ],
-    raw=Shared::PropertyAccountingContactRaw.new(),
+    raw={
+      "indexing": "string",
+    },
     shipping_address=Shared::PropertyAccountingContactShippingAddress.new(),
     telephones=[
       Shared::AccountingTelephone.new(
@@ -104,7 +106,9 @@ res = s.contact.create_crm_contact(connection_id="string", crm_contact=Shared::C
     emails=[
       Shared::CrmEmail.new(),
     ],
-    raw=Shared::PropertyCrmContactRaw.new(),
+    raw={
+      "Mendelevium": "string",
+    },
     telephones=[
       Shared::CrmTelephone.new(
         telephone="string",
@@ -155,7 +159,9 @@ res = s.contact.create_uc_contact(connection_id="string", uc_contact=Shared::UcC
         email="Dulce_Becker30@yahoo.com",
       ),
     ],
-    raw=Shared::PropertyUcContactRaw.new(),
+    raw={
+      "challenge": "string",
+    },
     telephones=[
       Shared::UcTelephone.new(
         telephone="string",
@@ -468,7 +474,9 @@ res = s.contact.patch_accounting_contact(connection_id="string", id="string", ac
         email="Sylvester.Kuhic@yahoo.com",
       ),
     ],
-    raw=Shared::PropertyAccountingContactRaw.new(),
+    raw={
+      "copying": "string",
+    },
     shipping_address=Shared::PropertyAccountingContactShippingAddress.new(),
     telephones=[
       Shared::AccountingTelephone.new(
@@ -526,7 +534,9 @@ res = s.contact.patch_crm_contact(connection_id="string", id="string", crm_conta
     emails=[
       Shared::CrmEmail.new(),
     ],
-    raw=Shared::PropertyCrmContactRaw.new(),
+    raw={
+      "architecture": "string",
+    },
     telephones=[
       Shared::CrmTelephone.new(
         telephone="string",
@@ -578,7 +588,9 @@ res = s.contact.patch_uc_contact(connection_id="string", id="string", uc_contact
         email="Norene_Boehm97@hotmail.com",
       ),
     ],
-    raw=Shared::PropertyUcContactRaw.new(),
+    raw={
+      "Borders": "string",
+    },
     telephones=[
       Shared::UcTelephone.new(
         telephone="string",
@@ -748,7 +760,9 @@ res = s.contact.update_accounting_contact(connection_id="string", id="string", a
         email="Kaci_Hane@hotmail.com",
       ),
     ],
-    raw=Shared::PropertyAccountingContactRaw.new(),
+    raw={
+      "Ohio": "string",
+    },
     shipping_address=Shared::PropertyAccountingContactShippingAddress.new(),
     telephones=[
       Shared::AccountingTelephone.new(
@@ -806,7 +820,9 @@ res = s.contact.update_crm_contact(connection_id="string", id="string", crm_cont
     emails=[
       Shared::CrmEmail.new(),
     ],
-    raw=Shared::PropertyCrmContactRaw.new(),
+    raw={
+      "Universal": "string",
+    },
     telephones=[
       Shared::CrmTelephone.new(
         telephone="string",
@@ -858,7 +874,9 @@ res = s.contact.update_uc_contact(connection_id="string", id="string", uc_contac
         email="Kianna.Witting90@gmail.com",
       ),
     ],
-    raw=Shared::PropertyUcContactRaw.new(),
+    raw={
+      "Convertible": "string",
+    },
     telephones=[
       Shared::UcTelephone.new(
         telephone="string",

@@ -29,7 +29,9 @@ s.config_security(
 
     
 res = s.interview.create_ats_interview(connection_id="string", ats_interview=Shared::AtsInterview.new(
-    raw=Shared::PropertyAtsInterviewRaw.new(),
+    raw={
+      "Metrics": "string",
+    },
     user_ids=[
       "string",
     ],
@@ -160,7 +162,9 @@ s.config_security(
 
     
 res = s.interview.patch_ats_interview(connection_id="string", id="string", ats_interview=Shared::AtsInterview.new(
-    raw=Shared::PropertyAtsInterviewRaw.new(),
+    raw={
+      "courageously": "string",
+    },
     user_ids=[
       "string",
     ],
@@ -244,7 +248,9 @@ s.config_security(
 
     
 res = s.interview.update_ats_interview(connection_id="string", id="string", ats_interview=Shared::AtsInterview.new(
-    raw=Shared::PropertyAtsInterviewRaw.new(),
+    raw={
+      "maroon": "string",
+    },
     user_ids=[
       "string",
     ],

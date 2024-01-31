@@ -29,7 +29,9 @@ s.config_security(
 
     
 res = s.pipeline.create_crm_pipeline(connection_id="string", crm_pipeline=Shared::CrmPipeline.new(
-    raw=Shared::PropertyCrmPipelineRaw.new(),
+    raw={
+      "Mazda": "string",
+    },
   ))
 
 if ! res.crm_pipeline.nil?
@@ -157,7 +159,9 @@ s.config_security(
 
     
 res = s.pipeline.patch_crm_pipeline(connection_id="string", id="string", crm_pipeline=Shared::CrmPipeline.new(
-    raw=Shared::PropertyCrmPipelineRaw.new(),
+    raw={
+      "unimpressively": "string",
+    },
   ))
 
 if ! res.crm_pipeline.nil?
@@ -238,7 +242,9 @@ s.config_security(
 
     
 res = s.pipeline.update_crm_pipeline(connection_id="string", id="string", crm_pipeline=Shared::CrmPipeline.new(
-    raw=Shared::PropertyCrmPipelineRaw.new(),
+    raw={
+      "functionalities": "string",
+    },
   ))
 
 if ! res.crm_pipeline.nil?

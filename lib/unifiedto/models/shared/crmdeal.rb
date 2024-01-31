@@ -5,7 +5,6 @@
 
 require 'sorbet-runtime'
 require 'faraday'
-require_relative '../shared/property_crmdeal_raw'
 
 module UnifiedRubySDK
   module Shared
@@ -32,7 +31,7 @@ module UnifiedRubySDK
 
       field :probability, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('probability') } }
       # The raw data returned by the integration for this deal
-      field :raw, T.nilable(Shared::PropertyCrmDealRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :source, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source') } }
 
@@ -47,7 +46,7 @@ module UnifiedRubySDK
       field :won_reason, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('won_reason') } }
 
 
-      sig { params(amount: T.nilable(Float), closed_at: T.nilable(DateTime), created_at: T.nilable(DateTime), currency: T.nilable(String), id: T.nilable(String), lost_reason: T.nilable(String), name: T.nilable(String), pipeline: T.nilable(String), probability: T.nilable(Float), raw: T.nilable(Shared::PropertyCrmDealRaw), source: T.nilable(String), stage: T.nilable(String), tags: T.nilable(T::Array[String]), updated_at: T.nilable(DateTime), user_id: T.nilable(String), won_reason: T.nilable(String)).void }
+      sig { params(amount: T.nilable(Float), closed_at: T.nilable(DateTime), created_at: T.nilable(DateTime), currency: T.nilable(String), id: T.nilable(String), lost_reason: T.nilable(String), name: T.nilable(String), pipeline: T.nilable(String), probability: T.nilable(Float), raw: T.nilable(T::Hash[Symbol, Object]), source: T.nilable(String), stage: T.nilable(String), tags: T.nilable(T::Array[String]), updated_at: T.nilable(DateTime), user_id: T.nilable(String), won_reason: T.nilable(String)).void }
       def initialize(amount: nil, closed_at: nil, created_at: nil, currency: nil, id: nil, lost_reason: nil, name: nil, pipeline: nil, probability: nil, raw: nil, source: nil, stage: nil, tags: nil, updated_at: nil, user_id: nil, won_reason: nil)
         @amount = amount
         @closed_at = closed_at

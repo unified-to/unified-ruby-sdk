@@ -40,7 +40,9 @@ res = s.company.create_crm_company(connection_id="string", crm_company=Shared::C
     link_urls=[
       "string",
     ],
-    raw=Shared::PropertyCrmCompanyRaw.new(),
+    raw={
+      "connecting": "string",
+    },
     tags=[
       "string",
     ],
@@ -229,7 +231,9 @@ res = s.company.patch_crm_company(connection_id="string", id="string", crm_compa
     link_urls=[
       "string",
     ],
-    raw=Shared::PropertyCrmCompanyRaw.new(),
+    raw={
+      "Producer": "string",
+    },
     tags=[
       "string",
     ],
@@ -331,7 +335,9 @@ res = s.company.update_crm_company(connection_id="string", id="string", crm_comp
     link_urls=[
       "string",
     ],
-    raw=Shared::PropertyCrmCompanyRaw.new(),
+    raw={
+      "SMS": "string",
+    },
     tags=[
       "string",
     ],

@@ -46,7 +46,9 @@ res = s.ticketing.create_ticketing_customer(connection_id="string", ticketing_cu
         email="Guadalupe78@yahoo.com",
       ),
     ],
-    raw=Shared::PropertyTicketingCustomerRaw.new(),
+    raw={
+      "Borders": "string",
+    },
     tags=[
       "string",
     ],
@@ -95,7 +97,9 @@ s.config_security(
 
     
 res = s.ticketing.create_ticketing_note(connection_id="string", ticketing_note=Shared::TicketingNote.new(
-    raw=Shared::PropertyTicketingNoteRaw.new(),
+    raw={
+      "Cruiser": "string",
+    },
   ))
 
 if ! res.ticketing_note.nil?
@@ -136,7 +140,9 @@ s.config_security(
 
     
 res = s.ticketing.create_ticketing_ticket(connection_id="string", ticketing_ticket=Shared::TicketingTicket.new(
-    raw=Shared::PropertyTicketingTicketRaw.new(),
+    raw={
+      "sky": "string",
+    },
     tags=[
       "string",
     ],
@@ -446,7 +452,9 @@ res = s.ticketing.patch_ticketing_customer(connection_id="string", id="string", 
         email="Raymundo93@hotmail.com",
       ),
     ],
-    raw=Shared::PropertyTicketingCustomerRaw.new(),
+    raw={
+      "Brownsville": "string",
+    },
     tags=[
       "string",
     ],
@@ -496,7 +504,9 @@ s.config_security(
 
     
 res = s.ticketing.patch_ticketing_note(connection_id="string", id="string", ticketing_note=Shared::TicketingNote.new(
-    raw=Shared::PropertyTicketingNoteRaw.new(),
+    raw={
+      "soon": "string",
+    },
   ))
 
 if ! res.ticketing_note.nil?
@@ -538,7 +548,9 @@ s.config_security(
 
     
 res = s.ticketing.patch_ticketing_ticket(connection_id="string", id="string", ticketing_ticket=Shared::TicketingTicket.new(
-    raw=Shared::PropertyTicketingTicketRaw.new(),
+    raw={
+      "Bespoke": "string",
+    },
     tags=[
       "string",
     ],
@@ -705,7 +717,9 @@ res = s.ticketing.update_ticketing_customer(connection_id="string", id="string",
         email="Mohamed.Friesen@hotmail.com",
       ),
     ],
-    raw=Shared::PropertyTicketingCustomerRaw.new(),
+    raw={
+      "Barium": "string",
+    },
     tags=[
       "string",
     ],
@@ -755,7 +769,9 @@ s.config_security(
 
     
 res = s.ticketing.update_ticketing_note(connection_id="string", id="string", ticketing_note=Shared::TicketingNote.new(
-    raw=Shared::PropertyTicketingNoteRaw.new(),
+    raw={
+      "lavender": "string",
+    },
   ))
 
 if ! res.ticketing_note.nil?
@@ -797,7 +813,9 @@ s.config_security(
 
     
 res = s.ticketing.update_ticketing_ticket(connection_id="string", id="string", ticketing_ticket=Shared::TicketingTicket.new(
-    raw=Shared::PropertyTicketingTicketRaw.new(),
+    raw={
+      "Rhode": "string",
+    },
     tags=[
       "string",
     ],

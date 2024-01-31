@@ -27,7 +27,9 @@ s.config_security(
 )
 
     
-res = s.passthrough.create_passthrough(connection_id="string", path="string", undefined=Shared::Undefined.new())
+res = s.passthrough.create_passthrough(connection_id="string", path="string", request_body={
+    "turquoise": "string",
+  })
 
 if ! res.undefined.nil?
   # handle response
@@ -37,11 +39,11 @@ end
 
 ### Parameters
 
-| Parameter                                             | Type                                                  | Required                                              | Description                                           |
-| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| `connection_id`                                       | *String*                                              | :heavy_check_mark:                                    | ID of the connection                                  |
-| `path`                                                | *String*                                              | :heavy_check_mark:                                    | N/A                                                   |
-| `undefined`                                           | [Shared::Undefined](../../models/shared/undefined.md) | :heavy_minus_sign:                                    | integration-specific payload                          |
+| Parameter                    | Type                         | Required                     | Description                  |
+| ---------------------------- | ---------------------------- | ---------------------------- | ---------------------------- |
+| `connection_id`              | *String*                     | :heavy_check_mark:           | ID of the connection         |
+| `path`                       | *String*                     | :heavy_check_mark:           | N/A                          |
+| `request_body`               | T::Hash[Symbol, *Object*]    | :heavy_minus_sign:           | integration-specific payload |
 
 
 ### Response
@@ -106,7 +108,9 @@ s.config_security(
 )
 
     
-res = s.passthrough.patch_passthrough(connection_id="string", path="string", undefined=Shared::Undefined.new())
+res = s.passthrough.patch_passthrough(connection_id="string", path="string", request_body={
+    "brand": "string",
+  })
 
 if ! res.undefined.nil?
   # handle response
@@ -116,11 +120,11 @@ end
 
 ### Parameters
 
-| Parameter                                             | Type                                                  | Required                                              | Description                                           |
-| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| `connection_id`                                       | *String*                                              | :heavy_check_mark:                                    | ID of the connection                                  |
-| `path`                                                | *String*                                              | :heavy_check_mark:                                    | N/A                                                   |
-| `undefined`                                           | [Shared::Undefined](../../models/shared/undefined.md) | :heavy_minus_sign:                                    | integration-specific payload                          |
+| Parameter                    | Type                         | Required                     | Description                  |
+| ---------------------------- | ---------------------------- | ---------------------------- | ---------------------------- |
+| `connection_id`              | *String*                     | :heavy_check_mark:           | ID of the connection         |
+| `path`                       | *String*                     | :heavy_check_mark:           | N/A                          |
+| `request_body`               | T::Hash[Symbol, *Object*]    | :heavy_minus_sign:           | integration-specific payload |
 
 
 ### Response
@@ -185,7 +189,9 @@ s.config_security(
 )
 
     
-res = s.passthrough.update_passthrough(connection_id="string", path="string", undefined=Shared::Undefined.new())
+res = s.passthrough.update_passthrough(connection_id="string", path="string", request_body={
+    "Northwest": "string",
+  })
 
 if ! res.undefined.nil?
   # handle response
@@ -195,11 +201,11 @@ end
 
 ### Parameters
 
-| Parameter                                             | Type                                                  | Required                                              | Description                                           |
-| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| `connection_id`                                       | *String*                                              | :heavy_check_mark:                                    | ID of the connection                                  |
-| `path`                                                | *String*                                              | :heavy_check_mark:                                    | N/A                                                   |
-| `undefined`                                           | [Shared::Undefined](../../models/shared/undefined.md) | :heavy_minus_sign:                                    | integration-specific payload                          |
+| Parameter                    | Type                         | Required                     | Description                  |
+| ---------------------------- | ---------------------------- | ---------------------------- | ---------------------------- |
+| `connection_id`              | *String*                     | :heavy_check_mark:           | ID of the connection         |
+| `path`                       | *String*                     | :heavy_check_mark:           | N/A                          |
+| `request_body`               | T::Hash[Symbol, *Object*]    | :heavy_minus_sign:           | integration-specific payload |
 
 
 ### Response

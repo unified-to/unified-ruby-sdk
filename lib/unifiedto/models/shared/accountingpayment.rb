@@ -5,7 +5,6 @@
 
 require 'sorbet-runtime'
 require 'faraday'
-require_relative '../shared/property_accountingpayment_raw'
 
 module UnifiedRubySDK
   module Shared
@@ -30,7 +29,7 @@ module UnifiedRubySDK
 
       field :payment_method, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_method') } }
 
-      field :raw, T.nilable(Shared::PropertyAccountingPaymentRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :reference, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference') } }
 
@@ -39,7 +38,7 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(account_id: T.nilable(String), contact_id: T.nilable(String), created_at: T.nilable(DateTime), currency: T.nilable(String), id: T.nilable(String), invoice_id: T.nilable(String), notes: T.nilable(String), payment_method: T.nilable(String), raw: T.nilable(Shared::PropertyAccountingPaymentRaw), reference: T.nilable(String), total_amount: T.nilable(Float), updated_at: T.nilable(DateTime)).void }
+      sig { params(account_id: T.nilable(String), contact_id: T.nilable(String), created_at: T.nilable(DateTime), currency: T.nilable(String), id: T.nilable(String), invoice_id: T.nilable(String), notes: T.nilable(String), payment_method: T.nilable(String), raw: T.nilable(T::Hash[Symbol, Object]), reference: T.nilable(String), total_amount: T.nilable(Float), updated_at: T.nilable(DateTime)).void }
       def initialize(account_id: nil, contact_id: nil, created_at: nil, currency: nil, id: nil, invoice_id: nil, notes: nil, payment_method: nil, raw: nil, reference: nil, total_amount: nil, updated_at: nil)
         @account_id = account_id
         @contact_id = contact_id

@@ -44,20 +44,24 @@ req = Shared::Connection.new(
     emails=[
       "string",
     ],
-    meta=Shared::PropertyPropertyConnectionAuthMeta.new(),
+    meta={
+      "likewise": "string",
+    },
     other_auth_info=[
       "string",
     ],
   ),
   categories=[
-    Shared::PropertyConnectionCategories::STORAGE,
+    Shared::PropertyConnectionCategories::CRM,
   ],
   cursors_cache=[
-    Shared::Undefined.new(),
+    {
+      "Specialist": "string",
+    },
   ],
   integration_type="string",
   permissions=[
-    Shared::PropertyConnectionPermissions::ATS_JOB_READ,
+    Shared::PropertyConnectionPermissions::CRM_COMPANY_WRITE,
   ],
 )
     
@@ -104,8 +108,10 @@ res = s.unified.create_unified_webhook(webhook=Shared::Webhook.new(
     event=Shared::Event::CREATED,
     hook_url="string",
     interval=188.12,
-    meta=Shared::PropertyWebhookMeta.new(),
-    object_type=Shared::ObjectType::CRM_COMPANY,
+    meta={
+      "payment": "string",
+    },
+    object_type=Shared::ObjectType::ACCOUNTING_CONTACT,
     runs=[
       "string",
     ],
@@ -526,20 +532,24 @@ res = s.unified.patch_unified_connection(id="string", connection=Shared::Connect
       emails=[
         "string",
       ],
-      meta=Shared::PropertyPropertyConnectionAuthMeta.new(),
+      meta={
+        "International": "string",
+      },
       other_auth_info=[
         "string",
       ],
     ),
     categories=[
-      Shared::PropertyConnectionCategories::TICKETING,
+      Shared::PropertyConnectionCategories::STORAGE,
     ],
     cursors_cache=[
-      Shared::Undefined.new(),
+      {
+        "Coupe": "string",
+      },
     ],
     integration_type="string",
     permissions=[
-      Shared::PropertyConnectionPermissions::MARTECH_LIST_READ,
+      Shared::PropertyConnectionPermissions::ACCOUNTING_INVOICE_WRITE,
     ],
   ))
 
@@ -699,20 +709,24 @@ res = s.unified.update_unified_connection(id="string", connection=Shared::Connec
       emails=[
         "string",
       ],
-      meta=Shared::PropertyPropertyConnectionAuthMeta.new(),
+      meta={
+        "tan": "string",
+      },
       other_auth_info=[
         "string",
       ],
     ),
     categories=[
-      Shared::PropertyConnectionCategories::UC,
+      Shared::PropertyConnectionCategories::STORAGE,
     ],
     cursors_cache=[
-      Shared::Undefined.new(),
+      {
+        "coulomb": "string",
+      },
     ],
     integration_type="string",
     permissions=[
-      Shared::PropertyConnectionPermissions::CRM_COMPANY_WRITE,
+      Shared::PropertyConnectionPermissions::ACCOUNTING_TRANSACTION_READ,
     ],
   ))
 

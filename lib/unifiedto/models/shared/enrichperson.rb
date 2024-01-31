@@ -6,7 +6,6 @@
 require 'sorbet-runtime'
 require 'faraday'
 require_relative '../shared/property_enrichperson_address'
-require_relative '../shared/property_enrichperson_raw'
 
 module UnifiedRubySDK
   module Shared
@@ -54,7 +53,7 @@ module UnifiedRubySDK
 
       field :name, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
       # The raw data returned by the integration for this person
-      field :raw, T.nilable(Shared::PropertyEnrichPersonRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
       # An array of telephones for this person
       field :telephones, T.nilable(T::Array[Shared::EnrichTelephone]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
 
@@ -73,7 +72,7 @@ module UnifiedRubySDK
       field :work_histories, T.nilable(T::Array[Shared::EnrichPersonWorkHistory]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('work_histories') } }
 
 
-      sig { params(address: T.nilable(Shared::PropertyEnrichPersonAddress), bio: T.nilable(String), birthdate: T.nilable(String), company: T.nilable(String), company_domain: T.nilable(String), created_at: T.nilable(DateTime), emails: T.nilable(T::Array[Shared::EnrichEmail]), facebook_url: T.nilable(String), gender: T.nilable(Shared::Gender), github_url: T.nilable(String), github_username: T.nilable(String), id: T.nilable(String), image_url: T.nilable(String), linkedin_url: T.nilable(String), name: T.nilable(String), raw: T.nilable(Shared::PropertyEnrichPersonRaw), telephones: T.nilable(T::Array[Shared::EnrichTelephone]), timezone: T.nilable(String), title: T.nilable(String), twitter_handle: T.nilable(String), twitter_url: T.nilable(String), updated_at: T.nilable(DateTime), utc_offset: T.nilable(Float), work_histories: T.nilable(T::Array[Shared::EnrichPersonWorkHistory])).void }
+      sig { params(address: T.nilable(Shared::PropertyEnrichPersonAddress), bio: T.nilable(String), birthdate: T.nilable(String), company: T.nilable(String), company_domain: T.nilable(String), created_at: T.nilable(DateTime), emails: T.nilable(T::Array[Shared::EnrichEmail]), facebook_url: T.nilable(String), gender: T.nilable(Shared::Gender), github_url: T.nilable(String), github_username: T.nilable(String), id: T.nilable(String), image_url: T.nilable(String), linkedin_url: T.nilable(String), name: T.nilable(String), raw: T.nilable(T::Hash[Symbol, Object]), telephones: T.nilable(T::Array[Shared::EnrichTelephone]), timezone: T.nilable(String), title: T.nilable(String), twitter_handle: T.nilable(String), twitter_url: T.nilable(String), updated_at: T.nilable(DateTime), utc_offset: T.nilable(Float), work_histories: T.nilable(T::Array[Shared::EnrichPersonWorkHistory])).void }
       def initialize(address: nil, bio: nil, birthdate: nil, company: nil, company_domain: nil, created_at: nil, emails: nil, facebook_url: nil, gender: nil, github_url: nil, github_username: nil, id: nil, image_url: nil, linkedin_url: nil, name: nil, raw: nil, telephones: nil, timezone: nil, title: nil, twitter_handle: nil, twitter_url: nil, updated_at: nil, utc_offset: nil, work_histories: nil)
         @address = address
         @bio = bio

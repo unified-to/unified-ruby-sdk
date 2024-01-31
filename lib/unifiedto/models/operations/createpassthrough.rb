@@ -5,7 +5,6 @@
 
 require 'sorbet-runtime'
 require 'faraday'
-require_relative '../shared/undefined'
 
 module UnifiedRubySDK
   module Operations
@@ -18,14 +17,14 @@ module UnifiedRubySDK
 
       field :path, String, { 'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': false } }
       # integration-specific payload
-      field :undefined, T.nilable(Shared::Undefined), { 'request': { 'media_type': 'application/json' } }
+      field :request_body, T.nilable(T::Hash[Symbol, Object]), { 'request': { 'media_type': 'application/json' } }
 
 
-      sig { params(connection_id: String, path: String, undefined: T.nilable(Shared::Undefined)).void }
-      def initialize(connection_id: nil, path: nil, undefined: nil)
+      sig { params(connection_id: String, path: String, request_body: T.nilable(T::Hash[Symbol, Object])).void }
+      def initialize(connection_id: nil, path: nil, request_body: nil)
         @connection_id = connection_id
         @path = path
-        @undefined = undefined
+        @request_body = request_body
       end
     end
 
@@ -40,10 +39,10 @@ module UnifiedRubySDK
       # HTTP response status code for this operation
       field :status_code, Integer
       # Successful
-      field :undefined, T.nilable(Shared::Undefined)
+      field :undefined, T.nilable(T::Hash[Symbol, Object])
 
 
-      sig { params(content_type: String, raw_response: Faraday::Response, status_code: Integer, undefined: T.nilable(Shared::Undefined)).void }
+      sig { params(content_type: String, raw_response: Faraday::Response, status_code: Integer, undefined: T.nilable(T::Hash[Symbol, Object])).void }
       def initialize(content_type: nil, raw_response: nil, status_code: nil, undefined: nil)
         @content_type = content_type
         @raw_response = raw_response

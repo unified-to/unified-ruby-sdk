@@ -68,7 +68,9 @@ s.config_security(
     
 res = s.accounting.create_accounting_account(connection_id="string", accounting_account=Shared::AccountingAccount.new(
     name="string",
-    raw=Shared::PropertyAccountingAccountRaw.new(),
+    raw={
+      "Executive": "string",
+    },
   ))
 
 if ! res.accounting_account.nil?
@@ -115,7 +117,9 @@ res = s.accounting.create_accounting_contact(connection_id="string", accounting_
         email="Mac36@gmail.com",
       ),
     ],
-    raw=Shared::PropertyAccountingContactRaw.new(),
+    raw={
+      "indexing": "string",
+    },
     shipping_address=Shared::PropertyAccountingContactShippingAddress.new(),
     telephones=[
       Shared::AccountingTelephone.new(
@@ -167,7 +171,9 @@ res = s.accounting.create_accounting_invoice(connection_id="string", accounting_
         total_amount=6736.06,
       ),
     ],
-    raw=Shared::PropertyAccountingInvoiceRaw.new(),
+    raw={
+      "green": "string",
+    },
   ))
 
 if ! res.accounting_invoice.nil?
@@ -209,7 +215,9 @@ s.config_security(
     
 res = s.accounting.create_accounting_item(connection_id="string", accounting_item=Shared::AccountingItem.new(
     name="string",
-    raw=Shared::PropertyAccountingItemRaw.new(),
+    raw={
+      "visionary": "string",
+    },
   ))
 
 if ! res.accounting_item.nil?
@@ -250,7 +258,9 @@ s.config_security(
 
     
 res = s.accounting.create_accounting_payment(connection_id="string", accounting_payment=Shared::AccountingPayment.new(
-    raw=Shared::PropertyAccountingPaymentRaw.new(),
+    raw={
+      "Specialist": "string",
+    },
   ))
 
 if ! res.accounting_payment.nil?
@@ -293,7 +303,9 @@ s.config_security(
 res = s.accounting.create_accounting_taxrate(connection_id="string", accounting_taxrate=Shared::AccountingTaxrate.new(
     name="string",
     rate=1719.1,
-    raw=Shared::PropertyAccountingTaxrateRaw.new(),
+    raw={
+      "Gorgeous": "string",
+    },
   ))
 
 if ! res.accounting_taxrate.nil?
@@ -341,7 +353,9 @@ res = s.accounting.create_accounting_transaction(connection_id="string", account
         total_amount=4969.62,
       ),
     ],
-    raw=Shared::PropertyAccountingTransactionRaw.new(),
+    raw={
+      "Web": "string",
+    },
   ))
 
 if ! res.accounting_transaction.nil?
@@ -1079,7 +1093,9 @@ s.config_security(
     
 res = s.accounting.patch_accounting_account(connection_id="string", id="string", accounting_account=Shared::AccountingAccount.new(
     name="string",
-    raw=Shared::PropertyAccountingAccountRaw.new(),
+    raw={
+      "Garden": "string",
+    },
   ))
 
 if ! res.accounting_account.nil?
@@ -1127,7 +1143,9 @@ res = s.accounting.patch_accounting_contact(connection_id="string", id="string",
         email="Sylvester.Kuhic@yahoo.com",
       ),
     ],
-    raw=Shared::PropertyAccountingContactRaw.new(),
+    raw={
+      "copying": "string",
+    },
     shipping_address=Shared::PropertyAccountingContactShippingAddress.new(),
     telephones=[
       Shared::AccountingTelephone.new(
@@ -1180,7 +1198,9 @@ res = s.accounting.patch_accounting_invoice(connection_id="string", id="string",
         total_amount=7374.1,
       ),
     ],
-    raw=Shared::PropertyAccountingInvoiceRaw.new(),
+    raw={
+      "kink": "string",
+    },
   ))
 
 if ! res.accounting_invoice.nil?
@@ -1223,7 +1243,9 @@ s.config_security(
     
 res = s.accounting.patch_accounting_item(connection_id="string", id="string", accounting_item=Shared::AccountingItem.new(
     name="string",
-    raw=Shared::PropertyAccountingItemRaw.new(),
+    raw={
+      "Sleek": "string",
+    },
   ))
 
 if ! res.accounting_item.nil?
@@ -1265,7 +1287,9 @@ s.config_security(
 
     
 res = s.accounting.patch_accounting_payment(connection_id="string", id="string", accounting_payment=Shared::AccountingPayment.new(
-    raw=Shared::PropertyAccountingPaymentRaw.new(),
+    raw={
+      "Herzegovina": "string",
+    },
   ))
 
 if ! res.accounting_payment.nil?
@@ -1309,7 +1333,9 @@ s.config_security(
 res = s.accounting.patch_accounting_taxrate(connection_id="string", id="string", accounting_taxrate=Shared::AccountingTaxrate.new(
     name="string",
     rate=5991.47,
-    raw=Shared::PropertyAccountingTaxrateRaw.new(),
+    raw={
+      "Representative": "string",
+    },
   ))
 
 if ! res.accounting_taxrate.nil?
@@ -1358,7 +1384,9 @@ res = s.accounting.patch_accounting_transaction(connection_id="string", id="stri
         total_amount=5633.69,
       ),
     ],
-    raw=Shared::PropertyAccountingTransactionRaw.new(),
+    raw={
+      "invoice": "string",
+    },
   ))
 
 if ! res.accounting_transaction.nil?
@@ -1674,7 +1702,9 @@ s.config_security(
     
 res = s.accounting.update_accounting_account(connection_id="string", id="string", accounting_account=Shared::AccountingAccount.new(
     name="string",
-    raw=Shared::PropertyAccountingAccountRaw.new(),
+    raw={
+      "Pop": "string",
+    },
   ))
 
 if ! res.accounting_account.nil?
@@ -1722,7 +1752,9 @@ res = s.accounting.update_accounting_contact(connection_id="string", id="string"
         email="Kaci_Hane@hotmail.com",
       ),
     ],
-    raw=Shared::PropertyAccountingContactRaw.new(),
+    raw={
+      "Ohio": "string",
+    },
     shipping_address=Shared::PropertyAccountingContactShippingAddress.new(),
     telephones=[
       Shared::AccountingTelephone.new(
@@ -1775,7 +1807,9 @@ res = s.accounting.update_accounting_invoice(connection_id="string", id="string"
         total_amount=6974.28,
       ),
     ],
-    raw=Shared::PropertyAccountingInvoiceRaw.new(),
+    raw={
+      "CSS": "string",
+    },
   ))
 
 if ! res.accounting_invoice.nil?
@@ -1818,7 +1852,9 @@ s.config_security(
     
 res = s.accounting.update_accounting_item(connection_id="string", id="string", accounting_item=Shared::AccountingItem.new(
     name="string",
-    raw=Shared::PropertyAccountingItemRaw.new(),
+    raw={
+      "Northwest": "string",
+    },
   ))
 
 if ! res.accounting_item.nil?
@@ -1860,7 +1896,9 @@ s.config_security(
 
     
 res = s.accounting.update_accounting_payment(connection_id="string", id="string", accounting_payment=Shared::AccountingPayment.new(
-    raw=Shared::PropertyAccountingPaymentRaw.new(),
+    raw={
+      "South": "string",
+    },
   ))
 
 if ! res.accounting_payment.nil?
@@ -1904,7 +1942,9 @@ s.config_security(
 res = s.accounting.update_accounting_taxrate(connection_id="string", id="string", accounting_taxrate=Shared::AccountingTaxrate.new(
     name="string",
     rate=3382.78,
-    raw=Shared::PropertyAccountingTaxrateRaw.new(),
+    raw={
+      "Hatchback": "string",
+    },
   ))
 
 if ! res.accounting_taxrate.nil?
@@ -1953,7 +1993,9 @@ res = s.accounting.update_accounting_transaction(connection_id="string", id="str
         total_amount=6498.37,
       ),
     ],
-    raw=Shared::PropertyAccountingTransactionRaw.new(),
+    raw={
+      "a": "string",
+    },
   ))
 
 if ! res.accounting_transaction.nil?

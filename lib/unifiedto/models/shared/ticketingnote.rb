@@ -5,7 +5,6 @@
 
 require 'sorbet-runtime'
 require 'faraday'
-require_relative '../shared/property_ticketingnote_raw'
 
 module UnifiedRubySDK
   module Shared
@@ -22,7 +21,7 @@ module UnifiedRubySDK
 
       field :id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :raw, T.nilable(Shared::PropertyTicketingNoteRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :ticket_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ticket_id') } }
 
@@ -31,7 +30,7 @@ module UnifiedRubySDK
       field :user_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
 
-      sig { params(created_at: T.nilable(DateTime), customer_id: T.nilable(String), description: T.nilable(String), id: T.nilable(String), raw: T.nilable(Shared::PropertyTicketingNoteRaw), ticket_id: T.nilable(String), updated_at: T.nilable(String), user_id: T.nilable(String)).void }
+      sig { params(created_at: T.nilable(DateTime), customer_id: T.nilable(String), description: T.nilable(String), id: T.nilable(String), raw: T.nilable(T::Hash[Symbol, Object]), ticket_id: T.nilable(String), updated_at: T.nilable(String), user_id: T.nilable(String)).void }
       def initialize(created_at: nil, customer_id: nil, description: nil, id: nil, raw: nil, ticket_id: nil, updated_at: nil, user_id: nil)
         @created_at = created_at
         @customer_id = customer_id

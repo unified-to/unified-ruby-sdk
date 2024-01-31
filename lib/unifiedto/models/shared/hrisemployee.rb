@@ -6,7 +6,6 @@
 require 'sorbet-runtime'
 require 'faraday'
 require_relative '../shared/property_hrisemployee_address'
-require_relative '../shared/property_hrisemployee_raw'
 
 module UnifiedRubySDK
   module Shared
@@ -100,7 +99,7 @@ module UnifiedRubySDK
 
       field :name, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-      field :raw, T.nilable(Shared::PropertyHrisEmployeeRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :telephones, T.nilable(T::Array[Shared::HrisTelephone]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
 
@@ -113,7 +112,7 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(address: T.nilable(Shared::PropertyHrisEmployeeAddress), created_at: T.nilable(DateTime), currency: T.nilable(String), date_of_birth: T.nilable(DateTime), department: T.nilable(String), division: T.nilable(String), emails: T.nilable(T::Array[Shared::HrisEmail]), employee_number: T.nilable(String), employment_status: T.nilable(Shared::EmploymentStatus), employment_type: T.nilable(Shared::HrisEmployeeEmploymentType), gender: T.nilable(Shared::HrisEmployeeGender), hired_at: T.nilable(DateTime), id: T.nilable(String), image_url: T.nilable(String), language_locale: T.nilable(String), location: T.nilable(String), manager_id: T.nilable(String), marital_status: T.nilable(Shared::MaritalStatus), name: T.nilable(String), raw: T.nilable(Shared::PropertyHrisEmployeeRaw), telephones: T.nilable(T::Array[Shared::HrisTelephone]), terminated_at: T.nilable(DateTime), timezone: T.nilable(String), title: T.nilable(String), updated_at: T.nilable(DateTime)).void }
+      sig { params(address: T.nilable(Shared::PropertyHrisEmployeeAddress), created_at: T.nilable(DateTime), currency: T.nilable(String), date_of_birth: T.nilable(DateTime), department: T.nilable(String), division: T.nilable(String), emails: T.nilable(T::Array[Shared::HrisEmail]), employee_number: T.nilable(String), employment_status: T.nilable(Shared::EmploymentStatus), employment_type: T.nilable(Shared::HrisEmployeeEmploymentType), gender: T.nilable(Shared::HrisEmployeeGender), hired_at: T.nilable(DateTime), id: T.nilable(String), image_url: T.nilable(String), language_locale: T.nilable(String), location: T.nilable(String), manager_id: T.nilable(String), marital_status: T.nilable(Shared::MaritalStatus), name: T.nilable(String), raw: T.nilable(T::Hash[Symbol, Object]), telephones: T.nilable(T::Array[Shared::HrisTelephone]), terminated_at: T.nilable(DateTime), timezone: T.nilable(String), title: T.nilable(String), updated_at: T.nilable(DateTime)).void }
       def initialize(address: nil, created_at: nil, currency: nil, date_of_birth: nil, department: nil, division: nil, emails: nil, employee_number: nil, employment_status: nil, employment_type: nil, gender: nil, hired_at: nil, id: nil, image_url: nil, language_locale: nil, location: nil, manager_id: nil, marital_status: nil, name: nil, raw: nil, telephones: nil, terminated_at: nil, timezone: nil, title: nil, updated_at: nil)
         @address = address
         @created_at = created_at

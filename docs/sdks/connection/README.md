@@ -33,20 +33,24 @@ req = Shared::Connection.new(
     emails=[
       "string",
     ],
-    meta=Shared::PropertyPropertyConnectionAuthMeta.new(),
+    meta={
+      "likewise": "string",
+    },
     other_auth_info=[
       "string",
     ],
   ),
   categories=[
-    Shared::PropertyConnectionCategories::STORAGE,
+    Shared::PropertyConnectionCategories::CRM,
   ],
   cursors_cache=[
-    Shared::Undefined.new(),
+    {
+      "Specialist": "string",
+    },
   ],
   integration_type="string",
   permissions=[
-    Shared::PropertyConnectionPermissions::ATS_JOB_READ,
+    Shared::PropertyConnectionPermissions::CRM_COMPANY_WRITE,
   ],
 )
     
@@ -175,20 +179,24 @@ res = s.connection.patch_unified_connection(id="string", connection=Shared::Conn
       emails=[
         "string",
       ],
-      meta=Shared::PropertyPropertyConnectionAuthMeta.new(),
+      meta={
+        "International": "string",
+      },
       other_auth_info=[
         "string",
       ],
     ),
     categories=[
-      Shared::PropertyConnectionCategories::TICKETING,
+      Shared::PropertyConnectionCategories::STORAGE,
     ],
     cursors_cache=[
-      Shared::Undefined.new(),
+      {
+        "Coupe": "string",
+      },
     ],
     integration_type="string",
     permissions=[
-      Shared::PropertyConnectionPermissions::MARTECH_LIST_READ,
+      Shared::PropertyConnectionPermissions::ACCOUNTING_INVOICE_WRITE,
     ],
   ))
 
@@ -272,20 +280,24 @@ res = s.connection.update_unified_connection(id="string", connection=Shared::Con
       emails=[
         "string",
       ],
-      meta=Shared::PropertyPropertyConnectionAuthMeta.new(),
+      meta={
+        "tan": "string",
+      },
       other_auth_info=[
         "string",
       ],
     ),
     categories=[
-      Shared::PropertyConnectionCategories::UC,
+      Shared::PropertyConnectionCategories::STORAGE,
     ],
     cursors_cache=[
-      Shared::Undefined.new(),
+      {
+        "coulomb": "string",
+      },
     ],
     integration_type="string",
     permissions=[
-      Shared::PropertyConnectionPermissions::CRM_COMPANY_WRITE,
+      Shared::PropertyConnectionPermissions::ACCOUNTING_TRANSACTION_READ,
     ],
   ))
 

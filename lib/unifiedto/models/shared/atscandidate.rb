@@ -6,7 +6,6 @@
 require 'sorbet-runtime'
 require 'faraday'
 require_relative '../shared/property_atscandidate_address'
-require_relative '../shared/property_atscandidate_raw'
 
 module UnifiedRubySDK
   module Shared
@@ -48,7 +47,7 @@ module UnifiedRubySDK
 
       field :origin, T.nilable(Shared::Origin), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('origin'), 'decoder': Utils.enum_from_string(Shared::Origin, true) } }
 
-      field :raw, T.nilable(Shared::PropertyAtsCandidateRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :tags, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
 
@@ -59,7 +58,7 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(address: T.nilable(Shared::PropertyAtsCandidateAddress), company_name: T.nilable(String), created_at: T.nilable(DateTime), emails: T.nilable(T::Array[Shared::AtsEmail]), external_id: T.nilable(String), id: T.nilable(String), image_url: T.nilable(String), link_urls: T.nilable(T::Array[String]), name: T.nilable(String), origin: T.nilable(Shared::Origin), raw: T.nilable(Shared::PropertyAtsCandidateRaw), tags: T.nilable(T::Array[String]), telephones: T.nilable(T::Array[Shared::AtsTelephone]), title: T.nilable(String), updated_at: T.nilable(DateTime)).void }
+      sig { params(address: T.nilable(Shared::PropertyAtsCandidateAddress), company_name: T.nilable(String), created_at: T.nilable(DateTime), emails: T.nilable(T::Array[Shared::AtsEmail]), external_id: T.nilable(String), id: T.nilable(String), image_url: T.nilable(String), link_urls: T.nilable(T::Array[String]), name: T.nilable(String), origin: T.nilable(Shared::Origin), raw: T.nilable(T::Hash[Symbol, Object]), tags: T.nilable(T::Array[String]), telephones: T.nilable(T::Array[Shared::AtsTelephone]), title: T.nilable(String), updated_at: T.nilable(DateTime)).void }
       def initialize(address: nil, company_name: nil, created_at: nil, emails: nil, external_id: nil, id: nil, image_url: nil, link_urls: nil, name: nil, origin: nil, raw: nil, tags: nil, telephones: nil, title: nil, updated_at: nil)
         @address = address
         @company_name = company_name

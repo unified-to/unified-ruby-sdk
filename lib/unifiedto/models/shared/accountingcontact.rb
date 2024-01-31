@@ -6,7 +6,6 @@
 require 'sorbet-runtime'
 require 'faraday'
 require_relative '../shared/property_accountingcontact_billing_address'
-require_relative '../shared/property_accountingcontact_raw'
 require_relative '../shared/property_accountingcontact_shipping_address'
 
 module UnifiedRubySDK
@@ -52,7 +51,7 @@ module UnifiedRubySDK
 
       field :name, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-      field :raw, T.nilable(Shared::PropertyAccountingContactRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :shipping_address, T.nilable(Shared::PropertyAccountingContactShippingAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('shipping_address') } }
 
@@ -65,7 +64,7 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(billing_address: T.nilable(Shared::PropertyAccountingContactBillingAddress), created_at: T.nilable(DateTime), currency: T.nilable(String), emails: T.nilable(T::Array[Shared::AccountingEmail]), id: T.nilable(String), is_active: T.nilable(T::Boolean), is_customer: T.nilable(T::Boolean), is_supplier: T.nilable(T::Boolean), name: T.nilable(String), raw: T.nilable(Shared::PropertyAccountingContactRaw), shipping_address: T.nilable(Shared::PropertyAccountingContactShippingAddress), tax_exemption: T.nilable(Shared::TaxExemption), tax_number: T.nilable(String), telephones: T.nilable(T::Array[Shared::AccountingTelephone]), updated_at: T.nilable(DateTime)).void }
+      sig { params(billing_address: T.nilable(Shared::PropertyAccountingContactBillingAddress), created_at: T.nilable(DateTime), currency: T.nilable(String), emails: T.nilable(T::Array[Shared::AccountingEmail]), id: T.nilable(String), is_active: T.nilable(T::Boolean), is_customer: T.nilable(T::Boolean), is_supplier: T.nilable(T::Boolean), name: T.nilable(String), raw: T.nilable(T::Hash[Symbol, Object]), shipping_address: T.nilable(Shared::PropertyAccountingContactShippingAddress), tax_exemption: T.nilable(Shared::TaxExemption), tax_number: T.nilable(String), telephones: T.nilable(T::Array[Shared::AccountingTelephone]), updated_at: T.nilable(DateTime)).void }
       def initialize(billing_address: nil, created_at: nil, currency: nil, emails: nil, id: nil, is_active: nil, is_customer: nil, is_supplier: nil, name: nil, raw: nil, shipping_address: nil, tax_exemption: nil, tax_number: nil, telephones: nil, updated_at: nil)
         @billing_address = billing_address
         @created_at = created_at

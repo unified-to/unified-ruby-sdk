@@ -35,7 +35,9 @@ res = s.uc.create_uc_contact(connection_id="string", uc_contact=Shared::UcContac
         email="Dulce_Becker30@yahoo.com",
       ),
     ],
-    raw=Shared::PropertyUcContactRaw.new(),
+    raw={
+      "challenge": "string",
+    },
     telephones=[
       Shared::UcTelephone.new(
         telephone="string",
@@ -218,7 +220,9 @@ res = s.uc.patch_uc_contact(connection_id="string", id="string", uc_contact=Shar
         email="Norene_Boehm97@hotmail.com",
       ),
     ],
-    raw=Shared::PropertyUcContactRaw.new(),
+    raw={
+      "Borders": "string",
+    },
     telephones=[
       Shared::UcTelephone.new(
         telephone="string",
@@ -309,7 +313,9 @@ res = s.uc.update_uc_contact(connection_id="string", id="string", uc_contact=Sha
         email="Kianna.Witting90@gmail.com",
       ),
     ],
-    raw=Shared::PropertyUcContactRaw.new(),
+    raw={
+      "Convertible": "string",
+    },
     telephones=[
       Shared::UcTelephone.new(
         telephone="string",

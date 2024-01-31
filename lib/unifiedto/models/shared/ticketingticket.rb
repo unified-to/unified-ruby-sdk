@@ -5,7 +5,6 @@
 
 require 'sorbet-runtime'
 require 'faraday'
-require_relative '../shared/property_ticketingticket_raw'
 
 module UnifiedRubySDK
   module Shared
@@ -37,7 +36,7 @@ module UnifiedRubySDK
 
       field :priority, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('priority') } }
 
-      field :raw, T.nilable(Shared::PropertyTicketingTicketRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :source, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source') } }
 
@@ -54,7 +53,7 @@ module UnifiedRubySDK
       field :user_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
 
-      sig { params(category: T.nilable(String), closed_at: T.nilable(DateTime), created_at: T.nilable(DateTime), customer_id: T.nilable(String), description: T.nilable(String), id: T.nilable(String), priority: T.nilable(String), raw: T.nilable(Shared::PropertyTicketingTicketRaw), source: T.nilable(String), source_ref: T.nilable(String), status: T.nilable(Shared::TicketingTicketStatus), subject: T.nilable(String), tags: T.nilable(T::Array[String]), updated_at: T.nilable(DateTime), user_id: T.nilable(String)).void }
+      sig { params(category: T.nilable(String), closed_at: T.nilable(DateTime), created_at: T.nilable(DateTime), customer_id: T.nilable(String), description: T.nilable(String), id: T.nilable(String), priority: T.nilable(String), raw: T.nilable(T::Hash[Symbol, Object]), source: T.nilable(String), source_ref: T.nilable(String), status: T.nilable(Shared::TicketingTicketStatus), subject: T.nilable(String), tags: T.nilable(T::Array[String]), updated_at: T.nilable(DateTime), user_id: T.nilable(String)).void }
       def initialize(category: nil, closed_at: nil, created_at: nil, customer_id: nil, description: nil, id: nil, priority: nil, raw: nil, source: nil, source_ref: nil, status: nil, subject: nil, tags: nil, updated_at: nil, user_id: nil)
         @category = category
         @closed_at = closed_at

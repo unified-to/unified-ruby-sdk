@@ -6,7 +6,6 @@
 require 'sorbet-runtime'
 require 'faraday'
 require_relative '../shared/property_crmlead_address'
-require_relative '../shared/property_crmlead_raw'
 
 module UnifiedRubySDK
   module Shared
@@ -35,7 +34,7 @@ module UnifiedRubySDK
 
       field :name, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-      field :raw, T.nilable(Shared::PropertyCrmLeadRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :source, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source') } }
 
@@ -48,7 +47,7 @@ module UnifiedRubySDK
       field :user_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
 
-      sig { params(address: T.nilable(Shared::PropertyCrmLeadAddress), company_id: T.nilable(String), company_name: T.nilable(String), contact_id: T.nilable(String), created_at: T.nilable(DateTime), creator_user_id: T.nilable(String), emails: T.nilable(T::Array[Shared::CrmEmail]), id: T.nilable(String), is_active: T.nilable(T::Boolean), name: T.nilable(String), raw: T.nilable(Shared::PropertyCrmLeadRaw), source: T.nilable(String), status: T.nilable(String), telephones: T.nilable(T::Array[Shared::CrmTelephone]), updated_at: T.nilable(DateTime), user_id: T.nilable(String)).void }
+      sig { params(address: T.nilable(Shared::PropertyCrmLeadAddress), company_id: T.nilable(String), company_name: T.nilable(String), contact_id: T.nilable(String), created_at: T.nilable(DateTime), creator_user_id: T.nilable(String), emails: T.nilable(T::Array[Shared::CrmEmail]), id: T.nilable(String), is_active: T.nilable(T::Boolean), name: T.nilable(String), raw: T.nilable(T::Hash[Symbol, Object]), source: T.nilable(String), status: T.nilable(String), telephones: T.nilable(T::Array[Shared::CrmTelephone]), updated_at: T.nilable(DateTime), user_id: T.nilable(String)).void }
       def initialize(address: nil, company_id: nil, company_name: nil, contact_id: nil, created_at: nil, creator_user_id: nil, emails: nil, id: nil, is_active: nil, name: nil, raw: nil, source: nil, status: nil, telephones: nil, updated_at: nil, user_id: nil)
         @address = address
         @company_id = company_id

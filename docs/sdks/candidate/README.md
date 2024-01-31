@@ -38,7 +38,9 @@ res = s.candidate.create_ats_candidate(connection_id="string", ats_candidate=Sha
     link_urls=[
       "string",
     ],
-    raw=Shared::PropertyAtsCandidateRaw.new(),
+    raw={
+      "radian": "string",
+    },
     tags=[
       "string",
     ],
@@ -183,7 +185,9 @@ res = s.candidate.patch_ats_candidate(connection_id="string", id="string", ats_c
     link_urls=[
       "string",
     ],
-    raw=Shared::PropertyAtsCandidateRaw.new(),
+    raw={
+      "Credit": "string",
+    },
     tags=[
       "string",
     ],
@@ -281,7 +285,9 @@ res = s.candidate.update_ats_candidate(connection_id="string", id="string", ats_
     link_urls=[
       "string",
     ],
-    raw=Shared::PropertyAtsCandidateRaw.new(),
+    raw={
+      "B2C": "string",
+    },
     tags=[
       "string",
     ],

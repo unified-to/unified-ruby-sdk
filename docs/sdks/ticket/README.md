@@ -29,7 +29,9 @@ s.config_security(
 
     
 res = s.ticket.create_ticketing_ticket(connection_id="string", ticketing_ticket=Shared::TicketingTicket.new(
-    raw=Shared::PropertyTicketingTicketRaw.new(),
+    raw={
+      "sky": "string",
+    },
     tags=[
       "string",
     ],
@@ -160,7 +162,9 @@ s.config_security(
 
     
 res = s.ticket.patch_ticketing_ticket(connection_id="string", id="string", ticketing_ticket=Shared::TicketingTicket.new(
-    raw=Shared::PropertyTicketingTicketRaw.new(),
+    raw={
+      "Bespoke": "string",
+    },
     tags=[
       "string",
     ],
@@ -244,7 +248,9 @@ s.config_security(
 
     
 res = s.ticket.update_ticketing_ticket(connection_id="string", id="string", ticketing_ticket=Shared::TicketingTicket.new(
-    raw=Shared::PropertyTicketingTicketRaw.new(),
+    raw={
+      "Rhode": "string",
+    },
     tags=[
       "string",
     ],

@@ -29,7 +29,9 @@ s.config_security(
 
     
 res = s.list.create_martech_list(connection_id="string", marketing_list=Shared::MarketingList.new(
-    raw=Shared::PropertyMarketingListRaw.new(),
+    raw={
+      "Latin": "string",
+    },
   ))
 
 if ! res.marketing_list.nil?
@@ -157,7 +159,9 @@ s.config_security(
 
     
 res = s.list.patch_martech_list(connection_id="string", id="string", marketing_list=Shared::MarketingList.new(
-    raw=Shared::PropertyMarketingListRaw.new(),
+    raw={
+      "Classical": "string",
+    },
   ))
 
 if ! res.marketing_list.nil?
@@ -238,7 +242,9 @@ s.config_security(
 
     
 res = s.list.update_martech_list(connection_id="string", id="string", marketing_list=Shared::MarketingList.new(
-    raw=Shared::PropertyMarketingListRaw.new(),
+    raw={
+      "innocently": "string",
+    },
   ))
 
 if ! res.marketing_list.nil?

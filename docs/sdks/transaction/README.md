@@ -36,7 +36,9 @@ res = s.transaction.create_accounting_transaction(connection_id="string", accoun
         total_amount=4969.62,
       ),
     ],
-    raw=Shared::PropertyAccountingTransactionRaw.new(),
+    raw={
+      "Web": "string",
+    },
   ))
 
 if ! res.accounting_transaction.nil?
@@ -171,7 +173,9 @@ res = s.transaction.patch_accounting_transaction(connection_id="string", id="str
         total_amount=5633.69,
       ),
     ],
-    raw=Shared::PropertyAccountingTransactionRaw.new(),
+    raw={
+      "invoice": "string",
+    },
   ))
 
 if ! res.accounting_transaction.nil?
@@ -259,7 +263,9 @@ res = s.transaction.update_accounting_transaction(connection_id="string", id="st
         total_amount=6498.37,
       ),
     ],
-    raw=Shared::PropertyAccountingTransactionRaw.new(),
+    raw={
+      "a": "string",
+    },
   ))
 
 if ! res.accounting_transaction.nil?

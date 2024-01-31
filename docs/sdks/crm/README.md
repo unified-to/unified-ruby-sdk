@@ -69,7 +69,9 @@ res = s.crm.create_crm_company(connection_id="string", crm_company=Shared::CrmCo
     link_urls=[
       "string",
     ],
-    raw=Shared::PropertyCrmCompanyRaw.new(),
+    raw={
+      "connecting": "string",
+    },
     tags=[
       "string",
     ],
@@ -131,7 +133,9 @@ res = s.crm.create_crm_contact(connection_id="string", crm_contact=Shared::CrmCo
     emails=[
       Shared::CrmEmail.new(),
     ],
-    raw=Shared::PropertyCrmContactRaw.new(),
+    raw={
+      "Mendelevium": "string",
+    },
     telephones=[
       Shared::CrmTelephone.new(
         telephone="string",
@@ -177,7 +181,9 @@ s.config_security(
 
     
 res = s.crm.create_crm_deal(connection_id="string", crm_deal=Shared::CrmDeal.new(
-    raw=Shared::PropertyCrmDealRaw.new(),
+    raw={
+      "Toys": "string",
+    },
     tags=[
       "string",
     ],
@@ -247,7 +253,9 @@ res = s.crm.create_crm_event(connection_id="string", crm_event=Shared::CrmEvent.
     ],
     meeting=Shared::PropertyCrmEventMeeting.new(),
     note=Shared::PropertyCrmEventNote.new(),
-    raw=Shared::PropertyCrmEventRaw.new(),
+    raw={
+      "repeatedly": "string",
+    },
     task=Shared::PropertyCrmEventTask.new(),
   ))
 
@@ -293,7 +301,9 @@ res = s.crm.create_crm_lead(connection_id="string", crm_lead=Shared::CrmLead.new
     emails=[
       Shared::CrmEmail.new(),
     ],
-    raw=Shared::PropertyCrmLeadRaw.new(),
+    raw={
+      "Designer": "string",
+    },
     telephones=[
       Shared::CrmTelephone.new(
         telephone="string",
@@ -339,7 +349,9 @@ s.config_security(
 
     
 res = s.crm.create_crm_pipeline(connection_id="string", crm_pipeline=Shared::CrmPipeline.new(
-    raw=Shared::PropertyCrmPipelineRaw.new(),
+    raw={
+      "Mazda": "string",
+    },
   ))
 
 if ! res.crm_pipeline.nil?
@@ -912,7 +924,9 @@ res = s.crm.patch_crm_company(connection_id="string", id="string", crm_company=S
     link_urls=[
       "string",
     ],
-    raw=Shared::PropertyCrmCompanyRaw.new(),
+    raw={
+      "Producer": "string",
+    },
     tags=[
       "string",
     ],
@@ -975,7 +989,9 @@ res = s.crm.patch_crm_contact(connection_id="string", id="string", crm_contact=S
     emails=[
       Shared::CrmEmail.new(),
     ],
-    raw=Shared::PropertyCrmContactRaw.new(),
+    raw={
+      "architecture": "string",
+    },
     telephones=[
       Shared::CrmTelephone.new(
         telephone="string",
@@ -1022,7 +1038,9 @@ s.config_security(
 
     
 res = s.crm.patch_crm_deal(connection_id="string", id="string", crm_deal=Shared::CrmDeal.new(
-    raw=Shared::PropertyCrmDealRaw.new(),
+    raw={
+      "consign": "string",
+    },
     tags=[
       "string",
     ],
@@ -1093,7 +1111,9 @@ res = s.crm.patch_crm_event(connection_id="string", id="string", crm_event=Share
     ],
     meeting=Shared::PropertyCrmEventMeeting.new(),
     note=Shared::PropertyCrmEventNote.new(),
-    raw=Shared::PropertyCrmEventRaw.new(),
+    raw={
+      "XML": "string",
+    },
     task=Shared::PropertyCrmEventTask.new(),
   ))
 
@@ -1140,7 +1160,9 @@ res = s.crm.patch_crm_lead(connection_id="string", id="string", crm_lead=Shared:
     emails=[
       Shared::CrmEmail.new(),
     ],
-    raw=Shared::PropertyCrmLeadRaw.new(),
+    raw={
+      "deposit": "string",
+    },
     telephones=[
       Shared::CrmTelephone.new(
         telephone="string",
@@ -1187,7 +1209,9 @@ s.config_security(
 
     
 res = s.crm.patch_crm_pipeline(connection_id="string", id="string", crm_pipeline=Shared::CrmPipeline.new(
-    raw=Shared::PropertyCrmPipelineRaw.new(),
+    raw={
+      "unimpressively": "string",
+    },
   ))
 
 if ! res.crm_pipeline.nil?
@@ -1473,7 +1497,9 @@ res = s.crm.update_crm_company(connection_id="string", id="string", crm_company=
     link_urls=[
       "string",
     ],
-    raw=Shared::PropertyCrmCompanyRaw.new(),
+    raw={
+      "SMS": "string",
+    },
     tags=[
       "string",
     ],
@@ -1536,7 +1562,9 @@ res = s.crm.update_crm_contact(connection_id="string", id="string", crm_contact=
     emails=[
       Shared::CrmEmail.new(),
     ],
-    raw=Shared::PropertyCrmContactRaw.new(),
+    raw={
+      "Universal": "string",
+    },
     telephones=[
       Shared::CrmTelephone.new(
         telephone="string",
@@ -1583,7 +1611,9 @@ s.config_security(
 
     
 res = s.crm.update_crm_deal(connection_id="string", id="string", crm_deal=Shared::CrmDeal.new(
-    raw=Shared::PropertyCrmDealRaw.new(),
+    raw={
+      "South": "string",
+    },
     tags=[
       "string",
     ],
@@ -1654,7 +1684,9 @@ res = s.crm.update_crm_event(connection_id="string", id="string", crm_event=Shar
     ],
     meeting=Shared::PropertyCrmEventMeeting.new(),
     note=Shared::PropertyCrmEventNote.new(),
-    raw=Shared::PropertyCrmEventRaw.new(),
+    raw={
+      "Account": "string",
+    },
     task=Shared::PropertyCrmEventTask.new(),
   ))
 
@@ -1701,7 +1733,9 @@ res = s.crm.update_crm_lead(connection_id="string", id="string", crm_lead=Shared
     emails=[
       Shared::CrmEmail.new(),
     ],
-    raw=Shared::PropertyCrmLeadRaw.new(),
+    raw={
+      "Northwest": "string",
+    },
     telephones=[
       Shared::CrmTelephone.new(
         telephone="string",
@@ -1748,7 +1782,9 @@ s.config_security(
 
     
 res = s.crm.update_crm_pipeline(connection_id="string", id="string", crm_pipeline=Shared::CrmPipeline.new(
-    raw=Shared::PropertyCrmPipelineRaw.new(),
+    raw={
+      "functionalities": "string",
+    },
   ))
 
 if ! res.crm_pipeline.nil?

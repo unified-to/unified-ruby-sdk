@@ -32,7 +32,9 @@ res = s.group.create_hris_group(connection_id="string", hris_group=Shared::HrisG
     manager_ids=[
       "string",
     ],
-    raw=Shared::PropertyHrisGroupRaw.new(),
+    raw={
+      "transmitter": "string",
+    },
     user_ids=[
       "string",
     ],
@@ -166,7 +168,9 @@ res = s.group.patch_hris_group(connection_id="string", id="string", hris_group=S
     manager_ids=[
       "string",
     ],
-    raw=Shared::PropertyHrisGroupRaw.new(),
+    raw={
+      "scalable": "string",
+    },
     user_ids=[
       "string",
     ],
@@ -253,7 +257,9 @@ res = s.group.update_hris_group(connection_id="string", id="string", hris_group=
     manager_ids=[
       "string",
     ],
-    raw=Shared::PropertyHrisGroupRaw.new(),
+    raw={
+      "disintermediate": "string",
+    },
     user_ids=[
       "string",
     ],

@@ -5,7 +5,6 @@
 
 require 'sorbet-runtime'
 require 'faraday'
-require_relative '../shared/property_webhook_meta'
 
 module UnifiedRubySDK
   module Shared
@@ -98,7 +97,7 @@ module UnifiedRubySDK
 
       field :is_healthy, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_healthy') } }
 
-      field :meta, T.nilable(Shared::PropertyWebhookMeta), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('meta') } }
+      field :meta, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('meta') } }
       # An array of the most revent virtual webhook runs
       field :runs, T.nilable(T::Array[String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('runs') } }
 
@@ -109,7 +108,7 @@ module UnifiedRubySDK
       field :workspace_id, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
 
 
-      sig { params(connection_id: String, event: Shared::Event, hook_url: String, interval: Float, object_type: Shared::ObjectType, checked_at: T.nilable(DateTime), created_at: T.nilable(DateTime), environment: T.nilable(String), fields: T.nilable(String), id: T.nilable(String), integration_type: T.nilable(String), is_healthy: T.nilable(T::Boolean), meta: T.nilable(Shared::PropertyWebhookMeta), runs: T.nilable(T::Array[String]), updated_at: T.nilable(DateTime), webhook_type: T.nilable(Shared::WebhookWebhookType), workspace_id: T.nilable(String)).void }
+      sig { params(connection_id: String, event: Shared::Event, hook_url: String, interval: Float, object_type: Shared::ObjectType, checked_at: T.nilable(DateTime), created_at: T.nilable(DateTime), environment: T.nilable(String), fields: T.nilable(String), id: T.nilable(String), integration_type: T.nilable(String), is_healthy: T.nilable(T::Boolean), meta: T.nilable(T::Hash[Symbol, Object]), runs: T.nilable(T::Array[String]), updated_at: T.nilable(DateTime), webhook_type: T.nilable(Shared::WebhookWebhookType), workspace_id: T.nilable(String)).void }
       def initialize(connection_id: nil, event: nil, hook_url: nil, interval: nil, object_type: nil, checked_at: nil, created_at: nil, environment: nil, fields: nil, id: nil, integration_type: nil, is_healthy: nil, meta: nil, runs: nil, updated_at: nil, webhook_type: nil, workspace_id: nil)
         @connection_id = connection_id
         @event = event

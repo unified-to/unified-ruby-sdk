@@ -46,7 +46,9 @@ res = s.job.create_ats_job(connection_id="string", ats_job=Shared::AtsJob.new(
     public_job_urls=[
       "string",
     ],
-    raw=Shared::PropertyAtsJobRaw.new(),
+    raw={
+      "Loan": "string",
+    },
     recruiter_ids=[
       "string",
     ],
@@ -194,7 +196,9 @@ res = s.job.patch_ats_job(connection_id="string", id="string", ats_job=Shared::A
     public_job_urls=[
       "string",
     ],
-    raw=Shared::PropertyAtsJobRaw.new(),
+    raw={
+      "indigo": "string",
+    },
     recruiter_ids=[
       "string",
     ],
@@ -295,7 +299,9 @@ res = s.job.update_ats_job(connection_id="string", id="string", ats_job=Shared::
     public_job_urls=[
       "string",
     ],
-    raw=Shared::PropertyAtsJobRaw.new(),
+    raw={
+      "Plastic": "string",
+    },
     recruiter_ids=[
       "string",
     ],

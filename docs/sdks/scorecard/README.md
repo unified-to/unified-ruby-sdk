@@ -29,7 +29,9 @@ s.config_security(
 
     
 res = s.scorecard.create_ats_scorecard(connection_id="string", ats_scorecard=Shared::AtsScorecard.new(
-    raw=Shared::PropertyAtsScorecardRaw.new(),
+    raw={
+      "Brunei": "string",
+    },
   ))
 
 if ! res.ats_scorecard.nil?
@@ -157,7 +159,9 @@ s.config_security(
 
     
 res = s.scorecard.patch_ats_scorecard(connection_id="string", id="string", ats_scorecard=Shared::AtsScorecard.new(
-    raw=Shared::PropertyAtsScorecardRaw.new(),
+    raw={
+      "Falls": "string",
+    },
   ))
 
 if ! res.ats_scorecard.nil?
@@ -238,7 +242,9 @@ s.config_security(
 
     
 res = s.scorecard.update_ats_scorecard(connection_id="string", id="string", ats_scorecard=Shared::AtsScorecard.new(
-    raw=Shared::PropertyAtsScorecardRaw.new(),
+    raw={
+      "East": "string",
+    },
   ))
 
 if ! res.ats_scorecard.nil?

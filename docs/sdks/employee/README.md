@@ -35,7 +35,9 @@ res = s.employee.create_hris_employee(connection_id="string", hris_employee=Shar
         email="Adriel_Hansen@hotmail.com",
       ),
     ],
-    raw=Shared::PropertyHrisEmployeeRaw.new(),
+    raw={
+      "composite": "string",
+    },
     telephones=[
       Shared::HrisTelephone.new(
         telephone="string",
@@ -174,7 +176,9 @@ res = s.employee.patch_hris_employee(connection_id="string", id="string", hris_e
         email="Zetta.Cassin@yahoo.com",
       ),
     ],
-    raw=Shared::PropertyHrisEmployeeRaw.new(),
+    raw={
+      "cyan": "string",
+    },
     telephones=[
       Shared::HrisTelephone.new(
         telephone="string",
@@ -266,7 +270,9 @@ res = s.employee.update_hris_employee(connection_id="string", id="string", hris_
         email="Abbie_Aufderhar@gmail.com",
       ),
     ],
-    raw=Shared::PropertyHrisEmployeeRaw.new(),
+    raw={
+      "Mazda": "string",
+    },
     telephones=[
       Shared::HrisTelephone.new(
         telephone="string",

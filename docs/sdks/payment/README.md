@@ -29,7 +29,9 @@ s.config_security(
 
     
 res = s.payment.create_accounting_payment(connection_id="string", accounting_payment=Shared::AccountingPayment.new(
-    raw=Shared::PropertyAccountingPaymentRaw.new(),
+    raw={
+      "Specialist": "string",
+    },
   ))
 
 if ! res.accounting_payment.nil?
@@ -157,7 +159,9 @@ s.config_security(
 
     
 res = s.payment.patch_accounting_payment(connection_id="string", id="string", accounting_payment=Shared::AccountingPayment.new(
-    raw=Shared::PropertyAccountingPaymentRaw.new(),
+    raw={
+      "Herzegovina": "string",
+    },
   ))
 
 if ! res.accounting_payment.nil?
@@ -238,7 +242,9 @@ s.config_security(
 
     
 res = s.payment.update_accounting_payment(connection_id="string", id="string", accounting_payment=Shared::AccountingPayment.new(
-    raw=Shared::PropertyAccountingPaymentRaw.new(),
+    raw={
+      "South": "string",
+    },
   ))
 
 if ! res.accounting_payment.nil?

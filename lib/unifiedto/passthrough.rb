@@ -17,14 +17,14 @@ module UnifiedRubySDK
       @sdk_configuration = sdk_config
     end
 
-    sig { params(connection_id: String, path: String, undefined: T.nilable(Shared::Undefined)).returns(Utils::FieldAugmented) }
-    def create_passthrough(connection_id, path, undefined = nil)
+    sig { params(connection_id: String, path: String, request_body: T.nilable(T::Hash[Symbol, Object])).returns(Utils::FieldAugmented) }
+    def create_passthrough(connection_id, path, request_body = nil)
       # create_passthrough - Passthrough POST
       request = Operations::CreatePassthroughRequest.new(
         
         connection_id: connection_id,
         path: path,
-        undefined: undefined
+        request_body: request_body
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -35,7 +35,7 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :undefined, :json)
+      req_content_type, data, form = Utils.serialize_request_body(request, :request_body, :json)
       headers['content-type'] = req_content_type
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -59,7 +59,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, Shared::Undefined)
+          out = Utils.unmarshal_complex(r.env.response_body, T::Hash[Symbol, Object])
           res.undefined = out
         end
       end
@@ -98,21 +98,21 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, Shared::Undefined)
+          out = Utils.unmarshal_complex(r.env.response_body, T::Hash[Symbol, Object])
           res.undefined = out
         end
       end
       res
     end
 
-    sig { params(connection_id: String, path: String, undefined: T.nilable(Shared::Undefined)).returns(Utils::FieldAugmented) }
-    def patch_passthrough(connection_id, path, undefined = nil)
+    sig { params(connection_id: String, path: String, request_body: T.nilable(T::Hash[Symbol, Object])).returns(Utils::FieldAugmented) }
+    def patch_passthrough(connection_id, path, request_body = nil)
       # patch_passthrough - Passthrough PUT
       request = Operations::PatchPassthroughRequest.new(
         
         connection_id: connection_id,
         path: path,
-        undefined: undefined
+        request_body: request_body
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -123,7 +123,7 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :undefined, :json)
+      req_content_type, data, form = Utils.serialize_request_body(request, :request_body, :json)
       headers['content-type'] = req_content_type
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -147,7 +147,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, Shared::Undefined)
+          out = Utils.unmarshal_complex(r.env.response_body, T::Hash[Symbol, Object])
           res.undefined = out
         end
       end
@@ -186,21 +186,21 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, Shared::Undefined)
+          out = Utils.unmarshal_complex(r.env.response_body, T::Hash[Symbol, Object])
           res.undefined = out
         end
       end
       res
     end
 
-    sig { params(connection_id: String, path: String, undefined: T.nilable(Shared::Undefined)).returns(Utils::FieldAugmented) }
-    def update_passthrough(connection_id, path, undefined = nil)
+    sig { params(connection_id: String, path: String, request_body: T.nilable(T::Hash[Symbol, Object])).returns(Utils::FieldAugmented) }
+    def update_passthrough(connection_id, path, request_body = nil)
       # update_passthrough - Passthrough PUT
       request = Operations::UpdatePassthroughRequest.new(
         
         connection_id: connection_id,
         path: path,
-        undefined: undefined
+        request_body: request_body
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -211,7 +211,7 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :undefined, :json)
+      req_content_type, data, form = Utils.serialize_request_body(request, :request_body, :json)
       headers['content-type'] = req_content_type
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -235,7 +235,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, Shared::Undefined)
+          out = Utils.unmarshal_complex(r.env.response_body, T::Hash[Symbol, Object])
           res.undefined = out
         end
       end

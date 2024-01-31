@@ -5,7 +5,6 @@
 
 require 'sorbet-runtime'
 require 'faraday'
-require_relative '../shared/property_accountingitem_raw'
 
 module UnifiedRubySDK
   module Shared
@@ -32,14 +31,14 @@ module UnifiedRubySDK
 
       field :quantity_on_hand, T.nilable(Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('quantity_on_hand') } }
 
-      field :raw, T.nilable(Shared::PropertyAccountingItemRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(T::Hash[Symbol, Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :sku, T.nilable(String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sku') } }
 
       field :updated_at, T.nilable(DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(name: String, created_at: T.nilable(DateTime), description: T.nilable(String), id: T.nilable(String), is_active: T.nilable(T::Boolean), is_taxable: T.nilable(T::Boolean), price: T.nilable(Float), public_description: T.nilable(String), quantity_on_hand: T.nilable(Float), raw: T.nilable(Shared::PropertyAccountingItemRaw), sku: T.nilable(String), updated_at: T.nilable(DateTime)).void }
+      sig { params(name: String, created_at: T.nilable(DateTime), description: T.nilable(String), id: T.nilable(String), is_active: T.nilable(T::Boolean), is_taxable: T.nilable(T::Boolean), price: T.nilable(Float), public_description: T.nilable(String), quantity_on_hand: T.nilable(Float), raw: T.nilable(T::Hash[Symbol, Object]), sku: T.nilable(String), updated_at: T.nilable(DateTime)).void }
       def initialize(name: nil, created_at: nil, description: nil, id: nil, is_active: nil, is_taxable: nil, price: nil, public_description: nil, quantity_on_hand: nil, raw: nil, sku: nil, updated_at: nil)
         @name = name
         @created_at = created_at
