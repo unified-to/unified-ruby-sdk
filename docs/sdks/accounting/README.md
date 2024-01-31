@@ -353,8 +353,14 @@ res = s.accounting.create_accounting_transaction(connection_id="string", account
         total_amount=4969.62,
       ),
     ],
+    lineitems=[
+      Shared::AccountingTransactionLineitem.new(
+        account_id="string",
+        total_amount=6267.93,
+      ),
+    ],
     raw={
-      "Web": "string",
+      "Direct": "string",
     },
   ))
 
@@ -1384,8 +1390,14 @@ res = s.accounting.patch_accounting_transaction(connection_id="string", id="stri
         total_amount=5633.69,
       ),
     ],
+    lineitems=[
+      Shared::AccountingTransactionLineitem.new(
+        account_id="string",
+        total_amount=4558.63,
+      ),
+    ],
     raw={
-      "invoice": "string",
+      "instead": "string",
     },
   ))
 
@@ -1993,8 +2005,14 @@ res = s.accounting.update_accounting_transaction(connection_id="string", id="str
         total_amount=6498.37,
       ),
     ],
+    lineitems=[
+      Shared::AccountingTransactionLineitem.new(
+        account_id="string",
+        total_amount=5659.17,
+      ),
+    ],
     raw={
-      "a": "string",
+      "protest": "string",
     },
   ))
 
