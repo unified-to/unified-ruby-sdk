@@ -73,7 +73,7 @@ s.config_security(
 
 req = Operations::ListUnifiedIntegrationWorkspacesRequest.new(
   categories=[
-    Operations::QueryParamCategories::UC,
+    Operations::QueryParamCategories::ACCOUNTING,
   ],
   workspace_id="string",
 )
@@ -118,7 +118,7 @@ s.config_security(
 
 req = Operations::ListUnifiedIntegrationsRequest.new(
   categories=[
-    Operations::ListUnifiedIntegrationsQueryParamCategories::AUTH,
+    Operations::ListUnifiedIntegrationsQueryParamCategories::CRM,
   ],
 )
     

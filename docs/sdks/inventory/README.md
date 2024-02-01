@@ -1,0 +1,271 @@
+# Inventory
+
+
+### Available Operations
+
+* [create_commerce_inventory](#create_commerce_inventory) - Create an inventory
+* [get_commerce_inventory](#get_commerce_inventory) - Retrieve an inventory
+* [list_commerce_inventories](#list_commerce_inventories) - List all inventories
+* [patch_commerce_inventory](#patch_commerce_inventory) - Update an inventory
+* [remove_commerce_inventory](#remove_commerce_inventory) - Remove an inventory
+* [update_commerce_inventory](#update_commerce_inventory) - Update an inventory
+
+## create_commerce_inventory
+
+Create an inventory
+
+### Example Usage
+
+```ruby
+require_relative unified_ruby_sdk
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  security=Shared::Security.new(
+    jwt="<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.inventory.create_commerce_inventory(connection_id="string", commerce_inventory=Shared::CommerceInventory.new(
+    available=5165.08,
+    raw={
+      "Officer": "string",
+    },
+  ))
+
+if ! res.commerce_inventory.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `connection_id`                                                       | *String*                                                              | :heavy_check_mark:                                                    | ID of the connection                                                  |
+| `commerce_inventory`                                                  | [Shared::CommerceInventory](../../models/shared/commerceinventory.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+
+
+### Response
+
+**[T.nilable(Operations::CreateCommerceInventoryResponse)](../../models/operations/createcommerceinventoryresponse.md)**
+
+
+## get_commerce_inventory
+
+Retrieve an inventory
+
+### Example Usage
+
+```ruby
+require_relative unified_ruby_sdk
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  security=Shared::Security.new(
+    jwt="<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.inventory.get_commerce_inventory(connection_id="string", id="string", fields=[
+    "string",
+  ])
+
+if ! res.commerce_inventory.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                        | Type                             | Required                         | Description                      |
+| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
+| `connection_id`                  | *String*                         | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *String*                         | :heavy_check_mark:               | ID of the Inventory              |
+| `fields`                         | T::Array<*String*>               | :heavy_minus_sign:               | Comma-delimited fields to return |
+
+
+### Response
+
+**[T.nilable(Operations::GetCommerceInventoryResponse)](../../models/operations/getcommerceinventoryresponse.md)**
+
+
+## list_commerce_inventories
+
+List all inventories
+
+### Example Usage
+
+```ruby
+require_relative unified_ruby_sdk
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  security=Shared::Security.new(
+    jwt="<YOUR_API_KEY_HERE>",
+  )
+)
+
+
+req = Operations::ListCommerceInventoriesRequest.new(
+  connection_id="string",
+  fields=[
+    "string",
+  ],
+)
+    
+res = s.inventory.list_commerce_inventories(req)
+
+if ! res.commerce_inventories.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [Operations::ListCommerceInventoriesRequest](../../models/operations/listcommerceinventoriesrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+
+
+### Response
+
+**[T.nilable(Operations::ListCommerceInventoriesResponse)](../../models/operations/listcommerceinventoriesresponse.md)**
+
+
+## patch_commerce_inventory
+
+Update an inventory
+
+### Example Usage
+
+```ruby
+require_relative unified_ruby_sdk
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  security=Shared::Security.new(
+    jwt="<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.inventory.patch_commerce_inventory(connection_id="string", id="string", commerce_inventory=Shared::CommerceInventory.new(
+    available=615.23,
+    raw={
+      "Modern": "string",
+    },
+  ))
+
+if ! res.commerce_inventory.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `connection_id`                                                       | *String*                                                              | :heavy_check_mark:                                                    | ID of the connection                                                  |
+| `id`                                                                  | *String*                                                              | :heavy_check_mark:                                                    | ID of the Inventory                                                   |
+| `commerce_inventory`                                                  | [Shared::CommerceInventory](../../models/shared/commerceinventory.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+
+
+### Response
+
+**[T.nilable(Operations::PatchCommerceInventoryResponse)](../../models/operations/patchcommerceinventoryresponse.md)**
+
+
+## remove_commerce_inventory
+
+Remove an inventory
+
+### Example Usage
+
+```ruby
+require_relative unified_ruby_sdk
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  security=Shared::Security.new(
+    jwt="<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.inventory.remove_commerce_inventory(connection_id="string", id="string")
+
+if res.status == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *String*             | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *String*             | :heavy_check_mark:   | ID of the Inventory  |
+
+
+### Response
+
+**[T.nilable(Operations::RemoveCommerceInventoryResponse)](../../models/operations/removecommerceinventoryresponse.md)**
+
+
+## update_commerce_inventory
+
+Update an inventory
+
+### Example Usage
+
+```ruby
+require_relative unified_ruby_sdk
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  security=Shared::Security.new(
+    jwt="<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.inventory.update_commerce_inventory(connection_id="string", id="string", commerce_inventory=Shared::CommerceInventory.new(
+    available=9360.02,
+    raw={
+      "wavy": "string",
+    },
+  ))
+
+if ! res.commerce_inventory.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `connection_id`                                                       | *String*                                                              | :heavy_check_mark:                                                    | ID of the connection                                                  |
+| `id`                                                                  | *String*                                                              | :heavy_check_mark:                                                    | ID of the Inventory                                                   |
+| `commerce_inventory`                                                  | [Shared::CommerceInventory](../../models/shared/commerceinventory.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+
+
+### Response
+
+**[T.nilable(Operations::UpdateCommerceInventoryResponse)](../../models/operations/updatecommerceinventoryresponse.md)**
+

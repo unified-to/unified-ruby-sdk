@@ -17,24 +17,24 @@ module UnifiedRubySDK
       @sdk_configuration = sdk_config
     end
 
-    sig { params(connection_id: String, accounting_item: T.nilable(Shared::AccountingItem)).returns(Utils::FieldAugmented) }
-    def create_accounting_item(connection_id, accounting_item = nil)
-      # create_accounting_item - Create an item
-      request = Operations::CreateAccountingItemRequest.new(
+    sig { params(connection_id: String, commerce_item: T.nilable(Shared::CommerceItem)).returns(Utils::FieldAugmented) }
+    def create_commerce_item(connection_id, commerce_item = nil)
+      # create_commerce_item - Create an item/product
+      request = Operations::CreateCommerceItemRequest.new(
         
         connection_id: connection_id,
-        accounting_item: accounting_item
+        commerce_item: commerce_item
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Operations::CreateAccountingItemRequest,
+        Operations::CreateCommerceItemRequest,
         base_url,
-        '/accounting/{connection_id}/item',
+        '/commerce/{connection_id}/item',
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :accounting_item, :json)
+      req_content_type, data, form = Utils.serialize_request_body(request, :commerce_item, :json)
       headers['content-type'] = req_content_type
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -53,22 +53,22 @@ module UnifiedRubySDK
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
 
-      res = Operations::CreateAccountingItemResponse.new(
+      res = Operations::CreateCommerceItemResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, Shared::AccountingItem)
-          res.accounting_item = out
+          out = Utils.unmarshal_complex(r.env.response_body, Shared::CommerceItem)
+          res.commerce_item = out
         end
       end
       res
     end
 
     sig { params(connection_id: String, id: String, fields: T.nilable(T::Array[String])).returns(Utils::FieldAugmented) }
-    def get_accounting_item(connection_id, id, fields = nil)
-      # get_accounting_item - Retrieve an item
-      request = Operations::GetAccountingItemRequest.new(
+    def get_commerce_item(connection_id, id, fields = nil)
+      # get_commerce_item - Retrieve an item/product
+      request = Operations::GetCommerceItemRequest.new(
         
         connection_id: connection_id,
         id: id,
@@ -77,13 +77,13 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Operations::GetAccountingItemRequest,
+        Operations::GetCommerceItemRequest,
         base_url,
-        '/accounting/{connection_id}/item/{id}',
+        '/commerce/{connection_id}/item/{id}',
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Operations::GetAccountingItemRequest, request)
+      query_params = Utils.get_query_params(Operations::GetCommerceItemRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -95,31 +95,31 @@ module UnifiedRubySDK
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
 
-      res = Operations::GetAccountingItemResponse.new(
+      res = Operations::GetCommerceItemResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, Shared::AccountingItem)
-          res.accounting_item = out
+          out = Utils.unmarshal_complex(r.env.response_body, Shared::CommerceItem)
+          res.commerce_item = out
         end
       end
       res
     end
 
-    sig { params(request: T.nilable(Operations::ListAccountingItemsRequest)).returns(Utils::FieldAugmented) }
-    def list_accounting_items(request)
-      # list_accounting_items - List all items
+    sig { params(request: T.nilable(Operations::ListCommerceItemsRequest)).returns(Utils::FieldAugmented) }
+    def list_commerce_items(request)
+      # list_commerce_items - List all items/products
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Operations::ListAccountingItemsRequest,
+        Operations::ListCommerceItemsRequest,
         base_url,
-        '/accounting/{connection_id}/item',
+        '/commerce/{connection_id}/item',
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Operations::ListAccountingItemsRequest, request)
+      query_params = Utils.get_query_params(Operations::ListCommerceItemsRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -131,37 +131,37 @@ module UnifiedRubySDK
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
 
-      res = Operations::ListAccountingItemsResponse.new(
+      res = Operations::ListCommerceItemsResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, T::Array[Shared::AccountingItem])
-          res.accounting_items = out
+          out = Utils.unmarshal_complex(r.env.response_body, T::Array[Shared::CommerceItem])
+          res.commerce_items = out
         end
       end
       res
     end
 
-    sig { params(connection_id: String, id: String, accounting_item: T.nilable(Shared::AccountingItem)).returns(Utils::FieldAugmented) }
-    def patch_accounting_item(connection_id, id, accounting_item = nil)
-      # patch_accounting_item - Update an item
-      request = Operations::PatchAccountingItemRequest.new(
+    sig { params(connection_id: String, id: String, commerce_item: T.nilable(Shared::CommerceItem)).returns(Utils::FieldAugmented) }
+    def patch_commerce_item(connection_id, id, commerce_item = nil)
+      # patch_commerce_item - Update an item/product
+      request = Operations::PatchCommerceItemRequest.new(
         
         connection_id: connection_id,
         id: id,
-        accounting_item: accounting_item
+        commerce_item: commerce_item
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Operations::PatchAccountingItemRequest,
+        Operations::PatchCommerceItemRequest,
         base_url,
-        '/accounting/{connection_id}/item/{id}',
+        '/commerce/{connection_id}/item/{id}',
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :accounting_item, :json)
+      req_content_type, data, form = Utils.serialize_request_body(request, :commerce_item, :json)
       headers['content-type'] = req_content_type
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -180,22 +180,22 @@ module UnifiedRubySDK
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
 
-      res = Operations::PatchAccountingItemResponse.new(
+      res = Operations::PatchCommerceItemResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, Shared::AccountingItem)
-          res.accounting_item = out
+          out = Utils.unmarshal_complex(r.env.response_body, Shared::CommerceItem)
+          res.commerce_item = out
         end
       end
       res
     end
 
     sig { params(connection_id: String, id: String).returns(Utils::FieldAugmented) }
-    def remove_accounting_item(connection_id, id)
-      # remove_accounting_item - Remove an item
-      request = Operations::RemoveAccountingItemRequest.new(
+    def remove_commerce_item(connection_id, id)
+      # remove_commerce_item - Remove an item/product
+      request = Operations::RemoveCommerceItemRequest.new(
         
         connection_id: connection_id,
         id: id
@@ -203,9 +203,9 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Operations::RemoveAccountingItemRequest,
+        Operations::RemoveCommerceItemRequest,
         base_url,
-        '/accounting/{connection_id}/item/{id}',
+        '/commerce/{connection_id}/item/{id}',
         request
       )
       headers = {}
@@ -219,7 +219,7 @@ module UnifiedRubySDK
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
 
-      res = Operations::RemoveAccountingItemResponse.new(
+      res = Operations::RemoveCommerceItemResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
       if True
@@ -230,25 +230,25 @@ module UnifiedRubySDK
       res
     end
 
-    sig { params(connection_id: String, id: String, accounting_item: T.nilable(Shared::AccountingItem)).returns(Utils::FieldAugmented) }
-    def update_accounting_item(connection_id, id, accounting_item = nil)
-      # update_accounting_item - Update an item
-      request = Operations::UpdateAccountingItemRequest.new(
+    sig { params(connection_id: String, id: String, commerce_item: T.nilable(Shared::CommerceItem)).returns(Utils::FieldAugmented) }
+    def update_commerce_item(connection_id, id, commerce_item = nil)
+      # update_commerce_item - Update an item/product
+      request = Operations::UpdateCommerceItemRequest.new(
         
         connection_id: connection_id,
         id: id,
-        accounting_item: accounting_item
+        commerce_item: commerce_item
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Operations::UpdateAccountingItemRequest,
+        Operations::UpdateCommerceItemRequest,
         base_url,
-        '/accounting/{connection_id}/item/{id}',
+        '/commerce/{connection_id}/item/{id}',
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :accounting_item, :json)
+      req_content_type, data, form = Utils.serialize_request_body(request, :commerce_item, :json)
       headers['content-type'] = req_content_type
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -267,13 +267,13 @@ module UnifiedRubySDK
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
 
-      res = Operations::UpdateAccountingItemResponse.new(
+      res = Operations::UpdateCommerceItemResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, Shared::AccountingItem)
-          res.accounting_item = out
+          out = Utils.unmarshal_complex(r.env.response_body, Shared::CommerceItem)
+          res.commerce_item = out
         end
       end
       res

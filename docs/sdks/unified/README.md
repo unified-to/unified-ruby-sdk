@@ -52,7 +52,7 @@ req = Shared::Connection.new(
     ],
   ),
   categories=[
-    Shared::PropertyConnectionCategories::CRM,
+    Shared::PropertyConnectionCategories::ENRICH,
   ],
   cursors_cache=[
     {
@@ -61,7 +61,7 @@ req = Shared::Connection.new(
   ],
   integration_type="string",
   permissions=[
-    Shared::PropertyConnectionPermissions::CRM_COMPANY_WRITE,
+    Shared::PropertyConnectionPermissions::ATS_JOB_WRITE,
   ],
 )
     
@@ -356,7 +356,7 @@ s.config_security(
 
 req = Operations::ListUnifiedConnectionsRequest.new(
   categories=[
-    Operations::Categories::ENRICH,
+    Operations::Categories::MARTECH,
   ],
 )
     
@@ -400,7 +400,7 @@ s.config_security(
 
 req = Operations::ListUnifiedIntegrationWorkspacesRequest.new(
   categories=[
-    Operations::QueryParamCategories::UC,
+    Operations::QueryParamCategories::ACCOUNTING,
   ],
   workspace_id="string",
 )
@@ -445,7 +445,7 @@ s.config_security(
 
 req = Operations::ListUnifiedIntegrationsRequest.new(
   categories=[
-    Operations::ListUnifiedIntegrationsQueryParamCategories::AUTH,
+    Operations::ListUnifiedIntegrationsQueryParamCategories::CRM,
   ],
 )
     
@@ -540,7 +540,7 @@ res = s.unified.patch_unified_connection(id="string", connection=Shared::Connect
       ],
     ),
     categories=[
-      Shared::PropertyConnectionCategories::STORAGE,
+      Shared::PropertyConnectionCategories::COMMERCE,
     ],
     cursors_cache=[
       {
@@ -549,7 +549,7 @@ res = s.unified.patch_unified_connection(id="string", connection=Shared::Connect
     ],
     integration_type="string",
     permissions=[
-      Shared::PropertyConnectionPermissions::ACCOUNTING_INVOICE_WRITE,
+      Shared::PropertyConnectionPermissions::ACCOUNTING_CONTACT_READ,
     ],
   ))
 
@@ -717,7 +717,7 @@ res = s.unified.update_unified_connection(id="string", connection=Shared::Connec
       ],
     ),
     categories=[
-      Shared::PropertyConnectionCategories::STORAGE,
+      Shared::PropertyConnectionCategories::COMMERCE,
     ],
     cursors_cache=[
       {
@@ -726,7 +726,7 @@ res = s.unified.update_unified_connection(id="string", connection=Shared::Connec
     ],
     integration_type="string",
     permissions=[
-      Shared::PropertyConnectionPermissions::ACCOUNTING_TRANSACTION_READ,
+      Shared::PropertyConnectionPermissions::ACCOUNTING_TRANSACTION_WRITE,
     ],
   ))
 

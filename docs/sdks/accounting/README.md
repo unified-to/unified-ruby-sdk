@@ -6,14 +6,12 @@
 * [create_accounting_account](#create_accounting_account) - Create an account
 * [create_accounting_contact](#create_accounting_contact) - Create a contact
 * [create_accounting_invoice](#create_accounting_invoice) - Create a invoice
-* [create_accounting_item](#create_accounting_item) - Create an item
 * [create_accounting_payment](#create_accounting_payment) - Create a payment
 * [create_accounting_taxrate](#create_accounting_taxrate) - Create a taxrate
 * [create_accounting_transaction](#create_accounting_transaction) - Create a transaction
 * [get_accounting_account](#get_accounting_account) - Retrieve an account
 * [get_accounting_contact](#get_accounting_contact) - Retrieve a contact
 * [get_accounting_invoice](#get_accounting_invoice) - Retrieve a invoice
-* [get_accounting_item](#get_accounting_item) - Retrieve an item
 * [get_accounting_organization](#get_accounting_organization) - Retrieve an organization
 * [get_accounting_payment](#get_accounting_payment) - Retrieve a payment
 * [get_accounting_taxrate](#get_accounting_taxrate) - Retrieve a taxrate
@@ -21,7 +19,6 @@
 * [list_accounting_accounts](#list_accounting_accounts) - List all accounts
 * [list_accounting_contacts](#list_accounting_contacts) - List all contacts
 * [list_accounting_invoices](#list_accounting_invoices) - List all invoices
-* [list_accounting_items](#list_accounting_items) - List all items
 * [list_accounting_organizations](#list_accounting_organizations) - List all organizations
 * [list_accounting_payments](#list_accounting_payments) - List all payments
 * [list_accounting_taxrates](#list_accounting_taxrates) - List all taxrates
@@ -29,21 +26,18 @@
 * [patch_accounting_account](#patch_accounting_account) - Update an account
 * [patch_accounting_contact](#patch_accounting_contact) - Update a contact
 * [patch_accounting_invoice](#patch_accounting_invoice) - Update a invoice
-* [patch_accounting_item](#patch_accounting_item) - Update an item
 * [patch_accounting_payment](#patch_accounting_payment) - Update a payment
 * [patch_accounting_taxrate](#patch_accounting_taxrate) - Update a taxrate
 * [patch_accounting_transaction](#patch_accounting_transaction) - Update a transaction
 * [remove_accounting_account](#remove_accounting_account) - Remove an account
 * [remove_accounting_contact](#remove_accounting_contact) - Remove a contact
 * [remove_accounting_invoice](#remove_accounting_invoice) - Remove a invoice
-* [remove_accounting_item](#remove_accounting_item) - Remove an item
 * [remove_accounting_payment](#remove_accounting_payment) - Remove a payment
 * [remove_accounting_taxrate](#remove_accounting_taxrate) - Remove a taxrate
 * [remove_accounting_transaction](#remove_accounting_transaction) - Remove a transaction
 * [update_accounting_account](#update_accounting_account) - Update an account
 * [update_accounting_contact](#update_accounting_contact) - Update a contact
 * [update_accounting_invoice](#update_accounting_invoice) - Update a invoice
-* [update_accounting_item](#update_accounting_item) - Update an item
 * [update_accounting_payment](#update_accounting_payment) - Update a payment
 * [update_accounting_taxrate](#update_accounting_taxrate) - Update a taxrate
 * [update_accounting_transaction](#update_accounting_transaction) - Update a transaction
@@ -195,50 +189,6 @@ end
 **[T.nilable(Operations::CreateAccountingInvoiceResponse)](../../models/operations/createaccountinginvoiceresponse.md)**
 
 
-## create_accounting_item
-
-Create an item
-
-### Example Usage
-
-```ruby
-require_relative unified_ruby_sdk
-
-
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  security=Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
-res = s.accounting.create_accounting_item(connection_id="string", accounting_item=Shared::AccountingItem.new(
-    name="string",
-    raw={
-      "visionary": "string",
-    },
-  ))
-
-if ! res.accounting_item.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
-| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
-| `connection_id`                                                 | *String*                                                        | :heavy_check_mark:                                              | ID of the connection                                            |
-| `accounting_item`                                               | [Shared::AccountingItem](../../models/shared/accountingitem.md) | :heavy_minus_sign:                                              | An item or product                                              |
-
-
-### Response
-
-**[T.nilable(Operations::CreateAccountingItemResponse)](../../models/operations/createaccountingitemresponse.md)**
-
-
 ## create_accounting_payment
 
 Create a payment
@@ -347,20 +297,14 @@ s.config_security(
     
 res = s.accounting.create_accounting_transaction(connection_id="string", accounting_transaction=Shared::AccountingTransaction.new(
     id="<ID>",
-    line_items=[
+    lineitems=[
       Shared::AccountingTransactionLineitem.new(
         account_id="string",
         total_amount=4969.62,
       ),
     ],
-    lineitems=[
-      Shared::AccountingTransactionLineitem.new(
-        account_id="string",
-        total_amount=6267.93,
-      ),
-    ],
     raw={
-      "Direct": "string",
+      "Web": "string",
     },
   ))
 
@@ -507,48 +451,6 @@ end
 ### Response
 
 **[T.nilable(Operations::GetAccountingInvoiceResponse)](../../models/operations/getaccountinginvoiceresponse.md)**
-
-
-## get_accounting_item
-
-Retrieve an item
-
-### Example Usage
-
-```ruby
-require_relative unified_ruby_sdk
-
-
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  security=Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
-res = s.accounting.get_accounting_item(connection_id="string", id="string", fields=[
-    "string",
-  ])
-
-if ! res.accounting_item.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter                        | Type                             | Required                         | Description                      |
-| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *String*                         | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *String*                         | :heavy_check_mark:               | ID of the Item                   |
-| `fields`                         | T::Array<*String*>               | :heavy_minus_sign:               | Comma-delimited fields to return |
-
-
-### Response
-
-**[T.nilable(Operations::GetAccountingItemResponse)](../../models/operations/getaccountingitemresponse.md)**
 
 
 ## get_accounting_organization
@@ -852,51 +754,6 @@ end
 ### Response
 
 **[T.nilable(Operations::ListAccountingInvoicesResponse)](../../models/operations/listaccountinginvoicesresponse.md)**
-
-
-## list_accounting_items
-
-List all items
-
-### Example Usage
-
-```ruby
-require_relative unified_ruby_sdk
-
-
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  security=Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
-  )
-)
-
-
-req = Operations::ListAccountingItemsRequest.new(
-  connection_id="string",
-  fields=[
-    "string",
-  ],
-)
-    
-res = s.accounting.list_accounting_items(req)
-
-if ! res.accounting_items.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `request`                                                                                       | [Operations::ListAccountingItemsRequest](../../models/operations/listaccountingitemsrequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
-
-
-### Response
-
-**[T.nilable(Operations::ListAccountingItemsResponse)](../../models/operations/listaccountingitemsresponse.md)**
 
 
 ## list_accounting_organizations
@@ -1229,51 +1086,6 @@ end
 **[T.nilable(Operations::PatchAccountingInvoiceResponse)](../../models/operations/patchaccountinginvoiceresponse.md)**
 
 
-## patch_accounting_item
-
-Update an item
-
-### Example Usage
-
-```ruby
-require_relative unified_ruby_sdk
-
-
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  security=Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
-res = s.accounting.patch_accounting_item(connection_id="string", id="string", accounting_item=Shared::AccountingItem.new(
-    name="string",
-    raw={
-      "Sleek": "string",
-    },
-  ))
-
-if ! res.accounting_item.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
-| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
-| `connection_id`                                                 | *String*                                                        | :heavy_check_mark:                                              | ID of the connection                                            |
-| `id`                                                            | *String*                                                        | :heavy_check_mark:                                              | ID of the Item                                                  |
-| `accounting_item`                                               | [Shared::AccountingItem](../../models/shared/accountingitem.md) | :heavy_minus_sign:                                              | An item or product                                              |
-
-
-### Response
-
-**[T.nilable(Operations::PatchAccountingItemResponse)](../../models/operations/patchaccountingitemresponse.md)**
-
-
 ## patch_accounting_payment
 
 Update a payment
@@ -1384,20 +1196,14 @@ s.config_security(
     
 res = s.accounting.patch_accounting_transaction(connection_id="string", id="string", accounting_transaction=Shared::AccountingTransaction.new(
     id="<ID>",
-    line_items=[
+    lineitems=[
       Shared::AccountingTransactionLineitem.new(
         account_id="string",
         total_amount=5633.69,
       ),
     ],
-    lineitems=[
-      Shared::AccountingTransactionLineitem.new(
-        account_id="string",
-        total_amount=4558.63,
-      ),
-    ],
     raw={
-      "instead": "string",
+      "invoice": "string",
     },
   ))
 
@@ -1536,45 +1342,6 @@ end
 ### Response
 
 **[T.nilable(Operations::RemoveAccountingInvoiceResponse)](../../models/operations/removeaccountinginvoiceresponse.md)**
-
-
-## remove_accounting_item
-
-Remove an item
-
-### Example Usage
-
-```ruby
-require_relative unified_ruby_sdk
-
-
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  security=Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
-res = s.accounting.remove_accounting_item(connection_id="string", id="string")
-
-if res.status == 200
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter            | Type                 | Required             | Description          |
-| -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *String*             | :heavy_check_mark:   | ID of the connection |
-| `id`                 | *String*             | :heavy_check_mark:   | ID of the Item       |
-
-
-### Response
-
-**[T.nilable(Operations::RemoveAccountingItemResponse)](../../models/operations/removeaccountingitemresponse.md)**
 
 
 ## remove_accounting_payment
@@ -1844,51 +1611,6 @@ end
 **[T.nilable(Operations::UpdateAccountingInvoiceResponse)](../../models/operations/updateaccountinginvoiceresponse.md)**
 
 
-## update_accounting_item
-
-Update an item
-
-### Example Usage
-
-```ruby
-require_relative unified_ruby_sdk
-
-
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  security=Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
-res = s.accounting.update_accounting_item(connection_id="string", id="string", accounting_item=Shared::AccountingItem.new(
-    name="string",
-    raw={
-      "Northwest": "string",
-    },
-  ))
-
-if ! res.accounting_item.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
-| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
-| `connection_id`                                                 | *String*                                                        | :heavy_check_mark:                                              | ID of the connection                                            |
-| `id`                                                            | *String*                                                        | :heavy_check_mark:                                              | ID of the Item                                                  |
-| `accounting_item`                                               | [Shared::AccountingItem](../../models/shared/accountingitem.md) | :heavy_minus_sign:                                              | An item or product                                              |
-
-
-### Response
-
-**[T.nilable(Operations::UpdateAccountingItemResponse)](../../models/operations/updateaccountingitemresponse.md)**
-
-
 ## update_accounting_payment
 
 Update a payment
@@ -1999,20 +1721,14 @@ s.config_security(
     
 res = s.accounting.update_accounting_transaction(connection_id="string", id="string", accounting_transaction=Shared::AccountingTransaction.new(
     id="<ID>",
-    line_items=[
+    lineitems=[
       Shared::AccountingTransactionLineitem.new(
         account_id="string",
         total_amount=6498.37,
       ),
     ],
-    lineitems=[
-      Shared::AccountingTransactionLineitem.new(
-        account_id="string",
-        total_amount=5659.17,
-      ),
-    ],
     raw={
-      "protest": "string",
+      "a": "string",
     },
   ))
 

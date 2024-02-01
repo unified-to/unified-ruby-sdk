@@ -161,54 +161,6 @@ module UnifiedRubySDK
       res
     end
 
-    sig { params(connection_id: String, accounting_item: T.nilable(Shared::AccountingItem)).returns(Utils::FieldAugmented) }
-    def create_accounting_item(connection_id, accounting_item = nil)
-      # create_accounting_item - Create an item
-      request = Operations::CreateAccountingItemRequest.new(
-        
-        connection_id: connection_id,
-        accounting_item: accounting_item
-      )
-      url, params = @sdk_configuration.get_server_details
-      base_url = Utils.template_url(url, params)
-      url = Utils.generate_url(
-        Operations::CreateAccountingItemRequest,
-        base_url,
-        '/accounting/{connection_id}/item',
-        request
-      )
-      headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :accounting_item, :json)
-      headers['content-type'] = req_content_type
-      headers['Accept'] = 'application/json'
-      headers['user-agent'] = @sdk_configuration.user_agent
-
-      r = @sdk_configuration.client.post(url) do |req|
-        req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
-        if form
-          req.body = Utils.encode_form(form)
-        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-          req.body = URI.encode_www_form(data)
-        else
-          req.body = data
-        end
-      end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = Operations::CreateAccountingItemResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-      if r.status == 200
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, Shared::AccountingItem)
-          res.accounting_item = out
-        end
-      end
-      res
-    end
-
     sig { params(connection_id: String, accounting_payment: T.nilable(Shared::AccountingPayment)).returns(Utils::FieldAugmented) }
     def create_accounting_payment(connection_id, accounting_payment = nil)
       # create_accounting_payment - Create a payment
@@ -474,48 +426,6 @@ module UnifiedRubySDK
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, Shared::AccountingInvoice)
           res.accounting_invoice = out
-        end
-      end
-      res
-    end
-
-    sig { params(connection_id: String, id: String, fields: T.nilable(T::Array[String])).returns(Utils::FieldAugmented) }
-    def get_accounting_item(connection_id, id, fields = nil)
-      # get_accounting_item - Retrieve an item
-      request = Operations::GetAccountingItemRequest.new(
-        
-        connection_id: connection_id,
-        id: id,
-        fields: fields
-      )
-      url, params = @sdk_configuration.get_server_details
-      base_url = Utils.template_url(url, params)
-      url = Utils.generate_url(
-        Operations::GetAccountingItemRequest,
-        base_url,
-        '/accounting/{connection_id}/item/{id}',
-        request
-      )
-      headers = {}
-      query_params = Utils.get_query_params(Operations::GetAccountingItemRequest, request)
-      headers['Accept'] = 'application/json'
-      headers['user-agent'] = @sdk_configuration.user_agent
-
-      r = @sdk_configuration.client.get(url) do |req|
-        req.headers = headers
-        req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
-      end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = Operations::GetAccountingItemResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-      if r.status == 200
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, Shared::AccountingItem)
-          res.accounting_item = out
         end
       end
       res
@@ -792,42 +702,6 @@ module UnifiedRubySDK
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, T::Array[Shared::AccountingInvoice])
           res.accounting_invoices = out
-        end
-      end
-      res
-    end
-
-    sig { params(request: T.nilable(Operations::ListAccountingItemsRequest)).returns(Utils::FieldAugmented) }
-    def list_accounting_items(request)
-      # list_accounting_items - List all items
-      url, params = @sdk_configuration.get_server_details
-      base_url = Utils.template_url(url, params)
-      url = Utils.generate_url(
-        Operations::ListAccountingItemsRequest,
-        base_url,
-        '/accounting/{connection_id}/item',
-        request
-      )
-      headers = {}
-      query_params = Utils.get_query_params(Operations::ListAccountingItemsRequest, request)
-      headers['Accept'] = 'application/json'
-      headers['user-agent'] = @sdk_configuration.user_agent
-
-      r = @sdk_configuration.client.get(url) do |req|
-        req.headers = headers
-        req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
-      end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = Operations::ListAccountingItemsResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-      if r.status == 200
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, T::Array[Shared::AccountingItem])
-          res.accounting_items = out
         end
       end
       res
@@ -1124,55 +998,6 @@ module UnifiedRubySDK
       res
     end
 
-    sig { params(connection_id: String, id: String, accounting_item: T.nilable(Shared::AccountingItem)).returns(Utils::FieldAugmented) }
-    def patch_accounting_item(connection_id, id, accounting_item = nil)
-      # patch_accounting_item - Update an item
-      request = Operations::PatchAccountingItemRequest.new(
-        
-        connection_id: connection_id,
-        id: id,
-        accounting_item: accounting_item
-      )
-      url, params = @sdk_configuration.get_server_details
-      base_url = Utils.template_url(url, params)
-      url = Utils.generate_url(
-        Operations::PatchAccountingItemRequest,
-        base_url,
-        '/accounting/{connection_id}/item/{id}',
-        request
-      )
-      headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :accounting_item, :json)
-      headers['content-type'] = req_content_type
-      headers['Accept'] = 'application/json'
-      headers['user-agent'] = @sdk_configuration.user_agent
-
-      r = @sdk_configuration.client.patch(url) do |req|
-        req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
-        if form
-          req.body = Utils.encode_form(form)
-        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-          req.body = URI.encode_www_form(data)
-        else
-          req.body = data
-        end
-      end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = Operations::PatchAccountingItemResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-      if r.status == 200
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, Shared::AccountingItem)
-          res.accounting_item = out
-        end
-      end
-      res
-    end
-
     sig { params(connection_id: String, id: String, accounting_payment: T.nilable(Shared::AccountingPayment)).returns(Utils::FieldAugmented) }
     def patch_accounting_payment(connection_id, id, accounting_payment = nil)
       # patch_accounting_payment - Update a payment
@@ -1424,44 +1249,6 @@ module UnifiedRubySDK
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
 
       res = Operations::RemoveAccountingInvoiceResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-      if True
-                
-        res.res = r.env.response_body if Utils.match_content_type(content_type, 'application/json')
-      
-      end
-      res
-    end
-
-    sig { params(connection_id: String, id: String).returns(Utils::FieldAugmented) }
-    def remove_accounting_item(connection_id, id)
-      # remove_accounting_item - Remove an item
-      request = Operations::RemoveAccountingItemRequest.new(
-        
-        connection_id: connection_id,
-        id: id
-      )
-      url, params = @sdk_configuration.get_server_details
-      base_url = Utils.template_url(url, params)
-      url = Utils.generate_url(
-        Operations::RemoveAccountingItemRequest,
-        base_url,
-        '/accounting/{connection_id}/item/{id}',
-        request
-      )
-      headers = {}
-      headers['Accept'] = 'application/json'
-      headers['user-agent'] = @sdk_configuration.user_agent
-
-      r = @sdk_configuration.client.delete(url) do |req|
-        req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
-      end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = Operations::RemoveAccountingItemResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
       if True
@@ -1728,55 +1515,6 @@ module UnifiedRubySDK
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, Shared::AccountingInvoice)
           res.accounting_invoice = out
-        end
-      end
-      res
-    end
-
-    sig { params(connection_id: String, id: String, accounting_item: T.nilable(Shared::AccountingItem)).returns(Utils::FieldAugmented) }
-    def update_accounting_item(connection_id, id, accounting_item = nil)
-      # update_accounting_item - Update an item
-      request = Operations::UpdateAccountingItemRequest.new(
-        
-        connection_id: connection_id,
-        id: id,
-        accounting_item: accounting_item
-      )
-      url, params = @sdk_configuration.get_server_details
-      base_url = Utils.template_url(url, params)
-      url = Utils.generate_url(
-        Operations::UpdateAccountingItemRequest,
-        base_url,
-        '/accounting/{connection_id}/item/{id}',
-        request
-      )
-      headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :accounting_item, :json)
-      headers['content-type'] = req_content_type
-      headers['Accept'] = 'application/json'
-      headers['user-agent'] = @sdk_configuration.user_agent
-
-      r = @sdk_configuration.client.put(url) do |req|
-        req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
-        if form
-          req.body = Utils.encode_form(form)
-        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-          req.body = URI.encode_www_form(data)
-        else
-          req.body = data
-        end
-      end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = Operations::UpdateAccountingItemResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-      if r.status == 200
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, Shared::AccountingItem)
-          res.accounting_item = out
         end
       end
       res

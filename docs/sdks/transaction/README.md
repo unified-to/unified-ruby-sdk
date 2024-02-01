@@ -30,20 +30,14 @@ s.config_security(
     
 res = s.transaction.create_accounting_transaction(connection_id="string", accounting_transaction=Shared::AccountingTransaction.new(
     id="<ID>",
-    line_items=[
+    lineitems=[
       Shared::AccountingTransactionLineitem.new(
         account_id="string",
         total_amount=4969.62,
       ),
     ],
-    lineitems=[
-      Shared::AccountingTransactionLineitem.new(
-        account_id="string",
-        total_amount=6267.93,
-      ),
-    ],
     raw={
-      "Direct": "string",
+      "Web": "string",
     },
   ))
 
@@ -173,20 +167,14 @@ s.config_security(
     
 res = s.transaction.patch_accounting_transaction(connection_id="string", id="string", accounting_transaction=Shared::AccountingTransaction.new(
     id="<ID>",
-    line_items=[
+    lineitems=[
       Shared::AccountingTransactionLineitem.new(
         account_id="string",
         total_amount=5633.69,
       ),
     ],
-    lineitems=[
-      Shared::AccountingTransactionLineitem.new(
-        account_id="string",
-        total_amount=4558.63,
-      ),
-    ],
     raw={
-      "instead": "string",
+      "invoice": "string",
     },
   ))
 
@@ -269,20 +257,14 @@ s.config_security(
     
 res = s.transaction.update_accounting_transaction(connection_id="string", id="string", accounting_transaction=Shared::AccountingTransaction.new(
     id="<ID>",
-    line_items=[
+    lineitems=[
       Shared::AccountingTransactionLineitem.new(
         account_id="string",
         total_amount=6498.37,
       ),
     ],
-    lineitems=[
-      Shared::AccountingTransactionLineitem.new(
-        account_id="string",
-        total_amount=5659.17,
-      ),
-    ],
     raw={
-      "protest": "string",
+      "a": "string",
     },
   ))
 

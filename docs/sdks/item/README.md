@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [create_accounting_item](#create_accounting_item) - Create an item
-* [get_accounting_item](#get_accounting_item) - Retrieve an item
-* [list_accounting_items](#list_accounting_items) - List all items
-* [patch_accounting_item](#patch_accounting_item) - Update an item
-* [remove_accounting_item](#remove_accounting_item) - Remove an item
-* [update_accounting_item](#update_accounting_item) - Update an item
+* [create_commerce_item](#create_commerce_item) - Create an item/product
+* [get_commerce_item](#get_commerce_item) - Retrieve an item/product
+* [list_commerce_items](#list_commerce_items) - List all items/products
+* [patch_commerce_item](#patch_commerce_item) - Update an item/product
+* [remove_commerce_item](#remove_commerce_item) - Remove an item/product
+* [update_commerce_item](#update_commerce_item) - Update an item/product
 
-## create_accounting_item
+## create_commerce_item
 
-Create an item
+Create an item/product
 
 ### Example Usage
 
@@ -28,14 +28,49 @@ s.config_security(
 )
 
     
-res = s.item.create_accounting_item(connection_id="string", accounting_item=Shared::AccountingItem.new(
+res = s.item.create_commerce_item(connection_id="string", commerce_item=Shared::CommerceItem.new(
+    media=[
+      Shared::CommerceItemMedia.new(
+        url="http://loud-minister.name",
+      ),
+    ],
     name="string",
     raw={
-      "visionary": "string",
+      "Awesome": "string",
     },
+    tags=[
+      "string",
+    ],
+    variants=[
+      Shared::CommerceItemVariant.new(
+        media=[
+          Shared::CommerceItemMedia.new(
+            url="https://burdensome-pinecone.name",
+          ),
+        ],
+        name="string",
+        options=[
+          Shared::CommerceItemOption.new(
+            id="<ID>",
+            name="string",
+            values=[
+              "string",
+            ],
+          ),
+        ],
+        prices=[
+          Shared::CommerceItemPrice.new(
+            price=5559.73,
+          ),
+        ],
+        tags=[
+          "string",
+        ],
+      ),
+    ],
   ))
 
-if ! res.accounting_item.nil?
+if ! res.commerce_item.nil?
   # handle response
 end
 
@@ -43,20 +78,20 @@ end
 
 ### Parameters
 
-| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
-| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
-| `connection_id`                                                 | *String*                                                        | :heavy_check_mark:                                              | ID of the connection                                            |
-| `accounting_item`                                               | [Shared::AccountingItem](../../models/shared/accountingitem.md) | :heavy_minus_sign:                                              | An item or product                                              |
+| Parameter                                                   | Type                                                        | Required                                                    | Description                                                 |
+| ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
+| `connection_id`                                             | *String*                                                    | :heavy_check_mark:                                          | ID of the connection                                        |
+| `commerce_item`                                             | [Shared::CommerceItem](../../models/shared/commerceitem.md) | :heavy_minus_sign:                                          | N/A                                                         |
 
 
 ### Response
 
-**[T.nilable(Operations::CreateAccountingItemResponse)](../../models/operations/createaccountingitemresponse.md)**
+**[T.nilable(Operations::CreateCommerceItemResponse)](../../models/operations/createcommerceitemresponse.md)**
 
 
-## get_accounting_item
+## get_commerce_item
 
-Retrieve an item
+Retrieve an item/product
 
 ### Example Usage
 
@@ -72,11 +107,11 @@ s.config_security(
 )
 
     
-res = s.item.get_accounting_item(connection_id="string", id="string", fields=[
+res = s.item.get_commerce_item(connection_id="string", id="string", fields=[
     "string",
   ])
 
-if ! res.accounting_item.nil?
+if ! res.commerce_item.nil?
   # handle response
 end
 
@@ -93,12 +128,12 @@ end
 
 ### Response
 
-**[T.nilable(Operations::GetAccountingItemResponse)](../../models/operations/getaccountingitemresponse.md)**
+**[T.nilable(Operations::GetCommerceItemResponse)](../../models/operations/getcommerceitemresponse.md)**
 
 
-## list_accounting_items
+## list_commerce_items
 
-List all items
+List all items/products
 
 ### Example Usage
 
@@ -114,16 +149,16 @@ s.config_security(
 )
 
 
-req = Operations::ListAccountingItemsRequest.new(
+req = Operations::ListCommerceItemsRequest.new(
   connection_id="string",
   fields=[
     "string",
   ],
 )
     
-res = s.item.list_accounting_items(req)
+res = s.item.list_commerce_items(req)
 
-if ! res.accounting_items.nil?
+if ! res.commerce_items.nil?
   # handle response
 end
 
@@ -131,19 +166,19 @@ end
 
 ### Parameters
 
-| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `request`                                                                                       | [Operations::ListAccountingItemsRequest](../../models/operations/listaccountingitemsrequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [Operations::ListCommerceItemsRequest](../../models/operations/listcommerceitemsrequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 
 ### Response
 
-**[T.nilable(Operations::ListAccountingItemsResponse)](../../models/operations/listaccountingitemsresponse.md)**
+**[T.nilable(Operations::ListCommerceItemsResponse)](../../models/operations/listcommerceitemsresponse.md)**
 
 
-## patch_accounting_item
+## patch_commerce_item
 
-Update an item
+Update an item/product
 
 ### Example Usage
 
@@ -159,14 +194,49 @@ s.config_security(
 )
 
     
-res = s.item.patch_accounting_item(connection_id="string", id="string", accounting_item=Shared::AccountingItem.new(
+res = s.item.patch_commerce_item(connection_id="string", id="string", commerce_item=Shared::CommerceItem.new(
+    media=[
+      Shared::CommerceItemMedia.new(
+        url="http://frank-galley.biz",
+      ),
+    ],
     name="string",
     raw={
-      "Sleek": "string",
+      "Dollar": "string",
     },
+    tags=[
+      "string",
+    ],
+    variants=[
+      Shared::CommerceItemVariant.new(
+        media=[
+          Shared::CommerceItemMedia.new(
+            url="http://jaded-sequence.name",
+          ),
+        ],
+        name="string",
+        options=[
+          Shared::CommerceItemOption.new(
+            id="<ID>",
+            name="string",
+            values=[
+              "string",
+            ],
+          ),
+        ],
+        prices=[
+          Shared::CommerceItemPrice.new(
+            price=3986.91,
+          ),
+        ],
+        tags=[
+          "string",
+        ],
+      ),
+    ],
   ))
 
-if ! res.accounting_item.nil?
+if ! res.commerce_item.nil?
   # handle response
 end
 
@@ -174,21 +244,21 @@ end
 
 ### Parameters
 
-| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
-| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
-| `connection_id`                                                 | *String*                                                        | :heavy_check_mark:                                              | ID of the connection                                            |
-| `id`                                                            | *String*                                                        | :heavy_check_mark:                                              | ID of the Item                                                  |
-| `accounting_item`                                               | [Shared::AccountingItem](../../models/shared/accountingitem.md) | :heavy_minus_sign:                                              | An item or product                                              |
+| Parameter                                                   | Type                                                        | Required                                                    | Description                                                 |
+| ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
+| `connection_id`                                             | *String*                                                    | :heavy_check_mark:                                          | ID of the connection                                        |
+| `id`                                                        | *String*                                                    | :heavy_check_mark:                                          | ID of the Item                                              |
+| `commerce_item`                                             | [Shared::CommerceItem](../../models/shared/commerceitem.md) | :heavy_minus_sign:                                          | N/A                                                         |
 
 
 ### Response
 
-**[T.nilable(Operations::PatchAccountingItemResponse)](../../models/operations/patchaccountingitemresponse.md)**
+**[T.nilable(Operations::PatchCommerceItemResponse)](../../models/operations/patchcommerceitemresponse.md)**
 
 
-## remove_accounting_item
+## remove_commerce_item
 
-Remove an item
+Remove an item/product
 
 ### Example Usage
 
@@ -204,7 +274,7 @@ s.config_security(
 )
 
     
-res = s.item.remove_accounting_item(connection_id="string", id="string")
+res = s.item.remove_commerce_item(connection_id="string", id="string")
 
 if res.status == 200
   # handle response
@@ -222,12 +292,12 @@ end
 
 ### Response
 
-**[T.nilable(Operations::RemoveAccountingItemResponse)](../../models/operations/removeaccountingitemresponse.md)**
+**[T.nilable(Operations::RemoveCommerceItemResponse)](../../models/operations/removecommerceitemresponse.md)**
 
 
-## update_accounting_item
+## update_commerce_item
 
-Update an item
+Update an item/product
 
 ### Example Usage
 
@@ -243,14 +313,49 @@ s.config_security(
 )
 
     
-res = s.item.update_accounting_item(connection_id="string", id="string", accounting_item=Shared::AccountingItem.new(
+res = s.item.update_commerce_item(connection_id="string", id="string", commerce_item=Shared::CommerceItem.new(
+    media=[
+      Shared::CommerceItemMedia.new(
+        url="https://aggressive-major-league.org",
+      ),
+    ],
     name="string",
     raw={
-      "Northwest": "string",
+      "fuga": "string",
     },
+    tags=[
+      "string",
+    ],
+    variants=[
+      Shared::CommerceItemVariant.new(
+        media=[
+          Shared::CommerceItemMedia.new(
+            url="http://exemplary-standing.biz",
+          ),
+        ],
+        name="string",
+        options=[
+          Shared::CommerceItemOption.new(
+            id="<ID>",
+            name="string",
+            values=[
+              "string",
+            ],
+          ),
+        ],
+        prices=[
+          Shared::CommerceItemPrice.new(
+            price=113.63,
+          ),
+        ],
+        tags=[
+          "string",
+        ],
+      ),
+    ],
   ))
 
-if ! res.accounting_item.nil?
+if ! res.commerce_item.nil?
   # handle response
 end
 
@@ -258,14 +363,14 @@ end
 
 ### Parameters
 
-| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
-| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
-| `connection_id`                                                 | *String*                                                        | :heavy_check_mark:                                              | ID of the connection                                            |
-| `id`                                                            | *String*                                                        | :heavy_check_mark:                                              | ID of the Item                                                  |
-| `accounting_item`                                               | [Shared::AccountingItem](../../models/shared/accountingitem.md) | :heavy_minus_sign:                                              | An item or product                                              |
+| Parameter                                                   | Type                                                        | Required                                                    | Description                                                 |
+| ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
+| `connection_id`                                             | *String*                                                    | :heavy_check_mark:                                          | ID of the connection                                        |
+| `id`                                                        | *String*                                                    | :heavy_check_mark:                                          | ID of the Item                                              |
+| `commerce_item`                                             | [Shared::CommerceItem](../../models/shared/commerceitem.md) | :heavy_minus_sign:                                          | N/A                                                         |
 
 
 ### Response
 
-**[T.nilable(Operations::UpdateAccountingItemResponse)](../../models/operations/updateaccountingitemresponse.md)**
+**[T.nilable(Operations::UpdateCommerceItemResponse)](../../models/operations/updatecommerceitemresponse.md)**
 

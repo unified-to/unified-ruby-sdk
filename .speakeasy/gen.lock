@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: dd7e435592a9ea6528f806cf1e9e4701
+  docChecksum: a19ba4935c486a523296da7841502792
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.239.4
-  releaseVersion: 0.2.35
-  configChecksum: 46fd7c8408cb4449246a8aec9ec6aea9
+  generationVersion: 2.246.3
+  releaseVersion: 0.2.36
+  configChecksum: 5283a0440910735fcd4bc013ddf8c8ec
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -22,7 +22,6 @@ generatedFiles:
   - lib/unifiedto/account.rb
   - lib/unifiedto/contact.rb
   - lib/unifiedto/invoice.rb
-  - lib/unifiedto/item.rb
   - lib/unifiedto/organization.rb
   - lib/unifiedto/payment.rb
   - lib/unifiedto/taxrate.rb
@@ -35,6 +34,11 @@ generatedFiles:
   - lib/unifiedto/interview.rb
   - lib/unifiedto/job.rb
   - lib/unifiedto/scorecard.rb
+  - lib/unifiedto/commerce.rb
+  - lib/unifiedto/collection.rb
+  - lib/unifiedto/inventory.rb
+  - lib/unifiedto/item.rb
+  - lib/unifiedto/location.rb
   - lib/unifiedto/crm.rb
   - lib/unifiedto/company.rb
   - lib/unifiedto/deal.rb
@@ -115,14 +119,12 @@ generatedFiles:
   - lib/unifiedto/models/operations/createaccountingaccount.rb
   - lib/unifiedto/models/operations/createaccountingcontact.rb
   - lib/unifiedto/models/operations/createaccountinginvoice.rb
-  - lib/unifiedto/models/operations/createaccountingitem.rb
   - lib/unifiedto/models/operations/createaccountingpayment.rb
   - lib/unifiedto/models/operations/createaccountingtaxrate.rb
   - lib/unifiedto/models/operations/createaccountingtransaction.rb
   - lib/unifiedto/models/operations/getaccountingaccount.rb
   - lib/unifiedto/models/operations/getaccountingcontact.rb
   - lib/unifiedto/models/operations/getaccountinginvoice.rb
-  - lib/unifiedto/models/operations/getaccountingitem.rb
   - lib/unifiedto/models/operations/getaccountingorganization.rb
   - lib/unifiedto/models/operations/getaccountingpayment.rb
   - lib/unifiedto/models/operations/getaccountingtaxrate.rb
@@ -130,7 +132,6 @@ generatedFiles:
   - lib/unifiedto/models/operations/listaccountingaccounts.rb
   - lib/unifiedto/models/operations/listaccountingcontacts.rb
   - lib/unifiedto/models/operations/listaccountinginvoices.rb
-  - lib/unifiedto/models/operations/listaccountingitems.rb
   - lib/unifiedto/models/operations/listaccountingorganizations.rb
   - lib/unifiedto/models/operations/listaccountingpayments.rb
   - lib/unifiedto/models/operations/listaccountingtaxrates.rb
@@ -138,21 +139,18 @@ generatedFiles:
   - lib/unifiedto/models/operations/patchaccountingaccount.rb
   - lib/unifiedto/models/operations/patchaccountingcontact.rb
   - lib/unifiedto/models/operations/patchaccountinginvoice.rb
-  - lib/unifiedto/models/operations/patchaccountingitem.rb
   - lib/unifiedto/models/operations/patchaccountingpayment.rb
   - lib/unifiedto/models/operations/patchaccountingtaxrate.rb
   - lib/unifiedto/models/operations/patchaccountingtransaction.rb
   - lib/unifiedto/models/operations/removeaccountingaccount.rb
   - lib/unifiedto/models/operations/removeaccountingcontact.rb
   - lib/unifiedto/models/operations/removeaccountinginvoice.rb
-  - lib/unifiedto/models/operations/removeaccountingitem.rb
   - lib/unifiedto/models/operations/removeaccountingpayment.rb
   - lib/unifiedto/models/operations/removeaccountingtaxrate.rb
   - lib/unifiedto/models/operations/removeaccountingtransaction.rb
   - lib/unifiedto/models/operations/updateaccountingaccount.rb
   - lib/unifiedto/models/operations/updateaccountingcontact.rb
   - lib/unifiedto/models/operations/updateaccountinginvoice.rb
-  - lib/unifiedto/models/operations/updateaccountingitem.rb
   - lib/unifiedto/models/operations/updateaccountingpayment.rb
   - lib/unifiedto/models/operations/updateaccountingtaxrate.rb
   - lib/unifiedto/models/operations/updateaccountingtransaction.rb
@@ -205,6 +203,30 @@ generatedFiles:
   - lib/unifiedto/models/operations/updateatsinterview.rb
   - lib/unifiedto/models/operations/updateatsjob.rb
   - lib/unifiedto/models/operations/updateatsscorecard.rb
+  - lib/unifiedto/models/operations/createcommercecollection.rb
+  - lib/unifiedto/models/operations/createcommerceinventory.rb
+  - lib/unifiedto/models/operations/createcommerceitem.rb
+  - lib/unifiedto/models/operations/createcommercelocation.rb
+  - lib/unifiedto/models/operations/getcommercecollection.rb
+  - lib/unifiedto/models/operations/getcommerceinventory.rb
+  - lib/unifiedto/models/operations/getcommerceitem.rb
+  - lib/unifiedto/models/operations/getcommercelocation.rb
+  - lib/unifiedto/models/operations/listcommercecollections.rb
+  - lib/unifiedto/models/operations/listcommerceinventories.rb
+  - lib/unifiedto/models/operations/listcommerceitems.rb
+  - lib/unifiedto/models/operations/listcommercelocations.rb
+  - lib/unifiedto/models/operations/patchcommercecollection.rb
+  - lib/unifiedto/models/operations/patchcommerceinventory.rb
+  - lib/unifiedto/models/operations/patchcommerceitem.rb
+  - lib/unifiedto/models/operations/patchcommercelocation.rb
+  - lib/unifiedto/models/operations/removecommercecollection.rb
+  - lib/unifiedto/models/operations/removecommerceinventory.rb
+  - lib/unifiedto/models/operations/removecommerceitem.rb
+  - lib/unifiedto/models/operations/removecommercelocation.rb
+  - lib/unifiedto/models/operations/updatecommercecollection.rb
+  - lib/unifiedto/models/operations/updatecommerceinventory.rb
+  - lib/unifiedto/models/operations/updatecommerceitem.rb
+  - lib/unifiedto/models/operations/updatecommercelocation.rb
   - lib/unifiedto/models/operations/createcrmcompany.rb
   - lib/unifiedto/models/operations/createcrmdeal.rb
   - lib/unifiedto/models/operations/createcrmevent.rb
@@ -317,7 +339,6 @@ generatedFiles:
   - lib/unifiedto/models/shared/property_accountingcontact_billing_address.rb
   - lib/unifiedto/models/shared/accountinginvoice.rb
   - lib/unifiedto/models/shared/accountinglineitem.rb
-  - lib/unifiedto/models/shared/accountingitem.rb
   - lib/unifiedto/models/shared/accountingpayment.rb
   - lib/unifiedto/models/shared/accountingtaxrate.rb
   - lib/unifiedto/models/shared/accountingtransaction.rb
@@ -343,6 +364,15 @@ generatedFiles:
   - lib/unifiedto/models/shared/atsaddress.rb
   - lib/unifiedto/models/shared/atsscorecard.rb
   - lib/unifiedto/models/shared/atsstatus.rb
+  - lib/unifiedto/models/shared/commercecollection.rb
+  - lib/unifiedto/models/shared/commerceitemmedia.rb
+  - lib/unifiedto/models/shared/commerceinventory.rb
+  - lib/unifiedto/models/shared/commerceitem.rb
+  - lib/unifiedto/models/shared/commerceitemvariant.rb
+  - lib/unifiedto/models/shared/commerceitemprice.rb
+  - lib/unifiedto/models/shared/commerceitemoption.rb
+  - lib/unifiedto/models/shared/commercelocation.rb
+  - lib/unifiedto/models/shared/property_commercelocation_address.rb
   - lib/unifiedto/models/shared/crmcompany.rb
   - lib/unifiedto/models/shared/property_crmcompany_address.rb
   - lib/unifiedto/models/shared/crmdeal.rb
@@ -398,8 +428,6 @@ generatedFiles:
   - docs/models/operations/createaccountingcontactresponse.md
   - docs/models/operations/createaccountinginvoicerequest.md
   - docs/models/operations/createaccountinginvoiceresponse.md
-  - docs/models/operations/createaccountingitemrequest.md
-  - docs/models/operations/createaccountingitemresponse.md
   - docs/models/operations/createaccountingpaymentrequest.md
   - docs/models/operations/createaccountingpaymentresponse.md
   - docs/models/operations/createaccountingtaxraterequest.md
@@ -412,8 +440,6 @@ generatedFiles:
   - docs/models/operations/getaccountingcontactresponse.md
   - docs/models/operations/getaccountinginvoicerequest.md
   - docs/models/operations/getaccountinginvoiceresponse.md
-  - docs/models/operations/getaccountingitemrequest.md
-  - docs/models/operations/getaccountingitemresponse.md
   - docs/models/operations/getaccountingorganizationrequest.md
   - docs/models/operations/getaccountingorganizationresponse.md
   - docs/models/operations/getaccountingpaymentrequest.md
@@ -428,8 +454,6 @@ generatedFiles:
   - docs/models/operations/listaccountingcontactsresponse.md
   - docs/models/operations/listaccountinginvoicesrequest.md
   - docs/models/operations/listaccountinginvoicesresponse.md
-  - docs/models/operations/listaccountingitemsrequest.md
-  - docs/models/operations/listaccountingitemsresponse.md
   - docs/models/operations/listaccountingorganizationsrequest.md
   - docs/models/operations/listaccountingorganizationsresponse.md
   - docs/models/operations/listaccountingpaymentsrequest.md
@@ -444,8 +468,6 @@ generatedFiles:
   - docs/models/operations/patchaccountingcontactresponse.md
   - docs/models/operations/patchaccountinginvoicerequest.md
   - docs/models/operations/patchaccountinginvoiceresponse.md
-  - docs/models/operations/patchaccountingitemrequest.md
-  - docs/models/operations/patchaccountingitemresponse.md
   - docs/models/operations/patchaccountingpaymentrequest.md
   - docs/models/operations/patchaccountingpaymentresponse.md
   - docs/models/operations/patchaccountingtaxraterequest.md
@@ -458,8 +480,6 @@ generatedFiles:
   - docs/models/operations/removeaccountingcontactresponse.md
   - docs/models/operations/removeaccountinginvoicerequest.md
   - docs/models/operations/removeaccountinginvoiceresponse.md
-  - docs/models/operations/removeaccountingitemrequest.md
-  - docs/models/operations/removeaccountingitemresponse.md
   - docs/models/operations/removeaccountingpaymentrequest.md
   - docs/models/operations/removeaccountingpaymentresponse.md
   - docs/models/operations/removeaccountingtaxraterequest.md
@@ -472,8 +492,6 @@ generatedFiles:
   - docs/models/operations/updateaccountingcontactresponse.md
   - docs/models/operations/updateaccountinginvoicerequest.md
   - docs/models/operations/updateaccountinginvoiceresponse.md
-  - docs/models/operations/updateaccountingitemrequest.md
-  - docs/models/operations/updateaccountingitemresponse.md
   - docs/models/operations/updateaccountingpaymentrequest.md
   - docs/models/operations/updateaccountingpaymentresponse.md
   - docs/models/operations/updateaccountingtaxraterequest.md
@@ -578,6 +596,54 @@ generatedFiles:
   - docs/models/operations/updateatsjobresponse.md
   - docs/models/operations/updateatsscorecardrequest.md
   - docs/models/operations/updateatsscorecardresponse.md
+  - docs/models/operations/createcommercecollectionrequest.md
+  - docs/models/operations/createcommercecollectionresponse.md
+  - docs/models/operations/createcommerceinventoryrequest.md
+  - docs/models/operations/createcommerceinventoryresponse.md
+  - docs/models/operations/createcommerceitemrequest.md
+  - docs/models/operations/createcommerceitemresponse.md
+  - docs/models/operations/createcommercelocationrequest.md
+  - docs/models/operations/createcommercelocationresponse.md
+  - docs/models/operations/getcommercecollectionrequest.md
+  - docs/models/operations/getcommercecollectionresponse.md
+  - docs/models/operations/getcommerceinventoryrequest.md
+  - docs/models/operations/getcommerceinventoryresponse.md
+  - docs/models/operations/getcommerceitemrequest.md
+  - docs/models/operations/getcommerceitemresponse.md
+  - docs/models/operations/getcommercelocationrequest.md
+  - docs/models/operations/getcommercelocationresponse.md
+  - docs/models/operations/listcommercecollectionsrequest.md
+  - docs/models/operations/listcommercecollectionsresponse.md
+  - docs/models/operations/listcommerceinventoriesrequest.md
+  - docs/models/operations/listcommerceinventoriesresponse.md
+  - docs/models/operations/listcommerceitemsrequest.md
+  - docs/models/operations/listcommerceitemsresponse.md
+  - docs/models/operations/listcommercelocationsrequest.md
+  - docs/models/operations/listcommercelocationsresponse.md
+  - docs/models/operations/patchcommercecollectionrequest.md
+  - docs/models/operations/patchcommercecollectionresponse.md
+  - docs/models/operations/patchcommerceinventoryrequest.md
+  - docs/models/operations/patchcommerceinventoryresponse.md
+  - docs/models/operations/patchcommerceitemrequest.md
+  - docs/models/operations/patchcommerceitemresponse.md
+  - docs/models/operations/patchcommercelocationrequest.md
+  - docs/models/operations/patchcommercelocationresponse.md
+  - docs/models/operations/removecommercecollectionrequest.md
+  - docs/models/operations/removecommercecollectionresponse.md
+  - docs/models/operations/removecommerceinventoryrequest.md
+  - docs/models/operations/removecommerceinventoryresponse.md
+  - docs/models/operations/removecommerceitemrequest.md
+  - docs/models/operations/removecommerceitemresponse.md
+  - docs/models/operations/removecommercelocationrequest.md
+  - docs/models/operations/removecommercelocationresponse.md
+  - docs/models/operations/updatecommercecollectionrequest.md
+  - docs/models/operations/updatecommercecollectionresponse.md
+  - docs/models/operations/updatecommerceinventoryrequest.md
+  - docs/models/operations/updatecommerceinventoryresponse.md
+  - docs/models/operations/updatecommerceitemrequest.md
+  - docs/models/operations/updatecommerceitemresponse.md
+  - docs/models/operations/updatecommercelocationrequest.md
+  - docs/models/operations/updatecommercelocationresponse.md
   - docs/models/operations/createcrmcompanyrequest.md
   - docs/models/operations/createcrmcompanyresponse.md
   - docs/models/operations/createcrmdealrequest.md
@@ -803,7 +869,6 @@ generatedFiles:
   - docs/models/shared/accountinginvoicestatus.md
   - docs/models/shared/accountinginvoice.md
   - docs/models/shared/accountinglineitem.md
-  - docs/models/shared/accountingitem.md
   - docs/models/shared/accountingpayment.md
   - docs/models/shared/accountingtaxrate.md
   - docs/models/shared/accountingtransaction.md
@@ -845,6 +910,18 @@ generatedFiles:
   - docs/models/shared/atsscorecard.md
   - docs/models/shared/atsstatusstatus.md
   - docs/models/shared/atsstatus.md
+  - docs/models/shared/commercecollection.md
+  - docs/models/shared/commerceitemmediatype.md
+  - docs/models/shared/commerceitemmedia.md
+  - docs/models/shared/commerceinventory.md
+  - docs/models/shared/commerceitem.md
+  - docs/models/shared/sizeunit.md
+  - docs/models/shared/weightunit.md
+  - docs/models/shared/commerceitemvariant.md
+  - docs/models/shared/commerceitemprice.md
+  - docs/models/shared/commerceitemoption.md
+  - docs/models/shared/commercelocation.md
+  - docs/models/shared/propertycommercelocationaddress.md
   - docs/models/shared/crmcompany.md
   - docs/models/shared/propertycrmcompanyaddress.md
   - docs/models/shared/crmdeal.md
@@ -921,7 +998,6 @@ generatedFiles:
   - docs/sdks/account/README.md
   - docs/sdks/contact/README.md
   - docs/sdks/invoice/README.md
-  - docs/sdks/item/README.md
   - docs/sdks/organization/README.md
   - docs/sdks/payment/README.md
   - docs/sdks/taxrate/README.md
@@ -934,6 +1010,11 @@ generatedFiles:
   - docs/sdks/interview/README.md
   - docs/sdks/job/README.md
   - docs/sdks/scorecard/README.md
+  - docs/sdks/commerce/README.md
+  - docs/sdks/collection/README.md
+  - docs/sdks/inventory/README.md
+  - docs/sdks/item/README.md
+  - docs/sdks/location/README.md
   - docs/sdks/crm/README.md
   - docs/sdks/company/README.md
   - docs/sdks/deal/README.md

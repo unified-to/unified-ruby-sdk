@@ -1,0 +1,15 @@
+# ListCommerceInventoriesRequest
+
+
+## Fields
+
+| Field                                                                    | Type                                                                     | Required                                                                 | Description                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `connection_id`                                                          | *String*                                                                 | :heavy_check_mark:                                                       | ID of the connection                                                     |
+| `fields`                                                                 | T::Array<*String*>                                                       | :heavy_minus_sign:                                                       | Comma-delimited fields to return                                         |
+| `limit`                                                                  | *T.nilable(Float)*                                                       | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `offset`                                                                 | *T.nilable(Float)*                                                       | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `order`                                                                  | *T.nilable(String)*                                                      | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `query`                                                                  | *T.nilable(String)*                                                      | :heavy_minus_sign:                                                       | Query string to search. eg. email address or name                        |
+| `sort`                                                                   | *T.nilable(String)*                                                      | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `updated_gte`                                                            | [Date](https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html)     | :heavy_minus_sign:                                                       | Return only results whose updated date is equal or greater to this value |

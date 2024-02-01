@@ -12,7 +12,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :contact, :invoice, :item, :organization, :payment, :taxrate, :transaction, :ats, :application, :applicationstatus, :candidate, :document, :interview, :job, :scorecard, :crm, :company, :deal, :event, :lead, :pipeline, :enrich, :person, :hris, :employee, :group, :martech, :list, :member, :passthrough, :storage, :file, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :webhook
+    attr_accessor :accounting, :account, :contact, :invoice, :organization, :payment, :taxrate, :transaction, :ats, :application, :applicationstatus, :candidate, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :company, :deal, :event, :lead, :pipeline, :enrich, :person, :hris, :employee, :group, :martech, :list, :member, :passthrough, :storage, :file, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :webhook
 
     attr_accessor :security, :language, :sdk_version, :gen_version
 
@@ -78,7 +78,6 @@ module UnifiedRubySDK
       @account = Account.new(@sdk_configuration)
       @contact = Contact.new(@sdk_configuration)
       @invoice = Invoice.new(@sdk_configuration)
-      @item = Item.new(@sdk_configuration)
       @organization = Organization.new(@sdk_configuration)
       @payment = Payment.new(@sdk_configuration)
       @taxrate = Taxrate.new(@sdk_configuration)
@@ -91,6 +90,11 @@ module UnifiedRubySDK
       @interview = Interview.new(@sdk_configuration)
       @job = Job.new(@sdk_configuration)
       @scorecard = Scorecard.new(@sdk_configuration)
+      @commerce = Commerce.new(@sdk_configuration)
+      @collection = Collection.new(@sdk_configuration)
+      @inventory = Inventory.new(@sdk_configuration)
+      @item = Item.new(@sdk_configuration)
+      @location = Location.new(@sdk_configuration)
       @crm = Crm.new(@sdk_configuration)
       @company = Company.new(@sdk_configuration)
       @deal = Deal.new(@sdk_configuration)

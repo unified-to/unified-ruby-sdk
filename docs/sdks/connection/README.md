@@ -41,7 +41,7 @@ req = Shared::Connection.new(
     ],
   ),
   categories=[
-    Shared::PropertyConnectionCategories::CRM,
+    Shared::PropertyConnectionCategories::ENRICH,
   ],
   cursors_cache=[
     {
@@ -50,7 +50,7 @@ req = Shared::Connection.new(
   ],
   integration_type="string",
   permissions=[
-    Shared::PropertyConnectionPermissions::CRM_COMPANY_WRITE,
+    Shared::PropertyConnectionPermissions::ATS_JOB_WRITE,
   ],
 )
     
@@ -132,7 +132,7 @@ s.config_security(
 
 req = Operations::ListUnifiedConnectionsRequest.new(
   categories=[
-    Operations::Categories::ENRICH,
+    Operations::Categories::MARTECH,
   ],
 )
     
@@ -187,7 +187,7 @@ res = s.connection.patch_unified_connection(id="string", connection=Shared::Conn
       ],
     ),
     categories=[
-      Shared::PropertyConnectionCategories::STORAGE,
+      Shared::PropertyConnectionCategories::COMMERCE,
     ],
     cursors_cache=[
       {
@@ -196,7 +196,7 @@ res = s.connection.patch_unified_connection(id="string", connection=Shared::Conn
     ],
     integration_type="string",
     permissions=[
-      Shared::PropertyConnectionPermissions::ACCOUNTING_INVOICE_WRITE,
+      Shared::PropertyConnectionPermissions::ACCOUNTING_CONTACT_READ,
     ],
   ))
 
@@ -288,7 +288,7 @@ res = s.connection.update_unified_connection(id="string", connection=Shared::Con
       ],
     ),
     categories=[
-      Shared::PropertyConnectionCategories::STORAGE,
+      Shared::PropertyConnectionCategories::COMMERCE,
     ],
     cursors_cache=[
       {
@@ -297,7 +297,7 @@ res = s.connection.update_unified_connection(id="string", connection=Shared::Con
     ],
     integration_type="string",
     permissions=[
-      Shared::PropertyConnectionPermissions::ACCOUNTING_TRANSACTION_READ,
+      Shared::PropertyConnectionPermissions::ACCOUNTING_TRANSACTION_WRITE,
     ],
   ))
 
