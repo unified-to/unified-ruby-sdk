@@ -22,13 +22,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.pipeline.create_crm_pipeline(connection_id="string", crm_pipeline=Shared::CrmPipeline.new(
+res = s.pipeline.create_crm_pipeline(connection_id="string", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(
     raw={
       "Mazda": "string",
     },
@@ -42,15 +42,15 @@ end
 
 ### Parameters
 
-| Parameter                                                 | Type                                                      | Required                                                  | Description                                               |
-| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
-| `connection_id`                                           | *String*                                                  | :heavy_check_mark:                                        | ID of the connection                                      |
-| `crm_pipeline`                                            | [Shared::CrmPipeline](../../models/shared/crmpipeline.md) | :heavy_minus_sign:                                        | N/A                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `crm_pipeline`                                                              | [::UnifiedRubySDK::Shared::CrmPipeline](../../models/shared/crmpipeline.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
 
 
 ### Response
 
-**[T.nilable(Operations::CreateCrmPipelineResponse)](../../models/operations/createcrmpipelineresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::CreateCrmPipelineResponse)](../../models/operations/createcrmpipelineresponse.md)**
 
 
 ## get_crm_pipeline
@@ -65,7 +65,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -85,14 +85,14 @@ end
 
 | Parameter                        | Type                             | Required                         | Description                      |
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *String*                         | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *String*                         | :heavy_check_mark:               | ID of the Pipeline               |
-| `fields`                         | T::Array<*String*>               | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Pipeline               |
+| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
 
-**[T.nilable(Operations::GetCrmPipelineResponse)](../../models/operations/getcrmpipelineresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::GetCrmPipelineResponse)](../../models/operations/getcrmpipelineresponse.md)**
 
 
 ## list_crm_pipelines
@@ -107,13 +107,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
 
-req = Operations::ListCrmPipelinesRequest.new(
+req = ::UnifiedRubySDK::Operations::ListCrmPipelinesRequest.new(
   connection_id="string",
   fields=[
     "string",
@@ -130,14 +130,14 @@ end
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [Operations::ListCrmPipelinesRequest](../../models/operations/listcrmpipelinesrequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [::UnifiedRubySDK::Operations::ListCrmPipelinesRequest](../../models/operations/listcrmpipelinesrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
 
 
 ### Response
 
-**[T.nilable(Operations::ListCrmPipelinesResponse)](../../models/operations/listcrmpipelinesresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::ListCrmPipelinesResponse)](../../models/operations/listcrmpipelinesresponse.md)**
 
 
 ## patch_crm_pipeline
@@ -152,13 +152,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.pipeline.patch_crm_pipeline(connection_id="string", id="string", crm_pipeline=Shared::CrmPipeline.new(
+res = s.pipeline.patch_crm_pipeline(connection_id="string", id="string", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(
     raw={
       "unimpressively": "string",
     },
@@ -172,16 +172,16 @@ end
 
 ### Parameters
 
-| Parameter                                                 | Type                                                      | Required                                                  | Description                                               |
-| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
-| `connection_id`                                           | *String*                                                  | :heavy_check_mark:                                        | ID of the connection                                      |
-| `id`                                                      | *String*                                                  | :heavy_check_mark:                                        | ID of the Pipeline                                        |
-| `crm_pipeline`                                            | [Shared::CrmPipeline](../../models/shared/crmpipeline.md) | :heavy_minus_sign:                                        | N/A                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Pipeline                                                          |
+| `crm_pipeline`                                                              | [::UnifiedRubySDK::Shared::CrmPipeline](../../models/shared/crmpipeline.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
 
 
 ### Response
 
-**[T.nilable(Operations::PatchCrmPipelineResponse)](../../models/operations/patchcrmpipelineresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::PatchCrmPipelineResponse)](../../models/operations/patchcrmpipelineresponse.md)**
 
 
 ## remove_crm_pipeline
@@ -196,7 +196,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -214,13 +214,13 @@ end
 
 | Parameter            | Type                 | Required             | Description          |
 | -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *String*             | :heavy_check_mark:   | ID of the connection |
-| `id`                 | *String*             | :heavy_check_mark:   | ID of the Pipeline   |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Pipeline   |
 
 
 ### Response
 
-**[T.nilable(Operations::RemoveCrmPipelineResponse)](../../models/operations/removecrmpipelineresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::RemoveCrmPipelineResponse)](../../models/operations/removecrmpipelineresponse.md)**
 
 
 ## update_crm_pipeline
@@ -235,13 +235,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.pipeline.update_crm_pipeline(connection_id="string", id="string", crm_pipeline=Shared::CrmPipeline.new(
+res = s.pipeline.update_crm_pipeline(connection_id="string", id="string", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(
     raw={
       "functionalities": "string",
     },
@@ -255,14 +255,14 @@ end
 
 ### Parameters
 
-| Parameter                                                 | Type                                                      | Required                                                  | Description                                               |
-| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
-| `connection_id`                                           | *String*                                                  | :heavy_check_mark:                                        | ID of the connection                                      |
-| `id`                                                      | *String*                                                  | :heavy_check_mark:                                        | ID of the Pipeline                                        |
-| `crm_pipeline`                                            | [Shared::CrmPipeline](../../models/shared/crmpipeline.md) | :heavy_minus_sign:                                        | N/A                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Pipeline                                                          |
+| `crm_pipeline`                                                              | [::UnifiedRubySDK::Shared::CrmPipeline](../../models/shared/crmpipeline.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
 
 
 ### Response
 
-**[T.nilable(Operations::UpdateCrmPipelineResponse)](../../models/operations/updatecrmpipelineresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::UpdateCrmPipelineResponse)](../../models/operations/updatecrmpipelineresponse.md)**
 

@@ -5,8 +5,8 @@
 
 | Field                                      | Type                                       | Required                                   | Description                                |
 | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
-| `connection_id`                            | *String*                                   | :heavy_check_mark:                         | ID of the connection                       |
-| `email`                                    | *T.nilable(String)*                        | :heavy_minus_sign:                         | The email of the person to search          |
-| `linkedin_url`                             | *T.nilable(String)*                        | :heavy_minus_sign:                         | The LinkedIn URL of the person to search   |
-| `name`                                     | *T.nilable(String)*                        | :heavy_minus_sign:                         | The name of the person to search           |
-| `twitter`                                  | *T.nilable(String)*                        | :heavy_minus_sign:                         | The twitter handle of the person to search |
+| `connection_id`                            | *::String*                                 | :heavy_check_mark:                         | ID of the connection                       |
+| `email`                                    | *T.nilable(::String)*                      | :heavy_minus_sign:                         | The email of the person to search          |
+| `linkedin_url`                             | *T.nilable(::String)*                      | :heavy_minus_sign:                         | The LinkedIn URL of the person to search   |
+| `name`                                     | *T.nilable(::String)*                      | :heavy_minus_sign:                         | The name of the person to search           |
+| `twitter`                                  | *T.nilable(::String)*                      | :heavy_minus_sign:                         | The twitter handle of the person to search |

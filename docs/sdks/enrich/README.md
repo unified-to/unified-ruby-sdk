@@ -18,7 +18,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -36,14 +36,14 @@ end
 
 | Parameter                           | Type                                | Required                            | Description                         |
 | ----------------------------------- | ----------------------------------- | ----------------------------------- | ----------------------------------- |
-| `connection_id`                     | *String*                            | :heavy_check_mark:                  | ID of the connection                |
-| `domain`                            | *String*                            | :heavy_minus_sign:                  | The domain of the company to search |
-| `name`                              | *String*                            | :heavy_minus_sign:                  | The name of the company to search   |
+| `connection_id`                     | *::String*                          | :heavy_check_mark:                  | ID of the connection                |
+| `domain`                            | *::String*                          | :heavy_minus_sign:                  | The domain of the company to search |
+| `name`                              | *::String*                          | :heavy_minus_sign:                  | The name of the company to search   |
 
 
 ### Response
 
-**[T.nilable(Operations::ListEnrichCompaniesResponse)](../../models/operations/listenrichcompaniesresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::ListEnrichCompaniesResponse)](../../models/operations/listenrichcompaniesresponse.md)**
 
 
 ## list_enrich_people
@@ -58,13 +58,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
 
-req = Operations::ListEnrichPeopleRequest.new(
+req = ::UnifiedRubySDK::Operations::ListEnrichPeopleRequest.new(
   connection_id="string",
 )
     
@@ -78,12 +78,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [Operations::ListEnrichPeopleRequest](../../models/operations/listenrichpeoplerequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [::UnifiedRubySDK::Operations::ListEnrichPeopleRequest](../../models/operations/listenrichpeoplerequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
 
 
 ### Response
 
-**[T.nilable(Operations::ListEnrichPeopleResponse)](../../models/operations/listenrichpeopleresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::ListEnrichPeopleResponse)](../../models/operations/listenrichpeopleresponse.md)**
 

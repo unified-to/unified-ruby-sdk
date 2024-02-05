@@ -22,17 +22,17 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.storage.create_storage_file(connection_id="string", storage_file=Shared::StorageFile.new(
+res = s.storage.create_storage_file(connection_id="string", storage_file=::UnifiedRubySDK::Shared::StorageFile.new(
     permissions=[
-      Shared::StoragePermission.new(
+      ::UnifiedRubySDK::Shared::StoragePermission.new(
         roles=[
-          Shared::PropertyStoragePermissionRoles::WRITE,
+          ::UnifiedRubySDK::Shared::PropertyStoragePermissionRoles::WRITE,
         ],
       ),
     ],
@@ -49,15 +49,15 @@ end
 
 ### Parameters
 
-| Parameter                                                 | Type                                                      | Required                                                  | Description                                               |
-| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
-| `connection_id`                                           | *String*                                                  | :heavy_check_mark:                                        | ID of the connection                                      |
-| `storage_file`                                            | [Shared::StorageFile](../../models/shared/storagefile.md) | :heavy_minus_sign:                                        | N/A                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `storage_file`                                                              | [::UnifiedRubySDK::Shared::StorageFile](../../models/shared/storagefile.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
 
 
 ### Response
 
-**[T.nilable(Operations::CreateStorageFileResponse)](../../models/operations/createstoragefileresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::CreateStorageFileResponse)](../../models/operations/createstoragefileresponse.md)**
 
 
 ## get_storage_file
@@ -72,7 +72,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -92,14 +92,14 @@ end
 
 | Parameter                        | Type                             | Required                         | Description                      |
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *String*                         | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *String*                         | :heavy_check_mark:               | ID of the File                   |
-| `fields`                         | T::Array<*String*>               | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the File                   |
+| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
 
-**[T.nilable(Operations::GetStorageFileResponse)](../../models/operations/getstoragefileresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::GetStorageFileResponse)](../../models/operations/getstoragefileresponse.md)**
 
 
 ## list_storage_files
@@ -114,13 +114,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
 
-req = Operations::ListStorageFilesRequest.new(
+req = ::UnifiedRubySDK::Operations::ListStorageFilesRequest.new(
   connection_id="string",
   fields=[
     "string",
@@ -137,14 +137,14 @@ end
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [Operations::ListStorageFilesRequest](../../models/operations/liststoragefilesrequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [::UnifiedRubySDK::Operations::ListStorageFilesRequest](../../models/operations/liststoragefilesrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
 
 
 ### Response
 
-**[T.nilable(Operations::ListStorageFilesResponse)](../../models/operations/liststoragefilesresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::ListStorageFilesResponse)](../../models/operations/liststoragefilesresponse.md)**
 
 
 ## patch_storage_file
@@ -159,17 +159,17 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.storage.patch_storage_file(connection_id="string", id="string", storage_file=Shared::StorageFile.new(
+res = s.storage.patch_storage_file(connection_id="string", id="string", storage_file=::UnifiedRubySDK::Shared::StorageFile.new(
     permissions=[
-      Shared::StoragePermission.new(
+      ::UnifiedRubySDK::Shared::StoragePermission.new(
         roles=[
-          Shared::PropertyStoragePermissionRoles::OWNER,
+          ::UnifiedRubySDK::Shared::PropertyStoragePermissionRoles::OWNER,
         ],
       ),
     ],
@@ -186,16 +186,16 @@ end
 
 ### Parameters
 
-| Parameter                                                 | Type                                                      | Required                                                  | Description                                               |
-| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
-| `connection_id`                                           | *String*                                                  | :heavy_check_mark:                                        | ID of the connection                                      |
-| `id`                                                      | *String*                                                  | :heavy_check_mark:                                        | ID of the File                                            |
-| `storage_file`                                            | [Shared::StorageFile](../../models/shared/storagefile.md) | :heavy_minus_sign:                                        | N/A                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the File                                                              |
+| `storage_file`                                                              | [::UnifiedRubySDK::Shared::StorageFile](../../models/shared/storagefile.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
 
 
 ### Response
 
-**[T.nilable(Operations::PatchStorageFileResponse)](../../models/operations/patchstoragefileresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::PatchStorageFileResponse)](../../models/operations/patchstoragefileresponse.md)**
 
 
 ## remove_storage_file
@@ -210,7 +210,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -228,13 +228,13 @@ end
 
 | Parameter            | Type                 | Required             | Description          |
 | -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *String*             | :heavy_check_mark:   | ID of the connection |
-| `id`                 | *String*             | :heavy_check_mark:   | ID of the File       |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the File       |
 
 
 ### Response
 
-**[T.nilable(Operations::RemoveStorageFileResponse)](../../models/operations/removestoragefileresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::RemoveStorageFileResponse)](../../models/operations/removestoragefileresponse.md)**
 
 
 ## update_storage_file
@@ -249,17 +249,17 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.storage.update_storage_file(connection_id="string", id="string", storage_file=Shared::StorageFile.new(
+res = s.storage.update_storage_file(connection_id="string", id="string", storage_file=::UnifiedRubySDK::Shared::StorageFile.new(
     permissions=[
-      Shared::StoragePermission.new(
+      ::UnifiedRubySDK::Shared::StoragePermission.new(
         roles=[
-          Shared::PropertyStoragePermissionRoles::WRITE,
+          ::UnifiedRubySDK::Shared::PropertyStoragePermissionRoles::WRITE,
         ],
       ),
     ],
@@ -276,14 +276,14 @@ end
 
 ### Parameters
 
-| Parameter                                                 | Type                                                      | Required                                                  | Description                                               |
-| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
-| `connection_id`                                           | *String*                                                  | :heavy_check_mark:                                        | ID of the connection                                      |
-| `id`                                                      | *String*                                                  | :heavy_check_mark:                                        | ID of the File                                            |
-| `storage_file`                                            | [Shared::StorageFile](../../models/shared/storagefile.md) | :heavy_minus_sign:                                        | N/A                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the File                                                              |
+| `storage_file`                                                              | [::UnifiedRubySDK::Shared::StorageFile](../../models/shared/storagefile.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
 
 
 ### Response
 
-**[T.nilable(Operations::UpdateStorageFileResponse)](../../models/operations/updatestoragefileresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::UpdateStorageFileResponse)](../../models/operations/updatestoragefileresponse.md)**
 

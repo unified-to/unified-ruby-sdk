@@ -6,11 +6,12 @@ generation:
   useClassNamesForArrayFields: true
   fixes:
     nameResolutionDec2023: false
+    parameterOrderingFeb2024: false
   baseServerURL: ""
   flattenGlobalSecurity: true
   telemetryEnabled: false
 ruby:
-  version: 0.2.36
+  version: 0.3.0
   author: Unified
   description: Ruby Client SDK for Unified.to
   imports:

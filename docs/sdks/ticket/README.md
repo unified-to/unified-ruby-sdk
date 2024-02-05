@@ -22,13 +22,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.ticket.create_ticketing_ticket(connection_id="string", ticketing_ticket=Shared::TicketingTicket.new(
+res = s.ticket.create_ticketing_ticket(connection_id="string", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new(
     raw={
       "sky": "string",
     },
@@ -45,15 +45,15 @@ end
 
 ### Parameters
 
-| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| `connection_id`                                                   | *String*                                                          | :heavy_check_mark:                                                | ID of the connection                                              |
-| `ticketing_ticket`                                                | [Shared::TicketingTicket](../../models/shared/ticketingticket.md) | :heavy_minus_sign:                                                | N/A                                                               |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `connection_id`                                                                     | *::String*                                                                          | :heavy_check_mark:                                                                  | ID of the connection                                                                |
+| `ticketing_ticket`                                                                  | [::UnifiedRubySDK::Shared::TicketingTicket](../../models/shared/ticketingticket.md) | :heavy_minus_sign:                                                                  | N/A                                                                                 |
 
 
 ### Response
 
-**[T.nilable(Operations::CreateTicketingTicketResponse)](../../models/operations/createticketingticketresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::CreateTicketingTicketResponse)](../../models/operations/createticketingticketresponse.md)**
 
 
 ## get_ticketing_ticket
@@ -68,7 +68,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -88,14 +88,14 @@ end
 
 | Parameter                        | Type                             | Required                         | Description                      |
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *String*                         | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *String*                         | :heavy_check_mark:               | ID of the Ticket                 |
-| `fields`                         | T::Array<*String*>               | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Ticket                 |
+| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
 
-**[T.nilable(Operations::GetTicketingTicketResponse)](../../models/operations/getticketingticketresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::GetTicketingTicketResponse)](../../models/operations/getticketingticketresponse.md)**
 
 
 ## list_ticketing_tickets
@@ -110,13 +110,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
 
-req = Operations::ListTicketingTicketsRequest.new(
+req = ::UnifiedRubySDK::Operations::ListTicketingTicketsRequest.new(
   connection_id="string",
   fields=[
     "string",
@@ -133,14 +133,14 @@ end
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [Operations::ListTicketingTicketsRequest](../../models/operations/listticketingticketsrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                           | [::UnifiedRubySDK::Operations::ListTicketingTicketsRequest](../../models/operations/listticketingticketsrequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 
 ### Response
 
-**[T.nilable(Operations::ListTicketingTicketsResponse)](../../models/operations/listticketingticketsresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::ListTicketingTicketsResponse)](../../models/operations/listticketingticketsresponse.md)**
 
 
 ## patch_ticketing_ticket
@@ -155,13 +155,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.ticket.patch_ticketing_ticket(connection_id="string", id="string", ticketing_ticket=Shared::TicketingTicket.new(
+res = s.ticket.patch_ticketing_ticket(connection_id="string", id="string", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new(
     raw={
       "Bespoke": "string",
     },
@@ -178,16 +178,16 @@ end
 
 ### Parameters
 
-| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| `connection_id`                                                   | *String*                                                          | :heavy_check_mark:                                                | ID of the connection                                              |
-| `id`                                                              | *String*                                                          | :heavy_check_mark:                                                | ID of the Ticket                                                  |
-| `ticketing_ticket`                                                | [Shared::TicketingTicket](../../models/shared/ticketingticket.md) | :heavy_minus_sign:                                                | N/A                                                               |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `connection_id`                                                                     | *::String*                                                                          | :heavy_check_mark:                                                                  | ID of the connection                                                                |
+| `id`                                                                                | *::String*                                                                          | :heavy_check_mark:                                                                  | ID of the Ticket                                                                    |
+| `ticketing_ticket`                                                                  | [::UnifiedRubySDK::Shared::TicketingTicket](../../models/shared/ticketingticket.md) | :heavy_minus_sign:                                                                  | N/A                                                                                 |
 
 
 ### Response
 
-**[T.nilable(Operations::PatchTicketingTicketResponse)](../../models/operations/patchticketingticketresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::PatchTicketingTicketResponse)](../../models/operations/patchticketingticketresponse.md)**
 
 
 ## remove_ticketing_ticket
@@ -202,7 +202,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -220,13 +220,13 @@ end
 
 | Parameter            | Type                 | Required             | Description          |
 | -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *String*             | :heavy_check_mark:   | ID of the connection |
-| `id`                 | *String*             | :heavy_check_mark:   | ID of the Ticket     |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Ticket     |
 
 
 ### Response
 
-**[T.nilable(Operations::RemoveTicketingTicketResponse)](../../models/operations/removeticketingticketresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::RemoveTicketingTicketResponse)](../../models/operations/removeticketingticketresponse.md)**
 
 
 ## update_ticketing_ticket
@@ -241,13 +241,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.ticket.update_ticketing_ticket(connection_id="string", id="string", ticketing_ticket=Shared::TicketingTicket.new(
+res = s.ticket.update_ticketing_ticket(connection_id="string", id="string", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new(
     raw={
       "Rhode": "string",
     },
@@ -264,14 +264,14 @@ end
 
 ### Parameters
 
-| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| `connection_id`                                                   | *String*                                                          | :heavy_check_mark:                                                | ID of the connection                                              |
-| `id`                                                              | *String*                                                          | :heavy_check_mark:                                                | ID of the Ticket                                                  |
-| `ticketing_ticket`                                                | [Shared::TicketingTicket](../../models/shared/ticketingticket.md) | :heavy_minus_sign:                                                | N/A                                                               |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `connection_id`                                                                     | *::String*                                                                          | :heavy_check_mark:                                                                  | ID of the connection                                                                |
+| `id`                                                                                | *::String*                                                                          | :heavy_check_mark:                                                                  | ID of the Ticket                                                                    |
+| `ticketing_ticket`                                                                  | [::UnifiedRubySDK::Shared::TicketingTicket](../../models/shared/ticketingticket.md) | :heavy_minus_sign:                                                                  | N/A                                                                                 |
 
 
 ### Response
 
-**[T.nilable(Operations::UpdateTicketingTicketResponse)](../../models/operations/updateticketingticketresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::UpdateTicketingTicketResponse)](../../models/operations/updateticketingticketresponse.md)**
 

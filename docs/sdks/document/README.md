@@ -22,13 +22,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.document.create_ats_document(connection_id="string", ats_document=Shared::AtsDocument.new(
+res = s.document.create_ats_document(connection_id="string", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(
     raw={
       "Southeast": "string",
     },
@@ -42,15 +42,15 @@ end
 
 ### Parameters
 
-| Parameter                                                 | Type                                                      | Required                                                  | Description                                               |
-| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
-| `connection_id`                                           | *String*                                                  | :heavy_check_mark:                                        | ID of the connection                                      |
-| `ats_document`                                            | [Shared::AtsDocument](../../models/shared/atsdocument.md) | :heavy_minus_sign:                                        | N/A                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `ats_document`                                                              | [::UnifiedRubySDK::Shared::AtsDocument](../../models/shared/atsdocument.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
 
 
 ### Response
 
-**[T.nilable(Operations::CreateAtsDocumentResponse)](../../models/operations/createatsdocumentresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::CreateAtsDocumentResponse)](../../models/operations/createatsdocumentresponse.md)**
 
 
 ## get_ats_document
@@ -65,7 +65,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -85,14 +85,14 @@ end
 
 | Parameter                        | Type                             | Required                         | Description                      |
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *String*                         | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *String*                         | :heavy_check_mark:               | ID of the Document               |
-| `fields`                         | T::Array<*String*>               | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Document               |
+| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
 
-**[T.nilable(Operations::GetAtsDocumentResponse)](../../models/operations/getatsdocumentresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::GetAtsDocumentResponse)](../../models/operations/getatsdocumentresponse.md)**
 
 
 ## list_ats_documents
@@ -107,13 +107,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
 
-req = Operations::ListAtsDocumentsRequest.new(
+req = ::UnifiedRubySDK::Operations::ListAtsDocumentsRequest.new(
   connection_id="string",
   fields=[
     "string",
@@ -130,14 +130,14 @@ end
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [Operations::ListAtsDocumentsRequest](../../models/operations/listatsdocumentsrequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [::UnifiedRubySDK::Operations::ListAtsDocumentsRequest](../../models/operations/listatsdocumentsrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
 
 
 ### Response
 
-**[T.nilable(Operations::ListAtsDocumentsResponse)](../../models/operations/listatsdocumentsresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::ListAtsDocumentsResponse)](../../models/operations/listatsdocumentsresponse.md)**
 
 
 ## patch_ats_document
@@ -152,13 +152,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.document.patch_ats_document(connection_id="string", id="string", ats_document=Shared::AtsDocument.new(
+res = s.document.patch_ats_document(connection_id="string", id="string", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(
     raw={
       "Northeast": "string",
     },
@@ -172,16 +172,16 @@ end
 
 ### Parameters
 
-| Parameter                                                 | Type                                                      | Required                                                  | Description                                               |
-| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
-| `connection_id`                                           | *String*                                                  | :heavy_check_mark:                                        | ID of the connection                                      |
-| `id`                                                      | *String*                                                  | :heavy_check_mark:                                        | ID of the Document                                        |
-| `ats_document`                                            | [Shared::AtsDocument](../../models/shared/atsdocument.md) | :heavy_minus_sign:                                        | N/A                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Document                                                          |
+| `ats_document`                                                              | [::UnifiedRubySDK::Shared::AtsDocument](../../models/shared/atsdocument.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
 
 
 ### Response
 
-**[T.nilable(Operations::PatchAtsDocumentResponse)](../../models/operations/patchatsdocumentresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::PatchAtsDocumentResponse)](../../models/operations/patchatsdocumentresponse.md)**
 
 
 ## remove_ats_document
@@ -196,7 +196,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -214,13 +214,13 @@ end
 
 | Parameter            | Type                 | Required             | Description          |
 | -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *String*             | :heavy_check_mark:   | ID of the connection |
-| `id`                 | *String*             | :heavy_check_mark:   | ID of the Document   |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Document   |
 
 
 ### Response
 
-**[T.nilable(Operations::RemoveAtsDocumentResponse)](../../models/operations/removeatsdocumentresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::RemoveAtsDocumentResponse)](../../models/operations/removeatsdocumentresponse.md)**
 
 
 ## update_ats_document
@@ -235,13 +235,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.document.update_ats_document(connection_id="string", id="string", ats_document=Shared::AtsDocument.new(
+res = s.document.update_ats_document(connection_id="string", id="string", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(
     raw={
       "turquoise": "string",
     },
@@ -255,14 +255,14 @@ end
 
 ### Parameters
 
-| Parameter                                                 | Type                                                      | Required                                                  | Description                                               |
-| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
-| `connection_id`                                           | *String*                                                  | :heavy_check_mark:                                        | ID of the connection                                      |
-| `id`                                                      | *String*                                                  | :heavy_check_mark:                                        | ID of the Document                                        |
-| `ats_document`                                            | [Shared::AtsDocument](../../models/shared/atsdocument.md) | :heavy_minus_sign:                                        | N/A                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Document                                                          |
+| `ats_document`                                                              | [::UnifiedRubySDK::Shared::AtsDocument](../../models/shared/atsdocument.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
 
 
 ### Response
 
-**[T.nilable(Operations::UpdateAtsDocumentResponse)](../../models/operations/updateatsdocumentresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::UpdateAtsDocumentResponse)](../../models/operations/updateatsdocumentresponse.md)**
 

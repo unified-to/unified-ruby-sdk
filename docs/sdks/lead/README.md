@@ -22,22 +22,22 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.lead.create_crm_lead(connection_id="string", crm_lead=Shared::CrmLead.new(
-    address=Shared::PropertyCrmLeadAddress.new(),
+res = s.lead.create_crm_lead(connection_id="string", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(
+    address=::UnifiedRubySDK::Shared::PropertyCrmLeadAddress.new(),
     emails=[
-      Shared::CrmEmail.new(),
+      ::UnifiedRubySDK::Shared::CrmEmail.new(),
     ],
     raw={
       "Designer": "string",
     },
     telephones=[
-      Shared::CrmTelephone.new(
+      ::UnifiedRubySDK::Shared::CrmTelephone.new(
         telephone="string",
       ),
     ],
@@ -51,15 +51,15 @@ end
 
 ### Parameters
 
-| Parameter                                         | Type                                              | Required                                          | Description                                       |
-| ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
-| `connection_id`                                   | *String*                                          | :heavy_check_mark:                                | ID of the connection                              |
-| `crm_lead`                                        | [Shared::CrmLead](../../models/shared/crmlead.md) | :heavy_minus_sign:                                | N/A                                               |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
+| `crm_lead`                                                          | [::UnifiedRubySDK::Shared::CrmLead](../../models/shared/crmlead.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
 
 
 ### Response
 
-**[T.nilable(Operations::CreateCrmLeadResponse)](../../models/operations/createcrmleadresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::CreateCrmLeadResponse)](../../models/operations/createcrmleadresponse.md)**
 
 
 ## get_crm_lead
@@ -74,7 +74,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -94,14 +94,14 @@ end
 
 | Parameter                        | Type                             | Required                         | Description                      |
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *String*                         | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *String*                         | :heavy_check_mark:               | ID of the Lead                   |
-| `fields`                         | T::Array<*String*>               | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Lead                   |
+| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
 
-**[T.nilable(Operations::GetCrmLeadResponse)](../../models/operations/getcrmleadresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::GetCrmLeadResponse)](../../models/operations/getcrmleadresponse.md)**
 
 
 ## list_crm_leads
@@ -116,13 +116,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
 
-req = Operations::ListCrmLeadsRequest.new(
+req = ::UnifiedRubySDK::Operations::ListCrmLeadsRequest.new(
   connection_id="string",
   fields=[
     "string",
@@ -139,14 +139,14 @@ end
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [Operations::ListCrmLeadsRequest](../../models/operations/listcrmleadsrequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [::UnifiedRubySDK::Operations::ListCrmLeadsRequest](../../models/operations/listcrmleadsrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 
 ### Response
 
-**[T.nilable(Operations::ListCrmLeadsResponse)](../../models/operations/listcrmleadsresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::ListCrmLeadsResponse)](../../models/operations/listcrmleadsresponse.md)**
 
 
 ## patch_crm_lead
@@ -161,22 +161,22 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.lead.patch_crm_lead(connection_id="string", id="string", crm_lead=Shared::CrmLead.new(
-    address=Shared::PropertyCrmLeadAddress.new(),
+res = s.lead.patch_crm_lead(connection_id="string", id="string", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(
+    address=::UnifiedRubySDK::Shared::PropertyCrmLeadAddress.new(),
     emails=[
-      Shared::CrmEmail.new(),
+      ::UnifiedRubySDK::Shared::CrmEmail.new(),
     ],
     raw={
       "deposit": "string",
     },
     telephones=[
-      Shared::CrmTelephone.new(
+      ::UnifiedRubySDK::Shared::CrmTelephone.new(
         telephone="string",
       ),
     ],
@@ -190,16 +190,16 @@ end
 
 ### Parameters
 
-| Parameter                                         | Type                                              | Required                                          | Description                                       |
-| ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
-| `connection_id`                                   | *String*                                          | :heavy_check_mark:                                | ID of the connection                              |
-| `id`                                              | *String*                                          | :heavy_check_mark:                                | ID of the Lead                                    |
-| `crm_lead`                                        | [Shared::CrmLead](../../models/shared/crmlead.md) | :heavy_minus_sign:                                | N/A                                               |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
+| `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Lead                                                      |
+| `crm_lead`                                                          | [::UnifiedRubySDK::Shared::CrmLead](../../models/shared/crmlead.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
 
 
 ### Response
 
-**[T.nilable(Operations::PatchCrmLeadResponse)](../../models/operations/patchcrmleadresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::PatchCrmLeadResponse)](../../models/operations/patchcrmleadresponse.md)**
 
 
 ## remove_crm_lead
@@ -214,7 +214,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -232,13 +232,13 @@ end
 
 | Parameter            | Type                 | Required             | Description          |
 | -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *String*             | :heavy_check_mark:   | ID of the connection |
-| `id`                 | *String*             | :heavy_check_mark:   | ID of the Lead       |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Lead       |
 
 
 ### Response
 
-**[T.nilable(Operations::RemoveCrmLeadResponse)](../../models/operations/removecrmleadresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::RemoveCrmLeadResponse)](../../models/operations/removecrmleadresponse.md)**
 
 
 ## update_crm_lead
@@ -253,22 +253,22 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.lead.update_crm_lead(connection_id="string", id="string", crm_lead=Shared::CrmLead.new(
-    address=Shared::PropertyCrmLeadAddress.new(),
+res = s.lead.update_crm_lead(connection_id="string", id="string", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(
+    address=::UnifiedRubySDK::Shared::PropertyCrmLeadAddress.new(),
     emails=[
-      Shared::CrmEmail.new(),
+      ::UnifiedRubySDK::Shared::CrmEmail.new(),
     ],
     raw={
       "Northwest": "string",
     },
     telephones=[
-      Shared::CrmTelephone.new(
+      ::UnifiedRubySDK::Shared::CrmTelephone.new(
         telephone="string",
       ),
     ],
@@ -282,14 +282,14 @@ end
 
 ### Parameters
 
-| Parameter                                         | Type                                              | Required                                          | Description                                       |
-| ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
-| `connection_id`                                   | *String*                                          | :heavy_check_mark:                                | ID of the connection                              |
-| `id`                                              | *String*                                          | :heavy_check_mark:                                | ID of the Lead                                    |
-| `crm_lead`                                        | [Shared::CrmLead](../../models/shared/crmlead.md) | :heavy_minus_sign:                                | N/A                                               |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
+| `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Lead                                                      |
+| `crm_lead`                                                          | [::UnifiedRubySDK::Shared::CrmLead](../../models/shared/crmlead.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
 
 
 ### Response
 
-**[T.nilable(Operations::UpdateCrmLeadResponse)](../../models/operations/updatecrmleadresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::UpdateCrmLeadResponse)](../../models/operations/updatecrmleadresponse.md)**
 

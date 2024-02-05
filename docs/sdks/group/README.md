@@ -22,13 +22,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.group.create_hris_group(connection_id="string", hris_group=Shared::HrisGroup.new(
+res = s.group.create_hris_group(connection_id="string", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(
     manager_ids=[
       "string",
     ],
@@ -48,15 +48,15 @@ end
 
 ### Parameters
 
-| Parameter                                             | Type                                                  | Required                                              | Description                                           |
-| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| `connection_id`                                       | *String*                                              | :heavy_check_mark:                                    | ID of the connection                                  |
-| `hris_group`                                          | [Shared::HrisGroup](../../models/shared/hrisgroup.md) | :heavy_minus_sign:                                    | N/A                                                   |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
+| `hris_group`                                                            | [::UnifiedRubySDK::Shared::HrisGroup](../../models/shared/hrisgroup.md) | :heavy_minus_sign:                                                      | N/A                                                                     |
 
 
 ### Response
 
-**[T.nilable(Operations::CreateHrisGroupResponse)](../../models/operations/createhrisgroupresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::CreateHrisGroupResponse)](../../models/operations/createhrisgroupresponse.md)**
 
 
 ## get_hris_group
@@ -71,7 +71,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -91,14 +91,14 @@ end
 
 | Parameter                        | Type                             | Required                         | Description                      |
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *String*                         | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *String*                         | :heavy_check_mark:               | ID of the Group                  |
-| `fields`                         | T::Array<*String*>               | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Group                  |
+| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
 
-**[T.nilable(Operations::GetHrisGroupResponse)](../../models/operations/gethrisgroupresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::GetHrisGroupResponse)](../../models/operations/gethrisgroupresponse.md)**
 
 
 ## list_hris_groups
@@ -113,13 +113,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
 
-req = Operations::ListHrisGroupsRequest.new(
+req = ::UnifiedRubySDK::Operations::ListHrisGroupsRequest.new(
   connection_id="string",
   fields=[
     "string",
@@ -136,14 +136,14 @@ end
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [Operations::ListHrisGroupsRequest](../../models/operations/listhrisgroupsrequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [::UnifiedRubySDK::Operations::ListHrisGroupsRequest](../../models/operations/listhrisgroupsrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
 
 
 ### Response
 
-**[T.nilable(Operations::ListHrisGroupsResponse)](../../models/operations/listhrisgroupsresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::ListHrisGroupsResponse)](../../models/operations/listhrisgroupsresponse.md)**
 
 
 ## patch_hris_group
@@ -158,13 +158,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.group.patch_hris_group(connection_id="string", id="string", hris_group=Shared::HrisGroup.new(
+res = s.group.patch_hris_group(connection_id="string", id="string", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(
     manager_ids=[
       "string",
     ],
@@ -184,16 +184,16 @@ end
 
 ### Parameters
 
-| Parameter                                             | Type                                                  | Required                                              | Description                                           |
-| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| `connection_id`                                       | *String*                                              | :heavy_check_mark:                                    | ID of the connection                                  |
-| `id`                                                  | *String*                                              | :heavy_check_mark:                                    | ID of the Group                                       |
-| `hris_group`                                          | [Shared::HrisGroup](../../models/shared/hrisgroup.md) | :heavy_minus_sign:                                    | N/A                                                   |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
+| `id`                                                                    | *::String*                                                              | :heavy_check_mark:                                                      | ID of the Group                                                         |
+| `hris_group`                                                            | [::UnifiedRubySDK::Shared::HrisGroup](../../models/shared/hrisgroup.md) | :heavy_minus_sign:                                                      | N/A                                                                     |
 
 
 ### Response
 
-**[T.nilable(Operations::PatchHrisGroupResponse)](../../models/operations/patchhrisgroupresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::PatchHrisGroupResponse)](../../models/operations/patchhrisgroupresponse.md)**
 
 
 ## remove_hris_group
@@ -208,7 +208,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -226,13 +226,13 @@ end
 
 | Parameter            | Type                 | Required             | Description          |
 | -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *String*             | :heavy_check_mark:   | ID of the connection |
-| `id`                 | *String*             | :heavy_check_mark:   | ID of the Group      |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Group      |
 
 
 ### Response
 
-**[T.nilable(Operations::RemoveHrisGroupResponse)](../../models/operations/removehrisgroupresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::RemoveHrisGroupResponse)](../../models/operations/removehrisgroupresponse.md)**
 
 
 ## update_hris_group
@@ -247,13 +247,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.group.update_hris_group(connection_id="string", id="string", hris_group=Shared::HrisGroup.new(
+res = s.group.update_hris_group(connection_id="string", id="string", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(
     manager_ids=[
       "string",
     ],
@@ -273,14 +273,14 @@ end
 
 ### Parameters
 
-| Parameter                                             | Type                                                  | Required                                              | Description                                           |
-| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| `connection_id`                                       | *String*                                              | :heavy_check_mark:                                    | ID of the connection                                  |
-| `id`                                                  | *String*                                              | :heavy_check_mark:                                    | ID of the Group                                       |
-| `hris_group`                                          | [Shared::HrisGroup](../../models/shared/hrisgroup.md) | :heavy_minus_sign:                                    | N/A                                                   |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
+| `id`                                                                    | *::String*                                                              | :heavy_check_mark:                                                      | ID of the Group                                                         |
+| `hris_group`                                                            | [::UnifiedRubySDK::Shared::HrisGroup](../../models/shared/hrisgroup.md) | :heavy_minus_sign:                                                      | N/A                                                                     |
 
 
 ### Response
 
-**[T.nilable(Operations::UpdateHrisGroupResponse)](../../models/operations/updatehrisgroupresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::UpdateHrisGroupResponse)](../../models/operations/updatehrisgroupresponse.md)**
 

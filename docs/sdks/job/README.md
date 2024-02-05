@@ -22,19 +22,19 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.job.create_ats_job(connection_id="string", ats_job=Shared::AtsJob.new(
+res = s.job.create_ats_job(connection_id="string", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(
     addresses=[
-      Shared::AtsAddress.new(),
+      ::UnifiedRubySDK::Shared::AtsAddress.new(),
     ],
     compensation=[
-      Shared::AtsCompensation.new(
-        type=Shared::AtsCompensationType::SALARY,
+      ::UnifiedRubySDK::Shared::AtsCompensation.new(
+        type=::UnifiedRubySDK::Shared::AtsCompensationType::SALARY,
       ),
     ],
     departments=[
@@ -62,15 +62,15 @@ end
 
 ### Parameters
 
-| Parameter                                       | Type                                            | Required                                        | Description                                     |
-| ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- |
-| `connection_id`                                 | *String*                                        | :heavy_check_mark:                              | ID of the connection                            |
-| `ats_job`                                       | [Shared::AtsJob](../../models/shared/atsjob.md) | :heavy_minus_sign:                              | N/A                                             |
+| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `connection_id`                                                   | *::String*                                                        | :heavy_check_mark:                                                | ID of the connection                                              |
+| `ats_job`                                                         | [::UnifiedRubySDK::Shared::AtsJob](../../models/shared/atsjob.md) | :heavy_minus_sign:                                                | N/A                                                               |
 
 
 ### Response
 
-**[T.nilable(Operations::CreateAtsJobResponse)](../../models/operations/createatsjobresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::CreateAtsJobResponse)](../../models/operations/createatsjobresponse.md)**
 
 
 ## get_ats_job
@@ -85,7 +85,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -105,14 +105,14 @@ end
 
 | Parameter                        | Type                             | Required                         | Description                      |
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *String*                         | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *String*                         | :heavy_check_mark:               | ID of the Job                    |
-| `fields`                         | T::Array<*String*>               | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Job                    |
+| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
 
-**[T.nilable(Operations::GetAtsJobResponse)](../../models/operations/getatsjobresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::GetAtsJobResponse)](../../models/operations/getatsjobresponse.md)**
 
 
 ## list_ats_jobs
@@ -127,13 +127,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
 
-req = Operations::ListAtsJobsRequest.new(
+req = ::UnifiedRubySDK::Operations::ListAtsJobsRequest.new(
   connection_id="string",
   fields=[
     "string",
@@ -150,14 +150,14 @@ end
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [Operations::ListAtsJobsRequest](../../models/operations/listatsjobsrequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [::UnifiedRubySDK::Operations::ListAtsJobsRequest](../../models/operations/listatsjobsrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 
 ### Response
 
-**[T.nilable(Operations::ListAtsJobsResponse)](../../models/operations/listatsjobsresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::ListAtsJobsResponse)](../../models/operations/listatsjobsresponse.md)**
 
 
 ## patch_ats_job
@@ -172,19 +172,19 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.job.patch_ats_job(connection_id="string", id="string", ats_job=Shared::AtsJob.new(
+res = s.job.patch_ats_job(connection_id="string", id="string", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(
     addresses=[
-      Shared::AtsAddress.new(),
+      ::UnifiedRubySDK::Shared::AtsAddress.new(),
     ],
     compensation=[
-      Shared::AtsCompensation.new(
-        type=Shared::AtsCompensationType::BONUS,
+      ::UnifiedRubySDK::Shared::AtsCompensation.new(
+        type=::UnifiedRubySDK::Shared::AtsCompensationType::BONUS,
       ),
     ],
     departments=[
@@ -212,16 +212,16 @@ end
 
 ### Parameters
 
-| Parameter                                       | Type                                            | Required                                        | Description                                     |
-| ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- |
-| `connection_id`                                 | *String*                                        | :heavy_check_mark:                              | ID of the connection                            |
-| `id`                                            | *String*                                        | :heavy_check_mark:                              | ID of the Job                                   |
-| `ats_job`                                       | [Shared::AtsJob](../../models/shared/atsjob.md) | :heavy_minus_sign:                              | N/A                                             |
+| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `connection_id`                                                   | *::String*                                                        | :heavy_check_mark:                                                | ID of the connection                                              |
+| `id`                                                              | *::String*                                                        | :heavy_check_mark:                                                | ID of the Job                                                     |
+| `ats_job`                                                         | [::UnifiedRubySDK::Shared::AtsJob](../../models/shared/atsjob.md) | :heavy_minus_sign:                                                | N/A                                                               |
 
 
 ### Response
 
-**[T.nilable(Operations::PatchAtsJobResponse)](../../models/operations/patchatsjobresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::PatchAtsJobResponse)](../../models/operations/patchatsjobresponse.md)**
 
 
 ## remove_ats_job
@@ -236,7 +236,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -254,13 +254,13 @@ end
 
 | Parameter            | Type                 | Required             | Description          |
 | -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *String*             | :heavy_check_mark:   | ID of the connection |
-| `id`                 | *String*             | :heavy_check_mark:   | ID of the Job        |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Job        |
 
 
 ### Response
 
-**[T.nilable(Operations::RemoveAtsJobResponse)](../../models/operations/removeatsjobresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::RemoveAtsJobResponse)](../../models/operations/removeatsjobresponse.md)**
 
 
 ## update_ats_job
@@ -275,19 +275,19 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.job.update_ats_job(connection_id="string", id="string", ats_job=Shared::AtsJob.new(
+res = s.job.update_ats_job(connection_id="string", id="string", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(
     addresses=[
-      Shared::AtsAddress.new(),
+      ::UnifiedRubySDK::Shared::AtsAddress.new(),
     ],
     compensation=[
-      Shared::AtsCompensation.new(
-        type=Shared::AtsCompensationType::EQUITY,
+      ::UnifiedRubySDK::Shared::AtsCompensation.new(
+        type=::UnifiedRubySDK::Shared::AtsCompensationType::EQUITY,
       ),
     ],
     departments=[
@@ -315,14 +315,14 @@ end
 
 ### Parameters
 
-| Parameter                                       | Type                                            | Required                                        | Description                                     |
-| ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- |
-| `connection_id`                                 | *String*                                        | :heavy_check_mark:                              | ID of the connection                            |
-| `id`                                            | *String*                                        | :heavy_check_mark:                              | ID of the Job                                   |
-| `ats_job`                                       | [Shared::AtsJob](../../models/shared/atsjob.md) | :heavy_minus_sign:                              | N/A                                             |
+| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `connection_id`                                                   | *::String*                                                        | :heavy_check_mark:                                                | ID of the connection                                              |
+| `id`                                                              | *::String*                                                        | :heavy_check_mark:                                                | ID of the Job                                                     |
+| `ats_job`                                                         | [::UnifiedRubySDK::Shared::AtsJob](../../models/shared/atsjob.md) | :heavy_minus_sign:                                                | N/A                                                               |
 
 
 ### Response
 
-**[T.nilable(Operations::UpdateAtsJobResponse)](../../models/operations/updateatsjobresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::UpdateAtsJobResponse)](../../models/operations/updateatsjobresponse.md)**
 

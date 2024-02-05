@@ -1,80 +1,80 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: a19ba4935c486a523296da7841502792
+  docChecksum: 18ccf953df89af94fa8ee7505288f024
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.246.3
-  releaseVersion: 0.2.36
-  configChecksum: 5283a0440910735fcd4bc013ddf8c8ec
+  generationVersion: 2.249.1
+  releaseVersion: 0.3.0
+  configChecksum: ba6cc04c3b59aef653340d7191aac676
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
 features:
   ruby:
-    core: 3.2.2
+    core: 3.2.3
     flattening: 2.81.1
     globalSecurity: 2.81.3
     globalServerURLs: 2.82.1
 generatedFiles:
-  - lib/unifiedto/sdkconfiguration.rb
-  - lib/unifiedto/accounting.rb
-  - lib/unifiedto/account.rb
-  - lib/unifiedto/contact.rb
-  - lib/unifiedto/invoice.rb
-  - lib/unifiedto/organization.rb
-  - lib/unifiedto/payment.rb
-  - lib/unifiedto/taxrate.rb
-  - lib/unifiedto/transaction.rb
-  - lib/unifiedto/ats.rb
-  - lib/unifiedto/application.rb
-  - lib/unifiedto/applicationstatus.rb
-  - lib/unifiedto/candidate.rb
-  - lib/unifiedto/document.rb
-  - lib/unifiedto/interview.rb
-  - lib/unifiedto/job.rb
-  - lib/unifiedto/scorecard.rb
-  - lib/unifiedto/commerce.rb
-  - lib/unifiedto/collection.rb
-  - lib/unifiedto/inventory.rb
-  - lib/unifiedto/item.rb
-  - lib/unifiedto/location.rb
-  - lib/unifiedto/crm.rb
-  - lib/unifiedto/company.rb
-  - lib/unifiedto/deal.rb
-  - lib/unifiedto/event.rb
-  - lib/unifiedto/lead.rb
-  - lib/unifiedto/pipeline.rb
-  - lib/unifiedto/enrich.rb
-  - lib/unifiedto/person.rb
-  - lib/unifiedto/hris.rb
-  - lib/unifiedto/employee.rb
-  - lib/unifiedto/group.rb
-  - lib/unifiedto/martech.rb
-  - lib/unifiedto/list.rb
-  - lib/unifiedto/member.rb
-  - lib/unifiedto/passthrough.rb
-  - lib/unifiedto/storage.rb
-  - lib/unifiedto/file.rb
-  - lib/unifiedto/ticketing.rb
-  - lib/unifiedto/customer.rb
-  - lib/unifiedto/note.rb
-  - lib/unifiedto/ticket.rb
-  - lib/unifiedto/uc.rb
-  - lib/unifiedto/call.rb
-  - lib/unifiedto/unified.rb
-  - lib/unifiedto/apicall.rb
-  - lib/unifiedto/connection.rb
-  - lib/unifiedto/integration.rb
-  - lib/unifiedto/auth.rb
-  - lib/unifiedto/login.rb
-  - lib/unifiedto/webhook.rb
-  - lib/unifiedto/sdk.rb
+  - lib/unified_ruby_sdk/sdkconfiguration.rb
+  - lib/unified_ruby_sdk/accounting.rb
+  - lib/unified_ruby_sdk/account.rb
+  - lib/unified_ruby_sdk/contact.rb
+  - lib/unified_ruby_sdk/invoice.rb
+  - lib/unified_ruby_sdk/organization.rb
+  - lib/unified_ruby_sdk/payment.rb
+  - lib/unified_ruby_sdk/taxrate.rb
+  - lib/unified_ruby_sdk/transaction.rb
+  - lib/unified_ruby_sdk/ats.rb
+  - lib/unified_ruby_sdk/application.rb
+  - lib/unified_ruby_sdk/applicationstatus.rb
+  - lib/unified_ruby_sdk/candidate.rb
+  - lib/unified_ruby_sdk/company.rb
+  - lib/unified_ruby_sdk/document.rb
+  - lib/unified_ruby_sdk/interview.rb
+  - lib/unified_ruby_sdk/job.rb
+  - lib/unified_ruby_sdk/scorecard.rb
+  - lib/unified_ruby_sdk/commerce.rb
+  - lib/unified_ruby_sdk/collection.rb
+  - lib/unified_ruby_sdk/inventory.rb
+  - lib/unified_ruby_sdk/item.rb
+  - lib/unified_ruby_sdk/location.rb
+  - lib/unified_ruby_sdk/crm.rb
+  - lib/unified_ruby_sdk/deal.rb
+  - lib/unified_ruby_sdk/event.rb
+  - lib/unified_ruby_sdk/lead.rb
+  - lib/unified_ruby_sdk/pipeline.rb
+  - lib/unified_ruby_sdk/enrich.rb
+  - lib/unified_ruby_sdk/person.rb
+  - lib/unified_ruby_sdk/hris.rb
+  - lib/unified_ruby_sdk/employee.rb
+  - lib/unified_ruby_sdk/group.rb
+  - lib/unified_ruby_sdk/martech.rb
+  - lib/unified_ruby_sdk/list.rb
+  - lib/unified_ruby_sdk/member.rb
+  - lib/unified_ruby_sdk/passthrough.rb
+  - lib/unified_ruby_sdk/storage.rb
+  - lib/unified_ruby_sdk/file.rb
+  - lib/unified_ruby_sdk/ticketing.rb
+  - lib/unified_ruby_sdk/customer.rb
+  - lib/unified_ruby_sdk/note.rb
+  - lib/unified_ruby_sdk/ticket.rb
+  - lib/unified_ruby_sdk/uc.rb
+  - lib/unified_ruby_sdk/call.rb
+  - lib/unified_ruby_sdk/unified.rb
+  - lib/unified_ruby_sdk/apicall.rb
+  - lib/unified_ruby_sdk/connection.rb
+  - lib/unified_ruby_sdk/integration.rb
+  - lib/unified_ruby_sdk/auth.rb
+  - lib/unified_ruby_sdk/login.rb
+  - lib/unified_ruby_sdk/webhook.rb
+  - lib/unified_ruby_sdk/unified_to.rb
   - .rubocop.yml
   - Gemfile
   - Rakefile
-  - lib/unifiedto/utils/metadata_fields.rb
-  - lib/unifiedto/utils/utils.rb
+  - lib/unified_ruby_sdk/utils/metadata_fields.rb
+  - lib/unified_ruby_sdk/utils/utils.rb
   - sorbet/config
   - sorbet/rbi/annotations/.gitattributes
   - sorbet/rbi/annotations/faraday.rbi
@@ -116,312 +116,586 @@ generatedFiles:
   - sorbet/tapioca/config.yml
   - sorbet/tapioca/require.rb
   - unified_ruby_sdk.gemspec
-  - lib/unifiedto/models/operations/createaccountingaccount.rb
-  - lib/unifiedto/models/operations/createaccountingcontact.rb
-  - lib/unifiedto/models/operations/createaccountinginvoice.rb
-  - lib/unifiedto/models/operations/createaccountingpayment.rb
-  - lib/unifiedto/models/operations/createaccountingtaxrate.rb
-  - lib/unifiedto/models/operations/createaccountingtransaction.rb
-  - lib/unifiedto/models/operations/getaccountingaccount.rb
-  - lib/unifiedto/models/operations/getaccountingcontact.rb
-  - lib/unifiedto/models/operations/getaccountinginvoice.rb
-  - lib/unifiedto/models/operations/getaccountingorganization.rb
-  - lib/unifiedto/models/operations/getaccountingpayment.rb
-  - lib/unifiedto/models/operations/getaccountingtaxrate.rb
-  - lib/unifiedto/models/operations/getaccountingtransaction.rb
-  - lib/unifiedto/models/operations/listaccountingaccounts.rb
-  - lib/unifiedto/models/operations/listaccountingcontacts.rb
-  - lib/unifiedto/models/operations/listaccountinginvoices.rb
-  - lib/unifiedto/models/operations/listaccountingorganizations.rb
-  - lib/unifiedto/models/operations/listaccountingpayments.rb
-  - lib/unifiedto/models/operations/listaccountingtaxrates.rb
-  - lib/unifiedto/models/operations/listaccountingtransactions.rb
-  - lib/unifiedto/models/operations/patchaccountingaccount.rb
-  - lib/unifiedto/models/operations/patchaccountingcontact.rb
-  - lib/unifiedto/models/operations/patchaccountinginvoice.rb
-  - lib/unifiedto/models/operations/patchaccountingpayment.rb
-  - lib/unifiedto/models/operations/patchaccountingtaxrate.rb
-  - lib/unifiedto/models/operations/patchaccountingtransaction.rb
-  - lib/unifiedto/models/operations/removeaccountingaccount.rb
-  - lib/unifiedto/models/operations/removeaccountingcontact.rb
-  - lib/unifiedto/models/operations/removeaccountinginvoice.rb
-  - lib/unifiedto/models/operations/removeaccountingpayment.rb
-  - lib/unifiedto/models/operations/removeaccountingtaxrate.rb
-  - lib/unifiedto/models/operations/removeaccountingtransaction.rb
-  - lib/unifiedto/models/operations/updateaccountingaccount.rb
-  - lib/unifiedto/models/operations/updateaccountingcontact.rb
-  - lib/unifiedto/models/operations/updateaccountinginvoice.rb
-  - lib/unifiedto/models/operations/updateaccountingpayment.rb
-  - lib/unifiedto/models/operations/updateaccountingtaxrate.rb
-  - lib/unifiedto/models/operations/updateaccountingtransaction.rb
-  - lib/unifiedto/models/operations/createcrmcontact.rb
-  - lib/unifiedto/models/operations/createuccontact.rb
-  - lib/unifiedto/models/operations/getcrmcontact.rb
-  - lib/unifiedto/models/operations/getuccontact.rb
-  - lib/unifiedto/models/operations/listcrmcontacts.rb
-  - lib/unifiedto/models/operations/listuccontacts.rb
-  - lib/unifiedto/models/operations/patchcrmcontact.rb
-  - lib/unifiedto/models/operations/patchuccontact.rb
-  - lib/unifiedto/models/operations/removecrmcontact.rb
-  - lib/unifiedto/models/operations/removeuccontact.rb
-  - lib/unifiedto/models/operations/updatecrmcontact.rb
-  - lib/unifiedto/models/operations/updateuccontact.rb
-  - lib/unifiedto/models/operations/createatsapplication.rb
-  - lib/unifiedto/models/operations/createatscandidate.rb
-  - lib/unifiedto/models/operations/createatsdocument.rb
-  - lib/unifiedto/models/operations/createatsinterview.rb
-  - lib/unifiedto/models/operations/createatsjob.rb
-  - lib/unifiedto/models/operations/createatsscorecard.rb
-  - lib/unifiedto/models/operations/getatsapplication.rb
-  - lib/unifiedto/models/operations/getatscandidate.rb
-  - lib/unifiedto/models/operations/getatsdocument.rb
-  - lib/unifiedto/models/operations/getatsinterview.rb
-  - lib/unifiedto/models/operations/getatsjob.rb
-  - lib/unifiedto/models/operations/getatsscorecard.rb
-  - lib/unifiedto/models/operations/listatsapplications.rb
-  - lib/unifiedto/models/operations/listatsapplicationstatuses.rb
-  - lib/unifiedto/models/operations/listatscandidates.rb
-  - lib/unifiedto/models/operations/listatsdocuments.rb
-  - lib/unifiedto/models/operations/listatsinterviews.rb
-  - lib/unifiedto/models/operations/listatsjobs.rb
-  - lib/unifiedto/models/operations/listatsscorecards.rb
-  - lib/unifiedto/models/operations/patchatsapplication.rb
-  - lib/unifiedto/models/operations/patchatscandidate.rb
-  - lib/unifiedto/models/operations/patchatsdocument.rb
-  - lib/unifiedto/models/operations/patchatsinterview.rb
-  - lib/unifiedto/models/operations/patchatsjob.rb
-  - lib/unifiedto/models/operations/patchatsscorecard.rb
-  - lib/unifiedto/models/operations/removeatsapplication.rb
-  - lib/unifiedto/models/operations/removeatscandidate.rb
-  - lib/unifiedto/models/operations/removeatsdocument.rb
-  - lib/unifiedto/models/operations/removeatsinterview.rb
-  - lib/unifiedto/models/operations/removeatsjob.rb
-  - lib/unifiedto/models/operations/removeatsscorecard.rb
-  - lib/unifiedto/models/operations/updateatsapplication.rb
-  - lib/unifiedto/models/operations/updateatscandidate.rb
-  - lib/unifiedto/models/operations/updateatsdocument.rb
-  - lib/unifiedto/models/operations/updateatsinterview.rb
-  - lib/unifiedto/models/operations/updateatsjob.rb
-  - lib/unifiedto/models/operations/updateatsscorecard.rb
-  - lib/unifiedto/models/operations/createcommercecollection.rb
-  - lib/unifiedto/models/operations/createcommerceinventory.rb
-  - lib/unifiedto/models/operations/createcommerceitem.rb
-  - lib/unifiedto/models/operations/createcommercelocation.rb
-  - lib/unifiedto/models/operations/getcommercecollection.rb
-  - lib/unifiedto/models/operations/getcommerceinventory.rb
-  - lib/unifiedto/models/operations/getcommerceitem.rb
-  - lib/unifiedto/models/operations/getcommercelocation.rb
-  - lib/unifiedto/models/operations/listcommercecollections.rb
-  - lib/unifiedto/models/operations/listcommerceinventories.rb
-  - lib/unifiedto/models/operations/listcommerceitems.rb
-  - lib/unifiedto/models/operations/listcommercelocations.rb
-  - lib/unifiedto/models/operations/patchcommercecollection.rb
-  - lib/unifiedto/models/operations/patchcommerceinventory.rb
-  - lib/unifiedto/models/operations/patchcommerceitem.rb
-  - lib/unifiedto/models/operations/patchcommercelocation.rb
-  - lib/unifiedto/models/operations/removecommercecollection.rb
-  - lib/unifiedto/models/operations/removecommerceinventory.rb
-  - lib/unifiedto/models/operations/removecommerceitem.rb
-  - lib/unifiedto/models/operations/removecommercelocation.rb
-  - lib/unifiedto/models/operations/updatecommercecollection.rb
-  - lib/unifiedto/models/operations/updatecommerceinventory.rb
-  - lib/unifiedto/models/operations/updatecommerceitem.rb
-  - lib/unifiedto/models/operations/updatecommercelocation.rb
-  - lib/unifiedto/models/operations/createcrmcompany.rb
-  - lib/unifiedto/models/operations/createcrmdeal.rb
-  - lib/unifiedto/models/operations/createcrmevent.rb
-  - lib/unifiedto/models/operations/createcrmlead.rb
-  - lib/unifiedto/models/operations/createcrmpipeline.rb
-  - lib/unifiedto/models/operations/getcrmcompany.rb
-  - lib/unifiedto/models/operations/getcrmdeal.rb
-  - lib/unifiedto/models/operations/getcrmevent.rb
-  - lib/unifiedto/models/operations/getcrmlead.rb
-  - lib/unifiedto/models/operations/getcrmpipeline.rb
-  - lib/unifiedto/models/operations/listcrmcompanies.rb
-  - lib/unifiedto/models/operations/listcrmdeals.rb
-  - lib/unifiedto/models/operations/listcrmevents.rb
-  - lib/unifiedto/models/operations/listcrmleads.rb
-  - lib/unifiedto/models/operations/listcrmpipelines.rb
-  - lib/unifiedto/models/operations/patchcrmcompany.rb
-  - lib/unifiedto/models/operations/patchcrmdeal.rb
-  - lib/unifiedto/models/operations/patchcrmevent.rb
-  - lib/unifiedto/models/operations/patchcrmlead.rb
-  - lib/unifiedto/models/operations/patchcrmpipeline.rb
-  - lib/unifiedto/models/operations/removecrmcompany.rb
-  - lib/unifiedto/models/operations/removecrmdeal.rb
-  - lib/unifiedto/models/operations/removecrmevent.rb
-  - lib/unifiedto/models/operations/removecrmlead.rb
-  - lib/unifiedto/models/operations/removecrmpipeline.rb
-  - lib/unifiedto/models/operations/updatecrmcompany.rb
-  - lib/unifiedto/models/operations/updatecrmdeal.rb
-  - lib/unifiedto/models/operations/updatecrmevent.rb
-  - lib/unifiedto/models/operations/updatecrmlead.rb
-  - lib/unifiedto/models/operations/updatecrmpipeline.rb
-  - lib/unifiedto/models/operations/listenrichcompanies.rb
-  - lib/unifiedto/models/operations/listenrichpeople.rb
-  - lib/unifiedto/models/operations/createhrisemployee.rb
-  - lib/unifiedto/models/operations/createhrisgroup.rb
-  - lib/unifiedto/models/operations/gethrisemployee.rb
-  - lib/unifiedto/models/operations/gethrisgroup.rb
-  - lib/unifiedto/models/operations/listhrisemployees.rb
-  - lib/unifiedto/models/operations/listhrisgroups.rb
-  - lib/unifiedto/models/operations/patchhrisemployee.rb
-  - lib/unifiedto/models/operations/patchhrisgroup.rb
-  - lib/unifiedto/models/operations/removehrisemployee.rb
-  - lib/unifiedto/models/operations/removehrisgroup.rb
-  - lib/unifiedto/models/operations/updatehrisemployee.rb
-  - lib/unifiedto/models/operations/updatehrisgroup.rb
-  - lib/unifiedto/models/operations/createmartechlist.rb
-  - lib/unifiedto/models/operations/createmartechmember.rb
-  - lib/unifiedto/models/operations/getmartechlist.rb
-  - lib/unifiedto/models/operations/getmartechmember.rb
-  - lib/unifiedto/models/operations/listmartechlists.rb
-  - lib/unifiedto/models/operations/listmartechmembers.rb
-  - lib/unifiedto/models/operations/patchmartechlist.rb
-  - lib/unifiedto/models/operations/patchmartechmember.rb
-  - lib/unifiedto/models/operations/removemartechlist.rb
-  - lib/unifiedto/models/operations/removemartechmember.rb
-  - lib/unifiedto/models/operations/updatemartechlist.rb
-  - lib/unifiedto/models/operations/updatemartechmember.rb
-  - lib/unifiedto/models/operations/createpassthrough.rb
-  - lib/unifiedto/models/operations/listpassthroughs.rb
-  - lib/unifiedto/models/operations/patchpassthrough.rb
-  - lib/unifiedto/models/operations/removepassthrough.rb
-  - lib/unifiedto/models/operations/updatepassthrough.rb
-  - lib/unifiedto/models/operations/createstoragefile.rb
-  - lib/unifiedto/models/operations/getstoragefile.rb
-  - lib/unifiedto/models/operations/liststoragefiles.rb
-  - lib/unifiedto/models/operations/patchstoragefile.rb
-  - lib/unifiedto/models/operations/removestoragefile.rb
-  - lib/unifiedto/models/operations/updatestoragefile.rb
-  - lib/unifiedto/models/operations/createticketingcustomer.rb
-  - lib/unifiedto/models/operations/createticketingnote.rb
-  - lib/unifiedto/models/operations/createticketingticket.rb
-  - lib/unifiedto/models/operations/getticketingcustomer.rb
-  - lib/unifiedto/models/operations/getticketingnote.rb
-  - lib/unifiedto/models/operations/getticketingticket.rb
-  - lib/unifiedto/models/operations/listticketingcustomers.rb
-  - lib/unifiedto/models/operations/listticketingnotes.rb
-  - lib/unifiedto/models/operations/listticketingtickets.rb
-  - lib/unifiedto/models/operations/patchticketingcustomer.rb
-  - lib/unifiedto/models/operations/patchticketingnote.rb
-  - lib/unifiedto/models/operations/patchticketingticket.rb
-  - lib/unifiedto/models/operations/removeticketingcustomer.rb
-  - lib/unifiedto/models/operations/removeticketingnote.rb
-  - lib/unifiedto/models/operations/removeticketingticket.rb
-  - lib/unifiedto/models/operations/updateticketingcustomer.rb
-  - lib/unifiedto/models/operations/updateticketingnote.rb
-  - lib/unifiedto/models/operations/updateticketingticket.rb
-  - lib/unifiedto/models/operations/listuccalls.rb
-  - lib/unifiedto/models/operations/createunifiedconnection.rb
-  - lib/unifiedto/models/operations/createunifiedwebhook.rb
-  - lib/unifiedto/models/operations/getunifiedapicall.rb
-  - lib/unifiedto/models/operations/getunifiedconnection.rb
-  - lib/unifiedto/models/operations/getunifiedintegrationauth.rb
-  - lib/unifiedto/models/operations/getunifiedwebhook.rb
-  - lib/unifiedto/models/operations/listunifiedapicalls.rb
-  - lib/unifiedto/models/operations/listunifiedconnections.rb
-  - lib/unifiedto/models/operations/listunifiedintegrationworkspaces.rb
-  - lib/unifiedto/models/operations/listunifiedintegrations.rb
-  - lib/unifiedto/models/operations/listunifiedwebhooks.rb
-  - lib/unifiedto/models/operations/patchunifiedconnection.rb
-  - lib/unifiedto/models/operations/patchunifiedwebhooktrigger.rb
-  - lib/unifiedto/models/operations/removeunifiedconnection.rb
-  - lib/unifiedto/models/operations/removeunifiedwebhook.rb
-  - lib/unifiedto/models/operations/updateunifiedconnection.rb
-  - lib/unifiedto/models/operations/updateunifiedwebhooktrigger.rb
-  - lib/unifiedto/models/operations/getunifiedintegrationlogin.rb
-  - lib/unifiedto/models/shared/accountingaccount.rb
-  - lib/unifiedto/models/shared/accountingcontact.rb
-  - lib/unifiedto/models/shared/accountingtelephone.rb
-  - lib/unifiedto/models/shared/property_accountingcontact_shipping_address.rb
-  - lib/unifiedto/models/shared/accountingemail.rb
-  - lib/unifiedto/models/shared/property_accountingcontact_billing_address.rb
-  - lib/unifiedto/models/shared/accountinginvoice.rb
-  - lib/unifiedto/models/shared/accountinglineitem.rb
-  - lib/unifiedto/models/shared/accountingpayment.rb
-  - lib/unifiedto/models/shared/accountingtaxrate.rb
-  - lib/unifiedto/models/shared/accountingtransaction.rb
-  - lib/unifiedto/models/shared/accountingtransactionlineitem.rb
-  - lib/unifiedto/models/shared/accountingorganization.rb
-  - lib/unifiedto/models/shared/property_accountingorganization_address.rb
-  - lib/unifiedto/models/shared/crmcontact.rb
-  - lib/unifiedto/models/shared/crmtelephone.rb
-  - lib/unifiedto/models/shared/crmemail.rb
-  - lib/unifiedto/models/shared/property_crmcontact_address.rb
-  - lib/unifiedto/models/shared/uccontact.rb
-  - lib/unifiedto/models/shared/uctelephone.rb
-  - lib/unifiedto/models/shared/ucemail.rb
-  - lib/unifiedto/models/shared/atsapplication.rb
-  - lib/unifiedto/models/shared/atscandidate.rb
-  - lib/unifiedto/models/shared/atstelephone.rb
-  - lib/unifiedto/models/shared/atsemail.rb
-  - lib/unifiedto/models/shared/property_atscandidate_address.rb
-  - lib/unifiedto/models/shared/atsdocument.rb
-  - lib/unifiedto/models/shared/atsinterview.rb
-  - lib/unifiedto/models/shared/atsjob.rb
-  - lib/unifiedto/models/shared/atscompensation.rb
-  - lib/unifiedto/models/shared/atsaddress.rb
-  - lib/unifiedto/models/shared/atsscorecard.rb
-  - lib/unifiedto/models/shared/atsstatus.rb
-  - lib/unifiedto/models/shared/commercecollection.rb
-  - lib/unifiedto/models/shared/commerceitemmedia.rb
-  - lib/unifiedto/models/shared/commerceinventory.rb
-  - lib/unifiedto/models/shared/commerceitem.rb
-  - lib/unifiedto/models/shared/commerceitemvariant.rb
-  - lib/unifiedto/models/shared/commerceitemprice.rb
-  - lib/unifiedto/models/shared/commerceitemoption.rb
-  - lib/unifiedto/models/shared/commercelocation.rb
-  - lib/unifiedto/models/shared/property_commercelocation_address.rb
-  - lib/unifiedto/models/shared/crmcompany.rb
-  - lib/unifiedto/models/shared/property_crmcompany_address.rb
-  - lib/unifiedto/models/shared/crmdeal.rb
-  - lib/unifiedto/models/shared/crmevent.rb
-  - lib/unifiedto/models/shared/property_crmevent_task.rb
-  - lib/unifiedto/models/shared/property_crmevent_note.rb
-  - lib/unifiedto/models/shared/property_crmevent_meeting.rb
-  - lib/unifiedto/models/shared/property_crmevent_email.rb
-  - lib/unifiedto/models/shared/property_crmevent_call.rb
-  - lib/unifiedto/models/shared/crmlead.rb
-  - lib/unifiedto/models/shared/property_crmlead_address.rb
-  - lib/unifiedto/models/shared/crmpipeline.rb
-  - lib/unifiedto/models/shared/enrichcompany.rb
-  - lib/unifiedto/models/shared/enrichtelephone.rb
-  - lib/unifiedto/models/shared/property_enrichcompany_address.rb
-  - lib/unifiedto/models/shared/enrichperson.rb
-  - lib/unifiedto/models/shared/enrichpersonworkhistory.rb
-  - lib/unifiedto/models/shared/enrichemail.rb
-  - lib/unifiedto/models/shared/property_enrichperson_address.rb
-  - lib/unifiedto/models/shared/hrisemployee.rb
-  - lib/unifiedto/models/shared/hristelephone.rb
-  - lib/unifiedto/models/shared/hrisemail.rb
-  - lib/unifiedto/models/shared/property_hrisemployee_address.rb
-  - lib/unifiedto/models/shared/hrisgroup.rb
-  - lib/unifiedto/models/shared/marketinglist.rb
-  - lib/unifiedto/models/shared/marketingmember.rb
-  - lib/unifiedto/models/shared/marketingemail.rb
-  - lib/unifiedto/models/shared/storagefile.rb
-  - lib/unifiedto/models/shared/storagepermission.rb
-  - lib/unifiedto/models/shared/property_storagepermission_roles.rb
-  - lib/unifiedto/models/shared/ticketingcustomer.rb
-  - lib/unifiedto/models/shared/ticketingtelephone.rb
-  - lib/unifiedto/models/shared/ticketingemail.rb
-  - lib/unifiedto/models/shared/ticketingnote.rb
-  - lib/unifiedto/models/shared/ticketingticket.rb
-  - lib/unifiedto/models/shared/uccall.rb
-  - lib/unifiedto/models/shared/property_uccall_telephone.rb
-  - lib/unifiedto/models/shared/connection.rb
-  - lib/unifiedto/models/shared/property_connection_permissions.rb
-  - lib/unifiedto/models/shared/property_connection_categories.rb
-  - lib/unifiedto/models/shared/property_connection_auth.rb
-  - lib/unifiedto/models/shared/webhook.rb
-  - lib/unifiedto/models/shared/apicall.rb
-  - lib/unifiedto/models/shared/integration.rb
-  - lib/unifiedto/models/shared/integrationsupport.rb
-  - lib/unifiedto/models/shared/property_integrationsupport_webhook_events.rb
-  - lib/unifiedto/models/shared/property_integration_categories.rb
-  - lib/unifiedto/models/shared/security.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingaccount_request.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingcontact_request.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountinginvoice_request.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountinginvoice_response.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingpayment_request.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingpayment_response.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingtaxrate_request.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingtaxrate_response.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingtransaction_request.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingtransaction_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingaccount_request.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingcontact_request.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountinginvoice_request.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountinginvoice_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingorganization_request.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingorganization_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingpayment_request.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingpayment_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingtaxrate_request.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingtaxrate_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingtransaction_request.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingtransaction_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingaccounts_request.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingaccounts_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingcontacts_request.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingcontacts_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountinginvoices_request.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountinginvoices_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingorganizations_request.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingorganizations_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingpayments_request.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingpayments_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingtaxrates_request.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingtaxrates_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingtransactions_request.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingtransactions_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingaccount_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingcontact_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountinginvoice_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountinginvoice_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingpayment_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingpayment_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingtaxrate_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingtaxrate_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingtransaction_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingtransaction_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingaccount_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingcontact_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountinginvoice_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountinginvoice_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingpayment_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingpayment_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingtaxrate_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingtaxrate_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingtransaction_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingtransaction_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingaccount_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingcontact_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountinginvoice_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountinginvoice_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingpayment_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingpayment_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingtaxrate_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingtaxrate_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingtransaction_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingtransaction_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcrmcontact_request.rb
+  - lib/unified_ruby_sdk/models/operations/createcrmcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/createuccontact_request.rb
+  - lib/unified_ruby_sdk/models/operations/createuccontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcrmcontact_request.rb
+  - lib/unified_ruby_sdk/models/operations/getcrmcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/getuccontact_request.rb
+  - lib/unified_ruby_sdk/models/operations/getuccontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcrmcontacts_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcrmcontacts_response.rb
+  - lib/unified_ruby_sdk/models/operations/listuccontacts_request.rb
+  - lib/unified_ruby_sdk/models/operations/listuccontacts_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcrmcontact_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchcrmcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchuccontact_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchuccontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecrmcontact_request.rb
+  - lib/unified_ruby_sdk/models/operations/removecrmcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeuccontact_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeuccontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecrmcontact_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatecrmcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateuccontact_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateuccontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/createatsapplication_request.rb
+  - lib/unified_ruby_sdk/models/operations/createatsapplication_response.rb
+  - lib/unified_ruby_sdk/models/operations/createatscandidate_request.rb
+  - lib/unified_ruby_sdk/models/operations/createatscandidate_response.rb
+  - lib/unified_ruby_sdk/models/operations/createatsdocument_request.rb
+  - lib/unified_ruby_sdk/models/operations/createatsdocument_response.rb
+  - lib/unified_ruby_sdk/models/operations/createatsinterview_request.rb
+  - lib/unified_ruby_sdk/models/operations/createatsinterview_response.rb
+  - lib/unified_ruby_sdk/models/operations/createatsjob_request.rb
+  - lib/unified_ruby_sdk/models/operations/createatsjob_response.rb
+  - lib/unified_ruby_sdk/models/operations/createatsscorecard_request.rb
+  - lib/unified_ruby_sdk/models/operations/createatsscorecard_response.rb
+  - lib/unified_ruby_sdk/models/operations/getatsapplication_request.rb
+  - lib/unified_ruby_sdk/models/operations/getatsapplication_response.rb
+  - lib/unified_ruby_sdk/models/operations/getatscandidate_request.rb
+  - lib/unified_ruby_sdk/models/operations/getatscandidate_response.rb
+  - lib/unified_ruby_sdk/models/operations/getatscompany_request.rb
+  - lib/unified_ruby_sdk/models/operations/getatscompany_response.rb
+  - lib/unified_ruby_sdk/models/operations/getatsdocument_request.rb
+  - lib/unified_ruby_sdk/models/operations/getatsdocument_response.rb
+  - lib/unified_ruby_sdk/models/operations/getatsinterview_request.rb
+  - lib/unified_ruby_sdk/models/operations/getatsinterview_response.rb
+  - lib/unified_ruby_sdk/models/operations/getatsjob_request.rb
+  - lib/unified_ruby_sdk/models/operations/getatsjob_response.rb
+  - lib/unified_ruby_sdk/models/operations/getatsscorecard_request.rb
+  - lib/unified_ruby_sdk/models/operations/getatsscorecard_response.rb
+  - lib/unified_ruby_sdk/models/operations/listatsapplications_request.rb
+  - lib/unified_ruby_sdk/models/operations/listatsapplications_response.rb
+  - lib/unified_ruby_sdk/models/operations/listatsapplicationstatuses_request.rb
+  - lib/unified_ruby_sdk/models/operations/listatsapplicationstatuses_response.rb
+  - lib/unified_ruby_sdk/models/operations/listatscandidates_request.rb
+  - lib/unified_ruby_sdk/models/operations/listatscandidates_response.rb
+  - lib/unified_ruby_sdk/models/operations/listatscompanies_request.rb
+  - lib/unified_ruby_sdk/models/operations/listatscompanies_response.rb
+  - lib/unified_ruby_sdk/models/operations/listatsdocuments_request.rb
+  - lib/unified_ruby_sdk/models/operations/listatsdocuments_response.rb
+  - lib/unified_ruby_sdk/models/operations/listatsinterviews_request.rb
+  - lib/unified_ruby_sdk/models/operations/listatsinterviews_response.rb
+  - lib/unified_ruby_sdk/models/operations/listatsjobs_request.rb
+  - lib/unified_ruby_sdk/models/operations/listatsjobs_response.rb
+  - lib/unified_ruby_sdk/models/operations/listatsscorecards_request.rb
+  - lib/unified_ruby_sdk/models/operations/listatsscorecards_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchatsapplication_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchatsapplication_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchatscandidate_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchatscandidate_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchatsdocument_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchatsdocument_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchatsinterview_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchatsinterview_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchatsjob_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchatsjob_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchatsscorecard_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchatsscorecard_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeatsapplication_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeatsapplication_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeatscandidate_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeatscandidate_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeatsdocument_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeatsdocument_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeatsinterview_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeatsinterview_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeatsjob_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeatsjob_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeatsscorecard_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeatsscorecard_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateatsapplication_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateatsapplication_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateatscandidate_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateatscandidate_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateatsdocument_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateatsdocument_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateatsinterview_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateatsinterview_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateatsjob_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateatsjob_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateatsscorecard_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateatsscorecard_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcrmcompany_request.rb
+  - lib/unified_ruby_sdk/models/operations/createcrmcompany_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcrmcompany_request.rb
+  - lib/unified_ruby_sdk/models/operations/getcrmcompany_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcrmcompanies_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcrmcompanies_response.rb
+  - lib/unified_ruby_sdk/models/operations/listenrichcompanies_request.rb
+  - lib/unified_ruby_sdk/models/operations/listenrichcompanies_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcrmcompany_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchcrmcompany_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecrmcompany_request.rb
+  - lib/unified_ruby_sdk/models/operations/removecrmcompany_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecrmcompany_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatecrmcompany_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcommercecollection_request.rb
+  - lib/unified_ruby_sdk/models/operations/createcommercecollection_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcommerceinventory_request.rb
+  - lib/unified_ruby_sdk/models/operations/createcommerceinventory_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcommerceitem_request.rb
+  - lib/unified_ruby_sdk/models/operations/createcommerceitem_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcommercelocation_request.rb
+  - lib/unified_ruby_sdk/models/operations/createcommercelocation_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcommercecollection_request.rb
+  - lib/unified_ruby_sdk/models/operations/getcommercecollection_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcommerceinventory_request.rb
+  - lib/unified_ruby_sdk/models/operations/getcommerceinventory_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcommerceitem_request.rb
+  - lib/unified_ruby_sdk/models/operations/getcommerceitem_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcommercelocation_request.rb
+  - lib/unified_ruby_sdk/models/operations/getcommercelocation_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcommercecollections_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcommercecollections_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcommerceinventories_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcommerceinventories_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcommerceitems_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcommerceitems_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcommercelocations_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcommercelocations_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcommercecollection_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchcommercecollection_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcommerceinventory_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchcommerceinventory_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcommerceitem_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchcommerceitem_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcommercelocation_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchcommercelocation_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecommercecollection_request.rb
+  - lib/unified_ruby_sdk/models/operations/removecommercecollection_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecommerceinventory_request.rb
+  - lib/unified_ruby_sdk/models/operations/removecommerceinventory_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecommerceitem_request.rb
+  - lib/unified_ruby_sdk/models/operations/removecommerceitem_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecommercelocation_request.rb
+  - lib/unified_ruby_sdk/models/operations/removecommercelocation_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecommercecollection_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatecommercecollection_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecommerceinventory_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatecommerceinventory_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecommerceitem_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatecommerceitem_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecommercelocation_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatecommercelocation_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcrmdeal_request.rb
+  - lib/unified_ruby_sdk/models/operations/createcrmdeal_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcrmevent_request.rb
+  - lib/unified_ruby_sdk/models/operations/createcrmevent_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcrmlead_request.rb
+  - lib/unified_ruby_sdk/models/operations/createcrmlead_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcrmpipeline_request.rb
+  - lib/unified_ruby_sdk/models/operations/createcrmpipeline_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcrmdeal_request.rb
+  - lib/unified_ruby_sdk/models/operations/getcrmdeal_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcrmevent_request.rb
+  - lib/unified_ruby_sdk/models/operations/getcrmevent_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcrmlead_request.rb
+  - lib/unified_ruby_sdk/models/operations/getcrmlead_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcrmpipeline_request.rb
+  - lib/unified_ruby_sdk/models/operations/getcrmpipeline_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcrmdeals_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcrmdeals_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcrmevents_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcrmevents_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcrmleads_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcrmleads_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcrmpipelines_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcrmpipelines_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcrmdeal_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchcrmdeal_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcrmevent_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchcrmevent_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcrmlead_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchcrmlead_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcrmpipeline_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchcrmpipeline_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecrmdeal_request.rb
+  - lib/unified_ruby_sdk/models/operations/removecrmdeal_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecrmevent_request.rb
+  - lib/unified_ruby_sdk/models/operations/removecrmevent_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecrmlead_request.rb
+  - lib/unified_ruby_sdk/models/operations/removecrmlead_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecrmpipeline_request.rb
+  - lib/unified_ruby_sdk/models/operations/removecrmpipeline_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecrmdeal_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatecrmdeal_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecrmevent_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatecrmevent_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecrmlead_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatecrmlead_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecrmpipeline_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatecrmpipeline_response.rb
+  - lib/unified_ruby_sdk/models/operations/listenrichpeople_request.rb
+  - lib/unified_ruby_sdk/models/operations/listenrichpeople_response.rb
+  - lib/unified_ruby_sdk/models/operations/createhrisemployee_request.rb
+  - lib/unified_ruby_sdk/models/operations/createhrisemployee_response.rb
+  - lib/unified_ruby_sdk/models/operations/createhrisgroup_request.rb
+  - lib/unified_ruby_sdk/models/operations/createhrisgroup_response.rb
+  - lib/unified_ruby_sdk/models/operations/gethrisemployee_request.rb
+  - lib/unified_ruby_sdk/models/operations/gethrisemployee_response.rb
+  - lib/unified_ruby_sdk/models/operations/gethrisgroup_request.rb
+  - lib/unified_ruby_sdk/models/operations/gethrisgroup_response.rb
+  - lib/unified_ruby_sdk/models/operations/listhrisemployees_request.rb
+  - lib/unified_ruby_sdk/models/operations/listhrisemployees_response.rb
+  - lib/unified_ruby_sdk/models/operations/listhrisgroups_request.rb
+  - lib/unified_ruby_sdk/models/operations/listhrisgroups_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchhrisemployee_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchhrisemployee_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchhrisgroup_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchhrisgroup_response.rb
+  - lib/unified_ruby_sdk/models/operations/removehrisemployee_request.rb
+  - lib/unified_ruby_sdk/models/operations/removehrisemployee_response.rb
+  - lib/unified_ruby_sdk/models/operations/removehrisgroup_request.rb
+  - lib/unified_ruby_sdk/models/operations/removehrisgroup_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatehrisemployee_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatehrisemployee_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatehrisgroup_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatehrisgroup_response.rb
+  - lib/unified_ruby_sdk/models/operations/createmartechlist_request.rb
+  - lib/unified_ruby_sdk/models/operations/createmartechlist_response.rb
+  - lib/unified_ruby_sdk/models/operations/createmartechmember_request.rb
+  - lib/unified_ruby_sdk/models/operations/createmartechmember_response.rb
+  - lib/unified_ruby_sdk/models/operations/getmartechlist_request.rb
+  - lib/unified_ruby_sdk/models/operations/getmartechlist_response.rb
+  - lib/unified_ruby_sdk/models/operations/getmartechmember_request.rb
+  - lib/unified_ruby_sdk/models/operations/getmartechmember_response.rb
+  - lib/unified_ruby_sdk/models/operations/listmartechlists_request.rb
+  - lib/unified_ruby_sdk/models/operations/listmartechlists_response.rb
+  - lib/unified_ruby_sdk/models/operations/listmartechmembers_request.rb
+  - lib/unified_ruby_sdk/models/operations/listmartechmembers_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchmartechlist_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchmartechlist_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchmartechmember_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchmartechmember_response.rb
+  - lib/unified_ruby_sdk/models/operations/removemartechlist_request.rb
+  - lib/unified_ruby_sdk/models/operations/removemartechlist_response.rb
+  - lib/unified_ruby_sdk/models/operations/removemartechmember_request.rb
+  - lib/unified_ruby_sdk/models/operations/removemartechmember_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatemartechlist_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatemartechlist_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatemartechmember_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatemartechmember_response.rb
+  - lib/unified_ruby_sdk/models/operations/createpassthrough_request.rb
+  - lib/unified_ruby_sdk/models/operations/createpassthrough_response.rb
+  - lib/unified_ruby_sdk/models/operations/listpassthroughs_request.rb
+  - lib/unified_ruby_sdk/models/operations/listpassthroughs_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchpassthrough_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchpassthrough_response.rb
+  - lib/unified_ruby_sdk/models/operations/removepassthrough_request.rb
+  - lib/unified_ruby_sdk/models/operations/removepassthrough_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatepassthrough_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatepassthrough_response.rb
+  - lib/unified_ruby_sdk/models/operations/createstoragefile_request.rb
+  - lib/unified_ruby_sdk/models/operations/createstoragefile_response.rb
+  - lib/unified_ruby_sdk/models/operations/getstoragefile_request.rb
+  - lib/unified_ruby_sdk/models/operations/getstoragefile_response.rb
+  - lib/unified_ruby_sdk/models/operations/liststoragefiles_request.rb
+  - lib/unified_ruby_sdk/models/operations/liststoragefiles_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchstoragefile_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchstoragefile_response.rb
+  - lib/unified_ruby_sdk/models/operations/removestoragefile_request.rb
+  - lib/unified_ruby_sdk/models/operations/removestoragefile_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatestoragefile_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatestoragefile_response.rb
+  - lib/unified_ruby_sdk/models/operations/createticketingcustomer_request.rb
+  - lib/unified_ruby_sdk/models/operations/createticketingcustomer_response.rb
+  - lib/unified_ruby_sdk/models/operations/createticketingnote_request.rb
+  - lib/unified_ruby_sdk/models/operations/createticketingnote_response.rb
+  - lib/unified_ruby_sdk/models/operations/createticketingticket_request.rb
+  - lib/unified_ruby_sdk/models/operations/createticketingticket_response.rb
+  - lib/unified_ruby_sdk/models/operations/getticketingcustomer_request.rb
+  - lib/unified_ruby_sdk/models/operations/getticketingcustomer_response.rb
+  - lib/unified_ruby_sdk/models/operations/getticketingnote_request.rb
+  - lib/unified_ruby_sdk/models/operations/getticketingnote_response.rb
+  - lib/unified_ruby_sdk/models/operations/getticketingticket_request.rb
+  - lib/unified_ruby_sdk/models/operations/getticketingticket_response.rb
+  - lib/unified_ruby_sdk/models/operations/listticketingcustomers_request.rb
+  - lib/unified_ruby_sdk/models/operations/listticketingcustomers_response.rb
+  - lib/unified_ruby_sdk/models/operations/listticketingnotes_request.rb
+  - lib/unified_ruby_sdk/models/operations/listticketingnotes_response.rb
+  - lib/unified_ruby_sdk/models/operations/listticketingtickets_request.rb
+  - lib/unified_ruby_sdk/models/operations/listticketingtickets_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchticketingcustomer_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchticketingcustomer_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchticketingnote_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchticketingnote_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchticketingticket_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchticketingticket_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeticketingcustomer_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeticketingcustomer_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeticketingnote_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeticketingnote_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeticketingticket_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeticketingticket_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateticketingcustomer_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateticketingcustomer_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateticketingnote_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateticketingnote_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateticketingticket_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateticketingticket_response.rb
+  - lib/unified_ruby_sdk/models/operations/listuccalls_request.rb
+  - lib/unified_ruby_sdk/models/operations/listuccalls_response.rb
+  - lib/unified_ruby_sdk/models/operations/createunifiedconnection_response.rb
+  - lib/unified_ruby_sdk/models/operations/createunifiedwebhook_request.rb
+  - lib/unified_ruby_sdk/models/operations/createunifiedwebhook_response.rb
+  - lib/unified_ruby_sdk/models/operations/getunifiedapicall_request.rb
+  - lib/unified_ruby_sdk/models/operations/getunifiedapicall_response.rb
+  - lib/unified_ruby_sdk/models/operations/getunifiedconnection_request.rb
+  - lib/unified_ruby_sdk/models/operations/getunifiedconnection_response.rb
+  - lib/unified_ruby_sdk/models/operations/scopes.rb
+  - lib/unified_ruby_sdk/models/operations/getunifiedintegrationauth_request.rb
+  - lib/unified_ruby_sdk/models/operations/getunifiedintegrationauth_response.rb
+  - lib/unified_ruby_sdk/models/operations/getunifiedwebhook_request.rb
+  - lib/unified_ruby_sdk/models/operations/getunifiedwebhook_response.rb
+  - lib/unified_ruby_sdk/models/operations/listunifiedapicalls_request.rb
+  - lib/unified_ruby_sdk/models/operations/listunifiedapicalls_response.rb
+  - lib/unified_ruby_sdk/models/operations/categories.rb
+  - lib/unified_ruby_sdk/models/operations/listunifiedconnections_request.rb
+  - lib/unified_ruby_sdk/models/operations/listunifiedconnections_response.rb
+  - lib/unified_ruby_sdk/models/operations/queryparam_categories.rb
+  - lib/unified_ruby_sdk/models/operations/listunifiedintegrationworkspaces_request.rb
+  - lib/unified_ruby_sdk/models/operations/listunifiedintegrationworkspaces_response.rb
+  - lib/unified_ruby_sdk/models/operations/listunifiedintegrations_queryparam_categories.rb
+  - lib/unified_ruby_sdk/models/operations/listunifiedintegrations_request.rb
+  - lib/unified_ruby_sdk/models/operations/listunifiedintegrations_response.rb
+  - lib/unified_ruby_sdk/models/operations/listunifiedwebhooks_request.rb
+  - lib/unified_ruby_sdk/models/operations/listunifiedwebhooks_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchunifiedconnection_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchunifiedconnection_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchunifiedwebhooktrigger_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchunifiedwebhooktrigger_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeunifiedconnection_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeunifiedconnection_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeunifiedwebhook_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeunifiedwebhook_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateunifiedconnection_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateunifiedconnection_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateunifiedwebhooktrigger_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateunifiedwebhooktrigger_response.rb
+  - lib/unified_ruby_sdk/models/operations/getunifiedintegrationlogin_request.rb
+  - lib/unified_ruby_sdk/models/operations/getunifiedintegrationlogin_response.rb
+  - lib/unified_ruby_sdk/models/shared/status.rb
+  - lib/unified_ruby_sdk/models/shared/type.rb
+  - lib/unified_ruby_sdk/models/shared/accountingaccount.rb
+  - lib/unified_ruby_sdk/models/shared/tax_exemption.rb
+  - lib/unified_ruby_sdk/models/shared/accountingcontact.rb
+  - lib/unified_ruby_sdk/models/shared/accountingtelephone_type.rb
+  - lib/unified_ruby_sdk/models/shared/accountingtelephone.rb
+  - lib/unified_ruby_sdk/models/shared/property_accountingcontact_shipping_address.rb
+  - lib/unified_ruby_sdk/models/shared/accountingemail_type.rb
+  - lib/unified_ruby_sdk/models/shared/accountingemail.rb
+  - lib/unified_ruby_sdk/models/shared/property_accountingcontact_billing_address.rb
+  - lib/unified_ruby_sdk/models/shared/accountinginvoice_status.rb
+  - lib/unified_ruby_sdk/models/shared/accountinginvoice.rb
+  - lib/unified_ruby_sdk/models/shared/accountinglineitem.rb
+  - lib/unified_ruby_sdk/models/shared/accountingpayment.rb
+  - lib/unified_ruby_sdk/models/shared/accountingtaxrate.rb
+  - lib/unified_ruby_sdk/models/shared/accountingtransaction.rb
+  - lib/unified_ruby_sdk/models/shared/accountingtransactionlineitem.rb
+  - lib/unified_ruby_sdk/models/shared/accountingorganization.rb
+  - lib/unified_ruby_sdk/models/shared/property_accountingorganization_address.rb
+  - lib/unified_ruby_sdk/models/shared/crmcontact.rb
+  - lib/unified_ruby_sdk/models/shared/crmtelephone_type.rb
+  - lib/unified_ruby_sdk/models/shared/crmtelephone.rb
+  - lib/unified_ruby_sdk/models/shared/crmemail_type.rb
+  - lib/unified_ruby_sdk/models/shared/crmemail.rb
+  - lib/unified_ruby_sdk/models/shared/property_crmcontact_address.rb
+  - lib/unified_ruby_sdk/models/shared/uccontact.rb
+  - lib/unified_ruby_sdk/models/shared/uctelephone_type.rb
+  - lib/unified_ruby_sdk/models/shared/uctelephone.rb
+  - lib/unified_ruby_sdk/models/shared/ucemail_type.rb
+  - lib/unified_ruby_sdk/models/shared/ucemail.rb
+  - lib/unified_ruby_sdk/models/shared/atsapplication_status.rb
+  - lib/unified_ruby_sdk/models/shared/atsapplication.rb
+  - lib/unified_ruby_sdk/models/shared/origin.rb
+  - lib/unified_ruby_sdk/models/shared/atscandidate.rb
+  - lib/unified_ruby_sdk/models/shared/atstelephone_type.rb
+  - lib/unified_ruby_sdk/models/shared/atstelephone.rb
+  - lib/unified_ruby_sdk/models/shared/atsemail_type.rb
+  - lib/unified_ruby_sdk/models/shared/atsemail.rb
+  - lib/unified_ruby_sdk/models/shared/property_atscandidate_address.rb
+  - lib/unified_ruby_sdk/models/shared/atsdocument_type.rb
+  - lib/unified_ruby_sdk/models/shared/atsdocument.rb
+  - lib/unified_ruby_sdk/models/shared/atsinterview_status.rb
+  - lib/unified_ruby_sdk/models/shared/atsinterview.rb
+  - lib/unified_ruby_sdk/models/shared/employment_type.rb
+  - lib/unified_ruby_sdk/models/shared/atsjob_status.rb
+  - lib/unified_ruby_sdk/models/shared/atsjob.rb
+  - lib/unified_ruby_sdk/models/shared/frequency.rb
+  - lib/unified_ruby_sdk/models/shared/atscompensation_type.rb
+  - lib/unified_ruby_sdk/models/shared/atscompensation.rb
+  - lib/unified_ruby_sdk/models/shared/atsaddress.rb
+  - lib/unified_ruby_sdk/models/shared/recommendation.rb
+  - lib/unified_ruby_sdk/models/shared/atsscorecard.rb
+  - lib/unified_ruby_sdk/models/shared/atscompany.rb
+  - lib/unified_ruby_sdk/models/shared/property_atscompany_address.rb
+  - lib/unified_ruby_sdk/models/shared/atsstatus_status.rb
+  - lib/unified_ruby_sdk/models/shared/atsstatus.rb
+  - lib/unified_ruby_sdk/models/shared/crmcompany.rb
+  - lib/unified_ruby_sdk/models/shared/property_crmcompany_address.rb
+  - lib/unified_ruby_sdk/models/shared/enrichcompany.rb
+  - lib/unified_ruby_sdk/models/shared/enrichtelephone_type.rb
+  - lib/unified_ruby_sdk/models/shared/enrichtelephone.rb
+  - lib/unified_ruby_sdk/models/shared/property_enrichcompany_address.rb
+  - lib/unified_ruby_sdk/models/shared/commercecollection.rb
+  - lib/unified_ruby_sdk/models/shared/commerceitemmedia_type.rb
+  - lib/unified_ruby_sdk/models/shared/commerceitemmedia.rb
+  - lib/unified_ruby_sdk/models/shared/commerceinventory.rb
+  - lib/unified_ruby_sdk/models/shared/commerceitem.rb
+  - lib/unified_ruby_sdk/models/shared/size_unit.rb
+  - lib/unified_ruby_sdk/models/shared/weight_unit.rb
+  - lib/unified_ruby_sdk/models/shared/commerceitemvariant.rb
+  - lib/unified_ruby_sdk/models/shared/commerceitemprice.rb
+  - lib/unified_ruby_sdk/models/shared/commerceitemoption.rb
+  - lib/unified_ruby_sdk/models/shared/commercelocation.rb
+  - lib/unified_ruby_sdk/models/shared/property_commercelocation_address.rb
+  - lib/unified_ruby_sdk/models/shared/crmdeal.rb
+  - lib/unified_ruby_sdk/models/shared/crmevent_type.rb
+  - lib/unified_ruby_sdk/models/shared/crmevent.rb
+  - lib/unified_ruby_sdk/models/shared/property_crmevent_task_status.rb
+  - lib/unified_ruby_sdk/models/shared/property_crmevent_task.rb
+  - lib/unified_ruby_sdk/models/shared/property_crmevent_note.rb
+  - lib/unified_ruby_sdk/models/shared/property_crmevent_meeting.rb
+  - lib/unified_ruby_sdk/models/shared/property_crmevent_email.rb
+  - lib/unified_ruby_sdk/models/shared/property_crmevent_call.rb
+  - lib/unified_ruby_sdk/models/shared/crmlead.rb
+  - lib/unified_ruby_sdk/models/shared/property_crmlead_address.rb
+  - lib/unified_ruby_sdk/models/shared/crmpipeline.rb
+  - lib/unified_ruby_sdk/models/shared/gender.rb
+  - lib/unified_ruby_sdk/models/shared/enrichperson.rb
+  - lib/unified_ruby_sdk/models/shared/enrichpersonworkhistory.rb
+  - lib/unified_ruby_sdk/models/shared/enrichemail_type.rb
+  - lib/unified_ruby_sdk/models/shared/enrichemail.rb
+  - lib/unified_ruby_sdk/models/shared/property_enrichperson_address.rb
+  - lib/unified_ruby_sdk/models/shared/employment_status.rb
+  - lib/unified_ruby_sdk/models/shared/hrisemployee_employment_type.rb
+  - lib/unified_ruby_sdk/models/shared/hrisemployee_gender.rb
+  - lib/unified_ruby_sdk/models/shared/marital_status.rb
+  - lib/unified_ruby_sdk/models/shared/hrisemployee.rb
+  - lib/unified_ruby_sdk/models/shared/hristelephone_type.rb
+  - lib/unified_ruby_sdk/models/shared/hristelephone.rb
+  - lib/unified_ruby_sdk/models/shared/hrisemail_type.rb
+  - lib/unified_ruby_sdk/models/shared/hrisemail.rb
+  - lib/unified_ruby_sdk/models/shared/property_hrisemployee_address.rb
+  - lib/unified_ruby_sdk/models/shared/hrisgroup_type.rb
+  - lib/unified_ruby_sdk/models/shared/hrisgroup.rb
+  - lib/unified_ruby_sdk/models/shared/marketinglist.rb
+  - lib/unified_ruby_sdk/models/shared/marketingmember.rb
+  - lib/unified_ruby_sdk/models/shared/marketingemail_type.rb
+  - lib/unified_ruby_sdk/models/shared/marketingemail.rb
+  - lib/unified_ruby_sdk/models/shared/storagefile_type.rb
+  - lib/unified_ruby_sdk/models/shared/storagefile.rb
+  - lib/unified_ruby_sdk/models/shared/storagepermission.rb
+  - lib/unified_ruby_sdk/models/shared/property_storagepermission_roles.rb
+  - lib/unified_ruby_sdk/models/shared/ticketingcustomer.rb
+  - lib/unified_ruby_sdk/models/shared/ticketingtelephone_type.rb
+  - lib/unified_ruby_sdk/models/shared/ticketingtelephone.rb
+  - lib/unified_ruby_sdk/models/shared/ticketingemail_type.rb
+  - lib/unified_ruby_sdk/models/shared/ticketingemail.rb
+  - lib/unified_ruby_sdk/models/shared/ticketingnote.rb
+  - lib/unified_ruby_sdk/models/shared/ticketingticket_status.rb
+  - lib/unified_ruby_sdk/models/shared/ticketingticket.rb
+  - lib/unified_ruby_sdk/models/shared/uccall.rb
+  - lib/unified_ruby_sdk/models/shared/property_uccall_telephone_type.rb
+  - lib/unified_ruby_sdk/models/shared/property_uccall_telephone.rb
+  - lib/unified_ruby_sdk/models/shared/connection.rb
+  - lib/unified_ruby_sdk/models/shared/property_connection_permissions.rb
+  - lib/unified_ruby_sdk/models/shared/property_connection_categories.rb
+  - lib/unified_ruby_sdk/models/shared/property_connection_auth.rb
+  - lib/unified_ruby_sdk/models/shared/event.rb
+  - lib/unified_ruby_sdk/models/shared/object_type.rb
+  - lib/unified_ruby_sdk/models/shared/webhook_webhook_type.rb
+  - lib/unified_ruby_sdk/models/shared/webhook.rb
+  - lib/unified_ruby_sdk/models/shared/apicall_type.rb
+  - lib/unified_ruby_sdk/models/shared/apicall.rb
+  - lib/unified_ruby_sdk/models/shared/integration.rb
+  - lib/unified_ruby_sdk/models/shared/webhook_type.rb
+  - lib/unified_ruby_sdk/models/shared/integrationsupport.rb
+  - lib/unified_ruby_sdk/models/shared/property_integrationsupport_webhook_events.rb
+  - lib/unified_ruby_sdk/models/shared/property_integration_categories.rb
+  - lib/unified_ruby_sdk/models/shared/security.rb
   - lib/unified_ruby_sdk.rb
+  - lib/unified_ruby_sdk/models/operations.rb
+  - lib/unified_ruby_sdk/models/shared.rb
   - docs/models/operations/createaccountingaccountrequest.md
   - docs/models/operations/createaccountingaccountresponse.md
   - docs/models/operations/createaccountingcontactrequest.md
@@ -538,6 +812,8 @@ generatedFiles:
   - docs/models/operations/getatsapplicationresponse.md
   - docs/models/operations/getatscandidaterequest.md
   - docs/models/operations/getatscandidateresponse.md
+  - docs/models/operations/getatscompanyrequest.md
+  - docs/models/operations/getatscompanyresponse.md
   - docs/models/operations/getatsdocumentrequest.md
   - docs/models/operations/getatsdocumentresponse.md
   - docs/models/operations/getatsinterviewrequest.md
@@ -552,6 +828,8 @@ generatedFiles:
   - docs/models/operations/listatsapplicationstatusesresponse.md
   - docs/models/operations/listatscandidatesrequest.md
   - docs/models/operations/listatscandidatesresponse.md
+  - docs/models/operations/listatscompaniesrequest.md
+  - docs/models/operations/listatscompaniesresponse.md
   - docs/models/operations/listatsdocumentsrequest.md
   - docs/models/operations/listatsdocumentsresponse.md
   - docs/models/operations/listatsinterviewsrequest.md
@@ -596,6 +874,20 @@ generatedFiles:
   - docs/models/operations/updateatsjobresponse.md
   - docs/models/operations/updateatsscorecardrequest.md
   - docs/models/operations/updateatsscorecardresponse.md
+  - docs/models/operations/createcrmcompanyrequest.md
+  - docs/models/operations/createcrmcompanyresponse.md
+  - docs/models/operations/getcrmcompanyrequest.md
+  - docs/models/operations/getcrmcompanyresponse.md
+  - docs/models/operations/listcrmcompaniesrequest.md
+  - docs/models/operations/listcrmcompaniesresponse.md
+  - docs/models/operations/listenrichcompaniesrequest.md
+  - docs/models/operations/listenrichcompaniesresponse.md
+  - docs/models/operations/patchcrmcompanyrequest.md
+  - docs/models/operations/patchcrmcompanyresponse.md
+  - docs/models/operations/removecrmcompanyrequest.md
+  - docs/models/operations/removecrmcompanyresponse.md
+  - docs/models/operations/updatecrmcompanyrequest.md
+  - docs/models/operations/updatecrmcompanyresponse.md
   - docs/models/operations/createcommercecollectionrequest.md
   - docs/models/operations/createcommercecollectionresponse.md
   - docs/models/operations/createcommerceinventoryrequest.md
@@ -644,8 +936,6 @@ generatedFiles:
   - docs/models/operations/updatecommerceitemresponse.md
   - docs/models/operations/updatecommercelocationrequest.md
   - docs/models/operations/updatecommercelocationresponse.md
-  - docs/models/operations/createcrmcompanyrequest.md
-  - docs/models/operations/createcrmcompanyresponse.md
   - docs/models/operations/createcrmdealrequest.md
   - docs/models/operations/createcrmdealresponse.md
   - docs/models/operations/createcrmeventrequest.md
@@ -654,8 +944,6 @@ generatedFiles:
   - docs/models/operations/createcrmleadresponse.md
   - docs/models/operations/createcrmpipelinerequest.md
   - docs/models/operations/createcrmpipelineresponse.md
-  - docs/models/operations/getcrmcompanyrequest.md
-  - docs/models/operations/getcrmcompanyresponse.md
   - docs/models/operations/getcrmdealrequest.md
   - docs/models/operations/getcrmdealresponse.md
   - docs/models/operations/getcrmeventrequest.md
@@ -664,8 +952,6 @@ generatedFiles:
   - docs/models/operations/getcrmleadresponse.md
   - docs/models/operations/getcrmpipelinerequest.md
   - docs/models/operations/getcrmpipelineresponse.md
-  - docs/models/operations/listcrmcompaniesrequest.md
-  - docs/models/operations/listcrmcompaniesresponse.md
   - docs/models/operations/listcrmdealsrequest.md
   - docs/models/operations/listcrmdealsresponse.md
   - docs/models/operations/listcrmeventsrequest.md
@@ -674,8 +960,6 @@ generatedFiles:
   - docs/models/operations/listcrmleadsresponse.md
   - docs/models/operations/listcrmpipelinesrequest.md
   - docs/models/operations/listcrmpipelinesresponse.md
-  - docs/models/operations/patchcrmcompanyrequest.md
-  - docs/models/operations/patchcrmcompanyresponse.md
   - docs/models/operations/patchcrmdealrequest.md
   - docs/models/operations/patchcrmdealresponse.md
   - docs/models/operations/patchcrmeventrequest.md
@@ -684,8 +968,6 @@ generatedFiles:
   - docs/models/operations/patchcrmleadresponse.md
   - docs/models/operations/patchcrmpipelinerequest.md
   - docs/models/operations/patchcrmpipelineresponse.md
-  - docs/models/operations/removecrmcompanyrequest.md
-  - docs/models/operations/removecrmcompanyresponse.md
   - docs/models/operations/removecrmdealrequest.md
   - docs/models/operations/removecrmdealresponse.md
   - docs/models/operations/removecrmeventrequest.md
@@ -694,8 +976,6 @@ generatedFiles:
   - docs/models/operations/removecrmleadresponse.md
   - docs/models/operations/removecrmpipelinerequest.md
   - docs/models/operations/removecrmpipelineresponse.md
-  - docs/models/operations/updatecrmcompanyrequest.md
-  - docs/models/operations/updatecrmcompanyresponse.md
   - docs/models/operations/updatecrmdealrequest.md
   - docs/models/operations/updatecrmdealresponse.md
   - docs/models/operations/updatecrmeventrequest.md
@@ -704,8 +984,6 @@ generatedFiles:
   - docs/models/operations/updatecrmleadresponse.md
   - docs/models/operations/updatecrmpipelinerequest.md
   - docs/models/operations/updatecrmpipelineresponse.md
-  - docs/models/operations/listenrichcompaniesrequest.md
-  - docs/models/operations/listenrichcompaniesresponse.md
   - docs/models/operations/listenrichpeoplerequest.md
   - docs/models/operations/listenrichpeopleresponse.md
   - docs/models/operations/createhrisemployeerequest.md
@@ -908,8 +1186,16 @@ generatedFiles:
   - docs/models/shared/atsaddress.md
   - docs/models/shared/recommendation.md
   - docs/models/shared/atsscorecard.md
+  - docs/models/shared/atscompany.md
+  - docs/models/shared/propertyatscompanyaddress.md
   - docs/models/shared/atsstatusstatus.md
   - docs/models/shared/atsstatus.md
+  - docs/models/shared/crmcompany.md
+  - docs/models/shared/propertycrmcompanyaddress.md
+  - docs/models/shared/enrichcompany.md
+  - docs/models/shared/enrichtelephonetype.md
+  - docs/models/shared/enrichtelephone.md
+  - docs/models/shared/propertyenrichcompanyaddress.md
   - docs/models/shared/commercecollection.md
   - docs/models/shared/commerceitemmediatype.md
   - docs/models/shared/commerceitemmedia.md
@@ -922,8 +1208,6 @@ generatedFiles:
   - docs/models/shared/commerceitemoption.md
   - docs/models/shared/commercelocation.md
   - docs/models/shared/propertycommercelocationaddress.md
-  - docs/models/shared/crmcompany.md
-  - docs/models/shared/propertycrmcompanyaddress.md
   - docs/models/shared/crmdeal.md
   - docs/models/shared/crmeventtype.md
   - docs/models/shared/crmevent.md
@@ -936,10 +1220,6 @@ generatedFiles:
   - docs/models/shared/crmlead.md
   - docs/models/shared/propertycrmleadaddress.md
   - docs/models/shared/crmpipeline.md
-  - docs/models/shared/enrichcompany.md
-  - docs/models/shared/enrichtelephonetype.md
-  - docs/models/shared/enrichtelephone.md
-  - docs/models/shared/propertyenrichcompanyaddress.md
   - docs/models/shared/gender.md
   - docs/models/shared/enrichperson.md
   - docs/models/shared/enrichpersonworkhistory.md
@@ -1006,6 +1286,7 @@ generatedFiles:
   - docs/sdks/application/README.md
   - docs/sdks/applicationstatus/README.md
   - docs/sdks/candidate/README.md
+  - docs/sdks/company/README.md
   - docs/sdks/document/README.md
   - docs/sdks/interview/README.md
   - docs/sdks/job/README.md
@@ -1016,7 +1297,6 @@ generatedFiles:
   - docs/sdks/item/README.md
   - docs/sdks/location/README.md
   - docs/sdks/crm/README.md
-  - docs/sdks/company/README.md
   - docs/sdks/deal/README.md
   - docs/sdks/event/README.md
   - docs/sdks/lead/README.md

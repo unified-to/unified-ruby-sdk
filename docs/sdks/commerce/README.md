@@ -40,19 +40,19 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.commerce.create_commerce_collection(connection_id="string", commerce_collection=Shared::CommerceCollection.new(
+res = s.commerce.create_commerce_collection(connection_id="string", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
     id="<ID>",
     item_ids=[
       "string",
     ],
     media=[
-      Shared::CommerceItemMedia.new(
+      ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
         url="http://uneven-mattress.name",
       ),
     ],
@@ -73,15 +73,15 @@ end
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `connection_id`                                                         | *String*                                                                | :heavy_check_mark:                                                      | ID of the connection                                                    |
-| `commerce_collection`                                                   | [Shared::CommerceCollection](../../models/shared/commercecollection.md) | :heavy_minus_sign:                                                      | A collection of items/products/services                                 |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `connection_id`                                                                           | *::String*                                                                                | :heavy_check_mark:                                                                        | ID of the connection                                                                      |
+| `commerce_collection`                                                                     | [::UnifiedRubySDK::Shared::CommerceCollection](../../models/shared/commercecollection.md) | :heavy_minus_sign:                                                                        | A collection of items/products/services                                                   |
 
 
 ### Response
 
-**[T.nilable(Operations::CreateCommerceCollectionResponse)](../../models/operations/createcommercecollectionresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::CreateCommerceCollectionResponse)](../../models/operations/createcommercecollectionresponse.md)**
 
 
 ## create_commerce_inventory
@@ -96,13 +96,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.commerce.create_commerce_inventory(connection_id="string", commerce_inventory=Shared::CommerceInventory.new(
+res = s.commerce.create_commerce_inventory(connection_id="string", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
     available=5165.08,
     raw={
       "Officer": "string",
@@ -117,15 +117,15 @@ end
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `connection_id`                                                       | *String*                                                              | :heavy_check_mark:                                                    | ID of the connection                                                  |
-| `commerce_inventory`                                                  | [Shared::CommerceInventory](../../models/shared/commerceinventory.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `commerce_inventory`                                                                    | [::UnifiedRubySDK::Shared::CommerceInventory](../../models/shared/commerceinventory.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
 
 
 ### Response
 
-**[T.nilable(Operations::CreateCommerceInventoryResponse)](../../models/operations/createcommerceinventoryresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::CreateCommerceInventoryResponse)](../../models/operations/createcommerceinventoryresponse.md)**
 
 
 ## create_commerce_item
@@ -140,15 +140,15 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.commerce.create_commerce_item(connection_id="string", commerce_item=Shared::CommerceItem.new(
+res = s.commerce.create_commerce_item(connection_id="string", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(
     media=[
-      Shared::CommerceItemMedia.new(
+      ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
         url="http://loud-minister.name",
       ),
     ],
@@ -160,15 +160,15 @@ res = s.commerce.create_commerce_item(connection_id="string", commerce_item=Shar
       "string",
     ],
     variants=[
-      Shared::CommerceItemVariant.new(
+      ::UnifiedRubySDK::Shared::CommerceItemVariant.new(
         media=[
-          Shared::CommerceItemMedia.new(
+          ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
             url="https://burdensome-pinecone.name",
           ),
         ],
         name="string",
         options=[
-          Shared::CommerceItemOption.new(
+          ::UnifiedRubySDK::Shared::CommerceItemOption.new(
             id="<ID>",
             name="string",
             values=[
@@ -177,7 +177,7 @@ res = s.commerce.create_commerce_item(connection_id="string", commerce_item=Shar
           ),
         ],
         prices=[
-          Shared::CommerceItemPrice.new(
+          ::UnifiedRubySDK::Shared::CommerceItemPrice.new(
             price=5559.73,
           ),
         ],
@@ -196,15 +196,15 @@ end
 
 ### Parameters
 
-| Parameter                                                   | Type                                                        | Required                                                    | Description                                                 |
-| ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
-| `connection_id`                                             | *String*                                                    | :heavy_check_mark:                                          | ID of the connection                                        |
-| `commerce_item`                                             | [Shared::CommerceItem](../../models/shared/commerceitem.md) | :heavy_minus_sign:                                          | N/A                                                         |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
+| `commerce_item`                                                               | [::UnifiedRubySDK::Shared::CommerceItem](../../models/shared/commerceitem.md) | :heavy_minus_sign:                                                            | N/A                                                                           |
 
 
 ### Response
 
-**[T.nilable(Operations::CreateCommerceItemResponse)](../../models/operations/createcommerceitemresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::CreateCommerceItemResponse)](../../models/operations/createcommerceitemresponse.md)**
 
 
 ## create_commerce_location
@@ -219,14 +219,14 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.commerce.create_commerce_location(connection_id="string", commerce_location=Shared::CommerceLocation.new(
-    address=Shared::PropertyCommerceLocationAddress.new(),
+res = s.commerce.create_commerce_location(connection_id="string", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
+    address=::UnifiedRubySDK::Shared::PropertyCommerceLocationAddress.new(),
     name="string",
     raw={
       "Books": "string",
@@ -241,15 +241,15 @@ end
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `connection_id`                                                     | *String*                                                            | :heavy_check_mark:                                                  | ID of the connection                                                |
-| `commerce_location`                                                 | [Shared::CommerceLocation](../../models/shared/commercelocation.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `connection_id`                                                                       | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the connection                                                                  |
+| `commerce_location`                                                                   | [::UnifiedRubySDK::Shared::CommerceLocation](../../models/shared/commercelocation.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
 
 
 ### Response
 
-**[T.nilable(Operations::CreateCommerceLocationResponse)](../../models/operations/createcommercelocationresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::CreateCommerceLocationResponse)](../../models/operations/createcommercelocationresponse.md)**
 
 
 ## get_commerce_collection
@@ -264,7 +264,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -284,14 +284,14 @@ end
 
 | Parameter                        | Type                             | Required                         | Description                      |
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *String*                         | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *String*                         | :heavy_check_mark:               | ID of the Collection             |
-| `fields`                         | T::Array<*String*>               | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Collection             |
+| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
 
-**[T.nilable(Operations::GetCommerceCollectionResponse)](../../models/operations/getcommercecollectionresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::GetCommerceCollectionResponse)](../../models/operations/getcommercecollectionresponse.md)**
 
 
 ## get_commerce_inventory
@@ -306,7 +306,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -326,14 +326,14 @@ end
 
 | Parameter                        | Type                             | Required                         | Description                      |
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *String*                         | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *String*                         | :heavy_check_mark:               | ID of the Inventory              |
-| `fields`                         | T::Array<*String*>               | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Inventory              |
+| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
 
-**[T.nilable(Operations::GetCommerceInventoryResponse)](../../models/operations/getcommerceinventoryresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::GetCommerceInventoryResponse)](../../models/operations/getcommerceinventoryresponse.md)**
 
 
 ## get_commerce_item
@@ -348,7 +348,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -368,14 +368,14 @@ end
 
 | Parameter                        | Type                             | Required                         | Description                      |
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *String*                         | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *String*                         | :heavy_check_mark:               | ID of the Item                   |
-| `fields`                         | T::Array<*String*>               | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Item                   |
+| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
 
-**[T.nilable(Operations::GetCommerceItemResponse)](../../models/operations/getcommerceitemresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::GetCommerceItemResponse)](../../models/operations/getcommerceitemresponse.md)**
 
 
 ## get_commerce_location
@@ -390,7 +390,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -410,14 +410,14 @@ end
 
 | Parameter                        | Type                             | Required                         | Description                      |
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *String*                         | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *String*                         | :heavy_check_mark:               | ID of the Location               |
-| `fields`                         | T::Array<*String*>               | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Location               |
+| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
 
-**[T.nilable(Operations::GetCommerceLocationResponse)](../../models/operations/getcommercelocationresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::GetCommerceLocationResponse)](../../models/operations/getcommercelocationresponse.md)**
 
 
 ## list_commerce_collections
@@ -432,13 +432,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
 
-req = Operations::ListCommerceCollectionsRequest.new(
+req = ::UnifiedRubySDK::Operations::ListCommerceCollectionsRequest.new(
   connection_id="string",
   fields=[
     "string",
@@ -455,14 +455,14 @@ end
 
 ### Parameters
 
-| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                               | [Operations::ListCommerceCollectionsRequest](../../models/operations/listcommercecollectionsrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                 | [::UnifiedRubySDK::Operations::ListCommerceCollectionsRequest](../../models/operations/listcommercecollectionsrequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
 
 
 ### Response
 
-**[T.nilable(Operations::ListCommerceCollectionsResponse)](../../models/operations/listcommercecollectionsresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::ListCommerceCollectionsResponse)](../../models/operations/listcommercecollectionsresponse.md)**
 
 
 ## list_commerce_inventories
@@ -477,13 +477,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
 
-req = Operations::ListCommerceInventoriesRequest.new(
+req = ::UnifiedRubySDK::Operations::ListCommerceInventoriesRequest.new(
   connection_id="string",
   fields=[
     "string",
@@ -500,14 +500,14 @@ end
 
 ### Parameters
 
-| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                               | [Operations::ListCommerceInventoriesRequest](../../models/operations/listcommerceinventoriesrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                 | [::UnifiedRubySDK::Operations::ListCommerceInventoriesRequest](../../models/operations/listcommerceinventoriesrequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
 
 
 ### Response
 
-**[T.nilable(Operations::ListCommerceInventoriesResponse)](../../models/operations/listcommerceinventoriesresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::ListCommerceInventoriesResponse)](../../models/operations/listcommerceinventoriesresponse.md)**
 
 
 ## list_commerce_items
@@ -522,13 +522,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
 
-req = Operations::ListCommerceItemsRequest.new(
+req = ::UnifiedRubySDK::Operations::ListCommerceItemsRequest.new(
   connection_id="string",
   fields=[
     "string",
@@ -545,14 +545,14 @@ end
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [Operations::ListCommerceItemsRequest](../../models/operations/listcommerceitemsrequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [::UnifiedRubySDK::Operations::ListCommerceItemsRequest](../../models/operations/listcommerceitemsrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
 
 
 ### Response
 
-**[T.nilable(Operations::ListCommerceItemsResponse)](../../models/operations/listcommerceitemsresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::ListCommerceItemsResponse)](../../models/operations/listcommerceitemsresponse.md)**
 
 
 ## list_commerce_locations
@@ -567,13 +567,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
 
-req = Operations::ListCommerceLocationsRequest.new(
+req = ::UnifiedRubySDK::Operations::ListCommerceLocationsRequest.new(
   connection_id="string",
   fields=[
     "string",
@@ -590,14 +590,14 @@ end
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [Operations::ListCommerceLocationsRequest](../../models/operations/listcommercelocationsrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                             | [::UnifiedRubySDK::Operations::ListCommerceLocationsRequest](../../models/operations/listcommercelocationsrequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
 
-**[T.nilable(Operations::ListCommerceLocationsResponse)](../../models/operations/listcommercelocationsresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::ListCommerceLocationsResponse)](../../models/operations/listcommercelocationsresponse.md)**
 
 
 ## patch_commerce_collection
@@ -612,19 +612,19 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.commerce.patch_commerce_collection(connection_id="string", id="string", commerce_collection=Shared::CommerceCollection.new(
+res = s.commerce.patch_commerce_collection(connection_id="string", id="string", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
     id="<ID>",
     item_ids=[
       "string",
     ],
     media=[
-      Shared::CommerceItemMedia.new(
+      ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
         url="http://personal-sorrow.com",
       ),
     ],
@@ -645,16 +645,16 @@ end
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `connection_id`                                                         | *String*                                                                | :heavy_check_mark:                                                      | ID of the connection                                                    |
-| `id`                                                                    | *String*                                                                | :heavy_check_mark:                                                      | ID of the Collection                                                    |
-| `commerce_collection`                                                   | [Shared::CommerceCollection](../../models/shared/commercecollection.md) | :heavy_minus_sign:                                                      | A collection of items/products/services                                 |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `connection_id`                                                                           | *::String*                                                                                | :heavy_check_mark:                                                                        | ID of the connection                                                                      |
+| `id`                                                                                      | *::String*                                                                                | :heavy_check_mark:                                                                        | ID of the Collection                                                                      |
+| `commerce_collection`                                                                     | [::UnifiedRubySDK::Shared::CommerceCollection](../../models/shared/commercecollection.md) | :heavy_minus_sign:                                                                        | A collection of items/products/services                                                   |
 
 
 ### Response
 
-**[T.nilable(Operations::PatchCommerceCollectionResponse)](../../models/operations/patchcommercecollectionresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::PatchCommerceCollectionResponse)](../../models/operations/patchcommercecollectionresponse.md)**
 
 
 ## patch_commerce_inventory
@@ -669,13 +669,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.commerce.patch_commerce_inventory(connection_id="string", id="string", commerce_inventory=Shared::CommerceInventory.new(
+res = s.commerce.patch_commerce_inventory(connection_id="string", id="string", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
     available=615.23,
     raw={
       "Modern": "string",
@@ -690,16 +690,16 @@ end
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `connection_id`                                                       | *String*                                                              | :heavy_check_mark:                                                    | ID of the connection                                                  |
-| `id`                                                                  | *String*                                                              | :heavy_check_mark:                                                    | ID of the Inventory                                                   |
-| `commerce_inventory`                                                  | [Shared::CommerceInventory](../../models/shared/commerceinventory.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Inventory                                                                     |
+| `commerce_inventory`                                                                    | [::UnifiedRubySDK::Shared::CommerceInventory](../../models/shared/commerceinventory.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
 
 
 ### Response
 
-**[T.nilable(Operations::PatchCommerceInventoryResponse)](../../models/operations/patchcommerceinventoryresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::PatchCommerceInventoryResponse)](../../models/operations/patchcommerceinventoryresponse.md)**
 
 
 ## patch_commerce_item
@@ -714,15 +714,15 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.commerce.patch_commerce_item(connection_id="string", id="string", commerce_item=Shared::CommerceItem.new(
+res = s.commerce.patch_commerce_item(connection_id="string", id="string", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(
     media=[
-      Shared::CommerceItemMedia.new(
+      ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
         url="http://frank-galley.biz",
       ),
     ],
@@ -734,15 +734,15 @@ res = s.commerce.patch_commerce_item(connection_id="string", id="string", commer
       "string",
     ],
     variants=[
-      Shared::CommerceItemVariant.new(
+      ::UnifiedRubySDK::Shared::CommerceItemVariant.new(
         media=[
-          Shared::CommerceItemMedia.new(
+          ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
             url="http://jaded-sequence.name",
           ),
         ],
         name="string",
         options=[
-          Shared::CommerceItemOption.new(
+          ::UnifiedRubySDK::Shared::CommerceItemOption.new(
             id="<ID>",
             name="string",
             values=[
@@ -751,7 +751,7 @@ res = s.commerce.patch_commerce_item(connection_id="string", id="string", commer
           ),
         ],
         prices=[
-          Shared::CommerceItemPrice.new(
+          ::UnifiedRubySDK::Shared::CommerceItemPrice.new(
             price=3986.91,
           ),
         ],
@@ -770,16 +770,16 @@ end
 
 ### Parameters
 
-| Parameter                                                   | Type                                                        | Required                                                    | Description                                                 |
-| ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
-| `connection_id`                                             | *String*                                                    | :heavy_check_mark:                                          | ID of the connection                                        |
-| `id`                                                        | *String*                                                    | :heavy_check_mark:                                          | ID of the Item                                              |
-| `commerce_item`                                             | [Shared::CommerceItem](../../models/shared/commerceitem.md) | :heavy_minus_sign:                                          | N/A                                                         |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
+| `id`                                                                          | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the Item                                                                |
+| `commerce_item`                                                               | [::UnifiedRubySDK::Shared::CommerceItem](../../models/shared/commerceitem.md) | :heavy_minus_sign:                                                            | N/A                                                                           |
 
 
 ### Response
 
-**[T.nilable(Operations::PatchCommerceItemResponse)](../../models/operations/patchcommerceitemresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::PatchCommerceItemResponse)](../../models/operations/patchcommerceitemresponse.md)**
 
 
 ## patch_commerce_location
@@ -794,14 +794,14 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.commerce.patch_commerce_location(connection_id="string", id="string", commerce_location=Shared::CommerceLocation.new(
-    address=Shared::PropertyCommerceLocationAddress.new(),
+res = s.commerce.patch_commerce_location(connection_id="string", id="string", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
+    address=::UnifiedRubySDK::Shared::PropertyCommerceLocationAddress.new(),
     name="string",
     raw={
       "Kina": "string",
@@ -816,16 +816,16 @@ end
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `connection_id`                                                     | *String*                                                            | :heavy_check_mark:                                                  | ID of the connection                                                |
-| `id`                                                                | *String*                                                            | :heavy_check_mark:                                                  | ID of the Location                                                  |
-| `commerce_location`                                                 | [Shared::CommerceLocation](../../models/shared/commercelocation.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `connection_id`                                                                       | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the connection                                                                  |
+| `id`                                                                                  | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the Location                                                                    |
+| `commerce_location`                                                                   | [::UnifiedRubySDK::Shared::CommerceLocation](../../models/shared/commercelocation.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
 
 
 ### Response
 
-**[T.nilable(Operations::PatchCommerceLocationResponse)](../../models/operations/patchcommercelocationresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::PatchCommerceLocationResponse)](../../models/operations/patchcommercelocationresponse.md)**
 
 
 ## remove_commerce_collection
@@ -840,7 +840,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -858,13 +858,13 @@ end
 
 | Parameter            | Type                 | Required             | Description          |
 | -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *String*             | :heavy_check_mark:   | ID of the connection |
-| `id`                 | *String*             | :heavy_check_mark:   | ID of the Collection |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Collection |
 
 
 ### Response
 
-**[T.nilable(Operations::RemoveCommerceCollectionResponse)](../../models/operations/removecommercecollectionresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::RemoveCommerceCollectionResponse)](../../models/operations/removecommercecollectionresponse.md)**
 
 
 ## remove_commerce_inventory
@@ -879,7 +879,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -897,13 +897,13 @@ end
 
 | Parameter            | Type                 | Required             | Description          |
 | -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *String*             | :heavy_check_mark:   | ID of the connection |
-| `id`                 | *String*             | :heavy_check_mark:   | ID of the Inventory  |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Inventory  |
 
 
 ### Response
 
-**[T.nilable(Operations::RemoveCommerceInventoryResponse)](../../models/operations/removecommerceinventoryresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::RemoveCommerceInventoryResponse)](../../models/operations/removecommerceinventoryresponse.md)**
 
 
 ## remove_commerce_item
@@ -918,7 +918,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -936,13 +936,13 @@ end
 
 | Parameter            | Type                 | Required             | Description          |
 | -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *String*             | :heavy_check_mark:   | ID of the connection |
-| `id`                 | *String*             | :heavy_check_mark:   | ID of the Item       |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Item       |
 
 
 ### Response
 
-**[T.nilable(Operations::RemoveCommerceItemResponse)](../../models/operations/removecommerceitemresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::RemoveCommerceItemResponse)](../../models/operations/removecommerceitemresponse.md)**
 
 
 ## remove_commerce_location
@@ -957,7 +957,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -975,13 +975,13 @@ end
 
 | Parameter            | Type                 | Required             | Description          |
 | -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *String*             | :heavy_check_mark:   | ID of the connection |
-| `id`                 | *String*             | :heavy_check_mark:   | ID of the Location   |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Location   |
 
 
 ### Response
 
-**[T.nilable(Operations::RemoveCommerceLocationResponse)](../../models/operations/removecommercelocationresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::RemoveCommerceLocationResponse)](../../models/operations/removecommercelocationresponse.md)**
 
 
 ## update_commerce_collection
@@ -996,19 +996,19 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.commerce.update_commerce_collection(connection_id="string", id="string", commerce_collection=Shared::CommerceCollection.new(
+res = s.commerce.update_commerce_collection(connection_id="string", id="string", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
     id="<ID>",
     item_ids=[
       "string",
     ],
     media=[
-      Shared::CommerceItemMedia.new(
+      ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
         url="https://stupid-entity.org",
       ),
     ],
@@ -1029,16 +1029,16 @@ end
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `connection_id`                                                         | *String*                                                                | :heavy_check_mark:                                                      | ID of the connection                                                    |
-| `id`                                                                    | *String*                                                                | :heavy_check_mark:                                                      | ID of the Collection                                                    |
-| `commerce_collection`                                                   | [Shared::CommerceCollection](../../models/shared/commercecollection.md) | :heavy_minus_sign:                                                      | A collection of items/products/services                                 |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `connection_id`                                                                           | *::String*                                                                                | :heavy_check_mark:                                                                        | ID of the connection                                                                      |
+| `id`                                                                                      | *::String*                                                                                | :heavy_check_mark:                                                                        | ID of the Collection                                                                      |
+| `commerce_collection`                                                                     | [::UnifiedRubySDK::Shared::CommerceCollection](../../models/shared/commercecollection.md) | :heavy_minus_sign:                                                                        | A collection of items/products/services                                                   |
 
 
 ### Response
 
-**[T.nilable(Operations::UpdateCommerceCollectionResponse)](../../models/operations/updatecommercecollectionresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::UpdateCommerceCollectionResponse)](../../models/operations/updatecommercecollectionresponse.md)**
 
 
 ## update_commerce_inventory
@@ -1053,13 +1053,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.commerce.update_commerce_inventory(connection_id="string", id="string", commerce_inventory=Shared::CommerceInventory.new(
+res = s.commerce.update_commerce_inventory(connection_id="string", id="string", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
     available=9360.02,
     raw={
       "wavy": "string",
@@ -1074,16 +1074,16 @@ end
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `connection_id`                                                       | *String*                                                              | :heavy_check_mark:                                                    | ID of the connection                                                  |
-| `id`                                                                  | *String*                                                              | :heavy_check_mark:                                                    | ID of the Inventory                                                   |
-| `commerce_inventory`                                                  | [Shared::CommerceInventory](../../models/shared/commerceinventory.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Inventory                                                                     |
+| `commerce_inventory`                                                                    | [::UnifiedRubySDK::Shared::CommerceInventory](../../models/shared/commerceinventory.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
 
 
 ### Response
 
-**[T.nilable(Operations::UpdateCommerceInventoryResponse)](../../models/operations/updatecommerceinventoryresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::UpdateCommerceInventoryResponse)](../../models/operations/updatecommerceinventoryresponse.md)**
 
 
 ## update_commerce_item
@@ -1098,15 +1098,15 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.commerce.update_commerce_item(connection_id="string", id="string", commerce_item=Shared::CommerceItem.new(
+res = s.commerce.update_commerce_item(connection_id="string", id="string", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(
     media=[
-      Shared::CommerceItemMedia.new(
+      ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
         url="https://aggressive-major-league.org",
       ),
     ],
@@ -1118,15 +1118,15 @@ res = s.commerce.update_commerce_item(connection_id="string", id="string", comme
       "string",
     ],
     variants=[
-      Shared::CommerceItemVariant.new(
+      ::UnifiedRubySDK::Shared::CommerceItemVariant.new(
         media=[
-          Shared::CommerceItemMedia.new(
+          ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
             url="http://exemplary-standing.biz",
           ),
         ],
         name="string",
         options=[
-          Shared::CommerceItemOption.new(
+          ::UnifiedRubySDK::Shared::CommerceItemOption.new(
             id="<ID>",
             name="string",
             values=[
@@ -1135,7 +1135,7 @@ res = s.commerce.update_commerce_item(connection_id="string", id="string", comme
           ),
         ],
         prices=[
-          Shared::CommerceItemPrice.new(
+          ::UnifiedRubySDK::Shared::CommerceItemPrice.new(
             price=113.63,
           ),
         ],
@@ -1154,16 +1154,16 @@ end
 
 ### Parameters
 
-| Parameter                                                   | Type                                                        | Required                                                    | Description                                                 |
-| ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
-| `connection_id`                                             | *String*                                                    | :heavy_check_mark:                                          | ID of the connection                                        |
-| `id`                                                        | *String*                                                    | :heavy_check_mark:                                          | ID of the Item                                              |
-| `commerce_item`                                             | [Shared::CommerceItem](../../models/shared/commerceitem.md) | :heavy_minus_sign:                                          | N/A                                                         |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
+| `id`                                                                          | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the Item                                                                |
+| `commerce_item`                                                               | [::UnifiedRubySDK::Shared::CommerceItem](../../models/shared/commerceitem.md) | :heavy_minus_sign:                                                            | N/A                                                                           |
 
 
 ### Response
 
-**[T.nilable(Operations::UpdateCommerceItemResponse)](../../models/operations/updatecommerceitemresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::UpdateCommerceItemResponse)](../../models/operations/updatecommerceitemresponse.md)**
 
 
 ## update_commerce_location
@@ -1178,14 +1178,14 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.commerce.update_commerce_location(connection_id="string", id="string", commerce_location=Shared::CommerceLocation.new(
-    address=Shared::PropertyCommerceLocationAddress.new(),
+res = s.commerce.update_commerce_location(connection_id="string", id="string", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
+    address=::UnifiedRubySDK::Shared::PropertyCommerceLocationAddress.new(),
     name="string",
     raw={
       "hmph": "string",
@@ -1200,14 +1200,14 @@ end
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `connection_id`                                                     | *String*                                                            | :heavy_check_mark:                                                  | ID of the connection                                                |
-| `id`                                                                | *String*                                                            | :heavy_check_mark:                                                  | ID of the Location                                                  |
-| `commerce_location`                                                 | [Shared::CommerceLocation](../../models/shared/commercelocation.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `connection_id`                                                                       | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the connection                                                                  |
+| `id`                                                                                  | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the Location                                                                    |
+| `commerce_location`                                                                   | [::UnifiedRubySDK::Shared::CommerceLocation](../../models/shared/commercelocation.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
 
 
 ### Response
 
-**[T.nilable(Operations::UpdateCommerceLocationResponse)](../../models/operations/updatecommercelocationresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::UpdateCommerceLocationResponse)](../../models/operations/updatecommercelocationresponse.md)**
 

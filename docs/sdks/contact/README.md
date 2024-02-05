@@ -34,25 +34,25 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.contact.create_accounting_contact(connection_id="string", accounting_contact=Shared::AccountingContact.new(
-    billing_address=Shared::PropertyAccountingContactBillingAddress.new(),
+res = s.contact.create_accounting_contact(connection_id="string", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new(
+    billing_address=::UnifiedRubySDK::Shared::PropertyAccountingContactBillingAddress.new(),
     emails=[
-      Shared::AccountingEmail.new(
+      ::UnifiedRubySDK::Shared::AccountingEmail.new(
         email="Mac36@gmail.com",
       ),
     ],
     raw={
       "indexing": "string",
     },
-    shipping_address=Shared::PropertyAccountingContactShippingAddress.new(),
+    shipping_address=::UnifiedRubySDK::Shared::PropertyAccountingContactShippingAddress.new(),
     telephones=[
-      Shared::AccountingTelephone.new(
+      ::UnifiedRubySDK::Shared::AccountingTelephone.new(
         telephone="string",
       ),
     ],
@@ -66,15 +66,15 @@ end
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `connection_id`                                                       | *String*                                                              | :heavy_check_mark:                                                    | ID of the connection                                                  |
-| `accounting_contact`                                                  | [Shared::AccountingContact](../../models/shared/accountingcontact.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `accounting_contact`                                                                    | [::UnifiedRubySDK::Shared::AccountingContact](../../models/shared/accountingcontact.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
 
 
 ### Response
 
-**[T.nilable(Operations::CreateAccountingContactResponse)](../../models/operations/createaccountingcontactresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::CreateAccountingContactResponse)](../../models/operations/createaccountingcontactresponse.md)**
 
 
 ## create_crm_contact
@@ -89,14 +89,14 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.contact.create_crm_contact(connection_id="string", crm_contact=Shared::CrmContact.new(
-    address=Shared::PropertyCrmContactAddress.new(),
+res = s.contact.create_crm_contact(connection_id="string", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new(
+    address=::UnifiedRubySDK::Shared::PropertyCrmContactAddress.new(),
     company_ids=[
       "string",
     ],
@@ -104,13 +104,13 @@ res = s.contact.create_crm_contact(connection_id="string", crm_contact=Shared::C
       "string",
     ],
     emails=[
-      Shared::CrmEmail.new(),
+      ::UnifiedRubySDK::Shared::CrmEmail.new(),
     ],
     raw={
       "Mendelevium": "string",
     },
     telephones=[
-      Shared::CrmTelephone.new(
+      ::UnifiedRubySDK::Shared::CrmTelephone.new(
         telephone="string",
       ),
     ],
@@ -126,13 +126,13 @@ end
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `connection_id`                                                                          | *String*                                                                                 | :heavy_check_mark:                                                                       | ID of the connection                                                                     |
-| `crm_contact`                                                                            | [Shared::CrmContact](../../models/shared/crmcontact.md)                                  | :heavy_minus_sign:                                                                       | A contact represents a person that optionally is associated with a deal and/or a company |
+| `connection_id`                                                                          | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the connection                                                                     |
+| `crm_contact`                                                                            | [::UnifiedRubySDK::Shared::CrmContact](../../models/shared/crmcontact.md)                | :heavy_minus_sign:                                                                       | A contact represents a person that optionally is associated with a deal and/or a company |
 
 
 ### Response
 
-**[T.nilable(Operations::CreateCrmContactResponse)](../../models/operations/createcrmcontactresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::CreateCrmContactResponse)](../../models/operations/createcrmcontactresponse.md)**
 
 
 ## create_uc_contact
@@ -147,15 +147,15 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.contact.create_uc_contact(connection_id="string", uc_contact=Shared::UcContact.new(
+res = s.contact.create_uc_contact(connection_id="string", uc_contact=::UnifiedRubySDK::Shared::UcContact.new(
     emails=[
-      Shared::UcEmail.new(
+      ::UnifiedRubySDK::Shared::UcEmail.new(
         email="Dulce_Becker30@yahoo.com",
       ),
     ],
@@ -163,7 +163,7 @@ res = s.contact.create_uc_contact(connection_id="string", uc_contact=Shared::UcC
       "challenge": "string",
     },
     telephones=[
-      Shared::UcTelephone.new(
+      ::UnifiedRubySDK::Shared::UcTelephone.new(
         telephone="string",
       ),
     ],
@@ -179,13 +179,13 @@ end
 
 | Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
 | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `connection_id`                                                         | *String*                                                                | :heavy_check_mark:                                                      | ID of the connection                                                    |
-| `uc_contact`                                                            | [Shared::UcContact](../../models/shared/uccontact.md)                   | :heavy_minus_sign:                                                      | A contact represents a person that optionally is associated with a call |
+| `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
+| `uc_contact`                                                            | [::UnifiedRubySDK::Shared::UcContact](../../models/shared/uccontact.md) | :heavy_minus_sign:                                                      | A contact represents a person that optionally is associated with a call |
 
 
 ### Response
 
-**[T.nilable(Operations::CreateUcContactResponse)](../../models/operations/createuccontactresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::CreateUcContactResponse)](../../models/operations/createuccontactresponse.md)**
 
 
 ## get_accounting_contact
@@ -200,7 +200,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -220,14 +220,14 @@ end
 
 | Parameter                        | Type                             | Required                         | Description                      |
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *String*                         | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *String*                         | :heavy_check_mark:               | ID of the Contact                |
-| `fields`                         | T::Array<*String*>               | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Contact                |
+| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
 
-**[T.nilable(Operations::GetAccountingContactResponse)](../../models/operations/getaccountingcontactresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::GetAccountingContactResponse)](../../models/operations/getaccountingcontactresponse.md)**
 
 
 ## get_crm_contact
@@ -242,7 +242,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -262,14 +262,14 @@ end
 
 | Parameter                        | Type                             | Required                         | Description                      |
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *String*                         | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *String*                         | :heavy_check_mark:               | ID of the Contact                |
-| `fields`                         | T::Array<*String*>               | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Contact                |
+| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
 
-**[T.nilable(Operations::GetCrmContactResponse)](../../models/operations/getcrmcontactresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::GetCrmContactResponse)](../../models/operations/getcrmcontactresponse.md)**
 
 
 ## get_uc_contact
@@ -284,7 +284,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -304,14 +304,14 @@ end
 
 | Parameter                        | Type                             | Required                         | Description                      |
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *String*                         | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *String*                         | :heavy_check_mark:               | ID of the Contact                |
-| `fields`                         | T::Array<*String*>               | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Contact                |
+| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
 
-**[T.nilable(Operations::GetUcContactResponse)](../../models/operations/getuccontactresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::GetUcContactResponse)](../../models/operations/getuccontactresponse.md)**
 
 
 ## list_accounting_contacts
@@ -326,13 +326,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
 
-req = Operations::ListAccountingContactsRequest.new(
+req = ::UnifiedRubySDK::Operations::ListAccountingContactsRequest.new(
   connection_id="string",
   fields=[
     "string",
@@ -349,14 +349,14 @@ end
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [Operations::ListAccountingContactsRequest](../../models/operations/listaccountingcontactsrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                               | [::UnifiedRubySDK::Operations::ListAccountingContactsRequest](../../models/operations/listaccountingcontactsrequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
 
-**[T.nilable(Operations::ListAccountingContactsResponse)](../../models/operations/listaccountingcontactsresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::ListAccountingContactsResponse)](../../models/operations/listaccountingcontactsresponse.md)**
 
 
 ## list_crm_contacts
@@ -371,13 +371,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
 
-req = Operations::ListCrmContactsRequest.new(
+req = ::UnifiedRubySDK::Operations::ListCrmContactsRequest.new(
   connection_id="string",
   fields=[
     "string",
@@ -394,14 +394,14 @@ end
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [Operations::ListCrmContactsRequest](../../models/operations/listcrmcontactsrequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [::UnifiedRubySDK::Operations::ListCrmContactsRequest](../../models/operations/listcrmcontactsrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
 
 
 ### Response
 
-**[T.nilable(Operations::ListCrmContactsResponse)](../../models/operations/listcrmcontactsresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::ListCrmContactsResponse)](../../models/operations/listcrmcontactsresponse.md)**
 
 
 ## list_uc_contacts
@@ -416,13 +416,13 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
 
-req = Operations::ListUcContactsRequest.new(
+req = ::UnifiedRubySDK::Operations::ListUcContactsRequest.new(
   connection_id="string",
   fields=[
     "string",
@@ -439,14 +439,14 @@ end
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [Operations::ListUcContactsRequest](../../models/operations/listuccontactsrequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [::UnifiedRubySDK::Operations::ListUcContactsRequest](../../models/operations/listuccontactsrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
 
 
 ### Response
 
-**[T.nilable(Operations::ListUcContactsResponse)](../../models/operations/listuccontactsresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::ListUcContactsResponse)](../../models/operations/listuccontactsresponse.md)**
 
 
 ## patch_accounting_contact
@@ -461,25 +461,25 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.contact.patch_accounting_contact(connection_id="string", id="string", accounting_contact=Shared::AccountingContact.new(
-    billing_address=Shared::PropertyAccountingContactBillingAddress.new(),
+res = s.contact.patch_accounting_contact(connection_id="string", id="string", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new(
+    billing_address=::UnifiedRubySDK::Shared::PropertyAccountingContactBillingAddress.new(),
     emails=[
-      Shared::AccountingEmail.new(
+      ::UnifiedRubySDK::Shared::AccountingEmail.new(
         email="Sylvester.Kuhic@yahoo.com",
       ),
     ],
     raw={
       "copying": "string",
     },
-    shipping_address=Shared::PropertyAccountingContactShippingAddress.new(),
+    shipping_address=::UnifiedRubySDK::Shared::PropertyAccountingContactShippingAddress.new(),
     telephones=[
-      Shared::AccountingTelephone.new(
+      ::UnifiedRubySDK::Shared::AccountingTelephone.new(
         telephone="string",
       ),
     ],
@@ -493,16 +493,16 @@ end
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `connection_id`                                                       | *String*                                                              | :heavy_check_mark:                                                    | ID of the connection                                                  |
-| `id`                                                                  | *String*                                                              | :heavy_check_mark:                                                    | ID of the Contact                                                     |
-| `accounting_contact`                                                  | [Shared::AccountingContact](../../models/shared/accountingcontact.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Contact                                                                       |
+| `accounting_contact`                                                                    | [::UnifiedRubySDK::Shared::AccountingContact](../../models/shared/accountingcontact.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
 
 
 ### Response
 
-**[T.nilable(Operations::PatchAccountingContactResponse)](../../models/operations/patchaccountingcontactresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::PatchAccountingContactResponse)](../../models/operations/patchaccountingcontactresponse.md)**
 
 
 ## patch_crm_contact
@@ -517,14 +517,14 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.contact.patch_crm_contact(connection_id="string", id="string", crm_contact=Shared::CrmContact.new(
-    address=Shared::PropertyCrmContactAddress.new(),
+res = s.contact.patch_crm_contact(connection_id="string", id="string", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new(
+    address=::UnifiedRubySDK::Shared::PropertyCrmContactAddress.new(),
     company_ids=[
       "string",
     ],
@@ -532,13 +532,13 @@ res = s.contact.patch_crm_contact(connection_id="string", id="string", crm_conta
       "string",
     ],
     emails=[
-      Shared::CrmEmail.new(),
+      ::UnifiedRubySDK::Shared::CrmEmail.new(),
     ],
     raw={
       "architecture": "string",
     },
     telephones=[
-      Shared::CrmTelephone.new(
+      ::UnifiedRubySDK::Shared::CrmTelephone.new(
         telephone="string",
       ),
     ],
@@ -554,14 +554,14 @@ end
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `connection_id`                                                                          | *String*                                                                                 | :heavy_check_mark:                                                                       | ID of the connection                                                                     |
-| `id`                                                                                     | *String*                                                                                 | :heavy_check_mark:                                                                       | ID of the Contact                                                                        |
-| `crm_contact`                                                                            | [Shared::CrmContact](../../models/shared/crmcontact.md)                                  | :heavy_minus_sign:                                                                       | A contact represents a person that optionally is associated with a deal and/or a company |
+| `connection_id`                                                                          | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the connection                                                                     |
+| `id`                                                                                     | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the Contact                                                                        |
+| `crm_contact`                                                                            | [::UnifiedRubySDK::Shared::CrmContact](../../models/shared/crmcontact.md)                | :heavy_minus_sign:                                                                       | A contact represents a person that optionally is associated with a deal and/or a company |
 
 
 ### Response
 
-**[T.nilable(Operations::PatchCrmContactResponse)](../../models/operations/patchcrmcontactresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::PatchCrmContactResponse)](../../models/operations/patchcrmcontactresponse.md)**
 
 
 ## patch_uc_contact
@@ -576,15 +576,15 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.contact.patch_uc_contact(connection_id="string", id="string", uc_contact=Shared::UcContact.new(
+res = s.contact.patch_uc_contact(connection_id="string", id="string", uc_contact=::UnifiedRubySDK::Shared::UcContact.new(
     emails=[
-      Shared::UcEmail.new(
+      ::UnifiedRubySDK::Shared::UcEmail.new(
         email="Norene_Boehm97@hotmail.com",
       ),
     ],
@@ -592,7 +592,7 @@ res = s.contact.patch_uc_contact(connection_id="string", id="string", uc_contact
       "Borders": "string",
     },
     telephones=[
-      Shared::UcTelephone.new(
+      ::UnifiedRubySDK::Shared::UcTelephone.new(
         telephone="string",
       ),
     ],
@@ -608,14 +608,14 @@ end
 
 | Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
 | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `connection_id`                                                         | *String*                                                                | :heavy_check_mark:                                                      | ID of the connection                                                    |
-| `id`                                                                    | *String*                                                                | :heavy_check_mark:                                                      | ID of the Contact                                                       |
-| `uc_contact`                                                            | [Shared::UcContact](../../models/shared/uccontact.md)                   | :heavy_minus_sign:                                                      | A contact represents a person that optionally is associated with a call |
+| `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
+| `id`                                                                    | *::String*                                                              | :heavy_check_mark:                                                      | ID of the Contact                                                       |
+| `uc_contact`                                                            | [::UnifiedRubySDK::Shared::UcContact](../../models/shared/uccontact.md) | :heavy_minus_sign:                                                      | A contact represents a person that optionally is associated with a call |
 
 
 ### Response
 
-**[T.nilable(Operations::PatchUcContactResponse)](../../models/operations/patchuccontactresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::PatchUcContactResponse)](../../models/operations/patchuccontactresponse.md)**
 
 
 ## remove_accounting_contact
@@ -630,7 +630,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -648,13 +648,13 @@ end
 
 | Parameter            | Type                 | Required             | Description          |
 | -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *String*             | :heavy_check_mark:   | ID of the connection |
-| `id`                 | *String*             | :heavy_check_mark:   | ID of the Contact    |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Contact    |
 
 
 ### Response
 
-**[T.nilable(Operations::RemoveAccountingContactResponse)](../../models/operations/removeaccountingcontactresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::RemoveAccountingContactResponse)](../../models/operations/removeaccountingcontactresponse.md)**
 
 
 ## remove_crm_contact
@@ -669,7 +669,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -687,13 +687,13 @@ end
 
 | Parameter            | Type                 | Required             | Description          |
 | -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *String*             | :heavy_check_mark:   | ID of the connection |
-| `id`                 | *String*             | :heavy_check_mark:   | ID of the Contact    |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Contact    |
 
 
 ### Response
 
-**[T.nilable(Operations::RemoveCrmContactResponse)](../../models/operations/removecrmcontactresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::RemoveCrmContactResponse)](../../models/operations/removecrmcontactresponse.md)**
 
 
 ## remove_uc_contact
@@ -708,7 +708,7 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
@@ -726,13 +726,13 @@ end
 
 | Parameter            | Type                 | Required             | Description          |
 | -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *String*             | :heavy_check_mark:   | ID of the connection |
-| `id`                 | *String*             | :heavy_check_mark:   | ID of the Contact    |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Contact    |
 
 
 ### Response
 
-**[T.nilable(Operations::RemoveUcContactResponse)](../../models/operations/removeuccontactresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::RemoveUcContactResponse)](../../models/operations/removeuccontactresponse.md)**
 
 
 ## update_accounting_contact
@@ -747,25 +747,25 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.contact.update_accounting_contact(connection_id="string", id="string", accounting_contact=Shared::AccountingContact.new(
-    billing_address=Shared::PropertyAccountingContactBillingAddress.new(),
+res = s.contact.update_accounting_contact(connection_id="string", id="string", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new(
+    billing_address=::UnifiedRubySDK::Shared::PropertyAccountingContactBillingAddress.new(),
     emails=[
-      Shared::AccountingEmail.new(
+      ::UnifiedRubySDK::Shared::AccountingEmail.new(
         email="Kaci_Hane@hotmail.com",
       ),
     ],
     raw={
       "Ohio": "string",
     },
-    shipping_address=Shared::PropertyAccountingContactShippingAddress.new(),
+    shipping_address=::UnifiedRubySDK::Shared::PropertyAccountingContactShippingAddress.new(),
     telephones=[
-      Shared::AccountingTelephone.new(
+      ::UnifiedRubySDK::Shared::AccountingTelephone.new(
         telephone="string",
       ),
     ],
@@ -779,16 +779,16 @@ end
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `connection_id`                                                       | *String*                                                              | :heavy_check_mark:                                                    | ID of the connection                                                  |
-| `id`                                                                  | *String*                                                              | :heavy_check_mark:                                                    | ID of the Contact                                                     |
-| `accounting_contact`                                                  | [Shared::AccountingContact](../../models/shared/accountingcontact.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Contact                                                                       |
+| `accounting_contact`                                                                    | [::UnifiedRubySDK::Shared::AccountingContact](../../models/shared/accountingcontact.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
 
 
 ### Response
 
-**[T.nilable(Operations::UpdateAccountingContactResponse)](../../models/operations/updateaccountingcontactresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::UpdateAccountingContactResponse)](../../models/operations/updateaccountingcontactresponse.md)**
 
 
 ## update_crm_contact
@@ -803,14 +803,14 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.contact.update_crm_contact(connection_id="string", id="string", crm_contact=Shared::CrmContact.new(
-    address=Shared::PropertyCrmContactAddress.new(),
+res = s.contact.update_crm_contact(connection_id="string", id="string", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new(
+    address=::UnifiedRubySDK::Shared::PropertyCrmContactAddress.new(),
     company_ids=[
       "string",
     ],
@@ -818,13 +818,13 @@ res = s.contact.update_crm_contact(connection_id="string", id="string", crm_cont
       "string",
     ],
     emails=[
-      Shared::CrmEmail.new(),
+      ::UnifiedRubySDK::Shared::CrmEmail.new(),
     ],
     raw={
       "Universal": "string",
     },
     telephones=[
-      Shared::CrmTelephone.new(
+      ::UnifiedRubySDK::Shared::CrmTelephone.new(
         telephone="string",
       ),
     ],
@@ -840,14 +840,14 @@ end
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `connection_id`                                                                          | *String*                                                                                 | :heavy_check_mark:                                                                       | ID of the connection                                                                     |
-| `id`                                                                                     | *String*                                                                                 | :heavy_check_mark:                                                                       | ID of the Contact                                                                        |
-| `crm_contact`                                                                            | [Shared::CrmContact](../../models/shared/crmcontact.md)                                  | :heavy_minus_sign:                                                                       | A contact represents a person that optionally is associated with a deal and/or a company |
+| `connection_id`                                                                          | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the connection                                                                     |
+| `id`                                                                                     | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the Contact                                                                        |
+| `crm_contact`                                                                            | [::UnifiedRubySDK::Shared::CrmContact](../../models/shared/crmcontact.md)                | :heavy_minus_sign:                                                                       | A contact represents a person that optionally is associated with a deal and/or a company |
 
 
 ### Response
 
-**[T.nilable(Operations::UpdateCrmContactResponse)](../../models/operations/updatecrmcontactresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::UpdateCrmContactResponse)](../../models/operations/updatecrmcontactresponse.md)**
 
 
 ## update_uc_contact
@@ -862,15 +862,15 @@ require_relative unified_ruby_sdk
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=Shared::Security.new(
+  security=::UnifiedRubySDK::Shared::Security.new(
     jwt="<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.contact.update_uc_contact(connection_id="string", id="string", uc_contact=Shared::UcContact.new(
+res = s.contact.update_uc_contact(connection_id="string", id="string", uc_contact=::UnifiedRubySDK::Shared::UcContact.new(
     emails=[
-      Shared::UcEmail.new(
+      ::UnifiedRubySDK::Shared::UcEmail.new(
         email="Kianna.Witting90@gmail.com",
       ),
     ],
@@ -878,7 +878,7 @@ res = s.contact.update_uc_contact(connection_id="string", id="string", uc_contac
       "Convertible": "string",
     },
     telephones=[
-      Shared::UcTelephone.new(
+      ::UnifiedRubySDK::Shared::UcTelephone.new(
         telephone="string",
       ),
     ],
@@ -894,12 +894,12 @@ end
 
 | Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
 | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `connection_id`                                                         | *String*                                                                | :heavy_check_mark:                                                      | ID of the connection                                                    |
-| `id`                                                                    | *String*                                                                | :heavy_check_mark:                                                      | ID of the Contact                                                       |
-| `uc_contact`                                                            | [Shared::UcContact](../../models/shared/uccontact.md)                   | :heavy_minus_sign:                                                      | A contact represents a person that optionally is associated with a call |
+| `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
+| `id`                                                                    | *::String*                                                              | :heavy_check_mark:                                                      | ID of the Contact                                                       |
+| `uc_contact`                                                            | [::UnifiedRubySDK::Shared::UcContact](../../models/shared/uccontact.md) | :heavy_minus_sign:                                                      | A contact represents a person that optionally is associated with a call |
 
 
 ### Response
 
-**[T.nilable(Operations::UpdateUcContactResponse)](../../models/operations/updateuccontactresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::UpdateUcContactResponse)](../../models/operations/updateuccontactresponse.md)**
 
