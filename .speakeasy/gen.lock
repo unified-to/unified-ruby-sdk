@@ -5,8 +5,8 @@ management:
   docVersion: "1.0"
   speakeasyVersion: internal
   generationVersion: 2.249.1
-  releaseVersion: 0.3.0
-  configChecksum: ba6cc04c3b59aef653340d7191aac676
+  releaseVersion: 0.3.1
+  configChecksum: d55672fd3a62ff5863cc4d3a014a88f1
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
