@@ -31,7 +31,7 @@ res = s.passthrough.create_passthrough(connection_id="string", path="string", re
     "turquoise": "string",
   })
 
-if ! res.undefined.nil?
+if ! res.result.nil?
   # handle response
 end
 
@@ -71,7 +71,7 @@ s.config_security(
     
 res = s.passthrough.list_passthroughs(connection_id="string", path="string")
 
-if ! res.undefined.nil?
+if ! res.result.nil?
   # handle response
 end
 
@@ -112,7 +112,7 @@ res = s.passthrough.patch_passthrough(connection_id="string", path="string", req
     "brand": "string",
   })
 
-if ! res.undefined.nil?
+if ! res.result.nil?
   # handle response
 end
 
@@ -152,7 +152,7 @@ s.config_security(
     
 res = s.passthrough.remove_passthrough(connection_id="string", path="string")
 
-if ! res.undefined.nil?
+if ! res.result.nil?
   # handle response
 end
 
@@ -193,7 +193,7 @@ res = s.passthrough.update_passthrough(connection_id="string", path="string", re
     "Northwest": "string",
   })
 
-if ! res.undefined.nil?
+if ! res.result.nil?
   # handle response
 end
 

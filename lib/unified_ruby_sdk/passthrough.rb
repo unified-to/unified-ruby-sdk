@@ -62,7 +62,7 @@ module UnifiedRubySDK
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, T::Hash[Symbol, ::Object])
-          res.undefined = out
+          res.result = out
         end
       end
       res
@@ -102,7 +102,7 @@ module UnifiedRubySDK
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, T::Hash[Symbol, ::Object])
-          res.undefined = out
+          res.result = out
         end
       end
       res
@@ -152,7 +152,7 @@ module UnifiedRubySDK
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, T::Hash[Symbol, ::Object])
-          res.undefined = out
+          res.result = out
         end
       end
       res
@@ -192,7 +192,7 @@ module UnifiedRubySDK
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, T::Hash[Symbol, ::Object])
-          res.undefined = out
+          res.result = out
         end
       end
       res
@@ -242,7 +242,7 @@ module UnifiedRubySDK
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, T::Hash[Symbol, ::Object])
-          res.undefined = out
+          res.result = out
         end
       end
       res
