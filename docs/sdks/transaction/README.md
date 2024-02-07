@@ -17,26 +17,26 @@ Create a transaction
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.transaction.create_accounting_transaction(connection_id="string", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
-    id="<ID>",
-    lineitems=[
+    id: "<ID>",
+    lineitems: [
       ::UnifiedRubySDK::Shared::AccountingTransactionLineitem.new(
-        account_id="string",
-        total_amount=4969.62,
+        account_id: "string",
+        total_amount: 4969.62,
       ),
     ],
-    raw={
+    raw: {
       "Web": "string",
     },
   ))
@@ -67,18 +67,18 @@ Retrieve a transaction
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.transaction.get_accounting_transaction(connection_id="string", id="string", fields=[
+res = s.transaction.get_accounting_transaction(connection_id="string", id="string", fields_=[
     "string",
   ])
 
@@ -94,7 +94,7 @@ end
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Transaction            |
-| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
@@ -109,20 +109,20 @@ List all transactions
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListAccountingTransactionsRequest.new(
-  connection_id="string",
-  fields=[
+  connection_id: "string",
+  fields_: [
     "string",
   ],
 )
@@ -154,26 +154,26 @@ Update a transaction
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.transaction.patch_accounting_transaction(connection_id="string", id="string", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
-    id="<ID>",
-    lineitems=[
+    id: "<ID>",
+    lineitems: [
       ::UnifiedRubySDK::Shared::AccountingTransactionLineitem.new(
-        account_id="string",
-        total_amount=5633.69,
+        account_id: "string",
+        total_amount: 5633.69,
       ),
     ],
-    raw={
+    raw: {
       "invoice": "string",
     },
   ))
@@ -205,20 +205,20 @@ Remove a transaction
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.transaction.remove_accounting_transaction(connection_id="string", id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -244,26 +244,26 @@ Update a transaction
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.transaction.update_accounting_transaction(connection_id="string", id="string", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
-    id="<ID>",
-    lineitems=[
+    id: "<ID>",
+    lineitems: [
       ::UnifiedRubySDK::Shared::AccountingTransactionLineitem.new(
-        account_id="string",
-        total_amount=6498.37,
+        account_id: "string",
+        total_amount: 6498.37,
       ),
     ],
-    raw={
+    raw: {
       "a": "string",
     },
   ))

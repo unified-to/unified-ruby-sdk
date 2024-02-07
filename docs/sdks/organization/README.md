@@ -13,18 +13,18 @@ Retrieve an organization
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.organization.get_accounting_organization(connection_id="string", id="string", fields=[
+res = s.organization.get_accounting_organization(connection_id="string", id="string", fields_=[
     "string",
   ])
 
@@ -40,7 +40,7 @@ end
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Organization           |
-| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
@@ -55,20 +55,20 @@ List all organizations
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListAccountingOrganizationsRequest.new(
-  connection_id="string",
-  fields=[
+  connection_id: "string",
+  fields_: [
     "string",
   ],
 )

@@ -14,23 +14,23 @@ Returns an authorization URL for the specified integration.  Once a successful a
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::GetUnifiedIntegrationAuthRequest.new(
-  integration_type="string",
-  scopes=[
+  integration_type: "string",
+  scopes: [
     ::UnifiedRubySDK::Operations::Scopes::HRIS_EMPLOYEE_WRITE,
   ],
-  workspace_id="string",
+  workspace_id: "string",
 )
     
 res = s.integration.get_unified_integration_auth(req)
@@ -60,22 +60,22 @@ No authentication required as this is to be used by front-end interface
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListUnifiedIntegrationWorkspacesRequest.new(
-  categories=[
+  categories: [
     ::UnifiedRubySDK::Operations::QueryParamCategories::ACCOUNTING,
   ],
-  workspace_id="string",
+  workspace_id: "string",
 )
     
 res = s.integration.list_unified_integration_workspaces(req)
@@ -105,19 +105,19 @@ Returns all integrations
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListUnifiedIntegrationsRequest.new(
-  categories=[
+  categories: [
     ::UnifiedRubySDK::Operations::ListUnifiedIntegrationsQueryParamCategories::CRM,
   ],
 )

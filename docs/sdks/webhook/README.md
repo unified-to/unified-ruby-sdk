@@ -17,27 +17,27 @@ The data payload received by your server is described at https://docs.unified.to
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.webhook.create_unified_webhook(webhook=::UnifiedRubySDK::Shared::Webhook.new(
-    connection_id="string",
-    event=::UnifiedRubySDK::Shared::Event::CREATED,
-    hook_url="string",
-    interval=188.12,
-    meta={
+    connection_id: "string",
+    event: ::UnifiedRubySDK::Shared::Event::CREATED,
+    hook_url: "string",
+    interval: 188.12,
+    meta: {
       "payment": "string",
     },
-    object_type=::UnifiedRubySDK::Shared::ObjectType::ACCOUNTING_CONTACT,
-    runs=[
+    object_type: ::UnifiedRubySDK::Shared::ObjectType::ACCOUNTING_CONTACT,
+    runs: [
       "string",
     ],
   ), include_all=false)
@@ -68,13 +68,13 @@ Retrieve webhook by its ID
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
@@ -106,13 +106,13 @@ Returns all registered webhooks
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
@@ -146,20 +146,20 @@ Trigger webhook
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.webhook.patch_unified_webhook_trigger(id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -184,20 +184,20 @@ Remove webhook subscription
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.webhook.remove_unified_webhook(id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -222,20 +222,20 @@ Trigger webhook
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.webhook.update_unified_webhook_trigger(id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 

@@ -17,19 +17,19 @@ Create a document
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.document.create_ats_document(connection_id="string", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(
-    raw={
+    raw: {
       "Southeast": "string",
     },
   ))
@@ -60,18 +60,18 @@ Retrieve a document
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.document.get_ats_document(connection_id="string", id="string", fields=[
+res = s.document.get_ats_document(connection_id="string", id="string", fields_=[
     "string",
   ])
 
@@ -87,7 +87,7 @@ end
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Document               |
-| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
@@ -102,20 +102,20 @@ List all documents
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListAtsDocumentsRequest.new(
-  connection_id="string",
-  fields=[
+  connection_id: "string",
+  fields_: [
     "string",
   ],
 )
@@ -147,19 +147,19 @@ Update a document
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.document.patch_ats_document(connection_id="string", id="string", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(
-    raw={
+    raw: {
       "Northeast": "string",
     },
   ))
@@ -191,20 +191,20 @@ Remove a document
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.document.remove_ats_document(connection_id="string", id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -230,19 +230,19 @@ Update a document
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.document.update_ats_document(connection_id="string", id="string", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(
-    raw={
+    raw: {
       "turquoise": "string",
     },
   ))

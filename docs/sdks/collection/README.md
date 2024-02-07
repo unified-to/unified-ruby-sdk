@@ -17,32 +17,32 @@ Create a collection
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.collection.create_commerce_collection(connection_id="string", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
-    id="<ID>",
-    item_ids=[
+    id: "<ID>",
+    item_ids: [
       "string",
     ],
-    media=[
+    media: [
       ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-        url="http://uneven-mattress.name",
+        url: "http://uneven-mattress.name",
       ),
     ],
-    name="string",
-    raw={
+    name: "string",
+    raw: {
       "whoever": "string",
     },
-    tags=[
+    tags: [
       "string",
     ],
   ))
@@ -73,18 +73,18 @@ Retrieve a collection
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.collection.get_commerce_collection(connection_id="string", id="string", fields=[
+res = s.collection.get_commerce_collection(connection_id="string", id="string", fields_=[
     "string",
   ])
 
@@ -100,7 +100,7 @@ end
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Collection             |
-| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
@@ -115,20 +115,20 @@ List all collections
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListCommerceCollectionsRequest.new(
-  connection_id="string",
-  fields=[
+  connection_id: "string",
+  fields_: [
     "string",
   ],
 )
@@ -160,32 +160,32 @@ Update a collection
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.collection.patch_commerce_collection(connection_id="string", id="string", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
-    id="<ID>",
-    item_ids=[
+    id: "<ID>",
+    item_ids: [
       "string",
     ],
-    media=[
+    media: [
       ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-        url="http://personal-sorrow.com",
+        url: "http://personal-sorrow.com",
       ),
     ],
-    name="string",
-    raw={
+    name: "string",
+    raw: {
       "Cheese": "string",
     },
-    tags=[
+    tags: [
       "string",
     ],
   ))
@@ -217,20 +217,20 @@ Remove a collection
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.collection.remove_commerce_collection(connection_id="string", id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -256,32 +256,32 @@ Update a collection
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.collection.update_commerce_collection(connection_id="string", id="string", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
-    id="<ID>",
-    item_ids=[
+    id: "<ID>",
+    item_ids: [
       "string",
     ],
-    media=[
+    media: [
       ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-        url="https://stupid-entity.org",
+        url: "https://stupid-entity.org",
       ),
     ],
-    name="string",
-    raw={
+    name: "string",
+    raw: {
       "Modern": "string",
     },
-    tags=[
+    tags: [
       "string",
     ],
   ))

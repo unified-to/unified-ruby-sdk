@@ -47,40 +47,40 @@ Create a company
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.crm.create_crm_company(connection_id="string", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(
-    address=::UnifiedRubySDK::Shared::PropertyCrmCompanyAddress.new(),
-    deal_ids=[
+    address: ::UnifiedRubySDK::Shared::PropertyCrmCompanyAddress.new(),
+    deal_ids: [
       "string",
     ],
-    emails=[
+    emails: [
       ::UnifiedRubySDK::Shared::CrmEmail.new(),
     ],
-    link_urls=[
+    link_urls: [
       "string",
     ],
-    raw={
+    raw: {
       "connecting": "string",
     },
-    tags=[
+    tags: [
       "string",
     ],
-    telephones=[
+    telephones: [
       ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone="string",
+        telephone: "string",
       ),
     ],
-    websites=[
+    websites: [
       "string",
     ],
   ))
@@ -111,34 +111,34 @@ Create a contact
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.crm.create_crm_contact(connection_id="string", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new(
-    address=::UnifiedRubySDK::Shared::PropertyCrmContactAddress.new(),
-    company_ids=[
+    address: ::UnifiedRubySDK::Shared::PropertyCrmContactAddress.new(),
+    company_ids: [
       "string",
     ],
-    deal_ids=[
+    deal_ids: [
       "string",
     ],
-    emails=[
+    emails: [
       ::UnifiedRubySDK::Shared::CrmEmail.new(),
     ],
-    raw={
+    raw: {
       "Mendelevium": "string",
     },
-    telephones=[
+    telephones: [
       ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone="string",
+        telephone: "string",
       ),
     ],
   ))
@@ -169,22 +169,22 @@ Create a deal
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.crm.create_crm_deal(connection_id="string", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new(
-    raw={
+    raw: {
       "Toys": "string",
     },
-    tags=[
+    tags: [
       "string",
     ],
   ))
@@ -215,48 +215,48 @@ Create a event
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.crm.create_crm_event(connection_id="string", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(
-    call=::UnifiedRubySDK::Shared::PropertyCrmEventCall.new(),
-    company_ids=[
+    call: ::UnifiedRubySDK::Shared::PropertyCrmEventCall.new(),
+    company_ids: [
       "string",
     ],
-    contact_ids=[
+    contact_ids: [
       "string",
     ],
-    deal_ids=[
+    deal_ids: [
       "string",
     ],
-    email=::UnifiedRubySDK::Shared::PropertyCrmEventEmail.new(
-      attachment_file_ids=[
+    email: ::UnifiedRubySDK::Shared::PropertyCrmEventEmail.new(
+      attachment_file_ids: [
         "string",
       ],
-      cc=[
+      cc: [
         "string",
       ],
-      to=[
+      to: [
         "string",
       ],
     ),
-    lead_ids=[
+    lead_ids: [
       "string",
     ],
-    meeting=::UnifiedRubySDK::Shared::PropertyCrmEventMeeting.new(),
-    note=::UnifiedRubySDK::Shared::PropertyCrmEventNote.new(),
-    raw={
+    meeting: ::UnifiedRubySDK::Shared::PropertyCrmEventMeeting.new(),
+    note: ::UnifiedRubySDK::Shared::PropertyCrmEventNote.new(),
+    raw: {
       "repeatedly": "string",
     },
-    task=::UnifiedRubySDK::Shared::PropertyCrmEventTask.new(),
+    task: ::UnifiedRubySDK::Shared::PropertyCrmEventTask.new(),
   ))
 
 if ! res.crm_event.nil?
@@ -285,28 +285,28 @@ Create a lead
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.crm.create_crm_lead(connection_id="string", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(
-    address=::UnifiedRubySDK::Shared::PropertyCrmLeadAddress.new(),
-    emails=[
+    address: ::UnifiedRubySDK::Shared::PropertyCrmLeadAddress.new(),
+    emails: [
       ::UnifiedRubySDK::Shared::CrmEmail.new(),
     ],
-    raw={
+    raw: {
       "Designer": "string",
     },
-    telephones=[
+    telephones: [
       ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone="string",
+        telephone: "string",
       ),
     ],
   ))
@@ -337,19 +337,19 @@ Create a pipeline
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.crm.create_crm_pipeline(connection_id="string", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(
-    raw={
+    raw: {
       "Mazda": "string",
     },
   ))
@@ -380,18 +380,18 @@ Retrieve a company
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.crm.get_crm_company(connection_id="string", id="string", fields=[
+res = s.crm.get_crm_company(connection_id="string", id="string", fields_=[
     "string",
   ])
 
@@ -407,7 +407,7 @@ end
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Company                |
-| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
@@ -422,18 +422,18 @@ Retrieve a contact
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.crm.get_crm_contact(connection_id="string", id="string", fields=[
+res = s.crm.get_crm_contact(connection_id="string", id="string", fields_=[
     "string",
   ])
 
@@ -449,7 +449,7 @@ end
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Contact                |
-| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
@@ -464,18 +464,18 @@ Retrieve a deal
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.crm.get_crm_deal(connection_id="string", id="string", fields=[
+res = s.crm.get_crm_deal(connection_id="string", id="string", fields_=[
     "string",
   ])
 
@@ -491,7 +491,7 @@ end
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Deal                   |
-| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
@@ -506,18 +506,18 @@ Retrieve a event
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.crm.get_crm_event(connection_id="string", id="string", fields=[
+res = s.crm.get_crm_event(connection_id="string", id="string", fields_=[
     "string",
   ])
 
@@ -533,7 +533,7 @@ end
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Event                  |
-| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
@@ -548,18 +548,18 @@ Retrieve a lead
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.crm.get_crm_lead(connection_id="string", id="string", fields=[
+res = s.crm.get_crm_lead(connection_id="string", id="string", fields_=[
     "string",
   ])
 
@@ -575,7 +575,7 @@ end
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Lead                   |
-| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
@@ -590,18 +590,18 @@ Retrieve a pipeline
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.crm.get_crm_pipeline(connection_id="string", id="string", fields=[
+res = s.crm.get_crm_pipeline(connection_id="string", id="string", fields_=[
     "string",
   ])
 
@@ -617,7 +617,7 @@ end
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Pipeline               |
-| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
@@ -632,20 +632,20 @@ List all companies
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListCrmCompaniesRequest.new(
-  connection_id="string",
-  fields=[
+  connection_id: "string",
+  fields_: [
     "string",
   ],
 )
@@ -677,20 +677,20 @@ List all contacts
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListCrmContactsRequest.new(
-  connection_id="string",
-  fields=[
+  connection_id: "string",
+  fields_: [
     "string",
   ],
 )
@@ -722,20 +722,20 @@ List all deals
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListCrmDealsRequest.new(
-  connection_id="string",
-  fields=[
+  connection_id: "string",
+  fields_: [
     "string",
   ],
 )
@@ -767,20 +767,20 @@ List all events
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListCrmEventsRequest.new(
-  connection_id="string",
-  fields=[
+  connection_id: "string",
+  fields_: [
     "string",
   ],
 )
@@ -812,20 +812,20 @@ List all leads
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListCrmLeadsRequest.new(
-  connection_id="string",
-  fields=[
+  connection_id: "string",
+  fields_: [
     "string",
   ],
 )
@@ -857,20 +857,20 @@ List all pipelines
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListCrmPipelinesRequest.new(
-  connection_id="string",
-  fields=[
+  connection_id: "string",
+  fields_: [
     "string",
   ],
 )
@@ -902,40 +902,40 @@ Update a company
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.crm.patch_crm_company(connection_id="string", id="string", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(
-    address=::UnifiedRubySDK::Shared::PropertyCrmCompanyAddress.new(),
-    deal_ids=[
+    address: ::UnifiedRubySDK::Shared::PropertyCrmCompanyAddress.new(),
+    deal_ids: [
       "string",
     ],
-    emails=[
+    emails: [
       ::UnifiedRubySDK::Shared::CrmEmail.new(),
     ],
-    link_urls=[
+    link_urls: [
       "string",
     ],
-    raw={
+    raw: {
       "Producer": "string",
     },
-    tags=[
+    tags: [
       "string",
     ],
-    telephones=[
+    telephones: [
       ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone="string",
+        telephone: "string",
       ),
     ],
-    websites=[
+    websites: [
       "string",
     ],
   ))
@@ -967,34 +967,34 @@ Update a contact
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.crm.patch_crm_contact(connection_id="string", id="string", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new(
-    address=::UnifiedRubySDK::Shared::PropertyCrmContactAddress.new(),
-    company_ids=[
+    address: ::UnifiedRubySDK::Shared::PropertyCrmContactAddress.new(),
+    company_ids: [
       "string",
     ],
-    deal_ids=[
+    deal_ids: [
       "string",
     ],
-    emails=[
+    emails: [
       ::UnifiedRubySDK::Shared::CrmEmail.new(),
     ],
-    raw={
+    raw: {
       "architecture": "string",
     },
-    telephones=[
+    telephones: [
       ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone="string",
+        telephone: "string",
       ),
     ],
   ))
@@ -1026,22 +1026,22 @@ Update a deal
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.crm.patch_crm_deal(connection_id="string", id="string", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new(
-    raw={
+    raw: {
       "consign": "string",
     },
-    tags=[
+    tags: [
       "string",
     ],
   ))
@@ -1073,48 +1073,48 @@ Update a event
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.crm.patch_crm_event(connection_id="string", id="string", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(
-    call=::UnifiedRubySDK::Shared::PropertyCrmEventCall.new(),
-    company_ids=[
+    call: ::UnifiedRubySDK::Shared::PropertyCrmEventCall.new(),
+    company_ids: [
       "string",
     ],
-    contact_ids=[
+    contact_ids: [
       "string",
     ],
-    deal_ids=[
+    deal_ids: [
       "string",
     ],
-    email=::UnifiedRubySDK::Shared::PropertyCrmEventEmail.new(
-      attachment_file_ids=[
+    email: ::UnifiedRubySDK::Shared::PropertyCrmEventEmail.new(
+      attachment_file_ids: [
         "string",
       ],
-      cc=[
+      cc: [
         "string",
       ],
-      to=[
+      to: [
         "string",
       ],
     ),
-    lead_ids=[
+    lead_ids: [
       "string",
     ],
-    meeting=::UnifiedRubySDK::Shared::PropertyCrmEventMeeting.new(),
-    note=::UnifiedRubySDK::Shared::PropertyCrmEventNote.new(),
-    raw={
+    meeting: ::UnifiedRubySDK::Shared::PropertyCrmEventMeeting.new(),
+    note: ::UnifiedRubySDK::Shared::PropertyCrmEventNote.new(),
+    raw: {
       "XML": "string",
     },
-    task=::UnifiedRubySDK::Shared::PropertyCrmEventTask.new(),
+    task: ::UnifiedRubySDK::Shared::PropertyCrmEventTask.new(),
   ))
 
 if ! res.crm_event.nil?
@@ -1144,28 +1144,28 @@ Update a lead
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.crm.patch_crm_lead(connection_id="string", id="string", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(
-    address=::UnifiedRubySDK::Shared::PropertyCrmLeadAddress.new(),
-    emails=[
+    address: ::UnifiedRubySDK::Shared::PropertyCrmLeadAddress.new(),
+    emails: [
       ::UnifiedRubySDK::Shared::CrmEmail.new(),
     ],
-    raw={
+    raw: {
       "deposit": "string",
     },
-    telephones=[
+    telephones: [
       ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone="string",
+        telephone: "string",
       ),
     ],
   ))
@@ -1197,19 +1197,19 @@ Update a pipeline
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.crm.patch_crm_pipeline(connection_id="string", id="string", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(
-    raw={
+    raw: {
       "unimpressively": "string",
     },
   ))
@@ -1241,20 +1241,20 @@ Remove a company
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.crm.remove_crm_company(connection_id="string", id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -1280,20 +1280,20 @@ Remove a contact
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.crm.remove_crm_contact(connection_id="string", id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -1319,20 +1319,20 @@ Remove a deal
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.crm.remove_crm_deal(connection_id="string", id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -1358,20 +1358,20 @@ Remove a event
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.crm.remove_crm_event(connection_id="string", id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -1397,20 +1397,20 @@ Remove a lead
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.crm.remove_crm_lead(connection_id="string", id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -1436,20 +1436,20 @@ Remove a pipeline
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.crm.remove_crm_pipeline(connection_id="string", id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -1475,40 +1475,40 @@ Update a company
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.crm.update_crm_company(connection_id="string", id="string", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(
-    address=::UnifiedRubySDK::Shared::PropertyCrmCompanyAddress.new(),
-    deal_ids=[
+    address: ::UnifiedRubySDK::Shared::PropertyCrmCompanyAddress.new(),
+    deal_ids: [
       "string",
     ],
-    emails=[
+    emails: [
       ::UnifiedRubySDK::Shared::CrmEmail.new(),
     ],
-    link_urls=[
+    link_urls: [
       "string",
     ],
-    raw={
+    raw: {
       "SMS": "string",
     },
-    tags=[
+    tags: [
       "string",
     ],
-    telephones=[
+    telephones: [
       ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone="string",
+        telephone: "string",
       ),
     ],
-    websites=[
+    websites: [
       "string",
     ],
   ))
@@ -1540,34 +1540,34 @@ Update a contact
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.crm.update_crm_contact(connection_id="string", id="string", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new(
-    address=::UnifiedRubySDK::Shared::PropertyCrmContactAddress.new(),
-    company_ids=[
+    address: ::UnifiedRubySDK::Shared::PropertyCrmContactAddress.new(),
+    company_ids: [
       "string",
     ],
-    deal_ids=[
+    deal_ids: [
       "string",
     ],
-    emails=[
+    emails: [
       ::UnifiedRubySDK::Shared::CrmEmail.new(),
     ],
-    raw={
+    raw: {
       "Universal": "string",
     },
-    telephones=[
+    telephones: [
       ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone="string",
+        telephone: "string",
       ),
     ],
   ))
@@ -1599,22 +1599,22 @@ Update a deal
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.crm.update_crm_deal(connection_id="string", id="string", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new(
-    raw={
+    raw: {
       "South": "string",
     },
-    tags=[
+    tags: [
       "string",
     ],
   ))
@@ -1646,48 +1646,48 @@ Update a event
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.crm.update_crm_event(connection_id="string", id="string", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(
-    call=::UnifiedRubySDK::Shared::PropertyCrmEventCall.new(),
-    company_ids=[
+    call: ::UnifiedRubySDK::Shared::PropertyCrmEventCall.new(),
+    company_ids: [
       "string",
     ],
-    contact_ids=[
+    contact_ids: [
       "string",
     ],
-    deal_ids=[
+    deal_ids: [
       "string",
     ],
-    email=::UnifiedRubySDK::Shared::PropertyCrmEventEmail.new(
-      attachment_file_ids=[
+    email: ::UnifiedRubySDK::Shared::PropertyCrmEventEmail.new(
+      attachment_file_ids: [
         "string",
       ],
-      cc=[
+      cc: [
         "string",
       ],
-      to=[
+      to: [
         "string",
       ],
     ),
-    lead_ids=[
+    lead_ids: [
       "string",
     ],
-    meeting=::UnifiedRubySDK::Shared::PropertyCrmEventMeeting.new(),
-    note=::UnifiedRubySDK::Shared::PropertyCrmEventNote.new(),
-    raw={
+    meeting: ::UnifiedRubySDK::Shared::PropertyCrmEventMeeting.new(),
+    note: ::UnifiedRubySDK::Shared::PropertyCrmEventNote.new(),
+    raw: {
       "Account": "string",
     },
-    task=::UnifiedRubySDK::Shared::PropertyCrmEventTask.new(),
+    task: ::UnifiedRubySDK::Shared::PropertyCrmEventTask.new(),
   ))
 
 if ! res.crm_event.nil?
@@ -1717,28 +1717,28 @@ Update a lead
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.crm.update_crm_lead(connection_id="string", id="string", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(
-    address=::UnifiedRubySDK::Shared::PropertyCrmLeadAddress.new(),
-    emails=[
+    address: ::UnifiedRubySDK::Shared::PropertyCrmLeadAddress.new(),
+    emails: [
       ::UnifiedRubySDK::Shared::CrmEmail.new(),
     ],
-    raw={
+    raw: {
       "Northwest": "string",
     },
-    telephones=[
+    telephones: [
       ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone="string",
+        telephone: "string",
       ),
     ],
   ))
@@ -1770,19 +1770,19 @@ Update a pipeline
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.crm.update_crm_pipeline(connection_id="string", id="string", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(
-    raw={
+    raw: {
       "functionalities": "string",
     },
   ))

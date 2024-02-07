@@ -17,39 +17,39 @@ Create connection
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Shared::Connection.new(
-  auth=::UnifiedRubySDK::Shared::PropertyConnectionAuth.new(
-    emails=[
+  auth: ::UnifiedRubySDK::Shared::PropertyConnectionAuth.new(
+    emails: [
       "string",
     ],
-    meta={
+    meta: {
       "likewise": "string",
     },
-    other_auth_info=[
+    other_auth_info: [
       "string",
     ],
   ),
-  categories=[
+  categories: [
     ::UnifiedRubySDK::Shared::PropertyConnectionCategories::ENRICH,
   ],
-  cursors_cache=[
+  cursors_cache: [
     {
       "Specialist": "string",
     },
   ],
-  integration_type="string",
-  permissions=[
+  integration_type: "string",
+  permissions: [
     ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_COMPANY_READ,
   ],
 )
@@ -81,13 +81,13 @@ Retrieve connection
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
@@ -119,19 +119,19 @@ List all connections
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListUnifiedConnectionsRequest.new(
-  categories=[
+  categories: [
     ::UnifiedRubySDK::Operations::Categories::MARTECH,
   ],
 )
@@ -163,39 +163,39 @@ Update connection
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.connection.patch_unified_connection(id="string", connection=::UnifiedRubySDK::Shared::Connection.new(
-    auth=::UnifiedRubySDK::Shared::PropertyConnectionAuth.new(
-      emails=[
+    auth: ::UnifiedRubySDK::Shared::PropertyConnectionAuth.new(
+      emails: [
         "string",
       ],
-      meta={
+      meta: {
         "International": "string",
       },
-      other_auth_info=[
+      other_auth_info: [
         "string",
       ],
     ),
-    categories=[
+    categories: [
       ::UnifiedRubySDK::Shared::PropertyConnectionCategories::COMMERCE,
     ],
-    cursors_cache=[
+    cursors_cache: [
       {
         "Coupe": "string",
       },
     ],
-    integration_type="string",
-    permissions=[
+    integration_type: "string",
+    permissions: [
       ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ACCOUNTING_CONTACT_READ,
     ],
   ))
@@ -226,20 +226,20 @@ Remove connection
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.connection.remove_unified_connection(id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -264,39 +264,39 @@ Update connection
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.connection.update_unified_connection(id="string", connection=::UnifiedRubySDK::Shared::Connection.new(
-    auth=::UnifiedRubySDK::Shared::PropertyConnectionAuth.new(
-      emails=[
+    auth: ::UnifiedRubySDK::Shared::PropertyConnectionAuth.new(
+      emails: [
         "string",
       ],
-      meta={
+      meta: {
         "tan": "string",
       },
-      other_auth_info=[
+      other_auth_info: [
         "string",
       ],
     ),
-    categories=[
+    categories: [
       ::UnifiedRubySDK::Shared::PropertyConnectionCategories::COMMERCE,
     ],
-    cursors_cache=[
+    cursors_cache: [
       {
         "coulomb": "string",
       },
     ],
-    integration_type="string",
-    permissions=[
+    integration_type: "string",
+    permissions: [
       ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ACCOUNTING_TRANSACTION_WRITE,
     ],
   ))

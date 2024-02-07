@@ -16,7 +16,7 @@ module UnifiedRubySDK
       # The candidate ID to filter results
       field :candidate_id, T.nilable(::String), { 'query_param': { 'field_name': 'candidate_id', 'style': 'form', 'explode': true } }
       # Comma-delimited fields to return
-      field :fields, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
       # The job ID
       field :job_id, T.nilable(::String), { 'query_param': { 'field_name': 'job_id', 'style': 'form', 'explode': true } }
 
@@ -33,11 +33,11 @@ module UnifiedRubySDK
       field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, candidate_id: T.nilable(::String), fields: T.nilable(T::Array[::String]), job_id: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
-      def initialize(connection_id: nil, candidate_id: nil, fields: nil, job_id: nil, limit: nil, offset: nil, order: nil, query: nil, sort: nil, updated_gte: nil)
+      sig { params(connection_id: ::String, candidate_id: T.nilable(::String), fields_: T.nilable(T::Array[::String]), job_id: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
+      def initialize(connection_id: nil, candidate_id: nil, fields_: nil, job_id: nil, limit: nil, offset: nil, order: nil, query: nil, sort: nil, updated_gte: nil)
         @connection_id = connection_id
         @candidate_id = candidate_id
-        @fields = fields
+        @fields_ = fields_
         @job_id = job_id
         @limit = limit
         @offset = offset

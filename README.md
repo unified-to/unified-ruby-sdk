@@ -20,20 +20,20 @@ gem specific_install https://github.com/unified-to/unified-ruby-sdk
 ### Example
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.accounting.create_accounting_account(connection_id="string", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(
-    name="string",
-    raw={
+    name: "string",
+    raw: {
       "Executive": "string",
     },
   ))
@@ -276,27 +276,27 @@ end
 
 * [create_commerce_collection](docs/sdks/commerce/README.md#create_commerce_collection) - Create a collection
 * [create_commerce_inventory](docs/sdks/commerce/README.md#create_commerce_inventory) - Create an inventory
-* [create_commerce_item](docs/sdks/commerce/README.md#create_commerce_item) - Create an item/product
+* [create_commerce_item](docs/sdks/commerce/README.md#create_commerce_item) - Create an item
 * [create_commerce_location](docs/sdks/commerce/README.md#create_commerce_location) - Create a location
 * [get_commerce_collection](docs/sdks/commerce/README.md#get_commerce_collection) - Retrieve a collection
 * [get_commerce_inventory](docs/sdks/commerce/README.md#get_commerce_inventory) - Retrieve an inventory
-* [get_commerce_item](docs/sdks/commerce/README.md#get_commerce_item) - Retrieve an item/product
+* [get_commerce_item](docs/sdks/commerce/README.md#get_commerce_item) - Retrieve an item
 * [get_commerce_location](docs/sdks/commerce/README.md#get_commerce_location) - Retrieve a location
 * [list_commerce_collections](docs/sdks/commerce/README.md#list_commerce_collections) - List all collections
 * [list_commerce_inventories](docs/sdks/commerce/README.md#list_commerce_inventories) - List all inventories
-* [list_commerce_items](docs/sdks/commerce/README.md#list_commerce_items) - List all items/products
+* [list_commerce_items](docs/sdks/commerce/README.md#list_commerce_items) - List all items
 * [list_commerce_locations](docs/sdks/commerce/README.md#list_commerce_locations) - List all locations
 * [patch_commerce_collection](docs/sdks/commerce/README.md#patch_commerce_collection) - Update a collection
 * [patch_commerce_inventory](docs/sdks/commerce/README.md#patch_commerce_inventory) - Update an inventory
-* [patch_commerce_item](docs/sdks/commerce/README.md#patch_commerce_item) - Update an item/product
+* [patch_commerce_item](docs/sdks/commerce/README.md#patch_commerce_item) - Update an item
 * [patch_commerce_location](docs/sdks/commerce/README.md#patch_commerce_location) - Update a location
 * [remove_commerce_collection](docs/sdks/commerce/README.md#remove_commerce_collection) - Remove a collection
 * [remove_commerce_inventory](docs/sdks/commerce/README.md#remove_commerce_inventory) - Remove an inventory
-* [remove_commerce_item](docs/sdks/commerce/README.md#remove_commerce_item) - Remove an item/product
+* [remove_commerce_item](docs/sdks/commerce/README.md#remove_commerce_item) - Remove an item
 * [remove_commerce_location](docs/sdks/commerce/README.md#remove_commerce_location) - Remove a location
 * [update_commerce_collection](docs/sdks/commerce/README.md#update_commerce_collection) - Update a collection
 * [update_commerce_inventory](docs/sdks/commerce/README.md#update_commerce_inventory) - Update an inventory
-* [update_commerce_item](docs/sdks/commerce/README.md#update_commerce_item) - Update an item/product
+* [update_commerce_item](docs/sdks/commerce/README.md#update_commerce_item) - Update an item
 * [update_commerce_location](docs/sdks/commerce/README.md#update_commerce_location) - Update a location
 
 ### [Collection](docs/sdks/collection/README.md)
@@ -319,12 +319,12 @@ end
 
 ### [Item](docs/sdks/item/README.md)
 
-* [create_commerce_item](docs/sdks/item/README.md#create_commerce_item) - Create an item/product
-* [get_commerce_item](docs/sdks/item/README.md#get_commerce_item) - Retrieve an item/product
-* [list_commerce_items](docs/sdks/item/README.md#list_commerce_items) - List all items/products
-* [patch_commerce_item](docs/sdks/item/README.md#patch_commerce_item) - Update an item/product
-* [remove_commerce_item](docs/sdks/item/README.md#remove_commerce_item) - Remove an item/product
-* [update_commerce_item](docs/sdks/item/README.md#update_commerce_item) - Update an item/product
+* [create_commerce_item](docs/sdks/item/README.md#create_commerce_item) - Create an item
+* [get_commerce_item](docs/sdks/item/README.md#get_commerce_item) - Retrieve an item
+* [list_commerce_items](docs/sdks/item/README.md#list_commerce_items) - List all items
+* [patch_commerce_item](docs/sdks/item/README.md#patch_commerce_item) - Update an item
+* [remove_commerce_item](docs/sdks/item/README.md#remove_commerce_item) - Remove an item
+* [update_commerce_item](docs/sdks/item/README.md#update_commerce_item) - Update an item
 
 ### [Location](docs/sdks/location/README.md)
 

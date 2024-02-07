@@ -17,26 +17,26 @@ Create a file
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.file.create_storage_file(connection_id="string", storage_file=::UnifiedRubySDK::Shared::StorageFile.new(
-    permissions=[
+    permissions: [
       ::UnifiedRubySDK::Shared::StoragePermission.new(
-        roles=[
+        roles: [
           ::UnifiedRubySDK::Shared::PropertyStoragePermissionRoles::WRITE,
         ],
       ),
     ],
-    raw={
+    raw: {
       "Sports": "string",
     },
   ))
@@ -67,18 +67,18 @@ Retrieve a file
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.file.get_storage_file(connection_id="string", id="string", fields=[
+res = s.file.get_storage_file(connection_id="string", id="string", fields_=[
     "string",
   ])
 
@@ -94,7 +94,7 @@ end
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the File                   |
-| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
@@ -109,20 +109,20 @@ List all files
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListStorageFilesRequest.new(
-  connection_id="string",
-  fields=[
+  connection_id: "string",
+  fields_: [
     "string",
   ],
 )
@@ -154,26 +154,26 @@ Update a file
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.file.patch_storage_file(connection_id="string", id="string", storage_file=::UnifiedRubySDK::Shared::StorageFile.new(
-    permissions=[
+    permissions: [
       ::UnifiedRubySDK::Shared::StoragePermission.new(
-        roles=[
+        roles: [
           ::UnifiedRubySDK::Shared::PropertyStoragePermissionRoles::OWNER,
         ],
       ),
     ],
-    raw={
+    raw: {
       "Mexico": "string",
     },
   ))
@@ -205,20 +205,20 @@ Remove a file
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.file.remove_storage_file(connection_id="string", id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -244,26 +244,26 @@ Update a file
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.file.update_storage_file(connection_id="string", id="string", storage_file=::UnifiedRubySDK::Shared::StorageFile.new(
-    permissions=[
+    permissions: [
       ::UnifiedRubySDK::Shared::StoragePermission.new(
-        roles=[
+        roles: [
           ::UnifiedRubySDK::Shared::PropertyStoragePermissionRoles::WRITE,
         ],
       ),
     ],
-    raw={
+    raw: {
       "Male": "string",
     },
   ))

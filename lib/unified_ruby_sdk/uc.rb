@@ -68,14 +68,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
-    def get_uc_contact(connection_id, id, fields = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    def get_uc_contact(connection_id, id, fields_ = nil)
       # get_uc_contact - Retrieve a contact
       request = ::UnifiedRubySDK::Operations::GetUcContactRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields: fields
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)

@@ -18,7 +18,7 @@ module UnifiedRubySDK
       # The deal ID to filter results
       field :deal_id, T.nilable(::String), { 'query_param': { 'field_name': 'deal_id', 'style': 'form', 'explode': true } }
       # Comma-delimited fields to return
-      field :fields, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
       field :limit, T.nilable(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
 
@@ -35,12 +35,12 @@ module UnifiedRubySDK
       field :user_id, T.nilable(::String), { 'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, company_id: T.nilable(::String), deal_id: T.nilable(::String), fields: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-      def initialize(connection_id: nil, company_id: nil, deal_id: nil, fields: nil, limit: nil, offset: nil, order: nil, query: nil, sort: nil, updated_gte: nil, user_id: nil)
+      sig { params(connection_id: ::String, company_id: T.nilable(::String), deal_id: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+      def initialize(connection_id: nil, company_id: nil, deal_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, sort: nil, updated_gte: nil, user_id: nil)
         @connection_id = connection_id
         @company_id = company_id
         @deal_id = deal_id
-        @fields = fields
+        @fields_ = fields_
         @limit = limit
         @offset = offset
         @order = order

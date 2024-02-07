@@ -166,14 +166,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
-    def get_ticketing_customer(connection_id, id, fields = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    def get_ticketing_customer(connection_id, id, fields_ = nil)
       # get_ticketing_customer - Retrieve a customer
       request = ::UnifiedRubySDK::Operations::GetTicketingCustomerRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields: fields
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -209,14 +209,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
-    def get_ticketing_note(connection_id, id, fields = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    def get_ticketing_note(connection_id, id, fields_ = nil)
       # get_ticketing_note - Retrieve a note
       request = ::UnifiedRubySDK::Operations::GetTicketingNoteRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields: fields
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -252,14 +252,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
-    def get_ticketing_ticket(connection_id, id, fields = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    def get_ticketing_ticket(connection_id, id, fields_ = nil)
       # get_ticketing_ticket - Retrieve a ticket
       request = ::UnifiedRubySDK::Operations::GetTicketingTicketRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields: fields
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)

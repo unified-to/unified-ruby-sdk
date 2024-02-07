@@ -313,14 +313,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
-    def get_accounting_account(connection_id, id, fields = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    def get_accounting_account(connection_id, id, fields_ = nil)
       # get_accounting_account - Retrieve an account
       request = ::UnifiedRubySDK::Operations::GetAccountingAccountRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields: fields
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -356,14 +356,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
-    def get_accounting_contact(connection_id, id, fields = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    def get_accounting_contact(connection_id, id, fields_ = nil)
       # get_accounting_contact - Retrieve a contact
       request = ::UnifiedRubySDK::Operations::GetAccountingContactRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields: fields
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -399,14 +399,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
-    def get_accounting_invoice(connection_id, id, fields = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    def get_accounting_invoice(connection_id, id, fields_ = nil)
       # get_accounting_invoice - Retrieve a invoice
       request = ::UnifiedRubySDK::Operations::GetAccountingInvoiceRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields: fields
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -442,14 +442,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
-    def get_accounting_organization(connection_id, id, fields = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    def get_accounting_organization(connection_id, id, fields_ = nil)
       # get_accounting_organization - Retrieve an organization
       request = ::UnifiedRubySDK::Operations::GetAccountingOrganizationRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields: fields
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -485,14 +485,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
-    def get_accounting_payment(connection_id, id, fields = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    def get_accounting_payment(connection_id, id, fields_ = nil)
       # get_accounting_payment - Retrieve a payment
       request = ::UnifiedRubySDK::Operations::GetAccountingPaymentRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields: fields
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -528,14 +528,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
-    def get_accounting_taxrate(connection_id, id, fields = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    def get_accounting_taxrate(connection_id, id, fields_ = nil)
       # get_accounting_taxrate - Retrieve a taxrate
       request = ::UnifiedRubySDK::Operations::GetAccountingTaxrateRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields: fields
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -571,14 +571,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
-    def get_accounting_transaction(connection_id, id, fields = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    def get_accounting_transaction(connection_id, id, fields_ = nil)
       # get_accounting_transaction - Retrieve a transaction
       request = ::UnifiedRubySDK::Operations::GetAccountingTransactionRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields: fields
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)

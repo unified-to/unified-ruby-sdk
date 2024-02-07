@@ -235,8 +235,8 @@ module UnifiedRubySDK
       _populate_form(field_name, metadata.fetch(:explode, true), obj, delimiter, &get_query_param_field_name)
     end
 
-    sig { params(clazz: Class, query_params: FieldAugmented, gbls: T::Hash[Symbol, T::Hash[Symbol, T::Hash[Symbol, Object]]]).returns(T::Hash[Symbol, T::Array[String]]) }
-    def self.get_query_params(clazz, query_params, gbls)
+    sig { params(clazz: Class, query_params: FieldAugmented, gbls: T.nilable(T::Hash[Symbol, T::Hash[Symbol, T::Hash[Symbol, Object]]])).returns(T::Hash[Symbol, T::Array[String]]) }
+    def self.get_query_params(clazz, query_params, gbls = nil)
       params = {}
       param_fields = clazz.fields
       param_fields.each do |f|

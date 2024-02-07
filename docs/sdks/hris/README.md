@@ -23,30 +23,30 @@ Create an employee
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.hris.create_hris_employee(connection_id="string", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new(
-    address=::UnifiedRubySDK::Shared::PropertyHrisEmployeeAddress.new(),
-    emails=[
+    address: ::UnifiedRubySDK::Shared::PropertyHrisEmployeeAddress.new(),
+    emails: [
       ::UnifiedRubySDK::Shared::HrisEmail.new(
-        email="Adriel_Hansen@hotmail.com",
+        email: "Adriel_Hansen@hotmail.com",
       ),
     ],
-    raw={
+    raw: {
       "composite": "string",
     },
-    telephones=[
+    telephones: [
       ::UnifiedRubySDK::Shared::HrisTelephone.new(
-        telephone="string",
+        telephone: "string",
       ),
     ],
   ))
@@ -77,25 +77,25 @@ Create a group
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.hris.create_hris_group(connection_id="string", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(
-    manager_ids=[
+    manager_ids: [
       "string",
     ],
-    raw={
+    raw: {
       "transmitter": "string",
     },
-    user_ids=[
+    user_ids: [
       "string",
     ],
   ))
@@ -126,18 +126,18 @@ Retrieve an employee
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.hris.get_hris_employee(connection_id="string", id="string", fields=[
+res = s.hris.get_hris_employee(connection_id="string", id="string", fields_=[
     "string",
   ])
 
@@ -153,7 +153,7 @@ end
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Employee               |
-| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
@@ -168,18 +168,18 @@ Retrieve a group
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.hris.get_hris_group(connection_id="string", id="string", fields=[
+res = s.hris.get_hris_group(connection_id="string", id="string", fields_=[
     "string",
   ])
 
@@ -195,7 +195,7 @@ end
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Group                  |
-| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
@@ -210,20 +210,20 @@ List all employees
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListHrisEmployeesRequest.new(
-  connection_id="string",
-  fields=[
+  connection_id: "string",
+  fields_: [
     "string",
   ],
 )
@@ -255,20 +255,20 @@ List all groups
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListHrisGroupsRequest.new(
-  connection_id="string",
-  fields=[
+  connection_id: "string",
+  fields_: [
     "string",
   ],
 )
@@ -300,30 +300,30 @@ Update an employee
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.hris.patch_hris_employee(connection_id="string", id="string", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new(
-    address=::UnifiedRubySDK::Shared::PropertyHrisEmployeeAddress.new(),
-    emails=[
+    address: ::UnifiedRubySDK::Shared::PropertyHrisEmployeeAddress.new(),
+    emails: [
       ::UnifiedRubySDK::Shared::HrisEmail.new(
-        email="Zetta.Cassin@yahoo.com",
+        email: "Zetta.Cassin@yahoo.com",
       ),
     ],
-    raw={
+    raw: {
       "cyan": "string",
     },
-    telephones=[
+    telephones: [
       ::UnifiedRubySDK::Shared::HrisTelephone.new(
-        telephone="string",
+        telephone: "string",
       ),
     ],
   ))
@@ -355,25 +355,25 @@ Update a group
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.hris.patch_hris_group(connection_id="string", id="string", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(
-    manager_ids=[
+    manager_ids: [
       "string",
     ],
-    raw={
+    raw: {
       "scalable": "string",
     },
-    user_ids=[
+    user_ids: [
       "string",
     ],
   ))
@@ -405,20 +405,20 @@ Remove an employee
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.hris.remove_hris_employee(connection_id="string", id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -444,20 +444,20 @@ Remove a group
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.hris.remove_hris_group(connection_id="string", id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -483,30 +483,30 @@ Update an employee
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.hris.update_hris_employee(connection_id="string", id="string", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new(
-    address=::UnifiedRubySDK::Shared::PropertyHrisEmployeeAddress.new(),
-    emails=[
+    address: ::UnifiedRubySDK::Shared::PropertyHrisEmployeeAddress.new(),
+    emails: [
       ::UnifiedRubySDK::Shared::HrisEmail.new(
-        email="Abbie_Aufderhar@gmail.com",
+        email: "Abbie_Aufderhar@gmail.com",
       ),
     ],
-    raw={
+    raw: {
       "Mazda": "string",
     },
-    telephones=[
+    telephones: [
       ::UnifiedRubySDK::Shared::HrisTelephone.new(
-        telephone="string",
+        telephone: "string",
       ),
     ],
   ))
@@ -538,25 +538,25 @@ Update a group
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.hris.update_hris_group(connection_id="string", id="string", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(
-    manager_ids=[
+    manager_ids: [
       "string",
     ],
-    raw={
+    raw: {
       "disintermediate": "string",
     },
-    user_ids=[
+    user_ids: [
       "string",
     ],
   ))

@@ -12,20 +12,20 @@ Returns an authentication URL for the specified integration.  Once a successful 
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::GetUnifiedIntegrationLoginRequest.new(
-  integration_type="string",
-  workspace_id="string",
+  integration_type: "string",
+  workspace_id: "string",
 )
     
 res = s.login.get_unified_integration_login(req)

@@ -18,29 +18,29 @@ Create a contact
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.uc.create_uc_contact(connection_id="string", uc_contact=::UnifiedRubySDK::Shared::UcContact.new(
-    emails=[
+    emails: [
       ::UnifiedRubySDK::Shared::UcEmail.new(
-        email="Dulce_Becker30@yahoo.com",
+        email: "Dulce_Becker30@yahoo.com",
       ),
     ],
-    raw={
+    raw: {
       "challenge": "string",
     },
-    telephones=[
+    telephones: [
       ::UnifiedRubySDK::Shared::UcTelephone.new(
-        telephone="string",
+        telephone: "string",
       ),
     ],
   ))
@@ -71,18 +71,18 @@ Retrieve a contact
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.uc.get_uc_contact(connection_id="string", id="string", fields=[
+res = s.uc.get_uc_contact(connection_id="string", id="string", fields_=[
     "string",
   ])
 
@@ -98,7 +98,7 @@ end
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Contact                |
-| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
@@ -113,20 +113,20 @@ List all calls
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListUcCallsRequest.new(
-  connection_id="string",
-  fields=[
+  connection_id: "string",
+  fields_: [
     "string",
   ],
 )
@@ -158,20 +158,20 @@ List all contacts
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListUcContactsRequest.new(
-  connection_id="string",
-  fields=[
+  connection_id: "string",
+  fields_: [
     "string",
   ],
 )
@@ -203,29 +203,29 @@ Update a contact
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.uc.patch_uc_contact(connection_id="string", id="string", uc_contact=::UnifiedRubySDK::Shared::UcContact.new(
-    emails=[
+    emails: [
       ::UnifiedRubySDK::Shared::UcEmail.new(
-        email="Norene_Boehm97@hotmail.com",
+        email: "Norene_Boehm97@hotmail.com",
       ),
     ],
-    raw={
+    raw: {
       "Borders": "string",
     },
-    telephones=[
+    telephones: [
       ::UnifiedRubySDK::Shared::UcTelephone.new(
-        telephone="string",
+        telephone: "string",
       ),
     ],
   ))
@@ -257,20 +257,20 @@ Remove a contact
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.uc.remove_uc_contact(connection_id="string", id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -296,29 +296,29 @@ Update a contact
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.uc.update_uc_contact(connection_id="string", id="string", uc_contact=::UnifiedRubySDK::Shared::UcContact.new(
-    emails=[
+    emails: [
       ::UnifiedRubySDK::Shared::UcEmail.new(
-        email="Kianna.Witting90@gmail.com",
+        email: "Kianna.Witting90@gmail.com",
       ),
     ],
-    raw={
+    raw: {
       "Convertible": "string",
     },
-    telephones=[
+    telephones: [
       ::UnifiedRubySDK::Shared::UcTelephone.new(
-        telephone="string",
+        telephone: "string",
       ),
     ],
   ))

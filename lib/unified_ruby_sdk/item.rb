@@ -21,7 +21,7 @@ module UnifiedRubySDK
 
     sig { params(connection_id: ::String, commerce_item: T.nilable(::UnifiedRubySDK::Shared::CommerceItem)).returns(Utils::FieldAugmented) }
     def create_commerce_item(connection_id, commerce_item = nil)
-      # create_commerce_item - Create an item/product
+      # create_commerce_item - Create an item
       request = ::UnifiedRubySDK::Operations::CreateCommerceItemRequest.new(
         
         connection_id: connection_id,
@@ -68,14 +68,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
-    def get_commerce_item(connection_id, id, fields = nil)
-      # get_commerce_item - Retrieve an item/product
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    def get_commerce_item(connection_id, id, fields_ = nil)
+      # get_commerce_item - Retrieve an item
       request = ::UnifiedRubySDK::Operations::GetCommerceItemRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields: fields
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -113,7 +113,7 @@ module UnifiedRubySDK
 
     sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCommerceItemsRequest)).returns(Utils::FieldAugmented) }
     def list_commerce_items(request)
-      # list_commerce_items - List all items/products
+      # list_commerce_items - List all items
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -150,7 +150,7 @@ module UnifiedRubySDK
 
     sig { params(connection_id: ::String, id: ::String, commerce_item: T.nilable(::UnifiedRubySDK::Shared::CommerceItem)).returns(Utils::FieldAugmented) }
     def patch_commerce_item(connection_id, id, commerce_item = nil)
-      # patch_commerce_item - Update an item/product
+      # patch_commerce_item - Update an item
       request = ::UnifiedRubySDK::Operations::PatchCommerceItemRequest.new(
         
         connection_id: connection_id,
@@ -200,7 +200,7 @@ module UnifiedRubySDK
 
     sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
     def remove_commerce_item(connection_id, id)
-      # remove_commerce_item - Remove an item/product
+      # remove_commerce_item - Remove an item
       request = ::UnifiedRubySDK::Operations::RemoveCommerceItemRequest.new(
         
         connection_id: connection_id,
@@ -239,7 +239,7 @@ module UnifiedRubySDK
 
     sig { params(connection_id: ::String, id: ::String, commerce_item: T.nilable(::UnifiedRubySDK::Shared::CommerceItem)).returns(Utils::FieldAugmented) }
     def update_commerce_item(connection_id, id, commerce_item = nil)
-      # update_commerce_item - Update an item/product
+      # update_commerce_item - Update an item
       request = ::UnifiedRubySDK::Operations::UpdateCommerceItemRequest.new(
         
         connection_id: connection_id,

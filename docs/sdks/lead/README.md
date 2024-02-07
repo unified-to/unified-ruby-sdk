@@ -17,28 +17,28 @@ Create a lead
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.lead.create_crm_lead(connection_id="string", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(
-    address=::UnifiedRubySDK::Shared::PropertyCrmLeadAddress.new(),
-    emails=[
+    address: ::UnifiedRubySDK::Shared::PropertyCrmLeadAddress.new(),
+    emails: [
       ::UnifiedRubySDK::Shared::CrmEmail.new(),
     ],
-    raw={
+    raw: {
       "Designer": "string",
     },
-    telephones=[
+    telephones: [
       ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone="string",
+        telephone: "string",
       ),
     ],
   ))
@@ -69,18 +69,18 @@ Retrieve a lead
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.lead.get_crm_lead(connection_id="string", id="string", fields=[
+res = s.lead.get_crm_lead(connection_id="string", id="string", fields_=[
     "string",
   ])
 
@@ -96,7 +96,7 @@ end
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Lead                   |
-| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
@@ -111,20 +111,20 @@ List all leads
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListCrmLeadsRequest.new(
-  connection_id="string",
-  fields=[
+  connection_id: "string",
+  fields_: [
     "string",
   ],
 )
@@ -156,28 +156,28 @@ Update a lead
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.lead.patch_crm_lead(connection_id="string", id="string", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(
-    address=::UnifiedRubySDK::Shared::PropertyCrmLeadAddress.new(),
-    emails=[
+    address: ::UnifiedRubySDK::Shared::PropertyCrmLeadAddress.new(),
+    emails: [
       ::UnifiedRubySDK::Shared::CrmEmail.new(),
     ],
-    raw={
+    raw: {
       "deposit": "string",
     },
-    telephones=[
+    telephones: [
       ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone="string",
+        telephone: "string",
       ),
     ],
   ))
@@ -209,20 +209,20 @@ Remove a lead
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.lead.remove_crm_lead(connection_id="string", id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -248,28 +248,28 @@ Update a lead
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.lead.update_crm_lead(connection_id="string", id="string", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(
-    address=::UnifiedRubySDK::Shared::PropertyCrmLeadAddress.new(),
-    emails=[
+    address: ::UnifiedRubySDK::Shared::PropertyCrmLeadAddress.new(),
+    emails: [
       ::UnifiedRubySDK::Shared::CrmEmail.new(),
     ],
-    raw={
+    raw: {
       "Northwest": "string",
     },
-    telephones=[
+    telephones: [
       ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone="string",
+        telephone: "string",
       ),
     ],
   ))

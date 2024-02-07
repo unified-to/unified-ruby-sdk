@@ -13,6 +13,8 @@ module UnifiedRubySDK
         SCHEDULED = new('SCHEDULED')
         AWAITING_FEEDBACK = new('AWAITING_FEEDBACK')
         COMPLETE = new('COMPLETE')
+        CANCELED = new('CANCELED')
+        NEEDS_SCHEDULING = new('NEEDS_SCHEDULING')
       end
     end
 

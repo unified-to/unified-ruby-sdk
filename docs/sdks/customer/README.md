@@ -17,32 +17,32 @@ Create a customer
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.customer.create_ticketing_customer(connection_id="string", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new(
-    emails=[
+    emails: [
       ::UnifiedRubySDK::Shared::TicketingEmail.new(
-        email="Guadalupe78@yahoo.com",
+        email: "Guadalupe78@yahoo.com",
       ),
     ],
-    raw={
+    raw: {
       "Borders": "string",
     },
-    tags=[
+    tags: [
       "string",
     ],
-    telephones=[
+    telephones: [
       ::UnifiedRubySDK::Shared::TicketingTelephone.new(
-        telephone="string",
+        telephone: "string",
       ),
     ],
   ))
@@ -73,18 +73,18 @@ Retrieve a customer
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.customer.get_ticketing_customer(connection_id="string", id="string", fields=[
+res = s.customer.get_ticketing_customer(connection_id="string", id="string", fields_=[
     "string",
   ])
 
@@ -100,7 +100,7 @@ end
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Customer               |
-| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
@@ -115,20 +115,20 @@ List all customers
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListTicketingCustomersRequest.new(
-  connection_id="string",
-  fields=[
+  connection_id: "string",
+  fields_: [
     "string",
   ],
 )
@@ -160,32 +160,32 @@ Update a customer
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.customer.patch_ticketing_customer(connection_id="string", id="string", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new(
-    emails=[
+    emails: [
       ::UnifiedRubySDK::Shared::TicketingEmail.new(
-        email="Raymundo93@hotmail.com",
+        email: "Raymundo93@hotmail.com",
       ),
     ],
-    raw={
+    raw: {
       "Brownsville": "string",
     },
-    tags=[
+    tags: [
       "string",
     ],
-    telephones=[
+    telephones: [
       ::UnifiedRubySDK::Shared::TicketingTelephone.new(
-        telephone="string",
+        telephone: "string",
       ),
     ],
   ))
@@ -217,20 +217,20 @@ Remove a customer
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.customer.remove_ticketing_customer(connection_id="string", id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -256,32 +256,32 @@ Update a customer
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.customer.update_ticketing_customer(connection_id="string", id="string", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new(
-    emails=[
+    emails: [
       ::UnifiedRubySDK::Shared::TicketingEmail.new(
-        email="Mohamed.Friesen@hotmail.com",
+        email: "Mohamed.Friesen@hotmail.com",
       ),
     ],
-    raw={
+    raw: {
       "Barium": "string",
     },
-    tags=[
+    tags: [
       "string",
     ],
-    telephones=[
+    telephones: [
       ::UnifiedRubySDK::Shared::TicketingTelephone.new(
-        telephone="string",
+        telephone: "string",
       ),
     ],
   ))

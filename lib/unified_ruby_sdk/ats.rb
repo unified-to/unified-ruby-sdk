@@ -313,14 +313,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
-    def get_ats_application(connection_id, id, fields = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    def get_ats_application(connection_id, id, fields_ = nil)
       # get_ats_application - Retrieve an application
       request = ::UnifiedRubySDK::Operations::GetAtsApplicationRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields: fields
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -356,14 +356,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
-    def get_ats_candidate(connection_id, id, fields = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    def get_ats_candidate(connection_id, id, fields_ = nil)
       # get_ats_candidate - Retrieve a candidate
       request = ::UnifiedRubySDK::Operations::GetAtsCandidateRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields: fields
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -399,14 +399,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
-    def get_ats_company(connection_id, id, fields = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    def get_ats_company(connection_id, id, fields_ = nil)
       # get_ats_company - Retrieve a company
       request = ::UnifiedRubySDK::Operations::GetAtsCompanyRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields: fields
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -442,14 +442,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
-    def get_ats_document(connection_id, id, fields = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    def get_ats_document(connection_id, id, fields_ = nil)
       # get_ats_document - Retrieve a document
       request = ::UnifiedRubySDK::Operations::GetAtsDocumentRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields: fields
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -485,14 +485,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
-    def get_ats_interview(connection_id, id, fields = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    def get_ats_interview(connection_id, id, fields_ = nil)
       # get_ats_interview - Retrieve a interview
       request = ::UnifiedRubySDK::Operations::GetAtsInterviewRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields: fields
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -528,14 +528,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
-    def get_ats_job(connection_id, id, fields = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    def get_ats_job(connection_id, id, fields_ = nil)
       # get_ats_job - Retrieve a job
       request = ::UnifiedRubySDK::Operations::GetAtsJobRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields: fields
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -571,14 +571,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
-    def get_ats_scorecard(connection_id, id, fields = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    def get_ats_scorecard(connection_id, id, fields_ = nil)
       # get_ats_scorecard - Retrieve a scorecard
       request = ::UnifiedRubySDK::Operations::GetAtsScorecardRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields: fields
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)

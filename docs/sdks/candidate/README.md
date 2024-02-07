@@ -17,36 +17,36 @@ Create a candidate
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.candidate.create_ats_candidate(connection_id="string", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new(
-    address=::UnifiedRubySDK::Shared::PropertyAtsCandidateAddress.new(),
-    emails=[
+    address: ::UnifiedRubySDK::Shared::PropertyAtsCandidateAddress.new(),
+    emails: [
       ::UnifiedRubySDK::Shared::AtsEmail.new(
-        email="Robin_Feeney@hotmail.com",
+        email: "Robin_Feeney@hotmail.com",
       ),
     ],
-    link_urls=[
+    link_urls: [
       "string",
     ],
-    raw={
+    raw: {
       "radian": "string",
     },
-    tags=[
+    tags: [
       "string",
     ],
-    telephones=[
+    telephones: [
       ::UnifiedRubySDK::Shared::AtsTelephone.new(
-        telephone="string",
+        telephone: "string",
       ),
     ],
   ))
@@ -77,18 +77,18 @@ Retrieve a candidate
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.candidate.get_ats_candidate(connection_id="string", id="string", fields=[
+res = s.candidate.get_ats_candidate(connection_id="string", id="string", fields_=[
     "string",
   ])
 
@@ -104,7 +104,7 @@ end
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Candidate              |
-| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
@@ -119,20 +119,20 @@ List all candidates
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListAtsCandidatesRequest.new(
-  connection_id="string",
-  fields=[
+  connection_id: "string",
+  fields_: [
     "string",
   ],
 )
@@ -164,36 +164,36 @@ Update a candidate
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.candidate.patch_ats_candidate(connection_id="string", id="string", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new(
-    address=::UnifiedRubySDK::Shared::PropertyAtsCandidateAddress.new(),
-    emails=[
+    address: ::UnifiedRubySDK::Shared::PropertyAtsCandidateAddress.new(),
+    emails: [
       ::UnifiedRubySDK::Shared::AtsEmail.new(
-        email="Tracy.Collins13@gmail.com",
+        email: "Tracy.Collins13@gmail.com",
       ),
     ],
-    link_urls=[
+    link_urls: [
       "string",
     ],
-    raw={
+    raw: {
       "Credit": "string",
     },
-    tags=[
+    tags: [
       "string",
     ],
-    telephones=[
+    telephones: [
       ::UnifiedRubySDK::Shared::AtsTelephone.new(
-        telephone="string",
+        telephone: "string",
       ),
     ],
   ))
@@ -225,20 +225,20 @@ Remove a candidate
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.candidate.remove_ats_candidate(connection_id="string", id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -264,36 +264,36 @@ Update a candidate
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.candidate.update_ats_candidate(connection_id="string", id="string", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new(
-    address=::UnifiedRubySDK::Shared::PropertyAtsCandidateAddress.new(),
-    emails=[
+    address: ::UnifiedRubySDK::Shared::PropertyAtsCandidateAddress.new(),
+    emails: [
       ::UnifiedRubySDK::Shared::AtsEmail.new(
-        email="Gaetano86@hotmail.com",
+        email: "Gaetano86@hotmail.com",
       ),
     ],
-    link_urls=[
+    link_urls: [
       "string",
     ],
-    raw={
+    raw: {
       "B2C": "string",
     },
-    tags=[
+    tags: [
       "string",
     ],
-    telephones=[
+    telephones: [
       ::UnifiedRubySDK::Shared::AtsTelephone.new(
-        telephone="string",
+        telephone: "string",
       ),
     ],
   ))

@@ -17,39 +17,39 @@ Create a job
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.job.create_ats_job(connection_id="string", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(
-    addresses=[
+    addresses: [
       ::UnifiedRubySDK::Shared::AtsAddress.new(),
     ],
-    compensation=[
+    compensation: [
       ::UnifiedRubySDK::Shared::AtsCompensation.new(
-        type=::UnifiedRubySDK::Shared::AtsCompensationType::SALARY,
+        type: ::UnifiedRubySDK::Shared::AtsCompensationType::SALARY,
       ),
     ],
-    departments=[
+    departments: [
       "string",
     ],
-    hiring_manager_ids=[
+    hiring_manager_ids: [
       "string",
     ],
-    public_job_urls=[
+    public_job_urls: [
       "string",
     ],
-    raw={
+    raw: {
       "Loan": "string",
     },
-    recruiter_ids=[
+    recruiter_ids: [
       "string",
     ],
   ))
@@ -80,18 +80,18 @@ Retrieve a job
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.job.get_ats_job(connection_id="string", id="string", fields=[
+res = s.job.get_ats_job(connection_id="string", id="string", fields_=[
     "string",
   ])
 
@@ -107,7 +107,7 @@ end
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Job                    |
-| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
@@ -122,20 +122,20 @@ List all jobs
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListAtsJobsRequest.new(
-  connection_id="string",
-  fields=[
+  connection_id: "string",
+  fields_: [
     "string",
   ],
 )
@@ -167,39 +167,39 @@ Update a job
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.job.patch_ats_job(connection_id="string", id="string", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(
-    addresses=[
+    addresses: [
       ::UnifiedRubySDK::Shared::AtsAddress.new(),
     ],
-    compensation=[
+    compensation: [
       ::UnifiedRubySDK::Shared::AtsCompensation.new(
-        type=::UnifiedRubySDK::Shared::AtsCompensationType::BONUS,
+        type: ::UnifiedRubySDK::Shared::AtsCompensationType::BONUS,
       ),
     ],
-    departments=[
+    departments: [
       "string",
     ],
-    hiring_manager_ids=[
+    hiring_manager_ids: [
       "string",
     ],
-    public_job_urls=[
+    public_job_urls: [
       "string",
     ],
-    raw={
+    raw: {
       "indigo": "string",
     },
-    recruiter_ids=[
+    recruiter_ids: [
       "string",
     ],
   ))
@@ -231,20 +231,20 @@ Remove a job
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.job.remove_ats_job(connection_id="string", id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -270,39 +270,39 @@ Update a job
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.job.update_ats_job(connection_id="string", id="string", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(
-    addresses=[
+    addresses: [
       ::UnifiedRubySDK::Shared::AtsAddress.new(),
     ],
-    compensation=[
+    compensation: [
       ::UnifiedRubySDK::Shared::AtsCompensation.new(
-        type=::UnifiedRubySDK::Shared::AtsCompensationType::EQUITY,
+        type: ::UnifiedRubySDK::Shared::AtsCompensationType::EQUITY,
       ),
     ],
-    departments=[
+    departments: [
       "string",
     ],
-    hiring_manager_ids=[
+    hiring_manager_ids: [
       "string",
     ],
-    public_job_urls=[
+    public_job_urls: [
       "string",
     ],
-    raw={
+    raw: {
       "Plastic": "string",
     },
-    recruiter_ids=[
+    recruiter_ids: [
       "string",
     ],
   ))

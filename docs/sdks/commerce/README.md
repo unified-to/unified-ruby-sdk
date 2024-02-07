@@ -5,27 +5,27 @@
 
 * [create_commerce_collection](#create_commerce_collection) - Create a collection
 * [create_commerce_inventory](#create_commerce_inventory) - Create an inventory
-* [create_commerce_item](#create_commerce_item) - Create an item/product
+* [create_commerce_item](#create_commerce_item) - Create an item
 * [create_commerce_location](#create_commerce_location) - Create a location
 * [get_commerce_collection](#get_commerce_collection) - Retrieve a collection
 * [get_commerce_inventory](#get_commerce_inventory) - Retrieve an inventory
-* [get_commerce_item](#get_commerce_item) - Retrieve an item/product
+* [get_commerce_item](#get_commerce_item) - Retrieve an item
 * [get_commerce_location](#get_commerce_location) - Retrieve a location
 * [list_commerce_collections](#list_commerce_collections) - List all collections
 * [list_commerce_inventories](#list_commerce_inventories) - List all inventories
-* [list_commerce_items](#list_commerce_items) - List all items/products
+* [list_commerce_items](#list_commerce_items) - List all items
 * [list_commerce_locations](#list_commerce_locations) - List all locations
 * [patch_commerce_collection](#patch_commerce_collection) - Update a collection
 * [patch_commerce_inventory](#patch_commerce_inventory) - Update an inventory
-* [patch_commerce_item](#patch_commerce_item) - Update an item/product
+* [patch_commerce_item](#patch_commerce_item) - Update an item
 * [patch_commerce_location](#patch_commerce_location) - Update a location
 * [remove_commerce_collection](#remove_commerce_collection) - Remove a collection
 * [remove_commerce_inventory](#remove_commerce_inventory) - Remove an inventory
-* [remove_commerce_item](#remove_commerce_item) - Remove an item/product
+* [remove_commerce_item](#remove_commerce_item) - Remove an item
 * [remove_commerce_location](#remove_commerce_location) - Remove a location
 * [update_commerce_collection](#update_commerce_collection) - Update a collection
 * [update_commerce_inventory](#update_commerce_inventory) - Update an inventory
-* [update_commerce_item](#update_commerce_item) - Update an item/product
+* [update_commerce_item](#update_commerce_item) - Update an item
 * [update_commerce_location](#update_commerce_location) - Update a location
 
 ## create_commerce_collection
@@ -35,32 +35,32 @@ Create a collection
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.commerce.create_commerce_collection(connection_id="string", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
-    id="<ID>",
-    item_ids=[
+    id: "<ID>",
+    item_ids: [
       "string",
     ],
-    media=[
+    media: [
       ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-        url="http://uneven-mattress.name",
+        url: "http://uneven-mattress.name",
       ),
     ],
-    name="string",
-    raw={
+    name: "string",
+    raw: {
       "whoever": "string",
     },
-    tags=[
+    tags: [
       "string",
     ],
   ))
@@ -91,20 +91,20 @@ Create an inventory
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.commerce.create_commerce_inventory(connection_id="string", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
-    available=5165.08,
-    raw={
+    available: 5165.08,
+    raw: {
       "Officer": "string",
     },
   ))
@@ -130,58 +130,58 @@ end
 
 ## create_commerce_item
 
-Create an item/product
+Create an item
 
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.commerce.create_commerce_item(connection_id="string", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(
-    media=[
+    media: [
       ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-        url="http://loud-minister.name",
+        url: "http://loud-minister.name",
       ),
     ],
-    name="string",
-    raw={
+    name: "string",
+    raw: {
       "Awesome": "string",
     },
-    tags=[
+    tags: [
       "string",
     ],
-    variants=[
+    variants: [
       ::UnifiedRubySDK::Shared::CommerceItemVariant.new(
-        media=[
+        media: [
           ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-            url="https://burdensome-pinecone.name",
+            url: "https://burdensome-pinecone.name",
           ),
         ],
-        name="string",
-        options=[
+        name: "string",
+        options: [
           ::UnifiedRubySDK::Shared::CommerceItemOption.new(
-            id="<ID>",
-            name="string",
-            values=[
+            id: "<ID>",
+            name: "string",
+            values: [
               "string",
             ],
           ),
         ],
-        prices=[
+        prices: [
           ::UnifiedRubySDK::Shared::CommerceItemPrice.new(
-            price=5559.73,
+            price: 5559.73,
           ),
         ],
-        tags=[
+        tags: [
           "string",
         ],
       ),
@@ -214,21 +214,21 @@ Create a location
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.commerce.create_commerce_location(connection_id="string", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
-    address=::UnifiedRubySDK::Shared::PropertyCommerceLocationAddress.new(),
-    name="string",
-    raw={
+    address: ::UnifiedRubySDK::Shared::PropertyCommerceLocationAddress.new(),
+    name: "string",
+    raw: {
       "Books": "string",
     },
   ))
@@ -259,18 +259,18 @@ Retrieve a collection
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.commerce.get_commerce_collection(connection_id="string", id="string", fields=[
+res = s.commerce.get_commerce_collection(connection_id="string", id="string", fields_=[
     "string",
   ])
 
@@ -286,7 +286,7 @@ end
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Collection             |
-| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
@@ -301,18 +301,18 @@ Retrieve an inventory
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.commerce.get_commerce_inventory(connection_id="string", id="string", fields=[
+res = s.commerce.get_commerce_inventory(connection_id="string", id="string", fields_=[
     "string",
   ])
 
@@ -328,7 +328,7 @@ end
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Inventory              |
-| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
@@ -338,23 +338,23 @@ end
 
 ## get_commerce_item
 
-Retrieve an item/product
+Retrieve an item
 
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.commerce.get_commerce_item(connection_id="string", id="string", fields=[
+res = s.commerce.get_commerce_item(connection_id="string", id="string", fields_=[
     "string",
   ])
 
@@ -370,7 +370,7 @@ end
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Item                   |
-| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
@@ -385,18 +385,18 @@ Retrieve a location
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.commerce.get_commerce_location(connection_id="string", id="string", fields=[
+res = s.commerce.get_commerce_location(connection_id="string", id="string", fields_=[
     "string",
   ])
 
@@ -412,7 +412,7 @@ end
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Location               |
-| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
@@ -427,20 +427,20 @@ List all collections
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListCommerceCollectionsRequest.new(
-  connection_id="string",
-  fields=[
+  connection_id: "string",
+  fields_: [
     "string",
   ],
 )
@@ -472,20 +472,20 @@ List all inventories
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListCommerceInventoriesRequest.new(
-  connection_id="string",
-  fields=[
+  connection_id: "string",
+  fields_: [
     "string",
   ],
 )
@@ -512,25 +512,25 @@ end
 
 ## list_commerce_items
 
-List all items/products
+List all items
 
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListCommerceItemsRequest.new(
-  connection_id="string",
-  fields=[
+  connection_id: "string",
+  fields_: [
     "string",
   ],
 )
@@ -562,20 +562,20 @@ List all locations
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListCommerceLocationsRequest.new(
-  connection_id="string",
-  fields=[
+  connection_id: "string",
+  fields_: [
     "string",
   ],
 )
@@ -607,32 +607,32 @@ Update a collection
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.commerce.patch_commerce_collection(connection_id="string", id="string", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
-    id="<ID>",
-    item_ids=[
+    id: "<ID>",
+    item_ids: [
       "string",
     ],
-    media=[
+    media: [
       ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-        url="http://personal-sorrow.com",
+        url: "http://personal-sorrow.com",
       ),
     ],
-    name="string",
-    raw={
+    name: "string",
+    raw: {
       "Cheese": "string",
     },
-    tags=[
+    tags: [
       "string",
     ],
   ))
@@ -664,20 +664,20 @@ Update an inventory
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.commerce.patch_commerce_inventory(connection_id="string", id="string", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
-    available=615.23,
-    raw={
+    available: 615.23,
+    raw: {
       "Modern": "string",
     },
   ))
@@ -704,58 +704,58 @@ end
 
 ## patch_commerce_item
 
-Update an item/product
+Update an item
 
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.commerce.patch_commerce_item(connection_id="string", id="string", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(
-    media=[
+    media: [
       ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-        url="http://frank-galley.biz",
+        url: "http://frank-galley.biz",
       ),
     ],
-    name="string",
-    raw={
+    name: "string",
+    raw: {
       "Dollar": "string",
     },
-    tags=[
+    tags: [
       "string",
     ],
-    variants=[
+    variants: [
       ::UnifiedRubySDK::Shared::CommerceItemVariant.new(
-        media=[
+        media: [
           ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-            url="http://jaded-sequence.name",
+            url: "http://jaded-sequence.name",
           ),
         ],
-        name="string",
-        options=[
+        name: "string",
+        options: [
           ::UnifiedRubySDK::Shared::CommerceItemOption.new(
-            id="<ID>",
-            name="string",
-            values=[
+            id: "<ID>",
+            name: "string",
+            values: [
               "string",
             ],
           ),
         ],
-        prices=[
+        prices: [
           ::UnifiedRubySDK::Shared::CommerceItemPrice.new(
-            price=3986.91,
+            price: 3986.91,
           ),
         ],
-        tags=[
+        tags: [
           "string",
         ],
       ),
@@ -789,21 +789,21 @@ Update a location
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.commerce.patch_commerce_location(connection_id="string", id="string", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
-    address=::UnifiedRubySDK::Shared::PropertyCommerceLocationAddress.new(),
-    name="string",
-    raw={
+    address: ::UnifiedRubySDK::Shared::PropertyCommerceLocationAddress.new(),
+    name: "string",
+    raw: {
       "Kina": "string",
     },
   ))
@@ -835,20 +835,20 @@ Remove a collection
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.commerce.remove_commerce_collection(connection_id="string", id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -874,20 +874,20 @@ Remove an inventory
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.commerce.remove_commerce_inventory(connection_id="string", id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -908,25 +908,25 @@ end
 
 ## remove_commerce_item
 
-Remove an item/product
+Remove an item
 
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.commerce.remove_commerce_item(connection_id="string", id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -952,20 +952,20 @@ Remove a location
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.commerce.remove_commerce_location(connection_id="string", id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -991,32 +991,32 @@ Update a collection
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.commerce.update_commerce_collection(connection_id="string", id="string", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
-    id="<ID>",
-    item_ids=[
+    id: "<ID>",
+    item_ids: [
       "string",
     ],
-    media=[
+    media: [
       ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-        url="https://stupid-entity.org",
+        url: "https://stupid-entity.org",
       ),
     ],
-    name="string",
-    raw={
+    name: "string",
+    raw: {
       "Modern": "string",
     },
-    tags=[
+    tags: [
       "string",
     ],
   ))
@@ -1048,20 +1048,20 @@ Update an inventory
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.commerce.update_commerce_inventory(connection_id="string", id="string", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
-    available=9360.02,
-    raw={
+    available: 9360.02,
+    raw: {
       "wavy": "string",
     },
   ))
@@ -1088,58 +1088,58 @@ end
 
 ## update_commerce_item
 
-Update an item/product
+Update an item
 
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.commerce.update_commerce_item(connection_id="string", id="string", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(
-    media=[
+    media: [
       ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-        url="https://aggressive-major-league.org",
+        url: "https://aggressive-major-league.org",
       ),
     ],
-    name="string",
-    raw={
+    name: "string",
+    raw: {
       "fuga": "string",
     },
-    tags=[
+    tags: [
       "string",
     ],
-    variants=[
+    variants: [
       ::UnifiedRubySDK::Shared::CommerceItemVariant.new(
-        media=[
+        media: [
           ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-            url="http://exemplary-standing.biz",
+            url: "http://exemplary-standing.biz",
           ),
         ],
-        name="string",
-        options=[
+        name: "string",
+        options: [
           ::UnifiedRubySDK::Shared::CommerceItemOption.new(
-            id="<ID>",
-            name="string",
-            values=[
+            id: "<ID>",
+            name: "string",
+            values: [
               "string",
             ],
           ),
         ],
-        prices=[
+        prices: [
           ::UnifiedRubySDK::Shared::CommerceItemPrice.new(
-            price=113.63,
+            price: 113.63,
           ),
         ],
-        tags=[
+        tags: [
           "string",
         ],
       ),
@@ -1173,21 +1173,21 @@ Update a location
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.commerce.update_commerce_location(connection_id="string", id="string", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
-    address=::UnifiedRubySDK::Shared::PropertyCommerceLocationAddress.new(),
-    name="string",
-    raw={
+    address: ::UnifiedRubySDK::Shared::PropertyCommerceLocationAddress.new(),
+    name: "string",
+    raw: {
       "hmph": "string",
     },
   ))

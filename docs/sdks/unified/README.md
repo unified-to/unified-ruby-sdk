@@ -28,39 +28,39 @@ Create connection
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Shared::Connection.new(
-  auth=::UnifiedRubySDK::Shared::PropertyConnectionAuth.new(
-    emails=[
+  auth: ::UnifiedRubySDK::Shared::PropertyConnectionAuth.new(
+    emails: [
       "string",
     ],
-    meta={
+    meta: {
       "likewise": "string",
     },
-    other_auth_info=[
+    other_auth_info: [
       "string",
     ],
   ),
-  categories=[
+  categories: [
     ::UnifiedRubySDK::Shared::PropertyConnectionCategories::ENRICH,
   ],
-  cursors_cache=[
+  cursors_cache: [
     {
       "Specialist": "string",
     },
   ],
-  integration_type="string",
-  permissions=[
+  integration_type: "string",
+  permissions: [
     ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_COMPANY_READ,
   ],
 )
@@ -92,27 +92,27 @@ The data payload received by your server is described at https://docs.unified.to
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.unified.create_unified_webhook(webhook=::UnifiedRubySDK::Shared::Webhook.new(
-    connection_id="string",
-    event=::UnifiedRubySDK::Shared::Event::CREATED,
-    hook_url="string",
-    interval=188.12,
-    meta={
+    connection_id: "string",
+    event: ::UnifiedRubySDK::Shared::Event::CREATED,
+    hook_url: "string",
+    interval: 188.12,
+    meta: {
       "payment": "string",
     },
-    object_type=::UnifiedRubySDK::Shared::ObjectType::ACCOUNTING_CONTACT,
-    runs=[
+    object_type: ::UnifiedRubySDK::Shared::ObjectType::ACCOUNTING_CONTACT,
+    runs: [
       "string",
     ],
   ), include_all=false)
@@ -143,13 +143,13 @@ Retrieve specific API Call by its ID
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
@@ -181,13 +181,13 @@ Retrieve connection
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
@@ -219,23 +219,23 @@ Returns an authorization URL for the specified integration.  Once a successful a
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::GetUnifiedIntegrationAuthRequest.new(
-  integration_type="string",
-  scopes=[
+  integration_type: "string",
+  scopes: [
     ::UnifiedRubySDK::Operations::Scopes::HRIS_EMPLOYEE_WRITE,
   ],
-  workspace_id="string",
+  workspace_id: "string",
 )
     
 res = s.unified.get_unified_integration_auth(req)
@@ -265,13 +265,13 @@ Retrieve webhook by its ID
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
@@ -303,13 +303,13 @@ Returns API Calls
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
@@ -343,19 +343,19 @@ List all connections
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListUnifiedConnectionsRequest.new(
-  categories=[
+  categories: [
     ::UnifiedRubySDK::Operations::Categories::MARTECH,
   ],
 )
@@ -387,22 +387,22 @@ No authentication required as this is to be used by front-end interface
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListUnifiedIntegrationWorkspacesRequest.new(
-  categories=[
+  categories: [
     ::UnifiedRubySDK::Operations::QueryParamCategories::ACCOUNTING,
   ],
-  workspace_id="string",
+  workspace_id: "string",
 )
     
 res = s.unified.list_unified_integration_workspaces(req)
@@ -432,19 +432,19 @@ Returns all integrations
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListUnifiedIntegrationsRequest.new(
-  categories=[
+  categories: [
     ::UnifiedRubySDK::Operations::ListUnifiedIntegrationsQueryParamCategories::CRM,
   ],
 )
@@ -476,13 +476,13 @@ Returns all registered webhooks
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
@@ -516,39 +516,39 @@ Update connection
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.unified.patch_unified_connection(id="string", connection=::UnifiedRubySDK::Shared::Connection.new(
-    auth=::UnifiedRubySDK::Shared::PropertyConnectionAuth.new(
-      emails=[
+    auth: ::UnifiedRubySDK::Shared::PropertyConnectionAuth.new(
+      emails: [
         "string",
       ],
-      meta={
+      meta: {
         "International": "string",
       },
-      other_auth_info=[
+      other_auth_info: [
         "string",
       ],
     ),
-    categories=[
+    categories: [
       ::UnifiedRubySDK::Shared::PropertyConnectionCategories::COMMERCE,
     ],
-    cursors_cache=[
+    cursors_cache: [
       {
         "Coupe": "string",
       },
     ],
-    integration_type="string",
-    permissions=[
+    integration_type: "string",
+    permissions: [
       ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ACCOUNTING_CONTACT_READ,
     ],
   ))
@@ -579,20 +579,20 @@ Trigger webhook
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.unified.patch_unified_webhook_trigger(id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -617,20 +617,20 @@ Remove connection
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.unified.remove_unified_connection(id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -655,20 +655,20 @@ Remove webhook subscription
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.unified.remove_unified_webhook(id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -693,39 +693,39 @@ Update connection
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.unified.update_unified_connection(id="string", connection=::UnifiedRubySDK::Shared::Connection.new(
-    auth=::UnifiedRubySDK::Shared::PropertyConnectionAuth.new(
-      emails=[
+    auth: ::UnifiedRubySDK::Shared::PropertyConnectionAuth.new(
+      emails: [
         "string",
       ],
-      meta={
+      meta: {
         "tan": "string",
       },
-      other_auth_info=[
+      other_auth_info: [
         "string",
       ],
     ),
-    categories=[
+    categories: [
       ::UnifiedRubySDK::Shared::PropertyConnectionCategories::COMMERCE,
     ],
-    cursors_cache=[
+    cursors_cache: [
       {
         "coulomb": "string",
       },
     ],
-    integration_type="string",
-    permissions=[
+    integration_type: "string",
+    permissions: [
       ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ACCOUNTING_TRANSACTION_WRITE,
     ],
   ))
@@ -756,20 +756,20 @@ Trigger webhook
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.unified.update_unified_webhook_trigger(id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 

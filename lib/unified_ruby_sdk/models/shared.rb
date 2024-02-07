@@ -58,6 +58,7 @@ module UnifiedRubySDK
     autoload :AtsAddress, 'unified_ruby_sdk/models/shared/atsaddress.rb'
     autoload :Recommendation, 'unified_ruby_sdk/models/shared/recommendation.rb'
     autoload :AtsScorecard, 'unified_ruby_sdk/models/shared/atsscorecard.rb'
+    autoload :AtsScorecardQuestion, 'unified_ruby_sdk/models/shared/atsscorecardquestion.rb'
     autoload :AtsCompany, 'unified_ruby_sdk/models/shared/atscompany.rb'
     autoload :PropertyAtsCompanyAddress, 'unified_ruby_sdk/models/shared/property_atscompany_address.rb'
     autoload :AtsStatusStatus, 'unified_ruby_sdk/models/shared/atsstatus_status.rb'

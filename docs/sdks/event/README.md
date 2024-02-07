@@ -17,48 +17,48 @@ Create a event
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.event.create_crm_event(connection_id="string", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(
-    call=::UnifiedRubySDK::Shared::PropertyCrmEventCall.new(),
-    company_ids=[
+    call: ::UnifiedRubySDK::Shared::PropertyCrmEventCall.new(),
+    company_ids: [
       "string",
     ],
-    contact_ids=[
+    contact_ids: [
       "string",
     ],
-    deal_ids=[
+    deal_ids: [
       "string",
     ],
-    email=::UnifiedRubySDK::Shared::PropertyCrmEventEmail.new(
-      attachment_file_ids=[
+    email: ::UnifiedRubySDK::Shared::PropertyCrmEventEmail.new(
+      attachment_file_ids: [
         "string",
       ],
-      cc=[
+      cc: [
         "string",
       ],
-      to=[
+      to: [
         "string",
       ],
     ),
-    lead_ids=[
+    lead_ids: [
       "string",
     ],
-    meeting=::UnifiedRubySDK::Shared::PropertyCrmEventMeeting.new(),
-    note=::UnifiedRubySDK::Shared::PropertyCrmEventNote.new(),
-    raw={
+    meeting: ::UnifiedRubySDK::Shared::PropertyCrmEventMeeting.new(),
+    note: ::UnifiedRubySDK::Shared::PropertyCrmEventNote.new(),
+    raw: {
       "repeatedly": "string",
     },
-    task=::UnifiedRubySDK::Shared::PropertyCrmEventTask.new(),
+    task: ::UnifiedRubySDK::Shared::PropertyCrmEventTask.new(),
   ))
 
 if ! res.crm_event.nil?
@@ -87,18 +87,18 @@ Retrieve a event
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
-res = s.event.get_crm_event(connection_id="string", id="string", fields=[
+res = s.event.get_crm_event(connection_id="string", id="string", fields_=[
     "string",
   ])
 
@@ -114,7 +114,7 @@ end
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Event                  |
-| `fields`                         | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
 
 ### Response
@@ -129,20 +129,20 @@ List all events
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
 
 req = ::UnifiedRubySDK::Operations::ListCrmEventsRequest.new(
-  connection_id="string",
-  fields=[
+  connection_id: "string",
+  fields_: [
     "string",
   ],
 )
@@ -174,48 +174,48 @@ Update a event
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.event.patch_crm_event(connection_id="string", id="string", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(
-    call=::UnifiedRubySDK::Shared::PropertyCrmEventCall.new(),
-    company_ids=[
+    call: ::UnifiedRubySDK::Shared::PropertyCrmEventCall.new(),
+    company_ids: [
       "string",
     ],
-    contact_ids=[
+    contact_ids: [
       "string",
     ],
-    deal_ids=[
+    deal_ids: [
       "string",
     ],
-    email=::UnifiedRubySDK::Shared::PropertyCrmEventEmail.new(
-      attachment_file_ids=[
+    email: ::UnifiedRubySDK::Shared::PropertyCrmEventEmail.new(
+      attachment_file_ids: [
         "string",
       ],
-      cc=[
+      cc: [
         "string",
       ],
-      to=[
+      to: [
         "string",
       ],
     ),
-    lead_ids=[
+    lead_ids: [
       "string",
     ],
-    meeting=::UnifiedRubySDK::Shared::PropertyCrmEventMeeting.new(),
-    note=::UnifiedRubySDK::Shared::PropertyCrmEventNote.new(),
-    raw={
+    meeting: ::UnifiedRubySDK::Shared::PropertyCrmEventMeeting.new(),
+    note: ::UnifiedRubySDK::Shared::PropertyCrmEventNote.new(),
+    raw: {
       "XML": "string",
     },
-    task=::UnifiedRubySDK::Shared::PropertyCrmEventTask.new(),
+    task: ::UnifiedRubySDK::Shared::PropertyCrmEventTask.new(),
   ))
 
 if ! res.crm_event.nil?
@@ -245,20 +245,20 @@ Remove a event
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.event.remove_crm_event(connection_id="string", id="string")
 
-if res.status == 200
+if res.status_code == 200
   # handle response
 end
 
@@ -284,48 +284,48 @@ Update a event
 ### Example Usage
 
 ```ruby
-require_relative unified_ruby_sdk
+require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
 s.config_security(
-  security=::UnifiedRubySDK::Shared::Security.new(
-    jwt="<YOUR_API_KEY_HERE>",
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
   )
 )
 
     
 res = s.event.update_crm_event(connection_id="string", id="string", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(
-    call=::UnifiedRubySDK::Shared::PropertyCrmEventCall.new(),
-    company_ids=[
+    call: ::UnifiedRubySDK::Shared::PropertyCrmEventCall.new(),
+    company_ids: [
       "string",
     ],
-    contact_ids=[
+    contact_ids: [
       "string",
     ],
-    deal_ids=[
+    deal_ids: [
       "string",
     ],
-    email=::UnifiedRubySDK::Shared::PropertyCrmEventEmail.new(
-      attachment_file_ids=[
+    email: ::UnifiedRubySDK::Shared::PropertyCrmEventEmail.new(
+      attachment_file_ids: [
         "string",
       ],
-      cc=[
+      cc: [
         "string",
       ],
-      to=[
+      to: [
         "string",
       ],
     ),
-    lead_ids=[
+    lead_ids: [
       "string",
     ],
-    meeting=::UnifiedRubySDK::Shared::PropertyCrmEventMeeting.new(),
-    note=::UnifiedRubySDK::Shared::PropertyCrmEventNote.new(),
-    raw={
+    meeting: ::UnifiedRubySDK::Shared::PropertyCrmEventMeeting.new(),
+    note: ::UnifiedRubySDK::Shared::PropertyCrmEventNote.new(),
+    raw: {
       "Account": "string",
     },
-    task=::UnifiedRubySDK::Shared::PropertyCrmEventTask.new(),
+    task: ::UnifiedRubySDK::Shared::PropertyCrmEventTask.new(),
   ))
 
 if ! res.crm_event.nil?
