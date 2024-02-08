@@ -479,7 +479,9 @@ module UnifiedRubySDK
       end
 
       data = "#{username}:#{password}".encode
-      req.headers['Authorization'] = "Basic #{Base64.encode64(data)}"
+      # Use strict_encode, because encode adds newlines after 60 chars
+      # https://docs.ruby-lang.org/en/3.0/Base64.html#method-i-encode64
+      req.headers['Authorization'] = "Basic #{Base64.strict_encode64(data)}"
     end
 
     sig { params(optional: T::Boolean).returns(T.proc.params(s: String).returns(DateTime)) }
