@@ -61,6 +61,8 @@ end
 * [get_accounting_invoice](docs/sdks/accounting/README.md#get_accounting_invoice) - Retrieve a invoice
 * [get_accounting_organization](docs/sdks/accounting/README.md#get_accounting_organization) - Retrieve an organization
 * [get_accounting_payment](docs/sdks/accounting/README.md#get_accounting_payment) - Retrieve a payment
+* [get_accounting_payout](docs/sdks/accounting/README.md#get_accounting_payout) - Retrieve a payout
+* [get_accounting_refund](docs/sdks/accounting/README.md#get_accounting_refund) - Retrieve a refund
 * [get_accounting_taxrate](docs/sdks/accounting/README.md#get_accounting_taxrate) - Retrieve a taxrate
 * [get_accounting_transaction](docs/sdks/accounting/README.md#get_accounting_transaction) - Retrieve a transaction
 * [list_accounting_accounts](docs/sdks/accounting/README.md#list_accounting_accounts) - List all accounts
@@ -68,6 +70,8 @@ end
 * [list_accounting_invoices](docs/sdks/accounting/README.md#list_accounting_invoices) - List all invoices
 * [list_accounting_organizations](docs/sdks/accounting/README.md#list_accounting_organizations) - List all organizations
 * [list_accounting_payments](docs/sdks/accounting/README.md#list_accounting_payments) - List all payments
+* [list_accounting_payouts](docs/sdks/accounting/README.md#list_accounting_payouts) - List all payouts
+* [list_accounting_refunds](docs/sdks/accounting/README.md#list_accounting_refunds) - List all refunds
 * [list_accounting_taxrates](docs/sdks/accounting/README.md#list_accounting_taxrates) - List all taxrates
 * [list_accounting_transactions](docs/sdks/accounting/README.md#list_accounting_transactions) - List all transactions
 * [patch_accounting_account](docs/sdks/accounting/README.md#patch_accounting_account) - Update an account
@@ -141,6 +145,16 @@ end
 * [patch_accounting_payment](docs/sdks/payment/README.md#patch_accounting_payment) - Update a payment
 * [remove_accounting_payment](docs/sdks/payment/README.md#remove_accounting_payment) - Remove a payment
 * [update_accounting_payment](docs/sdks/payment/README.md#update_accounting_payment) - Update a payment
+
+### [Payout](docs/sdks/payout/README.md)
+
+* [get_accounting_payout](docs/sdks/payout/README.md#get_accounting_payout) - Retrieve a payout
+* [list_accounting_payouts](docs/sdks/payout/README.md#list_accounting_payouts) - List all payouts
+
+### [Refund](docs/sdks/refund/README.md)
+
+* [get_accounting_refund](docs/sdks/refund/README.md#get_accounting_refund) - Retrieve a refund
+* [list_accounting_refunds](docs/sdks/refund/README.md#list_accounting_refunds) - List all refunds
 
 ### [Taxrate](docs/sdks/taxrate/README.md)
 
@@ -585,6 +599,7 @@ end
 * [list_unified_connections](docs/sdks/unified/README.md#list_unified_connections) - List all connections
 * [list_unified_integration_workspaces](docs/sdks/unified/README.md#list_unified_integration_workspaces) - Returns all activated integrations in a workspace
 * [list_unified_integrations](docs/sdks/unified/README.md#list_unified_integrations) - Returns all integrations
+* [list_unified_issues](docs/sdks/unified/README.md#list_unified_issues) - List support issues
 * [list_unified_webhooks](docs/sdks/unified/README.md#list_unified_webhooks) - Returns all registered webhooks
 * [patch_unified_connection](docs/sdks/unified/README.md#patch_unified_connection) - Update connection
 * [patch_unified_webhook_trigger](docs/sdks/unified/README.md#patch_unified_webhook_trigger) - Trigger webhook
@@ -621,6 +636,10 @@ end
 ### [Login](docs/sdks/login/README.md)
 
 * [get_unified_integration_login](docs/sdks/login/README.md#get_unified_integration_login) - Sign in a user
+
+### [Issue](docs/sdks/issue/README.md)
+
+* [list_unified_issues](docs/sdks/issue/README.md#list_unified_issues) - List support issues
 
 ### [Webhook](docs/sdks/webhook/README.md)
 

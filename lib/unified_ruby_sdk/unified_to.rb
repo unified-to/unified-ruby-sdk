@@ -12,7 +12,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :contact, :invoice, :organization, :payment, :taxrate, :transaction, :ats, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :hris, :employee, :group, :martech, :list, :member, :passthrough, :storage, :file, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :webhook
+    attr_accessor :accounting, :account, :contact, :invoice, :organization, :payment, :payout, :refund, :taxrate, :transaction, :ats, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :hris, :employee, :group, :martech, :list, :member, :passthrough, :storage, :file, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
 
     attr_accessor :security, :language, :sdk_version, :gen_version
 
@@ -80,6 +80,8 @@ module UnifiedRubySDK
       @invoice = Invoice.new(@sdk_configuration)
       @organization = Organization.new(@sdk_configuration)
       @payment = Payment.new(@sdk_configuration)
+      @payout = Payout.new(@sdk_configuration)
+      @refund = Refund.new(@sdk_configuration)
       @taxrate = Taxrate.new(@sdk_configuration)
       @transaction = Transaction.new(@sdk_configuration)
       @ats = Ats.new(@sdk_configuration)
@@ -124,6 +126,7 @@ module UnifiedRubySDK
       @integration = Integration.new(@sdk_configuration)
       @auth = Auth.new(@sdk_configuration)
       @login = Login.new(@sdk_configuration)
+      @issue = Issue.new(@sdk_configuration)
       @webhook = Webhook.new(@sdk_configuration)
     end
   end

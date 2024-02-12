@@ -16,6 +16,8 @@ module UnifiedRubySDK
   autoload :Invoice, 'unified_ruby_sdk/invoice'
   autoload :Organization, 'unified_ruby_sdk/organization'
   autoload :Payment, 'unified_ruby_sdk/payment'
+  autoload :Payout, 'unified_ruby_sdk/payout'
+  autoload :Refund, 'unified_ruby_sdk/refund'
   autoload :Taxrate, 'unified_ruby_sdk/taxrate'
   autoload :Transaction, 'unified_ruby_sdk/transaction'
   autoload :Ats, 'unified_ruby_sdk/ats'
@@ -60,5 +62,6 @@ module UnifiedRubySDK
   autoload :Integration, 'unified_ruby_sdk/integration'
   autoload :Auth, 'unified_ruby_sdk/auth'
   autoload :Login, 'unified_ruby_sdk/login'
+  autoload :Issue, 'unified_ruby_sdk/issue'
   autoload :Webhook, 'unified_ruby_sdk/webhook'
 end

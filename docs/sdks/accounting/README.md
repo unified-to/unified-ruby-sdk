@@ -14,6 +14,8 @@
 * [get_accounting_invoice](#get_accounting_invoice) - Retrieve a invoice
 * [get_accounting_organization](#get_accounting_organization) - Retrieve an organization
 * [get_accounting_payment](#get_accounting_payment) - Retrieve a payment
+* [get_accounting_payout](#get_accounting_payout) - Retrieve a payout
+* [get_accounting_refund](#get_accounting_refund) - Retrieve a refund
 * [get_accounting_taxrate](#get_accounting_taxrate) - Retrieve a taxrate
 * [get_accounting_transaction](#get_accounting_transaction) - Retrieve a transaction
 * [list_accounting_accounts](#list_accounting_accounts) - List all accounts
@@ -21,6 +23,8 @@
 * [list_accounting_invoices](#list_accounting_invoices) - List all invoices
 * [list_accounting_organizations](#list_accounting_organizations) - List all organizations
 * [list_accounting_payments](#list_accounting_payments) - List all payments
+* [list_accounting_payouts](#list_accounting_payouts) - List all payouts
+* [list_accounting_refunds](#list_accounting_refunds) - List all refunds
 * [list_accounting_taxrates](#list_accounting_taxrates) - List all taxrates
 * [list_accounting_transactions](#list_accounting_transactions) - List all transactions
 * [patch_accounting_account](#patch_accounting_account) - Update an account
@@ -537,6 +541,90 @@ end
 **[T.nilable(::UnifiedRubySDK::Operations::GetAccountingPaymentResponse)](../../models/operations/getaccountingpaymentresponse.md)**
 
 
+## get_accounting_payout
+
+Retrieve a payout
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.accounting.get_accounting_payout(connection_id="string", id="string", fields_=[
+    "string",
+  ])
+
+if ! res.accounting_payout.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                        | Type                             | Required                         | Description                      |
+| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Payout                 |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::GetAccountingPayoutResponse)](../../models/operations/getaccountingpayoutresponse.md)**
+
+
+## get_accounting_refund
+
+Retrieve a refund
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.accounting.get_accounting_refund(connection_id="string", id="string", fields_=[
+    "string",
+  ])
+
+if ! res.accounting_refund.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                        | Type                             | Required                         | Description                      |
+| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Refund                 |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::GetAccountingRefundResponse)](../../models/operations/getaccountingrefundresponse.md)**
+
+
 ## get_accounting_taxrate
 
 Retrieve a taxrate
@@ -844,6 +932,96 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListAccountingPaymentsResponse)](../../models/operations/listaccountingpaymentsresponse.md)**
+
+
+## list_accounting_payouts
+
+List all payouts
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+
+req = ::UnifiedRubySDK::Operations::ListAccountingPayoutsRequest.new(
+  connection_id: "string",
+  fields_: [
+    "string",
+  ],
+)
+    
+res = s.accounting.list_accounting_payouts(req)
+
+if ! res.accounting_payouts.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                             | [::UnifiedRubySDK::Operations::ListAccountingPayoutsRequest](../../models/operations/listaccountingpayoutsrequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::ListAccountingPayoutsResponse)](../../models/operations/listaccountingpayoutsresponse.md)**
+
+
+## list_accounting_refunds
+
+List all refunds
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+
+req = ::UnifiedRubySDK::Operations::ListAccountingRefundsRequest.new(
+  connection_id: "string",
+  fields_: [
+    "string",
+  ],
+)
+    
+res = s.accounting.list_accounting_refunds(req)
+
+if ! res.accounting_refunds.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                             | [::UnifiedRubySDK::Operations::ListAccountingRefundsRequest](../../models/operations/listaccountingrefundsrequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::ListAccountingRefundsResponse)](../../models/operations/listaccountingrefundsresponse.md)**
 
 
 ## list_accounting_taxrates

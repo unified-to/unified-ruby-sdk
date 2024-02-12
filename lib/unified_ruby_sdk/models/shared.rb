@@ -25,6 +25,10 @@ module UnifiedRubySDK
     autoload :AccountingTransactionLineitem, 'unified_ruby_sdk/models/shared/accountingtransactionlineitem.rb'
     autoload :AccountingOrganization, 'unified_ruby_sdk/models/shared/accountingorganization.rb'
     autoload :PropertyAccountingOrganizationAddress, 'unified_ruby_sdk/models/shared/property_accountingorganization_address.rb'
+    autoload :AccountingPayoutStatus, 'unified_ruby_sdk/models/shared/accountingpayout_status.rb'
+    autoload :AccountingPayout, 'unified_ruby_sdk/models/shared/accountingpayout.rb'
+    autoload :AccountingRefundStatus, 'unified_ruby_sdk/models/shared/accountingrefund_status.rb'
+    autoload :AccountingRefund, 'unified_ruby_sdk/models/shared/accountingrefund.rb'
     autoload :CrmContact, 'unified_ruby_sdk/models/shared/crmcontact.rb'
     autoload :CrmTelephoneType, 'unified_ruby_sdk/models/shared/crmtelephone_type.rb'
     autoload :CrmTelephone, 'unified_ruby_sdk/models/shared/crmtelephone.rb'
@@ -145,6 +149,9 @@ module UnifiedRubySDK
     autoload :IntegrationSupport, 'unified_ruby_sdk/models/shared/integrationsupport.rb'
     autoload :PropertyIntegrationSupportWebhookEvents, 'unified_ruby_sdk/models/shared/property_integrationsupport_webhook_events.rb'
     autoload :PropertyIntegrationCategories, 'unified_ruby_sdk/models/shared/property_integration_categories.rb'
+    autoload :IssueStatus, 'unified_ruby_sdk/models/shared/issue_status.rb'
+    autoload :IssueType, 'unified_ruby_sdk/models/shared/issue_type.rb'
+    autoload :Issue, 'unified_ruby_sdk/models/shared/issue.rb'
     autoload :Security, 'unified_ruby_sdk/models/shared/security.rb'
   end
 end
