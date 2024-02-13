@@ -32,14 +32,7 @@ res = s.webhook.create_unified_webhook(webhook=::UnifiedRubySDK::Shared::Webhook
     connection_id: "string",
     event: ::UnifiedRubySDK::Shared::Event::CREATED,
     hook_url: "string",
-    interval: 188.12,
-    meta: {
-      "payment": "string",
-    },
-    object_type: ::UnifiedRubySDK::Shared::ObjectType::ACCOUNTING_CONTACT,
-    runs: [
-      "string",
-    ],
+    object_type: ::UnifiedRubySDK::Shared::ObjectType::ACCOUNTING_ACCOUNT,
   ), include_all=false)
 
 if ! res.webhook.nil?

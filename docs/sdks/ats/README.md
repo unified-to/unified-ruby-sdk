@@ -61,11 +61,7 @@ s.config_security(
 )
 
     
-res = s.ats.create_ats_application(connection_id="string", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new(
-    raw: {
-      "Hassium": "string",
-    },
-  ))
+res = s.ats.create_ats_application(connection_id="string", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new())
 
 if ! res.ats_application.nil?
   # handle response
@@ -104,28 +100,7 @@ s.config_security(
 )
 
     
-res = s.ats.create_ats_candidate(connection_id="string", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new(
-    address: ::UnifiedRubySDK::Shared::PropertyAtsCandidateAddress.new(),
-    emails: [
-      ::UnifiedRubySDK::Shared::AtsEmail.new(
-        email: "Robin_Feeney@hotmail.com",
-      ),
-    ],
-    link_urls: [
-      "string",
-    ],
-    raw: {
-      "radian": "string",
-    },
-    tags: [
-      "string",
-    ],
-    telephones: [
-      ::UnifiedRubySDK::Shared::AtsTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.ats.create_ats_candidate(connection_id="string", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new())
 
 if ! res.ats_candidate.nil?
   # handle response
@@ -164,11 +139,7 @@ s.config_security(
 )
 
     
-res = s.ats.create_ats_document(connection_id="string", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(
-    raw: {
-      "Southeast": "string",
-    },
-  ))
+res = s.ats.create_ats_document(connection_id="string", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new())
 
 if ! res.ats_document.nil?
   # handle response
@@ -207,14 +178,7 @@ s.config_security(
 )
 
     
-res = s.ats.create_ats_interview(connection_id="string", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new(
-    raw: {
-      "Metrics": "string",
-    },
-    user_ids: [
-      "string",
-    ],
-  ))
+res = s.ats.create_ats_interview(connection_id="string", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new())
 
 if ! res.ats_interview.nil?
   # handle response
@@ -253,31 +217,7 @@ s.config_security(
 )
 
     
-res = s.ats.create_ats_job(connection_id="string", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(
-    addresses: [
-      ::UnifiedRubySDK::Shared::AtsAddress.new(),
-    ],
-    compensation: [
-      ::UnifiedRubySDK::Shared::AtsCompensation.new(
-        type: ::UnifiedRubySDK::Shared::AtsCompensationType::SALARY,
-      ),
-    ],
-    departments: [
-      "string",
-    ],
-    hiring_manager_ids: [
-      "string",
-    ],
-    public_job_urls: [
-      "string",
-    ],
-    raw: {
-      "Loan": "string",
-    },
-    recruiter_ids: [
-      "string",
-    ],
-  ))
+res = s.ats.create_ats_job(connection_id="string", ats_job=::UnifiedRubySDK::Shared::AtsJob.new())
 
 if ! res.ats_job.nil?
   # handle response
@@ -316,16 +256,7 @@ s.config_security(
 )
 
     
-res = s.ats.create_ats_scorecard(connection_id="string", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new(
-    questions: [
-      ::UnifiedRubySDK::Shared::AtsScorecardQuestion.new(
-        text: "string",
-      ),
-    ],
-    raw: {
-      "Brunei": "string",
-    },
-  ))
+res = s.ats.create_ats_scorecard(connection_id="string", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new())
 
 if ! res.ats_scorecard.nil?
   # handle response
@@ -660,9 +591,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListAtsApplicationsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.ats.list_ats_applications(req)
@@ -705,9 +633,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListAtsApplicationstatusesRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.ats.list_ats_applicationstatuses(req)
@@ -750,9 +675,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListAtsCandidatesRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.ats.list_ats_candidates(req)
@@ -795,9 +717,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListAtsCompaniesRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.ats.list_ats_companies(req)
@@ -840,9 +759,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListAtsDocumentsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.ats.list_ats_documents(req)
@@ -885,9 +801,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListAtsInterviewsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.ats.list_ats_interviews(req)
@@ -930,9 +843,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListAtsJobsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.ats.list_ats_jobs(req)
@@ -975,9 +885,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListAtsScorecardsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.ats.list_ats_scorecards(req)
@@ -1018,11 +925,7 @@ s.config_security(
 )
 
     
-res = s.ats.patch_ats_application(connection_id="string", id="string", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new(
-    raw: {
-      "Lead": "string",
-    },
-  ))
+res = s.ats.patch_ats_application(connection_id="string", id="string", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new())
 
 if ! res.ats_application.nil?
   # handle response
@@ -1062,28 +965,7 @@ s.config_security(
 )
 
     
-res = s.ats.patch_ats_candidate(connection_id="string", id="string", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new(
-    address: ::UnifiedRubySDK::Shared::PropertyAtsCandidateAddress.new(),
-    emails: [
-      ::UnifiedRubySDK::Shared::AtsEmail.new(
-        email: "Tracy.Collins13@gmail.com",
-      ),
-    ],
-    link_urls: [
-      "string",
-    ],
-    raw: {
-      "Credit": "string",
-    },
-    tags: [
-      "string",
-    ],
-    telephones: [
-      ::UnifiedRubySDK::Shared::AtsTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.ats.patch_ats_candidate(connection_id="string", id="string", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new())
 
 if ! res.ats_candidate.nil?
   # handle response
@@ -1123,11 +1005,7 @@ s.config_security(
 )
 
     
-res = s.ats.patch_ats_document(connection_id="string", id="string", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(
-    raw: {
-      "Northeast": "string",
-    },
-  ))
+res = s.ats.patch_ats_document(connection_id="string", id="string", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new())
 
 if ! res.ats_document.nil?
   # handle response
@@ -1167,14 +1045,7 @@ s.config_security(
 )
 
     
-res = s.ats.patch_ats_interview(connection_id="string", id="string", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new(
-    raw: {
-      "courageously": "string",
-    },
-    user_ids: [
-      "string",
-    ],
-  ))
+res = s.ats.patch_ats_interview(connection_id="string", id="string", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new())
 
 if ! res.ats_interview.nil?
   # handle response
@@ -1214,31 +1085,7 @@ s.config_security(
 )
 
     
-res = s.ats.patch_ats_job(connection_id="string", id="string", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(
-    addresses: [
-      ::UnifiedRubySDK::Shared::AtsAddress.new(),
-    ],
-    compensation: [
-      ::UnifiedRubySDK::Shared::AtsCompensation.new(
-        type: ::UnifiedRubySDK::Shared::AtsCompensationType::BONUS,
-      ),
-    ],
-    departments: [
-      "string",
-    ],
-    hiring_manager_ids: [
-      "string",
-    ],
-    public_job_urls: [
-      "string",
-    ],
-    raw: {
-      "indigo": "string",
-    },
-    recruiter_ids: [
-      "string",
-    ],
-  ))
+res = s.ats.patch_ats_job(connection_id="string", id="string", ats_job=::UnifiedRubySDK::Shared::AtsJob.new())
 
 if ! res.ats_job.nil?
   # handle response
@@ -1278,16 +1125,7 @@ s.config_security(
 )
 
     
-res = s.ats.patch_ats_scorecard(connection_id="string", id="string", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new(
-    questions: [
-      ::UnifiedRubySDK::Shared::AtsScorecardQuestion.new(
-        text: "string",
-      ),
-    ],
-    raw: {
-      "Falls": "string",
-    },
-  ))
+res = s.ats.patch_ats_scorecard(connection_id="string", id="string", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new())
 
 if ! res.ats_scorecard.nil?
   # handle response
@@ -1561,11 +1399,7 @@ s.config_security(
 )
 
     
-res = s.ats.update_ats_application(connection_id="string", id="string", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new(
-    raw: {
-      "Keyboard": "string",
-    },
-  ))
+res = s.ats.update_ats_application(connection_id="string", id="string", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new())
 
 if ! res.ats_application.nil?
   # handle response
@@ -1605,28 +1439,7 @@ s.config_security(
 )
 
     
-res = s.ats.update_ats_candidate(connection_id="string", id="string", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new(
-    address: ::UnifiedRubySDK::Shared::PropertyAtsCandidateAddress.new(),
-    emails: [
-      ::UnifiedRubySDK::Shared::AtsEmail.new(
-        email: "Gaetano86@hotmail.com",
-      ),
-    ],
-    link_urls: [
-      "string",
-    ],
-    raw: {
-      "B2C": "string",
-    },
-    tags: [
-      "string",
-    ],
-    telephones: [
-      ::UnifiedRubySDK::Shared::AtsTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.ats.update_ats_candidate(connection_id="string", id="string", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new())
 
 if ! res.ats_candidate.nil?
   # handle response
@@ -1666,11 +1479,7 @@ s.config_security(
 )
 
     
-res = s.ats.update_ats_document(connection_id="string", id="string", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(
-    raw: {
-      "turquoise": "string",
-    },
-  ))
+res = s.ats.update_ats_document(connection_id="string", id="string", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new())
 
 if ! res.ats_document.nil?
   # handle response
@@ -1710,14 +1519,7 @@ s.config_security(
 )
 
     
-res = s.ats.update_ats_interview(connection_id="string", id="string", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new(
-    raw: {
-      "maroon": "string",
-    },
-    user_ids: [
-      "string",
-    ],
-  ))
+res = s.ats.update_ats_interview(connection_id="string", id="string", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new())
 
 if ! res.ats_interview.nil?
   # handle response
@@ -1757,31 +1559,7 @@ s.config_security(
 )
 
     
-res = s.ats.update_ats_job(connection_id="string", id="string", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(
-    addresses: [
-      ::UnifiedRubySDK::Shared::AtsAddress.new(),
-    ],
-    compensation: [
-      ::UnifiedRubySDK::Shared::AtsCompensation.new(
-        type: ::UnifiedRubySDK::Shared::AtsCompensationType::EQUITY,
-      ),
-    ],
-    departments: [
-      "string",
-    ],
-    hiring_manager_ids: [
-      "string",
-    ],
-    public_job_urls: [
-      "string",
-    ],
-    raw: {
-      "Plastic": "string",
-    },
-    recruiter_ids: [
-      "string",
-    ],
-  ))
+res = s.ats.update_ats_job(connection_id="string", id="string", ats_job=::UnifiedRubySDK::Shared::AtsJob.new())
 
 if ! res.ats_job.nil?
   # handle response
@@ -1821,16 +1599,7 @@ s.config_security(
 )
 
     
-res = s.ats.update_ats_scorecard(connection_id="string", id="string", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new(
-    questions: [
-      ::UnifiedRubySDK::Shared::AtsScorecardQuestion.new(
-        text: "string",
-      ),
-    ],
-    raw: {
-      "East": "string",
-    },
-  ))
+res = s.ats.update_ats_scorecard(connection_id="string", id="string", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new())
 
 if ! res.ats_scorecard.nil?
   # handle response

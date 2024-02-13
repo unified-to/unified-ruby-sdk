@@ -28,24 +28,7 @@ s.config_security(
 )
 
     
-res = s.customer.create_ticketing_customer(connection_id="string", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new(
-    emails: [
-      ::UnifiedRubySDK::Shared::TicketingEmail.new(
-        email: "Guadalupe78@yahoo.com",
-      ),
-    ],
-    raw: {
-      "Borders": "string",
-    },
-    tags: [
-      "string",
-    ],
-    telephones: [
-      ::UnifiedRubySDK::Shared::TicketingTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.customer.create_ticketing_customer(connection_id="string", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new())
 
 if ! res.ticketing_customer.nil?
   # handle response
@@ -128,9 +111,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListTicketingCustomersRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.customer.list_ticketing_customers(req)
@@ -171,24 +151,7 @@ s.config_security(
 )
 
     
-res = s.customer.patch_ticketing_customer(connection_id="string", id="string", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new(
-    emails: [
-      ::UnifiedRubySDK::Shared::TicketingEmail.new(
-        email: "Raymundo93@hotmail.com",
-      ),
-    ],
-    raw: {
-      "Brownsville": "string",
-    },
-    tags: [
-      "string",
-    ],
-    telephones: [
-      ::UnifiedRubySDK::Shared::TicketingTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.customer.patch_ticketing_customer(connection_id="string", id="string", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new())
 
 if ! res.ticketing_customer.nil?
   # handle response
@@ -267,24 +230,7 @@ s.config_security(
 )
 
     
-res = s.customer.update_ticketing_customer(connection_id="string", id="string", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new(
-    emails: [
-      ::UnifiedRubySDK::Shared::TicketingEmail.new(
-        email: "Mohamed.Friesen@hotmail.com",
-      ),
-    ],
-    raw: {
-      "Barium": "string",
-    },
-    tags: [
-      "string",
-    ],
-    telephones: [
-      ::UnifiedRubySDK::Shared::TicketingTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.customer.update_ticketing_customer(connection_id="string", id="string", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new())
 
 if ! res.ticketing_customer.nil?
   # handle response

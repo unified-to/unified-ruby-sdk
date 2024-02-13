@@ -28,11 +28,7 @@ s.config_security(
 )
 
     
-res = s.pipeline.create_crm_pipeline(connection_id="string", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(
-    raw: {
-      "Mazda": "string",
-    },
-  ))
+res = s.pipeline.create_crm_pipeline(connection_id="string", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new())
 
 if ! res.crm_pipeline.nil?
   # handle response
@@ -115,9 +111,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListCrmPipelinesRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.pipeline.list_crm_pipelines(req)
@@ -158,11 +151,7 @@ s.config_security(
 )
 
     
-res = s.pipeline.patch_crm_pipeline(connection_id="string", id="string", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(
-    raw: {
-      "unimpressively": "string",
-    },
-  ))
+res = s.pipeline.patch_crm_pipeline(connection_id="string", id="string", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new())
 
 if ! res.crm_pipeline.nil?
   # handle response
@@ -241,11 +230,7 @@ s.config_security(
 )
 
     
-res = s.pipeline.update_crm_pipeline(connection_id="string", id="string", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(
-    raw: {
-      "functionalities": "string",
-    },
-  ))
+res = s.pipeline.update_crm_pipeline(connection_id="string", id="string", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new())
 
 if ! res.crm_pipeline.nil?
   # handle response

@@ -58,32 +58,7 @@ s.config_security(
 )
 
     
-res = s.crm.create_crm_company(connection_id="string", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(
-    address: ::UnifiedRubySDK::Shared::PropertyCrmCompanyAddress.new(),
-    deal_ids: [
-      "string",
-    ],
-    emails: [
-      ::UnifiedRubySDK::Shared::CrmEmail.new(),
-    ],
-    link_urls: [
-      "string",
-    ],
-    raw: {
-      "connecting": "string",
-    },
-    tags: [
-      "string",
-    ],
-    telephones: [
-      ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone: "string",
-      ),
-    ],
-    websites: [
-      "string",
-    ],
-  ))
+res = s.crm.create_crm_company(connection_id="string", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new())
 
 if ! res.crm_company.nil?
   # handle response
@@ -122,26 +97,7 @@ s.config_security(
 )
 
     
-res = s.crm.create_crm_contact(connection_id="string", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new(
-    address: ::UnifiedRubySDK::Shared::PropertyCrmContactAddress.new(),
-    company_ids: [
-      "string",
-    ],
-    deal_ids: [
-      "string",
-    ],
-    emails: [
-      ::UnifiedRubySDK::Shared::CrmEmail.new(),
-    ],
-    raw: {
-      "Mendelevium": "string",
-    },
-    telephones: [
-      ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.crm.create_crm_contact(connection_id="string", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new())
 
 if ! res.crm_contact.nil?
   # handle response
@@ -180,14 +136,7 @@ s.config_security(
 )
 
     
-res = s.crm.create_crm_deal(connection_id="string", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new(
-    raw: {
-      "Toys": "string",
-    },
-    tags: [
-      "string",
-    ],
-  ))
+res = s.crm.create_crm_deal(connection_id="string", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new())
 
 if ! res.crm_deal.nil?
   # handle response
@@ -226,38 +175,7 @@ s.config_security(
 )
 
     
-res = s.crm.create_crm_event(connection_id="string", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(
-    call: ::UnifiedRubySDK::Shared::PropertyCrmEventCall.new(),
-    company_ids: [
-      "string",
-    ],
-    contact_ids: [
-      "string",
-    ],
-    deal_ids: [
-      "string",
-    ],
-    email: ::UnifiedRubySDK::Shared::PropertyCrmEventEmail.new(
-      attachment_file_ids: [
-        "string",
-      ],
-      cc: [
-        "string",
-      ],
-      to: [
-        "string",
-      ],
-    ),
-    lead_ids: [
-      "string",
-    ],
-    meeting: ::UnifiedRubySDK::Shared::PropertyCrmEventMeeting.new(),
-    note: ::UnifiedRubySDK::Shared::PropertyCrmEventNote.new(),
-    raw: {
-      "repeatedly": "string",
-    },
-    task: ::UnifiedRubySDK::Shared::PropertyCrmEventTask.new(),
-  ))
+res = s.crm.create_crm_event(connection_id="string", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new())
 
 if ! res.crm_event.nil?
   # handle response
@@ -296,20 +214,7 @@ s.config_security(
 )
 
     
-res = s.crm.create_crm_lead(connection_id="string", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(
-    address: ::UnifiedRubySDK::Shared::PropertyCrmLeadAddress.new(),
-    emails: [
-      ::UnifiedRubySDK::Shared::CrmEmail.new(),
-    ],
-    raw: {
-      "Designer": "string",
-    },
-    telephones: [
-      ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.crm.create_crm_lead(connection_id="string", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new())
 
 if ! res.crm_lead.nil?
   # handle response
@@ -348,11 +253,7 @@ s.config_security(
 )
 
     
-res = s.crm.create_crm_pipeline(connection_id="string", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(
-    raw: {
-      "Mazda": "string",
-    },
-  ))
+res = s.crm.create_crm_pipeline(connection_id="string", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new())
 
 if ! res.crm_pipeline.nil?
   # handle response
@@ -645,9 +546,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListCrmCompaniesRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.crm.list_crm_companies(req)
@@ -690,9 +588,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListCrmContactsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.crm.list_crm_contacts(req)
@@ -735,9 +630,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListCrmDealsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.crm.list_crm_deals(req)
@@ -780,9 +672,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListCrmEventsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.crm.list_crm_events(req)
@@ -825,9 +714,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListCrmLeadsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.crm.list_crm_leads(req)
@@ -870,9 +756,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListCrmPipelinesRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.crm.list_crm_pipelines(req)
@@ -913,32 +796,7 @@ s.config_security(
 )
 
     
-res = s.crm.patch_crm_company(connection_id="string", id="string", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(
-    address: ::UnifiedRubySDK::Shared::PropertyCrmCompanyAddress.new(),
-    deal_ids: [
-      "string",
-    ],
-    emails: [
-      ::UnifiedRubySDK::Shared::CrmEmail.new(),
-    ],
-    link_urls: [
-      "string",
-    ],
-    raw: {
-      "Producer": "string",
-    },
-    tags: [
-      "string",
-    ],
-    telephones: [
-      ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone: "string",
-      ),
-    ],
-    websites: [
-      "string",
-    ],
-  ))
+res = s.crm.patch_crm_company(connection_id="string", id="string", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new())
 
 if ! res.crm_company.nil?
   # handle response
@@ -978,26 +836,7 @@ s.config_security(
 )
 
     
-res = s.crm.patch_crm_contact(connection_id="string", id="string", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new(
-    address: ::UnifiedRubySDK::Shared::PropertyCrmContactAddress.new(),
-    company_ids: [
-      "string",
-    ],
-    deal_ids: [
-      "string",
-    ],
-    emails: [
-      ::UnifiedRubySDK::Shared::CrmEmail.new(),
-    ],
-    raw: {
-      "architecture": "string",
-    },
-    telephones: [
-      ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.crm.patch_crm_contact(connection_id="string", id="string", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new())
 
 if ! res.crm_contact.nil?
   # handle response
@@ -1037,14 +876,7 @@ s.config_security(
 )
 
     
-res = s.crm.patch_crm_deal(connection_id="string", id="string", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new(
-    raw: {
-      "consign": "string",
-    },
-    tags: [
-      "string",
-    ],
-  ))
+res = s.crm.patch_crm_deal(connection_id="string", id="string", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new())
 
 if ! res.crm_deal.nil?
   # handle response
@@ -1084,38 +916,7 @@ s.config_security(
 )
 
     
-res = s.crm.patch_crm_event(connection_id="string", id="string", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(
-    call: ::UnifiedRubySDK::Shared::PropertyCrmEventCall.new(),
-    company_ids: [
-      "string",
-    ],
-    contact_ids: [
-      "string",
-    ],
-    deal_ids: [
-      "string",
-    ],
-    email: ::UnifiedRubySDK::Shared::PropertyCrmEventEmail.new(
-      attachment_file_ids: [
-        "string",
-      ],
-      cc: [
-        "string",
-      ],
-      to: [
-        "string",
-      ],
-    ),
-    lead_ids: [
-      "string",
-    ],
-    meeting: ::UnifiedRubySDK::Shared::PropertyCrmEventMeeting.new(),
-    note: ::UnifiedRubySDK::Shared::PropertyCrmEventNote.new(),
-    raw: {
-      "XML": "string",
-    },
-    task: ::UnifiedRubySDK::Shared::PropertyCrmEventTask.new(),
-  ))
+res = s.crm.patch_crm_event(connection_id="string", id="string", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new())
 
 if ! res.crm_event.nil?
   # handle response
@@ -1155,20 +956,7 @@ s.config_security(
 )
 
     
-res = s.crm.patch_crm_lead(connection_id="string", id="string", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(
-    address: ::UnifiedRubySDK::Shared::PropertyCrmLeadAddress.new(),
-    emails: [
-      ::UnifiedRubySDK::Shared::CrmEmail.new(),
-    ],
-    raw: {
-      "deposit": "string",
-    },
-    telephones: [
-      ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.crm.patch_crm_lead(connection_id="string", id="string", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new())
 
 if ! res.crm_lead.nil?
   # handle response
@@ -1208,11 +996,7 @@ s.config_security(
 )
 
     
-res = s.crm.patch_crm_pipeline(connection_id="string", id="string", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(
-    raw: {
-      "unimpressively": "string",
-    },
-  ))
+res = s.crm.patch_crm_pipeline(connection_id="string", id="string", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new())
 
 if ! res.crm_pipeline.nil?
   # handle response
@@ -1486,32 +1270,7 @@ s.config_security(
 )
 
     
-res = s.crm.update_crm_company(connection_id="string", id="string", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(
-    address: ::UnifiedRubySDK::Shared::PropertyCrmCompanyAddress.new(),
-    deal_ids: [
-      "string",
-    ],
-    emails: [
-      ::UnifiedRubySDK::Shared::CrmEmail.new(),
-    ],
-    link_urls: [
-      "string",
-    ],
-    raw: {
-      "SMS": "string",
-    },
-    tags: [
-      "string",
-    ],
-    telephones: [
-      ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone: "string",
-      ),
-    ],
-    websites: [
-      "string",
-    ],
-  ))
+res = s.crm.update_crm_company(connection_id="string", id="string", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new())
 
 if ! res.crm_company.nil?
   # handle response
@@ -1551,26 +1310,7 @@ s.config_security(
 )
 
     
-res = s.crm.update_crm_contact(connection_id="string", id="string", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new(
-    address: ::UnifiedRubySDK::Shared::PropertyCrmContactAddress.new(),
-    company_ids: [
-      "string",
-    ],
-    deal_ids: [
-      "string",
-    ],
-    emails: [
-      ::UnifiedRubySDK::Shared::CrmEmail.new(),
-    ],
-    raw: {
-      "Universal": "string",
-    },
-    telephones: [
-      ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.crm.update_crm_contact(connection_id="string", id="string", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new())
 
 if ! res.crm_contact.nil?
   # handle response
@@ -1610,14 +1350,7 @@ s.config_security(
 )
 
     
-res = s.crm.update_crm_deal(connection_id="string", id="string", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new(
-    raw: {
-      "South": "string",
-    },
-    tags: [
-      "string",
-    ],
-  ))
+res = s.crm.update_crm_deal(connection_id="string", id="string", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new())
 
 if ! res.crm_deal.nil?
   # handle response
@@ -1657,38 +1390,7 @@ s.config_security(
 )
 
     
-res = s.crm.update_crm_event(connection_id="string", id="string", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(
-    call: ::UnifiedRubySDK::Shared::PropertyCrmEventCall.new(),
-    company_ids: [
-      "string",
-    ],
-    contact_ids: [
-      "string",
-    ],
-    deal_ids: [
-      "string",
-    ],
-    email: ::UnifiedRubySDK::Shared::PropertyCrmEventEmail.new(
-      attachment_file_ids: [
-        "string",
-      ],
-      cc: [
-        "string",
-      ],
-      to: [
-        "string",
-      ],
-    ),
-    lead_ids: [
-      "string",
-    ],
-    meeting: ::UnifiedRubySDK::Shared::PropertyCrmEventMeeting.new(),
-    note: ::UnifiedRubySDK::Shared::PropertyCrmEventNote.new(),
-    raw: {
-      "Account": "string",
-    },
-    task: ::UnifiedRubySDK::Shared::PropertyCrmEventTask.new(),
-  ))
+res = s.crm.update_crm_event(connection_id="string", id="string", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new())
 
 if ! res.crm_event.nil?
   # handle response
@@ -1728,20 +1430,7 @@ s.config_security(
 )
 
     
-res = s.crm.update_crm_lead(connection_id="string", id="string", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(
-    address: ::UnifiedRubySDK::Shared::PropertyCrmLeadAddress.new(),
-    emails: [
-      ::UnifiedRubySDK::Shared::CrmEmail.new(),
-    ],
-    raw: {
-      "Northwest": "string",
-    },
-    telephones: [
-      ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.crm.update_crm_lead(connection_id="string", id="string", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new())
 
 if ! res.crm_lead.nil?
   # handle response
@@ -1781,11 +1470,7 @@ s.config_security(
 )
 
     
-res = s.crm.update_crm_pipeline(connection_id="string", id="string", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(
-    raw: {
-      "functionalities": "string",
-    },
-  ))
+res = s.crm.update_crm_pipeline(connection_id="string", id="string", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new())
 
 if ! res.crm_pipeline.nil?
   # handle response

@@ -30,9 +30,6 @@ s.config_security(
     
 res = s.inventory.create_commerce_inventory(connection_id="string", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
     available: 5165.08,
-    raw: {
-      "Officer": "string",
-    },
   ))
 
 if ! res.commerce_inventory.nil?
@@ -116,9 +113,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListCommerceInventoriesRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.inventory.list_commerce_inventories(req)
@@ -161,9 +155,6 @@ s.config_security(
     
 res = s.inventory.patch_commerce_inventory(connection_id="string", id="string", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
     available: 615.23,
-    raw: {
-      "Modern": "string",
-    },
   ))
 
 if ! res.commerce_inventory.nil?
@@ -245,9 +236,6 @@ s.config_security(
     
 res = s.inventory.update_commerce_inventory(connection_id="string", id="string", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
     available: 9360.02,
-    raw: {
-      "wavy": "string",
-    },
   ))
 
 if ! res.commerce_inventory.nil?

@@ -30,21 +30,7 @@ s.config_security(
     
 res = s.collection.create_commerce_collection(connection_id="string", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
     id: "<ID>",
-    item_ids: [
-      "string",
-    ],
-    media: [
-      ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-        url: "http://uneven-mattress.name",
-      ),
-    ],
     name: "string",
-    raw: {
-      "whoever": "string",
-    },
-    tags: [
-      "string",
-    ],
   ))
 
 if ! res.commerce_collection.nil?
@@ -128,9 +114,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListCommerceCollectionsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.collection.list_commerce_collections(req)
@@ -173,21 +156,7 @@ s.config_security(
     
 res = s.collection.patch_commerce_collection(connection_id="string", id="string", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
     id: "<ID>",
-    item_ids: [
-      "string",
-    ],
-    media: [
-      ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-        url: "http://personal-sorrow.com",
-      ),
-    ],
     name: "string",
-    raw: {
-      "Cheese": "string",
-    },
-    tags: [
-      "string",
-    ],
   ))
 
 if ! res.commerce_collection.nil?
@@ -269,21 +238,7 @@ s.config_security(
     
 res = s.collection.update_commerce_collection(connection_id="string", id="string", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
     id: "<ID>",
-    item_ids: [
-      "string",
-    ],
-    media: [
-      ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-        url: "https://stupid-entity.org",
-      ),
-    ],
     name: "string",
-    raw: {
-      "Modern": "string",
-    },
-    tags: [
-      "string",
-    ],
   ))
 
 if ! res.commerce_collection.nil?

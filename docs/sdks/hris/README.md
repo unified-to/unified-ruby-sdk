@@ -34,22 +34,7 @@ s.config_security(
 )
 
     
-res = s.hris.create_hris_employee(connection_id="string", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new(
-    address: ::UnifiedRubySDK::Shared::PropertyHrisEmployeeAddress.new(),
-    emails: [
-      ::UnifiedRubySDK::Shared::HrisEmail.new(
-        email: "Adriel_Hansen@hotmail.com",
-      ),
-    ],
-    raw: {
-      "composite": "string",
-    },
-    telephones: [
-      ::UnifiedRubySDK::Shared::HrisTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.hris.create_hris_employee(connection_id="string", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new())
 
 if ! res.hris_employee.nil?
   # handle response
@@ -88,17 +73,7 @@ s.config_security(
 )
 
     
-res = s.hris.create_hris_group(connection_id="string", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(
-    manager_ids: [
-      "string",
-    ],
-    raw: {
-      "transmitter": "string",
-    },
-    user_ids: [
-      "string",
-    ],
-  ))
+res = s.hris.create_hris_group(connection_id="string", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new())
 
 if ! res.hris_group.nil?
   # handle response
@@ -223,9 +198,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListHrisEmployeesRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.hris.list_hris_employees(req)
@@ -268,9 +240,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListHrisGroupsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.hris.list_hris_groups(req)
@@ -311,22 +280,7 @@ s.config_security(
 )
 
     
-res = s.hris.patch_hris_employee(connection_id="string", id="string", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new(
-    address: ::UnifiedRubySDK::Shared::PropertyHrisEmployeeAddress.new(),
-    emails: [
-      ::UnifiedRubySDK::Shared::HrisEmail.new(
-        email: "Zetta.Cassin@yahoo.com",
-      ),
-    ],
-    raw: {
-      "cyan": "string",
-    },
-    telephones: [
-      ::UnifiedRubySDK::Shared::HrisTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.hris.patch_hris_employee(connection_id="string", id="string", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new())
 
 if ! res.hris_employee.nil?
   # handle response
@@ -366,17 +320,7 @@ s.config_security(
 )
 
     
-res = s.hris.patch_hris_group(connection_id="string", id="string", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(
-    manager_ids: [
-      "string",
-    ],
-    raw: {
-      "scalable": "string",
-    },
-    user_ids: [
-      "string",
-    ],
-  ))
+res = s.hris.patch_hris_group(connection_id="string", id="string", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new())
 
 if ! res.hris_group.nil?
   # handle response
@@ -494,22 +438,7 @@ s.config_security(
 )
 
     
-res = s.hris.update_hris_employee(connection_id="string", id="string", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new(
-    address: ::UnifiedRubySDK::Shared::PropertyHrisEmployeeAddress.new(),
-    emails: [
-      ::UnifiedRubySDK::Shared::HrisEmail.new(
-        email: "Abbie_Aufderhar@gmail.com",
-      ),
-    ],
-    raw: {
-      "Mazda": "string",
-    },
-    telephones: [
-      ::UnifiedRubySDK::Shared::HrisTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.hris.update_hris_employee(connection_id="string", id="string", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new())
 
 if ! res.hris_employee.nil?
   # handle response
@@ -549,17 +478,7 @@ s.config_security(
 )
 
     
-res = s.hris.update_hris_group(connection_id="string", id="string", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(
-    manager_ids: [
-      "string",
-    ],
-    raw: {
-      "disintermediate": "string",
-    },
-    user_ids: [
-      "string",
-    ],
-  ))
+res = s.hris.update_hris_group(connection_id="string", id="string", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new())
 
 if ! res.hris_group.nil?
   # handle response

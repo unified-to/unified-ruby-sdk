@@ -28,17 +28,7 @@ s.config_security(
 )
 
     
-res = s.group.create_hris_group(connection_id="string", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(
-    manager_ids: [
-      "string",
-    ],
-    raw: {
-      "transmitter": "string",
-    },
-    user_ids: [
-      "string",
-    ],
-  ))
+res = s.group.create_hris_group(connection_id="string", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new())
 
 if ! res.hris_group.nil?
   # handle response
@@ -121,9 +111,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListHrisGroupsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.group.list_hris_groups(req)
@@ -164,17 +151,7 @@ s.config_security(
 )
 
     
-res = s.group.patch_hris_group(connection_id="string", id="string", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(
-    manager_ids: [
-      "string",
-    ],
-    raw: {
-      "scalable": "string",
-    },
-    user_ids: [
-      "string",
-    ],
-  ))
+res = s.group.patch_hris_group(connection_id="string", id="string", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new())
 
 if ! res.hris_group.nil?
   # handle response
@@ -253,17 +230,7 @@ s.config_security(
 )
 
     
-res = s.group.update_hris_group(connection_id="string", id="string", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(
-    manager_ids: [
-      "string",
-    ],
-    raw: {
-      "disintermediate": "string",
-    },
-    user_ids: [
-      "string",
-    ],
-  ))
+res = s.group.update_hris_group(connection_id="string", id="string", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new())
 
 if ! res.hris_group.nil?
   # handle response

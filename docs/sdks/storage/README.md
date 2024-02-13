@@ -28,18 +28,7 @@ s.config_security(
 )
 
     
-res = s.storage.create_storage_file(connection_id="string", storage_file=::UnifiedRubySDK::Shared::StorageFile.new(
-    permissions: [
-      ::UnifiedRubySDK::Shared::StoragePermission.new(
-        roles: [
-          ::UnifiedRubySDK::Shared::PropertyStoragePermissionRoles::WRITE,
-        ],
-      ),
-    ],
-    raw: {
-      "Sports": "string",
-    },
-  ))
+res = s.storage.create_storage_file(connection_id="string", storage_file=::UnifiedRubySDK::Shared::StorageFile.new())
 
 if ! res.storage_file.nil?
   # handle response
@@ -122,9 +111,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListStorageFilesRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.storage.list_storage_files(req)
@@ -165,18 +151,7 @@ s.config_security(
 )
 
     
-res = s.storage.patch_storage_file(connection_id="string", id="string", storage_file=::UnifiedRubySDK::Shared::StorageFile.new(
-    permissions: [
-      ::UnifiedRubySDK::Shared::StoragePermission.new(
-        roles: [
-          ::UnifiedRubySDK::Shared::PropertyStoragePermissionRoles::OWNER,
-        ],
-      ),
-    ],
-    raw: {
-      "Mexico": "string",
-    },
-  ))
+res = s.storage.patch_storage_file(connection_id="string", id="string", storage_file=::UnifiedRubySDK::Shared::StorageFile.new())
 
 if ! res.storage_file.nil?
   # handle response
@@ -255,18 +230,7 @@ s.config_security(
 )
 
     
-res = s.storage.update_storage_file(connection_id="string", id="string", storage_file=::UnifiedRubySDK::Shared::StorageFile.new(
-    permissions: [
-      ::UnifiedRubySDK::Shared::StoragePermission.new(
-        roles: [
-          ::UnifiedRubySDK::Shared::PropertyStoragePermissionRoles::WRITE,
-        ],
-      ),
-    ],
-    raw: {
-      "Male": "string",
-    },
-  ))
+res = s.storage.update_storage_file(connection_id="string", id="string", storage_file=::UnifiedRubySDK::Shared::StorageFile.new())
 
 if ! res.storage_file.nil?
   # handle response

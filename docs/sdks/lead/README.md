@@ -28,20 +28,7 @@ s.config_security(
 )
 
     
-res = s.lead.create_crm_lead(connection_id="string", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(
-    address: ::UnifiedRubySDK::Shared::PropertyCrmLeadAddress.new(),
-    emails: [
-      ::UnifiedRubySDK::Shared::CrmEmail.new(),
-    ],
-    raw: {
-      "Designer": "string",
-    },
-    telephones: [
-      ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.lead.create_crm_lead(connection_id="string", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new())
 
 if ! res.crm_lead.nil?
   # handle response
@@ -124,9 +111,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListCrmLeadsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.lead.list_crm_leads(req)
@@ -167,20 +151,7 @@ s.config_security(
 )
 
     
-res = s.lead.patch_crm_lead(connection_id="string", id="string", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(
-    address: ::UnifiedRubySDK::Shared::PropertyCrmLeadAddress.new(),
-    emails: [
-      ::UnifiedRubySDK::Shared::CrmEmail.new(),
-    ],
-    raw: {
-      "deposit": "string",
-    },
-    telephones: [
-      ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.lead.patch_crm_lead(connection_id="string", id="string", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new())
 
 if ! res.crm_lead.nil?
   # handle response
@@ -259,20 +230,7 @@ s.config_security(
 )
 
     
-res = s.lead.update_crm_lead(connection_id="string", id="string", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(
-    address: ::UnifiedRubySDK::Shared::PropertyCrmLeadAddress.new(),
-    emails: [
-      ::UnifiedRubySDK::Shared::CrmEmail.new(),
-    ],
-    raw: {
-      "Northwest": "string",
-    },
-    telephones: [
-      ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.lead.update_crm_lead(connection_id="string", id="string", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new())
 
 if ! res.crm_lead.nil?
   # handle response

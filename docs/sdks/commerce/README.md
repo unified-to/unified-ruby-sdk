@@ -48,21 +48,7 @@ s.config_security(
     
 res = s.commerce.create_commerce_collection(connection_id="string", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
     id: "<ID>",
-    item_ids: [
-      "string",
-    ],
-    media: [
-      ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-        url: "http://uneven-mattress.name",
-      ),
-    ],
     name: "string",
-    raw: {
-      "whoever": "string",
-    },
-    tags: [
-      "string",
-    ],
   ))
 
 if ! res.commerce_collection.nil?
@@ -104,9 +90,6 @@ s.config_security(
     
 res = s.commerce.create_commerce_inventory(connection_id="string", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
     available: 5165.08,
-    raw: {
-      "Officer": "string",
-    },
   ))
 
 if ! res.commerce_inventory.nil?
@@ -147,45 +130,7 @@ s.config_security(
 
     
 res = s.commerce.create_commerce_item(connection_id="string", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(
-    media: [
-      ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-        url: "http://loud-minister.name",
-      ),
-    ],
     name: "string",
-    raw: {
-      "Awesome": "string",
-    },
-    tags: [
-      "string",
-    ],
-    variants: [
-      ::UnifiedRubySDK::Shared::CommerceItemVariant.new(
-        media: [
-          ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-            url: "https://burdensome-pinecone.name",
-          ),
-        ],
-        name: "string",
-        options: [
-          ::UnifiedRubySDK::Shared::CommerceItemOption.new(
-            id: "<ID>",
-            name: "string",
-            values: [
-              "string",
-            ],
-          ),
-        ],
-        prices: [
-          ::UnifiedRubySDK::Shared::CommerceItemPrice.new(
-            price: 5559.73,
-          ),
-        ],
-        tags: [
-          "string",
-        ],
-      ),
-    ],
   ))
 
 if ! res.commerce_item.nil?
@@ -226,11 +171,7 @@ s.config_security(
 
     
 res = s.commerce.create_commerce_location(connection_id="string", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
-    address: ::UnifiedRubySDK::Shared::PropertyCommerceLocationAddress.new(),
     name: "string",
-    raw: {
-      "Books": "string",
-    },
   ))
 
 if ! res.commerce_location.nil?
@@ -440,9 +381,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListCommerceCollectionsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.commerce.list_commerce_collections(req)
@@ -485,9 +423,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListCommerceInventoriesRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.commerce.list_commerce_inventories(req)
@@ -530,9 +465,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListCommerceItemsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.commerce.list_commerce_items(req)
@@ -575,9 +507,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListCommerceLocationsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.commerce.list_commerce_locations(req)
@@ -620,21 +549,7 @@ s.config_security(
     
 res = s.commerce.patch_commerce_collection(connection_id="string", id="string", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
     id: "<ID>",
-    item_ids: [
-      "string",
-    ],
-    media: [
-      ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-        url: "http://personal-sorrow.com",
-      ),
-    ],
     name: "string",
-    raw: {
-      "Cheese": "string",
-    },
-    tags: [
-      "string",
-    ],
   ))
 
 if ! res.commerce_collection.nil?
@@ -677,9 +592,6 @@ s.config_security(
     
 res = s.commerce.patch_commerce_inventory(connection_id="string", id="string", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
     available: 615.23,
-    raw: {
-      "Modern": "string",
-    },
   ))
 
 if ! res.commerce_inventory.nil?
@@ -721,45 +633,7 @@ s.config_security(
 
     
 res = s.commerce.patch_commerce_item(connection_id="string", id="string", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(
-    media: [
-      ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-        url: "http://frank-galley.biz",
-      ),
-    ],
     name: "string",
-    raw: {
-      "Dollar": "string",
-    },
-    tags: [
-      "string",
-    ],
-    variants: [
-      ::UnifiedRubySDK::Shared::CommerceItemVariant.new(
-        media: [
-          ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-            url: "http://jaded-sequence.name",
-          ),
-        ],
-        name: "string",
-        options: [
-          ::UnifiedRubySDK::Shared::CommerceItemOption.new(
-            id: "<ID>",
-            name: "string",
-            values: [
-              "string",
-            ],
-          ),
-        ],
-        prices: [
-          ::UnifiedRubySDK::Shared::CommerceItemPrice.new(
-            price: 3986.91,
-          ),
-        ],
-        tags: [
-          "string",
-        ],
-      ),
-    ],
   ))
 
 if ! res.commerce_item.nil?
@@ -801,11 +675,7 @@ s.config_security(
 
     
 res = s.commerce.patch_commerce_location(connection_id="string", id="string", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
-    address: ::UnifiedRubySDK::Shared::PropertyCommerceLocationAddress.new(),
     name: "string",
-    raw: {
-      "Kina": "string",
-    },
   ))
 
 if ! res.commerce_location.nil?
@@ -1004,21 +874,7 @@ s.config_security(
     
 res = s.commerce.update_commerce_collection(connection_id="string", id="string", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
     id: "<ID>",
-    item_ids: [
-      "string",
-    ],
-    media: [
-      ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-        url: "https://stupid-entity.org",
-      ),
-    ],
     name: "string",
-    raw: {
-      "Modern": "string",
-    },
-    tags: [
-      "string",
-    ],
   ))
 
 if ! res.commerce_collection.nil?
@@ -1061,9 +917,6 @@ s.config_security(
     
 res = s.commerce.update_commerce_inventory(connection_id="string", id="string", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
     available: 9360.02,
-    raw: {
-      "wavy": "string",
-    },
   ))
 
 if ! res.commerce_inventory.nil?
@@ -1105,45 +958,7 @@ s.config_security(
 
     
 res = s.commerce.update_commerce_item(connection_id="string", id="string", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(
-    media: [
-      ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-        url: "https://aggressive-major-league.org",
-      ),
-    ],
     name: "string",
-    raw: {
-      "fuga": "string",
-    },
-    tags: [
-      "string",
-    ],
-    variants: [
-      ::UnifiedRubySDK::Shared::CommerceItemVariant.new(
-        media: [
-          ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-            url: "http://exemplary-standing.biz",
-          ),
-        ],
-        name: "string",
-        options: [
-          ::UnifiedRubySDK::Shared::CommerceItemOption.new(
-            id: "<ID>",
-            name: "string",
-            values: [
-              "string",
-            ],
-          ),
-        ],
-        prices: [
-          ::UnifiedRubySDK::Shared::CommerceItemPrice.new(
-            price: 113.63,
-          ),
-        ],
-        tags: [
-          "string",
-        ],
-      ),
-    ],
   ))
 
 if ! res.commerce_item.nil?
@@ -1185,11 +1000,7 @@ s.config_security(
 
     
 res = s.commerce.update_commerce_location(connection_id="string", id="string", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
-    address: ::UnifiedRubySDK::Shared::PropertyCommerceLocationAddress.new(),
     name: "string",
-    raw: {
-      "hmph": "string",
-    },
   ))
 
 if ! res.commerce_location.nil?

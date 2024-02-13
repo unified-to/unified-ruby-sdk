@@ -68,9 +68,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListAccountingRefundsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.refund.list_accounting_refunds(req)

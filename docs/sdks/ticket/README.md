@@ -28,14 +28,7 @@ s.config_security(
 )
 
     
-res = s.ticket.create_ticketing_ticket(connection_id="string", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new(
-    raw: {
-      "sky": "string",
-    },
-    tags: [
-      "string",
-    ],
-  ))
+res = s.ticket.create_ticketing_ticket(connection_id="string", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new())
 
 if ! res.ticketing_ticket.nil?
   # handle response
@@ -118,9 +111,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListTicketingTicketsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.ticket.list_ticketing_tickets(req)
@@ -161,14 +151,7 @@ s.config_security(
 )
 
     
-res = s.ticket.patch_ticketing_ticket(connection_id="string", id="string", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new(
-    raw: {
-      "Bespoke": "string",
-    },
-    tags: [
-      "string",
-    ],
-  ))
+res = s.ticket.patch_ticketing_ticket(connection_id="string", id="string", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new())
 
 if ! res.ticketing_ticket.nil?
   # handle response
@@ -247,14 +230,7 @@ s.config_security(
 )
 
     
-res = s.ticket.update_ticketing_ticket(connection_id="string", id="string", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new(
-    raw: {
-      "Rhode": "string",
-    },
-    tags: [
-      "string",
-    ],
-  ))
+res = s.ticket.update_ticketing_ticket(connection_id="string", id="string", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new())
 
 if ! res.ticketing_ticket.nil?
   # handle response

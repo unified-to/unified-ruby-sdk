@@ -29,28 +29,12 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Shared::Connection.new(
-  auth: ::UnifiedRubySDK::Shared::PropertyConnectionAuth.new(
-    emails: [
-      "string",
-    ],
-    meta: {
-      "likewise": "string",
-    },
-    other_auth_info: [
-      "string",
-    ],
-  ),
   categories: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::ENRICH,
-  ],
-  cursors_cache: [
-    {
-      "Specialist": "string",
-    },
+    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::COMMERCE,
   ],
   integration_type: "string",
   permissions: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_COMPANY_READ,
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_APPLICATIONSTATUS_READ,
   ],
 )
     
@@ -130,11 +114,7 @@ s.config_security(
 )
 
 
-req = ::UnifiedRubySDK::Operations::ListUnifiedConnectionsRequest.new(
-  categories: [
-    ::UnifiedRubySDK::Operations::Categories::MARTECH,
-  ],
-)
+req = ::UnifiedRubySDK::Operations::ListUnifiedConnectionsRequest.new()
     
 res = s.connection.list_unified_connections(req)
 
@@ -175,28 +155,12 @@ s.config_security(
 
     
 res = s.connection.patch_unified_connection(id="string", connection=::UnifiedRubySDK::Shared::Connection.new(
-    auth: ::UnifiedRubySDK::Shared::PropertyConnectionAuth.new(
-      emails: [
-        "string",
-      ],
-      meta: {
-        "International": "string",
-      },
-      other_auth_info: [
-        "string",
-      ],
-    ),
     categories: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionCategories::COMMERCE,
-    ],
-    cursors_cache: [
-      {
-        "Coupe": "string",
-      },
+      ::UnifiedRubySDK::Shared::PropertyConnectionCategories::TICKETING,
     ],
     integration_type: "string",
     permissions: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ACCOUNTING_CONTACT_READ,
+      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_LEAD_WRITE,
     ],
   ))
 
@@ -276,28 +240,12 @@ s.config_security(
 
     
 res = s.connection.update_unified_connection(id="string", connection=::UnifiedRubySDK::Shared::Connection.new(
-    auth: ::UnifiedRubySDK::Shared::PropertyConnectionAuth.new(
-      emails: [
-        "string",
-      ],
-      meta: {
-        "tan": "string",
-      },
-      other_auth_info: [
-        "string",
-      ],
-    ),
     categories: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionCategories::COMMERCE,
-    ],
-    cursors_cache: [
-      {
-        "coulomb": "string",
-      },
+      ::UnifiedRubySDK::Shared::PropertyConnectionCategories::ACCOUNTING,
     ],
     integration_type: "string",
     permissions: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ACCOUNTING_TRANSACTION_WRITE,
+      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_JOB_WRITE,
     ],
   ))
 

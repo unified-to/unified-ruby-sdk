@@ -17,6 +17,8 @@ module UnifiedRubySDK
         ACCOUNTING_PAYMENT = new('accounting_payment')
         ACCOUNTING_TAXRATE = new('accounting_taxrate')
         ACCOUNTING_ORGANIZATION = new('accounting_organization')
+        ACCOUNTING_PAYOUT = new('accounting_payout')
+        ACCOUNTING_REFUND = new('accounting_refund')
         COMMERCE_ITEM = new('commerce_item')
         COMMERCE_COLLECTION = new('commerce_collection')
         COMMERCE_INVENTORY = new('commerce_inventory')

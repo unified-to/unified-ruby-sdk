@@ -28,38 +28,7 @@ s.config_security(
 )
 
     
-res = s.event.create_crm_event(connection_id="string", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(
-    call: ::UnifiedRubySDK::Shared::PropertyCrmEventCall.new(),
-    company_ids: [
-      "string",
-    ],
-    contact_ids: [
-      "string",
-    ],
-    deal_ids: [
-      "string",
-    ],
-    email: ::UnifiedRubySDK::Shared::PropertyCrmEventEmail.new(
-      attachment_file_ids: [
-        "string",
-      ],
-      cc: [
-        "string",
-      ],
-      to: [
-        "string",
-      ],
-    ),
-    lead_ids: [
-      "string",
-    ],
-    meeting: ::UnifiedRubySDK::Shared::PropertyCrmEventMeeting.new(),
-    note: ::UnifiedRubySDK::Shared::PropertyCrmEventNote.new(),
-    raw: {
-      "repeatedly": "string",
-    },
-    task: ::UnifiedRubySDK::Shared::PropertyCrmEventTask.new(),
-  ))
+res = s.event.create_crm_event(connection_id="string", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new())
 
 if ! res.crm_event.nil?
   # handle response
@@ -142,9 +111,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListCrmEventsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.event.list_crm_events(req)
@@ -185,38 +151,7 @@ s.config_security(
 )
 
     
-res = s.event.patch_crm_event(connection_id="string", id="string", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(
-    call: ::UnifiedRubySDK::Shared::PropertyCrmEventCall.new(),
-    company_ids: [
-      "string",
-    ],
-    contact_ids: [
-      "string",
-    ],
-    deal_ids: [
-      "string",
-    ],
-    email: ::UnifiedRubySDK::Shared::PropertyCrmEventEmail.new(
-      attachment_file_ids: [
-        "string",
-      ],
-      cc: [
-        "string",
-      ],
-      to: [
-        "string",
-      ],
-    ),
-    lead_ids: [
-      "string",
-    ],
-    meeting: ::UnifiedRubySDK::Shared::PropertyCrmEventMeeting.new(),
-    note: ::UnifiedRubySDK::Shared::PropertyCrmEventNote.new(),
-    raw: {
-      "XML": "string",
-    },
-    task: ::UnifiedRubySDK::Shared::PropertyCrmEventTask.new(),
-  ))
+res = s.event.patch_crm_event(connection_id="string", id="string", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new())
 
 if ! res.crm_event.nil?
   # handle response
@@ -295,38 +230,7 @@ s.config_security(
 )
 
     
-res = s.event.update_crm_event(connection_id="string", id="string", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(
-    call: ::UnifiedRubySDK::Shared::PropertyCrmEventCall.new(),
-    company_ids: [
-      "string",
-    ],
-    contact_ids: [
-      "string",
-    ],
-    deal_ids: [
-      "string",
-    ],
-    email: ::UnifiedRubySDK::Shared::PropertyCrmEventEmail.new(
-      attachment_file_ids: [
-        "string",
-      ],
-      cc: [
-        "string",
-      ],
-      to: [
-        "string",
-      ],
-    ),
-    lead_ids: [
-      "string",
-    ],
-    meeting: ::UnifiedRubySDK::Shared::PropertyCrmEventMeeting.new(),
-    note: ::UnifiedRubySDK::Shared::PropertyCrmEventNote.new(),
-    raw: {
-      "Account": "string",
-    },
-    task: ::UnifiedRubySDK::Shared::PropertyCrmEventTask.new(),
-  ))
+res = s.event.update_crm_event(connection_id="string", id="string", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new())
 
 if ! res.crm_event.nil?
   # handle response

@@ -28,11 +28,7 @@ s.config_security(
 )
 
     
-res = s.document.create_ats_document(connection_id="string", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(
-    raw: {
-      "Southeast": "string",
-    },
-  ))
+res = s.document.create_ats_document(connection_id="string", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new())
 
 if ! res.ats_document.nil?
   # handle response
@@ -115,9 +111,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListAtsDocumentsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.document.list_ats_documents(req)
@@ -158,11 +151,7 @@ s.config_security(
 )
 
     
-res = s.document.patch_ats_document(connection_id="string", id="string", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(
-    raw: {
-      "Northeast": "string",
-    },
-  ))
+res = s.document.patch_ats_document(connection_id="string", id="string", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new())
 
 if ! res.ats_document.nil?
   # handle response
@@ -241,11 +230,7 @@ s.config_security(
 )
 
     
-res = s.document.update_ats_document(connection_id="string", id="string", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(
-    raw: {
-      "turquoise": "string",
-    },
-  ))
+res = s.document.update_ats_document(connection_id="string", id="string", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new())
 
 if ! res.ats_document.nil?
   # handle response

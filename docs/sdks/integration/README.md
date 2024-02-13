@@ -27,9 +27,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::GetUnifiedIntegrationAuthRequest.new(
   integration_type: "string",
-  scopes: [
-    ::UnifiedRubySDK::Operations::Scopes::HRIS_EMPLOYEE_WRITE,
-  ],
   workspace_id: "string",
 )
     
@@ -72,9 +69,6 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListUnifiedIntegrationWorkspacesRequest.new(
-  categories: [
-    ::UnifiedRubySDK::Operations::QueryParamCategories::ACCOUNTING,
-  ],
   workspace_id: "string",
 )
     
@@ -116,11 +110,7 @@ s.config_security(
 )
 
 
-req = ::UnifiedRubySDK::Operations::ListUnifiedIntegrationsRequest.new(
-  categories: [
-    ::UnifiedRubySDK::Operations::ListUnifiedIntegrationsQueryParamCategories::CRM,
-  ],
-)
+req = ::UnifiedRubySDK::Operations::ListUnifiedIntegrationsRequest.new()
     
 res = s.integration.list_unified_integrations(req)
 

@@ -29,45 +29,7 @@ s.config_security(
 
     
 res = s.item.create_commerce_item(connection_id="string", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(
-    media: [
-      ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-        url: "http://loud-minister.name",
-      ),
-    ],
     name: "string",
-    raw: {
-      "Awesome": "string",
-    },
-    tags: [
-      "string",
-    ],
-    variants: [
-      ::UnifiedRubySDK::Shared::CommerceItemVariant.new(
-        media: [
-          ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-            url: "https://burdensome-pinecone.name",
-          ),
-        ],
-        name: "string",
-        options: [
-          ::UnifiedRubySDK::Shared::CommerceItemOption.new(
-            id: "<ID>",
-            name: "string",
-            values: [
-              "string",
-            ],
-          ),
-        ],
-        prices: [
-          ::UnifiedRubySDK::Shared::CommerceItemPrice.new(
-            price: 5559.73,
-          ),
-        ],
-        tags: [
-          "string",
-        ],
-      ),
-    ],
   ))
 
 if ! res.commerce_item.nil?
@@ -151,9 +113,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListCommerceItemsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.item.list_commerce_items(req)
@@ -195,45 +154,7 @@ s.config_security(
 
     
 res = s.item.patch_commerce_item(connection_id="string", id="string", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(
-    media: [
-      ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-        url: "http://frank-galley.biz",
-      ),
-    ],
     name: "string",
-    raw: {
-      "Dollar": "string",
-    },
-    tags: [
-      "string",
-    ],
-    variants: [
-      ::UnifiedRubySDK::Shared::CommerceItemVariant.new(
-        media: [
-          ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-            url: "http://jaded-sequence.name",
-          ),
-        ],
-        name: "string",
-        options: [
-          ::UnifiedRubySDK::Shared::CommerceItemOption.new(
-            id: "<ID>",
-            name: "string",
-            values: [
-              "string",
-            ],
-          ),
-        ],
-        prices: [
-          ::UnifiedRubySDK::Shared::CommerceItemPrice.new(
-            price: 3986.91,
-          ),
-        ],
-        tags: [
-          "string",
-        ],
-      ),
-    ],
   ))
 
 if ! res.commerce_item.nil?
@@ -314,45 +235,7 @@ s.config_security(
 
     
 res = s.item.update_commerce_item(connection_id="string", id="string", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(
-    media: [
-      ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-        url: "https://aggressive-major-league.org",
-      ),
-    ],
     name: "string",
-    raw: {
-      "fuga": "string",
-    },
-    tags: [
-      "string",
-    ],
-    variants: [
-      ::UnifiedRubySDK::Shared::CommerceItemVariant.new(
-        media: [
-          ::UnifiedRubySDK::Shared::CommerceItemMedia.new(
-            url: "http://exemplary-standing.biz",
-          ),
-        ],
-        name: "string",
-        options: [
-          ::UnifiedRubySDK::Shared::CommerceItemOption.new(
-            id: "<ID>",
-            name: "string",
-            values: [
-              "string",
-            ],
-          ),
-        ],
-        prices: [
-          ::UnifiedRubySDK::Shared::CommerceItemPrice.new(
-            price: 113.63,
-          ),
-        ],
-        tags: [
-          "string",
-        ],
-      ),
-    ],
   ))
 
 if ! res.commerce_item.nil?

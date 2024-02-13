@@ -28,22 +28,7 @@ s.config_security(
 )
 
     
-res = s.employee.create_hris_employee(connection_id="string", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new(
-    address: ::UnifiedRubySDK::Shared::PropertyHrisEmployeeAddress.new(),
-    emails: [
-      ::UnifiedRubySDK::Shared::HrisEmail.new(
-        email: "Adriel_Hansen@hotmail.com",
-      ),
-    ],
-    raw: {
-      "composite": "string",
-    },
-    telephones: [
-      ::UnifiedRubySDK::Shared::HrisTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.employee.create_hris_employee(connection_id="string", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new())
 
 if ! res.hris_employee.nil?
   # handle response
@@ -126,9 +111,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListHrisEmployeesRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.employee.list_hris_employees(req)
@@ -169,22 +151,7 @@ s.config_security(
 )
 
     
-res = s.employee.patch_hris_employee(connection_id="string", id="string", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new(
-    address: ::UnifiedRubySDK::Shared::PropertyHrisEmployeeAddress.new(),
-    emails: [
-      ::UnifiedRubySDK::Shared::HrisEmail.new(
-        email: "Zetta.Cassin@yahoo.com",
-      ),
-    ],
-    raw: {
-      "cyan": "string",
-    },
-    telephones: [
-      ::UnifiedRubySDK::Shared::HrisTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.employee.patch_hris_employee(connection_id="string", id="string", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new())
 
 if ! res.hris_employee.nil?
   # handle response
@@ -263,22 +230,7 @@ s.config_security(
 )
 
     
-res = s.employee.update_hris_employee(connection_id="string", id="string", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new(
-    address: ::UnifiedRubySDK::Shared::PropertyHrisEmployeeAddress.new(),
-    emails: [
-      ::UnifiedRubySDK::Shared::HrisEmail.new(
-        email: "Abbie_Aufderhar@gmail.com",
-      ),
-    ],
-    raw: {
-      "Mazda": "string",
-    },
-    telephones: [
-      ::UnifiedRubySDK::Shared::HrisTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.employee.update_hris_employee(connection_id="string", id="string", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new())
 
 if ! res.hris_employee.nil?
   # handle response

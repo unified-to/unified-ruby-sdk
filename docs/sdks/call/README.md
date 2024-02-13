@@ -25,9 +25,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListUcCallsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.call.list_uc_calls(req)

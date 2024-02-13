@@ -29,21 +29,7 @@ s.config_security(
 )
 
     
-res = s.uc.create_uc_contact(connection_id="string", uc_contact=::UnifiedRubySDK::Shared::UcContact.new(
-    emails: [
-      ::UnifiedRubySDK::Shared::UcEmail.new(
-        email: "Dulce_Becker30@yahoo.com",
-      ),
-    ],
-    raw: {
-      "challenge": "string",
-    },
-    telephones: [
-      ::UnifiedRubySDK::Shared::UcTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.uc.create_uc_contact(connection_id="string", uc_contact=::UnifiedRubySDK::Shared::UcContact.new())
 
 if ! res.uc_contact.nil?
   # handle response
@@ -126,9 +112,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListUcCallsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.uc.list_uc_calls(req)
@@ -171,9 +154,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListUcContactsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.uc.list_uc_contacts(req)
@@ -214,21 +194,7 @@ s.config_security(
 )
 
     
-res = s.uc.patch_uc_contact(connection_id="string", id="string", uc_contact=::UnifiedRubySDK::Shared::UcContact.new(
-    emails: [
-      ::UnifiedRubySDK::Shared::UcEmail.new(
-        email: "Norene_Boehm97@hotmail.com",
-      ),
-    ],
-    raw: {
-      "Borders": "string",
-    },
-    telephones: [
-      ::UnifiedRubySDK::Shared::UcTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.uc.patch_uc_contact(connection_id="string", id="string", uc_contact=::UnifiedRubySDK::Shared::UcContact.new())
 
 if ! res.uc_contact.nil?
   # handle response
@@ -307,21 +273,7 @@ s.config_security(
 )
 
     
-res = s.uc.update_uc_contact(connection_id="string", id="string", uc_contact=::UnifiedRubySDK::Shared::UcContact.new(
-    emails: [
-      ::UnifiedRubySDK::Shared::UcEmail.new(
-        email: "Kianna.Witting90@gmail.com",
-      ),
-    ],
-    raw: {
-      "Convertible": "string",
-    },
-    telephones: [
-      ::UnifiedRubySDK::Shared::UcTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.uc.update_uc_contact(connection_id="string", id="string", uc_contact=::UnifiedRubySDK::Shared::UcContact.new())
 
 if ! res.uc_contact.nil?
   # handle response

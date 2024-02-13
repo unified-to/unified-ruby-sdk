@@ -28,31 +28,7 @@ s.config_security(
 )
 
     
-res = s.job.create_ats_job(connection_id="string", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(
-    addresses: [
-      ::UnifiedRubySDK::Shared::AtsAddress.new(),
-    ],
-    compensation: [
-      ::UnifiedRubySDK::Shared::AtsCompensation.new(
-        type: ::UnifiedRubySDK::Shared::AtsCompensationType::SALARY,
-      ),
-    ],
-    departments: [
-      "string",
-    ],
-    hiring_manager_ids: [
-      "string",
-    ],
-    public_job_urls: [
-      "string",
-    ],
-    raw: {
-      "Loan": "string",
-    },
-    recruiter_ids: [
-      "string",
-    ],
-  ))
+res = s.job.create_ats_job(connection_id="string", ats_job=::UnifiedRubySDK::Shared::AtsJob.new())
 
 if ! res.ats_job.nil?
   # handle response
@@ -135,9 +111,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListAtsJobsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.job.list_ats_jobs(req)
@@ -178,31 +151,7 @@ s.config_security(
 )
 
     
-res = s.job.patch_ats_job(connection_id="string", id="string", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(
-    addresses: [
-      ::UnifiedRubySDK::Shared::AtsAddress.new(),
-    ],
-    compensation: [
-      ::UnifiedRubySDK::Shared::AtsCompensation.new(
-        type: ::UnifiedRubySDK::Shared::AtsCompensationType::BONUS,
-      ),
-    ],
-    departments: [
-      "string",
-    ],
-    hiring_manager_ids: [
-      "string",
-    ],
-    public_job_urls: [
-      "string",
-    ],
-    raw: {
-      "indigo": "string",
-    },
-    recruiter_ids: [
-      "string",
-    ],
-  ))
+res = s.job.patch_ats_job(connection_id="string", id="string", ats_job=::UnifiedRubySDK::Shared::AtsJob.new())
 
 if ! res.ats_job.nil?
   # handle response
@@ -281,31 +230,7 @@ s.config_security(
 )
 
     
-res = s.job.update_ats_job(connection_id="string", id="string", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(
-    addresses: [
-      ::UnifiedRubySDK::Shared::AtsAddress.new(),
-    ],
-    compensation: [
-      ::UnifiedRubySDK::Shared::AtsCompensation.new(
-        type: ::UnifiedRubySDK::Shared::AtsCompensationType::EQUITY,
-      ),
-    ],
-    departments: [
-      "string",
-    ],
-    hiring_manager_ids: [
-      "string",
-    ],
-    public_job_urls: [
-      "string",
-    ],
-    raw: {
-      "Plastic": "string",
-    },
-    recruiter_ids: [
-      "string",
-    ],
-  ))
+res = s.job.update_ats_job(connection_id="string", id="string", ats_job=::UnifiedRubySDK::Shared::AtsJob.new())
 
 if ! res.ats_job.nil?
   # handle response

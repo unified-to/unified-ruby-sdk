@@ -68,9 +68,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListAccountingPayoutsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.payout.list_accounting_payouts(req)

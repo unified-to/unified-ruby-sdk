@@ -28,14 +28,7 @@ s.config_security(
 )
 
     
-res = s.deal.create_crm_deal(connection_id="string", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new(
-    raw: {
-      "Toys": "string",
-    },
-    tags: [
-      "string",
-    ],
-  ))
+res = s.deal.create_crm_deal(connection_id="string", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new())
 
 if ! res.crm_deal.nil?
   # handle response
@@ -118,9 +111,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListCrmDealsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.deal.list_crm_deals(req)
@@ -161,14 +151,7 @@ s.config_security(
 )
 
     
-res = s.deal.patch_crm_deal(connection_id="string", id="string", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new(
-    raw: {
-      "consign": "string",
-    },
-    tags: [
-      "string",
-    ],
-  ))
+res = s.deal.patch_crm_deal(connection_id="string", id="string", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new())
 
 if ! res.crm_deal.nil?
   # handle response
@@ -247,14 +230,7 @@ s.config_security(
 )
 
     
-res = s.deal.update_crm_deal(connection_id="string", id="string", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new(
-    raw: {
-      "South": "string",
-    },
-    tags: [
-      "string",
-    ],
-  ))
+res = s.deal.update_crm_deal(connection_id="string", id="string", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new())
 
 if ! res.crm_deal.nil?
   # handle response

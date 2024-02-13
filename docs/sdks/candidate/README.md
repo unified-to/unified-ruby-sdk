@@ -28,28 +28,7 @@ s.config_security(
 )
 
     
-res = s.candidate.create_ats_candidate(connection_id="string", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new(
-    address: ::UnifiedRubySDK::Shared::PropertyAtsCandidateAddress.new(),
-    emails: [
-      ::UnifiedRubySDK::Shared::AtsEmail.new(
-        email: "Robin_Feeney@hotmail.com",
-      ),
-    ],
-    link_urls: [
-      "string",
-    ],
-    raw: {
-      "radian": "string",
-    },
-    tags: [
-      "string",
-    ],
-    telephones: [
-      ::UnifiedRubySDK::Shared::AtsTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.candidate.create_ats_candidate(connection_id="string", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new())
 
 if ! res.ats_candidate.nil?
   # handle response
@@ -132,9 +111,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListAtsCandidatesRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.candidate.list_ats_candidates(req)
@@ -175,28 +151,7 @@ s.config_security(
 )
 
     
-res = s.candidate.patch_ats_candidate(connection_id="string", id="string", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new(
-    address: ::UnifiedRubySDK::Shared::PropertyAtsCandidateAddress.new(),
-    emails: [
-      ::UnifiedRubySDK::Shared::AtsEmail.new(
-        email: "Tracy.Collins13@gmail.com",
-      ),
-    ],
-    link_urls: [
-      "string",
-    ],
-    raw: {
-      "Credit": "string",
-    },
-    tags: [
-      "string",
-    ],
-    telephones: [
-      ::UnifiedRubySDK::Shared::AtsTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.candidate.patch_ats_candidate(connection_id="string", id="string", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new())
 
 if ! res.ats_candidate.nil?
   # handle response
@@ -275,28 +230,7 @@ s.config_security(
 )
 
     
-res = s.candidate.update_ats_candidate(connection_id="string", id="string", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new(
-    address: ::UnifiedRubySDK::Shared::PropertyAtsCandidateAddress.new(),
-    emails: [
-      ::UnifiedRubySDK::Shared::AtsEmail.new(
-        email: "Gaetano86@hotmail.com",
-      ),
-    ],
-    link_urls: [
-      "string",
-    ],
-    raw: {
-      "B2C": "string",
-    },
-    tags: [
-      "string",
-    ],
-    telephones: [
-      ::UnifiedRubySDK::Shared::AtsTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.candidate.update_ats_candidate(connection_id="string", id="string", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new())
 
 if ! res.ats_candidate.nil?
   # handle response

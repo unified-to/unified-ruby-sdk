@@ -28,14 +28,7 @@ s.config_security(
 )
 
     
-res = s.interview.create_ats_interview(connection_id="string", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new(
-    raw: {
-      "Metrics": "string",
-    },
-    user_ids: [
-      "string",
-    ],
-  ))
+res = s.interview.create_ats_interview(connection_id="string", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new())
 
 if ! res.ats_interview.nil?
   # handle response
@@ -118,9 +111,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListAtsInterviewsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.interview.list_ats_interviews(req)
@@ -161,14 +151,7 @@ s.config_security(
 )
 
     
-res = s.interview.patch_ats_interview(connection_id="string", id="string", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new(
-    raw: {
-      "courageously": "string",
-    },
-    user_ids: [
-      "string",
-    ],
-  ))
+res = s.interview.patch_ats_interview(connection_id="string", id="string", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new())
 
 if ! res.ats_interview.nil?
   # handle response
@@ -247,14 +230,7 @@ s.config_security(
 )
 
     
-res = s.interview.update_ats_interview(connection_id="string", id="string", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new(
-    raw: {
-      "maroon": "string",
-    },
-    user_ids: [
-      "string",
-    ],
-  ))
+res = s.interview.update_ats_interview(connection_id="string", id="string", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new())
 
 if ! res.ats_interview.nil?
   # handle response

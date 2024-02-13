@@ -28,22 +28,7 @@ s.config_security(
 )
 
     
-res = s.member.create_martech_member(connection_id="string", marketing_member=::UnifiedRubySDK::Shared::MarketingMember.new(
-    emails: [
-      ::UnifiedRubySDK::Shared::MarketingEmail.new(
-        email: "Eldridge.Marvin@gmail.com",
-      ),
-    ],
-    list_ids: [
-      "string",
-    ],
-    raw: {
-      "input": "string",
-    },
-    tags: [
-      "string",
-    ],
-  ))
+res = s.member.create_martech_member(connection_id="string", marketing_member=::UnifiedRubySDK::Shared::MarketingMember.new())
 
 if ! res.marketing_member.nil?
   # handle response
@@ -126,9 +111,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListMartechMembersRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.member.list_martech_members(req)
@@ -169,22 +151,7 @@ s.config_security(
 )
 
     
-res = s.member.patch_martech_member(connection_id="string", id="string", marketing_member=::UnifiedRubySDK::Shared::MarketingMember.new(
-    emails: [
-      ::UnifiedRubySDK::Shared::MarketingEmail.new(
-        email: "Shana_Boyle@yahoo.com",
-      ),
-    ],
-    list_ids: [
-      "string",
-    ],
-    raw: {
-      "Handcrafted": "string",
-    },
-    tags: [
-      "string",
-    ],
-  ))
+res = s.member.patch_martech_member(connection_id="string", id="string", marketing_member=::UnifiedRubySDK::Shared::MarketingMember.new())
 
 if ! res.marketing_member.nil?
   # handle response
@@ -263,22 +230,7 @@ s.config_security(
 )
 
     
-res = s.member.update_martech_member(connection_id="string", id="string", marketing_member=::UnifiedRubySDK::Shared::MarketingMember.new(
-    emails: [
-      ::UnifiedRubySDK::Shared::MarketingEmail.new(
-        email: "Antonette.Kerluke@hotmail.com",
-      ),
-    ],
-    list_ids: [
-      "string",
-    ],
-    raw: {
-      "connect": "string",
-    },
-    tags: [
-      "string",
-    ],
-  ))
+res = s.member.update_martech_member(connection_id="string", id="string", marketing_member=::UnifiedRubySDK::Shared::MarketingMember.new())
 
 if ! res.marketing_member.nil?
   # handle response

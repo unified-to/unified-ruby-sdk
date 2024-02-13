@@ -26,9 +26,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::GetUnifiedIntegrationAuthRequest.new(
   integration_type: "string",
-  scopes: [
-    ::UnifiedRubySDK::Operations::Scopes::HRIS_EMPLOYEE_WRITE,
-  ],
   workspace_id: "string",
 )
     

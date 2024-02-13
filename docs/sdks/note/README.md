@@ -28,11 +28,7 @@ s.config_security(
 )
 
     
-res = s.note.create_ticketing_note(connection_id="string", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new(
-    raw: {
-      "Cruiser": "string",
-    },
-  ))
+res = s.note.create_ticketing_note(connection_id="string", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new())
 
 if ! res.ticketing_note.nil?
   # handle response
@@ -115,9 +111,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListTicketingNotesRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.note.list_ticketing_notes(req)
@@ -158,11 +151,7 @@ s.config_security(
 )
 
     
-res = s.note.patch_ticketing_note(connection_id="string", id="string", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new(
-    raw: {
-      "soon": "string",
-    },
-  ))
+res = s.note.patch_ticketing_note(connection_id="string", id="string", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new())
 
 if ! res.ticketing_note.nil?
   # handle response
@@ -241,11 +230,7 @@ s.config_security(
 )
 
     
-res = s.note.update_ticketing_note(connection_id="string", id="string", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new(
-    raw: {
-      "lavender": "string",
-    },
-  ))
+res = s.note.update_ticketing_note(connection_id="string", id="string", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new())
 
 if ! res.ticketing_note.nil?
   # handle response

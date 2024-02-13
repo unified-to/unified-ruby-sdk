@@ -40,23 +40,7 @@ s.config_security(
 )
 
     
-res = s.contact.create_accounting_contact(connection_id="string", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new(
-    billing_address: ::UnifiedRubySDK::Shared::PropertyAccountingContactBillingAddress.new(),
-    emails: [
-      ::UnifiedRubySDK::Shared::AccountingEmail.new(
-        email: "Mac36@gmail.com",
-      ),
-    ],
-    raw: {
-      "indexing": "string",
-    },
-    shipping_address: ::UnifiedRubySDK::Shared::PropertyAccountingContactShippingAddress.new(),
-    telephones: [
-      ::UnifiedRubySDK::Shared::AccountingTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.contact.create_accounting_contact(connection_id="string", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new())
 
 if ! res.accounting_contact.nil?
   # handle response
@@ -95,26 +79,7 @@ s.config_security(
 )
 
     
-res = s.contact.create_crm_contact(connection_id="string", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new(
-    address: ::UnifiedRubySDK::Shared::PropertyCrmContactAddress.new(),
-    company_ids: [
-      "string",
-    ],
-    deal_ids: [
-      "string",
-    ],
-    emails: [
-      ::UnifiedRubySDK::Shared::CrmEmail.new(),
-    ],
-    raw: {
-      "Mendelevium": "string",
-    },
-    telephones: [
-      ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.contact.create_crm_contact(connection_id="string", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new())
 
 if ! res.crm_contact.nil?
   # handle response
@@ -153,21 +118,7 @@ s.config_security(
 )
 
     
-res = s.contact.create_uc_contact(connection_id="string", uc_contact=::UnifiedRubySDK::Shared::UcContact.new(
-    emails: [
-      ::UnifiedRubySDK::Shared::UcEmail.new(
-        email: "Dulce_Becker30@yahoo.com",
-      ),
-    ],
-    raw: {
-      "challenge": "string",
-    },
-    telephones: [
-      ::UnifiedRubySDK::Shared::UcTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.contact.create_uc_contact(connection_id="string", uc_contact=::UnifiedRubySDK::Shared::UcContact.new())
 
 if ! res.uc_contact.nil?
   # handle response
@@ -334,9 +285,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListAccountingContactsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.contact.list_accounting_contacts(req)
@@ -379,9 +327,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListCrmContactsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.contact.list_crm_contacts(req)
@@ -424,9 +369,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListUcContactsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.contact.list_uc_contacts(req)
@@ -467,23 +409,7 @@ s.config_security(
 )
 
     
-res = s.contact.patch_accounting_contact(connection_id="string", id="string", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new(
-    billing_address: ::UnifiedRubySDK::Shared::PropertyAccountingContactBillingAddress.new(),
-    emails: [
-      ::UnifiedRubySDK::Shared::AccountingEmail.new(
-        email: "Sylvester.Kuhic@yahoo.com",
-      ),
-    ],
-    raw: {
-      "copying": "string",
-    },
-    shipping_address: ::UnifiedRubySDK::Shared::PropertyAccountingContactShippingAddress.new(),
-    telephones: [
-      ::UnifiedRubySDK::Shared::AccountingTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.contact.patch_accounting_contact(connection_id="string", id="string", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new())
 
 if ! res.accounting_contact.nil?
   # handle response
@@ -523,26 +449,7 @@ s.config_security(
 )
 
     
-res = s.contact.patch_crm_contact(connection_id="string", id="string", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new(
-    address: ::UnifiedRubySDK::Shared::PropertyCrmContactAddress.new(),
-    company_ids: [
-      "string",
-    ],
-    deal_ids: [
-      "string",
-    ],
-    emails: [
-      ::UnifiedRubySDK::Shared::CrmEmail.new(),
-    ],
-    raw: {
-      "architecture": "string",
-    },
-    telephones: [
-      ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.contact.patch_crm_contact(connection_id="string", id="string", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new())
 
 if ! res.crm_contact.nil?
   # handle response
@@ -582,21 +489,7 @@ s.config_security(
 )
 
     
-res = s.contact.patch_uc_contact(connection_id="string", id="string", uc_contact=::UnifiedRubySDK::Shared::UcContact.new(
-    emails: [
-      ::UnifiedRubySDK::Shared::UcEmail.new(
-        email: "Norene_Boehm97@hotmail.com",
-      ),
-    ],
-    raw: {
-      "Borders": "string",
-    },
-    telephones: [
-      ::UnifiedRubySDK::Shared::UcTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.contact.patch_uc_contact(connection_id="string", id="string", uc_contact=::UnifiedRubySDK::Shared::UcContact.new())
 
 if ! res.uc_contact.nil?
   # handle response
@@ -753,23 +646,7 @@ s.config_security(
 )
 
     
-res = s.contact.update_accounting_contact(connection_id="string", id="string", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new(
-    billing_address: ::UnifiedRubySDK::Shared::PropertyAccountingContactBillingAddress.new(),
-    emails: [
-      ::UnifiedRubySDK::Shared::AccountingEmail.new(
-        email: "Kaci_Hane@hotmail.com",
-      ),
-    ],
-    raw: {
-      "Ohio": "string",
-    },
-    shipping_address: ::UnifiedRubySDK::Shared::PropertyAccountingContactShippingAddress.new(),
-    telephones: [
-      ::UnifiedRubySDK::Shared::AccountingTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.contact.update_accounting_contact(connection_id="string", id="string", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new())
 
 if ! res.accounting_contact.nil?
   # handle response
@@ -809,26 +686,7 @@ s.config_security(
 )
 
     
-res = s.contact.update_crm_contact(connection_id="string", id="string", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new(
-    address: ::UnifiedRubySDK::Shared::PropertyCrmContactAddress.new(),
-    company_ids: [
-      "string",
-    ],
-    deal_ids: [
-      "string",
-    ],
-    emails: [
-      ::UnifiedRubySDK::Shared::CrmEmail.new(),
-    ],
-    raw: {
-      "Universal": "string",
-    },
-    telephones: [
-      ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.contact.update_crm_contact(connection_id="string", id="string", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new())
 
 if ! res.crm_contact.nil?
   # handle response
@@ -868,21 +726,7 @@ s.config_security(
 )
 
     
-res = s.contact.update_uc_contact(connection_id="string", id="string", uc_contact=::UnifiedRubySDK::Shared::UcContact.new(
-    emails: [
-      ::UnifiedRubySDK::Shared::UcEmail.new(
-        email: "Kianna.Witting90@gmail.com",
-      ),
-    ],
-    raw: {
-      "Convertible": "string",
-    },
-    telephones: [
-      ::UnifiedRubySDK::Shared::UcTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.contact.update_uc_contact(connection_id="string", id="string", uc_contact=::UnifiedRubySDK::Shared::UcContact.new())
 
 if ! res.uc_contact.nil?
   # handle response

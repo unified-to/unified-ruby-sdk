@@ -40,24 +40,7 @@ s.config_security(
 )
 
     
-res = s.ticketing.create_ticketing_customer(connection_id="string", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new(
-    emails: [
-      ::UnifiedRubySDK::Shared::TicketingEmail.new(
-        email: "Guadalupe78@yahoo.com",
-      ),
-    ],
-    raw: {
-      "Borders": "string",
-    },
-    tags: [
-      "string",
-    ],
-    telephones: [
-      ::UnifiedRubySDK::Shared::TicketingTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.ticketing.create_ticketing_customer(connection_id="string", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new())
 
 if ! res.ticketing_customer.nil?
   # handle response
@@ -96,11 +79,7 @@ s.config_security(
 )
 
     
-res = s.ticketing.create_ticketing_note(connection_id="string", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new(
-    raw: {
-      "Cruiser": "string",
-    },
-  ))
+res = s.ticketing.create_ticketing_note(connection_id="string", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new())
 
 if ! res.ticketing_note.nil?
   # handle response
@@ -139,14 +118,7 @@ s.config_security(
 )
 
     
-res = s.ticketing.create_ticketing_ticket(connection_id="string", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new(
-    raw: {
-      "sky": "string",
-    },
-    tags: [
-      "string",
-    ],
-  ))
+res = s.ticketing.create_ticketing_ticket(connection_id="string", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new())
 
 if ! res.ticketing_ticket.nil?
   # handle response
@@ -313,9 +285,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListTicketingCustomersRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.ticketing.list_ticketing_customers(req)
@@ -358,9 +327,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListTicketingNotesRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.ticketing.list_ticketing_notes(req)
@@ -403,9 +369,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListTicketingTicketsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.ticketing.list_ticketing_tickets(req)
@@ -446,24 +409,7 @@ s.config_security(
 )
 
     
-res = s.ticketing.patch_ticketing_customer(connection_id="string", id="string", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new(
-    emails: [
-      ::UnifiedRubySDK::Shared::TicketingEmail.new(
-        email: "Raymundo93@hotmail.com",
-      ),
-    ],
-    raw: {
-      "Brownsville": "string",
-    },
-    tags: [
-      "string",
-    ],
-    telephones: [
-      ::UnifiedRubySDK::Shared::TicketingTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.ticketing.patch_ticketing_customer(connection_id="string", id="string", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new())
 
 if ! res.ticketing_customer.nil?
   # handle response
@@ -503,11 +449,7 @@ s.config_security(
 )
 
     
-res = s.ticketing.patch_ticketing_note(connection_id="string", id="string", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new(
-    raw: {
-      "soon": "string",
-    },
-  ))
+res = s.ticketing.patch_ticketing_note(connection_id="string", id="string", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new())
 
 if ! res.ticketing_note.nil?
   # handle response
@@ -547,14 +489,7 @@ s.config_security(
 )
 
     
-res = s.ticketing.patch_ticketing_ticket(connection_id="string", id="string", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new(
-    raw: {
-      "Bespoke": "string",
-    },
-    tags: [
-      "string",
-    ],
-  ))
+res = s.ticketing.patch_ticketing_ticket(connection_id="string", id="string", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new())
 
 if ! res.ticketing_ticket.nil?
   # handle response
@@ -711,24 +646,7 @@ s.config_security(
 )
 
     
-res = s.ticketing.update_ticketing_customer(connection_id="string", id="string", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new(
-    emails: [
-      ::UnifiedRubySDK::Shared::TicketingEmail.new(
-        email: "Mohamed.Friesen@hotmail.com",
-      ),
-    ],
-    raw: {
-      "Barium": "string",
-    },
-    tags: [
-      "string",
-    ],
-    telephones: [
-      ::UnifiedRubySDK::Shared::TicketingTelephone.new(
-        telephone: "string",
-      ),
-    ],
-  ))
+res = s.ticketing.update_ticketing_customer(connection_id="string", id="string", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new())
 
 if ! res.ticketing_customer.nil?
   # handle response
@@ -768,11 +686,7 @@ s.config_security(
 )
 
     
-res = s.ticketing.update_ticketing_note(connection_id="string", id="string", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new(
-    raw: {
-      "lavender": "string",
-    },
-  ))
+res = s.ticketing.update_ticketing_note(connection_id="string", id="string", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new())
 
 if ! res.ticketing_note.nil?
   # handle response
@@ -812,14 +726,7 @@ s.config_security(
 )
 
     
-res = s.ticketing.update_ticketing_ticket(connection_id="string", id="string", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new(
-    raw: {
-      "Rhode": "string",
-    },
-    tags: [
-      "string",
-    ],
-  ))
+res = s.ticketing.update_ticketing_ticket(connection_id="string", id="string", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new())
 
 if ! res.ticketing_ticket.nil?
   # handle response

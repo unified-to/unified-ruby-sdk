@@ -28,11 +28,7 @@ s.config_security(
 )
 
     
-res = s.list.create_martech_list(connection_id="string", marketing_list=::UnifiedRubySDK::Shared::MarketingList.new(
-    raw: {
-      "Latin": "string",
-    },
-  ))
+res = s.list.create_martech_list(connection_id="string", marketing_list=::UnifiedRubySDK::Shared::MarketingList.new())
 
 if ! res.marketing_list.nil?
   # handle response
@@ -115,9 +111,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListMartechListsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.list.list_martech_lists(req)
@@ -158,11 +151,7 @@ s.config_security(
 )
 
     
-res = s.list.patch_martech_list(connection_id="string", id="string", marketing_list=::UnifiedRubySDK::Shared::MarketingList.new(
-    raw: {
-      "Classical": "string",
-    },
-  ))
+res = s.list.patch_martech_list(connection_id="string", id="string", marketing_list=::UnifiedRubySDK::Shared::MarketingList.new())
 
 if ! res.marketing_list.nil?
   # handle response
@@ -241,11 +230,7 @@ s.config_security(
 )
 
     
-res = s.list.update_martech_list(connection_id="string", id="string", marketing_list=::UnifiedRubySDK::Shared::MarketingList.new(
-    raw: {
-      "innocently": "string",
-    },
-  ))
+res = s.list.update_martech_list(connection_id="string", id="string", marketing_list=::UnifiedRubySDK::Shared::MarketingList.new())
 
 if ! res.marketing_list.nil?
   # handle response

@@ -29,11 +29,7 @@ s.config_security(
 
     
 res = s.location.create_commerce_location(connection_id="string", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
-    address: ::UnifiedRubySDK::Shared::PropertyCommerceLocationAddress.new(),
     name: "string",
-    raw: {
-      "Books": "string",
-    },
   ))
 
 if ! res.commerce_location.nil?
@@ -117,9 +113,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListCommerceLocationsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.location.list_commerce_locations(req)
@@ -161,11 +154,7 @@ s.config_security(
 
     
 res = s.location.patch_commerce_location(connection_id="string", id="string", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
-    address: ::UnifiedRubySDK::Shared::PropertyCommerceLocationAddress.new(),
     name: "string",
-    raw: {
-      "Kina": "string",
-    },
   ))
 
 if ! res.commerce_location.nil?
@@ -246,11 +235,7 @@ s.config_security(
 
     
 res = s.location.update_commerce_location(connection_id="string", id="string", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
-    address: ::UnifiedRubySDK::Shared::PropertyCommerceLocationAddress.new(),
     name: "string",
-    raw: {
-      "hmph": "string",
-    },
   ))
 
 if ! res.commerce_location.nil?

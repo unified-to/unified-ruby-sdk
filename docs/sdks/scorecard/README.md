@@ -28,16 +28,7 @@ s.config_security(
 )
 
     
-res = s.scorecard.create_ats_scorecard(connection_id="string", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new(
-    questions: [
-      ::UnifiedRubySDK::Shared::AtsScorecardQuestion.new(
-        text: "string",
-      ),
-    ],
-    raw: {
-      "Brunei": "string",
-    },
-  ))
+res = s.scorecard.create_ats_scorecard(connection_id="string", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new())
 
 if ! res.ats_scorecard.nil?
   # handle response
@@ -120,9 +111,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListAtsScorecardsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.scorecard.list_ats_scorecards(req)
@@ -163,16 +151,7 @@ s.config_security(
 )
 
     
-res = s.scorecard.patch_ats_scorecard(connection_id="string", id="string", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new(
-    questions: [
-      ::UnifiedRubySDK::Shared::AtsScorecardQuestion.new(
-        text: "string",
-      ),
-    ],
-    raw: {
-      "Falls": "string",
-    },
-  ))
+res = s.scorecard.patch_ats_scorecard(connection_id="string", id="string", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new())
 
 if ! res.ats_scorecard.nil?
   # handle response
@@ -251,16 +230,7 @@ s.config_security(
 )
 
     
-res = s.scorecard.update_ats_scorecard(connection_id="string", id="string", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new(
-    questions: [
-      ::UnifiedRubySDK::Shared::AtsScorecardQuestion.new(
-        text: "string",
-      ),
-    ],
-    raw: {
-      "East": "string",
-    },
-  ))
+res = s.scorecard.update_ats_scorecard(connection_id="string", id="string", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new())
 
 if ! res.ats_scorecard.nil?
   # handle response

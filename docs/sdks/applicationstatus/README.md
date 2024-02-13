@@ -25,9 +25,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListAtsApplicationstatusesRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.applicationstatus.list_ats_applicationstatuses(req)

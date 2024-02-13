@@ -41,28 +41,12 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Shared::Connection.new(
-  auth: ::UnifiedRubySDK::Shared::PropertyConnectionAuth.new(
-    emails: [
-      "string",
-    ],
-    meta: {
-      "likewise": "string",
-    },
-    other_auth_info: [
-      "string",
-    ],
-  ),
   categories: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::ENRICH,
-  ],
-  cursors_cache: [
-    {
-      "Specialist": "string",
-    },
+    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::COMMERCE,
   ],
   integration_type: "string",
   permissions: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_COMPANY_READ,
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_APPLICATIONSTATUS_READ,
   ],
 )
     
@@ -108,14 +92,7 @@ res = s.unified.create_unified_webhook(webhook=::UnifiedRubySDK::Shared::Webhook
     connection_id: "string",
     event: ::UnifiedRubySDK::Shared::Event::CREATED,
     hook_url: "string",
-    interval: 188.12,
-    meta: {
-      "payment": "string",
-    },
-    object_type: ::UnifiedRubySDK::Shared::ObjectType::ACCOUNTING_CONTACT,
-    runs: [
-      "string",
-    ],
+    object_type: ::UnifiedRubySDK::Shared::ObjectType::ACCOUNTING_ACCOUNT,
   ), include_all=false)
 
 if ! res.webhook.nil?
@@ -233,9 +210,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::GetUnifiedIntegrationAuthRequest.new(
   integration_type: "string",
-  scopes: [
-    ::UnifiedRubySDK::Operations::Scopes::HRIS_EMPLOYEE_WRITE,
-  ],
   workspace_id: "string",
 )
     
@@ -355,11 +329,7 @@ s.config_security(
 )
 
 
-req = ::UnifiedRubySDK::Operations::ListUnifiedConnectionsRequest.new(
-  categories: [
-    ::UnifiedRubySDK::Operations::Categories::MARTECH,
-  ],
-)
+req = ::UnifiedRubySDK::Operations::ListUnifiedConnectionsRequest.new()
     
 res = s.unified.list_unified_connections(req)
 
@@ -400,9 +370,6 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListUnifiedIntegrationWorkspacesRequest.new(
-  categories: [
-    ::UnifiedRubySDK::Operations::QueryParamCategories::ACCOUNTING,
-  ],
   workspace_id: "string",
 )
     
@@ -444,11 +411,7 @@ s.config_security(
 )
 
 
-req = ::UnifiedRubySDK::Operations::ListUnifiedIntegrationsRequest.new(
-  categories: [
-    ::UnifiedRubySDK::Operations::ListUnifiedIntegrationsQueryParamCategories::CRM,
-  ],
-)
+req = ::UnifiedRubySDK::Operations::ListUnifiedIntegrationsRequest.new()
     
 res = s.unified.list_unified_integrations(req)
 
@@ -569,28 +532,12 @@ s.config_security(
 
     
 res = s.unified.patch_unified_connection(id="string", connection=::UnifiedRubySDK::Shared::Connection.new(
-    auth: ::UnifiedRubySDK::Shared::PropertyConnectionAuth.new(
-      emails: [
-        "string",
-      ],
-      meta: {
-        "International": "string",
-      },
-      other_auth_info: [
-        "string",
-      ],
-    ),
     categories: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionCategories::COMMERCE,
-    ],
-    cursors_cache: [
-      {
-        "Coupe": "string",
-      },
+      ::UnifiedRubySDK::Shared::PropertyConnectionCategories::TICKETING,
     ],
     integration_type: "string",
     permissions: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ACCOUNTING_CONTACT_READ,
+      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_LEAD_WRITE,
     ],
   ))
 
@@ -746,28 +693,12 @@ s.config_security(
 
     
 res = s.unified.update_unified_connection(id="string", connection=::UnifiedRubySDK::Shared::Connection.new(
-    auth: ::UnifiedRubySDK::Shared::PropertyConnectionAuth.new(
-      emails: [
-        "string",
-      ],
-      meta: {
-        "tan": "string",
-      },
-      other_auth_info: [
-        "string",
-      ],
-    ),
     categories: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionCategories::COMMERCE,
-    ],
-    cursors_cache: [
-      {
-        "coulomb": "string",
-      },
+      ::UnifiedRubySDK::Shared::PropertyConnectionCategories::ACCOUNTING,
     ],
     integration_type: "string",
     permissions: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ACCOUNTING_TRANSACTION_WRITE,
+      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_JOB_WRITE,
     ],
   ))
 

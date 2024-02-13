@@ -28,11 +28,7 @@ s.config_security(
 )
 
     
-res = s.payment.create_accounting_payment(connection_id="string", accounting_payment=::UnifiedRubySDK::Shared::AccountingPayment.new(
-    raw: {
-      "Specialist": "string",
-    },
-  ))
+res = s.payment.create_accounting_payment(connection_id="string", accounting_payment=::UnifiedRubySDK::Shared::AccountingPayment.new())
 
 if ! res.accounting_payment.nil?
   # handle response
@@ -115,9 +111,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListAccountingPaymentsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.payment.list_accounting_payments(req)
@@ -158,11 +151,7 @@ s.config_security(
 )
 
     
-res = s.payment.patch_accounting_payment(connection_id="string", id="string", accounting_payment=::UnifiedRubySDK::Shared::AccountingPayment.new(
-    raw: {
-      "Herzegovina": "string",
-    },
-  ))
+res = s.payment.patch_accounting_payment(connection_id="string", id="string", accounting_payment=::UnifiedRubySDK::Shared::AccountingPayment.new())
 
 if ! res.accounting_payment.nil?
   # handle response
@@ -241,11 +230,7 @@ s.config_security(
 )
 
     
-res = s.payment.update_accounting_payment(connection_id="string", id="string", accounting_payment=::UnifiedRubySDK::Shared::AccountingPayment.new(
-    raw: {
-      "South": "string",
-    },
-  ))
+res = s.payment.update_accounting_payment(connection_id="string", id="string", accounting_payment=::UnifiedRubySDK::Shared::AccountingPayment.new())
 
 if ! res.accounting_payment.nil?
   # handle response

@@ -68,9 +68,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListAccountingOrganizationsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.organization.list_accounting_organizations(req)

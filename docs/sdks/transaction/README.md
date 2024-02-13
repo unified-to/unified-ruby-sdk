@@ -30,15 +30,6 @@ s.config_security(
     
 res = s.transaction.create_accounting_transaction(connection_id="string", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
     id: "<ID>",
-    lineitems: [
-      ::UnifiedRubySDK::Shared::AccountingTransactionLineitem.new(
-        account_id: "string",
-        total_amount: 4969.62,
-      ),
-    ],
-    raw: {
-      "Web": "string",
-    },
   ))
 
 if ! res.accounting_transaction.nil?
@@ -122,9 +113,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListAccountingTransactionsRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.transaction.list_accounting_transactions(req)
@@ -167,15 +155,6 @@ s.config_security(
     
 res = s.transaction.patch_accounting_transaction(connection_id="string", id="string", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
     id: "<ID>",
-    lineitems: [
-      ::UnifiedRubySDK::Shared::AccountingTransactionLineitem.new(
-        account_id: "string",
-        total_amount: 5633.69,
-      ),
-    ],
-    raw: {
-      "invoice": "string",
-    },
   ))
 
 if ! res.accounting_transaction.nil?
@@ -257,15 +236,6 @@ s.config_security(
     
 res = s.transaction.update_accounting_transaction(connection_id="string", id="string", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
     id: "<ID>",
-    lineitems: [
-      ::UnifiedRubySDK::Shared::AccountingTransactionLineitem.new(
-        account_id: "string",
-        total_amount: 6498.37,
-      ),
-    ],
-    raw: {
-      "a": "string",
-    },
   ))
 
 if ! res.accounting_transaction.nil?

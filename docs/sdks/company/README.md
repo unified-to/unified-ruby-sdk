@@ -31,32 +31,7 @@ s.config_security(
 )
 
     
-res = s.company.create_crm_company(connection_id="string", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(
-    address: ::UnifiedRubySDK::Shared::PropertyCrmCompanyAddress.new(),
-    deal_ids: [
-      "string",
-    ],
-    emails: [
-      ::UnifiedRubySDK::Shared::CrmEmail.new(),
-    ],
-    link_urls: [
-      "string",
-    ],
-    raw: {
-      "connecting": "string",
-    },
-    tags: [
-      "string",
-    ],
-    telephones: [
-      ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone: "string",
-      ),
-    ],
-    websites: [
-      "string",
-    ],
-  ))
+res = s.company.create_crm_company(connection_id="string", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new())
 
 if ! res.crm_company.nil?
   # handle response
@@ -181,9 +156,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListAtsCompaniesRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.company.list_ats_companies(req)
@@ -226,9 +198,6 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::ListCrmCompaniesRequest.new(
   connection_id: "string",
-  fields_: [
-    "string",
-  ],
 )
     
 res = s.company.list_crm_companies(req)
@@ -309,32 +278,7 @@ s.config_security(
 )
 
     
-res = s.company.patch_crm_company(connection_id="string", id="string", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(
-    address: ::UnifiedRubySDK::Shared::PropertyCrmCompanyAddress.new(),
-    deal_ids: [
-      "string",
-    ],
-    emails: [
-      ::UnifiedRubySDK::Shared::CrmEmail.new(),
-    ],
-    link_urls: [
-      "string",
-    ],
-    raw: {
-      "Producer": "string",
-    },
-    tags: [
-      "string",
-    ],
-    telephones: [
-      ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone: "string",
-      ),
-    ],
-    websites: [
-      "string",
-    ],
-  ))
+res = s.company.patch_crm_company(connection_id="string", id="string", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new())
 
 if ! res.crm_company.nil?
   # handle response
@@ -413,32 +357,7 @@ s.config_security(
 )
 
     
-res = s.company.update_crm_company(connection_id="string", id="string", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(
-    address: ::UnifiedRubySDK::Shared::PropertyCrmCompanyAddress.new(),
-    deal_ids: [
-      "string",
-    ],
-    emails: [
-      ::UnifiedRubySDK::Shared::CrmEmail.new(),
-    ],
-    link_urls: [
-      "string",
-    ],
-    raw: {
-      "SMS": "string",
-    },
-    tags: [
-      "string",
-    ],
-    telephones: [
-      ::UnifiedRubySDK::Shared::CrmTelephone.new(
-        telephone: "string",
-      ),
-    ],
-    websites: [
-      "string",
-    ],
-  ))
+res = s.company.update_crm_company(connection_id="string", id="string", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new())
 
 if ! res.crm_company.nil?
   # handle response
