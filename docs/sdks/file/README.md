@@ -28,7 +28,7 @@ s.config_security(
 )
 
     
-res = s.file.create_storage_file(connection_id="string", storage_file=::UnifiedRubySDK::Shared::StorageFile.new())
+res = s.file.create_storage_file(connection_id="<value>", storage_file=::UnifiedRubySDK::Shared::StorageFile.new())
 
 if ! res.storage_file.nil?
   # handle response
@@ -67,8 +67,8 @@ s.config_security(
 )
 
     
-res = s.file.get_storage_file(connection_id="string", id="string", fields_=[
-    "string",
+res = s.file.get_storage_file(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.storage_file.nil?
@@ -110,7 +110,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListStorageFilesRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.file.list_storage_files(req)
@@ -151,7 +151,7 @@ s.config_security(
 )
 
     
-res = s.file.patch_storage_file(connection_id="string", id="string", storage_file=::UnifiedRubySDK::Shared::StorageFile.new())
+res = s.file.patch_storage_file(connection_id="<value>", id="<value>", storage_file=::UnifiedRubySDK::Shared::StorageFile.new())
 
 if ! res.storage_file.nil?
   # handle response
@@ -191,7 +191,7 @@ s.config_security(
 )
 
     
-res = s.file.remove_storage_file(connection_id="string", id="string")
+res = s.file.remove_storage_file(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -230,7 +230,7 @@ s.config_security(
 )
 
     
-res = s.file.update_storage_file(connection_id="string", id="string", storage_file=::UnifiedRubySDK::Shared::StorageFile.new())
+res = s.file.update_storage_file(connection_id="<value>", id="<value>", storage_file=::UnifiedRubySDK::Shared::StorageFile.new())
 
 if ! res.storage_file.nil?
   # handle response

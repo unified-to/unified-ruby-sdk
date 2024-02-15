@@ -31,7 +31,7 @@ s.config_security(
 )
 
     
-res = s.company.create_crm_company(connection_id="string", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new())
+res = s.company.create_crm_company(connection_id="<value>", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new())
 
 if ! res.crm_company.nil?
   # handle response
@@ -70,8 +70,8 @@ s.config_security(
 )
 
     
-res = s.company.get_ats_company(connection_id="string", id="string", fields_=[
-    "string",
+res = s.company.get_ats_company(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.ats_company.nil?
@@ -112,8 +112,8 @@ s.config_security(
 )
 
     
-res = s.company.get_crm_company(connection_id="string", id="string", fields_=[
-    "string",
+res = s.company.get_crm_company(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.crm_company.nil?
@@ -155,7 +155,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAtsCompaniesRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.company.list_ats_companies(req)
@@ -197,7 +197,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListCrmCompaniesRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.company.list_crm_companies(req)
@@ -238,7 +238,7 @@ s.config_security(
 )
 
     
-res = s.company.list_enrich_companies(connection_id="string", domain="string", name="string")
+res = s.company.list_enrich_companies(connection_id="<value>", domain="<value>", name="<value>")
 
 if ! res.enrich_company.nil?
   # handle response
@@ -278,7 +278,7 @@ s.config_security(
 )
 
     
-res = s.company.patch_crm_company(connection_id="string", id="string", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new())
+res = s.company.patch_crm_company(connection_id="<value>", id="<value>", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new())
 
 if ! res.crm_company.nil?
   # handle response
@@ -318,7 +318,7 @@ s.config_security(
 )
 
     
-res = s.company.remove_crm_company(connection_id="string", id="string")
+res = s.company.remove_crm_company(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -357,7 +357,7 @@ s.config_security(
 )
 
     
-res = s.company.update_crm_company(connection_id="string", id="string", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new())
+res = s.company.update_crm_company(connection_id="<value>", id="<value>", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new())
 
 if ! res.crm_company.nil?
   # handle response

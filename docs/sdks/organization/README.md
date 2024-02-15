@@ -24,8 +24,8 @@ s.config_security(
 )
 
     
-res = s.organization.get_accounting_organization(connection_id="string", id="string", fields_=[
-    "string",
+res = s.organization.get_accounting_organization(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.accounting_organization.nil?
@@ -67,7 +67,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAccountingOrganizationsRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.organization.list_accounting_organizations(req)

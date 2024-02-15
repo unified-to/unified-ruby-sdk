@@ -64,8 +64,8 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_account(connection_id="string", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(
-    name: "string",
+res = s.accounting.create_accounting_account(connection_id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(
+    name: "<value>",
   ))
 
 if ! res.accounting_account.nil?
@@ -105,7 +105,7 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_contact(connection_id="string", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new())
+res = s.accounting.create_accounting_contact(connection_id="<value>", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new())
 
 if ! res.accounting_contact.nil?
   # handle response
@@ -144,7 +144,7 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_invoice(connection_id="string", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new())
+res = s.accounting.create_accounting_invoice(connection_id="<value>", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new())
 
 if ! res.accounting_invoice.nil?
   # handle response
@@ -183,7 +183,7 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_payment(connection_id="string", accounting_payment=::UnifiedRubySDK::Shared::AccountingPayment.new())
+res = s.accounting.create_accounting_payment(connection_id="<value>", accounting_payment=::UnifiedRubySDK::Shared::AccountingPayment.new())
 
 if ! res.accounting_payment.nil?
   # handle response
@@ -222,8 +222,8 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_taxrate(connection_id="string", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(
-    name: "string",
+res = s.accounting.create_accounting_taxrate(connection_id="<value>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(
+    name: "<value>",
     rate: 1719.1,
   ))
 
@@ -264,8 +264,8 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_transaction(connection_id="string", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
-    id: "<ID>",
+res = s.accounting.create_accounting_transaction(connection_id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
+    id: "<id>",
   ))
 
 if ! res.accounting_transaction.nil?
@@ -305,8 +305,8 @@ s.config_security(
 )
 
     
-res = s.accounting.get_accounting_account(connection_id="string", id="string", fields_=[
-    "string",
+res = s.accounting.get_accounting_account(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.accounting_account.nil?
@@ -347,8 +347,8 @@ s.config_security(
 )
 
     
-res = s.accounting.get_accounting_contact(connection_id="string", id="string", fields_=[
-    "string",
+res = s.accounting.get_accounting_contact(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.accounting_contact.nil?
@@ -389,8 +389,8 @@ s.config_security(
 )
 
     
-res = s.accounting.get_accounting_invoice(connection_id="string", id="string", fields_=[
-    "string",
+res = s.accounting.get_accounting_invoice(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.accounting_invoice.nil?
@@ -431,8 +431,8 @@ s.config_security(
 )
 
     
-res = s.accounting.get_accounting_organization(connection_id="string", id="string", fields_=[
-    "string",
+res = s.accounting.get_accounting_organization(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.accounting_organization.nil?
@@ -473,8 +473,8 @@ s.config_security(
 )
 
     
-res = s.accounting.get_accounting_payment(connection_id="string", id="string", fields_=[
-    "string",
+res = s.accounting.get_accounting_payment(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.accounting_payment.nil?
@@ -515,8 +515,8 @@ s.config_security(
 )
 
     
-res = s.accounting.get_accounting_payout(connection_id="string", id="string", fields_=[
-    "string",
+res = s.accounting.get_accounting_payout(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.accounting_payout.nil?
@@ -557,8 +557,8 @@ s.config_security(
 )
 
     
-res = s.accounting.get_accounting_refund(connection_id="string", id="string", fields_=[
-    "string",
+res = s.accounting.get_accounting_refund(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.accounting_refund.nil?
@@ -599,8 +599,8 @@ s.config_security(
 )
 
     
-res = s.accounting.get_accounting_taxrate(connection_id="string", id="string", fields_=[
-    "string",
+res = s.accounting.get_accounting_taxrate(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.accounting_taxrate.nil?
@@ -641,8 +641,8 @@ s.config_security(
 )
 
     
-res = s.accounting.get_accounting_transaction(connection_id="string", id="string", fields_=[
-    "string",
+res = s.accounting.get_accounting_transaction(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.accounting_transaction.nil?
@@ -684,7 +684,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAccountingAccountsRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.accounting.list_accounting_accounts(req)
@@ -726,7 +726,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAccountingContactsRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.accounting.list_accounting_contacts(req)
@@ -768,7 +768,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAccountingInvoicesRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.accounting.list_accounting_invoices(req)
@@ -810,7 +810,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAccountingOrganizationsRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.accounting.list_accounting_organizations(req)
@@ -852,7 +852,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAccountingPaymentsRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.accounting.list_accounting_payments(req)
@@ -894,7 +894,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAccountingPayoutsRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.accounting.list_accounting_payouts(req)
@@ -936,7 +936,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAccountingRefundsRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.accounting.list_accounting_refunds(req)
@@ -978,7 +978,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAccountingTaxratesRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.accounting.list_accounting_taxrates(req)
@@ -1020,7 +1020,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAccountingTransactionsRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.accounting.list_accounting_transactions(req)
@@ -1061,8 +1061,8 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_account(connection_id="string", id="string", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(
-    name: "string",
+res = s.accounting.patch_accounting_account(connection_id="<value>", id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(
+    name: "<value>",
   ))
 
 if ! res.accounting_account.nil?
@@ -1103,7 +1103,7 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_contact(connection_id="string", id="string", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new())
+res = s.accounting.patch_accounting_contact(connection_id="<value>", id="<value>", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new())
 
 if ! res.accounting_contact.nil?
   # handle response
@@ -1143,7 +1143,7 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_invoice(connection_id="string", id="string", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new())
+res = s.accounting.patch_accounting_invoice(connection_id="<value>", id="<value>", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new())
 
 if ! res.accounting_invoice.nil?
   # handle response
@@ -1183,7 +1183,7 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_payment(connection_id="string", id="string", accounting_payment=::UnifiedRubySDK::Shared::AccountingPayment.new())
+res = s.accounting.patch_accounting_payment(connection_id="<value>", id="<value>", accounting_payment=::UnifiedRubySDK::Shared::AccountingPayment.new())
 
 if ! res.accounting_payment.nil?
   # handle response
@@ -1223,8 +1223,8 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_taxrate(connection_id="string", id="string", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(
-    name: "string",
+res = s.accounting.patch_accounting_taxrate(connection_id="<value>", id="<value>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(
+    name: "<value>",
     rate: 5991.47,
   ))
 
@@ -1266,8 +1266,8 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_transaction(connection_id="string", id="string", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
-    id: "<ID>",
+res = s.accounting.patch_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
+    id: "<id>",
   ))
 
 if ! res.accounting_transaction.nil?
@@ -1308,7 +1308,7 @@ s.config_security(
 )
 
     
-res = s.accounting.remove_accounting_account(connection_id="string", id="string")
+res = s.accounting.remove_accounting_account(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -1347,7 +1347,7 @@ s.config_security(
 )
 
     
-res = s.accounting.remove_accounting_contact(connection_id="string", id="string")
+res = s.accounting.remove_accounting_contact(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -1386,7 +1386,7 @@ s.config_security(
 )
 
     
-res = s.accounting.remove_accounting_invoice(connection_id="string", id="string")
+res = s.accounting.remove_accounting_invoice(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -1425,7 +1425,7 @@ s.config_security(
 )
 
     
-res = s.accounting.remove_accounting_payment(connection_id="string", id="string")
+res = s.accounting.remove_accounting_payment(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -1464,7 +1464,7 @@ s.config_security(
 )
 
     
-res = s.accounting.remove_accounting_taxrate(connection_id="string", id="string")
+res = s.accounting.remove_accounting_taxrate(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -1503,7 +1503,7 @@ s.config_security(
 )
 
     
-res = s.accounting.remove_accounting_transaction(connection_id="string", id="string")
+res = s.accounting.remove_accounting_transaction(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -1542,8 +1542,8 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_account(connection_id="string", id="string", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(
-    name: "string",
+res = s.accounting.update_accounting_account(connection_id="<value>", id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(
+    name: "<value>",
   ))
 
 if ! res.accounting_account.nil?
@@ -1584,7 +1584,7 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_contact(connection_id="string", id="string", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new())
+res = s.accounting.update_accounting_contact(connection_id="<value>", id="<value>", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new())
 
 if ! res.accounting_contact.nil?
   # handle response
@@ -1624,7 +1624,7 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_invoice(connection_id="string", id="string", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new())
+res = s.accounting.update_accounting_invoice(connection_id="<value>", id="<value>", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new())
 
 if ! res.accounting_invoice.nil?
   # handle response
@@ -1664,7 +1664,7 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_payment(connection_id="string", id="string", accounting_payment=::UnifiedRubySDK::Shared::AccountingPayment.new())
+res = s.accounting.update_accounting_payment(connection_id="<value>", id="<value>", accounting_payment=::UnifiedRubySDK::Shared::AccountingPayment.new())
 
 if ! res.accounting_payment.nil?
   # handle response
@@ -1704,8 +1704,8 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_taxrate(connection_id="string", id="string", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(
-    name: "string",
+res = s.accounting.update_accounting_taxrate(connection_id="<value>", id="<value>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(
+    name: "<value>",
     rate: 3382.78,
   ))
 
@@ -1747,8 +1747,8 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_transaction(connection_id="string", id="string", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
-    id: "<ID>",
+res = s.accounting.update_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
+    id: "<id>",
   ))
 
 if ! res.accounting_transaction.nil?

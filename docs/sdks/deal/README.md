@@ -28,7 +28,7 @@ s.config_security(
 )
 
     
-res = s.deal.create_crm_deal(connection_id="string", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new())
+res = s.deal.create_crm_deal(connection_id="<value>", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new())
 
 if ! res.crm_deal.nil?
   # handle response
@@ -67,8 +67,8 @@ s.config_security(
 )
 
     
-res = s.deal.get_crm_deal(connection_id="string", id="string", fields_=[
-    "string",
+res = s.deal.get_crm_deal(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.crm_deal.nil?
@@ -110,7 +110,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListCrmDealsRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.deal.list_crm_deals(req)
@@ -151,7 +151,7 @@ s.config_security(
 )
 
     
-res = s.deal.patch_crm_deal(connection_id="string", id="string", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new())
+res = s.deal.patch_crm_deal(connection_id="<value>", id="<value>", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new())
 
 if ! res.crm_deal.nil?
   # handle response
@@ -191,7 +191,7 @@ s.config_security(
 )
 
     
-res = s.deal.remove_crm_deal(connection_id="string", id="string")
+res = s.deal.remove_crm_deal(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -230,7 +230,7 @@ s.config_security(
 )
 
     
-res = s.deal.update_crm_deal(connection_id="string", id="string", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new())
+res = s.deal.update_crm_deal(connection_id="<value>", id="<value>", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new())
 
 if ! res.crm_deal.nil?
   # handle response

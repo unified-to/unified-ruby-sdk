@@ -28,8 +28,8 @@ s.config_security(
 )
 
     
-res = s.account.create_accounting_account(connection_id="string", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(
-    name: "string",
+res = s.account.create_accounting_account(connection_id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(
+    name: "<value>",
   ))
 
 if ! res.accounting_account.nil?
@@ -69,8 +69,8 @@ s.config_security(
 )
 
     
-res = s.account.get_accounting_account(connection_id="string", id="string", fields_=[
-    "string",
+res = s.account.get_accounting_account(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.accounting_account.nil?
@@ -112,7 +112,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAccountingAccountsRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.account.list_accounting_accounts(req)
@@ -153,8 +153,8 @@ s.config_security(
 )
 
     
-res = s.account.patch_accounting_account(connection_id="string", id="string", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(
-    name: "string",
+res = s.account.patch_accounting_account(connection_id="<value>", id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(
+    name: "<value>",
   ))
 
 if ! res.accounting_account.nil?
@@ -195,7 +195,7 @@ s.config_security(
 )
 
     
-res = s.account.remove_accounting_account(connection_id="string", id="string")
+res = s.account.remove_accounting_account(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -234,8 +234,8 @@ s.config_security(
 )
 
     
-res = s.account.update_accounting_account(connection_id="string", id="string", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(
-    name: "string",
+res = s.account.update_accounting_account(connection_id="<value>", id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(
+    name: "<value>",
   ))
 
 if ! res.accounting_account.nil?

@@ -28,8 +28,8 @@ s.config_security(
 )
 
     
-res = s.location.create_commerce_location(connection_id="string", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
-    name: "string",
+res = s.location.create_commerce_location(connection_id="<value>", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
+    name: "<value>",
   ))
 
 if ! res.commerce_location.nil?
@@ -69,8 +69,8 @@ s.config_security(
 )
 
     
-res = s.location.get_commerce_location(connection_id="string", id="string", fields_=[
-    "string",
+res = s.location.get_commerce_location(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.commerce_location.nil?
@@ -112,7 +112,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListCommerceLocationsRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.location.list_commerce_locations(req)
@@ -153,8 +153,8 @@ s.config_security(
 )
 
     
-res = s.location.patch_commerce_location(connection_id="string", id="string", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
-    name: "string",
+res = s.location.patch_commerce_location(connection_id="<value>", id="<value>", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
+    name: "<value>",
   ))
 
 if ! res.commerce_location.nil?
@@ -195,7 +195,7 @@ s.config_security(
 )
 
     
-res = s.location.remove_commerce_location(connection_id="string", id="string")
+res = s.location.remove_commerce_location(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -234,8 +234,8 @@ s.config_security(
 )
 
     
-res = s.location.update_commerce_location(connection_id="string", id="string", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
-    name: "string",
+res = s.location.update_commerce_location(connection_id="<value>", id="<value>", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
+    name: "<value>",
   ))
 
 if ! res.commerce_location.nil?

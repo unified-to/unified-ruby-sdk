@@ -32,7 +32,7 @@ req = ::UnifiedRubySDK::Shared::Connection.new(
   categories: [
     ::UnifiedRubySDK::Shared::PropertyConnectionCategories::COMMERCE,
   ],
-  integration_type: "string",
+  integration_type: "<value>",
   permissions: [
     ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_APPLICATIONSTATUS_READ,
   ],
@@ -76,7 +76,7 @@ s.config_security(
 )
 
     
-res = s.connection.get_unified_connection(id="string")
+res = s.connection.get_unified_connection(id="<value>")
 
 if ! res.connection.nil?
   # handle response
@@ -154,11 +154,11 @@ s.config_security(
 )
 
     
-res = s.connection.patch_unified_connection(id="string", connection=::UnifiedRubySDK::Shared::Connection.new(
+res = s.connection.patch_unified_connection(id="<value>", connection=::UnifiedRubySDK::Shared::Connection.new(
     categories: [
       ::UnifiedRubySDK::Shared::PropertyConnectionCategories::TICKETING,
     ],
-    integration_type: "string",
+    integration_type: "<value>",
     permissions: [
       ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_LEAD_WRITE,
     ],
@@ -201,7 +201,7 @@ s.config_security(
 )
 
     
-res = s.connection.remove_unified_connection(id="string")
+res = s.connection.remove_unified_connection(id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -239,11 +239,11 @@ s.config_security(
 )
 
     
-res = s.connection.update_unified_connection(id="string", connection=::UnifiedRubySDK::Shared::Connection.new(
+res = s.connection.update_unified_connection(id="<value>", connection=::UnifiedRubySDK::Shared::Connection.new(
     categories: [
       ::UnifiedRubySDK::Shared::PropertyConnectionCategories::ACCOUNTING,
     ],
-    integration_type: "string",
+    integration_type: "<value>",
     permissions: [
       ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_JOB_WRITE,
     ],

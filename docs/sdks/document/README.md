@@ -28,7 +28,7 @@ s.config_security(
 )
 
     
-res = s.document.create_ats_document(connection_id="string", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new())
+res = s.document.create_ats_document(connection_id="<value>", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new())
 
 if ! res.ats_document.nil?
   # handle response
@@ -67,8 +67,8 @@ s.config_security(
 )
 
     
-res = s.document.get_ats_document(connection_id="string", id="string", fields_=[
-    "string",
+res = s.document.get_ats_document(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.ats_document.nil?
@@ -110,7 +110,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAtsDocumentsRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.document.list_ats_documents(req)
@@ -151,7 +151,7 @@ s.config_security(
 )
 
     
-res = s.document.patch_ats_document(connection_id="string", id="string", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new())
+res = s.document.patch_ats_document(connection_id="<value>", id="<value>", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new())
 
 if ! res.ats_document.nil?
   # handle response
@@ -191,7 +191,7 @@ s.config_security(
 )
 
     
-res = s.document.remove_ats_document(connection_id="string", id="string")
+res = s.document.remove_ats_document(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -230,7 +230,7 @@ s.config_security(
 )
 
     
-res = s.document.update_ats_document(connection_id="string", id="string", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new())
+res = s.document.update_ats_document(connection_id="<value>", id="<value>", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new())
 
 if ! res.ats_document.nil?
   # handle response

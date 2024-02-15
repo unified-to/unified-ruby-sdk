@@ -44,7 +44,7 @@ req = ::UnifiedRubySDK::Shared::Connection.new(
   categories: [
     ::UnifiedRubySDK::Shared::PropertyConnectionCategories::COMMERCE,
   ],
-  integration_type: "string",
+  integration_type: "<value>",
   permissions: [
     ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_APPLICATIONSTATUS_READ,
   ],
@@ -89,9 +89,9 @@ s.config_security(
 
     
 res = s.unified.create_unified_webhook(webhook=::UnifiedRubySDK::Shared::Webhook.new(
-    connection_id: "string",
+    connection_id: "<value>",
     event: ::UnifiedRubySDK::Shared::Event::CREATED,
-    hook_url: "string",
+    hook_url: "<value>",
     object_type: ::UnifiedRubySDK::Shared::ObjectType::ACCOUNTING_ACCOUNT,
   ), include_all=false)
 
@@ -132,7 +132,7 @@ s.config_security(
 )
 
     
-res = s.unified.get_unified_apicall(id="string")
+res = s.unified.get_unified_apicall(id="<value>")
 
 if ! res.api_call.nil?
   # handle response
@@ -170,7 +170,7 @@ s.config_security(
 )
 
     
-res = s.unified.get_unified_connection(id="string")
+res = s.unified.get_unified_connection(id="<value>")
 
 if ! res.connection.nil?
   # handle response
@@ -209,8 +209,8 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::GetUnifiedIntegrationAuthRequest.new(
-  integration_type: "string",
-  workspace_id: "string",
+  integration_type: "<value>",
+  workspace_id: "<value>",
 )
     
 res = s.unified.get_unified_integration_auth(req)
@@ -251,7 +251,7 @@ s.config_security(
 )
 
     
-res = s.unified.get_unified_webhook(id="string")
+res = s.unified.get_unified_webhook(id="<value>")
 
 if ! res.webhook.nil?
   # handle response
@@ -370,7 +370,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListUnifiedIntegrationWorkspacesRequest.new(
-  workspace_id: "string",
+  workspace_id: "<value>",
 )
     
 res = s.unified.list_unified_integration_workspaces(req)
@@ -531,11 +531,11 @@ s.config_security(
 )
 
     
-res = s.unified.patch_unified_connection(id="string", connection=::UnifiedRubySDK::Shared::Connection.new(
+res = s.unified.patch_unified_connection(id="<value>", connection=::UnifiedRubySDK::Shared::Connection.new(
     categories: [
       ::UnifiedRubySDK::Shared::PropertyConnectionCategories::TICKETING,
     ],
-    integration_type: "string",
+    integration_type: "<value>",
     permissions: [
       ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_LEAD_WRITE,
     ],
@@ -578,7 +578,7 @@ s.config_security(
 )
 
     
-res = s.unified.patch_unified_webhook_trigger(id="string")
+res = s.unified.patch_unified_webhook_trigger(id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -616,7 +616,7 @@ s.config_security(
 )
 
     
-res = s.unified.remove_unified_connection(id="string")
+res = s.unified.remove_unified_connection(id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -654,7 +654,7 @@ s.config_security(
 )
 
     
-res = s.unified.remove_unified_webhook(id="string")
+res = s.unified.remove_unified_webhook(id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -692,11 +692,11 @@ s.config_security(
 )
 
     
-res = s.unified.update_unified_connection(id="string", connection=::UnifiedRubySDK::Shared::Connection.new(
+res = s.unified.update_unified_connection(id="<value>", connection=::UnifiedRubySDK::Shared::Connection.new(
     categories: [
       ::UnifiedRubySDK::Shared::PropertyConnectionCategories::ACCOUNTING,
     ],
-    integration_type: "string",
+    integration_type: "<value>",
     permissions: [
       ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_JOB_WRITE,
     ],
@@ -739,7 +739,7 @@ s.config_security(
 )
 
     
-res = s.unified.update_unified_webhook_trigger(id="string")
+res = s.unified.update_unified_webhook_trigger(id="<value>")
 
 if res.status_code == 200
   # handle response

@@ -28,7 +28,7 @@ s.config_security(
 )
 
     
-res = s.employee.create_hris_employee(connection_id="string", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new())
+res = s.employee.create_hris_employee(connection_id="<value>", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new())
 
 if ! res.hris_employee.nil?
   # handle response
@@ -67,8 +67,8 @@ s.config_security(
 )
 
     
-res = s.employee.get_hris_employee(connection_id="string", id="string", fields_=[
-    "string",
+res = s.employee.get_hris_employee(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.hris_employee.nil?
@@ -110,7 +110,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListHrisEmployeesRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.employee.list_hris_employees(req)
@@ -151,7 +151,7 @@ s.config_security(
 )
 
     
-res = s.employee.patch_hris_employee(connection_id="string", id="string", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new())
+res = s.employee.patch_hris_employee(connection_id="<value>", id="<value>", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new())
 
 if ! res.hris_employee.nil?
   # handle response
@@ -191,7 +191,7 @@ s.config_security(
 )
 
     
-res = s.employee.remove_hris_employee(connection_id="string", id="string")
+res = s.employee.remove_hris_employee(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -230,7 +230,7 @@ s.config_security(
 )
 
     
-res = s.employee.update_hris_employee(connection_id="string", id="string", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new())
+res = s.employee.update_hris_employee(connection_id="<value>", id="<value>", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new())
 
 if ! res.hris_employee.nil?
   # handle response

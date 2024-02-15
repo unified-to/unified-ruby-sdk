@@ -28,8 +28,8 @@ s.config_security(
 )
 
     
-res = s.taxrate.create_accounting_taxrate(connection_id="string", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(
-    name: "string",
+res = s.taxrate.create_accounting_taxrate(connection_id="<value>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(
+    name: "<value>",
     rate: 1719.1,
   ))
 
@@ -70,8 +70,8 @@ s.config_security(
 )
 
     
-res = s.taxrate.get_accounting_taxrate(connection_id="string", id="string", fields_=[
-    "string",
+res = s.taxrate.get_accounting_taxrate(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.accounting_taxrate.nil?
@@ -113,7 +113,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAccountingTaxratesRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.taxrate.list_accounting_taxrates(req)
@@ -154,8 +154,8 @@ s.config_security(
 )
 
     
-res = s.taxrate.patch_accounting_taxrate(connection_id="string", id="string", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(
-    name: "string",
+res = s.taxrate.patch_accounting_taxrate(connection_id="<value>", id="<value>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(
+    name: "<value>",
     rate: 5991.47,
   ))
 
@@ -197,7 +197,7 @@ s.config_security(
 )
 
     
-res = s.taxrate.remove_accounting_taxrate(connection_id="string", id="string")
+res = s.taxrate.remove_accounting_taxrate(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -236,8 +236,8 @@ s.config_security(
 )
 
     
-res = s.taxrate.update_accounting_taxrate(connection_id="string", id="string", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(
-    name: "string",
+res = s.taxrate.update_accounting_taxrate(connection_id="<value>", id="<value>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(
+    name: "<value>",
     rate: 3382.78,
   ))
 

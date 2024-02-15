@@ -40,7 +40,7 @@ s.config_security(
 )
 
     
-res = s.contact.create_accounting_contact(connection_id="string", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new())
+res = s.contact.create_accounting_contact(connection_id="<value>", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new())
 
 if ! res.accounting_contact.nil?
   # handle response
@@ -79,7 +79,7 @@ s.config_security(
 )
 
     
-res = s.contact.create_crm_contact(connection_id="string", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new())
+res = s.contact.create_crm_contact(connection_id="<value>", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new())
 
 if ! res.crm_contact.nil?
   # handle response
@@ -118,7 +118,7 @@ s.config_security(
 )
 
     
-res = s.contact.create_uc_contact(connection_id="string", uc_contact=::UnifiedRubySDK::Shared::UcContact.new())
+res = s.contact.create_uc_contact(connection_id="<value>", uc_contact=::UnifiedRubySDK::Shared::UcContact.new())
 
 if ! res.uc_contact.nil?
   # handle response
@@ -157,8 +157,8 @@ s.config_security(
 )
 
     
-res = s.contact.get_accounting_contact(connection_id="string", id="string", fields_=[
-    "string",
+res = s.contact.get_accounting_contact(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.accounting_contact.nil?
@@ -199,8 +199,8 @@ s.config_security(
 )
 
     
-res = s.contact.get_crm_contact(connection_id="string", id="string", fields_=[
-    "string",
+res = s.contact.get_crm_contact(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.crm_contact.nil?
@@ -241,8 +241,8 @@ s.config_security(
 )
 
     
-res = s.contact.get_uc_contact(connection_id="string", id="string", fields_=[
-    "string",
+res = s.contact.get_uc_contact(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.uc_contact.nil?
@@ -284,7 +284,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAccountingContactsRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.contact.list_accounting_contacts(req)
@@ -326,7 +326,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListCrmContactsRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.contact.list_crm_contacts(req)
@@ -368,7 +368,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListUcContactsRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.contact.list_uc_contacts(req)
@@ -409,7 +409,7 @@ s.config_security(
 )
 
     
-res = s.contact.patch_accounting_contact(connection_id="string", id="string", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new())
+res = s.contact.patch_accounting_contact(connection_id="<value>", id="<value>", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new())
 
 if ! res.accounting_contact.nil?
   # handle response
@@ -449,7 +449,7 @@ s.config_security(
 )
 
     
-res = s.contact.patch_crm_contact(connection_id="string", id="string", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new())
+res = s.contact.patch_crm_contact(connection_id="<value>", id="<value>", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new())
 
 if ! res.crm_contact.nil?
   # handle response
@@ -489,7 +489,7 @@ s.config_security(
 )
 
     
-res = s.contact.patch_uc_contact(connection_id="string", id="string", uc_contact=::UnifiedRubySDK::Shared::UcContact.new())
+res = s.contact.patch_uc_contact(connection_id="<value>", id="<value>", uc_contact=::UnifiedRubySDK::Shared::UcContact.new())
 
 if ! res.uc_contact.nil?
   # handle response
@@ -529,7 +529,7 @@ s.config_security(
 )
 
     
-res = s.contact.remove_accounting_contact(connection_id="string", id="string")
+res = s.contact.remove_accounting_contact(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -568,7 +568,7 @@ s.config_security(
 )
 
     
-res = s.contact.remove_crm_contact(connection_id="string", id="string")
+res = s.contact.remove_crm_contact(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -607,7 +607,7 @@ s.config_security(
 )
 
     
-res = s.contact.remove_uc_contact(connection_id="string", id="string")
+res = s.contact.remove_uc_contact(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -646,7 +646,7 @@ s.config_security(
 )
 
     
-res = s.contact.update_accounting_contact(connection_id="string", id="string", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new())
+res = s.contact.update_accounting_contact(connection_id="<value>", id="<value>", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new())
 
 if ! res.accounting_contact.nil?
   # handle response
@@ -686,7 +686,7 @@ s.config_security(
 )
 
     
-res = s.contact.update_crm_contact(connection_id="string", id="string", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new())
+res = s.contact.update_crm_contact(connection_id="<value>", id="<value>", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new())
 
 if ! res.crm_contact.nil?
   # handle response
@@ -726,7 +726,7 @@ s.config_security(
 )
 
     
-res = s.contact.update_uc_contact(connection_id="string", id="string", uc_contact=::UnifiedRubySDK::Shared::UcContact.new())
+res = s.contact.update_uc_contact(connection_id="<value>", id="<value>", uc_contact=::UnifiedRubySDK::Shared::UcContact.new())
 
 if ! res.uc_contact.nil?
   # handle response

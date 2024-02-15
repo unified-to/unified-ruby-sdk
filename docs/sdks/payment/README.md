@@ -28,7 +28,7 @@ s.config_security(
 )
 
     
-res = s.payment.create_accounting_payment(connection_id="string", accounting_payment=::UnifiedRubySDK::Shared::AccountingPayment.new())
+res = s.payment.create_accounting_payment(connection_id="<value>", accounting_payment=::UnifiedRubySDK::Shared::AccountingPayment.new())
 
 if ! res.accounting_payment.nil?
   # handle response
@@ -67,8 +67,8 @@ s.config_security(
 )
 
     
-res = s.payment.get_accounting_payment(connection_id="string", id="string", fields_=[
-    "string",
+res = s.payment.get_accounting_payment(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.accounting_payment.nil?
@@ -110,7 +110,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAccountingPaymentsRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.payment.list_accounting_payments(req)
@@ -151,7 +151,7 @@ s.config_security(
 )
 
     
-res = s.payment.patch_accounting_payment(connection_id="string", id="string", accounting_payment=::UnifiedRubySDK::Shared::AccountingPayment.new())
+res = s.payment.patch_accounting_payment(connection_id="<value>", id="<value>", accounting_payment=::UnifiedRubySDK::Shared::AccountingPayment.new())
 
 if ! res.accounting_payment.nil?
   # handle response
@@ -191,7 +191,7 @@ s.config_security(
 )
 
     
-res = s.payment.remove_accounting_payment(connection_id="string", id="string")
+res = s.payment.remove_accounting_payment(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -230,7 +230,7 @@ s.config_security(
 )
 
     
-res = s.payment.update_accounting_payment(connection_id="string", id="string", accounting_payment=::UnifiedRubySDK::Shared::AccountingPayment.new())
+res = s.payment.update_accounting_payment(connection_id="<value>", id="<value>", accounting_payment=::UnifiedRubySDK::Shared::AccountingPayment.new())
 
 if ! res.accounting_payment.nil?
   # handle response

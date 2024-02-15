@@ -28,8 +28,8 @@ s.config_security(
 )
 
     
-res = s.transaction.create_accounting_transaction(connection_id="string", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
-    id: "<ID>",
+res = s.transaction.create_accounting_transaction(connection_id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
+    id: "<id>",
   ))
 
 if ! res.accounting_transaction.nil?
@@ -69,8 +69,8 @@ s.config_security(
 )
 
     
-res = s.transaction.get_accounting_transaction(connection_id="string", id="string", fields_=[
-    "string",
+res = s.transaction.get_accounting_transaction(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.accounting_transaction.nil?
@@ -112,7 +112,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAccountingTransactionsRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.transaction.list_accounting_transactions(req)
@@ -153,8 +153,8 @@ s.config_security(
 )
 
     
-res = s.transaction.patch_accounting_transaction(connection_id="string", id="string", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
-    id: "<ID>",
+res = s.transaction.patch_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
+    id: "<id>",
   ))
 
 if ! res.accounting_transaction.nil?
@@ -195,7 +195,7 @@ s.config_security(
 )
 
     
-res = s.transaction.remove_accounting_transaction(connection_id="string", id="string")
+res = s.transaction.remove_accounting_transaction(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -234,8 +234,8 @@ s.config_security(
 )
 
     
-res = s.transaction.update_accounting_transaction(connection_id="string", id="string", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
-    id: "<ID>",
+res = s.transaction.update_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
+    id: "<id>",
   ))
 
 if ! res.accounting_transaction.nil?

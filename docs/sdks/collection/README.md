@@ -28,9 +28,9 @@ s.config_security(
 )
 
     
-res = s.collection.create_commerce_collection(connection_id="string", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
-    id: "<ID>",
-    name: "string",
+res = s.collection.create_commerce_collection(connection_id="<value>", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
+    id: "<id>",
+    name: "<value>",
   ))
 
 if ! res.commerce_collection.nil?
@@ -70,8 +70,8 @@ s.config_security(
 )
 
     
-res = s.collection.get_commerce_collection(connection_id="string", id="string", fields_=[
-    "string",
+res = s.collection.get_commerce_collection(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.commerce_collection.nil?
@@ -113,7 +113,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListCommerceCollectionsRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.collection.list_commerce_collections(req)
@@ -154,9 +154,9 @@ s.config_security(
 )
 
     
-res = s.collection.patch_commerce_collection(connection_id="string", id="string", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
-    id: "<ID>",
-    name: "string",
+res = s.collection.patch_commerce_collection(connection_id="<value>", id="<value>", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
+    id: "<id>",
+    name: "<value>",
   ))
 
 if ! res.commerce_collection.nil?
@@ -197,7 +197,7 @@ s.config_security(
 )
 
     
-res = s.collection.remove_commerce_collection(connection_id="string", id="string")
+res = s.collection.remove_commerce_collection(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -236,9 +236,9 @@ s.config_security(
 )
 
     
-res = s.collection.update_commerce_collection(connection_id="string", id="string", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
-    id: "<ID>",
-    name: "string",
+res = s.collection.update_commerce_collection(connection_id="<value>", id="<value>", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
+    id: "<id>",
+    name: "<value>",
   ))
 
 if ! res.commerce_collection.nil?

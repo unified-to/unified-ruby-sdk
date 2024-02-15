@@ -28,7 +28,7 @@ s.config_security(
 )
 
     
-res = s.inventory.create_commerce_inventory(connection_id="string", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
+res = s.inventory.create_commerce_inventory(connection_id="<value>", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
     available: 5165.08,
   ))
 
@@ -69,8 +69,8 @@ s.config_security(
 )
 
     
-res = s.inventory.get_commerce_inventory(connection_id="string", id="string", fields_=[
-    "string",
+res = s.inventory.get_commerce_inventory(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.commerce_inventory.nil?
@@ -112,7 +112,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListCommerceInventoriesRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.inventory.list_commerce_inventories(req)
@@ -153,7 +153,7 @@ s.config_security(
 )
 
     
-res = s.inventory.patch_commerce_inventory(connection_id="string", id="string", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
+res = s.inventory.patch_commerce_inventory(connection_id="<value>", id="<value>", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
     available: 615.23,
   ))
 
@@ -195,7 +195,7 @@ s.config_security(
 )
 
     
-res = s.inventory.remove_commerce_inventory(connection_id="string", id="string")
+res = s.inventory.remove_commerce_inventory(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -234,7 +234,7 @@ s.config_security(
 )
 
     
-res = s.inventory.update_commerce_inventory(connection_id="string", id="string", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
+res = s.inventory.update_commerce_inventory(connection_id="<value>", id="<value>", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
     available: 9360.02,
   ))
 

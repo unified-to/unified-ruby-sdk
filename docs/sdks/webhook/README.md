@@ -29,9 +29,9 @@ s.config_security(
 
     
 res = s.webhook.create_unified_webhook(webhook=::UnifiedRubySDK::Shared::Webhook.new(
-    connection_id: "string",
+    connection_id: "<value>",
     event: ::UnifiedRubySDK::Shared::Event::CREATED,
-    hook_url: "string",
+    hook_url: "<value>",
     object_type: ::UnifiedRubySDK::Shared::ObjectType::ACCOUNTING_ACCOUNT,
   ), include_all=false)
 
@@ -72,7 +72,7 @@ s.config_security(
 )
 
     
-res = s.webhook.get_unified_webhook(id="string")
+res = s.webhook.get_unified_webhook(id="<value>")
 
 if ! res.webhook.nil?
   # handle response
@@ -150,7 +150,7 @@ s.config_security(
 )
 
     
-res = s.webhook.patch_unified_webhook_trigger(id="string")
+res = s.webhook.patch_unified_webhook_trigger(id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -188,7 +188,7 @@ s.config_security(
 )
 
     
-res = s.webhook.remove_unified_webhook(id="string")
+res = s.webhook.remove_unified_webhook(id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -226,7 +226,7 @@ s.config_security(
 )
 
     
-res = s.webhook.update_unified_webhook_trigger(id="string")
+res = s.webhook.update_unified_webhook_trigger(id="<value>")
 
 if res.status_code == 200
   # handle response

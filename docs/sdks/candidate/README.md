@@ -28,7 +28,7 @@ s.config_security(
 )
 
     
-res = s.candidate.create_ats_candidate(connection_id="string", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new())
+res = s.candidate.create_ats_candidate(connection_id="<value>", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new())
 
 if ! res.ats_candidate.nil?
   # handle response
@@ -67,8 +67,8 @@ s.config_security(
 )
 
     
-res = s.candidate.get_ats_candidate(connection_id="string", id="string", fields_=[
-    "string",
+res = s.candidate.get_ats_candidate(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.ats_candidate.nil?
@@ -110,7 +110,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAtsCandidatesRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.candidate.list_ats_candidates(req)
@@ -151,7 +151,7 @@ s.config_security(
 )
 
     
-res = s.candidate.patch_ats_candidate(connection_id="string", id="string", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new())
+res = s.candidate.patch_ats_candidate(connection_id="<value>", id="<value>", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new())
 
 if ! res.ats_candidate.nil?
   # handle response
@@ -191,7 +191,7 @@ s.config_security(
 )
 
     
-res = s.candidate.remove_ats_candidate(connection_id="string", id="string")
+res = s.candidate.remove_ats_candidate(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -230,7 +230,7 @@ s.config_security(
 )
 
     
-res = s.candidate.update_ats_candidate(connection_id="string", id="string", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new())
+res = s.candidate.update_ats_candidate(connection_id="<value>", id="<value>", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new())
 
 if ! res.ats_candidate.nil?
   # handle response

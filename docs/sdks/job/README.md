@@ -28,7 +28,7 @@ s.config_security(
 )
 
     
-res = s.job.create_ats_job(connection_id="string", ats_job=::UnifiedRubySDK::Shared::AtsJob.new())
+res = s.job.create_ats_job(connection_id="<value>", ats_job=::UnifiedRubySDK::Shared::AtsJob.new())
 
 if ! res.ats_job.nil?
   # handle response
@@ -67,8 +67,8 @@ s.config_security(
 )
 
     
-res = s.job.get_ats_job(connection_id="string", id="string", fields_=[
-    "string",
+res = s.job.get_ats_job(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.ats_job.nil?
@@ -110,7 +110,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAtsJobsRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.job.list_ats_jobs(req)
@@ -151,7 +151,7 @@ s.config_security(
 )
 
     
-res = s.job.patch_ats_job(connection_id="string", id="string", ats_job=::UnifiedRubySDK::Shared::AtsJob.new())
+res = s.job.patch_ats_job(connection_id="<value>", id="<value>", ats_job=::UnifiedRubySDK::Shared::AtsJob.new())
 
 if ! res.ats_job.nil?
   # handle response
@@ -191,7 +191,7 @@ s.config_security(
 )
 
     
-res = s.job.remove_ats_job(connection_id="string", id="string")
+res = s.job.remove_ats_job(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -230,7 +230,7 @@ s.config_security(
 )
 
     
-res = s.job.update_ats_job(connection_id="string", id="string", ats_job=::UnifiedRubySDK::Shared::AtsJob.new())
+res = s.job.update_ats_job(connection_id="<value>", id="<value>", ats_job=::UnifiedRubySDK::Shared::AtsJob.new())
 
 if ! res.ats_job.nil?
   # handle response

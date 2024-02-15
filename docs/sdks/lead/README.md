@@ -28,7 +28,7 @@ s.config_security(
 )
 
     
-res = s.lead.create_crm_lead(connection_id="string", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new())
+res = s.lead.create_crm_lead(connection_id="<value>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new())
 
 if ! res.crm_lead.nil?
   # handle response
@@ -67,8 +67,8 @@ s.config_security(
 )
 
     
-res = s.lead.get_crm_lead(connection_id="string", id="string", fields_=[
-    "string",
+res = s.lead.get_crm_lead(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.crm_lead.nil?
@@ -110,7 +110,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListCrmLeadsRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.lead.list_crm_leads(req)
@@ -151,7 +151,7 @@ s.config_security(
 )
 
     
-res = s.lead.patch_crm_lead(connection_id="string", id="string", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new())
+res = s.lead.patch_crm_lead(connection_id="<value>", id="<value>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new())
 
 if ! res.crm_lead.nil?
   # handle response
@@ -191,7 +191,7 @@ s.config_security(
 )
 
     
-res = s.lead.remove_crm_lead(connection_id="string", id="string")
+res = s.lead.remove_crm_lead(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -230,7 +230,7 @@ s.config_security(
 )
 
     
-res = s.lead.update_crm_lead(connection_id="string", id="string", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new())
+res = s.lead.update_crm_lead(connection_id="<value>", id="<value>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new())
 
 if ! res.crm_lead.nil?
   # handle response

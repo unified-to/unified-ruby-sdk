@@ -27,8 +27,8 @@ s.config_security(
 )
 
     
-res = s.passthrough.create_passthrough(connection_id="string", path="string", request_body={
-    "turquoise": "string",
+res = s.passthrough.create_passthrough(connection_id="<value>", path="<value>", request_body={
+    "turquoise": "<value>",
   })
 
 if ! res.result.nil?
@@ -69,7 +69,7 @@ s.config_security(
 )
 
     
-res = s.passthrough.list_passthroughs(connection_id="string", path="string")
+res = s.passthrough.list_passthroughs(connection_id="<value>", path="<value>")
 
 if ! res.result.nil?
   # handle response
@@ -108,8 +108,8 @@ s.config_security(
 )
 
     
-res = s.passthrough.patch_passthrough(connection_id="string", path="string", request_body={
-    "brand": "string",
+res = s.passthrough.patch_passthrough(connection_id="<value>", path="<value>", request_body={
+    "brand": "<value>",
   })
 
 if ! res.result.nil?
@@ -150,7 +150,7 @@ s.config_security(
 )
 
     
-res = s.passthrough.remove_passthrough(connection_id="string", path="string")
+res = s.passthrough.remove_passthrough(connection_id="<value>", path="<value>")
 
 if ! res.result.nil?
   # handle response
@@ -189,8 +189,8 @@ s.config_security(
 )
 
     
-res = s.passthrough.update_passthrough(connection_id="string", path="string", request_body={
-    "Northwest": "string",
+res = s.passthrough.update_passthrough(connection_id="<value>", path="<value>", request_body={
+    "Northwest": "<value>",
   })
 
 if ! res.result.nil?

@@ -24,8 +24,8 @@ s.config_security(
 )
 
     
-res = s.refund.get_accounting_refund(connection_id="string", id="string", fields_=[
-    "string",
+res = s.refund.get_accounting_refund(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.accounting_refund.nil?
@@ -67,7 +67,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAccountingRefundsRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.refund.list_accounting_refunds(req)

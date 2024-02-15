@@ -28,7 +28,7 @@ s.config_security(
 )
 
     
-res = s.interview.create_ats_interview(connection_id="string", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new())
+res = s.interview.create_ats_interview(connection_id="<value>", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new())
 
 if ! res.ats_interview.nil?
   # handle response
@@ -67,8 +67,8 @@ s.config_security(
 )
 
     
-res = s.interview.get_ats_interview(connection_id="string", id="string", fields_=[
-    "string",
+res = s.interview.get_ats_interview(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
   ])
 
 if ! res.ats_interview.nil?
@@ -110,7 +110,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAtsInterviewsRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.interview.list_ats_interviews(req)
@@ -151,7 +151,7 @@ s.config_security(
 )
 
     
-res = s.interview.patch_ats_interview(connection_id="string", id="string", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new())
+res = s.interview.patch_ats_interview(connection_id="<value>", id="<value>", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new())
 
 if ! res.ats_interview.nil?
   # handle response
@@ -191,7 +191,7 @@ s.config_security(
 )
 
     
-res = s.interview.remove_ats_interview(connection_id="string", id="string")
+res = s.interview.remove_ats_interview(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -230,7 +230,7 @@ s.config_security(
 )
 
     
-res = s.interview.update_ats_interview(connection_id="string", id="string", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new())
+res = s.interview.update_ats_interview(connection_id="<value>", id="<value>", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new())
 
 if ! res.ats_interview.nil?
   # handle response

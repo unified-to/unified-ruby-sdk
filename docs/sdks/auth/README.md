@@ -25,8 +25,8 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::GetUnifiedIntegrationAuthRequest.new(
-  integration_type: "string",
-  workspace_id: "string",
+  integration_type: "<value>",
+  workspace_id: "<value>",
 )
     
 res = s.auth.get_unified_integration_auth(req)
@@ -68,8 +68,8 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::GetUnifiedIntegrationLoginRequest.new(
-  integration_type: "string",
-  workspace_id: "string",
+  integration_type: "<value>",
+  workspace_id: "<value>",
 )
     
 res = s.auth.get_unified_integration_login(req)

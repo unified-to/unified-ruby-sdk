@@ -24,7 +24,7 @@ s.config_security(
 )
 
     
-res = s.enrich.list_enrich_companies(connection_id="string", domain="string", name="string")
+res = s.enrich.list_enrich_companies(connection_id="<value>", domain="<value>", name="<value>")
 
 if ! res.enrich_company.nil?
   # handle response
@@ -65,7 +65,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListEnrichPeopleRequest.new(
-  connection_id: "string",
+  connection_id: "<value>",
 )
     
 res = s.enrich.list_enrich_people(req)
