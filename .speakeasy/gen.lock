@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 5c191fdb16f8d76a3eb09c714f56170d
+  docChecksum: 119b9584a5fe294470614e38361fae09
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.258.0
-  releaseVersion: 0.4.9
-  configChecksum: 7638bf3610c64147a17fb568728aa08f
+  generationVersion: 2.259.1
+  releaseVersion: 0.4.10
+  configChecksum: cfcdb310a2140d896a4e809ddecd411b
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -604,6 +604,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/ucemail.rb
   - lib/unified_ruby_sdk/models/shared/atsapplication_status.rb
   - lib/unified_ruby_sdk/models/shared/atsapplication.rb
+  - lib/unified_ruby_sdk/models/shared/atsapplicationanswer.rb
   - lib/unified_ruby_sdk/models/shared/origin.rb
   - lib/unified_ruby_sdk/models/shared/atscandidate.rb
   - lib/unified_ruby_sdk/models/shared/atstelephone_type.rb
@@ -618,6 +619,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/employment_type.rb
   - lib/unified_ruby_sdk/models/shared/atsjob_status.rb
   - lib/unified_ruby_sdk/models/shared/atsjob.rb
+  - lib/unified_ruby_sdk/models/shared/atsjobquestion_type.rb
+  - lib/unified_ruby_sdk/models/shared/atsjobquestion.rb
   - lib/unified_ruby_sdk/models/shared/frequency.rb
   - lib/unified_ruby_sdk/models/shared/atscompensation_type.rb
   - lib/unified_ruby_sdk/models/shared/atscompensation.rb
@@ -1202,6 +1205,7 @@ generatedFiles:
   - docs/models/shared/ucemail.md
   - docs/models/shared/atsapplicationstatus.md
   - docs/models/shared/atsapplication.md
+  - docs/models/shared/atsapplicationanswer.md
   - docs/models/shared/origin.md
   - docs/models/shared/atscandidate.md
   - docs/models/shared/atstelephonetype.md
@@ -1216,6 +1220,8 @@ generatedFiles:
   - docs/models/shared/employmenttype.md
   - docs/models/shared/atsjobstatus.md
   - docs/models/shared/atsjob.md
+  - docs/models/shared/atsjobquestiontype.md
+  - docs/models/shared/atsjobquestion.md
   - docs/models/shared/frequency.md
   - docs/models/shared/atscompensationtype.md
   - docs/models/shared/atscompensation.md

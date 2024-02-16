@@ -12,6 +12,8 @@ module UnifiedRubySDK
       extend T::Sig
 
 
+      field :answers, T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsApplicationAnswer]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('answers') } }
+
       field :applied_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('applied_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
       field :candidate_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('candidate_id') } }
@@ -39,8 +41,9 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(applied_at: T.nilable(::DateTime), candidate_id: T.nilable(::String), created_at: T.nilable(::DateTime), hired_at: T.nilable(::DateTime), id: T.nilable(::String), job_id: T.nilable(::String), original_status: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), rejected_at: T.nilable(::DateTime), rejected_reason: T.nilable(::String), source: T.nilable(::String), status: T.nilable(::UnifiedRubySDK::Shared::AtsApplicationStatus), updated_at: T.nilable(::DateTime)).void }
-      def initialize(applied_at: nil, candidate_id: nil, created_at: nil, hired_at: nil, id: nil, job_id: nil, original_status: nil, raw: nil, rejected_at: nil, rejected_reason: nil, source: nil, status: nil, updated_at: nil)
+      sig { params(answers: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsApplicationAnswer]), applied_at: T.nilable(::DateTime), candidate_id: T.nilable(::String), created_at: T.nilable(::DateTime), hired_at: T.nilable(::DateTime), id: T.nilable(::String), job_id: T.nilable(::String), original_status: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), rejected_at: T.nilable(::DateTime), rejected_reason: T.nilable(::String), source: T.nilable(::String), status: T.nilable(::UnifiedRubySDK::Shared::AtsApplicationStatus), updated_at: T.nilable(::DateTime)).void }
+      def initialize(answers: nil, applied_at: nil, candidate_id: nil, created_at: nil, hired_at: nil, id: nil, job_id: nil, original_status: nil, raw: nil, rejected_at: nil, rejected_reason: nil, source: nil, status: nil, updated_at: nil)
+        @answers = answers
         @applied_at = applied_at
         @candidate_id = candidate_id
         @created_at = created_at
