@@ -4,15 +4,15 @@ management:
   docChecksum: 119b9584a5fe294470614e38361fae09
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.259.1
-  releaseVersion: 0.4.10
-  configChecksum: cfcdb310a2140d896a4e809ddecd411b
+  generationVersion: 2.262.2
+  releaseVersion: 0.4.11
+  configChecksum: 90ce35df17d601b255e93b53582a380a
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
 features:
   ruby:
-    core: 3.2.7
+    core: 3.2.8
     flattening: 2.81.1
     globalSecurity: 2.81.3
     globalServerURLs: 2.82.1

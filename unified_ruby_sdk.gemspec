@@ -4,17 +4,17 @@ $LOAD_PATH.push File.expand_path('lib', __dir__)
 
 Gem::Specification.new do |s|
   s.name        = 'unified_ruby_sdk'
-  s.version     = '0.4.10'
+  s.version     = '0.4.11'
   s.platform    = Gem::Platform::RUBY
   s.licenses    = ['Apache-2.0']
   s.summary     = ''
-  s.homepage    = 'https://github.com/speakeasy-api/openapi-generation'
+  s.homepage    = 'https://github.com/unified-to/unified-ruby-sdk.git'
   s.description = 'Ruby Client SDK for Unified.to'
   s.authors     = ['Unified']
   s.metadata    = {
-    'homepage_uri' => 'https://github.com/speakeasy-api/openapi-generation',
-    'documentation_uri' => 'https://github.com/speakeasy-api/openapi-generation',
-    'source_code_uri' => 'https://github.com/speakeasy-api/openapi-generation'
+    'homepage_uri' => 'https://github.com/unified-to/unified-ruby-sdk.git',
+    'documentation_uri' => 'https://github.com/unified-to/unified-ruby-sdk.git',
+    'source_code_uri' => 'https://github.com/unified-to/unified-ruby-sdk.git'
   }
 
   s.files         = Dir['{lib,test}/**/*']
