@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact)).returns(::UnifiedRubySDK::Operations::CreateUcContactResponse) }
     def create_uc_contact(connection_id, uc_contact = nil)
       # create_uc_contact - Create a contact
       request = ::UnifiedRubySDK::Operations::CreateUcContactRequest.new(
@@ -68,7 +68,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetUcContactResponse) }
     def get_uc_contact(connection_id, id, fields_ = nil)
       # get_uc_contact - Retrieve a contact
       request = ::UnifiedRubySDK::Operations::GetUcContactRequest.new(
@@ -111,7 +111,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUcCallsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUcCallsRequest)).returns(::UnifiedRubySDK::Operations::ListUcCallsResponse) }
     def list_uc_calls(request)
       # list_uc_calls - List all calls
       url, params = @sdk_configuration.get_server_details
@@ -148,7 +148,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUcContactsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUcContactsRequest)).returns(::UnifiedRubySDK::Operations::ListUcContactsResponse) }
     def list_uc_contacts(request)
       # list_uc_contacts - List all contacts
       url, params = @sdk_configuration.get_server_details
@@ -185,7 +185,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact)).returns(::UnifiedRubySDK::Operations::PatchUcContactResponse) }
     def patch_uc_contact(connection_id, id, uc_contact = nil)
       # patch_uc_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::PatchUcContactRequest.new(
@@ -235,7 +235,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveUcContactResponse) }
     def remove_uc_contact(connection_id, id)
       # remove_uc_contact - Remove a contact
       request = ::UnifiedRubySDK::Operations::RemoveUcContactRequest.new(
@@ -274,7 +274,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact)).returns(::UnifiedRubySDK::Operations::UpdateUcContactResponse) }
     def update_uc_contact(connection_id, id, uc_contact = nil)
       # update_uc_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::UpdateUcContactRequest.new(

@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ats_application: T.nilable(::UnifiedRubySDK::Shared::AtsApplication)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, ats_application: T.nilable(::UnifiedRubySDK::Shared::AtsApplication)).returns(::UnifiedRubySDK::Operations::CreateAtsApplicationResponse) }
     def create_ats_application(connection_id, ats_application = nil)
       # create_ats_application - Create an application
       request = ::UnifiedRubySDK::Operations::CreateAtsApplicationRequest.new(
@@ -68,7 +68,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAtsApplicationResponse) }
     def get_ats_application(connection_id, id, fields_ = nil)
       # get_ats_application - Retrieve an application
       request = ::UnifiedRubySDK::Operations::GetAtsApplicationRequest.new(
@@ -111,7 +111,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsApplicationsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsApplicationsRequest)).returns(::UnifiedRubySDK::Operations::ListAtsApplicationsResponse) }
     def list_ats_applications(request)
       # list_ats_applications - List all applications
       url, params = @sdk_configuration.get_server_details
@@ -148,7 +148,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_application: T.nilable(::UnifiedRubySDK::Shared::AtsApplication)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, ats_application: T.nilable(::UnifiedRubySDK::Shared::AtsApplication)).returns(::UnifiedRubySDK::Operations::PatchAtsApplicationResponse) }
     def patch_ats_application(connection_id, id, ats_application = nil)
       # patch_ats_application - Update an application
       request = ::UnifiedRubySDK::Operations::PatchAtsApplicationRequest.new(
@@ -198,7 +198,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAtsApplicationResponse) }
     def remove_ats_application(connection_id, id)
       # remove_ats_application - Remove an application
       request = ::UnifiedRubySDK::Operations::RemoveAtsApplicationRequest.new(
@@ -237,7 +237,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_application: T.nilable(::UnifiedRubySDK::Shared::AtsApplication)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, ats_application: T.nilable(::UnifiedRubySDK::Shared::AtsApplication)).returns(::UnifiedRubySDK::Operations::UpdateAtsApplicationResponse) }
     def update_ats_application(connection_id, id, ats_application = nil)
       # update_ats_application - Update an application
       request = ::UnifiedRubySDK::Operations::UpdateAtsApplicationRequest.new(

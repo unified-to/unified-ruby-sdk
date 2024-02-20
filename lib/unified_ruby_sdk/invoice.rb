@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, accounting_invoice: T.nilable(::UnifiedRubySDK::Shared::AccountingInvoice)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, accounting_invoice: T.nilable(::UnifiedRubySDK::Shared::AccountingInvoice)).returns(::UnifiedRubySDK::Operations::CreateAccountingInvoiceResponse) }
     def create_accounting_invoice(connection_id, accounting_invoice = nil)
       # create_accounting_invoice - Create a invoice
       request = ::UnifiedRubySDK::Operations::CreateAccountingInvoiceRequest.new(
@@ -68,7 +68,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAccountingInvoiceResponse) }
     def get_accounting_invoice(connection_id, id, fields_ = nil)
       # get_accounting_invoice - Retrieve a invoice
       request = ::UnifiedRubySDK::Operations::GetAccountingInvoiceRequest.new(
@@ -111,7 +111,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingInvoicesRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingInvoicesRequest)).returns(::UnifiedRubySDK::Operations::ListAccountingInvoicesResponse) }
     def list_accounting_invoices(request)
       # list_accounting_invoices - List all invoices
       url, params = @sdk_configuration.get_server_details
@@ -148,7 +148,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_invoice: T.nilable(::UnifiedRubySDK::Shared::AccountingInvoice)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, accounting_invoice: T.nilable(::UnifiedRubySDK::Shared::AccountingInvoice)).returns(::UnifiedRubySDK::Operations::PatchAccountingInvoiceResponse) }
     def patch_accounting_invoice(connection_id, id, accounting_invoice = nil)
       # patch_accounting_invoice - Update a invoice
       request = ::UnifiedRubySDK::Operations::PatchAccountingInvoiceRequest.new(
@@ -198,7 +198,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAccountingInvoiceResponse) }
     def remove_accounting_invoice(connection_id, id)
       # remove_accounting_invoice - Remove a invoice
       request = ::UnifiedRubySDK::Operations::RemoveAccountingInvoiceRequest.new(
@@ -237,7 +237,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_invoice: T.nilable(::UnifiedRubySDK::Shared::AccountingInvoice)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, accounting_invoice: T.nilable(::UnifiedRubySDK::Shared::AccountingInvoice)).returns(::UnifiedRubySDK::Operations::UpdateAccountingInvoiceResponse) }
     def update_accounting_invoice(connection_id, id, accounting_invoice = nil)
       # update_accounting_invoice - Update a invoice
       request = ::UnifiedRubySDK::Operations::UpdateAccountingInvoiceRequest.new(

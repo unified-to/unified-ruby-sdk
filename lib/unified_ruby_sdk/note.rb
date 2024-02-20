@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ticketing_note: T.nilable(::UnifiedRubySDK::Shared::TicketingNote)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, ticketing_note: T.nilable(::UnifiedRubySDK::Shared::TicketingNote)).returns(::UnifiedRubySDK::Operations::CreateTicketingNoteResponse) }
     def create_ticketing_note(connection_id, ticketing_note = nil)
       # create_ticketing_note - Create a note
       request = ::UnifiedRubySDK::Operations::CreateTicketingNoteRequest.new(
@@ -68,7 +68,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetTicketingNoteResponse) }
     def get_ticketing_note(connection_id, id, fields_ = nil)
       # get_ticketing_note - Retrieve a note
       request = ::UnifiedRubySDK::Operations::GetTicketingNoteRequest.new(
@@ -111,7 +111,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListTicketingNotesRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListTicketingNotesRequest)).returns(::UnifiedRubySDK::Operations::ListTicketingNotesResponse) }
     def list_ticketing_notes(request)
       # list_ticketing_notes - List all notes
       url, params = @sdk_configuration.get_server_details
@@ -148,7 +148,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ticketing_note: T.nilable(::UnifiedRubySDK::Shared::TicketingNote)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, ticketing_note: T.nilable(::UnifiedRubySDK::Shared::TicketingNote)).returns(::UnifiedRubySDK::Operations::PatchTicketingNoteResponse) }
     def patch_ticketing_note(connection_id, id, ticketing_note = nil)
       # patch_ticketing_note - Update a note
       request = ::UnifiedRubySDK::Operations::PatchTicketingNoteRequest.new(
@@ -198,7 +198,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveTicketingNoteResponse) }
     def remove_ticketing_note(connection_id, id)
       # remove_ticketing_note - Remove a note
       request = ::UnifiedRubySDK::Operations::RemoveTicketingNoteRequest.new(
@@ -237,7 +237,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ticketing_note: T.nilable(::UnifiedRubySDK::Shared::TicketingNote)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, ticketing_note: T.nilable(::UnifiedRubySDK::Shared::TicketingNote)).returns(::UnifiedRubySDK::Operations::UpdateTicketingNoteResponse) }
     def update_ticketing_note(connection_id, id, ticketing_note = nil)
       # update_ticketing_note - Update a note
       request = ::UnifiedRubySDK::Operations::UpdateTicketingNoteRequest.new(

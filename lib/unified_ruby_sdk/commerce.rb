@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(::UnifiedRubySDK::Operations::CreateCommerceCollectionResponse) }
     def create_commerce_collection(connection_id, commerce_collection = nil)
       # create_commerce_collection - Create a collection
       request = ::UnifiedRubySDK::Operations::CreateCommerceCollectionRequest.new(
@@ -68,7 +68,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, commerce_inventory: T.nilable(::UnifiedRubySDK::Shared::CommerceInventory)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, commerce_inventory: T.nilable(::UnifiedRubySDK::Shared::CommerceInventory)).returns(::UnifiedRubySDK::Operations::CreateCommerceInventoryResponse) }
     def create_commerce_inventory(connection_id, commerce_inventory = nil)
       # create_commerce_inventory - Create an inventory
       request = ::UnifiedRubySDK::Operations::CreateCommerceInventoryRequest.new(
@@ -117,7 +117,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, commerce_item: T.nilable(::UnifiedRubySDK::Shared::CommerceItem)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, commerce_item: T.nilable(::UnifiedRubySDK::Shared::CommerceItem)).returns(::UnifiedRubySDK::Operations::CreateCommerceItemResponse) }
     def create_commerce_item(connection_id, commerce_item = nil)
       # create_commerce_item - Create an item
       request = ::UnifiedRubySDK::Operations::CreateCommerceItemRequest.new(
@@ -166,7 +166,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation)).returns(::UnifiedRubySDK::Operations::CreateCommerceLocationResponse) }
     def create_commerce_location(connection_id, commerce_location = nil)
       # create_commerce_location - Create a location
       request = ::UnifiedRubySDK::Operations::CreateCommerceLocationRequest.new(
@@ -215,7 +215,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCommerceCollectionResponse) }
     def get_commerce_collection(connection_id, id, fields_ = nil)
       # get_commerce_collection - Retrieve a collection
       request = ::UnifiedRubySDK::Operations::GetCommerceCollectionRequest.new(
@@ -258,7 +258,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCommerceInventoryResponse) }
     def get_commerce_inventory(connection_id, id, fields_ = nil)
       # get_commerce_inventory - Retrieve an inventory
       request = ::UnifiedRubySDK::Operations::GetCommerceInventoryRequest.new(
@@ -301,7 +301,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCommerceItemResponse) }
     def get_commerce_item(connection_id, id, fields_ = nil)
       # get_commerce_item - Retrieve an item
       request = ::UnifiedRubySDK::Operations::GetCommerceItemRequest.new(
@@ -344,7 +344,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCommerceLocationResponse) }
     def get_commerce_location(connection_id, id, fields_ = nil)
       # get_commerce_location - Retrieve a location
       request = ::UnifiedRubySDK::Operations::GetCommerceLocationRequest.new(
@@ -387,7 +387,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCommerceCollectionsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCommerceCollectionsRequest)).returns(::UnifiedRubySDK::Operations::ListCommerceCollectionsResponse) }
     def list_commerce_collections(request)
       # list_commerce_collections - List all collections
       url, params = @sdk_configuration.get_server_details
@@ -424,7 +424,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCommerceInventoriesRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCommerceInventoriesRequest)).returns(::UnifiedRubySDK::Operations::ListCommerceInventoriesResponse) }
     def list_commerce_inventories(request)
       # list_commerce_inventories - List all inventories
       url, params = @sdk_configuration.get_server_details
@@ -461,7 +461,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCommerceItemsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCommerceItemsRequest)).returns(::UnifiedRubySDK::Operations::ListCommerceItemsResponse) }
     def list_commerce_items(request)
       # list_commerce_items - List all items
       url, params = @sdk_configuration.get_server_details
@@ -498,7 +498,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCommerceLocationsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCommerceLocationsRequest)).returns(::UnifiedRubySDK::Operations::ListCommerceLocationsResponse) }
     def list_commerce_locations(request)
       # list_commerce_locations - List all locations
       url, params = @sdk_configuration.get_server_details
@@ -535,7 +535,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(::UnifiedRubySDK::Operations::PatchCommerceCollectionResponse) }
     def patch_commerce_collection(connection_id, id, commerce_collection = nil)
       # patch_commerce_collection - Update a collection
       request = ::UnifiedRubySDK::Operations::PatchCommerceCollectionRequest.new(
@@ -585,7 +585,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_inventory: T.nilable(::UnifiedRubySDK::Shared::CommerceInventory)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, commerce_inventory: T.nilable(::UnifiedRubySDK::Shared::CommerceInventory)).returns(::UnifiedRubySDK::Operations::PatchCommerceInventoryResponse) }
     def patch_commerce_inventory(connection_id, id, commerce_inventory = nil)
       # patch_commerce_inventory - Update an inventory
       request = ::UnifiedRubySDK::Operations::PatchCommerceInventoryRequest.new(
@@ -635,7 +635,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_item: T.nilable(::UnifiedRubySDK::Shared::CommerceItem)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, commerce_item: T.nilable(::UnifiedRubySDK::Shared::CommerceItem)).returns(::UnifiedRubySDK::Operations::PatchCommerceItemResponse) }
     def patch_commerce_item(connection_id, id, commerce_item = nil)
       # patch_commerce_item - Update an item
       request = ::UnifiedRubySDK::Operations::PatchCommerceItemRequest.new(
@@ -685,7 +685,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation)).returns(::UnifiedRubySDK::Operations::PatchCommerceLocationResponse) }
     def patch_commerce_location(connection_id, id, commerce_location = nil)
       # patch_commerce_location - Update a location
       request = ::UnifiedRubySDK::Operations::PatchCommerceLocationRequest.new(
@@ -735,7 +735,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCommerceCollectionResponse) }
     def remove_commerce_collection(connection_id, id)
       # remove_commerce_collection - Remove a collection
       request = ::UnifiedRubySDK::Operations::RemoveCommerceCollectionRequest.new(
@@ -774,7 +774,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCommerceInventoryResponse) }
     def remove_commerce_inventory(connection_id, id)
       # remove_commerce_inventory - Remove an inventory
       request = ::UnifiedRubySDK::Operations::RemoveCommerceInventoryRequest.new(
@@ -813,7 +813,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCommerceItemResponse) }
     def remove_commerce_item(connection_id, id)
       # remove_commerce_item - Remove an item
       request = ::UnifiedRubySDK::Operations::RemoveCommerceItemRequest.new(
@@ -852,7 +852,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCommerceLocationResponse) }
     def remove_commerce_location(connection_id, id)
       # remove_commerce_location - Remove a location
       request = ::UnifiedRubySDK::Operations::RemoveCommerceLocationRequest.new(
@@ -891,7 +891,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(::UnifiedRubySDK::Operations::UpdateCommerceCollectionResponse) }
     def update_commerce_collection(connection_id, id, commerce_collection = nil)
       # update_commerce_collection - Update a collection
       request = ::UnifiedRubySDK::Operations::UpdateCommerceCollectionRequest.new(
@@ -941,7 +941,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_inventory: T.nilable(::UnifiedRubySDK::Shared::CommerceInventory)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, commerce_inventory: T.nilable(::UnifiedRubySDK::Shared::CommerceInventory)).returns(::UnifiedRubySDK::Operations::UpdateCommerceInventoryResponse) }
     def update_commerce_inventory(connection_id, id, commerce_inventory = nil)
       # update_commerce_inventory - Update an inventory
       request = ::UnifiedRubySDK::Operations::UpdateCommerceInventoryRequest.new(
@@ -991,7 +991,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_item: T.nilable(::UnifiedRubySDK::Shared::CommerceItem)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, commerce_item: T.nilable(::UnifiedRubySDK::Shared::CommerceItem)).returns(::UnifiedRubySDK::Operations::UpdateCommerceItemResponse) }
     def update_commerce_item(connection_id, id, commerce_item = nil)
       # update_commerce_item - Update an item
       request = ::UnifiedRubySDK::Operations::UpdateCommerceItemRequest.new(
@@ -1041,7 +1041,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation)).returns(::UnifiedRubySDK::Operations::UpdateCommerceLocationResponse) }
     def update_commerce_location(connection_id, id, commerce_location = nil)
       # update_commerce_location - Update a location
       request = ::UnifiedRubySDK::Operations::UpdateCommerceLocationRequest.new(

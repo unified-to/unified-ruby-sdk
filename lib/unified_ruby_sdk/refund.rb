@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAccountingRefundResponse) }
     def get_accounting_refund(connection_id, id, fields_ = nil)
       # get_accounting_refund - Retrieve a refund
       request = ::UnifiedRubySDK::Operations::GetAccountingRefundRequest.new(
@@ -62,7 +62,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingRefundsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingRefundsRequest)).returns(::UnifiedRubySDK::Operations::ListAccountingRefundsResponse) }
     def list_accounting_refunds(request)
       # list_accounting_refunds - List all refunds
       url, params = @sdk_configuration.get_server_details

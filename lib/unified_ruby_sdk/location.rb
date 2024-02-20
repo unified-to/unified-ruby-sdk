@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation)).returns(::UnifiedRubySDK::Operations::CreateCommerceLocationResponse) }
     def create_commerce_location(connection_id, commerce_location = nil)
       # create_commerce_location - Create a location
       request = ::UnifiedRubySDK::Operations::CreateCommerceLocationRequest.new(
@@ -68,7 +68,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCommerceLocationResponse) }
     def get_commerce_location(connection_id, id, fields_ = nil)
       # get_commerce_location - Retrieve a location
       request = ::UnifiedRubySDK::Operations::GetCommerceLocationRequest.new(
@@ -111,7 +111,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCommerceLocationsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCommerceLocationsRequest)).returns(::UnifiedRubySDK::Operations::ListCommerceLocationsResponse) }
     def list_commerce_locations(request)
       # list_commerce_locations - List all locations
       url, params = @sdk_configuration.get_server_details
@@ -148,7 +148,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation)).returns(::UnifiedRubySDK::Operations::PatchCommerceLocationResponse) }
     def patch_commerce_location(connection_id, id, commerce_location = nil)
       # patch_commerce_location - Update a location
       request = ::UnifiedRubySDK::Operations::PatchCommerceLocationRequest.new(
@@ -198,7 +198,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCommerceLocationResponse) }
     def remove_commerce_location(connection_id, id)
       # remove_commerce_location - Remove a location
       request = ::UnifiedRubySDK::Operations::RemoveCommerceLocationRequest.new(
@@ -237,7 +237,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation)).returns(::UnifiedRubySDK::Operations::UpdateCommerceLocationResponse) }
     def update_commerce_location(connection_id, id, commerce_location = nil)
       # update_commerce_location - Update a location
       request = ::UnifiedRubySDK::Operations::UpdateCommerceLocationRequest.new(

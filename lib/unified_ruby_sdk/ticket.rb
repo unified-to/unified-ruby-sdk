@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ticketing_ticket: T.nilable(::UnifiedRubySDK::Shared::TicketingTicket)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, ticketing_ticket: T.nilable(::UnifiedRubySDK::Shared::TicketingTicket)).returns(::UnifiedRubySDK::Operations::CreateTicketingTicketResponse) }
     def create_ticketing_ticket(connection_id, ticketing_ticket = nil)
       # create_ticketing_ticket - Create a ticket
       request = ::UnifiedRubySDK::Operations::CreateTicketingTicketRequest.new(
@@ -68,7 +68,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetTicketingTicketResponse) }
     def get_ticketing_ticket(connection_id, id, fields_ = nil)
       # get_ticketing_ticket - Retrieve a ticket
       request = ::UnifiedRubySDK::Operations::GetTicketingTicketRequest.new(
@@ -111,7 +111,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListTicketingTicketsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListTicketingTicketsRequest)).returns(::UnifiedRubySDK::Operations::ListTicketingTicketsResponse) }
     def list_ticketing_tickets(request)
       # list_ticketing_tickets - List all tickets
       url, params = @sdk_configuration.get_server_details
@@ -148,7 +148,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ticketing_ticket: T.nilable(::UnifiedRubySDK::Shared::TicketingTicket)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, ticketing_ticket: T.nilable(::UnifiedRubySDK::Shared::TicketingTicket)).returns(::UnifiedRubySDK::Operations::PatchTicketingTicketResponse) }
     def patch_ticketing_ticket(connection_id, id, ticketing_ticket = nil)
       # patch_ticketing_ticket - Update a ticket
       request = ::UnifiedRubySDK::Operations::PatchTicketingTicketRequest.new(
@@ -198,7 +198,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveTicketingTicketResponse) }
     def remove_ticketing_ticket(connection_id, id)
       # remove_ticketing_ticket - Remove a ticket
       request = ::UnifiedRubySDK::Operations::RemoveTicketingTicketRequest.new(
@@ -237,7 +237,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ticketing_ticket: T.nilable(::UnifiedRubySDK::Shared::TicketingTicket)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, ticketing_ticket: T.nilable(::UnifiedRubySDK::Shared::TicketingTicket)).returns(::UnifiedRubySDK::Operations::UpdateTicketingTicketResponse) }
     def update_ticketing_ticket(connection_id, id, ticketing_ticket = nil)
       # update_ticketing_ticket - Update a ticket
       request = ::UnifiedRubySDK::Operations::UpdateTicketingTicketRequest.new(

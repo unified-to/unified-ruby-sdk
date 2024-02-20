@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsApplicationstatusesRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsApplicationstatusesRequest)).returns(::UnifiedRubySDK::Operations::ListAtsApplicationstatusesResponse) }
     def list_ats_applicationstatuses(request)
       # list_ats_applicationstatuses - List all application statuses
       url, params = @sdk_configuration.get_server_details

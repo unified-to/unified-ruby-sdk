@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, accounting_taxrate: T.nilable(::UnifiedRubySDK::Shared::AccountingTaxrate)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, accounting_taxrate: T.nilable(::UnifiedRubySDK::Shared::AccountingTaxrate)).returns(::UnifiedRubySDK::Operations::CreateAccountingTaxrateResponse) }
     def create_accounting_taxrate(connection_id, accounting_taxrate = nil)
       # create_accounting_taxrate - Create a taxrate
       request = ::UnifiedRubySDK::Operations::CreateAccountingTaxrateRequest.new(
@@ -68,7 +68,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAccountingTaxrateResponse) }
     def get_accounting_taxrate(connection_id, id, fields_ = nil)
       # get_accounting_taxrate - Retrieve a taxrate
       request = ::UnifiedRubySDK::Operations::GetAccountingTaxrateRequest.new(
@@ -111,7 +111,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingTaxratesRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingTaxratesRequest)).returns(::UnifiedRubySDK::Operations::ListAccountingTaxratesResponse) }
     def list_accounting_taxrates(request)
       # list_accounting_taxrates - List all taxrates
       url, params = @sdk_configuration.get_server_details
@@ -148,7 +148,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_taxrate: T.nilable(::UnifiedRubySDK::Shared::AccountingTaxrate)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, accounting_taxrate: T.nilable(::UnifiedRubySDK::Shared::AccountingTaxrate)).returns(::UnifiedRubySDK::Operations::PatchAccountingTaxrateResponse) }
     def patch_accounting_taxrate(connection_id, id, accounting_taxrate = nil)
       # patch_accounting_taxrate - Update a taxrate
       request = ::UnifiedRubySDK::Operations::PatchAccountingTaxrateRequest.new(
@@ -198,7 +198,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAccountingTaxrateResponse) }
     def remove_accounting_taxrate(connection_id, id)
       # remove_accounting_taxrate - Remove a taxrate
       request = ::UnifiedRubySDK::Operations::RemoveAccountingTaxrateRequest.new(
@@ -237,7 +237,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_taxrate: T.nilable(::UnifiedRubySDK::Shared::AccountingTaxrate)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, accounting_taxrate: T.nilable(::UnifiedRubySDK::Shared::AccountingTaxrate)).returns(::UnifiedRubySDK::Operations::UpdateAccountingTaxrateResponse) }
     def update_accounting_taxrate(connection_id, id, accounting_taxrate = nil)
       # update_accounting_taxrate - Update a taxrate
       request = ::UnifiedRubySDK::Operations::UpdateAccountingTaxrateRequest.new(

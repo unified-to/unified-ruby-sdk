@@ -4,15 +4,15 @@ management:
   docChecksum: 119b9584a5fe294470614e38361fae09
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.262.2
-  releaseVersion: 0.4.11
-  configChecksum: 90ce35df17d601b255e93b53582a380a
+  generationVersion: 2.263.3
+  releaseVersion: 0.4.12
+  configChecksum: 7eba9720d0334fc2f8c333ea009d2c82
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
 features:
   ruby:
-    core: 3.2.8
+    core: 3.2.9
     flattening: 2.81.1
     globalSecurity: 2.81.3
     globalServerURLs: 2.82.1
@@ -78,6 +78,7 @@ generatedFiles:
   - Gemfile.lock
   - Rakefile
   - lib/unified_ruby_sdk/utils/metadata_fields.rb
+  - lib/unified_ruby_sdk/utils/t.rb
   - lib/unified_ruby_sdk/utils/utils.rb
   - sorbet/config
   - sorbet/rbi/annotations/.gitattributes

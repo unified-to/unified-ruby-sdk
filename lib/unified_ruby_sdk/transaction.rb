@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, accounting_transaction: T.nilable(::UnifiedRubySDK::Shared::AccountingTransaction)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, accounting_transaction: T.nilable(::UnifiedRubySDK::Shared::AccountingTransaction)).returns(::UnifiedRubySDK::Operations::CreateAccountingTransactionResponse) }
     def create_accounting_transaction(connection_id, accounting_transaction = nil)
       # create_accounting_transaction - Create a transaction
       request = ::UnifiedRubySDK::Operations::CreateAccountingTransactionRequest.new(
@@ -68,7 +68,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAccountingTransactionResponse) }
     def get_accounting_transaction(connection_id, id, fields_ = nil)
       # get_accounting_transaction - Retrieve a transaction
       request = ::UnifiedRubySDK::Operations::GetAccountingTransactionRequest.new(
@@ -111,7 +111,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingTransactionsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingTransactionsRequest)).returns(::UnifiedRubySDK::Operations::ListAccountingTransactionsResponse) }
     def list_accounting_transactions(request)
       # list_accounting_transactions - List all transactions
       url, params = @sdk_configuration.get_server_details
@@ -148,7 +148,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_transaction: T.nilable(::UnifiedRubySDK::Shared::AccountingTransaction)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, accounting_transaction: T.nilable(::UnifiedRubySDK::Shared::AccountingTransaction)).returns(::UnifiedRubySDK::Operations::PatchAccountingTransactionResponse) }
     def patch_accounting_transaction(connection_id, id, accounting_transaction = nil)
       # patch_accounting_transaction - Update a transaction
       request = ::UnifiedRubySDK::Operations::PatchAccountingTransactionRequest.new(
@@ -198,7 +198,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAccountingTransactionResponse) }
     def remove_accounting_transaction(connection_id, id)
       # remove_accounting_transaction - Remove a transaction
       request = ::UnifiedRubySDK::Operations::RemoveAccountingTransactionRequest.new(
@@ -237,7 +237,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_transaction: T.nilable(::UnifiedRubySDK::Shared::AccountingTransaction)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, accounting_transaction: T.nilable(::UnifiedRubySDK::Shared::AccountingTransaction)).returns(::UnifiedRubySDK::Operations::UpdateAccountingTransactionResponse) }
     def update_accounting_transaction(connection_id, id, accounting_transaction = nil)
       # update_accounting_transaction - Update a transaction
       request = ::UnifiedRubySDK::Operations::UpdateAccountingTransactionRequest.new(

@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ats_application: T.nilable(::UnifiedRubySDK::Shared::AtsApplication)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, ats_application: T.nilable(::UnifiedRubySDK::Shared::AtsApplication)).returns(::UnifiedRubySDK::Operations::CreateAtsApplicationResponse) }
     def create_ats_application(connection_id, ats_application = nil)
       # create_ats_application - Create an application
       request = ::UnifiedRubySDK::Operations::CreateAtsApplicationRequest.new(
@@ -68,7 +68,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ats_candidate: T.nilable(::UnifiedRubySDK::Shared::AtsCandidate)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, ats_candidate: T.nilable(::UnifiedRubySDK::Shared::AtsCandidate)).returns(::UnifiedRubySDK::Operations::CreateAtsCandidateResponse) }
     def create_ats_candidate(connection_id, ats_candidate = nil)
       # create_ats_candidate - Create a candidate
       request = ::UnifiedRubySDK::Operations::CreateAtsCandidateRequest.new(
@@ -117,7 +117,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ats_document: T.nilable(::UnifiedRubySDK::Shared::AtsDocument)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, ats_document: T.nilable(::UnifiedRubySDK::Shared::AtsDocument)).returns(::UnifiedRubySDK::Operations::CreateAtsDocumentResponse) }
     def create_ats_document(connection_id, ats_document = nil)
       # create_ats_document - Create a document
       request = ::UnifiedRubySDK::Operations::CreateAtsDocumentRequest.new(
@@ -166,7 +166,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ats_interview: T.nilable(::UnifiedRubySDK::Shared::AtsInterview)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, ats_interview: T.nilable(::UnifiedRubySDK::Shared::AtsInterview)).returns(::UnifiedRubySDK::Operations::CreateAtsInterviewResponse) }
     def create_ats_interview(connection_id, ats_interview = nil)
       # create_ats_interview - Create a interview
       request = ::UnifiedRubySDK::Operations::CreateAtsInterviewRequest.new(
@@ -215,7 +215,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ats_job: T.nilable(::UnifiedRubySDK::Shared::AtsJob)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, ats_job: T.nilable(::UnifiedRubySDK::Shared::AtsJob)).returns(::UnifiedRubySDK::Operations::CreateAtsJobResponse) }
     def create_ats_job(connection_id, ats_job = nil)
       # create_ats_job - Create a job
       request = ::UnifiedRubySDK::Operations::CreateAtsJobRequest.new(
@@ -264,7 +264,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard)).returns(::UnifiedRubySDK::Operations::CreateAtsScorecardResponse) }
     def create_ats_scorecard(connection_id, ats_scorecard = nil)
       # create_ats_scorecard - Create a scorecard
       request = ::UnifiedRubySDK::Operations::CreateAtsScorecardRequest.new(
@@ -313,7 +313,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAtsApplicationResponse) }
     def get_ats_application(connection_id, id, fields_ = nil)
       # get_ats_application - Retrieve an application
       request = ::UnifiedRubySDK::Operations::GetAtsApplicationRequest.new(
@@ -356,7 +356,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAtsCandidateResponse) }
     def get_ats_candidate(connection_id, id, fields_ = nil)
       # get_ats_candidate - Retrieve a candidate
       request = ::UnifiedRubySDK::Operations::GetAtsCandidateRequest.new(
@@ -399,7 +399,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAtsCompanyResponse) }
     def get_ats_company(connection_id, id, fields_ = nil)
       # get_ats_company - Retrieve a company
       request = ::UnifiedRubySDK::Operations::GetAtsCompanyRequest.new(
@@ -442,7 +442,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAtsDocumentResponse) }
     def get_ats_document(connection_id, id, fields_ = nil)
       # get_ats_document - Retrieve a document
       request = ::UnifiedRubySDK::Operations::GetAtsDocumentRequest.new(
@@ -485,7 +485,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAtsInterviewResponse) }
     def get_ats_interview(connection_id, id, fields_ = nil)
       # get_ats_interview - Retrieve a interview
       request = ::UnifiedRubySDK::Operations::GetAtsInterviewRequest.new(
@@ -528,7 +528,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAtsJobResponse) }
     def get_ats_job(connection_id, id, fields_ = nil)
       # get_ats_job - Retrieve a job
       request = ::UnifiedRubySDK::Operations::GetAtsJobRequest.new(
@@ -571,7 +571,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAtsScorecardResponse) }
     def get_ats_scorecard(connection_id, id, fields_ = nil)
       # get_ats_scorecard - Retrieve a scorecard
       request = ::UnifiedRubySDK::Operations::GetAtsScorecardRequest.new(
@@ -614,7 +614,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsApplicationsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsApplicationsRequest)).returns(::UnifiedRubySDK::Operations::ListAtsApplicationsResponse) }
     def list_ats_applications(request)
       # list_ats_applications - List all applications
       url, params = @sdk_configuration.get_server_details
@@ -651,7 +651,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsApplicationstatusesRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsApplicationstatusesRequest)).returns(::UnifiedRubySDK::Operations::ListAtsApplicationstatusesResponse) }
     def list_ats_applicationstatuses(request)
       # list_ats_applicationstatuses - List all application statuses
       url, params = @sdk_configuration.get_server_details
@@ -688,7 +688,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsCandidatesRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsCandidatesRequest)).returns(::UnifiedRubySDK::Operations::ListAtsCandidatesResponse) }
     def list_ats_candidates(request)
       # list_ats_candidates - List all candidates
       url, params = @sdk_configuration.get_server_details
@@ -725,7 +725,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsCompaniesRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsCompaniesRequest)).returns(::UnifiedRubySDK::Operations::ListAtsCompaniesResponse) }
     def list_ats_companies(request)
       # list_ats_companies - List all companies
       url, params = @sdk_configuration.get_server_details
@@ -762,7 +762,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsDocumentsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsDocumentsRequest)).returns(::UnifiedRubySDK::Operations::ListAtsDocumentsResponse) }
     def list_ats_documents(request)
       # list_ats_documents - List all documents
       url, params = @sdk_configuration.get_server_details
@@ -799,7 +799,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsInterviewsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsInterviewsRequest)).returns(::UnifiedRubySDK::Operations::ListAtsInterviewsResponse) }
     def list_ats_interviews(request)
       # list_ats_interviews - List all interviews
       url, params = @sdk_configuration.get_server_details
@@ -836,7 +836,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsJobsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsJobsRequest)).returns(::UnifiedRubySDK::Operations::ListAtsJobsResponse) }
     def list_ats_jobs(request)
       # list_ats_jobs - List all jobs
       url, params = @sdk_configuration.get_server_details
@@ -873,7 +873,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsScorecardsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsScorecardsRequest)).returns(::UnifiedRubySDK::Operations::ListAtsScorecardsResponse) }
     def list_ats_scorecards(request)
       # list_ats_scorecards - List all scorecards
       url, params = @sdk_configuration.get_server_details
@@ -910,7 +910,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_application: T.nilable(::UnifiedRubySDK::Shared::AtsApplication)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, ats_application: T.nilable(::UnifiedRubySDK::Shared::AtsApplication)).returns(::UnifiedRubySDK::Operations::PatchAtsApplicationResponse) }
     def patch_ats_application(connection_id, id, ats_application = nil)
       # patch_ats_application - Update an application
       request = ::UnifiedRubySDK::Operations::PatchAtsApplicationRequest.new(
@@ -960,7 +960,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_candidate: T.nilable(::UnifiedRubySDK::Shared::AtsCandidate)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, ats_candidate: T.nilable(::UnifiedRubySDK::Shared::AtsCandidate)).returns(::UnifiedRubySDK::Operations::PatchAtsCandidateResponse) }
     def patch_ats_candidate(connection_id, id, ats_candidate = nil)
       # patch_ats_candidate - Update a candidate
       request = ::UnifiedRubySDK::Operations::PatchAtsCandidateRequest.new(
@@ -1010,7 +1010,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_document: T.nilable(::UnifiedRubySDK::Shared::AtsDocument)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, ats_document: T.nilable(::UnifiedRubySDK::Shared::AtsDocument)).returns(::UnifiedRubySDK::Operations::PatchAtsDocumentResponse) }
     def patch_ats_document(connection_id, id, ats_document = nil)
       # patch_ats_document - Update a document
       request = ::UnifiedRubySDK::Operations::PatchAtsDocumentRequest.new(
@@ -1060,7 +1060,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_interview: T.nilable(::UnifiedRubySDK::Shared::AtsInterview)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, ats_interview: T.nilable(::UnifiedRubySDK::Shared::AtsInterview)).returns(::UnifiedRubySDK::Operations::PatchAtsInterviewResponse) }
     def patch_ats_interview(connection_id, id, ats_interview = nil)
       # patch_ats_interview - Update a interview
       request = ::UnifiedRubySDK::Operations::PatchAtsInterviewRequest.new(
@@ -1110,7 +1110,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_job: T.nilable(::UnifiedRubySDK::Shared::AtsJob)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, ats_job: T.nilable(::UnifiedRubySDK::Shared::AtsJob)).returns(::UnifiedRubySDK::Operations::PatchAtsJobResponse) }
     def patch_ats_job(connection_id, id, ats_job = nil)
       # patch_ats_job - Update a job
       request = ::UnifiedRubySDK::Operations::PatchAtsJobRequest.new(
@@ -1160,7 +1160,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard)).returns(::UnifiedRubySDK::Operations::PatchAtsScorecardResponse) }
     def patch_ats_scorecard(connection_id, id, ats_scorecard = nil)
       # patch_ats_scorecard - Update a scorecard
       request = ::UnifiedRubySDK::Operations::PatchAtsScorecardRequest.new(
@@ -1210,7 +1210,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAtsApplicationResponse) }
     def remove_ats_application(connection_id, id)
       # remove_ats_application - Remove an application
       request = ::UnifiedRubySDK::Operations::RemoveAtsApplicationRequest.new(
@@ -1249,7 +1249,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAtsCandidateResponse) }
     def remove_ats_candidate(connection_id, id)
       # remove_ats_candidate - Remove a candidate
       request = ::UnifiedRubySDK::Operations::RemoveAtsCandidateRequest.new(
@@ -1288,7 +1288,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAtsDocumentResponse) }
     def remove_ats_document(connection_id, id)
       # remove_ats_document - Remove a document
       request = ::UnifiedRubySDK::Operations::RemoveAtsDocumentRequest.new(
@@ -1327,7 +1327,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAtsInterviewResponse) }
     def remove_ats_interview(connection_id, id)
       # remove_ats_interview - Remove a interview
       request = ::UnifiedRubySDK::Operations::RemoveAtsInterviewRequest.new(
@@ -1366,7 +1366,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAtsJobResponse) }
     def remove_ats_job(connection_id, id)
       # remove_ats_job - Remove a job
       request = ::UnifiedRubySDK::Operations::RemoveAtsJobRequest.new(
@@ -1405,7 +1405,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAtsScorecardResponse) }
     def remove_ats_scorecard(connection_id, id)
       # remove_ats_scorecard - Remove a scorecard
       request = ::UnifiedRubySDK::Operations::RemoveAtsScorecardRequest.new(
@@ -1444,7 +1444,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_application: T.nilable(::UnifiedRubySDK::Shared::AtsApplication)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, ats_application: T.nilable(::UnifiedRubySDK::Shared::AtsApplication)).returns(::UnifiedRubySDK::Operations::UpdateAtsApplicationResponse) }
     def update_ats_application(connection_id, id, ats_application = nil)
       # update_ats_application - Update an application
       request = ::UnifiedRubySDK::Operations::UpdateAtsApplicationRequest.new(
@@ -1494,7 +1494,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_candidate: T.nilable(::UnifiedRubySDK::Shared::AtsCandidate)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, ats_candidate: T.nilable(::UnifiedRubySDK::Shared::AtsCandidate)).returns(::UnifiedRubySDK::Operations::UpdateAtsCandidateResponse) }
     def update_ats_candidate(connection_id, id, ats_candidate = nil)
       # update_ats_candidate - Update a candidate
       request = ::UnifiedRubySDK::Operations::UpdateAtsCandidateRequest.new(
@@ -1544,7 +1544,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_document: T.nilable(::UnifiedRubySDK::Shared::AtsDocument)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, ats_document: T.nilable(::UnifiedRubySDK::Shared::AtsDocument)).returns(::UnifiedRubySDK::Operations::UpdateAtsDocumentResponse) }
     def update_ats_document(connection_id, id, ats_document = nil)
       # update_ats_document - Update a document
       request = ::UnifiedRubySDK::Operations::UpdateAtsDocumentRequest.new(
@@ -1594,7 +1594,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_interview: T.nilable(::UnifiedRubySDK::Shared::AtsInterview)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, ats_interview: T.nilable(::UnifiedRubySDK::Shared::AtsInterview)).returns(::UnifiedRubySDK::Operations::UpdateAtsInterviewResponse) }
     def update_ats_interview(connection_id, id, ats_interview = nil)
       # update_ats_interview - Update a interview
       request = ::UnifiedRubySDK::Operations::UpdateAtsInterviewRequest.new(
@@ -1644,7 +1644,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_job: T.nilable(::UnifiedRubySDK::Shared::AtsJob)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, ats_job: T.nilable(::UnifiedRubySDK::Shared::AtsJob)).returns(::UnifiedRubySDK::Operations::UpdateAtsJobResponse) }
     def update_ats_job(connection_id, id, ats_job = nil)
       # update_ats_job - Update a job
       request = ::UnifiedRubySDK::Operations::UpdateAtsJobRequest.new(
@@ -1694,7 +1694,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard)).returns(::UnifiedRubySDK::Operations::UpdateAtsScorecardResponse) }
     def update_ats_scorecard(connection_id, id, ats_scorecard = nil)
       # update_ats_scorecard - Update a scorecard
       request = ::UnifiedRubySDK::Operations::UpdateAtsScorecardRequest.new(

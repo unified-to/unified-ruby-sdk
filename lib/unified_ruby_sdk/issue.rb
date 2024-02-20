@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIssuesRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIssuesRequest)).returns(::UnifiedRubySDK::Operations::ListUnifiedIssuesResponse) }
     def list_unified_issues(request)
       # list_unified_issues - List support issues
       url, params = @sdk_configuration.get_server_details

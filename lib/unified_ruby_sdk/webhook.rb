@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(webhook: T.nilable(::UnifiedRubySDK::Shared::Webhook), include_all: T.nilable(T::Boolean)).returns(Utils::FieldAugmented) }
+    sig { params(webhook: T.nilable(::UnifiedRubySDK::Shared::Webhook), include_all: T.nilable(T::Boolean)).returns(::UnifiedRubySDK::Operations::CreateUnifiedWebhookResponse) }
     def create_unified_webhook(webhook = nil, include_all = nil)
       # create_unified_webhook - Create webhook subscription
       # The data payload received by your server is described at https://docs.unified.to/unified/overview.  The `interval` field can be set as low as 15 minutes for paid accounts, and 60 minutes for free accounts.
@@ -66,7 +66,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(id: ::String).returns(::UnifiedRubySDK::Operations::GetUnifiedWebhookResponse) }
     def get_unified_webhook(id)
       # get_unified_webhook - Retrieve webhook by its ID
       request = ::UnifiedRubySDK::Operations::GetUnifiedWebhookRequest.new(
@@ -105,7 +105,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedWebhooksRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedWebhooksRequest)).returns(::UnifiedRubySDK::Operations::ListUnifiedWebhooksResponse) }
     def list_unified_webhooks(request)
       # list_unified_webhooks - Returns all registered webhooks
       url, params = @sdk_configuration.get_server_details
@@ -137,7 +137,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(id: ::String).returns(::UnifiedRubySDK::Operations::PatchUnifiedWebhookTriggerResponse) }
     def patch_unified_webhook_trigger(id)
       # patch_unified_webhook_trigger - Trigger webhook
       request = ::UnifiedRubySDK::Operations::PatchUnifiedWebhookTriggerRequest.new(
@@ -175,7 +175,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(id: ::String).returns(::UnifiedRubySDK::Operations::RemoveUnifiedWebhookResponse) }
     def remove_unified_webhook(id)
       # remove_unified_webhook - Remove webhook subscription
       request = ::UnifiedRubySDK::Operations::RemoveUnifiedWebhookRequest.new(
@@ -213,7 +213,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(id: ::String).returns(::UnifiedRubySDK::Operations::UpdateUnifiedWebhookTriggerResponse) }
     def update_unified_webhook_trigger(id)
       # update_unified_webhook_trigger - Trigger webhook
       request = ::UnifiedRubySDK::Operations::UpdateUnifiedWebhookTriggerRequest.new(

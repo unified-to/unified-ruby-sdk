@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, crm_company: T.nilable(::UnifiedRubySDK::Shared::CrmCompany)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, crm_company: T.nilable(::UnifiedRubySDK::Shared::CrmCompany)).returns(::UnifiedRubySDK::Operations::CreateCrmCompanyResponse) }
     def create_crm_company(connection_id, crm_company = nil)
       # create_crm_company - Create a company
       request = ::UnifiedRubySDK::Operations::CreateCrmCompanyRequest.new(
@@ -68,7 +68,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAtsCompanyResponse) }
     def get_ats_company(connection_id, id, fields_ = nil)
       # get_ats_company - Retrieve a company
       request = ::UnifiedRubySDK::Operations::GetAtsCompanyRequest.new(
@@ -111,7 +111,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCrmCompanyResponse) }
     def get_crm_company(connection_id, id, fields_ = nil)
       # get_crm_company - Retrieve a company
       request = ::UnifiedRubySDK::Operations::GetCrmCompanyRequest.new(
@@ -154,7 +154,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsCompaniesRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsCompaniesRequest)).returns(::UnifiedRubySDK::Operations::ListAtsCompaniesResponse) }
     def list_ats_companies(request)
       # list_ats_companies - List all companies
       url, params = @sdk_configuration.get_server_details
@@ -191,7 +191,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmCompaniesRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmCompaniesRequest)).returns(::UnifiedRubySDK::Operations::ListCrmCompaniesResponse) }
     def list_crm_companies(request)
       # list_crm_companies - List all companies
       url, params = @sdk_configuration.get_server_details
@@ -228,7 +228,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, domain: T.nilable(::String), name: T.nilable(::String)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, domain: T.nilable(::String), name: T.nilable(::String)).returns(::UnifiedRubySDK::Operations::ListEnrichCompaniesResponse) }
     def list_enrich_companies(connection_id, domain = nil, name = nil)
       # list_enrich_companies - Retrieve enrichment information for a company
       request = ::UnifiedRubySDK::Operations::ListEnrichCompaniesRequest.new(
@@ -271,7 +271,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_company: T.nilable(::UnifiedRubySDK::Shared::CrmCompany)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, crm_company: T.nilable(::UnifiedRubySDK::Shared::CrmCompany)).returns(::UnifiedRubySDK::Operations::PatchCrmCompanyResponse) }
     def patch_crm_company(connection_id, id, crm_company = nil)
       # patch_crm_company - Update a company
       request = ::UnifiedRubySDK::Operations::PatchCrmCompanyRequest.new(
@@ -321,7 +321,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCrmCompanyResponse) }
     def remove_crm_company(connection_id, id)
       # remove_crm_company - Remove a company
       request = ::UnifiedRubySDK::Operations::RemoveCrmCompanyRequest.new(
@@ -360,7 +360,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_company: T.nilable(::UnifiedRubySDK::Shared::CrmCompany)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, crm_company: T.nilable(::UnifiedRubySDK::Shared::CrmCompany)).returns(::UnifiedRubySDK::Operations::UpdateCrmCompanyResponse) }
     def update_crm_company(connection_id, id, crm_company = nil)
       # update_crm_company - Update a company
       request = ::UnifiedRubySDK::Operations::UpdateCrmCompanyRequest.new(

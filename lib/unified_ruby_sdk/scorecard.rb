@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard)).returns(::UnifiedRubySDK::Operations::CreateAtsScorecardResponse) }
     def create_ats_scorecard(connection_id, ats_scorecard = nil)
       # create_ats_scorecard - Create a scorecard
       request = ::UnifiedRubySDK::Operations::CreateAtsScorecardRequest.new(
@@ -68,7 +68,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAtsScorecardResponse) }
     def get_ats_scorecard(connection_id, id, fields_ = nil)
       # get_ats_scorecard - Retrieve a scorecard
       request = ::UnifiedRubySDK::Operations::GetAtsScorecardRequest.new(
@@ -111,7 +111,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsScorecardsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsScorecardsRequest)).returns(::UnifiedRubySDK::Operations::ListAtsScorecardsResponse) }
     def list_ats_scorecards(request)
       # list_ats_scorecards - List all scorecards
       url, params = @sdk_configuration.get_server_details
@@ -148,7 +148,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard)).returns(::UnifiedRubySDK::Operations::PatchAtsScorecardResponse) }
     def patch_ats_scorecard(connection_id, id, ats_scorecard = nil)
       # patch_ats_scorecard - Update a scorecard
       request = ::UnifiedRubySDK::Operations::PatchAtsScorecardRequest.new(
@@ -198,7 +198,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAtsScorecardResponse) }
     def remove_ats_scorecard(connection_id, id)
       # remove_ats_scorecard - Remove a scorecard
       request = ::UnifiedRubySDK::Operations::RemoveAtsScorecardRequest.new(
@@ -237,7 +237,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard)).returns(::UnifiedRubySDK::Operations::UpdateAtsScorecardResponse) }
     def update_ats_scorecard(connection_id, id, ats_scorecard = nil)
       # update_ats_scorecard - Update a scorecard
       request = ::UnifiedRubySDK::Operations::UpdateAtsScorecardRequest.new(

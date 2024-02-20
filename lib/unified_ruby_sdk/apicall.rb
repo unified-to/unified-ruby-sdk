@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(id: ::String).returns(::UnifiedRubySDK::Operations::GetUnifiedApicallResponse) }
     def get_unified_apicall(id)
       # get_unified_apicall - Retrieve specific API Call by its ID
       request = ::UnifiedRubySDK::Operations::GetUnifiedApicallRequest.new(
@@ -58,7 +58,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedApicallsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedApicallsRequest)).returns(::UnifiedRubySDK::Operations::ListUnifiedApicallsResponse) }
     def list_unified_apicalls(request)
       # list_unified_apicalls - Returns API Calls
       url, params = @sdk_configuration.get_server_details

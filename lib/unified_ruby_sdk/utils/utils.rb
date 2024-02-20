@@ -742,7 +742,7 @@ module UnifiedRubySDK
       end
     end
 
-    sig { params(data: String, type: Object).returns(Object) }
+    sig { params(data: Object, type: Object).returns(Object) }
     def self.unmarshal_complex(data, type)
       begin
         value = unmarshal_json(JSON.parse(data), type)
@@ -754,20 +754,15 @@ module UnifiedRubySDK
 
     sig { params(data: Object, type: Object).returns(Object) }
     def self.unmarshal_json(data, type)
+      if T.simplifiable? type
+        type = T.simplify_type type
+      end
       if type.respond_to? :unmarshal_json
         type.unmarshal_json(data)
-      elsif type.to_s.start_with? 'T::Array'
-        if type.type.respond_to? :raw_type
-          data.map { |v| Utils.unmarshal_complex(v, type.type.raw_type) }
-        else
-          data.map { |v| Utils.unmarshal_complex(v, type.type) }
-        end
-      elsif type.to_s.start_with? 'T::Hash'
-        if type.type.types[1].respond_to? :raw_type
-          data.transform_values { |v| Utils.unmarshal_complex(v, type.type.types[1].raw_type) }
-        else
-          data.transform_values { |v| Utils.unmarshal_complex(v, type.type.types[1]) }
-        end
+      elsif T.arr? type
+        data.map { |v| Utils.unmarshal_complex(v, T.arr_of(type)) }
+      elsif T.hash? type
+        data.transform_values { |v| Utils.unmarshal_complex(v, T.hash_of(type)) }
       else
         data
       end

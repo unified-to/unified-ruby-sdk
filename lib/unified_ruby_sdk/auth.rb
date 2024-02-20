@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::GetUnifiedIntegrationAuthRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::GetUnifiedIntegrationAuthRequest)).returns(::UnifiedRubySDK::Operations::GetUnifiedIntegrationAuthResponse) }
     def get_unified_integration_auth(request)
       # get_unified_integration_auth - Create connection indirectly
       # Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
@@ -55,7 +55,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::GetUnifiedIntegrationLoginRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::GetUnifiedIntegrationLoginRequest)).returns(::UnifiedRubySDK::Operations::GetUnifiedIntegrationLoginResponse) }
     def get_unified_integration_login(request)
       # get_unified_integration_login - Sign in a user
       # Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.

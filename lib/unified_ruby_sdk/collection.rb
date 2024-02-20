@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(::UnifiedRubySDK::Operations::CreateCommerceCollectionResponse) }
     def create_commerce_collection(connection_id, commerce_collection = nil)
       # create_commerce_collection - Create a collection
       request = ::UnifiedRubySDK::Operations::CreateCommerceCollectionRequest.new(
@@ -68,7 +68,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCommerceCollectionResponse) }
     def get_commerce_collection(connection_id, id, fields_ = nil)
       # get_commerce_collection - Retrieve a collection
       request = ::UnifiedRubySDK::Operations::GetCommerceCollectionRequest.new(
@@ -111,7 +111,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCommerceCollectionsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCommerceCollectionsRequest)).returns(::UnifiedRubySDK::Operations::ListCommerceCollectionsResponse) }
     def list_commerce_collections(request)
       # list_commerce_collections - List all collections
       url, params = @sdk_configuration.get_server_details
@@ -148,7 +148,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(::UnifiedRubySDK::Operations::PatchCommerceCollectionResponse) }
     def patch_commerce_collection(connection_id, id, commerce_collection = nil)
       # patch_commerce_collection - Update a collection
       request = ::UnifiedRubySDK::Operations::PatchCommerceCollectionRequest.new(
@@ -198,7 +198,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCommerceCollectionResponse) }
     def remove_commerce_collection(connection_id, id)
       # remove_commerce_collection - Remove a collection
       request = ::UnifiedRubySDK::Operations::RemoveCommerceCollectionRequest.new(
@@ -237,7 +237,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(::UnifiedRubySDK::Operations::UpdateCommerceCollectionResponse) }
     def update_commerce_collection(connection_id, id, commerce_collection = nil)
       # update_commerce_collection - Update a collection
       request = ::UnifiedRubySDK::Operations::UpdateCommerceCollectionRequest.new(

@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, crm_company: T.nilable(::UnifiedRubySDK::Shared::CrmCompany)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, crm_company: T.nilable(::UnifiedRubySDK::Shared::CrmCompany)).returns(::UnifiedRubySDK::Operations::CreateCrmCompanyResponse) }
     def create_crm_company(connection_id, crm_company = nil)
       # create_crm_company - Create a company
       request = ::UnifiedRubySDK::Operations::CreateCrmCompanyRequest.new(
@@ -68,7 +68,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact)).returns(::UnifiedRubySDK::Operations::CreateCrmContactResponse) }
     def create_crm_contact(connection_id, crm_contact = nil)
       # create_crm_contact - Create a contact
       request = ::UnifiedRubySDK::Operations::CreateCrmContactRequest.new(
@@ -117,7 +117,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal)).returns(::UnifiedRubySDK::Operations::CreateCrmDealResponse) }
     def create_crm_deal(connection_id, crm_deal = nil)
       # create_crm_deal - Create a deal
       request = ::UnifiedRubySDK::Operations::CreateCrmDealRequest.new(
@@ -166,7 +166,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, crm_event: T.nilable(::UnifiedRubySDK::Shared::CrmEvent)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, crm_event: T.nilable(::UnifiedRubySDK::Shared::CrmEvent)).returns(::UnifiedRubySDK::Operations::CreateCrmEventResponse) }
     def create_crm_event(connection_id, crm_event = nil)
       # create_crm_event - Create a event
       request = ::UnifiedRubySDK::Operations::CreateCrmEventRequest.new(
@@ -215,7 +215,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, crm_lead: T.nilable(::UnifiedRubySDK::Shared::CrmLead)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, crm_lead: T.nilable(::UnifiedRubySDK::Shared::CrmLead)).returns(::UnifiedRubySDK::Operations::CreateCrmLeadResponse) }
     def create_crm_lead(connection_id, crm_lead = nil)
       # create_crm_lead - Create a lead
       request = ::UnifiedRubySDK::Operations::CreateCrmLeadRequest.new(
@@ -264,7 +264,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, crm_pipeline: T.nilable(::UnifiedRubySDK::Shared::CrmPipeline)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, crm_pipeline: T.nilable(::UnifiedRubySDK::Shared::CrmPipeline)).returns(::UnifiedRubySDK::Operations::CreateCrmPipelineResponse) }
     def create_crm_pipeline(connection_id, crm_pipeline = nil)
       # create_crm_pipeline - Create a pipeline
       request = ::UnifiedRubySDK::Operations::CreateCrmPipelineRequest.new(
@@ -313,7 +313,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCrmCompanyResponse) }
     def get_crm_company(connection_id, id, fields_ = nil)
       # get_crm_company - Retrieve a company
       request = ::UnifiedRubySDK::Operations::GetCrmCompanyRequest.new(
@@ -356,7 +356,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCrmContactResponse) }
     def get_crm_contact(connection_id, id, fields_ = nil)
       # get_crm_contact - Retrieve a contact
       request = ::UnifiedRubySDK::Operations::GetCrmContactRequest.new(
@@ -399,7 +399,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCrmDealResponse) }
     def get_crm_deal(connection_id, id, fields_ = nil)
       # get_crm_deal - Retrieve a deal
       request = ::UnifiedRubySDK::Operations::GetCrmDealRequest.new(
@@ -442,7 +442,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCrmEventResponse) }
     def get_crm_event(connection_id, id, fields_ = nil)
       # get_crm_event - Retrieve a event
       request = ::UnifiedRubySDK::Operations::GetCrmEventRequest.new(
@@ -485,7 +485,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCrmLeadResponse) }
     def get_crm_lead(connection_id, id, fields_ = nil)
       # get_crm_lead - Retrieve a lead
       request = ::UnifiedRubySDK::Operations::GetCrmLeadRequest.new(
@@ -528,7 +528,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCrmPipelineResponse) }
     def get_crm_pipeline(connection_id, id, fields_ = nil)
       # get_crm_pipeline - Retrieve a pipeline
       request = ::UnifiedRubySDK::Operations::GetCrmPipelineRequest.new(
@@ -571,7 +571,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmCompaniesRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmCompaniesRequest)).returns(::UnifiedRubySDK::Operations::ListCrmCompaniesResponse) }
     def list_crm_companies(request)
       # list_crm_companies - List all companies
       url, params = @sdk_configuration.get_server_details
@@ -608,7 +608,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmContactsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmContactsRequest)).returns(::UnifiedRubySDK::Operations::ListCrmContactsResponse) }
     def list_crm_contacts(request)
       # list_crm_contacts - List all contacts
       url, params = @sdk_configuration.get_server_details
@@ -645,7 +645,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmDealsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmDealsRequest)).returns(::UnifiedRubySDK::Operations::ListCrmDealsResponse) }
     def list_crm_deals(request)
       # list_crm_deals - List all deals
       url, params = @sdk_configuration.get_server_details
@@ -682,7 +682,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmEventsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmEventsRequest)).returns(::UnifiedRubySDK::Operations::ListCrmEventsResponse) }
     def list_crm_events(request)
       # list_crm_events - List all events
       url, params = @sdk_configuration.get_server_details
@@ -719,7 +719,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmLeadsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmLeadsRequest)).returns(::UnifiedRubySDK::Operations::ListCrmLeadsResponse) }
     def list_crm_leads(request)
       # list_crm_leads - List all leads
       url, params = @sdk_configuration.get_server_details
@@ -756,7 +756,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmPipelinesRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmPipelinesRequest)).returns(::UnifiedRubySDK::Operations::ListCrmPipelinesResponse) }
     def list_crm_pipelines(request)
       # list_crm_pipelines - List all pipelines
       url, params = @sdk_configuration.get_server_details
@@ -793,7 +793,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_company: T.nilable(::UnifiedRubySDK::Shared::CrmCompany)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, crm_company: T.nilable(::UnifiedRubySDK::Shared::CrmCompany)).returns(::UnifiedRubySDK::Operations::PatchCrmCompanyResponse) }
     def patch_crm_company(connection_id, id, crm_company = nil)
       # patch_crm_company - Update a company
       request = ::UnifiedRubySDK::Operations::PatchCrmCompanyRequest.new(
@@ -843,7 +843,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact)).returns(::UnifiedRubySDK::Operations::PatchCrmContactResponse) }
     def patch_crm_contact(connection_id, id, crm_contact = nil)
       # patch_crm_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::PatchCrmContactRequest.new(
@@ -893,7 +893,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal)).returns(::UnifiedRubySDK::Operations::PatchCrmDealResponse) }
     def patch_crm_deal(connection_id, id, crm_deal = nil)
       # patch_crm_deal - Update a deal
       request = ::UnifiedRubySDK::Operations::PatchCrmDealRequest.new(
@@ -943,7 +943,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_event: T.nilable(::UnifiedRubySDK::Shared::CrmEvent)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, crm_event: T.nilable(::UnifiedRubySDK::Shared::CrmEvent)).returns(::UnifiedRubySDK::Operations::PatchCrmEventResponse) }
     def patch_crm_event(connection_id, id, crm_event = nil)
       # patch_crm_event - Update a event
       request = ::UnifiedRubySDK::Operations::PatchCrmEventRequest.new(
@@ -993,7 +993,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_lead: T.nilable(::UnifiedRubySDK::Shared::CrmLead)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, crm_lead: T.nilable(::UnifiedRubySDK::Shared::CrmLead)).returns(::UnifiedRubySDK::Operations::PatchCrmLeadResponse) }
     def patch_crm_lead(connection_id, id, crm_lead = nil)
       # patch_crm_lead - Update a lead
       request = ::UnifiedRubySDK::Operations::PatchCrmLeadRequest.new(
@@ -1043,7 +1043,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_pipeline: T.nilable(::UnifiedRubySDK::Shared::CrmPipeline)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, crm_pipeline: T.nilable(::UnifiedRubySDK::Shared::CrmPipeline)).returns(::UnifiedRubySDK::Operations::PatchCrmPipelineResponse) }
     def patch_crm_pipeline(connection_id, id, crm_pipeline = nil)
       # patch_crm_pipeline - Update a pipeline
       request = ::UnifiedRubySDK::Operations::PatchCrmPipelineRequest.new(
@@ -1093,7 +1093,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCrmCompanyResponse) }
     def remove_crm_company(connection_id, id)
       # remove_crm_company - Remove a company
       request = ::UnifiedRubySDK::Operations::RemoveCrmCompanyRequest.new(
@@ -1132,7 +1132,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCrmContactResponse) }
     def remove_crm_contact(connection_id, id)
       # remove_crm_contact - Remove a contact
       request = ::UnifiedRubySDK::Operations::RemoveCrmContactRequest.new(
@@ -1171,7 +1171,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCrmDealResponse) }
     def remove_crm_deal(connection_id, id)
       # remove_crm_deal - Remove a deal
       request = ::UnifiedRubySDK::Operations::RemoveCrmDealRequest.new(
@@ -1210,7 +1210,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCrmEventResponse) }
     def remove_crm_event(connection_id, id)
       # remove_crm_event - Remove a event
       request = ::UnifiedRubySDK::Operations::RemoveCrmEventRequest.new(
@@ -1249,7 +1249,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCrmLeadResponse) }
     def remove_crm_lead(connection_id, id)
       # remove_crm_lead - Remove a lead
       request = ::UnifiedRubySDK::Operations::RemoveCrmLeadRequest.new(
@@ -1288,7 +1288,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCrmPipelineResponse) }
     def remove_crm_pipeline(connection_id, id)
       # remove_crm_pipeline - Remove a pipeline
       request = ::UnifiedRubySDK::Operations::RemoveCrmPipelineRequest.new(
@@ -1327,7 +1327,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_company: T.nilable(::UnifiedRubySDK::Shared::CrmCompany)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, crm_company: T.nilable(::UnifiedRubySDK::Shared::CrmCompany)).returns(::UnifiedRubySDK::Operations::UpdateCrmCompanyResponse) }
     def update_crm_company(connection_id, id, crm_company = nil)
       # update_crm_company - Update a company
       request = ::UnifiedRubySDK::Operations::UpdateCrmCompanyRequest.new(
@@ -1377,7 +1377,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact)).returns(::UnifiedRubySDK::Operations::UpdateCrmContactResponse) }
     def update_crm_contact(connection_id, id, crm_contact = nil)
       # update_crm_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::UpdateCrmContactRequest.new(
@@ -1427,7 +1427,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal)).returns(::UnifiedRubySDK::Operations::UpdateCrmDealResponse) }
     def update_crm_deal(connection_id, id, crm_deal = nil)
       # update_crm_deal - Update a deal
       request = ::UnifiedRubySDK::Operations::UpdateCrmDealRequest.new(
@@ -1477,7 +1477,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_event: T.nilable(::UnifiedRubySDK::Shared::CrmEvent)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, crm_event: T.nilable(::UnifiedRubySDK::Shared::CrmEvent)).returns(::UnifiedRubySDK::Operations::UpdateCrmEventResponse) }
     def update_crm_event(connection_id, id, crm_event = nil)
       # update_crm_event - Update a event
       request = ::UnifiedRubySDK::Operations::UpdateCrmEventRequest.new(
@@ -1527,7 +1527,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_lead: T.nilable(::UnifiedRubySDK::Shared::CrmLead)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, crm_lead: T.nilable(::UnifiedRubySDK::Shared::CrmLead)).returns(::UnifiedRubySDK::Operations::UpdateCrmLeadResponse) }
     def update_crm_lead(connection_id, id, crm_lead = nil)
       # update_crm_lead - Update a lead
       request = ::UnifiedRubySDK::Operations::UpdateCrmLeadRequest.new(
@@ -1577,7 +1577,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_pipeline: T.nilable(::UnifiedRubySDK::Shared::CrmPipeline)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, crm_pipeline: T.nilable(::UnifiedRubySDK::Shared::CrmPipeline)).returns(::UnifiedRubySDK::Operations::UpdateCrmPipelineResponse) }
     def update_crm_pipeline(connection_id, id, crm_pipeline = nil)
       # update_crm_pipeline - Update a pipeline
       request = ::UnifiedRubySDK::Operations::UpdateCrmPipelineRequest.new(

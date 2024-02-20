@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAccountingOrganizationResponse) }
     def get_accounting_organization(connection_id, id, fields_ = nil)
       # get_accounting_organization - Retrieve an organization
       request = ::UnifiedRubySDK::Operations::GetAccountingOrganizationRequest.new(
@@ -62,7 +62,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingOrganizationsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingOrganizationsRequest)).returns(::UnifiedRubySDK::Operations::ListAccountingOrganizationsResponse) }
     def list_accounting_organizations(request)
       # list_accounting_organizations - List all organizations
       url, params = @sdk_configuration.get_server_details

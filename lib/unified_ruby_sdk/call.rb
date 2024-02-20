@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUcCallsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUcCallsRequest)).returns(::UnifiedRubySDK::Operations::ListUcCallsResponse) }
     def list_uc_calls(request)
       # list_uc_calls - List all calls
       url, params = @sdk_configuration.get_server_details

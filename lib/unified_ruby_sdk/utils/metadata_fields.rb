@@ -62,28 +62,24 @@ module UnifiedRubySDK
         end
         fields.each do |field|
           field_type = field.type
-          if field.type.respond_to?(:types) && field.type.types.length == 2
-            type2 = field.type.types[1]
-            if type2.raw_type == NilClass
-              field_type = field.type.types[0]
-              field_type = field_type.raw_type if field_type.respond_to? :raw_type
-            end
+          if T.nilable? field_type
+            field_type = T.nilable_of(field_type)
           end
-
 
           key = "#{field.name}="
           lookup = field.metadata.fetch(:format_json, {}).fetch(:letter_case, nil).call
           value = d[lookup]
           next if value.nil?
 
-          if field_type.to_s.start_with? 'T::Array'
-            inner_type = field_type.type.raw_type
+          if T.arr? field_type
+            inner_type = T.arr_of(field_type)
             unmarshalled_array = value.map { |f| unmarshal_single(inner_type, f) }
             to_build.send(key, unmarshalled_array)
-          elsif field_type.to_s.start_with? 'T::Hash'
-            _, val_type = field_type.type.types
+          elsif T.hash? field_type
+            val_type = T.hash_of(field_type)
+
             # rubocop:disable Style/HashTransformValues
-            unmarshalled_hash = value.map { |k, v| [k, unmarshal_single(val_type.raw_type, v)] }.to_h
+            unmarshalled_hash = value.map { |k, v| [k, unmarshal_single(val_type, v)] }.to_h
             # rubocop:enable Style/HashTransformValues
             to_build.send(key, unmarshalled_hash)
           else

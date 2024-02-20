@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::GetUnifiedIntegrationAuthRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::GetUnifiedIntegrationAuthRequest)).returns(::UnifiedRubySDK::Operations::GetUnifiedIntegrationAuthResponse) }
     def get_unified_integration_auth(request)
       # get_unified_integration_auth - Create connection indirectly
       # Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
@@ -55,7 +55,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIntegrationWorkspacesRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIntegrationWorkspacesRequest)).returns(::UnifiedRubySDK::Operations::ListUnifiedIntegrationWorkspacesResponse) }
     def list_unified_integration_workspaces(request)
       # list_unified_integration_workspaces - Returns all activated integrations in a workspace
       # No authentication required as this is to be used by front-end interface
@@ -93,7 +93,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIntegrationsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIntegrationsRequest)).returns(::UnifiedRubySDK::Operations::ListUnifiedIntegrationsResponse) }
     def list_unified_integrations(request)
       # list_unified_integrations - Returns all integrations
       url, params = @sdk_configuration.get_server_details

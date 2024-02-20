@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal)).returns(::UnifiedRubySDK::Operations::CreateCrmDealResponse) }
     def create_crm_deal(connection_id, crm_deal = nil)
       # create_crm_deal - Create a deal
       request = ::UnifiedRubySDK::Operations::CreateCrmDealRequest.new(
@@ -68,7 +68,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCrmDealResponse) }
     def get_crm_deal(connection_id, id, fields_ = nil)
       # get_crm_deal - Retrieve a deal
       request = ::UnifiedRubySDK::Operations::GetCrmDealRequest.new(
@@ -111,7 +111,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmDealsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmDealsRequest)).returns(::UnifiedRubySDK::Operations::ListCrmDealsResponse) }
     def list_crm_deals(request)
       # list_crm_deals - List all deals
       url, params = @sdk_configuration.get_server_details
@@ -148,7 +148,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal)).returns(::UnifiedRubySDK::Operations::PatchCrmDealResponse) }
     def patch_crm_deal(connection_id, id, crm_deal = nil)
       # patch_crm_deal - Update a deal
       request = ::UnifiedRubySDK::Operations::PatchCrmDealRequest.new(
@@ -198,7 +198,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCrmDealResponse) }
     def remove_crm_deal(connection_id, id)
       # remove_crm_deal - Remove a deal
       request = ::UnifiedRubySDK::Operations::RemoveCrmDealRequest.new(
@@ -237,7 +237,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal)).returns(::UnifiedRubySDK::Operations::UpdateCrmDealResponse) }
     def update_crm_deal(connection_id, id, crm_deal = nil)
       # update_crm_deal - Update a deal
       request = ::UnifiedRubySDK::Operations::UpdateCrmDealRequest.new(

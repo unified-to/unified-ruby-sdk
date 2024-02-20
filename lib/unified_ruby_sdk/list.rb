@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, marketing_list: T.nilable(::UnifiedRubySDK::Shared::MarketingList)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, marketing_list: T.nilable(::UnifiedRubySDK::Shared::MarketingList)).returns(::UnifiedRubySDK::Operations::CreateMartechListResponse) }
     def create_martech_list(connection_id, marketing_list = nil)
       # create_martech_list - Create a list
       request = ::UnifiedRubySDK::Operations::CreateMartechListRequest.new(
@@ -68,7 +68,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetMartechListResponse) }
     def get_martech_list(connection_id, id, fields_ = nil)
       # get_martech_list - Retrieve a list
       request = ::UnifiedRubySDK::Operations::GetMartechListRequest.new(
@@ -111,7 +111,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListMartechListsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListMartechListsRequest)).returns(::UnifiedRubySDK::Operations::ListMartechListsResponse) }
     def list_martech_lists(request)
       # list_martech_lists - List all lists
       url, params = @sdk_configuration.get_server_details
@@ -148,7 +148,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, marketing_list: T.nilable(::UnifiedRubySDK::Shared::MarketingList)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, marketing_list: T.nilable(::UnifiedRubySDK::Shared::MarketingList)).returns(::UnifiedRubySDK::Operations::PatchMartechListResponse) }
     def patch_martech_list(connection_id, id, marketing_list = nil)
       # patch_martech_list - Update a list
       request = ::UnifiedRubySDK::Operations::PatchMartechListRequest.new(
@@ -198,7 +198,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveMartechListResponse) }
     def remove_martech_list(connection_id, id)
       # remove_martech_list - Remove a list
       request = ::UnifiedRubySDK::Operations::RemoveMartechListRequest.new(
@@ -237,7 +237,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, marketing_list: T.nilable(::UnifiedRubySDK::Shared::MarketingList)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, marketing_list: T.nilable(::UnifiedRubySDK::Shared::MarketingList)).returns(::UnifiedRubySDK::Operations::UpdateMartechListResponse) }
     def update_martech_list(connection_id, id, marketing_list = nil)
       # update_martech_list - Update a list
       request = ::UnifiedRubySDK::Operations::UpdateMartechListRequest.new(

@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, hris_employee: T.nilable(::UnifiedRubySDK::Shared::HrisEmployee)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, hris_employee: T.nilable(::UnifiedRubySDK::Shared::HrisEmployee)).returns(::UnifiedRubySDK::Operations::CreateHrisEmployeeResponse) }
     def create_hris_employee(connection_id, hris_employee = nil)
       # create_hris_employee - Create an employee
       request = ::UnifiedRubySDK::Operations::CreateHrisEmployeeRequest.new(
@@ -68,7 +68,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetHrisEmployeeResponse) }
     def get_hris_employee(connection_id, id, fields_ = nil)
       # get_hris_employee - Retrieve an employee
       request = ::UnifiedRubySDK::Operations::GetHrisEmployeeRequest.new(
@@ -111,7 +111,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListHrisEmployeesRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListHrisEmployeesRequest)).returns(::UnifiedRubySDK::Operations::ListHrisEmployeesResponse) }
     def list_hris_employees(request)
       # list_hris_employees - List all employees
       url, params = @sdk_configuration.get_server_details
@@ -148,7 +148,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, hris_employee: T.nilable(::UnifiedRubySDK::Shared::HrisEmployee)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, hris_employee: T.nilable(::UnifiedRubySDK::Shared::HrisEmployee)).returns(::UnifiedRubySDK::Operations::PatchHrisEmployeeResponse) }
     def patch_hris_employee(connection_id, id, hris_employee = nil)
       # patch_hris_employee - Update an employee
       request = ::UnifiedRubySDK::Operations::PatchHrisEmployeeRequest.new(
@@ -198,7 +198,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveHrisEmployeeResponse) }
     def remove_hris_employee(connection_id, id)
       # remove_hris_employee - Remove an employee
       request = ::UnifiedRubySDK::Operations::RemoveHrisEmployeeRequest.new(
@@ -237,7 +237,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, hris_employee: T.nilable(::UnifiedRubySDK::Shared::HrisEmployee)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, hris_employee: T.nilable(::UnifiedRubySDK::Shared::HrisEmployee)).returns(::UnifiedRubySDK::Operations::UpdateHrisEmployeeResponse) }
     def update_hris_employee(connection_id, id, hris_employee = nil)
       # update_hris_employee - Update an employee
       request = ::UnifiedRubySDK::Operations::UpdateHrisEmployeeRequest.new(

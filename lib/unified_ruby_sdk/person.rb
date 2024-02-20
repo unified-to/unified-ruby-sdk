@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListEnrichPeopleRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListEnrichPeopleRequest)).returns(::UnifiedRubySDK::Operations::ListEnrichPeopleResponse) }
     def list_enrich_people(request)
       # list_enrich_people - Retrieve enrichment information for a person
       url, params = @sdk_configuration.get_server_details

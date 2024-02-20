@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, hris_group: T.nilable(::UnifiedRubySDK::Shared::HrisGroup)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, hris_group: T.nilable(::UnifiedRubySDK::Shared::HrisGroup)).returns(::UnifiedRubySDK::Operations::CreateHrisGroupResponse) }
     def create_hris_group(connection_id, hris_group = nil)
       # create_hris_group - Create a group
       request = ::UnifiedRubySDK::Operations::CreateHrisGroupRequest.new(
@@ -68,7 +68,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetHrisGroupResponse) }
     def get_hris_group(connection_id, id, fields_ = nil)
       # get_hris_group - Retrieve a group
       request = ::UnifiedRubySDK::Operations::GetHrisGroupRequest.new(
@@ -111,7 +111,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListHrisGroupsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListHrisGroupsRequest)).returns(::UnifiedRubySDK::Operations::ListHrisGroupsResponse) }
     def list_hris_groups(request)
       # list_hris_groups - List all groups
       url, params = @sdk_configuration.get_server_details
@@ -148,7 +148,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, hris_group: T.nilable(::UnifiedRubySDK::Shared::HrisGroup)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, hris_group: T.nilable(::UnifiedRubySDK::Shared::HrisGroup)).returns(::UnifiedRubySDK::Operations::PatchHrisGroupResponse) }
     def patch_hris_group(connection_id, id, hris_group = nil)
       # patch_hris_group - Update a group
       request = ::UnifiedRubySDK::Operations::PatchHrisGroupRequest.new(
@@ -198,7 +198,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveHrisGroupResponse) }
     def remove_hris_group(connection_id, id)
       # remove_hris_group - Remove a group
       request = ::UnifiedRubySDK::Operations::RemoveHrisGroupRequest.new(
@@ -237,7 +237,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, hris_group: T.nilable(::UnifiedRubySDK::Shared::HrisGroup)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, hris_group: T.nilable(::UnifiedRubySDK::Shared::HrisGroup)).returns(::UnifiedRubySDK::Operations::UpdateHrisGroupResponse) }
     def update_hris_group(connection_id, id, hris_group = nil)
       # update_hris_group - Update a group
       request = ::UnifiedRubySDK::Operations::UpdateHrisGroupRequest.new(

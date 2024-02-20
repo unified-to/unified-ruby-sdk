@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(T::Hash[Symbol, ::Object])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(T::Hash[Symbol, ::Object])).returns(::UnifiedRubySDK::Operations::CreatePassthroughResponse) }
     def create_passthrough(connection_id, path, request_body = nil)
       # create_passthrough - Passthrough POST
       request = ::UnifiedRubySDK::Operations::CreatePassthroughRequest.new(
@@ -69,7 +69,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, path: ::String).returns(::UnifiedRubySDK::Operations::ListPassthroughsResponse) }
     def list_passthroughs(connection_id, path)
       # list_passthroughs - Passthrough GET
       request = ::UnifiedRubySDK::Operations::ListPassthroughsRequest.new(
@@ -109,7 +109,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(T::Hash[Symbol, ::Object])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(T::Hash[Symbol, ::Object])).returns(::UnifiedRubySDK::Operations::PatchPassthroughResponse) }
     def patch_passthrough(connection_id, path, request_body = nil)
       # patch_passthrough - Passthrough PUT
       request = ::UnifiedRubySDK::Operations::PatchPassthroughRequest.new(
@@ -159,7 +159,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, path: ::String).returns(::UnifiedRubySDK::Operations::RemovePassthroughResponse) }
     def remove_passthrough(connection_id, path)
       # remove_passthrough - Passthrough DELETE
       request = ::UnifiedRubySDK::Operations::RemovePassthroughRequest.new(
@@ -199,7 +199,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(T::Hash[Symbol, ::Object])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(T::Hash[Symbol, ::Object])).returns(::UnifiedRubySDK::Operations::UpdatePassthroughResponse) }
     def update_passthrough(connection_id, path, request_body = nil)
       # update_passthrough - Passthrough PUT
       request = ::UnifiedRubySDK::Operations::UpdatePassthroughRequest.new(

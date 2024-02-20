@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, accounting_contact: T.nilable(::UnifiedRubySDK::Shared::AccountingContact)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, accounting_contact: T.nilable(::UnifiedRubySDK::Shared::AccountingContact)).returns(::UnifiedRubySDK::Operations::CreateAccountingContactResponse) }
     def create_accounting_contact(connection_id, accounting_contact = nil)
       # create_accounting_contact - Create a contact
       request = ::UnifiedRubySDK::Operations::CreateAccountingContactRequest.new(
@@ -68,7 +68,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact)).returns(::UnifiedRubySDK::Operations::CreateCrmContactResponse) }
     def create_crm_contact(connection_id, crm_contact = nil)
       # create_crm_contact - Create a contact
       request = ::UnifiedRubySDK::Operations::CreateCrmContactRequest.new(
@@ -117,7 +117,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact)).returns(::UnifiedRubySDK::Operations::CreateUcContactResponse) }
     def create_uc_contact(connection_id, uc_contact = nil)
       # create_uc_contact - Create a contact
       request = ::UnifiedRubySDK::Operations::CreateUcContactRequest.new(
@@ -166,7 +166,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAccountingContactResponse) }
     def get_accounting_contact(connection_id, id, fields_ = nil)
       # get_accounting_contact - Retrieve a contact
       request = ::UnifiedRubySDK::Operations::GetAccountingContactRequest.new(
@@ -209,7 +209,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCrmContactResponse) }
     def get_crm_contact(connection_id, id, fields_ = nil)
       # get_crm_contact - Retrieve a contact
       request = ::UnifiedRubySDK::Operations::GetCrmContactRequest.new(
@@ -252,7 +252,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetUcContactResponse) }
     def get_uc_contact(connection_id, id, fields_ = nil)
       # get_uc_contact - Retrieve a contact
       request = ::UnifiedRubySDK::Operations::GetUcContactRequest.new(
@@ -295,7 +295,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingContactsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingContactsRequest)).returns(::UnifiedRubySDK::Operations::ListAccountingContactsResponse) }
     def list_accounting_contacts(request)
       # list_accounting_contacts - List all contacts
       url, params = @sdk_configuration.get_server_details
@@ -332,7 +332,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmContactsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmContactsRequest)).returns(::UnifiedRubySDK::Operations::ListCrmContactsResponse) }
     def list_crm_contacts(request)
       # list_crm_contacts - List all contacts
       url, params = @sdk_configuration.get_server_details
@@ -369,7 +369,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUcContactsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUcContactsRequest)).returns(::UnifiedRubySDK::Operations::ListUcContactsResponse) }
     def list_uc_contacts(request)
       # list_uc_contacts - List all contacts
       url, params = @sdk_configuration.get_server_details
@@ -406,7 +406,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_contact: T.nilable(::UnifiedRubySDK::Shared::AccountingContact)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, accounting_contact: T.nilable(::UnifiedRubySDK::Shared::AccountingContact)).returns(::UnifiedRubySDK::Operations::PatchAccountingContactResponse) }
     def patch_accounting_contact(connection_id, id, accounting_contact = nil)
       # patch_accounting_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::PatchAccountingContactRequest.new(
@@ -456,7 +456,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact)).returns(::UnifiedRubySDK::Operations::PatchCrmContactResponse) }
     def patch_crm_contact(connection_id, id, crm_contact = nil)
       # patch_crm_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::PatchCrmContactRequest.new(
@@ -506,7 +506,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact)).returns(::UnifiedRubySDK::Operations::PatchUcContactResponse) }
     def patch_uc_contact(connection_id, id, uc_contact = nil)
       # patch_uc_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::PatchUcContactRequest.new(
@@ -556,7 +556,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAccountingContactResponse) }
     def remove_accounting_contact(connection_id, id)
       # remove_accounting_contact - Remove a contact
       request = ::UnifiedRubySDK::Operations::RemoveAccountingContactRequest.new(
@@ -595,7 +595,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCrmContactResponse) }
     def remove_crm_contact(connection_id, id)
       # remove_crm_contact - Remove a contact
       request = ::UnifiedRubySDK::Operations::RemoveCrmContactRequest.new(
@@ -634,7 +634,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveUcContactResponse) }
     def remove_uc_contact(connection_id, id)
       # remove_uc_contact - Remove a contact
       request = ::UnifiedRubySDK::Operations::RemoveUcContactRequest.new(
@@ -673,7 +673,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_contact: T.nilable(::UnifiedRubySDK::Shared::AccountingContact)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, accounting_contact: T.nilable(::UnifiedRubySDK::Shared::AccountingContact)).returns(::UnifiedRubySDK::Operations::UpdateAccountingContactResponse) }
     def update_accounting_contact(connection_id, id, accounting_contact = nil)
       # update_accounting_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::UpdateAccountingContactRequest.new(
@@ -723,7 +723,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact)).returns(::UnifiedRubySDK::Operations::UpdateCrmContactResponse) }
     def update_crm_contact(connection_id, id, crm_contact = nil)
       # update_crm_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::UpdateCrmContactRequest.new(
@@ -773,7 +773,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact)).returns(::UnifiedRubySDK::Operations::UpdateUcContactResponse) }
     def update_uc_contact(connection_id, id, uc_contact = nil)
       # update_uc_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::UpdateUcContactRequest.new(

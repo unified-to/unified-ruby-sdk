@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, accounting_account: T.nilable(::UnifiedRubySDK::Shared::AccountingAccount)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, accounting_account: T.nilable(::UnifiedRubySDK::Shared::AccountingAccount)).returns(::UnifiedRubySDK::Operations::CreateAccountingAccountResponse) }
     def create_accounting_account(connection_id, accounting_account = nil)
       # create_accounting_account - Create an account
       request = ::UnifiedRubySDK::Operations::CreateAccountingAccountRequest.new(
@@ -68,7 +68,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAccountingAccountResponse) }
     def get_accounting_account(connection_id, id, fields_ = nil)
       # get_accounting_account - Retrieve an account
       request = ::UnifiedRubySDK::Operations::GetAccountingAccountRequest.new(
@@ -111,7 +111,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingAccountsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingAccountsRequest)).returns(::UnifiedRubySDK::Operations::ListAccountingAccountsResponse) }
     def list_accounting_accounts(request)
       # list_accounting_accounts - List all accounts
       url, params = @sdk_configuration.get_server_details
@@ -148,7 +148,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_account: T.nilable(::UnifiedRubySDK::Shared::AccountingAccount)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, accounting_account: T.nilable(::UnifiedRubySDK::Shared::AccountingAccount)).returns(::UnifiedRubySDK::Operations::PatchAccountingAccountResponse) }
     def patch_accounting_account(connection_id, id, accounting_account = nil)
       # patch_accounting_account - Update an account
       request = ::UnifiedRubySDK::Operations::PatchAccountingAccountRequest.new(
@@ -198,7 +198,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAccountingAccountResponse) }
     def remove_accounting_account(connection_id, id)
       # remove_accounting_account - Remove an account
       request = ::UnifiedRubySDK::Operations::RemoveAccountingAccountRequest.new(
@@ -237,7 +237,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_account: T.nilable(::UnifiedRubySDK::Shared::AccountingAccount)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, accounting_account: T.nilable(::UnifiedRubySDK::Shared::AccountingAccount)).returns(::UnifiedRubySDK::Operations::UpdateAccountingAccountResponse) }
     def update_accounting_account(connection_id, id, accounting_account = nil)
       # update_accounting_account - Update an account
       request = ::UnifiedRubySDK::Operations::UpdateAccountingAccountRequest.new(

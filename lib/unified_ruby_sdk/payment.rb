@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, accounting_payment: T.nilable(::UnifiedRubySDK::Shared::AccountingPayment)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, accounting_payment: T.nilable(::UnifiedRubySDK::Shared::AccountingPayment)).returns(::UnifiedRubySDK::Operations::CreateAccountingPaymentResponse) }
     def create_accounting_payment(connection_id, accounting_payment = nil)
       # create_accounting_payment - Create a payment
       request = ::UnifiedRubySDK::Operations::CreateAccountingPaymentRequest.new(
@@ -68,7 +68,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAccountingPaymentResponse) }
     def get_accounting_payment(connection_id, id, fields_ = nil)
       # get_accounting_payment - Retrieve a payment
       request = ::UnifiedRubySDK::Operations::GetAccountingPaymentRequest.new(
@@ -111,7 +111,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingPaymentsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingPaymentsRequest)).returns(::UnifiedRubySDK::Operations::ListAccountingPaymentsResponse) }
     def list_accounting_payments(request)
       # list_accounting_payments - List all payments
       url, params = @sdk_configuration.get_server_details
@@ -148,7 +148,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_payment: T.nilable(::UnifiedRubySDK::Shared::AccountingPayment)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, accounting_payment: T.nilable(::UnifiedRubySDK::Shared::AccountingPayment)).returns(::UnifiedRubySDK::Operations::PatchAccountingPaymentResponse) }
     def patch_accounting_payment(connection_id, id, accounting_payment = nil)
       # patch_accounting_payment - Update a payment
       request = ::UnifiedRubySDK::Operations::PatchAccountingPaymentRequest.new(
@@ -198,7 +198,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAccountingPaymentResponse) }
     def remove_accounting_payment(connection_id, id)
       # remove_accounting_payment - Remove a payment
       request = ::UnifiedRubySDK::Operations::RemoveAccountingPaymentRequest.new(
@@ -237,7 +237,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_payment: T.nilable(::UnifiedRubySDK::Shared::AccountingPayment)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, accounting_payment: T.nilable(::UnifiedRubySDK::Shared::AccountingPayment)).returns(::UnifiedRubySDK::Operations::UpdateAccountingPaymentResponse) }
     def update_accounting_payment(connection_id, id, accounting_payment = nil)
       # update_accounting_payment - Update a payment
       request = ::UnifiedRubySDK::Operations::UpdateAccountingPaymentRequest.new(

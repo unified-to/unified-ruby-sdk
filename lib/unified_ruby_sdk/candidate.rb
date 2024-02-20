@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ats_candidate: T.nilable(::UnifiedRubySDK::Shared::AtsCandidate)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, ats_candidate: T.nilable(::UnifiedRubySDK::Shared::AtsCandidate)).returns(::UnifiedRubySDK::Operations::CreateAtsCandidateResponse) }
     def create_ats_candidate(connection_id, ats_candidate = nil)
       # create_ats_candidate - Create a candidate
       request = ::UnifiedRubySDK::Operations::CreateAtsCandidateRequest.new(
@@ -68,7 +68,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAtsCandidateResponse) }
     def get_ats_candidate(connection_id, id, fields_ = nil)
       # get_ats_candidate - Retrieve a candidate
       request = ::UnifiedRubySDK::Operations::GetAtsCandidateRequest.new(
@@ -111,7 +111,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsCandidatesRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsCandidatesRequest)).returns(::UnifiedRubySDK::Operations::ListAtsCandidatesResponse) }
     def list_ats_candidates(request)
       # list_ats_candidates - List all candidates
       url, params = @sdk_configuration.get_server_details
@@ -148,7 +148,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_candidate: T.nilable(::UnifiedRubySDK::Shared::AtsCandidate)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, ats_candidate: T.nilable(::UnifiedRubySDK::Shared::AtsCandidate)).returns(::UnifiedRubySDK::Operations::PatchAtsCandidateResponse) }
     def patch_ats_candidate(connection_id, id, ats_candidate = nil)
       # patch_ats_candidate - Update a candidate
       request = ::UnifiedRubySDK::Operations::PatchAtsCandidateRequest.new(
@@ -198,7 +198,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAtsCandidateResponse) }
     def remove_ats_candidate(connection_id, id)
       # remove_ats_candidate - Remove a candidate
       request = ::UnifiedRubySDK::Operations::RemoveAtsCandidateRequest.new(
@@ -237,7 +237,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_candidate: T.nilable(::UnifiedRubySDK::Shared::AtsCandidate)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, ats_candidate: T.nilable(::UnifiedRubySDK::Shared::AtsCandidate)).returns(::UnifiedRubySDK::Operations::UpdateAtsCandidateResponse) }
     def update_ats_candidate(connection_id, id, ats_candidate = nil)
       # update_ats_candidate - Update a candidate
       request = ::UnifiedRubySDK::Operations::UpdateAtsCandidateRequest.new(

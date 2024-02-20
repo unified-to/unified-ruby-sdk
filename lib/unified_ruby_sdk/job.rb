@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ats_job: T.nilable(::UnifiedRubySDK::Shared::AtsJob)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, ats_job: T.nilable(::UnifiedRubySDK::Shared::AtsJob)).returns(::UnifiedRubySDK::Operations::CreateAtsJobResponse) }
     def create_ats_job(connection_id, ats_job = nil)
       # create_ats_job - Create a job
       request = ::UnifiedRubySDK::Operations::CreateAtsJobRequest.new(
@@ -68,7 +68,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAtsJobResponse) }
     def get_ats_job(connection_id, id, fields_ = nil)
       # get_ats_job - Retrieve a job
       request = ::UnifiedRubySDK::Operations::GetAtsJobRequest.new(
@@ -111,7 +111,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsJobsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsJobsRequest)).returns(::UnifiedRubySDK::Operations::ListAtsJobsResponse) }
     def list_ats_jobs(request)
       # list_ats_jobs - List all jobs
       url, params = @sdk_configuration.get_server_details
@@ -148,7 +148,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_job: T.nilable(::UnifiedRubySDK::Shared::AtsJob)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, ats_job: T.nilable(::UnifiedRubySDK::Shared::AtsJob)).returns(::UnifiedRubySDK::Operations::PatchAtsJobResponse) }
     def patch_ats_job(connection_id, id, ats_job = nil)
       # patch_ats_job - Update a job
       request = ::UnifiedRubySDK::Operations::PatchAtsJobRequest.new(
@@ -198,7 +198,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAtsJobResponse) }
     def remove_ats_job(connection_id, id)
       # remove_ats_job - Remove a job
       request = ::UnifiedRubySDK::Operations::RemoveAtsJobRequest.new(
@@ -237,7 +237,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_job: T.nilable(::UnifiedRubySDK::Shared::AtsJob)).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, ats_job: T.nilable(::UnifiedRubySDK::Shared::AtsJob)).returns(::UnifiedRubySDK::Operations::UpdateAtsJobResponse) }
     def update_ats_job(connection_id, id, ats_job = nil)
       # update_ats_job - Update a job
       request = ::UnifiedRubySDK::Operations::UpdateAtsJobRequest.new(

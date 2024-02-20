@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(Utils::FieldAugmented) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAccountingPayoutResponse) }
     def get_accounting_payout(connection_id, id, fields_ = nil)
       # get_accounting_payout - Retrieve a payout
       request = ::UnifiedRubySDK::Operations::GetAccountingPayoutRequest.new(
@@ -62,7 +62,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingPayoutsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingPayoutsRequest)).returns(::UnifiedRubySDK::Operations::ListAccountingPayoutsResponse) }
     def list_accounting_payouts(request)
       # list_accounting_payouts - List all payouts
       url, params = @sdk_configuration.get_server_details

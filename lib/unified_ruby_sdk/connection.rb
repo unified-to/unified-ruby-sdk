@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Shared::Connection)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Shared::Connection)).returns(::UnifiedRubySDK::Operations::CreateUnifiedConnectionResponse) }
     def create_unified_connection(request)
       # create_unified_connection - Create connection
       url, params = @sdk_configuration.get_server_details
@@ -58,7 +58,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(id: ::String).returns(::UnifiedRubySDK::Operations::GetUnifiedConnectionResponse) }
     def get_unified_connection(id)
       # get_unified_connection - Retrieve connection
       request = ::UnifiedRubySDK::Operations::GetUnifiedConnectionRequest.new(
@@ -97,7 +97,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedConnectionsRequest)).returns(Utils::FieldAugmented) }
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedConnectionsRequest)).returns(::UnifiedRubySDK::Operations::ListUnifiedConnectionsResponse) }
     def list_unified_connections(request)
       # list_unified_connections - List all connections
       url, params = @sdk_configuration.get_server_details
@@ -129,7 +129,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String, connection: T.nilable(::UnifiedRubySDK::Shared::Connection)).returns(Utils::FieldAugmented) }
+    sig { params(id: ::String, connection: T.nilable(::UnifiedRubySDK::Shared::Connection)).returns(::UnifiedRubySDK::Operations::PatchUnifiedConnectionResponse) }
     def patch_unified_connection(id, connection = nil)
       # patch_unified_connection - Update connection
       request = ::UnifiedRubySDK::Operations::PatchUnifiedConnectionRequest.new(
@@ -178,7 +178,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String).returns(Utils::FieldAugmented) }
+    sig { params(id: ::String).returns(::UnifiedRubySDK::Operations::RemoveUnifiedConnectionResponse) }
     def remove_unified_connection(id)
       # remove_unified_connection - Remove connection
       request = ::UnifiedRubySDK::Operations::RemoveUnifiedConnectionRequest.new(
@@ -216,7 +216,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String, connection: T.nilable(::UnifiedRubySDK::Shared::Connection)).returns(Utils::FieldAugmented) }
+    sig { params(id: ::String, connection: T.nilable(::UnifiedRubySDK::Shared::Connection)).returns(::UnifiedRubySDK::Operations::UpdateUnifiedConnectionResponse) }
     def update_unified_connection(id, connection = nil)
       # update_unified_connection - Update connection
       request = ::UnifiedRubySDK::Operations::UpdateUnifiedConnectionRequest.new(
