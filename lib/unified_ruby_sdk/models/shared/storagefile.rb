@@ -18,6 +18,8 @@ module UnifiedRubySDK
 
       field :download_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('download_url') } }
 
+      field :hash, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('hash') } }
+
       field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
       field :mime_type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mime_type') } }
@@ -39,11 +41,12 @@ module UnifiedRubySDK
       field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
 
-      sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), download_url: T.nilable(::String), id: T.nilable(::String), mime_type: T.nilable(::String), name: T.nilable(::String), parent_id: T.nilable(::String), permissions: T.nilable(T::Array[::UnifiedRubySDK::Shared::StoragePermission]), raw: T.nilable(T::Hash[Symbol, ::Object]), size: T.nilable(::Float), type: T.nilable(::UnifiedRubySDK::Shared::StorageFileType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-      def initialize(created_at: nil, description: nil, download_url: nil, id: nil, mime_type: nil, name: nil, parent_id: nil, permissions: nil, raw: nil, size: nil, type: nil, updated_at: nil, user_id: nil)
+      sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), download_url: T.nilable(::String), hash: T.nilable(::String), id: T.nilable(::String), mime_type: T.nilable(::String), name: T.nilable(::String), parent_id: T.nilable(::String), permissions: T.nilable(T::Array[::UnifiedRubySDK::Shared::StoragePermission]), raw: T.nilable(T::Hash[Symbol, ::Object]), size: T.nilable(::Float), type: T.nilable(::UnifiedRubySDK::Shared::StorageFileType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+      def initialize(created_at: nil, description: nil, download_url: nil, hash: nil, id: nil, mime_type: nil, name: nil, parent_id: nil, permissions: nil, raw: nil, size: nil, type: nil, updated_at: nil, user_id: nil)
         @created_at = created_at
         @description = description
         @download_url = download_url
+        @hash = hash
         @id = id
         @mime_type = mime_type
         @name = name
