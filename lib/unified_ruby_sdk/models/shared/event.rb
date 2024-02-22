@@ -12,6 +12,7 @@ module UnifiedRubySDK
       enums do
         UPDATED = new('updated')
         CREATED = new('created')
+        DELETED = new('deleted')
       end
     end
 
