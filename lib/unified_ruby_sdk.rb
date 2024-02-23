@@ -22,6 +22,7 @@ module UnifiedRubySDK
   autoload :Taxrate, 'unified_ruby_sdk/taxrate'
   autoload :Transaction, 'unified_ruby_sdk/transaction'
   autoload :Ats, 'unified_ruby_sdk/ats'
+  autoload :Activity, 'unified_ruby_sdk/activity'
   autoload :Application, 'unified_ruby_sdk/application'
   autoload :Applicationstatus, 'unified_ruby_sdk/applicationstatus'
   autoload :Candidate, 'unified_ruby_sdk/candidate'

@@ -40,6 +40,8 @@ module UnifiedRubySDK
     autoload :UcTelephone, 'unified_ruby_sdk/models/shared/uctelephone.rb'
     autoload :UcEmailType, 'unified_ruby_sdk/models/shared/ucemail_type.rb'
     autoload :UcEmail, 'unified_ruby_sdk/models/shared/ucemail.rb'
+    autoload :AtsActivityType, 'unified_ruby_sdk/models/shared/atsactivity_type.rb'
+    autoload :AtsActivity, 'unified_ruby_sdk/models/shared/atsactivity.rb'
     autoload :AtsApplicationStatus, 'unified_ruby_sdk/models/shared/atsapplication_status.rb'
     autoload :AtsApplication, 'unified_ruby_sdk/models/shared/atsapplication.rb'
     autoload :AtsApplicationAnswer, 'unified_ruby_sdk/models/shared/atsapplicationanswer.rb'

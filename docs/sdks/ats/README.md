@@ -3,12 +3,14 @@
 
 ### Available Operations
 
+* [create_ats_activity](#create_ats_activity) - Create an activity
 * [create_ats_application](#create_ats_application) - Create an application
 * [create_ats_candidate](#create_ats_candidate) - Create a candidate
 * [create_ats_document](#create_ats_document) - Create a document
 * [create_ats_interview](#create_ats_interview) - Create a interview
 * [create_ats_job](#create_ats_job) - Create a job
 * [create_ats_scorecard](#create_ats_scorecard) - Create a scorecard
+* [get_ats_activity](#get_ats_activity) - Retrieve an activity
 * [get_ats_application](#get_ats_application) - Retrieve an application
 * [get_ats_candidate](#get_ats_candidate) - Retrieve a candidate
 * [get_ats_company](#get_ats_company) - Retrieve a company
@@ -16,6 +18,7 @@
 * [get_ats_interview](#get_ats_interview) - Retrieve a interview
 * [get_ats_job](#get_ats_job) - Retrieve a job
 * [get_ats_scorecard](#get_ats_scorecard) - Retrieve a scorecard
+* [list_ats_activities](#list_ats_activities) - List all activities
 * [list_ats_applications](#list_ats_applications) - List all applications
 * [list_ats_applicationstatuses](#list_ats_applicationstatuses) - List all application statuses
 * [list_ats_candidates](#list_ats_candidates) - List all candidates
@@ -24,24 +27,68 @@
 * [list_ats_interviews](#list_ats_interviews) - List all interviews
 * [list_ats_jobs](#list_ats_jobs) - List all jobs
 * [list_ats_scorecards](#list_ats_scorecards) - List all scorecards
+* [patch_ats_activity](#patch_ats_activity) - Update an activity
 * [patch_ats_application](#patch_ats_application) - Update an application
 * [patch_ats_candidate](#patch_ats_candidate) - Update a candidate
 * [patch_ats_document](#patch_ats_document) - Update a document
 * [patch_ats_interview](#patch_ats_interview) - Update a interview
 * [patch_ats_job](#patch_ats_job) - Update a job
 * [patch_ats_scorecard](#patch_ats_scorecard) - Update a scorecard
+* [remove_ats_activity](#remove_ats_activity) - Remove an activity
 * [remove_ats_application](#remove_ats_application) - Remove an application
 * [remove_ats_candidate](#remove_ats_candidate) - Remove a candidate
 * [remove_ats_document](#remove_ats_document) - Remove a document
 * [remove_ats_interview](#remove_ats_interview) - Remove a interview
 * [remove_ats_job](#remove_ats_job) - Remove a job
 * [remove_ats_scorecard](#remove_ats_scorecard) - Remove a scorecard
+* [update_ats_activity](#update_ats_activity) - Update an activity
 * [update_ats_application](#update_ats_application) - Update an application
 * [update_ats_candidate](#update_ats_candidate) - Update a candidate
 * [update_ats_document](#update_ats_document) - Update a document
 * [update_ats_interview](#update_ats_interview) - Update a interview
 * [update_ats_job](#update_ats_job) - Update a job
 * [update_ats_scorecard](#update_ats_scorecard) - Update a scorecard
+
+## create_ats_activity
+
+Create an activity
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.ats.create_ats_activity(connection_id="<value>", ats_activity=::UnifiedRubySDK::Shared::AtsActivity.new(
+    title: "<value>",
+  ))
+
+if ! res.ats_activity.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `ats_activity`                                                              | [::UnifiedRubySDK::Shared::AtsActivity](../../models/shared/atsactivity.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::CreateAtsActivityResponse)](../../models/operations/createatsactivityresponse.md)**
+
 
 ## create_ats_application
 
@@ -275,6 +322,48 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::CreateAtsScorecardResponse)](../../models/operations/createatsscorecardresponse.md)**
+
+
+## get_ats_activity
+
+Retrieve an activity
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.ats.get_ats_activity(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
+  ])
+
+if ! res.ats_activity.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                        | Type                             | Required                         | Description                      |
+| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Activity               |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::GetAtsActivityResponse)](../../models/operations/getatsactivityresponse.md)**
 
 
 ## get_ats_application
@@ -569,6 +658,48 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetAtsScorecardResponse)](../../models/operations/getatsscorecardresponse.md)**
+
+
+## list_ats_activities
+
+List all activities
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+
+req = ::UnifiedRubySDK::Operations::ListAtsActivitiesRequest.new(
+  connection_id: "<value>",
+)
+    
+res = s.ats.list_ats_activities(req)
+
+if ! res.ats_activities.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [::UnifiedRubySDK::Operations::ListAtsActivitiesRequest](../../models/operations/listatsactivitiesrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::ListAtsActivitiesResponse)](../../models/operations/listatsactivitiesresponse.md)**
 
 
 ## list_ats_applications
@@ -907,6 +1038,48 @@ end
 **[T.nilable(::UnifiedRubySDK::Operations::ListAtsScorecardsResponse)](../../models/operations/listatsscorecardsresponse.md)**
 
 
+## patch_ats_activity
+
+Update an activity
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.ats.patch_ats_activity(connection_id="<value>", id="<value>", ats_activity=::UnifiedRubySDK::Shared::AtsActivity.new(
+    title: "<value>",
+  ))
+
+if ! res.ats_activity.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Activity                                                          |
+| `ats_activity`                                                              | [::UnifiedRubySDK::Shared::AtsActivity](../../models/shared/atsactivity.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::PatchAtsActivityResponse)](../../models/operations/patchatsactivityresponse.md)**
+
+
 ## patch_ats_application
 
 Update an application
@@ -1147,6 +1320,45 @@ end
 **[T.nilable(::UnifiedRubySDK::Operations::PatchAtsScorecardResponse)](../../models/operations/patchatsscorecardresponse.md)**
 
 
+## remove_ats_activity
+
+Remove an activity
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.ats.remove_ats_activity(connection_id="<value>", id="<value>")
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Activity   |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::RemoveAtsActivityResponse)](../../models/operations/removeatsactivityresponse.md)**
+
+
 ## remove_ats_application
 
 Remove an application
@@ -1379,6 +1591,48 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveAtsScorecardResponse)](../../models/operations/removeatsscorecardresponse.md)**
+
+
+## update_ats_activity
+
+Update an activity
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.ats.update_ats_activity(connection_id="<value>", id="<value>", ats_activity=::UnifiedRubySDK::Shared::AtsActivity.new(
+    title: "<value>",
+  ))
+
+if ! res.ats_activity.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Activity                                                          |
+| `ats_activity`                                                              | [::UnifiedRubySDK::Shared::AtsActivity](../../models/shared/atsactivity.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::UpdateAtsActivityResponse)](../../models/operations/updateatsactivityresponse.md)**
 
 
 ## update_ats_application

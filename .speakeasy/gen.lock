@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 540edc51c35db4343817668bdfafdaa0
+  docChecksum: 7bd6e19ec36f960e56c7d65cda36a422
   docVersion: "1.0"
   speakeasyVersion: internal
   generationVersion: 2.269.0
-  releaseVersion: 0.4.16
-  configChecksum: 6f12cdb6b2048ef965387134d120870f
+  releaseVersion: 0.4.17
+  configChecksum: 53a1ea0579d5ad3ccf28a297945f72ef
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -29,6 +29,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/taxrate.rb
   - lib/unified_ruby_sdk/transaction.rb
   - lib/unified_ruby_sdk/ats.rb
+  - lib/unified_ruby_sdk/activity.rb
   - lib/unified_ruby_sdk/application.rb
   - lib/unified_ruby_sdk/applicationstatus.rb
   - lib/unified_ruby_sdk/candidate.rb
@@ -229,6 +230,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatecrmcontact_response.rb
   - lib/unified_ruby_sdk/models/operations/updateuccontact_request.rb
   - lib/unified_ruby_sdk/models/operations/updateuccontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/createatsactivity_request.rb
+  - lib/unified_ruby_sdk/models/operations/createatsactivity_response.rb
   - lib/unified_ruby_sdk/models/operations/createatsapplication_request.rb
   - lib/unified_ruby_sdk/models/operations/createatsapplication_response.rb
   - lib/unified_ruby_sdk/models/operations/createatscandidate_request.rb
@@ -241,6 +244,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createatsjob_response.rb
   - lib/unified_ruby_sdk/models/operations/createatsscorecard_request.rb
   - lib/unified_ruby_sdk/models/operations/createatsscorecard_response.rb
+  - lib/unified_ruby_sdk/models/operations/getatsactivity_request.rb
+  - lib/unified_ruby_sdk/models/operations/getatsactivity_response.rb
   - lib/unified_ruby_sdk/models/operations/getatsapplication_request.rb
   - lib/unified_ruby_sdk/models/operations/getatsapplication_response.rb
   - lib/unified_ruby_sdk/models/operations/getatscandidate_request.rb
@@ -255,6 +260,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getatsjob_response.rb
   - lib/unified_ruby_sdk/models/operations/getatsscorecard_request.rb
   - lib/unified_ruby_sdk/models/operations/getatsscorecard_response.rb
+  - lib/unified_ruby_sdk/models/operations/listatsactivities_request.rb
+  - lib/unified_ruby_sdk/models/operations/listatsactivities_response.rb
   - lib/unified_ruby_sdk/models/operations/listatsapplications_request.rb
   - lib/unified_ruby_sdk/models/operations/listatsapplications_response.rb
   - lib/unified_ruby_sdk/models/operations/listatsapplicationstatuses_request.rb
@@ -271,6 +278,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listatsjobs_response.rb
   - lib/unified_ruby_sdk/models/operations/listatsscorecards_request.rb
   - lib/unified_ruby_sdk/models/operations/listatsscorecards_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchatsactivity_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchatsactivity_response.rb
   - lib/unified_ruby_sdk/models/operations/patchatsapplication_request.rb
   - lib/unified_ruby_sdk/models/operations/patchatsapplication_response.rb
   - lib/unified_ruby_sdk/models/operations/patchatscandidate_request.rb
@@ -283,6 +292,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchatsjob_response.rb
   - lib/unified_ruby_sdk/models/operations/patchatsscorecard_request.rb
   - lib/unified_ruby_sdk/models/operations/patchatsscorecard_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeatsactivity_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeatsactivity_response.rb
   - lib/unified_ruby_sdk/models/operations/removeatsapplication_request.rb
   - lib/unified_ruby_sdk/models/operations/removeatsapplication_response.rb
   - lib/unified_ruby_sdk/models/operations/removeatscandidate_request.rb
@@ -295,6 +306,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removeatsjob_response.rb
   - lib/unified_ruby_sdk/models/operations/removeatsscorecard_request.rb
   - lib/unified_ruby_sdk/models/operations/removeatsscorecard_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateatsactivity_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateatsactivity_response.rb
   - lib/unified_ruby_sdk/models/operations/updateatsapplication_request.rb
   - lib/unified_ruby_sdk/models/operations/updateatsapplication_response.rb
   - lib/unified_ruby_sdk/models/operations/updateatscandidate_request.rb
@@ -603,6 +616,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/uctelephone.rb
   - lib/unified_ruby_sdk/models/shared/ucemail_type.rb
   - lib/unified_ruby_sdk/models/shared/ucemail.rb
+  - lib/unified_ruby_sdk/models/shared/atsactivity_type.rb
+  - lib/unified_ruby_sdk/models/shared/atsactivity.rb
   - lib/unified_ruby_sdk/models/shared/atsapplication_status.rb
   - lib/unified_ruby_sdk/models/shared/atsapplication.rb
   - lib/unified_ruby_sdk/models/shared/atsapplicationanswer.rb
@@ -830,6 +845,8 @@ generatedFiles:
   - docs/models/operations/updatecrmcontactresponse.md
   - docs/models/operations/updateuccontactrequest.md
   - docs/models/operations/updateuccontactresponse.md
+  - docs/models/operations/createatsactivityrequest.md
+  - docs/models/operations/createatsactivityresponse.md
   - docs/models/operations/createatsapplicationrequest.md
   - docs/models/operations/createatsapplicationresponse.md
   - docs/models/operations/createatscandidaterequest.md
@@ -842,6 +859,8 @@ generatedFiles:
   - docs/models/operations/createatsjobresponse.md
   - docs/models/operations/createatsscorecardrequest.md
   - docs/models/operations/createatsscorecardresponse.md
+  - docs/models/operations/getatsactivityrequest.md
+  - docs/models/operations/getatsactivityresponse.md
   - docs/models/operations/getatsapplicationrequest.md
   - docs/models/operations/getatsapplicationresponse.md
   - docs/models/operations/getatscandidaterequest.md
@@ -856,6 +875,8 @@ generatedFiles:
   - docs/models/operations/getatsjobresponse.md
   - docs/models/operations/getatsscorecardrequest.md
   - docs/models/operations/getatsscorecardresponse.md
+  - docs/models/operations/listatsactivitiesrequest.md
+  - docs/models/operations/listatsactivitiesresponse.md
   - docs/models/operations/listatsapplicationsrequest.md
   - docs/models/operations/listatsapplicationsresponse.md
   - docs/models/operations/listatsapplicationstatusesrequest.md
@@ -872,6 +893,8 @@ generatedFiles:
   - docs/models/operations/listatsjobsresponse.md
   - docs/models/operations/listatsscorecardsrequest.md
   - docs/models/operations/listatsscorecardsresponse.md
+  - docs/models/operations/patchatsactivityrequest.md
+  - docs/models/operations/patchatsactivityresponse.md
   - docs/models/operations/patchatsapplicationrequest.md
   - docs/models/operations/patchatsapplicationresponse.md
   - docs/models/operations/patchatscandidaterequest.md
@@ -884,6 +907,8 @@ generatedFiles:
   - docs/models/operations/patchatsjobresponse.md
   - docs/models/operations/patchatsscorecardrequest.md
   - docs/models/operations/patchatsscorecardresponse.md
+  - docs/models/operations/removeatsactivityrequest.md
+  - docs/models/operations/removeatsactivityresponse.md
   - docs/models/operations/removeatsapplicationrequest.md
   - docs/models/operations/removeatsapplicationresponse.md
   - docs/models/operations/removeatscandidaterequest.md
@@ -896,6 +921,8 @@ generatedFiles:
   - docs/models/operations/removeatsjobresponse.md
   - docs/models/operations/removeatsscorecardrequest.md
   - docs/models/operations/removeatsscorecardresponse.md
+  - docs/models/operations/updateatsactivityrequest.md
+  - docs/models/operations/updateatsactivityresponse.md
   - docs/models/operations/updateatsapplicationrequest.md
   - docs/models/operations/updateatsapplicationresponse.md
   - docs/models/operations/updateatscandidaterequest.md
@@ -1204,6 +1231,8 @@ generatedFiles:
   - docs/models/shared/uctelephone.md
   - docs/models/shared/ucemailtype.md
   - docs/models/shared/ucemail.md
+  - docs/models/shared/atsactivitytype.md
+  - docs/models/shared/atsactivity.md
   - docs/models/shared/atsapplicationstatus.md
   - docs/models/shared/atsapplication.md
   - docs/models/shared/atsapplicationanswer.md
@@ -1332,6 +1361,7 @@ generatedFiles:
   - docs/sdks/taxrate/README.md
   - docs/sdks/transaction/README.md
   - docs/sdks/ats/README.md
+  - docs/sdks/activity/README.md
   - docs/sdks/application/README.md
   - docs/sdks/applicationstatus/README.md
   - docs/sdks/candidate/README.md

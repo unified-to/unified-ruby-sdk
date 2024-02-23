@@ -12,7 +12,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :contact, :invoice, :organization, :payment, :payout, :refund, :taxrate, :transaction, :ats, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :hris, :employee, :group, :martech, :list, :member, :passthrough, :storage, :file, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
+    attr_accessor :accounting, :account, :contact, :invoice, :organization, :payment, :payout, :refund, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :hris, :employee, :group, :martech, :list, :member, :passthrough, :storage, :file, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
 
     attr_accessor :security, :language, :sdk_version, :gen_version
 
@@ -85,6 +85,7 @@ module UnifiedRubySDK
       @taxrate = Taxrate.new(@sdk_configuration)
       @transaction = Transaction.new(@sdk_configuration)
       @ats = Ats.new(@sdk_configuration)
+      @activity = Activity.new(@sdk_configuration)
       @application = Application.new(@sdk_configuration)
       @applicationstatus = Applicationstatus.new(@sdk_configuration)
       @candidate = Candidate.new(@sdk_configuration)
