@@ -157,6 +157,5 @@ module UnifiedRubySDK
     autoload :IssueStatus, 'unified_ruby_sdk/models/shared/issue_status.rb'
     autoload :IssueType, 'unified_ruby_sdk/models/shared/issue_type.rb'
     autoload :Issue, 'unified_ruby_sdk/models/shared/issue.rb'
-    autoload :Security, 'unified_ruby_sdk/models/shared/security.rb'
   end
 end

@@ -19,8 +19,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal)).returns(::UnifiedRubySDK::Operations::CreateCrmDealResponse) }
-    def create_crm_deal(connection_id, crm_deal = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::CreateCrmDealSecurity, connection_id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal)).returns(::UnifiedRubySDK::Operations::CreateCrmDealResponse) }
+    def create_crm_deal(security, connection_id, crm_deal = nil)
       # create_crm_deal - Create a deal
       request = ::UnifiedRubySDK::Operations::CreateCrmDealRequest.new(
         
@@ -43,7 +43,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -68,8 +68,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCrmDealResponse) }
-    def get_crm_deal(connection_id, id, fields_ = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetCrmDealSecurity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCrmDealResponse) }
+    def get_crm_deal(security, connection_id, id, fields_ = nil)
       # get_crm_deal - Retrieve a deal
       request = ::UnifiedRubySDK::Operations::GetCrmDealRequest.new(
         
@@ -93,7 +93,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -111,8 +111,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmDealsRequest)).returns(::UnifiedRubySDK::Operations::ListCrmDealsResponse) }
-    def list_crm_deals(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmDealsRequest), security: ::UnifiedRubySDK::Operations::ListCrmDealsSecurity).returns(::UnifiedRubySDK::Operations::ListCrmDealsResponse) }
+    def list_crm_deals(request, security)
       # list_crm_deals - List all deals
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -130,7 +130,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -148,8 +148,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal)).returns(::UnifiedRubySDK::Operations::PatchCrmDealResponse) }
-    def patch_crm_deal(connection_id, id, crm_deal = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::PatchCrmDealSecurity, connection_id: ::String, id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal)).returns(::UnifiedRubySDK::Operations::PatchCrmDealResponse) }
+    def patch_crm_deal(security, connection_id, id, crm_deal = nil)
       # patch_crm_deal - Update a deal
       request = ::UnifiedRubySDK::Operations::PatchCrmDealRequest.new(
         
@@ -173,7 +173,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -198,8 +198,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCrmDealResponse) }
-    def remove_crm_deal(connection_id, id)
+    sig { params(security: ::UnifiedRubySDK::Operations::RemoveCrmDealSecurity, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCrmDealResponse) }
+    def remove_crm_deal(security, connection_id, id)
       # remove_crm_deal - Remove a deal
       request = ::UnifiedRubySDK::Operations::RemoveCrmDealRequest.new(
         
@@ -220,7 +220,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.delete(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -237,8 +237,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal)).returns(::UnifiedRubySDK::Operations::UpdateCrmDealResponse) }
-    def update_crm_deal(connection_id, id, crm_deal = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::UpdateCrmDealSecurity, connection_id: ::String, id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal)).returns(::UnifiedRubySDK::Operations::UpdateCrmDealResponse) }
+    def update_crm_deal(security, connection_id, id, crm_deal = nil)
       # update_crm_deal - Update a deal
       request = ::UnifiedRubySDK::Operations::UpdateCrmDealRequest.new(
         
@@ -262,7 +262,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')

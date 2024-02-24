@@ -19,8 +19,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String).returns(::UnifiedRubySDK::Operations::GetUnifiedApicallResponse) }
-    def get_unified_apicall(id)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetUnifiedApicallSecurity, id: ::String).returns(::UnifiedRubySDK::Operations::GetUnifiedApicallResponse) }
+    def get_unified_apicall(security, id)
       # get_unified_apicall - Retrieve specific API Call by its ID
       request = ::UnifiedRubySDK::Operations::GetUnifiedApicallRequest.new(
         
@@ -40,7 +40,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -58,8 +58,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedApicallsRequest)).returns(::UnifiedRubySDK::Operations::ListUnifiedApicallsResponse) }
-    def list_unified_apicalls(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedApicallsRequest), security: ::UnifiedRubySDK::Operations::ListUnifiedApicallsSecurity).returns(::UnifiedRubySDK::Operations::ListUnifiedApicallsResponse) }
+    def list_unified_apicalls(request, security)
       # list_unified_apicalls - Returns API Calls
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -72,7 +72,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')

@@ -19,8 +19,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAccountingPayoutResponse) }
-    def get_accounting_payout(connection_id, id, fields_ = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetAccountingPayoutSecurity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAccountingPayoutResponse) }
+    def get_accounting_payout(security, connection_id, id, fields_ = nil)
       # get_accounting_payout - Retrieve a payout
       request = ::UnifiedRubySDK::Operations::GetAccountingPayoutRequest.new(
         
@@ -44,7 +44,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -62,8 +62,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingPayoutsRequest)).returns(::UnifiedRubySDK::Operations::ListAccountingPayoutsResponse) }
-    def list_accounting_payouts(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingPayoutsRequest), security: ::UnifiedRubySDK::Operations::ListAccountingPayoutsSecurity).returns(::UnifiedRubySDK::Operations::ListAccountingPayoutsResponse) }
+    def list_accounting_payouts(request, security)
       # list_accounting_payouts - List all payouts
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -81,7 +81,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')

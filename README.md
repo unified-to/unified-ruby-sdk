@@ -24,14 +24,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.accounting.create_accounting_account(connection_id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(
+res = s.accounting.create_accounting_account(::UnifiedRubySDK::Operations::CreateAccountingAccountSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(
     name: "<value>",
   ))
 

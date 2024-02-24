@@ -39,7 +39,6 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -75,7 +74,6 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -93,8 +91,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIntegrationsRequest)).returns(::UnifiedRubySDK::Operations::ListUnifiedIntegrationsResponse) }
-    def list_unified_integrations(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIntegrationsRequest), security: ::UnifiedRubySDK::Operations::ListUnifiedIntegrationsSecurity).returns(::UnifiedRubySDK::Operations::ListUnifiedIntegrationsResponse) }
+    def list_unified_integrations(request, security)
       # list_unified_integrations - Returns all integrations
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -107,7 +105,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')

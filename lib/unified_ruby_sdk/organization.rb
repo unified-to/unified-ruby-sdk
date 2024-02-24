@@ -19,8 +19,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAccountingOrganizationResponse) }
-    def get_accounting_organization(connection_id, id, fields_ = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetAccountingOrganizationSecurity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAccountingOrganizationResponse) }
+    def get_accounting_organization(security, connection_id, id, fields_ = nil)
       # get_accounting_organization - Retrieve an organization
       request = ::UnifiedRubySDK::Operations::GetAccountingOrganizationRequest.new(
         
@@ -44,7 +44,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -62,8 +62,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingOrganizationsRequest)).returns(::UnifiedRubySDK::Operations::ListAccountingOrganizationsResponse) }
-    def list_accounting_organizations(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingOrganizationsRequest), security: ::UnifiedRubySDK::Operations::ListAccountingOrganizationsSecurity).returns(::UnifiedRubySDK::Operations::ListAccountingOrganizationsResponse) }
+    def list_accounting_organizations(request, security)
       # list_accounting_organizations - List all organizations
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -81,7 +81,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
