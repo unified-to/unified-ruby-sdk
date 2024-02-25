@@ -19,8 +19,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, hris_employee: T.nilable(::UnifiedRubySDK::Shared::HrisEmployee)).returns(::UnifiedRubySDK::Operations::CreateHrisEmployeeResponse) }
-    def create_hris_employee(connection_id, hris_employee = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::CreateHrisEmployeeSecurity, connection_id: ::String, hris_employee: T.nilable(::UnifiedRubySDK::Shared::HrisEmployee)).returns(::UnifiedRubySDK::Operations::CreateHrisEmployeeResponse) }
+    def create_hris_employee(security, connection_id, hris_employee = nil)
       # create_hris_employee - Create an employee
       request = ::UnifiedRubySDK::Operations::CreateHrisEmployeeRequest.new(
         
@@ -43,7 +43,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -68,8 +68,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, hris_group: T.nilable(::UnifiedRubySDK::Shared::HrisGroup)).returns(::UnifiedRubySDK::Operations::CreateHrisGroupResponse) }
-    def create_hris_group(connection_id, hris_group = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::CreateHrisGroupSecurity, connection_id: ::String, hris_group: T.nilable(::UnifiedRubySDK::Shared::HrisGroup)).returns(::UnifiedRubySDK::Operations::CreateHrisGroupResponse) }
+    def create_hris_group(security, connection_id, hris_group = nil)
       # create_hris_group - Create a group
       request = ::UnifiedRubySDK::Operations::CreateHrisGroupRequest.new(
         
@@ -92,7 +92,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -117,8 +117,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetHrisEmployeeResponse) }
-    def get_hris_employee(connection_id, id, fields_ = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetHrisEmployeeSecurity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetHrisEmployeeResponse) }
+    def get_hris_employee(security, connection_id, id, fields_ = nil)
       # get_hris_employee - Retrieve an employee
       request = ::UnifiedRubySDK::Operations::GetHrisEmployeeRequest.new(
         
@@ -142,7 +142,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -160,8 +160,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetHrisGroupResponse) }
-    def get_hris_group(connection_id, id, fields_ = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetHrisGroupSecurity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetHrisGroupResponse) }
+    def get_hris_group(security, connection_id, id, fields_ = nil)
       # get_hris_group - Retrieve a group
       request = ::UnifiedRubySDK::Operations::GetHrisGroupRequest.new(
         
@@ -185,7 +185,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -203,8 +203,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListHrisEmployeesRequest)).returns(::UnifiedRubySDK::Operations::ListHrisEmployeesResponse) }
-    def list_hris_employees(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListHrisEmployeesRequest), security: ::UnifiedRubySDK::Operations::ListHrisEmployeesSecurity).returns(::UnifiedRubySDK::Operations::ListHrisEmployeesResponse) }
+    def list_hris_employees(request, security)
       # list_hris_employees - List all employees
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -222,7 +222,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -240,8 +240,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListHrisGroupsRequest)).returns(::UnifiedRubySDK::Operations::ListHrisGroupsResponse) }
-    def list_hris_groups(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListHrisGroupsRequest), security: ::UnifiedRubySDK::Operations::ListHrisGroupsSecurity).returns(::UnifiedRubySDK::Operations::ListHrisGroupsResponse) }
+    def list_hris_groups(request, security)
       # list_hris_groups - List all groups
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -259,7 +259,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -277,8 +277,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, hris_employee: T.nilable(::UnifiedRubySDK::Shared::HrisEmployee)).returns(::UnifiedRubySDK::Operations::PatchHrisEmployeeResponse) }
-    def patch_hris_employee(connection_id, id, hris_employee = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::PatchHrisEmployeeSecurity, connection_id: ::String, id: ::String, hris_employee: T.nilable(::UnifiedRubySDK::Shared::HrisEmployee)).returns(::UnifiedRubySDK::Operations::PatchHrisEmployeeResponse) }
+    def patch_hris_employee(security, connection_id, id, hris_employee = nil)
       # patch_hris_employee - Update an employee
       request = ::UnifiedRubySDK::Operations::PatchHrisEmployeeRequest.new(
         
@@ -302,7 +302,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -327,8 +327,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, hris_group: T.nilable(::UnifiedRubySDK::Shared::HrisGroup)).returns(::UnifiedRubySDK::Operations::PatchHrisGroupResponse) }
-    def patch_hris_group(connection_id, id, hris_group = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::PatchHrisGroupSecurity, connection_id: ::String, id: ::String, hris_group: T.nilable(::UnifiedRubySDK::Shared::HrisGroup)).returns(::UnifiedRubySDK::Operations::PatchHrisGroupResponse) }
+    def patch_hris_group(security, connection_id, id, hris_group = nil)
       # patch_hris_group - Update a group
       request = ::UnifiedRubySDK::Operations::PatchHrisGroupRequest.new(
         
@@ -352,7 +352,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -377,8 +377,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveHrisEmployeeResponse) }
-    def remove_hris_employee(connection_id, id)
+    sig { params(security: ::UnifiedRubySDK::Operations::RemoveHrisEmployeeSecurity, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveHrisEmployeeResponse) }
+    def remove_hris_employee(security, connection_id, id)
       # remove_hris_employee - Remove an employee
       request = ::UnifiedRubySDK::Operations::RemoveHrisEmployeeRequest.new(
         
@@ -399,7 +399,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.delete(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -416,8 +416,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveHrisGroupResponse) }
-    def remove_hris_group(connection_id, id)
+    sig { params(security: ::UnifiedRubySDK::Operations::RemoveHrisGroupSecurity, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveHrisGroupResponse) }
+    def remove_hris_group(security, connection_id, id)
       # remove_hris_group - Remove a group
       request = ::UnifiedRubySDK::Operations::RemoveHrisGroupRequest.new(
         
@@ -438,7 +438,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.delete(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -455,8 +455,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, hris_employee: T.nilable(::UnifiedRubySDK::Shared::HrisEmployee)).returns(::UnifiedRubySDK::Operations::UpdateHrisEmployeeResponse) }
-    def update_hris_employee(connection_id, id, hris_employee = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::UpdateHrisEmployeeSecurity, connection_id: ::String, id: ::String, hris_employee: T.nilable(::UnifiedRubySDK::Shared::HrisEmployee)).returns(::UnifiedRubySDK::Operations::UpdateHrisEmployeeResponse) }
+    def update_hris_employee(security, connection_id, id, hris_employee = nil)
       # update_hris_employee - Update an employee
       request = ::UnifiedRubySDK::Operations::UpdateHrisEmployeeRequest.new(
         
@@ -480,7 +480,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -505,8 +505,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, hris_group: T.nilable(::UnifiedRubySDK::Shared::HrisGroup)).returns(::UnifiedRubySDK::Operations::UpdateHrisGroupResponse) }
-    def update_hris_group(connection_id, id, hris_group = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::UpdateHrisGroupSecurity, connection_id: ::String, id: ::String, hris_group: T.nilable(::UnifiedRubySDK::Shared::HrisGroup)).returns(::UnifiedRubySDK::Operations::UpdateHrisGroupResponse) }
+    def update_hris_group(security, connection_id, id, hris_group = nil)
       # update_hris_group - Update a group
       request = ::UnifiedRubySDK::Operations::UpdateHrisGroupRequest.new(
         
@@ -530,7 +530,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')

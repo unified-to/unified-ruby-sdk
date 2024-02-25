@@ -21,14 +21,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.deal.create_crm_deal(connection_id="<value>", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new())
+res = s.deal.create_crm_deal(::UnifiedRubySDK::Operations::CreateCrmDealSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new())
 
 if ! res.crm_deal.nil?
   # handle response
@@ -38,10 +35,11 @@ end
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
-| `crm_deal`                                                          | [::UnifiedRubySDK::Shared::CrmDeal](../../models/shared/crmdeal.md) | :heavy_minus_sign:                                                  | A deal represents an opportunity with companies and/or contacts     |
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                              | [::UnifiedRubySDK::Operations::CreateCrmDealSecurity](../../models/operations/createcrmdealsecurity.md) | :heavy_check_mark:                                                                                      | The security requirements to use for the request.                                                       |
+| `connection_id`                                                                                         | *::String*                                                                                              | :heavy_check_mark:                                                                                      | ID of the connection                                                                                    |
+| `crm_deal`                                                                                              | [::UnifiedRubySDK::Shared::CrmDeal](../../models/shared/crmdeal.md)                                     | :heavy_minus_sign:                                                                                      | A deal represents an opportunity with companies and/or contacts                                         |
 
 
 ### Response
@@ -60,14 +58,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.deal.get_crm_deal(connection_id="<value>", id="<value>", fields_=[
+res = s.deal.get_crm_deal(::UnifiedRubySDK::Operations::GetCrmDealSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", id="<value>", fields_=[
     "<value>",
   ])
 
@@ -79,11 +74,12 @@ end
 
 ### Parameters
 
-| Parameter                        | Type                             | Required                         | Description                      |
-| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Deal                   |
-| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `security`                                                                                        | [::UnifiedRubySDK::Operations::GetCrmDealSecurity](../../models/operations/getcrmdealsecurity.md) | :heavy_check_mark:                                                                                | The security requirements to use for the request.                                                 |
+| `connection_id`                                                                                   | *::String*                                                                                        | :heavy_check_mark:                                                                                | ID of the connection                                                                              |
+| `id`                                                                                              | *::String*                                                                                        | :heavy_check_mark:                                                                                | ID of the Deal                                                                                    |
+| `fields_`                                                                                         | T::Array<*::String*>                                                                              | :heavy_minus_sign:                                                                                | Comma-delimited fields to return                                                                  |
 
 
 ### Response
@@ -102,18 +98,15 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
 
 req = ::UnifiedRubySDK::Operations::ListCrmDealsRequest.new(
   connection_id: "<value>",
 )
     
-res = s.deal.list_crm_deals(req)
+res = s.deal.list_crm_deals(req, ::UnifiedRubySDK::Operations::ListCrmDealsSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ))
 
 if ! res.crm_deals.nil?
   # handle response
@@ -123,9 +116,10 @@ end
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [::UnifiedRubySDK::Operations::ListCrmDealsRequest](../../models/operations/listcrmdealsrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [::UnifiedRubySDK::Operations::ListCrmDealsRequest](../../models/operations/listcrmdealsrequest.md)   | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| `security`                                                                                            | [::UnifiedRubySDK::Operations::ListCrmDealsSecurity](../../models/operations/listcrmdealssecurity.md) | :heavy_check_mark:                                                                                    | The security requirements to use for the request.                                                     |
 
 
 ### Response
@@ -144,14 +138,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.deal.patch_crm_deal(connection_id="<value>", id="<value>", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new())
+res = s.deal.patch_crm_deal(::UnifiedRubySDK::Operations::PatchCrmDealSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", id="<value>", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new())
 
 if ! res.crm_deal.nil?
   # handle response
@@ -161,11 +152,12 @@ end
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
-| `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Deal                                                      |
-| `crm_deal`                                                          | [::UnifiedRubySDK::Shared::CrmDeal](../../models/shared/crmdeal.md) | :heavy_minus_sign:                                                  | A deal represents an opportunity with companies and/or contacts     |
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `security`                                                                                            | [::UnifiedRubySDK::Operations::PatchCrmDealSecurity](../../models/operations/patchcrmdealsecurity.md) | :heavy_check_mark:                                                                                    | The security requirements to use for the request.                                                     |
+| `connection_id`                                                                                       | *::String*                                                                                            | :heavy_check_mark:                                                                                    | ID of the connection                                                                                  |
+| `id`                                                                                                  | *::String*                                                                                            | :heavy_check_mark:                                                                                    | ID of the Deal                                                                                        |
+| `crm_deal`                                                                                            | [::UnifiedRubySDK::Shared::CrmDeal](../../models/shared/crmdeal.md)                                   | :heavy_minus_sign:                                                                                    | A deal represents an opportunity with companies and/or contacts                                       |
 
 
 ### Response
@@ -184,14 +176,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.deal.remove_crm_deal(connection_id="<value>", id="<value>")
+res = s.deal.remove_crm_deal(::UnifiedRubySDK::Operations::RemoveCrmDealSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -201,10 +190,11 @@ end
 
 ### Parameters
 
-| Parameter            | Type                 | Required             | Description          |
-| -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
-| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Deal       |
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                              | [::UnifiedRubySDK::Operations::RemoveCrmDealSecurity](../../models/operations/removecrmdealsecurity.md) | :heavy_check_mark:                                                                                      | The security requirements to use for the request.                                                       |
+| `connection_id`                                                                                         | *::String*                                                                                              | :heavy_check_mark:                                                                                      | ID of the connection                                                                                    |
+| `id`                                                                                                    | *::String*                                                                                              | :heavy_check_mark:                                                                                      | ID of the Deal                                                                                          |
 
 
 ### Response
@@ -223,14 +213,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.deal.update_crm_deal(connection_id="<value>", id="<value>", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new())
+res = s.deal.update_crm_deal(::UnifiedRubySDK::Operations::UpdateCrmDealSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", id="<value>", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new())
 
 if ! res.crm_deal.nil?
   # handle response
@@ -240,11 +227,12 @@ end
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
-| `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Deal                                                      |
-| `crm_deal`                                                          | [::UnifiedRubySDK::Shared::CrmDeal](../../models/shared/crmdeal.md) | :heavy_minus_sign:                                                  | A deal represents an opportunity with companies and/or contacts     |
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                              | [::UnifiedRubySDK::Operations::UpdateCrmDealSecurity](../../models/operations/updatecrmdealsecurity.md) | :heavy_check_mark:                                                                                      | The security requirements to use for the request.                                                       |
+| `connection_id`                                                                                         | *::String*                                                                                              | :heavy_check_mark:                                                                                      | ID of the connection                                                                                    |
+| `id`                                                                                                    | *::String*                                                                                              | :heavy_check_mark:                                                                                      | ID of the Deal                                                                                          |
+| `crm_deal`                                                                                              | [::UnifiedRubySDK::Shared::CrmDeal](../../models/shared/crmdeal.md)                                     | :heavy_minus_sign:                                                                                      | A deal represents an opportunity with companies and/or contacts                                         |
 
 
 ### Response

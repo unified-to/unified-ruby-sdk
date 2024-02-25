@@ -19,8 +19,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ticketing_customer: T.nilable(::UnifiedRubySDK::Shared::TicketingCustomer)).returns(::UnifiedRubySDK::Operations::CreateTicketingCustomerResponse) }
-    def create_ticketing_customer(connection_id, ticketing_customer = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::CreateTicketingCustomerSecurity, connection_id: ::String, ticketing_customer: T.nilable(::UnifiedRubySDK::Shared::TicketingCustomer)).returns(::UnifiedRubySDK::Operations::CreateTicketingCustomerResponse) }
+    def create_ticketing_customer(security, connection_id, ticketing_customer = nil)
       # create_ticketing_customer - Create a customer
       request = ::UnifiedRubySDK::Operations::CreateTicketingCustomerRequest.new(
         
@@ -43,7 +43,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -68,8 +68,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ticketing_note: T.nilable(::UnifiedRubySDK::Shared::TicketingNote)).returns(::UnifiedRubySDK::Operations::CreateTicketingNoteResponse) }
-    def create_ticketing_note(connection_id, ticketing_note = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::CreateTicketingNoteSecurity, connection_id: ::String, ticketing_note: T.nilable(::UnifiedRubySDK::Shared::TicketingNote)).returns(::UnifiedRubySDK::Operations::CreateTicketingNoteResponse) }
+    def create_ticketing_note(security, connection_id, ticketing_note = nil)
       # create_ticketing_note - Create a note
       request = ::UnifiedRubySDK::Operations::CreateTicketingNoteRequest.new(
         
@@ -92,7 +92,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -117,8 +117,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ticketing_ticket: T.nilable(::UnifiedRubySDK::Shared::TicketingTicket)).returns(::UnifiedRubySDK::Operations::CreateTicketingTicketResponse) }
-    def create_ticketing_ticket(connection_id, ticketing_ticket = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::CreateTicketingTicketSecurity, connection_id: ::String, ticketing_ticket: T.nilable(::UnifiedRubySDK::Shared::TicketingTicket)).returns(::UnifiedRubySDK::Operations::CreateTicketingTicketResponse) }
+    def create_ticketing_ticket(security, connection_id, ticketing_ticket = nil)
       # create_ticketing_ticket - Create a ticket
       request = ::UnifiedRubySDK::Operations::CreateTicketingTicketRequest.new(
         
@@ -141,7 +141,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -166,8 +166,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetTicketingCustomerResponse) }
-    def get_ticketing_customer(connection_id, id, fields_ = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetTicketingCustomerSecurity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetTicketingCustomerResponse) }
+    def get_ticketing_customer(security, connection_id, id, fields_ = nil)
       # get_ticketing_customer - Retrieve a customer
       request = ::UnifiedRubySDK::Operations::GetTicketingCustomerRequest.new(
         
@@ -191,7 +191,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -209,8 +209,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetTicketingNoteResponse) }
-    def get_ticketing_note(connection_id, id, fields_ = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetTicketingNoteSecurity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetTicketingNoteResponse) }
+    def get_ticketing_note(security, connection_id, id, fields_ = nil)
       # get_ticketing_note - Retrieve a note
       request = ::UnifiedRubySDK::Operations::GetTicketingNoteRequest.new(
         
@@ -234,7 +234,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -252,8 +252,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetTicketingTicketResponse) }
-    def get_ticketing_ticket(connection_id, id, fields_ = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetTicketingTicketSecurity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetTicketingTicketResponse) }
+    def get_ticketing_ticket(security, connection_id, id, fields_ = nil)
       # get_ticketing_ticket - Retrieve a ticket
       request = ::UnifiedRubySDK::Operations::GetTicketingTicketRequest.new(
         
@@ -277,7 +277,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -295,8 +295,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListTicketingCustomersRequest)).returns(::UnifiedRubySDK::Operations::ListTicketingCustomersResponse) }
-    def list_ticketing_customers(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListTicketingCustomersRequest), security: ::UnifiedRubySDK::Operations::ListTicketingCustomersSecurity).returns(::UnifiedRubySDK::Operations::ListTicketingCustomersResponse) }
+    def list_ticketing_customers(request, security)
       # list_ticketing_customers - List all customers
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -314,7 +314,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -332,8 +332,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListTicketingNotesRequest)).returns(::UnifiedRubySDK::Operations::ListTicketingNotesResponse) }
-    def list_ticketing_notes(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListTicketingNotesRequest), security: ::UnifiedRubySDK::Operations::ListTicketingNotesSecurity).returns(::UnifiedRubySDK::Operations::ListTicketingNotesResponse) }
+    def list_ticketing_notes(request, security)
       # list_ticketing_notes - List all notes
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -351,7 +351,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -369,8 +369,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListTicketingTicketsRequest)).returns(::UnifiedRubySDK::Operations::ListTicketingTicketsResponse) }
-    def list_ticketing_tickets(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListTicketingTicketsRequest), security: ::UnifiedRubySDK::Operations::ListTicketingTicketsSecurity).returns(::UnifiedRubySDK::Operations::ListTicketingTicketsResponse) }
+    def list_ticketing_tickets(request, security)
       # list_ticketing_tickets - List all tickets
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -388,7 +388,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -406,8 +406,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ticketing_customer: T.nilable(::UnifiedRubySDK::Shared::TicketingCustomer)).returns(::UnifiedRubySDK::Operations::PatchTicketingCustomerResponse) }
-    def patch_ticketing_customer(connection_id, id, ticketing_customer = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::PatchTicketingCustomerSecurity, connection_id: ::String, id: ::String, ticketing_customer: T.nilable(::UnifiedRubySDK::Shared::TicketingCustomer)).returns(::UnifiedRubySDK::Operations::PatchTicketingCustomerResponse) }
+    def patch_ticketing_customer(security, connection_id, id, ticketing_customer = nil)
       # patch_ticketing_customer - Update a customer
       request = ::UnifiedRubySDK::Operations::PatchTicketingCustomerRequest.new(
         
@@ -431,7 +431,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -456,8 +456,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ticketing_note: T.nilable(::UnifiedRubySDK::Shared::TicketingNote)).returns(::UnifiedRubySDK::Operations::PatchTicketingNoteResponse) }
-    def patch_ticketing_note(connection_id, id, ticketing_note = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::PatchTicketingNoteSecurity, connection_id: ::String, id: ::String, ticketing_note: T.nilable(::UnifiedRubySDK::Shared::TicketingNote)).returns(::UnifiedRubySDK::Operations::PatchTicketingNoteResponse) }
+    def patch_ticketing_note(security, connection_id, id, ticketing_note = nil)
       # patch_ticketing_note - Update a note
       request = ::UnifiedRubySDK::Operations::PatchTicketingNoteRequest.new(
         
@@ -481,7 +481,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -506,8 +506,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ticketing_ticket: T.nilable(::UnifiedRubySDK::Shared::TicketingTicket)).returns(::UnifiedRubySDK::Operations::PatchTicketingTicketResponse) }
-    def patch_ticketing_ticket(connection_id, id, ticketing_ticket = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::PatchTicketingTicketSecurity, connection_id: ::String, id: ::String, ticketing_ticket: T.nilable(::UnifiedRubySDK::Shared::TicketingTicket)).returns(::UnifiedRubySDK::Operations::PatchTicketingTicketResponse) }
+    def patch_ticketing_ticket(security, connection_id, id, ticketing_ticket = nil)
       # patch_ticketing_ticket - Update a ticket
       request = ::UnifiedRubySDK::Operations::PatchTicketingTicketRequest.new(
         
@@ -531,7 +531,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -556,8 +556,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveTicketingCustomerResponse) }
-    def remove_ticketing_customer(connection_id, id)
+    sig { params(security: ::UnifiedRubySDK::Operations::RemoveTicketingCustomerSecurity, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveTicketingCustomerResponse) }
+    def remove_ticketing_customer(security, connection_id, id)
       # remove_ticketing_customer - Remove a customer
       request = ::UnifiedRubySDK::Operations::RemoveTicketingCustomerRequest.new(
         
@@ -578,7 +578,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.delete(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -595,8 +595,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveTicketingNoteResponse) }
-    def remove_ticketing_note(connection_id, id)
+    sig { params(security: ::UnifiedRubySDK::Operations::RemoveTicketingNoteSecurity, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveTicketingNoteResponse) }
+    def remove_ticketing_note(security, connection_id, id)
       # remove_ticketing_note - Remove a note
       request = ::UnifiedRubySDK::Operations::RemoveTicketingNoteRequest.new(
         
@@ -617,7 +617,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.delete(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -634,8 +634,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveTicketingTicketResponse) }
-    def remove_ticketing_ticket(connection_id, id)
+    sig { params(security: ::UnifiedRubySDK::Operations::RemoveTicketingTicketSecurity, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveTicketingTicketResponse) }
+    def remove_ticketing_ticket(security, connection_id, id)
       # remove_ticketing_ticket - Remove a ticket
       request = ::UnifiedRubySDK::Operations::RemoveTicketingTicketRequest.new(
         
@@ -656,7 +656,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.delete(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -673,8 +673,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ticketing_customer: T.nilable(::UnifiedRubySDK::Shared::TicketingCustomer)).returns(::UnifiedRubySDK::Operations::UpdateTicketingCustomerResponse) }
-    def update_ticketing_customer(connection_id, id, ticketing_customer = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::UpdateTicketingCustomerSecurity, connection_id: ::String, id: ::String, ticketing_customer: T.nilable(::UnifiedRubySDK::Shared::TicketingCustomer)).returns(::UnifiedRubySDK::Operations::UpdateTicketingCustomerResponse) }
+    def update_ticketing_customer(security, connection_id, id, ticketing_customer = nil)
       # update_ticketing_customer - Update a customer
       request = ::UnifiedRubySDK::Operations::UpdateTicketingCustomerRequest.new(
         
@@ -698,7 +698,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -723,8 +723,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ticketing_note: T.nilable(::UnifiedRubySDK::Shared::TicketingNote)).returns(::UnifiedRubySDK::Operations::UpdateTicketingNoteResponse) }
-    def update_ticketing_note(connection_id, id, ticketing_note = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::UpdateTicketingNoteSecurity, connection_id: ::String, id: ::String, ticketing_note: T.nilable(::UnifiedRubySDK::Shared::TicketingNote)).returns(::UnifiedRubySDK::Operations::UpdateTicketingNoteResponse) }
+    def update_ticketing_note(security, connection_id, id, ticketing_note = nil)
       # update_ticketing_note - Update a note
       request = ::UnifiedRubySDK::Operations::UpdateTicketingNoteRequest.new(
         
@@ -748,7 +748,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -773,8 +773,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ticketing_ticket: T.nilable(::UnifiedRubySDK::Shared::TicketingTicket)).returns(::UnifiedRubySDK::Operations::UpdateTicketingTicketResponse) }
-    def update_ticketing_ticket(connection_id, id, ticketing_ticket = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::UpdateTicketingTicketSecurity, connection_id: ::String, id: ::String, ticketing_ticket: T.nilable(::UnifiedRubySDK::Shared::TicketingTicket)).returns(::UnifiedRubySDK::Operations::UpdateTicketingTicketResponse) }
+    def update_ticketing_ticket(security, connection_id, id, ticketing_ticket = nil)
       # update_ticketing_ticket - Update a ticket
       request = ::UnifiedRubySDK::Operations::UpdateTicketingTicketRequest.new(
         
@@ -798,7 +798,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')

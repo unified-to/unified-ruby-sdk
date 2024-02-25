@@ -19,8 +19,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUcCallsRequest)).returns(::UnifiedRubySDK::Operations::ListUcCallsResponse) }
-    def list_uc_calls(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUcCallsRequest), security: ::UnifiedRubySDK::Operations::ListUcCallsSecurity).returns(::UnifiedRubySDK::Operations::ListUcCallsResponse) }
+    def list_uc_calls(request, security)
       # list_uc_calls - List all calls
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -38,7 +38,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')

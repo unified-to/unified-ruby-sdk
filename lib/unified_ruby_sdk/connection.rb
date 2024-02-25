@@ -19,8 +19,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Shared::Connection)).returns(::UnifiedRubySDK::Operations::CreateUnifiedConnectionResponse) }
-    def create_unified_connection(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Shared::Connection), security: ::UnifiedRubySDK::Operations::CreateUnifiedConnectionSecurity).returns(::UnifiedRubySDK::Operations::CreateUnifiedConnectionResponse) }
+    def create_unified_connection(request, security)
       # create_unified_connection - Create connection
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -33,7 +33,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -58,8 +58,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String).returns(::UnifiedRubySDK::Operations::GetUnifiedConnectionResponse) }
-    def get_unified_connection(id)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetUnifiedConnectionSecurity, id: ::String).returns(::UnifiedRubySDK::Operations::GetUnifiedConnectionResponse) }
+    def get_unified_connection(security, id)
       # get_unified_connection - Retrieve connection
       request = ::UnifiedRubySDK::Operations::GetUnifiedConnectionRequest.new(
         
@@ -79,7 +79,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -97,8 +97,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedConnectionsRequest)).returns(::UnifiedRubySDK::Operations::ListUnifiedConnectionsResponse) }
-    def list_unified_connections(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedConnectionsRequest), security: ::UnifiedRubySDK::Operations::ListUnifiedConnectionsSecurity).returns(::UnifiedRubySDK::Operations::ListUnifiedConnectionsResponse) }
+    def list_unified_connections(request, security)
       # list_unified_connections - List all connections
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -111,7 +111,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -129,8 +129,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String, connection: T.nilable(::UnifiedRubySDK::Shared::Connection)).returns(::UnifiedRubySDK::Operations::PatchUnifiedConnectionResponse) }
-    def patch_unified_connection(id, connection = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::PatchUnifiedConnectionSecurity, id: ::String, connection: T.nilable(::UnifiedRubySDK::Shared::Connection)).returns(::UnifiedRubySDK::Operations::PatchUnifiedConnectionResponse) }
+    def patch_unified_connection(security, id, connection = nil)
       # patch_unified_connection - Update connection
       request = ::UnifiedRubySDK::Operations::PatchUnifiedConnectionRequest.new(
         
@@ -153,7 +153,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -178,8 +178,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String).returns(::UnifiedRubySDK::Operations::RemoveUnifiedConnectionResponse) }
-    def remove_unified_connection(id)
+    sig { params(security: ::UnifiedRubySDK::Operations::RemoveUnifiedConnectionSecurity, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveUnifiedConnectionResponse) }
+    def remove_unified_connection(security, id)
       # remove_unified_connection - Remove connection
       request = ::UnifiedRubySDK::Operations::RemoveUnifiedConnectionRequest.new(
         
@@ -199,7 +199,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.delete(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -216,8 +216,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String, connection: T.nilable(::UnifiedRubySDK::Shared::Connection)).returns(::UnifiedRubySDK::Operations::UpdateUnifiedConnectionResponse) }
-    def update_unified_connection(id, connection = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::UpdateUnifiedConnectionSecurity, id: ::String, connection: T.nilable(::UnifiedRubySDK::Shared::Connection)).returns(::UnifiedRubySDK::Operations::UpdateUnifiedConnectionResponse) }
+    def update_unified_connection(security, id, connection = nil)
       # update_unified_connection - Update connection
       request = ::UnifiedRubySDK::Operations::UpdateUnifiedConnectionRequest.new(
         
@@ -240,7 +240,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')

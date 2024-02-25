@@ -23,14 +23,13 @@ module UnifiedRubySDK
              url_params: T::Hash[Symbol, String],
              client: Faraday::Request).void
     end
-    def initialize(security: nil,
+    def initialize(
                    server_idx: nil,
                    server_url: nil,
                    url_params: nil,
                    client: nil)
 
       ## Instantiates the SDK configuring it with the provided parameters.
-      # @param [Shared::Security] security The security details required for authentication
       # @param [Integer] server_idx The index of the server to use for all operations
       # @param [String] server_url The server URL to use for all operations
       # @param [Hash<Symbol, String>] url_params Parameters to optionally template the server URL with
@@ -64,12 +63,6 @@ module UnifiedRubySDK
         @server_url = Utils.template_url(@server_url, params)
       end
       init_sdks
-    end
-
-    sig { params(security: ::UnifiedRubySDK::Shared::Security).void }
-    def config_security(security)
-      @security = security
-      @sdk_configuration.security = security
     end
 
     sig { void }
