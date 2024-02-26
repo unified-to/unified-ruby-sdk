@@ -21,11 +21,6 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
 
 req = ::UnifiedRubySDK::Shared::Connection.new(
@@ -38,7 +33,9 @@ req = ::UnifiedRubySDK::Shared::Connection.new(
   ],
 )
     
-res = s.connection.create_unified_connection(req)
+res = s.connection.create_unified_connection(req, ::UnifiedRubySDK::Operations::CreateUnifiedConnectionSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ))
 
 if ! res.connection.nil?
   # handle response
@@ -48,9 +45,10 @@ end
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [::UnifiedRubySDK::Shared::Connection](../../models/shared/connection.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                   | [::UnifiedRubySDK::Shared::Connection](../../models/shared/connection.md)                                                   | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+| `security`                                                                                                                  | [::UnifiedRubySDK::Operations::CreateUnifiedConnectionSecurity](../../models/operations/createunifiedconnectionsecurity.md) | :heavy_check_mark:                                                                                                          | The security requirements to use for the request.                                                                           |
 
 
 ### Response
@@ -69,14 +67,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.connection.get_unified_connection(id="<value>")
+res = s.connection.get_unified_connection(::UnifiedRubySDK::Operations::GetUnifiedConnectionSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), id="<value>")
 
 if ! res.connection.nil?
   # handle response
@@ -86,9 +81,10 @@ end
 
 ### Parameters
 
-| Parameter            | Type                 | Required             | Description          |
-| -------------------- | -------------------- | -------------------- | -------------------- |
-| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Connection |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                            | [::UnifiedRubySDK::Operations::GetUnifiedConnectionSecurity](../../models/operations/getunifiedconnectionsecurity.md) | :heavy_check_mark:                                                                                                    | The security requirements to use for the request.                                                                     |
+| `id`                                                                                                                  | *::String*                                                                                                            | :heavy_check_mark:                                                                                                    | ID of the Connection                                                                                                  |
 
 
 ### Response
@@ -107,16 +103,13 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
 
 req = ::UnifiedRubySDK::Operations::ListUnifiedConnectionsRequest.new()
     
-res = s.connection.list_unified_connections(req)
+res = s.connection.list_unified_connections(req, ::UnifiedRubySDK::Operations::ListUnifiedConnectionsSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ))
 
 if ! res.connections.nil?
   # handle response
@@ -126,9 +119,10 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                               | [::UnifiedRubySDK::Operations::ListUnifiedConnectionsRequest](../../models/operations/listunifiedconnectionsrequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                 | [::UnifiedRubySDK::Operations::ListUnifiedConnectionsRequest](../../models/operations/listunifiedconnectionsrequest.md)   | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+| `security`                                                                                                                | [::UnifiedRubySDK::Operations::ListUnifiedConnectionsSecurity](../../models/operations/listunifiedconnectionssecurity.md) | :heavy_check_mark:                                                                                                        | The security requirements to use for the request.                                                                         |
 
 
 ### Response
@@ -147,14 +141,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.connection.patch_unified_connection(id="<value>", connection=::UnifiedRubySDK::Shared::Connection.new(
+res = s.connection.patch_unified_connection(::UnifiedRubySDK::Operations::PatchUnifiedConnectionSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), id="<value>", connection=::UnifiedRubySDK::Shared::Connection.new(
     categories: [
       ::UnifiedRubySDK::Shared::PropertyConnectionCategories::TICKETING,
     ],
@@ -172,10 +163,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `id`                                                                      | *::String*                                                                | :heavy_check_mark:                                                        | ID of the Connection                                                      |
-| `connection`                                                              | [::UnifiedRubySDK::Shared::Connection](../../models/shared/connection.md) | :heavy_minus_sign:                                                        | A connection represents a specific authentication of an integration.      |
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                                | [::UnifiedRubySDK::Operations::PatchUnifiedConnectionSecurity](../../models/operations/patchunifiedconnectionsecurity.md) | :heavy_check_mark:                                                                                                        | The security requirements to use for the request.                                                                         |
+| `id`                                                                                                                      | *::String*                                                                                                                | :heavy_check_mark:                                                                                                        | ID of the Connection                                                                                                      |
+| `connection`                                                                                                              | [::UnifiedRubySDK::Shared::Connection](../../models/shared/connection.md)                                                 | :heavy_minus_sign:                                                                                                        | A connection represents a specific authentication of an integration.                                                      |
 
 
 ### Response
@@ -194,14 +186,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.connection.remove_unified_connection(id="<value>")
+res = s.connection.remove_unified_connection(::UnifiedRubySDK::Operations::RemoveUnifiedConnectionSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -211,9 +200,10 @@ end
 
 ### Parameters
 
-| Parameter            | Type                 | Required             | Description          |
-| -------------------- | -------------------- | -------------------- | -------------------- |
-| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Connection |
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                                  | [::UnifiedRubySDK::Operations::RemoveUnifiedConnectionSecurity](../../models/operations/removeunifiedconnectionsecurity.md) | :heavy_check_mark:                                                                                                          | The security requirements to use for the request.                                                                           |
+| `id`                                                                                                                        | *::String*                                                                                                                  | :heavy_check_mark:                                                                                                          | ID of the Connection                                                                                                        |
 
 
 ### Response
@@ -232,14 +222,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.connection.update_unified_connection(id="<value>", connection=::UnifiedRubySDK::Shared::Connection.new(
+res = s.connection.update_unified_connection(::UnifiedRubySDK::Operations::UpdateUnifiedConnectionSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), id="<value>", connection=::UnifiedRubySDK::Shared::Connection.new(
     categories: [
       ::UnifiedRubySDK::Shared::PropertyConnectionCategories::ACCOUNTING,
     ],
@@ -257,10 +244,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `id`                                                                      | *::String*                                                                | :heavy_check_mark:                                                        | ID of the Connection                                                      |
-| `connection`                                                              | [::UnifiedRubySDK::Shared::Connection](../../models/shared/connection.md) | :heavy_minus_sign:                                                        | A connection represents a specific authentication of an integration.      |
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                                  | [::UnifiedRubySDK::Operations::UpdateUnifiedConnectionSecurity](../../models/operations/updateunifiedconnectionsecurity.md) | :heavy_check_mark:                                                                                                          | The security requirements to use for the request.                                                                           |
+| `id`                                                                                                                        | *::String*                                                                                                                  | :heavy_check_mark:                                                                                                          | ID of the Connection                                                                                                        |
+| `connection`                                                                                                                | [::UnifiedRubySDK::Shared::Connection](../../models/shared/connection.md)                                                   | :heavy_minus_sign:                                                                                                          | A connection represents a specific authentication of an integration.                                                        |
 
 
 ### Response

@@ -17,14 +17,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.payout.get_accounting_payout(connection_id="<value>", id="<value>", fields_=[
+res = s.payout.get_accounting_payout(::UnifiedRubySDK::Operations::GetAccountingPayoutSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", id="<value>", fields_=[
     "<value>",
   ])
 
@@ -36,11 +33,12 @@ end
 
 ### Parameters
 
-| Parameter                        | Type                             | Required                         | Description                      |
-| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Payout                 |
-| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                          | [::UnifiedRubySDK::Operations::GetAccountingPayoutSecurity](../../models/operations/getaccountingpayoutsecurity.md) | :heavy_check_mark:                                                                                                  | The security requirements to use for the request.                                                                   |
+| `connection_id`                                                                                                     | *::String*                                                                                                          | :heavy_check_mark:                                                                                                  | ID of the connection                                                                                                |
+| `id`                                                                                                                | *::String*                                                                                                          | :heavy_check_mark:                                                                                                  | ID of the Payout                                                                                                    |
+| `fields_`                                                                                                           | T::Array<*::String*>                                                                                                | :heavy_minus_sign:                                                                                                  | Comma-delimited fields to return                                                                                    |
 
 
 ### Response
@@ -59,18 +57,15 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
 
 req = ::UnifiedRubySDK::Operations::ListAccountingPayoutsRequest.new(
   connection_id: "<value>",
 )
     
-res = s.payout.list_accounting_payouts(req)
+res = s.payout.list_accounting_payouts(req, ::UnifiedRubySDK::Operations::ListAccountingPayoutsSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ))
 
 if ! res.accounting_payouts.nil?
   # handle response
@@ -80,9 +75,10 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                             | [::UnifiedRubySDK::Operations::ListAccountingPayoutsRequest](../../models/operations/listaccountingpayoutsrequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                               | [::UnifiedRubySDK::Operations::ListAccountingPayoutsRequest](../../models/operations/listaccountingpayoutsrequest.md)   | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| `security`                                                                                                              | [::UnifiedRubySDK::Operations::ListAccountingPayoutsSecurity](../../models/operations/listaccountingpayoutssecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
 
 
 ### Response

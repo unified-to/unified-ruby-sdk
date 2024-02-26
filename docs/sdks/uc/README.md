@@ -22,14 +22,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.uc.create_uc_contact(connection_id="<value>", uc_contact=::UnifiedRubySDK::Shared::UcContact.new())
+res = s.uc.create_uc_contact(::UnifiedRubySDK::Operations::CreateUcContactSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", uc_contact=::UnifiedRubySDK::Shared::UcContact.new())
 
 if ! res.uc_contact.nil?
   # handle response
@@ -39,10 +36,11 @@ end
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
-| `uc_contact`                                                            | [::UnifiedRubySDK::Shared::UcContact](../../models/shared/uccontact.md) | :heavy_minus_sign:                                                      | A contact represents a person that optionally is associated with a call |
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                  | [::UnifiedRubySDK::Operations::CreateUcContactSecurity](../../models/operations/createuccontactsecurity.md) | :heavy_check_mark:                                                                                          | The security requirements to use for the request.                                                           |
+| `connection_id`                                                                                             | *::String*                                                                                                  | :heavy_check_mark:                                                                                          | ID of the connection                                                                                        |
+| `uc_contact`                                                                                                | [::UnifiedRubySDK::Shared::UcContact](../../models/shared/uccontact.md)                                     | :heavy_minus_sign:                                                                                          | A contact represents a person that optionally is associated with a call                                     |
 
 
 ### Response
@@ -61,14 +59,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.uc.get_uc_contact(connection_id="<value>", id="<value>", fields_=[
+res = s.uc.get_uc_contact(::UnifiedRubySDK::Operations::GetUcContactSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", id="<value>", fields_=[
     "<value>",
   ])
 
@@ -80,11 +75,12 @@ end
 
 ### Parameters
 
-| Parameter                        | Type                             | Required                         | Description                      |
-| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Contact                |
-| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `security`                                                                                            | [::UnifiedRubySDK::Operations::GetUcContactSecurity](../../models/operations/getuccontactsecurity.md) | :heavy_check_mark:                                                                                    | The security requirements to use for the request.                                                     |
+| `connection_id`                                                                                       | *::String*                                                                                            | :heavy_check_mark:                                                                                    | ID of the connection                                                                                  |
+| `id`                                                                                                  | *::String*                                                                                            | :heavy_check_mark:                                                                                    | ID of the Contact                                                                                     |
+| `fields_`                                                                                             | T::Array<*::String*>                                                                                  | :heavy_minus_sign:                                                                                    | Comma-delimited fields to return                                                                      |
 
 
 ### Response
@@ -103,18 +99,15 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
 
 req = ::UnifiedRubySDK::Operations::ListUcCallsRequest.new(
   connection_id: "<value>",
 )
     
-res = s.uc.list_uc_calls(req)
+res = s.uc.list_uc_calls(req, ::UnifiedRubySDK::Operations::ListUcCallsSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ))
 
 if ! res.uc_calls.nil?
   # handle response
@@ -124,9 +117,10 @@ end
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [::UnifiedRubySDK::Operations::ListUcCallsRequest](../../models/operations/listuccallsrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [::UnifiedRubySDK::Operations::ListUcCallsRequest](../../models/operations/listuccallsrequest.md)   | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| `security`                                                                                          | [::UnifiedRubySDK::Operations::ListUcCallsSecurity](../../models/operations/listuccallssecurity.md) | :heavy_check_mark:                                                                                  | The security requirements to use for the request.                                                   |
 
 
 ### Response
@@ -145,18 +139,15 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
 
 req = ::UnifiedRubySDK::Operations::ListUcContactsRequest.new(
   connection_id: "<value>",
 )
     
-res = s.uc.list_uc_contacts(req)
+res = s.uc.list_uc_contacts(req, ::UnifiedRubySDK::Operations::ListUcContactsSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ))
 
 if ! res.uc_contacts.nil?
   # handle response
@@ -166,9 +157,10 @@ end
 
 ### Parameters
 
-| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                               | [::UnifiedRubySDK::Operations::ListUcContactsRequest](../../models/operations/listuccontactsrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [::UnifiedRubySDK::Operations::ListUcContactsRequest](../../models/operations/listuccontactsrequest.md)   | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| `security`                                                                                                | [::UnifiedRubySDK::Operations::ListUcContactsSecurity](../../models/operations/listuccontactssecurity.md) | :heavy_check_mark:                                                                                        | The security requirements to use for the request.                                                         |
 
 
 ### Response
@@ -187,14 +179,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.uc.patch_uc_contact(connection_id="<value>", id="<value>", uc_contact=::UnifiedRubySDK::Shared::UcContact.new())
+res = s.uc.patch_uc_contact(::UnifiedRubySDK::Operations::PatchUcContactSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", id="<value>", uc_contact=::UnifiedRubySDK::Shared::UcContact.new())
 
 if ! res.uc_contact.nil?
   # handle response
@@ -204,11 +193,12 @@ end
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
-| `id`                                                                    | *::String*                                                              | :heavy_check_mark:                                                      | ID of the Contact                                                       |
-| `uc_contact`                                                            | [::UnifiedRubySDK::Shared::UcContact](../../models/shared/uccontact.md) | :heavy_minus_sign:                                                      | A contact represents a person that optionally is associated with a call |
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                | [::UnifiedRubySDK::Operations::PatchUcContactSecurity](../../models/operations/patchuccontactsecurity.md) | :heavy_check_mark:                                                                                        | The security requirements to use for the request.                                                         |
+| `connection_id`                                                                                           | *::String*                                                                                                | :heavy_check_mark:                                                                                        | ID of the connection                                                                                      |
+| `id`                                                                                                      | *::String*                                                                                                | :heavy_check_mark:                                                                                        | ID of the Contact                                                                                         |
+| `uc_contact`                                                                                              | [::UnifiedRubySDK::Shared::UcContact](../../models/shared/uccontact.md)                                   | :heavy_minus_sign:                                                                                        | A contact represents a person that optionally is associated with a call                                   |
 
 
 ### Response
@@ -227,14 +217,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.uc.remove_uc_contact(connection_id="<value>", id="<value>")
+res = s.uc.remove_uc_contact(::UnifiedRubySDK::Operations::RemoveUcContactSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -244,10 +231,11 @@ end
 
 ### Parameters
 
-| Parameter            | Type                 | Required             | Description          |
-| -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
-| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Contact    |
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                  | [::UnifiedRubySDK::Operations::RemoveUcContactSecurity](../../models/operations/removeuccontactsecurity.md) | :heavy_check_mark:                                                                                          | The security requirements to use for the request.                                                           |
+| `connection_id`                                                                                             | *::String*                                                                                                  | :heavy_check_mark:                                                                                          | ID of the connection                                                                                        |
+| `id`                                                                                                        | *::String*                                                                                                  | :heavy_check_mark:                                                                                          | ID of the Contact                                                                                           |
 
 
 ### Response
@@ -266,14 +254,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.uc.update_uc_contact(connection_id="<value>", id="<value>", uc_contact=::UnifiedRubySDK::Shared::UcContact.new())
+res = s.uc.update_uc_contact(::UnifiedRubySDK::Operations::UpdateUcContactSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", id="<value>", uc_contact=::UnifiedRubySDK::Shared::UcContact.new())
 
 if ! res.uc_contact.nil?
   # handle response
@@ -283,11 +268,12 @@ end
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
-| `id`                                                                    | *::String*                                                              | :heavy_check_mark:                                                      | ID of the Contact                                                       |
-| `uc_contact`                                                            | [::UnifiedRubySDK::Shared::UcContact](../../models/shared/uccontact.md) | :heavy_minus_sign:                                                      | A contact represents a person that optionally is associated with a call |
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                  | [::UnifiedRubySDK::Operations::UpdateUcContactSecurity](../../models/operations/updateuccontactsecurity.md) | :heavy_check_mark:                                                                                          | The security requirements to use for the request.                                                           |
+| `connection_id`                                                                                             | *::String*                                                                                                  | :heavy_check_mark:                                                                                          | ID of the connection                                                                                        |
+| `id`                                                                                                        | *::String*                                                                                                  | :heavy_check_mark:                                                                                          | ID of the Contact                                                                                           |
+| `uc_contact`                                                                                                | [::UnifiedRubySDK::Shared::UcContact](../../models/shared/uccontact.md)                                     | :heavy_minus_sign:                                                                                          | A contact represents a person that optionally is associated with a call                                     |
 
 
 ### Response

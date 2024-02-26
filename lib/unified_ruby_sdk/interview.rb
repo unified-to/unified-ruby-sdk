@@ -19,8 +19,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ats_interview: T.nilable(::UnifiedRubySDK::Shared::AtsInterview)).returns(::UnifiedRubySDK::Operations::CreateAtsInterviewResponse) }
-    def create_ats_interview(connection_id, ats_interview = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::CreateAtsInterviewSecurity, connection_id: ::String, ats_interview: T.nilable(::UnifiedRubySDK::Shared::AtsInterview)).returns(::UnifiedRubySDK::Operations::CreateAtsInterviewResponse) }
+    def create_ats_interview(security, connection_id, ats_interview = nil)
       # create_ats_interview - Create a interview
       request = ::UnifiedRubySDK::Operations::CreateAtsInterviewRequest.new(
         
@@ -43,7 +43,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -68,8 +68,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAtsInterviewResponse) }
-    def get_ats_interview(connection_id, id, fields_ = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetAtsInterviewSecurity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAtsInterviewResponse) }
+    def get_ats_interview(security, connection_id, id, fields_ = nil)
       # get_ats_interview - Retrieve a interview
       request = ::UnifiedRubySDK::Operations::GetAtsInterviewRequest.new(
         
@@ -93,7 +93,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -111,8 +111,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsInterviewsRequest)).returns(::UnifiedRubySDK::Operations::ListAtsInterviewsResponse) }
-    def list_ats_interviews(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsInterviewsRequest), security: ::UnifiedRubySDK::Operations::ListAtsInterviewsSecurity).returns(::UnifiedRubySDK::Operations::ListAtsInterviewsResponse) }
+    def list_ats_interviews(request, security)
       # list_ats_interviews - List all interviews
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -130,7 +130,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -148,8 +148,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_interview: T.nilable(::UnifiedRubySDK::Shared::AtsInterview)).returns(::UnifiedRubySDK::Operations::PatchAtsInterviewResponse) }
-    def patch_ats_interview(connection_id, id, ats_interview = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::PatchAtsInterviewSecurity, connection_id: ::String, id: ::String, ats_interview: T.nilable(::UnifiedRubySDK::Shared::AtsInterview)).returns(::UnifiedRubySDK::Operations::PatchAtsInterviewResponse) }
+    def patch_ats_interview(security, connection_id, id, ats_interview = nil)
       # patch_ats_interview - Update a interview
       request = ::UnifiedRubySDK::Operations::PatchAtsInterviewRequest.new(
         
@@ -173,7 +173,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -198,8 +198,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAtsInterviewResponse) }
-    def remove_ats_interview(connection_id, id)
+    sig { params(security: ::UnifiedRubySDK::Operations::RemoveAtsInterviewSecurity, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAtsInterviewResponse) }
+    def remove_ats_interview(security, connection_id, id)
       # remove_ats_interview - Remove a interview
       request = ::UnifiedRubySDK::Operations::RemoveAtsInterviewRequest.new(
         
@@ -220,7 +220,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.delete(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -237,8 +237,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_interview: T.nilable(::UnifiedRubySDK::Shared::AtsInterview)).returns(::UnifiedRubySDK::Operations::UpdateAtsInterviewResponse) }
-    def update_ats_interview(connection_id, id, ats_interview = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::UpdateAtsInterviewSecurity, connection_id: ::String, id: ::String, ats_interview: T.nilable(::UnifiedRubySDK::Shared::AtsInterview)).returns(::UnifiedRubySDK::Operations::UpdateAtsInterviewResponse) }
+    def update_ats_interview(security, connection_id, id, ats_interview = nil)
       # update_ats_interview - Update a interview
       request = ::UnifiedRubySDK::Operations::UpdateAtsInterviewRequest.new(
         
@@ -262,7 +262,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')

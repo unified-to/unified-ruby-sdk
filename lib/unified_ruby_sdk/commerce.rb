@@ -19,8 +19,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(::UnifiedRubySDK::Operations::CreateCommerceCollectionResponse) }
-    def create_commerce_collection(connection_id, commerce_collection = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::CreateCommerceCollectionSecurity, connection_id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(::UnifiedRubySDK::Operations::CreateCommerceCollectionResponse) }
+    def create_commerce_collection(security, connection_id, commerce_collection = nil)
       # create_commerce_collection - Create a collection
       request = ::UnifiedRubySDK::Operations::CreateCommerceCollectionRequest.new(
         
@@ -43,7 +43,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -68,8 +68,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, commerce_inventory: T.nilable(::UnifiedRubySDK::Shared::CommerceInventory)).returns(::UnifiedRubySDK::Operations::CreateCommerceInventoryResponse) }
-    def create_commerce_inventory(connection_id, commerce_inventory = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::CreateCommerceInventorySecurity, connection_id: ::String, commerce_inventory: T.nilable(::UnifiedRubySDK::Shared::CommerceInventory)).returns(::UnifiedRubySDK::Operations::CreateCommerceInventoryResponse) }
+    def create_commerce_inventory(security, connection_id, commerce_inventory = nil)
       # create_commerce_inventory - Create an inventory
       request = ::UnifiedRubySDK::Operations::CreateCommerceInventoryRequest.new(
         
@@ -92,7 +92,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -117,8 +117,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, commerce_item: T.nilable(::UnifiedRubySDK::Shared::CommerceItem)).returns(::UnifiedRubySDK::Operations::CreateCommerceItemResponse) }
-    def create_commerce_item(connection_id, commerce_item = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::CreateCommerceItemSecurity, connection_id: ::String, commerce_item: T.nilable(::UnifiedRubySDK::Shared::CommerceItem)).returns(::UnifiedRubySDK::Operations::CreateCommerceItemResponse) }
+    def create_commerce_item(security, connection_id, commerce_item = nil)
       # create_commerce_item - Create an item
       request = ::UnifiedRubySDK::Operations::CreateCommerceItemRequest.new(
         
@@ -141,7 +141,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -166,8 +166,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation)).returns(::UnifiedRubySDK::Operations::CreateCommerceLocationResponse) }
-    def create_commerce_location(connection_id, commerce_location = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::CreateCommerceLocationSecurity, connection_id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation)).returns(::UnifiedRubySDK::Operations::CreateCommerceLocationResponse) }
+    def create_commerce_location(security, connection_id, commerce_location = nil)
       # create_commerce_location - Create a location
       request = ::UnifiedRubySDK::Operations::CreateCommerceLocationRequest.new(
         
@@ -190,7 +190,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -215,8 +215,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCommerceCollectionResponse) }
-    def get_commerce_collection(connection_id, id, fields_ = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetCommerceCollectionSecurity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCommerceCollectionResponse) }
+    def get_commerce_collection(security, connection_id, id, fields_ = nil)
       # get_commerce_collection - Retrieve a collection
       request = ::UnifiedRubySDK::Operations::GetCommerceCollectionRequest.new(
         
@@ -240,7 +240,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCommerceInventoryResponse) }
-    def get_commerce_inventory(connection_id, id, fields_ = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetCommerceInventorySecurity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCommerceInventoryResponse) }
+    def get_commerce_inventory(security, connection_id, id, fields_ = nil)
       # get_commerce_inventory - Retrieve an inventory
       request = ::UnifiedRubySDK::Operations::GetCommerceInventoryRequest.new(
         
@@ -283,7 +283,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -301,8 +301,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCommerceItemResponse) }
-    def get_commerce_item(connection_id, id, fields_ = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetCommerceItemSecurity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCommerceItemResponse) }
+    def get_commerce_item(security, connection_id, id, fields_ = nil)
       # get_commerce_item - Retrieve an item
       request = ::UnifiedRubySDK::Operations::GetCommerceItemRequest.new(
         
@@ -326,7 +326,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -344,8 +344,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCommerceLocationResponse) }
-    def get_commerce_location(connection_id, id, fields_ = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetCommerceLocationSecurity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCommerceLocationResponse) }
+    def get_commerce_location(security, connection_id, id, fields_ = nil)
       # get_commerce_location - Retrieve a location
       request = ::UnifiedRubySDK::Operations::GetCommerceLocationRequest.new(
         
@@ -369,7 +369,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -387,8 +387,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCommerceCollectionsRequest)).returns(::UnifiedRubySDK::Operations::ListCommerceCollectionsResponse) }
-    def list_commerce_collections(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCommerceCollectionsRequest), security: ::UnifiedRubySDK::Operations::ListCommerceCollectionsSecurity).returns(::UnifiedRubySDK::Operations::ListCommerceCollectionsResponse) }
+    def list_commerce_collections(request, security)
       # list_commerce_collections - List all collections
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -406,7 +406,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -424,8 +424,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCommerceInventoriesRequest)).returns(::UnifiedRubySDK::Operations::ListCommerceInventoriesResponse) }
-    def list_commerce_inventories(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCommerceInventoriesRequest), security: ::UnifiedRubySDK::Operations::ListCommerceInventoriesSecurity).returns(::UnifiedRubySDK::Operations::ListCommerceInventoriesResponse) }
+    def list_commerce_inventories(request, security)
       # list_commerce_inventories - List all inventories
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -443,7 +443,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -461,8 +461,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCommerceItemsRequest)).returns(::UnifiedRubySDK::Operations::ListCommerceItemsResponse) }
-    def list_commerce_items(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCommerceItemsRequest), security: ::UnifiedRubySDK::Operations::ListCommerceItemsSecurity).returns(::UnifiedRubySDK::Operations::ListCommerceItemsResponse) }
+    def list_commerce_items(request, security)
       # list_commerce_items - List all items
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -480,7 +480,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -498,8 +498,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCommerceLocationsRequest)).returns(::UnifiedRubySDK::Operations::ListCommerceLocationsResponse) }
-    def list_commerce_locations(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCommerceLocationsRequest), security: ::UnifiedRubySDK::Operations::ListCommerceLocationsSecurity).returns(::UnifiedRubySDK::Operations::ListCommerceLocationsResponse) }
+    def list_commerce_locations(request, security)
       # list_commerce_locations - List all locations
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -517,7 +517,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -535,8 +535,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(::UnifiedRubySDK::Operations::PatchCommerceCollectionResponse) }
-    def patch_commerce_collection(connection_id, id, commerce_collection = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::PatchCommerceCollectionSecurity, connection_id: ::String, id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(::UnifiedRubySDK::Operations::PatchCommerceCollectionResponse) }
+    def patch_commerce_collection(security, connection_id, id, commerce_collection = nil)
       # patch_commerce_collection - Update a collection
       request = ::UnifiedRubySDK::Operations::PatchCommerceCollectionRequest.new(
         
@@ -560,7 +560,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -585,8 +585,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_inventory: T.nilable(::UnifiedRubySDK::Shared::CommerceInventory)).returns(::UnifiedRubySDK::Operations::PatchCommerceInventoryResponse) }
-    def patch_commerce_inventory(connection_id, id, commerce_inventory = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::PatchCommerceInventorySecurity, connection_id: ::String, id: ::String, commerce_inventory: T.nilable(::UnifiedRubySDK::Shared::CommerceInventory)).returns(::UnifiedRubySDK::Operations::PatchCommerceInventoryResponse) }
+    def patch_commerce_inventory(security, connection_id, id, commerce_inventory = nil)
       # patch_commerce_inventory - Update an inventory
       request = ::UnifiedRubySDK::Operations::PatchCommerceInventoryRequest.new(
         
@@ -610,7 +610,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -635,8 +635,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_item: T.nilable(::UnifiedRubySDK::Shared::CommerceItem)).returns(::UnifiedRubySDK::Operations::PatchCommerceItemResponse) }
-    def patch_commerce_item(connection_id, id, commerce_item = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::PatchCommerceItemSecurity, connection_id: ::String, id: ::String, commerce_item: T.nilable(::UnifiedRubySDK::Shared::CommerceItem)).returns(::UnifiedRubySDK::Operations::PatchCommerceItemResponse) }
+    def patch_commerce_item(security, connection_id, id, commerce_item = nil)
       # patch_commerce_item - Update an item
       request = ::UnifiedRubySDK::Operations::PatchCommerceItemRequest.new(
         
@@ -660,7 +660,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -685,8 +685,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation)).returns(::UnifiedRubySDK::Operations::PatchCommerceLocationResponse) }
-    def patch_commerce_location(connection_id, id, commerce_location = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::PatchCommerceLocationSecurity, connection_id: ::String, id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation)).returns(::UnifiedRubySDK::Operations::PatchCommerceLocationResponse) }
+    def patch_commerce_location(security, connection_id, id, commerce_location = nil)
       # patch_commerce_location - Update a location
       request = ::UnifiedRubySDK::Operations::PatchCommerceLocationRequest.new(
         
@@ -710,7 +710,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -735,8 +735,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCommerceCollectionResponse) }
-    def remove_commerce_collection(connection_id, id)
+    sig { params(security: ::UnifiedRubySDK::Operations::RemoveCommerceCollectionSecurity, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCommerceCollectionResponse) }
+    def remove_commerce_collection(security, connection_id, id)
       # remove_commerce_collection - Remove a collection
       request = ::UnifiedRubySDK::Operations::RemoveCommerceCollectionRequest.new(
         
@@ -757,7 +757,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.delete(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -774,8 +774,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCommerceInventoryResponse) }
-    def remove_commerce_inventory(connection_id, id)
+    sig { params(security: ::UnifiedRubySDK::Operations::RemoveCommerceInventorySecurity, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCommerceInventoryResponse) }
+    def remove_commerce_inventory(security, connection_id, id)
       # remove_commerce_inventory - Remove an inventory
       request = ::UnifiedRubySDK::Operations::RemoveCommerceInventoryRequest.new(
         
@@ -796,7 +796,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.delete(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -813,8 +813,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCommerceItemResponse) }
-    def remove_commerce_item(connection_id, id)
+    sig { params(security: ::UnifiedRubySDK::Operations::RemoveCommerceItemSecurity, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCommerceItemResponse) }
+    def remove_commerce_item(security, connection_id, id)
       # remove_commerce_item - Remove an item
       request = ::UnifiedRubySDK::Operations::RemoveCommerceItemRequest.new(
         
@@ -835,7 +835,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.delete(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -852,8 +852,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCommerceLocationResponse) }
-    def remove_commerce_location(connection_id, id)
+    sig { params(security: ::UnifiedRubySDK::Operations::RemoveCommerceLocationSecurity, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCommerceLocationResponse) }
+    def remove_commerce_location(security, connection_id, id)
       # remove_commerce_location - Remove a location
       request = ::UnifiedRubySDK::Operations::RemoveCommerceLocationRequest.new(
         
@@ -874,7 +874,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.delete(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -891,8 +891,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(::UnifiedRubySDK::Operations::UpdateCommerceCollectionResponse) }
-    def update_commerce_collection(connection_id, id, commerce_collection = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::UpdateCommerceCollectionSecurity, connection_id: ::String, id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(::UnifiedRubySDK::Operations::UpdateCommerceCollectionResponse) }
+    def update_commerce_collection(security, connection_id, id, commerce_collection = nil)
       # update_commerce_collection - Update a collection
       request = ::UnifiedRubySDK::Operations::UpdateCommerceCollectionRequest.new(
         
@@ -916,7 +916,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -941,8 +941,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_inventory: T.nilable(::UnifiedRubySDK::Shared::CommerceInventory)).returns(::UnifiedRubySDK::Operations::UpdateCommerceInventoryResponse) }
-    def update_commerce_inventory(connection_id, id, commerce_inventory = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::UpdateCommerceInventorySecurity, connection_id: ::String, id: ::String, commerce_inventory: T.nilable(::UnifiedRubySDK::Shared::CommerceInventory)).returns(::UnifiedRubySDK::Operations::UpdateCommerceInventoryResponse) }
+    def update_commerce_inventory(security, connection_id, id, commerce_inventory = nil)
       # update_commerce_inventory - Update an inventory
       request = ::UnifiedRubySDK::Operations::UpdateCommerceInventoryRequest.new(
         
@@ -966,7 +966,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -991,8 +991,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_item: T.nilable(::UnifiedRubySDK::Shared::CommerceItem)).returns(::UnifiedRubySDK::Operations::UpdateCommerceItemResponse) }
-    def update_commerce_item(connection_id, id, commerce_item = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::UpdateCommerceItemSecurity, connection_id: ::String, id: ::String, commerce_item: T.nilable(::UnifiedRubySDK::Shared::CommerceItem)).returns(::UnifiedRubySDK::Operations::UpdateCommerceItemResponse) }
+    def update_commerce_item(security, connection_id, id, commerce_item = nil)
       # update_commerce_item - Update an item
       request = ::UnifiedRubySDK::Operations::UpdateCommerceItemRequest.new(
         
@@ -1016,7 +1016,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -1041,8 +1041,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation)).returns(::UnifiedRubySDK::Operations::UpdateCommerceLocationResponse) }
-    def update_commerce_location(connection_id, id, commerce_location = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::UpdateCommerceLocationSecurity, connection_id: ::String, id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation)).returns(::UnifiedRubySDK::Operations::UpdateCommerceLocationResponse) }
+    def update_commerce_location(security, connection_id, id, commerce_location = nil)
       # update_commerce_location - Update a location
       request = ::UnifiedRubySDK::Operations::UpdateCommerceLocationRequest.new(
         
@@ -1066,7 +1066,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')

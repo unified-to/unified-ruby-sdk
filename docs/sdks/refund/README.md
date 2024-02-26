@@ -17,14 +17,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.refund.get_accounting_refund(connection_id="<value>", id="<value>", fields_=[
+res = s.refund.get_accounting_refund(::UnifiedRubySDK::Operations::GetAccountingRefundSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", id="<value>", fields_=[
     "<value>",
   ])
 
@@ -36,11 +33,12 @@ end
 
 ### Parameters
 
-| Parameter                        | Type                             | Required                         | Description                      |
-| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Refund                 |
-| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                          | [::UnifiedRubySDK::Operations::GetAccountingRefundSecurity](../../models/operations/getaccountingrefundsecurity.md) | :heavy_check_mark:                                                                                                  | The security requirements to use for the request.                                                                   |
+| `connection_id`                                                                                                     | *::String*                                                                                                          | :heavy_check_mark:                                                                                                  | ID of the connection                                                                                                |
+| `id`                                                                                                                | *::String*                                                                                                          | :heavy_check_mark:                                                                                                  | ID of the Refund                                                                                                    |
+| `fields_`                                                                                                           | T::Array<*::String*>                                                                                                | :heavy_minus_sign:                                                                                                  | Comma-delimited fields to return                                                                                    |
 
 
 ### Response
@@ -59,18 +57,15 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
 
 req = ::UnifiedRubySDK::Operations::ListAccountingRefundsRequest.new(
   connection_id: "<value>",
 )
     
-res = s.refund.list_accounting_refunds(req)
+res = s.refund.list_accounting_refunds(req, ::UnifiedRubySDK::Operations::ListAccountingRefundsSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ))
 
 if ! res.accounting_refunds.nil?
   # handle response
@@ -80,9 +75,10 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                             | [::UnifiedRubySDK::Operations::ListAccountingRefundsRequest](../../models/operations/listaccountingrefundsrequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                               | [::UnifiedRubySDK::Operations::ListAccountingRefundsRequest](../../models/operations/listaccountingrefundsrequest.md)   | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| `security`                                                                                                              | [::UnifiedRubySDK::Operations::ListAccountingRefundsSecurity](../../models/operations/listaccountingrefundssecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
 
 
 ### Response

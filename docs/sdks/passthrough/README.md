@@ -20,14 +20,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.passthrough.create_passthrough(connection_id="<value>", path="<value>", request_body={
+res = s.passthrough.create_passthrough(::UnifiedRubySDK::Operations::CreatePassthroughSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", path="<value>", request_body={
     "turquoise": "<value>",
   })
 
@@ -39,11 +36,12 @@ end
 
 ### Parameters
 
-| Parameter                    | Type                         | Required                     | Description                  |
-| ---------------------------- | ---------------------------- | ---------------------------- | ---------------------------- |
-| `connection_id`              | *::String*                   | :heavy_check_mark:           | ID of the connection         |
-| `path`                       | *::String*                   | :heavy_check_mark:           | N/A                          |
-| `request_body`               | T::Hash[Symbol, *::Object*]  | :heavy_minus_sign:           | integration-specific payload |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                      | [::UnifiedRubySDK::Operations::CreatePassthroughSecurity](../../models/operations/createpassthroughsecurity.md) | :heavy_check_mark:                                                                                              | The security requirements to use for the request.                                                               |
+| `connection_id`                                                                                                 | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the connection                                                                                            |
+| `path`                                                                                                          | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | N/A                                                                                                             |
+| `request_body`                                                                                                  | T::Hash[Symbol, *::Object*]                                                                                     | :heavy_minus_sign:                                                                                              | integration-specific payload                                                                                    |
 
 
 ### Response
@@ -62,14 +60,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.passthrough.list_passthroughs(connection_id="<value>", path="<value>")
+res = s.passthrough.list_passthroughs(::UnifiedRubySDK::Operations::ListPassthroughsSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", path="<value>")
 
 if ! res.result.nil?
   # handle response
@@ -79,10 +74,11 @@ end
 
 ### Parameters
 
-| Parameter            | Type                 | Required             | Description          |
-| -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
-| `path`               | *::String*           | :heavy_check_mark:   | N/A                  |
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                    | [::UnifiedRubySDK::Operations::ListPassthroughsSecurity](../../models/operations/listpassthroughssecurity.md) | :heavy_check_mark:                                                                                            | The security requirements to use for the request.                                                             |
+| `connection_id`                                                                                               | *::String*                                                                                                    | :heavy_check_mark:                                                                                            | ID of the connection                                                                                          |
+| `path`                                                                                                        | *::String*                                                                                                    | :heavy_check_mark:                                                                                            | N/A                                                                                                           |
 
 
 ### Response
@@ -101,14 +97,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.passthrough.patch_passthrough(connection_id="<value>", path="<value>", request_body={
+res = s.passthrough.patch_passthrough(::UnifiedRubySDK::Operations::PatchPassthroughSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", path="<value>", request_body={
     "brand": "<value>",
   })
 
@@ -120,11 +113,12 @@ end
 
 ### Parameters
 
-| Parameter                    | Type                         | Required                     | Description                  |
-| ---------------------------- | ---------------------------- | ---------------------------- | ---------------------------- |
-| `connection_id`              | *::String*                   | :heavy_check_mark:           | ID of the connection         |
-| `path`                       | *::String*                   | :heavy_check_mark:           | N/A                          |
-| `request_body`               | T::Hash[Symbol, *::Object*]  | :heavy_minus_sign:           | integration-specific payload |
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                    | [::UnifiedRubySDK::Operations::PatchPassthroughSecurity](../../models/operations/patchpassthroughsecurity.md) | :heavy_check_mark:                                                                                            | The security requirements to use for the request.                                                             |
+| `connection_id`                                                                                               | *::String*                                                                                                    | :heavy_check_mark:                                                                                            | ID of the connection                                                                                          |
+| `path`                                                                                                        | *::String*                                                                                                    | :heavy_check_mark:                                                                                            | N/A                                                                                                           |
+| `request_body`                                                                                                | T::Hash[Symbol, *::Object*]                                                                                   | :heavy_minus_sign:                                                                                            | integration-specific payload                                                                                  |
 
 
 ### Response
@@ -143,14 +137,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.passthrough.remove_passthrough(connection_id="<value>", path="<value>")
+res = s.passthrough.remove_passthrough(::UnifiedRubySDK::Operations::RemovePassthroughSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", path="<value>")
 
 if ! res.result.nil?
   # handle response
@@ -160,10 +151,11 @@ end
 
 ### Parameters
 
-| Parameter            | Type                 | Required             | Description          |
-| -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
-| `path`               | *::String*           | :heavy_check_mark:   | N/A                  |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                      | [::UnifiedRubySDK::Operations::RemovePassthroughSecurity](../../models/operations/removepassthroughsecurity.md) | :heavy_check_mark:                                                                                              | The security requirements to use for the request.                                                               |
+| `connection_id`                                                                                                 | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the connection                                                                                            |
+| `path`                                                                                                          | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | N/A                                                                                                             |
 
 
 ### Response
@@ -182,14 +174,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.passthrough.update_passthrough(connection_id="<value>", path="<value>", request_body={
+res = s.passthrough.update_passthrough(::UnifiedRubySDK::Operations::UpdatePassthroughSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", path="<value>", request_body={
     "Northwest": "<value>",
   })
 
@@ -201,11 +190,12 @@ end
 
 ### Parameters
 
-| Parameter                    | Type                         | Required                     | Description                  |
-| ---------------------------- | ---------------------------- | ---------------------------- | ---------------------------- |
-| `connection_id`              | *::String*                   | :heavy_check_mark:           | ID of the connection         |
-| `path`                       | *::String*                   | :heavy_check_mark:           | N/A                          |
-| `request_body`               | T::Hash[Symbol, *::Object*]  | :heavy_minus_sign:           | integration-specific payload |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                      | [::UnifiedRubySDK::Operations::UpdatePassthroughSecurity](../../models/operations/updatepassthroughsecurity.md) | :heavy_check_mark:                                                                                              | The security requirements to use for the request.                                                               |
+| `connection_id`                                                                                                 | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the connection                                                                                            |
+| `path`                                                                                                          | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | N/A                                                                                                             |
+| `request_body`                                                                                                  | T::Hash[Symbol, *::Object*]                                                                                     | :heavy_minus_sign:                                                                                              | integration-specific payload                                                                                    |
 
 
 ### Response

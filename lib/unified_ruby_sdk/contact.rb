@@ -19,8 +19,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, accounting_contact: T.nilable(::UnifiedRubySDK::Shared::AccountingContact)).returns(::UnifiedRubySDK::Operations::CreateAccountingContactResponse) }
-    def create_accounting_contact(connection_id, accounting_contact = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::CreateAccountingContactSecurity, connection_id: ::String, accounting_contact: T.nilable(::UnifiedRubySDK::Shared::AccountingContact)).returns(::UnifiedRubySDK::Operations::CreateAccountingContactResponse) }
+    def create_accounting_contact(security, connection_id, accounting_contact = nil)
       # create_accounting_contact - Create a contact
       request = ::UnifiedRubySDK::Operations::CreateAccountingContactRequest.new(
         
@@ -43,7 +43,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -68,8 +68,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact)).returns(::UnifiedRubySDK::Operations::CreateCrmContactResponse) }
-    def create_crm_contact(connection_id, crm_contact = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::CreateCrmContactSecurity, connection_id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact)).returns(::UnifiedRubySDK::Operations::CreateCrmContactResponse) }
+    def create_crm_contact(security, connection_id, crm_contact = nil)
       # create_crm_contact - Create a contact
       request = ::UnifiedRubySDK::Operations::CreateCrmContactRequest.new(
         
@@ -92,7 +92,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -117,8 +117,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact)).returns(::UnifiedRubySDK::Operations::CreateUcContactResponse) }
-    def create_uc_contact(connection_id, uc_contact = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::CreateUcContactSecurity, connection_id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact)).returns(::UnifiedRubySDK::Operations::CreateUcContactResponse) }
+    def create_uc_contact(security, connection_id, uc_contact = nil)
       # create_uc_contact - Create a contact
       request = ::UnifiedRubySDK::Operations::CreateUcContactRequest.new(
         
@@ -141,7 +141,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -166,8 +166,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAccountingContactResponse) }
-    def get_accounting_contact(connection_id, id, fields_ = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetAccountingContactSecurity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAccountingContactResponse) }
+    def get_accounting_contact(security, connection_id, id, fields_ = nil)
       # get_accounting_contact - Retrieve a contact
       request = ::UnifiedRubySDK::Operations::GetAccountingContactRequest.new(
         
@@ -191,7 +191,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -209,8 +209,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCrmContactResponse) }
-    def get_crm_contact(connection_id, id, fields_ = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetCrmContactSecurity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCrmContactResponse) }
+    def get_crm_contact(security, connection_id, id, fields_ = nil)
       # get_crm_contact - Retrieve a contact
       request = ::UnifiedRubySDK::Operations::GetCrmContactRequest.new(
         
@@ -234,7 +234,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -252,8 +252,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetUcContactResponse) }
-    def get_uc_contact(connection_id, id, fields_ = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetUcContactSecurity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetUcContactResponse) }
+    def get_uc_contact(security, connection_id, id, fields_ = nil)
       # get_uc_contact - Retrieve a contact
       request = ::UnifiedRubySDK::Operations::GetUcContactRequest.new(
         
@@ -277,7 +277,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -295,8 +295,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingContactsRequest)).returns(::UnifiedRubySDK::Operations::ListAccountingContactsResponse) }
-    def list_accounting_contacts(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingContactsRequest), security: ::UnifiedRubySDK::Operations::ListAccountingContactsSecurity).returns(::UnifiedRubySDK::Operations::ListAccountingContactsResponse) }
+    def list_accounting_contacts(request, security)
       # list_accounting_contacts - List all contacts
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -314,7 +314,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -332,8 +332,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmContactsRequest)).returns(::UnifiedRubySDK::Operations::ListCrmContactsResponse) }
-    def list_crm_contacts(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmContactsRequest), security: ::UnifiedRubySDK::Operations::ListCrmContactsSecurity).returns(::UnifiedRubySDK::Operations::ListCrmContactsResponse) }
+    def list_crm_contacts(request, security)
       # list_crm_contacts - List all contacts
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -351,7 +351,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -369,8 +369,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUcContactsRequest)).returns(::UnifiedRubySDK::Operations::ListUcContactsResponse) }
-    def list_uc_contacts(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUcContactsRequest), security: ::UnifiedRubySDK::Operations::ListUcContactsSecurity).returns(::UnifiedRubySDK::Operations::ListUcContactsResponse) }
+    def list_uc_contacts(request, security)
       # list_uc_contacts - List all contacts
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -388,7 +388,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -406,8 +406,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_contact: T.nilable(::UnifiedRubySDK::Shared::AccountingContact)).returns(::UnifiedRubySDK::Operations::PatchAccountingContactResponse) }
-    def patch_accounting_contact(connection_id, id, accounting_contact = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::PatchAccountingContactSecurity, connection_id: ::String, id: ::String, accounting_contact: T.nilable(::UnifiedRubySDK::Shared::AccountingContact)).returns(::UnifiedRubySDK::Operations::PatchAccountingContactResponse) }
+    def patch_accounting_contact(security, connection_id, id, accounting_contact = nil)
       # patch_accounting_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::PatchAccountingContactRequest.new(
         
@@ -431,7 +431,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -456,8 +456,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact)).returns(::UnifiedRubySDK::Operations::PatchCrmContactResponse) }
-    def patch_crm_contact(connection_id, id, crm_contact = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::PatchCrmContactSecurity, connection_id: ::String, id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact)).returns(::UnifiedRubySDK::Operations::PatchCrmContactResponse) }
+    def patch_crm_contact(security, connection_id, id, crm_contact = nil)
       # patch_crm_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::PatchCrmContactRequest.new(
         
@@ -481,7 +481,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -506,8 +506,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact)).returns(::UnifiedRubySDK::Operations::PatchUcContactResponse) }
-    def patch_uc_contact(connection_id, id, uc_contact = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::PatchUcContactSecurity, connection_id: ::String, id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact)).returns(::UnifiedRubySDK::Operations::PatchUcContactResponse) }
+    def patch_uc_contact(security, connection_id, id, uc_contact = nil)
       # patch_uc_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::PatchUcContactRequest.new(
         
@@ -531,7 +531,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -556,8 +556,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAccountingContactResponse) }
-    def remove_accounting_contact(connection_id, id)
+    sig { params(security: ::UnifiedRubySDK::Operations::RemoveAccountingContactSecurity, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAccountingContactResponse) }
+    def remove_accounting_contact(security, connection_id, id)
       # remove_accounting_contact - Remove a contact
       request = ::UnifiedRubySDK::Operations::RemoveAccountingContactRequest.new(
         
@@ -578,7 +578,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.delete(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -595,8 +595,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCrmContactResponse) }
-    def remove_crm_contact(connection_id, id)
+    sig { params(security: ::UnifiedRubySDK::Operations::RemoveCrmContactSecurity, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCrmContactResponse) }
+    def remove_crm_contact(security, connection_id, id)
       # remove_crm_contact - Remove a contact
       request = ::UnifiedRubySDK::Operations::RemoveCrmContactRequest.new(
         
@@ -617,7 +617,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.delete(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -634,8 +634,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveUcContactResponse) }
-    def remove_uc_contact(connection_id, id)
+    sig { params(security: ::UnifiedRubySDK::Operations::RemoveUcContactSecurity, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveUcContactResponse) }
+    def remove_uc_contact(security, connection_id, id)
       # remove_uc_contact - Remove a contact
       request = ::UnifiedRubySDK::Operations::RemoveUcContactRequest.new(
         
@@ -656,7 +656,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.delete(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -673,8 +673,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_contact: T.nilable(::UnifiedRubySDK::Shared::AccountingContact)).returns(::UnifiedRubySDK::Operations::UpdateAccountingContactResponse) }
-    def update_accounting_contact(connection_id, id, accounting_contact = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::UpdateAccountingContactSecurity, connection_id: ::String, id: ::String, accounting_contact: T.nilable(::UnifiedRubySDK::Shared::AccountingContact)).returns(::UnifiedRubySDK::Operations::UpdateAccountingContactResponse) }
+    def update_accounting_contact(security, connection_id, id, accounting_contact = nil)
       # update_accounting_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::UpdateAccountingContactRequest.new(
         
@@ -698,7 +698,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -723,8 +723,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact)).returns(::UnifiedRubySDK::Operations::UpdateCrmContactResponse) }
-    def update_crm_contact(connection_id, id, crm_contact = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::UpdateCrmContactSecurity, connection_id: ::String, id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact)).returns(::UnifiedRubySDK::Operations::UpdateCrmContactResponse) }
+    def update_crm_contact(security, connection_id, id, crm_contact = nil)
       # update_crm_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::UpdateCrmContactRequest.new(
         
@@ -748,7 +748,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -773,8 +773,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact)).returns(::UnifiedRubySDK::Operations::UpdateUcContactResponse) }
-    def update_uc_contact(connection_id, id, uc_contact = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::UpdateUcContactSecurity, connection_id: ::String, id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact)).returns(::UnifiedRubySDK::Operations::UpdateUcContactResponse) }
+    def update_uc_contact(security, connection_id, id, uc_contact = nil)
       # update_uc_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::UpdateUcContactRequest.new(
         
@@ -798,7 +798,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')

@@ -19,8 +19,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(::UnifiedRubySDK::Operations::CreateCommerceCollectionResponse) }
-    def create_commerce_collection(connection_id, commerce_collection = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::CreateCommerceCollectionSecurity, connection_id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(::UnifiedRubySDK::Operations::CreateCommerceCollectionResponse) }
+    def create_commerce_collection(security, connection_id, commerce_collection = nil)
       # create_commerce_collection - Create a collection
       request = ::UnifiedRubySDK::Operations::CreateCommerceCollectionRequest.new(
         
@@ -43,7 +43,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -68,8 +68,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCommerceCollectionResponse) }
-    def get_commerce_collection(connection_id, id, fields_ = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetCommerceCollectionSecurity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCommerceCollectionResponse) }
+    def get_commerce_collection(security, connection_id, id, fields_ = nil)
       # get_commerce_collection - Retrieve a collection
       request = ::UnifiedRubySDK::Operations::GetCommerceCollectionRequest.new(
         
@@ -93,7 +93,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -111,8 +111,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCommerceCollectionsRequest)).returns(::UnifiedRubySDK::Operations::ListCommerceCollectionsResponse) }
-    def list_commerce_collections(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCommerceCollectionsRequest), security: ::UnifiedRubySDK::Operations::ListCommerceCollectionsSecurity).returns(::UnifiedRubySDK::Operations::ListCommerceCollectionsResponse) }
+    def list_commerce_collections(request, security)
       # list_commerce_collections - List all collections
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -130,7 +130,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -148,8 +148,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(::UnifiedRubySDK::Operations::PatchCommerceCollectionResponse) }
-    def patch_commerce_collection(connection_id, id, commerce_collection = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::PatchCommerceCollectionSecurity, connection_id: ::String, id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(::UnifiedRubySDK::Operations::PatchCommerceCollectionResponse) }
+    def patch_commerce_collection(security, connection_id, id, commerce_collection = nil)
       # patch_commerce_collection - Update a collection
       request = ::UnifiedRubySDK::Operations::PatchCommerceCollectionRequest.new(
         
@@ -173,7 +173,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -198,8 +198,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCommerceCollectionResponse) }
-    def remove_commerce_collection(connection_id, id)
+    sig { params(security: ::UnifiedRubySDK::Operations::RemoveCommerceCollectionSecurity, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCommerceCollectionResponse) }
+    def remove_commerce_collection(security, connection_id, id)
       # remove_commerce_collection - Remove a collection
       request = ::UnifiedRubySDK::Operations::RemoveCommerceCollectionRequest.new(
         
@@ -220,7 +220,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.delete(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -237,8 +237,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(::UnifiedRubySDK::Operations::UpdateCommerceCollectionResponse) }
-    def update_commerce_collection(connection_id, id, commerce_collection = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::UpdateCommerceCollectionSecurity, connection_id: ::String, id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(::UnifiedRubySDK::Operations::UpdateCommerceCollectionResponse) }
+    def update_commerce_collection(security, connection_id, id, commerce_collection = nil)
       # update_commerce_collection - Update a collection
       request = ::UnifiedRubySDK::Operations::UpdateCommerceCollectionRequest.new(
         
@@ -262,7 +262,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')

@@ -21,14 +21,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.application.create_ats_application(connection_id="<value>", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new())
+res = s.application.create_ats_application(::UnifiedRubySDK::Operations::CreateAtsApplicationSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new())
 
 if ! res.ats_application.nil?
   # handle response
@@ -38,10 +35,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `connection_id`                                                                   | *::String*                                                                        | :heavy_check_mark:                                                                | ID of the connection                                                              |
-| `ats_application`                                                                 | [::UnifiedRubySDK::Shared::AtsApplication](../../models/shared/atsapplication.md) | :heavy_minus_sign:                                                                | N/A                                                                               |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                            | [::UnifiedRubySDK::Operations::CreateAtsApplicationSecurity](../../models/operations/createatsapplicationsecurity.md) | :heavy_check_mark:                                                                                                    | The security requirements to use for the request.                                                                     |
+| `connection_id`                                                                                                       | *::String*                                                                                                            | :heavy_check_mark:                                                                                                    | ID of the connection                                                                                                  |
+| `ats_application`                                                                                                     | [::UnifiedRubySDK::Shared::AtsApplication](../../models/shared/atsapplication.md)                                     | :heavy_minus_sign:                                                                                                    | N/A                                                                                                                   |
 
 
 ### Response
@@ -60,14 +58,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.application.get_ats_application(connection_id="<value>", id="<value>", fields_=[
+res = s.application.get_ats_application(::UnifiedRubySDK::Operations::GetAtsApplicationSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", id="<value>", fields_=[
     "<value>",
   ])
 
@@ -79,11 +74,12 @@ end
 
 ### Parameters
 
-| Parameter                        | Type                             | Required                         | Description                      |
-| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Application            |
-| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                      | [::UnifiedRubySDK::Operations::GetAtsApplicationSecurity](../../models/operations/getatsapplicationsecurity.md) | :heavy_check_mark:                                                                                              | The security requirements to use for the request.                                                               |
+| `connection_id`                                                                                                 | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the connection                                                                                            |
+| `id`                                                                                                            | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the Application                                                                                           |
+| `fields_`                                                                                                       | T::Array<*::String*>                                                                                            | :heavy_minus_sign:                                                                                              | Comma-delimited fields to return                                                                                |
 
 
 ### Response
@@ -102,18 +98,15 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
 
 req = ::UnifiedRubySDK::Operations::ListAtsApplicationsRequest.new(
   connection_id: "<value>",
 )
     
-res = s.application.list_ats_applications(req)
+res = s.application.list_ats_applications(req, ::UnifiedRubySDK::Operations::ListAtsApplicationsSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ))
 
 if ! res.ats_applications.nil?
   # handle response
@@ -123,9 +116,10 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                         | [::UnifiedRubySDK::Operations::ListAtsApplicationsRequest](../../models/operations/listatsapplicationsrequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                           | [::UnifiedRubySDK::Operations::ListAtsApplicationsRequest](../../models/operations/listatsapplicationsrequest.md)   | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| `security`                                                                                                          | [::UnifiedRubySDK::Operations::ListAtsApplicationsSecurity](../../models/operations/listatsapplicationssecurity.md) | :heavy_check_mark:                                                                                                  | The security requirements to use for the request.                                                                   |
 
 
 ### Response
@@ -144,14 +138,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.application.patch_ats_application(connection_id="<value>", id="<value>", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new())
+res = s.application.patch_ats_application(::UnifiedRubySDK::Operations::PatchAtsApplicationSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", id="<value>", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new())
 
 if ! res.ats_application.nil?
   # handle response
@@ -161,11 +152,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `connection_id`                                                                   | *::String*                                                                        | :heavy_check_mark:                                                                | ID of the connection                                                              |
-| `id`                                                                              | *::String*                                                                        | :heavy_check_mark:                                                                | ID of the Application                                                             |
-| `ats_application`                                                                 | [::UnifiedRubySDK::Shared::AtsApplication](../../models/shared/atsapplication.md) | :heavy_minus_sign:                                                                | N/A                                                                               |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                          | [::UnifiedRubySDK::Operations::PatchAtsApplicationSecurity](../../models/operations/patchatsapplicationsecurity.md) | :heavy_check_mark:                                                                                                  | The security requirements to use for the request.                                                                   |
+| `connection_id`                                                                                                     | *::String*                                                                                                          | :heavy_check_mark:                                                                                                  | ID of the connection                                                                                                |
+| `id`                                                                                                                | *::String*                                                                                                          | :heavy_check_mark:                                                                                                  | ID of the Application                                                                                               |
+| `ats_application`                                                                                                   | [::UnifiedRubySDK::Shared::AtsApplication](../../models/shared/atsapplication.md)                                   | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
 
 
 ### Response
@@ -184,14 +176,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.application.remove_ats_application(connection_id="<value>", id="<value>")
+res = s.application.remove_ats_application(::UnifiedRubySDK::Operations::RemoveAtsApplicationSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -201,10 +190,11 @@ end
 
 ### Parameters
 
-| Parameter             | Type                  | Required              | Description           |
-| --------------------- | --------------------- | --------------------- | --------------------- |
-| `connection_id`       | *::String*            | :heavy_check_mark:    | ID of the connection  |
-| `id`                  | *::String*            | :heavy_check_mark:    | ID of the Application |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                            | [::UnifiedRubySDK::Operations::RemoveAtsApplicationSecurity](../../models/operations/removeatsapplicationsecurity.md) | :heavy_check_mark:                                                                                                    | The security requirements to use for the request.                                                                     |
+| `connection_id`                                                                                                       | *::String*                                                                                                            | :heavy_check_mark:                                                                                                    | ID of the connection                                                                                                  |
+| `id`                                                                                                                  | *::String*                                                                                                            | :heavy_check_mark:                                                                                                    | ID of the Application                                                                                                 |
 
 
 ### Response
@@ -223,14 +213,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.application.update_ats_application(connection_id="<value>", id="<value>", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new())
+res = s.application.update_ats_application(::UnifiedRubySDK::Operations::UpdateAtsApplicationSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", id="<value>", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new())
 
 if ! res.ats_application.nil?
   # handle response
@@ -240,11 +227,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `connection_id`                                                                   | *::String*                                                                        | :heavy_check_mark:                                                                | ID of the connection                                                              |
-| `id`                                                                              | *::String*                                                                        | :heavy_check_mark:                                                                | ID of the Application                                                             |
-| `ats_application`                                                                 | [::UnifiedRubySDK::Shared::AtsApplication](../../models/shared/atsapplication.md) | :heavy_minus_sign:                                                                | N/A                                                                               |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                            | [::UnifiedRubySDK::Operations::UpdateAtsApplicationSecurity](../../models/operations/updateatsapplicationsecurity.md) | :heavy_check_mark:                                                                                                    | The security requirements to use for the request.                                                                     |
+| `connection_id`                                                                                                       | *::String*                                                                                                            | :heavy_check_mark:                                                                                                    | ID of the connection                                                                                                  |
+| `id`                                                                                                                  | *::String*                                                                                                            | :heavy_check_mark:                                                                                                    | ID of the Application                                                                                                 |
+| `ats_application`                                                                                                     | [::UnifiedRubySDK::Shared::AtsApplication](../../models/shared/atsapplication.md)                                     | :heavy_minus_sign:                                                                                                    | N/A                                                                                                                   |
 
 
 ### Response

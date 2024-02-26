@@ -19,8 +19,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIssuesRequest)).returns(::UnifiedRubySDK::Operations::ListUnifiedIssuesResponse) }
-    def list_unified_issues(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIssuesRequest), security: ::UnifiedRubySDK::Operations::ListUnifiedIssuesSecurity).returns(::UnifiedRubySDK::Operations::ListUnifiedIssuesResponse) }
+    def list_unified_issues(request, security)
       # list_unified_issues - List support issues
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -33,7 +33,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
