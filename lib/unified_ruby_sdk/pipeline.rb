@@ -19,8 +19,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, crm_pipeline: T.nilable(::UnifiedRubySDK::Shared::CrmPipeline)).returns(::UnifiedRubySDK::Operations::CreateCrmPipelineResponse) }
-    def create_crm_pipeline(connection_id, crm_pipeline = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::CreateCrmPipelineSecurity, connection_id: ::String, crm_pipeline: T.nilable(::UnifiedRubySDK::Shared::CrmPipeline)).returns(::UnifiedRubySDK::Operations::CreateCrmPipelineResponse) }
+    def create_crm_pipeline(security, connection_id, crm_pipeline = nil)
       # create_crm_pipeline - Create a pipeline
       request = ::UnifiedRubySDK::Operations::CreateCrmPipelineRequest.new(
         
@@ -43,7 +43,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -68,8 +68,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCrmPipelineResponse) }
-    def get_crm_pipeline(connection_id, id, fields_ = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetCrmPipelineSecurity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCrmPipelineResponse) }
+    def get_crm_pipeline(security, connection_id, id, fields_ = nil)
       # get_crm_pipeline - Retrieve a pipeline
       request = ::UnifiedRubySDK::Operations::GetCrmPipelineRequest.new(
         
@@ -93,7 +93,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -111,8 +111,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmPipelinesRequest)).returns(::UnifiedRubySDK::Operations::ListCrmPipelinesResponse) }
-    def list_crm_pipelines(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmPipelinesRequest), security: ::UnifiedRubySDK::Operations::ListCrmPipelinesSecurity).returns(::UnifiedRubySDK::Operations::ListCrmPipelinesResponse) }
+    def list_crm_pipelines(request, security)
       # list_crm_pipelines - List all pipelines
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -130,7 +130,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -148,8 +148,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_pipeline: T.nilable(::UnifiedRubySDK::Shared::CrmPipeline)).returns(::UnifiedRubySDK::Operations::PatchCrmPipelineResponse) }
-    def patch_crm_pipeline(connection_id, id, crm_pipeline = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::PatchCrmPipelineSecurity, connection_id: ::String, id: ::String, crm_pipeline: T.nilable(::UnifiedRubySDK::Shared::CrmPipeline)).returns(::UnifiedRubySDK::Operations::PatchCrmPipelineResponse) }
+    def patch_crm_pipeline(security, connection_id, id, crm_pipeline = nil)
       # patch_crm_pipeline - Update a pipeline
       request = ::UnifiedRubySDK::Operations::PatchCrmPipelineRequest.new(
         
@@ -173,7 +173,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -198,8 +198,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCrmPipelineResponse) }
-    def remove_crm_pipeline(connection_id, id)
+    sig { params(security: ::UnifiedRubySDK::Operations::RemoveCrmPipelineSecurity, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCrmPipelineResponse) }
+    def remove_crm_pipeline(security, connection_id, id)
       # remove_crm_pipeline - Remove a pipeline
       request = ::UnifiedRubySDK::Operations::RemoveCrmPipelineRequest.new(
         
@@ -220,7 +220,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.delete(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -237,8 +237,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_pipeline: T.nilable(::UnifiedRubySDK::Shared::CrmPipeline)).returns(::UnifiedRubySDK::Operations::UpdateCrmPipelineResponse) }
-    def update_crm_pipeline(connection_id, id, crm_pipeline = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::UpdateCrmPipelineSecurity, connection_id: ::String, id: ::String, crm_pipeline: T.nilable(::UnifiedRubySDK::Shared::CrmPipeline)).returns(::UnifiedRubySDK::Operations::UpdateCrmPipelineResponse) }
+    def update_crm_pipeline(security, connection_id, id, crm_pipeline = nil)
       # update_crm_pipeline - Update a pipeline
       request = ::UnifiedRubySDK::Operations::UpdateCrmPipelineRequest.new(
         
@@ -262,7 +262,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')

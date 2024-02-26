@@ -19,8 +19,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, domain: T.nilable(::String), name: T.nilable(::String)).returns(::UnifiedRubySDK::Operations::ListEnrichCompaniesResponse) }
-    def list_enrich_companies(connection_id, domain = nil, name = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::ListEnrichCompaniesSecurity, connection_id: ::String, domain: T.nilable(::String), name: T.nilable(::String)).returns(::UnifiedRubySDK::Operations::ListEnrichCompaniesResponse) }
+    def list_enrich_companies(security, connection_id, domain = nil, name = nil)
       # list_enrich_companies - Retrieve enrichment information for a company
       request = ::UnifiedRubySDK::Operations::ListEnrichCompaniesRequest.new(
         
@@ -44,7 +44,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -62,8 +62,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListEnrichPeopleRequest)).returns(::UnifiedRubySDK::Operations::ListEnrichPeopleResponse) }
-    def list_enrich_people(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListEnrichPeopleRequest), security: ::UnifiedRubySDK::Operations::ListEnrichPeopleSecurity).returns(::UnifiedRubySDK::Operations::ListEnrichPeopleResponse) }
+    def list_enrich_people(request, security)
       # list_enrich_people - Retrieve enrichment information for a person
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -81,7 +81,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')

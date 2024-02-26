@@ -19,8 +19,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, marketing_list: T.nilable(::UnifiedRubySDK::Shared::MarketingList)).returns(::UnifiedRubySDK::Operations::CreateMartechListResponse) }
-    def create_martech_list(connection_id, marketing_list = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::CreateMartechListSecurity, connection_id: ::String, marketing_list: T.nilable(::UnifiedRubySDK::Shared::MarketingList)).returns(::UnifiedRubySDK::Operations::CreateMartechListResponse) }
+    def create_martech_list(security, connection_id, marketing_list = nil)
       # create_martech_list - Create a list
       request = ::UnifiedRubySDK::Operations::CreateMartechListRequest.new(
         
@@ -43,7 +43,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -68,8 +68,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetMartechListResponse) }
-    def get_martech_list(connection_id, id, fields_ = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetMartechListSecurity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetMartechListResponse) }
+    def get_martech_list(security, connection_id, id, fields_ = nil)
       # get_martech_list - Retrieve a list
       request = ::UnifiedRubySDK::Operations::GetMartechListRequest.new(
         
@@ -93,7 +93,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -111,8 +111,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListMartechListsRequest)).returns(::UnifiedRubySDK::Operations::ListMartechListsResponse) }
-    def list_martech_lists(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListMartechListsRequest), security: ::UnifiedRubySDK::Operations::ListMartechListsSecurity).returns(::UnifiedRubySDK::Operations::ListMartechListsResponse) }
+    def list_martech_lists(request, security)
       # list_martech_lists - List all lists
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -130,7 +130,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -148,8 +148,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, marketing_list: T.nilable(::UnifiedRubySDK::Shared::MarketingList)).returns(::UnifiedRubySDK::Operations::PatchMartechListResponse) }
-    def patch_martech_list(connection_id, id, marketing_list = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::PatchMartechListSecurity, connection_id: ::String, id: ::String, marketing_list: T.nilable(::UnifiedRubySDK::Shared::MarketingList)).returns(::UnifiedRubySDK::Operations::PatchMartechListResponse) }
+    def patch_martech_list(security, connection_id, id, marketing_list = nil)
       # patch_martech_list - Update a list
       request = ::UnifiedRubySDK::Operations::PatchMartechListRequest.new(
         
@@ -173,7 +173,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -198,8 +198,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveMartechListResponse) }
-    def remove_martech_list(connection_id, id)
+    sig { params(security: ::UnifiedRubySDK::Operations::RemoveMartechListSecurity, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveMartechListResponse) }
+    def remove_martech_list(security, connection_id, id)
       # remove_martech_list - Remove a list
       request = ::UnifiedRubySDK::Operations::RemoveMartechListRequest.new(
         
@@ -220,7 +220,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.delete(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -237,8 +237,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, marketing_list: T.nilable(::UnifiedRubySDK::Shared::MarketingList)).returns(::UnifiedRubySDK::Operations::UpdateMartechListResponse) }
-    def update_martech_list(connection_id, id, marketing_list = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::UpdateMartechListSecurity, connection_id: ::String, id: ::String, marketing_list: T.nilable(::UnifiedRubySDK::Shared::MarketingList)).returns(::UnifiedRubySDK::Operations::UpdateMartechListResponse) }
+    def update_martech_list(security, connection_id, id, marketing_list = nil)
       # update_martech_list - Update a list
       request = ::UnifiedRubySDK::Operations::UpdateMartechListRequest.new(
         
@@ -262,7 +262,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')

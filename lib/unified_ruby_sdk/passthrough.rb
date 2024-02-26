@@ -19,8 +19,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(T::Hash[Symbol, ::Object])).returns(::UnifiedRubySDK::Operations::CreatePassthroughResponse) }
-    def create_passthrough(connection_id, path, request_body = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::CreatePassthroughSecurity, connection_id: ::String, path: ::String, request_body: T.nilable(T::Hash[Symbol, ::Object])).returns(::UnifiedRubySDK::Operations::CreatePassthroughResponse) }
+    def create_passthrough(security, connection_id, path, request_body = nil)
       # create_passthrough - Passthrough POST
       request = ::UnifiedRubySDK::Operations::CreatePassthroughRequest.new(
         
@@ -44,7 +44,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -69,8 +69,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String).returns(::UnifiedRubySDK::Operations::ListPassthroughsResponse) }
-    def list_passthroughs(connection_id, path)
+    sig { params(security: ::UnifiedRubySDK::Operations::ListPassthroughsSecurity, connection_id: ::String, path: ::String).returns(::UnifiedRubySDK::Operations::ListPassthroughsResponse) }
+    def list_passthroughs(security, connection_id, path)
       # list_passthroughs - Passthrough GET
       request = ::UnifiedRubySDK::Operations::ListPassthroughsRequest.new(
         
@@ -91,7 +91,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -109,8 +109,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(T::Hash[Symbol, ::Object])).returns(::UnifiedRubySDK::Operations::PatchPassthroughResponse) }
-    def patch_passthrough(connection_id, path, request_body = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::PatchPassthroughSecurity, connection_id: ::String, path: ::String, request_body: T.nilable(T::Hash[Symbol, ::Object])).returns(::UnifiedRubySDK::Operations::PatchPassthroughResponse) }
+    def patch_passthrough(security, connection_id, path, request_body = nil)
       # patch_passthrough - Passthrough PUT
       request = ::UnifiedRubySDK::Operations::PatchPassthroughRequest.new(
         
@@ -134,7 +134,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -159,8 +159,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String).returns(::UnifiedRubySDK::Operations::RemovePassthroughResponse) }
-    def remove_passthrough(connection_id, path)
+    sig { params(security: ::UnifiedRubySDK::Operations::RemovePassthroughSecurity, connection_id: ::String, path: ::String).returns(::UnifiedRubySDK::Operations::RemovePassthroughResponse) }
+    def remove_passthrough(security, connection_id, path)
       # remove_passthrough - Passthrough DELETE
       request = ::UnifiedRubySDK::Operations::RemovePassthroughRequest.new(
         
@@ -181,7 +181,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.delete(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -199,8 +199,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(T::Hash[Symbol, ::Object])).returns(::UnifiedRubySDK::Operations::UpdatePassthroughResponse) }
-    def update_passthrough(connection_id, path, request_body = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::UpdatePassthroughSecurity, connection_id: ::String, path: ::String, request_body: T.nilable(T::Hash[Symbol, ::Object])).returns(::UnifiedRubySDK::Operations::UpdatePassthroughResponse) }
+    def update_passthrough(security, connection_id, path, request_body = nil)
       # update_passthrough - Passthrough PUT
       request = ::UnifiedRubySDK::Operations::UpdatePassthroughRequest.new(
         
@@ -224,7 +224,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
