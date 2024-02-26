@@ -19,8 +19,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, accounting_account: T.nilable(::UnifiedRubySDK::Shared::AccountingAccount)).returns(::UnifiedRubySDK::Operations::CreateAccountingAccountResponse) }
-    def create_accounting_account(connection_id, accounting_account = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::CreateAccountingAccountSecurity, connection_id: ::String, accounting_account: T.nilable(::UnifiedRubySDK::Shared::AccountingAccount)).returns(::UnifiedRubySDK::Operations::CreateAccountingAccountResponse) }
+    def create_accounting_account(security, connection_id, accounting_account = nil)
       # create_accounting_account - Create an account
       request = ::UnifiedRubySDK::Operations::CreateAccountingAccountRequest.new(
         
@@ -43,7 +43,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -68,8 +68,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAccountingAccountResponse) }
-    def get_accounting_account(connection_id, id, fields_ = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetAccountingAccountSecurity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAccountingAccountResponse) }
+    def get_accounting_account(security, connection_id, id, fields_ = nil)
       # get_accounting_account - Retrieve an account
       request = ::UnifiedRubySDK::Operations::GetAccountingAccountRequest.new(
         
@@ -93,7 +93,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -111,8 +111,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingAccountsRequest)).returns(::UnifiedRubySDK::Operations::ListAccountingAccountsResponse) }
-    def list_accounting_accounts(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingAccountsRequest), security: ::UnifiedRubySDK::Operations::ListAccountingAccountsSecurity).returns(::UnifiedRubySDK::Operations::ListAccountingAccountsResponse) }
+    def list_accounting_accounts(request, security)
       # list_accounting_accounts - List all accounts
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -130,7 +130,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -148,8 +148,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_account: T.nilable(::UnifiedRubySDK::Shared::AccountingAccount)).returns(::UnifiedRubySDK::Operations::PatchAccountingAccountResponse) }
-    def patch_accounting_account(connection_id, id, accounting_account = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::PatchAccountingAccountSecurity, connection_id: ::String, id: ::String, accounting_account: T.nilable(::UnifiedRubySDK::Shared::AccountingAccount)).returns(::UnifiedRubySDK::Operations::PatchAccountingAccountResponse) }
+    def patch_accounting_account(security, connection_id, id, accounting_account = nil)
       # patch_accounting_account - Update an account
       request = ::UnifiedRubySDK::Operations::PatchAccountingAccountRequest.new(
         
@@ -173,7 +173,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -198,8 +198,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAccountingAccountResponse) }
-    def remove_accounting_account(connection_id, id)
+    sig { params(security: ::UnifiedRubySDK::Operations::RemoveAccountingAccountSecurity, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAccountingAccountResponse) }
+    def remove_accounting_account(security, connection_id, id)
       # remove_accounting_account - Remove an account
       request = ::UnifiedRubySDK::Operations::RemoveAccountingAccountRequest.new(
         
@@ -220,7 +220,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.delete(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -237,8 +237,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_account: T.nilable(::UnifiedRubySDK::Shared::AccountingAccount)).returns(::UnifiedRubySDK::Operations::UpdateAccountingAccountResponse) }
-    def update_accounting_account(connection_id, id, accounting_account = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::UpdateAccountingAccountSecurity, connection_id: ::String, id: ::String, accounting_account: T.nilable(::UnifiedRubySDK::Shared::AccountingAccount)).returns(::UnifiedRubySDK::Operations::UpdateAccountingAccountResponse) }
+    def update_accounting_account(security, connection_id, id, accounting_account = nil)
       # update_accounting_account - Update an account
       request = ::UnifiedRubySDK::Operations::UpdateAccountingAccountRequest.new(
         
@@ -262,7 +262,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')

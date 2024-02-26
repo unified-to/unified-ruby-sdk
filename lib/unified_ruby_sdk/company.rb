@@ -19,8 +19,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, crm_company: T.nilable(::UnifiedRubySDK::Shared::CrmCompany)).returns(::UnifiedRubySDK::Operations::CreateCrmCompanyResponse) }
-    def create_crm_company(connection_id, crm_company = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::CreateCrmCompanySecurity, connection_id: ::String, crm_company: T.nilable(::UnifiedRubySDK::Shared::CrmCompany)).returns(::UnifiedRubySDK::Operations::CreateCrmCompanyResponse) }
+    def create_crm_company(security, connection_id, crm_company = nil)
       # create_crm_company - Create a company
       request = ::UnifiedRubySDK::Operations::CreateCrmCompanyRequest.new(
         
@@ -43,7 +43,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -68,8 +68,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAtsCompanyResponse) }
-    def get_ats_company(connection_id, id, fields_ = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetAtsCompanySecurity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAtsCompanyResponse) }
+    def get_ats_company(security, connection_id, id, fields_ = nil)
       # get_ats_company - Retrieve a company
       request = ::UnifiedRubySDK::Operations::GetAtsCompanyRequest.new(
         
@@ -93,7 +93,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -111,8 +111,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCrmCompanyResponse) }
-    def get_crm_company(connection_id, id, fields_ = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetCrmCompanySecurity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCrmCompanyResponse) }
+    def get_crm_company(security, connection_id, id, fields_ = nil)
       # get_crm_company - Retrieve a company
       request = ::UnifiedRubySDK::Operations::GetCrmCompanyRequest.new(
         
@@ -136,7 +136,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -154,8 +154,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsCompaniesRequest)).returns(::UnifiedRubySDK::Operations::ListAtsCompaniesResponse) }
-    def list_ats_companies(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsCompaniesRequest), security: ::UnifiedRubySDK::Operations::ListAtsCompaniesSecurity).returns(::UnifiedRubySDK::Operations::ListAtsCompaniesResponse) }
+    def list_ats_companies(request, security)
       # list_ats_companies - List all companies
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -173,7 +173,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -191,8 +191,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmCompaniesRequest)).returns(::UnifiedRubySDK::Operations::ListCrmCompaniesResponse) }
-    def list_crm_companies(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmCompaniesRequest), security: ::UnifiedRubySDK::Operations::ListCrmCompaniesSecurity).returns(::UnifiedRubySDK::Operations::ListCrmCompaniesResponse) }
+    def list_crm_companies(request, security)
       # list_crm_companies - List all companies
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -210,7 +210,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -228,8 +228,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, domain: T.nilable(::String), name: T.nilable(::String)).returns(::UnifiedRubySDK::Operations::ListEnrichCompaniesResponse) }
-    def list_enrich_companies(connection_id, domain = nil, name = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::ListEnrichCompaniesSecurity, connection_id: ::String, domain: T.nilable(::String), name: T.nilable(::String)).returns(::UnifiedRubySDK::Operations::ListEnrichCompaniesResponse) }
+    def list_enrich_companies(security, connection_id, domain = nil, name = nil)
       # list_enrich_companies - Retrieve enrichment information for a company
       request = ::UnifiedRubySDK::Operations::ListEnrichCompaniesRequest.new(
         
@@ -253,7 +253,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -271,8 +271,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_company: T.nilable(::UnifiedRubySDK::Shared::CrmCompany)).returns(::UnifiedRubySDK::Operations::PatchCrmCompanyResponse) }
-    def patch_crm_company(connection_id, id, crm_company = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::PatchCrmCompanySecurity, connection_id: ::String, id: ::String, crm_company: T.nilable(::UnifiedRubySDK::Shared::CrmCompany)).returns(::UnifiedRubySDK::Operations::PatchCrmCompanyResponse) }
+    def patch_crm_company(security, connection_id, id, crm_company = nil)
       # patch_crm_company - Update a company
       request = ::UnifiedRubySDK::Operations::PatchCrmCompanyRequest.new(
         
@@ -296,7 +296,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -321,8 +321,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCrmCompanyResponse) }
-    def remove_crm_company(connection_id, id)
+    sig { params(security: ::UnifiedRubySDK::Operations::RemoveCrmCompanySecurity, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCrmCompanyResponse) }
+    def remove_crm_company(security, connection_id, id)
       # remove_crm_company - Remove a company
       request = ::UnifiedRubySDK::Operations::RemoveCrmCompanyRequest.new(
         
@@ -343,7 +343,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.delete(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -360,8 +360,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_company: T.nilable(::UnifiedRubySDK::Shared::CrmCompany)).returns(::UnifiedRubySDK::Operations::UpdateCrmCompanyResponse) }
-    def update_crm_company(connection_id, id, crm_company = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::UpdateCrmCompanySecurity, connection_id: ::String, id: ::String, crm_company: T.nilable(::UnifiedRubySDK::Shared::CrmCompany)).returns(::UnifiedRubySDK::Operations::UpdateCrmCompanyResponse) }
+    def update_crm_company(security, connection_id, id, crm_company = nil)
       # update_crm_company - Update a company
       request = ::UnifiedRubySDK::Operations::UpdateCrmCompanyRequest.new(
         
@@ -385,7 +385,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')

@@ -21,14 +21,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.transaction.create_accounting_transaction(connection_id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
+res = s.transaction.create_accounting_transaction(::UnifiedRubySDK::Operations::CreateAccountingTransactionSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
     id: "<id>",
   ))
 
@@ -40,10 +37,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                 | *::String*                                                                                      | :heavy_check_mark:                                                                              | ID of the connection                                                                            |
-| `accounting_transaction`                                                                        | [::UnifiedRubySDK::Shared::AccountingTransaction](../../models/shared/accountingtransaction.md) | :heavy_minus_sign:                                                                              | N/A                                                                                             |
+| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                                          | [::UnifiedRubySDK::Operations::CreateAccountingTransactionSecurity](../../models/operations/createaccountingtransactionsecurity.md) | :heavy_check_mark:                                                                                                                  | The security requirements to use for the request.                                                                                   |
+| `connection_id`                                                                                                                     | *::String*                                                                                                                          | :heavy_check_mark:                                                                                                                  | ID of the connection                                                                                                                |
+| `accounting_transaction`                                                                                                            | [::UnifiedRubySDK::Shared::AccountingTransaction](../../models/shared/accountingtransaction.md)                                     | :heavy_minus_sign:                                                                                                                  | N/A                                                                                                                                 |
 
 
 ### Response
@@ -62,14 +60,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.transaction.get_accounting_transaction(connection_id="<value>", id="<value>", fields_=[
+res = s.transaction.get_accounting_transaction(::UnifiedRubySDK::Operations::GetAccountingTransactionSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", id="<value>", fields_=[
     "<value>",
   ])
 
@@ -81,11 +76,12 @@ end
 
 ### Parameters
 
-| Parameter                        | Type                             | Required                         | Description                      |
-| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Transaction            |
-| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                                    | [::UnifiedRubySDK::Operations::GetAccountingTransactionSecurity](../../models/operations/getaccountingtransactionsecurity.md) | :heavy_check_mark:                                                                                                            | The security requirements to use for the request.                                                                             |
+| `connection_id`                                                                                                               | *::String*                                                                                                                    | :heavy_check_mark:                                                                                                            | ID of the connection                                                                                                          |
+| `id`                                                                                                                          | *::String*                                                                                                                    | :heavy_check_mark:                                                                                                            | ID of the Transaction                                                                                                         |
+| `fields_`                                                                                                                     | T::Array<*::String*>                                                                                                          | :heavy_minus_sign:                                                                                                            | Comma-delimited fields to return                                                                                              |
 
 
 ### Response
@@ -104,18 +100,15 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
 
 req = ::UnifiedRubySDK::Operations::ListAccountingTransactionsRequest.new(
   connection_id: "<value>",
 )
     
-res = s.transaction.list_accounting_transactions(req)
+res = s.transaction.list_accounting_transactions(req, ::UnifiedRubySDK::Operations::ListAccountingTransactionsSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ))
 
 if ! res.accounting_transactions.nil?
   # handle response
@@ -125,9 +118,10 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                       | [::UnifiedRubySDK::Operations::ListAccountingTransactionsRequest](../../models/operations/listaccountingtransactionsrequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                         | [::UnifiedRubySDK::Operations::ListAccountingTransactionsRequest](../../models/operations/listaccountingtransactionsrequest.md)   | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| `security`                                                                                                                        | [::UnifiedRubySDK::Operations::ListAccountingTransactionsSecurity](../../models/operations/listaccountingtransactionssecurity.md) | :heavy_check_mark:                                                                                                                | The security requirements to use for the request.                                                                                 |
 
 
 ### Response
@@ -146,14 +140,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.transaction.patch_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
+res = s.transaction.patch_accounting_transaction(::UnifiedRubySDK::Operations::PatchAccountingTransactionSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
     id: "<id>",
   ))
 
@@ -165,11 +156,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                 | *::String*                                                                                      | :heavy_check_mark:                                                                              | ID of the connection                                                                            |
-| `id`                                                                                            | *::String*                                                                                      | :heavy_check_mark:                                                                              | ID of the Transaction                                                                           |
-| `accounting_transaction`                                                                        | [::UnifiedRubySDK::Shared::AccountingTransaction](../../models/shared/accountingtransaction.md) | :heavy_minus_sign:                                                                              | N/A                                                                                             |
+| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                                        | [::UnifiedRubySDK::Operations::PatchAccountingTransactionSecurity](../../models/operations/patchaccountingtransactionsecurity.md) | :heavy_check_mark:                                                                                                                | The security requirements to use for the request.                                                                                 |
+| `connection_id`                                                                                                                   | *::String*                                                                                                                        | :heavy_check_mark:                                                                                                                | ID of the connection                                                                                                              |
+| `id`                                                                                                                              | *::String*                                                                                                                        | :heavy_check_mark:                                                                                                                | ID of the Transaction                                                                                                             |
+| `accounting_transaction`                                                                                                          | [::UnifiedRubySDK::Shared::AccountingTransaction](../../models/shared/accountingtransaction.md)                                   | :heavy_minus_sign:                                                                                                                | N/A                                                                                                                               |
 
 
 ### Response
@@ -188,14 +180,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.transaction.remove_accounting_transaction(connection_id="<value>", id="<value>")
+res = s.transaction.remove_accounting_transaction(::UnifiedRubySDK::Operations::RemoveAccountingTransactionSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -205,10 +194,11 @@ end
 
 ### Parameters
 
-| Parameter             | Type                  | Required              | Description           |
-| --------------------- | --------------------- | --------------------- | --------------------- |
-| `connection_id`       | *::String*            | :heavy_check_mark:    | ID of the connection  |
-| `id`                  | *::String*            | :heavy_check_mark:    | ID of the Transaction |
+| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                                          | [::UnifiedRubySDK::Operations::RemoveAccountingTransactionSecurity](../../models/operations/removeaccountingtransactionsecurity.md) | :heavy_check_mark:                                                                                                                  | The security requirements to use for the request.                                                                                   |
+| `connection_id`                                                                                                                     | *::String*                                                                                                                          | :heavy_check_mark:                                                                                                                  | ID of the connection                                                                                                                |
+| `id`                                                                                                                                | *::String*                                                                                                                          | :heavy_check_mark:                                                                                                                  | ID of the Transaction                                                                                                               |
 
 
 ### Response
@@ -227,14 +217,11 @@ require 'unified_ruby_sdk'
 
 
 s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
     
-res = s.transaction.update_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
+res = s.transaction.update_accounting_transaction(::UnifiedRubySDK::Operations::UpdateAccountingTransactionSecurity.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  ), connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
     id: "<id>",
   ))
 
@@ -246,11 +233,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                 | *::String*                                                                                      | :heavy_check_mark:                                                                              | ID of the connection                                                                            |
-| `id`                                                                                            | *::String*                                                                                      | :heavy_check_mark:                                                                              | ID of the Transaction                                                                           |
-| `accounting_transaction`                                                                        | [::UnifiedRubySDK::Shared::AccountingTransaction](../../models/shared/accountingtransaction.md) | :heavy_minus_sign:                                                                              | N/A                                                                                             |
+| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                                          | [::UnifiedRubySDK::Operations::UpdateAccountingTransactionSecurity](../../models/operations/updateaccountingtransactionsecurity.md) | :heavy_check_mark:                                                                                                                  | The security requirements to use for the request.                                                                                   |
+| `connection_id`                                                                                                                     | *::String*                                                                                                                          | :heavy_check_mark:                                                                                                                  | ID of the connection                                                                                                                |
+| `id`                                                                                                                                | *::String*                                                                                                                          | :heavy_check_mark:                                                                                                                  | ID of the Transaction                                                                                                               |
+| `accounting_transaction`                                                                                                            | [::UnifiedRubySDK::Shared::AccountingTransaction](../../models/shared/accountingtransaction.md)                                     | :heavy_minus_sign:                                                                                                                  | N/A                                                                                                                                 |
 
 
 ### Response

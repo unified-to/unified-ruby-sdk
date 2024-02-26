@@ -19,8 +19,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, storage_file: T.nilable(::UnifiedRubySDK::Shared::StorageFile)).returns(::UnifiedRubySDK::Operations::CreateStorageFileResponse) }
-    def create_storage_file(connection_id, storage_file = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::CreateStorageFileSecurity, connection_id: ::String, storage_file: T.nilable(::UnifiedRubySDK::Shared::StorageFile)).returns(::UnifiedRubySDK::Operations::CreateStorageFileResponse) }
+    def create_storage_file(security, connection_id, storage_file = nil)
       # create_storage_file - Create a file
       request = ::UnifiedRubySDK::Operations::CreateStorageFileRequest.new(
         
@@ -43,7 +43,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -68,8 +68,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetStorageFileResponse) }
-    def get_storage_file(connection_id, id, fields_ = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::GetStorageFileSecurity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetStorageFileResponse) }
+    def get_storage_file(security, connection_id, id, fields_ = nil)
       # get_storage_file - Retrieve a file
       request = ::UnifiedRubySDK::Operations::GetStorageFileRequest.new(
         
@@ -93,7 +93,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -111,8 +111,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListStorageFilesRequest)).returns(::UnifiedRubySDK::Operations::ListStorageFilesResponse) }
-    def list_storage_files(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListStorageFilesRequest), security: ::UnifiedRubySDK::Operations::ListStorageFilesSecurity).returns(::UnifiedRubySDK::Operations::ListStorageFilesResponse) }
+    def list_storage_files(request, security)
       # list_storage_files - List all files
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -130,7 +130,7 @@ module UnifiedRubySDK
       r = @sdk_configuration.client.get(url) do |req|
         req.headers = headers
         req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -148,8 +148,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, storage_file: T.nilable(::UnifiedRubySDK::Shared::StorageFile)).returns(::UnifiedRubySDK::Operations::PatchStorageFileResponse) }
-    def patch_storage_file(connection_id, id, storage_file = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::PatchStorageFileSecurity, connection_id: ::String, id: ::String, storage_file: T.nilable(::UnifiedRubySDK::Shared::StorageFile)).returns(::UnifiedRubySDK::Operations::PatchStorageFileResponse) }
+    def patch_storage_file(security, connection_id, id, storage_file = nil)
       # patch_storage_file - Update a file
       request = ::UnifiedRubySDK::Operations::PatchStorageFileRequest.new(
         
@@ -173,7 +173,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
@@ -198,8 +198,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveStorageFileResponse) }
-    def remove_storage_file(connection_id, id)
+    sig { params(security: ::UnifiedRubySDK::Operations::RemoveStorageFileSecurity, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveStorageFileResponse) }
+    def remove_storage_file(security, connection_id, id)
       # remove_storage_file - Remove a file
       request = ::UnifiedRubySDK::Operations::RemoveStorageFileRequest.new(
         
@@ -220,7 +220,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.delete(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -237,8 +237,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, storage_file: T.nilable(::UnifiedRubySDK::Shared::StorageFile)).returns(::UnifiedRubySDK::Operations::UpdateStorageFileResponse) }
-    def update_storage_file(connection_id, id, storage_file = nil)
+    sig { params(security: ::UnifiedRubySDK::Operations::UpdateStorageFileSecurity, connection_id: ::String, id: ::String, storage_file: T.nilable(::UnifiedRubySDK::Shared::StorageFile)).returns(::UnifiedRubySDK::Operations::UpdateStorageFileResponse) }
+    def update_storage_file(security, connection_id, id, storage_file = nil)
       # update_storage_file - Update a file
       request = ::UnifiedRubySDK::Operations::UpdateStorageFileRequest.new(
         
@@ -262,7 +262,7 @@ module UnifiedRubySDK
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        Utils.configure_request_security(req, security) if !security.nil?
         if form
           req.body = Utils.encode_form(form)
         elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')

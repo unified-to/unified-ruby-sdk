@@ -1,21 +1,22 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 7bd6e19ec36f960e56c7d65cda36a422
+  docChecksum: 7b981c3199081a2591af224351cdfba2
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.269.0
-  releaseVersion: 0.4.17
-  configChecksum: 53a1ea0579d5ad3ccf28a297945f72ef
+  generationVersion: 2.272.4
+  releaseVersion: 0.5.0
+  configChecksum: a7196ebb9abc3eb4e59ea8655826ef70
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
 features:
   ruby:
-    core: 3.2.9
+    core: 3.2.10
     flattening: 2.81.1
-    globalSecurity: 2.81.3
+    globalSecurity: 2.81.4
     globalServerURLs: 2.82.1
+    methodSecurity: 2.82.1
 generatedFiles:
   - lib/unified_ruby_sdk/sdkconfiguration.rb
   - lib/unified_ruby_sdk/accounting.rb
@@ -122,461 +123,686 @@ generatedFiles:
   - sorbet/tapioca/config.yml
   - sorbet/tapioca/require.rb
   - unified_ruby_sdk.gemspec
+  - lib/unified_ruby_sdk/models/operations/createaccountingaccount_security.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingaccount_request.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingcontact_security.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingcontact_request.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountinginvoice_security.rb
   - lib/unified_ruby_sdk/models/operations/createaccountinginvoice_request.rb
   - lib/unified_ruby_sdk/models/operations/createaccountinginvoice_response.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingpayment_security.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingpayment_request.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingpayment_response.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingtaxrate_security.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingtaxrate_request.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingtaxrate_response.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingtransaction_security.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingtransaction_request.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingtransaction_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingaccount_security.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingaccount_request.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingcontact_security.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingcontact_request.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountinginvoice_security.rb
   - lib/unified_ruby_sdk/models/operations/getaccountinginvoice_request.rb
   - lib/unified_ruby_sdk/models/operations/getaccountinginvoice_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingorganization_security.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingorganization_request.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingorganization_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingpayment_security.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingpayment_request.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingpayment_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingpayout_security.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingpayout_request.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingpayout_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingrefund_security.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingrefund_request.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingrefund_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingtaxrate_security.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingtaxrate_request.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingtaxrate_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingtransaction_security.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingtransaction_request.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingtransaction_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingaccounts_security.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingaccounts_request.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingaccounts_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingcontacts_security.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingcontacts_request.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingcontacts_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountinginvoices_security.rb
   - lib/unified_ruby_sdk/models/operations/listaccountinginvoices_request.rb
   - lib/unified_ruby_sdk/models/operations/listaccountinginvoices_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingorganizations_security.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingorganizations_request.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingorganizations_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingpayments_security.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingpayments_request.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingpayments_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingpayouts_security.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingpayouts_request.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingpayouts_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingrefunds_security.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingrefunds_request.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingrefunds_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingtaxrates_security.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingtaxrates_request.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingtaxrates_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingtransactions_security.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingtransactions_request.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingtransactions_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingaccount_security.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingaccount_request.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingcontact_security.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingcontact_request.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountinginvoice_security.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountinginvoice_request.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountinginvoice_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingpayment_security.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingpayment_request.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingpayment_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingtaxrate_security.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingtaxrate_request.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingtaxrate_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingtransaction_security.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingtransaction_request.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingtransaction_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingaccount_security.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingaccount_request.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingcontact_security.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingcontact_request.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountinginvoice_security.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountinginvoice_request.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountinginvoice_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingpayment_security.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingpayment_request.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingpayment_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingtaxrate_security.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingtaxrate_request.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingtaxrate_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingtransaction_security.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingtransaction_request.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingtransaction_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingaccount_security.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingaccount_request.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingcontact_security.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingcontact_request.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountinginvoice_security.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountinginvoice_request.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountinginvoice_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingpayment_security.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingpayment_request.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingpayment_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingtaxrate_security.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingtaxrate_request.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingtaxrate_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingtransaction_security.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingtransaction_request.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingtransaction_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcrmcontact_security.rb
   - lib/unified_ruby_sdk/models/operations/createcrmcontact_request.rb
   - lib/unified_ruby_sdk/models/operations/createcrmcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/createuccontact_security.rb
   - lib/unified_ruby_sdk/models/operations/createuccontact_request.rb
   - lib/unified_ruby_sdk/models/operations/createuccontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcrmcontact_security.rb
   - lib/unified_ruby_sdk/models/operations/getcrmcontact_request.rb
   - lib/unified_ruby_sdk/models/operations/getcrmcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/getuccontact_security.rb
   - lib/unified_ruby_sdk/models/operations/getuccontact_request.rb
   - lib/unified_ruby_sdk/models/operations/getuccontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcrmcontacts_security.rb
   - lib/unified_ruby_sdk/models/operations/listcrmcontacts_request.rb
   - lib/unified_ruby_sdk/models/operations/listcrmcontacts_response.rb
+  - lib/unified_ruby_sdk/models/operations/listuccontacts_security.rb
   - lib/unified_ruby_sdk/models/operations/listuccontacts_request.rb
   - lib/unified_ruby_sdk/models/operations/listuccontacts_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcrmcontact_security.rb
   - lib/unified_ruby_sdk/models/operations/patchcrmcontact_request.rb
   - lib/unified_ruby_sdk/models/operations/patchcrmcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchuccontact_security.rb
   - lib/unified_ruby_sdk/models/operations/patchuccontact_request.rb
   - lib/unified_ruby_sdk/models/operations/patchuccontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecrmcontact_security.rb
   - lib/unified_ruby_sdk/models/operations/removecrmcontact_request.rb
   - lib/unified_ruby_sdk/models/operations/removecrmcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeuccontact_security.rb
   - lib/unified_ruby_sdk/models/operations/removeuccontact_request.rb
   - lib/unified_ruby_sdk/models/operations/removeuccontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecrmcontact_security.rb
   - lib/unified_ruby_sdk/models/operations/updatecrmcontact_request.rb
   - lib/unified_ruby_sdk/models/operations/updatecrmcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateuccontact_security.rb
   - lib/unified_ruby_sdk/models/operations/updateuccontact_request.rb
   - lib/unified_ruby_sdk/models/operations/updateuccontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/createatsactivity_security.rb
   - lib/unified_ruby_sdk/models/operations/createatsactivity_request.rb
   - lib/unified_ruby_sdk/models/operations/createatsactivity_response.rb
+  - lib/unified_ruby_sdk/models/operations/createatsapplication_security.rb
   - lib/unified_ruby_sdk/models/operations/createatsapplication_request.rb
   - lib/unified_ruby_sdk/models/operations/createatsapplication_response.rb
+  - lib/unified_ruby_sdk/models/operations/createatscandidate_security.rb
   - lib/unified_ruby_sdk/models/operations/createatscandidate_request.rb
   - lib/unified_ruby_sdk/models/operations/createatscandidate_response.rb
+  - lib/unified_ruby_sdk/models/operations/createatsdocument_security.rb
   - lib/unified_ruby_sdk/models/operations/createatsdocument_request.rb
   - lib/unified_ruby_sdk/models/operations/createatsdocument_response.rb
+  - lib/unified_ruby_sdk/models/operations/createatsinterview_security.rb
   - lib/unified_ruby_sdk/models/operations/createatsinterview_request.rb
   - lib/unified_ruby_sdk/models/operations/createatsinterview_response.rb
+  - lib/unified_ruby_sdk/models/operations/createatsjob_security.rb
   - lib/unified_ruby_sdk/models/operations/createatsjob_request.rb
   - lib/unified_ruby_sdk/models/operations/createatsjob_response.rb
+  - lib/unified_ruby_sdk/models/operations/createatsscorecard_security.rb
   - lib/unified_ruby_sdk/models/operations/createatsscorecard_request.rb
   - lib/unified_ruby_sdk/models/operations/createatsscorecard_response.rb
+  - lib/unified_ruby_sdk/models/operations/getatsactivity_security.rb
   - lib/unified_ruby_sdk/models/operations/getatsactivity_request.rb
   - lib/unified_ruby_sdk/models/operations/getatsactivity_response.rb
+  - lib/unified_ruby_sdk/models/operations/getatsapplication_security.rb
   - lib/unified_ruby_sdk/models/operations/getatsapplication_request.rb
   - lib/unified_ruby_sdk/models/operations/getatsapplication_response.rb
+  - lib/unified_ruby_sdk/models/operations/getatscandidate_security.rb
   - lib/unified_ruby_sdk/models/operations/getatscandidate_request.rb
   - lib/unified_ruby_sdk/models/operations/getatscandidate_response.rb
+  - lib/unified_ruby_sdk/models/operations/getatscompany_security.rb
   - lib/unified_ruby_sdk/models/operations/getatscompany_request.rb
   - lib/unified_ruby_sdk/models/operations/getatscompany_response.rb
+  - lib/unified_ruby_sdk/models/operations/getatsdocument_security.rb
   - lib/unified_ruby_sdk/models/operations/getatsdocument_request.rb
   - lib/unified_ruby_sdk/models/operations/getatsdocument_response.rb
+  - lib/unified_ruby_sdk/models/operations/getatsinterview_security.rb
   - lib/unified_ruby_sdk/models/operations/getatsinterview_request.rb
   - lib/unified_ruby_sdk/models/operations/getatsinterview_response.rb
+  - lib/unified_ruby_sdk/models/operations/getatsjob_security.rb
   - lib/unified_ruby_sdk/models/operations/getatsjob_request.rb
   - lib/unified_ruby_sdk/models/operations/getatsjob_response.rb
+  - lib/unified_ruby_sdk/models/operations/getatsscorecard_security.rb
   - lib/unified_ruby_sdk/models/operations/getatsscorecard_request.rb
   - lib/unified_ruby_sdk/models/operations/getatsscorecard_response.rb
+  - lib/unified_ruby_sdk/models/operations/listatsactivities_security.rb
   - lib/unified_ruby_sdk/models/operations/listatsactivities_request.rb
   - lib/unified_ruby_sdk/models/operations/listatsactivities_response.rb
+  - lib/unified_ruby_sdk/models/operations/listatsapplications_security.rb
   - lib/unified_ruby_sdk/models/operations/listatsapplications_request.rb
   - lib/unified_ruby_sdk/models/operations/listatsapplications_response.rb
+  - lib/unified_ruby_sdk/models/operations/listatsapplicationstatuses_security.rb
   - lib/unified_ruby_sdk/models/operations/listatsapplicationstatuses_request.rb
   - lib/unified_ruby_sdk/models/operations/listatsapplicationstatuses_response.rb
+  - lib/unified_ruby_sdk/models/operations/listatscandidates_security.rb
   - lib/unified_ruby_sdk/models/operations/listatscandidates_request.rb
   - lib/unified_ruby_sdk/models/operations/listatscandidates_response.rb
+  - lib/unified_ruby_sdk/models/operations/listatscompanies_security.rb
   - lib/unified_ruby_sdk/models/operations/listatscompanies_request.rb
   - lib/unified_ruby_sdk/models/operations/listatscompanies_response.rb
+  - lib/unified_ruby_sdk/models/operations/listatsdocuments_security.rb
   - lib/unified_ruby_sdk/models/operations/listatsdocuments_request.rb
   - lib/unified_ruby_sdk/models/operations/listatsdocuments_response.rb
+  - lib/unified_ruby_sdk/models/operations/listatsinterviews_security.rb
   - lib/unified_ruby_sdk/models/operations/listatsinterviews_request.rb
   - lib/unified_ruby_sdk/models/operations/listatsinterviews_response.rb
+  - lib/unified_ruby_sdk/models/operations/listatsjobs_security.rb
   - lib/unified_ruby_sdk/models/operations/listatsjobs_request.rb
   - lib/unified_ruby_sdk/models/operations/listatsjobs_response.rb
+  - lib/unified_ruby_sdk/models/operations/listatsscorecards_security.rb
   - lib/unified_ruby_sdk/models/operations/listatsscorecards_request.rb
   - lib/unified_ruby_sdk/models/operations/listatsscorecards_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchatsactivity_security.rb
   - lib/unified_ruby_sdk/models/operations/patchatsactivity_request.rb
   - lib/unified_ruby_sdk/models/operations/patchatsactivity_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchatsapplication_security.rb
   - lib/unified_ruby_sdk/models/operations/patchatsapplication_request.rb
   - lib/unified_ruby_sdk/models/operations/patchatsapplication_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchatscandidate_security.rb
   - lib/unified_ruby_sdk/models/operations/patchatscandidate_request.rb
   - lib/unified_ruby_sdk/models/operations/patchatscandidate_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchatsdocument_security.rb
   - lib/unified_ruby_sdk/models/operations/patchatsdocument_request.rb
   - lib/unified_ruby_sdk/models/operations/patchatsdocument_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchatsinterview_security.rb
   - lib/unified_ruby_sdk/models/operations/patchatsinterview_request.rb
   - lib/unified_ruby_sdk/models/operations/patchatsinterview_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchatsjob_security.rb
   - lib/unified_ruby_sdk/models/operations/patchatsjob_request.rb
   - lib/unified_ruby_sdk/models/operations/patchatsjob_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchatsscorecard_security.rb
   - lib/unified_ruby_sdk/models/operations/patchatsscorecard_request.rb
   - lib/unified_ruby_sdk/models/operations/patchatsscorecard_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeatsactivity_security.rb
   - lib/unified_ruby_sdk/models/operations/removeatsactivity_request.rb
   - lib/unified_ruby_sdk/models/operations/removeatsactivity_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeatsapplication_security.rb
   - lib/unified_ruby_sdk/models/operations/removeatsapplication_request.rb
   - lib/unified_ruby_sdk/models/operations/removeatsapplication_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeatscandidate_security.rb
   - lib/unified_ruby_sdk/models/operations/removeatscandidate_request.rb
   - lib/unified_ruby_sdk/models/operations/removeatscandidate_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeatsdocument_security.rb
   - lib/unified_ruby_sdk/models/operations/removeatsdocument_request.rb
   - lib/unified_ruby_sdk/models/operations/removeatsdocument_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeatsinterview_security.rb
   - lib/unified_ruby_sdk/models/operations/removeatsinterview_request.rb
   - lib/unified_ruby_sdk/models/operations/removeatsinterview_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeatsjob_security.rb
   - lib/unified_ruby_sdk/models/operations/removeatsjob_request.rb
   - lib/unified_ruby_sdk/models/operations/removeatsjob_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeatsscorecard_security.rb
   - lib/unified_ruby_sdk/models/operations/removeatsscorecard_request.rb
   - lib/unified_ruby_sdk/models/operations/removeatsscorecard_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateatsactivity_security.rb
   - lib/unified_ruby_sdk/models/operations/updateatsactivity_request.rb
   - lib/unified_ruby_sdk/models/operations/updateatsactivity_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateatsapplication_security.rb
   - lib/unified_ruby_sdk/models/operations/updateatsapplication_request.rb
   - lib/unified_ruby_sdk/models/operations/updateatsapplication_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateatscandidate_security.rb
   - lib/unified_ruby_sdk/models/operations/updateatscandidate_request.rb
   - lib/unified_ruby_sdk/models/operations/updateatscandidate_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateatsdocument_security.rb
   - lib/unified_ruby_sdk/models/operations/updateatsdocument_request.rb
   - lib/unified_ruby_sdk/models/operations/updateatsdocument_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateatsinterview_security.rb
   - lib/unified_ruby_sdk/models/operations/updateatsinterview_request.rb
   - lib/unified_ruby_sdk/models/operations/updateatsinterview_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateatsjob_security.rb
   - lib/unified_ruby_sdk/models/operations/updateatsjob_request.rb
   - lib/unified_ruby_sdk/models/operations/updateatsjob_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateatsscorecard_security.rb
   - lib/unified_ruby_sdk/models/operations/updateatsscorecard_request.rb
   - lib/unified_ruby_sdk/models/operations/updateatsscorecard_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcrmcompany_security.rb
   - lib/unified_ruby_sdk/models/operations/createcrmcompany_request.rb
   - lib/unified_ruby_sdk/models/operations/createcrmcompany_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcrmcompany_security.rb
   - lib/unified_ruby_sdk/models/operations/getcrmcompany_request.rb
   - lib/unified_ruby_sdk/models/operations/getcrmcompany_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcrmcompanies_security.rb
   - lib/unified_ruby_sdk/models/operations/listcrmcompanies_request.rb
   - lib/unified_ruby_sdk/models/operations/listcrmcompanies_response.rb
+  - lib/unified_ruby_sdk/models/operations/listenrichcompanies_security.rb
   - lib/unified_ruby_sdk/models/operations/listenrichcompanies_request.rb
   - lib/unified_ruby_sdk/models/operations/listenrichcompanies_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcrmcompany_security.rb
   - lib/unified_ruby_sdk/models/operations/patchcrmcompany_request.rb
   - lib/unified_ruby_sdk/models/operations/patchcrmcompany_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecrmcompany_security.rb
   - lib/unified_ruby_sdk/models/operations/removecrmcompany_request.rb
   - lib/unified_ruby_sdk/models/operations/removecrmcompany_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecrmcompany_security.rb
   - lib/unified_ruby_sdk/models/operations/updatecrmcompany_request.rb
   - lib/unified_ruby_sdk/models/operations/updatecrmcompany_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcommercecollection_security.rb
   - lib/unified_ruby_sdk/models/operations/createcommercecollection_request.rb
   - lib/unified_ruby_sdk/models/operations/createcommercecollection_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcommerceinventory_security.rb
   - lib/unified_ruby_sdk/models/operations/createcommerceinventory_request.rb
   - lib/unified_ruby_sdk/models/operations/createcommerceinventory_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcommerceitem_security.rb
   - lib/unified_ruby_sdk/models/operations/createcommerceitem_request.rb
   - lib/unified_ruby_sdk/models/operations/createcommerceitem_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcommercelocation_security.rb
   - lib/unified_ruby_sdk/models/operations/createcommercelocation_request.rb
   - lib/unified_ruby_sdk/models/operations/createcommercelocation_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcommercecollection_security.rb
   - lib/unified_ruby_sdk/models/operations/getcommercecollection_request.rb
   - lib/unified_ruby_sdk/models/operations/getcommercecollection_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcommerceinventory_security.rb
   - lib/unified_ruby_sdk/models/operations/getcommerceinventory_request.rb
   - lib/unified_ruby_sdk/models/operations/getcommerceinventory_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcommerceitem_security.rb
   - lib/unified_ruby_sdk/models/operations/getcommerceitem_request.rb
   - lib/unified_ruby_sdk/models/operations/getcommerceitem_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcommercelocation_security.rb
   - lib/unified_ruby_sdk/models/operations/getcommercelocation_request.rb
   - lib/unified_ruby_sdk/models/operations/getcommercelocation_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcommercecollections_security.rb
   - lib/unified_ruby_sdk/models/operations/listcommercecollections_request.rb
   - lib/unified_ruby_sdk/models/operations/listcommercecollections_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcommerceinventories_security.rb
   - lib/unified_ruby_sdk/models/operations/listcommerceinventories_request.rb
   - lib/unified_ruby_sdk/models/operations/listcommerceinventories_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcommerceitems_security.rb
   - lib/unified_ruby_sdk/models/operations/listcommerceitems_request.rb
   - lib/unified_ruby_sdk/models/operations/listcommerceitems_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcommercelocations_security.rb
   - lib/unified_ruby_sdk/models/operations/listcommercelocations_request.rb
   - lib/unified_ruby_sdk/models/operations/listcommercelocations_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcommercecollection_security.rb
   - lib/unified_ruby_sdk/models/operations/patchcommercecollection_request.rb
   - lib/unified_ruby_sdk/models/operations/patchcommercecollection_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcommerceinventory_security.rb
   - lib/unified_ruby_sdk/models/operations/patchcommerceinventory_request.rb
   - lib/unified_ruby_sdk/models/operations/patchcommerceinventory_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcommerceitem_security.rb
   - lib/unified_ruby_sdk/models/operations/patchcommerceitem_request.rb
   - lib/unified_ruby_sdk/models/operations/patchcommerceitem_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcommercelocation_security.rb
   - lib/unified_ruby_sdk/models/operations/patchcommercelocation_request.rb
   - lib/unified_ruby_sdk/models/operations/patchcommercelocation_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecommercecollection_security.rb
   - lib/unified_ruby_sdk/models/operations/removecommercecollection_request.rb
   - lib/unified_ruby_sdk/models/operations/removecommercecollection_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecommerceinventory_security.rb
   - lib/unified_ruby_sdk/models/operations/removecommerceinventory_request.rb
   - lib/unified_ruby_sdk/models/operations/removecommerceinventory_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecommerceitem_security.rb
   - lib/unified_ruby_sdk/models/operations/removecommerceitem_request.rb
   - lib/unified_ruby_sdk/models/operations/removecommerceitem_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecommercelocation_security.rb
   - lib/unified_ruby_sdk/models/operations/removecommercelocation_request.rb
   - lib/unified_ruby_sdk/models/operations/removecommercelocation_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecommercecollection_security.rb
   - lib/unified_ruby_sdk/models/operations/updatecommercecollection_request.rb
   - lib/unified_ruby_sdk/models/operations/updatecommercecollection_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecommerceinventory_security.rb
   - lib/unified_ruby_sdk/models/operations/updatecommerceinventory_request.rb
   - lib/unified_ruby_sdk/models/operations/updatecommerceinventory_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecommerceitem_security.rb
   - lib/unified_ruby_sdk/models/operations/updatecommerceitem_request.rb
   - lib/unified_ruby_sdk/models/operations/updatecommerceitem_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecommercelocation_security.rb
   - lib/unified_ruby_sdk/models/operations/updatecommercelocation_request.rb
   - lib/unified_ruby_sdk/models/operations/updatecommercelocation_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcrmdeal_security.rb
   - lib/unified_ruby_sdk/models/operations/createcrmdeal_request.rb
   - lib/unified_ruby_sdk/models/operations/createcrmdeal_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcrmevent_security.rb
   - lib/unified_ruby_sdk/models/operations/createcrmevent_request.rb
   - lib/unified_ruby_sdk/models/operations/createcrmevent_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcrmlead_security.rb
   - lib/unified_ruby_sdk/models/operations/createcrmlead_request.rb
   - lib/unified_ruby_sdk/models/operations/createcrmlead_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcrmpipeline_security.rb
   - lib/unified_ruby_sdk/models/operations/createcrmpipeline_request.rb
   - lib/unified_ruby_sdk/models/operations/createcrmpipeline_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcrmdeal_security.rb
   - lib/unified_ruby_sdk/models/operations/getcrmdeal_request.rb
   - lib/unified_ruby_sdk/models/operations/getcrmdeal_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcrmevent_security.rb
   - lib/unified_ruby_sdk/models/operations/getcrmevent_request.rb
   - lib/unified_ruby_sdk/models/operations/getcrmevent_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcrmlead_security.rb
   - lib/unified_ruby_sdk/models/operations/getcrmlead_request.rb
   - lib/unified_ruby_sdk/models/operations/getcrmlead_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcrmpipeline_security.rb
   - lib/unified_ruby_sdk/models/operations/getcrmpipeline_request.rb
   - lib/unified_ruby_sdk/models/operations/getcrmpipeline_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcrmdeals_security.rb
   - lib/unified_ruby_sdk/models/operations/listcrmdeals_request.rb
   - lib/unified_ruby_sdk/models/operations/listcrmdeals_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcrmevents_security.rb
   - lib/unified_ruby_sdk/models/operations/listcrmevents_request.rb
   - lib/unified_ruby_sdk/models/operations/listcrmevents_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcrmleads_security.rb
   - lib/unified_ruby_sdk/models/operations/listcrmleads_request.rb
   - lib/unified_ruby_sdk/models/operations/listcrmleads_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcrmpipelines_security.rb
   - lib/unified_ruby_sdk/models/operations/listcrmpipelines_request.rb
   - lib/unified_ruby_sdk/models/operations/listcrmpipelines_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcrmdeal_security.rb
   - lib/unified_ruby_sdk/models/operations/patchcrmdeal_request.rb
   - lib/unified_ruby_sdk/models/operations/patchcrmdeal_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcrmevent_security.rb
   - lib/unified_ruby_sdk/models/operations/patchcrmevent_request.rb
   - lib/unified_ruby_sdk/models/operations/patchcrmevent_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcrmlead_security.rb
   - lib/unified_ruby_sdk/models/operations/patchcrmlead_request.rb
   - lib/unified_ruby_sdk/models/operations/patchcrmlead_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcrmpipeline_security.rb
   - lib/unified_ruby_sdk/models/operations/patchcrmpipeline_request.rb
   - lib/unified_ruby_sdk/models/operations/patchcrmpipeline_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecrmdeal_security.rb
   - lib/unified_ruby_sdk/models/operations/removecrmdeal_request.rb
   - lib/unified_ruby_sdk/models/operations/removecrmdeal_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecrmevent_security.rb
   - lib/unified_ruby_sdk/models/operations/removecrmevent_request.rb
   - lib/unified_ruby_sdk/models/operations/removecrmevent_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecrmlead_security.rb
   - lib/unified_ruby_sdk/models/operations/removecrmlead_request.rb
   - lib/unified_ruby_sdk/models/operations/removecrmlead_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecrmpipeline_security.rb
   - lib/unified_ruby_sdk/models/operations/removecrmpipeline_request.rb
   - lib/unified_ruby_sdk/models/operations/removecrmpipeline_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecrmdeal_security.rb
   - lib/unified_ruby_sdk/models/operations/updatecrmdeal_request.rb
   - lib/unified_ruby_sdk/models/operations/updatecrmdeal_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecrmevent_security.rb
   - lib/unified_ruby_sdk/models/operations/updatecrmevent_request.rb
   - lib/unified_ruby_sdk/models/operations/updatecrmevent_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecrmlead_security.rb
   - lib/unified_ruby_sdk/models/operations/updatecrmlead_request.rb
   - lib/unified_ruby_sdk/models/operations/updatecrmlead_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecrmpipeline_security.rb
   - lib/unified_ruby_sdk/models/operations/updatecrmpipeline_request.rb
   - lib/unified_ruby_sdk/models/operations/updatecrmpipeline_response.rb
+  - lib/unified_ruby_sdk/models/operations/listenrichpeople_security.rb
   - lib/unified_ruby_sdk/models/operations/listenrichpeople_request.rb
   - lib/unified_ruby_sdk/models/operations/listenrichpeople_response.rb
+  - lib/unified_ruby_sdk/models/operations/createhrisemployee_security.rb
   - lib/unified_ruby_sdk/models/operations/createhrisemployee_request.rb
   - lib/unified_ruby_sdk/models/operations/createhrisemployee_response.rb
+  - lib/unified_ruby_sdk/models/operations/createhrisgroup_security.rb
   - lib/unified_ruby_sdk/models/operations/createhrisgroup_request.rb
   - lib/unified_ruby_sdk/models/operations/createhrisgroup_response.rb
+  - lib/unified_ruby_sdk/models/operations/gethrisemployee_security.rb
   - lib/unified_ruby_sdk/models/operations/gethrisemployee_request.rb
   - lib/unified_ruby_sdk/models/operations/gethrisemployee_response.rb
+  - lib/unified_ruby_sdk/models/operations/gethrisgroup_security.rb
   - lib/unified_ruby_sdk/models/operations/gethrisgroup_request.rb
   - lib/unified_ruby_sdk/models/operations/gethrisgroup_response.rb
+  - lib/unified_ruby_sdk/models/operations/listhrisemployees_security.rb
   - lib/unified_ruby_sdk/models/operations/listhrisemployees_request.rb
   - lib/unified_ruby_sdk/models/operations/listhrisemployees_response.rb
+  - lib/unified_ruby_sdk/models/operations/listhrisgroups_security.rb
   - lib/unified_ruby_sdk/models/operations/listhrisgroups_request.rb
   - lib/unified_ruby_sdk/models/operations/listhrisgroups_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchhrisemployee_security.rb
   - lib/unified_ruby_sdk/models/operations/patchhrisemployee_request.rb
   - lib/unified_ruby_sdk/models/operations/patchhrisemployee_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchhrisgroup_security.rb
   - lib/unified_ruby_sdk/models/operations/patchhrisgroup_request.rb
   - lib/unified_ruby_sdk/models/operations/patchhrisgroup_response.rb
+  - lib/unified_ruby_sdk/models/operations/removehrisemployee_security.rb
   - lib/unified_ruby_sdk/models/operations/removehrisemployee_request.rb
   - lib/unified_ruby_sdk/models/operations/removehrisemployee_response.rb
+  - lib/unified_ruby_sdk/models/operations/removehrisgroup_security.rb
   - lib/unified_ruby_sdk/models/operations/removehrisgroup_request.rb
   - lib/unified_ruby_sdk/models/operations/removehrisgroup_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatehrisemployee_security.rb
   - lib/unified_ruby_sdk/models/operations/updatehrisemployee_request.rb
   - lib/unified_ruby_sdk/models/operations/updatehrisemployee_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatehrisgroup_security.rb
   - lib/unified_ruby_sdk/models/operations/updatehrisgroup_request.rb
   - lib/unified_ruby_sdk/models/operations/updatehrisgroup_response.rb
+  - lib/unified_ruby_sdk/models/operations/createmartechlist_security.rb
   - lib/unified_ruby_sdk/models/operations/createmartechlist_request.rb
   - lib/unified_ruby_sdk/models/operations/createmartechlist_response.rb
+  - lib/unified_ruby_sdk/models/operations/createmartechmember_security.rb
   - lib/unified_ruby_sdk/models/operations/createmartechmember_request.rb
   - lib/unified_ruby_sdk/models/operations/createmartechmember_response.rb
+  - lib/unified_ruby_sdk/models/operations/getmartechlist_security.rb
   - lib/unified_ruby_sdk/models/operations/getmartechlist_request.rb
   - lib/unified_ruby_sdk/models/operations/getmartechlist_response.rb
+  - lib/unified_ruby_sdk/models/operations/getmartechmember_security.rb
   - lib/unified_ruby_sdk/models/operations/getmartechmember_request.rb
   - lib/unified_ruby_sdk/models/operations/getmartechmember_response.rb
+  - lib/unified_ruby_sdk/models/operations/listmartechlists_security.rb
   - lib/unified_ruby_sdk/models/operations/listmartechlists_request.rb
   - lib/unified_ruby_sdk/models/operations/listmartechlists_response.rb
+  - lib/unified_ruby_sdk/models/operations/listmartechmembers_security.rb
   - lib/unified_ruby_sdk/models/operations/listmartechmembers_request.rb
   - lib/unified_ruby_sdk/models/operations/listmartechmembers_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchmartechlist_security.rb
   - lib/unified_ruby_sdk/models/operations/patchmartechlist_request.rb
   - lib/unified_ruby_sdk/models/operations/patchmartechlist_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchmartechmember_security.rb
   - lib/unified_ruby_sdk/models/operations/patchmartechmember_request.rb
   - lib/unified_ruby_sdk/models/operations/patchmartechmember_response.rb
+  - lib/unified_ruby_sdk/models/operations/removemartechlist_security.rb
   - lib/unified_ruby_sdk/models/operations/removemartechlist_request.rb
   - lib/unified_ruby_sdk/models/operations/removemartechlist_response.rb
+  - lib/unified_ruby_sdk/models/operations/removemartechmember_security.rb
   - lib/unified_ruby_sdk/models/operations/removemartechmember_request.rb
   - lib/unified_ruby_sdk/models/operations/removemartechmember_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatemartechlist_security.rb
   - lib/unified_ruby_sdk/models/operations/updatemartechlist_request.rb
   - lib/unified_ruby_sdk/models/operations/updatemartechlist_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatemartechmember_security.rb
   - lib/unified_ruby_sdk/models/operations/updatemartechmember_request.rb
   - lib/unified_ruby_sdk/models/operations/updatemartechmember_response.rb
+  - lib/unified_ruby_sdk/models/operations/createpassthrough_security.rb
   - lib/unified_ruby_sdk/models/operations/createpassthrough_request.rb
   - lib/unified_ruby_sdk/models/operations/createpassthrough_response.rb
+  - lib/unified_ruby_sdk/models/operations/listpassthroughs_security.rb
   - lib/unified_ruby_sdk/models/operations/listpassthroughs_request.rb
   - lib/unified_ruby_sdk/models/operations/listpassthroughs_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchpassthrough_security.rb
   - lib/unified_ruby_sdk/models/operations/patchpassthrough_request.rb
   - lib/unified_ruby_sdk/models/operations/patchpassthrough_response.rb
+  - lib/unified_ruby_sdk/models/operations/removepassthrough_security.rb
   - lib/unified_ruby_sdk/models/operations/removepassthrough_request.rb
   - lib/unified_ruby_sdk/models/operations/removepassthrough_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatepassthrough_security.rb
   - lib/unified_ruby_sdk/models/operations/updatepassthrough_request.rb
   - lib/unified_ruby_sdk/models/operations/updatepassthrough_response.rb
+  - lib/unified_ruby_sdk/models/operations/createstoragefile_security.rb
   - lib/unified_ruby_sdk/models/operations/createstoragefile_request.rb
   - lib/unified_ruby_sdk/models/operations/createstoragefile_response.rb
+  - lib/unified_ruby_sdk/models/operations/getstoragefile_security.rb
   - lib/unified_ruby_sdk/models/operations/getstoragefile_request.rb
   - lib/unified_ruby_sdk/models/operations/getstoragefile_response.rb
+  - lib/unified_ruby_sdk/models/operations/liststoragefiles_security.rb
   - lib/unified_ruby_sdk/models/operations/liststoragefiles_request.rb
   - lib/unified_ruby_sdk/models/operations/liststoragefiles_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchstoragefile_security.rb
   - lib/unified_ruby_sdk/models/operations/patchstoragefile_request.rb
   - lib/unified_ruby_sdk/models/operations/patchstoragefile_response.rb
+  - lib/unified_ruby_sdk/models/operations/removestoragefile_security.rb
   - lib/unified_ruby_sdk/models/operations/removestoragefile_request.rb
   - lib/unified_ruby_sdk/models/operations/removestoragefile_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatestoragefile_security.rb
   - lib/unified_ruby_sdk/models/operations/updatestoragefile_request.rb
   - lib/unified_ruby_sdk/models/operations/updatestoragefile_response.rb
+  - lib/unified_ruby_sdk/models/operations/createticketingcustomer_security.rb
   - lib/unified_ruby_sdk/models/operations/createticketingcustomer_request.rb
   - lib/unified_ruby_sdk/models/operations/createticketingcustomer_response.rb
+  - lib/unified_ruby_sdk/models/operations/createticketingnote_security.rb
   - lib/unified_ruby_sdk/models/operations/createticketingnote_request.rb
   - lib/unified_ruby_sdk/models/operations/createticketingnote_response.rb
+  - lib/unified_ruby_sdk/models/operations/createticketingticket_security.rb
   - lib/unified_ruby_sdk/models/operations/createticketingticket_request.rb
   - lib/unified_ruby_sdk/models/operations/createticketingticket_response.rb
+  - lib/unified_ruby_sdk/models/operations/getticketingcustomer_security.rb
   - lib/unified_ruby_sdk/models/operations/getticketingcustomer_request.rb
   - lib/unified_ruby_sdk/models/operations/getticketingcustomer_response.rb
+  - lib/unified_ruby_sdk/models/operations/getticketingnote_security.rb
   - lib/unified_ruby_sdk/models/operations/getticketingnote_request.rb
   - lib/unified_ruby_sdk/models/operations/getticketingnote_response.rb
+  - lib/unified_ruby_sdk/models/operations/getticketingticket_security.rb
   - lib/unified_ruby_sdk/models/operations/getticketingticket_request.rb
   - lib/unified_ruby_sdk/models/operations/getticketingticket_response.rb
+  - lib/unified_ruby_sdk/models/operations/listticketingcustomers_security.rb
   - lib/unified_ruby_sdk/models/operations/listticketingcustomers_request.rb
   - lib/unified_ruby_sdk/models/operations/listticketingcustomers_response.rb
+  - lib/unified_ruby_sdk/models/operations/listticketingnotes_security.rb
   - lib/unified_ruby_sdk/models/operations/listticketingnotes_request.rb
   - lib/unified_ruby_sdk/models/operations/listticketingnotes_response.rb
+  - lib/unified_ruby_sdk/models/operations/listticketingtickets_security.rb
   - lib/unified_ruby_sdk/models/operations/listticketingtickets_request.rb
   - lib/unified_ruby_sdk/models/operations/listticketingtickets_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchticketingcustomer_security.rb
   - lib/unified_ruby_sdk/models/operations/patchticketingcustomer_request.rb
   - lib/unified_ruby_sdk/models/operations/patchticketingcustomer_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchticketingnote_security.rb
   - lib/unified_ruby_sdk/models/operations/patchticketingnote_request.rb
   - lib/unified_ruby_sdk/models/operations/patchticketingnote_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchticketingticket_security.rb
   - lib/unified_ruby_sdk/models/operations/patchticketingticket_request.rb
   - lib/unified_ruby_sdk/models/operations/patchticketingticket_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeticketingcustomer_security.rb
   - lib/unified_ruby_sdk/models/operations/removeticketingcustomer_request.rb
   - lib/unified_ruby_sdk/models/operations/removeticketingcustomer_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeticketingnote_security.rb
   - lib/unified_ruby_sdk/models/operations/removeticketingnote_request.rb
   - lib/unified_ruby_sdk/models/operations/removeticketingnote_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeticketingticket_security.rb
   - lib/unified_ruby_sdk/models/operations/removeticketingticket_request.rb
   - lib/unified_ruby_sdk/models/operations/removeticketingticket_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateticketingcustomer_security.rb
   - lib/unified_ruby_sdk/models/operations/updateticketingcustomer_request.rb
   - lib/unified_ruby_sdk/models/operations/updateticketingcustomer_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateticketingnote_security.rb
   - lib/unified_ruby_sdk/models/operations/updateticketingnote_request.rb
   - lib/unified_ruby_sdk/models/operations/updateticketingnote_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateticketingticket_security.rb
   - lib/unified_ruby_sdk/models/operations/updateticketingticket_request.rb
   - lib/unified_ruby_sdk/models/operations/updateticketingticket_response.rb
+  - lib/unified_ruby_sdk/models/operations/listuccalls_security.rb
   - lib/unified_ruby_sdk/models/operations/listuccalls_request.rb
   - lib/unified_ruby_sdk/models/operations/listuccalls_response.rb
+  - lib/unified_ruby_sdk/models/operations/createunifiedconnection_security.rb
   - lib/unified_ruby_sdk/models/operations/createunifiedconnection_response.rb
+  - lib/unified_ruby_sdk/models/operations/createunifiedwebhook_security.rb
   - lib/unified_ruby_sdk/models/operations/createunifiedwebhook_request.rb
   - lib/unified_ruby_sdk/models/operations/createunifiedwebhook_response.rb
+  - lib/unified_ruby_sdk/models/operations/getunifiedapicall_security.rb
   - lib/unified_ruby_sdk/models/operations/getunifiedapicall_request.rb
   - lib/unified_ruby_sdk/models/operations/getunifiedapicall_response.rb
+  - lib/unified_ruby_sdk/models/operations/getunifiedconnection_security.rb
   - lib/unified_ruby_sdk/models/operations/getunifiedconnection_request.rb
   - lib/unified_ruby_sdk/models/operations/getunifiedconnection_response.rb
   - lib/unified_ruby_sdk/models/operations/scopes.rb
   - lib/unified_ruby_sdk/models/operations/getunifiedintegrationauth_request.rb
   - lib/unified_ruby_sdk/models/operations/getunifiedintegrationauth_response.rb
+  - lib/unified_ruby_sdk/models/operations/getunifiedwebhook_security.rb
   - lib/unified_ruby_sdk/models/operations/getunifiedwebhook_request.rb
   - lib/unified_ruby_sdk/models/operations/getunifiedwebhook_response.rb
+  - lib/unified_ruby_sdk/models/operations/listunifiedapicalls_security.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedapicalls_request.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedapicalls_response.rb
+  - lib/unified_ruby_sdk/models/operations/listunifiedconnections_security.rb
   - lib/unified_ruby_sdk/models/operations/categories.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedconnections_request.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedconnections_response.rb
   - lib/unified_ruby_sdk/models/operations/queryparam_categories.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedintegrationworkspaces_request.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedintegrationworkspaces_response.rb
+  - lib/unified_ruby_sdk/models/operations/listunifiedintegrations_security.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedintegrations_queryparam_categories.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedintegrations_request.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedintegrations_response.rb
+  - lib/unified_ruby_sdk/models/operations/listunifiedissues_security.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedissues_request.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedissues_response.rb
+  - lib/unified_ruby_sdk/models/operations/listunifiedwebhooks_security.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedwebhooks_request.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedwebhooks_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchunifiedconnection_security.rb
   - lib/unified_ruby_sdk/models/operations/patchunifiedconnection_request.rb
   - lib/unified_ruby_sdk/models/operations/patchunifiedconnection_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchunifiedwebhooktrigger_security.rb
   - lib/unified_ruby_sdk/models/operations/patchunifiedwebhooktrigger_request.rb
   - lib/unified_ruby_sdk/models/operations/patchunifiedwebhooktrigger_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeunifiedconnection_security.rb
   - lib/unified_ruby_sdk/models/operations/removeunifiedconnection_request.rb
   - lib/unified_ruby_sdk/models/operations/removeunifiedconnection_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeunifiedwebhook_security.rb
   - lib/unified_ruby_sdk/models/operations/removeunifiedwebhook_request.rb
   - lib/unified_ruby_sdk/models/operations/removeunifiedwebhook_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateunifiedconnection_security.rb
   - lib/unified_ruby_sdk/models/operations/updateunifiedconnection_request.rb
   - lib/unified_ruby_sdk/models/operations/updateunifiedconnection_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateunifiedwebhooktrigger_security.rb
   - lib/unified_ruby_sdk/models/operations/updateunifiedwebhooktrigger_request.rb
   - lib/unified_ruby_sdk/models/operations/updateunifiedwebhooktrigger_response.rb
   - lib/unified_ruby_sdk/models/operations/getunifiedintegrationlogin_request.rb
@@ -733,465 +959,689 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/issue_status.rb
   - lib/unified_ruby_sdk/models/shared/issue_type.rb
   - lib/unified_ruby_sdk/models/shared/issue.rb
-  - lib/unified_ruby_sdk/models/shared/security.rb
   - lib/unified_ruby_sdk.rb
   - lib/unified_ruby_sdk/models/operations.rb
   - lib/unified_ruby_sdk/models/shared.rb
+  - docs/models/operations/createaccountingaccountsecurity.md
   - docs/models/operations/createaccountingaccountrequest.md
   - docs/models/operations/createaccountingaccountresponse.md
+  - docs/models/operations/createaccountingcontactsecurity.md
   - docs/models/operations/createaccountingcontactrequest.md
   - docs/models/operations/createaccountingcontactresponse.md
+  - docs/models/operations/createaccountinginvoicesecurity.md
   - docs/models/operations/createaccountinginvoicerequest.md
   - docs/models/operations/createaccountinginvoiceresponse.md
+  - docs/models/operations/createaccountingpaymentsecurity.md
   - docs/models/operations/createaccountingpaymentrequest.md
   - docs/models/operations/createaccountingpaymentresponse.md
+  - docs/models/operations/createaccountingtaxratesecurity.md
   - docs/models/operations/createaccountingtaxraterequest.md
   - docs/models/operations/createaccountingtaxrateresponse.md
+  - docs/models/operations/createaccountingtransactionsecurity.md
   - docs/models/operations/createaccountingtransactionrequest.md
   - docs/models/operations/createaccountingtransactionresponse.md
+  - docs/models/operations/getaccountingaccountsecurity.md
   - docs/models/operations/getaccountingaccountrequest.md
   - docs/models/operations/getaccountingaccountresponse.md
+  - docs/models/operations/getaccountingcontactsecurity.md
   - docs/models/operations/getaccountingcontactrequest.md
   - docs/models/operations/getaccountingcontactresponse.md
+  - docs/models/operations/getaccountinginvoicesecurity.md
   - docs/models/operations/getaccountinginvoicerequest.md
   - docs/models/operations/getaccountinginvoiceresponse.md
+  - docs/models/operations/getaccountingorganizationsecurity.md
   - docs/models/operations/getaccountingorganizationrequest.md
   - docs/models/operations/getaccountingorganizationresponse.md
+  - docs/models/operations/getaccountingpaymentsecurity.md
   - docs/models/operations/getaccountingpaymentrequest.md
   - docs/models/operations/getaccountingpaymentresponse.md
+  - docs/models/operations/getaccountingpayoutsecurity.md
   - docs/models/operations/getaccountingpayoutrequest.md
   - docs/models/operations/getaccountingpayoutresponse.md
+  - docs/models/operations/getaccountingrefundsecurity.md
   - docs/models/operations/getaccountingrefundrequest.md
   - docs/models/operations/getaccountingrefundresponse.md
+  - docs/models/operations/getaccountingtaxratesecurity.md
   - docs/models/operations/getaccountingtaxraterequest.md
   - docs/models/operations/getaccountingtaxrateresponse.md
+  - docs/models/operations/getaccountingtransactionsecurity.md
   - docs/models/operations/getaccountingtransactionrequest.md
   - docs/models/operations/getaccountingtransactionresponse.md
+  - docs/models/operations/listaccountingaccountssecurity.md
   - docs/models/operations/listaccountingaccountsrequest.md
   - docs/models/operations/listaccountingaccountsresponse.md
+  - docs/models/operations/listaccountingcontactssecurity.md
   - docs/models/operations/listaccountingcontactsrequest.md
   - docs/models/operations/listaccountingcontactsresponse.md
+  - docs/models/operations/listaccountinginvoicessecurity.md
   - docs/models/operations/listaccountinginvoicesrequest.md
   - docs/models/operations/listaccountinginvoicesresponse.md
+  - docs/models/operations/listaccountingorganizationssecurity.md
   - docs/models/operations/listaccountingorganizationsrequest.md
   - docs/models/operations/listaccountingorganizationsresponse.md
+  - docs/models/operations/listaccountingpaymentssecurity.md
   - docs/models/operations/listaccountingpaymentsrequest.md
   - docs/models/operations/listaccountingpaymentsresponse.md
+  - docs/models/operations/listaccountingpayoutssecurity.md
   - docs/models/operations/listaccountingpayoutsrequest.md
   - docs/models/operations/listaccountingpayoutsresponse.md
+  - docs/models/operations/listaccountingrefundssecurity.md
   - docs/models/operations/listaccountingrefundsrequest.md
   - docs/models/operations/listaccountingrefundsresponse.md
+  - docs/models/operations/listaccountingtaxratessecurity.md
   - docs/models/operations/listaccountingtaxratesrequest.md
   - docs/models/operations/listaccountingtaxratesresponse.md
+  - docs/models/operations/listaccountingtransactionssecurity.md
   - docs/models/operations/listaccountingtransactionsrequest.md
   - docs/models/operations/listaccountingtransactionsresponse.md
+  - docs/models/operations/patchaccountingaccountsecurity.md
   - docs/models/operations/patchaccountingaccountrequest.md
   - docs/models/operations/patchaccountingaccountresponse.md
+  - docs/models/operations/patchaccountingcontactsecurity.md
   - docs/models/operations/patchaccountingcontactrequest.md
   - docs/models/operations/patchaccountingcontactresponse.md
+  - docs/models/operations/patchaccountinginvoicesecurity.md
   - docs/models/operations/patchaccountinginvoicerequest.md
   - docs/models/operations/patchaccountinginvoiceresponse.md
+  - docs/models/operations/patchaccountingpaymentsecurity.md
   - docs/models/operations/patchaccountingpaymentrequest.md
   - docs/models/operations/patchaccountingpaymentresponse.md
+  - docs/models/operations/patchaccountingtaxratesecurity.md
   - docs/models/operations/patchaccountingtaxraterequest.md
   - docs/models/operations/patchaccountingtaxrateresponse.md
+  - docs/models/operations/patchaccountingtransactionsecurity.md
   - docs/models/operations/patchaccountingtransactionrequest.md
   - docs/models/operations/patchaccountingtransactionresponse.md
+  - docs/models/operations/removeaccountingaccountsecurity.md
   - docs/models/operations/removeaccountingaccountrequest.md
   - docs/models/operations/removeaccountingaccountresponse.md
+  - docs/models/operations/removeaccountingcontactsecurity.md
   - docs/models/operations/removeaccountingcontactrequest.md
   - docs/models/operations/removeaccountingcontactresponse.md
+  - docs/models/operations/removeaccountinginvoicesecurity.md
   - docs/models/operations/removeaccountinginvoicerequest.md
   - docs/models/operations/removeaccountinginvoiceresponse.md
+  - docs/models/operations/removeaccountingpaymentsecurity.md
   - docs/models/operations/removeaccountingpaymentrequest.md
   - docs/models/operations/removeaccountingpaymentresponse.md
+  - docs/models/operations/removeaccountingtaxratesecurity.md
   - docs/models/operations/removeaccountingtaxraterequest.md
   - docs/models/operations/removeaccountingtaxrateresponse.md
+  - docs/models/operations/removeaccountingtransactionsecurity.md
   - docs/models/operations/removeaccountingtransactionrequest.md
   - docs/models/operations/removeaccountingtransactionresponse.md
+  - docs/models/operations/updateaccountingaccountsecurity.md
   - docs/models/operations/updateaccountingaccountrequest.md
   - docs/models/operations/updateaccountingaccountresponse.md
+  - docs/models/operations/updateaccountingcontactsecurity.md
   - docs/models/operations/updateaccountingcontactrequest.md
   - docs/models/operations/updateaccountingcontactresponse.md
+  - docs/models/operations/updateaccountinginvoicesecurity.md
   - docs/models/operations/updateaccountinginvoicerequest.md
   - docs/models/operations/updateaccountinginvoiceresponse.md
+  - docs/models/operations/updateaccountingpaymentsecurity.md
   - docs/models/operations/updateaccountingpaymentrequest.md
   - docs/models/operations/updateaccountingpaymentresponse.md
+  - docs/models/operations/updateaccountingtaxratesecurity.md
   - docs/models/operations/updateaccountingtaxraterequest.md
   - docs/models/operations/updateaccountingtaxrateresponse.md
+  - docs/models/operations/updateaccountingtransactionsecurity.md
   - docs/models/operations/updateaccountingtransactionrequest.md
   - docs/models/operations/updateaccountingtransactionresponse.md
+  - docs/models/operations/createcrmcontactsecurity.md
   - docs/models/operations/createcrmcontactrequest.md
   - docs/models/operations/createcrmcontactresponse.md
+  - docs/models/operations/createuccontactsecurity.md
   - docs/models/operations/createuccontactrequest.md
   - docs/models/operations/createuccontactresponse.md
+  - docs/models/operations/getcrmcontactsecurity.md
   - docs/models/operations/getcrmcontactrequest.md
   - docs/models/operations/getcrmcontactresponse.md
+  - docs/models/operations/getuccontactsecurity.md
   - docs/models/operations/getuccontactrequest.md
   - docs/models/operations/getuccontactresponse.md
+  - docs/models/operations/listcrmcontactssecurity.md
   - docs/models/operations/listcrmcontactsrequest.md
   - docs/models/operations/listcrmcontactsresponse.md
+  - docs/models/operations/listuccontactssecurity.md
   - docs/models/operations/listuccontactsrequest.md
   - docs/models/operations/listuccontactsresponse.md
+  - docs/models/operations/patchcrmcontactsecurity.md
   - docs/models/operations/patchcrmcontactrequest.md
   - docs/models/operations/patchcrmcontactresponse.md
+  - docs/models/operations/patchuccontactsecurity.md
   - docs/models/operations/patchuccontactrequest.md
   - docs/models/operations/patchuccontactresponse.md
+  - docs/models/operations/removecrmcontactsecurity.md
   - docs/models/operations/removecrmcontactrequest.md
   - docs/models/operations/removecrmcontactresponse.md
+  - docs/models/operations/removeuccontactsecurity.md
   - docs/models/operations/removeuccontactrequest.md
   - docs/models/operations/removeuccontactresponse.md
+  - docs/models/operations/updatecrmcontactsecurity.md
   - docs/models/operations/updatecrmcontactrequest.md
   - docs/models/operations/updatecrmcontactresponse.md
+  - docs/models/operations/updateuccontactsecurity.md
   - docs/models/operations/updateuccontactrequest.md
   - docs/models/operations/updateuccontactresponse.md
+  - docs/models/operations/createatsactivitysecurity.md
   - docs/models/operations/createatsactivityrequest.md
   - docs/models/operations/createatsactivityresponse.md
+  - docs/models/operations/createatsapplicationsecurity.md
   - docs/models/operations/createatsapplicationrequest.md
   - docs/models/operations/createatsapplicationresponse.md
+  - docs/models/operations/createatscandidatesecurity.md
   - docs/models/operations/createatscandidaterequest.md
   - docs/models/operations/createatscandidateresponse.md
+  - docs/models/operations/createatsdocumentsecurity.md
   - docs/models/operations/createatsdocumentrequest.md
   - docs/models/operations/createatsdocumentresponse.md
+  - docs/models/operations/createatsinterviewsecurity.md
   - docs/models/operations/createatsinterviewrequest.md
   - docs/models/operations/createatsinterviewresponse.md
+  - docs/models/operations/createatsjobsecurity.md
   - docs/models/operations/createatsjobrequest.md
   - docs/models/operations/createatsjobresponse.md
+  - docs/models/operations/createatsscorecardsecurity.md
   - docs/models/operations/createatsscorecardrequest.md
   - docs/models/operations/createatsscorecardresponse.md
+  - docs/models/operations/getatsactivitysecurity.md
   - docs/models/operations/getatsactivityrequest.md
   - docs/models/operations/getatsactivityresponse.md
+  - docs/models/operations/getatsapplicationsecurity.md
   - docs/models/operations/getatsapplicationrequest.md
   - docs/models/operations/getatsapplicationresponse.md
+  - docs/models/operations/getatscandidatesecurity.md
   - docs/models/operations/getatscandidaterequest.md
   - docs/models/operations/getatscandidateresponse.md
+  - docs/models/operations/getatscompanysecurity.md
   - docs/models/operations/getatscompanyrequest.md
   - docs/models/operations/getatscompanyresponse.md
+  - docs/models/operations/getatsdocumentsecurity.md
   - docs/models/operations/getatsdocumentrequest.md
   - docs/models/operations/getatsdocumentresponse.md
+  - docs/models/operations/getatsinterviewsecurity.md
   - docs/models/operations/getatsinterviewrequest.md
   - docs/models/operations/getatsinterviewresponse.md
+  - docs/models/operations/getatsjobsecurity.md
   - docs/models/operations/getatsjobrequest.md
   - docs/models/operations/getatsjobresponse.md
+  - docs/models/operations/getatsscorecardsecurity.md
   - docs/models/operations/getatsscorecardrequest.md
   - docs/models/operations/getatsscorecardresponse.md
+  - docs/models/operations/listatsactivitiessecurity.md
   - docs/models/operations/listatsactivitiesrequest.md
   - docs/models/operations/listatsactivitiesresponse.md
+  - docs/models/operations/listatsapplicationssecurity.md
   - docs/models/operations/listatsapplicationsrequest.md
   - docs/models/operations/listatsapplicationsresponse.md
+  - docs/models/operations/listatsapplicationstatusessecurity.md
   - docs/models/operations/listatsapplicationstatusesrequest.md
   - docs/models/operations/listatsapplicationstatusesresponse.md
+  - docs/models/operations/listatscandidatessecurity.md
   - docs/models/operations/listatscandidatesrequest.md
   - docs/models/operations/listatscandidatesresponse.md
+  - docs/models/operations/listatscompaniessecurity.md
   - docs/models/operations/listatscompaniesrequest.md
   - docs/models/operations/listatscompaniesresponse.md
+  - docs/models/operations/listatsdocumentssecurity.md
   - docs/models/operations/listatsdocumentsrequest.md
   - docs/models/operations/listatsdocumentsresponse.md
+  - docs/models/operations/listatsinterviewssecurity.md
   - docs/models/operations/listatsinterviewsrequest.md
   - docs/models/operations/listatsinterviewsresponse.md
+  - docs/models/operations/listatsjobssecurity.md
   - docs/models/operations/listatsjobsrequest.md
   - docs/models/operations/listatsjobsresponse.md
+  - docs/models/operations/listatsscorecardssecurity.md
   - docs/models/operations/listatsscorecardsrequest.md
   - docs/models/operations/listatsscorecardsresponse.md
+  - docs/models/operations/patchatsactivitysecurity.md
   - docs/models/operations/patchatsactivityrequest.md
   - docs/models/operations/patchatsactivityresponse.md
+  - docs/models/operations/patchatsapplicationsecurity.md
   - docs/models/operations/patchatsapplicationrequest.md
   - docs/models/operations/patchatsapplicationresponse.md
+  - docs/models/operations/patchatscandidatesecurity.md
   - docs/models/operations/patchatscandidaterequest.md
   - docs/models/operations/patchatscandidateresponse.md
+  - docs/models/operations/patchatsdocumentsecurity.md
   - docs/models/operations/patchatsdocumentrequest.md
   - docs/models/operations/patchatsdocumentresponse.md
+  - docs/models/operations/patchatsinterviewsecurity.md
   - docs/models/operations/patchatsinterviewrequest.md
   - docs/models/operations/patchatsinterviewresponse.md
+  - docs/models/operations/patchatsjobsecurity.md
   - docs/models/operations/patchatsjobrequest.md
   - docs/models/operations/patchatsjobresponse.md
+  - docs/models/operations/patchatsscorecardsecurity.md
   - docs/models/operations/patchatsscorecardrequest.md
   - docs/models/operations/patchatsscorecardresponse.md
+  - docs/models/operations/removeatsactivitysecurity.md
   - docs/models/operations/removeatsactivityrequest.md
   - docs/models/operations/removeatsactivityresponse.md
+  - docs/models/operations/removeatsapplicationsecurity.md
   - docs/models/operations/removeatsapplicationrequest.md
   - docs/models/operations/removeatsapplicationresponse.md
+  - docs/models/operations/removeatscandidatesecurity.md
   - docs/models/operations/removeatscandidaterequest.md
   - docs/models/operations/removeatscandidateresponse.md
+  - docs/models/operations/removeatsdocumentsecurity.md
   - docs/models/operations/removeatsdocumentrequest.md
   - docs/models/operations/removeatsdocumentresponse.md
+  - docs/models/operations/removeatsinterviewsecurity.md
   - docs/models/operations/removeatsinterviewrequest.md
   - docs/models/operations/removeatsinterviewresponse.md
+  - docs/models/operations/removeatsjobsecurity.md
   - docs/models/operations/removeatsjobrequest.md
   - docs/models/operations/removeatsjobresponse.md
+  - docs/models/operations/removeatsscorecardsecurity.md
   - docs/models/operations/removeatsscorecardrequest.md
   - docs/models/operations/removeatsscorecardresponse.md
+  - docs/models/operations/updateatsactivitysecurity.md
   - docs/models/operations/updateatsactivityrequest.md
   - docs/models/operations/updateatsactivityresponse.md
+  - docs/models/operations/updateatsapplicationsecurity.md
   - docs/models/operations/updateatsapplicationrequest.md
   - docs/models/operations/updateatsapplicationresponse.md
+  - docs/models/operations/updateatscandidatesecurity.md
   - docs/models/operations/updateatscandidaterequest.md
   - docs/models/operations/updateatscandidateresponse.md
+  - docs/models/operations/updateatsdocumentsecurity.md
   - docs/models/operations/updateatsdocumentrequest.md
   - docs/models/operations/updateatsdocumentresponse.md
+  - docs/models/operations/updateatsinterviewsecurity.md
   - docs/models/operations/updateatsinterviewrequest.md
   - docs/models/operations/updateatsinterviewresponse.md
+  - docs/models/operations/updateatsjobsecurity.md
   - docs/models/operations/updateatsjobrequest.md
   - docs/models/operations/updateatsjobresponse.md
+  - docs/models/operations/updateatsscorecardsecurity.md
   - docs/models/operations/updateatsscorecardrequest.md
   - docs/models/operations/updateatsscorecardresponse.md
+  - docs/models/operations/createcrmcompanysecurity.md
   - docs/models/operations/createcrmcompanyrequest.md
   - docs/models/operations/createcrmcompanyresponse.md
+  - docs/models/operations/getcrmcompanysecurity.md
   - docs/models/operations/getcrmcompanyrequest.md
   - docs/models/operations/getcrmcompanyresponse.md
+  - docs/models/operations/listcrmcompaniessecurity.md
   - docs/models/operations/listcrmcompaniesrequest.md
   - docs/models/operations/listcrmcompaniesresponse.md
+  - docs/models/operations/listenrichcompaniessecurity.md
   - docs/models/operations/listenrichcompaniesrequest.md
   - docs/models/operations/listenrichcompaniesresponse.md
+  - docs/models/operations/patchcrmcompanysecurity.md
   - docs/models/operations/patchcrmcompanyrequest.md
   - docs/models/operations/patchcrmcompanyresponse.md
+  - docs/models/operations/removecrmcompanysecurity.md
   - docs/models/operations/removecrmcompanyrequest.md
   - docs/models/operations/removecrmcompanyresponse.md
+  - docs/models/operations/updatecrmcompanysecurity.md
   - docs/models/operations/updatecrmcompanyrequest.md
   - docs/models/operations/updatecrmcompanyresponse.md
+  - docs/models/operations/createcommercecollectionsecurity.md
   - docs/models/operations/createcommercecollectionrequest.md
   - docs/models/operations/createcommercecollectionresponse.md
+  - docs/models/operations/createcommerceinventorysecurity.md
   - docs/models/operations/createcommerceinventoryrequest.md
   - docs/models/operations/createcommerceinventoryresponse.md
+  - docs/models/operations/createcommerceitemsecurity.md
   - docs/models/operations/createcommerceitemrequest.md
   - docs/models/operations/createcommerceitemresponse.md
+  - docs/models/operations/createcommercelocationsecurity.md
   - docs/models/operations/createcommercelocationrequest.md
   - docs/models/operations/createcommercelocationresponse.md
+  - docs/models/operations/getcommercecollectionsecurity.md
   - docs/models/operations/getcommercecollectionrequest.md
   - docs/models/operations/getcommercecollectionresponse.md
+  - docs/models/operations/getcommerceinventorysecurity.md
   - docs/models/operations/getcommerceinventoryrequest.md
   - docs/models/operations/getcommerceinventoryresponse.md
+  - docs/models/operations/getcommerceitemsecurity.md
   - docs/models/operations/getcommerceitemrequest.md
   - docs/models/operations/getcommerceitemresponse.md
+  - docs/models/operations/getcommercelocationsecurity.md
   - docs/models/operations/getcommercelocationrequest.md
   - docs/models/operations/getcommercelocationresponse.md
+  - docs/models/operations/listcommercecollectionssecurity.md
   - docs/models/operations/listcommercecollectionsrequest.md
   - docs/models/operations/listcommercecollectionsresponse.md
+  - docs/models/operations/listcommerceinventoriessecurity.md
   - docs/models/operations/listcommerceinventoriesrequest.md
   - docs/models/operations/listcommerceinventoriesresponse.md
+  - docs/models/operations/listcommerceitemssecurity.md
   - docs/models/operations/listcommerceitemsrequest.md
   - docs/models/operations/listcommerceitemsresponse.md
+  - docs/models/operations/listcommercelocationssecurity.md
   - docs/models/operations/listcommercelocationsrequest.md
   - docs/models/operations/listcommercelocationsresponse.md
+  - docs/models/operations/patchcommercecollectionsecurity.md
   - docs/models/operations/patchcommercecollectionrequest.md
   - docs/models/operations/patchcommercecollectionresponse.md
+  - docs/models/operations/patchcommerceinventorysecurity.md
   - docs/models/operations/patchcommerceinventoryrequest.md
   - docs/models/operations/patchcommerceinventoryresponse.md
+  - docs/models/operations/patchcommerceitemsecurity.md
   - docs/models/operations/patchcommerceitemrequest.md
   - docs/models/operations/patchcommerceitemresponse.md
+  - docs/models/operations/patchcommercelocationsecurity.md
   - docs/models/operations/patchcommercelocationrequest.md
   - docs/models/operations/patchcommercelocationresponse.md
+  - docs/models/operations/removecommercecollectionsecurity.md
   - docs/models/operations/removecommercecollectionrequest.md
   - docs/models/operations/removecommercecollectionresponse.md
+  - docs/models/operations/removecommerceinventorysecurity.md
   - docs/models/operations/removecommerceinventoryrequest.md
   - docs/models/operations/removecommerceinventoryresponse.md
+  - docs/models/operations/removecommerceitemsecurity.md
   - docs/models/operations/removecommerceitemrequest.md
   - docs/models/operations/removecommerceitemresponse.md
+  - docs/models/operations/removecommercelocationsecurity.md
   - docs/models/operations/removecommercelocationrequest.md
   - docs/models/operations/removecommercelocationresponse.md
+  - docs/models/operations/updatecommercecollectionsecurity.md
   - docs/models/operations/updatecommercecollectionrequest.md
   - docs/models/operations/updatecommercecollectionresponse.md
+  - docs/models/operations/updatecommerceinventorysecurity.md
   - docs/models/operations/updatecommerceinventoryrequest.md
   - docs/models/operations/updatecommerceinventoryresponse.md
+  - docs/models/operations/updatecommerceitemsecurity.md
   - docs/models/operations/updatecommerceitemrequest.md
   - docs/models/operations/updatecommerceitemresponse.md
+  - docs/models/operations/updatecommercelocationsecurity.md
   - docs/models/operations/updatecommercelocationrequest.md
   - docs/models/operations/updatecommercelocationresponse.md
+  - docs/models/operations/createcrmdealsecurity.md
   - docs/models/operations/createcrmdealrequest.md
   - docs/models/operations/createcrmdealresponse.md
+  - docs/models/operations/createcrmeventsecurity.md
   - docs/models/operations/createcrmeventrequest.md
   - docs/models/operations/createcrmeventresponse.md
+  - docs/models/operations/createcrmleadsecurity.md
   - docs/models/operations/createcrmleadrequest.md
   - docs/models/operations/createcrmleadresponse.md
+  - docs/models/operations/createcrmpipelinesecurity.md
   - docs/models/operations/createcrmpipelinerequest.md
   - docs/models/operations/createcrmpipelineresponse.md
+  - docs/models/operations/getcrmdealsecurity.md
   - docs/models/operations/getcrmdealrequest.md
   - docs/models/operations/getcrmdealresponse.md
+  - docs/models/operations/getcrmeventsecurity.md
   - docs/models/operations/getcrmeventrequest.md
   - docs/models/operations/getcrmeventresponse.md
+  - docs/models/operations/getcrmleadsecurity.md
   - docs/models/operations/getcrmleadrequest.md
   - docs/models/operations/getcrmleadresponse.md
+  - docs/models/operations/getcrmpipelinesecurity.md
   - docs/models/operations/getcrmpipelinerequest.md
   - docs/models/operations/getcrmpipelineresponse.md
+  - docs/models/operations/listcrmdealssecurity.md
   - docs/models/operations/listcrmdealsrequest.md
   - docs/models/operations/listcrmdealsresponse.md
+  - docs/models/operations/listcrmeventssecurity.md
   - docs/models/operations/listcrmeventsrequest.md
   - docs/models/operations/listcrmeventsresponse.md
+  - docs/models/operations/listcrmleadssecurity.md
   - docs/models/operations/listcrmleadsrequest.md
   - docs/models/operations/listcrmleadsresponse.md
+  - docs/models/operations/listcrmpipelinessecurity.md
   - docs/models/operations/listcrmpipelinesrequest.md
   - docs/models/operations/listcrmpipelinesresponse.md
+  - docs/models/operations/patchcrmdealsecurity.md
   - docs/models/operations/patchcrmdealrequest.md
   - docs/models/operations/patchcrmdealresponse.md
+  - docs/models/operations/patchcrmeventsecurity.md
   - docs/models/operations/patchcrmeventrequest.md
   - docs/models/operations/patchcrmeventresponse.md
+  - docs/models/operations/patchcrmleadsecurity.md
   - docs/models/operations/patchcrmleadrequest.md
   - docs/models/operations/patchcrmleadresponse.md
+  - docs/models/operations/patchcrmpipelinesecurity.md
   - docs/models/operations/patchcrmpipelinerequest.md
   - docs/models/operations/patchcrmpipelineresponse.md
+  - docs/models/operations/removecrmdealsecurity.md
   - docs/models/operations/removecrmdealrequest.md
   - docs/models/operations/removecrmdealresponse.md
+  - docs/models/operations/removecrmeventsecurity.md
   - docs/models/operations/removecrmeventrequest.md
   - docs/models/operations/removecrmeventresponse.md
+  - docs/models/operations/removecrmleadsecurity.md
   - docs/models/operations/removecrmleadrequest.md
   - docs/models/operations/removecrmleadresponse.md
+  - docs/models/operations/removecrmpipelinesecurity.md
   - docs/models/operations/removecrmpipelinerequest.md
   - docs/models/operations/removecrmpipelineresponse.md
+  - docs/models/operations/updatecrmdealsecurity.md
   - docs/models/operations/updatecrmdealrequest.md
   - docs/models/operations/updatecrmdealresponse.md
+  - docs/models/operations/updatecrmeventsecurity.md
   - docs/models/operations/updatecrmeventrequest.md
   - docs/models/operations/updatecrmeventresponse.md
+  - docs/models/operations/updatecrmleadsecurity.md
   - docs/models/operations/updatecrmleadrequest.md
   - docs/models/operations/updatecrmleadresponse.md
+  - docs/models/operations/updatecrmpipelinesecurity.md
   - docs/models/operations/updatecrmpipelinerequest.md
   - docs/models/operations/updatecrmpipelineresponse.md
+  - docs/models/operations/listenrichpeoplesecurity.md
   - docs/models/operations/listenrichpeoplerequest.md
   - docs/models/operations/listenrichpeopleresponse.md
+  - docs/models/operations/createhrisemployeesecurity.md
   - docs/models/operations/createhrisemployeerequest.md
   - docs/models/operations/createhrisemployeeresponse.md
+  - docs/models/operations/createhrisgroupsecurity.md
   - docs/models/operations/createhrisgrouprequest.md
   - docs/models/operations/createhrisgroupresponse.md
+  - docs/models/operations/gethrisemployeesecurity.md
   - docs/models/operations/gethrisemployeerequest.md
   - docs/models/operations/gethrisemployeeresponse.md
+  - docs/models/operations/gethrisgroupsecurity.md
   - docs/models/operations/gethrisgrouprequest.md
   - docs/models/operations/gethrisgroupresponse.md
+  - docs/models/operations/listhrisemployeessecurity.md
   - docs/models/operations/listhrisemployeesrequest.md
   - docs/models/operations/listhrisemployeesresponse.md
+  - docs/models/operations/listhrisgroupssecurity.md
   - docs/models/operations/listhrisgroupsrequest.md
   - docs/models/operations/listhrisgroupsresponse.md
+  - docs/models/operations/patchhrisemployeesecurity.md
   - docs/models/operations/patchhrisemployeerequest.md
   - docs/models/operations/patchhrisemployeeresponse.md
+  - docs/models/operations/patchhrisgroupsecurity.md
   - docs/models/operations/patchhrisgrouprequest.md
   - docs/models/operations/patchhrisgroupresponse.md
+  - docs/models/operations/removehrisemployeesecurity.md
   - docs/models/operations/removehrisemployeerequest.md
   - docs/models/operations/removehrisemployeeresponse.md
+  - docs/models/operations/removehrisgroupsecurity.md
   - docs/models/operations/removehrisgrouprequest.md
   - docs/models/operations/removehrisgroupresponse.md
+  - docs/models/operations/updatehrisemployeesecurity.md
   - docs/models/operations/updatehrisemployeerequest.md
   - docs/models/operations/updatehrisemployeeresponse.md
+  - docs/models/operations/updatehrisgroupsecurity.md
   - docs/models/operations/updatehrisgrouprequest.md
   - docs/models/operations/updatehrisgroupresponse.md
+  - docs/models/operations/createmartechlistsecurity.md
   - docs/models/operations/createmartechlistrequest.md
   - docs/models/operations/createmartechlistresponse.md
+  - docs/models/operations/createmartechmembersecurity.md
   - docs/models/operations/createmartechmemberrequest.md
   - docs/models/operations/createmartechmemberresponse.md
+  - docs/models/operations/getmartechlistsecurity.md
   - docs/models/operations/getmartechlistrequest.md
   - docs/models/operations/getmartechlistresponse.md
+  - docs/models/operations/getmartechmembersecurity.md
   - docs/models/operations/getmartechmemberrequest.md
   - docs/models/operations/getmartechmemberresponse.md
+  - docs/models/operations/listmartechlistssecurity.md
   - docs/models/operations/listmartechlistsrequest.md
   - docs/models/operations/listmartechlistsresponse.md
+  - docs/models/operations/listmartechmemberssecurity.md
   - docs/models/operations/listmartechmembersrequest.md
   - docs/models/operations/listmartechmembersresponse.md
+  - docs/models/operations/patchmartechlistsecurity.md
   - docs/models/operations/patchmartechlistrequest.md
   - docs/models/operations/patchmartechlistresponse.md
+  - docs/models/operations/patchmartechmembersecurity.md
   - docs/models/operations/patchmartechmemberrequest.md
   - docs/models/operations/patchmartechmemberresponse.md
+  - docs/models/operations/removemartechlistsecurity.md
   - docs/models/operations/removemartechlistrequest.md
   - docs/models/operations/removemartechlistresponse.md
+  - docs/models/operations/removemartechmembersecurity.md
   - docs/models/operations/removemartechmemberrequest.md
   - docs/models/operations/removemartechmemberresponse.md
+  - docs/models/operations/updatemartechlistsecurity.md
   - docs/models/operations/updatemartechlistrequest.md
   - docs/models/operations/updatemartechlistresponse.md
+  - docs/models/operations/updatemartechmembersecurity.md
   - docs/models/operations/updatemartechmemberrequest.md
   - docs/models/operations/updatemartechmemberresponse.md
+  - docs/models/operations/createpassthroughsecurity.md
   - docs/models/operations/createpassthroughrequest.md
   - docs/models/operations/createpassthroughresponse.md
+  - docs/models/operations/listpassthroughssecurity.md
   - docs/models/operations/listpassthroughsrequest.md
   - docs/models/operations/listpassthroughsresponse.md
+  - docs/models/operations/patchpassthroughsecurity.md
   - docs/models/operations/patchpassthroughrequest.md
   - docs/models/operations/patchpassthroughresponse.md
+  - docs/models/operations/removepassthroughsecurity.md
   - docs/models/operations/removepassthroughrequest.md
   - docs/models/operations/removepassthroughresponse.md
+  - docs/models/operations/updatepassthroughsecurity.md
   - docs/models/operations/updatepassthroughrequest.md
   - docs/models/operations/updatepassthroughresponse.md
+  - docs/models/operations/createstoragefilesecurity.md
   - docs/models/operations/createstoragefilerequest.md
   - docs/models/operations/createstoragefileresponse.md
+  - docs/models/operations/getstoragefilesecurity.md
   - docs/models/operations/getstoragefilerequest.md
   - docs/models/operations/getstoragefileresponse.md
+  - docs/models/operations/liststoragefilessecurity.md
   - docs/models/operations/liststoragefilesrequest.md
   - docs/models/operations/liststoragefilesresponse.md
+  - docs/models/operations/patchstoragefilesecurity.md
   - docs/models/operations/patchstoragefilerequest.md
   - docs/models/operations/patchstoragefileresponse.md
+  - docs/models/operations/removestoragefilesecurity.md
   - docs/models/operations/removestoragefilerequest.md
   - docs/models/operations/removestoragefileresponse.md
+  - docs/models/operations/updatestoragefilesecurity.md
   - docs/models/operations/updatestoragefilerequest.md
   - docs/models/operations/updatestoragefileresponse.md
+  - docs/models/operations/createticketingcustomersecurity.md
   - docs/models/operations/createticketingcustomerrequest.md
   - docs/models/operations/createticketingcustomerresponse.md
+  - docs/models/operations/createticketingnotesecurity.md
   - docs/models/operations/createticketingnoterequest.md
   - docs/models/operations/createticketingnoteresponse.md
+  - docs/models/operations/createticketingticketsecurity.md
   - docs/models/operations/createticketingticketrequest.md
   - docs/models/operations/createticketingticketresponse.md
+  - docs/models/operations/getticketingcustomersecurity.md
   - docs/models/operations/getticketingcustomerrequest.md
   - docs/models/operations/getticketingcustomerresponse.md
+  - docs/models/operations/getticketingnotesecurity.md
   - docs/models/operations/getticketingnoterequest.md
   - docs/models/operations/getticketingnoteresponse.md
+  - docs/models/operations/getticketingticketsecurity.md
   - docs/models/operations/getticketingticketrequest.md
   - docs/models/operations/getticketingticketresponse.md
+  - docs/models/operations/listticketingcustomerssecurity.md
   - docs/models/operations/listticketingcustomersrequest.md
   - docs/models/operations/listticketingcustomersresponse.md
+  - docs/models/operations/listticketingnotessecurity.md
   - docs/models/operations/listticketingnotesrequest.md
   - docs/models/operations/listticketingnotesresponse.md
+  - docs/models/operations/listticketingticketssecurity.md
   - docs/models/operations/listticketingticketsrequest.md
   - docs/models/operations/listticketingticketsresponse.md
+  - docs/models/operations/patchticketingcustomersecurity.md
   - docs/models/operations/patchticketingcustomerrequest.md
   - docs/models/operations/patchticketingcustomerresponse.md
+  - docs/models/operations/patchticketingnotesecurity.md
   - docs/models/operations/patchticketingnoterequest.md
   - docs/models/operations/patchticketingnoteresponse.md
+  - docs/models/operations/patchticketingticketsecurity.md
   - docs/models/operations/patchticketingticketrequest.md
   - docs/models/operations/patchticketingticketresponse.md
+  - docs/models/operations/removeticketingcustomersecurity.md
   - docs/models/operations/removeticketingcustomerrequest.md
   - docs/models/operations/removeticketingcustomerresponse.md
+  - docs/models/operations/removeticketingnotesecurity.md
   - docs/models/operations/removeticketingnoterequest.md
   - docs/models/operations/removeticketingnoteresponse.md
+  - docs/models/operations/removeticketingticketsecurity.md
   - docs/models/operations/removeticketingticketrequest.md
   - docs/models/operations/removeticketingticketresponse.md
+  - docs/models/operations/updateticketingcustomersecurity.md
   - docs/models/operations/updateticketingcustomerrequest.md
   - docs/models/operations/updateticketingcustomerresponse.md
+  - docs/models/operations/updateticketingnotesecurity.md
   - docs/models/operations/updateticketingnoterequest.md
   - docs/models/operations/updateticketingnoteresponse.md
+  - docs/models/operations/updateticketingticketsecurity.md
   - docs/models/operations/updateticketingticketrequest.md
   - docs/models/operations/updateticketingticketresponse.md
+  - docs/models/operations/listuccallssecurity.md
   - docs/models/operations/listuccallsrequest.md
   - docs/models/operations/listuccallsresponse.md
+  - docs/models/operations/createunifiedconnectionsecurity.md
   - docs/models/operations/createunifiedconnectionresponse.md
+  - docs/models/operations/createunifiedwebhooksecurity.md
   - docs/models/operations/createunifiedwebhookrequest.md
   - docs/models/operations/createunifiedwebhookresponse.md
+  - docs/models/operations/getunifiedapicallsecurity.md
   - docs/models/operations/getunifiedapicallrequest.md
   - docs/models/operations/getunifiedapicallresponse.md
+  - docs/models/operations/getunifiedconnectionsecurity.md
   - docs/models/operations/getunifiedconnectionrequest.md
   - docs/models/operations/getunifiedconnectionresponse.md
   - docs/models/operations/scopes.md
   - docs/models/operations/getunifiedintegrationauthrequest.md
   - docs/models/operations/getunifiedintegrationauthresponse.md
+  - docs/models/operations/getunifiedwebhooksecurity.md
   - docs/models/operations/getunifiedwebhookrequest.md
   - docs/models/operations/getunifiedwebhookresponse.md
+  - docs/models/operations/listunifiedapicallssecurity.md
   - docs/models/operations/listunifiedapicallsrequest.md
   - docs/models/operations/listunifiedapicallsresponse.md
+  - docs/models/operations/listunifiedconnectionssecurity.md
   - docs/models/operations/categories.md
   - docs/models/operations/listunifiedconnectionsrequest.md
   - docs/models/operations/listunifiedconnectionsresponse.md
   - docs/models/operations/queryparamcategories.md
   - docs/models/operations/listunifiedintegrationworkspacesrequest.md
   - docs/models/operations/listunifiedintegrationworkspacesresponse.md
+  - docs/models/operations/listunifiedintegrationssecurity.md
   - docs/models/operations/listunifiedintegrationsqueryparamcategories.md
   - docs/models/operations/listunifiedintegrationsrequest.md
   - docs/models/operations/listunifiedintegrationsresponse.md
+  - docs/models/operations/listunifiedissuessecurity.md
   - docs/models/operations/listunifiedissuesrequest.md
   - docs/models/operations/listunifiedissuesresponse.md
+  - docs/models/operations/listunifiedwebhookssecurity.md
   - docs/models/operations/listunifiedwebhooksrequest.md
   - docs/models/operations/listunifiedwebhooksresponse.md
+  - docs/models/operations/patchunifiedconnectionsecurity.md
   - docs/models/operations/patchunifiedconnectionrequest.md
   - docs/models/operations/patchunifiedconnectionresponse.md
+  - docs/models/operations/patchunifiedwebhooktriggersecurity.md
   - docs/models/operations/patchunifiedwebhooktriggerrequest.md
   - docs/models/operations/patchunifiedwebhooktriggerresponse.md
+  - docs/models/operations/removeunifiedconnectionsecurity.md
   - docs/models/operations/removeunifiedconnectionrequest.md
   - docs/models/operations/removeunifiedconnectionresponse.md
+  - docs/models/operations/removeunifiedwebhooksecurity.md
   - docs/models/operations/removeunifiedwebhookrequest.md
   - docs/models/operations/removeunifiedwebhookresponse.md
+  - docs/models/operations/updateunifiedconnectionsecurity.md
   - docs/models/operations/updateunifiedconnectionrequest.md
   - docs/models/operations/updateunifiedconnectionresponse.md
+  - docs/models/operations/updateunifiedwebhooktriggersecurity.md
   - docs/models/operations/updateunifiedwebhooktriggerrequest.md
   - docs/models/operations/updateunifiedwebhooktriggerresponse.md
   - docs/models/operations/getunifiedintegrationloginrequest.md
@@ -1348,7 +1798,6 @@ generatedFiles:
   - docs/models/shared/issuestatus.md
   - docs/models/shared/issuetype.md
   - docs/models/shared/issue.md
-  - docs/models/shared/security.md
   - docs/sdks/unifiedto/README.md
   - docs/sdks/accounting/README.md
   - docs/sdks/account/README.md
