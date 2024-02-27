@@ -22,6 +22,7 @@ module UnifiedRubySDK
         ACCOUNTING = new('accounting')
         STORAGE = new('storage')
         COMMERCE = new('commerce')
+        PAYMENT = new('payment')
       end
     end
 

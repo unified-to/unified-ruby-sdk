@@ -28,25 +28,26 @@ module UnifiedRubySDK
     field :sdk_version, String
     field :gen_version, String
     field :user_agent, String
-  
-    
+
+
     sig { params(client: Faraday::Connection, security: T.nilable(Shared::Security), server_url: T.nilable(String), server_idx: T.nilable(Integer)).void }
     def initialize(client, security, server_url, server_idx)
       @client = client
       @server_url = server_url
       @server_idx = server_idx.nil? ? 0 : server_idx
+      @security = security
       @language = 'ruby'
       @openapi_doc_version = '1.0'
-      @sdk_version = '0.4.17'
-      @gen_version = '2.269.0'
-      @user_agent = 'speakeasy-sdk/ruby 0.4.17 2.269.0 1.0 unified_ruby_sdk'
+      @sdk_version = '0.4.18'
+      @gen_version = '2.272.7'
+      @user_agent = 'speakeasy-sdk/ruby 0.4.18 2.272.7 1.0 unified_ruby_sdk'
     end
 
     sig { returns([String, T::Hash[Symbol, String]]) }
     def get_server_details
       return [@server_url.delete_suffix('/'), {}] if !@server_url.nil?
       @server_idx = 0 if @server_idx.nil?
-          
+
 
       [SERVERS[@server_idx], {}]
     end

@@ -19,10 +19,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAccountingPayoutResponse) }
-    def get_accounting_payout(connection_id, id, fields_ = nil)
-      # get_accounting_payout - Retrieve a payout
-      request = ::UnifiedRubySDK::Operations::GetAccountingPayoutRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetPaymentPayoutResponse) }
+    def get_payment_payout(connection_id, id, fields_ = nil)
+      # get_payment_payout - Retrieve a payout
+      request = ::UnifiedRubySDK::Operations::GetPaymentPayoutRequest.new(
         
         connection_id: connection_id,
         id: id,
@@ -31,13 +31,13 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::GetAccountingPayoutRequest,
+        ::UnifiedRubySDK::Operations::GetPaymentPayoutRequest,
         base_url,
-        '/accounting/{connection_id}/payout/{id}',
+        '/payment/{connection_id}/payout/{id}',
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::GetAccountingPayoutRequest, request)
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::GetPaymentPayoutRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -49,32 +49,32 @@ module UnifiedRubySDK
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
 
-      res = ::UnifiedRubySDK::Operations::GetAccountingPayoutResponse.new(
+      res = ::UnifiedRubySDK::Operations::GetPaymentPayoutResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::AccountingPayout)
-          res.accounting_payout = out
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentPayout)
+          res.payment_payout = out
         end
       end
       res
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingPayoutsRequest)).returns(::UnifiedRubySDK::Operations::ListAccountingPayoutsResponse) }
-    def list_accounting_payouts(request)
-      # list_accounting_payouts - List all payouts
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListPaymentPayoutsRequest)).returns(::UnifiedRubySDK::Operations::ListPaymentPayoutsResponse) }
+    def list_payment_payouts(request)
+      # list_payment_payouts - List all payouts
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::ListAccountingPayoutsRequest,
+        ::UnifiedRubySDK::Operations::ListPaymentPayoutsRequest,
         base_url,
-        '/accounting/{connection_id}/payout',
+        '/payment/{connection_id}/payout',
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::ListAccountingPayoutsRequest, request)
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::ListPaymentPayoutsRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -86,13 +86,13 @@ module UnifiedRubySDK
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
 
-      res = ::UnifiedRubySDK::Operations::ListAccountingPayoutsResponse.new(
+      res = ::UnifiedRubySDK::Operations::ListPaymentPayoutsResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, T::Array[::UnifiedRubySDK::Shared::AccountingPayout])
-          res.accounting_payouts = out
+          out = Utils.unmarshal_complex(r.env.response_body, T::Array[::UnifiedRubySDK::Shared::PaymentPayout])
+          res.payment_payouts = out
         end
       end
       res

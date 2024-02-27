@@ -19,10 +19,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAccountingRefundResponse) }
-    def get_accounting_refund(connection_id, id, fields_ = nil)
-      # get_accounting_refund - Retrieve a refund
-      request = ::UnifiedRubySDK::Operations::GetAccountingRefundRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetPaymentRefundResponse) }
+    def get_payment_refund(connection_id, id, fields_ = nil)
+      # get_payment_refund - Retrieve a refund
+      request = ::UnifiedRubySDK::Operations::GetPaymentRefundRequest.new(
         
         connection_id: connection_id,
         id: id,
@@ -31,13 +31,13 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::GetAccountingRefundRequest,
+        ::UnifiedRubySDK::Operations::GetPaymentRefundRequest,
         base_url,
-        '/accounting/{connection_id}/refund/{id}',
+        '/payment/{connection_id}/refund/{id}',
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::GetAccountingRefundRequest, request)
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::GetPaymentRefundRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -49,32 +49,32 @@ module UnifiedRubySDK
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
 
-      res = ::UnifiedRubySDK::Operations::GetAccountingRefundResponse.new(
+      res = ::UnifiedRubySDK::Operations::GetPaymentRefundResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::AccountingRefund)
-          res.accounting_refund = out
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentRefund)
+          res.payment_refund = out
         end
       end
       res
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingRefundsRequest)).returns(::UnifiedRubySDK::Operations::ListAccountingRefundsResponse) }
-    def list_accounting_refunds(request)
-      # list_accounting_refunds - List all refunds
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListPaymentRefundsRequest)).returns(::UnifiedRubySDK::Operations::ListPaymentRefundsResponse) }
+    def list_payment_refunds(request)
+      # list_payment_refunds - List all refunds
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::ListAccountingRefundsRequest,
+        ::UnifiedRubySDK::Operations::ListPaymentRefundsRequest,
         base_url,
-        '/accounting/{connection_id}/refund',
+        '/payment/{connection_id}/refund',
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::ListAccountingRefundsRequest, request)
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::ListPaymentRefundsRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -86,13 +86,13 @@ module UnifiedRubySDK
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
 
-      res = ::UnifiedRubySDK::Operations::ListAccountingRefundsResponse.new(
+      res = ::UnifiedRubySDK::Operations::ListPaymentRefundsResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, T::Array[::UnifiedRubySDK::Shared::AccountingRefund])
-          res.accounting_refunds = out
+          out = Utils.unmarshal_complex(r.env.response_body, T::Array[::UnifiedRubySDK::Shared::PaymentRefund])
+          res.payment_refunds = out
         end
       end
       res

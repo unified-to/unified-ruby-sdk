@@ -22,7 +22,7 @@ module UnifiedRubySDK
     sig { params(webhook: T.nilable(::UnifiedRubySDK::Shared::Webhook), include_all: T.nilable(T::Boolean)).returns(::UnifiedRubySDK::Operations::CreateUnifiedWebhookResponse) }
     def create_unified_webhook(webhook = nil, include_all = nil)
       # create_unified_webhook - Create webhook subscription
-      # The data payload received by your server is described at https://docs.unified.to/unified/overview.  The `interval` field can be set as low as 15 minutes for paid accounts, and 60 minutes for free accounts.
+      # The data payload received by your server is described at https://docs.unified.to/unified/overview. The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free accounts.
       request = ::UnifiedRubySDK::Operations::CreateUnifiedWebhookRequest.new(
         
         webhook: webhook,

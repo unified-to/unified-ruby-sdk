@@ -12,29 +12,29 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :contact, :invoice, :organization, :payment, :payout, :refund, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :hris, :employee, :group, :martech, :list, :member, :passthrough, :storage, :file, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
+    attr_accessor :accounting, :account, :contact, :invoice, :organization, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :hris, :employee, :group, :martech, :list, :member, :passthrough, :payment, :link, :payout, :refund, :storage, :file, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
 
     attr_accessor :security, :language, :sdk_version, :gen_version
 
     sig do
-      params(security: T.nilable(Shared::Security),
+      params(client: Faraday::Request,
+             security: T.nilable(Shared::Security),
              server_idx: Integer,
              server_url: String,
-             url_params: T::Hash[Symbol, String],
-             client: Faraday::Request).void
+             url_params: T::Hash[Symbol, String]).void
     end
-    def initialize(security: nil,
+    def initialize(client: nil,
+                   security: nil,
                    server_idx: nil,
                    server_url: nil,
-                   url_params: nil,
-                   client: nil)
+                   url_params: nil)
 
       ## Instantiates the SDK configuring it with the provided parameters.
+      # @param [Faraday::Request] client The faraday HTTP client to use for all operations
       # @param [Shared::Security] security The security details required for authentication
       # @param [Integer] server_idx The index of the server to use for all operations
       # @param [String] server_url The server URL to use for all operations
       # @param [Hash<Symbol, String>] url_params Parameters to optionally template the server URL with
-      # @param [Faraday::Request] client The faraday HTTP client to use for all operations
 
       if client.nil?
         client = Faraday.new(request: {
@@ -79,9 +79,6 @@ module UnifiedRubySDK
       @contact = Contact.new(@sdk_configuration)
       @invoice = Invoice.new(@sdk_configuration)
       @organization = Organization.new(@sdk_configuration)
-      @payment = Payment.new(@sdk_configuration)
-      @payout = Payout.new(@sdk_configuration)
-      @refund = Refund.new(@sdk_configuration)
       @taxrate = Taxrate.new(@sdk_configuration)
       @transaction = Transaction.new(@sdk_configuration)
       @ats = Ats.new(@sdk_configuration)
@@ -113,6 +110,10 @@ module UnifiedRubySDK
       @list = List.new(@sdk_configuration)
       @member = Member.new(@sdk_configuration)
       @passthrough = Passthrough.new(@sdk_configuration)
+      @payment = Payment.new(@sdk_configuration)
+      @link = Link.new(@sdk_configuration)
+      @payout = Payout.new(@sdk_configuration)
+      @refund = Refund.new(@sdk_configuration)
       @storage = Storage.new(@sdk_configuration)
       @file = File.new(@sdk_configuration)
       @ticketing = Ticketing.new(@sdk_configuration)

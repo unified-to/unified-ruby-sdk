@@ -19,24 +19,24 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, accounting_payment: T.nilable(::UnifiedRubySDK::Shared::AccountingPayment)).returns(::UnifiedRubySDK::Operations::CreateAccountingPaymentResponse) }
-    def create_accounting_payment(connection_id, accounting_payment = nil)
-      # create_accounting_payment - Create a payment
-      request = ::UnifiedRubySDK::Operations::CreateAccountingPaymentRequest.new(
+    sig { params(connection_id: ::String, payment_link: T.nilable(::UnifiedRubySDK::Shared::PaymentLink)).returns(::UnifiedRubySDK::Operations::CreatePaymentLinkResponse) }
+    def create_payment_link(connection_id, payment_link = nil)
+      # create_payment_link - Create a payment link
+      request = ::UnifiedRubySDK::Operations::CreatePaymentLinkRequest.new(
         
         connection_id: connection_id,
-        accounting_payment: accounting_payment
+        payment_link: payment_link
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::CreateAccountingPaymentRequest,
+        ::UnifiedRubySDK::Operations::CreatePaymentLinkRequest,
         base_url,
-        '/accounting/{connection_id}/payment',
+        '/payment/{connection_id}/link',
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :accounting_payment, :json)
+      req_content_type, data, form = Utils.serialize_request_body(request, :payment_link, :json)
       headers['content-type'] = req_content_type
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -55,23 +55,72 @@ module UnifiedRubySDK
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
 
-      res = ::UnifiedRubySDK::Operations::CreateAccountingPaymentResponse.new(
+      res = ::UnifiedRubySDK::Operations::CreatePaymentLinkResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::AccountingPayment)
-          res.accounting_payment = out
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentLink)
+          res.payment_link = out
         end
       end
       res
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAccountingPaymentResponse) }
-    def get_accounting_payment(connection_id, id, fields_ = nil)
-      # get_accounting_payment - Retrieve a payment
-      request = ::UnifiedRubySDK::Operations::GetAccountingPaymentRequest.new(
+    sig { params(connection_id: ::String, payment_payment: T.nilable(::UnifiedRubySDK::Shared::PaymentPayment)).returns(::UnifiedRubySDK::Operations::CreatePaymentPaymentResponse) }
+    def create_payment_payment(connection_id, payment_payment = nil)
+      # create_payment_payment - Create a payment
+      request = ::UnifiedRubySDK::Operations::CreatePaymentPaymentRequest.new(
+        
+        connection_id: connection_id,
+        payment_payment: payment_payment
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::CreatePaymentPaymentRequest,
+        base_url,
+        '/payment/{connection_id}/payment',
+        request
+      )
+      headers = {}
+      req_content_type, data, form = Utils.serialize_request_body(request, :payment_payment, :json)
+      headers['content-type'] = req_content_type
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.post(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        if form
+          req.body = Utils.encode_form(form)
+        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+          req.body = URI.encode_www_form(data)
+        else
+          req.body = data
+        end
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::CreatePaymentPaymentResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentPayment)
+          res.payment_payment = out
+        end
+      end
+      res
+    end
+
+
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetPaymentLinkResponse) }
+    def get_payment_link(connection_id, id, fields_ = nil)
+      # get_payment_link - Retrieve a payment link
+      request = ::UnifiedRubySDK::Operations::GetPaymentLinkRequest.new(
         
         connection_id: connection_id,
         id: id,
@@ -80,13 +129,13 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::GetAccountingPaymentRequest,
+        ::UnifiedRubySDK::Operations::GetPaymentLinkRequest,
         base_url,
-        '/accounting/{connection_id}/payment/{id}',
+        '/payment/{connection_id}/link/{id}',
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::GetAccountingPaymentRequest, request)
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::GetPaymentLinkRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -98,75 +147,315 @@ module UnifiedRubySDK
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
 
-      res = ::UnifiedRubySDK::Operations::GetAccountingPaymentResponse.new(
+      res = ::UnifiedRubySDK::Operations::GetPaymentLinkResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::AccountingPayment)
-          res.accounting_payment = out
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentLink)
+          res.payment_link = out
         end
       end
       res
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingPaymentsRequest)).returns(::UnifiedRubySDK::Operations::ListAccountingPaymentsResponse) }
-    def list_accounting_payments(request)
-      # list_accounting_payments - List all payments
-      url, params = @sdk_configuration.get_server_details
-      base_url = Utils.template_url(url, params)
-      url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::ListAccountingPaymentsRequest,
-        base_url,
-        '/accounting/{connection_id}/payment',
-        request
-      )
-      headers = {}
-      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::ListAccountingPaymentsRequest, request)
-      headers['Accept'] = 'application/json'
-      headers['user-agent'] = @sdk_configuration.user_agent
-
-      r = @sdk_configuration.client.get(url) do |req|
-        req.headers = headers
-        req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
-      end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = ::UnifiedRubySDK::Operations::ListAccountingPaymentsResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-      if r.status == 200
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, T::Array[::UnifiedRubySDK::Shared::AccountingPayment])
-          res.accounting_payments = out
-        end
-      end
-      res
-    end
-
-
-    sig { params(connection_id: ::String, id: ::String, accounting_payment: T.nilable(::UnifiedRubySDK::Shared::AccountingPayment)).returns(::UnifiedRubySDK::Operations::PatchAccountingPaymentResponse) }
-    def patch_accounting_payment(connection_id, id, accounting_payment = nil)
-      # patch_accounting_payment - Update a payment
-      request = ::UnifiedRubySDK::Operations::PatchAccountingPaymentRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetPaymentPaymentResponse) }
+    def get_payment_payment(connection_id, id, fields_ = nil)
+      # get_payment_payment - Retrieve a payment
+      request = ::UnifiedRubySDK::Operations::GetPaymentPaymentRequest.new(
         
         connection_id: connection_id,
         id: id,
-        accounting_payment: accounting_payment
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::PatchAccountingPaymentRequest,
+        ::UnifiedRubySDK::Operations::GetPaymentPaymentRequest,
         base_url,
-        '/accounting/{connection_id}/payment/{id}',
+        '/payment/{connection_id}/payment/{id}',
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :accounting_payment, :json)
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::GetPaymentPaymentRequest, request)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.get(url) do |req|
+        req.headers = headers
+        req.params = query_params
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::GetPaymentPaymentResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentPayment)
+          res.payment_payment = out
+        end
+      end
+      res
+    end
+
+
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetPaymentPayoutResponse) }
+    def get_payment_payout(connection_id, id, fields_ = nil)
+      # get_payment_payout - Retrieve a payout
+      request = ::UnifiedRubySDK::Operations::GetPaymentPayoutRequest.new(
+        
+        connection_id: connection_id,
+        id: id,
+        fields_: fields_
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::GetPaymentPayoutRequest,
+        base_url,
+        '/payment/{connection_id}/payout/{id}',
+        request
+      )
+      headers = {}
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::GetPaymentPayoutRequest, request)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.get(url) do |req|
+        req.headers = headers
+        req.params = query_params
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::GetPaymentPayoutResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentPayout)
+          res.payment_payout = out
+        end
+      end
+      res
+    end
+
+
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetPaymentRefundResponse) }
+    def get_payment_refund(connection_id, id, fields_ = nil)
+      # get_payment_refund - Retrieve a refund
+      request = ::UnifiedRubySDK::Operations::GetPaymentRefundRequest.new(
+        
+        connection_id: connection_id,
+        id: id,
+        fields_: fields_
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::GetPaymentRefundRequest,
+        base_url,
+        '/payment/{connection_id}/refund/{id}',
+        request
+      )
+      headers = {}
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::GetPaymentRefundRequest, request)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.get(url) do |req|
+        req.headers = headers
+        req.params = query_params
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::GetPaymentRefundResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentRefund)
+          res.payment_refund = out
+        end
+      end
+      res
+    end
+
+
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListPaymentLinksRequest)).returns(::UnifiedRubySDK::Operations::ListPaymentLinksResponse) }
+    def list_payment_links(request)
+      # list_payment_links - List all payment links
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::ListPaymentLinksRequest,
+        base_url,
+        '/payment/{connection_id}/link',
+        request
+      )
+      headers = {}
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::ListPaymentLinksRequest, request)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.get(url) do |req|
+        req.headers = headers
+        req.params = query_params
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::ListPaymentLinksResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, T::Array[::UnifiedRubySDK::Shared::PaymentLink])
+          res.payment_links = out
+        end
+      end
+      res
+    end
+
+
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListPaymentPaymentsRequest)).returns(::UnifiedRubySDK::Operations::ListPaymentPaymentsResponse) }
+    def list_payment_payments(request)
+      # list_payment_payments - List all payments
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::ListPaymentPaymentsRequest,
+        base_url,
+        '/payment/{connection_id}/payment',
+        request
+      )
+      headers = {}
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::ListPaymentPaymentsRequest, request)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.get(url) do |req|
+        req.headers = headers
+        req.params = query_params
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::ListPaymentPaymentsResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, T::Array[::UnifiedRubySDK::Shared::PaymentPayment])
+          res.payment_payments = out
+        end
+      end
+      res
+    end
+
+
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListPaymentPayoutsRequest)).returns(::UnifiedRubySDK::Operations::ListPaymentPayoutsResponse) }
+    def list_payment_payouts(request)
+      # list_payment_payouts - List all payouts
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::ListPaymentPayoutsRequest,
+        base_url,
+        '/payment/{connection_id}/payout',
+        request
+      )
+      headers = {}
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::ListPaymentPayoutsRequest, request)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.get(url) do |req|
+        req.headers = headers
+        req.params = query_params
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::ListPaymentPayoutsResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, T::Array[::UnifiedRubySDK::Shared::PaymentPayout])
+          res.payment_payouts = out
+        end
+      end
+      res
+    end
+
+
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListPaymentRefundsRequest)).returns(::UnifiedRubySDK::Operations::ListPaymentRefundsResponse) }
+    def list_payment_refunds(request)
+      # list_payment_refunds - List all refunds
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::ListPaymentRefundsRequest,
+        base_url,
+        '/payment/{connection_id}/refund',
+        request
+      )
+      headers = {}
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::ListPaymentRefundsRequest, request)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.get(url) do |req|
+        req.headers = headers
+        req.params = query_params
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::ListPaymentRefundsResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, T::Array[::UnifiedRubySDK::Shared::PaymentRefund])
+          res.payment_refunds = out
+        end
+      end
+      res
+    end
+
+
+    sig { params(connection_id: ::String, id: ::String, payment_link: T.nilable(::UnifiedRubySDK::Shared::PaymentLink)).returns(::UnifiedRubySDK::Operations::PatchPaymentLinkResponse) }
+    def patch_payment_link(connection_id, id, payment_link = nil)
+      # patch_payment_link - Update a payment link
+      request = ::UnifiedRubySDK::Operations::PatchPaymentLinkRequest.new(
+        
+        connection_id: connection_id,
+        id: id,
+        payment_link: payment_link
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::PatchPaymentLinkRequest,
+        base_url,
+        '/payment/{connection_id}/link/{id}',
+        request
+      )
+      headers = {}
+      req_content_type, data, form = Utils.serialize_request_body(request, :payment_link, :json)
       headers['content-type'] = req_content_type
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -185,23 +474,73 @@ module UnifiedRubySDK
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
 
-      res = ::UnifiedRubySDK::Operations::PatchAccountingPaymentResponse.new(
+      res = ::UnifiedRubySDK::Operations::PatchPaymentLinkResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::AccountingPayment)
-          res.accounting_payment = out
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentLink)
+          res.payment_link = out
         end
       end
       res
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAccountingPaymentResponse) }
-    def remove_accounting_payment(connection_id, id)
-      # remove_accounting_payment - Remove a payment
-      request = ::UnifiedRubySDK::Operations::RemoveAccountingPaymentRequest.new(
+    sig { params(connection_id: ::String, id: ::String, payment_payment: T.nilable(::UnifiedRubySDK::Shared::PaymentPayment)).returns(::UnifiedRubySDK::Operations::PatchPaymentPaymentResponse) }
+    def patch_payment_payment(connection_id, id, payment_payment = nil)
+      # patch_payment_payment - Update a payment
+      request = ::UnifiedRubySDK::Operations::PatchPaymentPaymentRequest.new(
+        
+        connection_id: connection_id,
+        id: id,
+        payment_payment: payment_payment
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::PatchPaymentPaymentRequest,
+        base_url,
+        '/payment/{connection_id}/payment/{id}',
+        request
+      )
+      headers = {}
+      req_content_type, data, form = Utils.serialize_request_body(request, :payment_payment, :json)
+      headers['content-type'] = req_content_type
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.patch(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        if form
+          req.body = Utils.encode_form(form)
+        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+          req.body = URI.encode_www_form(data)
+        else
+          req.body = data
+        end
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::PatchPaymentPaymentResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentPayment)
+          res.payment_payment = out
+        end
+      end
+      res
+    end
+
+
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemovePaymentLinkResponse) }
+    def remove_payment_link(connection_id, id)
+      # remove_payment_link - Remove a payment link
+      request = ::UnifiedRubySDK::Operations::RemovePaymentLinkRequest.new(
         
         connection_id: connection_id,
         id: id
@@ -209,9 +548,9 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::RemoveAccountingPaymentRequest,
+        ::UnifiedRubySDK::Operations::RemovePaymentLinkRequest,
         base_url,
-        '/accounting/{connection_id}/payment/{id}',
+        '/payment/{connection_id}/link/{id}',
         request
       )
       headers = {}
@@ -225,7 +564,7 @@ module UnifiedRubySDK
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
 
-      res = ::UnifiedRubySDK::Operations::RemoveAccountingPaymentResponse.new(
+      res = ::UnifiedRubySDK::Operations::RemovePaymentLinkResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
       if True
@@ -237,25 +576,64 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_payment: T.nilable(::UnifiedRubySDK::Shared::AccountingPayment)).returns(::UnifiedRubySDK::Operations::UpdateAccountingPaymentResponse) }
-    def update_accounting_payment(connection_id, id, accounting_payment = nil)
-      # update_accounting_payment - Update a payment
-      request = ::UnifiedRubySDK::Operations::UpdateAccountingPaymentRequest.new(
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemovePaymentPaymentResponse) }
+    def remove_payment_payment(connection_id, id)
+      # remove_payment_payment - Remove a payment
+      request = ::UnifiedRubySDK::Operations::RemovePaymentPaymentRequest.new(
         
         connection_id: connection_id,
-        id: id,
-        accounting_payment: accounting_payment
+        id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::UpdateAccountingPaymentRequest,
+        ::UnifiedRubySDK::Operations::RemovePaymentPaymentRequest,
         base_url,
-        '/accounting/{connection_id}/payment/{id}',
+        '/payment/{connection_id}/payment/{id}',
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :accounting_payment, :json)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.delete(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::RemovePaymentPaymentResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if True
+                
+        res.res = r.env.response_body if Utils.match_content_type(content_type, 'application/json')
+      
+      end
+      res
+    end
+
+
+    sig { params(connection_id: ::String, id: ::String, payment_link: T.nilable(::UnifiedRubySDK::Shared::PaymentLink)).returns(::UnifiedRubySDK::Operations::UpdatePaymentLinkResponse) }
+    def update_payment_link(connection_id, id, payment_link = nil)
+      # update_payment_link - Update a payment link
+      request = ::UnifiedRubySDK::Operations::UpdatePaymentLinkRequest.new(
+        
+        connection_id: connection_id,
+        id: id,
+        payment_link: payment_link
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::UpdatePaymentLinkRequest,
+        base_url,
+        '/payment/{connection_id}/link/{id}',
+        request
+      )
+      headers = {}
+      req_content_type, data, form = Utils.serialize_request_body(request, :payment_link, :json)
       headers['content-type'] = req_content_type
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -274,13 +652,63 @@ module UnifiedRubySDK
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
 
-      res = ::UnifiedRubySDK::Operations::UpdateAccountingPaymentResponse.new(
+      res = ::UnifiedRubySDK::Operations::UpdatePaymentLinkResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::AccountingPayment)
-          res.accounting_payment = out
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentLink)
+          res.payment_link = out
+        end
+      end
+      res
+    end
+
+
+    sig { params(connection_id: ::String, id: ::String, payment_payment: T.nilable(::UnifiedRubySDK::Shared::PaymentPayment)).returns(::UnifiedRubySDK::Operations::UpdatePaymentPaymentResponse) }
+    def update_payment_payment(connection_id, id, payment_payment = nil)
+      # update_payment_payment - Update a payment
+      request = ::UnifiedRubySDK::Operations::UpdatePaymentPaymentRequest.new(
+        
+        connection_id: connection_id,
+        id: id,
+        payment_payment: payment_payment
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::UpdatePaymentPaymentRequest,
+        base_url,
+        '/payment/{connection_id}/payment/{id}',
+        request
+      )
+      headers = {}
+      req_content_type, data, form = Utils.serialize_request_body(request, :payment_payment, :json)
+      headers['content-type'] = req_content_type
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.put(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        if form
+          req.body = Utils.encode_form(form)
+        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+          req.body = URI.encode_www_form(data)
+        else
+          req.body = data
+        end
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::UpdatePaymentPaymentResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentPayment)
+          res.payment_payment = out
         end
       end
       res

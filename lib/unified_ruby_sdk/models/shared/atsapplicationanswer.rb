@@ -12,14 +12,14 @@ module UnifiedRubySDK
       extend T::Sig
 
 
-      field :answer, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('answer') } }
+      field :answers, T::Array[::String], { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('answers') } }
 
       field :question_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('question_id') } }
 
 
-      sig { params(answer: ::String, question_id: ::String).void }
-      def initialize(answer: nil, question_id: nil)
-        @answer = answer
+      sig { params(answers: T::Array[::String], question_id: ::String).void }
+      def initialize(answers: nil, question_id: nil)
+        @answers = answers
         @question_id = question_id
       end
     end

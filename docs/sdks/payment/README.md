@@ -3,14 +3,71 @@
 
 ### Available Operations
 
-* [create_accounting_payment](#create_accounting_payment) - Create a payment
-* [get_accounting_payment](#get_accounting_payment) - Retrieve a payment
-* [list_accounting_payments](#list_accounting_payments) - List all payments
-* [patch_accounting_payment](#patch_accounting_payment) - Update a payment
-* [remove_accounting_payment](#remove_accounting_payment) - Remove a payment
-* [update_accounting_payment](#update_accounting_payment) - Update a payment
+* [create_payment_link](#create_payment_link) - Create a payment link
+* [create_payment_payment](#create_payment_payment) - Create a payment
+* [get_payment_link](#get_payment_link) - Retrieve a payment link
+* [get_payment_payment](#get_payment_payment) - Retrieve a payment
+* [get_payment_payout](#get_payment_payout) - Retrieve a payout
+* [get_payment_refund](#get_payment_refund) - Retrieve a refund
+* [list_payment_links](#list_payment_links) - List all payment links
+* [list_payment_payments](#list_payment_payments) - List all payments
+* [list_payment_payouts](#list_payment_payouts) - List all payouts
+* [list_payment_refunds](#list_payment_refunds) - List all refunds
+* [patch_payment_link](#patch_payment_link) - Update a payment link
+* [patch_payment_payment](#patch_payment_payment) - Update a payment
+* [remove_payment_link](#remove_payment_link) - Remove a payment link
+* [remove_payment_payment](#remove_payment_payment) - Remove a payment
+* [update_payment_link](#update_payment_link) - Update a payment link
+* [update_payment_payment](#update_payment_payment) - Update a payment
 
-## create_accounting_payment
+## create_payment_link
+
+Create a payment link
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.payment.create_payment_link(connection_id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(
+    is_active: false,
+    lineitems: [
+      ::UnifiedRubySDK::Shared::PaymenntLinkLineitem.new(
+        total_amount: 8711.36,
+      ),
+    ],
+    url: "https://athletic-unemployment.org",
+  ))
+
+if ! res.payment_link.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `payment_link`                                                              | [::UnifiedRubySDK::Shared::PaymentLink](../../models/shared/paymentlink.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::CreatePaymentLinkResponse)](../../models/operations/createpaymentlinkresponse.md)**
+
+
+## create_payment_payment
 
 Create a payment
 
@@ -28,9 +85,9 @@ s.config_security(
 )
 
     
-res = s.payment.create_accounting_payment(connection_id="<value>", accounting_payment=::UnifiedRubySDK::Shared::AccountingPayment.new())
+res = s.payment.create_payment_payment(connection_id="<value>", payment_payment=::UnifiedRubySDK::Shared::PaymentPayment.new())
 
-if ! res.accounting_payment.nil?
+if ! res.payment_payment.nil?
   # handle response
 end
 
@@ -38,18 +95,60 @@ end
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
-| `accounting_payment`                                                                    | [::UnifiedRubySDK::Shared::AccountingPayment](../../models/shared/accountingpayment.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `connection_id`                                                                   | *::String*                                                                        | :heavy_check_mark:                                                                | ID of the connection                                                              |
+| `payment_payment`                                                                 | [::UnifiedRubySDK::Shared::PaymentPayment](../../models/shared/paymentpayment.md) | :heavy_minus_sign:                                                                | N/A                                                                               |
 
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::CreateAccountingPaymentResponse)](../../models/operations/createaccountingpaymentresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::CreatePaymentPaymentResponse)](../../models/operations/createpaymentpaymentresponse.md)**
 
 
-## get_accounting_payment
+## get_payment_link
+
+Retrieve a payment link
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.payment.get_payment_link(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
+  ])
+
+if ! res.payment_link.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                        | Type                             | Required                         | Description                      |
+| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Link                   |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::GetPaymentLinkResponse)](../../models/operations/getpaymentlinkresponse.md)**
+
+
+## get_payment_payment
 
 Retrieve a payment
 
@@ -67,11 +166,11 @@ s.config_security(
 )
 
     
-res = s.payment.get_accounting_payment(connection_id="<value>", id="<value>", fields_=[
+res = s.payment.get_payment_payment(connection_id="<value>", id="<value>", fields_=[
     "<value>",
   ])
 
-if ! res.accounting_payment.nil?
+if ! res.payment_payment.nil?
   # handle response
 end
 
@@ -88,10 +187,136 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::GetAccountingPaymentResponse)](../../models/operations/getaccountingpaymentresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::GetPaymentPaymentResponse)](../../models/operations/getpaymentpaymentresponse.md)**
 
 
-## list_accounting_payments
+## get_payment_payout
+
+Retrieve a payout
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.payment.get_payment_payout(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
+  ])
+
+if ! res.payment_payout.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                        | Type                             | Required                         | Description                      |
+| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Payout                 |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::GetPaymentPayoutResponse)](../../models/operations/getpaymentpayoutresponse.md)**
+
+
+## get_payment_refund
+
+Retrieve a refund
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.payment.get_payment_refund(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
+  ])
+
+if ! res.payment_refund.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                        | Type                             | Required                         | Description                      |
+| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Refund                 |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::GetPaymentRefundResponse)](../../models/operations/getpaymentrefundresponse.md)**
+
+
+## list_payment_links
+
+List all payment links
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+
+req = ::UnifiedRubySDK::Operations::ListPaymentLinksRequest.new(
+  connection_id: "<value>",
+)
+    
+res = s.payment.list_payment_links(req)
+
+if ! res.payment_links.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [::UnifiedRubySDK::Operations::ListPaymentLinksRequest](../../models/operations/listpaymentlinksrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::ListPaymentLinksResponse)](../../models/operations/listpaymentlinksresponse.md)**
+
+
+## list_payment_payments
 
 List all payments
 
@@ -109,13 +334,13 @@ s.config_security(
 )
 
 
-req = ::UnifiedRubySDK::Operations::ListAccountingPaymentsRequest.new(
+req = ::UnifiedRubySDK::Operations::ListPaymentPaymentsRequest.new(
   connection_id: "<value>",
 )
     
-res = s.payment.list_accounting_payments(req)
+res = s.payment.list_payment_payments(req)
 
-if ! res.accounting_payments.nil?
+if ! res.payment_payments.nil?
   # handle response
 end
 
@@ -123,17 +348,149 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                               | [::UnifiedRubySDK::Operations::ListAccountingPaymentsRequest](../../models/operations/listaccountingpaymentsrequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                         | [::UnifiedRubySDK::Operations::ListPaymentPaymentsRequest](../../models/operations/listpaymentpaymentsrequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::ListAccountingPaymentsResponse)](../../models/operations/listaccountingpaymentsresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::ListPaymentPaymentsResponse)](../../models/operations/listpaymentpaymentsresponse.md)**
 
 
-## patch_accounting_payment
+## list_payment_payouts
+
+List all payouts
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+
+req = ::UnifiedRubySDK::Operations::ListPaymentPayoutsRequest.new(
+  connection_id: "<value>",
+)
+    
+res = s.payment.list_payment_payouts(req)
+
+if ! res.payment_payouts.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [::UnifiedRubySDK::Operations::ListPaymentPayoutsRequest](../../models/operations/listpaymentpayoutsrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::ListPaymentPayoutsResponse)](../../models/operations/listpaymentpayoutsresponse.md)**
+
+
+## list_payment_refunds
+
+List all refunds
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+
+req = ::UnifiedRubySDK::Operations::ListPaymentRefundsRequest.new(
+  connection_id: "<value>",
+)
+    
+res = s.payment.list_payment_refunds(req)
+
+if ! res.payment_refunds.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [::UnifiedRubySDK::Operations::ListPaymentRefundsRequest](../../models/operations/listpaymentrefundsrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::ListPaymentRefundsResponse)](../../models/operations/listpaymentrefundsresponse.md)**
+
+
+## patch_payment_link
+
+Update a payment link
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.payment.patch_payment_link(connection_id="<value>", id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(
+    is_active: false,
+    lineitems: [
+      ::UnifiedRubySDK::Shared::PaymenntLinkLineitem.new(
+        total_amount: 2219.73,
+      ),
+    ],
+    url: "http://vicious-rank.info",
+  ))
+
+if ! res.payment_link.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Link                                                              |
+| `payment_link`                                                              | [::UnifiedRubySDK::Shared::PaymentLink](../../models/shared/paymentlink.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::PatchPaymentLinkResponse)](../../models/operations/patchpaymentlinkresponse.md)**
+
+
+## patch_payment_payment
 
 Update a payment
 
@@ -151,9 +508,9 @@ s.config_security(
 )
 
     
-res = s.payment.patch_accounting_payment(connection_id="<value>", id="<value>", accounting_payment=::UnifiedRubySDK::Shared::AccountingPayment.new())
+res = s.payment.patch_payment_payment(connection_id="<value>", id="<value>", payment_payment=::UnifiedRubySDK::Shared::PaymentPayment.new())
 
-if ! res.accounting_payment.nil?
+if ! res.payment_payment.nil?
   # handle response
 end
 
@@ -161,19 +518,58 @@ end
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
-| `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Payment                                                                       |
-| `accounting_payment`                                                                    | [::UnifiedRubySDK::Shared::AccountingPayment](../../models/shared/accountingpayment.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `connection_id`                                                                   | *::String*                                                                        | :heavy_check_mark:                                                                | ID of the connection                                                              |
+| `id`                                                                              | *::String*                                                                        | :heavy_check_mark:                                                                | ID of the Payment                                                                 |
+| `payment_payment`                                                                 | [::UnifiedRubySDK::Shared::PaymentPayment](../../models/shared/paymentpayment.md) | :heavy_minus_sign:                                                                | N/A                                                                               |
 
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::PatchAccountingPaymentResponse)](../../models/operations/patchaccountingpaymentresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::PatchPaymentPaymentResponse)](../../models/operations/patchpaymentpaymentresponse.md)**
 
 
-## remove_accounting_payment
+## remove_payment_link
+
+Remove a payment link
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.payment.remove_payment_link(connection_id="<value>", id="<value>")
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Link       |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::RemovePaymentLinkResponse)](../../models/operations/removepaymentlinkresponse.md)**
+
+
+## remove_payment_payment
 
 Remove a payment
 
@@ -191,7 +587,7 @@ s.config_security(
 )
 
     
-res = s.payment.remove_accounting_payment(connection_id="<value>", id="<value>")
+res = s.payment.remove_payment_payment(connection_id="<value>", id="<value>")
 
 if res.status_code == 200
   # handle response
@@ -209,10 +605,58 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::RemoveAccountingPaymentResponse)](../../models/operations/removeaccountingpaymentresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::RemovePaymentPaymentResponse)](../../models/operations/removepaymentpaymentresponse.md)**
 
 
-## update_accounting_payment
+## update_payment_link
+
+Update a payment link
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.payment.update_payment_link(connection_id="<value>", id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(
+    is_active: false,
+    lineitems: [
+      ::UnifiedRubySDK::Shared::PaymenntLinkLineitem.new(
+        total_amount: 6147.65,
+      ),
+    ],
+    url: "http://flawed-publication.org",
+  ))
+
+if ! res.payment_link.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Link                                                              |
+| `payment_link`                                                              | [::UnifiedRubySDK::Shared::PaymentLink](../../models/shared/paymentlink.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::UpdatePaymentLinkResponse)](../../models/operations/updatepaymentlinkresponse.md)**
+
+
+## update_payment_payment
 
 Update a payment
 
@@ -230,9 +674,9 @@ s.config_security(
 )
 
     
-res = s.payment.update_accounting_payment(connection_id="<value>", id="<value>", accounting_payment=::UnifiedRubySDK::Shared::AccountingPayment.new())
+res = s.payment.update_payment_payment(connection_id="<value>", id="<value>", payment_payment=::UnifiedRubySDK::Shared::PaymentPayment.new())
 
-if ! res.accounting_payment.nil?
+if ! res.payment_payment.nil?
   # handle response
 end
 
@@ -240,14 +684,14 @@ end
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
-| `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Payment                                                                       |
-| `accounting_payment`                                                                    | [::UnifiedRubySDK::Shared::AccountingPayment](../../models/shared/accountingpayment.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `connection_id`                                                                   | *::String*                                                                        | :heavy_check_mark:                                                                | ID of the connection                                                              |
+| `id`                                                                              | *::String*                                                                        | :heavy_check_mark:                                                                | ID of the Payment                                                                 |
+| `payment_payment`                                                                 | [::UnifiedRubySDK::Shared::PaymentPayment](../../models/shared/paymentpayment.md) | :heavy_minus_sign:                                                                | N/A                                                                               |
 
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::UpdateAccountingPaymentResponse)](../../models/operations/updateaccountingpaymentresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::UpdatePaymentPaymentResponse)](../../models/operations/updatepaymentpaymentresponse.md)**
 

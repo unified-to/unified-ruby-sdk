@@ -3,10 +3,10 @@
 
 ### Available Operations
 
-* [get_accounting_refund](#get_accounting_refund) - Retrieve a refund
-* [list_accounting_refunds](#list_accounting_refunds) - List all refunds
+* [get_payment_refund](#get_payment_refund) - Retrieve a refund
+* [list_payment_refunds](#list_payment_refunds) - List all refunds
 
-## get_accounting_refund
+## get_payment_refund
 
 Retrieve a refund
 
@@ -24,11 +24,11 @@ s.config_security(
 )
 
     
-res = s.refund.get_accounting_refund(connection_id="<value>", id="<value>", fields_=[
+res = s.refund.get_payment_refund(connection_id="<value>", id="<value>", fields_=[
     "<value>",
   ])
 
-if ! res.accounting_refund.nil?
+if ! res.payment_refund.nil?
   # handle response
 end
 
@@ -45,10 +45,10 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::GetAccountingRefundResponse)](../../models/operations/getaccountingrefundresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::GetPaymentRefundResponse)](../../models/operations/getpaymentrefundresponse.md)**
 
 
-## list_accounting_refunds
+## list_payment_refunds
 
 List all refunds
 
@@ -66,13 +66,13 @@ s.config_security(
 )
 
 
-req = ::UnifiedRubySDK::Operations::ListAccountingRefundsRequest.new(
+req = ::UnifiedRubySDK::Operations::ListPaymentRefundsRequest.new(
   connection_id: "<value>",
 )
     
-res = s.refund.list_accounting_refunds(req)
+res = s.refund.list_payment_refunds(req)
 
-if ! res.accounting_refunds.nil?
+if ! res.payment_refunds.nil?
   # handle response
 end
 
@@ -80,12 +80,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                             | [::UnifiedRubySDK::Operations::ListAccountingRefundsRequest](../../models/operations/listaccountingrefundsrequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [::UnifiedRubySDK::Operations::ListPaymentRefundsRequest](../../models/operations/listpaymentrefundsrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::ListAccountingRefundsResponse)](../../models/operations/listaccountingrefundsresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::ListPaymentRefundsResponse)](../../models/operations/listpaymentrefundsresponse.md)**
 

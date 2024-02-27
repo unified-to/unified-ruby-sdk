@@ -3,10 +3,10 @@
 
 ### Available Operations
 
-* [get_accounting_payout](#get_accounting_payout) - Retrieve a payout
-* [list_accounting_payouts](#list_accounting_payouts) - List all payouts
+* [get_payment_payout](#get_payment_payout) - Retrieve a payout
+* [list_payment_payouts](#list_payment_payouts) - List all payouts
 
-## get_accounting_payout
+## get_payment_payout
 
 Retrieve a payout
 
@@ -24,11 +24,11 @@ s.config_security(
 )
 
     
-res = s.payout.get_accounting_payout(connection_id="<value>", id="<value>", fields_=[
+res = s.payout.get_payment_payout(connection_id="<value>", id="<value>", fields_=[
     "<value>",
   ])
 
-if ! res.accounting_payout.nil?
+if ! res.payment_payout.nil?
   # handle response
 end
 
@@ -45,10 +45,10 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::GetAccountingPayoutResponse)](../../models/operations/getaccountingpayoutresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::GetPaymentPayoutResponse)](../../models/operations/getpaymentpayoutresponse.md)**
 
 
-## list_accounting_payouts
+## list_payment_payouts
 
 List all payouts
 
@@ -66,13 +66,13 @@ s.config_security(
 )
 
 
-req = ::UnifiedRubySDK::Operations::ListAccountingPayoutsRequest.new(
+req = ::UnifiedRubySDK::Operations::ListPaymentPayoutsRequest.new(
   connection_id: "<value>",
 )
     
-res = s.payout.list_accounting_payouts(req)
+res = s.payout.list_payment_payouts(req)
 
-if ! res.accounting_payouts.nil?
+if ! res.payment_payouts.nil?
   # handle response
 end
 
@@ -80,12 +80,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                             | [::UnifiedRubySDK::Operations::ListAccountingPayoutsRequest](../../models/operations/listaccountingpayoutsrequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [::UnifiedRubySDK::Operations::ListPaymentPayoutsRequest](../../models/operations/listpaymentpayoutsrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::ListAccountingPayoutsResponse)](../../models/operations/listaccountingpayoutsresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::ListPaymentPayoutsResponse)](../../models/operations/listpaymentpayoutsresponse.md)**
 

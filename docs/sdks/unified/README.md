@@ -46,7 +46,7 @@ req = ::UnifiedRubySDK::Shared::Connection.new(
   ],
   integration_type: "<value>",
   permissions: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_CANDIDATE_READ,
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_APPLICATIONSTATUS_READ,
   ],
 )
     
@@ -72,7 +72,7 @@ end
 
 ## create_unified_webhook
 
-The data payload received by your server is described at https://docs.unified.to/unified/overview.  The `interval` field can be set as low as 15 minutes for paid accounts, and 60 minutes for free accounts.
+The data payload received by your server is described at https://docs.unified.to/unified/overview. The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free accounts.
 
 ### Example Usage
 
@@ -533,11 +533,11 @@ s.config_security(
     
 res = s.unified.patch_unified_connection(id="<value>", connection=::UnifiedRubySDK::Shared::Connection.new(
     categories: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionCategories::TICKETING,
+      ::UnifiedRubySDK::Shared::PropertyConnectionCategories::UC,
     ],
     integration_type: "<value>",
     permissions: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_LEAD_WRITE,
+      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_LEAD_READ,
     ],
   ))
 
@@ -694,11 +694,11 @@ s.config_security(
     
 res = s.unified.update_unified_connection(id="<value>", connection=::UnifiedRubySDK::Shared::Connection.new(
     categories: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionCategories::ACCOUNTING,
+      ::UnifiedRubySDK::Shared::PropertyConnectionCategories::STORAGE,
     ],
     integration_type: "<value>",
     permissions: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_COMPANY_READ,
+      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_JOB_WRITE,
     ],
   ))
 
