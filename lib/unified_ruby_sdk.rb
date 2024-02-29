@@ -3,12 +3,8 @@
 # typed: true
 # frozen_string_literal: true
 
-require_relative 'unified_ruby_sdk/utils/t'
-require_relative 'unified_ruby_sdk/utils/utils'
-require_relative 'unified_ruby_sdk/utils/metadata_fields'
 module UnifiedRubySDK
   autoload :UnifiedTo, 'unified_ruby_sdk/unified_to'
-  autoload :SDKConfiguration, 'unified_ruby_sdk/sdkconfiguration'
   autoload :Shared, 'unified_ruby_sdk/models/shared'
   autoload :Operations, 'unified_ruby_sdk/models/operations'
   autoload :Accounting, 'unified_ruby_sdk/accounting'
@@ -68,3 +64,8 @@ module UnifiedRubySDK
   autoload :Issue, 'unified_ruby_sdk/issue'
   autoload :Webhook, 'unified_ruby_sdk/webhook'
 end
+
+require_relative 'unified_ruby_sdk/utils/t'
+require_relative 'unified_ruby_sdk/utils/utils'
+require_relative 'unified_ruby_sdk/utils/metadata_fields'
+require_relative 'unified_ruby_sdk/sdkconfiguration'

@@ -6,6 +6,7 @@
 require 'faraday'
 require 'faraday/multipart'
 require 'sorbet-runtime'
+
 module UnifiedRubySDK
   extend T::Sig
 
@@ -13,8 +14,6 @@ module UnifiedRubySDK
     extend T::Sig
 
     attr_accessor :accounting, :account, :contact, :invoice, :organization, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :hris, :employee, :group, :martech, :list, :member, :passthrough, :payment, :link, :payout, :refund, :storage, :file, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
-
-    attr_accessor :security, :language, :sdk_version, :gen_version
 
     sig do
       params(client: Faraday::Request,
@@ -32,9 +31,9 @@ module UnifiedRubySDK
       ## Instantiates the SDK configuring it with the provided parameters.
       # @param [Faraday::Request] client The faraday HTTP client to use for all operations
       # @param [Shared::Security] security The security details required for authentication
-      # @param [Integer] server_idx The index of the server to use for all operations
-      # @param [String] server_url The server URL to use for all operations
-      # @param [Hash<Symbol, String>] url_params Parameters to optionally template the server URL with
+      # @param [::Integer] server_idx The index of the server to use for all operations
+      # @param [::String] server_url The server URL to use for all operations
+      # @param [::Hash<::Symbol, ::String>] url_params Parameters to optionally template the server URL with
 
       if client.nil?
         client = Faraday.new(request: {
@@ -52,23 +51,25 @@ module UnifiedRubySDK
       end
       server_idx = 0 if server_idx.nil?
 
-      
-
       @sdk_configuration = SDKConfiguration.new(client, security, server_url, server_idx)
       init_sdks
     end
 
-    sig { params(params: T.nilable(T::Hash[Symbol, String])).void }
-    def config_server_url(params)
-      if !params.nil?
-        @server_url = Utils.template_url(@server_url, params)
-      end
+    sig { params(server_url: String).void }
+    def config_server_url(server_url)
+      @sdk_configuration.server_url = server_url
+      init_sdks
+    end
+
+    sig { params(server_idx: Integer).void }
+    def config_server(server_idx)
+      raise StandardError, "Invalid server index #{server_idx}" if server_idx.negative? || server_idx >= SERVERS.length
+      @sdk_configuration.server_idx = server_idx
       init_sdks
     end
 
     sig { params(security: ::UnifiedRubySDK::Shared::Security).void }
     def config_security(security)
-      @security = security
       @sdk_configuration.security = security
     end
 
