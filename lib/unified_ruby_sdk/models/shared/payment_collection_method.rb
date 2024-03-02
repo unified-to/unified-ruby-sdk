@@ -8,10 +8,10 @@ module UnifiedRubySDK
   module Shared
   
 
-    class WebhookType < T::Enum
+    class PaymentCollectionMethod < T::Enum
       enums do
-        VIRTUAL = new('virtual')
-        NATIVE = new('native')
+        SEND_INVOICE = new('send_invoice')
+        CHARGE_AUTOMATICALLY = new('charge_automatically')
       end
     end
 

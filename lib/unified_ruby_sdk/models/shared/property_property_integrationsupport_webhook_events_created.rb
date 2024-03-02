@@ -8,10 +8,9 @@ module UnifiedRubySDK
   module Shared
   
 
-    class WebhookWebhookType < T::Enum
+    class PropertyPropertyIntegrationSupportWebhookEventsCreated < T::Enum
       enums do
         VIRTUAL = new('virtual')
-        NONE = new('none')
         NATIVE = new('native')
       end
     end

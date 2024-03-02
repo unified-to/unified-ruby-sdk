@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 48060151324f197510525fbcfe544edc
+  docChecksum: 0793d7d9d65b0d606620076f43596338
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.275.4
-  releaseVersion: 0.4.20
-  configChecksum: a1ad10e739451bff28d23857350be63a
+  generationVersion: 2.277.0
+  releaseVersion: 0.4.21
+  configChecksum: 2f0c82002cab5ececff0f6b4d6fab7f7
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -605,6 +605,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingemail_type.rb
   - lib/unified_ruby_sdk/models/shared/accountingemail.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingcontact_billing_address.rb
+  - lib/unified_ruby_sdk/models/shared/payment_collection_method.rb
   - lib/unified_ruby_sdk/models/shared/accountinginvoice_status.rb
   - lib/unified_ruby_sdk/models/shared/accountinginvoice.rb
   - lib/unified_ruby_sdk/models/shared/accountinglineitem.rb
@@ -736,14 +737,16 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_connection_auth.rb
   - lib/unified_ruby_sdk/models/shared/event.rb
   - lib/unified_ruby_sdk/models/shared/object_type.rb
-  - lib/unified_ruby_sdk/models/shared/webhook_webhook_type.rb
+  - lib/unified_ruby_sdk/models/shared/webhook_type.rb
   - lib/unified_ruby_sdk/models/shared/webhook.rb
   - lib/unified_ruby_sdk/models/shared/apicall_type.rb
   - lib/unified_ruby_sdk/models/shared/apicall.rb
   - lib/unified_ruby_sdk/models/shared/integration.rb
-  - lib/unified_ruby_sdk/models/shared/webhook_type.rb
   - lib/unified_ruby_sdk/models/shared/integrationsupport.rb
   - lib/unified_ruby_sdk/models/shared/property_integrationsupport_webhook_events.rb
+  - lib/unified_ruby_sdk/models/shared/property_property_integrationsupport_webhook_events_updated.rb
+  - lib/unified_ruby_sdk/models/shared/property_property_integrationsupport_webhook_events_deleted.rb
+  - lib/unified_ruby_sdk/models/shared/property_property_integrationsupport_webhook_events_created.rb
   - lib/unified_ruby_sdk/models/shared/property_integration_categories.rb
   - lib/unified_ruby_sdk/models/shared/issue_status.rb
   - lib/unified_ruby_sdk/models/shared/issue_type.rb
@@ -1234,6 +1237,7 @@ generatedFiles:
   - docs/models/shared/accountingemailtype.md
   - docs/models/shared/accountingemail.md
   - docs/models/shared/propertyaccountingcontactbillingaddress.md
+  - docs/models/shared/paymentcollectionmethod.md
   - docs/models/shared/accountinginvoicestatus.md
   - docs/models/shared/accountinginvoice.md
   - docs/models/shared/accountinglineitem.md
@@ -1365,14 +1369,16 @@ generatedFiles:
   - docs/models/shared/propertyconnectionauth.md
   - docs/models/shared/event.md
   - docs/models/shared/objecttype.md
-  - docs/models/shared/webhookwebhooktype.md
+  - docs/models/shared/webhooktype.md
   - docs/models/shared/webhook.md
   - docs/models/shared/apicalltype.md
   - docs/models/shared/apicall.md
   - docs/models/shared/integration.md
-  - docs/models/shared/webhooktype.md
   - docs/models/shared/integrationsupport.md
   - docs/models/shared/propertyintegrationsupportwebhookevents.md
+  - docs/models/shared/propertypropertyintegrationsupportwebhookeventsupdated.md
+  - docs/models/shared/propertypropertyintegrationsupportwebhookeventsdeleted.md
+  - docs/models/shared/propertypropertyintegrationsupportwebhookeventscreated.md
   - docs/models/shared/propertyintegrationcategories.md
   - docs/models/shared/issuestatus.md
   - docs/models/shared/issuetype.md
