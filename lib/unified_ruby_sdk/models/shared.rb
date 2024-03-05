@@ -13,6 +13,8 @@ module UnifiedRubySDK
     autoload :AccountingTelephoneType, 'unified_ruby_sdk/models/shared/accountingtelephone_type.rb'
     autoload :AccountingTelephone, 'unified_ruby_sdk/models/shared/accountingtelephone.rb'
     autoload :PropertyAccountingContactShippingAddress, 'unified_ruby_sdk/models/shared/property_accountingcontact_shipping_address.rb'
+    autoload :AccountingContactPaymentMethodType, 'unified_ruby_sdk/models/shared/accountingcontactpaymentmethod_type.rb'
+    autoload :AccountingContactPaymentMethod, 'unified_ruby_sdk/models/shared/accountingcontactpaymentmethod.rb'
     autoload :AccountingEmailType, 'unified_ruby_sdk/models/shared/accountingemail_type.rb'
     autoload :AccountingEmail, 'unified_ruby_sdk/models/shared/accountingemail.rb'
     autoload :PropertyAccountingContactBillingAddress, 'unified_ruby_sdk/models/shared/property_accountingcontact_billing_address.rb'

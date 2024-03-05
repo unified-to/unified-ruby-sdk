@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 0793d7d9d65b0d606620076f43596338
+  docChecksum: 1982f00b1c8ae9709c4c51c2b473ab66
   docVersion: "1.0"
   speakeasyVersion: internal
   generationVersion: 2.277.0
-  releaseVersion: 0.4.21
-  configChecksum: 2f0c82002cab5ececff0f6b4d6fab7f7
+  releaseVersion: 0.4.22
+  configChecksum: 0781f4bbe29041be1b57a72005dbc22c
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -602,6 +602,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingtelephone_type.rb
   - lib/unified_ruby_sdk/models/shared/accountingtelephone.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingcontact_shipping_address.rb
+  - lib/unified_ruby_sdk/models/shared/accountingcontactpaymentmethod_type.rb
+  - lib/unified_ruby_sdk/models/shared/accountingcontactpaymentmethod.rb
   - lib/unified_ruby_sdk/models/shared/accountingemail_type.rb
   - lib/unified_ruby_sdk/models/shared/accountingemail.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingcontact_billing_address.rb
@@ -1234,6 +1236,8 @@ generatedFiles:
   - docs/models/shared/accountingtelephonetype.md
   - docs/models/shared/accountingtelephone.md
   - docs/models/shared/propertyaccountingcontactshippingaddress.md
+  - docs/models/shared/accountingcontactpaymentmethodtype.md
+  - docs/models/shared/accountingcontactpaymentmethod.md
   - docs/models/shared/accountingemailtype.md
   - docs/models/shared/accountingemail.md
   - docs/models/shared/propertyaccountingcontactbillingaddress.md

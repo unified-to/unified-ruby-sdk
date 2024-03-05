@@ -30,6 +30,8 @@ module UnifiedRubySDK
 
       field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
+      field :payment_methods, T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingContactPaymentMethod]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_methods') } }
+
       field :portal_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('portal_url') } }
 
       field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
@@ -45,8 +47,8 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(billing_address: T.nilable(::UnifiedRubySDK::Shared::PropertyAccountingContactBillingAddress), created_at: T.nilable(::DateTime), currency: T.nilable(::String), emails: T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingEmail]), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_customer: T.nilable(T::Boolean), is_supplier: T.nilable(T::Boolean), name: T.nilable(::String), portal_url: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), shipping_address: T.nilable(::UnifiedRubySDK::Shared::PropertyAccountingContactShippingAddress), tax_exemption: T.nilable(::UnifiedRubySDK::Shared::TaxExemption), tax_number: T.nilable(::String), telephones: T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingTelephone]), updated_at: T.nilable(::DateTime)).void }
-      def initialize(billing_address: nil, created_at: nil, currency: nil, emails: nil, id: nil, is_active: nil, is_customer: nil, is_supplier: nil, name: nil, portal_url: nil, raw: nil, shipping_address: nil, tax_exemption: nil, tax_number: nil, telephones: nil, updated_at: nil)
+      sig { params(billing_address: T.nilable(::UnifiedRubySDK::Shared::PropertyAccountingContactBillingAddress), created_at: T.nilable(::DateTime), currency: T.nilable(::String), emails: T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingEmail]), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_customer: T.nilable(T::Boolean), is_supplier: T.nilable(T::Boolean), name: T.nilable(::String), payment_methods: T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingContactPaymentMethod]), portal_url: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), shipping_address: T.nilable(::UnifiedRubySDK::Shared::PropertyAccountingContactShippingAddress), tax_exemption: T.nilable(::UnifiedRubySDK::Shared::TaxExemption), tax_number: T.nilable(::String), telephones: T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingTelephone]), updated_at: T.nilable(::DateTime)).void }
+      def initialize(billing_address: nil, created_at: nil, currency: nil, emails: nil, id: nil, is_active: nil, is_customer: nil, is_supplier: nil, name: nil, payment_methods: nil, portal_url: nil, raw: nil, shipping_address: nil, tax_exemption: nil, tax_number: nil, telephones: nil, updated_at: nil)
         @billing_address = billing_address
         @created_at = created_at
         @currency = currency
@@ -56,6 +58,7 @@ module UnifiedRubySDK
         @is_customer = is_customer
         @is_supplier = is_supplier
         @name = name
+        @payment_methods = payment_methods
         @portal_url = portal_url
         @raw = raw
         @shipping_address = shipping_address
