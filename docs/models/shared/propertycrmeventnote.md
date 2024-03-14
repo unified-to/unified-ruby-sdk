@@ -8,3 +8,4 @@ The note object, when type = note
 | Field                 | Type                  | Required              | Description           |
 | --------------------- | --------------------- | --------------------- | --------------------- |
 | `description`         | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |
+| `title`               | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |

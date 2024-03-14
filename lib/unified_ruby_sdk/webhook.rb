@@ -168,8 +168,10 @@ module UnifiedRubySDK
       )
       if True
                 
-        res.res = r.env.response_body if Utils.match_content_type(content_type, 'application/json')
-      
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::String)
+          res.string = out
+        end
       end
       res
     end
@@ -206,8 +208,10 @@ module UnifiedRubySDK
       )
       if True
                 
-        res.res = r.env.response_body if Utils.match_content_type(content_type, 'application/json')
-      
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::String)
+          res.string = out
+        end
       end
       res
     end
@@ -244,8 +248,10 @@ module UnifiedRubySDK
       )
       if True
                 
-        res.res = r.env.response_body if Utils.match_content_type(content_type, 'application/json')
-      
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::String)
+          res.string = out
+        end
       end
       res
     end
