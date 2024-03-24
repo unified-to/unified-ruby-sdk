@@ -14,12 +14,15 @@ module UnifiedRubySDK
 
       field :email, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
 
+      field :is_verified, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_verified') } }
+
       field :type, T.nilable(::UnifiedRubySDK::Shared::EnrichEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::EnrichEmailType, true) } }
 
 
-      sig { params(email: ::String, type: T.nilable(::UnifiedRubySDK::Shared::EnrichEmailType)).void }
-      def initialize(email: nil, type: nil)
+      sig { params(email: ::String, is_verified: T.nilable(T::Boolean), type: T.nilable(::UnifiedRubySDK::Shared::EnrichEmailType)).void }
+      def initialize(email: nil, is_verified: nil, type: nil)
         @email = email
+        @is_verified = is_verified
         @type = type
       end
     end
