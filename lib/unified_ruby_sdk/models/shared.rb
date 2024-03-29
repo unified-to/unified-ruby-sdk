@@ -123,7 +123,7 @@ module UnifiedRubySDK
     autoload :MarketingEmailType, 'unified_ruby_sdk/models/shared/marketingemail_type.rb'
     autoload :MarketingEmail, 'unified_ruby_sdk/models/shared/marketingemail.rb'
     autoload :PaymentLink, 'unified_ruby_sdk/models/shared/paymentlink.rb'
-    autoload :PaymenntLinkLineitem, 'unified_ruby_sdk/models/shared/paymenntlinklineitem.rb'
+    autoload :PaymentLinkLineitem, 'unified_ruby_sdk/models/shared/paymentlinklineitem.rb'
     autoload :PaymentPayment, 'unified_ruby_sdk/models/shared/paymentpayment.rb'
     autoload :PaymentPayoutStatus, 'unified_ruby_sdk/models/shared/paymentpayout_status.rb'
     autoload :PaymentPayout, 'unified_ruby_sdk/models/shared/paymentpayout.rb'

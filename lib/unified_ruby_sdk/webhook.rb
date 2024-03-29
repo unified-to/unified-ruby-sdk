@@ -166,7 +166,8 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::PatchUnifiedWebhookTriggerResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      if True
+      if r.status >= 200 && r.status < 300
+      else
                 
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, ::String)
@@ -206,7 +207,8 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveUnifiedWebhookResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      if True
+      if r.status >= 200 && r.status < 300
+      else
                 
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, ::String)
@@ -246,7 +248,8 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::UpdateUnifiedWebhookTriggerResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      if True
+      if r.status >= 200 && r.status < 300
+      else
                 
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, ::String)

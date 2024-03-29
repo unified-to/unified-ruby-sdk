@@ -39,13 +39,12 @@ s.config_security(
 
     
 res = s.payment.create_payment_link(connection_id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(
-    is_active: false,
+    amount: 8711.36,
     lineitems: [
-      ::UnifiedRubySDK::Shared::PaymenntLinkLineitem.new(
-        total_amount: 8711.36,
+      ::UnifiedRubySDK::Shared::PaymentLinkLineitem.new(
+        total_amount: 7885.08,
       ),
     ],
-    url: "https://athletic-unemployment.org",
   ))
 
 if ! res.payment_link.nil?
@@ -461,13 +460,12 @@ s.config_security(
 
     
 res = s.payment.patch_payment_link(connection_id="<value>", id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(
-    is_active: false,
+    amount: 2219.73,
     lineitems: [
-      ::UnifiedRubySDK::Shared::PaymenntLinkLineitem.new(
-        total_amount: 2219.73,
+      ::UnifiedRubySDK::Shared::PaymentLinkLineitem.new(
+        total_amount: 4605.59,
       ),
     ],
-    url: "http://vicious-rank.info",
   ))
 
 if ! res.payment_link.nil?
@@ -627,13 +625,12 @@ s.config_security(
 
     
 res = s.payment.update_payment_link(connection_id="<value>", id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(
-    is_active: false,
+    amount: 6147.65,
     lineitems: [
-      ::UnifiedRubySDK::Shared::PaymenntLinkLineitem.new(
-        total_amount: 6147.65,
+      ::UnifiedRubySDK::Shared::PaymentLinkLineitem.new(
+        total_amount: 4437.28,
       ),
     ],
-    url: "http://flawed-publication.org",
   ))
 
 if ! res.payment_link.nil?
