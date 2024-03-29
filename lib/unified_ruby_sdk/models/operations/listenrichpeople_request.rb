@@ -13,6 +13,8 @@ module UnifiedRubySDK
 
       # ID of the connection
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+      # The name of the company the person is associated with.  Not valid by itself.
+      field :company_name, T.nilable(::String), { 'query_param': { 'field_name': 'company_name', 'style': 'form', 'explode': true } }
       # The email of the person to search
       field :email, T.nilable(::String), { 'query_param': { 'field_name': 'email', 'style': 'form', 'explode': true } }
       # The LinkedIn URL of the person to search
@@ -23,9 +25,10 @@ module UnifiedRubySDK
       field :twitter, T.nilable(::String), { 'query_param': { 'field_name': 'twitter', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, email: T.nilable(::String), linkedin_url: T.nilable(::String), name: T.nilable(::String), twitter: T.nilable(::String)).void }
-      def initialize(connection_id: nil, email: nil, linkedin_url: nil, name: nil, twitter: nil)
+      sig { params(connection_id: ::String, company_name: T.nilable(::String), email: T.nilable(::String), linkedin_url: T.nilable(::String), name: T.nilable(::String), twitter: T.nilable(::String)).void }
+      def initialize(connection_id: nil, company_name: nil, email: nil, linkedin_url: nil, name: nil, twitter: nil)
         @connection_id = connection_id
+        @company_name = company_name
         @email = email
         @linkedin_url = linkedin_url
         @name = name
