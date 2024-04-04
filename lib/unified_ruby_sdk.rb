@@ -39,6 +39,8 @@ module UnifiedRubySDK
   autoload :Hris, 'unified_ruby_sdk/hris'
   autoload :Employee, 'unified_ruby_sdk/employee'
   autoload :Group, 'unified_ruby_sdk/group'
+  autoload :Payslip, 'unified_ruby_sdk/payslip'
+  autoload :Timeoff, 'unified_ruby_sdk/timeoff'
   autoload :Martech, 'unified_ruby_sdk/martech'
   autoload :List, 'unified_ruby_sdk/list'
   autoload :Member, 'unified_ruby_sdk/member'

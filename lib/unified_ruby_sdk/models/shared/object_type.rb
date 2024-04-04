@@ -41,6 +41,8 @@ module UnifiedRubySDK
         CRM_PIPELINE = new('crm_pipeline')
         HRIS_EMPLOYEE = new('hris_employee')
         HRIS_GROUP = new('hris_group')
+        HRIS_PAYSLIP = new('hris_payslip')
+        HRIS_TIMEOFF = new('hris_timeoff')
         MARTECH_LIST = new('martech_list')
         MARTECH_MEMBER = new('martech_member')
         PASSTHROUGH = new('passthrough')

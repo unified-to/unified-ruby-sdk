@@ -13,7 +13,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :contact, :invoice, :organization, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :hris, :employee, :group, :martech, :list, :member, :passthrough, :payment, :link, :payout, :refund, :storage, :file, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
+    attr_accessor :accounting, :account, :contact, :invoice, :organization, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :hris, :employee, :group, :payslip, :timeoff, :martech, :list, :member, :passthrough, :payment, :link, :payout, :refund, :storage, :file, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
 
     sig do
       params(client: Faraday::Request,
@@ -107,6 +107,8 @@ module UnifiedRubySDK
       @hris = Hris.new(@sdk_configuration)
       @employee = Employee.new(@sdk_configuration)
       @group = Group.new(@sdk_configuration)
+      @payslip = Payslip.new(@sdk_configuration)
+      @timeoff = Timeoff.new(@sdk_configuration)
       @martech = Martech.new(@sdk_configuration)
       @list = List.new(@sdk_configuration)
       @member = Member.new(@sdk_configuration)

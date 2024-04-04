@@ -46,7 +46,7 @@ req = ::UnifiedRubySDK::Shared::Connection.new(
   ],
   integration_type: "<value>",
   permissions: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_APPLICATIONSTATUS_READ,
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_CANDIDATE_WRITE,
   ],
 )
     
@@ -537,7 +537,7 @@ res = s.unified.patch_unified_connection(id="<value>", connection=::UnifiedRubyS
     ],
     integration_type: "<value>",
     permissions: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_LEAD_READ,
+      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_PIPELINE_WRITE,
     ],
   ))
 
@@ -698,7 +698,7 @@ res = s.unified.update_unified_connection(id="<value>", connection=::UnifiedRuby
     ],
     integration_type: "<value>",
     permissions: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_JOB_WRITE,
+      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_DOCUMENT_READ,
     ],
   ))
 

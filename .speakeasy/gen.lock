@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: c0feefab18e1757955e61afa41102a4c
+  docChecksum: 2d9519a9ae45cc997b9772dfea3b96f5
   docVersion: "1.0"
-  speakeasyVersion: 1.228.1
-  generationVersion: 2.292.0
-  releaseVersion: 0.4.26
-  configChecksum: 208661a87dc6204fce22b4fab3531090
+  speakeasyVersion: 1.235.2
+  generationVersion: 2.298.2
+  releaseVersion: 0.4.27
+  configChecksum: 6fc5c8d242a59f5569950fb2adcf302b
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -50,6 +50,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/hris.rb
   - lib/unified_ruby_sdk/employee.rb
   - lib/unified_ruby_sdk/group.rb
+  - lib/unified_ruby_sdk/payslip.rb
+  - lib/unified_ruby_sdk/timeoff.rb
   - lib/unified_ruby_sdk/martech.rb
   - lib/unified_ruby_sdk/list.rb
   - lib/unified_ruby_sdk/member.rb
@@ -421,10 +423,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/gethrisemployee_response.rb
   - lib/unified_ruby_sdk/models/operations/gethrisgroup_request.rb
   - lib/unified_ruby_sdk/models/operations/gethrisgroup_response.rb
+  - lib/unified_ruby_sdk/models/operations/gethrispayslip_request.rb
+  - lib/unified_ruby_sdk/models/operations/gethrispayslip_response.rb
+  - lib/unified_ruby_sdk/models/operations/gethristimeoff_request.rb
+  - lib/unified_ruby_sdk/models/operations/gethristimeoff_response.rb
   - lib/unified_ruby_sdk/models/operations/listhrisemployees_request.rb
   - lib/unified_ruby_sdk/models/operations/listhrisemployees_response.rb
   - lib/unified_ruby_sdk/models/operations/listhrisgroups_request.rb
   - lib/unified_ruby_sdk/models/operations/listhrisgroups_response.rb
+  - lib/unified_ruby_sdk/models/operations/listhrispayslips_request.rb
+  - lib/unified_ruby_sdk/models/operations/listhrispayslips_response.rb
+  - lib/unified_ruby_sdk/models/operations/listhristimeoffs_request.rb
+  - lib/unified_ruby_sdk/models/operations/listhristimeoffs_response.rb
   - lib/unified_ruby_sdk/models/operations/patchhrisemployee_request.rb
   - lib/unified_ruby_sdk/models/operations/patchhrisemployee_response.rb
   - lib/unified_ruby_sdk/models/operations/patchhrisgroup_request.rb
@@ -707,6 +717,13 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_hrisemployee_address.rb
   - lib/unified_ruby_sdk/models/shared/hrisgroup_type.rb
   - lib/unified_ruby_sdk/models/shared/hrisgroup.rb
+  - lib/unified_ruby_sdk/models/shared/payment_type.rb
+  - lib/unified_ruby_sdk/models/shared/hrispayslip.rb
+  - lib/unified_ruby_sdk/models/shared/hrispayslipdetail_type.rb
+  - lib/unified_ruby_sdk/models/shared/hrispayslipdetail.rb
+  - lib/unified_ruby_sdk/models/shared/hristimeoff_status.rb
+  - lib/unified_ruby_sdk/models/shared/hristimeoff_type.rb
+  - lib/unified_ruby_sdk/models/shared/hristimeoff.rb
   - lib/unified_ruby_sdk/models/shared/marketinglist.rb
   - lib/unified_ruby_sdk/models/shared/marketingmember.rb
   - lib/unified_ruby_sdk/models/shared/marketingemail_type.rb
@@ -1055,10 +1072,18 @@ generatedFiles:
   - docs/models/operations/gethrisemployeeresponse.md
   - docs/models/operations/gethrisgrouprequest.md
   - docs/models/operations/gethrisgroupresponse.md
+  - docs/models/operations/gethrispaysliprequest.md
+  - docs/models/operations/gethrispayslipresponse.md
+  - docs/models/operations/gethristimeoffrequest.md
+  - docs/models/operations/gethristimeoffresponse.md
   - docs/models/operations/listhrisemployeesrequest.md
   - docs/models/operations/listhrisemployeesresponse.md
   - docs/models/operations/listhrisgroupsrequest.md
   - docs/models/operations/listhrisgroupsresponse.md
+  - docs/models/operations/listhrispayslipsrequest.md
+  - docs/models/operations/listhrispayslipsresponse.md
+  - docs/models/operations/listhristimeoffsrequest.md
+  - docs/models/operations/listhristimeoffsresponse.md
   - docs/models/operations/patchhrisemployeerequest.md
   - docs/models/operations/patchhrisemployeeresponse.md
   - docs/models/operations/patchhrisgrouprequest.md
@@ -1341,6 +1366,13 @@ generatedFiles:
   - docs/models/shared/propertyhrisemployeeaddress.md
   - docs/models/shared/hrisgrouptype.md
   - docs/models/shared/hrisgroup.md
+  - docs/models/shared/paymenttype.md
+  - docs/models/shared/hrispayslip.md
+  - docs/models/shared/hrispayslipdetailtype.md
+  - docs/models/shared/hrispayslipdetail.md
+  - docs/models/shared/hristimeoffstatus.md
+  - docs/models/shared/hristimeofftype.md
+  - docs/models/shared/hristimeoff.md
   - docs/models/shared/marketinglist.md
   - docs/models/shared/marketingmember.md
   - docs/models/shared/marketingemailtype.md
@@ -1421,6 +1453,8 @@ generatedFiles:
   - docs/sdks/hris/README.md
   - docs/sdks/employee/README.md
   - docs/sdks/group/README.md
+  - docs/sdks/payslip/README.md
+  - docs/sdks/timeoff/README.md
   - docs/sdks/martech/README.md
   - docs/sdks/list/README.md
   - docs/sdks/member/README.md

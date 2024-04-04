@@ -7,8 +7,12 @@
 * [create_hris_group](#create_hris_group) - Create a group
 * [get_hris_employee](#get_hris_employee) - Retrieve an employee
 * [get_hris_group](#get_hris_group) - Retrieve a group
+* [get_hris_payslip](#get_hris_payslip) - Retrieve a payslip
+* [get_hris_timeoff](#get_hris_timeoff) - Retrieve a timeoff
 * [list_hris_employees](#list_hris_employees) - List all employees
 * [list_hris_groups](#list_hris_groups) - List all groups
+* [list_hris_payslips](#list_hris_payslips) - List all payslip
+* [list_hris_timeoffs](#list_hris_timeoffs) - List all timeoffs
 * [patch_hris_employee](#patch_hris_employee) - Update an employee
 * [patch_hris_group](#patch_hris_group) - Update a group
 * [remove_hris_employee](#remove_hris_employee) - Remove an employee
@@ -178,6 +182,90 @@ end
 **[T.nilable(::UnifiedRubySDK::Operations::GetHrisGroupResponse)](../../models/operations/gethrisgroupresponse.md)**
 
 
+## get_hris_payslip
+
+Retrieve a payslip
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.hris.get_hris_payslip(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
+  ])
+
+if ! res.hris_payslip.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                        | Type                             | Required                         | Description                      |
+| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Payslip                |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::GetHrisPayslipResponse)](../../models/operations/gethrispayslipresponse.md)**
+
+
+## get_hris_timeoff
+
+Retrieve a timeoff
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.hris.get_hris_timeoff(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
+  ])
+
+if ! res.hris_timeoff.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                        | Type                             | Required                         | Description                      |
+| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Timeoff                |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::GetHrisTimeoffResponse)](../../models/operations/gethristimeoffresponse.md)**
+
+
 ## list_hris_employees
 
 List all employees
@@ -260,6 +348,90 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListHrisGroupsResponse)](../../models/operations/listhrisgroupsresponse.md)**
+
+
+## list_hris_payslips
+
+List all payslip
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+
+req = ::UnifiedRubySDK::Operations::ListHrisPayslipsRequest.new(
+  connection_id: "<value>",
+)
+    
+res = s.hris.list_hris_payslips(req)
+
+if ! res.hris_payslips.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [::UnifiedRubySDK::Operations::ListHrisPayslipsRequest](../../models/operations/listhrispayslipsrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::ListHrisPayslipsResponse)](../../models/operations/listhrispayslipsresponse.md)**
+
+
+## list_hris_timeoffs
+
+List all timeoffs
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+
+req = ::UnifiedRubySDK::Operations::ListHrisTimeoffsRequest.new(
+  connection_id: "<value>",
+)
+    
+res = s.hris.list_hris_timeoffs(req)
+
+if ! res.hris_timeoffs.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [::UnifiedRubySDK::Operations::ListHrisTimeoffsRequest](../../models/operations/listhristimeoffsrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::ListHrisTimeoffsResponse)](../../models/operations/listhristimeoffsresponse.md)**
 
 
 ## patch_hris_employee
