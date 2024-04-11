@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [create_ats_interview](#create_ats_interview) - Create a interview
-* [get_ats_interview](#get_ats_interview) - Retrieve a interview
+* [create_ats_interview](#create_ats_interview) - Create an interview
+* [get_ats_interview](#get_ats_interview) - Retrieve an interview
 * [list_ats_interviews](#list_ats_interviews) - List all interviews
-* [patch_ats_interview](#patch_ats_interview) - Update a interview
-* [remove_ats_interview](#remove_ats_interview) - Remove a interview
-* [update_ats_interview](#update_ats_interview) - Update a interview
+* [patch_ats_interview](#patch_ats_interview) - Update an interview
+* [remove_ats_interview](#remove_ats_interview) - Remove an interview
+* [update_ats_interview](#update_ats_interview) - Update an interview
 
 ## create_ats_interview
 
-Create a interview
+Create an interview
 
 ### Example Usage
 
@@ -51,7 +51,7 @@ end
 
 ## get_ats_interview
 
-Retrieve a interview
+Retrieve an interview
 
 ### Example Usage
 
@@ -135,7 +135,7 @@ end
 
 ## patch_ats_interview
 
-Update a interview
+Update an interview
 
 ### Example Usage
 
@@ -175,7 +175,7 @@ end
 
 ## remove_ats_interview
 
-Remove a interview
+Remove an interview
 
 ### Example Usage
 
@@ -214,7 +214,7 @@ end
 
 ## update_ats_interview
 
-Update a interview
+Update an interview
 
 ### Example Usage
 

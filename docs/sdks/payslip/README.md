@@ -4,7 +4,7 @@
 ### Available Operations
 
 * [get_hris_payslip](#get_hris_payslip) - Retrieve a payslip
-* [list_hris_payslips](#list_hris_payslips) - List all payslip
+* [list_hris_payslips](#list_hris_payslips) - List all payslips
 
 ## get_hris_payslip
 
@@ -50,7 +50,7 @@ end
 
 ## list_hris_payslips
 
-List all payslip
+List all payslips
 
 ### Example Usage
 

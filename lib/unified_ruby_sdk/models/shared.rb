@@ -76,6 +76,7 @@ module UnifiedRubySDK
     autoload :EnrichTelephoneType, 'unified_ruby_sdk/models/shared/enrichtelephone_type.rb'
     autoload :EnrichTelephone, 'unified_ruby_sdk/models/shared/enrichtelephone.rb'
     autoload :PropertyEnrichCompanyAddress, 'unified_ruby_sdk/models/shared/property_enrichcompany_address.rb'
+    autoload :CommerceCollectionType, 'unified_ruby_sdk/models/shared/commercecollection_type.rb'
     autoload :CommerceCollection, 'unified_ruby_sdk/models/shared/commercecollection.rb'
     autoload :CommerceItemMediaType, 'unified_ruby_sdk/models/shared/commerceitemmedia_type.rb'
     autoload :CommerceItemMedia, 'unified_ruby_sdk/models/shared/commerceitemmedia.rb'

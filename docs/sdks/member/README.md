@@ -7,7 +7,7 @@
 * [get_martech_member](#get_martech_member) - Retrieve a member
 * [list_martech_members](#list_martech_members) - List all members
 * [patch_martech_member](#patch_martech_member) - Update a member
-* [remove_martech_member](#remove_martech_member) - Remove member
+* [remove_martech_member](#remove_martech_member) - Remove a member
 * [update_martech_member](#update_martech_member) - Update a member
 
 ## create_martech_member
@@ -175,7 +175,7 @@ end
 
 ## remove_martech_member
 
-Remove member
+Remove a member
 
 ### Example Usage
 

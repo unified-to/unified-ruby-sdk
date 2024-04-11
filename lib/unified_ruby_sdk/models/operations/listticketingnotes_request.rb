@@ -25,7 +25,7 @@ module UnifiedRubySDK
       field :query, T.nilable(::String), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
 
       field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
-      # Usually required
+
       field :ticket_id, T.nilable(::String), { 'query_param': { 'field_name': 'ticket_id', 'style': 'form', 'explode': true } }
       # Return only results whose updated date is equal or greater to this value
       field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }

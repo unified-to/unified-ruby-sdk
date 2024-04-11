@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
     sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListHrisPayslipsRequest)).returns(::UnifiedRubySDK::Operations::ListHrisPayslipsResponse) }
     def list_hris_payslips(request)
-      # list_hris_payslips - List all payslip
+      # list_hris_payslips - List all payslips
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

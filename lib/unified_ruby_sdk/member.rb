@@ -200,7 +200,7 @@ module UnifiedRubySDK
 
     sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveMartechMemberResponse) }
     def remove_martech_member(connection_id, id)
-      # remove_martech_member - Remove member
+      # remove_martech_member - Remove a member
       request = ::UnifiedRubySDK::Operations::RemoveMartechMemberRequest.new(
         
         connection_id: connection_id,

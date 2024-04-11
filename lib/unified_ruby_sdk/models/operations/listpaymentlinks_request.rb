@@ -13,7 +13,7 @@ module UnifiedRubySDK
 
       # ID of the connection
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-      # The customer/supplier ID to filter results
+
       field :contact_id, T.nilable(::String), { 'query_param': { 'field_name': 'contact_id', 'style': 'form', 'explode': true } }
       # Comma-delimited fields to return
       field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
@@ -23,7 +23,7 @@ module UnifiedRubySDK
       field :offset, T.nilable(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
 
       field :order, T.nilable(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
-      # The payment ID to filter results
+
       field :payment_id, T.nilable(::String), { 'query_param': { 'field_name': 'payment_id', 'style': 'form', 'explode': true } }
       # Query string to search. eg. email address or name
       field :query, T.nilable(::String), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }

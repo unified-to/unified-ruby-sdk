@@ -13,7 +13,7 @@ module UnifiedRubySDK
 
       # ID of the connection
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-      # The customer ID to filter results
+
       field :customer_id, T.nilable(::String), { 'query_param': { 'field_name': 'customer_id', 'style': 'form', 'explode': true } }
       # Comma-delimited fields to return
       field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
@@ -29,7 +29,7 @@ module UnifiedRubySDK
       field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
       # Return only results whose updated date is equal or greater to this value
       field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
-      # The user/agent ID to filter results
+
       field :user_id, T.nilable(::String), { 'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': true } }
 
 

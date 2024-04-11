@@ -17,7 +17,7 @@ module UnifiedRubySDK
       field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
       field :limit, T.nilable(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
-      # Usually required
+
       field :list_id, T.nilable(::String), { 'query_param': { 'field_name': 'list_id', 'style': 'form', 'explode': true } }
 
       field :offset, T.nilable(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }

@@ -217,7 +217,7 @@ module UnifiedRubySDK
 
     sig { params(connection_id: ::String, ats_interview: T.nilable(::UnifiedRubySDK::Shared::AtsInterview)).returns(::UnifiedRubySDK::Operations::CreateAtsInterviewResponse) }
     def create_ats_interview(connection_id, ats_interview = nil)
-      # create_ats_interview - Create a interview
+      # create_ats_interview - Create an interview
       request = ::UnifiedRubySDK::Operations::CreateAtsInterviewRequest.new(
         
         connection_id: connection_id,
@@ -579,7 +579,7 @@ module UnifiedRubySDK
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAtsInterviewResponse) }
     def get_ats_interview(connection_id, id, fields_ = nil)
-      # get_ats_interview - Retrieve a interview
+      # get_ats_interview - Retrieve an interview
       request = ::UnifiedRubySDK::Operations::GetAtsInterviewRequest.new(
         
         connection_id: connection_id,
@@ -782,7 +782,7 @@ module UnifiedRubySDK
 
     sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsApplicationstatusesRequest)).returns(::UnifiedRubySDK::Operations::ListAtsApplicationstatusesResponse) }
     def list_ats_applicationstatuses(request)
-      # list_ats_applicationstatuses - List all application statuses
+      # list_ats_applicationstatuses - List all applicationstatuses
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1241,7 +1241,7 @@ module UnifiedRubySDK
 
     sig { params(connection_id: ::String, id: ::String, ats_interview: T.nilable(::UnifiedRubySDK::Shared::AtsInterview)).returns(::UnifiedRubySDK::Operations::PatchAtsInterviewResponse) }
     def patch_ats_interview(connection_id, id, ats_interview = nil)
-      # patch_ats_interview - Update a interview
+      # patch_ats_interview - Update an interview
       request = ::UnifiedRubySDK::Operations::PatchAtsInterviewRequest.new(
         
         connection_id: connection_id,
@@ -1559,7 +1559,7 @@ module UnifiedRubySDK
 
     sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAtsInterviewResponse) }
     def remove_ats_interview(connection_id, id)
-      # remove_ats_interview - Remove a interview
+      # remove_ats_interview - Remove an interview
       request = ::UnifiedRubySDK::Operations::RemoveAtsInterviewRequest.new(
         
         connection_id: connection_id,
@@ -1885,7 +1885,7 @@ module UnifiedRubySDK
 
     sig { params(connection_id: ::String, id: ::String, ats_interview: T.nilable(::UnifiedRubySDK::Shared::AtsInterview)).returns(::UnifiedRubySDK::Operations::UpdateAtsInterviewResponse) }
     def update_ats_interview(connection_id, id, ats_interview = nil)
-      # update_ats_interview - Update a interview
+      # update_ats_interview - Update an interview
       request = ::UnifiedRubySDK::Operations::UpdateAtsInterviewRequest.new(
         
         connection_id: connection_id,

@@ -21,7 +21,7 @@ module UnifiedRubySDK
 
     sig { params(connection_id: ::String, payment_link: T.nilable(::UnifiedRubySDK::Shared::PaymentLink)).returns(::UnifiedRubySDK::Operations::CreatePaymentLinkResponse) }
     def create_payment_link(connection_id, payment_link = nil)
-      # create_payment_link - Create a payment link
+      # create_payment_link - Create a link
       request = ::UnifiedRubySDK::Operations::CreatePaymentLinkRequest.new(
         
         connection_id: connection_id,
@@ -70,7 +70,7 @@ module UnifiedRubySDK
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetPaymentLinkResponse) }
     def get_payment_link(connection_id, id, fields_ = nil)
-      # get_payment_link - Retrieve a payment link
+      # get_payment_link - Retrieve a link
       request = ::UnifiedRubySDK::Operations::GetPaymentLinkRequest.new(
         
         connection_id: connection_id,
@@ -113,7 +113,7 @@ module UnifiedRubySDK
 
     sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListPaymentLinksRequest)).returns(::UnifiedRubySDK::Operations::ListPaymentLinksResponse) }
     def list_payment_links(request)
-      # list_payment_links - List all payment links
+      # list_payment_links - List all links
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -150,7 +150,7 @@ module UnifiedRubySDK
 
     sig { params(connection_id: ::String, id: ::String, payment_link: T.nilable(::UnifiedRubySDK::Shared::PaymentLink)).returns(::UnifiedRubySDK::Operations::PatchPaymentLinkResponse) }
     def patch_payment_link(connection_id, id, payment_link = nil)
-      # patch_payment_link - Update a payment link
+      # patch_payment_link - Update a link
       request = ::UnifiedRubySDK::Operations::PatchPaymentLinkRequest.new(
         
         connection_id: connection_id,
@@ -200,7 +200,7 @@ module UnifiedRubySDK
 
     sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemovePaymentLinkResponse) }
     def remove_payment_link(connection_id, id)
-      # remove_payment_link - Remove a payment link
+      # remove_payment_link - Remove a link
       request = ::UnifiedRubySDK::Operations::RemovePaymentLinkRequest.new(
         
         connection_id: connection_id,
@@ -242,7 +242,7 @@ module UnifiedRubySDK
 
     sig { params(connection_id: ::String, id: ::String, payment_link: T.nilable(::UnifiedRubySDK::Shared::PaymentLink)).returns(::UnifiedRubySDK::Operations::UpdatePaymentLinkResponse) }
     def update_payment_link(connection_id, id, payment_link = nil)
-      # update_payment_link - Update a payment link
+      # update_payment_link - Update a link
       request = ::UnifiedRubySDK::Operations::UpdatePaymentLinkRequest.new(
         
         connection_id: connection_id,

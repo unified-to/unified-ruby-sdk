@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 2d9519a9ae45cc997b9772dfea3b96f5
+  docChecksum: 6ea72e2ae09810203a78542e954e2f02
   docVersion: "1.0"
-  speakeasyVersion: 1.235.2
-  generationVersion: 2.298.2
-  releaseVersion: 0.4.27
-  configChecksum: 6fc5c8d242a59f5569950fb2adcf302b
+  speakeasyVersion: 1.250.0
+  generationVersion: 2.304.1
+  releaseVersion: 0.4.28
+  configChecksum: bb84e83220ca7f66b399c2c15b0b40a6
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -675,6 +675,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/enrichtelephone_type.rb
   - lib/unified_ruby_sdk/models/shared/enrichtelephone.rb
   - lib/unified_ruby_sdk/models/shared/property_enrichcompany_address.rb
+  - lib/unified_ruby_sdk/models/shared/commercecollection_type.rb
   - lib/unified_ruby_sdk/models/shared/commercecollection.rb
   - lib/unified_ruby_sdk/models/shared/commerceitemmedia_type.rb
   - lib/unified_ruby_sdk/models/shared/commerceitemmedia.rb
@@ -1324,6 +1325,7 @@ generatedFiles:
   - docs/models/shared/enrichtelephonetype.md
   - docs/models/shared/enrichtelephone.md
   - docs/models/shared/propertyenrichcompanyaddress.md
+  - docs/models/shared/commercecollectiontype.md
   - docs/models/shared/commercecollection.md
   - docs/models/shared/commerceitemmediatype.md
   - docs/models/shared/commerceitemmedia.md

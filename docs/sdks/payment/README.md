@@ -3,26 +3,26 @@
 
 ### Available Operations
 
-* [create_payment_link](#create_payment_link) - Create a payment link
+* [create_payment_link](#create_payment_link) - Create a link
 * [create_payment_payment](#create_payment_payment) - Create a payment
-* [get_payment_link](#get_payment_link) - Retrieve a payment link
+* [get_payment_link](#get_payment_link) - Retrieve a link
 * [get_payment_payment](#get_payment_payment) - Retrieve a payment
 * [get_payment_payout](#get_payment_payout) - Retrieve a payout
 * [get_payment_refund](#get_payment_refund) - Retrieve a refund
-* [list_payment_links](#list_payment_links) - List all payment links
+* [list_payment_links](#list_payment_links) - List all links
 * [list_payment_payments](#list_payment_payments) - List all payments
 * [list_payment_payouts](#list_payment_payouts) - List all payouts
 * [list_payment_refunds](#list_payment_refunds) - List all refunds
-* [patch_payment_link](#patch_payment_link) - Update a payment link
+* [patch_payment_link](#patch_payment_link) - Update a link
 * [patch_payment_payment](#patch_payment_payment) - Update a payment
-* [remove_payment_link](#remove_payment_link) - Remove a payment link
+* [remove_payment_link](#remove_payment_link) - Remove a link
 * [remove_payment_payment](#remove_payment_payment) - Remove a payment
-* [update_payment_link](#update_payment_link) - Update a payment link
+* [update_payment_link](#update_payment_link) - Update a link
 * [update_payment_payment](#update_payment_payment) - Update a payment
 
 ## create_payment_link
 
-Create a payment link
+Create a link
 
 ### Example Usage
 
@@ -107,7 +107,7 @@ end
 
 ## get_payment_link
 
-Retrieve a payment link
+Retrieve a link
 
 ### Example Usage
 
@@ -275,7 +275,7 @@ end
 
 ## list_payment_links
 
-List all payment links
+List all links
 
 ### Example Usage
 
@@ -443,7 +443,7 @@ end
 
 ## patch_payment_link
 
-Update a payment link
+Update a link
 
 ### Example Usage
 
@@ -530,7 +530,7 @@ end
 
 ## remove_payment_link
 
-Remove a payment link
+Remove a link
 
 ### Example Usage
 
@@ -608,7 +608,7 @@ end
 
 ## update_payment_link
 
-Update a payment link
+Update a link
 
 ### Example Usage
 

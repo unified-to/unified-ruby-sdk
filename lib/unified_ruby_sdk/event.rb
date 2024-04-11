@@ -21,7 +21,7 @@ module UnifiedRubySDK
 
     sig { params(connection_id: ::String, crm_event: T.nilable(::UnifiedRubySDK::Shared::CrmEvent)).returns(::UnifiedRubySDK::Operations::CreateCrmEventResponse) }
     def create_crm_event(connection_id, crm_event = nil)
-      # create_crm_event - Create a event
+      # create_crm_event - Create an event
       request = ::UnifiedRubySDK::Operations::CreateCrmEventRequest.new(
         
         connection_id: connection_id,
@@ -70,7 +70,7 @@ module UnifiedRubySDK
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCrmEventResponse) }
     def get_crm_event(connection_id, id, fields_ = nil)
-      # get_crm_event - Retrieve a event
+      # get_crm_event - Retrieve an event
       request = ::UnifiedRubySDK::Operations::GetCrmEventRequest.new(
         
         connection_id: connection_id,
@@ -150,7 +150,7 @@ module UnifiedRubySDK
 
     sig { params(connection_id: ::String, id: ::String, crm_event: T.nilable(::UnifiedRubySDK::Shared::CrmEvent)).returns(::UnifiedRubySDK::Operations::PatchCrmEventResponse) }
     def patch_crm_event(connection_id, id, crm_event = nil)
-      # patch_crm_event - Update a event
+      # patch_crm_event - Update an event
       request = ::UnifiedRubySDK::Operations::PatchCrmEventRequest.new(
         
         connection_id: connection_id,
@@ -200,7 +200,7 @@ module UnifiedRubySDK
 
     sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCrmEventResponse) }
     def remove_crm_event(connection_id, id)
-      # remove_crm_event - Remove a event
+      # remove_crm_event - Remove an event
       request = ::UnifiedRubySDK::Operations::RemoveCrmEventRequest.new(
         
         connection_id: connection_id,
@@ -242,7 +242,7 @@ module UnifiedRubySDK
 
     sig { params(connection_id: ::String, id: ::String, crm_event: T.nilable(::UnifiedRubySDK::Shared::CrmEvent)).returns(::UnifiedRubySDK::Operations::UpdateCrmEventResponse) }
     def update_crm_event(connection_id, id, crm_event = nil)
-      # update_crm_event - Update a event
+      # update_crm_event - Update an event
       request = ::UnifiedRubySDK::Operations::UpdateCrmEventRequest.new(
         
         connection_id: connection_id,

@@ -6,13 +6,13 @@
 * [create_crm_company](#create_crm_company) - Create a company
 * [create_crm_contact](#create_crm_contact) - Create a contact
 * [create_crm_deal](#create_crm_deal) - Create a deal
-* [create_crm_event](#create_crm_event) - Create a event
+* [create_crm_event](#create_crm_event) - Create an event
 * [create_crm_lead](#create_crm_lead) - Create a lead
 * [create_crm_pipeline](#create_crm_pipeline) - Create a pipeline
 * [get_crm_company](#get_crm_company) - Retrieve a company
 * [get_crm_contact](#get_crm_contact) - Retrieve a contact
 * [get_crm_deal](#get_crm_deal) - Retrieve a deal
-* [get_crm_event](#get_crm_event) - Retrieve a event
+* [get_crm_event](#get_crm_event) - Retrieve an event
 * [get_crm_lead](#get_crm_lead) - Retrieve a lead
 * [get_crm_pipeline](#get_crm_pipeline) - Retrieve a pipeline
 * [list_crm_companies](#list_crm_companies) - List all companies
@@ -24,19 +24,19 @@
 * [patch_crm_company](#patch_crm_company) - Update a company
 * [patch_crm_contact](#patch_crm_contact) - Update a contact
 * [patch_crm_deal](#patch_crm_deal) - Update a deal
-* [patch_crm_event](#patch_crm_event) - Update a event
+* [patch_crm_event](#patch_crm_event) - Update an event
 * [patch_crm_lead](#patch_crm_lead) - Update a lead
 * [patch_crm_pipeline](#patch_crm_pipeline) - Update a pipeline
 * [remove_crm_company](#remove_crm_company) - Remove a company
 * [remove_crm_contact](#remove_crm_contact) - Remove a contact
 * [remove_crm_deal](#remove_crm_deal) - Remove a deal
-* [remove_crm_event](#remove_crm_event) - Remove a event
+* [remove_crm_event](#remove_crm_event) - Remove an event
 * [remove_crm_lead](#remove_crm_lead) - Remove a lead
 * [remove_crm_pipeline](#remove_crm_pipeline) - Remove a pipeline
 * [update_crm_company](#update_crm_company) - Update a company
 * [update_crm_contact](#update_crm_contact) - Update a contact
 * [update_crm_deal](#update_crm_deal) - Update a deal
-* [update_crm_event](#update_crm_event) - Update a event
+* [update_crm_event](#update_crm_event) - Update an event
 * [update_crm_lead](#update_crm_lead) - Update a lead
 * [update_crm_pipeline](#update_crm_pipeline) - Update a pipeline
 
@@ -159,7 +159,7 @@ end
 
 ## create_crm_event
 
-Create a event
+Create an event
 
 ### Example Usage
 
@@ -402,7 +402,7 @@ end
 
 ## get_crm_event
 
-Retrieve a event
+Retrieve an event
 
 ### Example Usage
 
@@ -900,7 +900,7 @@ end
 
 ## patch_crm_event
 
-Update a event
+Update an event
 
 ### Example Usage
 
@@ -1137,7 +1137,7 @@ end
 
 ## remove_crm_event
 
-Remove a event
+Remove an event
 
 ### Example Usage
 
@@ -1374,7 +1374,7 @@ end
 
 ## update_crm_event
 
-Update a event
+Update an event
 
 ### Example Usage
 

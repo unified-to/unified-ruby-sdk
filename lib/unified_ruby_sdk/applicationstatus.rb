@@ -21,7 +21,7 @@ module UnifiedRubySDK
 
     sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAtsApplicationstatusesRequest)).returns(::UnifiedRubySDK::Operations::ListAtsApplicationstatusesResponse) }
     def list_ats_applicationstatuses(request)
-      # list_ats_applicationstatuses - List all application statuses
+      # list_ats_applicationstatuses - List all applicationstatuses
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
