@@ -24,7 +24,7 @@ module UnifiedRubySDK
 
       field :emails, T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
 
-      field :external_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_id') } }
+      field :external_identifier, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_identifier') } }
 
       field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
@@ -48,16 +48,18 @@ module UnifiedRubySDK
 
       field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+      field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-      sig { params(address: T.nilable(::UnifiedRubySDK::Shared::PropertyAtsCandidateAddress), company_id: T.nilable(::String), company_name: T.nilable(::String), created_at: T.nilable(::DateTime), date_of_birth: T.nilable(::DateTime), emails: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), external_id: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), link_urls: T.nilable(T::Array[::String]), name: T.nilable(::String), origin: T.nilable(::UnifiedRubySDK::Shared::Origin), raw: T.nilable(T::Hash[Symbol, ::Object]), sources: T.nilable(T::Array[::String]), tags: T.nilable(T::Array[::String]), telephones: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-      def initialize(address: nil, company_id: nil, company_name: nil, created_at: nil, date_of_birth: nil, emails: nil, external_id: nil, id: nil, image_url: nil, link_urls: nil, name: nil, origin: nil, raw: nil, sources: nil, tags: nil, telephones: nil, title: nil, updated_at: nil)
+
+      sig { params(address: T.nilable(::UnifiedRubySDK::Shared::PropertyAtsCandidateAddress), company_id: T.nilable(::String), company_name: T.nilable(::String), created_at: T.nilable(::DateTime), date_of_birth: T.nilable(::DateTime), emails: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), external_identifier: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), link_urls: T.nilable(T::Array[::String]), name: T.nilable(::String), origin: T.nilable(::UnifiedRubySDK::Shared::Origin), raw: T.nilable(T::Hash[Symbol, ::Object]), sources: T.nilable(T::Array[::String]), tags: T.nilable(T::Array[::String]), telephones: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+      def initialize(address: nil, company_id: nil, company_name: nil, created_at: nil, date_of_birth: nil, emails: nil, external_identifier: nil, id: nil, image_url: nil, link_urls: nil, name: nil, origin: nil, raw: nil, sources: nil, tags: nil, telephones: nil, title: nil, updated_at: nil, user_id: nil)
         @address = address
         @company_id = company_id
         @company_name = company_name
         @created_at = created_at
         @date_of_birth = date_of_birth
         @emails = emails
-        @external_id = external_id
+        @external_identifier = external_identifier
         @id = id
         @image_url = image_url
         @link_urls = link_urls
@@ -69,6 +71,7 @@ module UnifiedRubySDK
         @telephones = telephones
         @title = title
         @updated_at = updated_at
+        @user_id = user_id
       end
     end
   end
