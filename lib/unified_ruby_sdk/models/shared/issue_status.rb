@@ -10,11 +10,12 @@ module UnifiedRubySDK
 
     class IssueStatus < T::Enum
       enums do
-        ON_HOLD = new('ON_HOLD')
+        COMPLETED = new('COMPLETED')
         NEW = new('NEW')
+        ROADMAP = new('ROADMAP')
         IN_PROGRESS = new('IN_PROGRESS')
+        ON_HOLD = new('ON_HOLD')
         VALIDATING = new('VALIDATING')
-        COMPLETE = new('COMPLETE')
         REJECTED = new('REJECTED')
       end
     end
