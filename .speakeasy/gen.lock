@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: b49207a22215a71078d123979c29d05c
+  docChecksum: befc5e4546349064e32bd6f1b8d5d55b
   docVersion: "1.0"
   speakeasyVersion: 1.252.0
   generationVersion: 2.306.0
-  releaseVersion: 0.4.30
-  configChecksum: a700eb044ec50a90238360fce4189c5d
+  releaseVersion: 0.4.31
+  configChecksum: 1fa4bd89b48e62f47dd76f2f7d5d96a9
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -588,6 +588,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listunifiedintegrations_response.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedissues_request.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedissues_response.rb
+  - lib/unified_ruby_sdk/models/operations/listunifiedsupports_response.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedwebhooks_request.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedwebhooks_response.rb
   - lib/unified_ruby_sdk/models/operations/patchunifiedconnection_request.rb
@@ -753,6 +754,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_uccall_telephone.rb
   - lib/unified_ruby_sdk/models/shared/connection.rb
   - lib/unified_ruby_sdk/models/shared/property_connection_permissions.rb
+  - lib/unified_ruby_sdk/models/shared/undefined.rb
   - lib/unified_ruby_sdk/models/shared/property_connection_categories.rb
   - lib/unified_ruby_sdk/models/shared/property_connection_auth.rb
   - lib/unified_ruby_sdk/models/shared/event.rb
@@ -1238,6 +1240,7 @@ generatedFiles:
   - docs/models/operations/listunifiedintegrationsresponse.md
   - docs/models/operations/listunifiedissuesrequest.md
   - docs/models/operations/listunifiedissuesresponse.md
+  - docs/models/operations/listunifiedsupportsresponse.md
   - docs/models/operations/listunifiedwebhooksrequest.md
   - docs/models/operations/listunifiedwebhooksresponse.md
   - docs/models/operations/patchunifiedconnectionrequest.md
@@ -1403,6 +1406,7 @@ generatedFiles:
   - docs/models/shared/propertyuccalltelephone.md
   - docs/models/shared/connection.md
   - docs/models/shared/propertyconnectionpermissions.md
+  - docs/models/shared/undefined.md
   - docs/models/shared/propertyconnectioncategories.md
   - docs/models/shared/propertyconnectionauth.md
   - docs/models/shared/event.md

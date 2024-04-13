@@ -24,7 +24,7 @@ module UnifiedRubySDK
 
       field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :cursors_cache, T.nilable(T::Array[T::Hash[Symbol, ::Object]]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cursors_cache') } }
+      field :cursors_cache, T.nilable(T::Array[::UnifiedRubySDK::Shared::Undefined]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cursors_cache') } }
 
       field :environment, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('environment') } }
 
@@ -43,7 +43,7 @@ module UnifiedRubySDK
       field :workspace_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
 
 
-      sig { params(categories: T::Array[::UnifiedRubySDK::Shared::PropertyConnectionCategories], integration_type: ::String, permissions: T::Array[::UnifiedRubySDK::Shared::PropertyConnectionPermissions], auth: T.nilable(::UnifiedRubySDK::Shared::PropertyConnectionAuth), auth_aws_arn: T.nilable(::String), created_at: T.nilable(::DateTime), cursors_cache: T.nilable(T::Array[T::Hash[Symbol, ::Object]]), environment: T.nilable(::String), external_xref: T.nilable(::String), id: T.nilable(::String), is_paused: T.nilable(T::Boolean), last_healthy_at: T.nilable(::DateTime), last_unhealthy_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), workspace_id: T.nilable(::String)).void }
+      sig { params(categories: T::Array[::UnifiedRubySDK::Shared::PropertyConnectionCategories], integration_type: ::String, permissions: T::Array[::UnifiedRubySDK::Shared::PropertyConnectionPermissions], auth: T.nilable(::UnifiedRubySDK::Shared::PropertyConnectionAuth), auth_aws_arn: T.nilable(::String), created_at: T.nilable(::DateTime), cursors_cache: T.nilable(T::Array[::UnifiedRubySDK::Shared::Undefined]), environment: T.nilable(::String), external_xref: T.nilable(::String), id: T.nilable(::String), is_paused: T.nilable(T::Boolean), last_healthy_at: T.nilable(::DateTime), last_unhealthy_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), workspace_id: T.nilable(::String)).void }
       def initialize(categories: nil, integration_type: nil, permissions: nil, auth: nil, auth_aws_arn: nil, created_at: nil, cursors_cache: nil, environment: nil, external_xref: nil, id: nil, is_paused: nil, last_healthy_at: nil, last_unhealthy_at: nil, updated_at: nil, workspace_id: nil)
         @categories = categories
         @integration_type = integration_type

@@ -154,6 +154,7 @@ module UnifiedRubySDK
     autoload :PropertyUcCallTelephone, 'unified_ruby_sdk/models/shared/property_uccall_telephone.rb'
     autoload :Connection, 'unified_ruby_sdk/models/shared/connection.rb'
     autoload :PropertyConnectionPermissions, 'unified_ruby_sdk/models/shared/property_connection_permissions.rb'
+    autoload :Undefined, 'unified_ruby_sdk/models/shared/undefined.rb'
     autoload :PropertyConnectionCategories, 'unified_ruby_sdk/models/shared/property_connection_categories.rb'
     autoload :PropertyConnectionAuth, 'unified_ruby_sdk/models/shared/property_connection_auth.rb'
     autoload :Event, 'unified_ruby_sdk/models/shared/event.rb'

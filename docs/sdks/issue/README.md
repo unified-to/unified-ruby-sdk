@@ -4,6 +4,7 @@
 ### Available Operations
 
 * [list_unified_issues](#list_unified_issues) - List support issues
+* [list_unified_supports](#list_unified_supports) - Get support info
 
 ## list_unified_issues
 
@@ -43,4 +44,36 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIssuesResponse)](../../models/operations/listunifiedissuesresponse.md)**
+
+
+## list_unified_supports
+
+Get support info
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.issue.list_unified_supports()
+
+if ! res.undefined.nil?
+  # handle response
+end
+
+```
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::ListUnifiedSupportsResponse)](../../models/operations/listunifiedsupportsresponse.md)**
 

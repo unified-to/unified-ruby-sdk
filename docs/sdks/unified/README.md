@@ -14,6 +14,7 @@
 * [list_unified_integration_workspaces](#list_unified_integration_workspaces) - Returns all activated integrations in a workspace
 * [list_unified_integrations](#list_unified_integrations) - Returns all integrations
 * [list_unified_issues](#list_unified_issues) - List support issues
+* [list_unified_supports](#list_unified_supports) - Get support info
 * [list_unified_webhooks](#list_unified_webhooks) - Returns all registered webhooks
 * [patch_unified_connection](#patch_unified_connection) - Update connection
 * [patch_unified_webhook_trigger](#patch_unified_webhook_trigger) - Trigger webhook
@@ -471,6 +472,38 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIssuesResponse)](../../models/operations/listunifiedissuesresponse.md)**
+
+
+## list_unified_supports
+
+Get support info
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.unified.list_unified_supports()
+
+if ! res.undefined.nil?
+  # handle response
+end
+
+```
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::ListUnifiedSupportsResponse)](../../models/operations/listunifiedsupportsresponse.md)**
 
 
 ## list_unified_webhooks
