@@ -871,3 +871,11 @@ Based on:
 - Speakeasy CLI 1.260.6 (2.311.1) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [ruby v0.4.33] .
+
+## 2024-04-26 00:15:36
+### Changes
+Based on:
+- OpenAPI Doc 1.0 
+- Speakeasy CLI 1.274.1 (2.314.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [ruby v0.4.34] .
