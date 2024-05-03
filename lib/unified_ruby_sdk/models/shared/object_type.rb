@@ -54,6 +54,8 @@ module UnifiedRubySDK
         ENRICH_PERSON = new('enrich_person')
         ENRICH_COMPANY = new('enrich_company')
         STORAGE_FILE = new('storage_file')
+        GENAI_MODEL = new('genai_model')
+        GENAI_PROMPT = new('genai_prompt')
       end
     end
 

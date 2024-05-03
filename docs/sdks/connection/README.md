@@ -30,11 +30,11 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Shared::Connection.new(
   categories: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::COMMERCE,
+    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::PAYMENT,
   ],
   integration_type: "<value>",
   permissions: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_CANDIDATE_WRITE,
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_INTERVIEW_READ,
   ],
 )
     
@@ -156,11 +156,11 @@ s.config_security(
     
 res = s.connection.patch_unified_connection(id="<value>", connection=::UnifiedRubySDK::Shared::Connection.new(
     categories: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionCategories::UC,
+      ::UnifiedRubySDK::Shared::PropertyConnectionCategories::ACCOUNTING,
     ],
     integration_type: "<value>",
     permissions: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_PIPELINE_WRITE,
+      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::MARTECH_LIST_WRITE,
     ],
   ))
 
@@ -241,11 +241,11 @@ s.config_security(
     
 res = s.connection.update_unified_connection(id="<value>", connection=::UnifiedRubySDK::Shared::Connection.new(
     categories: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionCategories::STORAGE,
+      ::UnifiedRubySDK::Shared::PropertyConnectionCategories::COMMERCE,
     ],
     integration_type: "<value>",
     permissions: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_DOCUMENT_READ,
+      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_SCORECARD_READ,
     ],
   ))
 

@@ -415,6 +415,19 @@ end
 
 * [list_enrich_people](docs/sdks/person/README.md#list_enrich_people) - Retrieve enrichment information for a person
 
+### [Genai](docs/sdks/genai/README.md)
+
+* [create_genai_prompt](docs/sdks/genai/README.md#create_genai_prompt) - Create a prompt
+* [list_genai_models](docs/sdks/genai/README.md#list_genai_models) - List all models
+
+### [Model](docs/sdks/model/README.md)
+
+* [list_genai_models](docs/sdks/model/README.md#list_genai_models) - List all models
+
+### [Prompt](docs/sdks/prompt/README.md)
+
+* [create_genai_prompt](docs/sdks/prompt/README.md#create_genai_prompt) - Create a prompt
+
 ### [Hris](docs/sdks/hris/README.md)
 
 * [create_hris_employee](docs/sdks/hris/README.md#create_hris_employee) - Create an employee

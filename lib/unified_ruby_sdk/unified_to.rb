@@ -13,7 +13,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :contact, :invoice, :organization, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :hris, :employee, :group, :payslip, :timeoff, :martech, :list, :member, :passthrough, :payment, :link, :payout, :refund, :storage, :file, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
+    attr_accessor :accounting, :account, :contact, :invoice, :organization, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :employee, :group, :payslip, :timeoff, :martech, :list, :member, :passthrough, :payment, :link, :payout, :refund, :storage, :file, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
 
     sig do
       params(client: Faraday::Request,
@@ -104,6 +104,9 @@ module UnifiedRubySDK
       @pipeline = Pipeline.new(@sdk_configuration)
       @enrich = Enrich.new(@sdk_configuration)
       @person = Person.new(@sdk_configuration)
+      @genai = Genai.new(@sdk_configuration)
+      @model = Model.new(@sdk_configuration)
+      @prompt = Prompt.new(@sdk_configuration)
       @hris = Hris.new(@sdk_configuration)
       @employee = Employee.new(@sdk_configuration)
       @group = Group.new(@sdk_configuration)

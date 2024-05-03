@@ -23,6 +23,7 @@ module UnifiedRubySDK
         STORAGE = new('storage')
         COMMERCE = new('commerce')
         PAYMENT = new('payment')
+        GENAI = new('genai')
       end
     end
 

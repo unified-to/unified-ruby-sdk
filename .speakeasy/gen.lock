@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: fa589021db4663f2ad26cc32352a343e
+  docChecksum: e7d06a9f72eccefa7c7d5ca65b619e24
   docVersion: "1.0"
-  speakeasyVersion: 1.274.1
-  generationVersion: 2.314.0
-  releaseVersion: 0.4.34
-  configChecksum: 7d56a5e7a1c996c2f28fb186fad198e3
+  speakeasyVersion: 1.277.8
+  generationVersion: 2.319.10
+  releaseVersion: 0.4.35
+  configChecksum: faefa33fa7b38f4e0df2872a29b3b0fb
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
 features:
   ruby:
-    core: 3.2.11
+    core: 3.2.12
     flattening: 2.81.1
     globalSecurity: 2.81.6
     globalServerURLs: 2.82.3
@@ -47,6 +47,9 @@ generatedFiles:
   - lib/unified_ruby_sdk/pipeline.rb
   - lib/unified_ruby_sdk/enrich.rb
   - lib/unified_ruby_sdk/person.rb
+  - lib/unified_ruby_sdk/genai.rb
+  - lib/unified_ruby_sdk/model.rb
+  - lib/unified_ruby_sdk/prompt.rb
   - lib/unified_ruby_sdk/hris.rb
   - lib/unified_ruby_sdk/employee.rb
   - lib/unified_ruby_sdk/group.rb
@@ -415,6 +418,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatecrmpipeline_response.rb
   - lib/unified_ruby_sdk/models/operations/listenrichpeople_request.rb
   - lib/unified_ruby_sdk/models/operations/listenrichpeople_response.rb
+  - lib/unified_ruby_sdk/models/operations/creategenaiprompt_request.rb
+  - lib/unified_ruby_sdk/models/operations/creategenaiprompt_response.rb
+  - lib/unified_ruby_sdk/models/operations/listgenaimodels_request.rb
+  - lib/unified_ruby_sdk/models/operations/listgenaimodels_response.rb
   - lib/unified_ruby_sdk/models/operations/createhrisemployee_request.rb
   - lib/unified_ruby_sdk/models/operations/createhrisemployee_response.rb
   - lib/unified_ruby_sdk/models/operations/createhrisgroup_request.rb
@@ -707,6 +714,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/enrichemail_type.rb
   - lib/unified_ruby_sdk/models/shared/enrichemail.rb
   - lib/unified_ruby_sdk/models/shared/property_enrichperson_address.rb
+  - lib/unified_ruby_sdk/models/shared/genaiprompt.rb
+  - lib/unified_ruby_sdk/models/shared/role.rb
+  - lib/unified_ruby_sdk/models/shared/genaicontent.rb
+  - lib/unified_ruby_sdk/models/shared/genaimodel.rb
   - lib/unified_ruby_sdk/models/shared/employment_status.rb
   - lib/unified_ruby_sdk/models/shared/hrisemployee_employment_type.rb
   - lib/unified_ruby_sdk/models/shared/hrisemployee_gender.rb
@@ -1067,6 +1078,10 @@ generatedFiles:
   - docs/models/operations/updatecrmpipelineresponse.md
   - docs/models/operations/listenrichpeoplerequest.md
   - docs/models/operations/listenrichpeopleresponse.md
+  - docs/models/operations/creategenaipromptrequest.md
+  - docs/models/operations/creategenaipromptresponse.md
+  - docs/models/operations/listgenaimodelsrequest.md
+  - docs/models/operations/listgenaimodelsresponse.md
   - docs/models/operations/createhrisemployeerequest.md
   - docs/models/operations/createhrisemployeeresponse.md
   - docs/models/operations/createhrisgrouprequest.md
@@ -1359,6 +1374,10 @@ generatedFiles:
   - docs/models/shared/enrichemailtype.md
   - docs/models/shared/enrichemail.md
   - docs/models/shared/propertyenrichpersonaddress.md
+  - docs/models/shared/genaiprompt.md
+  - docs/models/shared/role.md
+  - docs/models/shared/genaicontent.md
+  - docs/models/shared/genaimodel.md
   - docs/models/shared/employmentstatus.md
   - docs/models/shared/hrisemployeeemploymenttype.md
   - docs/models/shared/hrisemployeegender.md
@@ -1456,6 +1475,9 @@ generatedFiles:
   - docs/sdks/pipeline/README.md
   - docs/sdks/enrich/README.md
   - docs/sdks/person/README.md
+  - docs/sdks/genai/README.md
+  - docs/sdks/model/README.md
+  - docs/sdks/prompt/README.md
   - docs/sdks/hris/README.md
   - docs/sdks/employee/README.md
   - docs/sdks/group/README.md

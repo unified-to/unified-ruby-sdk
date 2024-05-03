@@ -86,6 +86,9 @@ module UnifiedRubySDK
         STORAGE_FILE_READ = new('storage_file_read')
         STORAGE_FILE_WRITE = new('storage_file_write')
         WEBHOOK = new('webhook')
+        GENAI_MODEL_READ = new('genai_model_read')
+        GENAI_PROMPT_READ = new('genai_prompt_read')
+        GENAI_PROMPT_WRITE = new('genai_prompt_write')
       end
     end
 
