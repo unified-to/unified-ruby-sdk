@@ -18,6 +18,8 @@ module UnifiedRubySDK
 
       field :height, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('height') } }
 
+      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
       field :position, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('position') } }
 
       field :type, T.nilable(::UnifiedRubySDK::Shared::CommerceItemMediaType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::CommerceItemMediaType, true) } }
@@ -25,11 +27,12 @@ module UnifiedRubySDK
       field :width, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('width') } }
 
 
-      sig { params(url: ::String, alt: T.nilable(::String), height: T.nilable(::Float), position: T.nilable(::Float), type: T.nilable(::UnifiedRubySDK::Shared::CommerceItemMediaType), width: T.nilable(::Float)).void }
-      def initialize(url: nil, alt: nil, height: nil, position: nil, type: nil, width: nil)
+      sig { params(url: ::String, alt: T.nilable(::String), height: T.nilable(::Float), id: T.nilable(::String), position: T.nilable(::Float), type: T.nilable(::UnifiedRubySDK::Shared::CommerceItemMediaType), width: T.nilable(::Float)).void }
+      def initialize(url: nil, alt: nil, height: nil, id: nil, position: nil, type: nil, width: nil)
         @url = url
         @alt = alt
         @height = height
+        @id = id
         @position = position
         @type = type
         @width = width

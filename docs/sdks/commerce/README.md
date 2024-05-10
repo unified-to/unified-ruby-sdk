@@ -129,9 +129,7 @@ s.config_security(
 )
 
     
-res = s.commerce.create_commerce_item(connection_id="<value>", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(
-    name: "<value>",
-  ))
+res = s.commerce.create_commerce_item(connection_id="<value>", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new())
 
 if ! res.commerce_item.nil?
   # handle response
@@ -632,9 +630,7 @@ s.config_security(
 )
 
     
-res = s.commerce.patch_commerce_item(connection_id="<value>", id="<value>", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(
-    name: "<value>",
-  ))
+res = s.commerce.patch_commerce_item(connection_id="<value>", id="<value>", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new())
 
 if ! res.commerce_item.nil?
   # handle response
@@ -957,9 +953,7 @@ s.config_security(
 )
 
     
-res = s.commerce.update_commerce_item(connection_id="<value>", id="<value>", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(
-    name: "<value>",
-  ))
+res = s.commerce.update_commerce_item(connection_id="<value>", id="<value>", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new())
 
 if ! res.commerce_item.nil?
   # handle response
