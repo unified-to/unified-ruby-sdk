@@ -12,12 +12,12 @@ module UnifiedRubySDK
       extend T::Sig
 
 
-      field :telephone, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephone') } }
+      field :telephone, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephone') } }
 
       field :type, T.nilable(::UnifiedRubySDK::Shared::AccountingTelephoneType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::AccountingTelephoneType, true) } }
 
 
-      sig { params(telephone: ::String, type: T.nilable(::UnifiedRubySDK::Shared::AccountingTelephoneType)).void }
+      sig { params(telephone: T.nilable(::String), type: T.nilable(::UnifiedRubySDK::Shared::AccountingTelephoneType)).void }
       def initialize(telephone: nil, type: nil)
         @telephone = telephone
         @type = type

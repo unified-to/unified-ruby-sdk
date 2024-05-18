@@ -11,9 +11,7 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_account(connection_id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(
-    name: "<value>",
-  ))
+res = s.accounting.create_accounting_account(connection_id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new())
 
 if ! res.accounting_account.nil?
   # handle response

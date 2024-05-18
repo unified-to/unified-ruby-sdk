@@ -12,12 +12,12 @@ module UnifiedRubySDK
       extend T::Sig
 
 
-      field :email, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
+      field :email, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
 
       field :type, T.nilable(::UnifiedRubySDK::Shared::AccountingEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::AccountingEmailType, true) } }
 
 
-      sig { params(email: ::String, type: T.nilable(::UnifiedRubySDK::Shared::AccountingEmailType)).void }
+      sig { params(email: T.nilable(::String), type: T.nilable(::UnifiedRubySDK::Shared::AccountingEmailType)).void }
       def initialize(email: nil, type: nil)
         @email = email
         @type = type

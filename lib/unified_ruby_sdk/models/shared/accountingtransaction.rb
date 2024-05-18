@@ -12,13 +12,13 @@ module UnifiedRubySDK
       extend T::Sig
 
 
-      field :id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
       field :created_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
 
       field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
       field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+
+      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
       # new field name
       field :lineitems, T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingTransactionLineitem]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lineitems') } }
 
@@ -33,12 +33,12 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
 
 
-      sig { params(id: ::String, created_at: T.nilable(::String), currency: T.nilable(::String), description: T.nilable(::String), lineitems: T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingTransactionLineitem]), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), tax_amount: T.nilable(::Float), taxrate_id: T.nilable(::String), updated_at: T.nilable(::String)).void }
-      def initialize(id: nil, created_at: nil, currency: nil, description: nil, lineitems: nil, raw: nil, reference: nil, tax_amount: nil, taxrate_id: nil, updated_at: nil)
-        @id = id
+      sig { params(created_at: T.nilable(::String), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingTransactionLineitem]), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), tax_amount: T.nilable(::Float), taxrate_id: T.nilable(::String), updated_at: T.nilable(::String)).void }
+      def initialize(created_at: nil, currency: nil, description: nil, id: nil, lineitems: nil, raw: nil, reference: nil, tax_amount: nil, taxrate_id: nil, updated_at: nil)
         @created_at = created_at
         @currency = currency
         @description = description
+        @id = id
         @lineitems = lineitems
         @raw = raw
         @reference = reference

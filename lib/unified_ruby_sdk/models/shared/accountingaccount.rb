@@ -12,8 +12,6 @@ module UnifiedRubySDK
       extend T::Sig
 
 
-      field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
       field :balance, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('balance') } }
 
       field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -28,6 +26,10 @@ module UnifiedRubySDK
 
       field :is_payable, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_payable') } }
 
+      field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+      field :parent_account_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_account_id') } }
+
       field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :status, T.nilable(::UnifiedRubySDK::Shared::Status), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::Status, true) } }
@@ -37,9 +39,8 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(name: ::String, balance: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), customer_defined_code: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), is_payable: T.nilable(T::Boolean), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(::UnifiedRubySDK::Shared::Status), type: T.nilable(::UnifiedRubySDK::Shared::Type), updated_at: T.nilable(::DateTime)).void }
-      def initialize(name: nil, balance: nil, created_at: nil, currency: nil, customer_defined_code: nil, description: nil, id: nil, is_payable: nil, raw: nil, status: nil, type: nil, updated_at: nil)
-        @name = name
+      sig { params(balance: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), customer_defined_code: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), is_payable: T.nilable(T::Boolean), name: T.nilable(::String), parent_account_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(::UnifiedRubySDK::Shared::Status), type: T.nilable(::UnifiedRubySDK::Shared::Type), updated_at: T.nilable(::DateTime)).void }
+      def initialize(balance: nil, created_at: nil, currency: nil, customer_defined_code: nil, description: nil, id: nil, is_payable: nil, name: nil, parent_account_id: nil, raw: nil, status: nil, type: nil, updated_at: nil)
         @balance = balance
         @created_at = created_at
         @currency = currency
@@ -47,6 +48,8 @@ module UnifiedRubySDK
         @description = description
         @id = id
         @is_payable = is_payable
+        @name = name
+        @parent_account_id = parent_account_id
         @raw = raw
         @status = status
         @type = type

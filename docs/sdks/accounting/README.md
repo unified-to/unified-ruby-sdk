@@ -54,9 +54,7 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_account(connection_id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(
-    name: "<value>",
-  ))
+res = s.accounting.create_accounting_account(connection_id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new())
 
 if ! res.accounting_account.nil?
   # handle response
@@ -173,10 +171,7 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_taxrate(connection_id="<value>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(
-    name: "<value>",
-    rate: 1719.1,
-  ))
+res = s.accounting.create_accounting_taxrate(connection_id="<value>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new())
 
 if ! res.accounting_taxrate.nil?
   # handle response
@@ -215,9 +210,7 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_transaction(connection_id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
-    id: "<id>",
-  ))
+res = s.accounting.create_accounting_transaction(connection_id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new())
 
 if ! res.accounting_transaction.nil?
   # handle response
@@ -760,9 +753,7 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_account(connection_id="<value>", id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(
-    name: "<value>",
-  ))
+res = s.accounting.patch_accounting_account(connection_id="<value>", id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new())
 
 if ! res.accounting_account.nil?
   # handle response
@@ -882,10 +873,7 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_taxrate(connection_id="<value>", id="<value>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(
-    name: "<value>",
-    rate: 5991.47,
-  ))
+res = s.accounting.patch_accounting_taxrate(connection_id="<value>", id="<value>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new())
 
 if ! res.accounting_taxrate.nil?
   # handle response
@@ -925,9 +913,7 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
-    id: "<id>",
-  ))
+res = s.accounting.patch_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new())
 
 if ! res.accounting_transaction.nil?
   # handle response
@@ -1162,9 +1148,7 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_account(connection_id="<value>", id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(
-    name: "<value>",
-  ))
+res = s.accounting.update_accounting_account(connection_id="<value>", id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new())
 
 if ! res.accounting_account.nil?
   # handle response
@@ -1284,10 +1268,7 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_taxrate(connection_id="<value>", id="<value>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(
-    name: "<value>",
-    rate: 3382.78,
-  ))
+res = s.accounting.update_accounting_taxrate(connection_id="<value>", id="<value>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new())
 
 if ! res.accounting_taxrate.nil?
   # handle response
@@ -1327,9 +1308,7 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
-    id: "<id>",
-  ))
+res = s.accounting.update_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new())
 
 if ! res.accounting_transaction.nil?
   # handle response

@@ -12,9 +12,7 @@ module UnifiedRubySDK
       extend T::Sig
 
 
-      field :account_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_id') } }
-
-      field :total_amount, ::Float, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
+      field :account_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_id') } }
 
       field :contact_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
 
@@ -28,17 +26,19 @@ module UnifiedRubySDK
 
       field :tax_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_amount') } }
 
+      field :total_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
 
-      sig { params(account_id: ::String, total_amount: ::Float, contact_id: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), invoice_id: T.nilable(::String), payment_id: T.nilable(::String), tax_amount: T.nilable(::Float)).void }
-      def initialize(account_id: nil, total_amount: nil, contact_id: nil, description: nil, id: nil, invoice_id: nil, payment_id: nil, tax_amount: nil)
+
+      sig { params(account_id: T.nilable(::String), contact_id: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), invoice_id: T.nilable(::String), payment_id: T.nilable(::String), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float)).void }
+      def initialize(account_id: nil, contact_id: nil, description: nil, id: nil, invoice_id: nil, payment_id: nil, tax_amount: nil, total_amount: nil)
         @account_id = account_id
-        @total_amount = total_amount
         @contact_id = contact_id
         @description = description
         @id = id
         @invoice_id = invoice_id
         @payment_id = payment_id
         @tax_amount = tax_amount
+        @total_amount = total_amount
       end
     end
   end

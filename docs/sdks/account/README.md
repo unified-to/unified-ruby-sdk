@@ -28,9 +28,7 @@ s.config_security(
 )
 
     
-res = s.account.create_accounting_account(connection_id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(
-    name: "<value>",
-  ))
+res = s.account.create_accounting_account(connection_id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new())
 
 if ! res.accounting_account.nil?
   # handle response
@@ -153,9 +151,7 @@ s.config_security(
 )
 
     
-res = s.account.patch_accounting_account(connection_id="<value>", id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(
-    name: "<value>",
-  ))
+res = s.account.patch_accounting_account(connection_id="<value>", id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new())
 
 if ! res.accounting_account.nil?
   # handle response
@@ -234,9 +230,7 @@ s.config_security(
 )
 
     
-res = s.account.update_accounting_account(connection_id="<value>", id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(
-    name: "<value>",
-  ))
+res = s.account.update_accounting_account(connection_id="<value>", id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new())
 
 if ! res.accounting_account.nil?
   # handle response
