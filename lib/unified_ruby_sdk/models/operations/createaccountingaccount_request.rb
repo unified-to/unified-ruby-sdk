@@ -13,7 +13,7 @@ module UnifiedRubySDK
 
       # ID of the connection
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-
+      # Chart of accounts
       field :accounting_account, T.nilable(::UnifiedRubySDK::Shared::AccountingAccount), { 'request': { 'media_type': 'application/json' } }
 
 
