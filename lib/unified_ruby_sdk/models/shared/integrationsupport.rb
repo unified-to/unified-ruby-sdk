@@ -20,6 +20,8 @@ module UnifiedRubySDK
 
       field :list_candidate_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_candidate_id') } }
 
+      field :list_channel_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_channel_id') } }
+
       field :list_collection_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_collection_id') } }
 
       field :list_company_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_company_id') } }
@@ -58,6 +60,8 @@ module UnifiedRubySDK
 
       field :list_sort_by_updated_at, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_sort_by_updated_at') } }
 
+      field :list_space_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_space_id') } }
+
       field :list_ticket_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_ticket_id') } }
 
       field :list_type, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_type') } }
@@ -83,12 +87,13 @@ module UnifiedRubySDK
       field :webhook_events, T.nilable(::UnifiedRubySDK::Shared::PropertyIntegrationSupportWebhookEvents), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('webhook_events') } }
 
 
-      sig { params(inbound_fields: T.nilable(T::Hash[Symbol, ::Object]), list_account_id: T.nilable(T::Boolean), list_application_id: T.nilable(T::Boolean), list_candidate_id: T.nilable(T::Boolean), list_collection_id: T.nilable(T::Boolean), list_company_id: T.nilable(T::Boolean), list_contact_id: T.nilable(T::Boolean), list_customer_id: T.nilable(T::Boolean), list_deal_id: T.nilable(T::Boolean), list_interview_id: T.nilable(T::Boolean), list_invoice_id: T.nilable(T::Boolean), list_item_id: T.nilable(T::Boolean), list_job_id: T.nilable(T::Boolean), list_limit: T.nilable(T::Boolean), list_list_id: T.nilable(T::Boolean), list_location_id: T.nilable(T::Boolean), list_offset: T.nilable(T::Boolean), list_order: T.nilable(T::Boolean), list_parent_id: T.nilable(T::Boolean), list_query: T.nilable(T::Boolean), list_sort_by_created_at: T.nilable(T::Boolean), list_sort_by_name: T.nilable(T::Boolean), list_sort_by_updated_at: T.nilable(T::Boolean), list_ticket_id: T.nilable(T::Boolean), list_type: T.nilable(T::Boolean), list_updated_gte: T.nilable(T::Boolean), list_user_id: T.nilable(T::Boolean), methods: T.nilable(T::Hash[Symbol, T::Boolean]), outbound_fields: T.nilable(T::Hash[Symbol, ::Object]), search_domain: T.nilable(T::Boolean), search_email: T.nilable(T::Boolean), search_linkedinurl: T.nilable(T::Boolean), search_name: T.nilable(T::Boolean), search_twitter: T.nilable(T::Boolean), webhook_events: T.nilable(::UnifiedRubySDK::Shared::PropertyIntegrationSupportWebhookEvents)).void }
-      def initialize(inbound_fields: nil, list_account_id: nil, list_application_id: nil, list_candidate_id: nil, list_collection_id: nil, list_company_id: nil, list_contact_id: nil, list_customer_id: nil, list_deal_id: nil, list_interview_id: nil, list_invoice_id: nil, list_item_id: nil, list_job_id: nil, list_limit: nil, list_list_id: nil, list_location_id: nil, list_offset: nil, list_order: nil, list_parent_id: nil, list_query: nil, list_sort_by_created_at: nil, list_sort_by_name: nil, list_sort_by_updated_at: nil, list_ticket_id: nil, list_type: nil, list_updated_gte: nil, list_user_id: nil, methods: nil, outbound_fields: nil, search_domain: nil, search_email: nil, search_linkedinurl: nil, search_name: nil, search_twitter: nil, webhook_events: nil)
+      sig { params(inbound_fields: T.nilable(T::Hash[Symbol, ::Object]), list_account_id: T.nilable(T::Boolean), list_application_id: T.nilable(T::Boolean), list_candidate_id: T.nilable(T::Boolean), list_channel_id: T.nilable(T::Boolean), list_collection_id: T.nilable(T::Boolean), list_company_id: T.nilable(T::Boolean), list_contact_id: T.nilable(T::Boolean), list_customer_id: T.nilable(T::Boolean), list_deal_id: T.nilable(T::Boolean), list_interview_id: T.nilable(T::Boolean), list_invoice_id: T.nilable(T::Boolean), list_item_id: T.nilable(T::Boolean), list_job_id: T.nilable(T::Boolean), list_limit: T.nilable(T::Boolean), list_list_id: T.nilable(T::Boolean), list_location_id: T.nilable(T::Boolean), list_offset: T.nilable(T::Boolean), list_order: T.nilable(T::Boolean), list_parent_id: T.nilable(T::Boolean), list_query: T.nilable(T::Boolean), list_sort_by_created_at: T.nilable(T::Boolean), list_sort_by_name: T.nilable(T::Boolean), list_sort_by_updated_at: T.nilable(T::Boolean), list_space_id: T.nilable(T::Boolean), list_ticket_id: T.nilable(T::Boolean), list_type: T.nilable(T::Boolean), list_updated_gte: T.nilable(T::Boolean), list_user_id: T.nilable(T::Boolean), methods: T.nilable(T::Hash[Symbol, T::Boolean]), outbound_fields: T.nilable(T::Hash[Symbol, ::Object]), search_domain: T.nilable(T::Boolean), search_email: T.nilable(T::Boolean), search_linkedinurl: T.nilable(T::Boolean), search_name: T.nilable(T::Boolean), search_twitter: T.nilable(T::Boolean), webhook_events: T.nilable(::UnifiedRubySDK::Shared::PropertyIntegrationSupportWebhookEvents)).void }
+      def initialize(inbound_fields: nil, list_account_id: nil, list_application_id: nil, list_candidate_id: nil, list_channel_id: nil, list_collection_id: nil, list_company_id: nil, list_contact_id: nil, list_customer_id: nil, list_deal_id: nil, list_interview_id: nil, list_invoice_id: nil, list_item_id: nil, list_job_id: nil, list_limit: nil, list_list_id: nil, list_location_id: nil, list_offset: nil, list_order: nil, list_parent_id: nil, list_query: nil, list_sort_by_created_at: nil, list_sort_by_name: nil, list_sort_by_updated_at: nil, list_space_id: nil, list_ticket_id: nil, list_type: nil, list_updated_gte: nil, list_user_id: nil, methods: nil, outbound_fields: nil, search_domain: nil, search_email: nil, search_linkedinurl: nil, search_name: nil, search_twitter: nil, webhook_events: nil)
         @inbound_fields = inbound_fields
         @list_account_id = list_account_id
         @list_application_id = list_application_id
         @list_candidate_id = list_candidate_id
+        @list_channel_id = list_channel_id
         @list_collection_id = list_collection_id
         @list_company_id = list_company_id
         @list_contact_id = list_contact_id
@@ -108,6 +113,7 @@ module UnifiedRubySDK
         @list_sort_by_created_at = list_sort_by_created_at
         @list_sort_by_name = list_sort_by_name
         @list_sort_by_updated_at = list_sort_by_updated_at
+        @list_space_id = list_space_id
         @list_ticket_id = list_ticket_id
         @list_type = list_type
         @list_updated_gte = list_updated_gte

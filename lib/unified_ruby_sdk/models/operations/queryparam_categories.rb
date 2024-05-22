@@ -24,6 +24,8 @@ module UnifiedRubySDK
         COMMERCE = new('commerce')
         PAYMENT = new('payment')
         GENAI = new('genai')
+        MESSAGING = new('messaging')
+        KMS = new('kms')
       end
     end
 

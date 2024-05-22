@@ -13,7 +13,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :contact, :invoice, :organization, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :employee, :group, :payslip, :timeoff, :martech, :list, :member, :passthrough, :payment, :link, :payout, :refund, :storage, :file, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
+    attr_accessor :accounting, :account, :contact, :invoice, :organization, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :employee, :group, :payslip, :timeoff, :kms, :page, :space, :martech, :list, :member, :messaging, :channel, :message, :passthrough, :payment, :link, :payout, :refund, :storage, :file, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
 
     sig do
       params(client: Faraday::Request,
@@ -112,9 +112,15 @@ module UnifiedRubySDK
       @group = Group.new(@sdk_configuration)
       @payslip = Payslip.new(@sdk_configuration)
       @timeoff = Timeoff.new(@sdk_configuration)
+      @kms = Kms.new(@sdk_configuration)
+      @page = Page.new(@sdk_configuration)
+      @space = Space.new(@sdk_configuration)
       @martech = Martech.new(@sdk_configuration)
       @list = List.new(@sdk_configuration)
       @member = Member.new(@sdk_configuration)
+      @messaging = Messaging.new(@sdk_configuration)
+      @channel = Channel.new(@sdk_configuration)
+      @message = Message.new(@sdk_configuration)
       @passthrough = Passthrough.new(@sdk_configuration)
       @payment = Payment.new(@sdk_configuration)
       @link = Link.new(@sdk_configuration)

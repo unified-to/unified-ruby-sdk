@@ -89,6 +89,15 @@ module UnifiedRubySDK
         GENAI_MODEL_READ = new('genai_model_read')
         GENAI_PROMPT_READ = new('genai_prompt_read')
         GENAI_PROMPT_WRITE = new('genai_prompt_write')
+        MESSAGING_MESSAGE_READ = new('messaging_message_read')
+        MESSAGING_MESSAGE_WRITE = new('messaging_message_write')
+        MESSAGING_CHANNEL_READ = new('messaging_channel_read')
+        KMS_SPACE_READ = new('kms_space_read')
+        KMS_SPACE_WRITE = new('kms_space_write')
+        KMS_PAGE_READ = new('kms_page_read')
+        KMS_PAGE_WRITE = new('kms_page_write')
+        KMS_COMMENT_READ = new('kms_comment_read')
+        KMS_COMMENT_WRITE = new('kms_comment_write')
       end
     end
 

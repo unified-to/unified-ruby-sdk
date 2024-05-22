@@ -56,6 +56,10 @@ module UnifiedRubySDK
         STORAGE_FILE = new('storage_file')
         GENAI_MODEL = new('genai_model')
         GENAI_PROMPT = new('genai_prompt')
+        MESSAGING_MESSAGE = new('messaging_message')
+        MESSAGING_CHANNEL = new('messaging_channel')
+        KMS_SPACE = new('kms_space')
+        KMS_PAGE = new('kms_page')
       end
     end
 
