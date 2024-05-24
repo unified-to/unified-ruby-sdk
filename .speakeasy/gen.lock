@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 2e2c7c454bfe6fc3d2738e2f2da91408
+  docChecksum: 7d0bc9c5a49fa214574f501e91de9687
   docVersion: "1.0"
-  speakeasyVersion: 1.295.1
+  speakeasyVersion: 1.295.2
   generationVersion: 2.335.5
-  releaseVersion: 0.4.41
-  configChecksum: 1ae89f9cfd49b99144c8977a590ad058
+  releaseVersion: 0.4.42
+  configChecksum: cd4c622252443331fa64d41f4a93bd42
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
