@@ -37,7 +37,7 @@ module UnifiedRubySDK
       field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
       field :number_of_openings, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('number_of_openings') } }
-
+      # URLs for pages containing public listings for the job
       field :public_job_urls, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('public_job_urls') } }
 
       field :questions, T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsJobQuestion]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('questions') } }

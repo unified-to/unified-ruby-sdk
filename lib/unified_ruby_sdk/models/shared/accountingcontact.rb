@@ -14,6 +14,8 @@ module UnifiedRubySDK
 
       field :billing_address, T.nilable(::UnifiedRubySDK::Shared::PropertyAccountingContactBillingAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('billing_address') } }
 
+      field :company_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_name') } }
+
       field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
       field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
@@ -21,6 +23,8 @@ module UnifiedRubySDK
       field :emails, T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingEmail]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
 
       field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+      field :identification, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('identification') } }
 
       field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
@@ -47,13 +51,15 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(billing_address: T.nilable(::UnifiedRubySDK::Shared::PropertyAccountingContactBillingAddress), created_at: T.nilable(::DateTime), currency: T.nilable(::String), emails: T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingEmail]), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_customer: T.nilable(T::Boolean), is_supplier: T.nilable(T::Boolean), name: T.nilable(::String), payment_methods: T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingContactPaymentMethod]), portal_url: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), shipping_address: T.nilable(::UnifiedRubySDK::Shared::PropertyAccountingContactShippingAddress), tax_exemption: T.nilable(::UnifiedRubySDK::Shared::TaxExemption), tax_number: T.nilable(::String), telephones: T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingTelephone]), updated_at: T.nilable(::DateTime)).void }
-      def initialize(billing_address: nil, created_at: nil, currency: nil, emails: nil, id: nil, is_active: nil, is_customer: nil, is_supplier: nil, name: nil, payment_methods: nil, portal_url: nil, raw: nil, shipping_address: nil, tax_exemption: nil, tax_number: nil, telephones: nil, updated_at: nil)
+      sig { params(billing_address: T.nilable(::UnifiedRubySDK::Shared::PropertyAccountingContactBillingAddress), company_name: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), emails: T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingEmail]), id: T.nilable(::String), identification: T.nilable(::String), is_active: T.nilable(T::Boolean), is_customer: T.nilable(T::Boolean), is_supplier: T.nilable(T::Boolean), name: T.nilable(::String), payment_methods: T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingContactPaymentMethod]), portal_url: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), shipping_address: T.nilable(::UnifiedRubySDK::Shared::PropertyAccountingContactShippingAddress), tax_exemption: T.nilable(::UnifiedRubySDK::Shared::TaxExemption), tax_number: T.nilable(::String), telephones: T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingTelephone]), updated_at: T.nilable(::DateTime)).void }
+      def initialize(billing_address: nil, company_name: nil, created_at: nil, currency: nil, emails: nil, id: nil, identification: nil, is_active: nil, is_customer: nil, is_supplier: nil, name: nil, payment_methods: nil, portal_url: nil, raw: nil, shipping_address: nil, tax_exemption: nil, tax_number: nil, telephones: nil, updated_at: nil)
         @billing_address = billing_address
+        @company_name = company_name
         @created_at = created_at
         @currency = currency
         @emails = emails
         @id = id
+        @identification = identification
         @is_active = is_active
         @is_customer = is_customer
         @is_supplier = is_supplier

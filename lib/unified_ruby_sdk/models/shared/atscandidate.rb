@@ -29,7 +29,7 @@ module UnifiedRubySDK
       field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
       field :image_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('image_url') } }
-      # a list of social media links associated with the candidate. eg. LinkedIn URL
+      # URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)
       field :link_urls, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('link_urls') } }
 
       field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
