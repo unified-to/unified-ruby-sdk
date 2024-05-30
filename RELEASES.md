@@ -967,3 +967,11 @@ Based on:
 - Speakeasy CLI 1.299.1 (2.338.5) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [ruby v0.4.45] .
+
+## 2024-05-30 20:45:36
+### Changes
+Based on:
+- OpenAPI Doc 1.0 
+- Speakeasy CLI 1.299.3 (2.338.7) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [ruby v0.4.46] .
