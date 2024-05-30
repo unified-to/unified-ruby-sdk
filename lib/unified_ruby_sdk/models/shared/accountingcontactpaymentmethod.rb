@@ -14,12 +14,15 @@ module UnifiedRubySDK
 
       field :type, ::UnifiedRubySDK::Shared::AccountingContactPaymentMethodType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::AccountingContactPaymentMethodType, false) } }
 
+      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
       field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
 
-      sig { params(type: ::UnifiedRubySDK::Shared::AccountingContactPaymentMethodType, name: T.nilable(::String)).void }
-      def initialize(type: nil, name: nil)
+      sig { params(type: ::UnifiedRubySDK::Shared::AccountingContactPaymentMethodType, id: T.nilable(::String), name: T.nilable(::String)).void }
+      def initialize(type: nil, id: nil, name: nil)
         @type = type
+        @id = id
         @name = name
       end
     end
