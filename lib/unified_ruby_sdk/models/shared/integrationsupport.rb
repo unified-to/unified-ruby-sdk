@@ -12,65 +12,67 @@ module UnifiedRubySDK
       extend T::Sig
 
 
+      field :from_webhook, T.nilable(::UnifiedRubySDK::Shared::FromWebhook), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('from_webhook'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::FromWebhook, true) } }
+
       field :inbound_fields, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('inbound_fields') } }
 
-      field :list_account_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_account_id') } }
+      field :list_account_id, T.nilable(::UnifiedRubySDK::Shared::ListAccountId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_account_id'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListAccountId, true) } }
 
-      field :list_application_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_application_id') } }
+      field :list_application_id, T.nilable(::UnifiedRubySDK::Shared::ListApplicationId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_application_id'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListApplicationId, true) } }
 
-      field :list_candidate_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_candidate_id') } }
+      field :list_candidate_id, T.nilable(::UnifiedRubySDK::Shared::ListCandidateId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_candidate_id'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListCandidateId, true) } }
 
-      field :list_channel_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_channel_id') } }
+      field :list_channel_id, T.nilable(::UnifiedRubySDK::Shared::ListChannelId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_channel_id'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListChannelId, true) } }
 
-      field :list_collection_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_collection_id') } }
+      field :list_collection_id, T.nilable(::UnifiedRubySDK::Shared::ListCollectionId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_collection_id'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListCollectionId, true) } }
 
-      field :list_company_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_company_id') } }
+      field :list_company_id, T.nilable(::UnifiedRubySDK::Shared::ListCompanyId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_company_id'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListCompanyId, true) } }
 
-      field :list_contact_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_contact_id') } }
+      field :list_contact_id, T.nilable(::UnifiedRubySDK::Shared::ListContactId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_contact_id'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListContactId, true) } }
 
-      field :list_customer_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_customer_id') } }
+      field :list_customer_id, T.nilable(::UnifiedRubySDK::Shared::ListCustomerId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_customer_id'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListCustomerId, true) } }
 
-      field :list_deal_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_deal_id') } }
+      field :list_deal_id, T.nilable(::UnifiedRubySDK::Shared::ListDealId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_deal_id'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListDealId, true) } }
 
-      field :list_interview_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_interview_id') } }
+      field :list_interview_id, T.nilable(::UnifiedRubySDK::Shared::ListInterviewId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_interview_id'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListInterviewId, true) } }
 
-      field :list_invoice_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_invoice_id') } }
+      field :list_invoice_id, T.nilable(::UnifiedRubySDK::Shared::ListInvoiceId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_invoice_id'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListInvoiceId, true) } }
 
-      field :list_item_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_item_id') } }
+      field :list_item_id, T.nilable(::UnifiedRubySDK::Shared::ListItemId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_item_id'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListItemId, true) } }
 
-      field :list_job_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_job_id') } }
+      field :list_job_id, T.nilable(::UnifiedRubySDK::Shared::ListJobId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_job_id'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListJobId, true) } }
 
-      field :list_limit, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_limit') } }
+      field :list_limit, T.nilable(::UnifiedRubySDK::Shared::ListLimit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_limit'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListLimit, true) } }
 
-      field :list_link_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_link_id') } }
+      field :list_link_id, T.nilable(::UnifiedRubySDK::Shared::ListLinkId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_link_id'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListLinkId, true) } }
 
-      field :list_list_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_list_id') } }
+      field :list_list_id, T.nilable(::UnifiedRubySDK::Shared::ListListId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_list_id'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListListId, true) } }
 
-      field :list_location_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_location_id') } }
+      field :list_location_id, T.nilable(::UnifiedRubySDK::Shared::ListLocationId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_location_id'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListLocationId, true) } }
 
-      field :list_offset, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_offset') } }
+      field :list_offset, T.nilable(::UnifiedRubySDK::Shared::ListOffset), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_offset'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListOffset, true) } }
 
-      field :list_order, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_order') } }
+      field :list_order, T.nilable(::UnifiedRubySDK::Shared::ListOrder), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_order'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListOrder, true) } }
 
-      field :list_parent_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_parent_id') } }
+      field :list_parent_id, T.nilable(::UnifiedRubySDK::Shared::ListParentId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_parent_id'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListParentId, true) } }
 
-      field :list_query, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_query') } }
+      field :list_query, T.nilable(::UnifiedRubySDK::Shared::ListQuery), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_query'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListQuery, true) } }
 
-      field :list_sort_by_created_at, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_sort_by_created_at') } }
+      field :list_sort_by_created_at, T.nilable(::UnifiedRubySDK::Shared::ListSortByCreatedAt), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_sort_by_created_at'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListSortByCreatedAt, true) } }
 
-      field :list_sort_by_name, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_sort_by_name') } }
+      field :list_sort_by_name, T.nilable(::UnifiedRubySDK::Shared::ListSortByName), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_sort_by_name'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListSortByName, true) } }
 
-      field :list_sort_by_updated_at, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_sort_by_updated_at') } }
+      field :list_sort_by_updated_at, T.nilable(::UnifiedRubySDK::Shared::ListSortByUpdatedAt), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_sort_by_updated_at'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListSortByUpdatedAt, true) } }
 
-      field :list_space_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_space_id') } }
+      field :list_space_id, T.nilable(::UnifiedRubySDK::Shared::ListSpaceId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_space_id'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListSpaceId, true) } }
 
-      field :list_ticket_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_ticket_id') } }
+      field :list_ticket_id, T.nilable(::UnifiedRubySDK::Shared::ListTicketId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_ticket_id'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListTicketId, true) } }
 
-      field :list_type, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_type') } }
+      field :list_type, T.nilable(::UnifiedRubySDK::Shared::ListType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListType, true) } }
 
-      field :list_updated_gte, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_updated_gte') } }
+      field :list_updated_gte, T.nilable(::UnifiedRubySDK::Shared::ListUpdatedGte), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_updated_gte'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListUpdatedGte, true) } }
 
-      field :list_user_id, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_user_id') } }
+      field :list_user_id, T.nilable(::UnifiedRubySDK::Shared::ListUserId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_user_id'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ListUserId, true) } }
 
       field :methods, T.nilable(T::Hash[Symbol, T::Boolean]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('methods') } }
 
@@ -78,21 +80,22 @@ module UnifiedRubySDK
       # objects that we map from in the integration
       field :raw_objects, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw_objects') } }
 
-      field :search_domain, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('search_domain') } }
+      field :search_domain, T.nilable(::UnifiedRubySDK::Shared::SearchDomain), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('search_domain'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::SearchDomain, true) } }
 
-      field :search_email, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('search_email') } }
+      field :search_email, T.nilable(::UnifiedRubySDK::Shared::SearchEmail), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('search_email'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::SearchEmail, true) } }
 
-      field :search_linkedinurl, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('search_linkedinurl') } }
+      field :search_linkedinurl, T.nilable(::UnifiedRubySDK::Shared::SearchLinkedinurl), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('search_linkedinurl'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::SearchLinkedinurl, true) } }
 
-      field :search_name, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('search_name') } }
+      field :search_name, T.nilable(::UnifiedRubySDK::Shared::SearchName), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('search_name'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::SearchName, true) } }
 
-      field :search_twitter, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('search_twitter') } }
+      field :search_twitter, T.nilable(::UnifiedRubySDK::Shared::SearchTwitter), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('search_twitter'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::SearchTwitter, true) } }
 
       field :webhook_events, T.nilable(::UnifiedRubySDK::Shared::PropertyIntegrationSupportWebhookEvents), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('webhook_events') } }
 
 
-      sig { params(inbound_fields: T.nilable(T::Hash[Symbol, ::Object]), list_account_id: T.nilable(T::Boolean), list_application_id: T.nilable(T::Boolean), list_candidate_id: T.nilable(T::Boolean), list_channel_id: T.nilable(T::Boolean), list_collection_id: T.nilable(T::Boolean), list_company_id: T.nilable(T::Boolean), list_contact_id: T.nilable(T::Boolean), list_customer_id: T.nilable(T::Boolean), list_deal_id: T.nilable(T::Boolean), list_interview_id: T.nilable(T::Boolean), list_invoice_id: T.nilable(T::Boolean), list_item_id: T.nilable(T::Boolean), list_job_id: T.nilable(T::Boolean), list_limit: T.nilable(T::Boolean), list_link_id: T.nilable(T::Boolean), list_list_id: T.nilable(T::Boolean), list_location_id: T.nilable(T::Boolean), list_offset: T.nilable(T::Boolean), list_order: T.nilable(T::Boolean), list_parent_id: T.nilable(T::Boolean), list_query: T.nilable(T::Boolean), list_sort_by_created_at: T.nilable(T::Boolean), list_sort_by_name: T.nilable(T::Boolean), list_sort_by_updated_at: T.nilable(T::Boolean), list_space_id: T.nilable(T::Boolean), list_ticket_id: T.nilable(T::Boolean), list_type: T.nilable(T::Boolean), list_updated_gte: T.nilable(T::Boolean), list_user_id: T.nilable(T::Boolean), methods: T.nilable(T::Hash[Symbol, T::Boolean]), outbound_fields: T.nilable(T::Hash[Symbol, ::Object]), raw_objects: T.nilable(T::Array[::String]), search_domain: T.nilable(T::Boolean), search_email: T.nilable(T::Boolean), search_linkedinurl: T.nilable(T::Boolean), search_name: T.nilable(T::Boolean), search_twitter: T.nilable(T::Boolean), webhook_events: T.nilable(::UnifiedRubySDK::Shared::PropertyIntegrationSupportWebhookEvents)).void }
-      def initialize(inbound_fields: nil, list_account_id: nil, list_application_id: nil, list_candidate_id: nil, list_channel_id: nil, list_collection_id: nil, list_company_id: nil, list_contact_id: nil, list_customer_id: nil, list_deal_id: nil, list_interview_id: nil, list_invoice_id: nil, list_item_id: nil, list_job_id: nil, list_limit: nil, list_link_id: nil, list_list_id: nil, list_location_id: nil, list_offset: nil, list_order: nil, list_parent_id: nil, list_query: nil, list_sort_by_created_at: nil, list_sort_by_name: nil, list_sort_by_updated_at: nil, list_space_id: nil, list_ticket_id: nil, list_type: nil, list_updated_gte: nil, list_user_id: nil, methods: nil, outbound_fields: nil, raw_objects: nil, search_domain: nil, search_email: nil, search_linkedinurl: nil, search_name: nil, search_twitter: nil, webhook_events: nil)
+      sig { params(from_webhook: T.nilable(::UnifiedRubySDK::Shared::FromWebhook), inbound_fields: T.nilable(T::Hash[Symbol, ::Object]), list_account_id: T.nilable(::UnifiedRubySDK::Shared::ListAccountId), list_application_id: T.nilable(::UnifiedRubySDK::Shared::ListApplicationId), list_candidate_id: T.nilable(::UnifiedRubySDK::Shared::ListCandidateId), list_channel_id: T.nilable(::UnifiedRubySDK::Shared::ListChannelId), list_collection_id: T.nilable(::UnifiedRubySDK::Shared::ListCollectionId), list_company_id: T.nilable(::UnifiedRubySDK::Shared::ListCompanyId), list_contact_id: T.nilable(::UnifiedRubySDK::Shared::ListContactId), list_customer_id: T.nilable(::UnifiedRubySDK::Shared::ListCustomerId), list_deal_id: T.nilable(::UnifiedRubySDK::Shared::ListDealId), list_interview_id: T.nilable(::UnifiedRubySDK::Shared::ListInterviewId), list_invoice_id: T.nilable(::UnifiedRubySDK::Shared::ListInvoiceId), list_item_id: T.nilable(::UnifiedRubySDK::Shared::ListItemId), list_job_id: T.nilable(::UnifiedRubySDK::Shared::ListJobId), list_limit: T.nilable(::UnifiedRubySDK::Shared::ListLimit), list_link_id: T.nilable(::UnifiedRubySDK::Shared::ListLinkId), list_list_id: T.nilable(::UnifiedRubySDK::Shared::ListListId), list_location_id: T.nilable(::UnifiedRubySDK::Shared::ListLocationId), list_offset: T.nilable(::UnifiedRubySDK::Shared::ListOffset), list_order: T.nilable(::UnifiedRubySDK::Shared::ListOrder), list_parent_id: T.nilable(::UnifiedRubySDK::Shared::ListParentId), list_query: T.nilable(::UnifiedRubySDK::Shared::ListQuery), list_sort_by_created_at: T.nilable(::UnifiedRubySDK::Shared::ListSortByCreatedAt), list_sort_by_name: T.nilable(::UnifiedRubySDK::Shared::ListSortByName), list_sort_by_updated_at: T.nilable(::UnifiedRubySDK::Shared::ListSortByUpdatedAt), list_space_id: T.nilable(::UnifiedRubySDK::Shared::ListSpaceId), list_ticket_id: T.nilable(::UnifiedRubySDK::Shared::ListTicketId), list_type: T.nilable(::UnifiedRubySDK::Shared::ListType), list_updated_gte: T.nilable(::UnifiedRubySDK::Shared::ListUpdatedGte), list_user_id: T.nilable(::UnifiedRubySDK::Shared::ListUserId), methods: T.nilable(T::Hash[Symbol, T::Boolean]), outbound_fields: T.nilable(T::Hash[Symbol, ::Object]), raw_objects: T.nilable(T::Array[::String]), search_domain: T.nilable(::UnifiedRubySDK::Shared::SearchDomain), search_email: T.nilable(::UnifiedRubySDK::Shared::SearchEmail), search_linkedinurl: T.nilable(::UnifiedRubySDK::Shared::SearchLinkedinurl), search_name: T.nilable(::UnifiedRubySDK::Shared::SearchName), search_twitter: T.nilable(::UnifiedRubySDK::Shared::SearchTwitter), webhook_events: T.nilable(::UnifiedRubySDK::Shared::PropertyIntegrationSupportWebhookEvents)).void }
+      def initialize(from_webhook: nil, inbound_fields: nil, list_account_id: nil, list_application_id: nil, list_candidate_id: nil, list_channel_id: nil, list_collection_id: nil, list_company_id: nil, list_contact_id: nil, list_customer_id: nil, list_deal_id: nil, list_interview_id: nil, list_invoice_id: nil, list_item_id: nil, list_job_id: nil, list_limit: nil, list_link_id: nil, list_list_id: nil, list_location_id: nil, list_offset: nil, list_order: nil, list_parent_id: nil, list_query: nil, list_sort_by_created_at: nil, list_sort_by_name: nil, list_sort_by_updated_at: nil, list_space_id: nil, list_ticket_id: nil, list_type: nil, list_updated_gte: nil, list_user_id: nil, methods: nil, outbound_fields: nil, raw_objects: nil, search_domain: nil, search_email: nil, search_linkedinurl: nil, search_name: nil, search_twitter: nil, webhook_events: nil)
+        @from_webhook = from_webhook
         @inbound_fields = inbound_fields
         @list_account_id = list_account_id
         @list_application_id = list_application_id

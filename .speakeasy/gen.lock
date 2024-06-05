@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 74c64e97761c01481c293203e99f2a2f
+  docChecksum: 9a5990618c970a819b6235d1b48f2259
   docVersion: "1.0"
-  speakeasyVersion: 1.299.4
-  generationVersion: 2.338.7
-  releaseVersion: 0.4.47
-  configChecksum: a55a8d8f1b7370780d0906599f35b87e
+  speakeasyVersion: 1.299.7
+  generationVersion: 2.338.12
+  releaseVersion: 0.4.48
+  configChecksum: 123304f6d4fa7b82386062a8b6a13849
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
 features:
   ruby:
-    core: 3.2.12
+    core: 3.2.13
     flattening: 2.81.1
     globalSecurity: 2.81.6
     globalServerURLs: 2.82.3
@@ -828,6 +828,41 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/apicall_type.rb
   - lib/unified_ruby_sdk/models/shared/apicall.rb
   - lib/unified_ruby_sdk/models/shared/integration.rb
+  - lib/unified_ruby_sdk/models/shared/from_webhook.rb
+  - lib/unified_ruby_sdk/models/shared/list_account_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_application_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_candidate_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_channel_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_collection_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_company_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_contact_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_customer_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_deal_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_interview_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_invoice_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_item_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_job_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_limit.rb
+  - lib/unified_ruby_sdk/models/shared/list_link_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_list_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_location_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_offset.rb
+  - lib/unified_ruby_sdk/models/shared/list_order.rb
+  - lib/unified_ruby_sdk/models/shared/list_parent_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_query.rb
+  - lib/unified_ruby_sdk/models/shared/list_sort_by_created_at.rb
+  - lib/unified_ruby_sdk/models/shared/list_sort_by_name.rb
+  - lib/unified_ruby_sdk/models/shared/list_sort_by_updated_at.rb
+  - lib/unified_ruby_sdk/models/shared/list_space_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_ticket_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_type.rb
+  - lib/unified_ruby_sdk/models/shared/list_updated_gte.rb
+  - lib/unified_ruby_sdk/models/shared/list_user_id.rb
+  - lib/unified_ruby_sdk/models/shared/search_domain.rb
+  - lib/unified_ruby_sdk/models/shared/search_email.rb
+  - lib/unified_ruby_sdk/models/shared/search_linkedinurl.rb
+  - lib/unified_ruby_sdk/models/shared/search_name.rb
+  - lib/unified_ruby_sdk/models/shared/search_twitter.rb
   - lib/unified_ruby_sdk/models/shared/integrationsupport.rb
   - lib/unified_ruby_sdk/models/shared/property_integrationsupport_webhook_events.rb
   - lib/unified_ruby_sdk/models/shared/property_property_integrationsupport_webhook_events_updated.rb
@@ -1535,6 +1570,41 @@ generatedFiles:
   - docs/models/shared/apicalltype.md
   - docs/models/shared/apicall.md
   - docs/models/shared/integration.md
+  - docs/models/shared/fromwebhook.md
+  - docs/models/shared/listaccountid.md
+  - docs/models/shared/listapplicationid.md
+  - docs/models/shared/listcandidateid.md
+  - docs/models/shared/listchannelid.md
+  - docs/models/shared/listcollectionid.md
+  - docs/models/shared/listcompanyid.md
+  - docs/models/shared/listcontactid.md
+  - docs/models/shared/listcustomerid.md
+  - docs/models/shared/listdealid.md
+  - docs/models/shared/listinterviewid.md
+  - docs/models/shared/listinvoiceid.md
+  - docs/models/shared/listitemid.md
+  - docs/models/shared/listjobid.md
+  - docs/models/shared/listlimit.md
+  - docs/models/shared/listlinkid.md
+  - docs/models/shared/listlistid.md
+  - docs/models/shared/listlocationid.md
+  - docs/models/shared/listoffset.md
+  - docs/models/shared/listorder.md
+  - docs/models/shared/listparentid.md
+  - docs/models/shared/listquery.md
+  - docs/models/shared/listsortbycreatedat.md
+  - docs/models/shared/listsortbyname.md
+  - docs/models/shared/listsortbyupdatedat.md
+  - docs/models/shared/listspaceid.md
+  - docs/models/shared/listticketid.md
+  - docs/models/shared/listtype.md
+  - docs/models/shared/listupdatedgte.md
+  - docs/models/shared/listuserid.md
+  - docs/models/shared/searchdomain.md
+  - docs/models/shared/searchemail.md
+  - docs/models/shared/searchlinkedinurl.md
+  - docs/models/shared/searchname.md
+  - docs/models/shared/searchtwitter.md
   - docs/models/shared/integrationsupport.md
   - docs/models/shared/propertyintegrationsupportwebhookevents.md
   - docs/models/shared/propertypropertyintegrationsupportwebhookeventsupdated.md
