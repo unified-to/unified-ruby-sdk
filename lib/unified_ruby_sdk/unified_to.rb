@@ -13,7 +13,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :contact, :invoice, :organization, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :employee, :group, :payslip, :timeoff, :kms, :page, :space, :martech, :list, :member, :messaging, :channel, :message, :passthrough, :payment, :link, :payout, :refund, :storage, :file, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
+    attr_accessor :accounting, :account, :contact, :invoice, :organization, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :employee, :group, :payslip, :timeoff, :kms, :page, :space, :martech, :list, :member, :messaging, :channel, :message, :passthrough, :payment, :link, :payout, :refund, :storage, :file, :task, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
 
     sig do
       params(client: Faraday::Request,
@@ -128,6 +128,8 @@ module UnifiedRubySDK
       @refund = Refund.new(@sdk_configuration)
       @storage = Storage.new(@sdk_configuration)
       @file = File.new(@sdk_configuration)
+      @task = Task.new(@sdk_configuration)
+      @project = Project.new(@sdk_configuration)
       @ticketing = Ticketing.new(@sdk_configuration)
       @customer = Customer.new(@sdk_configuration)
       @note = Note.new(@sdk_configuration)

@@ -26,11 +26,13 @@ module UnifiedRubySDK
 
       field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
+      field :stages, T.nilable(T::Array[::UnifiedRubySDK::Shared::CrmStage]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('stages') } }
+
       field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(created_at: T.nilable(::DateTime), deal_probability: T.nilable(::Float), display_order: T.nilable(::Float), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
-      def initialize(created_at: nil, deal_probability: nil, display_order: nil, id: nil, is_active: nil, name: nil, raw: nil, updated_at: nil)
+      sig { params(created_at: T.nilable(::DateTime), deal_probability: T.nilable(::Float), display_order: T.nilable(::Float), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), stages: T.nilable(T::Array[::UnifiedRubySDK::Shared::CrmStage]), updated_at: T.nilable(::DateTime)).void }
+      def initialize(created_at: nil, deal_probability: nil, display_order: nil, id: nil, is_active: nil, name: nil, raw: nil, stages: nil, updated_at: nil)
         @created_at = created_at
         @deal_probability = deal_probability
         @display_order = display_order
@@ -38,6 +40,7 @@ module UnifiedRubySDK
         @is_active = is_active
         @name = name
         @raw = raw
+        @stages = stages
         @updated_at = updated_at
       end
     end

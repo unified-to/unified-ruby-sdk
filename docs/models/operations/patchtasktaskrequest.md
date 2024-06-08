@@ -1,0 +1,10 @@
+# PatchTaskTaskRequest
+
+
+## Fields
+
+| Field                                                                            | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `connection_id`                                                                  | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the connection                                                             |
+| `id`                                                                             | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the Task                                                                   |
+| `task_task`                                                                      | [T.nilable(::UnifiedRubySDK::Shared::TaskTask)](../../models/shared/tasktask.md) | :heavy_minus_sign:                                                               | N/A                                                                              |

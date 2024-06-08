@@ -98,6 +98,10 @@ module UnifiedRubySDK
         KMS_PAGE_WRITE = new('kms_page_write')
         KMS_COMMENT_READ = new('kms_comment_read')
         KMS_COMMENT_WRITE = new('kms_comment_write')
+        TASK_PROJECT_READ = new('task_project_read')
+        TASK_PROJECT_WRITE = new('task_project_write')
+        TASK_TASK_READ = new('task_task_read')
+        TASK_TASK_WRITE = new('task_task_write')
       end
     end
 

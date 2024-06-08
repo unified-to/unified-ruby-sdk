@@ -28,6 +28,8 @@ module UnifiedRubySDK
 
       field :pipeline, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pipeline') } }
 
+      field :pipeline_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pipeline_id') } }
+
       field :probability, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('probability') } }
       # The raw data returned by the integration for this deal
       field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
@@ -35,6 +37,8 @@ module UnifiedRubySDK
       field :source, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source') } }
 
       field :stage, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('stage') } }
+
+      field :stage_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('stage_id') } }
 
       field :tags, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
 
@@ -45,8 +49,8 @@ module UnifiedRubySDK
       field :won_reason, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('won_reason') } }
 
 
-      sig { params(amount: T.nilable(::Float), closed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), lost_reason: T.nilable(::String), name: T.nilable(::String), pipeline: T.nilable(::String), probability: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), source: T.nilable(::String), stage: T.nilable(::String), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), won_reason: T.nilable(::String)).void }
-      def initialize(amount: nil, closed_at: nil, created_at: nil, currency: nil, id: nil, lost_reason: nil, name: nil, pipeline: nil, probability: nil, raw: nil, source: nil, stage: nil, tags: nil, updated_at: nil, user_id: nil, won_reason: nil)
+      sig { params(amount: T.nilable(::Float), closed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), lost_reason: T.nilable(::String), name: T.nilable(::String), pipeline: T.nilable(::String), pipeline_id: T.nilable(::String), probability: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), source: T.nilable(::String), stage: T.nilable(::String), stage_id: T.nilable(::String), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), won_reason: T.nilable(::String)).void }
+      def initialize(amount: nil, closed_at: nil, created_at: nil, currency: nil, id: nil, lost_reason: nil, name: nil, pipeline: nil, pipeline_id: nil, probability: nil, raw: nil, source: nil, stage: nil, stage_id: nil, tags: nil, updated_at: nil, user_id: nil, won_reason: nil)
         @amount = amount
         @closed_at = closed_at
         @created_at = created_at
@@ -55,10 +59,12 @@ module UnifiedRubySDK
         @lost_reason = lost_reason
         @name = name
         @pipeline = pipeline
+        @pipeline_id = pipeline_id
         @probability = probability
         @raw = raw
         @source = source
         @stage = stage
+        @stage_id = stage_id
         @tags = tags
         @updated_at = updated_at
         @user_id = user_id

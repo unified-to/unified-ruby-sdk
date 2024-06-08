@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 9a5990618c970a819b6235d1b48f2259
+  docChecksum: 34d8e45448aaadab7271416cea77fcaf
   docVersion: "1.0"
-  speakeasyVersion: 1.299.7
-  generationVersion: 2.338.12
-  releaseVersion: 0.4.48
-  configChecksum: 123304f6d4fa7b82386062a8b6a13849
+  speakeasyVersion: 1.300.1
+  generationVersion: 2.339.1
+  releaseVersion: 0.4.49
+  configChecksum: 69a7760fc2697c0756b42a17dc50aaf2
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -71,6 +71,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/refund.rb
   - lib/unified_ruby_sdk/storage.rb
   - lib/unified_ruby_sdk/file.rb
+  - lib/unified_ruby_sdk/task.rb
+  - lib/unified_ruby_sdk/project.rb
   - lib/unified_ruby_sdk/ticketing.rb
   - lib/unified_ruby_sdk/customer.rb
   - lib/unified_ruby_sdk/note.rb
@@ -578,6 +580,30 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removestoragefile_response.rb
   - lib/unified_ruby_sdk/models/operations/updatestoragefile_request.rb
   - lib/unified_ruby_sdk/models/operations/updatestoragefile_response.rb
+  - lib/unified_ruby_sdk/models/operations/createtaskproject_request.rb
+  - lib/unified_ruby_sdk/models/operations/createtaskproject_response.rb
+  - lib/unified_ruby_sdk/models/operations/createtasktask_request.rb
+  - lib/unified_ruby_sdk/models/operations/createtasktask_response.rb
+  - lib/unified_ruby_sdk/models/operations/gettaskproject_request.rb
+  - lib/unified_ruby_sdk/models/operations/gettaskproject_response.rb
+  - lib/unified_ruby_sdk/models/operations/gettasktask_request.rb
+  - lib/unified_ruby_sdk/models/operations/gettasktask_response.rb
+  - lib/unified_ruby_sdk/models/operations/listtaskprojects_request.rb
+  - lib/unified_ruby_sdk/models/operations/listtaskprojects_response.rb
+  - lib/unified_ruby_sdk/models/operations/listtasktasks_request.rb
+  - lib/unified_ruby_sdk/models/operations/listtasktasks_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchtaskproject_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchtaskproject_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchtasktask_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchtasktask_response.rb
+  - lib/unified_ruby_sdk/models/operations/removetaskproject_request.rb
+  - lib/unified_ruby_sdk/models/operations/removetaskproject_response.rb
+  - lib/unified_ruby_sdk/models/operations/removetasktask_request.rb
+  - lib/unified_ruby_sdk/models/operations/removetasktask_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatetaskproject_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatetaskproject_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatetasktask_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatetasktask_response.rb
   - lib/unified_ruby_sdk/models/operations/createticketingcustomer_request.rb
   - lib/unified_ruby_sdk/models/operations/createticketingcustomer_response.rb
   - lib/unified_ruby_sdk/models/operations/createticketingnote_request.rb
@@ -754,6 +780,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/crmlead.rb
   - lib/unified_ruby_sdk/models/shared/property_crmlead_address.rb
   - lib/unified_ruby_sdk/models/shared/crmpipeline.rb
+  - lib/unified_ruby_sdk/models/shared/crmstage.rb
   - lib/unified_ruby_sdk/models/shared/gender.rb
   - lib/unified_ruby_sdk/models/shared/enrichperson.rb
   - lib/unified_ruby_sdk/models/shared/enrichpersonworkhistory.rb
@@ -805,6 +832,9 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/storagefile.rb
   - lib/unified_ruby_sdk/models/shared/storagepermission.rb
   - lib/unified_ruby_sdk/models/shared/property_storagepermission_roles.rb
+  - lib/unified_ruby_sdk/models/shared/taskproject.rb
+  - lib/unified_ruby_sdk/models/shared/tasktask_status.rb
+  - lib/unified_ruby_sdk/models/shared/tasktask.rb
   - lib/unified_ruby_sdk/models/shared/ticketingcustomer.rb
   - lib/unified_ruby_sdk/models/shared/ticketingtelephone_type.rb
   - lib/unified_ruby_sdk/models/shared/ticketingtelephone.rb
@@ -849,6 +879,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_offset.rb
   - lib/unified_ruby_sdk/models/shared/list_order.rb
   - lib/unified_ruby_sdk/models/shared/list_parent_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_project_id.rb
   - lib/unified_ruby_sdk/models/shared/list_query.rb
   - lib/unified_ruby_sdk/models/shared/list_sort_by_created_at.rb
   - lib/unified_ruby_sdk/models/shared/list_sort_by_name.rb
@@ -1320,6 +1351,30 @@ generatedFiles:
   - docs/models/operations/removestoragefileresponse.md
   - docs/models/operations/updatestoragefilerequest.md
   - docs/models/operations/updatestoragefileresponse.md
+  - docs/models/operations/createtaskprojectrequest.md
+  - docs/models/operations/createtaskprojectresponse.md
+  - docs/models/operations/createtasktaskrequest.md
+  - docs/models/operations/createtasktaskresponse.md
+  - docs/models/operations/gettaskprojectrequest.md
+  - docs/models/operations/gettaskprojectresponse.md
+  - docs/models/operations/gettasktaskrequest.md
+  - docs/models/operations/gettasktaskresponse.md
+  - docs/models/operations/listtaskprojectsrequest.md
+  - docs/models/operations/listtaskprojectsresponse.md
+  - docs/models/operations/listtasktasksrequest.md
+  - docs/models/operations/listtasktasksresponse.md
+  - docs/models/operations/patchtaskprojectrequest.md
+  - docs/models/operations/patchtaskprojectresponse.md
+  - docs/models/operations/patchtasktaskrequest.md
+  - docs/models/operations/patchtasktaskresponse.md
+  - docs/models/operations/removetaskprojectrequest.md
+  - docs/models/operations/removetaskprojectresponse.md
+  - docs/models/operations/removetasktaskrequest.md
+  - docs/models/operations/removetasktaskresponse.md
+  - docs/models/operations/updatetaskprojectrequest.md
+  - docs/models/operations/updatetaskprojectresponse.md
+  - docs/models/operations/updatetasktaskrequest.md
+  - docs/models/operations/updatetasktaskresponse.md
   - docs/models/operations/createticketingcustomerrequest.md
   - docs/models/operations/createticketingcustomerresponse.md
   - docs/models/operations/createticketingnoterequest.md
@@ -1496,6 +1551,7 @@ generatedFiles:
   - docs/models/shared/crmlead.md
   - docs/models/shared/propertycrmleadaddress.md
   - docs/models/shared/crmpipeline.md
+  - docs/models/shared/crmstage.md
   - docs/models/shared/gender.md
   - docs/models/shared/enrichperson.md
   - docs/models/shared/enrichpersonworkhistory.md
@@ -1547,6 +1603,9 @@ generatedFiles:
   - docs/models/shared/storagefile.md
   - docs/models/shared/storagepermission.md
   - docs/models/shared/propertystoragepermissionroles.md
+  - docs/models/shared/taskproject.md
+  - docs/models/shared/tasktaskstatus.md
+  - docs/models/shared/tasktask.md
   - docs/models/shared/ticketingcustomer.md
   - docs/models/shared/ticketingtelephonetype.md
   - docs/models/shared/ticketingtelephone.md
@@ -1591,6 +1650,7 @@ generatedFiles:
   - docs/models/shared/listoffset.md
   - docs/models/shared/listorder.md
   - docs/models/shared/listparentid.md
+  - docs/models/shared/listprojectid.md
   - docs/models/shared/listquery.md
   - docs/models/shared/listsortbycreatedat.md
   - docs/models/shared/listsortbyname.md
@@ -1669,6 +1729,8 @@ generatedFiles:
   - docs/sdks/refund/README.md
   - docs/sdks/storage/README.md
   - docs/sdks/file/README.md
+  - docs/sdks/task/README.md
+  - docs/sdks/project/README.md
   - docs/sdks/ticketing/README.md
   - docs/sdks/customer/README.md
   - docs/sdks/note/README.md

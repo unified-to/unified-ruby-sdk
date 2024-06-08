@@ -26,6 +26,7 @@ module UnifiedRubySDK
         GENAI = new('genai')
         MESSAGING = new('messaging')
         KMS = new('kms')
+        TASK = new('task')
       end
     end
 

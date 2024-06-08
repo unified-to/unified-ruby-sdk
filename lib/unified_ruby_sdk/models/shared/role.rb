@@ -10,8 +10,8 @@ module UnifiedRubySDK
 
     class Role < T::Enum
       enums do
-        SYSTEM = new('system')
-        USER = new('user')
+        SYSTEM = new('SYSTEM')
+        USER = new('USER')
       end
     end
 
