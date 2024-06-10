@@ -19,6 +19,55 @@ module UnifiedRubySDK
     end
 
 
+    sig { params(connection_id: ::String, hris_company: T.nilable(::UnifiedRubySDK::Shared::HrisCompany)).returns(::UnifiedRubySDK::Operations::CreateHrisCompanyResponse) }
+    def create_hris_company(connection_id, hris_company = nil)
+      # create_hris_company - Create a company
+      request = ::UnifiedRubySDK::Operations::CreateHrisCompanyRequest.new(
+        
+        connection_id: connection_id,
+        hris_company: hris_company
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::CreateHrisCompanyRequest,
+        base_url,
+        '/hris/{connection_id}/company',
+        request
+      )
+      headers = {}
+      req_content_type, data, form = Utils.serialize_request_body(request, :hris_company, :json)
+      headers['content-type'] = req_content_type
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.post(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        if form
+          req.body = Utils.encode_form(form)
+        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+          req.body = URI.encode_www_form(data)
+        else
+          req.body = data
+        end
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::CreateHrisCompanyResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::HrisCompany)
+          res.hris_company = out
+        end
+      end
+      res
+    end
+
+
     sig { params(connection_id: ::String, hris_employee: T.nilable(::UnifiedRubySDK::Shared::HrisEmployee)).returns(::UnifiedRubySDK::Operations::CreateHrisEmployeeResponse) }
     def create_hris_employee(connection_id, hris_employee = nil)
       # create_hris_employee - Create an employee
@@ -111,6 +160,49 @@ module UnifiedRubySDK
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::HrisGroup)
           res.hris_group = out
+        end
+      end
+      res
+    end
+
+
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetHrisCompanyResponse) }
+    def get_hris_company(connection_id, id, fields_ = nil)
+      # get_hris_company - Retrieve a company
+      request = ::UnifiedRubySDK::Operations::GetHrisCompanyRequest.new(
+        
+        connection_id: connection_id,
+        id: id,
+        fields_: fields_
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::GetHrisCompanyRequest,
+        base_url,
+        '/hris/{connection_id}/company/{id}',
+        request
+      )
+      headers = {}
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::GetHrisCompanyRequest, request)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.get(url) do |req|
+        req.headers = headers
+        req.params = query_params
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::GetHrisCompanyResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::HrisCompany)
+          res.hris_company = out
         end
       end
       res
@@ -289,6 +381,43 @@ module UnifiedRubySDK
     end
 
 
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListHrisCompaniesRequest)).returns(::UnifiedRubySDK::Operations::ListHrisCompaniesResponse) }
+    def list_hris_companies(request)
+      # list_hris_companies - List all companies
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::ListHrisCompaniesRequest,
+        base_url,
+        '/hris/{connection_id}/company',
+        request
+      )
+      headers = {}
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::ListHrisCompaniesRequest, request)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.get(url) do |req|
+        req.headers = headers
+        req.params = query_params
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::ListHrisCompaniesResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, T::Array[::UnifiedRubySDK::Shared::HrisCompany])
+          res.hris_companies = out
+        end
+      end
+      res
+    end
+
+
     sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListHrisEmployeesRequest)).returns(::UnifiedRubySDK::Operations::ListHrisEmployeesResponse) }
     def list_hris_employees(request)
       # list_hris_employees - List all employees
@@ -437,6 +566,56 @@ module UnifiedRubySDK
     end
 
 
+    sig { params(connection_id: ::String, id: ::String, hris_company: T.nilable(::UnifiedRubySDK::Shared::HrisCompany)).returns(::UnifiedRubySDK::Operations::PatchHrisCompanyResponse) }
+    def patch_hris_company(connection_id, id, hris_company = nil)
+      # patch_hris_company - Update a company
+      request = ::UnifiedRubySDK::Operations::PatchHrisCompanyRequest.new(
+        
+        connection_id: connection_id,
+        id: id,
+        hris_company: hris_company
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::PatchHrisCompanyRequest,
+        base_url,
+        '/hris/{connection_id}/company/{id}',
+        request
+      )
+      headers = {}
+      req_content_type, data, form = Utils.serialize_request_body(request, :hris_company, :json)
+      headers['content-type'] = req_content_type
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.patch(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        if form
+          req.body = Utils.encode_form(form)
+        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+          req.body = URI.encode_www_form(data)
+        else
+          req.body = data
+        end
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::PatchHrisCompanyResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::HrisCompany)
+          res.hris_company = out
+        end
+      end
+      res
+    end
+
+
     sig { params(connection_id: ::String, id: ::String, hris_employee: T.nilable(::UnifiedRubySDK::Shared::HrisEmployee)).returns(::UnifiedRubySDK::Operations::PatchHrisEmployeeResponse) }
     def patch_hris_employee(connection_id, id, hris_employee = nil)
       # patch_hris_employee - Update an employee
@@ -537,6 +716,48 @@ module UnifiedRubySDK
     end
 
 
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveHrisCompanyResponse) }
+    def remove_hris_company(connection_id, id)
+      # remove_hris_company - Remove a company
+      request = ::UnifiedRubySDK::Operations::RemoveHrisCompanyRequest.new(
+        
+        connection_id: connection_id,
+        id: id
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::RemoveHrisCompanyRequest,
+        base_url,
+        '/hris/{connection_id}/company/{id}',
+        request
+      )
+      headers = {}
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.delete(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::RemoveHrisCompanyResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status >= 200 && r.status < 300
+      else
+                
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::String)
+          res.string = out
+        end
+      end
+      res
+    end
+
+
     sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveHrisEmployeeResponse) }
     def remove_hris_employee(connection_id, id)
       # remove_hris_employee - Remove an employee
@@ -615,6 +836,56 @@ module UnifiedRubySDK
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, ::String)
           res.string = out
+        end
+      end
+      res
+    end
+
+
+    sig { params(connection_id: ::String, id: ::String, hris_company: T.nilable(::UnifiedRubySDK::Shared::HrisCompany)).returns(::UnifiedRubySDK::Operations::UpdateHrisCompanyResponse) }
+    def update_hris_company(connection_id, id, hris_company = nil)
+      # update_hris_company - Update a company
+      request = ::UnifiedRubySDK::Operations::UpdateHrisCompanyRequest.new(
+        
+        connection_id: connection_id,
+        id: id,
+        hris_company: hris_company
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::UpdateHrisCompanyRequest,
+        base_url,
+        '/hris/{connection_id}/company/{id}',
+        request
+      )
+      headers = {}
+      req_content_type, data, form = Utils.serialize_request_body(request, :hris_company, :json)
+      headers['content-type'] = req_content_type
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.put(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        if form
+          req.body = Utils.encode_form(form)
+        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+          req.body = URI.encode_www_form(data)
+        else
+          req.body = data
+        end
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::UpdateHrisCompanyResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::HrisCompany)
+          res.hris_company = out
         end
       end
       res

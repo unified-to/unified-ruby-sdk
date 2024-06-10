@@ -72,6 +72,8 @@ module UnifiedRubySDK
     autoload :AtsStatus, 'unified_ruby_sdk/models/shared/atsstatus.rb'
     autoload :CrmCompany, 'unified_ruby_sdk/models/shared/crmcompany.rb'
     autoload :PropertyCrmCompanyAddress, 'unified_ruby_sdk/models/shared/property_crmcompany_address.rb'
+    autoload :HrisCompany, 'unified_ruby_sdk/models/shared/hriscompany.rb'
+    autoload :PropertyHrisCompanyAddress, 'unified_ruby_sdk/models/shared/property_hriscompany_address.rb'
     autoload :EnrichCompany, 'unified_ruby_sdk/models/shared/enrichcompany.rb'
     autoload :EnrichTelephoneType, 'unified_ruby_sdk/models/shared/enrichtelephone_type.rb'
     autoload :EnrichTelephone, 'unified_ruby_sdk/models/shared/enrichtelephone.rb'

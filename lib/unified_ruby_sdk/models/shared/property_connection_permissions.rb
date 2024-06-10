@@ -82,6 +82,8 @@ module UnifiedRubySDK
         HRIS_PAYSLIP_WRITE = new('hris_payslip_write')
         HRIS_TIMEOFF_READ = new('hris_timeoff_read')
         HRIS_TIMEOFF_WRITE = new('hris_timeoff_write')
+        HRIS_COMPANY_READ = new('hris_company_read')
+        HRIS_COMPANY_WRITE = new('hris_company_write')
         UC_CALL_READ = new('uc_call_read')
         STORAGE_FILE_READ = new('storage_file_read')
         STORAGE_FILE_WRITE = new('storage_file_write')

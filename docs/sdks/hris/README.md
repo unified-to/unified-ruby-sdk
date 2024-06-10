@@ -3,22 +3,67 @@
 
 ### Available Operations
 
+* [create_hris_company](#create_hris_company) - Create a company
 * [create_hris_employee](#create_hris_employee) - Create an employee
 * [create_hris_group](#create_hris_group) - Create a group
+* [get_hris_company](#get_hris_company) - Retrieve a company
 * [get_hris_employee](#get_hris_employee) - Retrieve an employee
 * [get_hris_group](#get_hris_group) - Retrieve a group
 * [get_hris_payslip](#get_hris_payslip) - Retrieve a payslip
 * [get_hris_timeoff](#get_hris_timeoff) - Retrieve a timeoff
+* [list_hris_companies](#list_hris_companies) - List all companies
 * [list_hris_employees](#list_hris_employees) - List all employees
 * [list_hris_groups](#list_hris_groups) - List all groups
 * [list_hris_payslips](#list_hris_payslips) - List all payslips
 * [list_hris_timeoffs](#list_hris_timeoffs) - List all timeoffs
+* [patch_hris_company](#patch_hris_company) - Update a company
 * [patch_hris_employee](#patch_hris_employee) - Update an employee
 * [patch_hris_group](#patch_hris_group) - Update a group
+* [remove_hris_company](#remove_hris_company) - Remove a company
 * [remove_hris_employee](#remove_hris_employee) - Remove an employee
 * [remove_hris_group](#remove_hris_group) - Remove a group
+* [update_hris_company](#update_hris_company) - Update a company
 * [update_hris_employee](#update_hris_employee) - Update an employee
 * [update_hris_group](#update_hris_group) - Update a group
+
+## create_hris_company
+
+Create a company
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.hris.create_hris_company(connection_id="<value>", hris_company=::UnifiedRubySDK::Shared::HrisCompany.new())
+
+if ! res.hris_company.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `hris_company`                                                              | [::UnifiedRubySDK::Shared::HrisCompany](../../models/shared/hriscompany.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::CreateHrisCompanyResponse)](../../models/operations/createhriscompanyresponse.md)**
+
 
 ## create_hris_employee
 
@@ -96,6 +141,48 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::CreateHrisGroupResponse)](../../models/operations/createhrisgroupresponse.md)**
+
+
+## get_hris_company
+
+Retrieve a company
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.hris.get_hris_company(connection_id="<value>", id="<value>", fields_=[
+    "<value>",
+  ])
+
+if ! res.hris_company.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                        | Type                             | Required                         | Description                      |
+| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Company                |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::GetHrisCompanyResponse)](../../models/operations/gethriscompanyresponse.md)**
 
 
 ## get_hris_employee
@@ -266,6 +353,48 @@ end
 **[T.nilable(::UnifiedRubySDK::Operations::GetHrisTimeoffResponse)](../../models/operations/gethristimeoffresponse.md)**
 
 
+## list_hris_companies
+
+List all companies
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+
+req = ::UnifiedRubySDK::Operations::ListHrisCompaniesRequest.new(
+  connection_id: "<value>",
+)
+    
+res = s.hris.list_hris_companies(req)
+
+if ! res.hris_companies.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [::UnifiedRubySDK::Operations::ListHrisCompaniesRequest](../../models/operations/listhriscompaniesrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::ListHrisCompaniesResponse)](../../models/operations/listhriscompaniesresponse.md)**
+
+
 ## list_hris_employees
 
 List all employees
@@ -434,6 +563,46 @@ end
 **[T.nilable(::UnifiedRubySDK::Operations::ListHrisTimeoffsResponse)](../../models/operations/listhristimeoffsresponse.md)**
 
 
+## patch_hris_company
+
+Update a company
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.hris.patch_hris_company(connection_id="<value>", id="<value>", hris_company=::UnifiedRubySDK::Shared::HrisCompany.new())
+
+if ! res.hris_company.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Company                                                           |
+| `hris_company`                                                              | [::UnifiedRubySDK::Shared::HrisCompany](../../models/shared/hriscompany.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::PatchHrisCompanyResponse)](../../models/operations/patchhriscompanyresponse.md)**
+
+
 ## patch_hris_employee
 
 Update an employee
@@ -514,6 +683,45 @@ end
 **[T.nilable(::UnifiedRubySDK::Operations::PatchHrisGroupResponse)](../../models/operations/patchhrisgroupresponse.md)**
 
 
+## remove_hris_company
+
+Remove a company
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.hris.remove_hris_company(connection_id="<value>", id="<value>")
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Company    |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::RemoveHrisCompanyResponse)](../../models/operations/removehriscompanyresponse.md)**
+
+
 ## remove_hris_employee
 
 Remove an employee
@@ -590,6 +798,46 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveHrisGroupResponse)](../../models/operations/removehrisgroupresponse.md)**
+
+
+## update_hris_company
+
+Update a company
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.hris.update_hris_company(connection_id="<value>", id="<value>", hris_company=::UnifiedRubySDK::Shared::HrisCompany.new())
+
+if ! res.hris_company.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Company                                                           |
+| `hris_company`                                                              | [::UnifiedRubySDK::Shared::HrisCompany](../../models/shared/hriscompany.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::UpdateHrisCompanyResponse)](../../models/operations/updatehriscompanyresponse.md)**
 
 
 ## update_hris_employee

@@ -43,6 +43,7 @@ module UnifiedRubySDK
         HRIS_GROUP = new('hris_group')
         HRIS_PAYSLIP = new('hris_payslip')
         HRIS_TIMEOFF = new('hris_timeoff')
+        HRIS_COMPANY = new('hris_company')
         MARTECH_LIST = new('martech_list')
         MARTECH_MEMBER = new('martech_member')
         PASSTHROUGH = new('passthrough')

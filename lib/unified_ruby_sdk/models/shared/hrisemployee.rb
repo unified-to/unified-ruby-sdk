@@ -14,6 +14,8 @@ module UnifiedRubySDK
 
       field :address, T.nilable(::UnifiedRubySDK::Shared::PropertyHrisEmployeeAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
 
+      field :company_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
+
       field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
       field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
@@ -63,9 +65,10 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(address: T.nilable(::UnifiedRubySDK::Shared::PropertyHrisEmployeeAddress), created_at: T.nilable(::DateTime), currency: T.nilable(::String), date_of_birth: T.nilable(::DateTime), department: T.nilable(::String), division: T.nilable(::String), emails: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisEmail]), employee_number: T.nilable(::String), employment_status: T.nilable(::UnifiedRubySDK::Shared::EmploymentStatus), employment_type: T.nilable(::UnifiedRubySDK::Shared::HrisEmployeeEmploymentType), gender: T.nilable(::UnifiedRubySDK::Shared::HrisEmployeeGender), hired_at: T.nilable(::DateTime), id: T.nilable(::String), image_url: T.nilable(::String), language_locale: T.nilable(::String), location: T.nilable(::String), manager_id: T.nilable(::String), marital_status: T.nilable(::UnifiedRubySDK::Shared::MaritalStatus), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), telephones: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisTelephone]), terminated_at: T.nilable(::DateTime), timezone: T.nilable(::String), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-      def initialize(address: nil, created_at: nil, currency: nil, date_of_birth: nil, department: nil, division: nil, emails: nil, employee_number: nil, employment_status: nil, employment_type: nil, gender: nil, hired_at: nil, id: nil, image_url: nil, language_locale: nil, location: nil, manager_id: nil, marital_status: nil, name: nil, raw: nil, telephones: nil, terminated_at: nil, timezone: nil, title: nil, updated_at: nil)
+      sig { params(address: T.nilable(::UnifiedRubySDK::Shared::PropertyHrisEmployeeAddress), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), date_of_birth: T.nilable(::DateTime), department: T.nilable(::String), division: T.nilable(::String), emails: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisEmail]), employee_number: T.nilable(::String), employment_status: T.nilable(::UnifiedRubySDK::Shared::EmploymentStatus), employment_type: T.nilable(::UnifiedRubySDK::Shared::HrisEmployeeEmploymentType), gender: T.nilable(::UnifiedRubySDK::Shared::HrisEmployeeGender), hired_at: T.nilable(::DateTime), id: T.nilable(::String), image_url: T.nilable(::String), language_locale: T.nilable(::String), location: T.nilable(::String), manager_id: T.nilable(::String), marital_status: T.nilable(::UnifiedRubySDK::Shared::MaritalStatus), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), telephones: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisTelephone]), terminated_at: T.nilable(::DateTime), timezone: T.nilable(::String), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+      def initialize(address: nil, company_id: nil, created_at: nil, currency: nil, date_of_birth: nil, department: nil, division: nil, emails: nil, employee_number: nil, employment_status: nil, employment_type: nil, gender: nil, hired_at: nil, id: nil, image_url: nil, language_locale: nil, location: nil, manager_id: nil, marital_status: nil, name: nil, raw: nil, telephones: nil, terminated_at: nil, timezone: nil, title: nil, updated_at: nil)
         @address = address
+        @company_id = company_id
         @created_at = created_at
         @currency = currency
         @date_of_birth = date_of_birth

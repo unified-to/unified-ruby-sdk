@@ -160,7 +160,7 @@ res = s.connection.patch_unified_connection(id="<value>", connection=::UnifiedRu
     ],
     integration_type: "<value>",
     permissions: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::HRIS_EMPLOYEE_READ,
+      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::HRIS_GROUP_READ,
     ],
   ))
 
@@ -245,7 +245,7 @@ res = s.connection.update_unified_connection(id="<value>", connection=::UnifiedR
     ],
     integration_type: "<value>",
     permissions: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_DEAL_READ,
+      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_DEAL_WRITE,
     ],
   ))
 

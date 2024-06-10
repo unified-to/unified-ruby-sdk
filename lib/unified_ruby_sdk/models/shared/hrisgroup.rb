@@ -12,6 +12,8 @@ module UnifiedRubySDK
       extend T::Sig
 
 
+      field :company_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
+
       field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
       field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
@@ -35,8 +37,9 @@ module UnifiedRubySDK
       field :user_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
 
 
-      sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), manager_ids: T.nilable(T::Array[::String]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(::UnifiedRubySDK::Shared::HrisGroupType), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
-      def initialize(created_at: nil, description: nil, id: nil, is_active: nil, manager_ids: nil, name: nil, parent_id: nil, raw: nil, type: nil, updated_at: nil, user_ids: nil)
+      sig { params(company_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), manager_ids: T.nilable(T::Array[::String]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(::UnifiedRubySDK::Shared::HrisGroupType), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
+      def initialize(company_id: nil, created_at: nil, description: nil, id: nil, is_active: nil, manager_ids: nil, name: nil, parent_id: nil, raw: nil, type: nil, updated_at: nil, user_ids: nil)
+        @company_id = company_id
         @created_at = created_at
         @description = description
         @id = id

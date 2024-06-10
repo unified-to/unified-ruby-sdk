@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 34d8e45448aaadab7271416cea77fcaf
+  docChecksum: b5e06f8290f506984cde8a37b4ebd06e
   docVersion: "1.0"
   speakeasyVersion: 1.300.1
   generationVersion: 2.339.1
-  releaseVersion: 0.4.49
-  configChecksum: 69a7760fc2697c0756b42a17dc50aaf2
+  releaseVersion: 0.4.50
+  configChecksum: 076205946b2bdf857bf2e96cdc721f8a
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -316,18 +316,30 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updateatsscorecard_response.rb
   - lib/unified_ruby_sdk/models/operations/createcrmcompany_request.rb
   - lib/unified_ruby_sdk/models/operations/createcrmcompany_response.rb
+  - lib/unified_ruby_sdk/models/operations/createhriscompany_request.rb
+  - lib/unified_ruby_sdk/models/operations/createhriscompany_response.rb
   - lib/unified_ruby_sdk/models/operations/getcrmcompany_request.rb
   - lib/unified_ruby_sdk/models/operations/getcrmcompany_response.rb
+  - lib/unified_ruby_sdk/models/operations/gethriscompany_request.rb
+  - lib/unified_ruby_sdk/models/operations/gethriscompany_response.rb
   - lib/unified_ruby_sdk/models/operations/listcrmcompanies_request.rb
   - lib/unified_ruby_sdk/models/operations/listcrmcompanies_response.rb
   - lib/unified_ruby_sdk/models/operations/listenrichcompanies_request.rb
   - lib/unified_ruby_sdk/models/operations/listenrichcompanies_response.rb
+  - lib/unified_ruby_sdk/models/operations/listhriscompanies_request.rb
+  - lib/unified_ruby_sdk/models/operations/listhriscompanies_response.rb
   - lib/unified_ruby_sdk/models/operations/patchcrmcompany_request.rb
   - lib/unified_ruby_sdk/models/operations/patchcrmcompany_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchhriscompany_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchhriscompany_response.rb
   - lib/unified_ruby_sdk/models/operations/removecrmcompany_request.rb
   - lib/unified_ruby_sdk/models/operations/removecrmcompany_response.rb
+  - lib/unified_ruby_sdk/models/operations/removehriscompany_request.rb
+  - lib/unified_ruby_sdk/models/operations/removehriscompany_response.rb
   - lib/unified_ruby_sdk/models/operations/updatecrmcompany_request.rb
   - lib/unified_ruby_sdk/models/operations/updatecrmcompany_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatehriscompany_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatehriscompany_response.rb
   - lib/unified_ruby_sdk/models/operations/createcommercecollection_request.rb
   - lib/unified_ruby_sdk/models/operations/createcommercecollection_response.rb
   - lib/unified_ruby_sdk/models/operations/createcommerceinventory_request.rb
@@ -751,6 +763,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/atsstatus.rb
   - lib/unified_ruby_sdk/models/shared/crmcompany.rb
   - lib/unified_ruby_sdk/models/shared/property_crmcompany_address.rb
+  - lib/unified_ruby_sdk/models/shared/hriscompany.rb
+  - lib/unified_ruby_sdk/models/shared/property_hriscompany_address.rb
   - lib/unified_ruby_sdk/models/shared/enrichcompany.rb
   - lib/unified_ruby_sdk/models/shared/enrichtelephone_type.rb
   - lib/unified_ruby_sdk/models/shared/enrichtelephone.rb
@@ -1087,18 +1101,30 @@ generatedFiles:
   - docs/models/operations/updateatsscorecardresponse.md
   - docs/models/operations/createcrmcompanyrequest.md
   - docs/models/operations/createcrmcompanyresponse.md
+  - docs/models/operations/createhriscompanyrequest.md
+  - docs/models/operations/createhriscompanyresponse.md
   - docs/models/operations/getcrmcompanyrequest.md
   - docs/models/operations/getcrmcompanyresponse.md
+  - docs/models/operations/gethriscompanyrequest.md
+  - docs/models/operations/gethriscompanyresponse.md
   - docs/models/operations/listcrmcompaniesrequest.md
   - docs/models/operations/listcrmcompaniesresponse.md
   - docs/models/operations/listenrichcompaniesrequest.md
   - docs/models/operations/listenrichcompaniesresponse.md
+  - docs/models/operations/listhriscompaniesrequest.md
+  - docs/models/operations/listhriscompaniesresponse.md
   - docs/models/operations/patchcrmcompanyrequest.md
   - docs/models/operations/patchcrmcompanyresponse.md
+  - docs/models/operations/patchhriscompanyrequest.md
+  - docs/models/operations/patchhriscompanyresponse.md
   - docs/models/operations/removecrmcompanyrequest.md
   - docs/models/operations/removecrmcompanyresponse.md
+  - docs/models/operations/removehriscompanyrequest.md
+  - docs/models/operations/removehriscompanyresponse.md
   - docs/models/operations/updatecrmcompanyrequest.md
   - docs/models/operations/updatecrmcompanyresponse.md
+  - docs/models/operations/updatehriscompanyrequest.md
+  - docs/models/operations/updatehriscompanyresponse.md
   - docs/models/operations/createcommercecollectionrequest.md
   - docs/models/operations/createcommercecollectionresponse.md
   - docs/models/operations/createcommerceinventoryrequest.md
@@ -1522,6 +1548,8 @@ generatedFiles:
   - docs/models/shared/atsstatus.md
   - docs/models/shared/crmcompany.md
   - docs/models/shared/propertycrmcompanyaddress.md
+  - docs/models/shared/hriscompany.md
+  - docs/models/shared/propertyhriscompanyaddress.md
   - docs/models/shared/enrichcompany.md
   - docs/models/shared/enrichtelephonetype.md
   - docs/models/shared/enrichtelephone.md
