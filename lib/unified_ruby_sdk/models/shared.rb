@@ -94,6 +94,7 @@ module UnifiedRubySDK
     autoload :CrmDeal, 'unified_ruby_sdk/models/shared/crmdeal.rb'
     autoload :CrmEventType, 'unified_ruby_sdk/models/shared/crmevent_type.rb'
     autoload :CrmEvent, 'unified_ruby_sdk/models/shared/crmevent.rb'
+    autoload :Priority, 'unified_ruby_sdk/models/shared/priority.rb'
     autoload :PropertyCrmEventTaskStatus, 'unified_ruby_sdk/models/shared/property_crmevent_task_status.rb'
     autoload :PropertyCrmEventTask, 'unified_ruby_sdk/models/shared/property_crmevent_task.rb'
     autoload :PropertyCrmEventNote, 'unified_ruby_sdk/models/shared/property_crmevent_note.rb'

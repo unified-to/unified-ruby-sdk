@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: b5e06f8290f506984cde8a37b4ebd06e
+  docChecksum: f0fea8601a16d51b9c2316f7dec21d35
   docVersion: "1.0"
-  speakeasyVersion: 1.300.1
-  generationVersion: 2.339.1
-  releaseVersion: 0.4.50
-  configChecksum: 076205946b2bdf857bf2e96cdc721f8a
+  speakeasyVersion: 1.305.0
+  generationVersion: 2.340.3
+  releaseVersion: 0.4.51
+  configChecksum: 0656fc91a651adbe7b9ba544f31aede1
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -785,6 +785,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/crmdeal.rb
   - lib/unified_ruby_sdk/models/shared/crmevent_type.rb
   - lib/unified_ruby_sdk/models/shared/crmevent.rb
+  - lib/unified_ruby_sdk/models/shared/priority.rb
   - lib/unified_ruby_sdk/models/shared/property_crmevent_task_status.rb
   - lib/unified_ruby_sdk/models/shared/property_crmevent_task.rb
   - lib/unified_ruby_sdk/models/shared/property_crmevent_note.rb
@@ -1570,6 +1571,7 @@ generatedFiles:
   - docs/models/shared/crmdeal.md
   - docs/models/shared/crmeventtype.md
   - docs/models/shared/crmevent.md
+  - docs/models/shared/priority.md
   - docs/models/shared/propertycrmeventtaskstatus.md
   - docs/models/shared/propertycrmeventtask.md
   - docs/models/shared/propertycrmeventnote.md
