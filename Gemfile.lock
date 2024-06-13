@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    unified_ruby_sdk (0.4.51)
+    unified_ruby_sdk (0.4.52)
       faraday
       faraday-multipart
       rack

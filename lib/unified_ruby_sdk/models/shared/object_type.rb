@@ -12,6 +12,7 @@ module UnifiedRubySDK
       enums do
         ACCOUNTING_ACCOUNT = new('accounting_account')
         ACCOUNTING_TRANSACTION = new('accounting_transaction')
+        ACCOUNTING_JOURNAL = new('accounting_journal')
         ACCOUNTING_CONTACT = new('accounting_contact')
         ACCOUNTING_INVOICE = new('accounting_invoice')
         ACCOUNTING_TAXRATE = new('accounting_taxrate')

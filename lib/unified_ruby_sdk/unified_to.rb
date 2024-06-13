@@ -13,7 +13,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :contact, :invoice, :organization, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :employee, :group, :payslip, :timeoff, :kms, :page, :space, :martech, :list, :member, :messaging, :channel, :message, :passthrough, :payment, :link, :payout, :refund, :storage, :file, :task, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
+    attr_accessor :accounting, :account, :contact, :invoice, :journal, :organization, :taxrate, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :employee, :group, :payslip, :timeoff, :kms, :page, :space, :martech, :list, :member, :messaging, :channel, :message, :passthrough, :payment, :link, :payout, :refund, :storage, :file, :task, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
 
     sig do
       params(client: Faraday::Request,
@@ -79,9 +79,9 @@ module UnifiedRubySDK
       @account = Account.new(@sdk_configuration)
       @contact = Contact.new(@sdk_configuration)
       @invoice = Invoice.new(@sdk_configuration)
+      @journal = Journal.new(@sdk_configuration)
       @organization = Organization.new(@sdk_configuration)
       @taxrate = Taxrate.new(@sdk_configuration)
-      @transaction = Transaction.new(@sdk_configuration)
       @ats = Ats.new(@sdk_configuration)
       @activity = Activity.new(@sdk_configuration)
       @application = Application.new(@sdk_configuration)

@@ -15,6 +15,8 @@ module UnifiedRubySDK
         ACCOUNTING_ACCOUNT_WRITE = new('accounting_account_write')
         ACCOUNTING_TRANSACTION_READ = new('accounting_transaction_read')
         ACCOUNTING_TRANSACTION_WRITE = new('accounting_transaction_write')
+        ACCOUNTING_JOURNAL_READ = new('accounting_journal_read')
+        ACCOUNTING_JOURNAL_WRITE = new('accounting_journal_write')
         ACCOUNTING_INVOICE_READ = new('accounting_invoice_read')
         ACCOUNTING_INVOICE_WRITE = new('accounting_invoice_write')
         ACCOUNTING_CONTACT_READ = new('accounting_contact_read')

@@ -47,7 +47,7 @@ req = ::UnifiedRubySDK::Shared::Connection.new(
   ],
   integration_type: "<value>",
   permissions: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_DOCUMENT_WRITE,
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_DOCUMENT_READ,
   ],
 )
     
@@ -93,7 +93,7 @@ res = s.unified.create_unified_webhook(webhook=::UnifiedRubySDK::Shared::Webhook
     connection_id: "<value>",
     event: ::UnifiedRubySDK::Shared::Event::CREATED,
     hook_url: "<value>",
-    object_type: ::UnifiedRubySDK::Shared::ObjectType::ACCOUNTING_ACCOUNT,
+    object_type: ::UnifiedRubySDK::Shared::ObjectType::ACCOUNTING_TRANSACTION,
   ), include_all=false)
 
 if ! res.webhook.nil?
@@ -570,7 +570,7 @@ res = s.unified.patch_unified_connection(id="<value>", connection=::UnifiedRubyS
     ],
     integration_type: "<value>",
     permissions: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::HRIS_GROUP_READ,
+      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::HRIS_EMPLOYEE_WRITE,
     ],
   ))
 
@@ -731,7 +731,7 @@ res = s.unified.update_unified_connection(id="<value>", connection=::UnifiedRuby
     ],
     integration_type: "<value>",
     permissions: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_DEAL_WRITE,
+      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_DEAL_READ,
     ],
   ))
 

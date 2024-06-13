@@ -166,6 +166,55 @@ module UnifiedRubySDK
     end
 
 
+    sig { params(connection_id: ::String, accounting_journal: T.nilable(::UnifiedRubySDK::Shared::AccountingJournal)).returns(::UnifiedRubySDK::Operations::CreateAccountingJournalResponse) }
+    def create_accounting_journal(connection_id, accounting_journal = nil)
+      # create_accounting_journal - Create a journal
+      request = ::UnifiedRubySDK::Operations::CreateAccountingJournalRequest.new(
+        
+        connection_id: connection_id,
+        accounting_journal: accounting_journal
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::CreateAccountingJournalRequest,
+        base_url,
+        '/accounting/{connection_id}/journal',
+        request
+      )
+      headers = {}
+      req_content_type, data, form = Utils.serialize_request_body(request, :accounting_journal, :json)
+      headers['content-type'] = req_content_type
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.post(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        if form
+          req.body = Utils.encode_form(form)
+        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+          req.body = URI.encode_www_form(data)
+        else
+          req.body = data
+        end
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::CreateAccountingJournalResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::AccountingJournal)
+          res.accounting_journal = out
+        end
+      end
+      res
+    end
+
+
     sig { params(connection_id: ::String, accounting_taxrate: T.nilable(::UnifiedRubySDK::Shared::AccountingTaxrate)).returns(::UnifiedRubySDK::Operations::CreateAccountingTaxrateResponse) }
     def create_accounting_taxrate(connection_id, accounting_taxrate = nil)
       # create_accounting_taxrate - Create a taxrate
@@ -209,55 +258,6 @@ module UnifiedRubySDK
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::AccountingTaxrate)
           res.accounting_taxrate = out
-        end
-      end
-      res
-    end
-
-
-    sig { params(connection_id: ::String, accounting_transaction: T.nilable(::UnifiedRubySDK::Shared::AccountingTransaction)).returns(::UnifiedRubySDK::Operations::CreateAccountingTransactionResponse) }
-    def create_accounting_transaction(connection_id, accounting_transaction = nil)
-      # create_accounting_transaction - Create a transaction
-      request = ::UnifiedRubySDK::Operations::CreateAccountingTransactionRequest.new(
-        
-        connection_id: connection_id,
-        accounting_transaction: accounting_transaction
-      )
-      url, params = @sdk_configuration.get_server_details
-      base_url = Utils.template_url(url, params)
-      url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::CreateAccountingTransactionRequest,
-        base_url,
-        '/accounting/{connection_id}/transaction',
-        request
-      )
-      headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :accounting_transaction, :json)
-      headers['content-type'] = req_content_type
-      headers['Accept'] = 'application/json'
-      headers['user-agent'] = @sdk_configuration.user_agent
-
-      r = @sdk_configuration.client.post(url) do |req|
-        req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
-        if form
-          req.body = Utils.encode_form(form)
-        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-          req.body = URI.encode_www_form(data)
-        else
-          req.body = data
-        end
-      end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = ::UnifiedRubySDK::Operations::CreateAccountingTransactionResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-      if r.status == 200
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::AccountingTransaction)
-          res.accounting_transaction = out
         end
       end
       res
@@ -393,6 +393,49 @@ module UnifiedRubySDK
     end
 
 
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAccountingJournalResponse) }
+    def get_accounting_journal(connection_id, id, fields_ = nil)
+      # get_accounting_journal - Retrieve a journal
+      request = ::UnifiedRubySDK::Operations::GetAccountingJournalRequest.new(
+        
+        connection_id: connection_id,
+        id: id,
+        fields_: fields_
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::GetAccountingJournalRequest,
+        base_url,
+        '/accounting/{connection_id}/journal/{id}',
+        request
+      )
+      headers = {}
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::GetAccountingJournalRequest, request)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.get(url) do |req|
+        req.headers = headers
+        req.params = query_params
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::GetAccountingJournalResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::AccountingJournal)
+          res.accounting_journal = out
+        end
+      end
+      res
+    end
+
+
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAccountingOrganizationResponse) }
     def get_accounting_organization(connection_id, id, fields_ = nil)
       # get_accounting_organization - Retrieve an organization
@@ -473,49 +516,6 @@ module UnifiedRubySDK
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::AccountingTaxrate)
           res.accounting_taxrate = out
-        end
-      end
-      res
-    end
-
-
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetAccountingTransactionResponse) }
-    def get_accounting_transaction(connection_id, id, fields_ = nil)
-      # get_accounting_transaction - Retrieve a transaction
-      request = ::UnifiedRubySDK::Operations::GetAccountingTransactionRequest.new(
-        
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
-      url, params = @sdk_configuration.get_server_details
-      base_url = Utils.template_url(url, params)
-      url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::GetAccountingTransactionRequest,
-        base_url,
-        '/accounting/{connection_id}/transaction/{id}',
-        request
-      )
-      headers = {}
-      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::GetAccountingTransactionRequest, request)
-      headers['Accept'] = 'application/json'
-      headers['user-agent'] = @sdk_configuration.user_agent
-
-      r = @sdk_configuration.client.get(url) do |req|
-        req.headers = headers
-        req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
-      end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = ::UnifiedRubySDK::Operations::GetAccountingTransactionResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-      if r.status == 200
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::AccountingTransaction)
-          res.accounting_transaction = out
         end
       end
       res
@@ -633,6 +633,43 @@ module UnifiedRubySDK
     end
 
 
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingJournalsRequest)).returns(::UnifiedRubySDK::Operations::ListAccountingJournalsResponse) }
+    def list_accounting_journals(request)
+      # list_accounting_journals - List all journals
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::ListAccountingJournalsRequest,
+        base_url,
+        '/accounting/{connection_id}/journal',
+        request
+      )
+      headers = {}
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::ListAccountingJournalsRequest, request)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.get(url) do |req|
+        req.headers = headers
+        req.params = query_params
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::ListAccountingJournalsResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, T::Array[::UnifiedRubySDK::Shared::AccountingJournal])
+          res.accounting_journals = out
+        end
+      end
+      res
+    end
+
+
     sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingOrganizationsRequest)).returns(::UnifiedRubySDK::Operations::ListAccountingOrganizationsResponse) }
     def list_accounting_organizations(request)
       # list_accounting_organizations - List all organizations
@@ -701,43 +738,6 @@ module UnifiedRubySDK
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, T::Array[::UnifiedRubySDK::Shared::AccountingTaxrate])
           res.accounting_taxrates = out
-        end
-      end
-      res
-    end
-
-
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListAccountingTransactionsRequest)).returns(::UnifiedRubySDK::Operations::ListAccountingTransactionsResponse) }
-    def list_accounting_transactions(request)
-      # list_accounting_transactions - List all transactions
-      url, params = @sdk_configuration.get_server_details
-      base_url = Utils.template_url(url, params)
-      url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::ListAccountingTransactionsRequest,
-        base_url,
-        '/accounting/{connection_id}/transaction',
-        request
-      )
-      headers = {}
-      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::ListAccountingTransactionsRequest, request)
-      headers['Accept'] = 'application/json'
-      headers['user-agent'] = @sdk_configuration.user_agent
-
-      r = @sdk_configuration.client.get(url) do |req|
-        req.headers = headers
-        req.params = query_params
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
-      end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = ::UnifiedRubySDK::Operations::ListAccountingTransactionsResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-      if r.status == 200
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, T::Array[::UnifiedRubySDK::Shared::AccountingTransaction])
-          res.accounting_transactions = out
         end
       end
       res
@@ -894,6 +894,56 @@ module UnifiedRubySDK
     end
 
 
+    sig { params(connection_id: ::String, id: ::String, accounting_journal: T.nilable(::UnifiedRubySDK::Shared::AccountingJournal)).returns(::UnifiedRubySDK::Operations::PatchAccountingJournalResponse) }
+    def patch_accounting_journal(connection_id, id, accounting_journal = nil)
+      # patch_accounting_journal - Update a journal
+      request = ::UnifiedRubySDK::Operations::PatchAccountingJournalRequest.new(
+        
+        connection_id: connection_id,
+        id: id,
+        accounting_journal: accounting_journal
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::PatchAccountingJournalRequest,
+        base_url,
+        '/accounting/{connection_id}/journal/{id}',
+        request
+      )
+      headers = {}
+      req_content_type, data, form = Utils.serialize_request_body(request, :accounting_journal, :json)
+      headers['content-type'] = req_content_type
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.patch(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        if form
+          req.body = Utils.encode_form(form)
+        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+          req.body = URI.encode_www_form(data)
+        else
+          req.body = data
+        end
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::PatchAccountingJournalResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::AccountingJournal)
+          res.accounting_journal = out
+        end
+      end
+      res
+    end
+
+
     sig { params(connection_id: ::String, id: ::String, accounting_taxrate: T.nilable(::UnifiedRubySDK::Shared::AccountingTaxrate)).returns(::UnifiedRubySDK::Operations::PatchAccountingTaxrateResponse) }
     def patch_accounting_taxrate(connection_id, id, accounting_taxrate = nil)
       # patch_accounting_taxrate - Update a taxrate
@@ -938,56 +988,6 @@ module UnifiedRubySDK
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::AccountingTaxrate)
           res.accounting_taxrate = out
-        end
-      end
-      res
-    end
-
-
-    sig { params(connection_id: ::String, id: ::String, accounting_transaction: T.nilable(::UnifiedRubySDK::Shared::AccountingTransaction)).returns(::UnifiedRubySDK::Operations::PatchAccountingTransactionResponse) }
-    def patch_accounting_transaction(connection_id, id, accounting_transaction = nil)
-      # patch_accounting_transaction - Update a transaction
-      request = ::UnifiedRubySDK::Operations::PatchAccountingTransactionRequest.new(
-        
-        connection_id: connection_id,
-        id: id,
-        accounting_transaction: accounting_transaction
-      )
-      url, params = @sdk_configuration.get_server_details
-      base_url = Utils.template_url(url, params)
-      url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::PatchAccountingTransactionRequest,
-        base_url,
-        '/accounting/{connection_id}/transaction/{id}',
-        request
-      )
-      headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :accounting_transaction, :json)
-      headers['content-type'] = req_content_type
-      headers['Accept'] = 'application/json'
-      headers['user-agent'] = @sdk_configuration.user_agent
-
-      r = @sdk_configuration.client.patch(url) do |req|
-        req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
-        if form
-          req.body = Utils.encode_form(form)
-        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-          req.body = URI.encode_www_form(data)
-        else
-          req.body = data
-        end
-      end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = ::UnifiedRubySDK::Operations::PatchAccountingTransactionResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-      if r.status == 200
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::AccountingTransaction)
-          res.accounting_transaction = out
         end
       end
       res
@@ -1120,6 +1120,48 @@ module UnifiedRubySDK
     end
 
 
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAccountingJournalResponse) }
+    def remove_accounting_journal(connection_id, id)
+      # remove_accounting_journal - Remove a journal
+      request = ::UnifiedRubySDK::Operations::RemoveAccountingJournalRequest.new(
+        
+        connection_id: connection_id,
+        id: id
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::RemoveAccountingJournalRequest,
+        base_url,
+        '/accounting/{connection_id}/journal/{id}',
+        request
+      )
+      headers = {}
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.delete(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::RemoveAccountingJournalResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status >= 200 && r.status < 300
+      else
+                
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::String)
+          res.string = out
+        end
+      end
+      res
+    end
+
+
     sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAccountingTaxrateResponse) }
     def remove_accounting_taxrate(connection_id, id)
       # remove_accounting_taxrate - Remove a taxrate
@@ -1148,48 +1190,6 @@ module UnifiedRubySDK
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
 
       res = ::UnifiedRubySDK::Operations::RemoveAccountingTaxrateResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-      if r.status >= 200 && r.status < 300
-      else
-                
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::String)
-          res.string = out
-        end
-      end
-      res
-    end
-
-
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveAccountingTransactionResponse) }
-    def remove_accounting_transaction(connection_id, id)
-      # remove_accounting_transaction - Remove a transaction
-      request = ::UnifiedRubySDK::Operations::RemoveAccountingTransactionRequest.new(
-        
-        connection_id: connection_id,
-        id: id
-      )
-      url, params = @sdk_configuration.get_server_details
-      base_url = Utils.template_url(url, params)
-      url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::RemoveAccountingTransactionRequest,
-        base_url,
-        '/accounting/{connection_id}/transaction/{id}',
-        request
-      )
-      headers = {}
-      headers['Accept'] = 'application/json'
-      headers['user-agent'] = @sdk_configuration.user_agent
-
-      r = @sdk_configuration.client.delete(url) do |req|
-        req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
-      end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = ::UnifiedRubySDK::Operations::RemoveAccountingTransactionResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
       if r.status >= 200 && r.status < 300
@@ -1354,6 +1354,56 @@ module UnifiedRubySDK
     end
 
 
+    sig { params(connection_id: ::String, id: ::String, accounting_journal: T.nilable(::UnifiedRubySDK::Shared::AccountingJournal)).returns(::UnifiedRubySDK::Operations::UpdateAccountingJournalResponse) }
+    def update_accounting_journal(connection_id, id, accounting_journal = nil)
+      # update_accounting_journal - Update a journal
+      request = ::UnifiedRubySDK::Operations::UpdateAccountingJournalRequest.new(
+        
+        connection_id: connection_id,
+        id: id,
+        accounting_journal: accounting_journal
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::UpdateAccountingJournalRequest,
+        base_url,
+        '/accounting/{connection_id}/journal/{id}',
+        request
+      )
+      headers = {}
+      req_content_type, data, form = Utils.serialize_request_body(request, :accounting_journal, :json)
+      headers['content-type'] = req_content_type
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.put(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        if form
+          req.body = Utils.encode_form(form)
+        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+          req.body = URI.encode_www_form(data)
+        else
+          req.body = data
+        end
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::UpdateAccountingJournalResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::AccountingJournal)
+          res.accounting_journal = out
+        end
+      end
+      res
+    end
+
+
     sig { params(connection_id: ::String, id: ::String, accounting_taxrate: T.nilable(::UnifiedRubySDK::Shared::AccountingTaxrate)).returns(::UnifiedRubySDK::Operations::UpdateAccountingTaxrateResponse) }
     def update_accounting_taxrate(connection_id, id, accounting_taxrate = nil)
       # update_accounting_taxrate - Update a taxrate
@@ -1398,56 +1448,6 @@ module UnifiedRubySDK
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::AccountingTaxrate)
           res.accounting_taxrate = out
-        end
-      end
-      res
-    end
-
-
-    sig { params(connection_id: ::String, id: ::String, accounting_transaction: T.nilable(::UnifiedRubySDK::Shared::AccountingTransaction)).returns(::UnifiedRubySDK::Operations::UpdateAccountingTransactionResponse) }
-    def update_accounting_transaction(connection_id, id, accounting_transaction = nil)
-      # update_accounting_transaction - Update a transaction
-      request = ::UnifiedRubySDK::Operations::UpdateAccountingTransactionRequest.new(
-        
-        connection_id: connection_id,
-        id: id,
-        accounting_transaction: accounting_transaction
-      )
-      url, params = @sdk_configuration.get_server_details
-      base_url = Utils.template_url(url, params)
-      url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::UpdateAccountingTransactionRequest,
-        base_url,
-        '/accounting/{connection_id}/transaction/{id}',
-        request
-      )
-      headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :accounting_transaction, :json)
-      headers['content-type'] = req_content_type
-      headers['Accept'] = 'application/json'
-      headers['user-agent'] = @sdk_configuration.user_agent
-
-      r = @sdk_configuration.client.put(url) do |req|
-        req.headers = headers
-        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
-        if form
-          req.body = Utils.encode_form(form)
-        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-          req.body = URI.encode_www_form(data)
-        else
-          req.body = data
-        end
-      end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = ::UnifiedRubySDK::Operations::UpdateAccountingTransactionResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-      if r.status == 200
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::AccountingTransaction)
-          res.accounting_transaction = out
         end
       end
       res

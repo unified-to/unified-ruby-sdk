@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchAccountingTransactionResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveAccountingJournalResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation
@@ -18,15 +18,15 @@ module UnifiedRubySDK
       # HTTP response status code for this operation
       field :status_code, ::Integer
       # Successful
-      field :accounting_transaction, T.nilable(::UnifiedRubySDK::Shared::AccountingTransaction)
+      field :string, T.nilable(::String)
 
 
-      sig { params(content_type: ::String, raw_response: ::Faraday::Response, status_code: ::Integer, accounting_transaction: T.nilable(::UnifiedRubySDK::Shared::AccountingTransaction)).void }
-      def initialize(content_type: nil, raw_response: nil, status_code: nil, accounting_transaction: nil)
+      sig { params(content_type: ::String, raw_response: ::Faraday::Response, status_code: ::Integer, string: T.nilable(::String)).void }
+      def initialize(content_type: nil, raw_response: nil, status_code: nil, string: nil)
         @content_type = content_type
         @raw_response = raw_response
         @status_code = status_code
-        @accounting_transaction = accounting_transaction
+        @string = string
       end
     end
   end
