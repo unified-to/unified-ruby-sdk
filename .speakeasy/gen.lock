@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 5644d053fad87c74eb97f4e8f727fa1d
+  docChecksum: beb5ec210d7103d860c8cfde440f2674
   docVersion: "1.0"
-  speakeasyVersion: 1.306.0
-  generationVersion: 2.340.3
-  releaseVersion: 0.4.52
-  configChecksum: a297a4ef1820770a509351021e6e0caf
+  speakeasyVersion: 1.308.0
+  generationVersion: 2.342.2
+  releaseVersion: 0.4.53
+  configChecksum: 177b6d5a1bbb6a70393758e0a67ab45a
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -25,6 +25,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/journal.rb
   - lib/unified_ruby_sdk/organization.rb
   - lib/unified_ruby_sdk/taxrate.rb
+  - lib/unified_ruby_sdk/transaction.rb
   - lib/unified_ruby_sdk/ats.rb
   - lib/unified_ruby_sdk/activity.rb
   - lib/unified_ruby_sdk/application.rb
@@ -146,6 +147,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createaccountingjournal_response.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingtaxrate_request.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingtaxrate_response.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingtransaction_request.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingtransaction_response.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingaccount_request.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingaccount_response.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingcontact_request.rb
@@ -158,6 +161,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getaccountingorganization_response.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingtaxrate_request.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingtaxrate_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingtransaction_request.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingtransaction_response.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingaccounts_request.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingaccounts_response.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingcontacts_request.rb
@@ -170,6 +175,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listaccountingorganizations_response.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingtaxrates_request.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingtaxrates_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingtransactions_request.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingtransactions_response.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingaccount_request.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingaccount_response.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingcontact_request.rb
@@ -180,6 +187,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchaccountingjournal_response.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingtaxrate_request.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingtaxrate_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingtransaction_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingtransaction_response.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingaccount_request.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingaccount_response.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingcontact_request.rb
@@ -190,6 +199,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removeaccountingjournal_response.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingtaxrate_request.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingtaxrate_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingtransaction_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingtransaction_response.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingaccount_request.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingaccount_response.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingcontact_request.rb
@@ -200,6 +211,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updateaccountingjournal_response.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingtaxrate_request.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingtaxrate_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingtransaction_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingtransaction_response.rb
   - lib/unified_ruby_sdk/models/operations/createcrmcontact_request.rb
   - lib/unified_ruby_sdk/models/operations/createcrmcontact_response.rb
   - lib/unified_ruby_sdk/models/operations/createuccontact_request.rb
@@ -716,6 +729,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingjournal.rb
   - lib/unified_ruby_sdk/models/shared/accountingjournallineitem.rb
   - lib/unified_ruby_sdk/models/shared/accountingtaxrate.rb
+  - lib/unified_ruby_sdk/models/shared/accountingtransaction.rb
   - lib/unified_ruby_sdk/models/shared/accountingorganization.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingorganization_address.rb
   - lib/unified_ruby_sdk/models/shared/crmcontact.rb
@@ -932,6 +946,8 @@ generatedFiles:
   - docs/models/operations/createaccountingjournalresponse.md
   - docs/models/operations/createaccountingtaxraterequest.md
   - docs/models/operations/createaccountingtaxrateresponse.md
+  - docs/models/operations/createaccountingtransactionrequest.md
+  - docs/models/operations/createaccountingtransactionresponse.md
   - docs/models/operations/getaccountingaccountrequest.md
   - docs/models/operations/getaccountingaccountresponse.md
   - docs/models/operations/getaccountingcontactrequest.md
@@ -944,6 +960,8 @@ generatedFiles:
   - docs/models/operations/getaccountingorganizationresponse.md
   - docs/models/operations/getaccountingtaxraterequest.md
   - docs/models/operations/getaccountingtaxrateresponse.md
+  - docs/models/operations/getaccountingtransactionrequest.md
+  - docs/models/operations/getaccountingtransactionresponse.md
   - docs/models/operations/listaccountingaccountsrequest.md
   - docs/models/operations/listaccountingaccountsresponse.md
   - docs/models/operations/listaccountingcontactsrequest.md
@@ -956,6 +974,8 @@ generatedFiles:
   - docs/models/operations/listaccountingorganizationsresponse.md
   - docs/models/operations/listaccountingtaxratesrequest.md
   - docs/models/operations/listaccountingtaxratesresponse.md
+  - docs/models/operations/listaccountingtransactionsrequest.md
+  - docs/models/operations/listaccountingtransactionsresponse.md
   - docs/models/operations/patchaccountingaccountrequest.md
   - docs/models/operations/patchaccountingaccountresponse.md
   - docs/models/operations/patchaccountingcontactrequest.md
@@ -966,6 +986,8 @@ generatedFiles:
   - docs/models/operations/patchaccountingjournalresponse.md
   - docs/models/operations/patchaccountingtaxraterequest.md
   - docs/models/operations/patchaccountingtaxrateresponse.md
+  - docs/models/operations/patchaccountingtransactionrequest.md
+  - docs/models/operations/patchaccountingtransactionresponse.md
   - docs/models/operations/removeaccountingaccountrequest.md
   - docs/models/operations/removeaccountingaccountresponse.md
   - docs/models/operations/removeaccountingcontactrequest.md
@@ -976,6 +998,8 @@ generatedFiles:
   - docs/models/operations/removeaccountingjournalresponse.md
   - docs/models/operations/removeaccountingtaxraterequest.md
   - docs/models/operations/removeaccountingtaxrateresponse.md
+  - docs/models/operations/removeaccountingtransactionrequest.md
+  - docs/models/operations/removeaccountingtransactionresponse.md
   - docs/models/operations/updateaccountingaccountrequest.md
   - docs/models/operations/updateaccountingaccountresponse.md
   - docs/models/operations/updateaccountingcontactrequest.md
@@ -986,6 +1010,8 @@ generatedFiles:
   - docs/models/operations/updateaccountingjournalresponse.md
   - docs/models/operations/updateaccountingtaxraterequest.md
   - docs/models/operations/updateaccountingtaxrateresponse.md
+  - docs/models/operations/updateaccountingtransactionrequest.md
+  - docs/models/operations/updateaccountingtransactionresponse.md
   - docs/models/operations/createcrmcontactrequest.md
   - docs/models/operations/createcrmcontactresponse.md
   - docs/models/operations/createuccontactrequest.md
@@ -1502,6 +1528,7 @@ generatedFiles:
   - docs/models/shared/accountingjournal.md
   - docs/models/shared/accountingjournallineitem.md
   - docs/models/shared/accountingtaxrate.md
+  - docs/models/shared/accountingtransaction.md
   - docs/models/shared/accountingorganization.md
   - docs/models/shared/propertyaccountingorganizationaddress.md
   - docs/models/shared/crmcontact.md
@@ -1713,6 +1740,7 @@ generatedFiles:
   - docs/sdks/journal/README.md
   - docs/sdks/organization/README.md
   - docs/sdks/taxrate/README.md
+  - docs/sdks/transaction/README.md
   - docs/sdks/ats/README.md
   - docs/sdks/activity/README.md
   - docs/sdks/application/README.md

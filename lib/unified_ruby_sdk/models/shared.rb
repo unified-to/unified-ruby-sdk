@@ -25,6 +25,7 @@ module UnifiedRubySDK
     autoload :AccountingJournal, 'unified_ruby_sdk/models/shared/accountingjournal.rb'
     autoload :AccountingJournalLineitem, 'unified_ruby_sdk/models/shared/accountingjournallineitem.rb'
     autoload :AccountingTaxrate, 'unified_ruby_sdk/models/shared/accountingtaxrate.rb'
+    autoload :AccountingTransaction, 'unified_ruby_sdk/models/shared/accountingtransaction.rb'
     autoload :AccountingOrganization, 'unified_ruby_sdk/models/shared/accountingorganization.rb'
     autoload :PropertyAccountingOrganizationAddress, 'unified_ruby_sdk/models/shared/property_accountingorganization_address.rb'
     autoload :CrmContact, 'unified_ruby_sdk/models/shared/crmcontact.rb'
