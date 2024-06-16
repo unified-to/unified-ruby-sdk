@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 0956d7a0512cc4edbb9d414ae8b0f685
+  docChecksum: 6a7b53212dd7097ba515bad5f2f5e1f1
   docVersion: "1.0"
   speakeasyVersion: 1.308.1
   generationVersion: 2.342.6
-  releaseVersion: 0.4.54
-  configChecksum: 76bee00f965dc4681cddfb26b9d32f73
+  releaseVersion: 0.4.55
+  configChecksum: 84d7f9f84060528d071882379967b97b
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -900,6 +900,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_interview_id.rb
   - lib/unified_ruby_sdk/models/shared/list_invoice_id.rb
   - lib/unified_ruby_sdk/models/shared/list_item_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_item_variant_id.rb
   - lib/unified_ruby_sdk/models/shared/list_job_id.rb
   - lib/unified_ruby_sdk/models/shared/list_limit.rb
   - lib/unified_ruby_sdk/models/shared/list_link_id.rb
@@ -1699,6 +1700,7 @@ generatedFiles:
   - docs/models/shared/listinterviewid.md
   - docs/models/shared/listinvoiceid.md
   - docs/models/shared/listitemid.md
+  - docs/models/shared/listitemvariantid.md
   - docs/models/shared/listjobid.md
   - docs/models/shared/listlimit.md
   - docs/models/shared/listlinkid.md

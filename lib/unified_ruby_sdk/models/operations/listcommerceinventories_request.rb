@@ -16,8 +16,6 @@ module UnifiedRubySDK
       # Comma-delimited fields to return
       field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
-      field :item_id, T.nilable(::String), { 'query_param': { 'field_name': 'item_id', 'style': 'form', 'explode': true } }
-
       field :item_variant_id, T.nilable(::String), { 'query_param': { 'field_name': 'item_variant_id', 'style': 'form', 'explode': true } }
 
       field :limit, T.nilable(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
@@ -35,11 +33,10 @@ module UnifiedRubySDK
       field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, fields_: T.nilable(T::Array[::String]), item_id: T.nilable(::String), item_variant_id: T.nilable(::String), limit: T.nilable(::Float), location_id: T.nilable(::String), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
-      def initialize(connection_id: nil, fields_: nil, item_id: nil, item_variant_id: nil, limit: nil, location_id: nil, offset: nil, order: nil, query: nil, sort: nil, updated_gte: nil)
+      sig { params(connection_id: ::String, fields_: T.nilable(T::Array[::String]), item_variant_id: T.nilable(::String), limit: T.nilable(::Float), location_id: T.nilable(::String), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
+      def initialize(connection_id: nil, fields_: nil, item_variant_id: nil, limit: nil, location_id: nil, offset: nil, order: nil, query: nil, sort: nil, updated_gte: nil)
         @connection_id = connection_id
         @fields_ = fields_
-        @item_id = item_id
         @item_variant_id = item_variant_id
         @limit = limit
         @location_id = location_id

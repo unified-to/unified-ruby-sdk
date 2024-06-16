@@ -196,6 +196,7 @@ module UnifiedRubySDK
     autoload :ListInterviewId, 'unified_ruby_sdk/models/shared/list_interview_id.rb'
     autoload :ListInvoiceId, 'unified_ruby_sdk/models/shared/list_invoice_id.rb'
     autoload :ListItemId, 'unified_ruby_sdk/models/shared/list_item_id.rb'
+    autoload :ListItemVariantId, 'unified_ruby_sdk/models/shared/list_item_variant_id.rb'
     autoload :ListJobId, 'unified_ruby_sdk/models/shared/list_job_id.rb'
     autoload :ListLimit, 'unified_ruby_sdk/models/shared/list_limit.rb'
     autoload :ListLinkId, 'unified_ruby_sdk/models/shared/list_link_id.rb'
