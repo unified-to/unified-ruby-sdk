@@ -10,6 +10,7 @@ module UnifiedRubySDK
 
     class ListItemVariantId < T::Enum
       enums do
+        SUPPORTED_REQUIRED = new('supported-required')
         SUPPORTED = new('supported')
         NOT_SUPPORTED = new('not-supported')
       end

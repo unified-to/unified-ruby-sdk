@@ -22,6 +22,7 @@ module UnifiedRubySDK
         ACCEPTED = new('ACCEPTED')
         HIRED = new('HIRED')
         REJECTED = new('REJECTED')
+        DECLINED = new('DECLINED')
         WITHDRAWN = new('WITHDRAWN')
       end
     end
