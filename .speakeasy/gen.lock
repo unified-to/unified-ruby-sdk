@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: fc1188a2db372bfe9795cefed41fedb9
+  docChecksum: 8cd5f0b8f9ac7da8e963b9b8716b4f9a
   docVersion: "1.0"
-  speakeasyVersion: 1.313.0
-  generationVersion: 2.347.8
-  releaseVersion: 0.4.58
-  configChecksum: f834f705ad047bbbe409240561e4fdcc
+  speakeasyVersion: 1.314.2
+  generationVersion: 2.349.6
+  releaseVersion: 0.4.59
+  configChecksum: 918621e6c7525f723979196244a1b3f4
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
 features:
   ruby:
-    core: 3.2.13
+    core: 3.2.14
     flattening: 2.81.1
     globalSecurity: 2.81.6
     globalServerURLs: 2.82.3
@@ -692,7 +692,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listunifiedintegrations_response.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedissues_request.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedissues_response.rb
-  - lib/unified_ruby_sdk/models/operations/listunifiedsupports_response.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedwebhooks_request.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedwebhooks_response.rb
   - lib/unified_ruby_sdk/models/operations/patchunifiedconnection_request.rb
@@ -877,7 +876,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_uccall_telephone.rb
   - lib/unified_ruby_sdk/models/shared/connection.rb
   - lib/unified_ruby_sdk/models/shared/property_connection_permissions.rb
-  - lib/unified_ruby_sdk/models/shared/undefined.rb
   - lib/unified_ruby_sdk/models/shared/property_connection_categories.rb
   - lib/unified_ruby_sdk/models/shared/property_connection_auth.rb
   - lib/unified_ruby_sdk/models/shared/event.rb
@@ -1492,7 +1490,6 @@ generatedFiles:
   - docs/models/operations/listunifiedintegrationsresponse.md
   - docs/models/operations/listunifiedissuesrequest.md
   - docs/models/operations/listunifiedissuesresponse.md
-  - docs/models/operations/listunifiedsupportsresponse.md
   - docs/models/operations/listunifiedwebhooksrequest.md
   - docs/models/operations/listunifiedwebhooksresponse.md
   - docs/models/operations/patchunifiedconnectionrequest.md
@@ -1677,7 +1674,6 @@ generatedFiles:
   - docs/models/shared/propertyuccalltelephone.md
   - docs/models/shared/connection.md
   - docs/models/shared/propertyconnectionpermissions.md
-  - docs/models/shared/undefined.md
   - docs/models/shared/propertyconnectioncategories.md
   - docs/models/shared/propertyconnectionauth.md
   - docs/models/shared/event.md

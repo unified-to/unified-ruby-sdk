@@ -560,7 +560,6 @@ module UnifiedRubySDK
     autoload :ListUnifiedIntegrationsResponse, 'unified_ruby_sdk/models/operations/listunifiedintegrations_response.rb'
     autoload :ListUnifiedIssuesRequest, 'unified_ruby_sdk/models/operations/listunifiedissues_request.rb'
     autoload :ListUnifiedIssuesResponse, 'unified_ruby_sdk/models/operations/listunifiedissues_response.rb'
-    autoload :ListUnifiedSupportsResponse, 'unified_ruby_sdk/models/operations/listunifiedsupports_response.rb'
     autoload :ListUnifiedWebhooksRequest, 'unified_ruby_sdk/models/operations/listunifiedwebhooks_request.rb'
     autoload :ListUnifiedWebhooksResponse, 'unified_ruby_sdk/models/operations/listunifiedwebhooks_response.rb'
     autoload :PatchUnifiedConnectionRequest, 'unified_ruby_sdk/models/operations/patchunifiedconnection_request.rb'
