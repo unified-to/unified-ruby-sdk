@@ -226,7 +226,6 @@ module UnifiedRubySDK
     autoload :PropertyPropertyIntegrationSupportWebhookEventsCreated, 'unified_ruby_sdk/models/shared/property_property_integrationsupport_webhook_events_created.rb'
     autoload :PropertyIntegrationCategories, 'unified_ruby_sdk/models/shared/property_integration_categories.rb'
     autoload :IssueStatus, 'unified_ruby_sdk/models/shared/issue_status.rb'
-    autoload :IssueType, 'unified_ruby_sdk/models/shared/issue_type.rb'
     autoload :Issue, 'unified_ruby_sdk/models/shared/issue.rb'
     autoload :Security, 'unified_ruby_sdk/models/shared/security.rb'
   end

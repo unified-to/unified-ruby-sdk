@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 8cd5f0b8f9ac7da8e963b9b8716b4f9a
+  docChecksum: d30cc8ed3fe26eee9d880fe9074cfb0b
   docVersion: "1.0"
-  speakeasyVersion: 1.314.2
-  generationVersion: 2.349.6
-  releaseVersion: 0.4.59
-  configChecksum: 918621e6c7525f723979196244a1b3f4
+  speakeasyVersion: 1.321.0
+  generationVersion: 2.354.2
+  releaseVersion: 0.4.60
+  configChecksum: 7e909cdedaaa2b78c49a8d3b541a2c66
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -929,7 +929,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_property_integrationsupport_webhook_events_created.rb
   - lib/unified_ruby_sdk/models/shared/property_integration_categories.rb
   - lib/unified_ruby_sdk/models/shared/issue_status.rb
-  - lib/unified_ruby_sdk/models/shared/issue_type.rb
   - lib/unified_ruby_sdk/models/shared/issue.rb
   - lib/unified_ruby_sdk/models/shared/security.rb
   - lib/unified_ruby_sdk.rb
@@ -1727,7 +1726,6 @@ generatedFiles:
   - docs/models/shared/propertypropertyintegrationsupportwebhookeventscreated.md
   - docs/models/shared/propertyintegrationcategories.md
   - docs/models/shared/issuestatus.md
-  - docs/models/shared/issuetype.md
   - docs/models/shared/issue.md
   - docs/models/shared/security.md
   - docs/sdks/unifiedto/README.md
