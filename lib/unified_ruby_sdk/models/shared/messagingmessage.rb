@@ -12,9 +12,9 @@ module UnifiedRubySDK
       extend T::Sig
 
 
-      field :author_member, ::UnifiedRubySDK::Shared::PropertyMessagingMessageAuthorMember, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_member') } }
-
       field :message, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message') } }
+
+      field :author_member, T.nilable(::UnifiedRubySDK::Shared::PropertyMessagingMessageAuthorMember), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_member') } }
 
       field :channel_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('channel_id') } }
 
@@ -28,6 +28,8 @@ module UnifiedRubySDK
 
       field :mentioned_members, T.nilable(T::Array[::UnifiedRubySDK::Shared::MessagingMember]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mentioned_members') } }
 
+      field :message_html, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message_html') } }
+
       field :parent_message_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_message_id') } }
 
       field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
@@ -39,16 +41,17 @@ module UnifiedRubySDK
       field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
 
-      sig { params(author_member: ::UnifiedRubySDK::Shared::PropertyMessagingMessageAuthorMember, message: ::String, channel_id: T.nilable(::String), created_at: T.nilable(::String), destination_members: T.nilable(T::Array[::UnifiedRubySDK::Shared::MessagingMember]), hidden_members: T.nilable(T::Array[::UnifiedRubySDK::Shared::MessagingMember]), id: T.nilable(::String), mentioned_members: T.nilable(T::Array[::UnifiedRubySDK::Shared::MessagingMember]), parent_message_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), subject: T.nilable(::String), updated_at: T.nilable(::String), web_url: T.nilable(::String)).void }
-      def initialize(author_member: nil, message: nil, channel_id: nil, created_at: nil, destination_members: nil, hidden_members: nil, id: nil, mentioned_members: nil, parent_message_id: nil, raw: nil, subject: nil, updated_at: nil, web_url: nil)
-        @author_member = author_member
+      sig { params(message: ::String, author_member: T.nilable(::UnifiedRubySDK::Shared::PropertyMessagingMessageAuthorMember), channel_id: T.nilable(::String), created_at: T.nilable(::String), destination_members: T.nilable(T::Array[::UnifiedRubySDK::Shared::MessagingMember]), hidden_members: T.nilable(T::Array[::UnifiedRubySDK::Shared::MessagingMember]), id: T.nilable(::String), mentioned_members: T.nilable(T::Array[::UnifiedRubySDK::Shared::MessagingMember]), message_html: T.nilable(::String), parent_message_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), subject: T.nilable(::String), updated_at: T.nilable(::String), web_url: T.nilable(::String)).void }
+      def initialize(message: nil, author_member: nil, channel_id: nil, created_at: nil, destination_members: nil, hidden_members: nil, id: nil, mentioned_members: nil, message_html: nil, parent_message_id: nil, raw: nil, subject: nil, updated_at: nil, web_url: nil)
         @message = message
+        @author_member = author_member
         @channel_id = channel_id
         @created_at = created_at
         @destination_members = destination_members
         @hidden_members = hidden_members
         @id = id
         @mentioned_members = mentioned_members
+        @message_html = message_html
         @parent_message_id = parent_message_id
         @raw = raw
         @subject = subject

@@ -29,7 +29,6 @@ s.config_security(
 
     
 res = s.message.create_messaging_message(connection_id="<value>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(
-    author_member: ::UnifiedRubySDK::Shared::PropertyMessagingMessageAuthorMember.new(),
     message: "<value>",
   ))
 
@@ -155,7 +154,6 @@ s.config_security(
 
     
 res = s.message.patch_messaging_message(connection_id="<value>", id="<value>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(
-    author_member: ::UnifiedRubySDK::Shared::PropertyMessagingMessageAuthorMember.new(),
     message: "<value>",
   ))
 
@@ -237,7 +235,6 @@ s.config_security(
 
     
 res = s.message.update_messaging_message(connection_id="<value>", id="<value>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(
-    author_member: ::UnifiedRubySDK::Shared::PropertyMessagingMessageAuthorMember.new(),
     message: "<value>",
   ))
 
