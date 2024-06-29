@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: bdc716c1ec699c0df9357438a35e33f6
+  docChecksum: 47c3e061b14a46be0740453c7c5f67d6
   docVersion: "1.0"
-  speakeasyVersion: 1.322.1
+  speakeasyVersion: 1.322.3
   generationVersion: 2.354.2
-  releaseVersion: 0.4.61
-  configChecksum: 221f9edc97b87f40980110736a0153fe
+  releaseVersion: 0.4.62
+  configChecksum: 5c53543f6d54cb17c0ecb8b649a4a913
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -848,6 +848,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/messagingmessage.rb
   - lib/unified_ruby_sdk/models/shared/messagingmember.rb
   - lib/unified_ruby_sdk/models/shared/property_messagingmessage_author_member.rb
+  - lib/unified_ruby_sdk/models/shared/messagingattachment.rb
   - lib/unified_ruby_sdk/models/shared/messagingchannel.rb
   - lib/unified_ruby_sdk/models/shared/paymentlink.rb
   - lib/unified_ruby_sdk/models/shared/paymentlinklineitem.rb
@@ -1645,6 +1646,7 @@ generatedFiles:
   - docs/models/shared/messagingmessage.md
   - docs/models/shared/messagingmember.md
   - docs/models/shared/propertymessagingmessageauthormember.md
+  - docs/models/shared/messagingattachment.md
   - docs/models/shared/messagingchannel.md
   - docs/models/shared/paymentlink.md
   - docs/models/shared/paymentlinklineitem.md

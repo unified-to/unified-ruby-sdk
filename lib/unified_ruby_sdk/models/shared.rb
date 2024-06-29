@@ -145,6 +145,7 @@ module UnifiedRubySDK
     autoload :MessagingMessage, 'unified_ruby_sdk/models/shared/messagingmessage.rb'
     autoload :MessagingMember, 'unified_ruby_sdk/models/shared/messagingmember.rb'
     autoload :PropertyMessagingMessageAuthorMember, 'unified_ruby_sdk/models/shared/property_messagingmessage_author_member.rb'
+    autoload :MessagingAttachment, 'unified_ruby_sdk/models/shared/messagingattachment.rb'
     autoload :MessagingChannel, 'unified_ruby_sdk/models/shared/messagingchannel.rb'
     autoload :PaymentLink, 'unified_ruby_sdk/models/shared/paymentlink.rb'
     autoload :PaymentLinkLineitem, 'unified_ruby_sdk/models/shared/paymentlinklineitem.rb'

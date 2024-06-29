@@ -30,9 +30,7 @@ s.config_security(
 )
 
     
-res = s.messaging.create_messaging_message(connection_id="<value>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(
-    message: "<value>",
-  ))
+res = s.messaging.create_messaging_message(connection_id="<value>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new())
 
 if ! res.messaging_message.nil?
   # handle response
@@ -239,9 +237,7 @@ s.config_security(
 )
 
     
-res = s.messaging.patch_messaging_message(connection_id="<value>", id="<value>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(
-    message: "<value>",
-  ))
+res = s.messaging.patch_messaging_message(connection_id="<value>", id="<value>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new())
 
 if ! res.messaging_message.nil?
   # handle response
@@ -320,9 +316,7 @@ s.config_security(
 )
 
     
-res = s.messaging.update_messaging_message(connection_id="<value>", id="<value>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(
-    message: "<value>",
-  ))
+res = s.messaging.update_messaging_message(connection_id="<value>", id="<value>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new())
 
 if ! res.messaging_message.nil?
   # handle response
