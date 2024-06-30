@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 47c3e061b14a46be0740453c7c5f67d6
+  docChecksum: ae2ed3981ced9c41a08d5e707d7c8c86
   docVersion: "1.0"
   speakeasyVersion: 1.322.3
   generationVersion: 2.354.2
-  releaseVersion: 0.4.62
-  configChecksum: 5c53543f6d54cb17c0ecb8b649a4a913
+  releaseVersion: 0.4.63
+  configChecksum: f52010ee870c5d268b02df2afe2605bc
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -826,8 +826,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/hrisemployee.rb
   - lib/unified_ruby_sdk/models/shared/hristelephone_type.rb
   - lib/unified_ruby_sdk/models/shared/hristelephone.rb
+  - lib/unified_ruby_sdk/models/shared/property_hrisemployee_employee_roles.rb
   - lib/unified_ruby_sdk/models/shared/hrisemail_type.rb
   - lib/unified_ruby_sdk/models/shared/hrisemail.rb
+  - lib/unified_ruby_sdk/models/shared/hriscompensation.rb
   - lib/unified_ruby_sdk/models/shared/property_hrisemployee_address.rb
   - lib/unified_ruby_sdk/models/shared/hrisgroup_type.rb
   - lib/unified_ruby_sdk/models/shared/hrisgroup.rb
@@ -1624,8 +1626,10 @@ generatedFiles:
   - docs/models/shared/hrisemployee.md
   - docs/models/shared/hristelephonetype.md
   - docs/models/shared/hristelephone.md
+  - docs/models/shared/propertyhrisemployeeemployeeroles.md
   - docs/models/shared/hrisemailtype.md
   - docs/models/shared/hrisemail.md
+  - docs/models/shared/hriscompensation.md
   - docs/models/shared/propertyhrisemployeeaddress.md
   - docs/models/shared/hrisgrouptype.md
   - docs/models/shared/hrisgroup.md

@@ -12,9 +12,25 @@ module UnifiedRubySDK
       extend T::Sig
 
 
+      field :content_type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content_type') } }
 
-      
-      def initialize; end
+      field :download_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('download_url') } }
+
+      field :filename, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('filename') } }
+
+      field :message_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message_id') } }
+
+      field :size, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
+
+
+      sig { params(content_type: T.nilable(::String), download_url: T.nilable(::String), filename: T.nilable(::String), message_id: T.nilable(::String), size: T.nilable(::Float)).void }
+      def initialize(content_type: nil, download_url: nil, filename: nil, message_id: nil, size: nil)
+        @content_type = content_type
+        @download_url = download_url
+        @filename = filename
+        @message_id = message_id
+        @size = size
+      end
     end
   end
 end
