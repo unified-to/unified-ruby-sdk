@@ -20,29 +20,23 @@ module UnifiedRubySDK
 
       field :offset, T.nilable(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
 
-      field :order, T.nilable(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
-
       field :parent_id, T.nilable(::String), { 'query_param': { 'field_name': 'parent_id', 'style': 'form', 'explode': true } }
       # Query string to search. eg. email address or name
       field :query, T.nilable(::String), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
-
-      field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
 
       field :space_id, T.nilable(::String), { 'query_param': { 'field_name': 'space_id', 'style': 'form', 'explode': true } }
       # Return only results whose updated date is equal or greater to this value
       field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), sort: T.nilable(::String), space_id: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
-      def initialize(connection_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, parent_id: nil, query: nil, sort: nil, space_id: nil, updated_gte: nil)
+      sig { params(connection_id: ::String, fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), parent_id: T.nilable(::String), query: T.nilable(::String), space_id: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
+      def initialize(connection_id: nil, fields_: nil, limit: nil, offset: nil, parent_id: nil, query: nil, space_id: nil, updated_gte: nil)
         @connection_id = connection_id
         @fields_ = fields_
         @limit = limit
         @offset = offset
-        @order = order
         @parent_id = parent_id
         @query = query
-        @sort = sort
         @space_id = space_id
         @updated_gte = updated_gte
       end

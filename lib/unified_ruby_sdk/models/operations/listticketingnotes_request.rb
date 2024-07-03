@@ -21,28 +21,22 @@ module UnifiedRubySDK
       field :limit, T.nilable(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
 
       field :offset, T.nilable(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
-
-      field :order, T.nilable(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
       # Query string to search. eg. email address or name
       field :query, T.nilable(::String), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
-
-      field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
 
       field :ticket_id, T.nilable(::String), { 'query_param': { 'field_name': 'ticket_id', 'style': 'form', 'explode': true } }
       # Return only results whose updated date is equal or greater to this value
       field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, customer_id: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), sort: T.nilable(::String), ticket_id: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
-      def initialize(connection_id: nil, customer_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, sort: nil, ticket_id: nil, updated_gte: nil)
+      sig { params(connection_id: ::String, customer_id: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), query: T.nilable(::String), ticket_id: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
+      def initialize(connection_id: nil, customer_id: nil, fields_: nil, limit: nil, offset: nil, query: nil, ticket_id: nil, updated_gte: nil)
         @connection_id = connection_id
         @customer_id = customer_id
         @fields_ = fields_
         @limit = limit
         @offset = offset
-        @order = order
         @query = query
-        @sort = sort
         @ticket_id = ticket_id
         @updated_gte = updated_gte
       end

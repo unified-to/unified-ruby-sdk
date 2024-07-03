@@ -450,10 +450,8 @@ s.config_security(
   )
 )
 
-
-req = ::UnifiedRubySDK::Operations::ListUnifiedIssuesRequest.new()
     
-res = s.unified.list_unified_issues(req)
+res = s.unified.list_unified_issues(limit=7069.08, offset=7461.37, updated_gte=DateTime.iso8601('2022-01-21T01:55:24.746Z'))
 
 if ! res.issues.nil?
   # handle response
@@ -463,9 +461,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                     | [::UnifiedRubySDK::Operations::ListUnifiedIssuesRequest](../../models/operations/listunifiedissuesrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| Parameter                                                                | Type                                                                     | Required                                                                 | Description                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `limit`                                                                  | *::Float*                                                                | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `offset`                                                                 | *::Float*                                                                | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `updated_gte`                                                            | [Date](https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html)     | :heavy_minus_sign:                                                       | Return only results whose updated date is equal or greater to this value |
 
 
 ### Response
