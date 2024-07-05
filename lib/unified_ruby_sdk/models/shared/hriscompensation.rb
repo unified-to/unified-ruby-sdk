@@ -12,9 +12,22 @@ module UnifiedRubySDK
       extend T::Sig
 
 
+      field :amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
 
-      
-      def initialize; end
+      field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+
+      field :frequency, T.nilable(::UnifiedRubySDK::Shared::HrisCompensationFrequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::HrisCompensationFrequency, true) } }
+
+      field :type, T.nilable(::UnifiedRubySDK::Shared::HrisCompensationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::HrisCompensationType, true) } }
+
+
+      sig { params(amount: T.nilable(::Float), currency: T.nilable(::String), frequency: T.nilable(::UnifiedRubySDK::Shared::HrisCompensationFrequency), type: T.nilable(::UnifiedRubySDK::Shared::HrisCompensationType)).void }
+      def initialize(amount: nil, currency: nil, frequency: nil, type: nil)
+        @amount = amount
+        @currency = currency
+        @frequency = frequency
+        @type = type
+      end
     end
   end
 end

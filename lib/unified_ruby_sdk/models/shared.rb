@@ -126,6 +126,8 @@ module UnifiedRubySDK
     autoload :PropertyHrisEmployeeEmployeeRoles, 'unified_ruby_sdk/models/shared/property_hrisemployee_employee_roles.rb'
     autoload :HrisEmailType, 'unified_ruby_sdk/models/shared/hrisemail_type.rb'
     autoload :HrisEmail, 'unified_ruby_sdk/models/shared/hrisemail.rb'
+    autoload :HrisCompensationFrequency, 'unified_ruby_sdk/models/shared/hriscompensation_frequency.rb'
+    autoload :HrisCompensationType, 'unified_ruby_sdk/models/shared/hriscompensation_type.rb'
     autoload :HrisCompensation, 'unified_ruby_sdk/models/shared/hriscompensation.rb'
     autoload :PropertyHrisEmployeeAddress, 'unified_ruby_sdk/models/shared/property_hrisemployee_address.rb'
     autoload :HrisGroupType, 'unified_ruby_sdk/models/shared/hrisgroup_type.rb'
