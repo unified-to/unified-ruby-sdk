@@ -255,9 +255,7 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_transaction(connection_id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
-    total_amount: 4969.62,
-  ))
+res = s.accounting.create_accounting_transaction(connection_id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new())
 
 if ! res.accounting_transaction.nil?
   # handle response
@@ -1084,9 +1082,7 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
-    total_amount: 5633.69,
-  ))
+res = s.accounting.patch_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new())
 
 if ! res.accounting_transaction.nil?
   # handle response
@@ -1560,9 +1556,7 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(
-    total_amount: 6498.37,
-  ))
+res = s.accounting.update_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new())
 
 if ! res.accounting_transaction.nil?
   # handle response

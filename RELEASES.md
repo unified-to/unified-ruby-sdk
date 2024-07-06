@@ -1127,3 +1127,11 @@ Based on:
 - Speakeasy CLI 1.326.3 (2.359.6) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [ruby v0.4.65] .
+
+## 2024-07-06 00:13:20
+### Changes
+Based on:
+- OpenAPI Doc 1.0 
+- Speakeasy CLI 1.326.3 (2.359.6) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [ruby v0.4.66] .
