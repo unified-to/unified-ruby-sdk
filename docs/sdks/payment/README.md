@@ -38,14 +38,7 @@ s.config_security(
 )
 
     
-res = s.payment.create_payment_link(connection_id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(
-    amount: 8711.36,
-    lineitems: [
-      ::UnifiedRubySDK::Shared::PaymentLinkLineitem.new(
-        total_amount: 7885.08,
-      ),
-    ],
-  ))
+res = s.payment.create_payment_link(connection_id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new())
 
 if ! res.payment_link.nil?
   # handle response
@@ -459,14 +452,7 @@ s.config_security(
 )
 
     
-res = s.payment.patch_payment_link(connection_id="<value>", id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(
-    amount: 2219.73,
-    lineitems: [
-      ::UnifiedRubySDK::Shared::PaymentLinkLineitem.new(
-        total_amount: 4605.59,
-      ),
-    ],
-  ))
+res = s.payment.patch_payment_link(connection_id="<value>", id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new())
 
 if ! res.payment_link.nil?
   # handle response
@@ -624,14 +610,7 @@ s.config_security(
 )
 
     
-res = s.payment.update_payment_link(connection_id="<value>", id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(
-    amount: 6147.65,
-    lineitems: [
-      ::UnifiedRubySDK::Shared::PaymentLinkLineitem.new(
-        total_amount: 4437.28,
-      ),
-    ],
-  ))
+res = s.payment.update_payment_link(connection_id="<value>", id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new())
 
 if ! res.payment_link.nil?
   # handle response
