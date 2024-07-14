@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: baed20d00770c3529ab25ff351c386de
+  docChecksum: 447f3fb120945ec501fc264fcc573697
   docVersion: "1.0"
   speakeasyVersion: 1.335.0
   generationVersion: 2.370.2
-  releaseVersion: 0.4.69
-  configChecksum: 89dd71e62b6aed99e7ba02ce337ebe78
+  releaseVersion: 0.4.70
+  configChecksum: 30a907230e068b68bd59f815a8428abe
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -729,6 +729,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingjournallineitem.rb
   - lib/unified_ruby_sdk/models/shared/accountingtaxrate.rb
   - lib/unified_ruby_sdk/models/shared/accountingtransaction.rb
+  - lib/unified_ruby_sdk/models/shared/accountingtransactionlineitem.rb
   - lib/unified_ruby_sdk/models/shared/accountingorganization.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingorganization_address.rb
   - lib/unified_ruby_sdk/models/shared/crmcontact.rb
@@ -1531,6 +1532,7 @@ generatedFiles:
   - docs/models/shared/accountingjournallineitem.md
   - docs/models/shared/accountingtaxrate.md
   - docs/models/shared/accountingtransaction.md
+  - docs/models/shared/accountingtransactionlineitem.md
   - docs/models/shared/accountingorganization.md
   - docs/models/shared/propertyaccountingorganizationaddress.md
   - docs/models/shared/crmcontact.md

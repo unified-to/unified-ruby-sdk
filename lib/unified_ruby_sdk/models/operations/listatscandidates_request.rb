@@ -16,6 +16,8 @@ module UnifiedRubySDK
       # Comma-delimited fields to return
       field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
+      field :job_id, T.nilable(::String), { 'query_param': { 'field_name': 'job_id', 'style': 'form', 'explode': true } }
+
       field :limit, T.nilable(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
 
       field :offset, T.nilable(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
@@ -25,10 +27,11 @@ module UnifiedRubySDK
       field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), query: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
-      def initialize(connection_id: nil, fields_: nil, limit: nil, offset: nil, query: nil, updated_gte: nil)
+      sig { params(connection_id: ::String, fields_: T.nilable(T::Array[::String]), job_id: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), query: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
+      def initialize(connection_id: nil, fields_: nil, job_id: nil, limit: nil, offset: nil, query: nil, updated_gte: nil)
         @connection_id = connection_id
         @fields_ = fields_
+        @job_id = job_id
         @limit = limit
         @offset = offset
         @query = query
