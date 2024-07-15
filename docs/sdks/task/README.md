@@ -73,9 +73,7 @@ s.config_security(
 )
 
     
-res = s.task.create_task_task(connection_id="<value>", task_task=::UnifiedRubySDK::Shared::TaskTask.new(
-    name: "<value>",
-  ))
+res = s.task.create_task_task(connection_id="<value>", task_task=::UnifiedRubySDK::Shared::TaskTask.new())
 
 if ! res.task_task.nil?
   # handle response
@@ -322,9 +320,7 @@ s.config_security(
 )
 
     
-res = s.task.patch_task_task(connection_id="<value>", id="<value>", task_task=::UnifiedRubySDK::Shared::TaskTask.new(
-    name: "<value>",
-  ))
+res = s.task.patch_task_task(connection_id="<value>", id="<value>", task_task=::UnifiedRubySDK::Shared::TaskTask.new())
 
 if ! res.task_task.nil?
   # handle response
@@ -482,9 +478,7 @@ s.config_security(
 )
 
     
-res = s.task.update_task_task(connection_id="<value>", id="<value>", task_task=::UnifiedRubySDK::Shared::TaskTask.new(
-    name: "<value>",
-  ))
+res = s.task.update_task_task(connection_id="<value>", id="<value>", task_task=::UnifiedRubySDK::Shared::TaskTask.new())
 
 if ! res.task_task.nil?
   # handle response
