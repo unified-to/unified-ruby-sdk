@@ -24,6 +24,8 @@ module UnifiedRubySDK
 
       field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
+      field :is_chargeable_now, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_chargeable_now') } }
+
       field :lineitems, T.nilable(T::Array[::UnifiedRubySDK::Shared::PaymentLinkLineitem]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lineitems') } }
 
       field :payment_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_id') } }
@@ -35,14 +37,15 @@ module UnifiedRubySDK
       field :url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
 
-      sig { params(amount: T.nilable(::Float), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), lineitems: T.nilable(T::Array[::UnifiedRubySDK::Shared::PaymentLinkLineitem]), payment_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
-      def initialize(amount: nil, contact_id: nil, created_at: nil, currency: nil, id: nil, is_active: nil, lineitems: nil, payment_id: nil, raw: nil, updated_at: nil, url: nil)
+      sig { params(amount: T.nilable(::Float), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_chargeable_now: T.nilable(T::Boolean), lineitems: T.nilable(T::Array[::UnifiedRubySDK::Shared::PaymentLinkLineitem]), payment_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
+      def initialize(amount: nil, contact_id: nil, created_at: nil, currency: nil, id: nil, is_active: nil, is_chargeable_now: nil, lineitems: nil, payment_id: nil, raw: nil, updated_at: nil, url: nil)
         @amount = amount
         @contact_id = contact_id
         @created_at = created_at
         @currency = currency
         @id = id
         @is_active = is_active
+        @is_chargeable_now = is_chargeable_now
         @lineitems = lineitems
         @payment_id = payment_id
         @raw = raw
