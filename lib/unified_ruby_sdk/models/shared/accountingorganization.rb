@@ -26,6 +26,8 @@ module UnifiedRubySDK
 
       field :legal_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('legal_name') } }
 
+      field :organization_code, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_code') } }
+
       field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :tax_number, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_number') } }
@@ -37,8 +39,8 @@ module UnifiedRubySDK
       field :website, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('website') } }
 
 
-      sig { params(name: ::String, address: T.nilable(::UnifiedRubySDK::Shared::PropertyAccountingOrganizationAddress), created_at: T.nilable(::DateTime), currency: T.nilable(::String), fiscal_year_end_month: T.nilable(::Float), id: T.nilable(::String), legal_name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), tax_number: T.nilable(::String), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime), website: T.nilable(::String)).void }
-      def initialize(name: nil, address: nil, created_at: nil, currency: nil, fiscal_year_end_month: nil, id: nil, legal_name: nil, raw: nil, tax_number: nil, timezone: nil, updated_at: nil, website: nil)
+      sig { params(name: ::String, address: T.nilable(::UnifiedRubySDK::Shared::PropertyAccountingOrganizationAddress), created_at: T.nilable(::DateTime), currency: T.nilable(::String), fiscal_year_end_month: T.nilable(::Float), id: T.nilable(::String), legal_name: T.nilable(::String), organization_code: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), tax_number: T.nilable(::String), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime), website: T.nilable(::String)).void }
+      def initialize(name: nil, address: nil, created_at: nil, currency: nil, fiscal_year_end_month: nil, id: nil, legal_name: nil, organization_code: nil, raw: nil, tax_number: nil, timezone: nil, updated_at: nil, website: nil)
         @name = name
         @address = address
         @created_at = created_at
@@ -46,6 +48,7 @@ module UnifiedRubySDK
         @fiscal_year_end_month = fiscal_year_end_month
         @id = id
         @legal_name = legal_name
+        @organization_code = organization_code
         @raw = raw
         @tax_number = tax_number
         @timezone = timezone
