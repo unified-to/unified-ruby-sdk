@@ -86,6 +86,8 @@ module UnifiedRubySDK
         HRIS_TIMEOFF_WRITE = new('hris_timeoff_write')
         HRIS_COMPANY_READ = new('hris_company_read')
         HRIS_COMPANY_WRITE = new('hris_company_write')
+        HRIS_LOCATION_READ = new('hris_location_read')
+        HRIS_LOCATION_WRITE = new('hris_location_write')
         UC_CALL_READ = new('uc_call_read')
         STORAGE_FILE_READ = new('storage_file_read')
         STORAGE_FILE_WRITE = new('storage_file_write')

@@ -41,6 +41,8 @@ module UnifiedRubySDK
       field :employment_type, T.nilable(::UnifiedRubySDK::Shared::HrisEmployeeEmploymentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employment_type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::HrisEmployeeEmploymentType, true) } }
 
       field :gender, T.nilable(::UnifiedRubySDK::Shared::HrisEmployeeGender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gender'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::HrisEmployeeGender, true) } }
+      # Which groups/teams/units that this employee/user belongs to.  May not have all of the Group fields present, but should have id, name, or email.
+      field :groups, T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisGroup]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('groups') } }
 
       field :hired_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('hired_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
@@ -51,6 +53,8 @@ module UnifiedRubySDK
       field :language_locale, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language_locale') } }
 
       field :location, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location') } }
+
+      field :locations, T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisLocation]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('locations') } }
 
       field :manager_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('manager_id') } }
 
@@ -77,8 +81,8 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(address: T.nilable(::UnifiedRubySDK::Shared::PropertyHrisEmployeeAddress), bio: T.nilable(::String), company_id: T.nilable(::String), compensation: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisCompensation]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), date_of_birth: T.nilable(::DateTime), department: T.nilable(::String), division: T.nilable(::String), emails: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisEmail]), employee_number: T.nilable(::String), employee_roles: T.nilable(T::Array[::UnifiedRubySDK::Shared::PropertyHrisEmployeeEmployeeRoles]), employment_status: T.nilable(::UnifiedRubySDK::Shared::EmploymentStatus), employment_type: T.nilable(::UnifiedRubySDK::Shared::HrisEmployeeEmploymentType), gender: T.nilable(::UnifiedRubySDK::Shared::HrisEmployeeGender), hired_at: T.nilable(::DateTime), id: T.nilable(::String), image_url: T.nilable(::String), language_locale: T.nilable(::String), location: T.nilable(::String), manager_id: T.nilable(::String), marital_status: T.nilable(::UnifiedRubySDK::Shared::MaritalStatus), name: T.nilable(::String), pronouns: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), salutation: T.nilable(::String), ssn_sin: T.nilable(::String), telephones: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisTelephone]), terminated_at: T.nilable(::DateTime), timezone: T.nilable(::String), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-      def initialize(address: nil, bio: nil, company_id: nil, compensation: nil, created_at: nil, currency: nil, date_of_birth: nil, department: nil, division: nil, emails: nil, employee_number: nil, employee_roles: nil, employment_status: nil, employment_type: nil, gender: nil, hired_at: nil, id: nil, image_url: nil, language_locale: nil, location: nil, manager_id: nil, marital_status: nil, name: nil, pronouns: nil, raw: nil, salutation: nil, ssn_sin: nil, telephones: nil, terminated_at: nil, timezone: nil, title: nil, updated_at: nil)
+      sig { params(address: T.nilable(::UnifiedRubySDK::Shared::PropertyHrisEmployeeAddress), bio: T.nilable(::String), company_id: T.nilable(::String), compensation: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisCompensation]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), date_of_birth: T.nilable(::DateTime), department: T.nilable(::String), division: T.nilable(::String), emails: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisEmail]), employee_number: T.nilable(::String), employee_roles: T.nilable(T::Array[::UnifiedRubySDK::Shared::PropertyHrisEmployeeEmployeeRoles]), employment_status: T.nilable(::UnifiedRubySDK::Shared::EmploymentStatus), employment_type: T.nilable(::UnifiedRubySDK::Shared::HrisEmployeeEmploymentType), gender: T.nilable(::UnifiedRubySDK::Shared::HrisEmployeeGender), groups: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisGroup]), hired_at: T.nilable(::DateTime), id: T.nilable(::String), image_url: T.nilable(::String), language_locale: T.nilable(::String), location: T.nilable(::String), locations: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisLocation]), manager_id: T.nilable(::String), marital_status: T.nilable(::UnifiedRubySDK::Shared::MaritalStatus), name: T.nilable(::String), pronouns: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), salutation: T.nilable(::String), ssn_sin: T.nilable(::String), telephones: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisTelephone]), terminated_at: T.nilable(::DateTime), timezone: T.nilable(::String), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+      def initialize(address: nil, bio: nil, company_id: nil, compensation: nil, created_at: nil, currency: nil, date_of_birth: nil, department: nil, division: nil, emails: nil, employee_number: nil, employee_roles: nil, employment_status: nil, employment_type: nil, gender: nil, groups: nil, hired_at: nil, id: nil, image_url: nil, language_locale: nil, location: nil, locations: nil, manager_id: nil, marital_status: nil, name: nil, pronouns: nil, raw: nil, salutation: nil, ssn_sin: nil, telephones: nil, terminated_at: nil, timezone: nil, title: nil, updated_at: nil)
         @address = address
         @bio = bio
         @company_id = company_id
@@ -94,11 +98,13 @@ module UnifiedRubySDK
         @employment_status = employment_status
         @employment_type = employment_type
         @gender = gender
+        @groups = groups
         @hired_at = hired_at
         @id = id
         @image_url = image_url
         @language_locale = language_locale
         @location = location
+        @locations = locations
         @manager_id = manager_id
         @marital_status = marital_status
         @name = name

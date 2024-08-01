@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 939256dd6599a9b1968cce234d1549cc
+  docChecksum: e746fd806f5907d68d5ba126113c72ae
   docVersion: "1.0"
-  speakeasyVersion: 1.349.0
-  generationVersion: 2.382.0
-  releaseVersion: 0.4.77
-  configChecksum: d23aeced3ba08ec11e05643cf39ff0b5
+  speakeasyVersion: 1.349.2
+  generationVersion: 2.382.2
+  releaseVersion: 0.4.78
+  configChecksum: e1e69d6662badc7dbd82ca3acaf6ea6f
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -401,6 +401,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatecommerceitem_response.rb
   - lib/unified_ruby_sdk/models/operations/updatecommercelocation_request.rb
   - lib/unified_ruby_sdk/models/operations/updatecommercelocation_response.rb
+  - lib/unified_ruby_sdk/models/operations/createhrislocation_request.rb
+  - lib/unified_ruby_sdk/models/operations/createhrislocation_response.rb
+  - lib/unified_ruby_sdk/models/operations/gethrislocation_request.rb
+  - lib/unified_ruby_sdk/models/operations/gethrislocation_response.rb
+  - lib/unified_ruby_sdk/models/operations/listhrislocations_request.rb
+  - lib/unified_ruby_sdk/models/operations/listhrislocations_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchhrislocation_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchhrislocation_response.rb
+  - lib/unified_ruby_sdk/models/operations/removehrislocation_request.rb
+  - lib/unified_ruby_sdk/models/operations/removehrislocation_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatehrislocation_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatehrislocation_response.rb
   - lib/unified_ruby_sdk/models/operations/createcrmdeal_request.rb
   - lib/unified_ruby_sdk/models/operations/createcrmdeal_response.rb
   - lib/unified_ruby_sdk/models/operations/createcrmevent_request.rb
@@ -798,6 +810,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/commerceitemoption.rb
   - lib/unified_ruby_sdk/models/shared/commercelocation.rb
   - lib/unified_ruby_sdk/models/shared/property_commercelocation_address.rb
+  - lib/unified_ruby_sdk/models/shared/hrislocation.rb
+  - lib/unified_ruby_sdk/models/shared/hristelephone_type.rb
+  - lib/unified_ruby_sdk/models/shared/hristelephone.rb
+  - lib/unified_ruby_sdk/models/shared/property_hrislocation_address.rb
   - lib/unified_ruby_sdk/models/shared/crmdeal.rb
   - lib/unified_ruby_sdk/models/shared/crmevent_type.rb
   - lib/unified_ruby_sdk/models/shared/crmevent.rb
@@ -827,8 +843,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/hrisemployee_gender.rb
   - lib/unified_ruby_sdk/models/shared/marital_status.rb
   - lib/unified_ruby_sdk/models/shared/hrisemployee.rb
-  - lib/unified_ruby_sdk/models/shared/hristelephone_type.rb
-  - lib/unified_ruby_sdk/models/shared/hristelephone.rb
+  - lib/unified_ruby_sdk/models/shared/hrisgroup_type.rb
+  - lib/unified_ruby_sdk/models/shared/hrisgroup.rb
   - lib/unified_ruby_sdk/models/shared/property_hrisemployee_employee_roles.rb
   - lib/unified_ruby_sdk/models/shared/hrisemail_type.rb
   - lib/unified_ruby_sdk/models/shared/hrisemail.rb
@@ -836,8 +852,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/hriscompensation_type.rb
   - lib/unified_ruby_sdk/models/shared/hriscompensation.rb
   - lib/unified_ruby_sdk/models/shared/property_hrisemployee_address.rb
-  - lib/unified_ruby_sdk/models/shared/hrisgroup_type.rb
-  - lib/unified_ruby_sdk/models/shared/hrisgroup.rb
   - lib/unified_ruby_sdk/models/shared/payment_type.rb
   - lib/unified_ruby_sdk/models/shared/hrispayslip.rb
   - lib/unified_ruby_sdk/models/shared/hrispayslipdetail_type.rb
@@ -1206,6 +1220,18 @@ generatedFiles:
   - docs/models/operations/updatecommerceitemresponse.md
   - docs/models/operations/updatecommercelocationrequest.md
   - docs/models/operations/updatecommercelocationresponse.md
+  - docs/models/operations/createhrislocationrequest.md
+  - docs/models/operations/createhrislocationresponse.md
+  - docs/models/operations/gethrislocationrequest.md
+  - docs/models/operations/gethrislocationresponse.md
+  - docs/models/operations/listhrislocationsrequest.md
+  - docs/models/operations/listhrislocationsresponse.md
+  - docs/models/operations/patchhrislocationrequest.md
+  - docs/models/operations/patchhrislocationresponse.md
+  - docs/models/operations/removehrislocationrequest.md
+  - docs/models/operations/removehrislocationresponse.md
+  - docs/models/operations/updatehrislocationrequest.md
+  - docs/models/operations/updatehrislocationresponse.md
   - docs/models/operations/createcrmdealrequest.md
   - docs/models/operations/createcrmdealresponse.md
   - docs/models/operations/createcrmeventrequest.md
@@ -1603,6 +1629,10 @@ generatedFiles:
   - docs/models/shared/commerceitemoption.md
   - docs/models/shared/commercelocation.md
   - docs/models/shared/propertycommercelocationaddress.md
+  - docs/models/shared/hrislocation.md
+  - docs/models/shared/hristelephonetype.md
+  - docs/models/shared/hristelephone.md
+  - docs/models/shared/propertyhrislocationaddress.md
   - docs/models/shared/crmdeal.md
   - docs/models/shared/crmeventtype.md
   - docs/models/shared/crmevent.md
@@ -1632,8 +1662,8 @@ generatedFiles:
   - docs/models/shared/hrisemployeegender.md
   - docs/models/shared/maritalstatus.md
   - docs/models/shared/hrisemployee.md
-  - docs/models/shared/hristelephonetype.md
-  - docs/models/shared/hristelephone.md
+  - docs/models/shared/hrisgrouptype.md
+  - docs/models/shared/hrisgroup.md
   - docs/models/shared/propertyhrisemployeeemployeeroles.md
   - docs/models/shared/hrisemailtype.md
   - docs/models/shared/hrisemail.md
@@ -1641,8 +1671,6 @@ generatedFiles:
   - docs/models/shared/hriscompensationtype.md
   - docs/models/shared/hriscompensation.md
   - docs/models/shared/propertyhrisemployeeaddress.md
-  - docs/models/shared/hrisgrouptype.md
-  - docs/models/shared/hrisgroup.md
   - docs/models/shared/paymenttype.md
   - docs/models/shared/hrispayslip.md
   - docs/models/shared/hrispayslipdetailtype.md
