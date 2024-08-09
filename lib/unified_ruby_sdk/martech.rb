@@ -394,7 +394,7 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      headers['Accept'] = 'application/json'
+      headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.delete(url) do |req|
@@ -407,13 +407,7 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveMartechListResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      if True
-                
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::String)
-          res.string = out
-        end
-      end
+      
       res
     end
 
@@ -435,7 +429,7 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      headers['Accept'] = 'application/json'
+      headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.delete(url) do |req|
@@ -448,13 +442,7 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveMartechMemberResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      if True
-                
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::String)
-          res.string = out
-        end
-      end
+      
       res
     end
 

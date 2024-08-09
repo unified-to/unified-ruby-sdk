@@ -1190,7 +1190,7 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      headers['Accept'] = 'application/json'
+      headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.delete(url) do |req|
@@ -1203,13 +1203,7 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveAccountingAccountResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      if True
-                
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::String)
-          res.string = out
-        end
-      end
+      
       res
     end
 
@@ -1231,7 +1225,7 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      headers['Accept'] = 'application/json'
+      headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.delete(url) do |req|
@@ -1244,13 +1238,7 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveAccountingContactResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      if True
-                
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::String)
-          res.string = out
-        end
-      end
+      
       res
     end
 
@@ -1272,7 +1260,7 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      headers['Accept'] = 'application/json'
+      headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.delete(url) do |req|
@@ -1285,13 +1273,7 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveAccountingInvoiceResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      if True
-                
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::String)
-          res.string = out
-        end
-      end
+      
       res
     end
 
@@ -1313,7 +1295,7 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      headers['Accept'] = 'application/json'
+      headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.delete(url) do |req|
@@ -1326,13 +1308,7 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveAccountingJournalResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      if True
-                
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::String)
-          res.string = out
-        end
-      end
+      
       res
     end
 
@@ -1354,7 +1330,7 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      headers['Accept'] = 'application/json'
+      headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.delete(url) do |req|
@@ -1367,13 +1343,7 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveAccountingTaxrateResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      if True
-                
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::String)
-          res.string = out
-        end
-      end
+      
       res
     end
 
@@ -1395,7 +1365,7 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      headers['Accept'] = 'application/json'
+      headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.delete(url) do |req|
@@ -1408,13 +1378,7 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveAccountingTransactionResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      if True
-                
-        if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::String)
-          res.string = out
-        end
-      end
+      
       res
     end
 
