@@ -24,7 +24,11 @@ module UnifiedRubySDK
 
       field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+      field :importance, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('importance') } }
+
       field :resolution_time, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('resolution_time') } }
+
+      field :size, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
 
       field :type, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
 
@@ -33,15 +37,17 @@ module UnifiedRubySDK
       field :url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
 
-      sig { params(status: ::UnifiedRubySDK::Shared::IssueStatus, ticket_ref: ::String, title: ::String, workspace_id: ::String, created_at: T.nilable(::String), id: T.nilable(::String), resolution_time: T.nilable(::Float), type: T.nilable(T::Array[::String]), updated_at: T.nilable(::String), url: T.nilable(::String)).void }
-      def initialize(status: nil, ticket_ref: nil, title: nil, workspace_id: nil, created_at: nil, id: nil, resolution_time: nil, type: nil, updated_at: nil, url: nil)
+      sig { params(status: ::UnifiedRubySDK::Shared::IssueStatus, ticket_ref: ::String, title: ::String, workspace_id: ::String, created_at: T.nilable(::String), id: T.nilable(::String), importance: T.nilable(::Float), resolution_time: T.nilable(::Float), size: T.nilable(::Float), type: T.nilable(T::Array[::String]), updated_at: T.nilable(::String), url: T.nilable(::String)).void }
+      def initialize(status: nil, ticket_ref: nil, title: nil, workspace_id: nil, created_at: nil, id: nil, importance: nil, resolution_time: nil, size: nil, type: nil, updated_at: nil, url: nil)
         @status = status
         @ticket_ref = ticket_ref
         @title = title
         @workspace_id = workspace_id
         @created_at = created_at
         @id = id
+        @importance = importance
         @resolution_time = resolution_time
+        @size = size
         @type = type
         @updated_at = updated_at
         @url = url
