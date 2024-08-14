@@ -46,6 +46,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
@@ -84,6 +86,8 @@ if ! res.payment_payment.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -125,6 +129,8 @@ if ! res.payment_link.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -168,6 +174,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -210,6 +218,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -251,6 +261,8 @@ if ! res.payment_refund.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -296,6 +308,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
@@ -337,6 +351,8 @@ if ! res.payment_payments.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -380,6 +396,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
@@ -422,6 +440,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
@@ -459,6 +479,8 @@ if ! res.payment_link.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -500,6 +522,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
@@ -540,6 +564,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -578,6 +604,8 @@ if res.status_code == 200
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -618,6 +646,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
@@ -657,6 +687,8 @@ if ! res.payment_payment.nil?
 end
 
 ```
+
+
 
 ### Parameters
 

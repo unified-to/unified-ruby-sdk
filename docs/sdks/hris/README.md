@@ -58,6 +58,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
@@ -96,6 +98,8 @@ if ! res.hris_employee.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -136,6 +140,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
@@ -174,6 +180,8 @@ if ! res.hris_location.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -215,6 +223,8 @@ if ! res.hris_company.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -258,6 +268,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -299,6 +311,8 @@ if ! res.hris_group.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -342,6 +356,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -384,6 +400,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -425,6 +443,8 @@ if ! res.hris_timeoff.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -470,6 +490,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
@@ -511,6 +533,8 @@ if ! res.hris_employees.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -554,6 +578,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
@@ -595,6 +621,8 @@ if ! res.hris_locations.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -638,6 +666,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
@@ -680,6 +710,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
@@ -717,6 +749,8 @@ if ! res.hris_company.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -758,6 +792,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
@@ -797,6 +833,8 @@ if ! res.hris_group.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -838,6 +876,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
@@ -878,6 +918,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -916,6 +958,8 @@ if res.status_code == 200
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -956,6 +1000,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -995,6 +1041,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -1033,6 +1081,8 @@ if ! res.hris_company.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -1074,6 +1124,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
@@ -1114,6 +1166,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
@@ -1153,6 +1207,8 @@ if ! res.hris_location.nil?
 end
 
 ```
+
+
 
 ### Parameters
 

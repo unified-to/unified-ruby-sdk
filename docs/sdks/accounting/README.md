@@ -68,6 +68,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
@@ -106,6 +108,8 @@ if ! res.accounting_contact.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -146,6 +150,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
@@ -184,6 +190,8 @@ if ! res.accounting_journal.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -224,6 +232,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
@@ -262,6 +272,8 @@ if ! res.accounting_transaction.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -303,6 +315,8 @@ if ! res.accounting_account.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -346,6 +360,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -387,6 +403,8 @@ if ! res.accounting_invoice.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -430,6 +448,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -471,6 +491,8 @@ if ! res.accounting_organization.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -514,6 +536,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -555,6 +579,8 @@ if ! res.accounting_transaction.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -600,6 +626,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
@@ -641,6 +669,8 @@ if ! res.accounting_contacts.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -684,6 +714,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
@@ -725,6 +757,8 @@ if ! res.accounting_journals.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -768,6 +802,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
@@ -809,6 +845,8 @@ if ! res.accounting_taxrates.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -852,6 +890,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
@@ -889,6 +929,8 @@ if ! res.accounting_account.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -930,6 +972,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
@@ -969,6 +1013,8 @@ if ! res.accounting_invoice.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -1010,6 +1056,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
@@ -1049,6 +1097,8 @@ if ! res.accounting_taxrate.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -1090,6 +1140,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
@@ -1130,6 +1182,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -1168,6 +1222,8 @@ if res.status_code == 200
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -1208,6 +1264,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -1246,6 +1304,8 @@ if res.status_code == 200
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -1286,6 +1346,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -1325,6 +1387,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter             | Type                  | Required              | Description           |
@@ -1363,6 +1427,8 @@ if ! res.accounting_account.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -1404,6 +1470,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
@@ -1443,6 +1511,8 @@ if ! res.accounting_invoice.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -1484,6 +1554,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
@@ -1524,6 +1596,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
@@ -1563,6 +1637,8 @@ if ! res.accounting_transaction.nil?
 end
 
 ```
+
+
 
 ### Parameters
 

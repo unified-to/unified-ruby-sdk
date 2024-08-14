@@ -32,6 +32,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter          | Type               | Required           | Description        |
@@ -71,6 +73,8 @@ if ! res.api_calls.nil?
 end
 
 ```
+
+
 
 ### Parameters
 

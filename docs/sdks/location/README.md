@@ -44,6 +44,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
@@ -82,6 +84,8 @@ if ! res.hris_location.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -124,6 +128,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -165,6 +171,8 @@ if ! res.hris_location.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -210,6 +218,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
@@ -252,6 +262,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
@@ -291,6 +303,8 @@ if ! res.commerce_location.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -332,6 +346,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
@@ -372,6 +388,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -410,6 +428,8 @@ if res.status_code == 200
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -452,6 +472,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
@@ -491,6 +513,8 @@ if ! res.hris_location.nil?
 end
 
 ```
+
+
 
 ### Parameters
 

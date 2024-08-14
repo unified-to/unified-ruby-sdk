@@ -25,12 +25,16 @@ module UnifiedRubySDK
       field :object, T.nilable(::String), { 'query_param': { 'field_name': 'object', 'style': 'form', 'explode': true } }
 
       field :offset, T.nilable(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
+
+      field :order, T.nilable(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
+
+      field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
       # Return only results whose updated date is equal or greater to this value
       field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: T.nilable(::UnifiedRubySDK::Operations::ConnectionId), created_lte: T.nilable(::DateTime), env: T.nilable(::String), integration_type: T.nilable(::UnifiedRubySDK::Operations::IntegrationType), limit: T.nilable(::Float), object: T.nilable(::String), offset: T.nilable(::Float), updated_gte: T.nilable(::DateTime)).void }
-      def initialize(connection_id: nil, created_lte: nil, env: nil, integration_type: nil, limit: nil, object: nil, offset: nil, updated_gte: nil)
+      sig { params(connection_id: T.nilable(::UnifiedRubySDK::Operations::ConnectionId), created_lte: T.nilable(::DateTime), env: T.nilable(::String), integration_type: T.nilable(::UnifiedRubySDK::Operations::IntegrationType), limit: T.nilable(::Float), object: T.nilable(::String), offset: T.nilable(::Float), order: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
+      def initialize(connection_id: nil, created_lte: nil, env: nil, integration_type: nil, limit: nil, object: nil, offset: nil, order: nil, sort: nil, updated_gte: nil)
         @connection_id = connection_id
         @created_lte = created_lte
         @env = env
@@ -38,6 +42,8 @@ module UnifiedRubySDK
         @limit = limit
         @object = object
         @offset = offset
+        @order = order
+        @sort = sort
         @updated_gte = updated_gte
       end
     end

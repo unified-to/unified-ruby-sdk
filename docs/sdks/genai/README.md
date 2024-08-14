@@ -32,6 +32,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
@@ -74,6 +76,8 @@ if ! res.genai_models.nil?
 end
 
 ```
+
+
 
 ### Parameters
 

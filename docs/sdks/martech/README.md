@@ -42,6 +42,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
@@ -80,6 +82,8 @@ if ! res.marketing_member.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -122,6 +126,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -163,6 +169,8 @@ if ! res.marketing_member.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -208,6 +216,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
@@ -250,6 +260,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
@@ -287,6 +299,8 @@ if ! res.marketing_list.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -328,6 +342,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
@@ -368,6 +384,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -406,6 +424,8 @@ if res.status_code == 200
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -446,6 +466,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
@@ -485,6 +507,8 @@ if ! res.marketing_member.nil?
 end
 
 ```
+
+
 
 ### Parameters
 

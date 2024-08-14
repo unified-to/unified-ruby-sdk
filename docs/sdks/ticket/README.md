@@ -36,6 +36,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
@@ -76,6 +78,8 @@ if ! res.ticketing_ticket.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -121,6 +125,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
@@ -158,6 +164,8 @@ if ! res.ticketing_ticket.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -199,6 +207,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -237,6 +247,8 @@ if ! res.ticketing_ticket.nil?
 end
 
 ```
+
+
 
 ### Parameters
 

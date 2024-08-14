@@ -38,6 +38,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
@@ -80,6 +82,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
@@ -119,6 +123,8 @@ if ! res.integrations.nil?
 end
 
 ```
+
+
 
 ### Parameters
 

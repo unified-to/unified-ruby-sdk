@@ -32,6 +32,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                           | Type                                | Required                            | Description                         |
@@ -75,6 +77,8 @@ if ! res.enrich_person.nil?
 end
 
 ```
+
+
 
 ### Parameters
 

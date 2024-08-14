@@ -34,6 +34,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -77,6 +79,8 @@ if ! res.accounting_organizations.nil?
 end
 
 ```
+
+
 
 ### Parameters
 

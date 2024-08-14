@@ -19,15 +19,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(limit: T.nilable(::Float), offset: T.nilable(::Float), updated_gte: T.nilable(::DateTime)).returns(::UnifiedRubySDK::Operations::ListUnifiedIssuesResponse) }
-    def list_unified_issues(limit = nil, offset = nil, updated_gte = nil)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIssuesRequest)).returns(::UnifiedRubySDK::Operations::ListUnifiedIssuesResponse) }
+    def list_unified_issues(request)
       # list_unified_issues - List support issues
-      request = ::UnifiedRubySDK::Operations::ListUnifiedIssuesRequest.new(
-        
-        limit: limit,
-        offset: offset,
-        updated_gte: updated_gte
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = "#{base_url}/unified/issue"

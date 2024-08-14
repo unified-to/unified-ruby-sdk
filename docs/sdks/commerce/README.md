@@ -57,6 +57,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
@@ -98,6 +100,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
@@ -136,6 +140,8 @@ if ! res.commerce_item.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -178,6 +184,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
@@ -218,6 +226,8 @@ if ! res.commerce_collection.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -261,6 +271,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -303,6 +315,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -344,6 +358,8 @@ if ! res.commerce_location.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -389,6 +405,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
@@ -430,6 +448,8 @@ if ! res.commerce_inventories.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -473,6 +493,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
@@ -515,6 +537,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
@@ -555,6 +579,8 @@ if ! res.commerce_collection.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -598,6 +624,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
@@ -637,6 +665,8 @@ if ! res.commerce_item.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -680,6 +710,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
@@ -720,6 +752,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -758,6 +792,8 @@ if res.status_code == 200
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -798,6 +834,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -836,6 +874,8 @@ if res.status_code == 200
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -879,6 +919,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
@@ -921,6 +963,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
@@ -960,6 +1004,8 @@ if ! res.commerce_item.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -1002,6 +1048,8 @@ if ! res.commerce_location.nil?
 end
 
 ```
+
+
 
 ### Parameters
 

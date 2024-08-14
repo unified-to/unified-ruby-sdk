@@ -48,6 +48,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
@@ -87,6 +89,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
@@ -125,6 +129,8 @@ if ! res.ticketing_ticket.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -166,6 +172,8 @@ if ! res.ticketing_customer.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -209,6 +217,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -250,6 +260,8 @@ if ! res.ticketing_ticket.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -295,6 +307,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
@@ -336,6 +350,8 @@ if ! res.ticketing_notes.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -379,6 +395,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
@@ -416,6 +434,8 @@ if ! res.ticketing_customer.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -457,6 +477,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
@@ -496,6 +518,8 @@ if ! res.ticketing_ticket.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -537,6 +561,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -575,6 +601,8 @@ if res.status_code == 200
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -615,6 +643,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -653,6 +683,8 @@ if ! res.ticketing_customer.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
@@ -694,6 +726,8 @@ end
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
@@ -733,6 +767,8 @@ if ! res.ticketing_ticket.nil?
 end
 
 ```
+
+
 
 ### Parameters
 
