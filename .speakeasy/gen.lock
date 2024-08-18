@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: afff9b10658068a6dd8be329a73e9f3e
+  docChecksum: 3b148f39dc467e6e4a130bd90db813be
   docVersion: "1.0"
-  speakeasyVersion: 1.366.0
-  generationVersion: 2.396.0
-  releaseVersion: 0.4.81
-  configChecksum: 5f1388fea1ae8e10e3f7728f60f9b28c
+  speakeasyVersion: 1.374.2
+  generationVersion: 2.401.2
+  releaseVersion: 0.4.82
+  configChecksum: f39cbb343e1e6f9c828048e7b39f5f0e
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
 features:
   ruby:
-    core: 3.2.18
+    core: 3.2.19
     flattening: 2.81.1
     globalSecurity: 2.81.7
     globalServerURLs: 2.82.3
@@ -710,6 +710,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listunifiedwebhooks_response.rb
   - lib/unified_ruby_sdk/models/operations/patchunifiedconnection_request.rb
   - lib/unified_ruby_sdk/models/operations/patchunifiedconnection_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchunifiedwebhook_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchunifiedwebhook_response.rb
   - lib/unified_ruby_sdk/models/operations/patchunifiedwebhooktrigger_request.rb
   - lib/unified_ruby_sdk/models/operations/patchunifiedwebhooktrigger_response.rb
   - lib/unified_ruby_sdk/models/operations/removeunifiedconnection_request.rb
@@ -718,6 +720,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removeunifiedwebhook_response.rb
   - lib/unified_ruby_sdk/models/operations/updateunifiedconnection_request.rb
   - lib/unified_ruby_sdk/models/operations/updateunifiedconnection_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateunifiedwebhook_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateunifiedwebhook_response.rb
   - lib/unified_ruby_sdk/models/operations/updateunifiedwebhooktrigger_request.rb
   - lib/unified_ruby_sdk/models/operations/updateunifiedwebhooktrigger_response.rb
   - lib/unified_ruby_sdk/models/operations/getunifiedintegrationlogin_request.rb
@@ -1529,6 +1533,8 @@ generatedFiles:
   - docs/models/operations/listunifiedwebhooksresponse.md
   - docs/models/operations/patchunifiedconnectionrequest.md
   - docs/models/operations/patchunifiedconnectionresponse.md
+  - docs/models/operations/patchunifiedwebhookrequest.md
+  - docs/models/operations/patchunifiedwebhookresponse.md
   - docs/models/operations/patchunifiedwebhooktriggerrequest.md
   - docs/models/operations/patchunifiedwebhooktriggerresponse.md
   - docs/models/operations/removeunifiedconnectionrequest.md
@@ -1537,6 +1543,8 @@ generatedFiles:
   - docs/models/operations/removeunifiedwebhookresponse.md
   - docs/models/operations/updateunifiedconnectionrequest.md
   - docs/models/operations/updateunifiedconnectionresponse.md
+  - docs/models/operations/updateunifiedwebhookrequest.md
+  - docs/models/operations/updateunifiedwebhookresponse.md
   - docs/models/operations/updateunifiedwebhooktriggerrequest.md
   - docs/models/operations/updateunifiedwebhooktriggerresponse.md
   - docs/models/operations/getunifiedintegrationloginrequest.md

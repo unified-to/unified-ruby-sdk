@@ -137,6 +137,55 @@ module UnifiedRubySDK
     end
 
 
+    sig { params(id: ::String, webhook: T.nilable(::UnifiedRubySDK::Shared::Webhook)).returns(::UnifiedRubySDK::Operations::PatchUnifiedWebhookResponse) }
+    def patch_unified_webhook(id, webhook = nil)
+      # patch_unified_webhook - Update webhook subscription
+      request = ::UnifiedRubySDK::Operations::PatchUnifiedWebhookRequest.new(
+        
+        id: id,
+        webhook: webhook
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::PatchUnifiedWebhookRequest,
+        base_url,
+        '/unified/webhook/{id}',
+        request
+      )
+      headers = {}
+      req_content_type, data, form = Utils.serialize_request_body(request, :webhook, :json)
+      headers['content-type'] = req_content_type
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.patch(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        if form
+          req.body = Utils.encode_form(form)
+        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+          req.body = URI.encode_www_form(data)
+        else
+          req.body = data
+        end
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::PatchUnifiedWebhookResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::Webhook)
+          res.webhook = out
+        end
+      end
+      res
+    end
+
+
     sig { params(id: ::String).returns(::UnifiedRubySDK::Operations::PatchUnifiedWebhookTriggerResponse) }
     def patch_unified_webhook_trigger(id)
       # patch_unified_webhook_trigger - Trigger webhook
@@ -201,6 +250,55 @@ module UnifiedRubySDK
         status_code: r.status, content_type: content_type, raw_response: r
       )
       
+      res
+    end
+
+
+    sig { params(id: ::String, webhook: T.nilable(::UnifiedRubySDK::Shared::Webhook)).returns(::UnifiedRubySDK::Operations::UpdateUnifiedWebhookResponse) }
+    def update_unified_webhook(id, webhook = nil)
+      # update_unified_webhook - Update webhook subscription
+      request = ::UnifiedRubySDK::Operations::UpdateUnifiedWebhookRequest.new(
+        
+        id: id,
+        webhook: webhook
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::UpdateUnifiedWebhookRequest,
+        base_url,
+        '/unified/webhook/{id}',
+        request
+      )
+      headers = {}
+      req_content_type, data, form = Utils.serialize_request_body(request, :webhook, :json)
+      headers['content-type'] = req_content_type
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.put(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        if form
+          req.body = Utils.encode_form(form)
+        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+          req.body = URI.encode_www_form(data)
+        else
+          req.body = data
+        end
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::UpdateUnifiedWebhookResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::Webhook)
+          res.webhook = out
+        end
+      end
       res
     end
 

@@ -16,10 +16,12 @@
 * [list_unified_issues](#list_unified_issues) - List support issues
 * [list_unified_webhooks](#list_unified_webhooks) - Returns all registered webhooks
 * [patch_unified_connection](#patch_unified_connection) - Update connection
+* [patch_unified_webhook](#patch_unified_webhook) - Update webhook subscription
 * [patch_unified_webhook_trigger](#patch_unified_webhook_trigger) - Trigger webhook
 * [remove_unified_connection](#remove_unified_connection) - Remove connection
 * [remove_unified_webhook](#remove_unified_webhook) - Remove webhook subscription
 * [update_unified_connection](#update_unified_connection) - Update connection
+* [update_unified_webhook](#update_unified_webhook) - Update webhook subscription
 * [update_unified_webhook_trigger](#update_unified_webhook_trigger) - Trigger webhook
 
 ## create_unified_connection
@@ -586,6 +588,52 @@ end
 **[T.nilable(::UnifiedRubySDK::Operations::PatchUnifiedConnectionResponse)](../../models/operations/patchunifiedconnectionresponse.md)**
 
 
+## patch_unified_webhook
+
+Update webhook subscription
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.unified.patch_unified_webhook(id="<value>", webhook=::UnifiedRubySDK::Shared::Webhook.new(
+    connection_id: "<value>",
+    event: ::UnifiedRubySDK::Shared::Event::DELETED,
+    hook_url: "<value>",
+    object_type: ::UnifiedRubySDK::Shared::ObjectType::PASSTHROUGH,
+  ))
+
+if ! res.webhook.nil?
+  # handle response
+end
+
+```
+
+
+
+### Parameters
+
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Webhook                                                   |
+| `webhook`                                                           | [::UnifiedRubySDK::Shared::Webhook](../../models/shared/webhook.md) | :heavy_minus_sign:                                                  | A webhook is used to POST new/updated information to your server.   |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::PatchUnifiedWebhookResponse)](../../models/operations/patchunifiedwebhookresponse.md)**
+
+
 ## patch_unified_webhook_trigger
 
 Trigger webhook
@@ -753,6 +801,52 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateUnifiedConnectionResponse)](../../models/operations/updateunifiedconnectionresponse.md)**
+
+
+## update_unified_webhook
+
+Update webhook subscription
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.unified.update_unified_webhook(id="<value>", webhook=::UnifiedRubySDK::Shared::Webhook.new(
+    connection_id: "<value>",
+    event: ::UnifiedRubySDK::Shared::Event::CREATED,
+    hook_url: "<value>",
+    object_type: ::UnifiedRubySDK::Shared::ObjectType::HRIS_GROUP,
+  ))
+
+if ! res.webhook.nil?
+  # handle response
+end
+
+```
+
+
+
+### Parameters
+
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Webhook                                                   |
+| `webhook`                                                           | [::UnifiedRubySDK::Shared::Webhook](../../models/shared/webhook.md) | :heavy_minus_sign:                                                  | A webhook is used to POST new/updated information to your server.   |
+
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::UpdateUnifiedWebhookResponse)](../../models/operations/updateunifiedwebhookresponse.md)**
 
 
 ## update_unified_webhook_trigger
