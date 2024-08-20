@@ -50,9 +50,11 @@ module UnifiedRubySDK
 
       field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
+      field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-      sig { params(address: T.nilable(::UnifiedRubySDK::Shared::PropertyAtsCandidateAddress), company_id: T.nilable(::String), company_name: T.nilable(::String), created_at: T.nilable(::DateTime), date_of_birth: T.nilable(::DateTime), emails: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), external_identifier: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), link_urls: T.nilable(T::Array[::String]), name: T.nilable(::String), origin: T.nilable(::UnifiedRubySDK::Shared::Origin), raw: T.nilable(T::Hash[Symbol, ::Object]), sources: T.nilable(T::Array[::String]), tags: T.nilable(T::Array[::String]), telephones: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-      def initialize(address: nil, company_id: nil, company_name: nil, created_at: nil, date_of_birth: nil, emails: nil, external_identifier: nil, id: nil, image_url: nil, link_urls: nil, name: nil, origin: nil, raw: nil, sources: nil, tags: nil, telephones: nil, title: nil, updated_at: nil, user_id: nil)
+
+      sig { params(address: T.nilable(::UnifiedRubySDK::Shared::PropertyAtsCandidateAddress), company_id: T.nilable(::String), company_name: T.nilable(::String), created_at: T.nilable(::DateTime), date_of_birth: T.nilable(::DateTime), emails: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), external_identifier: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), link_urls: T.nilable(T::Array[::String]), name: T.nilable(::String), origin: T.nilable(::UnifiedRubySDK::Shared::Origin), raw: T.nilable(T::Hash[Symbol, ::Object]), sources: T.nilable(T::Array[::String]), tags: T.nilable(T::Array[::String]), telephones: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), web_url: T.nilable(::String)).void }
+      def initialize(address: nil, company_id: nil, company_name: nil, created_at: nil, date_of_birth: nil, emails: nil, external_identifier: nil, id: nil, image_url: nil, link_urls: nil, name: nil, origin: nil, raw: nil, sources: nil, tags: nil, telephones: nil, title: nil, updated_at: nil, user_id: nil, web_url: nil)
         @address = address
         @company_id = company_id
         @company_name = company_name
@@ -72,6 +74,7 @@ module UnifiedRubySDK
         @title = title
         @updated_at = updated_at
         @user_id = user_id
+        @web_url = web_url
       end
     end
   end
