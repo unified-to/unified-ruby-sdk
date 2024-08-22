@@ -1,5 +1,6 @@
 # Customer
 
+## Overview
 
 ### Available Operations
 
@@ -36,8 +37,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
@@ -45,10 +44,11 @@ end
 | `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
 | `ticketing_customer`                                                                    | [::UnifiedRubySDK::Shared::TicketingCustomer](../../models/shared/ticketingcustomer.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::CreateTicketingCustomerResponse)](../../models/operations/createticketingcustomerresponse.md)**
+
+
 
 
 ## get_ticketing_customer
@@ -79,8 +79,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -89,10 +87,11 @@ end
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Customer               |
 | `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetTicketingCustomerResponse)](../../models/operations/getticketingcustomerresponse.md)**
+
+
 
 
 ## list_ticketing_customers
@@ -125,18 +124,17 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                               | [::UnifiedRubySDK::Operations::ListTicketingCustomersRequest](../../models/operations/listticketingcustomersrequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListTicketingCustomersResponse)](../../models/operations/listticketingcustomersresponse.md)**
+
+
 
 
 ## patch_ticketing_customer
@@ -165,8 +163,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
@@ -175,10 +171,11 @@ end
 | `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Customer                                                                      |
 | `ticketing_customer`                                                                    | [::UnifiedRubySDK::Shared::TicketingCustomer](../../models/shared/ticketingcustomer.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::PatchTicketingCustomerResponse)](../../models/operations/patchticketingcustomerresponse.md)**
+
+
 
 
 ## remove_ticketing_customer
@@ -207,8 +204,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -216,10 +211,11 @@ end
 | `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
 | `id`                 | *::String*           | :heavy_check_mark:   | ID of the Customer   |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveTicketingCustomerResponse)](../../models/operations/removeticketingcustomerresponse.md)**
+
+
 
 
 ## update_ticketing_customer
@@ -248,8 +244,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
@@ -258,8 +252,8 @@ end
 | `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Customer                                                                      |
 | `ticketing_customer`                                                                    | [::UnifiedRubySDK::Shared::TicketingCustomer](../../models/shared/ticketingcustomer.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateTicketingCustomerResponse)](../../models/operations/updateticketingcustomerresponse.md)**
+
 

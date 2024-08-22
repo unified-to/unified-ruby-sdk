@@ -1,5 +1,6 @@
 # Model
 
+## Overview
 
 ### Available Operations
 
@@ -35,16 +36,14 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
 | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                 | [::UnifiedRubySDK::Operations::ListGenaiModelsRequest](../../models/operations/listgenaimodelsrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListGenaiModelsResponse)](../../models/operations/listgenaimodelsresponse.md)**
+
 

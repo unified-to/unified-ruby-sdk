@@ -1,5 +1,6 @@
 # Contact
 
+## Overview
 
 ### Available Operations
 
@@ -48,8 +49,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
@@ -57,10 +56,11 @@ end
 | `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
 | `accounting_contact`                                                                    | [::UnifiedRubySDK::Shared::AccountingContact](../../models/shared/accountingcontact.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::CreateAccountingContactResponse)](../../models/operations/createaccountingcontactresponse.md)**
+
+
 
 
 ## create_crm_contact
@@ -89,8 +89,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -98,10 +96,11 @@ end
 | `connection_id`                                                                          | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the connection                                                                     |
 | `crm_contact`                                                                            | [::UnifiedRubySDK::Shared::CrmContact](../../models/shared/crmcontact.md)                | :heavy_minus_sign:                                                                       | A contact represents a person that optionally is associated with a deal and/or a company |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::CreateCrmContactResponse)](../../models/operations/createcrmcontactresponse.md)**
+
+
 
 
 ## create_uc_contact
@@ -130,8 +129,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
@@ -139,10 +136,11 @@ end
 | `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
 | `uc_contact`                                                            | [::UnifiedRubySDK::Shared::UcContact](../../models/shared/uccontact.md) | :heavy_minus_sign:                                                      | A contact represents a person that optionally is associated with a call |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::CreateUcContactResponse)](../../models/operations/createuccontactresponse.md)**
+
+
 
 
 ## get_accounting_contact
@@ -173,8 +171,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -183,10 +179,11 @@ end
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Contact                |
 | `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetAccountingContactResponse)](../../models/operations/getaccountingcontactresponse.md)**
+
+
 
 
 ## get_crm_contact
@@ -217,8 +214,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -227,10 +222,11 @@ end
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Contact                |
 | `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetCrmContactResponse)](../../models/operations/getcrmcontactresponse.md)**
+
+
 
 
 ## get_uc_contact
@@ -261,8 +257,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -271,10 +265,11 @@ end
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Contact                |
 | `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetUcContactResponse)](../../models/operations/getuccontactresponse.md)**
+
+
 
 
 ## list_accounting_contacts
@@ -307,18 +302,17 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                               | [::UnifiedRubySDK::Operations::ListAccountingContactsRequest](../../models/operations/listaccountingcontactsrequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListAccountingContactsResponse)](../../models/operations/listaccountingcontactsresponse.md)**
+
+
 
 
 ## list_crm_contacts
@@ -351,18 +345,17 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
 | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                 | [::UnifiedRubySDK::Operations::ListCrmContactsRequest](../../models/operations/listcrmcontactsrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListCrmContactsResponse)](../../models/operations/listcrmcontactsresponse.md)**
+
+
 
 
 ## list_uc_contacts
@@ -395,18 +388,17 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
 | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                               | [::UnifiedRubySDK::Operations::ListUcContactsRequest](../../models/operations/listuccontactsrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListUcContactsResponse)](../../models/operations/listuccontactsresponse.md)**
+
+
 
 
 ## patch_accounting_contact
@@ -435,8 +427,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
@@ -445,10 +435,11 @@ end
 | `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Contact                                                                       |
 | `accounting_contact`                                                                    | [::UnifiedRubySDK::Shared::AccountingContact](../../models/shared/accountingcontact.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::PatchAccountingContactResponse)](../../models/operations/patchaccountingcontactresponse.md)**
+
+
 
 
 ## patch_crm_contact
@@ -477,8 +468,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -487,10 +476,11 @@ end
 | `id`                                                                                     | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the Contact                                                                        |
 | `crm_contact`                                                                            | [::UnifiedRubySDK::Shared::CrmContact](../../models/shared/crmcontact.md)                | :heavy_minus_sign:                                                                       | A contact represents a person that optionally is associated with a deal and/or a company |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::PatchCrmContactResponse)](../../models/operations/patchcrmcontactresponse.md)**
+
+
 
 
 ## patch_uc_contact
@@ -519,8 +509,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
@@ -529,10 +517,11 @@ end
 | `id`                                                                    | *::String*                                                              | :heavy_check_mark:                                                      | ID of the Contact                                                       |
 | `uc_contact`                                                            | [::UnifiedRubySDK::Shared::UcContact](../../models/shared/uccontact.md) | :heavy_minus_sign:                                                      | A contact represents a person that optionally is associated with a call |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::PatchUcContactResponse)](../../models/operations/patchuccontactresponse.md)**
+
+
 
 
 ## remove_accounting_contact
@@ -561,8 +550,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -570,10 +557,11 @@ end
 | `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
 | `id`                 | *::String*           | :heavy_check_mark:   | ID of the Contact    |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveAccountingContactResponse)](../../models/operations/removeaccountingcontactresponse.md)**
+
+
 
 
 ## remove_crm_contact
@@ -602,8 +590,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -611,10 +597,11 @@ end
 | `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
 | `id`                 | *::String*           | :heavy_check_mark:   | ID of the Contact    |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveCrmContactResponse)](../../models/operations/removecrmcontactresponse.md)**
+
+
 
 
 ## remove_uc_contact
@@ -643,8 +630,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -652,10 +637,11 @@ end
 | `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
 | `id`                 | *::String*           | :heavy_check_mark:   | ID of the Contact    |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveUcContactResponse)](../../models/operations/removeuccontactresponse.md)**
+
+
 
 
 ## update_accounting_contact
@@ -684,8 +670,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
@@ -694,10 +678,11 @@ end
 | `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Contact                                                                       |
 | `accounting_contact`                                                                    | [::UnifiedRubySDK::Shared::AccountingContact](../../models/shared/accountingcontact.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateAccountingContactResponse)](../../models/operations/updateaccountingcontactresponse.md)**
+
+
 
 
 ## update_crm_contact
@@ -726,8 +711,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -736,10 +719,11 @@ end
 | `id`                                                                                     | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the Contact                                                                        |
 | `crm_contact`                                                                            | [::UnifiedRubySDK::Shared::CrmContact](../../models/shared/crmcontact.md)                | :heavy_minus_sign:                                                                       | A contact represents a person that optionally is associated with a deal and/or a company |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateCrmContactResponse)](../../models/operations/updatecrmcontactresponse.md)**
+
+
 
 
 ## update_uc_contact
@@ -768,8 +752,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
@@ -778,8 +760,8 @@ end
 | `id`                                                                    | *::String*                                                              | :heavy_check_mark:                                                      | ID of the Contact                                                       |
 | `uc_contact`                                                            | [::UnifiedRubySDK::Shared::UcContact](../../models/shared/uccontact.md) | :heavy_minus_sign:                                                      | A contact represents a person that optionally is associated with a call |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateUcContactResponse)](../../models/operations/updateuccontactresponse.md)**
+
 

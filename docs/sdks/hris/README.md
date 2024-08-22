@@ -1,5 +1,6 @@
 # Hris
 
+## Overview
 
 ### Available Operations
 
@@ -58,8 +59,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
@@ -67,10 +66,11 @@ end
 | `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
 | `hris_company`                                                              | [::UnifiedRubySDK::Shared::HrisCompany](../../models/shared/hriscompany.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::CreateHrisCompanyResponse)](../../models/operations/createhriscompanyresponse.md)**
+
+
 
 
 ## create_hris_employee
@@ -99,8 +99,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
@@ -108,10 +106,11 @@ end
 | `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
 | `hris_employee`                                                               | [::UnifiedRubySDK::Shared::HrisEmployee](../../models/shared/hrisemployee.md) | :heavy_minus_sign:                                                            | N/A                                                                           |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::CreateHrisEmployeeResponse)](../../models/operations/createhrisemployeeresponse.md)**
+
+
 
 
 ## create_hris_group
@@ -140,8 +139,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
@@ -149,10 +146,11 @@ end
 | `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
 | `hris_group`                                                            | [::UnifiedRubySDK::Shared::HrisGroup](../../models/shared/hrisgroup.md) | :heavy_minus_sign:                                                      | N/A                                                                     |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::CreateHrisGroupResponse)](../../models/operations/createhrisgroupresponse.md)**
+
+
 
 
 ## create_hris_location
@@ -181,8 +179,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
@@ -190,10 +186,11 @@ end
 | `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
 | `hris_location`                                                               | [::UnifiedRubySDK::Shared::HrisLocation](../../models/shared/hrislocation.md) | :heavy_minus_sign:                                                            | N/A                                                                           |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::CreateHrisLocationResponse)](../../models/operations/createhrislocationresponse.md)**
+
+
 
 
 ## get_hris_company
@@ -224,8 +221,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -234,10 +229,11 @@ end
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Company                |
 | `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetHrisCompanyResponse)](../../models/operations/gethriscompanyresponse.md)**
+
+
 
 
 ## get_hris_employee
@@ -268,8 +264,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -278,10 +272,11 @@ end
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Employee               |
 | `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetHrisEmployeeResponse)](../../models/operations/gethrisemployeeresponse.md)**
+
+
 
 
 ## get_hris_group
@@ -312,8 +307,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -322,10 +315,11 @@ end
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Group                  |
 | `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetHrisGroupResponse)](../../models/operations/gethrisgroupresponse.md)**
+
+
 
 
 ## get_hris_location
@@ -356,8 +350,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -366,10 +358,11 @@ end
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Location               |
 | `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetHrisLocationResponse)](../../models/operations/gethrislocationresponse.md)**
+
+
 
 
 ## get_hris_payslip
@@ -400,8 +393,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -410,10 +401,11 @@ end
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Payslip                |
 | `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetHrisPayslipResponse)](../../models/operations/gethrispayslipresponse.md)**
+
+
 
 
 ## get_hris_timeoff
@@ -444,8 +436,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -454,10 +444,11 @@ end
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Timeoff                |
 | `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetHrisTimeoffResponse)](../../models/operations/gethristimeoffresponse.md)**
+
+
 
 
 ## list_hris_companies
@@ -490,18 +481,17 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                     | [::UnifiedRubySDK::Operations::ListHrisCompaniesRequest](../../models/operations/listhriscompaniesrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListHrisCompaniesResponse)](../../models/operations/listhriscompaniesresponse.md)**
+
+
 
 
 ## list_hris_employees
@@ -534,18 +524,17 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                     | [::UnifiedRubySDK::Operations::ListHrisEmployeesRequest](../../models/operations/listhrisemployeesrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListHrisEmployeesResponse)](../../models/operations/listhrisemployeesresponse.md)**
+
+
 
 
 ## list_hris_groups
@@ -578,18 +567,17 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
 | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                               | [::UnifiedRubySDK::Operations::ListHrisGroupsRequest](../../models/operations/listhrisgroupsrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListHrisGroupsResponse)](../../models/operations/listhrisgroupsresponse.md)**
+
+
 
 
 ## list_hris_locations
@@ -622,18 +610,17 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                     | [::UnifiedRubySDK::Operations::ListHrisLocationsRequest](../../models/operations/listhrislocationsrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListHrisLocationsResponse)](../../models/operations/listhrislocationsresponse.md)**
+
+
 
 
 ## list_hris_payslips
@@ -666,18 +653,17 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
 | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                   | [::UnifiedRubySDK::Operations::ListHrisPayslipsRequest](../../models/operations/listhrispayslipsrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListHrisPayslipsResponse)](../../models/operations/listhrispayslipsresponse.md)**
+
+
 
 
 ## list_hris_timeoffs
@@ -710,18 +696,17 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
 | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                   | [::UnifiedRubySDK::Operations::ListHrisTimeoffsRequest](../../models/operations/listhristimeoffsrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListHrisTimeoffsResponse)](../../models/operations/listhristimeoffsresponse.md)**
+
+
 
 
 ## patch_hris_company
@@ -750,8 +735,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
@@ -760,10 +743,11 @@ end
 | `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Company                                                           |
 | `hris_company`                                                              | [::UnifiedRubySDK::Shared::HrisCompany](../../models/shared/hriscompany.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::PatchHrisCompanyResponse)](../../models/operations/patchhriscompanyresponse.md)**
+
+
 
 
 ## patch_hris_employee
@@ -792,8 +776,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
@@ -802,10 +784,11 @@ end
 | `id`                                                                          | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the Employee                                                            |
 | `hris_employee`                                                               | [::UnifiedRubySDK::Shared::HrisEmployee](../../models/shared/hrisemployee.md) | :heavy_minus_sign:                                                            | N/A                                                                           |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::PatchHrisEmployeeResponse)](../../models/operations/patchhrisemployeeresponse.md)**
+
+
 
 
 ## patch_hris_group
@@ -834,8 +817,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
@@ -844,10 +825,11 @@ end
 | `id`                                                                    | *::String*                                                              | :heavy_check_mark:                                                      | ID of the Group                                                         |
 | `hris_group`                                                            | [::UnifiedRubySDK::Shared::HrisGroup](../../models/shared/hrisgroup.md) | :heavy_minus_sign:                                                      | N/A                                                                     |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::PatchHrisGroupResponse)](../../models/operations/patchhrisgroupresponse.md)**
+
+
 
 
 ## patch_hris_location
@@ -876,8 +858,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
@@ -886,10 +866,11 @@ end
 | `id`                                                                          | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the Location                                                            |
 | `hris_location`                                                               | [::UnifiedRubySDK::Shared::HrisLocation](../../models/shared/hrislocation.md) | :heavy_minus_sign:                                                            | N/A                                                                           |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::PatchHrisLocationResponse)](../../models/operations/patchhrislocationresponse.md)**
+
+
 
 
 ## remove_hris_company
@@ -918,8 +899,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -927,10 +906,11 @@ end
 | `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
 | `id`                 | *::String*           | :heavy_check_mark:   | ID of the Company    |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveHrisCompanyResponse)](../../models/operations/removehriscompanyresponse.md)**
+
+
 
 
 ## remove_hris_employee
@@ -959,8 +939,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -968,10 +946,11 @@ end
 | `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
 | `id`                 | *::String*           | :heavy_check_mark:   | ID of the Employee   |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveHrisEmployeeResponse)](../../models/operations/removehrisemployeeresponse.md)**
+
+
 
 
 ## remove_hris_group
@@ -1000,8 +979,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -1009,10 +986,11 @@ end
 | `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
 | `id`                 | *::String*           | :heavy_check_mark:   | ID of the Group      |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveHrisGroupResponse)](../../models/operations/removehrisgroupresponse.md)**
+
+
 
 
 ## remove_hris_location
@@ -1041,8 +1019,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -1050,10 +1026,11 @@ end
 | `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
 | `id`                 | *::String*           | :heavy_check_mark:   | ID of the Location   |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveHrisLocationResponse)](../../models/operations/removehrislocationresponse.md)**
+
+
 
 
 ## update_hris_company
@@ -1082,8 +1059,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
@@ -1092,10 +1067,11 @@ end
 | `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Company                                                           |
 | `hris_company`                                                              | [::UnifiedRubySDK::Shared::HrisCompany](../../models/shared/hriscompany.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateHrisCompanyResponse)](../../models/operations/updatehriscompanyresponse.md)**
+
+
 
 
 ## update_hris_employee
@@ -1124,8 +1100,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
@@ -1134,10 +1108,11 @@ end
 | `id`                                                                          | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the Employee                                                            |
 | `hris_employee`                                                               | [::UnifiedRubySDK::Shared::HrisEmployee](../../models/shared/hrisemployee.md) | :heavy_minus_sign:                                                            | N/A                                                                           |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateHrisEmployeeResponse)](../../models/operations/updatehrisemployeeresponse.md)**
+
+
 
 
 ## update_hris_group
@@ -1166,8 +1141,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
@@ -1176,10 +1149,11 @@ end
 | `id`                                                                    | *::String*                                                              | :heavy_check_mark:                                                      | ID of the Group                                                         |
 | `hris_group`                                                            | [::UnifiedRubySDK::Shared::HrisGroup](../../models/shared/hrisgroup.md) | :heavy_minus_sign:                                                      | N/A                                                                     |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateHrisGroupResponse)](../../models/operations/updatehrisgroupresponse.md)**
+
+
 
 
 ## update_hris_location
@@ -1208,8 +1182,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
@@ -1218,8 +1190,8 @@ end
 | `id`                                                                          | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the Location                                                            |
 | `hris_location`                                                               | [::UnifiedRubySDK::Shared::HrisLocation](../../models/shared/hrislocation.md) | :heavy_minus_sign:                                                            | N/A                                                                           |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateHrisLocationResponse)](../../models/operations/updatehrislocationresponse.md)**
+
 

@@ -1,5 +1,6 @@
 # Passthrough
 
+## Overview
 
 ### Available Operations
 
@@ -37,8 +38,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                    | Type                         | Required                     | Description                  |
@@ -47,10 +46,11 @@ end
 | `path`                       | *::String*                   | :heavy_check_mark:           | N/A                          |
 | `request_body`               | T::Hash[Symbol, *::Object*]  | :heavy_minus_sign:           | integration-specific payload |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::CreatePassthroughResponse)](../../models/operations/createpassthroughresponse.md)**
+
+
 
 
 ## list_passthroughs
@@ -79,8 +79,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -88,10 +86,11 @@ end
 | `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
 | `path`               | *::String*           | :heavy_check_mark:   | N/A                  |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListPassthroughsResponse)](../../models/operations/listpassthroughsresponse.md)**
+
+
 
 
 ## patch_passthrough
@@ -122,8 +121,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                    | Type                         | Required                     | Description                  |
@@ -132,10 +129,11 @@ end
 | `path`                       | *::String*                   | :heavy_check_mark:           | N/A                          |
 | `request_body`               | T::Hash[Symbol, *::Object*]  | :heavy_minus_sign:           | integration-specific payload |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::PatchPassthroughResponse)](../../models/operations/patchpassthroughresponse.md)**
+
+
 
 
 ## remove_passthrough
@@ -164,8 +162,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -173,10 +169,11 @@ end
 | `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
 | `path`               | *::String*           | :heavy_check_mark:   | N/A                  |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemovePassthroughResponse)](../../models/operations/removepassthroughresponse.md)**
+
+
 
 
 ## update_passthrough
@@ -207,8 +204,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                    | Type                         | Required                     | Description                  |
@@ -217,8 +212,8 @@ end
 | `path`                       | *::String*                   | :heavy_check_mark:           | N/A                          |
 | `request_body`               | T::Hash[Symbol, *::Object*]  | :heavy_minus_sign:           | integration-specific payload |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdatePassthroughResponse)](../../models/operations/updatepassthroughresponse.md)**
+
 

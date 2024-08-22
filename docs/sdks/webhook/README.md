@@ -1,5 +1,6 @@
 # Webhook
 
+## Overview
 
 ### Available Operations
 
@@ -43,8 +44,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
@@ -52,10 +51,11 @@ end
 | `webhook`                                                           | [::UnifiedRubySDK::Shared::Webhook](../../models/shared/webhook.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
 | `include_all`                                                       | *T::Boolean*                                                        | :heavy_minus_sign:                                                  | When set, all of the existing data will sent back to your server.   |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::CreateUnifiedWebhookResponse)](../../models/operations/createunifiedwebhookresponse.md)**
+
+
 
 
 ## get_unified_webhook
@@ -84,18 +84,17 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter          | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
 | `id`               | *::String*         | :heavy_check_mark: | ID of the Webhook  |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetUnifiedWebhookResponse)](../../models/operations/getunifiedwebhookresponse.md)**
+
+
 
 
 ## list_unified_webhooks
@@ -126,18 +125,17 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
 | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                         | [::UnifiedRubySDK::Operations::ListUnifiedWebhooksRequest](../../models/operations/listunifiedwebhooksrequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListUnifiedWebhooksResponse)](../../models/operations/listunifiedwebhooksresponse.md)**
+
+
 
 
 ## patch_unified_webhook
@@ -171,8 +169,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
@@ -180,10 +176,11 @@ end
 | `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Webhook                                                   |
 | `webhook`                                                           | [::UnifiedRubySDK::Shared::Webhook](../../models/shared/webhook.md) | :heavy_minus_sign:                                                  | A webhook is used to POST new/updated information to your server.   |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::PatchUnifiedWebhookResponse)](../../models/operations/patchunifiedwebhookresponse.md)**
+
+
 
 
 ## patch_unified_webhook_trigger
@@ -212,18 +209,17 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter          | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
 | `id`               | *::String*         | :heavy_check_mark: | ID of the Webhook  |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::PatchUnifiedWebhookTriggerResponse)](../../models/operations/patchunifiedwebhooktriggerresponse.md)**
+
+
 
 
 ## remove_unified_webhook
@@ -252,18 +248,17 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter          | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
 | `id`               | *::String*         | :heavy_check_mark: | ID of the Webhook  |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveUnifiedWebhookResponse)](../../models/operations/removeunifiedwebhookresponse.md)**
+
+
 
 
 ## update_unified_webhook
@@ -297,8 +292,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
@@ -306,10 +299,11 @@ end
 | `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Webhook                                                   |
 | `webhook`                                                           | [::UnifiedRubySDK::Shared::Webhook](../../models/shared/webhook.md) | :heavy_minus_sign:                                                  | A webhook is used to POST new/updated information to your server.   |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateUnifiedWebhookResponse)](../../models/operations/updateunifiedwebhookresponse.md)**
+
+
 
 
 ## update_unified_webhook_trigger
@@ -338,16 +332,14 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter          | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
 | `id`               | *::String*         | :heavy_check_mark: | ID of the Webhook  |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateUnifiedWebhookTriggerResponse)](../../models/operations/updateunifiedwebhooktriggerresponse.md)**
+
 

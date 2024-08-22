@@ -8,11 +8,11 @@ module UnifiedRubySDK
   module Shared
   
 
-    class AtsActivityType < T::Enum
+    class PropertyAtsActivityFromType < T::Enum
       enums do
-        NOTE = new('NOTE')
-        TASK = new('TASK')
-        EMAIL = new('EMAIL')
+        WORK = new('WORK')
+        HOME = new('HOME')
+        OTHER = new('OTHER')
       end
     end
 

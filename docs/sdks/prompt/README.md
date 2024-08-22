@@ -1,5 +1,6 @@
 # Prompt
 
+## Overview
 
 ### Available Operations
 
@@ -31,8 +32,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
@@ -40,8 +39,8 @@ end
 | `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
 | `genai_prompt`                                                              | [::UnifiedRubySDK::Shared::GenaiPrompt](../../models/shared/genaiprompt.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::CreateGenaiPromptResponse)](../../models/operations/creategenaipromptresponse.md)**
+
 

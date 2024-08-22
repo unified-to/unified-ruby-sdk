@@ -16,13 +16,19 @@ module UnifiedRubySDK
 
       field :application_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('application_id') } }
 
+      field :bcc, T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('bcc') } }
+
       field :candidate_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('candidate_id') } }
+
+      field :cc, T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cc') } }
 
       field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
       field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
       field :document_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('document_id') } }
+
+      field :from, T.nilable(::UnifiedRubySDK::Shared::PropertyAtsActivityFrom), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('from') } }
 
       field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
@@ -34,6 +40,8 @@ module UnifiedRubySDK
 
       field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
+      field :to, T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('to') } }
+
       field :type, T.nilable(::UnifiedRubySDK::Shared::AtsActivityType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::AtsActivityType, true) } }
 
       field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -41,19 +49,23 @@ module UnifiedRubySDK
       field :user_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
 
 
-      sig { params(title: ::String, application_id: T.nilable(::String), candidate_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), document_id: T.nilable(::String), id: T.nilable(::String), interview_id: T.nilable(::String), is_private: T.nilable(T::Boolean), job_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(::UnifiedRubySDK::Shared::AtsActivityType), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
-      def initialize(title: nil, application_id: nil, candidate_id: nil, created_at: nil, description: nil, document_id: nil, id: nil, interview_id: nil, is_private: nil, job_id: nil, raw: nil, type: nil, updated_at: nil, user_ids: nil)
+      sig { params(title: ::String, application_id: T.nilable(::String), bcc: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), candidate_id: T.nilable(::String), cc: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), created_at: T.nilable(::DateTime), description: T.nilable(::String), document_id: T.nilable(::String), from: T.nilable(::UnifiedRubySDK::Shared::PropertyAtsActivityFrom), id: T.nilable(::String), interview_id: T.nilable(::String), is_private: T.nilable(T::Boolean), job_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), to: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), type: T.nilable(::UnifiedRubySDK::Shared::AtsActivityType), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
+      def initialize(title: nil, application_id: nil, bcc: nil, candidate_id: nil, cc: nil, created_at: nil, description: nil, document_id: nil, from: nil, id: nil, interview_id: nil, is_private: nil, job_id: nil, raw: nil, to: nil, type: nil, updated_at: nil, user_ids: nil)
         @title = title
         @application_id = application_id
+        @bcc = bcc
         @candidate_id = candidate_id
+        @cc = cc
         @created_at = created_at
         @description = description
         @document_id = document_id
+        @from = from
         @id = id
         @interview_id = interview_id
         @is_private = is_private
         @job_id = job_id
         @raw = raw
+        @to = to
         @type = type
         @updated_at = updated_at
         @user_ids = user_ids

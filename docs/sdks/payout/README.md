@@ -1,5 +1,6 @@
 # Payout
 
+## Overview
 
 ### Available Operations
 
@@ -34,8 +35,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -44,10 +43,11 @@ end
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Payout                 |
 | `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetPaymentPayoutResponse)](../../models/operations/getpaymentpayoutresponse.md)**
+
+
 
 
 ## list_payment_payouts
@@ -80,16 +80,14 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                       | [::UnifiedRubySDK::Operations::ListPaymentPayoutsRequest](../../models/operations/listpaymentpayoutsrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListPaymentPayoutsResponse)](../../models/operations/listpaymentpayoutsresponse.md)**
+
 

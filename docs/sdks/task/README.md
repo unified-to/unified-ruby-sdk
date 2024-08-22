@@ -1,5 +1,6 @@
 # Task
 
+## Overview
 
 ### Available Operations
 
@@ -42,8 +43,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
@@ -51,10 +50,11 @@ end
 | `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
 | `task_project`                                                              | [::UnifiedRubySDK::Shared::TaskProject](../../models/shared/taskproject.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::CreateTaskProjectResponse)](../../models/operations/createtaskprojectresponse.md)**
+
+
 
 
 ## create_task_task
@@ -83,8 +83,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
@@ -92,10 +90,11 @@ end
 | `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
 | `task_task`                                                           | [::UnifiedRubySDK::Shared::TaskTask](../../models/shared/tasktask.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::CreateTaskTaskResponse)](../../models/operations/createtasktaskresponse.md)**
+
+
 
 
 ## get_task_project
@@ -126,8 +125,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -136,10 +133,11 @@ end
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Project                |
 | `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetTaskProjectResponse)](../../models/operations/gettaskprojectresponse.md)**
+
+
 
 
 ## get_task_task
@@ -170,8 +168,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -180,10 +176,11 @@ end
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Task                   |
 | `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetTaskTaskResponse)](../../models/operations/gettasktaskresponse.md)**
+
+
 
 
 ## list_task_projects
@@ -216,18 +213,17 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
 | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                   | [::UnifiedRubySDK::Operations::ListTaskProjectsRequest](../../models/operations/listtaskprojectsrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListTaskProjectsResponse)](../../models/operations/listtaskprojectsresponse.md)**
+
+
 
 
 ## list_task_tasks
@@ -260,18 +256,17 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | `request`                                                                                             | [::UnifiedRubySDK::Operations::ListTaskTasksRequest](../../models/operations/listtasktasksrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListTaskTasksResponse)](../../models/operations/listtasktasksresponse.md)**
+
+
 
 
 ## patch_task_project
@@ -300,8 +295,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
@@ -310,10 +303,11 @@ end
 | `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Project                                                           |
 | `task_project`                                                              | [::UnifiedRubySDK::Shared::TaskProject](../../models/shared/taskproject.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::PatchTaskProjectResponse)](../../models/operations/patchtaskprojectresponse.md)**
+
+
 
 
 ## patch_task_task
@@ -342,8 +336,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
@@ -352,10 +344,11 @@ end
 | `id`                                                                  | *::String*                                                            | :heavy_check_mark:                                                    | ID of the Task                                                        |
 | `task_task`                                                           | [::UnifiedRubySDK::Shared::TaskTask](../../models/shared/tasktask.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::PatchTaskTaskResponse)](../../models/operations/patchtasktaskresponse.md)**
+
+
 
 
 ## remove_task_project
@@ -384,8 +377,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -393,10 +384,11 @@ end
 | `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
 | `id`                 | *::String*           | :heavy_check_mark:   | ID of the Project    |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveTaskProjectResponse)](../../models/operations/removetaskprojectresponse.md)**
+
+
 
 
 ## remove_task_task
@@ -425,8 +417,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -434,10 +424,11 @@ end
 | `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
 | `id`                 | *::String*           | :heavy_check_mark:   | ID of the Task       |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveTaskTaskResponse)](../../models/operations/removetasktaskresponse.md)**
+
+
 
 
 ## update_task_project
@@ -466,8 +457,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
@@ -476,10 +465,11 @@ end
 | `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Project                                                           |
 | `task_project`                                                              | [::UnifiedRubySDK::Shared::TaskProject](../../models/shared/taskproject.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateTaskProjectResponse)](../../models/operations/updatetaskprojectresponse.md)**
+
+
 
 
 ## update_task_task
@@ -508,8 +498,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
@@ -518,8 +506,8 @@ end
 | `id`                                                                  | *::String*                                                            | :heavy_check_mark:                                                    | ID of the Task                                                        |
 | `task_task`                                                           | [::UnifiedRubySDK::Shared::TaskTask](../../models/shared/tasktask.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateTaskTaskResponse)](../../models/operations/updatetasktaskresponse.md)**
+
 

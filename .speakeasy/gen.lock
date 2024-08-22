@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 9e259bd9564bc71739f81088a051aa42
+  docChecksum: c44c1ebe1392a35323492a0b69344f39
   docVersion: "1.0"
-  speakeasyVersion: 1.376.0
-  generationVersion: 2.402.5
-  releaseVersion: 0.4.83
-  configChecksum: 1044b60ac90758c460a2ba03cfa702ab
+  speakeasyVersion: 1.377.1
+  generationVersion: 2.404.1
+  releaseVersion: 0.4.84
+  configChecksum: 5f18bb1ac54a4eb97a694dcf380dcf16
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -763,6 +763,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/ucemail.rb
   - lib/unified_ruby_sdk/models/shared/atsactivity_type.rb
   - lib/unified_ruby_sdk/models/shared/atsactivity.rb
+  - lib/unified_ruby_sdk/models/shared/atsemail_type.rb
+  - lib/unified_ruby_sdk/models/shared/atsemail.rb
+  - lib/unified_ruby_sdk/models/shared/property_atsactivity_from_type.rb
+  - lib/unified_ruby_sdk/models/shared/property_atsactivity_from.rb
   - lib/unified_ruby_sdk/models/shared/atsapplication_status.rb
   - lib/unified_ruby_sdk/models/shared/atsapplication.rb
   - lib/unified_ruby_sdk/models/shared/atsapplicationanswer.rb
@@ -770,8 +774,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/atscandidate.rb
   - lib/unified_ruby_sdk/models/shared/atstelephone_type.rb
   - lib/unified_ruby_sdk/models/shared/atstelephone.rb
-  - lib/unified_ruby_sdk/models/shared/atsemail_type.rb
-  - lib/unified_ruby_sdk/models/shared/atsemail.rb
   - lib/unified_ruby_sdk/models/shared/property_atscandidate_address.rb
   - lib/unified_ruby_sdk/models/shared/atsdocument_type.rb
   - lib/unified_ruby_sdk/models/shared/atsdocument.rb
@@ -1586,6 +1588,10 @@ generatedFiles:
   - docs/models/shared/ucemail.md
   - docs/models/shared/atsactivitytype.md
   - docs/models/shared/atsactivity.md
+  - docs/models/shared/atsemailtype.md
+  - docs/models/shared/atsemail.md
+  - docs/models/shared/propertyatsactivityfromtype.md
+  - docs/models/shared/propertyatsactivityfrom.md
   - docs/models/shared/atsapplicationstatus.md
   - docs/models/shared/atsapplication.md
   - docs/models/shared/atsapplicationanswer.md
@@ -1593,8 +1599,6 @@ generatedFiles:
   - docs/models/shared/atscandidate.md
   - docs/models/shared/atstelephonetype.md
   - docs/models/shared/atstelephone.md
-  - docs/models/shared/atsemailtype.md
-  - docs/models/shared/atsemail.md
   - docs/models/shared/propertyatscandidateaddress.md
   - docs/models/shared/atsdocumenttype.md
   - docs/models/shared/atsdocument.md

@@ -1,5 +1,6 @@
 # Space
 
+## Overview
 
 ### Available Operations
 
@@ -39,8 +40,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
@@ -48,10 +47,11 @@ end
 | `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
 | `kms_space`                                                           | [::UnifiedRubySDK::Shared::KmsSpace](../../models/shared/kmsspace.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::CreateKmsSpaceResponse)](../../models/operations/createkmsspaceresponse.md)**
+
+
 
 
 ## get_kms_space
@@ -82,8 +82,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -92,10 +90,11 @@ end
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Space                  |
 | `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetKmsSpaceResponse)](../../models/operations/getkmsspaceresponse.md)**
+
+
 
 
 ## list_kms_spaces
@@ -128,18 +127,17 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | `request`                                                                                             | [::UnifiedRubySDK::Operations::ListKmsSpacesRequest](../../models/operations/listkmsspacesrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListKmsSpacesResponse)](../../models/operations/listkmsspacesresponse.md)**
+
+
 
 
 ## patch_kms_space
@@ -171,8 +169,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
@@ -181,10 +177,11 @@ end
 | `id`                                                                  | *::String*                                                            | :heavy_check_mark:                                                    | ID of the Space                                                       |
 | `kms_space`                                                           | [::UnifiedRubySDK::Shared::KmsSpace](../../models/shared/kmsspace.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::PatchKmsSpaceResponse)](../../models/operations/patchkmsspaceresponse.md)**
+
+
 
 
 ## remove_kms_space
@@ -213,8 +210,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -222,10 +217,11 @@ end
 | `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
 | `id`                 | *::String*           | :heavy_check_mark:   | ID of the Space      |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveKmsSpaceResponse)](../../models/operations/removekmsspaceresponse.md)**
+
+
 
 
 ## update_kms_space
@@ -257,8 +253,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
@@ -267,8 +261,8 @@ end
 | `id`                                                                  | *::String*                                                            | :heavy_check_mark:                                                    | ID of the Space                                                       |
 | `kms_space`                                                           | [::UnifiedRubySDK::Shared::KmsSpace](../../models/shared/kmsspace.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateKmsSpaceResponse)](../../models/operations/updatekmsspaceresponse.md)**
+
 

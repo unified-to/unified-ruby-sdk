@@ -1,5 +1,6 @@
 # Enrich
 
+## Overview
 
 ### Available Operations
 
@@ -32,8 +33,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                           | Type                                | Required                            | Description                         |
@@ -42,10 +41,11 @@ end
 | `domain`                            | *::String*                          | :heavy_minus_sign:                  | The domain of the company to search |
 | `name`                              | *::String*                          | :heavy_minus_sign:                  | The name of the company to search   |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListEnrichCompaniesResponse)](../../models/operations/listenrichcompaniesresponse.md)**
+
+
 
 
 ## list_enrich_people
@@ -78,16 +78,14 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
 | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                   | [::UnifiedRubySDK::Operations::ListEnrichPeopleRequest](../../models/operations/listenrichpeoplerequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListEnrichPeopleResponse)](../../models/operations/listenrichpeopleresponse.md)**
+
 

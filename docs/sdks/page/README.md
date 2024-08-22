@@ -1,5 +1,6 @@
 # Page
 
+## Overview
 
 ### Available Operations
 
@@ -42,8 +43,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
@@ -51,10 +50,11 @@ end
 | `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
 | `kms_page`                                                          | [::UnifiedRubySDK::Shared::KmsPage](../../models/shared/kmspage.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::CreateKmsPageResponse)](../../models/operations/createkmspageresponse.md)**
+
+
 
 
 ## get_kms_page
@@ -85,8 +85,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                        | Type                             | Required                         | Description                      |
@@ -95,10 +93,11 @@ end
 | `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Page                   |
 | `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetKmsPageResponse)](../../models/operations/getkmspageresponse.md)**
+
+
 
 
 ## list_kms_pages
@@ -131,18 +130,17 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
 | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | `request`                                                                                           | [::UnifiedRubySDK::Operations::ListKmsPagesRequest](../../models/operations/listkmspagesrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListKmsPagesResponse)](../../models/operations/listkmspagesresponse.md)**
+
+
 
 
 ## patch_kms_page
@@ -177,8 +175,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
@@ -187,10 +183,11 @@ end
 | `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Page                                                      |
 | `kms_page`                                                          | [::UnifiedRubySDK::Shared::KmsPage](../../models/shared/kmspage.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::PatchKmsPageResponse)](../../models/operations/patchkmspageresponse.md)**
+
+
 
 
 ## remove_kms_page
@@ -219,8 +216,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter            | Type                 | Required             | Description          |
@@ -228,10 +223,11 @@ end
 | `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
 | `id`                 | *::String*           | :heavy_check_mark:   | ID of the Page       |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveKmsPageResponse)](../../models/operations/removekmspageresponse.md)**
+
+
 
 
 ## update_kms_page
@@ -266,8 +262,6 @@ end
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
@@ -276,8 +270,8 @@ end
 | `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Page                                                      |
 | `kms_page`                                                          | [::UnifiedRubySDK::Shared::KmsPage](../../models/shared/kmspage.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
 
-
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateKmsPageResponse)](../../models/operations/updatekmspageresponse.md)**
+
 
