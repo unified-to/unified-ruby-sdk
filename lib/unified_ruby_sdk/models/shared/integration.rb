@@ -14,8 +14,6 @@ module UnifiedRubySDK
       # The categories of support solutions that this integration has
       field :categories, T::Array[::UnifiedRubySDK::Shared::PropertyIntegrationCategories], { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('categories') } }
 
-      field :in_progress, T::Boolean, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('in_progress') } }
-
       field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
       field :type, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
@@ -37,6 +35,8 @@ module UnifiedRubySDK
       field :fa_icon, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fa_icon') } }
 
       field :featured, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('featured') } }
+
+      field :in_progress, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('in_progress') } }
 
       field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
@@ -61,10 +61,9 @@ module UnifiedRubySDK
       field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
 
-      sig { params(categories: T::Array[::UnifiedRubySDK::Shared::PropertyIntegrationCategories], in_progress: T::Boolean, name: ::String, type: ::String, active_healthy_connections: T.nilable(::Float), api: T.nilable(T::Hash[Symbol, ::Object]), api_docs_url: T.nilable(::String), beta: T.nilable(T::Boolean), color: T.nilable(::String), created_at: T.nilable(::String), description: T.nilable(::String), fa_icon: T.nilable(::String), featured: T.nilable(T::Boolean), is_active: T.nilable(T::Boolean), logo_url: T.nilable(::String), popularity: T.nilable(::Float), rate_limit_description: T.nilable(::String), support: T.nilable(T::Hash[Symbol, ::UnifiedRubySDK::Shared::IntegrationSupport]), tested_at: T.nilable(::DateTime), text_color: T.nilable(::String), token_instructions: T.nilable(T::Array[::String]), token_names: T.nilable(T::Array[::String]), updated_at: T.nilable(::String), web_url: T.nilable(::String)).void }
-      def initialize(categories: nil, in_progress: nil, name: nil, type: nil, active_healthy_connections: nil, api: nil, api_docs_url: nil, beta: nil, color: nil, created_at: nil, description: nil, fa_icon: nil, featured: nil, is_active: nil, logo_url: nil, popularity: nil, rate_limit_description: nil, support: nil, tested_at: nil, text_color: nil, token_instructions: nil, token_names: nil, updated_at: nil, web_url: nil)
+      sig { params(categories: T::Array[::UnifiedRubySDK::Shared::PropertyIntegrationCategories], name: ::String, type: ::String, active_healthy_connections: T.nilable(::Float), api: T.nilable(T::Hash[Symbol, ::Object]), api_docs_url: T.nilable(::String), beta: T.nilable(T::Boolean), color: T.nilable(::String), created_at: T.nilable(::String), description: T.nilable(::String), fa_icon: T.nilable(::String), featured: T.nilable(T::Boolean), in_progress: T.nilable(T::Boolean), is_active: T.nilable(T::Boolean), logo_url: T.nilable(::String), popularity: T.nilable(::Float), rate_limit_description: T.nilable(::String), support: T.nilable(T::Hash[Symbol, ::UnifiedRubySDK::Shared::IntegrationSupport]), tested_at: T.nilable(::DateTime), text_color: T.nilable(::String), token_instructions: T.nilable(T::Array[::String]), token_names: T.nilable(T::Array[::String]), updated_at: T.nilable(::String), web_url: T.nilable(::String)).void }
+      def initialize(categories: nil, name: nil, type: nil, active_healthy_connections: nil, api: nil, api_docs_url: nil, beta: nil, color: nil, created_at: nil, description: nil, fa_icon: nil, featured: nil, in_progress: nil, is_active: nil, logo_url: nil, popularity: nil, rate_limit_description: nil, support: nil, tested_at: nil, text_color: nil, token_instructions: nil, token_names: nil, updated_at: nil, web_url: nil)
         @categories = categories
-        @in_progress = in_progress
         @name = name
         @type = type
         @active_healthy_connections = active_healthy_connections
@@ -76,6 +75,7 @@ module UnifiedRubySDK
         @description = description
         @fa_icon = fa_icon
         @featured = featured
+        @in_progress = in_progress
         @is_active = is_active
         @logo_url = logo_url
         @popularity = popularity
