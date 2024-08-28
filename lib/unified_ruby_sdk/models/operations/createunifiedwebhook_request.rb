@@ -13,7 +13,7 @@ module UnifiedRubySDK
 
       # When set, all of the existing data will sent back to your server.
       field :include_all, T.nilable(T::Boolean), { 'query_param': { 'field_name': 'include_all', 'style': 'form', 'explode': true } }
-
+      # A webhook is used to POST new/updated information to your server.
       field :webhook, T.nilable(::UnifiedRubySDK::Shared::Webhook), { 'request': { 'media_type': 'application/json' } }
 
 
