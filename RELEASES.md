@@ -1295,3 +1295,11 @@ Based on:
 - Speakeasy CLI 1.381.0 (2.404.9) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [ruby v0.4.86] .
+
+## 2024-08-29 00:15:02
+### Changes
+Based on:
+- OpenAPI Doc 1.0 
+- Speakeasy CLI 1.382.0 (2.404.11) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [ruby v0.4.87] .
