@@ -19,6 +19,5 @@ module UnifiedRubySDK
         SUB_DEPARTMENT = new('SUB_DEPARTMENT')
       end
     end
-
   end
 end

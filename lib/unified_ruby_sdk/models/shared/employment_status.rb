@@ -14,6 +14,5 @@ module UnifiedRubySDK
         INACTIVE = new('INACTIVE')
       end
     end
-
   end
 end

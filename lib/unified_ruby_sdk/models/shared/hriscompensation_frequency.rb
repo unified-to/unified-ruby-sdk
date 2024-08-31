@@ -19,6 +19,5 @@ module UnifiedRubySDK
         WEEK = new('WEEK')
       end
     end
-
   end
 end

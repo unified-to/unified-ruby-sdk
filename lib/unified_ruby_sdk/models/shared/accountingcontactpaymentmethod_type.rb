@@ -19,6 +19,5 @@ module UnifiedRubySDK
         PAYPAL = new('PAYPAL')
       end
     end
-
   end
 end

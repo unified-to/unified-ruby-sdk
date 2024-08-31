@@ -14,6 +14,5 @@ module UnifiedRubySDK
         ARCHIVED = new('ARCHIVED')
       end
     end
-
   end
 end

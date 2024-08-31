@@ -16,6 +16,5 @@ module UnifiedRubySDK
         CANCELED = new('CANCELED')
       end
     end
-
   end
 end

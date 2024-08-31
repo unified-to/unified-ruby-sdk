@@ -24,6 +24,5 @@ module UnifiedRubySDK
         URL = new('URL')
       end
     end
-
   end
 end

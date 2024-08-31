@@ -24,8 +24,6 @@ module UnifiedRubySDK
 
       field :type, ::UnifiedRubySDK::Shared::ApiCallType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ApiCallType, false) } }
 
-      field :workspace_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
-
       field :connection_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('connection_id') } }
 
       field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -42,16 +40,17 @@ module UnifiedRubySDK
 
       field :size, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
 
+      field :workspace_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
 
-      sig { params(integration_type: ::String, method: ::String, name: ::String, path: ::String, status: ::String, type: ::UnifiedRubySDK::Shared::ApiCallType, workspace_id: ::String, connection_id: T.nilable(::String), created_at: T.nilable(::DateTime), environment: T.nilable(::String), error: T.nilable(::String), external_xref: T.nilable(::String), id: T.nilable(::String), ip_address: T.nilable(::String), size: T.nilable(::Float)).void }
-      def initialize(integration_type: nil, method: nil, name: nil, path: nil, status: nil, type: nil, workspace_id: nil, connection_id: nil, created_at: nil, environment: nil, error: nil, external_xref: nil, id: nil, ip_address: nil, size: nil)
+
+      sig { params(integration_type: ::String, method: ::String, name: ::String, path: ::String, status: ::String, type: ::UnifiedRubySDK::Shared::ApiCallType, connection_id: T.nilable(::String), created_at: T.nilable(::DateTime), environment: T.nilable(::String), error: T.nilable(::String), external_xref: T.nilable(::String), id: T.nilable(::String), ip_address: T.nilable(::String), size: T.nilable(::Float), workspace_id: T.nilable(::String)).void }
+      def initialize(integration_type: nil, method: nil, name: nil, path: nil, status: nil, type: nil, connection_id: nil, created_at: nil, environment: nil, error: nil, external_xref: nil, id: nil, ip_address: nil, size: nil, workspace_id: nil)
         @integration_type = integration_type
         @method = method
         @name = name
         @path = path
         @status = status
         @type = type
-        @workspace_id = workspace_id
         @connection_id = connection_id
         @created_at = created_at
         @environment = environment
@@ -60,6 +59,7 @@ module UnifiedRubySDK
         @id = id
         @ip_address = ip_address
         @size = size
+        @workspace_id = workspace_id
       end
     end
   end

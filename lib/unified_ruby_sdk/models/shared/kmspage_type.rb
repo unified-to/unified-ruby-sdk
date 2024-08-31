@@ -15,6 +15,5 @@ module UnifiedRubySDK
         TEXT = new('TEXT')
       end
     end
-
   end
 end

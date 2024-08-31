@@ -17,6 +17,5 @@ module UnifiedRubySDK
         CLOSED = new('CLOSED')
       end
     end
-
   end
 end

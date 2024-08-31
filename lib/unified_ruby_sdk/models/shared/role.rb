@@ -14,6 +14,5 @@ module UnifiedRubySDK
         USER = new('USER')
       end
     end
-
   end
 end

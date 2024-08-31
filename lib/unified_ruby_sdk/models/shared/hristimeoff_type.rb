@@ -14,6 +14,5 @@ module UnifiedRubySDK
         UNPAID = new('UNPAID')
       end
     end
-
   end
 end

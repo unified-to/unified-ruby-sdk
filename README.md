@@ -4,8 +4,25 @@
 </div>
 
 
+<!-- Start Summary [summary] -->
+## Summary
+
+Unified.to API: One API to Rule Them All
+<!-- End Summary [summary] -->
+
+<!-- Start Table of Contents [toc] -->
+## Table of Contents
+
+* [SDK Installation](#sdk-installation)
+* [SDK Example Usage](#sdk-example-usage)
+* [Available Resources and Operations](#available-resources-and-operations)
+* [Server Selection](#server-selection)
+<!-- End Table of Contents [toc] -->
+
 <!-- Start SDK Installation [installation] -->
 ## SDK Installation
+
+The SDK can be installed using [RubyGems](https://rubygems.org/):
 
 ```bash
 gem install specific_install

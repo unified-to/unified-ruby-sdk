@@ -15,6 +15,5 @@ module UnifiedRubySDK
         EMAIL = new('EMAIL')
       end
     end
-
   end
 end

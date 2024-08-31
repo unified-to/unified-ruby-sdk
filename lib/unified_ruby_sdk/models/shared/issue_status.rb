@@ -20,6 +20,5 @@ module UnifiedRubySDK
         UP_NEXT = new('UP_NEXT')
       end
     end
-
   end
 end

@@ -26,6 +26,5 @@ module UnifiedRubySDK
         WITHDRAWN = new('WITHDRAWN')
       end
     end
-
   end
 end

@@ -29,6 +29,5 @@ module UnifiedRubySDK
         REIMBURSEMENT = new('REIMBURSEMENT')
       end
     end
-
   end
 end

@@ -14,6 +14,5 @@ module UnifiedRubySDK
         FEMALE = new('FEMALE')
       end
     end
-
   end
 end

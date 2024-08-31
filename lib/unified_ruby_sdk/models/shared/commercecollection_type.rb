@@ -15,6 +15,5 @@ module UnifiedRubySDK
         CATEGORY = new('CATEGORY')
       end
     end
-
   end
 end

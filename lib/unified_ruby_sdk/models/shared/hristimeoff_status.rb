@@ -15,6 +15,5 @@ module UnifiedRubySDK
         DENIED = new('DENIED')
       end
     end
-
   end
 end

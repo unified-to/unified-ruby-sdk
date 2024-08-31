@@ -19,6 +19,5 @@ module UnifiedRubySDK
         REFUNDED = new('REFUNDED')
       end
     end
-
   end
 end

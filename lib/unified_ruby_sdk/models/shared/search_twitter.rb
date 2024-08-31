@@ -15,6 +15,5 @@ module UnifiedRubySDK
         NOT_SUPPORTED = new('not-supported')
       end
     end
-
   end
 end

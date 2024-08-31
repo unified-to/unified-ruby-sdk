@@ -14,6 +14,5 @@ module UnifiedRubySDK
         INCH = new('inch')
       end
     end
-
   end
 end

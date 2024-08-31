@@ -15,6 +15,5 @@ module UnifiedRubySDK
         COMPLETED = new('COMPLETED')
       end
     end
-
   end
 end

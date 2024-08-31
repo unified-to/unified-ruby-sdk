@@ -15,6 +15,5 @@ module UnifiedRubySDK
         CASH = new('CASH')
       end
     end
-
   end
 end

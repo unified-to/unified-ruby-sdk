@@ -15,6 +15,5 @@ module UnifiedRubySDK
         WRITE = new('WRITE')
       end
     end
-
   end
 end

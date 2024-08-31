@@ -14,6 +14,5 @@ module UnifiedRubySDK
         SINGLE = new('SINGLE')
       end
     end
-
   end
 end

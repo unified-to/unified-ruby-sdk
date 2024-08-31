@@ -17,6 +17,5 @@ module UnifiedRubySDK
         NEEDS_SCHEDULING = new('NEEDS_SCHEDULING')
       end
     end
-
   end
 end

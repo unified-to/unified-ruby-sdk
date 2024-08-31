@@ -16,6 +16,5 @@ module UnifiedRubySDK
         STRONG_YES = new('STRONG_YES')
       end
     end
-
   end
 end

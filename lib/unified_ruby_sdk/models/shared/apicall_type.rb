@@ -15,6 +15,5 @@ module UnifiedRubySDK
         INBOUND = new('inbound')
       end
     end
-
   end
 end

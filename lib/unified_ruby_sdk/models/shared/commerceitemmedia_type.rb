@@ -14,6 +14,5 @@ module UnifiedRubySDK
         VIDEO = new('video')
       end
     end
-
   end
 end

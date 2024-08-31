@@ -15,6 +15,5 @@ module UnifiedRubySDK
         OTHER = new('OTHER')
       end
     end
-
   end
 end

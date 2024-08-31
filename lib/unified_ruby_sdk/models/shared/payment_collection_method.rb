@@ -14,6 +14,5 @@ module UnifiedRubySDK
         CHARGE_AUTOMATICALLY = new('charge_automatically')
       end
     end
-
   end
 end

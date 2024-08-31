@@ -17,6 +17,5 @@ module UnifiedRubySDK
         NON_BINARY = new('NON_BINARY')
       end
     end
-
   end
 end

@@ -110,6 +110,5 @@ module UnifiedRubySDK
         TASK_TASK_WRITE = new('task_task_write')
       end
     end
-
   end
 end

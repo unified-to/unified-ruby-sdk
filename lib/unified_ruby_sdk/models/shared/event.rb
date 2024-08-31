@@ -15,6 +15,5 @@ module UnifiedRubySDK
         DELETED = new('deleted')
       end
     end
-
   end
 end

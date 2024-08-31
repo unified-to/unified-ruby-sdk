@@ -14,6 +14,5 @@ module UnifiedRubySDK
         FOLDER = new('FOLDER')
       end
     end
-
   end
 end

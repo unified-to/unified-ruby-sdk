@@ -17,6 +17,5 @@ module UnifiedRubySDK
         CALL = new('CALL')
       end
     end
-
   end
 end

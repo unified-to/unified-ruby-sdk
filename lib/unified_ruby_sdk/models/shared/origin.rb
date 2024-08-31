@@ -18,6 +18,5 @@ module UnifiedRubySDK
         UNIVERSITY = new('UNIVERSITY')
       end
     end
-
   end
 end

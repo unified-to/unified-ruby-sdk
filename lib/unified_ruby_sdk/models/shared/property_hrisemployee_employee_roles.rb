@@ -17,6 +17,5 @@ module UnifiedRubySDK
         INTERVIEWER = new('INTERVIEWER')
       end
     end
-
   end
 end

@@ -29,6 +29,5 @@ module UnifiedRubySDK
         TASK = new('task')
       end
     end
-
   end
 end

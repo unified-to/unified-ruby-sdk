@@ -16,6 +16,5 @@ module UnifiedRubySDK
         DEFERRED = new('DEFERRED')
       end
     end
-
   end
 end

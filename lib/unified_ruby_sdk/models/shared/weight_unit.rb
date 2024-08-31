@@ -16,6 +16,5 @@ module UnifiedRubySDK
         LB = new('lb')
       end
     end
-
   end
 end

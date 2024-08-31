@@ -14,6 +14,5 @@ module UnifiedRubySDK
         NATIVE = new('native')
       end
     end
-
   end
 end

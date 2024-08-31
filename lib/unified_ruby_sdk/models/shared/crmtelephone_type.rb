@@ -17,6 +17,5 @@ module UnifiedRubySDK
         MOBILE = new('MOBILE')
       end
     end
-
   end
 end

@@ -15,6 +15,5 @@ module UnifiedRubySDK
         LOW = new('LOW')
       end
     end
-
   end
 end
