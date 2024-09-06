@@ -22,6 +22,7 @@ module UnifiedRubySDK
     sig { params(request: T.nilable(::UnifiedRubySDK::Shared::Connection)).returns(::UnifiedRubySDK::Operations::CreateUnifiedConnectionResponse) }
     def create_unified_connection(request)
       # create_unified_connection - Create connection
+      # Used only to import existing customer credentials; use "Create connection indirectly" instead
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = "#{base_url}/unified/connection"

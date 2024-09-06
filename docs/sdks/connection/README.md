@@ -13,7 +13,7 @@
 
 ## create_unified_connection
 
-Create connection
+Used only to import existing customer credentials; use "Create connection indirectly" instead
 
 ### Example Usage
 
