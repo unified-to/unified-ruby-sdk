@@ -37,7 +37,9 @@ s.config_security(
     
 res = s.location.create_commerce_location(connection_id="<value>", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
     name: "<value>",
-  ))
+  ), fields_=[
+    "<value>",
+  ])
 
 if ! res.commerce_location.nil?
   # handle response
@@ -51,6 +53,7 @@ end
 | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | `connection_id`                                                                       | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the connection                                                                  |
 | `commerce_location`                                                                   | [::UnifiedRubySDK::Shared::CommerceLocation](../../models/shared/commercelocation.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `fields_`                                                                             | T::Array<*::String*>                                                                  | :heavy_minus_sign:                                                                    | Comma-delimited fields to return                                                      |
 
 ### Response
 
@@ -77,7 +80,9 @@ s.config_security(
 )
 
     
-res = s.location.create_hris_location(connection_id="<value>", hris_location=::UnifiedRubySDK::Shared::HrisLocation.new())
+res = s.location.create_hris_location(connection_id="<value>", hris_location=::UnifiedRubySDK::Shared::HrisLocation.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.hris_location.nil?
   # handle response
@@ -91,6 +96,7 @@ end
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
 | `hris_location`                                                               | [::UnifiedRubySDK::Shared::HrisLocation](../../models/shared/hrislocation.md) | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
 
 ### Response
 
@@ -291,7 +297,9 @@ s.config_security(
     
 res = s.location.patch_commerce_location(connection_id="<value>", id="<value>", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
     name: "<value>",
-  ))
+  ), fields_=[
+    "<value>",
+  ])
 
 if ! res.commerce_location.nil?
   # handle response
@@ -306,6 +314,7 @@ end
 | `connection_id`                                                                       | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the connection                                                                  |
 | `id`                                                                                  | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the Location                                                                    |
 | `commerce_location`                                                                   | [::UnifiedRubySDK::Shared::CommerceLocation](../../models/shared/commercelocation.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `fields_`                                                                             | T::Array<*::String*>                                                                  | :heavy_minus_sign:                                                                    | Comma-delimited fields to return                                                      |
 
 ### Response
 
@@ -332,7 +341,9 @@ s.config_security(
 )
 
     
-res = s.location.patch_hris_location(connection_id="<value>", id="<value>", hris_location=::UnifiedRubySDK::Shared::HrisLocation.new())
+res = s.location.patch_hris_location(connection_id="<value>", id="<value>", hris_location=::UnifiedRubySDK::Shared::HrisLocation.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.hris_location.nil?
   # handle response
@@ -347,6 +358,7 @@ end
 | `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
 | `id`                                                                          | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the Location                                                            |
 | `hris_location`                                                               | [::UnifiedRubySDK::Shared::HrisLocation](../../models/shared/hrislocation.md) | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
 
 ### Response
 
@@ -455,7 +467,9 @@ s.config_security(
     
 res = s.location.update_commerce_location(connection_id="<value>", id="<value>", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
     name: "<value>",
-  ))
+  ), fields_=[
+    "<value>",
+  ])
 
 if ! res.commerce_location.nil?
   # handle response
@@ -470,6 +484,7 @@ end
 | `connection_id`                                                                       | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the connection                                                                  |
 | `id`                                                                                  | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the Location                                                                    |
 | `commerce_location`                                                                   | [::UnifiedRubySDK::Shared::CommerceLocation](../../models/shared/commercelocation.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `fields_`                                                                             | T::Array<*::String*>                                                                  | :heavy_minus_sign:                                                                    | Comma-delimited fields to return                                                      |
 
 ### Response
 
@@ -496,7 +511,9 @@ s.config_security(
 )
 
     
-res = s.location.update_hris_location(connection_id="<value>", id="<value>", hris_location=::UnifiedRubySDK::Shared::HrisLocation.new())
+res = s.location.update_hris_location(connection_id="<value>", id="<value>", hris_location=::UnifiedRubySDK::Shared::HrisLocation.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.hris_location.nil?
   # handle response
@@ -511,6 +528,7 @@ end
 | `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
 | `id`                                                                          | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the Location                                                            |
 | `hris_location`                                                               | [::UnifiedRubySDK::Shared::HrisLocation](../../models/shared/hrislocation.md) | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
 
 ### Response
 

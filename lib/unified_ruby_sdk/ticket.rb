@@ -19,13 +19,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ticketing_ticket: T.nilable(::UnifiedRubySDK::Shared::TicketingTicket)).returns(::UnifiedRubySDK::Operations::CreateTicketingTicketResponse) }
-    def create_ticketing_ticket(connection_id, ticketing_ticket = nil)
+    sig { params(connection_id: ::String, ticketing_ticket: T.nilable(::UnifiedRubySDK::Shared::TicketingTicket), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateTicketingTicketResponse) }
+    def create_ticketing_ticket(connection_id, ticketing_ticket = nil, fields_ = nil)
       # create_ticketing_ticket - Create a ticket
       request = ::UnifiedRubySDK::Operations::CreateTicketingTicketRequest.new(
         
         connection_id: connection_id,
-        ticketing_ticket: ticketing_ticket
+        ticketing_ticket: ticketing_ticket,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -38,11 +39,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ticketing_ticket, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateTicketingTicketRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -148,14 +151,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ticketing_ticket: T.nilable(::UnifiedRubySDK::Shared::TicketingTicket)).returns(::UnifiedRubySDK::Operations::PatchTicketingTicketResponse) }
-    def patch_ticketing_ticket(connection_id, id, ticketing_ticket = nil)
+    sig { params(connection_id: ::String, id: ::String, ticketing_ticket: T.nilable(::UnifiedRubySDK::Shared::TicketingTicket), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchTicketingTicketResponse) }
+    def patch_ticketing_ticket(connection_id, id, ticketing_ticket = nil, fields_ = nil)
       # patch_ticketing_ticket - Update a ticket
       request = ::UnifiedRubySDK::Operations::PatchTicketingTicketRequest.new(
         
         connection_id: connection_id,
         id: id,
-        ticketing_ticket: ticketing_ticket
+        ticketing_ticket: ticketing_ticket,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -168,11 +172,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ticketing_ticket, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchTicketingTicketRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -233,14 +239,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ticketing_ticket: T.nilable(::UnifiedRubySDK::Shared::TicketingTicket)).returns(::UnifiedRubySDK::Operations::UpdateTicketingTicketResponse) }
-    def update_ticketing_ticket(connection_id, id, ticketing_ticket = nil)
+    sig { params(connection_id: ::String, id: ::String, ticketing_ticket: T.nilable(::UnifiedRubySDK::Shared::TicketingTicket), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateTicketingTicketResponse) }
+    def update_ticketing_ticket(connection_id, id, ticketing_ticket = nil, fields_ = nil)
       # update_ticketing_ticket - Update a ticket
       request = ::UnifiedRubySDK::Operations::UpdateTicketingTicketRequest.new(
         
         connection_id: connection_id,
         id: id,
-        ticketing_ticket: ticketing_ticket
+        ticketing_ticket: ticketing_ticket,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -253,11 +260,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ticketing_ticket, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateTicketingTicketRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)

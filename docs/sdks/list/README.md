@@ -29,7 +29,9 @@ s.config_security(
 )
 
     
-res = s.list.create_martech_list(connection_id="<value>", marketing_list=::UnifiedRubySDK::Shared::MarketingList.new())
+res = s.list.create_martech_list(connection_id="<value>", marketing_list=::UnifiedRubySDK::Shared::MarketingList.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.marketing_list.nil?
   # handle response
@@ -43,6 +45,7 @@ end
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | `connection_id`                                                                 | *::String*                                                                      | :heavy_check_mark:                                                              | ID of the connection                                                            |
 | `marketing_list`                                                                | [::UnifiedRubySDK::Shared::MarketingList](../../models/shared/marketinglist.md) | :heavy_minus_sign:                                                              | Mailing List                                                                    |
+| `fields_`                                                                       | T::Array<*::String*>                                                            | :heavy_minus_sign:                                                              | Comma-delimited fields to return                                                |
 
 ### Response
 
@@ -155,7 +158,9 @@ s.config_security(
 )
 
     
-res = s.list.patch_martech_list(connection_id="<value>", id="<value>", marketing_list=::UnifiedRubySDK::Shared::MarketingList.new())
+res = s.list.patch_martech_list(connection_id="<value>", id="<value>", marketing_list=::UnifiedRubySDK::Shared::MarketingList.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.marketing_list.nil?
   # handle response
@@ -170,6 +175,7 @@ end
 | `connection_id`                                                                 | *::String*                                                                      | :heavy_check_mark:                                                              | ID of the connection                                                            |
 | `id`                                                                            | *::String*                                                                      | :heavy_check_mark:                                                              | ID of the List                                                                  |
 | `marketing_list`                                                                | [::UnifiedRubySDK::Shared::MarketingList](../../models/shared/marketinglist.md) | :heavy_minus_sign:                                                              | Mailing List                                                                    |
+| `fields_`                                                                       | T::Array<*::String*>                                                            | :heavy_minus_sign:                                                              | Comma-delimited fields to return                                                |
 
 ### Response
 
@@ -236,7 +242,9 @@ s.config_security(
 )
 
     
-res = s.list.update_martech_list(connection_id="<value>", id="<value>", marketing_list=::UnifiedRubySDK::Shared::MarketingList.new())
+res = s.list.update_martech_list(connection_id="<value>", id="<value>", marketing_list=::UnifiedRubySDK::Shared::MarketingList.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.marketing_list.nil?
   # handle response
@@ -251,6 +259,7 @@ end
 | `connection_id`                                                                 | *::String*                                                                      | :heavy_check_mark:                                                              | ID of the connection                                                            |
 | `id`                                                                            | *::String*                                                                      | :heavy_check_mark:                                                              | ID of the List                                                                  |
 | `marketing_list`                                                                | [::UnifiedRubySDK::Shared::MarketingList](../../models/shared/marketinglist.md) | :heavy_minus_sign:                                                              | Mailing List                                                                    |
+| `fields_`                                                                       | T::Array<*::String*>                                                            | :heavy_minus_sign:                                                              | Comma-delimited fields to return                                                |
 
 ### Response
 

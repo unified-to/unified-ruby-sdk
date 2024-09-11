@@ -15,12 +15,15 @@ module UnifiedRubySDK
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
 
       field :ats_scorecard, T.nilable(::UnifiedRubySDK::Shared::AtsScorecard), { 'request': { 'media_type': 'application/json' } }
+      # Comma-delimited fields to return
+      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard)).void }
-      def initialize(connection_id: nil, ats_scorecard: nil)
+      sig { params(connection_id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard), fields_: T.nilable(T::Array[::String])).void }
+      def initialize(connection_id: nil, ats_scorecard: nil, fields_: nil)
         @connection_id = connection_id
         @ats_scorecard = ats_scorecard
+        @fields_ = fields_
       end
     end
   end

@@ -29,7 +29,9 @@ s.config_security(
 )
 
     
-res = s.journal.create_accounting_journal(connection_id="<value>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new())
+res = s.journal.create_accounting_journal(connection_id="<value>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.accounting_journal.nil?
   # handle response
@@ -43,6 +45,7 @@ end
 | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
 | `accounting_journal`                                                                    | [::UnifiedRubySDK::Shared::AccountingJournal](../../models/shared/accountingjournal.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -155,7 +158,9 @@ s.config_security(
 )
 
     
-res = s.journal.patch_accounting_journal(connection_id="<value>", id="<value>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new())
+res = s.journal.patch_accounting_journal(connection_id="<value>", id="<value>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.accounting_journal.nil?
   # handle response
@@ -170,6 +175,7 @@ end
 | `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
 | `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Journal                                                                       |
 | `accounting_journal`                                                                    | [::UnifiedRubySDK::Shared::AccountingJournal](../../models/shared/accountingjournal.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -236,7 +242,9 @@ s.config_security(
 )
 
     
-res = s.journal.update_accounting_journal(connection_id="<value>", id="<value>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new())
+res = s.journal.update_accounting_journal(connection_id="<value>", id="<value>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.accounting_journal.nil?
   # handle response
@@ -251,6 +259,7 @@ end
 | `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
 | `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Journal                                                                       |
 | `accounting_journal`                                                                    | [::UnifiedRubySDK::Shared::AccountingJournal](../../models/shared/accountingjournal.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 

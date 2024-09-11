@@ -15,12 +15,15 @@ module UnifiedRubySDK
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
 
       field :commerce_inventory, T.nilable(::UnifiedRubySDK::Shared::CommerceInventory), { 'request': { 'media_type': 'application/json' } }
+      # Comma-delimited fields to return
+      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, commerce_inventory: T.nilable(::UnifiedRubySDK::Shared::CommerceInventory)).void }
-      def initialize(connection_id: nil, commerce_inventory: nil)
+      sig { params(connection_id: ::String, commerce_inventory: T.nilable(::UnifiedRubySDK::Shared::CommerceInventory), fields_: T.nilable(T::Array[::String])).void }
+      def initialize(connection_id: nil, commerce_inventory: nil, fields_: nil)
         @connection_id = connection_id
         @commerce_inventory = commerce_inventory
+        @fields_ = fields_
       end
     end
   end

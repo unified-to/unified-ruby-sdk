@@ -29,7 +29,9 @@ s.config_security(
 )
 
     
-res = s.document.create_ats_document(connection_id="<value>", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new())
+res = s.document.create_ats_document(connection_id="<value>", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.ats_document.nil?
   # handle response
@@ -43,6 +45,7 @@ end
 | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
 | `ats_document`                                                              | [::UnifiedRubySDK::Shared::AtsDocument](../../models/shared/atsdocument.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -155,7 +158,9 @@ s.config_security(
 )
 
     
-res = s.document.patch_ats_document(connection_id="<value>", id="<value>", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new())
+res = s.document.patch_ats_document(connection_id="<value>", id="<value>", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.ats_document.nil?
   # handle response
@@ -170,6 +175,7 @@ end
 | `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
 | `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Document                                                          |
 | `ats_document`                                                              | [::UnifiedRubySDK::Shared::AtsDocument](../../models/shared/atsdocument.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -236,7 +242,9 @@ s.config_security(
 )
 
     
-res = s.document.update_ats_document(connection_id="<value>", id="<value>", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new())
+res = s.document.update_ats_document(connection_id="<value>", id="<value>", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.ats_document.nil?
   # handle response
@@ -251,6 +259,7 @@ end
 | `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
 | `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Document                                                          |
 | `ats_document`                                                              | [::UnifiedRubySDK::Shared::AtsDocument](../../models/shared/atsdocument.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 

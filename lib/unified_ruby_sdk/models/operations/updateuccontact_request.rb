@@ -15,14 +15,17 @@ module UnifiedRubySDK
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
       # ID of the Contact
       field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
+      # Comma-delimited fields to return
+      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
       # A contact represents a person that optionally is associated with a call
       field :uc_contact, T.nilable(::UnifiedRubySDK::Shared::UcContact), { 'request': { 'media_type': 'application/json' } }
 
 
-      sig { params(connection_id: ::String, id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact)).void }
-      def initialize(connection_id: nil, id: nil, uc_contact: nil)
+      sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact)).void }
+      def initialize(connection_id: nil, id: nil, fields_: nil, uc_contact: nil)
         @connection_id = connection_id
         @id = id
+        @fields_ = fields_
         @uc_contact = uc_contact
       end
     end

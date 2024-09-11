@@ -19,13 +19,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, crm_pipeline: T.nilable(::UnifiedRubySDK::Shared::CrmPipeline)).returns(::UnifiedRubySDK::Operations::CreateCrmPipelineResponse) }
-    def create_crm_pipeline(connection_id, crm_pipeline = nil)
+    sig { params(connection_id: ::String, crm_pipeline: T.nilable(::UnifiedRubySDK::Shared::CrmPipeline), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCrmPipelineResponse) }
+    def create_crm_pipeline(connection_id, crm_pipeline = nil, fields_ = nil)
       # create_crm_pipeline - Create a pipeline
       request = ::UnifiedRubySDK::Operations::CreateCrmPipelineRequest.new(
         
         connection_id: connection_id,
-        crm_pipeline: crm_pipeline
+        crm_pipeline: crm_pipeline,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -38,11 +39,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_pipeline, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateCrmPipelineRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -148,14 +151,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_pipeline: T.nilable(::UnifiedRubySDK::Shared::CrmPipeline)).returns(::UnifiedRubySDK::Operations::PatchCrmPipelineResponse) }
-    def patch_crm_pipeline(connection_id, id, crm_pipeline = nil)
+    sig { params(connection_id: ::String, id: ::String, crm_pipeline: T.nilable(::UnifiedRubySDK::Shared::CrmPipeline), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCrmPipelineResponse) }
+    def patch_crm_pipeline(connection_id, id, crm_pipeline = nil, fields_ = nil)
       # patch_crm_pipeline - Update a pipeline
       request = ::UnifiedRubySDK::Operations::PatchCrmPipelineRequest.new(
         
         connection_id: connection_id,
         id: id,
-        crm_pipeline: crm_pipeline
+        crm_pipeline: crm_pipeline,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -168,11 +172,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_pipeline, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchCrmPipelineRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -233,14 +239,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_pipeline: T.nilable(::UnifiedRubySDK::Shared::CrmPipeline)).returns(::UnifiedRubySDK::Operations::UpdateCrmPipelineResponse) }
-    def update_crm_pipeline(connection_id, id, crm_pipeline = nil)
+    sig { params(connection_id: ::String, id: ::String, crm_pipeline: T.nilable(::UnifiedRubySDK::Shared::CrmPipeline), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCrmPipelineResponse) }
+    def update_crm_pipeline(connection_id, id, crm_pipeline = nil, fields_ = nil)
       # update_crm_pipeline - Update a pipeline
       request = ::UnifiedRubySDK::Operations::UpdateCrmPipelineRequest.new(
         
         connection_id: connection_id,
         id: id,
-        crm_pipeline: crm_pipeline
+        crm_pipeline: crm_pipeline,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -253,11 +260,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_pipeline, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateCrmPipelineRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)

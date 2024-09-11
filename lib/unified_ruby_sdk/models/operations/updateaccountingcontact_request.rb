@@ -17,13 +17,16 @@ module UnifiedRubySDK
       field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
 
       field :accounting_contact, T.nilable(::UnifiedRubySDK::Shared::AccountingContact), { 'request': { 'media_type': 'application/json' } }
+      # Comma-delimited fields to return
+      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, id: ::String, accounting_contact: T.nilable(::UnifiedRubySDK::Shared::AccountingContact)).void }
-      def initialize(connection_id: nil, id: nil, accounting_contact: nil)
+      sig { params(connection_id: ::String, id: ::String, accounting_contact: T.nilable(::UnifiedRubySDK::Shared::AccountingContact), fields_: T.nilable(T::Array[::String])).void }
+      def initialize(connection_id: nil, id: nil, accounting_contact: nil, fields_: nil)
         @connection_id = connection_id
         @id = id
         @accounting_contact = accounting_contact
+        @fields_ = fields_
       end
     end
   end

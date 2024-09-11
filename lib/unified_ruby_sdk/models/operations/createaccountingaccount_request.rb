@@ -15,12 +15,15 @@ module UnifiedRubySDK
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
       # Chart of accounts
       field :accounting_account, T.nilable(::UnifiedRubySDK::Shared::AccountingAccount), { 'request': { 'media_type': 'application/json' } }
+      # Comma-delimited fields to return
+      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, accounting_account: T.nilable(::UnifiedRubySDK::Shared::AccountingAccount)).void }
-      def initialize(connection_id: nil, accounting_account: nil)
+      sig { params(connection_id: ::String, accounting_account: T.nilable(::UnifiedRubySDK::Shared::AccountingAccount), fields_: T.nilable(T::Array[::String])).void }
+      def initialize(connection_id: nil, accounting_account: nil, fields_: nil)
         @connection_id = connection_id
         @accounting_account = accounting_account
+        @fields_ = fields_
       end
     end
   end

@@ -15,12 +15,15 @@ module UnifiedRubySDK
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
 
       field :ats_interview, T.nilable(::UnifiedRubySDK::Shared::AtsInterview), { 'request': { 'media_type': 'application/json' } }
+      # Comma-delimited fields to return
+      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, ats_interview: T.nilable(::UnifiedRubySDK::Shared::AtsInterview)).void }
-      def initialize(connection_id: nil, ats_interview: nil)
+      sig { params(connection_id: ::String, ats_interview: T.nilable(::UnifiedRubySDK::Shared::AtsInterview), fields_: T.nilable(T::Array[::String])).void }
+      def initialize(connection_id: nil, ats_interview: nil, fields_: nil)
         @connection_id = connection_id
         @ats_interview = ats_interview
+        @fields_ = fields_
       end
     end
   end

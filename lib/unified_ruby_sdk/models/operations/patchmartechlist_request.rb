@@ -15,14 +15,17 @@ module UnifiedRubySDK
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
       # ID of the List
       field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
+      # Comma-delimited fields to return
+      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
       # Mailing List
       field :marketing_list, T.nilable(::UnifiedRubySDK::Shared::MarketingList), { 'request': { 'media_type': 'application/json' } }
 
 
-      sig { params(connection_id: ::String, id: ::String, marketing_list: T.nilable(::UnifiedRubySDK::Shared::MarketingList)).void }
-      def initialize(connection_id: nil, id: nil, marketing_list: nil)
+      sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), marketing_list: T.nilable(::UnifiedRubySDK::Shared::MarketingList)).void }
+      def initialize(connection_id: nil, id: nil, fields_: nil, marketing_list: nil)
         @connection_id = connection_id
         @id = id
+        @fields_ = fields_
         @marketing_list = marketing_list
       end
     end

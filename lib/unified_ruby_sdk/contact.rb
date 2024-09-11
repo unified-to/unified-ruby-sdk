@@ -19,13 +19,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, accounting_contact: T.nilable(::UnifiedRubySDK::Shared::AccountingContact)).returns(::UnifiedRubySDK::Operations::CreateAccountingContactResponse) }
-    def create_accounting_contact(connection_id, accounting_contact = nil)
+    sig { params(connection_id: ::String, accounting_contact: T.nilable(::UnifiedRubySDK::Shared::AccountingContact), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateAccountingContactResponse) }
+    def create_accounting_contact(connection_id, accounting_contact = nil, fields_ = nil)
       # create_accounting_contact - Create a contact
       request = ::UnifiedRubySDK::Operations::CreateAccountingContactRequest.new(
         
         connection_id: connection_id,
-        accounting_contact: accounting_contact
+        accounting_contact: accounting_contact,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -38,11 +39,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :accounting_contact, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateAccountingContactRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -68,13 +71,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact)).returns(::UnifiedRubySDK::Operations::CreateCrmContactResponse) }
-    def create_crm_contact(connection_id, crm_contact = nil)
+    sig { params(connection_id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCrmContactResponse) }
+    def create_crm_contact(connection_id, crm_contact = nil, fields_ = nil)
       # create_crm_contact - Create a contact
       request = ::UnifiedRubySDK::Operations::CreateCrmContactRequest.new(
         
         connection_id: connection_id,
-        crm_contact: crm_contact
+        crm_contact: crm_contact,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -87,11 +91,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_contact, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateCrmContactRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -117,13 +123,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact)).returns(::UnifiedRubySDK::Operations::CreateUcContactResponse) }
-    def create_uc_contact(connection_id, uc_contact = nil)
+    sig { params(connection_id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateUcContactResponse) }
+    def create_uc_contact(connection_id, uc_contact = nil, fields_ = nil)
       # create_uc_contact - Create a contact
       request = ::UnifiedRubySDK::Operations::CreateUcContactRequest.new(
         
         connection_id: connection_id,
-        uc_contact: uc_contact
+        uc_contact: uc_contact,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -136,11 +143,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :uc_contact, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateUcContactRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -406,14 +415,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_contact: T.nilable(::UnifiedRubySDK::Shared::AccountingContact)).returns(::UnifiedRubySDK::Operations::PatchAccountingContactResponse) }
-    def patch_accounting_contact(connection_id, id, accounting_contact = nil)
+    sig { params(connection_id: ::String, id: ::String, accounting_contact: T.nilable(::UnifiedRubySDK::Shared::AccountingContact), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchAccountingContactResponse) }
+    def patch_accounting_contact(connection_id, id, accounting_contact = nil, fields_ = nil)
       # patch_accounting_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::PatchAccountingContactRequest.new(
         
         connection_id: connection_id,
         id: id,
-        accounting_contact: accounting_contact
+        accounting_contact: accounting_contact,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -426,11 +436,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :accounting_contact, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchAccountingContactRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -456,14 +468,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact)).returns(::UnifiedRubySDK::Operations::PatchCrmContactResponse) }
-    def patch_crm_contact(connection_id, id, crm_contact = nil)
+    sig { params(connection_id: ::String, id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCrmContactResponse) }
+    def patch_crm_contact(connection_id, id, crm_contact = nil, fields_ = nil)
       # patch_crm_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::PatchCrmContactRequest.new(
         
         connection_id: connection_id,
         id: id,
-        crm_contact: crm_contact
+        crm_contact: crm_contact,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -476,11 +489,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_contact, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchCrmContactRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -506,14 +521,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact)).returns(::UnifiedRubySDK::Operations::PatchUcContactResponse) }
-    def patch_uc_contact(connection_id, id, uc_contact = nil)
+    sig { params(connection_id: ::String, id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchUcContactResponse) }
+    def patch_uc_contact(connection_id, id, uc_contact = nil, fields_ = nil)
       # patch_uc_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::PatchUcContactRequest.new(
         
         connection_id: connection_id,
         id: id,
-        uc_contact: uc_contact
+        uc_contact: uc_contact,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -526,11 +542,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :uc_contact, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchUcContactRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -661,14 +679,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_contact: T.nilable(::UnifiedRubySDK::Shared::AccountingContact)).returns(::UnifiedRubySDK::Operations::UpdateAccountingContactResponse) }
-    def update_accounting_contact(connection_id, id, accounting_contact = nil)
+    sig { params(connection_id: ::String, id: ::String, accounting_contact: T.nilable(::UnifiedRubySDK::Shared::AccountingContact), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateAccountingContactResponse) }
+    def update_accounting_contact(connection_id, id, accounting_contact = nil, fields_ = nil)
       # update_accounting_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::UpdateAccountingContactRequest.new(
         
         connection_id: connection_id,
         id: id,
-        accounting_contact: accounting_contact
+        accounting_contact: accounting_contact,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -681,11 +700,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :accounting_contact, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateAccountingContactRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -711,14 +732,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact)).returns(::UnifiedRubySDK::Operations::UpdateCrmContactResponse) }
-    def update_crm_contact(connection_id, id, crm_contact = nil)
+    sig { params(connection_id: ::String, id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCrmContactResponse) }
+    def update_crm_contact(connection_id, id, crm_contact = nil, fields_ = nil)
       # update_crm_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::UpdateCrmContactRequest.new(
         
         connection_id: connection_id,
         id: id,
-        crm_contact: crm_contact
+        crm_contact: crm_contact,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -731,11 +753,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_contact, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateCrmContactRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -761,14 +785,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact)).returns(::UnifiedRubySDK::Operations::UpdateUcContactResponse) }
-    def update_uc_contact(connection_id, id, uc_contact = nil)
+    sig { params(connection_id: ::String, id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateUcContactResponse) }
+    def update_uc_contact(connection_id, id, uc_contact = nil, fields_ = nil)
       # update_uc_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::UpdateUcContactRequest.new(
         
         connection_id: connection_id,
         id: id,
-        uc_contact: uc_contact
+        uc_contact: uc_contact,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -781,11 +806,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :uc_contact, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateUcContactRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)

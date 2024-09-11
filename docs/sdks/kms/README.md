@@ -41,7 +41,9 @@ res = s.kms.create_kms_page(connection_id="<value>", kms_page=::UnifiedRubySDK::
     space_id: "<value>",
     title: "<value>",
     type: ::UnifiedRubySDK::Shared::KmsPageType::HTML,
-  ))
+  ), fields_=[
+    "<value>",
+  ])
 
 if ! res.kms_page.nil?
   # handle response
@@ -55,6 +57,7 @@ end
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
 | `kms_page`                                                          | [::UnifiedRubySDK::Shared::KmsPage](../../models/shared/kmspage.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 
@@ -84,7 +87,9 @@ s.config_security(
 res = s.kms.create_kms_space(connection_id="<value>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
     id: "<id>",
     name: "<value>",
-  ))
+  ), fields_=[
+    "<value>",
+  ])
 
 if ! res.kms_space.nil?
   # handle response
@@ -98,6 +103,7 @@ end
 | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
 | `kms_space`                                                           | [::UnifiedRubySDK::Shared::KmsSpace](../../models/shared/kmsspace.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `fields_`                                                             | T::Array<*::String*>                                                  | :heavy_minus_sign:                                                    | Comma-delimited fields to return                                      |
 
 ### Response
 
@@ -302,7 +308,9 @@ res = s.kms.patch_kms_page(connection_id="<value>", id="<value>", kms_page=::Uni
     space_id: "<value>",
     title: "<value>",
     type: ::UnifiedRubySDK::Shared::KmsPageType::TEXT,
-  ))
+  ), fields_=[
+    "<value>",
+  ])
 
 if ! res.kms_page.nil?
   # handle response
@@ -317,6 +325,7 @@ end
 | `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
 | `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Page                                                      |
 | `kms_page`                                                          | [::UnifiedRubySDK::Shared::KmsPage](../../models/shared/kmspage.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 
@@ -346,7 +355,9 @@ s.config_security(
 res = s.kms.patch_kms_space(connection_id="<value>", id="<value>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
     id: "<id>",
     name: "<value>",
-  ))
+  ), fields_=[
+    "<value>",
+  ])
 
 if ! res.kms_space.nil?
   # handle response
@@ -361,6 +372,7 @@ end
 | `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
 | `id`                                                                  | *::String*                                                            | :heavy_check_mark:                                                    | ID of the Space                                                       |
 | `kms_space`                                                           | [::UnifiedRubySDK::Shared::KmsSpace](../../models/shared/kmsspace.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `fields_`                                                             | T::Array<*::String*>                                                  | :heavy_minus_sign:                                                    | Comma-delimited fields to return                                      |
 
 ### Response
 
@@ -473,7 +485,9 @@ res = s.kms.update_kms_page(connection_id="<value>", id="<value>", kms_page=::Un
     space_id: "<value>",
     title: "<value>",
     type: ::UnifiedRubySDK::Shared::KmsPageType::TEXT,
-  ))
+  ), fields_=[
+    "<value>",
+  ])
 
 if ! res.kms_page.nil?
   # handle response
@@ -488,6 +502,7 @@ end
 | `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
 | `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Page                                                      |
 | `kms_page`                                                          | [::UnifiedRubySDK::Shared::KmsPage](../../models/shared/kmspage.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 
@@ -517,7 +532,9 @@ s.config_security(
 res = s.kms.update_kms_space(connection_id="<value>", id="<value>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
     id: "<id>",
     name: "<value>",
-  ))
+  ), fields_=[
+    "<value>",
+  ])
 
 if ! res.kms_space.nil?
   # handle response
@@ -532,6 +549,7 @@ end
 | `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
 | `id`                                                                  | *::String*                                                            | :heavy_check_mark:                                                    | ID of the Space                                                       |
 | `kms_space`                                                           | [::UnifiedRubySDK::Shared::KmsSpace](../../models/shared/kmsspace.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `fields_`                                                             | T::Array<*::String*>                                                  | :heavy_minus_sign:                                                    | Comma-delimited fields to return                                      |
 
 ### Response
 

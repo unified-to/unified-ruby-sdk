@@ -29,7 +29,9 @@ s.config_security(
 )
 
     
-res = s.job.create_ats_job(connection_id="<value>", ats_job=::UnifiedRubySDK::Shared::AtsJob.new())
+res = s.job.create_ats_job(connection_id="<value>", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.ats_job.nil?
   # handle response
@@ -43,6 +45,7 @@ end
 | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
 | `connection_id`                                                   | *::String*                                                        | :heavy_check_mark:                                                | ID of the connection                                              |
 | `ats_job`                                                         | [::UnifiedRubySDK::Shared::AtsJob](../../models/shared/atsjob.md) | :heavy_minus_sign:                                                | N/A                                                               |
+| `fields_`                                                         | T::Array<*::String*>                                              | :heavy_minus_sign:                                                | Comma-delimited fields to return                                  |
 
 ### Response
 
@@ -155,7 +158,9 @@ s.config_security(
 )
 
     
-res = s.job.patch_ats_job(connection_id="<value>", id="<value>", ats_job=::UnifiedRubySDK::Shared::AtsJob.new())
+res = s.job.patch_ats_job(connection_id="<value>", id="<value>", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.ats_job.nil?
   # handle response
@@ -170,6 +175,7 @@ end
 | `connection_id`                                                   | *::String*                                                        | :heavy_check_mark:                                                | ID of the connection                                              |
 | `id`                                                              | *::String*                                                        | :heavy_check_mark:                                                | ID of the Job                                                     |
 | `ats_job`                                                         | [::UnifiedRubySDK::Shared::AtsJob](../../models/shared/atsjob.md) | :heavy_minus_sign:                                                | N/A                                                               |
+| `fields_`                                                         | T::Array<*::String*>                                              | :heavy_minus_sign:                                                | Comma-delimited fields to return                                  |
 
 ### Response
 
@@ -236,7 +242,9 @@ s.config_security(
 )
 
     
-res = s.job.update_ats_job(connection_id="<value>", id="<value>", ats_job=::UnifiedRubySDK::Shared::AtsJob.new())
+res = s.job.update_ats_job(connection_id="<value>", id="<value>", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.ats_job.nil?
   # handle response
@@ -251,6 +259,7 @@ end
 | `connection_id`                                                   | *::String*                                                        | :heavy_check_mark:                                                | ID of the connection                                              |
 | `id`                                                              | *::String*                                                        | :heavy_check_mark:                                                | ID of the Job                                                     |
 | `ats_job`                                                         | [::UnifiedRubySDK::Shared::AtsJob](../../models/shared/atsjob.md) | :heavy_minus_sign:                                                | N/A                                                               |
+| `fields_`                                                         | T::Array<*::String*>                                              | :heavy_minus_sign:                                                | Comma-delimited fields to return                                  |
 
 ### Response
 

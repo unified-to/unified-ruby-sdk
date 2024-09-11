@@ -29,7 +29,9 @@ s.config_security(
 )
 
     
-res = s.deal.create_crm_deal(connection_id="<value>", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new())
+res = s.deal.create_crm_deal(connection_id="<value>", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.crm_deal.nil?
   # handle response
@@ -43,6 +45,7 @@ end
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
 | `crm_deal`                                                          | [::UnifiedRubySDK::Shared::CrmDeal](../../models/shared/crmdeal.md) | :heavy_minus_sign:                                                  | A deal represents an opportunity with companies and/or contacts     |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 
@@ -155,7 +158,9 @@ s.config_security(
 )
 
     
-res = s.deal.patch_crm_deal(connection_id="<value>", id="<value>", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new())
+res = s.deal.patch_crm_deal(connection_id="<value>", id="<value>", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.crm_deal.nil?
   # handle response
@@ -170,6 +175,7 @@ end
 | `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
 | `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Deal                                                      |
 | `crm_deal`                                                          | [::UnifiedRubySDK::Shared::CrmDeal](../../models/shared/crmdeal.md) | :heavy_minus_sign:                                                  | A deal represents an opportunity with companies and/or contacts     |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 
@@ -236,7 +242,9 @@ s.config_security(
 )
 
     
-res = s.deal.update_crm_deal(connection_id="<value>", id="<value>", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new())
+res = s.deal.update_crm_deal(connection_id="<value>", id="<value>", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.crm_deal.nil?
   # handle response
@@ -251,6 +259,7 @@ end
 | `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
 | `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Deal                                                      |
 | `crm_deal`                                                          | [::UnifiedRubySDK::Shared::CrmDeal](../../models/shared/crmdeal.md) | :heavy_minus_sign:                                                  | A deal represents an opportunity with companies and/or contacts     |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 

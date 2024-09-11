@@ -19,13 +19,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, genai_prompt: T.nilable(::UnifiedRubySDK::Shared::GenaiPrompt)).returns(::UnifiedRubySDK::Operations::CreateGenaiPromptResponse) }
-    def create_genai_prompt(connection_id, genai_prompt = nil)
+    sig { params(connection_id: ::String, genai_prompt: T.nilable(::UnifiedRubySDK::Shared::GenaiPrompt), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateGenaiPromptResponse) }
+    def create_genai_prompt(connection_id, genai_prompt = nil, fields_ = nil)
       # create_genai_prompt - Create a prompt
       request = ::UnifiedRubySDK::Operations::CreateGenaiPromptRequest.new(
         
         connection_id: connection_id,
-        genai_prompt: genai_prompt
+        genai_prompt: genai_prompt,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -38,11 +39,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :genai_prompt, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateGenaiPromptRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)

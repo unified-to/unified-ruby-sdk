@@ -39,7 +39,9 @@ s.config_security(
 )
 
     
-res = s.payment.create_payment_link(connection_id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new())
+res = s.payment.create_payment_link(connection_id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.payment_link.nil?
   # handle response
@@ -53,6 +55,7 @@ end
 | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
 | `payment_link`                                                              | [::UnifiedRubySDK::Shared::PaymentLink](../../models/shared/paymentlink.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -79,7 +82,9 @@ s.config_security(
 )
 
     
-res = s.payment.create_payment_payment(connection_id="<value>", payment_payment=::UnifiedRubySDK::Shared::PaymentPayment.new())
+res = s.payment.create_payment_payment(connection_id="<value>", payment_payment=::UnifiedRubySDK::Shared::PaymentPayment.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.payment_payment.nil?
   # handle response
@@ -93,6 +98,7 @@ end
 | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
 | `connection_id`                                                                   | *::String*                                                                        | :heavy_check_mark:                                                                | ID of the connection                                                              |
 | `payment_payment`                                                                 | [::UnifiedRubySDK::Shared::PaymentPayment](../../models/shared/paymentpayment.md) | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `fields_`                                                                         | T::Array<*::String*>                                                              | :heavy_minus_sign:                                                                | Comma-delimited fields to return                                                  |
 
 ### Response
 
@@ -463,7 +469,9 @@ s.config_security(
 )
 
     
-res = s.payment.patch_payment_link(connection_id="<value>", id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new())
+res = s.payment.patch_payment_link(connection_id="<value>", id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.payment_link.nil?
   # handle response
@@ -478,6 +486,7 @@ end
 | `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
 | `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Link                                                              |
 | `payment_link`                                                              | [::UnifiedRubySDK::Shared::PaymentLink](../../models/shared/paymentlink.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -504,7 +513,9 @@ s.config_security(
 )
 
     
-res = s.payment.patch_payment_payment(connection_id="<value>", id="<value>", payment_payment=::UnifiedRubySDK::Shared::PaymentPayment.new())
+res = s.payment.patch_payment_payment(connection_id="<value>", id="<value>", payment_payment=::UnifiedRubySDK::Shared::PaymentPayment.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.payment_payment.nil?
   # handle response
@@ -519,6 +530,7 @@ end
 | `connection_id`                                                                   | *::String*                                                                        | :heavy_check_mark:                                                                | ID of the connection                                                              |
 | `id`                                                                              | *::String*                                                                        | :heavy_check_mark:                                                                | ID of the Payment                                                                 |
 | `payment_payment`                                                                 | [::UnifiedRubySDK::Shared::PaymentPayment](../../models/shared/paymentpayment.md) | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `fields_`                                                                         | T::Array<*::String*>                                                              | :heavy_minus_sign:                                                                | Comma-delimited fields to return                                                  |
 
 ### Response
 
@@ -625,7 +637,9 @@ s.config_security(
 )
 
     
-res = s.payment.update_payment_link(connection_id="<value>", id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new())
+res = s.payment.update_payment_link(connection_id="<value>", id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.payment_link.nil?
   # handle response
@@ -640,6 +654,7 @@ end
 | `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
 | `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Link                                                              |
 | `payment_link`                                                              | [::UnifiedRubySDK::Shared::PaymentLink](../../models/shared/paymentlink.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -666,7 +681,9 @@ s.config_security(
 )
 
     
-res = s.payment.update_payment_payment(connection_id="<value>", id="<value>", payment_payment=::UnifiedRubySDK::Shared::PaymentPayment.new())
+res = s.payment.update_payment_payment(connection_id="<value>", id="<value>", payment_payment=::UnifiedRubySDK::Shared::PaymentPayment.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.payment_payment.nil?
   # handle response
@@ -681,6 +698,7 @@ end
 | `connection_id`                                                                   | *::String*                                                                        | :heavy_check_mark:                                                                | ID of the connection                                                              |
 | `id`                                                                              | *::String*                                                                        | :heavy_check_mark:                                                                | ID of the Payment                                                                 |
 | `payment_payment`                                                                 | [::UnifiedRubySDK::Shared::PaymentPayment](../../models/shared/paymentpayment.md) | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `fields_`                                                                         | T::Array<*::String*>                                                              | :heavy_minus_sign:                                                                | Comma-delimited fields to return                                                  |
 
 ### Response
 

@@ -29,7 +29,9 @@ s.config_security(
 )
 
     
-res = s.lead.create_crm_lead(connection_id="<value>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new())
+res = s.lead.create_crm_lead(connection_id="<value>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.crm_lead.nil?
   # handle response
@@ -43,6 +45,7 @@ end
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
 | `crm_lead`                                                          | [::UnifiedRubySDK::Shared::CrmLead](../../models/shared/crmlead.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 
@@ -155,7 +158,9 @@ s.config_security(
 )
 
     
-res = s.lead.patch_crm_lead(connection_id="<value>", id="<value>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new())
+res = s.lead.patch_crm_lead(connection_id="<value>", id="<value>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.crm_lead.nil?
   # handle response
@@ -170,6 +175,7 @@ end
 | `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
 | `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Lead                                                      |
 | `crm_lead`                                                          | [::UnifiedRubySDK::Shared::CrmLead](../../models/shared/crmlead.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 
@@ -236,7 +242,9 @@ s.config_security(
 )
 
     
-res = s.lead.update_crm_lead(connection_id="<value>", id="<value>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new())
+res = s.lead.update_crm_lead(connection_id="<value>", id="<value>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.crm_lead.nil?
   # handle response
@@ -251,6 +259,7 @@ end
 | `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
 | `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Lead                                                      |
 | `crm_lead`                                                          | [::UnifiedRubySDK::Shared::CrmLead](../../models/shared/crmlead.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 

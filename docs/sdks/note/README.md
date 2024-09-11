@@ -29,7 +29,9 @@ s.config_security(
 )
 
     
-res = s.note.create_ticketing_note(connection_id="<value>", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new())
+res = s.note.create_ticketing_note(connection_id="<value>", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.ticketing_note.nil?
   # handle response
@@ -43,6 +45,7 @@ end
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | `connection_id`                                                                 | *::String*                                                                      | :heavy_check_mark:                                                              | ID of the connection                                                            |
 | `ticketing_note`                                                                | [::UnifiedRubySDK::Shared::TicketingNote](../../models/shared/ticketingnote.md) | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `fields_`                                                                       | T::Array<*::String*>                                                            | :heavy_minus_sign:                                                              | Comma-delimited fields to return                                                |
 
 ### Response
 
@@ -155,7 +158,9 @@ s.config_security(
 )
 
     
-res = s.note.patch_ticketing_note(connection_id="<value>", id="<value>", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new())
+res = s.note.patch_ticketing_note(connection_id="<value>", id="<value>", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.ticketing_note.nil?
   # handle response
@@ -170,6 +175,7 @@ end
 | `connection_id`                                                                 | *::String*                                                                      | :heavy_check_mark:                                                              | ID of the connection                                                            |
 | `id`                                                                            | *::String*                                                                      | :heavy_check_mark:                                                              | ID of the Note                                                                  |
 | `ticketing_note`                                                                | [::UnifiedRubySDK::Shared::TicketingNote](../../models/shared/ticketingnote.md) | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `fields_`                                                                       | T::Array<*::String*>                                                            | :heavy_minus_sign:                                                              | Comma-delimited fields to return                                                |
 
 ### Response
 
@@ -236,7 +242,9 @@ s.config_security(
 )
 
     
-res = s.note.update_ticketing_note(connection_id="<value>", id="<value>", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new())
+res = s.note.update_ticketing_note(connection_id="<value>", id="<value>", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.ticketing_note.nil?
   # handle response
@@ -251,6 +259,7 @@ end
 | `connection_id`                                                                 | *::String*                                                                      | :heavy_check_mark:                                                              | ID of the connection                                                            |
 | `id`                                                                            | *::String*                                                                      | :heavy_check_mark:                                                              | ID of the Note                                                                  |
 | `ticketing_note`                                                                | [::UnifiedRubySDK::Shared::TicketingNote](../../models/shared/ticketingnote.md) | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `fields_`                                                                       | T::Array<*::String*>                                                            | :heavy_minus_sign:                                                              | Comma-delimited fields to return                                                |
 
 ### Response
 

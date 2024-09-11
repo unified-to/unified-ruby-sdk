@@ -29,7 +29,9 @@ s.config_security(
 )
 
     
-res = s.transaction.create_accounting_transaction(connection_id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new())
+res = s.transaction.create_accounting_transaction(connection_id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.accounting_transaction.nil?
   # handle response
@@ -43,6 +45,7 @@ end
 | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | `connection_id`                                                                                 | *::String*                                                                                      | :heavy_check_mark:                                                                              | ID of the connection                                                                            |
 | `accounting_transaction`                                                                        | [::UnifiedRubySDK::Shared::AccountingTransaction](../../models/shared/accountingtransaction.md) | :heavy_minus_sign:                                                                              | N/A                                                                                             |
+| `fields_`                                                                                       | T::Array<*::String*>                                                                            | :heavy_minus_sign:                                                                              | Comma-delimited fields to return                                                                |
 
 ### Response
 
@@ -155,7 +158,9 @@ s.config_security(
 )
 
     
-res = s.transaction.patch_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new())
+res = s.transaction.patch_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.accounting_transaction.nil?
   # handle response
@@ -170,6 +175,7 @@ end
 | `connection_id`                                                                                 | *::String*                                                                                      | :heavy_check_mark:                                                                              | ID of the connection                                                                            |
 | `id`                                                                                            | *::String*                                                                                      | :heavy_check_mark:                                                                              | ID of the Transaction                                                                           |
 | `accounting_transaction`                                                                        | [::UnifiedRubySDK::Shared::AccountingTransaction](../../models/shared/accountingtransaction.md) | :heavy_minus_sign:                                                                              | N/A                                                                                             |
+| `fields_`                                                                                       | T::Array<*::String*>                                                                            | :heavy_minus_sign:                                                                              | Comma-delimited fields to return                                                                |
 
 ### Response
 
@@ -236,7 +242,9 @@ s.config_security(
 )
 
     
-res = s.transaction.update_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new())
+res = s.transaction.update_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.accounting_transaction.nil?
   # handle response
@@ -251,6 +259,7 @@ end
 | `connection_id`                                                                                 | *::String*                                                                                      | :heavy_check_mark:                                                                              | ID of the connection                                                                            |
 | `id`                                                                                            | *::String*                                                                                      | :heavy_check_mark:                                                                              | ID of the Transaction                                                                           |
 | `accounting_transaction`                                                                        | [::UnifiedRubySDK::Shared::AccountingTransaction](../../models/shared/accountingtransaction.md) | :heavy_minus_sign:                                                                              | N/A                                                                                             |
+| `fields_`                                                                                       | T::Array<*::String*>                                                                            | :heavy_minus_sign:                                                                              | Comma-delimited fields to return                                                                |
 
 ### Response
 

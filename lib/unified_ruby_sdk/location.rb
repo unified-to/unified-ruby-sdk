@@ -19,13 +19,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation)).returns(::UnifiedRubySDK::Operations::CreateCommerceLocationResponse) }
-    def create_commerce_location(connection_id, commerce_location = nil)
+    sig { params(connection_id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCommerceLocationResponse) }
+    def create_commerce_location(connection_id, commerce_location = nil, fields_ = nil)
       # create_commerce_location - Create a location
       request = ::UnifiedRubySDK::Operations::CreateCommerceLocationRequest.new(
         
         connection_id: connection_id,
-        commerce_location: commerce_location
+        commerce_location: commerce_location,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -38,11 +39,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_location, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateCommerceLocationRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -68,13 +71,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, hris_location: T.nilable(::UnifiedRubySDK::Shared::HrisLocation)).returns(::UnifiedRubySDK::Operations::CreateHrisLocationResponse) }
-    def create_hris_location(connection_id, hris_location = nil)
+    sig { params(connection_id: ::String, hris_location: T.nilable(::UnifiedRubySDK::Shared::HrisLocation), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateHrisLocationResponse) }
+    def create_hris_location(connection_id, hris_location = nil, fields_ = nil)
       # create_hris_location - Create a location
       request = ::UnifiedRubySDK::Operations::CreateHrisLocationRequest.new(
         
         connection_id: connection_id,
-        hris_location: hris_location
+        hris_location: hris_location,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -87,11 +91,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :hris_location, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateHrisLocationRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -277,14 +283,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation)).returns(::UnifiedRubySDK::Operations::PatchCommerceLocationResponse) }
-    def patch_commerce_location(connection_id, id, commerce_location = nil)
+    sig { params(connection_id: ::String, id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCommerceLocationResponse) }
+    def patch_commerce_location(connection_id, id, commerce_location = nil, fields_ = nil)
       # patch_commerce_location - Update a location
       request = ::UnifiedRubySDK::Operations::PatchCommerceLocationRequest.new(
         
         connection_id: connection_id,
         id: id,
-        commerce_location: commerce_location
+        commerce_location: commerce_location,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -297,11 +304,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_location, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchCommerceLocationRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -327,14 +336,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, hris_location: T.nilable(::UnifiedRubySDK::Shared::HrisLocation)).returns(::UnifiedRubySDK::Operations::PatchHrisLocationResponse) }
-    def patch_hris_location(connection_id, id, hris_location = nil)
+    sig { params(connection_id: ::String, id: ::String, hris_location: T.nilable(::UnifiedRubySDK::Shared::HrisLocation), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchHrisLocationResponse) }
+    def patch_hris_location(connection_id, id, hris_location = nil, fields_ = nil)
       # patch_hris_location - Update a location
       request = ::UnifiedRubySDK::Operations::PatchHrisLocationRequest.new(
         
         connection_id: connection_id,
         id: id,
-        hris_location: hris_location
+        hris_location: hris_location,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -347,11 +357,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :hris_location, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchHrisLocationRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -447,14 +459,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation)).returns(::UnifiedRubySDK::Operations::UpdateCommerceLocationResponse) }
-    def update_commerce_location(connection_id, id, commerce_location = nil)
+    sig { params(connection_id: ::String, id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCommerceLocationResponse) }
+    def update_commerce_location(connection_id, id, commerce_location = nil, fields_ = nil)
       # update_commerce_location - Update a location
       request = ::UnifiedRubySDK::Operations::UpdateCommerceLocationRequest.new(
         
         connection_id: connection_id,
         id: id,
-        commerce_location: commerce_location
+        commerce_location: commerce_location,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -467,11 +480,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_location, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateCommerceLocationRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -497,14 +512,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, hris_location: T.nilable(::UnifiedRubySDK::Shared::HrisLocation)).returns(::UnifiedRubySDK::Operations::UpdateHrisLocationResponse) }
-    def update_hris_location(connection_id, id, hris_location = nil)
+    sig { params(connection_id: ::String, id: ::String, hris_location: T.nilable(::UnifiedRubySDK::Shared::HrisLocation), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateHrisLocationResponse) }
+    def update_hris_location(connection_id, id, hris_location = nil, fields_ = nil)
       # update_hris_location - Update a location
       request = ::UnifiedRubySDK::Operations::UpdateHrisLocationRequest.new(
         
         connection_id: connection_id,
         id: id,
-        hris_location: hris_location
+        hris_location: hris_location,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -517,11 +533,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :hris_location, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateHrisLocationRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)

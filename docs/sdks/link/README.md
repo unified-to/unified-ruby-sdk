@@ -29,7 +29,9 @@ s.config_security(
 )
 
     
-res = s.link.create_payment_link(connection_id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new())
+res = s.link.create_payment_link(connection_id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.payment_link.nil?
   # handle response
@@ -43,6 +45,7 @@ end
 | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
 | `payment_link`                                                              | [::UnifiedRubySDK::Shared::PaymentLink](../../models/shared/paymentlink.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -155,7 +158,9 @@ s.config_security(
 )
 
     
-res = s.link.patch_payment_link(connection_id="<value>", id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new())
+res = s.link.patch_payment_link(connection_id="<value>", id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.payment_link.nil?
   # handle response
@@ -170,6 +175,7 @@ end
 | `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
 | `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Link                                                              |
 | `payment_link`                                                              | [::UnifiedRubySDK::Shared::PaymentLink](../../models/shared/paymentlink.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -236,7 +242,9 @@ s.config_security(
 )
 
     
-res = s.link.update_payment_link(connection_id="<value>", id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new())
+res = s.link.update_payment_link(connection_id="<value>", id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.payment_link.nil?
   # handle response
@@ -251,6 +259,7 @@ end
 | `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
 | `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Link                                                              |
 | `payment_link`                                                              | [::UnifiedRubySDK::Shared::PaymentLink](../../models/shared/paymentlink.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 

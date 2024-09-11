@@ -19,13 +19,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal)).returns(::UnifiedRubySDK::Operations::CreateCrmDealResponse) }
-    def create_crm_deal(connection_id, crm_deal = nil)
+    sig { params(connection_id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCrmDealResponse) }
+    def create_crm_deal(connection_id, crm_deal = nil, fields_ = nil)
       # create_crm_deal - Create a deal
       request = ::UnifiedRubySDK::Operations::CreateCrmDealRequest.new(
         
         connection_id: connection_id,
-        crm_deal: crm_deal
+        crm_deal: crm_deal,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -38,11 +39,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_deal, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateCrmDealRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -148,14 +151,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal)).returns(::UnifiedRubySDK::Operations::PatchCrmDealResponse) }
-    def patch_crm_deal(connection_id, id, crm_deal = nil)
+    sig { params(connection_id: ::String, id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCrmDealResponse) }
+    def patch_crm_deal(connection_id, id, crm_deal = nil, fields_ = nil)
       # patch_crm_deal - Update a deal
       request = ::UnifiedRubySDK::Operations::PatchCrmDealRequest.new(
         
         connection_id: connection_id,
         id: id,
-        crm_deal: crm_deal
+        crm_deal: crm_deal,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -168,11 +172,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_deal, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchCrmDealRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -233,14 +239,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal)).returns(::UnifiedRubySDK::Operations::UpdateCrmDealResponse) }
-    def update_crm_deal(connection_id, id, crm_deal = nil)
+    sig { params(connection_id: ::String, id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCrmDealResponse) }
+    def update_crm_deal(connection_id, id, crm_deal = nil, fields_ = nil)
       # update_crm_deal - Update a deal
       request = ::UnifiedRubySDK::Operations::UpdateCrmDealRequest.new(
         
         connection_id: connection_id,
         id: id,
-        crm_deal: crm_deal
+        crm_deal: crm_deal,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -253,11 +260,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_deal, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateCrmDealRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)

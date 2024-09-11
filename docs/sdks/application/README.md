@@ -29,7 +29,9 @@ s.config_security(
 )
 
     
-res = s.application.create_ats_application(connection_id="<value>", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new())
+res = s.application.create_ats_application(connection_id="<value>", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.ats_application.nil?
   # handle response
@@ -43,6 +45,7 @@ end
 | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
 | `connection_id`                                                                   | *::String*                                                                        | :heavy_check_mark:                                                                | ID of the connection                                                              |
 | `ats_application`                                                                 | [::UnifiedRubySDK::Shared::AtsApplication](../../models/shared/atsapplication.md) | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `fields_`                                                                         | T::Array<*::String*>                                                              | :heavy_minus_sign:                                                                | Comma-delimited fields to return                                                  |
 
 ### Response
 
@@ -155,7 +158,9 @@ s.config_security(
 )
 
     
-res = s.application.patch_ats_application(connection_id="<value>", id="<value>", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new())
+res = s.application.patch_ats_application(connection_id="<value>", id="<value>", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.ats_application.nil?
   # handle response
@@ -170,6 +175,7 @@ end
 | `connection_id`                                                                   | *::String*                                                                        | :heavy_check_mark:                                                                | ID of the connection                                                              |
 | `id`                                                                              | *::String*                                                                        | :heavy_check_mark:                                                                | ID of the Application                                                             |
 | `ats_application`                                                                 | [::UnifiedRubySDK::Shared::AtsApplication](../../models/shared/atsapplication.md) | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `fields_`                                                                         | T::Array<*::String*>                                                              | :heavy_minus_sign:                                                                | Comma-delimited fields to return                                                  |
 
 ### Response
 
@@ -236,7 +242,9 @@ s.config_security(
 )
 
     
-res = s.application.update_ats_application(connection_id="<value>", id="<value>", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new())
+res = s.application.update_ats_application(connection_id="<value>", id="<value>", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.ats_application.nil?
   # handle response
@@ -251,6 +259,7 @@ end
 | `connection_id`                                                                   | *::String*                                                                        | :heavy_check_mark:                                                                | ID of the connection                                                              |
 | `id`                                                                              | *::String*                                                                        | :heavy_check_mark:                                                                | ID of the Application                                                             |
 | `ats_application`                                                                 | [::UnifiedRubySDK::Shared::AtsApplication](../../models/shared/atsapplication.md) | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `fields_`                                                                         | T::Array<*::String*>                                                              | :heavy_minus_sign:                                                                | Comma-delimited fields to return                                                  |
 
 ### Response
 

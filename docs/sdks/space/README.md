@@ -32,7 +32,9 @@ s.config_security(
 res = s.space.create_kms_space(connection_id="<value>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
     id: "<id>",
     name: "<value>",
-  ))
+  ), fields_=[
+    "<value>",
+  ])
 
 if ! res.kms_space.nil?
   # handle response
@@ -46,6 +48,7 @@ end
 | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
 | `kms_space`                                                           | [::UnifiedRubySDK::Shared::KmsSpace](../../models/shared/kmsspace.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `fields_`                                                             | T::Array<*::String*>                                                  | :heavy_minus_sign:                                                    | Comma-delimited fields to return                                      |
 
 ### Response
 
@@ -161,7 +164,9 @@ s.config_security(
 res = s.space.patch_kms_space(connection_id="<value>", id="<value>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
     id: "<id>",
     name: "<value>",
-  ))
+  ), fields_=[
+    "<value>",
+  ])
 
 if ! res.kms_space.nil?
   # handle response
@@ -176,6 +181,7 @@ end
 | `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
 | `id`                                                                  | *::String*                                                            | :heavy_check_mark:                                                    | ID of the Space                                                       |
 | `kms_space`                                                           | [::UnifiedRubySDK::Shared::KmsSpace](../../models/shared/kmsspace.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `fields_`                                                             | T::Array<*::String*>                                                  | :heavy_minus_sign:                                                    | Comma-delimited fields to return                                      |
 
 ### Response
 
@@ -245,7 +251,9 @@ s.config_security(
 res = s.space.update_kms_space(connection_id="<value>", id="<value>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
     id: "<id>",
     name: "<value>",
-  ))
+  ), fields_=[
+    "<value>",
+  ])
 
 if ! res.kms_space.nil?
   # handle response
@@ -260,6 +268,7 @@ end
 | `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
 | `id`                                                                  | *::String*                                                            | :heavy_check_mark:                                                    | ID of the Space                                                       |
 | `kms_space`                                                           | [::UnifiedRubySDK::Shared::KmsSpace](../../models/shared/kmsspace.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `fields_`                                                             | T::Array<*::String*>                                                  | :heavy_minus_sign:                                                    | Comma-delimited fields to return                                      |
 
 ### Response
 

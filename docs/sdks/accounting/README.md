@@ -61,7 +61,9 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_account(connection_id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new())
+res = s.accounting.create_accounting_account(connection_id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.accounting_account.nil?
   # handle response
@@ -75,6 +77,7 @@ end
 | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
 | `accounting_account`                                                                    | [::UnifiedRubySDK::Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                                      | Chart of accounts                                                                       |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -101,7 +104,9 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_contact(connection_id="<value>", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new())
+res = s.accounting.create_accounting_contact(connection_id="<value>", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.accounting_contact.nil?
   # handle response
@@ -115,6 +120,7 @@ end
 | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
 | `accounting_contact`                                                                    | [::UnifiedRubySDK::Shared::AccountingContact](../../models/shared/accountingcontact.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -141,7 +147,9 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_invoice(connection_id="<value>", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new())
+res = s.accounting.create_accounting_invoice(connection_id="<value>", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.accounting_invoice.nil?
   # handle response
@@ -155,6 +163,7 @@ end
 | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
 | `accounting_invoice`                                                                    | [::UnifiedRubySDK::Shared::AccountingInvoice](../../models/shared/accountinginvoice.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -181,7 +190,9 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_journal(connection_id="<value>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new())
+res = s.accounting.create_accounting_journal(connection_id="<value>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.accounting_journal.nil?
   # handle response
@@ -195,6 +206,7 @@ end
 | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
 | `accounting_journal`                                                                    | [::UnifiedRubySDK::Shared::AccountingJournal](../../models/shared/accountingjournal.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -221,7 +233,9 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_taxrate(connection_id="<value>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new())
+res = s.accounting.create_accounting_taxrate(connection_id="<value>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.accounting_taxrate.nil?
   # handle response
@@ -235,6 +249,7 @@ end
 | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
 | `accounting_taxrate`                                                                    | [::UnifiedRubySDK::Shared::AccountingTaxrate](../../models/shared/accountingtaxrate.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -261,7 +276,9 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_transaction(connection_id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new())
+res = s.accounting.create_accounting_transaction(connection_id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.accounting_transaction.nil?
   # handle response
@@ -275,6 +292,7 @@ end
 | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | `connection_id`                                                                                 | *::String*                                                                                      | :heavy_check_mark:                                                                              | ID of the connection                                                                            |
 | `accounting_transaction`                                                                        | [::UnifiedRubySDK::Shared::AccountingTransaction](../../models/shared/accountingtransaction.md) | :heavy_minus_sign:                                                                              | N/A                                                                                             |
+| `fields_`                                                                                       | T::Array<*::String*>                                                                            | :heavy_minus_sign:                                                                              | Comma-delimited fields to return                                                                |
 
 ### Response
 
@@ -903,7 +921,9 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_account(connection_id="<value>", id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new())
+res = s.accounting.patch_accounting_account(connection_id="<value>", id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.accounting_account.nil?
   # handle response
@@ -918,6 +938,7 @@ end
 | `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
 | `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Account                                                                       |
 | `accounting_account`                                                                    | [::UnifiedRubySDK::Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                                      | Chart of accounts                                                                       |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -944,7 +965,9 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_contact(connection_id="<value>", id="<value>", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new())
+res = s.accounting.patch_accounting_contact(connection_id="<value>", id="<value>", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.accounting_contact.nil?
   # handle response
@@ -959,6 +982,7 @@ end
 | `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
 | `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Contact                                                                       |
 | `accounting_contact`                                                                    | [::UnifiedRubySDK::Shared::AccountingContact](../../models/shared/accountingcontact.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -985,7 +1009,9 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_invoice(connection_id="<value>", id="<value>", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new())
+res = s.accounting.patch_accounting_invoice(connection_id="<value>", id="<value>", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.accounting_invoice.nil?
   # handle response
@@ -1000,6 +1026,7 @@ end
 | `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
 | `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Invoice                                                                       |
 | `accounting_invoice`                                                                    | [::UnifiedRubySDK::Shared::AccountingInvoice](../../models/shared/accountinginvoice.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -1026,7 +1053,9 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_journal(connection_id="<value>", id="<value>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new())
+res = s.accounting.patch_accounting_journal(connection_id="<value>", id="<value>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.accounting_journal.nil?
   # handle response
@@ -1041,6 +1070,7 @@ end
 | `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
 | `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Journal                                                                       |
 | `accounting_journal`                                                                    | [::UnifiedRubySDK::Shared::AccountingJournal](../../models/shared/accountingjournal.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -1067,7 +1097,9 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_taxrate(connection_id="<value>", id="<value>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new())
+res = s.accounting.patch_accounting_taxrate(connection_id="<value>", id="<value>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.accounting_taxrate.nil?
   # handle response
@@ -1082,6 +1114,7 @@ end
 | `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
 | `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Taxrate                                                                       |
 | `accounting_taxrate`                                                                    | [::UnifiedRubySDK::Shared::AccountingTaxrate](../../models/shared/accountingtaxrate.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -1108,7 +1141,9 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new())
+res = s.accounting.patch_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.accounting_transaction.nil?
   # handle response
@@ -1123,6 +1158,7 @@ end
 | `connection_id`                                                                                 | *::String*                                                                                      | :heavy_check_mark:                                                                              | ID of the connection                                                                            |
 | `id`                                                                                            | *::String*                                                                                      | :heavy_check_mark:                                                                              | ID of the Transaction                                                                           |
 | `accounting_transaction`                                                                        | [::UnifiedRubySDK::Shared::AccountingTransaction](../../models/shared/accountingtransaction.md) | :heavy_minus_sign:                                                                              | N/A                                                                                             |
+| `fields_`                                                                                       | T::Array<*::String*>                                                                            | :heavy_minus_sign:                                                                              | Comma-delimited fields to return                                                                |
 
 ### Response
 
@@ -1389,7 +1425,9 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_account(connection_id="<value>", id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new())
+res = s.accounting.update_accounting_account(connection_id="<value>", id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.accounting_account.nil?
   # handle response
@@ -1404,6 +1442,7 @@ end
 | `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
 | `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Account                                                                       |
 | `accounting_account`                                                                    | [::UnifiedRubySDK::Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                                      | Chart of accounts                                                                       |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -1430,7 +1469,9 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_contact(connection_id="<value>", id="<value>", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new())
+res = s.accounting.update_accounting_contact(connection_id="<value>", id="<value>", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.accounting_contact.nil?
   # handle response
@@ -1445,6 +1486,7 @@ end
 | `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
 | `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Contact                                                                       |
 | `accounting_contact`                                                                    | [::UnifiedRubySDK::Shared::AccountingContact](../../models/shared/accountingcontact.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -1471,7 +1513,9 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_invoice(connection_id="<value>", id="<value>", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new())
+res = s.accounting.update_accounting_invoice(connection_id="<value>", id="<value>", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.accounting_invoice.nil?
   # handle response
@@ -1486,6 +1530,7 @@ end
 | `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
 | `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Invoice                                                                       |
 | `accounting_invoice`                                                                    | [::UnifiedRubySDK::Shared::AccountingInvoice](../../models/shared/accountinginvoice.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -1512,7 +1557,9 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_journal(connection_id="<value>", id="<value>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new())
+res = s.accounting.update_accounting_journal(connection_id="<value>", id="<value>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.accounting_journal.nil?
   # handle response
@@ -1527,6 +1574,7 @@ end
 | `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
 | `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Journal                                                                       |
 | `accounting_journal`                                                                    | [::UnifiedRubySDK::Shared::AccountingJournal](../../models/shared/accountingjournal.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -1553,7 +1601,9 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_taxrate(connection_id="<value>", id="<value>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new())
+res = s.accounting.update_accounting_taxrate(connection_id="<value>", id="<value>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.accounting_taxrate.nil?
   # handle response
@@ -1568,6 +1618,7 @@ end
 | `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
 | `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Taxrate                                                                       |
 | `accounting_taxrate`                                                                    | [::UnifiedRubySDK::Shared::AccountingTaxrate](../../models/shared/accountingtaxrate.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -1594,7 +1645,9 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new())
+res = s.accounting.update_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.accounting_transaction.nil?
   # handle response
@@ -1609,6 +1662,7 @@ end
 | `connection_id`                                                                                 | *::String*                                                                                      | :heavy_check_mark:                                                                              | ID of the connection                                                                            |
 | `id`                                                                                            | *::String*                                                                                      | :heavy_check_mark:                                                                              | ID of the Transaction                                                                           |
 | `accounting_transaction`                                                                        | [::UnifiedRubySDK::Shared::AccountingTransaction](../../models/shared/accountingtransaction.md) | :heavy_minus_sign:                                                                              | N/A                                                                                             |
+| `fields_`                                                                                       | T::Array<*::String*>                                                                            | :heavy_minus_sign:                                                                              | Comma-delimited fields to return                                                                |
 
 ### Response
 

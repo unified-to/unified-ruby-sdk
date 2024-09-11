@@ -29,7 +29,9 @@ s.config_security(
 )
 
     
-res = s.message.create_messaging_message(connection_id="<value>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new())
+res = s.message.create_messaging_message(connection_id="<value>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.messaging_message.nil?
   # handle response
@@ -43,6 +45,7 @@ end
 | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | `connection_id`                                                                       | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the connection                                                                  |
 | `messaging_message`                                                                   | [::UnifiedRubySDK::Shared::MessagingMessage](../../models/shared/messagingmessage.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `fields_`                                                                             | T::Array<*::String*>                                                                  | :heavy_minus_sign:                                                                    | Comma-delimited fields to return                                                      |
 
 ### Response
 
@@ -155,7 +158,9 @@ s.config_security(
 )
 
     
-res = s.message.patch_messaging_message(connection_id="<value>", id="<value>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new())
+res = s.message.patch_messaging_message(connection_id="<value>", id="<value>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.messaging_message.nil?
   # handle response
@@ -170,6 +175,7 @@ end
 | `connection_id`                                                                       | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the connection                                                                  |
 | `id`                                                                                  | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the Message                                                                     |
 | `messaging_message`                                                                   | [::UnifiedRubySDK::Shared::MessagingMessage](../../models/shared/messagingmessage.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `fields_`                                                                             | T::Array<*::String*>                                                                  | :heavy_minus_sign:                                                                    | Comma-delimited fields to return                                                      |
 
 ### Response
 
@@ -236,7 +242,9 @@ s.config_security(
 )
 
     
-res = s.message.update_messaging_message(connection_id="<value>", id="<value>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new())
+res = s.message.update_messaging_message(connection_id="<value>", id="<value>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.messaging_message.nil?
   # handle response
@@ -251,6 +259,7 @@ end
 | `connection_id`                                                                       | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the connection                                                                  |
 | `id`                                                                                  | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the Message                                                                     |
 | `messaging_message`                                                                   | [::UnifiedRubySDK::Shared::MessagingMessage](../../models/shared/messagingmessage.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `fields_`                                                                             | T::Array<*::String*>                                                                  | :heavy_minus_sign:                                                                    | Comma-delimited fields to return                                                      |
 
 ### Response
 

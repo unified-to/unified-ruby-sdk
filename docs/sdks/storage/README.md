@@ -29,7 +29,9 @@ s.config_security(
 )
 
     
-res = s.storage.create_storage_file(connection_id="<value>", storage_file=::UnifiedRubySDK::Shared::StorageFile.new())
+res = s.storage.create_storage_file(connection_id="<value>", storage_file=::UnifiedRubySDK::Shared::StorageFile.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.storage_file.nil?
   # handle response
@@ -43,6 +45,7 @@ end
 | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
 | `storage_file`                                                              | [::UnifiedRubySDK::Shared::StorageFile](../../models/shared/storagefile.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -155,7 +158,9 @@ s.config_security(
 )
 
     
-res = s.storage.patch_storage_file(connection_id="<value>", id="<value>", storage_file=::UnifiedRubySDK::Shared::StorageFile.new())
+res = s.storage.patch_storage_file(connection_id="<value>", id="<value>", storage_file=::UnifiedRubySDK::Shared::StorageFile.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.storage_file.nil?
   # handle response
@@ -170,6 +175,7 @@ end
 | `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
 | `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the File                                                              |
 | `storage_file`                                                              | [::UnifiedRubySDK::Shared::StorageFile](../../models/shared/storagefile.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -236,7 +242,9 @@ s.config_security(
 )
 
     
-res = s.storage.update_storage_file(connection_id="<value>", id="<value>", storage_file=::UnifiedRubySDK::Shared::StorageFile.new())
+res = s.storage.update_storage_file(connection_id="<value>", id="<value>", storage_file=::UnifiedRubySDK::Shared::StorageFile.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.storage_file.nil?
   # handle response
@@ -251,6 +259,7 @@ end
 | `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
 | `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the File                                                              |
 | `storage_file`                                                              | [::UnifiedRubySDK::Shared::StorageFile](../../models/shared/storagefile.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 

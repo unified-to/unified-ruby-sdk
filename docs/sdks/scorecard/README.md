@@ -29,7 +29,9 @@ s.config_security(
 )
 
     
-res = s.scorecard.create_ats_scorecard(connection_id="<value>", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new())
+res = s.scorecard.create_ats_scorecard(connection_id="<value>", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.ats_scorecard.nil?
   # handle response
@@ -43,6 +45,7 @@ end
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
 | `ats_scorecard`                                                               | [::UnifiedRubySDK::Shared::AtsScorecard](../../models/shared/atsscorecard.md) | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
 
 ### Response
 
@@ -155,7 +158,9 @@ s.config_security(
 )
 
     
-res = s.scorecard.patch_ats_scorecard(connection_id="<value>", id="<value>", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new())
+res = s.scorecard.patch_ats_scorecard(connection_id="<value>", id="<value>", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.ats_scorecard.nil?
   # handle response
@@ -170,6 +175,7 @@ end
 | `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
 | `id`                                                                          | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the Scorecard                                                           |
 | `ats_scorecard`                                                               | [::UnifiedRubySDK::Shared::AtsScorecard](../../models/shared/atsscorecard.md) | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
 
 ### Response
 
@@ -236,7 +242,9 @@ s.config_security(
 )
 
     
-res = s.scorecard.update_ats_scorecard(connection_id="<value>", id="<value>", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new())
+res = s.scorecard.update_ats_scorecard(connection_id="<value>", id="<value>", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.ats_scorecard.nil?
   # handle response
@@ -251,6 +259,7 @@ end
 | `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
 | `id`                                                                          | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the Scorecard                                                           |
 | `ats_scorecard`                                                               | [::UnifiedRubySDK::Shared::AtsScorecard](../../models/shared/atsscorecard.md) | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
 
 ### Response
 

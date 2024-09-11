@@ -19,13 +19,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(::UnifiedRubySDK::Operations::CreateCommerceCollectionResponse) }
-    def create_commerce_collection(connection_id, commerce_collection = nil)
+    sig { params(connection_id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCommerceCollectionResponse) }
+    def create_commerce_collection(connection_id, commerce_collection = nil, fields_ = nil)
       # create_commerce_collection - Create a collection
       request = ::UnifiedRubySDK::Operations::CreateCommerceCollectionRequest.new(
         
         connection_id: connection_id,
-        commerce_collection: commerce_collection
+        commerce_collection: commerce_collection,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -38,11 +39,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_collection, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateCommerceCollectionRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -68,13 +71,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, commerce_inventory: T.nilable(::UnifiedRubySDK::Shared::CommerceInventory)).returns(::UnifiedRubySDK::Operations::CreateCommerceInventoryResponse) }
-    def create_commerce_inventory(connection_id, commerce_inventory = nil)
+    sig { params(connection_id: ::String, commerce_inventory: T.nilable(::UnifiedRubySDK::Shared::CommerceInventory), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCommerceInventoryResponse) }
+    def create_commerce_inventory(connection_id, commerce_inventory = nil, fields_ = nil)
       # create_commerce_inventory - Create an inventory
       request = ::UnifiedRubySDK::Operations::CreateCommerceInventoryRequest.new(
         
         connection_id: connection_id,
-        commerce_inventory: commerce_inventory
+        commerce_inventory: commerce_inventory,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -87,11 +91,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_inventory, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateCommerceInventoryRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -117,13 +123,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, commerce_item: T.nilable(::UnifiedRubySDK::Shared::CommerceItem)).returns(::UnifiedRubySDK::Operations::CreateCommerceItemResponse) }
-    def create_commerce_item(connection_id, commerce_item = nil)
+    sig { params(connection_id: ::String, commerce_item: T.nilable(::UnifiedRubySDK::Shared::CommerceItem), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCommerceItemResponse) }
+    def create_commerce_item(connection_id, commerce_item = nil, fields_ = nil)
       # create_commerce_item - Create an item
       request = ::UnifiedRubySDK::Operations::CreateCommerceItemRequest.new(
         
         connection_id: connection_id,
-        commerce_item: commerce_item
+        commerce_item: commerce_item,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -136,11 +143,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_item, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateCommerceItemRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -166,13 +175,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation)).returns(::UnifiedRubySDK::Operations::CreateCommerceLocationResponse) }
-    def create_commerce_location(connection_id, commerce_location = nil)
+    sig { params(connection_id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCommerceLocationResponse) }
+    def create_commerce_location(connection_id, commerce_location = nil, fields_ = nil)
       # create_commerce_location - Create a location
       request = ::UnifiedRubySDK::Operations::CreateCommerceLocationRequest.new(
         
         connection_id: connection_id,
-        commerce_location: commerce_location
+        commerce_location: commerce_location,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -185,11 +195,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_location, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateCommerceLocationRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -535,14 +547,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(::UnifiedRubySDK::Operations::PatchCommerceCollectionResponse) }
-    def patch_commerce_collection(connection_id, id, commerce_collection = nil)
+    sig { params(connection_id: ::String, id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCommerceCollectionResponse) }
+    def patch_commerce_collection(connection_id, id, commerce_collection = nil, fields_ = nil)
       # patch_commerce_collection - Update a collection
       request = ::UnifiedRubySDK::Operations::PatchCommerceCollectionRequest.new(
         
         connection_id: connection_id,
         id: id,
-        commerce_collection: commerce_collection
+        commerce_collection: commerce_collection,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -555,11 +568,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_collection, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchCommerceCollectionRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -585,14 +600,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_inventory: T.nilable(::UnifiedRubySDK::Shared::CommerceInventory)).returns(::UnifiedRubySDK::Operations::PatchCommerceInventoryResponse) }
-    def patch_commerce_inventory(connection_id, id, commerce_inventory = nil)
+    sig { params(connection_id: ::String, id: ::String, commerce_inventory: T.nilable(::UnifiedRubySDK::Shared::CommerceInventory), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCommerceInventoryResponse) }
+    def patch_commerce_inventory(connection_id, id, commerce_inventory = nil, fields_ = nil)
       # patch_commerce_inventory - Update an inventory
       request = ::UnifiedRubySDK::Operations::PatchCommerceInventoryRequest.new(
         
         connection_id: connection_id,
         id: id,
-        commerce_inventory: commerce_inventory
+        commerce_inventory: commerce_inventory,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -605,11 +621,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_inventory, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchCommerceInventoryRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -635,14 +653,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_item: T.nilable(::UnifiedRubySDK::Shared::CommerceItem)).returns(::UnifiedRubySDK::Operations::PatchCommerceItemResponse) }
-    def patch_commerce_item(connection_id, id, commerce_item = nil)
+    sig { params(connection_id: ::String, id: ::String, commerce_item: T.nilable(::UnifiedRubySDK::Shared::CommerceItem), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCommerceItemResponse) }
+    def patch_commerce_item(connection_id, id, commerce_item = nil, fields_ = nil)
       # patch_commerce_item - Update an item
       request = ::UnifiedRubySDK::Operations::PatchCommerceItemRequest.new(
         
         connection_id: connection_id,
         id: id,
-        commerce_item: commerce_item
+        commerce_item: commerce_item,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -655,11 +674,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_item, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchCommerceItemRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -685,14 +706,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation)).returns(::UnifiedRubySDK::Operations::PatchCommerceLocationResponse) }
-    def patch_commerce_location(connection_id, id, commerce_location = nil)
+    sig { params(connection_id: ::String, id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCommerceLocationResponse) }
+    def patch_commerce_location(connection_id, id, commerce_location = nil, fields_ = nil)
       # patch_commerce_location - Update a location
       request = ::UnifiedRubySDK::Operations::PatchCommerceLocationRequest.new(
         
         connection_id: connection_id,
         id: id,
-        commerce_location: commerce_location
+        commerce_location: commerce_location,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -705,11 +727,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_location, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchCommerceLocationRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -875,14 +899,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection)).returns(::UnifiedRubySDK::Operations::UpdateCommerceCollectionResponse) }
-    def update_commerce_collection(connection_id, id, commerce_collection = nil)
+    sig { params(connection_id: ::String, id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCommerceCollectionResponse) }
+    def update_commerce_collection(connection_id, id, commerce_collection = nil, fields_ = nil)
       # update_commerce_collection - Update a collection
       request = ::UnifiedRubySDK::Operations::UpdateCommerceCollectionRequest.new(
         
         connection_id: connection_id,
         id: id,
-        commerce_collection: commerce_collection
+        commerce_collection: commerce_collection,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -895,11 +920,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_collection, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateCommerceCollectionRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -925,14 +952,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_inventory: T.nilable(::UnifiedRubySDK::Shared::CommerceInventory)).returns(::UnifiedRubySDK::Operations::UpdateCommerceInventoryResponse) }
-    def update_commerce_inventory(connection_id, id, commerce_inventory = nil)
+    sig { params(connection_id: ::String, id: ::String, commerce_inventory: T.nilable(::UnifiedRubySDK::Shared::CommerceInventory), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCommerceInventoryResponse) }
+    def update_commerce_inventory(connection_id, id, commerce_inventory = nil, fields_ = nil)
       # update_commerce_inventory - Update an inventory
       request = ::UnifiedRubySDK::Operations::UpdateCommerceInventoryRequest.new(
         
         connection_id: connection_id,
         id: id,
-        commerce_inventory: commerce_inventory
+        commerce_inventory: commerce_inventory,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -945,11 +973,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_inventory, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateCommerceInventoryRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -975,14 +1005,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_item: T.nilable(::UnifiedRubySDK::Shared::CommerceItem)).returns(::UnifiedRubySDK::Operations::UpdateCommerceItemResponse) }
-    def update_commerce_item(connection_id, id, commerce_item = nil)
+    sig { params(connection_id: ::String, id: ::String, commerce_item: T.nilable(::UnifiedRubySDK::Shared::CommerceItem), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCommerceItemResponse) }
+    def update_commerce_item(connection_id, id, commerce_item = nil, fields_ = nil)
       # update_commerce_item - Update an item
       request = ::UnifiedRubySDK::Operations::UpdateCommerceItemRequest.new(
         
         connection_id: connection_id,
         id: id,
-        commerce_item: commerce_item
+        commerce_item: commerce_item,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -995,11 +1026,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_item, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateCommerceItemRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -1025,14 +1058,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation)).returns(::UnifiedRubySDK::Operations::UpdateCommerceLocationResponse) }
-    def update_commerce_location(connection_id, id, commerce_location = nil)
+    sig { params(connection_id: ::String, id: ::String, commerce_location: T.nilable(::UnifiedRubySDK::Shared::CommerceLocation), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCommerceLocationResponse) }
+    def update_commerce_location(connection_id, id, commerce_location = nil, fields_ = nil)
       # update_commerce_location - Update a location
       request = ::UnifiedRubySDK::Operations::UpdateCommerceLocationRequest.new(
         
         connection_id: connection_id,
         id: id,
-        commerce_location: commerce_location
+        commerce_location: commerce_location,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1045,11 +1079,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_location, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateCommerceLocationRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)

@@ -13,13 +13,16 @@ module UnifiedRubySDK
 
       # ID of the connection
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+      # Comma-delimited fields to return
+      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
       # A member represents a person
       field :marketing_member, T.nilable(::UnifiedRubySDK::Shared::MarketingMember), { 'request': { 'media_type': 'application/json' } }
 
 
-      sig { params(connection_id: ::String, marketing_member: T.nilable(::UnifiedRubySDK::Shared::MarketingMember)).void }
-      def initialize(connection_id: nil, marketing_member: nil)
+      sig { params(connection_id: ::String, fields_: T.nilable(T::Array[::String]), marketing_member: T.nilable(::UnifiedRubySDK::Shared::MarketingMember)).void }
+      def initialize(connection_id: nil, fields_: nil, marketing_member: nil)
         @connection_id = connection_id
+        @fields_ = fields_
         @marketing_member = marketing_member
       end
     end

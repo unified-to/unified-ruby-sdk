@@ -15,14 +15,17 @@ module UnifiedRubySDK
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
       # ID of the Location
       field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
+      # Comma-delimited fields to return
+      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
       field :hris_location, T.nilable(::UnifiedRubySDK::Shared::HrisLocation), { 'request': { 'media_type': 'application/json' } }
 
 
-      sig { params(connection_id: ::String, id: ::String, hris_location: T.nilable(::UnifiedRubySDK::Shared::HrisLocation)).void }
-      def initialize(connection_id: nil, id: nil, hris_location: nil)
+      sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), hris_location: T.nilable(::UnifiedRubySDK::Shared::HrisLocation)).void }
+      def initialize(connection_id: nil, id: nil, fields_: nil, hris_location: nil)
         @connection_id = connection_id
         @id = id
+        @fields_ = fields_
         @hris_location = hris_location
       end
     end

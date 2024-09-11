@@ -31,7 +31,9 @@ s.config_security(
     
 res = s.activity.create_ats_activity(connection_id="<value>", ats_activity=::UnifiedRubySDK::Shared::AtsActivity.new(
     title: "<value>",
-  ))
+  ), fields_=[
+    "<value>",
+  ])
 
 if ! res.ats_activity.nil?
   # handle response
@@ -45,6 +47,7 @@ end
 | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
 | `ats_activity`                                                              | [::UnifiedRubySDK::Shared::AtsActivity](../../models/shared/atsactivity.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -159,7 +162,9 @@ s.config_security(
     
 res = s.activity.patch_ats_activity(connection_id="<value>", id="<value>", ats_activity=::UnifiedRubySDK::Shared::AtsActivity.new(
     title: "<value>",
-  ))
+  ), fields_=[
+    "<value>",
+  ])
 
 if ! res.ats_activity.nil?
   # handle response
@@ -174,6 +179,7 @@ end
 | `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
 | `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Activity                                                          |
 | `ats_activity`                                                              | [::UnifiedRubySDK::Shared::AtsActivity](../../models/shared/atsactivity.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -242,7 +248,9 @@ s.config_security(
     
 res = s.activity.update_ats_activity(connection_id="<value>", id="<value>", ats_activity=::UnifiedRubySDK::Shared::AtsActivity.new(
     title: "<value>",
-  ))
+  ), fields_=[
+    "<value>",
+  ])
 
 if ! res.ats_activity.nil?
   # handle response
@@ -257,6 +265,7 @@ end
 | `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
 | `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Activity                                                          |
 | `ats_activity`                                                              | [::UnifiedRubySDK::Shared::AtsActivity](../../models/shared/atsactivity.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 

@@ -19,13 +19,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, crm_event: T.nilable(::UnifiedRubySDK::Shared::CrmEvent)).returns(::UnifiedRubySDK::Operations::CreateCrmEventResponse) }
-    def create_crm_event(connection_id, crm_event = nil)
+    sig { params(connection_id: ::String, crm_event: T.nilable(::UnifiedRubySDK::Shared::CrmEvent), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCrmEventResponse) }
+    def create_crm_event(connection_id, crm_event = nil, fields_ = nil)
       # create_crm_event - Create an event
       request = ::UnifiedRubySDK::Operations::CreateCrmEventRequest.new(
         
         connection_id: connection_id,
-        crm_event: crm_event
+        crm_event: crm_event,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -38,11 +39,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_event, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateCrmEventRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -148,14 +151,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_event: T.nilable(::UnifiedRubySDK::Shared::CrmEvent)).returns(::UnifiedRubySDK::Operations::PatchCrmEventResponse) }
-    def patch_crm_event(connection_id, id, crm_event = nil)
+    sig { params(connection_id: ::String, id: ::String, crm_event: T.nilable(::UnifiedRubySDK::Shared::CrmEvent), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCrmEventResponse) }
+    def patch_crm_event(connection_id, id, crm_event = nil, fields_ = nil)
       # patch_crm_event - Update an event
       request = ::UnifiedRubySDK::Operations::PatchCrmEventRequest.new(
         
         connection_id: connection_id,
         id: id,
-        crm_event: crm_event
+        crm_event: crm_event,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -168,11 +172,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_event, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchCrmEventRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -233,14 +239,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_event: T.nilable(::UnifiedRubySDK::Shared::CrmEvent)).returns(::UnifiedRubySDK::Operations::UpdateCrmEventResponse) }
-    def update_crm_event(connection_id, id, crm_event = nil)
+    sig { params(connection_id: ::String, id: ::String, crm_event: T.nilable(::UnifiedRubySDK::Shared::CrmEvent), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCrmEventResponse) }
+    def update_crm_event(connection_id, id, crm_event = nil, fields_ = nil)
       # update_crm_event - Update an event
       request = ::UnifiedRubySDK::Operations::UpdateCrmEventRequest.new(
         
         connection_id: connection_id,
         id: id,
-        crm_event: crm_event
+        crm_event: crm_event,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -253,11 +260,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_event, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateCrmEventRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)

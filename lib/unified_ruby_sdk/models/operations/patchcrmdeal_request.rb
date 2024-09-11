@@ -17,13 +17,16 @@ module UnifiedRubySDK
       field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
       # A deal represents an opportunity with companies and/or contacts
       field :crm_deal, T.nilable(::UnifiedRubySDK::Shared::CrmDeal), { 'request': { 'media_type': 'application/json' } }
+      # Comma-delimited fields to return
+      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal)).void }
-      def initialize(connection_id: nil, id: nil, crm_deal: nil)
+      sig { params(connection_id: ::String, id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal), fields_: T.nilable(T::Array[::String])).void }
+      def initialize(connection_id: nil, id: nil, crm_deal: nil, fields_: nil)
         @connection_id = connection_id
         @id = id
         @crm_deal = crm_deal
+        @fields_ = fields_
       end
     end
   end

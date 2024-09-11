@@ -17,13 +17,16 @@ module UnifiedRubySDK
       field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
 
       field :ats_document, T.nilable(::UnifiedRubySDK::Shared::AtsDocument), { 'request': { 'media_type': 'application/json' } }
+      # Comma-delimited fields to return
+      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, id: ::String, ats_document: T.nilable(::UnifiedRubySDK::Shared::AtsDocument)).void }
-      def initialize(connection_id: nil, id: nil, ats_document: nil)
+      sig { params(connection_id: ::String, id: ::String, ats_document: T.nilable(::UnifiedRubySDK::Shared::AtsDocument), fields_: T.nilable(T::Array[::String])).void }
+      def initialize(connection_id: nil, id: nil, ats_document: nil, fields_: nil)
         @connection_id = connection_id
         @id = id
         @ats_document = ats_document
+        @fields_ = fields_
       end
     end
   end

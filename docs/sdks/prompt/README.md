@@ -24,7 +24,9 @@ s.config_security(
 )
 
     
-res = s.prompt.create_genai_prompt(connection_id="<value>", genai_prompt=::UnifiedRubySDK::Shared::GenaiPrompt.new())
+res = s.prompt.create_genai_prompt(connection_id="<value>", genai_prompt=::UnifiedRubySDK::Shared::GenaiPrompt.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.genai_prompt.nil?
   # handle response
@@ -38,6 +40,7 @@ end
 | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
 | `genai_prompt`                                                              | [::UnifiedRubySDK::Shared::GenaiPrompt](../../models/shared/genaiprompt.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 

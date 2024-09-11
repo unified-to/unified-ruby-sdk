@@ -19,13 +19,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, hris_company: T.nilable(::UnifiedRubySDK::Shared::HrisCompany)).returns(::UnifiedRubySDK::Operations::CreateHrisCompanyResponse) }
-    def create_hris_company(connection_id, hris_company = nil)
+    sig { params(connection_id: ::String, hris_company: T.nilable(::UnifiedRubySDK::Shared::HrisCompany), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateHrisCompanyResponse) }
+    def create_hris_company(connection_id, hris_company = nil, fields_ = nil)
       # create_hris_company - Create a company
       request = ::UnifiedRubySDK::Operations::CreateHrisCompanyRequest.new(
         
         connection_id: connection_id,
-        hris_company: hris_company
+        hris_company: hris_company,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -38,11 +39,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :hris_company, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateHrisCompanyRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -68,13 +71,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, hris_employee: T.nilable(::UnifiedRubySDK::Shared::HrisEmployee)).returns(::UnifiedRubySDK::Operations::CreateHrisEmployeeResponse) }
-    def create_hris_employee(connection_id, hris_employee = nil)
+    sig { params(connection_id: ::String, hris_employee: T.nilable(::UnifiedRubySDK::Shared::HrisEmployee), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateHrisEmployeeResponse) }
+    def create_hris_employee(connection_id, hris_employee = nil, fields_ = nil)
       # create_hris_employee - Create an employee
       request = ::UnifiedRubySDK::Operations::CreateHrisEmployeeRequest.new(
         
         connection_id: connection_id,
-        hris_employee: hris_employee
+        hris_employee: hris_employee,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -87,11 +91,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :hris_employee, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateHrisEmployeeRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -117,13 +123,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, hris_group: T.nilable(::UnifiedRubySDK::Shared::HrisGroup)).returns(::UnifiedRubySDK::Operations::CreateHrisGroupResponse) }
-    def create_hris_group(connection_id, hris_group = nil)
+    sig { params(connection_id: ::String, hris_group: T.nilable(::UnifiedRubySDK::Shared::HrisGroup), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateHrisGroupResponse) }
+    def create_hris_group(connection_id, hris_group = nil, fields_ = nil)
       # create_hris_group - Create a group
       request = ::UnifiedRubySDK::Operations::CreateHrisGroupRequest.new(
         
         connection_id: connection_id,
-        hris_group: hris_group
+        hris_group: hris_group,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -136,11 +143,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :hris_group, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateHrisGroupRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -166,13 +175,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, hris_location: T.nilable(::UnifiedRubySDK::Shared::HrisLocation)).returns(::UnifiedRubySDK::Operations::CreateHrisLocationResponse) }
-    def create_hris_location(connection_id, hris_location = nil)
+    sig { params(connection_id: ::String, hris_location: T.nilable(::UnifiedRubySDK::Shared::HrisLocation), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateHrisLocationResponse) }
+    def create_hris_location(connection_id, hris_location = nil, fields_ = nil)
       # create_hris_location - Create a location
       request = ::UnifiedRubySDK::Operations::CreateHrisLocationRequest.new(
         
         connection_id: connection_id,
-        hris_location: hris_location
+        hris_location: hris_location,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -185,11 +195,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :hris_location, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateHrisLocationRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -695,14 +707,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, hris_company: T.nilable(::UnifiedRubySDK::Shared::HrisCompany)).returns(::UnifiedRubySDK::Operations::PatchHrisCompanyResponse) }
-    def patch_hris_company(connection_id, id, hris_company = nil)
+    sig { params(connection_id: ::String, id: ::String, hris_company: T.nilable(::UnifiedRubySDK::Shared::HrisCompany), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchHrisCompanyResponse) }
+    def patch_hris_company(connection_id, id, hris_company = nil, fields_ = nil)
       # patch_hris_company - Update a company
       request = ::UnifiedRubySDK::Operations::PatchHrisCompanyRequest.new(
         
         connection_id: connection_id,
         id: id,
-        hris_company: hris_company
+        hris_company: hris_company,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -715,11 +728,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :hris_company, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchHrisCompanyRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -745,14 +760,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, hris_employee: T.nilable(::UnifiedRubySDK::Shared::HrisEmployee)).returns(::UnifiedRubySDK::Operations::PatchHrisEmployeeResponse) }
-    def patch_hris_employee(connection_id, id, hris_employee = nil)
+    sig { params(connection_id: ::String, id: ::String, hris_employee: T.nilable(::UnifiedRubySDK::Shared::HrisEmployee), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchHrisEmployeeResponse) }
+    def patch_hris_employee(connection_id, id, hris_employee = nil, fields_ = nil)
       # patch_hris_employee - Update an employee
       request = ::UnifiedRubySDK::Operations::PatchHrisEmployeeRequest.new(
         
         connection_id: connection_id,
         id: id,
-        hris_employee: hris_employee
+        hris_employee: hris_employee,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -765,11 +781,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :hris_employee, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchHrisEmployeeRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -795,14 +813,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, hris_group: T.nilable(::UnifiedRubySDK::Shared::HrisGroup)).returns(::UnifiedRubySDK::Operations::PatchHrisGroupResponse) }
-    def patch_hris_group(connection_id, id, hris_group = nil)
+    sig { params(connection_id: ::String, id: ::String, hris_group: T.nilable(::UnifiedRubySDK::Shared::HrisGroup), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchHrisGroupResponse) }
+    def patch_hris_group(connection_id, id, hris_group = nil, fields_ = nil)
       # patch_hris_group - Update a group
       request = ::UnifiedRubySDK::Operations::PatchHrisGroupRequest.new(
         
         connection_id: connection_id,
         id: id,
-        hris_group: hris_group
+        hris_group: hris_group,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -815,11 +834,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :hris_group, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchHrisGroupRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -845,14 +866,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, hris_location: T.nilable(::UnifiedRubySDK::Shared::HrisLocation)).returns(::UnifiedRubySDK::Operations::PatchHrisLocationResponse) }
-    def patch_hris_location(connection_id, id, hris_location = nil)
+    sig { params(connection_id: ::String, id: ::String, hris_location: T.nilable(::UnifiedRubySDK::Shared::HrisLocation), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchHrisLocationResponse) }
+    def patch_hris_location(connection_id, id, hris_location = nil, fields_ = nil)
       # patch_hris_location - Update a location
       request = ::UnifiedRubySDK::Operations::PatchHrisLocationRequest.new(
         
         connection_id: connection_id,
         id: id,
-        hris_location: hris_location
+        hris_location: hris_location,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -865,11 +887,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :hris_location, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchHrisLocationRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -1035,14 +1059,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, hris_company: T.nilable(::UnifiedRubySDK::Shared::HrisCompany)).returns(::UnifiedRubySDK::Operations::UpdateHrisCompanyResponse) }
-    def update_hris_company(connection_id, id, hris_company = nil)
+    sig { params(connection_id: ::String, id: ::String, hris_company: T.nilable(::UnifiedRubySDK::Shared::HrisCompany), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateHrisCompanyResponse) }
+    def update_hris_company(connection_id, id, hris_company = nil, fields_ = nil)
       # update_hris_company - Update a company
       request = ::UnifiedRubySDK::Operations::UpdateHrisCompanyRequest.new(
         
         connection_id: connection_id,
         id: id,
-        hris_company: hris_company
+        hris_company: hris_company,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1055,11 +1080,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :hris_company, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateHrisCompanyRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -1085,14 +1112,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, hris_employee: T.nilable(::UnifiedRubySDK::Shared::HrisEmployee)).returns(::UnifiedRubySDK::Operations::UpdateHrisEmployeeResponse) }
-    def update_hris_employee(connection_id, id, hris_employee = nil)
+    sig { params(connection_id: ::String, id: ::String, hris_employee: T.nilable(::UnifiedRubySDK::Shared::HrisEmployee), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateHrisEmployeeResponse) }
+    def update_hris_employee(connection_id, id, hris_employee = nil, fields_ = nil)
       # update_hris_employee - Update an employee
       request = ::UnifiedRubySDK::Operations::UpdateHrisEmployeeRequest.new(
         
         connection_id: connection_id,
         id: id,
-        hris_employee: hris_employee
+        hris_employee: hris_employee,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1105,11 +1133,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :hris_employee, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateHrisEmployeeRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -1135,14 +1165,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, hris_group: T.nilable(::UnifiedRubySDK::Shared::HrisGroup)).returns(::UnifiedRubySDK::Operations::UpdateHrisGroupResponse) }
-    def update_hris_group(connection_id, id, hris_group = nil)
+    sig { params(connection_id: ::String, id: ::String, hris_group: T.nilable(::UnifiedRubySDK::Shared::HrisGroup), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateHrisGroupResponse) }
+    def update_hris_group(connection_id, id, hris_group = nil, fields_ = nil)
       # update_hris_group - Update a group
       request = ::UnifiedRubySDK::Operations::UpdateHrisGroupRequest.new(
         
         connection_id: connection_id,
         id: id,
-        hris_group: hris_group
+        hris_group: hris_group,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1155,11 +1186,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :hris_group, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateHrisGroupRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -1185,14 +1218,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, hris_location: T.nilable(::UnifiedRubySDK::Shared::HrisLocation)).returns(::UnifiedRubySDK::Operations::UpdateHrisLocationResponse) }
-    def update_hris_location(connection_id, id, hris_location = nil)
+    sig { params(connection_id: ::String, id: ::String, hris_location: T.nilable(::UnifiedRubySDK::Shared::HrisLocation), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateHrisLocationResponse) }
+    def update_hris_location(connection_id, id, hris_location = nil, fields_ = nil)
       # update_hris_location - Update a location
       request = ::UnifiedRubySDK::Operations::UpdateHrisLocationRequest.new(
         
         connection_id: connection_id,
         id: id,
-        hris_location: hris_location
+        hris_location: hris_location,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1205,11 +1239,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :hris_location, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateHrisLocationRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)

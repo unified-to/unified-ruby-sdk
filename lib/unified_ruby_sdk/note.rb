@@ -19,13 +19,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ticketing_note: T.nilable(::UnifiedRubySDK::Shared::TicketingNote)).returns(::UnifiedRubySDK::Operations::CreateTicketingNoteResponse) }
-    def create_ticketing_note(connection_id, ticketing_note = nil)
+    sig { params(connection_id: ::String, ticketing_note: T.nilable(::UnifiedRubySDK::Shared::TicketingNote), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateTicketingNoteResponse) }
+    def create_ticketing_note(connection_id, ticketing_note = nil, fields_ = nil)
       # create_ticketing_note - Create a note
       request = ::UnifiedRubySDK::Operations::CreateTicketingNoteRequest.new(
         
         connection_id: connection_id,
-        ticketing_note: ticketing_note
+        ticketing_note: ticketing_note,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -38,11 +39,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ticketing_note, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateTicketingNoteRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -148,14 +151,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ticketing_note: T.nilable(::UnifiedRubySDK::Shared::TicketingNote)).returns(::UnifiedRubySDK::Operations::PatchTicketingNoteResponse) }
-    def patch_ticketing_note(connection_id, id, ticketing_note = nil)
+    sig { params(connection_id: ::String, id: ::String, ticketing_note: T.nilable(::UnifiedRubySDK::Shared::TicketingNote), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchTicketingNoteResponse) }
+    def patch_ticketing_note(connection_id, id, ticketing_note = nil, fields_ = nil)
       # patch_ticketing_note - Update a note
       request = ::UnifiedRubySDK::Operations::PatchTicketingNoteRequest.new(
         
         connection_id: connection_id,
         id: id,
-        ticketing_note: ticketing_note
+        ticketing_note: ticketing_note,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -168,11 +172,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ticketing_note, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchTicketingNoteRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -233,14 +239,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ticketing_note: T.nilable(::UnifiedRubySDK::Shared::TicketingNote)).returns(::UnifiedRubySDK::Operations::UpdateTicketingNoteResponse) }
-    def update_ticketing_note(connection_id, id, ticketing_note = nil)
+    sig { params(connection_id: ::String, id: ::String, ticketing_note: T.nilable(::UnifiedRubySDK::Shared::TicketingNote), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateTicketingNoteResponse) }
+    def update_ticketing_note(connection_id, id, ticketing_note = nil, fields_ = nil)
       # update_ticketing_note - Update a note
       request = ::UnifiedRubySDK::Operations::UpdateTicketingNoteRequest.new(
         
         connection_id: connection_id,
         id: id,
-        ticketing_note: ticketing_note
+        ticketing_note: ticketing_note,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -253,11 +260,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ticketing_note, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateTicketingNoteRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)

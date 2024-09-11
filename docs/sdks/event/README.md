@@ -29,7 +29,9 @@ s.config_security(
 )
 
     
-res = s.event.create_crm_event(connection_id="<value>", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new())
+res = s.event.create_crm_event(connection_id="<value>", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.crm_event.nil?
   # handle response
@@ -43,6 +45,7 @@ end
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | `connection_id`                                                                                                 | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the connection                                                                                            |
 | `crm_event`                                                                                                     | [::UnifiedRubySDK::Shared::CrmEvent](../../models/shared/crmevent.md)                                           | :heavy_minus_sign:                                                                                              | An event represents an event, activity, or engagement and is always associated with a deal, contact, or company |
+| `fields_`                                                                                                       | T::Array<*::String*>                                                                                            | :heavy_minus_sign:                                                                                              | Comma-delimited fields to return                                                                                |
 
 ### Response
 
@@ -155,7 +158,9 @@ s.config_security(
 )
 
     
-res = s.event.patch_crm_event(connection_id="<value>", id="<value>", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new())
+res = s.event.patch_crm_event(connection_id="<value>", id="<value>", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.crm_event.nil?
   # handle response
@@ -170,6 +175,7 @@ end
 | `connection_id`                                                                                                 | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the connection                                                                                            |
 | `id`                                                                                                            | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the Event                                                                                                 |
 | `crm_event`                                                                                                     | [::UnifiedRubySDK::Shared::CrmEvent](../../models/shared/crmevent.md)                                           | :heavy_minus_sign:                                                                                              | An event represents an event, activity, or engagement and is always associated with a deal, contact, or company |
+| `fields_`                                                                                                       | T::Array<*::String*>                                                                                            | :heavy_minus_sign:                                                                                              | Comma-delimited fields to return                                                                                |
 
 ### Response
 
@@ -236,7 +242,9 @@ s.config_security(
 )
 
     
-res = s.event.update_crm_event(connection_id="<value>", id="<value>", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new())
+res = s.event.update_crm_event(connection_id="<value>", id="<value>", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.crm_event.nil?
   # handle response
@@ -251,6 +259,7 @@ end
 | `connection_id`                                                                                                 | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the connection                                                                                            |
 | `id`                                                                                                            | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the Event                                                                                                 |
 | `crm_event`                                                                                                     | [::UnifiedRubySDK::Shared::CrmEvent](../../models/shared/crmevent.md)                                           | :heavy_minus_sign:                                                                                              | An event represents an event, activity, or engagement and is always associated with a deal, contact, or company |
+| `fields_`                                                                                                       | T::Array<*::String*>                                                                                            | :heavy_minus_sign:                                                                                              | Comma-delimited fields to return                                                                                |
 
 ### Response
 

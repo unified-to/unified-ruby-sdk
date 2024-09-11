@@ -19,13 +19,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard)).returns(::UnifiedRubySDK::Operations::CreateAtsScorecardResponse) }
-    def create_ats_scorecard(connection_id, ats_scorecard = nil)
+    sig { params(connection_id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateAtsScorecardResponse) }
+    def create_ats_scorecard(connection_id, ats_scorecard = nil, fields_ = nil)
       # create_ats_scorecard - Create a scorecard
       request = ::UnifiedRubySDK::Operations::CreateAtsScorecardRequest.new(
         
         connection_id: connection_id,
-        ats_scorecard: ats_scorecard
+        ats_scorecard: ats_scorecard,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -38,11 +39,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_scorecard, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateAtsScorecardRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -148,14 +151,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard)).returns(::UnifiedRubySDK::Operations::PatchAtsScorecardResponse) }
-    def patch_ats_scorecard(connection_id, id, ats_scorecard = nil)
+    sig { params(connection_id: ::String, id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchAtsScorecardResponse) }
+    def patch_ats_scorecard(connection_id, id, ats_scorecard = nil, fields_ = nil)
       # patch_ats_scorecard - Update a scorecard
       request = ::UnifiedRubySDK::Operations::PatchAtsScorecardRequest.new(
         
         connection_id: connection_id,
         id: id,
-        ats_scorecard: ats_scorecard
+        ats_scorecard: ats_scorecard,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -168,11 +172,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_scorecard, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchAtsScorecardRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -233,14 +239,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard)).returns(::UnifiedRubySDK::Operations::UpdateAtsScorecardResponse) }
-    def update_ats_scorecard(connection_id, id, ats_scorecard = nil)
+    sig { params(connection_id: ::String, id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateAtsScorecardResponse) }
+    def update_ats_scorecard(connection_id, id, ats_scorecard = nil, fields_ = nil)
       # update_ats_scorecard - Update a scorecard
       request = ::UnifiedRubySDK::Operations::UpdateAtsScorecardRequest.new(
         
         connection_id: connection_id,
         id: id,
-        ats_scorecard: ats_scorecard
+        ats_scorecard: ats_scorecard,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -253,11 +260,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_scorecard, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateAtsScorecardRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)

@@ -29,7 +29,9 @@ s.config_security(
 )
 
     
-res = s.interview.create_ats_interview(connection_id="<value>", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new())
+res = s.interview.create_ats_interview(connection_id="<value>", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.ats_interview.nil?
   # handle response
@@ -43,6 +45,7 @@ end
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
 | `ats_interview`                                                               | [::UnifiedRubySDK::Shared::AtsInterview](../../models/shared/atsinterview.md) | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
 
 ### Response
 
@@ -155,7 +158,9 @@ s.config_security(
 )
 
     
-res = s.interview.patch_ats_interview(connection_id="<value>", id="<value>", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new())
+res = s.interview.patch_ats_interview(connection_id="<value>", id="<value>", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.ats_interview.nil?
   # handle response
@@ -170,6 +175,7 @@ end
 | `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
 | `id`                                                                          | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the Interview                                                           |
 | `ats_interview`                                                               | [::UnifiedRubySDK::Shared::AtsInterview](../../models/shared/atsinterview.md) | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
 
 ### Response
 
@@ -236,7 +242,9 @@ s.config_security(
 )
 
     
-res = s.interview.update_ats_interview(connection_id="<value>", id="<value>", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new())
+res = s.interview.update_ats_interview(connection_id="<value>", id="<value>", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.ats_interview.nil?
   # handle response
@@ -251,6 +259,7 @@ end
 | `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
 | `id`                                                                          | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the Interview                                                           |
 | `ats_interview`                                                               | [::UnifiedRubySDK::Shared::AtsInterview](../../models/shared/atsinterview.md) | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
 
 ### Response
 

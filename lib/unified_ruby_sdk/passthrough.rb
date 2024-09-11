@@ -59,7 +59,7 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::CreatePassthroughResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      if r.status == 200
+      if r.status >= 200 && r.status < 300
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, T::Hash[Symbol, ::Object])
           res.result = out
@@ -99,7 +99,7 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::ListPassthroughsResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      if r.status == 200
+      if r.status >= 200 && r.status < 300
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, T::Hash[Symbol, ::Object])
           res.result = out
@@ -149,7 +149,7 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::PatchPassthroughResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      if r.status == 200
+      if r.status >= 200 && r.status < 300
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, T::Hash[Symbol, ::Object])
           res.result = out
@@ -189,7 +189,7 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemovePassthroughResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      if r.status == 200
+      if r.status >= 200 && r.status < 300
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, T::Hash[Symbol, ::Object])
           res.result = out
@@ -239,7 +239,7 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::UpdatePassthroughResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      if r.status == 200
+      if r.status >= 200 && r.status < 300
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, T::Hash[Symbol, ::Object])
           res.result = out

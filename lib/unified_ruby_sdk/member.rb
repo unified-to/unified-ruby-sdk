@@ -19,13 +19,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, marketing_member: T.nilable(::UnifiedRubySDK::Shared::MarketingMember)).returns(::UnifiedRubySDK::Operations::CreateMartechMemberResponse) }
-    def create_martech_member(connection_id, marketing_member = nil)
+    sig { params(connection_id: ::String, marketing_member: T.nilable(::UnifiedRubySDK::Shared::MarketingMember), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateMartechMemberResponse) }
+    def create_martech_member(connection_id, marketing_member = nil, fields_ = nil)
       # create_martech_member - Create a member
       request = ::UnifiedRubySDK::Operations::CreateMartechMemberRequest.new(
         
         connection_id: connection_id,
-        marketing_member: marketing_member
+        marketing_member: marketing_member,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -38,11 +39,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :marketing_member, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateMartechMemberRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -148,14 +151,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, marketing_member: T.nilable(::UnifiedRubySDK::Shared::MarketingMember)).returns(::UnifiedRubySDK::Operations::PatchMartechMemberResponse) }
-    def patch_martech_member(connection_id, id, marketing_member = nil)
+    sig { params(connection_id: ::String, id: ::String, marketing_member: T.nilable(::UnifiedRubySDK::Shared::MarketingMember), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchMartechMemberResponse) }
+    def patch_martech_member(connection_id, id, marketing_member = nil, fields_ = nil)
       # patch_martech_member - Update a member
       request = ::UnifiedRubySDK::Operations::PatchMartechMemberRequest.new(
         
         connection_id: connection_id,
         id: id,
-        marketing_member: marketing_member
+        marketing_member: marketing_member,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -168,11 +172,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :marketing_member, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchMartechMemberRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -233,14 +239,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, marketing_member: T.nilable(::UnifiedRubySDK::Shared::MarketingMember)).returns(::UnifiedRubySDK::Operations::UpdateMartechMemberResponse) }
-    def update_martech_member(connection_id, id, marketing_member = nil)
+    sig { params(connection_id: ::String, id: ::String, marketing_member: T.nilable(::UnifiedRubySDK::Shared::MarketingMember), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateMartechMemberResponse) }
+    def update_martech_member(connection_id, id, marketing_member = nil, fields_ = nil)
       # update_martech_member - Update a member
       request = ::UnifiedRubySDK::Operations::UpdateMartechMemberRequest.new(
         
         connection_id: connection_id,
         id: id,
-        marketing_member: marketing_member
+        marketing_member: marketing_member,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -253,11 +260,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :marketing_member, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateMartechMemberRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)

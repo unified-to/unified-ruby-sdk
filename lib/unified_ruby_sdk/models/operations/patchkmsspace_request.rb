@@ -15,14 +15,17 @@ module UnifiedRubySDK
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
       # ID of the Space
       field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
+      # Comma-delimited fields to return
+      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
       field :kms_space, T.nilable(::UnifiedRubySDK::Shared::KmsSpace), { 'request': { 'media_type': 'application/json' } }
 
 
-      sig { params(connection_id: ::String, id: ::String, kms_space: T.nilable(::UnifiedRubySDK::Shared::KmsSpace)).void }
-      def initialize(connection_id: nil, id: nil, kms_space: nil)
+      sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), kms_space: T.nilable(::UnifiedRubySDK::Shared::KmsSpace)).void }
+      def initialize(connection_id: nil, id: nil, fields_: nil, kms_space: nil)
         @connection_id = connection_id
         @id = id
+        @fields_ = fields_
         @kms_space = kms_space
       end
     end

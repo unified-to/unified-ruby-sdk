@@ -29,7 +29,9 @@ s.config_security(
 )
 
     
-res = s.customer.create_ticketing_customer(connection_id="<value>", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new())
+res = s.customer.create_ticketing_customer(connection_id="<value>", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.ticketing_customer.nil?
   # handle response
@@ -43,6 +45,7 @@ end
 | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
 | `ticketing_customer`                                                                    | [::UnifiedRubySDK::Shared::TicketingCustomer](../../models/shared/ticketingcustomer.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -155,7 +158,9 @@ s.config_security(
 )
 
     
-res = s.customer.patch_ticketing_customer(connection_id="<value>", id="<value>", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new())
+res = s.customer.patch_ticketing_customer(connection_id="<value>", id="<value>", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.ticketing_customer.nil?
   # handle response
@@ -170,6 +175,7 @@ end
 | `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
 | `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Customer                                                                      |
 | `ticketing_customer`                                                                    | [::UnifiedRubySDK::Shared::TicketingCustomer](../../models/shared/ticketingcustomer.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -236,7 +242,9 @@ s.config_security(
 )
 
     
-res = s.customer.update_ticketing_customer(connection_id="<value>", id="<value>", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new())
+res = s.customer.update_ticketing_customer(connection_id="<value>", id="<value>", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.ticketing_customer.nil?
   # handle response
@@ -251,6 +259,7 @@ end
 | `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
 | `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Customer                                                                      |
 | `ticketing_customer`                                                                    | [::UnifiedRubySDK::Shared::TicketingCustomer](../../models/shared/ticketingcustomer.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 

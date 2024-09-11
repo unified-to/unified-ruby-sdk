@@ -35,7 +35,9 @@ res = s.page.create_kms_page(connection_id="<value>", kms_page=::UnifiedRubySDK:
     space_id: "<value>",
     title: "<value>",
     type: ::UnifiedRubySDK::Shared::KmsPageType::HTML,
-  ))
+  ), fields_=[
+    "<value>",
+  ])
 
 if ! res.kms_page.nil?
   # handle response
@@ -49,6 +51,7 @@ end
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
 | `kms_page`                                                          | [::UnifiedRubySDK::Shared::KmsPage](../../models/shared/kmspage.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 
@@ -167,7 +170,9 @@ res = s.page.patch_kms_page(connection_id="<value>", id="<value>", kms_page=::Un
     space_id: "<value>",
     title: "<value>",
     type: ::UnifiedRubySDK::Shared::KmsPageType::TEXT,
-  ))
+  ), fields_=[
+    "<value>",
+  ])
 
 if ! res.kms_page.nil?
   # handle response
@@ -182,6 +187,7 @@ end
 | `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
 | `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Page                                                      |
 | `kms_page`                                                          | [::UnifiedRubySDK::Shared::KmsPage](../../models/shared/kmspage.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 
@@ -254,7 +260,9 @@ res = s.page.update_kms_page(connection_id="<value>", id="<value>", kms_page=::U
     space_id: "<value>",
     title: "<value>",
     type: ::UnifiedRubySDK::Shared::KmsPageType::TEXT,
-  ))
+  ), fields_=[
+    "<value>",
+  ])
 
 if ! res.kms_page.nil?
   # handle response
@@ -269,6 +277,7 @@ end
 | `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
 | `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Page                                                      |
 | `kms_page`                                                          | [::UnifiedRubySDK::Shared::KmsPage](../../models/shared/kmspage.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 

@@ -17,13 +17,16 @@ module UnifiedRubySDK
       field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
 
       field :crm_lead, T.nilable(::UnifiedRubySDK::Shared::CrmLead), { 'request': { 'media_type': 'application/json' } }
+      # Comma-delimited fields to return
+      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, id: ::String, crm_lead: T.nilable(::UnifiedRubySDK::Shared::CrmLead)).void }
-      def initialize(connection_id: nil, id: nil, crm_lead: nil)
+      sig { params(connection_id: ::String, id: ::String, crm_lead: T.nilable(::UnifiedRubySDK::Shared::CrmLead), fields_: T.nilable(T::Array[::String])).void }
+      def initialize(connection_id: nil, id: nil, crm_lead: nil, fields_: nil)
         @connection_id = connection_id
         @id = id
         @crm_lead = crm_lead
+        @fields_ = fields_
       end
     end
   end

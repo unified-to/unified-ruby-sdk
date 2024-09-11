@@ -29,7 +29,9 @@ s.config_security(
 )
 
     
-res = s.project.create_task_project(connection_id="<value>", task_project=::UnifiedRubySDK::Shared::TaskProject.new())
+res = s.project.create_task_project(connection_id="<value>", task_project=::UnifiedRubySDK::Shared::TaskProject.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.task_project.nil?
   # handle response
@@ -43,6 +45,7 @@ end
 | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
 | `task_project`                                                              | [::UnifiedRubySDK::Shared::TaskProject](../../models/shared/taskproject.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -155,7 +158,9 @@ s.config_security(
 )
 
     
-res = s.project.patch_task_project(connection_id="<value>", id="<value>", task_project=::UnifiedRubySDK::Shared::TaskProject.new())
+res = s.project.patch_task_project(connection_id="<value>", id="<value>", task_project=::UnifiedRubySDK::Shared::TaskProject.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.task_project.nil?
   # handle response
@@ -170,6 +175,7 @@ end
 | `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
 | `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Project                                                           |
 | `task_project`                                                              | [::UnifiedRubySDK::Shared::TaskProject](../../models/shared/taskproject.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -236,7 +242,9 @@ s.config_security(
 )
 
     
-res = s.project.update_task_project(connection_id="<value>", id="<value>", task_project=::UnifiedRubySDK::Shared::TaskProject.new())
+res = s.project.update_task_project(connection_id="<value>", id="<value>", task_project=::UnifiedRubySDK::Shared::TaskProject.new(), fields_=[
+    "<value>",
+  ])
 
 if ! res.task_project.nil?
   # handle response
@@ -251,6 +259,7 @@ end
 | `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
 | `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Project                                                           |
 | `task_project`                                                              | [::UnifiedRubySDK::Shared::TaskProject](../../models/shared/taskproject.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 

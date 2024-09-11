@@ -19,13 +19,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, accounting_invoice: T.nilable(::UnifiedRubySDK::Shared::AccountingInvoice)).returns(::UnifiedRubySDK::Operations::CreateAccountingInvoiceResponse) }
-    def create_accounting_invoice(connection_id, accounting_invoice = nil)
+    sig { params(connection_id: ::String, accounting_invoice: T.nilable(::UnifiedRubySDK::Shared::AccountingInvoice), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateAccountingInvoiceResponse) }
+    def create_accounting_invoice(connection_id, accounting_invoice = nil, fields_ = nil)
       # create_accounting_invoice - Create an invoice
       request = ::UnifiedRubySDK::Operations::CreateAccountingInvoiceRequest.new(
         
         connection_id: connection_id,
-        accounting_invoice: accounting_invoice
+        accounting_invoice: accounting_invoice,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -38,11 +39,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :accounting_invoice, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateAccountingInvoiceRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -148,14 +151,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_invoice: T.nilable(::UnifiedRubySDK::Shared::AccountingInvoice)).returns(::UnifiedRubySDK::Operations::PatchAccountingInvoiceResponse) }
-    def patch_accounting_invoice(connection_id, id, accounting_invoice = nil)
+    sig { params(connection_id: ::String, id: ::String, accounting_invoice: T.nilable(::UnifiedRubySDK::Shared::AccountingInvoice), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchAccountingInvoiceResponse) }
+    def patch_accounting_invoice(connection_id, id, accounting_invoice = nil, fields_ = nil)
       # patch_accounting_invoice - Update an invoice
       request = ::UnifiedRubySDK::Operations::PatchAccountingInvoiceRequest.new(
         
         connection_id: connection_id,
         id: id,
-        accounting_invoice: accounting_invoice
+        accounting_invoice: accounting_invoice,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -168,11 +172,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :accounting_invoice, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchAccountingInvoiceRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -233,14 +239,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_invoice: T.nilable(::UnifiedRubySDK::Shared::AccountingInvoice)).returns(::UnifiedRubySDK::Operations::UpdateAccountingInvoiceResponse) }
-    def update_accounting_invoice(connection_id, id, accounting_invoice = nil)
+    sig { params(connection_id: ::String, id: ::String, accounting_invoice: T.nilable(::UnifiedRubySDK::Shared::AccountingInvoice), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateAccountingInvoiceResponse) }
+    def update_accounting_invoice(connection_id, id, accounting_invoice = nil, fields_ = nil)
       # update_accounting_invoice - Update an invoice
       request = ::UnifiedRubySDK::Operations::UpdateAccountingInvoiceRequest.new(
         
         connection_id: connection_id,
         id: id,
-        accounting_invoice: accounting_invoice
+        accounting_invoice: accounting_invoice,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -253,11 +260,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :accounting_invoice, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateAccountingInvoiceRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)

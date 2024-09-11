@@ -19,13 +19,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ats_activity: T.nilable(::UnifiedRubySDK::Shared::AtsActivity)).returns(::UnifiedRubySDK::Operations::CreateAtsActivityResponse) }
-    def create_ats_activity(connection_id, ats_activity = nil)
+    sig { params(connection_id: ::String, ats_activity: T.nilable(::UnifiedRubySDK::Shared::AtsActivity), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateAtsActivityResponse) }
+    def create_ats_activity(connection_id, ats_activity = nil, fields_ = nil)
       # create_ats_activity - Create an activity
       request = ::UnifiedRubySDK::Operations::CreateAtsActivityRequest.new(
         
         connection_id: connection_id,
-        ats_activity: ats_activity
+        ats_activity: ats_activity,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -38,11 +39,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_activity, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateAtsActivityRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -68,13 +71,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ats_application: T.nilable(::UnifiedRubySDK::Shared::AtsApplication)).returns(::UnifiedRubySDK::Operations::CreateAtsApplicationResponse) }
-    def create_ats_application(connection_id, ats_application = nil)
+    sig { params(connection_id: ::String, ats_application: T.nilable(::UnifiedRubySDK::Shared::AtsApplication), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateAtsApplicationResponse) }
+    def create_ats_application(connection_id, ats_application = nil, fields_ = nil)
       # create_ats_application - Create an application
       request = ::UnifiedRubySDK::Operations::CreateAtsApplicationRequest.new(
         
         connection_id: connection_id,
-        ats_application: ats_application
+        ats_application: ats_application,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -87,11 +91,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_application, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateAtsApplicationRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -117,13 +123,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ats_candidate: T.nilable(::UnifiedRubySDK::Shared::AtsCandidate)).returns(::UnifiedRubySDK::Operations::CreateAtsCandidateResponse) }
-    def create_ats_candidate(connection_id, ats_candidate = nil)
+    sig { params(connection_id: ::String, ats_candidate: T.nilable(::UnifiedRubySDK::Shared::AtsCandidate), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateAtsCandidateResponse) }
+    def create_ats_candidate(connection_id, ats_candidate = nil, fields_ = nil)
       # create_ats_candidate - Create a candidate
       request = ::UnifiedRubySDK::Operations::CreateAtsCandidateRequest.new(
         
         connection_id: connection_id,
-        ats_candidate: ats_candidate
+        ats_candidate: ats_candidate,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -136,11 +143,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_candidate, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateAtsCandidateRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -166,13 +175,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ats_document: T.nilable(::UnifiedRubySDK::Shared::AtsDocument)).returns(::UnifiedRubySDK::Operations::CreateAtsDocumentResponse) }
-    def create_ats_document(connection_id, ats_document = nil)
+    sig { params(connection_id: ::String, ats_document: T.nilable(::UnifiedRubySDK::Shared::AtsDocument), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateAtsDocumentResponse) }
+    def create_ats_document(connection_id, ats_document = nil, fields_ = nil)
       # create_ats_document - Create a document
       request = ::UnifiedRubySDK::Operations::CreateAtsDocumentRequest.new(
         
         connection_id: connection_id,
-        ats_document: ats_document
+        ats_document: ats_document,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -185,11 +195,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_document, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateAtsDocumentRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -215,13 +227,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ats_interview: T.nilable(::UnifiedRubySDK::Shared::AtsInterview)).returns(::UnifiedRubySDK::Operations::CreateAtsInterviewResponse) }
-    def create_ats_interview(connection_id, ats_interview = nil)
+    sig { params(connection_id: ::String, ats_interview: T.nilable(::UnifiedRubySDK::Shared::AtsInterview), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateAtsInterviewResponse) }
+    def create_ats_interview(connection_id, ats_interview = nil, fields_ = nil)
       # create_ats_interview - Create an interview
       request = ::UnifiedRubySDK::Operations::CreateAtsInterviewRequest.new(
         
         connection_id: connection_id,
-        ats_interview: ats_interview
+        ats_interview: ats_interview,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -234,11 +247,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_interview, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateAtsInterviewRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -264,13 +279,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ats_job: T.nilable(::UnifiedRubySDK::Shared::AtsJob)).returns(::UnifiedRubySDK::Operations::CreateAtsJobResponse) }
-    def create_ats_job(connection_id, ats_job = nil)
+    sig { params(connection_id: ::String, ats_job: T.nilable(::UnifiedRubySDK::Shared::AtsJob), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateAtsJobResponse) }
+    def create_ats_job(connection_id, ats_job = nil, fields_ = nil)
       # create_ats_job - Create a job
       request = ::UnifiedRubySDK::Operations::CreateAtsJobRequest.new(
         
         connection_id: connection_id,
-        ats_job: ats_job
+        ats_job: ats_job,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -283,11 +299,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_job, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateAtsJobRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -313,13 +331,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard)).returns(::UnifiedRubySDK::Operations::CreateAtsScorecardResponse) }
-    def create_ats_scorecard(connection_id, ats_scorecard = nil)
+    sig { params(connection_id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateAtsScorecardResponse) }
+    def create_ats_scorecard(connection_id, ats_scorecard = nil, fields_ = nil)
       # create_ats_scorecard - Create a scorecard
       request = ::UnifiedRubySDK::Operations::CreateAtsScorecardRequest.new(
         
         connection_id: connection_id,
-        ats_scorecard: ats_scorecard
+        ats_scorecard: ats_scorecard,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -332,11 +351,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_scorecard, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateAtsScorecardRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.post(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -1039,14 +1060,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_activity: T.nilable(::UnifiedRubySDK::Shared::AtsActivity)).returns(::UnifiedRubySDK::Operations::PatchAtsActivityResponse) }
-    def patch_ats_activity(connection_id, id, ats_activity = nil)
+    sig { params(connection_id: ::String, id: ::String, ats_activity: T.nilable(::UnifiedRubySDK::Shared::AtsActivity), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchAtsActivityResponse) }
+    def patch_ats_activity(connection_id, id, ats_activity = nil, fields_ = nil)
       # patch_ats_activity - Update an activity
       request = ::UnifiedRubySDK::Operations::PatchAtsActivityRequest.new(
         
         connection_id: connection_id,
         id: id,
-        ats_activity: ats_activity
+        ats_activity: ats_activity,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1059,11 +1081,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_activity, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchAtsActivityRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -1089,14 +1113,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_application: T.nilable(::UnifiedRubySDK::Shared::AtsApplication)).returns(::UnifiedRubySDK::Operations::PatchAtsApplicationResponse) }
-    def patch_ats_application(connection_id, id, ats_application = nil)
+    sig { params(connection_id: ::String, id: ::String, ats_application: T.nilable(::UnifiedRubySDK::Shared::AtsApplication), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchAtsApplicationResponse) }
+    def patch_ats_application(connection_id, id, ats_application = nil, fields_ = nil)
       # patch_ats_application - Update an application
       request = ::UnifiedRubySDK::Operations::PatchAtsApplicationRequest.new(
         
         connection_id: connection_id,
         id: id,
-        ats_application: ats_application
+        ats_application: ats_application,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1109,11 +1134,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_application, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchAtsApplicationRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -1139,14 +1166,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_candidate: T.nilable(::UnifiedRubySDK::Shared::AtsCandidate)).returns(::UnifiedRubySDK::Operations::PatchAtsCandidateResponse) }
-    def patch_ats_candidate(connection_id, id, ats_candidate = nil)
+    sig { params(connection_id: ::String, id: ::String, ats_candidate: T.nilable(::UnifiedRubySDK::Shared::AtsCandidate), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchAtsCandidateResponse) }
+    def patch_ats_candidate(connection_id, id, ats_candidate = nil, fields_ = nil)
       # patch_ats_candidate - Update a candidate
       request = ::UnifiedRubySDK::Operations::PatchAtsCandidateRequest.new(
         
         connection_id: connection_id,
         id: id,
-        ats_candidate: ats_candidate
+        ats_candidate: ats_candidate,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1159,11 +1187,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_candidate, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchAtsCandidateRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -1189,14 +1219,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_document: T.nilable(::UnifiedRubySDK::Shared::AtsDocument)).returns(::UnifiedRubySDK::Operations::PatchAtsDocumentResponse) }
-    def patch_ats_document(connection_id, id, ats_document = nil)
+    sig { params(connection_id: ::String, id: ::String, ats_document: T.nilable(::UnifiedRubySDK::Shared::AtsDocument), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchAtsDocumentResponse) }
+    def patch_ats_document(connection_id, id, ats_document = nil, fields_ = nil)
       # patch_ats_document - Update a document
       request = ::UnifiedRubySDK::Operations::PatchAtsDocumentRequest.new(
         
         connection_id: connection_id,
         id: id,
-        ats_document: ats_document
+        ats_document: ats_document,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1209,11 +1240,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_document, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchAtsDocumentRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -1239,14 +1272,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_interview: T.nilable(::UnifiedRubySDK::Shared::AtsInterview)).returns(::UnifiedRubySDK::Operations::PatchAtsInterviewResponse) }
-    def patch_ats_interview(connection_id, id, ats_interview = nil)
+    sig { params(connection_id: ::String, id: ::String, ats_interview: T.nilable(::UnifiedRubySDK::Shared::AtsInterview), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchAtsInterviewResponse) }
+    def patch_ats_interview(connection_id, id, ats_interview = nil, fields_ = nil)
       # patch_ats_interview - Update an interview
       request = ::UnifiedRubySDK::Operations::PatchAtsInterviewRequest.new(
         
         connection_id: connection_id,
         id: id,
-        ats_interview: ats_interview
+        ats_interview: ats_interview,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1259,11 +1293,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_interview, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchAtsInterviewRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -1289,14 +1325,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_job: T.nilable(::UnifiedRubySDK::Shared::AtsJob)).returns(::UnifiedRubySDK::Operations::PatchAtsJobResponse) }
-    def patch_ats_job(connection_id, id, ats_job = nil)
+    sig { params(connection_id: ::String, id: ::String, ats_job: T.nilable(::UnifiedRubySDK::Shared::AtsJob), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchAtsJobResponse) }
+    def patch_ats_job(connection_id, id, ats_job = nil, fields_ = nil)
       # patch_ats_job - Update a job
       request = ::UnifiedRubySDK::Operations::PatchAtsJobRequest.new(
         
         connection_id: connection_id,
         id: id,
-        ats_job: ats_job
+        ats_job: ats_job,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1309,11 +1346,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_job, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchAtsJobRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -1339,14 +1378,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard)).returns(::UnifiedRubySDK::Operations::PatchAtsScorecardResponse) }
-    def patch_ats_scorecard(connection_id, id, ats_scorecard = nil)
+    sig { params(connection_id: ::String, id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchAtsScorecardResponse) }
+    def patch_ats_scorecard(connection_id, id, ats_scorecard = nil, fields_ = nil)
       # patch_ats_scorecard - Update a scorecard
       request = ::UnifiedRubySDK::Operations::PatchAtsScorecardRequest.new(
         
         connection_id: connection_id,
         id: id,
-        ats_scorecard: ats_scorecard
+        ats_scorecard: ats_scorecard,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1359,11 +1399,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_scorecard, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchAtsScorecardRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.patch(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -1634,14 +1676,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_activity: T.nilable(::UnifiedRubySDK::Shared::AtsActivity)).returns(::UnifiedRubySDK::Operations::UpdateAtsActivityResponse) }
-    def update_ats_activity(connection_id, id, ats_activity = nil)
+    sig { params(connection_id: ::String, id: ::String, ats_activity: T.nilable(::UnifiedRubySDK::Shared::AtsActivity), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateAtsActivityResponse) }
+    def update_ats_activity(connection_id, id, ats_activity = nil, fields_ = nil)
       # update_ats_activity - Update an activity
       request = ::UnifiedRubySDK::Operations::UpdateAtsActivityRequest.new(
         
         connection_id: connection_id,
         id: id,
-        ats_activity: ats_activity
+        ats_activity: ats_activity,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1654,11 +1697,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_activity, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateAtsActivityRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -1684,14 +1729,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_application: T.nilable(::UnifiedRubySDK::Shared::AtsApplication)).returns(::UnifiedRubySDK::Operations::UpdateAtsApplicationResponse) }
-    def update_ats_application(connection_id, id, ats_application = nil)
+    sig { params(connection_id: ::String, id: ::String, ats_application: T.nilable(::UnifiedRubySDK::Shared::AtsApplication), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateAtsApplicationResponse) }
+    def update_ats_application(connection_id, id, ats_application = nil, fields_ = nil)
       # update_ats_application - Update an application
       request = ::UnifiedRubySDK::Operations::UpdateAtsApplicationRequest.new(
         
         connection_id: connection_id,
         id: id,
-        ats_application: ats_application
+        ats_application: ats_application,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1704,11 +1750,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_application, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateAtsApplicationRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -1734,14 +1782,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_candidate: T.nilable(::UnifiedRubySDK::Shared::AtsCandidate)).returns(::UnifiedRubySDK::Operations::UpdateAtsCandidateResponse) }
-    def update_ats_candidate(connection_id, id, ats_candidate = nil)
+    sig { params(connection_id: ::String, id: ::String, ats_candidate: T.nilable(::UnifiedRubySDK::Shared::AtsCandidate), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateAtsCandidateResponse) }
+    def update_ats_candidate(connection_id, id, ats_candidate = nil, fields_ = nil)
       # update_ats_candidate - Update a candidate
       request = ::UnifiedRubySDK::Operations::UpdateAtsCandidateRequest.new(
         
         connection_id: connection_id,
         id: id,
-        ats_candidate: ats_candidate
+        ats_candidate: ats_candidate,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1754,11 +1803,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_candidate, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateAtsCandidateRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -1784,14 +1835,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_document: T.nilable(::UnifiedRubySDK::Shared::AtsDocument)).returns(::UnifiedRubySDK::Operations::UpdateAtsDocumentResponse) }
-    def update_ats_document(connection_id, id, ats_document = nil)
+    sig { params(connection_id: ::String, id: ::String, ats_document: T.nilable(::UnifiedRubySDK::Shared::AtsDocument), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateAtsDocumentResponse) }
+    def update_ats_document(connection_id, id, ats_document = nil, fields_ = nil)
       # update_ats_document - Update a document
       request = ::UnifiedRubySDK::Operations::UpdateAtsDocumentRequest.new(
         
         connection_id: connection_id,
         id: id,
-        ats_document: ats_document
+        ats_document: ats_document,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1804,11 +1856,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_document, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateAtsDocumentRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -1834,14 +1888,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_interview: T.nilable(::UnifiedRubySDK::Shared::AtsInterview)).returns(::UnifiedRubySDK::Operations::UpdateAtsInterviewResponse) }
-    def update_ats_interview(connection_id, id, ats_interview = nil)
+    sig { params(connection_id: ::String, id: ::String, ats_interview: T.nilable(::UnifiedRubySDK::Shared::AtsInterview), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateAtsInterviewResponse) }
+    def update_ats_interview(connection_id, id, ats_interview = nil, fields_ = nil)
       # update_ats_interview - Update an interview
       request = ::UnifiedRubySDK::Operations::UpdateAtsInterviewRequest.new(
         
         connection_id: connection_id,
         id: id,
-        ats_interview: ats_interview
+        ats_interview: ats_interview,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1854,11 +1909,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_interview, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateAtsInterviewRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -1884,14 +1941,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_job: T.nilable(::UnifiedRubySDK::Shared::AtsJob)).returns(::UnifiedRubySDK::Operations::UpdateAtsJobResponse) }
-    def update_ats_job(connection_id, id, ats_job = nil)
+    sig { params(connection_id: ::String, id: ::String, ats_job: T.nilable(::UnifiedRubySDK::Shared::AtsJob), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateAtsJobResponse) }
+    def update_ats_job(connection_id, id, ats_job = nil, fields_ = nil)
       # update_ats_job - Update a job
       request = ::UnifiedRubySDK::Operations::UpdateAtsJobRequest.new(
         
         connection_id: connection_id,
         id: id,
-        ats_job: ats_job
+        ats_job: ats_job,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1904,11 +1962,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_job, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateAtsJobRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
@@ -1934,14 +1994,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard)).returns(::UnifiedRubySDK::Operations::UpdateAtsScorecardResponse) }
-    def update_ats_scorecard(connection_id, id, ats_scorecard = nil)
+    sig { params(connection_id: ::String, id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateAtsScorecardResponse) }
+    def update_ats_scorecard(connection_id, id, ats_scorecard = nil, fields_ = nil)
       # update_ats_scorecard - Update a scorecard
       request = ::UnifiedRubySDK::Operations::UpdateAtsScorecardRequest.new(
         
         connection_id: connection_id,
         id: id,
-        ats_scorecard: ats_scorecard
+        ats_scorecard: ats_scorecard,
+        fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1954,11 +2015,13 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_scorecard, :json)
       headers['content-type'] = req_content_type
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateAtsScorecardRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       r = @sdk_configuration.client.put(url) do |req|
         req.headers = headers
+        req.params = query_params
         Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
         if form
           req.body = Utils.encode_form(form)
