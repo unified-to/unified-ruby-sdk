@@ -30,8 +30,8 @@ s.config_security(
 
     
 res = s.journal.create_accounting_journal(connection_id="<value>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.accounting_journal.nil?
   # handle response
@@ -72,9 +72,9 @@ s.config_security(
 )
 
     
-res = s.journal.get_accounting_journal(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.journal.get_accounting_journal(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.accounting_journal.nil?
   # handle response
@@ -158,9 +158,9 @@ s.config_security(
 )
 
     
-res = s.journal.patch_accounting_journal(connection_id="<value>", id="<value>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), fields_=[
-    "<value>",
-  ])
+res = s.journal.patch_accounting_journal(connection_id="<value>", id="<id>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), fields_=[
+  "<value>",
+])
 
 if ! res.accounting_journal.nil?
   # handle response
@@ -202,7 +202,7 @@ s.config_security(
 )
 
     
-res = s.journal.remove_accounting_journal(connection_id="<value>", id="<value>")
+res = s.journal.remove_accounting_journal(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -242,9 +242,9 @@ s.config_security(
 )
 
     
-res = s.journal.update_accounting_journal(connection_id="<value>", id="<value>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), fields_=[
-    "<value>",
-  ])
+res = s.journal.update_accounting_journal(connection_id="<value>", id="<id>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), fields_=[
+  "<value>",
+])
 
 if ! res.accounting_journal.nil?
   # handle response

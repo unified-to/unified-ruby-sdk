@@ -40,8 +40,8 @@ s.config_security(
 
     
 res = s.payment.create_payment_link(connection_id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.payment_link.nil?
   # handle response
@@ -83,8 +83,8 @@ s.config_security(
 
     
 res = s.payment.create_payment_payment(connection_id="<value>", payment_payment=::UnifiedRubySDK::Shared::PaymentPayment.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.payment_payment.nil?
   # handle response
@@ -125,9 +125,9 @@ s.config_security(
 )
 
     
-res = s.payment.get_payment_link(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.payment.get_payment_link(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.payment_link.nil?
   # handle response
@@ -168,9 +168,9 @@ s.config_security(
 )
 
     
-res = s.payment.get_payment_payment(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.payment.get_payment_payment(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.payment_payment.nil?
   # handle response
@@ -211,9 +211,9 @@ s.config_security(
 )
 
     
-res = s.payment.get_payment_payout(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.payment.get_payment_payout(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.payment_payout.nil?
   # handle response
@@ -254,9 +254,9 @@ s.config_security(
 )
 
     
-res = s.payment.get_payment_refund(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.payment.get_payment_refund(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.payment_refund.nil?
   # handle response
@@ -469,9 +469,9 @@ s.config_security(
 )
 
     
-res = s.payment.patch_payment_link(connection_id="<value>", id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(), fields_=[
-    "<value>",
-  ])
+res = s.payment.patch_payment_link(connection_id="<value>", id="<id>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(), fields_=[
+  "<value>",
+])
 
 if ! res.payment_link.nil?
   # handle response
@@ -513,9 +513,9 @@ s.config_security(
 )
 
     
-res = s.payment.patch_payment_payment(connection_id="<value>", id="<value>", payment_payment=::UnifiedRubySDK::Shared::PaymentPayment.new(), fields_=[
-    "<value>",
-  ])
+res = s.payment.patch_payment_payment(connection_id="<value>", id="<id>", payment_payment=::UnifiedRubySDK::Shared::PaymentPayment.new(), fields_=[
+  "<value>",
+])
 
 if ! res.payment_payment.nil?
   # handle response
@@ -557,7 +557,7 @@ s.config_security(
 )
 
     
-res = s.payment.remove_payment_link(connection_id="<value>", id="<value>")
+res = s.payment.remove_payment_link(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -597,7 +597,7 @@ s.config_security(
 )
 
     
-res = s.payment.remove_payment_payment(connection_id="<value>", id="<value>")
+res = s.payment.remove_payment_payment(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -637,9 +637,9 @@ s.config_security(
 )
 
     
-res = s.payment.update_payment_link(connection_id="<value>", id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(), fields_=[
-    "<value>",
-  ])
+res = s.payment.update_payment_link(connection_id="<value>", id="<id>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(), fields_=[
+  "<value>",
+])
 
 if ! res.payment_link.nil?
   # handle response
@@ -681,9 +681,9 @@ s.config_security(
 )
 
     
-res = s.payment.update_payment_payment(connection_id="<value>", id="<value>", payment_payment=::UnifiedRubySDK::Shared::PaymentPayment.new(), fields_=[
-    "<value>",
-  ])
+res = s.payment.update_payment_payment(connection_id="<value>", id="<id>", payment_payment=::UnifiedRubySDK::Shared::PaymentPayment.new(), fields_=[
+  "<value>",
+])
 
 if ! res.payment_payment.nil?
   # handle response

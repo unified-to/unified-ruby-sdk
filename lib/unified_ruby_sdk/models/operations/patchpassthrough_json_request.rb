@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchPassthroughRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchPassthroughJsonRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # ID of the connection
@@ -16,10 +16,10 @@ module UnifiedRubySDK
 
       field :path, ::String, { 'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': false } }
       # integration-specific payload
-      field :request_body, T.nilable(T::Hash[Symbol, ::Object]), { 'request': { 'media_type': 'application/json' } }
+      field :request_body, T.nilable(::Object), { 'request': { 'media_type': 'application/json' } }
 
 
-      sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(T::Hash[Symbol, ::Object])).void }
+      sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object)).void }
       def initialize(connection_id: nil, path: nil, request_body: nil)
         @connection_id = connection_id
         @path = path

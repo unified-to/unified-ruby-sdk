@@ -42,8 +42,8 @@ s.config_security(
 
     
 res = s.ticketing.create_ticketing_customer(connection_id="<value>", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.ticketing_customer.nil?
   # handle response
@@ -85,8 +85,8 @@ s.config_security(
 
     
 res = s.ticketing.create_ticketing_note(connection_id="<value>", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.ticketing_note.nil?
   # handle response
@@ -128,8 +128,8 @@ s.config_security(
 
     
 res = s.ticketing.create_ticketing_ticket(connection_id="<value>", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.ticketing_ticket.nil?
   # handle response
@@ -170,9 +170,9 @@ s.config_security(
 )
 
     
-res = s.ticketing.get_ticketing_customer(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.ticketing.get_ticketing_customer(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.ticketing_customer.nil?
   # handle response
@@ -213,9 +213,9 @@ s.config_security(
 )
 
     
-res = s.ticketing.get_ticketing_note(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.ticketing.get_ticketing_note(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.ticketing_note.nil?
   # handle response
@@ -256,9 +256,9 @@ s.config_security(
 )
 
     
-res = s.ticketing.get_ticketing_ticket(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.ticketing.get_ticketing_ticket(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.ticketing_ticket.nil?
   # handle response
@@ -428,9 +428,9 @@ s.config_security(
 )
 
     
-res = s.ticketing.patch_ticketing_customer(connection_id="<value>", id="<value>", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new(), fields_=[
-    "<value>",
-  ])
+res = s.ticketing.patch_ticketing_customer(connection_id="<value>", id="<id>", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ticketing_customer.nil?
   # handle response
@@ -472,9 +472,9 @@ s.config_security(
 )
 
     
-res = s.ticketing.patch_ticketing_note(connection_id="<value>", id="<value>", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new(), fields_=[
-    "<value>",
-  ])
+res = s.ticketing.patch_ticketing_note(connection_id="<value>", id="<id>", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ticketing_note.nil?
   # handle response
@@ -516,9 +516,9 @@ s.config_security(
 )
 
     
-res = s.ticketing.patch_ticketing_ticket(connection_id="<value>", id="<value>", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new(), fields_=[
-    "<value>",
-  ])
+res = s.ticketing.patch_ticketing_ticket(connection_id="<value>", id="<id>", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ticketing_ticket.nil?
   # handle response
@@ -560,7 +560,7 @@ s.config_security(
 )
 
     
-res = s.ticketing.remove_ticketing_customer(connection_id="<value>", id="<value>")
+res = s.ticketing.remove_ticketing_customer(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -600,7 +600,7 @@ s.config_security(
 )
 
     
-res = s.ticketing.remove_ticketing_note(connection_id="<value>", id="<value>")
+res = s.ticketing.remove_ticketing_note(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -640,7 +640,7 @@ s.config_security(
 )
 
     
-res = s.ticketing.remove_ticketing_ticket(connection_id="<value>", id="<value>")
+res = s.ticketing.remove_ticketing_ticket(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -680,9 +680,9 @@ s.config_security(
 )
 
     
-res = s.ticketing.update_ticketing_customer(connection_id="<value>", id="<value>", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new(), fields_=[
-    "<value>",
-  ])
+res = s.ticketing.update_ticketing_customer(connection_id="<value>", id="<id>", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ticketing_customer.nil?
   # handle response
@@ -724,9 +724,9 @@ s.config_security(
 )
 
     
-res = s.ticketing.update_ticketing_note(connection_id="<value>", id="<value>", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new(), fields_=[
-    "<value>",
-  ])
+res = s.ticketing.update_ticketing_note(connection_id="<value>", id="<id>", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ticketing_note.nil?
   # handle response
@@ -768,9 +768,9 @@ s.config_security(
 )
 
     
-res = s.ticketing.update_ticketing_ticket(connection_id="<value>", id="<value>", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new(), fields_=[
-    "<value>",
-  ])
+res = s.ticketing.update_ticketing_ticket(connection_id="<value>", id="<id>", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ticketing_ticket.nil?
   # handle response

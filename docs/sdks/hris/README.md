@@ -52,8 +52,8 @@ s.config_security(
 
     
 res = s.hris.create_hris_company(connection_id="<value>", hris_company=::UnifiedRubySDK::Shared::HrisCompany.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.hris_company.nil?
   # handle response
@@ -95,8 +95,8 @@ s.config_security(
 
     
 res = s.hris.create_hris_employee(connection_id="<value>", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.hris_employee.nil?
   # handle response
@@ -138,8 +138,8 @@ s.config_security(
 
     
 res = s.hris.create_hris_group(connection_id="<value>", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.hris_group.nil?
   # handle response
@@ -181,8 +181,8 @@ s.config_security(
 
     
 res = s.hris.create_hris_location(connection_id="<value>", hris_location=::UnifiedRubySDK::Shared::HrisLocation.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.hris_location.nil?
   # handle response
@@ -223,9 +223,9 @@ s.config_security(
 )
 
     
-res = s.hris.get_hris_company(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.hris.get_hris_company(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.hris_company.nil?
   # handle response
@@ -266,9 +266,9 @@ s.config_security(
 )
 
     
-res = s.hris.get_hris_employee(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.hris.get_hris_employee(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.hris_employee.nil?
   # handle response
@@ -309,9 +309,9 @@ s.config_security(
 )
 
     
-res = s.hris.get_hris_group(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.hris.get_hris_group(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.hris_group.nil?
   # handle response
@@ -352,9 +352,9 @@ s.config_security(
 )
 
     
-res = s.hris.get_hris_location(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.hris.get_hris_location(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.hris_location.nil?
   # handle response
@@ -395,9 +395,9 @@ s.config_security(
 )
 
     
-res = s.hris.get_hris_payslip(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.hris.get_hris_payslip(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.hris_payslip.nil?
   # handle response
@@ -438,9 +438,9 @@ s.config_security(
 )
 
     
-res = s.hris.get_hris_timeoff(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.hris.get_hris_timeoff(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.hris_timeoff.nil?
   # handle response
@@ -739,9 +739,9 @@ s.config_security(
 )
 
     
-res = s.hris.patch_hris_company(connection_id="<value>", id="<value>", hris_company=::UnifiedRubySDK::Shared::HrisCompany.new(), fields_=[
-    "<value>",
-  ])
+res = s.hris.patch_hris_company(connection_id="<value>", id="<id>", hris_company=::UnifiedRubySDK::Shared::HrisCompany.new(), fields_=[
+  "<value>",
+])
 
 if ! res.hris_company.nil?
   # handle response
@@ -783,9 +783,9 @@ s.config_security(
 )
 
     
-res = s.hris.patch_hris_employee(connection_id="<value>", id="<value>", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new(), fields_=[
-    "<value>",
-  ])
+res = s.hris.patch_hris_employee(connection_id="<value>", id="<id>", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new(), fields_=[
+  "<value>",
+])
 
 if ! res.hris_employee.nil?
   # handle response
@@ -827,9 +827,9 @@ s.config_security(
 )
 
     
-res = s.hris.patch_hris_group(connection_id="<value>", id="<value>", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(), fields_=[
-    "<value>",
-  ])
+res = s.hris.patch_hris_group(connection_id="<value>", id="<id>", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(), fields_=[
+  "<value>",
+])
 
 if ! res.hris_group.nil?
   # handle response
@@ -871,9 +871,9 @@ s.config_security(
 )
 
     
-res = s.hris.patch_hris_location(connection_id="<value>", id="<value>", hris_location=::UnifiedRubySDK::Shared::HrisLocation.new(), fields_=[
-    "<value>",
-  ])
+res = s.hris.patch_hris_location(connection_id="<value>", id="<id>", hris_location=::UnifiedRubySDK::Shared::HrisLocation.new(), fields_=[
+  "<value>",
+])
 
 if ! res.hris_location.nil?
   # handle response
@@ -915,7 +915,7 @@ s.config_security(
 )
 
     
-res = s.hris.remove_hris_company(connection_id="<value>", id="<value>")
+res = s.hris.remove_hris_company(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -955,7 +955,7 @@ s.config_security(
 )
 
     
-res = s.hris.remove_hris_employee(connection_id="<value>", id="<value>")
+res = s.hris.remove_hris_employee(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -995,7 +995,7 @@ s.config_security(
 )
 
     
-res = s.hris.remove_hris_group(connection_id="<value>", id="<value>")
+res = s.hris.remove_hris_group(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -1035,7 +1035,7 @@ s.config_security(
 )
 
     
-res = s.hris.remove_hris_location(connection_id="<value>", id="<value>")
+res = s.hris.remove_hris_location(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -1075,9 +1075,9 @@ s.config_security(
 )
 
     
-res = s.hris.update_hris_company(connection_id="<value>", id="<value>", hris_company=::UnifiedRubySDK::Shared::HrisCompany.new(), fields_=[
-    "<value>",
-  ])
+res = s.hris.update_hris_company(connection_id="<value>", id="<id>", hris_company=::UnifiedRubySDK::Shared::HrisCompany.new(), fields_=[
+  "<value>",
+])
 
 if ! res.hris_company.nil?
   # handle response
@@ -1119,9 +1119,9 @@ s.config_security(
 )
 
     
-res = s.hris.update_hris_employee(connection_id="<value>", id="<value>", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new(), fields_=[
-    "<value>",
-  ])
+res = s.hris.update_hris_employee(connection_id="<value>", id="<id>", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new(), fields_=[
+  "<value>",
+])
 
 if ! res.hris_employee.nil?
   # handle response
@@ -1163,9 +1163,9 @@ s.config_security(
 )
 
     
-res = s.hris.update_hris_group(connection_id="<value>", id="<value>", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(), fields_=[
-    "<value>",
-  ])
+res = s.hris.update_hris_group(connection_id="<value>", id="<id>", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(), fields_=[
+  "<value>",
+])
 
 if ! res.hris_group.nil?
   # handle response
@@ -1207,9 +1207,9 @@ s.config_security(
 )
 
     
-res = s.hris.update_hris_location(connection_id="<value>", id="<value>", hris_location=::UnifiedRubySDK::Shared::HrisLocation.new(), fields_=[
-    "<value>",
-  ])
+res = s.hris.update_hris_location(connection_id="<value>", id="<id>", hris_location=::UnifiedRubySDK::Shared::HrisLocation.new(), fields_=[
+  "<value>",
+])
 
 if ! res.hris_location.nil?
   # handle response

@@ -39,8 +39,8 @@ s.config_security(
 
     
 res = s.company.create_crm_company(connection_id="<value>", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.crm_company.nil?
   # handle response
@@ -82,8 +82,8 @@ s.config_security(
 
     
 res = s.company.create_hris_company(connection_id="<value>", hris_company=::UnifiedRubySDK::Shared::HrisCompany.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.hris_company.nil?
   # handle response
@@ -124,9 +124,9 @@ s.config_security(
 )
 
     
-res = s.company.get_ats_company(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.company.get_ats_company(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.ats_company.nil?
   # handle response
@@ -167,9 +167,9 @@ s.config_security(
 )
 
     
-res = s.company.get_crm_company(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.company.get_crm_company(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.crm_company.nil?
   # handle response
@@ -210,9 +210,9 @@ s.config_security(
 )
 
     
-res = s.company.get_hris_company(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.company.get_hris_company(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.hris_company.nil?
   # handle response
@@ -339,7 +339,7 @@ s.config_security(
 )
 
     
-res = s.company.list_enrich_companies(connection_id="<value>", domain="<value>", name="<value>")
+res = s.company.list_enrich_companies(connection_id="<value>", domain="dismal-cornmeal.org", name="<value>")
 
 if ! res.enrich_company.nil?
   # handle response
@@ -423,9 +423,9 @@ s.config_security(
 )
 
     
-res = s.company.patch_crm_company(connection_id="<value>", id="<value>", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(), fields_=[
-    "<value>",
-  ])
+res = s.company.patch_crm_company(connection_id="<value>", id="<id>", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_company.nil?
   # handle response
@@ -467,9 +467,9 @@ s.config_security(
 )
 
     
-res = s.company.patch_hris_company(connection_id="<value>", id="<value>", hris_company=::UnifiedRubySDK::Shared::HrisCompany.new(), fields_=[
-    "<value>",
-  ])
+res = s.company.patch_hris_company(connection_id="<value>", id="<id>", hris_company=::UnifiedRubySDK::Shared::HrisCompany.new(), fields_=[
+  "<value>",
+])
 
 if ! res.hris_company.nil?
   # handle response
@@ -511,7 +511,7 @@ s.config_security(
 )
 
     
-res = s.company.remove_crm_company(connection_id="<value>", id="<value>")
+res = s.company.remove_crm_company(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -551,7 +551,7 @@ s.config_security(
 )
 
     
-res = s.company.remove_hris_company(connection_id="<value>", id="<value>")
+res = s.company.remove_hris_company(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -591,9 +591,9 @@ s.config_security(
 )
 
     
-res = s.company.update_crm_company(connection_id="<value>", id="<value>", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(), fields_=[
-    "<value>",
-  ])
+res = s.company.update_crm_company(connection_id="<value>", id="<id>", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_company.nil?
   # handle response
@@ -635,9 +635,9 @@ s.config_security(
 )
 
     
-res = s.company.update_hris_company(connection_id="<value>", id="<value>", hris_company=::UnifiedRubySDK::Shared::HrisCompany.new(), fields_=[
-    "<value>",
-  ])
+res = s.company.update_hris_company(connection_id="<value>", id="<id>", hris_company=::UnifiedRubySDK::Shared::HrisCompany.new(), fields_=[
+  "<value>",
+])
 
 if ! res.hris_company.nil?
   # handle response

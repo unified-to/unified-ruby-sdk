@@ -36,8 +36,8 @@ s.config_security(
 
     
 res = s.task.create_task_project(connection_id="<value>", task_project=::UnifiedRubySDK::Shared::TaskProject.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.task_project.nil?
   # handle response
@@ -79,8 +79,8 @@ s.config_security(
 
     
 res = s.task.create_task_task(connection_id="<value>", task_task=::UnifiedRubySDK::Shared::TaskTask.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.task_task.nil?
   # handle response
@@ -121,9 +121,9 @@ s.config_security(
 )
 
     
-res = s.task.get_task_project(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.task.get_task_project(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.task_project.nil?
   # handle response
@@ -164,9 +164,9 @@ s.config_security(
 )
 
     
-res = s.task.get_task_task(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.task.get_task_task(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.task_task.nil?
   # handle response
@@ -293,9 +293,9 @@ s.config_security(
 )
 
     
-res = s.task.patch_task_project(connection_id="<value>", id="<value>", task_project=::UnifiedRubySDK::Shared::TaskProject.new(), fields_=[
-    "<value>",
-  ])
+res = s.task.patch_task_project(connection_id="<value>", id="<id>", task_project=::UnifiedRubySDK::Shared::TaskProject.new(), fields_=[
+  "<value>",
+])
 
 if ! res.task_project.nil?
   # handle response
@@ -337,9 +337,9 @@ s.config_security(
 )
 
     
-res = s.task.patch_task_task(connection_id="<value>", id="<value>", task_task=::UnifiedRubySDK::Shared::TaskTask.new(), fields_=[
-    "<value>",
-  ])
+res = s.task.patch_task_task(connection_id="<value>", id="<id>", task_task=::UnifiedRubySDK::Shared::TaskTask.new(), fields_=[
+  "<value>",
+])
 
 if ! res.task_task.nil?
   # handle response
@@ -381,7 +381,7 @@ s.config_security(
 )
 
     
-res = s.task.remove_task_project(connection_id="<value>", id="<value>")
+res = s.task.remove_task_project(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -421,7 +421,7 @@ s.config_security(
 )
 
     
-res = s.task.remove_task_task(connection_id="<value>", id="<value>")
+res = s.task.remove_task_task(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -461,9 +461,9 @@ s.config_security(
 )
 
     
-res = s.task.update_task_project(connection_id="<value>", id="<value>", task_project=::UnifiedRubySDK::Shared::TaskProject.new(), fields_=[
-    "<value>",
-  ])
+res = s.task.update_task_project(connection_id="<value>", id="<id>", task_project=::UnifiedRubySDK::Shared::TaskProject.new(), fields_=[
+  "<value>",
+])
 
 if ! res.task_project.nil?
   # handle response
@@ -505,9 +505,9 @@ s.config_security(
 )
 
     
-res = s.task.update_task_task(connection_id="<value>", id="<value>", task_task=::UnifiedRubySDK::Shared::TaskTask.new(), fields_=[
-    "<value>",
-  ])
+res = s.task.update_task_task(connection_id="<value>", id="<id>", task_task=::UnifiedRubySDK::Shared::TaskTask.new(), fields_=[
+  "<value>",
+])
 
 if ! res.task_task.nil?
   # handle response

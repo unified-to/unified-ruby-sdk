@@ -93,11 +93,11 @@ s.config_security(
 
     
 res = s.unified.create_unified_webhook(webhook=::UnifiedRubySDK::Shared::Webhook.new(
-    connection_id: "<value>",
-    event: ::UnifiedRubySDK::Shared::Event::CREATED,
-    hook_url: "<value>",
-    object_type: ::UnifiedRubySDK::Shared::ObjectType::ACCOUNTING_TRANSACTION,
-  ), include_all=false)
+  connection_id: "<value>",
+  event: ::UnifiedRubySDK::Shared::Event::CREATED,
+  hook_url: "<value>",
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::ACCOUNTING_TRANSACTION,
+), include_all=false)
 
 if ! res.webhook.nil?
   # handle response
@@ -137,7 +137,7 @@ s.config_security(
 )
 
     
-res = s.unified.get_unified_apicall(id="<value>")
+res = s.unified.get_unified_apicall(id="<id>")
 
 if ! res.api_call.nil?
   # handle response
@@ -176,7 +176,7 @@ s.config_security(
 )
 
     
-res = s.unified.get_unified_connection(id="<value>")
+res = s.unified.get_unified_connection(id="<id>")
 
 if ! res.connection.nil?
   # handle response
@@ -259,7 +259,7 @@ s.config_security(
 )
 
     
-res = s.unified.get_unified_webhook(id="<value>")
+res = s.unified.get_unified_webhook(id="<id>")
 
 if ! res.webhook.nil?
   # handle response
@@ -546,15 +546,15 @@ s.config_security(
 )
 
     
-res = s.unified.patch_unified_connection(id="<value>", connection=::UnifiedRubySDK::Shared::Connection.new(
-    categories: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionCategories::COMMERCE,
-    ],
-    integration_type: "<value>",
-    permissions: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::HRIS_GROUP_READ,
-    ],
-  ))
+res = s.unified.patch_unified_connection(id="<id>", connection=::UnifiedRubySDK::Shared::Connection.new(
+  categories: [
+    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::COMMERCE,
+  ],
+  integration_type: "<value>",
+  permissions: [
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::HRIS_GROUP_READ,
+  ],
+))
 
 if ! res.connection.nil?
   # handle response
@@ -594,12 +594,12 @@ s.config_security(
 )
 
     
-res = s.unified.patch_unified_webhook(id="<value>", webhook=::UnifiedRubySDK::Shared::Webhook.new(
-    connection_id: "<value>",
-    event: ::UnifiedRubySDK::Shared::Event::DELETED,
-    hook_url: "<value>",
-    object_type: ::UnifiedRubySDK::Shared::ObjectType::PASSTHROUGH,
-  ))
+res = s.unified.patch_unified_webhook(id="<id>", webhook=::UnifiedRubySDK::Shared::Webhook.new(
+  connection_id: "<value>",
+  event: ::UnifiedRubySDK::Shared::Event::DELETED,
+  hook_url: "<value>",
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::PASSTHROUGH,
+))
 
 if ! res.webhook.nil?
   # handle response
@@ -639,7 +639,7 @@ s.config_security(
 )
 
     
-res = s.unified.patch_unified_webhook_trigger(id="<value>")
+res = s.unified.patch_unified_webhook_trigger(id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -678,7 +678,7 @@ s.config_security(
 )
 
     
-res = s.unified.remove_unified_connection(id="<value>")
+res = s.unified.remove_unified_connection(id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -717,7 +717,7 @@ s.config_security(
 )
 
     
-res = s.unified.remove_unified_webhook(id="<value>")
+res = s.unified.remove_unified_webhook(id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -756,15 +756,15 @@ s.config_security(
 )
 
     
-res = s.unified.update_unified_connection(id="<value>", connection=::UnifiedRubySDK::Shared::Connection.new(
-    categories: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionCategories::GENAI,
-    ],
-    integration_type: "<value>",
-    permissions: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_DEAL_WRITE,
-    ],
-  ))
+res = s.unified.update_unified_connection(id="<id>", connection=::UnifiedRubySDK::Shared::Connection.new(
+  categories: [
+    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::GENAI,
+  ],
+  integration_type: "<value>",
+  permissions: [
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_DEAL_WRITE,
+  ],
+))
 
 if ! res.connection.nil?
   # handle response
@@ -804,12 +804,12 @@ s.config_security(
 )
 
     
-res = s.unified.update_unified_webhook(id="<value>", webhook=::UnifiedRubySDK::Shared::Webhook.new(
-    connection_id: "<value>",
-    event: ::UnifiedRubySDK::Shared::Event::CREATED,
-    hook_url: "<value>",
-    object_type: ::UnifiedRubySDK::Shared::ObjectType::HRIS_GROUP,
-  ))
+res = s.unified.update_unified_webhook(id="<id>", webhook=::UnifiedRubySDK::Shared::Webhook.new(
+  connection_id: "<value>",
+  event: ::UnifiedRubySDK::Shared::Event::CREATED,
+  hook_url: "<value>",
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::HRIS_GROUP,
+))
 
 if ! res.webhook.nil?
   # handle response
@@ -849,7 +849,7 @@ s.config_security(
 )
 
     
-res = s.unified.update_unified_webhook_trigger(id="<value>")
+res = s.unified.update_unified_webhook_trigger(id="<id>")
 
 if res.status_code == 200
   # handle response

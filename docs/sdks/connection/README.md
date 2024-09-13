@@ -78,7 +78,7 @@ s.config_security(
 )
 
     
-res = s.connection.get_unified_connection(id="<value>")
+res = s.connection.get_unified_connection(id="<id>")
 
 if ! res.connection.nil?
   # handle response
@@ -158,15 +158,15 @@ s.config_security(
 )
 
     
-res = s.connection.patch_unified_connection(id="<value>", connection=::UnifiedRubySDK::Shared::Connection.new(
-    categories: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionCategories::COMMERCE,
-    ],
-    integration_type: "<value>",
-    permissions: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::HRIS_GROUP_READ,
-    ],
-  ))
+res = s.connection.patch_unified_connection(id="<id>", connection=::UnifiedRubySDK::Shared::Connection.new(
+  categories: [
+    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::COMMERCE,
+  ],
+  integration_type: "<value>",
+  permissions: [
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::HRIS_GROUP_READ,
+  ],
+))
 
 if ! res.connection.nil?
   # handle response
@@ -206,7 +206,7 @@ s.config_security(
 )
 
     
-res = s.connection.remove_unified_connection(id="<value>")
+res = s.connection.remove_unified_connection(id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -245,15 +245,15 @@ s.config_security(
 )
 
     
-res = s.connection.update_unified_connection(id="<value>", connection=::UnifiedRubySDK::Shared::Connection.new(
-    categories: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionCategories::GENAI,
-    ],
-    integration_type: "<value>",
-    permissions: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_DEAL_WRITE,
-    ],
-  ))
+res = s.connection.update_unified_connection(id="<id>", connection=::UnifiedRubySDK::Shared::Connection.new(
+  categories: [
+    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::GENAI,
+  ],
+  integration_type: "<value>",
+  permissions: [
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_DEAL_WRITE,
+  ],
+))
 
 if ! res.connection.nil?
   # handle response

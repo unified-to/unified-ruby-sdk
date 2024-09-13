@@ -30,8 +30,8 @@ s.config_security(
 
     
 res = s.group.create_hris_group(connection_id="<value>", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.hris_group.nil?
   # handle response
@@ -72,9 +72,9 @@ s.config_security(
 )
 
     
-res = s.group.get_hris_group(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.group.get_hris_group(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.hris_group.nil?
   # handle response
@@ -158,9 +158,9 @@ s.config_security(
 )
 
     
-res = s.group.patch_hris_group(connection_id="<value>", id="<value>", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(), fields_=[
-    "<value>",
-  ])
+res = s.group.patch_hris_group(connection_id="<value>", id="<id>", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(), fields_=[
+  "<value>",
+])
 
 if ! res.hris_group.nil?
   # handle response
@@ -202,7 +202,7 @@ s.config_security(
 )
 
     
-res = s.group.remove_hris_group(connection_id="<value>", id="<value>")
+res = s.group.remove_hris_group(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -242,9 +242,9 @@ s.config_security(
 )
 
     
-res = s.group.update_hris_group(connection_id="<value>", id="<value>", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(), fields_=[
-    "<value>",
-  ])
+res = s.group.update_hris_group(connection_id="<value>", id="<id>", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(), fields_=[
+  "<value>",
+])
 
 if ! res.hris_group.nil?
   # handle response

@@ -30,8 +30,8 @@ s.config_security(
 
     
 res = s.file.create_storage_file(connection_id="<value>", storage_file=::UnifiedRubySDK::Shared::StorageFile.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.storage_file.nil?
   # handle response
@@ -72,9 +72,9 @@ s.config_security(
 )
 
     
-res = s.file.get_storage_file(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.file.get_storage_file(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.storage_file.nil?
   # handle response
@@ -158,9 +158,9 @@ s.config_security(
 )
 
     
-res = s.file.patch_storage_file(connection_id="<value>", id="<value>", storage_file=::UnifiedRubySDK::Shared::StorageFile.new(), fields_=[
-    "<value>",
-  ])
+res = s.file.patch_storage_file(connection_id="<value>", id="<id>", storage_file=::UnifiedRubySDK::Shared::StorageFile.new(), fields_=[
+  "<value>",
+])
 
 if ! res.storage_file.nil?
   # handle response
@@ -202,7 +202,7 @@ s.config_security(
 )
 
     
-res = s.file.remove_storage_file(connection_id="<value>", id="<value>")
+res = s.file.remove_storage_file(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -242,9 +242,9 @@ s.config_security(
 )
 
     
-res = s.file.update_storage_file(connection_id="<value>", id="<value>", storage_file=::UnifiedRubySDK::Shared::StorageFile.new(), fields_=[
-    "<value>",
-  ])
+res = s.file.update_storage_file(connection_id="<value>", id="<id>", storage_file=::UnifiedRubySDK::Shared::StorageFile.new(), fields_=[
+  "<value>",
+])
 
 if ! res.storage_file.nil?
   # handle response

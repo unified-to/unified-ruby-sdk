@@ -30,8 +30,8 @@ s.config_security(
 
     
 res = s.transaction.create_accounting_transaction(connection_id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.accounting_transaction.nil?
   # handle response
@@ -72,9 +72,9 @@ s.config_security(
 )
 
     
-res = s.transaction.get_accounting_transaction(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.transaction.get_accounting_transaction(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.accounting_transaction.nil?
   # handle response
@@ -158,9 +158,9 @@ s.config_security(
 )
 
     
-res = s.transaction.patch_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(), fields_=[
-    "<value>",
-  ])
+res = s.transaction.patch_accounting_transaction(connection_id="<value>", id="<id>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(), fields_=[
+  "<value>",
+])
 
 if ! res.accounting_transaction.nil?
   # handle response
@@ -202,7 +202,7 @@ s.config_security(
 )
 
     
-res = s.transaction.remove_accounting_transaction(connection_id="<value>", id="<value>")
+res = s.transaction.remove_accounting_transaction(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -242,9 +242,9 @@ s.config_security(
 )
 
     
-res = s.transaction.update_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(), fields_=[
-    "<value>",
-  ])
+res = s.transaction.update_accounting_transaction(connection_id="<value>", id="<id>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(), fields_=[
+  "<value>",
+])
 
 if ! res.accounting_transaction.nil?
   # handle response

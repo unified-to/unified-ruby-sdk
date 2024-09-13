@@ -25,9 +25,9 @@ s.config_security(
 )
 
     
-res = s.organization.get_accounting_organization(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.organization.get_accounting_organization(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.accounting_organization.nil?
   # handle response

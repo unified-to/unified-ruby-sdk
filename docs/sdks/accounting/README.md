@@ -62,8 +62,8 @@ s.config_security(
 
     
 res = s.accounting.create_accounting_account(connection_id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.accounting_account.nil?
   # handle response
@@ -105,8 +105,8 @@ s.config_security(
 
     
 res = s.accounting.create_accounting_contact(connection_id="<value>", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.accounting_contact.nil?
   # handle response
@@ -148,8 +148,8 @@ s.config_security(
 
     
 res = s.accounting.create_accounting_invoice(connection_id="<value>", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.accounting_invoice.nil?
   # handle response
@@ -191,8 +191,8 @@ s.config_security(
 
     
 res = s.accounting.create_accounting_journal(connection_id="<value>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.accounting_journal.nil?
   # handle response
@@ -234,8 +234,8 @@ s.config_security(
 
     
 res = s.accounting.create_accounting_taxrate(connection_id="<value>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.accounting_taxrate.nil?
   # handle response
@@ -277,8 +277,8 @@ s.config_security(
 
     
 res = s.accounting.create_accounting_transaction(connection_id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.accounting_transaction.nil?
   # handle response
@@ -319,9 +319,9 @@ s.config_security(
 )
 
     
-res = s.accounting.get_accounting_account(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.accounting.get_accounting_account(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.accounting_account.nil?
   # handle response
@@ -362,9 +362,9 @@ s.config_security(
 )
 
     
-res = s.accounting.get_accounting_contact(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.accounting.get_accounting_contact(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.accounting_contact.nil?
   # handle response
@@ -405,9 +405,9 @@ s.config_security(
 )
 
     
-res = s.accounting.get_accounting_invoice(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.accounting.get_accounting_invoice(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.accounting_invoice.nil?
   # handle response
@@ -448,9 +448,9 @@ s.config_security(
 )
 
     
-res = s.accounting.get_accounting_journal(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.accounting.get_accounting_journal(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.accounting_journal.nil?
   # handle response
@@ -491,9 +491,9 @@ s.config_security(
 )
 
     
-res = s.accounting.get_accounting_organization(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.accounting.get_accounting_organization(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.accounting_organization.nil?
   # handle response
@@ -534,9 +534,9 @@ s.config_security(
 )
 
     
-res = s.accounting.get_accounting_taxrate(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.accounting.get_accounting_taxrate(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.accounting_taxrate.nil?
   # handle response
@@ -577,9 +577,9 @@ s.config_security(
 )
 
     
-res = s.accounting.get_accounting_transaction(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.accounting.get_accounting_transaction(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.accounting_transaction.nil?
   # handle response
@@ -921,9 +921,9 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_account(connection_id="<value>", id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), fields_=[
-    "<value>",
-  ])
+res = s.accounting.patch_accounting_account(connection_id="<value>", id="<id>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), fields_=[
+  "<value>",
+])
 
 if ! res.accounting_account.nil?
   # handle response
@@ -965,9 +965,9 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_contact(connection_id="<value>", id="<value>", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new(), fields_=[
-    "<value>",
-  ])
+res = s.accounting.patch_accounting_contact(connection_id="<value>", id="<id>", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new(), fields_=[
+  "<value>",
+])
 
 if ! res.accounting_contact.nil?
   # handle response
@@ -1009,9 +1009,9 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_invoice(connection_id="<value>", id="<value>", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new(), fields_=[
-    "<value>",
-  ])
+res = s.accounting.patch_accounting_invoice(connection_id="<value>", id="<id>", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new(), fields_=[
+  "<value>",
+])
 
 if ! res.accounting_invoice.nil?
   # handle response
@@ -1053,9 +1053,9 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_journal(connection_id="<value>", id="<value>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), fields_=[
-    "<value>",
-  ])
+res = s.accounting.patch_accounting_journal(connection_id="<value>", id="<id>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), fields_=[
+  "<value>",
+])
 
 if ! res.accounting_journal.nil?
   # handle response
@@ -1097,9 +1097,9 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_taxrate(connection_id="<value>", id="<value>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(), fields_=[
-    "<value>",
-  ])
+res = s.accounting.patch_accounting_taxrate(connection_id="<value>", id="<id>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(), fields_=[
+  "<value>",
+])
 
 if ! res.accounting_taxrate.nil?
   # handle response
@@ -1141,9 +1141,9 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(), fields_=[
-    "<value>",
-  ])
+res = s.accounting.patch_accounting_transaction(connection_id="<value>", id="<id>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(), fields_=[
+  "<value>",
+])
 
 if ! res.accounting_transaction.nil?
   # handle response
@@ -1185,7 +1185,7 @@ s.config_security(
 )
 
     
-res = s.accounting.remove_accounting_account(connection_id="<value>", id="<value>")
+res = s.accounting.remove_accounting_account(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -1225,7 +1225,7 @@ s.config_security(
 )
 
     
-res = s.accounting.remove_accounting_contact(connection_id="<value>", id="<value>")
+res = s.accounting.remove_accounting_contact(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -1265,7 +1265,7 @@ s.config_security(
 )
 
     
-res = s.accounting.remove_accounting_invoice(connection_id="<value>", id="<value>")
+res = s.accounting.remove_accounting_invoice(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -1305,7 +1305,7 @@ s.config_security(
 )
 
     
-res = s.accounting.remove_accounting_journal(connection_id="<value>", id="<value>")
+res = s.accounting.remove_accounting_journal(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -1345,7 +1345,7 @@ s.config_security(
 )
 
     
-res = s.accounting.remove_accounting_taxrate(connection_id="<value>", id="<value>")
+res = s.accounting.remove_accounting_taxrate(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -1385,7 +1385,7 @@ s.config_security(
 )
 
     
-res = s.accounting.remove_accounting_transaction(connection_id="<value>", id="<value>")
+res = s.accounting.remove_accounting_transaction(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -1425,9 +1425,9 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_account(connection_id="<value>", id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), fields_=[
-    "<value>",
-  ])
+res = s.accounting.update_accounting_account(connection_id="<value>", id="<id>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), fields_=[
+  "<value>",
+])
 
 if ! res.accounting_account.nil?
   # handle response
@@ -1469,9 +1469,9 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_contact(connection_id="<value>", id="<value>", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new(), fields_=[
-    "<value>",
-  ])
+res = s.accounting.update_accounting_contact(connection_id="<value>", id="<id>", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new(), fields_=[
+  "<value>",
+])
 
 if ! res.accounting_contact.nil?
   # handle response
@@ -1513,9 +1513,9 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_invoice(connection_id="<value>", id="<value>", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new(), fields_=[
-    "<value>",
-  ])
+res = s.accounting.update_accounting_invoice(connection_id="<value>", id="<id>", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new(), fields_=[
+  "<value>",
+])
 
 if ! res.accounting_invoice.nil?
   # handle response
@@ -1557,9 +1557,9 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_journal(connection_id="<value>", id="<value>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), fields_=[
-    "<value>",
-  ])
+res = s.accounting.update_accounting_journal(connection_id="<value>", id="<id>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), fields_=[
+  "<value>",
+])
 
 if ! res.accounting_journal.nil?
   # handle response
@@ -1601,9 +1601,9 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_taxrate(connection_id="<value>", id="<value>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(), fields_=[
-    "<value>",
-  ])
+res = s.accounting.update_accounting_taxrate(connection_id="<value>", id="<id>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(), fields_=[
+  "<value>",
+])
 
 if ! res.accounting_taxrate.nil?
   # handle response
@@ -1645,9 +1645,9 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_transaction(connection_id="<value>", id="<value>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(), fields_=[
-    "<value>",
-  ])
+res = s.accounting.update_accounting_transaction(connection_id="<value>", id="<id>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(), fields_=[
+  "<value>",
+])
 
 if ! res.accounting_transaction.nil?
   # handle response

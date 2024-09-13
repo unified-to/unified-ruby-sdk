@@ -30,8 +30,8 @@ s.config_security(
 
     
 res = s.message.create_messaging_message(connection_id="<value>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.messaging_message.nil?
   # handle response
@@ -72,9 +72,9 @@ s.config_security(
 )
 
     
-res = s.message.get_messaging_message(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.message.get_messaging_message(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.messaging_message.nil?
   # handle response
@@ -158,9 +158,9 @@ s.config_security(
 )
 
     
-res = s.message.patch_messaging_message(connection_id="<value>", id="<value>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), fields_=[
-    "<value>",
-  ])
+res = s.message.patch_messaging_message(connection_id="<value>", id="<id>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), fields_=[
+  "<value>",
+])
 
 if ! res.messaging_message.nil?
   # handle response
@@ -202,7 +202,7 @@ s.config_security(
 )
 
     
-res = s.message.remove_messaging_message(connection_id="<value>", id="<value>")
+res = s.message.remove_messaging_message(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -242,9 +242,9 @@ s.config_security(
 )
 
     
-res = s.message.update_messaging_message(connection_id="<value>", id="<value>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), fields_=[
-    "<value>",
-  ])
+res = s.message.update_messaging_message(connection_id="<value>", id="<id>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), fields_=[
+  "<value>",
+])
 
 if ! res.messaging_message.nil?
   # handle response

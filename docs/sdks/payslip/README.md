@@ -25,9 +25,9 @@ s.config_security(
 )
 
     
-res = s.payslip.get_hris_payslip(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.payslip.get_hris_payslip(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.hris_payslip.nil?
   # handle response

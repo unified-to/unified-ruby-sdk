@@ -25,9 +25,9 @@ s.config_security(
 )
 
     
-res = s.refund.get_payment_refund(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.refund.get_payment_refund(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.payment_refund.nil?
   # handle response

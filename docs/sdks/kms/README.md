@@ -36,14 +36,14 @@ s.config_security(
 
     
 res = s.kms.create_kms_page(connection_id="<value>", kms_page=::UnifiedRubySDK::Shared::KmsPage.new(
-    download_url: "<value>",
-    id: "<id>",
-    space_id: "<value>",
-    title: "<value>",
-    type: ::UnifiedRubySDK::Shared::KmsPageType::HTML,
-  ), fields_=[
-    "<value>",
-  ])
+  download_url: "<value>",
+  id: "<id>",
+  space_id: "<value>",
+  title: "<value>",
+  type: ::UnifiedRubySDK::Shared::KmsPageType::HTML,
+), fields_=[
+  "<value>",
+])
 
 if ! res.kms_page.nil?
   # handle response
@@ -85,11 +85,11 @@ s.config_security(
 
     
 res = s.kms.create_kms_space(connection_id="<value>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
-    id: "<id>",
-    name: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+  id: "<id>",
+  name: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.kms_space.nil?
   # handle response
@@ -130,9 +130,9 @@ s.config_security(
 )
 
     
-res = s.kms.get_kms_page(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.kms.get_kms_page(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.kms_page.nil?
   # handle response
@@ -173,9 +173,9 @@ s.config_security(
 )
 
     
-res = s.kms.get_kms_space(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.kms.get_kms_space(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.kms_space.nil?
   # handle response
@@ -302,15 +302,15 @@ s.config_security(
 )
 
     
-res = s.kms.patch_kms_page(connection_id="<value>", id="<value>", kms_page=::UnifiedRubySDK::Shared::KmsPage.new(
-    download_url: "<value>",
-    id: "<id>",
-    space_id: "<value>",
-    title: "<value>",
-    type: ::UnifiedRubySDK::Shared::KmsPageType::TEXT,
-  ), fields_=[
-    "<value>",
-  ])
+res = s.kms.patch_kms_page(connection_id="<value>", id="<id>", kms_page=::UnifiedRubySDK::Shared::KmsPage.new(
+  download_url: "<value>",
+  id: "<id>",
+  space_id: "<value>",
+  title: "<value>",
+  type: ::UnifiedRubySDK::Shared::KmsPageType::TEXT,
+), fields_=[
+  "<value>",
+])
 
 if ! res.kms_page.nil?
   # handle response
@@ -352,12 +352,12 @@ s.config_security(
 )
 
     
-res = s.kms.patch_kms_space(connection_id="<value>", id="<value>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
-    id: "<id>",
-    name: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.kms.patch_kms_space(connection_id="<value>", id="<id>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
+  id: "<id>",
+  name: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.kms_space.nil?
   # handle response
@@ -399,7 +399,7 @@ s.config_security(
 )
 
     
-res = s.kms.remove_kms_page(connection_id="<value>", id="<value>")
+res = s.kms.remove_kms_page(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -439,7 +439,7 @@ s.config_security(
 )
 
     
-res = s.kms.remove_kms_space(connection_id="<value>", id="<value>")
+res = s.kms.remove_kms_space(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -479,15 +479,15 @@ s.config_security(
 )
 
     
-res = s.kms.update_kms_page(connection_id="<value>", id="<value>", kms_page=::UnifiedRubySDK::Shared::KmsPage.new(
-    download_url: "<value>",
-    id: "<id>",
-    space_id: "<value>",
-    title: "<value>",
-    type: ::UnifiedRubySDK::Shared::KmsPageType::TEXT,
-  ), fields_=[
-    "<value>",
-  ])
+res = s.kms.update_kms_page(connection_id="<value>", id="<id>", kms_page=::UnifiedRubySDK::Shared::KmsPage.new(
+  download_url: "<value>",
+  id: "<id>",
+  space_id: "<value>",
+  title: "<value>",
+  type: ::UnifiedRubySDK::Shared::KmsPageType::TEXT,
+), fields_=[
+  "<value>",
+])
 
 if ! res.kms_page.nil?
   # handle response
@@ -529,12 +529,12 @@ s.config_security(
 )
 
     
-res = s.kms.update_kms_space(connection_id="<value>", id="<value>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
-    id: "<id>",
-    name: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.kms.update_kms_space(connection_id="<value>", id="<id>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
+  id: "<id>",
+  name: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.kms_space.nil?
   # handle response

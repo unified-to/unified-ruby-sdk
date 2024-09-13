@@ -25,7 +25,7 @@ s.config_security(
 )
 
     
-res = s.enrich.list_enrich_companies(connection_id="<value>", domain="<value>", name="<value>")
+res = s.enrich.list_enrich_companies(connection_id="<value>", domain="dismal-cornmeal.org", name="<value>")
 
 if ! res.enrich_company.nil?
   # handle response

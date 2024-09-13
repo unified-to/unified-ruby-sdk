@@ -25,7 +25,7 @@ s.config_security(
 )
 
     
-res = s.apicall.get_unified_apicall(id="<value>")
+res = s.apicall.get_unified_apicall(id="<id>")
 
 if ! res.api_call.nil?
   # handle response

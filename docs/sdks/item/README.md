@@ -30,8 +30,8 @@ s.config_security(
 
     
 res = s.item.create_commerce_item(connection_id="<value>", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.commerce_item.nil?
   # handle response
@@ -72,9 +72,9 @@ s.config_security(
 )
 
     
-res = s.item.get_commerce_item(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.item.get_commerce_item(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.commerce_item.nil?
   # handle response
@@ -158,9 +158,9 @@ s.config_security(
 )
 
     
-res = s.item.patch_commerce_item(connection_id="<value>", id="<value>", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(), fields_=[
-    "<value>",
-  ])
+res = s.item.patch_commerce_item(connection_id="<value>", id="<id>", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(), fields_=[
+  "<value>",
+])
 
 if ! res.commerce_item.nil?
   # handle response
@@ -202,7 +202,7 @@ s.config_security(
 )
 
     
-res = s.item.remove_commerce_item(connection_id="<value>", id="<value>")
+res = s.item.remove_commerce_item(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -242,9 +242,9 @@ s.config_security(
 )
 
     
-res = s.item.update_commerce_item(connection_id="<value>", id="<value>", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(), fields_=[
-    "<value>",
-  ])
+res = s.item.update_commerce_item(connection_id="<value>", id="<id>", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(), fields_=[
+  "<value>",
+])
 
 if ! res.commerce_item.nil?
   # handle response

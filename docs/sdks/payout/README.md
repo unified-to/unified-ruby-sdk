@@ -25,9 +25,9 @@ s.config_security(
 )
 
     
-res = s.payout.get_payment_payout(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.payout.get_payment_payout(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.payment_payout.nil?
   # handle response

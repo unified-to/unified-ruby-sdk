@@ -30,11 +30,11 @@ s.config_security(
 
     
 res = s.space.create_kms_space(connection_id="<value>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
-    id: "<id>",
-    name: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+  id: "<id>",
+  name: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.kms_space.nil?
   # handle response
@@ -75,9 +75,9 @@ s.config_security(
 )
 
     
-res = s.space.get_kms_space(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.space.get_kms_space(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.kms_space.nil?
   # handle response
@@ -161,12 +161,12 @@ s.config_security(
 )
 
     
-res = s.space.patch_kms_space(connection_id="<value>", id="<value>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
-    id: "<id>",
-    name: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.space.patch_kms_space(connection_id="<value>", id="<id>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
+  id: "<id>",
+  name: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.kms_space.nil?
   # handle response
@@ -208,7 +208,7 @@ s.config_security(
 )
 
     
-res = s.space.remove_kms_space(connection_id="<value>", id="<value>")
+res = s.space.remove_kms_space(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -248,12 +248,12 @@ s.config_security(
 )
 
     
-res = s.space.update_kms_space(connection_id="<value>", id="<value>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
-    id: "<id>",
-    name: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.space.update_kms_space(connection_id="<value>", id="<id>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
+  id: "<id>",
+  name: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.kms_space.nil?
   # handle response

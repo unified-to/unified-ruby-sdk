@@ -25,9 +25,9 @@ s.config_security(
 )
 
     
-res = s.timeoff.get_hris_timeoff(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.timeoff.get_hris_timeoff(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.hris_timeoff.nil?
   # handle response

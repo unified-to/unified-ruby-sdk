@@ -25,9 +25,9 @@ s.config_security(
 )
 
     
-res = s.channel.get_messaging_channel(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.channel.get_messaging_channel(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.messaging_channel.nil?
   # handle response

@@ -30,8 +30,8 @@ s.config_security(
 
     
 res = s.ticket.create_ticketing_ticket(connection_id="<value>", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.ticketing_ticket.nil?
   # handle response
@@ -72,9 +72,9 @@ s.config_security(
 )
 
     
-res = s.ticket.get_ticketing_ticket(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.ticket.get_ticketing_ticket(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.ticketing_ticket.nil?
   # handle response
@@ -158,9 +158,9 @@ s.config_security(
 )
 
     
-res = s.ticket.patch_ticketing_ticket(connection_id="<value>", id="<value>", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new(), fields_=[
-    "<value>",
-  ])
+res = s.ticket.patch_ticketing_ticket(connection_id="<value>", id="<id>", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ticketing_ticket.nil?
   # handle response
@@ -202,7 +202,7 @@ s.config_security(
 )
 
     
-res = s.ticket.remove_ticketing_ticket(connection_id="<value>", id="<value>")
+res = s.ticket.remove_ticketing_ticket(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -242,9 +242,9 @@ s.config_security(
 )
 
     
-res = s.ticket.update_ticketing_ticket(connection_id="<value>", id="<value>", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new(), fields_=[
-    "<value>",
-  ])
+res = s.ticket.update_ticketing_ticket(connection_id="<value>", id="<id>", ticketing_ticket=::UnifiedRubySDK::Shared::TicketingTicket.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ticketing_ticket.nil?
   # handle response

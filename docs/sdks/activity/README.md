@@ -30,10 +30,10 @@ s.config_security(
 
     
 res = s.activity.create_ats_activity(connection_id="<value>", ats_activity=::UnifiedRubySDK::Shared::AtsActivity.new(
-    title: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+  title: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.ats_activity.nil?
   # handle response
@@ -74,9 +74,9 @@ s.config_security(
 )
 
     
-res = s.activity.get_ats_activity(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.activity.get_ats_activity(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.ats_activity.nil?
   # handle response
@@ -160,11 +160,11 @@ s.config_security(
 )
 
     
-res = s.activity.patch_ats_activity(connection_id="<value>", id="<value>", ats_activity=::UnifiedRubySDK::Shared::AtsActivity.new(
-    title: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.activity.patch_ats_activity(connection_id="<value>", id="<id>", ats_activity=::UnifiedRubySDK::Shared::AtsActivity.new(
+  title: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.ats_activity.nil?
   # handle response
@@ -206,7 +206,7 @@ s.config_security(
 )
 
     
-res = s.activity.remove_ats_activity(connection_id="<value>", id="<value>")
+res = s.activity.remove_ats_activity(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -246,11 +246,11 @@ s.config_security(
 )
 
     
-res = s.activity.update_ats_activity(connection_id="<value>", id="<value>", ats_activity=::UnifiedRubySDK::Shared::AtsActivity.new(
-    title: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.activity.update_ats_activity(connection_id="<value>", id="<id>", ats_activity=::UnifiedRubySDK::Shared::AtsActivity.new(
+  title: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.ats_activity.nil?
   # handle response

@@ -31,8 +31,8 @@ s.config_security(
 
     
 res = s.uc.create_uc_contact(connection_id="<value>", uc_contact=::UnifiedRubySDK::Shared::UcContact.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.uc_contact.nil?
   # handle response
@@ -73,9 +73,9 @@ s.config_security(
 )
 
     
-res = s.uc.get_uc_contact(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.uc.get_uc_contact(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.uc_contact.nil?
   # handle response
@@ -202,9 +202,9 @@ s.config_security(
 )
 
     
-res = s.uc.patch_uc_contact(connection_id="<value>", id="<value>", uc_contact=::UnifiedRubySDK::Shared::UcContact.new(), fields_=[
-    "<value>",
-  ])
+res = s.uc.patch_uc_contact(connection_id="<value>", id="<id>", uc_contact=::UnifiedRubySDK::Shared::UcContact.new(), fields_=[
+  "<value>",
+])
 
 if ! res.uc_contact.nil?
   # handle response
@@ -246,7 +246,7 @@ s.config_security(
 )
 
     
-res = s.uc.remove_uc_contact(connection_id="<value>", id="<value>")
+res = s.uc.remove_uc_contact(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -286,9 +286,9 @@ s.config_security(
 )
 
     
-res = s.uc.update_uc_contact(connection_id="<value>", id="<value>", uc_contact=::UnifiedRubySDK::Shared::UcContact.new(), fields_=[
-    "<value>",
-  ])
+res = s.uc.update_uc_contact(connection_id="<value>", id="<id>", uc_contact=::UnifiedRubySDK::Shared::UcContact.new(), fields_=[
+  "<value>",
+])
 
 if ! res.uc_contact.nil?
   # handle response

@@ -36,10 +36,10 @@ s.config_security(
 
     
 res = s.location.create_commerce_location(connection_id="<value>", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
-    name: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+  name: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.commerce_location.nil?
   # handle response
@@ -81,8 +81,8 @@ s.config_security(
 
     
 res = s.location.create_hris_location(connection_id="<value>", hris_location=::UnifiedRubySDK::Shared::HrisLocation.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.hris_location.nil?
   # handle response
@@ -123,9 +123,9 @@ s.config_security(
 )
 
     
-res = s.location.get_commerce_location(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.location.get_commerce_location(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.commerce_location.nil?
   # handle response
@@ -166,9 +166,9 @@ s.config_security(
 )
 
     
-res = s.location.get_hris_location(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.location.get_hris_location(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.hris_location.nil?
   # handle response
@@ -295,11 +295,11 @@ s.config_security(
 )
 
     
-res = s.location.patch_commerce_location(connection_id="<value>", id="<value>", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
-    name: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.location.patch_commerce_location(connection_id="<value>", id="<id>", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
+  name: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.commerce_location.nil?
   # handle response
@@ -341,9 +341,9 @@ s.config_security(
 )
 
     
-res = s.location.patch_hris_location(connection_id="<value>", id="<value>", hris_location=::UnifiedRubySDK::Shared::HrisLocation.new(), fields_=[
-    "<value>",
-  ])
+res = s.location.patch_hris_location(connection_id="<value>", id="<id>", hris_location=::UnifiedRubySDK::Shared::HrisLocation.new(), fields_=[
+  "<value>",
+])
 
 if ! res.hris_location.nil?
   # handle response
@@ -385,7 +385,7 @@ s.config_security(
 )
 
     
-res = s.location.remove_commerce_location(connection_id="<value>", id="<value>")
+res = s.location.remove_commerce_location(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -425,7 +425,7 @@ s.config_security(
 )
 
     
-res = s.location.remove_hris_location(connection_id="<value>", id="<value>")
+res = s.location.remove_hris_location(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -465,11 +465,11 @@ s.config_security(
 )
 
     
-res = s.location.update_commerce_location(connection_id="<value>", id="<value>", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
-    name: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.location.update_commerce_location(connection_id="<value>", id="<id>", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
+  name: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.commerce_location.nil?
   # handle response
@@ -511,9 +511,9 @@ s.config_security(
 )
 
     
-res = s.location.update_hris_location(connection_id="<value>", id="<value>", hris_location=::UnifiedRubySDK::Shared::HrisLocation.new(), fields_=[
-    "<value>",
-  ])
+res = s.location.update_hris_location(connection_id="<value>", id="<id>", hris_location=::UnifiedRubySDK::Shared::HrisLocation.new(), fields_=[
+  "<value>",
+])
 
 if ! res.hris_location.nil?
   # handle response

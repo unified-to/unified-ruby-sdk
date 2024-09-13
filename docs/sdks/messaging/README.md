@@ -32,8 +32,8 @@ s.config_security(
 
     
 res = s.messaging.create_messaging_message(connection_id="<value>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.messaging_message.nil?
   # handle response
@@ -74,9 +74,9 @@ s.config_security(
 )
 
     
-res = s.messaging.get_messaging_channel(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.messaging.get_messaging_channel(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.messaging_channel.nil?
   # handle response
@@ -117,9 +117,9 @@ s.config_security(
 )
 
     
-res = s.messaging.get_messaging_message(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.messaging.get_messaging_message(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.messaging_message.nil?
   # handle response
@@ -246,9 +246,9 @@ s.config_security(
 )
 
     
-res = s.messaging.patch_messaging_message(connection_id="<value>", id="<value>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), fields_=[
-    "<value>",
-  ])
+res = s.messaging.patch_messaging_message(connection_id="<value>", id="<id>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), fields_=[
+  "<value>",
+])
 
 if ! res.messaging_message.nil?
   # handle response
@@ -290,7 +290,7 @@ s.config_security(
 )
 
     
-res = s.messaging.remove_messaging_message(connection_id="<value>", id="<value>")
+res = s.messaging.remove_messaging_message(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -330,9 +330,9 @@ s.config_security(
 )
 
     
-res = s.messaging.update_messaging_message(connection_id="<value>", id="<value>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), fields_=[
-    "<value>",
-  ])
+res = s.messaging.update_messaging_message(connection_id="<value>", id="<id>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), fields_=[
+  "<value>",
+])
 
 if ! res.messaging_message.nil?
   # handle response

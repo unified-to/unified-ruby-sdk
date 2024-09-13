@@ -30,8 +30,8 @@ s.config_security(
 
     
 res = s.application.create_ats_application(connection_id="<value>", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.ats_application.nil?
   # handle response
@@ -72,9 +72,9 @@ s.config_security(
 )
 
     
-res = s.application.get_ats_application(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.application.get_ats_application(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.ats_application.nil?
   # handle response
@@ -158,9 +158,9 @@ s.config_security(
 )
 
     
-res = s.application.patch_ats_application(connection_id="<value>", id="<value>", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new(), fields_=[
-    "<value>",
-  ])
+res = s.application.patch_ats_application(connection_id="<value>", id="<id>", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_application.nil?
   # handle response
@@ -202,7 +202,7 @@ s.config_security(
 )
 
     
-res = s.application.remove_ats_application(connection_id="<value>", id="<value>")
+res = s.application.remove_ats_application(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -242,9 +242,9 @@ s.config_security(
 )
 
     
-res = s.application.update_ats_application(connection_id="<value>", id="<value>", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new(), fields_=[
-    "<value>",
-  ])
+res = s.application.update_ats_application(connection_id="<value>", id="<id>", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_application.nil?
   # handle response

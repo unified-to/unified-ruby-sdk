@@ -30,8 +30,8 @@ s.config_security(
 
     
 res = s.invoice.create_accounting_invoice(connection_id="<value>", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.accounting_invoice.nil?
   # handle response
@@ -72,9 +72,9 @@ s.config_security(
 )
 
     
-res = s.invoice.get_accounting_invoice(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.invoice.get_accounting_invoice(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.accounting_invoice.nil?
   # handle response
@@ -158,9 +158,9 @@ s.config_security(
 )
 
     
-res = s.invoice.patch_accounting_invoice(connection_id="<value>", id="<value>", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new(), fields_=[
-    "<value>",
-  ])
+res = s.invoice.patch_accounting_invoice(connection_id="<value>", id="<id>", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new(), fields_=[
+  "<value>",
+])
 
 if ! res.accounting_invoice.nil?
   # handle response
@@ -202,7 +202,7 @@ s.config_security(
 )
 
     
-res = s.invoice.remove_accounting_invoice(connection_id="<value>", id="<value>")
+res = s.invoice.remove_accounting_invoice(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -242,9 +242,9 @@ s.config_security(
 )
 
     
-res = s.invoice.update_accounting_invoice(connection_id="<value>", id="<value>", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new(), fields_=[
-    "<value>",
-  ])
+res = s.invoice.update_accounting_invoice(connection_id="<value>", id="<id>", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new(), fields_=[
+  "<value>",
+])
 
 if ! res.accounting_invoice.nil?
   # handle response

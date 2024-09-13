@@ -30,8 +30,8 @@ s.config_security(
 
     
 res = s.link.create_payment_link(connection_id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.payment_link.nil?
   # handle response
@@ -72,9 +72,9 @@ s.config_security(
 )
 
     
-res = s.link.get_payment_link(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.link.get_payment_link(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.payment_link.nil?
   # handle response
@@ -158,9 +158,9 @@ s.config_security(
 )
 
     
-res = s.link.patch_payment_link(connection_id="<value>", id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(), fields_=[
-    "<value>",
-  ])
+res = s.link.patch_payment_link(connection_id="<value>", id="<id>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(), fields_=[
+  "<value>",
+])
 
 if ! res.payment_link.nil?
   # handle response
@@ -202,7 +202,7 @@ s.config_security(
 )
 
     
-res = s.link.remove_payment_link(connection_id="<value>", id="<value>")
+res = s.link.remove_payment_link(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -242,9 +242,9 @@ s.config_security(
 )
 
     
-res = s.link.update_payment_link(connection_id="<value>", id="<value>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(), fields_=[
-    "<value>",
-  ])
+res = s.link.update_payment_link(connection_id="<value>", id="<id>", payment_link=::UnifiedRubySDK::Shared::PaymentLink.new(), fields_=[
+  "<value>",
+])
 
 if ! res.payment_link.nil?
   # handle response

@@ -36,8 +36,8 @@ s.config_security(
 
     
 res = s.martech.create_martech_list(connection_id="<value>", marketing_list=::UnifiedRubySDK::Shared::MarketingList.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.marketing_list.nil?
   # handle response
@@ -79,8 +79,8 @@ s.config_security(
 
     
 res = s.martech.create_martech_member(connection_id="<value>", marketing_member=::UnifiedRubySDK::Shared::MarketingMember.new(), fields_=[
-    "<value>",
-  ])
+  "<value>",
+])
 
 if ! res.marketing_member.nil?
   # handle response
@@ -121,9 +121,9 @@ s.config_security(
 )
 
     
-res = s.martech.get_martech_list(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.martech.get_martech_list(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.marketing_list.nil?
   # handle response
@@ -164,9 +164,9 @@ s.config_security(
 )
 
     
-res = s.martech.get_martech_member(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.martech.get_martech_member(connection_id="<value>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.marketing_member.nil?
   # handle response
@@ -293,9 +293,9 @@ s.config_security(
 )
 
     
-res = s.martech.patch_martech_list(connection_id="<value>", id="<value>", marketing_list=::UnifiedRubySDK::Shared::MarketingList.new(), fields_=[
-    "<value>",
-  ])
+res = s.martech.patch_martech_list(connection_id="<value>", id="<id>", marketing_list=::UnifiedRubySDK::Shared::MarketingList.new(), fields_=[
+  "<value>",
+])
 
 if ! res.marketing_list.nil?
   # handle response
@@ -337,9 +337,9 @@ s.config_security(
 )
 
     
-res = s.martech.patch_martech_member(connection_id="<value>", id="<value>", marketing_member=::UnifiedRubySDK::Shared::MarketingMember.new(), fields_=[
-    "<value>",
-  ])
+res = s.martech.patch_martech_member(connection_id="<value>", id="<id>", marketing_member=::UnifiedRubySDK::Shared::MarketingMember.new(), fields_=[
+  "<value>",
+])
 
 if ! res.marketing_member.nil?
   # handle response
@@ -381,7 +381,7 @@ s.config_security(
 )
 
     
-res = s.martech.remove_martech_list(connection_id="<value>", id="<value>")
+res = s.martech.remove_martech_list(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -421,7 +421,7 @@ s.config_security(
 )
 
     
-res = s.martech.remove_martech_member(connection_id="<value>", id="<value>")
+res = s.martech.remove_martech_member(connection_id="<value>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -461,9 +461,9 @@ s.config_security(
 )
 
     
-res = s.martech.update_martech_list(connection_id="<value>", id="<value>", marketing_list=::UnifiedRubySDK::Shared::MarketingList.new(), fields_=[
-    "<value>",
-  ])
+res = s.martech.update_martech_list(connection_id="<value>", id="<id>", marketing_list=::UnifiedRubySDK::Shared::MarketingList.new(), fields_=[
+  "<value>",
+])
 
 if ! res.marketing_list.nil?
   # handle response
@@ -505,9 +505,9 @@ s.config_security(
 )
 
     
-res = s.martech.update_martech_member(connection_id="<value>", id="<value>", marketing_member=::UnifiedRubySDK::Shared::MarketingMember.new(), fields_=[
-    "<value>",
-  ])
+res = s.martech.update_martech_member(connection_id="<value>", id="<id>", marketing_member=::UnifiedRubySDK::Shared::MarketingMember.new(), fields_=[
+  "<value>",
+])
 
 if ! res.marketing_member.nil?
   # handle response
