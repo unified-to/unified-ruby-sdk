@@ -29,9 +29,9 @@ s.config_security(
 )
 
     
-res = s.event.create_crm_event(connection_id="<value>", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), fields_=[
-    "<value>",
-  ])
+res = s.event.create_crm_event(connection_id="<id>", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_event.nil?
   # handle response
@@ -53,7 +53,6 @@ end
 
 
 
-
 ## get_crm_event
 
 Retrieve an event
@@ -72,9 +71,9 @@ s.config_security(
 )
 
     
-res = s.event.get_crm_event(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.event.get_crm_event(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.crm_event.nil?
   # handle response
@@ -93,7 +92,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetCrmEventResponse)](../../models/operations/getcrmeventresponse.md)**
-
 
 
 
@@ -116,7 +114,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListCrmEventsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.event.list_crm_events(req)
@@ -139,7 +137,6 @@ end
 
 
 
-
 ## patch_crm_event
 
 Update an event
@@ -158,9 +155,9 @@ s.config_security(
 )
 
     
-res = s.event.patch_crm_event(connection_id="<value>", id="<value>", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), fields_=[
-    "<value>",
-  ])
+res = s.event.patch_crm_event(connection_id="<id>", id="<id>", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_event.nil?
   # handle response
@@ -183,7 +180,6 @@ end
 
 
 
-
 ## remove_crm_event
 
 Remove an event
@@ -202,7 +198,7 @@ s.config_security(
 )
 
     
-res = s.event.remove_crm_event(connection_id="<value>", id="<value>")
+res = s.event.remove_crm_event(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -220,7 +216,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveCrmEventResponse)](../../models/operations/removecrmeventresponse.md)**
-
 
 
 
@@ -242,9 +237,9 @@ s.config_security(
 )
 
     
-res = s.event.update_crm_event(connection_id="<value>", id="<value>", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), fields_=[
-    "<value>",
-  ])
+res = s.event.update_crm_event(connection_id="<id>", id="<id>", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_event.nil?
   # handle response
@@ -264,5 +259,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateCrmEventResponse)](../../models/operations/updatecrmeventresponse.md)**
-
 

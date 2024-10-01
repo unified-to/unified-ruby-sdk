@@ -25,9 +25,9 @@ s.config_security(
 )
 
     
-res = s.genai.create_genai_prompt(connection_id="<value>", genai_prompt=::UnifiedRubySDK::Shared::GenaiPrompt.new(), fields_=[
-    "<value>",
-  ])
+res = s.genai.create_genai_prompt(connection_id="<id>", genai_prompt=::UnifiedRubySDK::Shared::GenaiPrompt.new(), fields_=[
+  "<value>",
+])
 
 if ! res.genai_prompt.nil?
   # handle response
@@ -46,7 +46,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::CreateGenaiPromptResponse)](../../models/operations/creategenaipromptresponse.md)**
-
 
 
 
@@ -69,7 +68,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListGenaiModelsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.genai.list_genai_models(req)
@@ -89,5 +88,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListGenaiModelsResponse)](../../models/operations/listgenaimodelsresponse.md)**
-
 

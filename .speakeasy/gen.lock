@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: cf72c39f8e74a269aab0cb250423c99a
+  docChecksum: 3c4e8a5e234e6444307aef536fd547bd
   docVersion: "1.0"
-  speakeasyVersion: 1.395.1
-  generationVersion: 2.415.0
-  releaseVersion: 0.4.90
-  configChecksum: b92ba2a9f0b290c03420d17c9a89ab18
+  speakeasyVersion: 1.405.6
+  generationVersion: 2.428.1
+  releaseVersion: 0.4.91
+  configChecksum: 5c5ff4846456253971a471487f7659dd
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
 features:
   ruby:
-    core: 3.2.20
+    core: 3.2.26
     flattening: 2.81.1
     globalSecurity: 2.81.7
     globalServerURLs: 2.82.3
@@ -92,8 +92,10 @@ generatedFiles:
   - docs/models/operations/createmartechmemberresponse.md
   - docs/models/operations/createmessagingmessagerequest.md
   - docs/models/operations/createmessagingmessageresponse.md
-  - docs/models/operations/createpassthroughrequest.md
-  - docs/models/operations/createpassthroughresponse.md
+  - docs/models/operations/createpassthroughjsonrequest.md
+  - docs/models/operations/createpassthroughjsonresponse.md
+  - docs/models/operations/createpassthroughrawrequest.md
+  - docs/models/operations/createpassthroughrawresponse.md
   - docs/models/operations/createpaymentlinkrequest.md
   - docs/models/operations/createpaymentlinkresponse.md
   - docs/models/operations/createpaymentpaymentrequest.md
@@ -407,8 +409,10 @@ generatedFiles:
   - docs/models/operations/patchmartechmemberresponse.md
   - docs/models/operations/patchmessagingmessagerequest.md
   - docs/models/operations/patchmessagingmessageresponse.md
-  - docs/models/operations/patchpassthroughrequest.md
-  - docs/models/operations/patchpassthroughresponse.md
+  - docs/models/operations/patchpassthroughjsonrequest.md
+  - docs/models/operations/patchpassthroughjsonresponse.md
+  - docs/models/operations/patchpassthroughrawrequest.md
+  - docs/models/operations/patchpassthroughrawresponse.md
   - docs/models/operations/patchpaymentlinkrequest.md
   - docs/models/operations/patchpaymentlinkresponse.md
   - docs/models/operations/patchpaymentpaymentrequest.md
@@ -587,8 +591,10 @@ generatedFiles:
   - docs/models/operations/updatemartechmemberresponse.md
   - docs/models/operations/updatemessagingmessagerequest.md
   - docs/models/operations/updatemessagingmessageresponse.md
-  - docs/models/operations/updatepassthroughrequest.md
-  - docs/models/operations/updatepassthroughresponse.md
+  - docs/models/operations/updatepassthroughjsonrequest.md
+  - docs/models/operations/updatepassthroughjsonresponse.md
+  - docs/models/operations/updatepassthroughrawrequest.md
+  - docs/models/operations/updatepassthroughrawresponse.md
   - docs/models/operations/updatepaymentlinkrequest.md
   - docs/models/operations/updatepaymentlinkresponse.md
   - docs/models/operations/updatepaymentpaymentrequest.md
@@ -669,6 +675,7 @@ generatedFiles:
   - docs/models/shared/commerceitemprice.md
   - docs/models/shared/commerceitemvariant.md
   - docs/models/shared/commercelocation.md
+  - docs/models/shared/commercemetadata.md
   - docs/models/shared/connection.md
   - docs/models/shared/crmcompany.md
   - docs/models/shared/crmcontact.md
@@ -1035,8 +1042,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createmartechmember_response.rb
   - lib/unified_ruby_sdk/models/operations/createmessagingmessage_request.rb
   - lib/unified_ruby_sdk/models/operations/createmessagingmessage_response.rb
-  - lib/unified_ruby_sdk/models/operations/createpassthrough_request.rb
-  - lib/unified_ruby_sdk/models/operations/createpassthrough_response.rb
+  - lib/unified_ruby_sdk/models/operations/createpassthrough_json_request.rb
+  - lib/unified_ruby_sdk/models/operations/createpassthrough_json_response.rb
+  - lib/unified_ruby_sdk/models/operations/createpassthrough_raw_request.rb
+  - lib/unified_ruby_sdk/models/operations/createpassthrough_raw_response.rb
   - lib/unified_ruby_sdk/models/operations/createpaymentlink_request.rb
   - lib/unified_ruby_sdk/models/operations/createpaymentlink_response.rb
   - lib/unified_ruby_sdk/models/operations/createpaymentpayment_request.rb
@@ -1350,8 +1359,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchmartechmember_response.rb
   - lib/unified_ruby_sdk/models/operations/patchmessagingmessage_request.rb
   - lib/unified_ruby_sdk/models/operations/patchmessagingmessage_response.rb
-  - lib/unified_ruby_sdk/models/operations/patchpassthrough_request.rb
-  - lib/unified_ruby_sdk/models/operations/patchpassthrough_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchpassthrough_json_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchpassthrough_json_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchpassthrough_raw_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchpassthrough_raw_response.rb
   - lib/unified_ruby_sdk/models/operations/patchpaymentlink_request.rb
   - lib/unified_ruby_sdk/models/operations/patchpaymentlink_response.rb
   - lib/unified_ruby_sdk/models/operations/patchpaymentpayment_request.rb
@@ -1530,8 +1541,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatemartechmember_response.rb
   - lib/unified_ruby_sdk/models/operations/updatemessagingmessage_request.rb
   - lib/unified_ruby_sdk/models/operations/updatemessagingmessage_response.rb
-  - lib/unified_ruby_sdk/models/operations/updatepassthrough_request.rb
-  - lib/unified_ruby_sdk/models/operations/updatepassthrough_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatepassthrough_json_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatepassthrough_json_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatepassthrough_raw_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatepassthrough_raw_response.rb
   - lib/unified_ruby_sdk/models/operations/updatepaymentlink_request.rb
   - lib/unified_ruby_sdk/models/operations/updatepaymentlink_response.rb
   - lib/unified_ruby_sdk/models/operations/updatepaymentpayment_request.rb
@@ -1613,6 +1626,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/commerceitemprice.rb
   - lib/unified_ruby_sdk/models/shared/commerceitemvariant.rb
   - lib/unified_ruby_sdk/models/shared/commercelocation.rb
+  - lib/unified_ruby_sdk/models/shared/commercemetadata.rb
   - lib/unified_ruby_sdk/models/shared/connection.rb
   - lib/unified_ruby_sdk/models/shared/crmcompany.rb
   - lib/unified_ruby_sdk/models/shared/crmcontact.rb
@@ -3461,6 +3475,26 @@ examples:
       responses:
         2XX:
           application/json: {"key": "<value>"}
+    speakeasy-default-create-passthrough-json:
+      parameters:
+        path:
+          connection_id: "<id>"
+          path: "/opt/lib"
+      responses:
+        2XX:
+          '*/*': "0xCc77eCA3Cd"
+          application/json: "<value>"
+          text/plain: "<value>"
+    speakeasy-default-create-passthrough-raw:
+      parameters:
+        path:
+          connection_id: "<id>"
+          path: "/etc/namedb"
+      responses:
+        2XX:
+          '*/*': "0x4B93D6214f"
+          application/json: "<value>"
+          text/plain: "<value>"
   listPassthroughs:
     speakeasy-default-list-passthroughs:
       parameters:
@@ -3470,6 +3504,8 @@ examples:
       responses:
         2XX:
           application/json: {"key": "<value>"}
+          '*/*': "0xc3bedCFEfa"
+          text/plain: "<value>"
   patchPassthrough:
     speakeasy-default-patch-passthrough:
       parameters:
@@ -3479,6 +3515,26 @@ examples:
       responses:
         2XX:
           application/json: {"key": "<value>"}
+    speakeasy-default-patch-passthrough-json:
+      parameters:
+        path:
+          connection_id: "<id>"
+          path: "/home/user"
+      responses:
+        2XX:
+          '*/*': "0xf8009Cc8eA"
+          application/json: "<value>"
+          text/plain: "<value>"
+    speakeasy-default-patch-passthrough-raw:
+      parameters:
+        path:
+          connection_id: "<id>"
+          path: "/etc/mail"
+      responses:
+        2XX:
+          '*/*': "0xCbf5667DBd"
+          application/json: "<value>"
+          text/plain: "<value>"
   removePassthrough:
     speakeasy-default-remove-passthrough:
       parameters:
@@ -3488,6 +3544,8 @@ examples:
       responses:
         2XX:
           application/json: {}
+          '*/*': "0x08c8c65Dc6"
+          text/plain: "<value>"
   updatePassthrough:
     speakeasy-default-update-passthrough:
       parameters:
@@ -3497,6 +3555,26 @@ examples:
       responses:
         2XX:
           application/json: {"key": "<value>", "key1": "<value>"}
+    speakeasy-default-update-passthrough-json:
+      parameters:
+        path:
+          connection_id: "<id>"
+          path: "/etc/namedb"
+      responses:
+        2XX:
+          '*/*': "0xada8b95388"
+          application/json: "<value>"
+          text/plain: "<value>"
+    speakeasy-default-update-passthrough-raw:
+      parameters:
+        path:
+          connection_id: "<id>"
+          path: "/System"
+      responses:
+        2XX:
+          '*/*': "0x5739830F8E"
+          application/json: "<value>"
+          text/plain: "<value>"
   createPaymentLink:
     speakeasy-default-create-payment-link:
       parameters:

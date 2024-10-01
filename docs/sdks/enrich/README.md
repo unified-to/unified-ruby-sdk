@@ -25,7 +25,7 @@ s.config_security(
 )
 
     
-res = s.enrich.list_enrich_companies(connection_id="<value>", domain="<value>", name="<value>")
+res = s.enrich.list_enrich_companies(connection_id="<id>", domain="distinct-wheel.info", name="<value>")
 
 if ! res.enrich_company.nil?
   # handle response
@@ -44,7 +44,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListEnrichCompaniesResponse)](../../models/operations/listenrichcompaniesresponse.md)**
-
 
 
 
@@ -67,7 +66,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListEnrichPeopleRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.enrich.list_enrich_people(req)
@@ -87,5 +86,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListEnrichPeopleResponse)](../../models/operations/listenrichpeopleresponse.md)**
-
 

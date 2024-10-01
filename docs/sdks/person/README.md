@@ -25,7 +25,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListEnrichPeopleRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.person.list_enrich_people(req)
@@ -45,5 +45,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListEnrichPeopleResponse)](../../models/operations/listenrichpeopleresponse.md)**
-
 

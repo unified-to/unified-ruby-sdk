@@ -85,6 +85,7 @@ module UnifiedRubySDK
     autoload :PropertyEnrichCompanyAddress, 'unified_ruby_sdk/models/shared/property_enrichcompany_address.rb'
     autoload :CommerceCollectionType, 'unified_ruby_sdk/models/shared/commercecollection_type.rb'
     autoload :CommerceCollection, 'unified_ruby_sdk/models/shared/commercecollection.rb'
+    autoload :CommerceMetadata, 'unified_ruby_sdk/models/shared/commercemetadata.rb'
     autoload :CommerceItemMediaType, 'unified_ruby_sdk/models/shared/commerceitemmedia_type.rb'
     autoload :CommerceItemMedia, 'unified_ruby_sdk/models/shared/commerceitemmedia.rb'
     autoload :CommerceInventory, 'unified_ruby_sdk/models/shared/commerceinventory.rb'

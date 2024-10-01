@@ -35,15 +35,15 @@ s.config_security(
 )
 
     
-res = s.kms.create_kms_page(connection_id="<value>", kms_page=::UnifiedRubySDK::Shared::KmsPage.new(
-    download_url: "<value>",
-    id: "<id>",
-    space_id: "<value>",
-    title: "<value>",
-    type: ::UnifiedRubySDK::Shared::KmsPageType::HTML,
-  ), fields_=[
-    "<value>",
-  ])
+res = s.kms.create_kms_page(connection_id="<id>", kms_page=::UnifiedRubySDK::Shared::KmsPage.new(
+  download_url: "https://bitter-adult.biz/",
+  id: "<id>",
+  space_id: "<id>",
+  title: "<value>",
+  type: ::UnifiedRubySDK::Shared::KmsPageType::HTML,
+), fields_=[
+  "<value>",
+])
 
 if ! res.kms_page.nil?
   # handle response
@@ -65,7 +65,6 @@ end
 
 
 
-
 ## create_kms_space
 
 Create a space
@@ -84,12 +83,12 @@ s.config_security(
 )
 
     
-res = s.kms.create_kms_space(connection_id="<value>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
-    id: "<id>",
-    name: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.kms.create_kms_space(connection_id="<id>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
+  id: "<id>",
+  name: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.kms_space.nil?
   # handle response
@@ -111,7 +110,6 @@ end
 
 
 
-
 ## get_kms_page
 
 Retrieve a page
@@ -130,9 +128,9 @@ s.config_security(
 )
 
     
-res = s.kms.get_kms_page(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.kms.get_kms_page(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.kms_page.nil?
   # handle response
@@ -154,7 +152,6 @@ end
 
 
 
-
 ## get_kms_space
 
 Retrieve a space
@@ -173,9 +170,9 @@ s.config_security(
 )
 
     
-res = s.kms.get_kms_space(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.kms.get_kms_space(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.kms_space.nil?
   # handle response
@@ -194,7 +191,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetKmsSpaceResponse)](../../models/operations/getkmsspaceresponse.md)**
-
 
 
 
@@ -217,7 +213,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListKmsPagesRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.kms.list_kms_pages(req)
@@ -240,7 +236,6 @@ end
 
 
 
-
 ## list_kms_spaces
 
 List all spaces
@@ -260,7 +255,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListKmsSpacesRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.kms.list_kms_spaces(req)
@@ -283,7 +278,6 @@ end
 
 
 
-
 ## patch_kms_page
 
 Update a page
@@ -302,15 +296,15 @@ s.config_security(
 )
 
     
-res = s.kms.patch_kms_page(connection_id="<value>", id="<value>", kms_page=::UnifiedRubySDK::Shared::KmsPage.new(
-    download_url: "<value>",
-    id: "<id>",
-    space_id: "<value>",
-    title: "<value>",
-    type: ::UnifiedRubySDK::Shared::KmsPageType::TEXT,
-  ), fields_=[
-    "<value>",
-  ])
+res = s.kms.patch_kms_page(connection_id="<id>", id="<id>", kms_page=::UnifiedRubySDK::Shared::KmsPage.new(
+  download_url: "https://evil-tackle.info",
+  id: "<id>",
+  space_id: "<id>",
+  title: "<value>",
+  type: ::UnifiedRubySDK::Shared::KmsPageType::MARKDOWN,
+), fields_=[
+  "<value>",
+])
 
 if ! res.kms_page.nil?
   # handle response
@@ -333,7 +327,6 @@ end
 
 
 
-
 ## patch_kms_space
 
 Update a space
@@ -352,12 +345,12 @@ s.config_security(
 )
 
     
-res = s.kms.patch_kms_space(connection_id="<value>", id="<value>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
-    id: "<id>",
-    name: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.kms.patch_kms_space(connection_id="<id>", id="<id>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
+  id: "<id>",
+  name: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.kms_space.nil?
   # handle response
@@ -380,7 +373,6 @@ end
 
 
 
-
 ## remove_kms_page
 
 Remove a page
@@ -399,7 +391,7 @@ s.config_security(
 )
 
     
-res = s.kms.remove_kms_page(connection_id="<value>", id="<value>")
+res = s.kms.remove_kms_page(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -417,7 +409,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveKmsPageResponse)](../../models/operations/removekmspageresponse.md)**
-
 
 
 
@@ -439,7 +430,7 @@ s.config_security(
 )
 
     
-res = s.kms.remove_kms_space(connection_id="<value>", id="<value>")
+res = s.kms.remove_kms_space(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -457,7 +448,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveKmsSpaceResponse)](../../models/operations/removekmsspaceresponse.md)**
-
 
 
 
@@ -479,15 +469,15 @@ s.config_security(
 )
 
     
-res = s.kms.update_kms_page(connection_id="<value>", id="<value>", kms_page=::UnifiedRubySDK::Shared::KmsPage.new(
-    download_url: "<value>",
-    id: "<id>",
-    space_id: "<value>",
-    title: "<value>",
-    type: ::UnifiedRubySDK::Shared::KmsPageType::TEXT,
-  ), fields_=[
-    "<value>",
-  ])
+res = s.kms.update_kms_page(connection_id="<id>", id="<id>", kms_page=::UnifiedRubySDK::Shared::KmsPage.new(
+  download_url: "https://salty-devil.com",
+  id: "<id>",
+  space_id: "<id>",
+  title: "<value>",
+  type: ::UnifiedRubySDK::Shared::KmsPageType::TEXT,
+), fields_=[
+  "<value>",
+])
 
 if ! res.kms_page.nil?
   # handle response
@@ -510,7 +500,6 @@ end
 
 
 
-
 ## update_kms_space
 
 Update a space
@@ -529,12 +518,12 @@ s.config_security(
 )
 
     
-res = s.kms.update_kms_space(connection_id="<value>", id="<value>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
-    id: "<id>",
-    name: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.kms.update_kms_space(connection_id="<id>", id="<id>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
+  id: "<id>",
+  name: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.kms_space.nil?
   # handle response
@@ -554,5 +543,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateKmsSpaceResponse)](../../models/operations/updatekmsspaceresponse.md)**
-
 

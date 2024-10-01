@@ -29,12 +29,12 @@ s.config_security(
 )
 
     
-res = s.collection.create_commerce_collection(connection_id="<value>", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
-    id: "<id>",
-    name: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.collection.create_commerce_collection(connection_id="<id>", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
+  id: "<id>",
+  name: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.commerce_collection.nil?
   # handle response
@@ -56,7 +56,6 @@ end
 
 
 
-
 ## get_commerce_collection
 
 Retrieve a collection
@@ -75,9 +74,9 @@ s.config_security(
 )
 
     
-res = s.collection.get_commerce_collection(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.collection.get_commerce_collection(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.commerce_collection.nil?
   # handle response
@@ -96,7 +95,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetCommerceCollectionResponse)](../../models/operations/getcommercecollectionresponse.md)**
-
 
 
 
@@ -119,7 +117,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListCommerceCollectionsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.collection.list_commerce_collections(req)
@@ -142,7 +140,6 @@ end
 
 
 
-
 ## patch_commerce_collection
 
 Update a collection
@@ -161,12 +158,12 @@ s.config_security(
 )
 
     
-res = s.collection.patch_commerce_collection(connection_id="<value>", id="<value>", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
-    id: "<id>",
-    name: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.collection.patch_commerce_collection(connection_id="<id>", id="<id>", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
+  id: "<id>",
+  name: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.commerce_collection.nil?
   # handle response
@@ -189,7 +186,6 @@ end
 
 
 
-
 ## remove_commerce_collection
 
 Remove a collection
@@ -208,7 +204,7 @@ s.config_security(
 )
 
     
-res = s.collection.remove_commerce_collection(connection_id="<value>", id="<value>")
+res = s.collection.remove_commerce_collection(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -226,7 +222,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveCommerceCollectionResponse)](../../models/operations/removecommercecollectionresponse.md)**
-
 
 
 
@@ -248,12 +243,12 @@ s.config_security(
 )
 
     
-res = s.collection.update_commerce_collection(connection_id="<value>", id="<value>", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
-    id: "<id>",
-    name: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.collection.update_commerce_collection(connection_id="<id>", id="<id>", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
+  id: "<id>",
+  name: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.commerce_collection.nil?
   # handle response
@@ -273,5 +268,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateCommerceCollectionResponse)](../../models/operations/updatecommercecollectionresponse.md)**
-
 

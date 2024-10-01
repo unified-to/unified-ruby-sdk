@@ -32,11 +32,11 @@ s.config_security(
 
     
 res = s.webhook.create_unified_webhook(webhook=::UnifiedRubySDK::Shared::Webhook.new(
-    connection_id: "<value>",
-    event: ::UnifiedRubySDK::Shared::Event::CREATED,
-    hook_url: "<value>",
-    object_type: ::UnifiedRubySDK::Shared::ObjectType::ACCOUNTING_TRANSACTION,
-  ), include_all=false)
+  connection_id: "<id>",
+  event: ::UnifiedRubySDK::Shared::Event::CREATED,
+  hook_url: "https://blind-platypus.org/",
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::ATS_SCORECARD,
+), include_all=false)
 
 if ! res.webhook.nil?
   # handle response
@@ -54,7 +54,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::CreateUnifiedWebhookResponse)](../../models/operations/createunifiedwebhookresponse.md)**
-
 
 
 
@@ -76,7 +75,7 @@ s.config_security(
 )
 
     
-res = s.webhook.get_unified_webhook(id="<value>")
+res = s.webhook.get_unified_webhook(id="<id>")
 
 if ! res.webhook.nil?
   # handle response
@@ -93,7 +92,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetUnifiedWebhookResponse)](../../models/operations/getunifiedwebhookresponse.md)**
-
 
 
 
@@ -137,7 +135,6 @@ end
 
 
 
-
 ## patch_unified_webhook
 
 Update webhook subscription
@@ -156,12 +153,12 @@ s.config_security(
 )
 
     
-res = s.webhook.patch_unified_webhook(id="<value>", webhook=::UnifiedRubySDK::Shared::Webhook.new(
-    connection_id: "<value>",
-    event: ::UnifiedRubySDK::Shared::Event::DELETED,
-    hook_url: "<value>",
-    object_type: ::UnifiedRubySDK::Shared::ObjectType::PASSTHROUGH,
-  ))
+res = s.webhook.patch_unified_webhook(id="<id>", webhook=::UnifiedRubySDK::Shared::Webhook.new(
+  connection_id: "<id>",
+  event: ::UnifiedRubySDK::Shared::Event::DELETED,
+  hook_url: "https://calculating-habit.name/",
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::COMMERCE_ITEM,
+))
 
 if ! res.webhook.nil?
   # handle response
@@ -179,7 +176,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::PatchUnifiedWebhookResponse)](../../models/operations/patchunifiedwebhookresponse.md)**
-
 
 
 
@@ -201,7 +197,7 @@ s.config_security(
 )
 
     
-res = s.webhook.patch_unified_webhook_trigger(id="<value>")
+res = s.webhook.patch_unified_webhook_trigger(id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -218,7 +214,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::PatchUnifiedWebhookTriggerResponse)](../../models/operations/patchunifiedwebhooktriggerresponse.md)**
-
 
 
 
@@ -240,7 +235,7 @@ s.config_security(
 )
 
     
-res = s.webhook.remove_unified_webhook(id="<value>")
+res = s.webhook.remove_unified_webhook(id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -257,7 +252,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveUnifiedWebhookResponse)](../../models/operations/removeunifiedwebhookresponse.md)**
-
 
 
 
@@ -279,12 +273,12 @@ s.config_security(
 )
 
     
-res = s.webhook.update_unified_webhook(id="<value>", webhook=::UnifiedRubySDK::Shared::Webhook.new(
-    connection_id: "<value>",
-    event: ::UnifiedRubySDK::Shared::Event::CREATED,
-    hook_url: "<value>",
-    object_type: ::UnifiedRubySDK::Shared::ObjectType::HRIS_GROUP,
-  ))
+res = s.webhook.update_unified_webhook(id="<id>", webhook=::UnifiedRubySDK::Shared::Webhook.new(
+  connection_id: "<id>",
+  event: ::UnifiedRubySDK::Shared::Event::CREATED,
+  hook_url: "https://glaring-postbox.info/",
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::GENAI_MODEL,
+))
 
 if ! res.webhook.nil?
   # handle response
@@ -302,7 +296,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateUnifiedWebhookResponse)](../../models/operations/updateunifiedwebhookresponse.md)**
-
 
 
 
@@ -324,7 +317,7 @@ s.config_security(
 )
 
     
-res = s.webhook.update_unified_webhook_trigger(id="<value>")
+res = s.webhook.update_unified_webhook_trigger(id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -341,5 +334,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateUnifiedWebhookTriggerResponse)](../../models/operations/updateunifiedwebhooktriggerresponse.md)**
-
 

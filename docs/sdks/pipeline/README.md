@@ -29,9 +29,9 @@ s.config_security(
 )
 
     
-res = s.pipeline.create_crm_pipeline(connection_id="<value>", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(), fields_=[
-    "<value>",
-  ])
+res = s.pipeline.create_crm_pipeline(connection_id="<id>", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_pipeline.nil?
   # handle response
@@ -53,7 +53,6 @@ end
 
 
 
-
 ## get_crm_pipeline
 
 Retrieve a pipeline
@@ -72,9 +71,9 @@ s.config_security(
 )
 
     
-res = s.pipeline.get_crm_pipeline(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.pipeline.get_crm_pipeline(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.crm_pipeline.nil?
   # handle response
@@ -93,7 +92,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetCrmPipelineResponse)](../../models/operations/getcrmpipelineresponse.md)**
-
 
 
 
@@ -116,7 +114,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListCrmPipelinesRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.pipeline.list_crm_pipelines(req)
@@ -139,7 +137,6 @@ end
 
 
 
-
 ## patch_crm_pipeline
 
 Update a pipeline
@@ -158,9 +155,9 @@ s.config_security(
 )
 
     
-res = s.pipeline.patch_crm_pipeline(connection_id="<value>", id="<value>", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(), fields_=[
-    "<value>",
-  ])
+res = s.pipeline.patch_crm_pipeline(connection_id="<id>", id="<id>", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_pipeline.nil?
   # handle response
@@ -183,7 +180,6 @@ end
 
 
 
-
 ## remove_crm_pipeline
 
 Remove a pipeline
@@ -202,7 +198,7 @@ s.config_security(
 )
 
     
-res = s.pipeline.remove_crm_pipeline(connection_id="<value>", id="<value>")
+res = s.pipeline.remove_crm_pipeline(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -220,7 +216,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveCrmPipelineResponse)](../../models/operations/removecrmpipelineresponse.md)**
-
 
 
 
@@ -242,9 +237,9 @@ s.config_security(
 )
 
     
-res = s.pipeline.update_crm_pipeline(connection_id="<value>", id="<value>", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(), fields_=[
-    "<value>",
-  ])
+res = s.pipeline.update_crm_pipeline(connection_id="<id>", id="<id>", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_pipeline.nil?
   # handle response
@@ -264,5 +259,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateCrmPipelineResponse)](../../models/operations/updatecrmpipelineresponse.md)**
-
 

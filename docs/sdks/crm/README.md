@@ -59,9 +59,9 @@ s.config_security(
 )
 
     
-res = s.crm.create_crm_company(connection_id="<value>", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(), fields_=[
-    "<value>",
-  ])
+res = s.crm.create_crm_company(connection_id="<id>", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_company.nil?
   # handle response
@@ -83,7 +83,6 @@ end
 
 
 
-
 ## create_crm_contact
 
 Create a contact
@@ -102,9 +101,9 @@ s.config_security(
 )
 
     
-res = s.crm.create_crm_contact(connection_id="<value>", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new(), fields_=[
-    "<value>",
-  ])
+res = s.crm.create_crm_contact(connection_id="<id>", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_contact.nil?
   # handle response
@@ -126,7 +125,6 @@ end
 
 
 
-
 ## create_crm_deal
 
 Create a deal
@@ -145,9 +143,9 @@ s.config_security(
 )
 
     
-res = s.crm.create_crm_deal(connection_id="<value>", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new(), fields_=[
-    "<value>",
-  ])
+res = s.crm.create_crm_deal(connection_id="<id>", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_deal.nil?
   # handle response
@@ -169,7 +167,6 @@ end
 
 
 
-
 ## create_crm_event
 
 Create an event
@@ -188,9 +185,9 @@ s.config_security(
 )
 
     
-res = s.crm.create_crm_event(connection_id="<value>", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), fields_=[
-    "<value>",
-  ])
+res = s.crm.create_crm_event(connection_id="<id>", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_event.nil?
   # handle response
@@ -212,7 +209,6 @@ end
 
 
 
-
 ## create_crm_lead
 
 Create a lead
@@ -231,9 +227,9 @@ s.config_security(
 )
 
     
-res = s.crm.create_crm_lead(connection_id="<value>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), fields_=[
-    "<value>",
-  ])
+res = s.crm.create_crm_lead(connection_id="<id>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_lead.nil?
   # handle response
@@ -255,7 +251,6 @@ end
 
 
 
-
 ## create_crm_pipeline
 
 Create a pipeline
@@ -274,9 +269,9 @@ s.config_security(
 )
 
     
-res = s.crm.create_crm_pipeline(connection_id="<value>", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(), fields_=[
-    "<value>",
-  ])
+res = s.crm.create_crm_pipeline(connection_id="<id>", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_pipeline.nil?
   # handle response
@@ -298,7 +293,6 @@ end
 
 
 
-
 ## get_crm_company
 
 Retrieve a company
@@ -317,9 +311,9 @@ s.config_security(
 )
 
     
-res = s.crm.get_crm_company(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.crm.get_crm_company(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.crm_company.nil?
   # handle response
@@ -341,7 +335,6 @@ end
 
 
 
-
 ## get_crm_contact
 
 Retrieve a contact
@@ -360,9 +353,9 @@ s.config_security(
 )
 
     
-res = s.crm.get_crm_contact(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.crm.get_crm_contact(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.crm_contact.nil?
   # handle response
@@ -384,7 +377,6 @@ end
 
 
 
-
 ## get_crm_deal
 
 Retrieve a deal
@@ -403,9 +395,9 @@ s.config_security(
 )
 
     
-res = s.crm.get_crm_deal(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.crm.get_crm_deal(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.crm_deal.nil?
   # handle response
@@ -427,7 +419,6 @@ end
 
 
 
-
 ## get_crm_event
 
 Retrieve an event
@@ -446,9 +437,9 @@ s.config_security(
 )
 
     
-res = s.crm.get_crm_event(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.crm.get_crm_event(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.crm_event.nil?
   # handle response
@@ -470,7 +461,6 @@ end
 
 
 
-
 ## get_crm_lead
 
 Retrieve a lead
@@ -489,9 +479,9 @@ s.config_security(
 )
 
     
-res = s.crm.get_crm_lead(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.crm.get_crm_lead(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.crm_lead.nil?
   # handle response
@@ -513,7 +503,6 @@ end
 
 
 
-
 ## get_crm_pipeline
 
 Retrieve a pipeline
@@ -532,9 +521,9 @@ s.config_security(
 )
 
     
-res = s.crm.get_crm_pipeline(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.crm.get_crm_pipeline(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.crm_pipeline.nil?
   # handle response
@@ -553,7 +542,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetCrmPipelineResponse)](../../models/operations/getcrmpipelineresponse.md)**
-
 
 
 
@@ -576,7 +564,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListCrmCompaniesRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.crm.list_crm_companies(req)
@@ -599,7 +587,6 @@ end
 
 
 
-
 ## list_crm_contacts
 
 List all contacts
@@ -619,7 +606,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListCrmContactsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.crm.list_crm_contacts(req)
@@ -642,7 +629,6 @@ end
 
 
 
-
 ## list_crm_deals
 
 List all deals
@@ -662,7 +648,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListCrmDealsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.crm.list_crm_deals(req)
@@ -685,7 +671,6 @@ end
 
 
 
-
 ## list_crm_events
 
 List all events
@@ -705,7 +690,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListCrmEventsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.crm.list_crm_events(req)
@@ -728,7 +713,6 @@ end
 
 
 
-
 ## list_crm_leads
 
 List all leads
@@ -748,7 +732,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListCrmLeadsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.crm.list_crm_leads(req)
@@ -771,7 +755,6 @@ end
 
 
 
-
 ## list_crm_pipelines
 
 List all pipelines
@@ -791,7 +774,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListCrmPipelinesRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.crm.list_crm_pipelines(req)
@@ -814,7 +797,6 @@ end
 
 
 
-
 ## patch_crm_company
 
 Update a company
@@ -833,9 +815,9 @@ s.config_security(
 )
 
     
-res = s.crm.patch_crm_company(connection_id="<value>", id="<value>", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(), fields_=[
-    "<value>",
-  ])
+res = s.crm.patch_crm_company(connection_id="<id>", id="<id>", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_company.nil?
   # handle response
@@ -858,7 +840,6 @@ end
 
 
 
-
 ## patch_crm_contact
 
 Update a contact
@@ -877,9 +858,9 @@ s.config_security(
 )
 
     
-res = s.crm.patch_crm_contact(connection_id="<value>", id="<value>", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new(), fields_=[
-    "<value>",
-  ])
+res = s.crm.patch_crm_contact(connection_id="<id>", id="<id>", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_contact.nil?
   # handle response
@@ -902,7 +883,6 @@ end
 
 
 
-
 ## patch_crm_deal
 
 Update a deal
@@ -921,9 +901,9 @@ s.config_security(
 )
 
     
-res = s.crm.patch_crm_deal(connection_id="<value>", id="<value>", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new(), fields_=[
-    "<value>",
-  ])
+res = s.crm.patch_crm_deal(connection_id="<id>", id="<id>", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_deal.nil?
   # handle response
@@ -946,7 +926,6 @@ end
 
 
 
-
 ## patch_crm_event
 
 Update an event
@@ -965,9 +944,9 @@ s.config_security(
 )
 
     
-res = s.crm.patch_crm_event(connection_id="<value>", id="<value>", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), fields_=[
-    "<value>",
-  ])
+res = s.crm.patch_crm_event(connection_id="<id>", id="<id>", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_event.nil?
   # handle response
@@ -990,7 +969,6 @@ end
 
 
 
-
 ## patch_crm_lead
 
 Update a lead
@@ -1009,9 +987,9 @@ s.config_security(
 )
 
     
-res = s.crm.patch_crm_lead(connection_id="<value>", id="<value>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), fields_=[
-    "<value>",
-  ])
+res = s.crm.patch_crm_lead(connection_id="<id>", id="<id>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_lead.nil?
   # handle response
@@ -1034,7 +1012,6 @@ end
 
 
 
-
 ## patch_crm_pipeline
 
 Update a pipeline
@@ -1053,9 +1030,9 @@ s.config_security(
 )
 
     
-res = s.crm.patch_crm_pipeline(connection_id="<value>", id="<value>", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(), fields_=[
-    "<value>",
-  ])
+res = s.crm.patch_crm_pipeline(connection_id="<id>", id="<id>", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_pipeline.nil?
   # handle response
@@ -1078,7 +1055,6 @@ end
 
 
 
-
 ## remove_crm_company
 
 Remove a company
@@ -1097,7 +1073,7 @@ s.config_security(
 )
 
     
-res = s.crm.remove_crm_company(connection_id="<value>", id="<value>")
+res = s.crm.remove_crm_company(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -1115,7 +1091,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveCrmCompanyResponse)](../../models/operations/removecrmcompanyresponse.md)**
-
 
 
 
@@ -1137,7 +1112,7 @@ s.config_security(
 )
 
     
-res = s.crm.remove_crm_contact(connection_id="<value>", id="<value>")
+res = s.crm.remove_crm_contact(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -1155,7 +1130,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveCrmContactResponse)](../../models/operations/removecrmcontactresponse.md)**
-
 
 
 
@@ -1177,7 +1151,7 @@ s.config_security(
 )
 
     
-res = s.crm.remove_crm_deal(connection_id="<value>", id="<value>")
+res = s.crm.remove_crm_deal(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -1195,7 +1169,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveCrmDealResponse)](../../models/operations/removecrmdealresponse.md)**
-
 
 
 
@@ -1217,7 +1190,7 @@ s.config_security(
 )
 
     
-res = s.crm.remove_crm_event(connection_id="<value>", id="<value>")
+res = s.crm.remove_crm_event(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -1235,7 +1208,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveCrmEventResponse)](../../models/operations/removecrmeventresponse.md)**
-
 
 
 
@@ -1257,7 +1229,7 @@ s.config_security(
 )
 
     
-res = s.crm.remove_crm_lead(connection_id="<value>", id="<value>")
+res = s.crm.remove_crm_lead(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -1275,7 +1247,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveCrmLeadResponse)](../../models/operations/removecrmleadresponse.md)**
-
 
 
 
@@ -1297,7 +1268,7 @@ s.config_security(
 )
 
     
-res = s.crm.remove_crm_pipeline(connection_id="<value>", id="<value>")
+res = s.crm.remove_crm_pipeline(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -1315,7 +1286,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveCrmPipelineResponse)](../../models/operations/removecrmpipelineresponse.md)**
-
 
 
 
@@ -1337,9 +1307,9 @@ s.config_security(
 )
 
     
-res = s.crm.update_crm_company(connection_id="<value>", id="<value>", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(), fields_=[
-    "<value>",
-  ])
+res = s.crm.update_crm_company(connection_id="<id>", id="<id>", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_company.nil?
   # handle response
@@ -1362,7 +1332,6 @@ end
 
 
 
-
 ## update_crm_contact
 
 Update a contact
@@ -1381,9 +1350,9 @@ s.config_security(
 )
 
     
-res = s.crm.update_crm_contact(connection_id="<value>", id="<value>", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new(), fields_=[
-    "<value>",
-  ])
+res = s.crm.update_crm_contact(connection_id="<id>", id="<id>", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_contact.nil?
   # handle response
@@ -1406,7 +1375,6 @@ end
 
 
 
-
 ## update_crm_deal
 
 Update a deal
@@ -1425,9 +1393,9 @@ s.config_security(
 )
 
     
-res = s.crm.update_crm_deal(connection_id="<value>", id="<value>", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new(), fields_=[
-    "<value>",
-  ])
+res = s.crm.update_crm_deal(connection_id="<id>", id="<id>", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_deal.nil?
   # handle response
@@ -1450,7 +1418,6 @@ end
 
 
 
-
 ## update_crm_event
 
 Update an event
@@ -1469,9 +1436,9 @@ s.config_security(
 )
 
     
-res = s.crm.update_crm_event(connection_id="<value>", id="<value>", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), fields_=[
-    "<value>",
-  ])
+res = s.crm.update_crm_event(connection_id="<id>", id="<id>", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_event.nil?
   # handle response
@@ -1494,7 +1461,6 @@ end
 
 
 
-
 ## update_crm_lead
 
 Update a lead
@@ -1513,9 +1479,9 @@ s.config_security(
 )
 
     
-res = s.crm.update_crm_lead(connection_id="<value>", id="<value>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), fields_=[
-    "<value>",
-  ])
+res = s.crm.update_crm_lead(connection_id="<id>", id="<id>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_lead.nil?
   # handle response
@@ -1538,7 +1504,6 @@ end
 
 
 
-
 ## update_crm_pipeline
 
 Update a pipeline
@@ -1557,9 +1522,9 @@ s.config_security(
 )
 
     
-res = s.crm.update_crm_pipeline(connection_id="<value>", id="<value>", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(), fields_=[
-    "<value>",
-  ])
+res = s.crm.update_crm_pipeline(connection_id="<id>", id="<id>", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_pipeline.nil?
   # handle response
@@ -1579,5 +1544,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateCrmPipelineResponse)](../../models/operations/updatecrmpipelineresponse.md)**
-
 
