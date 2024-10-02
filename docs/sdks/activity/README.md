@@ -29,11 +29,9 @@ s.config_security(
 )
 
     
-res = s.activity.create_ats_activity(connection_id="<value>", ats_activity=::UnifiedRubySDK::Shared::AtsActivity.new(
-    title: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.activity.create_ats_activity(connection_id="<id>", ats_activity=::UnifiedRubySDK::Shared::AtsActivity.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_activity.nil?
   # handle response
@@ -55,7 +53,6 @@ end
 
 
 
-
 ## get_ats_activity
 
 Retrieve an activity
@@ -74,9 +71,9 @@ s.config_security(
 )
 
     
-res = s.activity.get_ats_activity(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.activity.get_ats_activity(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.ats_activity.nil?
   # handle response
@@ -95,7 +92,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetAtsActivityResponse)](../../models/operations/getatsactivityresponse.md)**
-
 
 
 
@@ -118,7 +114,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAtsActivitiesRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.activity.list_ats_activities(req)
@@ -141,7 +137,6 @@ end
 
 
 
-
 ## patch_ats_activity
 
 Update an activity
@@ -160,11 +155,9 @@ s.config_security(
 )
 
     
-res = s.activity.patch_ats_activity(connection_id="<value>", id="<value>", ats_activity=::UnifiedRubySDK::Shared::AtsActivity.new(
-    title: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.activity.patch_ats_activity(connection_id="<id>", id="<id>", ats_activity=::UnifiedRubySDK::Shared::AtsActivity.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_activity.nil?
   # handle response
@@ -187,7 +180,6 @@ end
 
 
 
-
 ## remove_ats_activity
 
 Remove an activity
@@ -206,7 +198,7 @@ s.config_security(
 )
 
     
-res = s.activity.remove_ats_activity(connection_id="<value>", id="<value>")
+res = s.activity.remove_ats_activity(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -224,7 +216,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveAtsActivityResponse)](../../models/operations/removeatsactivityresponse.md)**
-
 
 
 
@@ -246,11 +237,9 @@ s.config_security(
 )
 
     
-res = s.activity.update_ats_activity(connection_id="<value>", id="<value>", ats_activity=::UnifiedRubySDK::Shared::AtsActivity.new(
-    title: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.activity.update_ats_activity(connection_id="<id>", id="<id>", ats_activity=::UnifiedRubySDK::Shared::AtsActivity.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_activity.nil?
   # handle response
@@ -270,5 +259,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateAtsActivityResponse)](../../models/operations/updateatsactivityresponse.md)**
-
 

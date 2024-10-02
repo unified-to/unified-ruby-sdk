@@ -29,9 +29,9 @@ s.config_security(
 )
 
     
-res = s.storage.create_storage_file(connection_id="<value>", storage_file=::UnifiedRubySDK::Shared::StorageFile.new(), fields_=[
-    "<value>",
-  ])
+res = s.storage.create_storage_file(connection_id="<id>", storage_file=::UnifiedRubySDK::Shared::StorageFile.new(), fields_=[
+  "<value>",
+])
 
 if ! res.storage_file.nil?
   # handle response
@@ -53,7 +53,6 @@ end
 
 
 
-
 ## get_storage_file
 
 Retrieve a file
@@ -72,9 +71,9 @@ s.config_security(
 )
 
     
-res = s.storage.get_storage_file(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.storage.get_storage_file(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.storage_file.nil?
   # handle response
@@ -93,7 +92,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetStorageFileResponse)](../../models/operations/getstoragefileresponse.md)**
-
 
 
 
@@ -116,7 +114,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListStorageFilesRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.storage.list_storage_files(req)
@@ -139,7 +137,6 @@ end
 
 
 
-
 ## patch_storage_file
 
 Update a file
@@ -158,9 +155,9 @@ s.config_security(
 )
 
     
-res = s.storage.patch_storage_file(connection_id="<value>", id="<value>", storage_file=::UnifiedRubySDK::Shared::StorageFile.new(), fields_=[
-    "<value>",
-  ])
+res = s.storage.patch_storage_file(connection_id="<id>", id="<id>", storage_file=::UnifiedRubySDK::Shared::StorageFile.new(), fields_=[
+  "<value>",
+])
 
 if ! res.storage_file.nil?
   # handle response
@@ -183,7 +180,6 @@ end
 
 
 
-
 ## remove_storage_file
 
 Remove a file
@@ -202,7 +198,7 @@ s.config_security(
 )
 
     
-res = s.storage.remove_storage_file(connection_id="<value>", id="<value>")
+res = s.storage.remove_storage_file(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -220,7 +216,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveStorageFileResponse)](../../models/operations/removestoragefileresponse.md)**
-
 
 
 
@@ -242,9 +237,9 @@ s.config_security(
 )
 
     
-res = s.storage.update_storage_file(connection_id="<value>", id="<value>", storage_file=::UnifiedRubySDK::Shared::StorageFile.new(), fields_=[
-    "<value>",
-  ])
+res = s.storage.update_storage_file(connection_id="<id>", id="<id>", storage_file=::UnifiedRubySDK::Shared::StorageFile.new(), fields_=[
+  "<value>",
+])
 
 if ! res.storage_file.nil?
   # handle response
@@ -264,5 +259,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateStorageFileResponse)](../../models/operations/updatestoragefileresponse.md)**
-
 

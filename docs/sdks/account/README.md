@@ -29,9 +29,9 @@ s.config_security(
 )
 
     
-res = s.account.create_accounting_account(connection_id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), fields_=[
-    "<value>",
-  ])
+res = s.account.create_accounting_account(connection_id="<id>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), fields_=[
+  "<value>",
+])
 
 if ! res.accounting_account.nil?
   # handle response
@@ -53,7 +53,6 @@ end
 
 
 
-
 ## get_accounting_account
 
 Retrieve an account
@@ -72,9 +71,9 @@ s.config_security(
 )
 
     
-res = s.account.get_accounting_account(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.account.get_accounting_account(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.accounting_account.nil?
   # handle response
@@ -93,7 +92,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetAccountingAccountResponse)](../../models/operations/getaccountingaccountresponse.md)**
-
 
 
 
@@ -116,7 +114,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAccountingAccountsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.account.list_accounting_accounts(req)
@@ -139,7 +137,6 @@ end
 
 
 
-
 ## patch_accounting_account
 
 Update an account
@@ -158,9 +155,9 @@ s.config_security(
 )
 
     
-res = s.account.patch_accounting_account(connection_id="<value>", id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), fields_=[
-    "<value>",
-  ])
+res = s.account.patch_accounting_account(connection_id="<id>", id="<id>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), fields_=[
+  "<value>",
+])
 
 if ! res.accounting_account.nil?
   # handle response
@@ -183,7 +180,6 @@ end
 
 
 
-
 ## remove_accounting_account
 
 Remove an account
@@ -202,7 +198,7 @@ s.config_security(
 )
 
     
-res = s.account.remove_accounting_account(connection_id="<value>", id="<value>")
+res = s.account.remove_accounting_account(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -220,7 +216,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveAccountingAccountResponse)](../../models/operations/removeaccountingaccountresponse.md)**
-
 
 
 
@@ -242,9 +237,9 @@ s.config_security(
 )
 
     
-res = s.account.update_accounting_account(connection_id="<value>", id="<value>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), fields_=[
-    "<value>",
-  ])
+res = s.account.update_accounting_account(connection_id="<id>", id="<id>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), fields_=[
+  "<value>",
+])
 
 if ! res.accounting_account.nil?
   # handle response
@@ -264,5 +259,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateAccountingAccountResponse)](../../models/operations/updateaccountingaccountresponse.md)**
-
 

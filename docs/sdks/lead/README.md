@@ -29,9 +29,9 @@ s.config_security(
 )
 
     
-res = s.lead.create_crm_lead(connection_id="<value>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), fields_=[
-    "<value>",
-  ])
+res = s.lead.create_crm_lead(connection_id="<id>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_lead.nil?
   # handle response
@@ -53,7 +53,6 @@ end
 
 
 
-
 ## get_crm_lead
 
 Retrieve a lead
@@ -72,9 +71,9 @@ s.config_security(
 )
 
     
-res = s.lead.get_crm_lead(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.lead.get_crm_lead(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.crm_lead.nil?
   # handle response
@@ -93,7 +92,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetCrmLeadResponse)](../../models/operations/getcrmleadresponse.md)**
-
 
 
 
@@ -116,7 +114,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListCrmLeadsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.lead.list_crm_leads(req)
@@ -139,7 +137,6 @@ end
 
 
 
-
 ## patch_crm_lead
 
 Update a lead
@@ -158,9 +155,9 @@ s.config_security(
 )
 
     
-res = s.lead.patch_crm_lead(connection_id="<value>", id="<value>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), fields_=[
-    "<value>",
-  ])
+res = s.lead.patch_crm_lead(connection_id="<id>", id="<id>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_lead.nil?
   # handle response
@@ -183,7 +180,6 @@ end
 
 
 
-
 ## remove_crm_lead
 
 Remove a lead
@@ -202,7 +198,7 @@ s.config_security(
 )
 
     
-res = s.lead.remove_crm_lead(connection_id="<value>", id="<value>")
+res = s.lead.remove_crm_lead(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -220,7 +216,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveCrmLeadResponse)](../../models/operations/removecrmleadresponse.md)**
-
 
 
 
@@ -242,9 +237,9 @@ s.config_security(
 )
 
     
-res = s.lead.update_crm_lead(connection_id="<value>", id="<value>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), fields_=[
-    "<value>",
-  ])
+res = s.lead.update_crm_lead(connection_id="<id>", id="<id>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), fields_=[
+  "<value>",
+])
 
 if ! res.crm_lead.nil?
   # handle response
@@ -264,5 +259,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateCrmLeadResponse)](../../models/operations/updatecrmleadresponse.md)**
-
 

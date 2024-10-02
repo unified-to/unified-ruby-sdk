@@ -31,9 +31,9 @@ s.config_security(
 )
 
     
-res = s.messaging.create_messaging_message(connection_id="<value>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), fields_=[
-    "<value>",
-  ])
+res = s.messaging.create_messaging_message(connection_id="<id>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), fields_=[
+  "<value>",
+])
 
 if ! res.messaging_message.nil?
   # handle response
@@ -55,7 +55,6 @@ end
 
 
 
-
 ## get_messaging_channel
 
 Retrieve a channel
@@ -74,9 +73,9 @@ s.config_security(
 )
 
     
-res = s.messaging.get_messaging_channel(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.messaging.get_messaging_channel(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.messaging_channel.nil?
   # handle response
@@ -98,7 +97,6 @@ end
 
 
 
-
 ## get_messaging_message
 
 Retrieve a message
@@ -117,9 +115,9 @@ s.config_security(
 )
 
     
-res = s.messaging.get_messaging_message(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.messaging.get_messaging_message(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.messaging_message.nil?
   # handle response
@@ -138,7 +136,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetMessagingMessageResponse)](../../models/operations/getmessagingmessageresponse.md)**
-
 
 
 
@@ -161,7 +158,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListMessagingChannelsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.messaging.list_messaging_channels(req)
@@ -184,7 +181,6 @@ end
 
 
 
-
 ## list_messaging_messages
 
 List all messages
@@ -204,7 +200,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListMessagingMessagesRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.messaging.list_messaging_messages(req)
@@ -227,7 +223,6 @@ end
 
 
 
-
 ## patch_messaging_message
 
 Update a message
@@ -246,9 +241,9 @@ s.config_security(
 )
 
     
-res = s.messaging.patch_messaging_message(connection_id="<value>", id="<value>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), fields_=[
-    "<value>",
-  ])
+res = s.messaging.patch_messaging_message(connection_id="<id>", id="<id>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), fields_=[
+  "<value>",
+])
 
 if ! res.messaging_message.nil?
   # handle response
@@ -271,7 +266,6 @@ end
 
 
 
-
 ## remove_messaging_message
 
 Remove a message
@@ -290,7 +284,7 @@ s.config_security(
 )
 
     
-res = s.messaging.remove_messaging_message(connection_id="<value>", id="<value>")
+res = s.messaging.remove_messaging_message(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -308,7 +302,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveMessagingMessageResponse)](../../models/operations/removemessagingmessageresponse.md)**
-
 
 
 
@@ -330,9 +323,9 @@ s.config_security(
 )
 
     
-res = s.messaging.update_messaging_message(connection_id="<value>", id="<value>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), fields_=[
-    "<value>",
-  ])
+res = s.messaging.update_messaging_message(connection_id="<id>", id="<id>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), fields_=[
+  "<value>",
+])
 
 if ! res.messaging_message.nil?
   # handle response
@@ -352,5 +345,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateMessagingMessageResponse)](../../models/operations/updatemessagingmessageresponse.md)**
-
 

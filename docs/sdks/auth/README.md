@@ -27,7 +27,7 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::GetUnifiedIntegrationAuthRequest.new(
   integration_type: "<value>",
-  workspace_id: "<value>",
+  workspace_id: "<id>",
 )
     
 res = s.auth.get_unified_integration_auth(req)
@@ -47,7 +47,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetUnifiedIntegrationAuthResponse)](../../models/operations/getunifiedintegrationauthresponse.md)**
-
 
 
 
@@ -71,7 +70,7 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::GetUnifiedIntegrationLoginRequest.new(
   integration_type: "<value>",
-  workspace_id: "<value>",
+  workspace_id: "<id>",
 )
     
 res = s.auth.get_unified_integration_login(req)
@@ -91,5 +90,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetUnifiedIntegrationLoginResponse)](../../models/operations/getunifiedintegrationloginresponse.md)**
-
 

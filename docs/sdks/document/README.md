@@ -29,9 +29,9 @@ s.config_security(
 )
 
     
-res = s.document.create_ats_document(connection_id="<value>", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(), fields_=[
-    "<value>",
-  ])
+res = s.document.create_ats_document(connection_id="<id>", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_document.nil?
   # handle response
@@ -53,7 +53,6 @@ end
 
 
 
-
 ## get_ats_document
 
 Retrieve a document
@@ -72,9 +71,9 @@ s.config_security(
 )
 
     
-res = s.document.get_ats_document(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.document.get_ats_document(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.ats_document.nil?
   # handle response
@@ -93,7 +92,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetAtsDocumentResponse)](../../models/operations/getatsdocumentresponse.md)**
-
 
 
 
@@ -116,7 +114,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAtsDocumentsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.document.list_ats_documents(req)
@@ -139,7 +137,6 @@ end
 
 
 
-
 ## patch_ats_document
 
 Update a document
@@ -158,9 +155,9 @@ s.config_security(
 )
 
     
-res = s.document.patch_ats_document(connection_id="<value>", id="<value>", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(), fields_=[
-    "<value>",
-  ])
+res = s.document.patch_ats_document(connection_id="<id>", id="<id>", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_document.nil?
   # handle response
@@ -183,7 +180,6 @@ end
 
 
 
-
 ## remove_ats_document
 
 Remove a document
@@ -202,7 +198,7 @@ s.config_security(
 )
 
     
-res = s.document.remove_ats_document(connection_id="<value>", id="<value>")
+res = s.document.remove_ats_document(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -220,7 +216,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveAtsDocumentResponse)](../../models/operations/removeatsdocumentresponse.md)**
-
 
 
 
@@ -242,9 +237,9 @@ s.config_security(
 )
 
     
-res = s.document.update_ats_document(connection_id="<value>", id="<value>", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(), fields_=[
-    "<value>",
-  ])
+res = s.document.update_ats_document(connection_id="<id>", id="<id>", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_document.nil?
   # handle response
@@ -264,5 +259,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateAtsDocumentResponse)](../../models/operations/updateatsdocumentresponse.md)**
-
 

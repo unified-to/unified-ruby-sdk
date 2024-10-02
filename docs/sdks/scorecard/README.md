@@ -29,9 +29,9 @@ s.config_security(
 )
 
     
-res = s.scorecard.create_ats_scorecard(connection_id="<value>", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new(), fields_=[
-    "<value>",
-  ])
+res = s.scorecard.create_ats_scorecard(connection_id="<id>", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_scorecard.nil?
   # handle response
@@ -53,7 +53,6 @@ end
 
 
 
-
 ## get_ats_scorecard
 
 Retrieve a scorecard
@@ -72,9 +71,9 @@ s.config_security(
 )
 
     
-res = s.scorecard.get_ats_scorecard(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.scorecard.get_ats_scorecard(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.ats_scorecard.nil?
   # handle response
@@ -93,7 +92,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetAtsScorecardResponse)](../../models/operations/getatsscorecardresponse.md)**
-
 
 
 
@@ -116,7 +114,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAtsScorecardsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.scorecard.list_ats_scorecards(req)
@@ -139,7 +137,6 @@ end
 
 
 
-
 ## patch_ats_scorecard
 
 Update a scorecard
@@ -158,9 +155,9 @@ s.config_security(
 )
 
     
-res = s.scorecard.patch_ats_scorecard(connection_id="<value>", id="<value>", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new(), fields_=[
-    "<value>",
-  ])
+res = s.scorecard.patch_ats_scorecard(connection_id="<id>", id="<id>", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_scorecard.nil?
   # handle response
@@ -183,7 +180,6 @@ end
 
 
 
-
 ## remove_ats_scorecard
 
 Remove a scorecard
@@ -202,7 +198,7 @@ s.config_security(
 )
 
     
-res = s.scorecard.remove_ats_scorecard(connection_id="<value>", id="<value>")
+res = s.scorecard.remove_ats_scorecard(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -220,7 +216,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveAtsScorecardResponse)](../../models/operations/removeatsscorecardresponse.md)**
-
 
 
 
@@ -242,9 +237,9 @@ s.config_security(
 )
 
     
-res = s.scorecard.update_ats_scorecard(connection_id="<value>", id="<value>", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new(), fields_=[
-    "<value>",
-  ])
+res = s.scorecard.update_ats_scorecard(connection_id="<id>", id="<id>", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_scorecard.nil?
   # handle response
@@ -264,5 +259,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateAtsScorecardResponse)](../../models/operations/updateatsscorecardresponse.md)**
-
 

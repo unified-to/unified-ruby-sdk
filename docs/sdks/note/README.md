@@ -29,9 +29,9 @@ s.config_security(
 )
 
     
-res = s.note.create_ticketing_note(connection_id="<value>", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new(), fields_=[
-    "<value>",
-  ])
+res = s.note.create_ticketing_note(connection_id="<id>", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ticketing_note.nil?
   # handle response
@@ -53,7 +53,6 @@ end
 
 
 
-
 ## get_ticketing_note
 
 Retrieve a note
@@ -72,9 +71,9 @@ s.config_security(
 )
 
     
-res = s.note.get_ticketing_note(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.note.get_ticketing_note(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.ticketing_note.nil?
   # handle response
@@ -93,7 +92,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetTicketingNoteResponse)](../../models/operations/getticketingnoteresponse.md)**
-
 
 
 
@@ -116,7 +114,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListTicketingNotesRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.note.list_ticketing_notes(req)
@@ -139,7 +137,6 @@ end
 
 
 
-
 ## patch_ticketing_note
 
 Update a note
@@ -158,9 +155,9 @@ s.config_security(
 )
 
     
-res = s.note.patch_ticketing_note(connection_id="<value>", id="<value>", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new(), fields_=[
-    "<value>",
-  ])
+res = s.note.patch_ticketing_note(connection_id="<id>", id="<id>", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ticketing_note.nil?
   # handle response
@@ -183,7 +180,6 @@ end
 
 
 
-
 ## remove_ticketing_note
 
 Remove a note
@@ -202,7 +198,7 @@ s.config_security(
 )
 
     
-res = s.note.remove_ticketing_note(connection_id="<value>", id="<value>")
+res = s.note.remove_ticketing_note(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -220,7 +216,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveTicketingNoteResponse)](../../models/operations/removeticketingnoteresponse.md)**
-
 
 
 
@@ -242,9 +237,9 @@ s.config_security(
 )
 
     
-res = s.note.update_ticketing_note(connection_id="<value>", id="<value>", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new(), fields_=[
-    "<value>",
-  ])
+res = s.note.update_ticketing_note(connection_id="<id>", id="<id>", ticketing_note=::UnifiedRubySDK::Shared::TicketingNote.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ticketing_note.nil?
   # handle response
@@ -264,5 +259,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateTicketingNoteResponse)](../../models/operations/updateticketingnoteresponse.md)**
-
 

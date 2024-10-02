@@ -29,9 +29,9 @@ s.config_security(
 )
 
     
-res = s.job.create_ats_job(connection_id="<value>", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(), fields_=[
-    "<value>",
-  ])
+res = s.job.create_ats_job(connection_id="<id>", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_job.nil?
   # handle response
@@ -53,7 +53,6 @@ end
 
 
 
-
 ## get_ats_job
 
 Retrieve a job
@@ -72,9 +71,9 @@ s.config_security(
 )
 
     
-res = s.job.get_ats_job(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.job.get_ats_job(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.ats_job.nil?
   # handle response
@@ -93,7 +92,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetAtsJobResponse)](../../models/operations/getatsjobresponse.md)**
-
 
 
 
@@ -116,7 +114,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAtsJobsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.job.list_ats_jobs(req)
@@ -139,7 +137,6 @@ end
 
 
 
-
 ## patch_ats_job
 
 Update a job
@@ -158,9 +155,9 @@ s.config_security(
 )
 
     
-res = s.job.patch_ats_job(connection_id="<value>", id="<value>", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(), fields_=[
-    "<value>",
-  ])
+res = s.job.patch_ats_job(connection_id="<id>", id="<id>", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_job.nil?
   # handle response
@@ -183,7 +180,6 @@ end
 
 
 
-
 ## remove_ats_job
 
 Remove a job
@@ -202,7 +198,7 @@ s.config_security(
 )
 
     
-res = s.job.remove_ats_job(connection_id="<value>", id="<value>")
+res = s.job.remove_ats_job(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -220,7 +216,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveAtsJobResponse)](../../models/operations/removeatsjobresponse.md)**
-
 
 
 
@@ -242,9 +237,9 @@ s.config_security(
 )
 
     
-res = s.job.update_ats_job(connection_id="<value>", id="<value>", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(), fields_=[
-    "<value>",
-  ])
+res = s.job.update_ats_job(connection_id="<id>", id="<id>", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_job.nil?
   # handle response
@@ -264,5 +259,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateAtsJobResponse)](../../models/operations/updateatsjobresponse.md)**
-
 

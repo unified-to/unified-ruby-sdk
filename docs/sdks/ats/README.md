@@ -68,11 +68,9 @@ s.config_security(
 )
 
     
-res = s.ats.create_ats_activity(connection_id="<value>", ats_activity=::UnifiedRubySDK::Shared::AtsActivity.new(
-    title: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.ats.create_ats_activity(connection_id="<id>", ats_activity=::UnifiedRubySDK::Shared::AtsActivity.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_activity.nil?
   # handle response
@@ -94,7 +92,6 @@ end
 
 
 
-
 ## create_ats_application
 
 Create an application
@@ -113,9 +110,9 @@ s.config_security(
 )
 
     
-res = s.ats.create_ats_application(connection_id="<value>", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new(), fields_=[
-    "<value>",
-  ])
+res = s.ats.create_ats_application(connection_id="<id>", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_application.nil?
   # handle response
@@ -137,7 +134,6 @@ end
 
 
 
-
 ## create_ats_candidate
 
 Create a candidate
@@ -156,9 +152,9 @@ s.config_security(
 )
 
     
-res = s.ats.create_ats_candidate(connection_id="<value>", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new(), fields_=[
-    "<value>",
-  ])
+res = s.ats.create_ats_candidate(connection_id="<id>", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_candidate.nil?
   # handle response
@@ -180,7 +176,6 @@ end
 
 
 
-
 ## create_ats_document
 
 Create a document
@@ -199,9 +194,9 @@ s.config_security(
 )
 
     
-res = s.ats.create_ats_document(connection_id="<value>", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(), fields_=[
-    "<value>",
-  ])
+res = s.ats.create_ats_document(connection_id="<id>", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_document.nil?
   # handle response
@@ -223,7 +218,6 @@ end
 
 
 
-
 ## create_ats_interview
 
 Create an interview
@@ -242,9 +236,9 @@ s.config_security(
 )
 
     
-res = s.ats.create_ats_interview(connection_id="<value>", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new(), fields_=[
-    "<value>",
-  ])
+res = s.ats.create_ats_interview(connection_id="<id>", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_interview.nil?
   # handle response
@@ -266,7 +260,6 @@ end
 
 
 
-
 ## create_ats_job
 
 Create a job
@@ -285,9 +278,9 @@ s.config_security(
 )
 
     
-res = s.ats.create_ats_job(connection_id="<value>", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(), fields_=[
-    "<value>",
-  ])
+res = s.ats.create_ats_job(connection_id="<id>", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_job.nil?
   # handle response
@@ -309,7 +302,6 @@ end
 
 
 
-
 ## create_ats_scorecard
 
 Create a scorecard
@@ -328,9 +320,9 @@ s.config_security(
 )
 
     
-res = s.ats.create_ats_scorecard(connection_id="<value>", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new(), fields_=[
-    "<value>",
-  ])
+res = s.ats.create_ats_scorecard(connection_id="<id>", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_scorecard.nil?
   # handle response
@@ -352,7 +344,6 @@ end
 
 
 
-
 ## get_ats_activity
 
 Retrieve an activity
@@ -371,9 +362,9 @@ s.config_security(
 )
 
     
-res = s.ats.get_ats_activity(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.ats.get_ats_activity(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.ats_activity.nil?
   # handle response
@@ -395,7 +386,6 @@ end
 
 
 
-
 ## get_ats_application
 
 Retrieve an application
@@ -414,9 +404,9 @@ s.config_security(
 )
 
     
-res = s.ats.get_ats_application(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.ats.get_ats_application(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.ats_application.nil?
   # handle response
@@ -438,7 +428,6 @@ end
 
 
 
-
 ## get_ats_candidate
 
 Retrieve a candidate
@@ -457,9 +446,9 @@ s.config_security(
 )
 
     
-res = s.ats.get_ats_candidate(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.ats.get_ats_candidate(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.ats_candidate.nil?
   # handle response
@@ -481,7 +470,6 @@ end
 
 
 
-
 ## get_ats_company
 
 Retrieve a company
@@ -500,9 +488,9 @@ s.config_security(
 )
 
     
-res = s.ats.get_ats_company(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.ats.get_ats_company(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.ats_company.nil?
   # handle response
@@ -524,7 +512,6 @@ end
 
 
 
-
 ## get_ats_document
 
 Retrieve a document
@@ -543,9 +530,9 @@ s.config_security(
 )
 
     
-res = s.ats.get_ats_document(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.ats.get_ats_document(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.ats_document.nil?
   # handle response
@@ -567,7 +554,6 @@ end
 
 
 
-
 ## get_ats_interview
 
 Retrieve an interview
@@ -586,9 +572,9 @@ s.config_security(
 )
 
     
-res = s.ats.get_ats_interview(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.ats.get_ats_interview(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.ats_interview.nil?
   # handle response
@@ -610,7 +596,6 @@ end
 
 
 
-
 ## get_ats_job
 
 Retrieve a job
@@ -629,9 +614,9 @@ s.config_security(
 )
 
     
-res = s.ats.get_ats_job(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.ats.get_ats_job(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.ats_job.nil?
   # handle response
@@ -653,7 +638,6 @@ end
 
 
 
-
 ## get_ats_scorecard
 
 Retrieve a scorecard
@@ -672,9 +656,9 @@ s.config_security(
 )
 
     
-res = s.ats.get_ats_scorecard(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.ats.get_ats_scorecard(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.ats_scorecard.nil?
   # handle response
@@ -693,7 +677,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetAtsScorecardResponse)](../../models/operations/getatsscorecardresponse.md)**
-
 
 
 
@@ -716,7 +699,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAtsActivitiesRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.ats.list_ats_activities(req)
@@ -739,7 +722,6 @@ end
 
 
 
-
 ## list_ats_applications
 
 List all applications
@@ -759,7 +741,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAtsApplicationsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.ats.list_ats_applications(req)
@@ -782,7 +764,6 @@ end
 
 
 
-
 ## list_ats_applicationstatuses
 
 List all applicationstatuses
@@ -802,7 +783,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAtsApplicationstatusesRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.ats.list_ats_applicationstatuses(req)
@@ -825,7 +806,6 @@ end
 
 
 
-
 ## list_ats_candidates
 
 List all candidates
@@ -845,7 +825,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAtsCandidatesRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.ats.list_ats_candidates(req)
@@ -868,7 +848,6 @@ end
 
 
 
-
 ## list_ats_companies
 
 List all companies
@@ -888,7 +867,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAtsCompaniesRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.ats.list_ats_companies(req)
@@ -911,7 +890,6 @@ end
 
 
 
-
 ## list_ats_documents
 
 List all documents
@@ -931,7 +909,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAtsDocumentsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.ats.list_ats_documents(req)
@@ -954,7 +932,6 @@ end
 
 
 
-
 ## list_ats_interviews
 
 List all interviews
@@ -974,7 +951,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAtsInterviewsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.ats.list_ats_interviews(req)
@@ -997,7 +974,6 @@ end
 
 
 
-
 ## list_ats_jobs
 
 List all jobs
@@ -1017,7 +993,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAtsJobsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.ats.list_ats_jobs(req)
@@ -1040,7 +1016,6 @@ end
 
 
 
-
 ## list_ats_scorecards
 
 List all scorecards
@@ -1060,7 +1035,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAtsScorecardsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.ats.list_ats_scorecards(req)
@@ -1083,7 +1058,6 @@ end
 
 
 
-
 ## patch_ats_activity
 
 Update an activity
@@ -1102,11 +1076,9 @@ s.config_security(
 )
 
     
-res = s.ats.patch_ats_activity(connection_id="<value>", id="<value>", ats_activity=::UnifiedRubySDK::Shared::AtsActivity.new(
-    title: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.ats.patch_ats_activity(connection_id="<id>", id="<id>", ats_activity=::UnifiedRubySDK::Shared::AtsActivity.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_activity.nil?
   # handle response
@@ -1129,7 +1101,6 @@ end
 
 
 
-
 ## patch_ats_application
 
 Update an application
@@ -1148,9 +1119,9 @@ s.config_security(
 )
 
     
-res = s.ats.patch_ats_application(connection_id="<value>", id="<value>", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new(), fields_=[
-    "<value>",
-  ])
+res = s.ats.patch_ats_application(connection_id="<id>", id="<id>", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_application.nil?
   # handle response
@@ -1173,7 +1144,6 @@ end
 
 
 
-
 ## patch_ats_candidate
 
 Update a candidate
@@ -1192,9 +1162,9 @@ s.config_security(
 )
 
     
-res = s.ats.patch_ats_candidate(connection_id="<value>", id="<value>", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new(), fields_=[
-    "<value>",
-  ])
+res = s.ats.patch_ats_candidate(connection_id="<id>", id="<id>", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_candidate.nil?
   # handle response
@@ -1217,7 +1187,6 @@ end
 
 
 
-
 ## patch_ats_document
 
 Update a document
@@ -1236,9 +1205,9 @@ s.config_security(
 )
 
     
-res = s.ats.patch_ats_document(connection_id="<value>", id="<value>", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(), fields_=[
-    "<value>",
-  ])
+res = s.ats.patch_ats_document(connection_id="<id>", id="<id>", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_document.nil?
   # handle response
@@ -1261,7 +1230,6 @@ end
 
 
 
-
 ## patch_ats_interview
 
 Update an interview
@@ -1280,9 +1248,9 @@ s.config_security(
 )
 
     
-res = s.ats.patch_ats_interview(connection_id="<value>", id="<value>", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new(), fields_=[
-    "<value>",
-  ])
+res = s.ats.patch_ats_interview(connection_id="<id>", id="<id>", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_interview.nil?
   # handle response
@@ -1305,7 +1273,6 @@ end
 
 
 
-
 ## patch_ats_job
 
 Update a job
@@ -1324,9 +1291,9 @@ s.config_security(
 )
 
     
-res = s.ats.patch_ats_job(connection_id="<value>", id="<value>", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(), fields_=[
-    "<value>",
-  ])
+res = s.ats.patch_ats_job(connection_id="<id>", id="<id>", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_job.nil?
   # handle response
@@ -1349,7 +1316,6 @@ end
 
 
 
-
 ## patch_ats_scorecard
 
 Update a scorecard
@@ -1368,9 +1334,9 @@ s.config_security(
 )
 
     
-res = s.ats.patch_ats_scorecard(connection_id="<value>", id="<value>", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new(), fields_=[
-    "<value>",
-  ])
+res = s.ats.patch_ats_scorecard(connection_id="<id>", id="<id>", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_scorecard.nil?
   # handle response
@@ -1393,7 +1359,6 @@ end
 
 
 
-
 ## remove_ats_activity
 
 Remove an activity
@@ -1412,7 +1377,7 @@ s.config_security(
 )
 
     
-res = s.ats.remove_ats_activity(connection_id="<value>", id="<value>")
+res = s.ats.remove_ats_activity(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -1430,7 +1395,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveAtsActivityResponse)](../../models/operations/removeatsactivityresponse.md)**
-
 
 
 
@@ -1452,7 +1416,7 @@ s.config_security(
 )
 
     
-res = s.ats.remove_ats_application(connection_id="<value>", id="<value>")
+res = s.ats.remove_ats_application(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -1470,7 +1434,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveAtsApplicationResponse)](../../models/operations/removeatsapplicationresponse.md)**
-
 
 
 
@@ -1492,7 +1455,7 @@ s.config_security(
 )
 
     
-res = s.ats.remove_ats_candidate(connection_id="<value>", id="<value>")
+res = s.ats.remove_ats_candidate(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -1510,7 +1473,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveAtsCandidateResponse)](../../models/operations/removeatscandidateresponse.md)**
-
 
 
 
@@ -1532,7 +1494,7 @@ s.config_security(
 )
 
     
-res = s.ats.remove_ats_document(connection_id="<value>", id="<value>")
+res = s.ats.remove_ats_document(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -1550,7 +1512,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveAtsDocumentResponse)](../../models/operations/removeatsdocumentresponse.md)**
-
 
 
 
@@ -1572,7 +1533,7 @@ s.config_security(
 )
 
     
-res = s.ats.remove_ats_interview(connection_id="<value>", id="<value>")
+res = s.ats.remove_ats_interview(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -1590,7 +1551,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveAtsInterviewResponse)](../../models/operations/removeatsinterviewresponse.md)**
-
 
 
 
@@ -1612,7 +1572,7 @@ s.config_security(
 )
 
     
-res = s.ats.remove_ats_job(connection_id="<value>", id="<value>")
+res = s.ats.remove_ats_job(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -1630,7 +1590,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveAtsJobResponse)](../../models/operations/removeatsjobresponse.md)**
-
 
 
 
@@ -1652,7 +1611,7 @@ s.config_security(
 )
 
     
-res = s.ats.remove_ats_scorecard(connection_id="<value>", id="<value>")
+res = s.ats.remove_ats_scorecard(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -1670,7 +1629,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveAtsScorecardResponse)](../../models/operations/removeatsscorecardresponse.md)**
-
 
 
 
@@ -1692,11 +1650,9 @@ s.config_security(
 )
 
     
-res = s.ats.update_ats_activity(connection_id="<value>", id="<value>", ats_activity=::UnifiedRubySDK::Shared::AtsActivity.new(
-    title: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.ats.update_ats_activity(connection_id="<id>", id="<id>", ats_activity=::UnifiedRubySDK::Shared::AtsActivity.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_activity.nil?
   # handle response
@@ -1719,7 +1675,6 @@ end
 
 
 
-
 ## update_ats_application
 
 Update an application
@@ -1738,9 +1693,9 @@ s.config_security(
 )
 
     
-res = s.ats.update_ats_application(connection_id="<value>", id="<value>", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new(), fields_=[
-    "<value>",
-  ])
+res = s.ats.update_ats_application(connection_id="<id>", id="<id>", ats_application=::UnifiedRubySDK::Shared::AtsApplication.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_application.nil?
   # handle response
@@ -1763,7 +1718,6 @@ end
 
 
 
-
 ## update_ats_candidate
 
 Update a candidate
@@ -1782,9 +1736,9 @@ s.config_security(
 )
 
     
-res = s.ats.update_ats_candidate(connection_id="<value>", id="<value>", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new(), fields_=[
-    "<value>",
-  ])
+res = s.ats.update_ats_candidate(connection_id="<id>", id="<id>", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_candidate.nil?
   # handle response
@@ -1807,7 +1761,6 @@ end
 
 
 
-
 ## update_ats_document
 
 Update a document
@@ -1826,9 +1779,9 @@ s.config_security(
 )
 
     
-res = s.ats.update_ats_document(connection_id="<value>", id="<value>", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(), fields_=[
-    "<value>",
-  ])
+res = s.ats.update_ats_document(connection_id="<id>", id="<id>", ats_document=::UnifiedRubySDK::Shared::AtsDocument.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_document.nil?
   # handle response
@@ -1851,7 +1804,6 @@ end
 
 
 
-
 ## update_ats_interview
 
 Update an interview
@@ -1870,9 +1822,9 @@ s.config_security(
 )
 
     
-res = s.ats.update_ats_interview(connection_id="<value>", id="<value>", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new(), fields_=[
-    "<value>",
-  ])
+res = s.ats.update_ats_interview(connection_id="<id>", id="<id>", ats_interview=::UnifiedRubySDK::Shared::AtsInterview.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_interview.nil?
   # handle response
@@ -1895,7 +1847,6 @@ end
 
 
 
-
 ## update_ats_job
 
 Update a job
@@ -1914,9 +1865,9 @@ s.config_security(
 )
 
     
-res = s.ats.update_ats_job(connection_id="<value>", id="<value>", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(), fields_=[
-    "<value>",
-  ])
+res = s.ats.update_ats_job(connection_id="<id>", id="<id>", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_job.nil?
   # handle response
@@ -1939,7 +1890,6 @@ end
 
 
 
-
 ## update_ats_scorecard
 
 Update a scorecard
@@ -1958,9 +1908,9 @@ s.config_security(
 )
 
     
-res = s.ats.update_ats_scorecard(connection_id="<value>", id="<value>", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new(), fields_=[
-    "<value>",
-  ])
+res = s.ats.update_ats_scorecard(connection_id="<id>", id="<id>", ats_scorecard=::UnifiedRubySDK::Shared::AtsScorecard.new(), fields_=[
+  "<value>",
+])
 
 if ! res.ats_scorecard.nil?
   # handle response
@@ -1980,5 +1930,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateAtsScorecardResponse)](../../models/operations/updateatsscorecardresponse.md)**
-
 

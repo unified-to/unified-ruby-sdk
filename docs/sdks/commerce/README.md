@@ -47,12 +47,12 @@ s.config_security(
 )
 
     
-res = s.commerce.create_commerce_collection(connection_id="<value>", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
-    id: "<id>",
-    name: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.commerce.create_commerce_collection(connection_id="<id>", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
+  id: "<id>",
+  name: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.commerce_collection.nil?
   # handle response
@@ -74,7 +74,6 @@ end
 
 
 
-
 ## create_commerce_inventory
 
 Create an inventory
@@ -93,11 +92,11 @@ s.config_security(
 )
 
     
-res = s.commerce.create_commerce_inventory(connection_id="<value>", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
-    available: 5165.08,
-  ), fields_=[
-    "<value>",
-  ])
+res = s.commerce.create_commerce_inventory(connection_id="<id>", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
+  available: 5165.08,
+), fields_=[
+  "<value>",
+])
 
 if ! res.commerce_inventory.nil?
   # handle response
@@ -119,7 +118,6 @@ end
 
 
 
-
 ## create_commerce_item
 
 Create an item
@@ -138,9 +136,9 @@ s.config_security(
 )
 
     
-res = s.commerce.create_commerce_item(connection_id="<value>", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(), fields_=[
-    "<value>",
-  ])
+res = s.commerce.create_commerce_item(connection_id="<id>", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(), fields_=[
+  "<value>",
+])
 
 if ! res.commerce_item.nil?
   # handle response
@@ -162,7 +160,6 @@ end
 
 
 
-
 ## create_commerce_location
 
 Create a location
@@ -181,11 +178,11 @@ s.config_security(
 )
 
     
-res = s.commerce.create_commerce_location(connection_id="<value>", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
-    name: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.commerce.create_commerce_location(connection_id="<id>", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
+  name: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.commerce_location.nil?
   # handle response
@@ -207,7 +204,6 @@ end
 
 
 
-
 ## get_commerce_collection
 
 Retrieve a collection
@@ -226,9 +222,9 @@ s.config_security(
 )
 
     
-res = s.commerce.get_commerce_collection(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.commerce.get_commerce_collection(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.commerce_collection.nil?
   # handle response
@@ -250,7 +246,6 @@ end
 
 
 
-
 ## get_commerce_inventory
 
 Retrieve an inventory
@@ -269,9 +264,9 @@ s.config_security(
 )
 
     
-res = s.commerce.get_commerce_inventory(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.commerce.get_commerce_inventory(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.commerce_inventory.nil?
   # handle response
@@ -293,7 +288,6 @@ end
 
 
 
-
 ## get_commerce_item
 
 Retrieve an item
@@ -312,9 +306,9 @@ s.config_security(
 )
 
     
-res = s.commerce.get_commerce_item(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.commerce.get_commerce_item(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.commerce_item.nil?
   # handle response
@@ -336,7 +330,6 @@ end
 
 
 
-
 ## get_commerce_location
 
 Retrieve a location
@@ -355,9 +348,9 @@ s.config_security(
 )
 
     
-res = s.commerce.get_commerce_location(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.commerce.get_commerce_location(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.commerce_location.nil?
   # handle response
@@ -376,7 +369,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetCommerceLocationResponse)](../../models/operations/getcommercelocationresponse.md)**
-
 
 
 
@@ -399,7 +391,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListCommerceCollectionsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.commerce.list_commerce_collections(req)
@@ -422,7 +414,6 @@ end
 
 
 
-
 ## list_commerce_inventories
 
 List all inventories
@@ -442,7 +433,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListCommerceInventoriesRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.commerce.list_commerce_inventories(req)
@@ -465,7 +456,6 @@ end
 
 
 
-
 ## list_commerce_items
 
 List all items
@@ -485,7 +475,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListCommerceItemsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.commerce.list_commerce_items(req)
@@ -508,7 +498,6 @@ end
 
 
 
-
 ## list_commerce_locations
 
 List all locations
@@ -528,7 +517,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListCommerceLocationsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.commerce.list_commerce_locations(req)
@@ -551,7 +540,6 @@ end
 
 
 
-
 ## patch_commerce_collection
 
 Update a collection
@@ -570,12 +558,12 @@ s.config_security(
 )
 
     
-res = s.commerce.patch_commerce_collection(connection_id="<value>", id="<value>", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
-    id: "<id>",
-    name: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.commerce.patch_commerce_collection(connection_id="<id>", id="<id>", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
+  id: "<id>",
+  name: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.commerce_collection.nil?
   # handle response
@@ -598,7 +586,6 @@ end
 
 
 
-
 ## patch_commerce_inventory
 
 Update an inventory
@@ -617,11 +604,11 @@ s.config_security(
 )
 
     
-res = s.commerce.patch_commerce_inventory(connection_id="<value>", id="<value>", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
-    available: 615.23,
-  ), fields_=[
-    "<value>",
-  ])
+res = s.commerce.patch_commerce_inventory(connection_id="<id>", id="<id>", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
+  available: 615.23,
+), fields_=[
+  "<value>",
+])
 
 if ! res.commerce_inventory.nil?
   # handle response
@@ -644,7 +631,6 @@ end
 
 
 
-
 ## patch_commerce_item
 
 Update an item
@@ -663,9 +649,9 @@ s.config_security(
 )
 
     
-res = s.commerce.patch_commerce_item(connection_id="<value>", id="<value>", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(), fields_=[
-    "<value>",
-  ])
+res = s.commerce.patch_commerce_item(connection_id="<id>", id="<id>", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(), fields_=[
+  "<value>",
+])
 
 if ! res.commerce_item.nil?
   # handle response
@@ -688,7 +674,6 @@ end
 
 
 
-
 ## patch_commerce_location
 
 Update a location
@@ -707,11 +692,11 @@ s.config_security(
 )
 
     
-res = s.commerce.patch_commerce_location(connection_id="<value>", id="<value>", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
-    name: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.commerce.patch_commerce_location(connection_id="<id>", id="<id>", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
+  name: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.commerce_location.nil?
   # handle response
@@ -734,7 +719,6 @@ end
 
 
 
-
 ## remove_commerce_collection
 
 Remove a collection
@@ -753,7 +737,7 @@ s.config_security(
 )
 
     
-res = s.commerce.remove_commerce_collection(connection_id="<value>", id="<value>")
+res = s.commerce.remove_commerce_collection(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -771,7 +755,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveCommerceCollectionResponse)](../../models/operations/removecommercecollectionresponse.md)**
-
 
 
 
@@ -793,7 +776,7 @@ s.config_security(
 )
 
     
-res = s.commerce.remove_commerce_inventory(connection_id="<value>", id="<value>")
+res = s.commerce.remove_commerce_inventory(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -811,7 +794,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveCommerceInventoryResponse)](../../models/operations/removecommerceinventoryresponse.md)**
-
 
 
 
@@ -833,7 +815,7 @@ s.config_security(
 )
 
     
-res = s.commerce.remove_commerce_item(connection_id="<value>", id="<value>")
+res = s.commerce.remove_commerce_item(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -851,7 +833,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveCommerceItemResponse)](../../models/operations/removecommerceitemresponse.md)**
-
 
 
 
@@ -873,7 +854,7 @@ s.config_security(
 )
 
     
-res = s.commerce.remove_commerce_location(connection_id="<value>", id="<value>")
+res = s.commerce.remove_commerce_location(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -891,7 +872,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveCommerceLocationResponse)](../../models/operations/removecommercelocationresponse.md)**
-
 
 
 
@@ -913,12 +893,12 @@ s.config_security(
 )
 
     
-res = s.commerce.update_commerce_collection(connection_id="<value>", id="<value>", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
-    id: "<id>",
-    name: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.commerce.update_commerce_collection(connection_id="<id>", id="<id>", commerce_collection=::UnifiedRubySDK::Shared::CommerceCollection.new(
+  id: "<id>",
+  name: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.commerce_collection.nil?
   # handle response
@@ -941,7 +921,6 @@ end
 
 
 
-
 ## update_commerce_inventory
 
 Update an inventory
@@ -960,11 +939,11 @@ s.config_security(
 )
 
     
-res = s.commerce.update_commerce_inventory(connection_id="<value>", id="<value>", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
-    available: 9360.02,
-  ), fields_=[
-    "<value>",
-  ])
+res = s.commerce.update_commerce_inventory(connection_id="<id>", id="<id>", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
+  available: 9360.01,
+), fields_=[
+  "<value>",
+])
 
 if ! res.commerce_inventory.nil?
   # handle response
@@ -987,7 +966,6 @@ end
 
 
 
-
 ## update_commerce_item
 
 Update an item
@@ -1006,9 +984,9 @@ s.config_security(
 )
 
     
-res = s.commerce.update_commerce_item(connection_id="<value>", id="<value>", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(), fields_=[
-    "<value>",
-  ])
+res = s.commerce.update_commerce_item(connection_id="<id>", id="<id>", commerce_item=::UnifiedRubySDK::Shared::CommerceItem.new(), fields_=[
+  "<value>",
+])
 
 if ! res.commerce_item.nil?
   # handle response
@@ -1031,7 +1009,6 @@ end
 
 
 
-
 ## update_commerce_location
 
 Update a location
@@ -1050,11 +1027,11 @@ s.config_security(
 )
 
     
-res = s.commerce.update_commerce_location(connection_id="<value>", id="<value>", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
-    name: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.commerce.update_commerce_location(connection_id="<id>", id="<id>", commerce_location=::UnifiedRubySDK::Shared::CommerceLocation.new(
+  name: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.commerce_location.nil?
   # handle response
@@ -1074,5 +1051,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateCommerceLocationResponse)](../../models/operations/updatecommercelocationresponse.md)**
-
 
