@@ -1,11 +1,14 @@
-# CreatePassthroughResponse
+# UpdatePassthroughRawResponse
 
 
 ## Fields
 
 | Field                                                                       | Type                                                                        | Required                                                                    | Description                                                                 |
 | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `two_xx_application_json_any`                                               | *T.nilable(::Object)*                                                       | :heavy_minus_sign:                                                          | Successful                                                                  |
+| `two_xx_text_plain_res`                                                     | *T.nilable(::String)*                                                       | :heavy_minus_sign:                                                          | Successful                                                                  |
+| `body`                                                                      | *T.nilable(::String)*                                                       | :heavy_minus_sign:                                                          | N/A                                                                         |
 | `content_type`                                                              | *::String*                                                                  | :heavy_check_mark:                                                          | HTTP response content type for this operation                               |
-| `result`                                                                    | T::Hash[Symbol, *::Object*]                                                 | :heavy_minus_sign:                                                          | Successful                                                                  |
+| `headers`                                                                   | T::Hash[Symbol, T::Array<*::String*>]                                       | :heavy_check_mark:                                                          | N/A                                                                         |
 | `status_code`                                                               | *::Integer*                                                                 | :heavy_check_mark:                                                          | HTTP response status code for this operation                                |
 | `raw_response`                                                              | [Faraday::Response](https://www.rubydoc.info/gems/faraday/Faraday/Response) | :heavy_check_mark:                                                          | Raw HTTP response; suitable for custom response parsing                     |
