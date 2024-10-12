@@ -25,9 +25,9 @@ s.config_security(
 )
 
     
-res = s.organization.get_accounting_organization(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.organization.get_accounting_organization(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.accounting_organization.nil?
   # handle response
@@ -46,7 +46,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetAccountingOrganizationResponse)](../../models/operations/getaccountingorganizationresponse.md)**
-
 
 
 
@@ -69,7 +68,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAccountingOrganizationsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.organization.list_accounting_organizations(req)
@@ -89,5 +88,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListAccountingOrganizationsResponse)](../../models/operations/listaccountingorganizationsresponse.md)**
-
 
