@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: cf72c39f8e74a269aab0cb250423c99a
+  docChecksum: 2f8b1ad907e9f06fa5885ee0f6d0b4ad
   docVersion: "1.0"
-  speakeasyVersion: 1.395.1
-  generationVersion: 2.415.0
-  releaseVersion: 0.4.90
-  configChecksum: b92ba2a9f0b290c03420d17c9a89ab18
+  speakeasyVersion: 1.418.2
+  generationVersion: 2.438.3
+  releaseVersion: 0.4.91
+  configChecksum: 5c5ff4846456253971a471487f7659dd
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
 features:
   ruby:
-    core: 3.2.20
+    core: 3.2.26
     flattening: 2.81.1
     globalSecurity: 2.81.7
     globalServerURLs: 2.82.3
@@ -92,12 +92,18 @@ generatedFiles:
   - docs/models/operations/createmartechmemberresponse.md
   - docs/models/operations/createmessagingmessagerequest.md
   - docs/models/operations/createmessagingmessageresponse.md
-  - docs/models/operations/createpassthroughrequest.md
-  - docs/models/operations/createpassthroughresponse.md
+  - docs/models/operations/createpassthroughjsonrequest.md
+  - docs/models/operations/createpassthroughjsonresponse.md
+  - docs/models/operations/createpassthroughrawrequest.md
+  - docs/models/operations/createpassthroughrawresponse.md
   - docs/models/operations/createpaymentlinkrequest.md
   - docs/models/operations/createpaymentlinkresponse.md
   - docs/models/operations/createpaymentpaymentrequest.md
   - docs/models/operations/createpaymentpaymentresponse.md
+  - docs/models/operations/createscimgroupsrequest.md
+  - docs/models/operations/createscimgroupsresponse.md
+  - docs/models/operations/createscimusersrequest.md
+  - docs/models/operations/createscimusersresponse.md
   - docs/models/operations/createstoragefilerequest.md
   - docs/models/operations/createstoragefileresponse.md
   - docs/models/operations/createtaskprojectrequest.md
@@ -197,6 +203,8 @@ generatedFiles:
   - docs/models/operations/getpaymentpayoutresponse.md
   - docs/models/operations/getpaymentrefundrequest.md
   - docs/models/operations/getpaymentrefundresponse.md
+  - docs/models/operations/getscimusersrequest.md
+  - docs/models/operations/getscimusersresponse.md
   - docs/models/operations/getstoragefilerequest.md
   - docs/models/operations/getstoragefileresponse.md
   - docs/models/operations/gettaskprojectrequest.md
@@ -314,6 +322,10 @@ generatedFiles:
   - docs/models/operations/listpaymentpayoutsresponse.md
   - docs/models/operations/listpaymentrefundsrequest.md
   - docs/models/operations/listpaymentrefundsresponse.md
+  - docs/models/operations/listscimgroupsrequest.md
+  - docs/models/operations/listscimgroupsresponse.md
+  - docs/models/operations/listscimusersrequest.md
+  - docs/models/operations/listscimusersresponse.md
   - docs/models/operations/liststoragefilesrequest.md
   - docs/models/operations/liststoragefilesresponse.md
   - docs/models/operations/listtaskprojectsrequest.md
@@ -407,12 +419,18 @@ generatedFiles:
   - docs/models/operations/patchmartechmemberresponse.md
   - docs/models/operations/patchmessagingmessagerequest.md
   - docs/models/operations/patchmessagingmessageresponse.md
-  - docs/models/operations/patchpassthroughrequest.md
-  - docs/models/operations/patchpassthroughresponse.md
+  - docs/models/operations/patchpassthroughjsonrequest.md
+  - docs/models/operations/patchpassthroughjsonresponse.md
+  - docs/models/operations/patchpassthroughrawrequest.md
+  - docs/models/operations/patchpassthroughrawresponse.md
   - docs/models/operations/patchpaymentlinkrequest.md
   - docs/models/operations/patchpaymentlinkresponse.md
   - docs/models/operations/patchpaymentpaymentrequest.md
   - docs/models/operations/patchpaymentpaymentresponse.md
+  - docs/models/operations/patchscimgroupsrequest.md
+  - docs/models/operations/patchscimgroupsresponse.md
+  - docs/models/operations/patchscimusersrequest.md
+  - docs/models/operations/patchscimusersresponse.md
   - docs/models/operations/patchstoragefilerequest.md
   - docs/models/operations/patchstoragefileresponse.md
   - docs/models/operations/patchtaskprojectrequest.md
@@ -504,6 +522,10 @@ generatedFiles:
   - docs/models/operations/removepaymentlinkresponse.md
   - docs/models/operations/removepaymentpaymentrequest.md
   - docs/models/operations/removepaymentpaymentresponse.md
+  - docs/models/operations/removescimgroupsrequest.md
+  - docs/models/operations/removescimgroupsresponse.md
+  - docs/models/operations/removescimusersrequest.md
+  - docs/models/operations/removescimusersresponse.md
   - docs/models/operations/removestoragefilerequest.md
   - docs/models/operations/removestoragefileresponse.md
   - docs/models/operations/removetaskprojectrequest.md
@@ -587,12 +609,18 @@ generatedFiles:
   - docs/models/operations/updatemartechmemberresponse.md
   - docs/models/operations/updatemessagingmessagerequest.md
   - docs/models/operations/updatemessagingmessageresponse.md
-  - docs/models/operations/updatepassthroughrequest.md
-  - docs/models/operations/updatepassthroughresponse.md
+  - docs/models/operations/updatepassthroughjsonrequest.md
+  - docs/models/operations/updatepassthroughjsonresponse.md
+  - docs/models/operations/updatepassthroughrawrequest.md
+  - docs/models/operations/updatepassthroughrawresponse.md
   - docs/models/operations/updatepaymentlinkrequest.md
   - docs/models/operations/updatepaymentlinkresponse.md
   - docs/models/operations/updatepaymentpaymentrequest.md
   - docs/models/operations/updatepaymentpaymentresponse.md
+  - docs/models/operations/updatescimgroupsrequest.md
+  - docs/models/operations/updatescimgroupsresponse.md
+  - docs/models/operations/updatescimusersrequest.md
+  - docs/models/operations/updatescimusersresponse.md
   - docs/models/operations/updatestoragefilerequest.md
   - docs/models/operations/updatestoragefileresponse.md
   - docs/models/operations/updatetaskprojectrequest.md
@@ -629,6 +657,7 @@ generatedFiles:
   - docs/models/shared/accountingtelephone.md
   - docs/models/shared/accountingtelephonetype.md
   - docs/models/shared/accountingtransaction.md
+  - docs/models/shared/accountingtransactioncontact.md
   - docs/models/shared/accountingtransactionlineitem.md
   - docs/models/shared/apicall.md
   - docs/models/shared/apicalltype.md
@@ -669,6 +698,7 @@ generatedFiles:
   - docs/models/shared/commerceitemprice.md
   - docs/models/shared/commerceitemvariant.md
   - docs/models/shared/commercelocation.md
+  - docs/models/shared/commercemetadata.md
   - docs/models/shared/connection.md
   - docs/models/shared/crmcompany.md
   - docs/models/shared/crmcontact.md
@@ -691,6 +721,7 @@ generatedFiles:
   - docs/models/shared/enrichpersonworkhistory.md
   - docs/models/shared/enrichtelephone.md
   - docs/models/shared/enrichtelephonetype.md
+  - docs/models/shared/ethnicity.md
   - docs/models/shared/event.md
   - docs/models/shared/frequency.md
   - docs/models/shared/fromwebhook.md
@@ -698,6 +729,7 @@ generatedFiles:
   - docs/models/shared/genaimodel.md
   - docs/models/shared/genaiprompt.md
   - docs/models/shared/gender.md
+  - docs/models/shared/group.md
   - docs/models/shared/hriscompany.md
   - docs/models/shared/hriscompensation.md
   - docs/models/shared/hriscompensationfrequency.md
@@ -725,6 +757,7 @@ generatedFiles:
   - docs/models/shared/kmspage.md
   - docs/models/shared/kmspagetype.md
   - docs/models/shared/kmsspace.md
+  - docs/models/shared/level.md
   - docs/models/shared/listaccountid.md
   - docs/models/shared/listapplicationid.md
   - docs/models/shared/listcandidateid.md
@@ -767,6 +800,7 @@ generatedFiles:
   - docs/models/shared/messagingmember.md
   - docs/models/shared/messagingmessage.md
   - docs/models/shared/objecttype.md
+  - docs/models/shared/operation.md
   - docs/models/shared/origin.md
   - docs/models/shared/paymentcollectionmethod.md
   - docs/models/shared/paymentlink.md
@@ -800,6 +834,8 @@ generatedFiles:
   - docs/models/shared/propertycrmleadaddress.md
   - docs/models/shared/propertyenrichcompanyaddress.md
   - docs/models/shared/propertyenrichpersonaddress.md
+  - docs/models/shared/propertygroupmeta.md
+  - docs/models/shared/propertygroupschemas.md
   - docs/models/shared/propertyhriscompanyaddress.md
   - docs/models/shared/propertyhrisemployeeaddress.md
   - docs/models/shared/propertyhrisemployeeemployeeroles.md
@@ -810,10 +846,23 @@ generatedFiles:
   - docs/models/shared/propertypropertyintegrationsupportwebhookeventscreated.md
   - docs/models/shared/propertypropertyintegrationsupportwebhookeventsdeleted.md
   - docs/models/shared/propertypropertyintegrationsupportwebhookeventsupdated.md
+  - docs/models/shared/propertypropertyuserurnietfparamsscimschemasextensionenterprise20usermanager.md
+  - docs/models/shared/propertypropertyuserurnietfparamsscimschemasextensionenterprise20usermanagertype.md
   - docs/models/shared/propertystoragepermissionroles.md
   - docs/models/shared/propertyuccalltelephone.md
   - docs/models/shared/propertyuccalltelephonetype.md
+  - docs/models/shared/propertyusermeta.md
+  - docs/models/shared/propertyusermetaresourcetype.md
+  - docs/models/shared/propertyusername.md
+  - docs/models/shared/propertyuserschemas.md
+  - docs/models/shared/propertyuserurnietfparamsscimschemasextensionenterprise20user.md
+  - docs/models/shared/propertyuserurnietfparamsscimschemasextensionenterprise20usergender.md
+  - docs/models/shared/propertyuserurnietfparamsscimschemasextensionlatticeattributes10user.md
+  - docs/models/shared/propertyuserurnietfparamsscimschemasextensionlatticeattributes10usergender.md
+  - docs/models/shared/propertyuserurnietfparamsscimschemasextensionpeakon20user.md
+  - docs/models/shared/propertyuserurnietfparamsscimschemasextensionpeakon20usergender.md
   - docs/models/shared/recommendation.md
+  - docs/models/shared/resourcetype.md
   - docs/models/shared/role.md
   - docs/models/shared/searchdomain.md
   - docs/models/shared/searchemail.md
@@ -821,6 +870,7 @@ generatedFiles:
   - docs/models/shared/searchname.md
   - docs/models/shared/searchtwitter.md
   - docs/models/shared/security.md
+  - docs/models/shared/sexualorientation.md
   - docs/models/shared/sizeunit.md
   - docs/models/shared/status.md
   - docs/models/shared/storagefile.md
@@ -845,6 +895,9 @@ generatedFiles:
   - docs/models/shared/ucemailtype.md
   - docs/models/shared/uctelephone.md
   - docs/models/shared/uctelephonetype.md
+  - docs/models/shared/undefined.md
+  - docs/models/shared/undefinedtype.md
+  - docs/models/shared/user.md
   - docs/models/shared/webhook.md
   - docs/models/shared/webhooktype.md
   - docs/models/shared/weightunit.md
@@ -906,6 +959,7 @@ generatedFiles:
   - docs/sdks/project/README.md
   - docs/sdks/prompt/README.md
   - docs/sdks/refund/README.md
+  - docs/sdks/scim/README.md
   - docs/sdks/scorecard/README.md
   - docs/sdks/space/README.md
   - docs/sdks/storage/README.md
@@ -918,6 +972,7 @@ generatedFiles:
   - docs/sdks/uc/README.md
   - docs/sdks/unified/README.md
   - docs/sdks/unifiedto/README.md
+  - docs/sdks/user/README.md
   - docs/sdks/webhook/README.md
   - lib/unified_ruby_sdk.rb
   - lib/unified_ruby_sdk/account.rb
@@ -1035,12 +1090,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createmartechmember_response.rb
   - lib/unified_ruby_sdk/models/operations/createmessagingmessage_request.rb
   - lib/unified_ruby_sdk/models/operations/createmessagingmessage_response.rb
-  - lib/unified_ruby_sdk/models/operations/createpassthrough_request.rb
-  - lib/unified_ruby_sdk/models/operations/createpassthrough_response.rb
+  - lib/unified_ruby_sdk/models/operations/createpassthrough_json_request.rb
+  - lib/unified_ruby_sdk/models/operations/createpassthrough_json_response.rb
+  - lib/unified_ruby_sdk/models/operations/createpassthrough_raw_request.rb
+  - lib/unified_ruby_sdk/models/operations/createpassthrough_raw_response.rb
   - lib/unified_ruby_sdk/models/operations/createpaymentlink_request.rb
   - lib/unified_ruby_sdk/models/operations/createpaymentlink_response.rb
   - lib/unified_ruby_sdk/models/operations/createpaymentpayment_request.rb
   - lib/unified_ruby_sdk/models/operations/createpaymentpayment_response.rb
+  - lib/unified_ruby_sdk/models/operations/createscimgroups_request.rb
+  - lib/unified_ruby_sdk/models/operations/createscimgroups_response.rb
+  - lib/unified_ruby_sdk/models/operations/createscimusers_request.rb
+  - lib/unified_ruby_sdk/models/operations/createscimusers_response.rb
   - lib/unified_ruby_sdk/models/operations/createstoragefile_request.rb
   - lib/unified_ruby_sdk/models/operations/createstoragefile_response.rb
   - lib/unified_ruby_sdk/models/operations/createtaskproject_request.rb
@@ -1140,6 +1201,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getpaymentpayout_response.rb
   - lib/unified_ruby_sdk/models/operations/getpaymentrefund_request.rb
   - lib/unified_ruby_sdk/models/operations/getpaymentrefund_response.rb
+  - lib/unified_ruby_sdk/models/operations/getscimusers_request.rb
+  - lib/unified_ruby_sdk/models/operations/getscimusers_response.rb
   - lib/unified_ruby_sdk/models/operations/getstoragefile_request.rb
   - lib/unified_ruby_sdk/models/operations/getstoragefile_response.rb
   - lib/unified_ruby_sdk/models/operations/gettaskproject_request.rb
@@ -1257,6 +1320,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listpaymentpayouts_response.rb
   - lib/unified_ruby_sdk/models/operations/listpaymentrefunds_request.rb
   - lib/unified_ruby_sdk/models/operations/listpaymentrefunds_response.rb
+  - lib/unified_ruby_sdk/models/operations/listscimgroups_request.rb
+  - lib/unified_ruby_sdk/models/operations/listscimgroups_response.rb
+  - lib/unified_ruby_sdk/models/operations/listscimusers_request.rb
+  - lib/unified_ruby_sdk/models/operations/listscimusers_response.rb
   - lib/unified_ruby_sdk/models/operations/liststoragefiles_request.rb
   - lib/unified_ruby_sdk/models/operations/liststoragefiles_response.rb
   - lib/unified_ruby_sdk/models/operations/listtaskprojects_request.rb
@@ -1350,12 +1417,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchmartechmember_response.rb
   - lib/unified_ruby_sdk/models/operations/patchmessagingmessage_request.rb
   - lib/unified_ruby_sdk/models/operations/patchmessagingmessage_response.rb
-  - lib/unified_ruby_sdk/models/operations/patchpassthrough_request.rb
-  - lib/unified_ruby_sdk/models/operations/patchpassthrough_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchpassthrough_json_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchpassthrough_json_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchpassthrough_raw_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchpassthrough_raw_response.rb
   - lib/unified_ruby_sdk/models/operations/patchpaymentlink_request.rb
   - lib/unified_ruby_sdk/models/operations/patchpaymentlink_response.rb
   - lib/unified_ruby_sdk/models/operations/patchpaymentpayment_request.rb
   - lib/unified_ruby_sdk/models/operations/patchpaymentpayment_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchscimgroups_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchscimgroups_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchscimusers_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchscimusers_response.rb
   - lib/unified_ruby_sdk/models/operations/patchstoragefile_request.rb
   - lib/unified_ruby_sdk/models/operations/patchstoragefile_response.rb
   - lib/unified_ruby_sdk/models/operations/patchtaskproject_request.rb
@@ -1447,6 +1520,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removepaymentlink_response.rb
   - lib/unified_ruby_sdk/models/operations/removepaymentpayment_request.rb
   - lib/unified_ruby_sdk/models/operations/removepaymentpayment_response.rb
+  - lib/unified_ruby_sdk/models/operations/removescimgroups_request.rb
+  - lib/unified_ruby_sdk/models/operations/removescimgroups_response.rb
+  - lib/unified_ruby_sdk/models/operations/removescimusers_request.rb
+  - lib/unified_ruby_sdk/models/operations/removescimusers_response.rb
   - lib/unified_ruby_sdk/models/operations/removestoragefile_request.rb
   - lib/unified_ruby_sdk/models/operations/removestoragefile_response.rb
   - lib/unified_ruby_sdk/models/operations/removetaskproject_request.rb
@@ -1530,12 +1607,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatemartechmember_response.rb
   - lib/unified_ruby_sdk/models/operations/updatemessagingmessage_request.rb
   - lib/unified_ruby_sdk/models/operations/updatemessagingmessage_response.rb
-  - lib/unified_ruby_sdk/models/operations/updatepassthrough_request.rb
-  - lib/unified_ruby_sdk/models/operations/updatepassthrough_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatepassthrough_json_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatepassthrough_json_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatepassthrough_raw_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatepassthrough_raw_response.rb
   - lib/unified_ruby_sdk/models/operations/updatepaymentlink_request.rb
   - lib/unified_ruby_sdk/models/operations/updatepaymentlink_response.rb
   - lib/unified_ruby_sdk/models/operations/updatepaymentpayment_request.rb
   - lib/unified_ruby_sdk/models/operations/updatepaymentpayment_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatescimgroups_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatescimgroups_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatescimusers_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatescimusers_response.rb
   - lib/unified_ruby_sdk/models/operations/updatestoragefile_request.rb
   - lib/unified_ruby_sdk/models/operations/updatestoragefile_response.rb
   - lib/unified_ruby_sdk/models/operations/updatetaskproject_request.rb
@@ -1573,6 +1656,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingtelephone.rb
   - lib/unified_ruby_sdk/models/shared/accountingtelephone_type.rb
   - lib/unified_ruby_sdk/models/shared/accountingtransaction.rb
+  - lib/unified_ruby_sdk/models/shared/accountingtransactioncontact.rb
   - lib/unified_ruby_sdk/models/shared/accountingtransactionlineitem.rb
   - lib/unified_ruby_sdk/models/shared/apicall.rb
   - lib/unified_ruby_sdk/models/shared/apicall_type.rb
@@ -1613,6 +1697,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/commerceitemprice.rb
   - lib/unified_ruby_sdk/models/shared/commerceitemvariant.rb
   - lib/unified_ruby_sdk/models/shared/commercelocation.rb
+  - lib/unified_ruby_sdk/models/shared/commercemetadata.rb
   - lib/unified_ruby_sdk/models/shared/connection.rb
   - lib/unified_ruby_sdk/models/shared/crmcompany.rb
   - lib/unified_ruby_sdk/models/shared/crmcontact.rb
@@ -1635,6 +1720,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/enrichpersonworkhistory.rb
   - lib/unified_ruby_sdk/models/shared/enrichtelephone.rb
   - lib/unified_ruby_sdk/models/shared/enrichtelephone_type.rb
+  - lib/unified_ruby_sdk/models/shared/ethnicity.rb
   - lib/unified_ruby_sdk/models/shared/event.rb
   - lib/unified_ruby_sdk/models/shared/frequency.rb
   - lib/unified_ruby_sdk/models/shared/from_webhook.rb
@@ -1642,6 +1728,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/genaimodel.rb
   - lib/unified_ruby_sdk/models/shared/genaiprompt.rb
   - lib/unified_ruby_sdk/models/shared/gender.rb
+  - lib/unified_ruby_sdk/models/shared/group.rb
   - lib/unified_ruby_sdk/models/shared/hriscompany.rb
   - lib/unified_ruby_sdk/models/shared/hriscompensation.rb
   - lib/unified_ruby_sdk/models/shared/hriscompensation_frequency.rb
@@ -1669,6 +1756,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/kmspage.rb
   - lib/unified_ruby_sdk/models/shared/kmspage_type.rb
   - lib/unified_ruby_sdk/models/shared/kmsspace.rb
+  - lib/unified_ruby_sdk/models/shared/level.rb
   - lib/unified_ruby_sdk/models/shared/list_account_id.rb
   - lib/unified_ruby_sdk/models/shared/list_application_id.rb
   - lib/unified_ruby_sdk/models/shared/list_candidate_id.rb
@@ -1711,6 +1799,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/messagingmember.rb
   - lib/unified_ruby_sdk/models/shared/messagingmessage.rb
   - lib/unified_ruby_sdk/models/shared/object_type.rb
+  - lib/unified_ruby_sdk/models/shared/operation.rb
   - lib/unified_ruby_sdk/models/shared/origin.rb
   - lib/unified_ruby_sdk/models/shared/payment_collection_method.rb
   - lib/unified_ruby_sdk/models/shared/payment_type.rb
@@ -1744,6 +1833,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_crmlead_address.rb
   - lib/unified_ruby_sdk/models/shared/property_enrichcompany_address.rb
   - lib/unified_ruby_sdk/models/shared/property_enrichperson_address.rb
+  - lib/unified_ruby_sdk/models/shared/property_group_meta.rb
+  - lib/unified_ruby_sdk/models/shared/property_group_schemas.rb
   - lib/unified_ruby_sdk/models/shared/property_hriscompany_address.rb
   - lib/unified_ruby_sdk/models/shared/property_hrisemployee_address.rb
   - lib/unified_ruby_sdk/models/shared/property_hrisemployee_employee_roles.rb
@@ -1754,10 +1845,23 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_property_integrationsupport_webhook_events_created.rb
   - lib/unified_ruby_sdk/models/shared/property_property_integrationsupport_webhook_events_deleted.rb
   - lib/unified_ruby_sdk/models/shared/property_property_integrationsupport_webhook_events_updated.rb
+  - lib/unified_ruby_sdk/models/shared/property_property_user_urn_ietf_params_scim_schemas_extension_enterprise_2_0_user_manager.rb
+  - lib/unified_ruby_sdk/models/shared/property_property_user_urn_ietf_params_scim_schemas_extension_enterprise_2_0_user_manager_type.rb
   - lib/unified_ruby_sdk/models/shared/property_storagepermission_roles.rb
   - lib/unified_ruby_sdk/models/shared/property_uccall_telephone.rb
   - lib/unified_ruby_sdk/models/shared/property_uccall_telephone_type.rb
+  - lib/unified_ruby_sdk/models/shared/property_user_meta.rb
+  - lib/unified_ruby_sdk/models/shared/property_user_meta_resourcetype.rb
+  - lib/unified_ruby_sdk/models/shared/property_user_name.rb
+  - lib/unified_ruby_sdk/models/shared/property_user_schemas.rb
+  - lib/unified_ruby_sdk/models/shared/property_user_urn_ietf_params_scim_schemas_extension_enterprise_2_0_user.rb
+  - lib/unified_ruby_sdk/models/shared/property_user_urn_ietf_params_scim_schemas_extension_enterprise_2_0_user_gender.rb
+  - lib/unified_ruby_sdk/models/shared/property_user_urn_ietf_params_scim_schemas_extension_lattice_attributes_1_0_user.rb
+  - lib/unified_ruby_sdk/models/shared/property_user_urn_ietf_params_scim_schemas_extension_lattice_attributes_1_0_user_gender.rb
+  - lib/unified_ruby_sdk/models/shared/property_user_urn_ietf_params_scim_schemas_extension_peakon_2_0_user.rb
+  - lib/unified_ruby_sdk/models/shared/property_user_urn_ietf_params_scim_schemas_extension_peakon_2_0_user_gender.rb
   - lib/unified_ruby_sdk/models/shared/recommendation.rb
+  - lib/unified_ruby_sdk/models/shared/resourcetype.rb
   - lib/unified_ruby_sdk/models/shared/role.rb
   - lib/unified_ruby_sdk/models/shared/search_domain.rb
   - lib/unified_ruby_sdk/models/shared/search_email.rb
@@ -1765,6 +1869,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/search_name.rb
   - lib/unified_ruby_sdk/models/shared/search_twitter.rb
   - lib/unified_ruby_sdk/models/shared/security.rb
+  - lib/unified_ruby_sdk/models/shared/sexualorientation.rb
   - lib/unified_ruby_sdk/models/shared/size_unit.rb
   - lib/unified_ruby_sdk/models/shared/status.rb
   - lib/unified_ruby_sdk/models/shared/storagefile.rb
@@ -1789,6 +1894,9 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/ucemail_type.rb
   - lib/unified_ruby_sdk/models/shared/uctelephone.rb
   - lib/unified_ruby_sdk/models/shared/uctelephone_type.rb
+  - lib/unified_ruby_sdk/models/shared/undefined.rb
+  - lib/unified_ruby_sdk/models/shared/undefined_type.rb
+  - lib/unified_ruby_sdk/models/shared/user.rb
   - lib/unified_ruby_sdk/models/shared/webhook.rb
   - lib/unified_ruby_sdk/models/shared/webhook_type.rb
   - lib/unified_ruby_sdk/models/shared/weight_unit.rb
@@ -1804,6 +1912,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/project.rb
   - lib/unified_ruby_sdk/prompt.rb
   - lib/unified_ruby_sdk/refund.rb
+  - lib/unified_ruby_sdk/scim.rb
   - lib/unified_ruby_sdk/scorecard.rb
   - lib/unified_ruby_sdk/sdkconfiguration.rb
   - lib/unified_ruby_sdk/space.rb
@@ -1817,6 +1926,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/uc.rb
   - lib/unified_ruby_sdk/unified.rb
   - lib/unified_ruby_sdk/unified_to.rb
+  - lib/unified_ruby_sdk/user.rb
   - lib/unified_ruby_sdk/utils/metadata_fields.rb
   - lib/unified_ruby_sdk/utils/t.rb
   - lib/unified_ruby_sdk/utils/utils.rb
@@ -3461,6 +3571,26 @@ examples:
       responses:
         2XX:
           application/json: {"key": "<value>"}
+    speakeasy-default-create-passthrough-json:
+      parameters:
+        path:
+          connection_id: "<id>"
+          path: "/opt/lib"
+      responses:
+        2XX:
+          '*/*': "0xCc77eCA3Cd"
+          application/json: "<value>"
+          text/plain: "<value>"
+    speakeasy-default-create-passthrough-raw:
+      parameters:
+        path:
+          connection_id: "<id>"
+          path: "/etc/namedb"
+      responses:
+        2XX:
+          '*/*': "0x4B93D6214f"
+          application/json: "<value>"
+          text/plain: "<value>"
   listPassthroughs:
     speakeasy-default-list-passthroughs:
       parameters:
@@ -3470,6 +3600,8 @@ examples:
       responses:
         2XX:
           application/json: {"key": "<value>"}
+          '*/*': "0xc3bedCFEfa"
+          text/plain: "<value>"
   patchPassthrough:
     speakeasy-default-patch-passthrough:
       parameters:
@@ -3479,6 +3611,26 @@ examples:
       responses:
         2XX:
           application/json: {"key": "<value>"}
+    speakeasy-default-patch-passthrough-json:
+      parameters:
+        path:
+          connection_id: "<id>"
+          path: "/home/user"
+      responses:
+        2XX:
+          '*/*': "0xf8009Cc8eA"
+          application/json: "<value>"
+          text/plain: "<value>"
+    speakeasy-default-patch-passthrough-raw:
+      parameters:
+        path:
+          connection_id: "<id>"
+          path: "/etc/mail"
+      responses:
+        2XX:
+          '*/*': "0xCbf5667DBd"
+          application/json: "<value>"
+          text/plain: "<value>"
   removePassthrough:
     speakeasy-default-remove-passthrough:
       parameters:
@@ -3488,6 +3640,8 @@ examples:
       responses:
         2XX:
           application/json: {}
+          '*/*': "0x08c8c65Dc6"
+          text/plain: "<value>"
   updatePassthrough:
     speakeasy-default-update-passthrough:
       parameters:
@@ -3497,6 +3651,26 @@ examples:
       responses:
         2XX:
           application/json: {"key": "<value>", "key1": "<value>"}
+    speakeasy-default-update-passthrough-json:
+      parameters:
+        path:
+          connection_id: "<id>"
+          path: "/etc/namedb"
+      responses:
+        2XX:
+          '*/*': "0xada8b95388"
+          application/json: "<value>"
+          text/plain: "<value>"
+    speakeasy-default-update-passthrough-raw:
+      parameters:
+        path:
+          connection_id: "<id>"
+          path: "/System"
+      responses:
+        2XX:
+          '*/*': "0x5739830F8E"
+          application/json: "<value>"
+          text/plain: "<value>"
   createPaymentLink:
     speakeasy-default-create-payment-link:
       parameters:
@@ -4020,3 +4194,68 @@ examples:
       responses:
         "200":
           text/plain: "<value>"
+  createScimGroups:
+    speakeasy-default-create-scim-groups:
+      parameters:
+        path:
+          connection_id: "<id>"
+  listScimGroups:
+    speakeasy-default-list-scim-groups:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  patchScimGroups:
+    speakeasy-default-patch-scim-groups:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeScimGroups:
+    speakeasy-default-remove-scim-groups:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateScimGroups:
+    speakeasy-default-update-scim-groups:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  createScimUsers:
+    speakeasy-default-create-scim-users:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  getScimUsers:
+    speakeasy-default-get-scim-users:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  listScimUsers:
+    speakeasy-default-list-scim-users:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  patchScimUsers:
+    speakeasy-default-patch-scim-users:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeScimUsers:
+    speakeasy-default-remove-scim-users:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateScimUsers:
+    speakeasy-default-update-scim-users:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"

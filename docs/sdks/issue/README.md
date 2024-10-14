@@ -44,4 +44,3 @@ end
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIssuesResponse)](../../models/operations/listunifiedissuesresponse.md)**
 
-

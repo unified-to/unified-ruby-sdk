@@ -59,6 +59,8 @@ module UnifiedRubySDK
   autoload :Link, 'unified_ruby_sdk/link'
   autoload :Payout, 'unified_ruby_sdk/payout'
   autoload :Refund, 'unified_ruby_sdk/refund'
+  autoload :Scim, 'unified_ruby_sdk/scim'
+  autoload :User, 'unified_ruby_sdk/user'
   autoload :Storage, 'unified_ruby_sdk/storage'
   autoload :File, 'unified_ruby_sdk/file'
   autoload :Task, 'unified_ruby_sdk/task'
