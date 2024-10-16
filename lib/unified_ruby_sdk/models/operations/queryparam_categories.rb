@@ -27,6 +27,7 @@ module UnifiedRubySDK
         MESSAGING = new('messaging')
         KMS = new('kms')
         TASK = new('task')
+        SCIM = new('scim')
       end
     end
   end
