@@ -29,12 +29,11 @@ s.config_security(
 )
 
     
-res = s.space.create_kms_space(connection_id="<value>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
-    id: "<id>",
-    name: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.space.create_kms_space(connection_id="<id>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
+  name: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.kms_space.nil?
   # handle response
@@ -44,16 +43,15 @@ end
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
-| `kms_space`                                                           | [::UnifiedRubySDK::Shared::KmsSpace](../../models/shared/kmsspace.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
-| `fields_`                                                             | T::Array<*::String*>                                                  | :heavy_minus_sign:                                                    | Comma-delimited fields to return                                      |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `connection_id`                                                                  | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the connection                                                             |
+| `kms_space`                                                                      | [T.nilable(::UnifiedRubySDK::Shared::KmsSpace)](../../models/shared/kmsspace.md) | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `fields_`                                                                        | T::Array<*::String*>                                                             | :heavy_minus_sign:                                                               | Comma-delimited fields to return                                                 |
 
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::CreateKmsSpaceResponse)](../../models/operations/createkmsspaceresponse.md)**
-
 
 
 
@@ -75,9 +73,9 @@ s.config_security(
 )
 
     
-res = s.space.get_kms_space(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.space.get_kms_space(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.kms_space.nil?
   # handle response
@@ -96,7 +94,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetKmsSpaceResponse)](../../models/operations/getkmsspaceresponse.md)**
-
 
 
 
@@ -119,7 +116,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListKmsSpacesRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.space.list_kms_spaces(req)
@@ -142,7 +139,6 @@ end
 
 
 
-
 ## patch_kms_space
 
 Update a space
@@ -161,12 +157,11 @@ s.config_security(
 )
 
     
-res = s.space.patch_kms_space(connection_id="<value>", id="<value>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
-    id: "<id>",
-    name: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.space.patch_kms_space(connection_id="<id>", id="<id>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
+  name: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.kms_space.nil?
   # handle response
@@ -176,17 +171,16 @@ end
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
-| `id`                                                                  | *::String*                                                            | :heavy_check_mark:                                                    | ID of the Space                                                       |
-| `kms_space`                                                           | [::UnifiedRubySDK::Shared::KmsSpace](../../models/shared/kmsspace.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
-| `fields_`                                                             | T::Array<*::String*>                                                  | :heavy_minus_sign:                                                    | Comma-delimited fields to return                                      |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `connection_id`                                                                  | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the connection                                                             |
+| `id`                                                                             | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the Space                                                                  |
+| `kms_space`                                                                      | [T.nilable(::UnifiedRubySDK::Shared::KmsSpace)](../../models/shared/kmsspace.md) | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `fields_`                                                                        | T::Array<*::String*>                                                             | :heavy_minus_sign:                                                               | Comma-delimited fields to return                                                 |
 
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::PatchKmsSpaceResponse)](../../models/operations/patchkmsspaceresponse.md)**
-
 
 
 
@@ -208,7 +202,7 @@ s.config_security(
 )
 
     
-res = s.space.remove_kms_space(connection_id="<value>", id="<value>")
+res = s.space.remove_kms_space(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -226,7 +220,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveKmsSpaceResponse)](../../models/operations/removekmsspaceresponse.md)**
-
 
 
 
@@ -248,12 +241,11 @@ s.config_security(
 )
 
     
-res = s.space.update_kms_space(connection_id="<value>", id="<value>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
-    id: "<id>",
-    name: "<value>",
-  ), fields_=[
-    "<value>",
-  ])
+res = s.space.update_kms_space(connection_id="<id>", id="<id>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
+  name: "<value>",
+), fields_=[
+  "<value>",
+])
 
 if ! res.kms_space.nil?
   # handle response
@@ -263,15 +255,14 @@ end
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
-| `id`                                                                  | *::String*                                                            | :heavy_check_mark:                                                    | ID of the Space                                                       |
-| `kms_space`                                                           | [::UnifiedRubySDK::Shared::KmsSpace](../../models/shared/kmsspace.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
-| `fields_`                                                             | T::Array<*::String*>                                                  | :heavy_minus_sign:                                                    | Comma-delimited fields to return                                      |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `connection_id`                                                                  | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the connection                                                             |
+| `id`                                                                             | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the Space                                                                  |
+| `kms_space`                                                                      | [T.nilable(::UnifiedRubySDK::Shared::KmsSpace)](../../models/shared/kmsspace.md) | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `fields_`                                                                        | T::Array<*::String*>                                                             | :heavy_minus_sign:                                                               | Comma-delimited fields to return                                                 |
 
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateKmsSpaceResponse)](../../models/operations/updatekmsspaceresponse.md)**
-
 
