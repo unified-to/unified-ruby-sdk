@@ -25,7 +25,7 @@ s.config_security(
 )
 
     
-res = s.enrich.list_enrich_companies(connection_id="<value>", domain="<value>", name="<value>")
+res = s.enrich.list_enrich_companies(connection_id="<id>", domain="distinct-wheel.info", name="<value>")
 
 if ! res.enrich_company.nil?
   # handle response
@@ -38,13 +38,12 @@ end
 | Parameter                           | Type                                | Required                            | Description                         |
 | ----------------------------------- | ----------------------------------- | ----------------------------------- | ----------------------------------- |
 | `connection_id`                     | *::String*                          | :heavy_check_mark:                  | ID of the connection                |
-| `domain`                            | *::String*                          | :heavy_minus_sign:                  | The domain of the company to search |
-| `name`                              | *::String*                          | :heavy_minus_sign:                  | The name of the company to search   |
+| `domain`                            | *T.nilable(::String)*               | :heavy_minus_sign:                  | The domain of the company to search |
+| `name`                              | *T.nilable(::String)*               | :heavy_minus_sign:                  | The name of the company to search   |
 
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListEnrichCompaniesResponse)](../../models/operations/listenrichcompaniesresponse.md)**
-
 
 
 
@@ -67,7 +66,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListEnrichPeopleRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.enrich.list_enrich_people(req)
@@ -87,5 +86,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListEnrichPeopleResponse)](../../models/operations/listenrichpeopleresponse.md)**
-
 
