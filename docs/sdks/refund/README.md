@@ -25,9 +25,9 @@ s.config_security(
 )
 
     
-res = s.refund.get_payment_refund(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.refund.get_payment_refund(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.payment_refund.nil?
   # handle response
@@ -46,7 +46,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetPaymentRefundResponse)](../../models/operations/getpaymentrefundresponse.md)**
-
 
 
 
@@ -69,7 +68,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListPaymentRefundsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.refund.list_payment_refunds(req)
@@ -89,5 +88,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListPaymentRefundsResponse)](../../models/operations/listpaymentrefundsresponse.md)**
-
 
