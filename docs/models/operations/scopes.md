@@ -19,6 +19,8 @@
 | `ACCOUNTING_TAXRATE_READ`      | accounting_taxrate_read        |
 | `ACCOUNTING_TAXRATE_WRITE`     | accounting_taxrate_write       |
 | `ACCOUNTING_ORGANIZATION_READ` | accounting_organization_read   |
+| `ACCOUNTING_ORDER_READ`        | accounting_order_read          |
+| `ACCOUNTING_ORDER_WRITE`       | accounting_order_write         |
 | `PAYMENT_PAYMENT_READ`         | payment_payment_read           |
 | `PAYMENT_PAYMENT_WRITE`        | payment_payment_write          |
 | `PAYMENT_PAYOUT_READ`          | payment_payout_read            |
@@ -103,3 +105,7 @@
 | `TASK_PROJECT_WRITE`           | task_project_write             |
 | `TASK_TASK_READ`               | task_task_read                 |
 | `TASK_TASK_WRITE`              | task_task_write                |
+| `SCIM_USERS_READ`              | scim_users_read                |
+| `SCIM_USERS_WRITE`             | scim_users_write               |
+| `SCIM_GROUPS_READ`             | scim_groups_read               |
+| `SCIM_GROUPS_WRITE`            | scim_groups_write              |
