@@ -12,6 +12,7 @@
 | `ACCOUNTING_INVOICE`      | accounting_invoice        |
 | `ACCOUNTING_TAXRATE`      | accounting_taxrate        |
 | `ACCOUNTING_ORGANIZATION` | accounting_organization   |
+| `ACCOUNTING_ORDER`        | accounting_order          |
 | `PAYMENT_PAYMENT`         | payment_payment           |
 | `PAYMENT_LINK`            | payment_link              |
 | `PAYMENT_PAYOUT`          | payment_payout            |
@@ -60,3 +61,5 @@
 | `KMS_PAGE`                | kms_page                  |
 | `TASK_PROJECT`            | task_project              |
 | `TASK_TASK`               | task_task                 |
+| `SCIM_USERS`              | scim_users                |
+| `SCIM_GROUPS`             | scim_groups               |
