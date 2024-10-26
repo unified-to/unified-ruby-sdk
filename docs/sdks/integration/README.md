@@ -28,7 +28,7 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::GetUnifiedIntegrationAuthRequest.new(
   integration_type: "<value>",
-  workspace_id: "<value>",
+  workspace_id: "<id>",
 )
     
 res = s.integration.get_unified_integration_auth(req)
@@ -51,7 +51,6 @@ end
 
 
 
-
 ## list_unified_integration_workspaces
 
 No authentication required as this is to be used by front-end interface
@@ -71,7 +70,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListUnifiedIntegrationWorkspacesRequest.new(
-  workspace_id: "<value>",
+  workspace_id: "<id>",
 )
     
 res = s.integration.list_unified_integration_workspaces(req)
@@ -91,7 +90,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIntegrationWorkspacesResponse)](../../models/operations/listunifiedintegrationworkspacesresponse.md)**
-
 
 
 
@@ -132,5 +130,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIntegrationsResponse)](../../models/operations/listunifiedintegrationsresponse.md)**
-
 
