@@ -24,6 +24,8 @@ module UnifiedRubySDK
         ACCOUNTING_TAXRATE_READ = new('accounting_taxrate_read')
         ACCOUNTING_TAXRATE_WRITE = new('accounting_taxrate_write')
         ACCOUNTING_ORGANIZATION_READ = new('accounting_organization_read')
+        ACCOUNTING_ORDER_READ = new('accounting_order_read')
+        ACCOUNTING_ORDER_WRITE = new('accounting_order_write')
         PAYMENT_PAYMENT_READ = new('payment_payment_read')
         PAYMENT_PAYMENT_WRITE = new('payment_payment_write')
         PAYMENT_PAYOUT_READ = new('payment_payout_read')
@@ -108,6 +110,10 @@ module UnifiedRubySDK
         TASK_PROJECT_WRITE = new('task_project_write')
         TASK_TASK_READ = new('task_task_read')
         TASK_TASK_WRITE = new('task_task_write')
+        SCIM_USERS_READ = new('scim_users_read')
+        SCIM_USERS_WRITE = new('scim_users_write')
+        SCIM_GROUPS_READ = new('scim_groups_read')
+        SCIM_GROUPS_WRITE = new('scim_groups_write')
       end
     end
   end
