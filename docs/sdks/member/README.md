@@ -29,9 +29,9 @@ s.config_security(
 )
 
     
-res = s.member.create_martech_member(connection_id="<value>", marketing_member=::UnifiedRubySDK::Shared::MarketingMember.new(), fields_=[
-    "<value>",
-  ])
+res = s.member.create_martech_member(connection_id="<id>", marketing_member=::UnifiedRubySDK::Shared::MarketingMember.new(), fields_=[
+  "<value>",
+])
 
 if ! res.marketing_member.nil?
   # handle response
@@ -41,16 +41,15 @@ end
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `connection_id`                                                                     | *::String*                                                                          | :heavy_check_mark:                                                                  | ID of the connection                                                                |
-| `marketing_member`                                                                  | [::UnifiedRubySDK::Shared::MarketingMember](../../models/shared/marketingmember.md) | :heavy_minus_sign:                                                                  | A member represents a person                                                        |
-| `fields_`                                                                           | T::Array<*::String*>                                                                | :heavy_minus_sign:                                                                  | Comma-delimited fields to return                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `connection_id`                                                                                | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the connection                                                                           |
+| `marketing_member`                                                                             | [T.nilable(::UnifiedRubySDK::Shared::MarketingMember)](../../models/shared/marketingmember.md) | :heavy_minus_sign:                                                                             | A member represents a person                                                                   |
+| `fields_`                                                                                      | T::Array<*::String*>                                                                           | :heavy_minus_sign:                                                                             | Comma-delimited fields to return                                                               |
 
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::CreateMartechMemberResponse)](../../models/operations/createmartechmemberresponse.md)**
-
 
 
 
@@ -72,9 +71,9 @@ s.config_security(
 )
 
     
-res = s.member.get_martech_member(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.member.get_martech_member(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.marketing_member.nil?
   # handle response
@@ -93,7 +92,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetMartechMemberResponse)](../../models/operations/getmartechmemberresponse.md)**
-
 
 
 
@@ -116,7 +114,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListMartechMembersRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.member.list_martech_members(req)
@@ -139,7 +137,6 @@ end
 
 
 
-
 ## patch_martech_member
 
 Update a member
@@ -158,9 +155,9 @@ s.config_security(
 )
 
     
-res = s.member.patch_martech_member(connection_id="<value>", id="<value>", marketing_member=::UnifiedRubySDK::Shared::MarketingMember.new(), fields_=[
-    "<value>",
-  ])
+res = s.member.patch_martech_member(connection_id="<id>", id="<id>", marketing_member=::UnifiedRubySDK::Shared::MarketingMember.new(), fields_=[
+  "<value>",
+])
 
 if ! res.marketing_member.nil?
   # handle response
@@ -170,17 +167,16 @@ end
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `connection_id`                                                                     | *::String*                                                                          | :heavy_check_mark:                                                                  | ID of the connection                                                                |
-| `id`                                                                                | *::String*                                                                          | :heavy_check_mark:                                                                  | ID of the Member                                                                    |
-| `marketing_member`                                                                  | [::UnifiedRubySDK::Shared::MarketingMember](../../models/shared/marketingmember.md) | :heavy_minus_sign:                                                                  | A member represents a person                                                        |
-| `fields_`                                                                           | T::Array<*::String*>                                                                | :heavy_minus_sign:                                                                  | Comma-delimited fields to return                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `connection_id`                                                                                | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the connection                                                                           |
+| `id`                                                                                           | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the Member                                                                               |
+| `marketing_member`                                                                             | [T.nilable(::UnifiedRubySDK::Shared::MarketingMember)](../../models/shared/marketingmember.md) | :heavy_minus_sign:                                                                             | A member represents a person                                                                   |
+| `fields_`                                                                                      | T::Array<*::String*>                                                                           | :heavy_minus_sign:                                                                             | Comma-delimited fields to return                                                               |
 
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::PatchMartechMemberResponse)](../../models/operations/patchmartechmemberresponse.md)**
-
 
 
 
@@ -202,7 +198,7 @@ s.config_security(
 )
 
     
-res = s.member.remove_martech_member(connection_id="<value>", id="<value>")
+res = s.member.remove_martech_member(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -220,7 +216,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveMartechMemberResponse)](../../models/operations/removemartechmemberresponse.md)**
-
 
 
 
@@ -242,9 +237,9 @@ s.config_security(
 )
 
     
-res = s.member.update_martech_member(connection_id="<value>", id="<value>", marketing_member=::UnifiedRubySDK::Shared::MarketingMember.new(), fields_=[
-    "<value>",
-  ])
+res = s.member.update_martech_member(connection_id="<id>", id="<id>", marketing_member=::UnifiedRubySDK::Shared::MarketingMember.new(), fields_=[
+  "<value>",
+])
 
 if ! res.marketing_member.nil?
   # handle response
@@ -254,15 +249,14 @@ end
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `connection_id`                                                                     | *::String*                                                                          | :heavy_check_mark:                                                                  | ID of the connection                                                                |
-| `id`                                                                                | *::String*                                                                          | :heavy_check_mark:                                                                  | ID of the Member                                                                    |
-| `marketing_member`                                                                  | [::UnifiedRubySDK::Shared::MarketingMember](../../models/shared/marketingmember.md) | :heavy_minus_sign:                                                                  | A member represents a person                                                        |
-| `fields_`                                                                           | T::Array<*::String*>                                                                | :heavy_minus_sign:                                                                  | Comma-delimited fields to return                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `connection_id`                                                                                | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the connection                                                                           |
+| `id`                                                                                           | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the Member                                                                               |
+| `marketing_member`                                                                             | [T.nilable(::UnifiedRubySDK::Shared::MarketingMember)](../../models/shared/marketingmember.md) | :heavy_minus_sign:                                                                             | A member represents a person                                                                   |
+| `fields_`                                                                                      | T::Array<*::String*>                                                                           | :heavy_minus_sign:                                                                             | Comma-delimited fields to return                                                               |
 
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateMartechMemberResponse)](../../models/operations/updatemartechmemberresponse.md)**
-
 
