@@ -29,9 +29,9 @@ s.config_security(
 )
 
     
-res = s.taxrate.create_accounting_taxrate(connection_id="<value>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(), fields_=[
-    "<value>",
-  ])
+res = s.taxrate.create_accounting_taxrate(connection_id="<id>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(), fields_=[
+  "<value>",
+])
 
 if ! res.accounting_taxrate.nil?
   # handle response
@@ -41,16 +41,15 @@ end
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
-| `accounting_taxrate`                                                                    | [::UnifiedRubySDK::Shared::AccountingTaxrate](../../models/shared/accountingtaxrate.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
-| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
+| `accounting_taxrate`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::AccountingTaxrate)](../../models/shared/accountingtaxrate.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
+| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
 
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::CreateAccountingTaxrateResponse)](../../models/operations/createaccountingtaxrateresponse.md)**
-
 
 
 
@@ -72,9 +71,9 @@ s.config_security(
 )
 
     
-res = s.taxrate.get_accounting_taxrate(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.taxrate.get_accounting_taxrate(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.accounting_taxrate.nil?
   # handle response
@@ -93,7 +92,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetAccountingTaxrateResponse)](../../models/operations/getaccountingtaxrateresponse.md)**
-
 
 
 
@@ -116,7 +114,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAccountingTaxratesRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.taxrate.list_accounting_taxrates(req)
@@ -139,7 +137,6 @@ end
 
 
 
-
 ## patch_accounting_taxrate
 
 Update a taxrate
@@ -158,9 +155,9 @@ s.config_security(
 )
 
     
-res = s.taxrate.patch_accounting_taxrate(connection_id="<value>", id="<value>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(), fields_=[
-    "<value>",
-  ])
+res = s.taxrate.patch_accounting_taxrate(connection_id="<id>", id="<id>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(), fields_=[
+  "<value>",
+])
 
 if ! res.accounting_taxrate.nil?
   # handle response
@@ -170,17 +167,16 @@ end
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
-| `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Taxrate                                                                       |
-| `accounting_taxrate`                                                                    | [::UnifiedRubySDK::Shared::AccountingTaxrate](../../models/shared/accountingtaxrate.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
-| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
+| `id`                                                                                               | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the Taxrate                                                                                  |
+| `accounting_taxrate`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::AccountingTaxrate)](../../models/shared/accountingtaxrate.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
+| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
 
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::PatchAccountingTaxrateResponse)](../../models/operations/patchaccountingtaxrateresponse.md)**
-
 
 
 
@@ -202,7 +198,7 @@ s.config_security(
 )
 
     
-res = s.taxrate.remove_accounting_taxrate(connection_id="<value>", id="<value>")
+res = s.taxrate.remove_accounting_taxrate(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -220,7 +216,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveAccountingTaxrateResponse)](../../models/operations/removeaccountingtaxrateresponse.md)**
-
 
 
 
@@ -242,9 +237,9 @@ s.config_security(
 )
 
     
-res = s.taxrate.update_accounting_taxrate(connection_id="<value>", id="<value>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(), fields_=[
-    "<value>",
-  ])
+res = s.taxrate.update_accounting_taxrate(connection_id="<id>", id="<id>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(), fields_=[
+  "<value>",
+])
 
 if ! res.accounting_taxrate.nil?
   # handle response
@@ -254,15 +249,14 @@ end
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
-| `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Taxrate                                                                       |
-| `accounting_taxrate`                                                                    | [::UnifiedRubySDK::Shared::AccountingTaxrate](../../models/shared/accountingtaxrate.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
-| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
+| `id`                                                                                               | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the Taxrate                                                                                  |
+| `accounting_taxrate`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::AccountingTaxrate)](../../models/shared/accountingtaxrate.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
+| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
 
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateAccountingTaxrateResponse)](../../models/operations/updateaccountingtaxrateresponse.md)**
-
 
