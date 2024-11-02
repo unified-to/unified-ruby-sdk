@@ -1327,3 +1327,11 @@ Based on:
 - Speakeasy CLI 1.395.1 (2.415.0) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [ruby v0.4.90] .
+
+## 2024-11-02 00:16:54
+### Changes
+Based on:
+- OpenAPI Doc 1.0 
+- Speakeasy CLI 1.424.0 (2.445.1) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [ruby v0.4.91] .

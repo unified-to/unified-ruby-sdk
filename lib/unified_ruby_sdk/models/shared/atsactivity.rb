@@ -12,8 +12,6 @@ module UnifiedRubySDK
       extend T::Sig
 
 
-      field :title, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
-
       field :application_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('application_id') } }
 
       field :bcc, T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('bcc') } }
@@ -40,6 +38,10 @@ module UnifiedRubySDK
 
       field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
+      field :sub_type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sub_type') } }
+
+      field :title, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
+
       field :to, T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('to') } }
 
       field :type, T.nilable(::UnifiedRubySDK::Shared::AtsActivityType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::AtsActivityType, true) } }
@@ -49,9 +51,8 @@ module UnifiedRubySDK
       field :user_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
 
 
-      sig { params(title: ::String, application_id: T.nilable(::String), bcc: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), candidate_id: T.nilable(::String), cc: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), created_at: T.nilable(::DateTime), description: T.nilable(::String), document_id: T.nilable(::String), from: T.nilable(::UnifiedRubySDK::Shared::PropertyAtsActivityFrom), id: T.nilable(::String), interview_id: T.nilable(::String), is_private: T.nilable(T::Boolean), job_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), to: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), type: T.nilable(::UnifiedRubySDK::Shared::AtsActivityType), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
-      def initialize(title: nil, application_id: nil, bcc: nil, candidate_id: nil, cc: nil, created_at: nil, description: nil, document_id: nil, from: nil, id: nil, interview_id: nil, is_private: nil, job_id: nil, raw: nil, to: nil, type: nil, updated_at: nil, user_ids: nil)
-        @title = title
+      sig { params(application_id: T.nilable(::String), bcc: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), candidate_id: T.nilable(::String), cc: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), created_at: T.nilable(::DateTime), description: T.nilable(::String), document_id: T.nilable(::String), from: T.nilable(::UnifiedRubySDK::Shared::PropertyAtsActivityFrom), id: T.nilable(::String), interview_id: T.nilable(::String), is_private: T.nilable(T::Boolean), job_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), sub_type: T.nilable(::String), title: T.nilable(::String), to: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), type: T.nilable(::UnifiedRubySDK::Shared::AtsActivityType), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
+      def initialize(application_id: nil, bcc: nil, candidate_id: nil, cc: nil, created_at: nil, description: nil, document_id: nil, from: nil, id: nil, interview_id: nil, is_private: nil, job_id: nil, raw: nil, sub_type: nil, title: nil, to: nil, type: nil, updated_at: nil, user_ids: nil)
         @application_id = application_id
         @bcc = bcc
         @candidate_id = candidate_id
@@ -65,6 +66,8 @@ module UnifiedRubySDK
         @is_private = is_private
         @job_id = job_id
         @raw = raw
+        @sub_type = sub_type
+        @title = title
         @to = to
         @type = type
         @updated_at = updated_at
