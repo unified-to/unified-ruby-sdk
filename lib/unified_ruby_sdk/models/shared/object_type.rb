@@ -17,6 +17,7 @@ module UnifiedRubySDK
         ACCOUNTING_INVOICE = new('accounting_invoice')
         ACCOUNTING_TAXRATE = new('accounting_taxrate')
         ACCOUNTING_ORGANIZATION = new('accounting_organization')
+        ACCOUNTING_ORDER = new('accounting_order')
         PAYMENT_PAYMENT = new('payment_payment')
         PAYMENT_LINK = new('payment_link')
         PAYMENT_PAYOUT = new('payment_payout')
@@ -65,6 +66,8 @@ module UnifiedRubySDK
         KMS_PAGE = new('kms_page')
         TASK_PROJECT = new('task_project')
         TASK_TASK = new('task_task')
+        SCIM_USERS = new('scim_users')
+        SCIM_GROUPS = new('scim_groups')
       end
     end
   end
