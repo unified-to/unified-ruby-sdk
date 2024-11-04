@@ -12,13 +12,13 @@ module UnifiedRubySDK
       extend T::Sig
 
 
-      field :id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
       field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
       field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
       field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+
+      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
       field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
@@ -31,12 +31,12 @@ module UnifiedRubySDK
       field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
 
-      sig { params(id: ::String, name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), is_active: T.nilable(T::Boolean), parent_space_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-      def initialize(id: nil, name: nil, created_at: nil, description: nil, is_active: nil, parent_space_id: nil, raw: nil, updated_at: nil, user_id: nil)
-        @id = id
+      sig { params(name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), parent_space_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+      def initialize(name: nil, created_at: nil, description: nil, id: nil, is_active: nil, parent_space_id: nil, raw: nil, updated_at: nil, user_id: nil)
         @name = name
         @created_at = created_at
         @description = description
+        @id = id
         @is_active = is_active
         @parent_space_id = parent_space_id
         @raw = raw

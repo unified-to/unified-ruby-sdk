@@ -14,8 +14,6 @@ module UnifiedRubySDK
 
       field :download_url, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('download_url') } }
 
-      field :id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
       field :space_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('space_id') } }
 
       field :title, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
@@ -23,6 +21,8 @@ module UnifiedRubySDK
       field :type, ::UnifiedRubySDK::Shared::KmsPageType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::KmsPageType, false) } }
 
       field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
       field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
@@ -35,14 +35,14 @@ module UnifiedRubySDK
       field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
 
-      sig { params(download_url: ::String, id: ::String, space_id: ::String, title: ::String, type: ::UnifiedRubySDK::Shared::KmsPageType, created_at: T.nilable(::DateTime), is_active: T.nilable(T::Boolean), parent_page_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-      def initialize(download_url: nil, id: nil, space_id: nil, title: nil, type: nil, created_at: nil, is_active: nil, parent_page_id: nil, raw: nil, updated_at: nil, user_id: nil)
+      sig { params(download_url: ::String, space_id: ::String, title: ::String, type: ::UnifiedRubySDK::Shared::KmsPageType, created_at: T.nilable(::DateTime), id: T.nilable(::String), is_active: T.nilable(T::Boolean), parent_page_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+      def initialize(download_url: nil, space_id: nil, title: nil, type: nil, created_at: nil, id: nil, is_active: nil, parent_page_id: nil, raw: nil, updated_at: nil, user_id: nil)
         @download_url = download_url
-        @id = id
         @space_id = space_id
         @title = title
         @type = type
         @created_at = created_at
+        @id = id
         @is_active = is_active
         @parent_page_id = parent_page_id
         @raw = raw
