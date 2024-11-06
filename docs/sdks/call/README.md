@@ -1,4 +1,5 @@
 # Call
+(*call*)
 
 ## Overview
 
@@ -25,7 +26,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListUcCallsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.call.list_uc_calls(req)
@@ -45,5 +46,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListUcCallsResponse)](../../models/operations/listuccallsresponse.md)**
-
 
