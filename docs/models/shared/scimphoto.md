@@ -1,0 +1,11 @@
+# ScimPhoto
+
+
+## Fields
+
+| Field                                                                                      | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `display`                                                                                  | *T.nilable(::String)*                                                                      | :heavy_minus_sign:                                                                         | N/A                                                                                        |
+| `primary`                                                                                  | *T.nilable(T::Boolean)*                                                                    | :heavy_minus_sign:                                                                         | N/A                                                                                        |
+| `type`                                                                                     | [T.nilable(::UnifiedRubySDK::Shared::ScimPhotoType)](../../models/shared/scimphototype.md) | :heavy_minus_sign:                                                                         | N/A                                                                                        |
+| `value`                                                                                    | *T.nilable(::String)*                                                                      | :heavy_minus_sign:                                                                         | N/A                                                                                        |
