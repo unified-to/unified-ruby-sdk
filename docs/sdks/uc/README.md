@@ -1,4 +1,5 @@
 # Uc
+(*uc*)
 
 ## Overview
 
@@ -30,9 +31,9 @@ s.config_security(
 )
 
     
-res = s.uc.create_uc_contact(connection_id="<value>", uc_contact=::UnifiedRubySDK::Shared::UcContact.new(), fields_=[
-    "<value>",
-  ])
+res = s.uc.create_uc_contact(connection_id="<id>", uc_contact=::UnifiedRubySDK::Shared::UcContact.new(), fields_=[
+  "<value>",
+])
 
 if ! res.uc_contact.nil?
   # handle response
@@ -42,16 +43,15 @@ end
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
-| `uc_contact`                                                            | [::UnifiedRubySDK::Shared::UcContact](../../models/shared/uccontact.md) | :heavy_minus_sign:                                                      | A contact represents a person that optionally is associated with a call |
-| `fields_`                                                               | T::Array<*::String*>                                                    | :heavy_minus_sign:                                                      | Comma-delimited fields to return                                        |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `connection_id`                                                                    | *::String*                                                                         | :heavy_check_mark:                                                                 | ID of the connection                                                               |
+| `uc_contact`                                                                       | [T.nilable(::UnifiedRubySDK::Shared::UcContact)](../../models/shared/uccontact.md) | :heavy_minus_sign:                                                                 | A contact represents a person that optionally is associated with a call            |
+| `fields_`                                                                          | T::Array<*::String*>                                                               | :heavy_minus_sign:                                                                 | Comma-delimited fields to return                                                   |
 
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::CreateUcContactResponse)](../../models/operations/createuccontactresponse.md)**
-
 
 
 
@@ -73,9 +73,9 @@ s.config_security(
 )
 
     
-res = s.uc.get_uc_contact(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.uc.get_uc_contact(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.uc_contact.nil?
   # handle response
@@ -94,7 +94,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetUcContactResponse)](../../models/operations/getuccontactresponse.md)**
-
 
 
 
@@ -117,7 +116,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListUcCallsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.uc.list_uc_calls(req)
@@ -140,7 +139,6 @@ end
 
 
 
-
 ## list_uc_contacts
 
 List all contacts
@@ -160,7 +158,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListUcContactsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.uc.list_uc_contacts(req)
@@ -183,7 +181,6 @@ end
 
 
 
-
 ## patch_uc_contact
 
 Update a contact
@@ -202,9 +199,9 @@ s.config_security(
 )
 
     
-res = s.uc.patch_uc_contact(connection_id="<value>", id="<value>", uc_contact=::UnifiedRubySDK::Shared::UcContact.new(), fields_=[
-    "<value>",
-  ])
+res = s.uc.patch_uc_contact(connection_id="<id>", id="<id>", uc_contact=::UnifiedRubySDK::Shared::UcContact.new(), fields_=[
+  "<value>",
+])
 
 if ! res.uc_contact.nil?
   # handle response
@@ -214,17 +211,16 @@ end
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
-| `id`                                                                    | *::String*                                                              | :heavy_check_mark:                                                      | ID of the Contact                                                       |
-| `uc_contact`                                                            | [::UnifiedRubySDK::Shared::UcContact](../../models/shared/uccontact.md) | :heavy_minus_sign:                                                      | A contact represents a person that optionally is associated with a call |
-| `fields_`                                                               | T::Array<*::String*>                                                    | :heavy_minus_sign:                                                      | Comma-delimited fields to return                                        |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `connection_id`                                                                    | *::String*                                                                         | :heavy_check_mark:                                                                 | ID of the connection                                                               |
+| `id`                                                                               | *::String*                                                                         | :heavy_check_mark:                                                                 | ID of the Contact                                                                  |
+| `uc_contact`                                                                       | [T.nilable(::UnifiedRubySDK::Shared::UcContact)](../../models/shared/uccontact.md) | :heavy_minus_sign:                                                                 | A contact represents a person that optionally is associated with a call            |
+| `fields_`                                                                          | T::Array<*::String*>                                                               | :heavy_minus_sign:                                                                 | Comma-delimited fields to return                                                   |
 
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::PatchUcContactResponse)](../../models/operations/patchuccontactresponse.md)**
-
 
 
 
@@ -246,7 +242,7 @@ s.config_security(
 )
 
     
-res = s.uc.remove_uc_contact(connection_id="<value>", id="<value>")
+res = s.uc.remove_uc_contact(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -264,7 +260,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveUcContactResponse)](../../models/operations/removeuccontactresponse.md)**
-
 
 
 
@@ -286,9 +281,9 @@ s.config_security(
 )
 
     
-res = s.uc.update_uc_contact(connection_id="<value>", id="<value>", uc_contact=::UnifiedRubySDK::Shared::UcContact.new(), fields_=[
-    "<value>",
-  ])
+res = s.uc.update_uc_contact(connection_id="<id>", id="<id>", uc_contact=::UnifiedRubySDK::Shared::UcContact.new(), fields_=[
+  "<value>",
+])
 
 if ! res.uc_contact.nil?
   # handle response
@@ -298,15 +293,14 @@ end
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
-| `id`                                                                    | *::String*                                                              | :heavy_check_mark:                                                      | ID of the Contact                                                       |
-| `uc_contact`                                                            | [::UnifiedRubySDK::Shared::UcContact](../../models/shared/uccontact.md) | :heavy_minus_sign:                                                      | A contact represents a person that optionally is associated with a call |
-| `fields_`                                                               | T::Array<*::String*>                                                    | :heavy_minus_sign:                                                      | Comma-delimited fields to return                                        |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `connection_id`                                                                    | *::String*                                                                         | :heavy_check_mark:                                                                 | ID of the connection                                                               |
+| `id`                                                                               | *::String*                                                                         | :heavy_check_mark:                                                                 | ID of the Contact                                                                  |
+| `uc_contact`                                                                       | [T.nilable(::UnifiedRubySDK::Shared::UcContact)](../../models/shared/uccontact.md) | :heavy_minus_sign:                                                                 | A contact represents a person that optionally is associated with a call            |
+| `fields_`                                                                          | T::Array<*::String*>                                                               | :heavy_minus_sign:                                                                 | Comma-delimited fields to return                                                   |
 
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateUcContactResponse)](../../models/operations/updateuccontactresponse.md)**
-
 
