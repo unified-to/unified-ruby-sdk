@@ -38,13 +38,17 @@ module UnifiedRubySDK
 
       field :ip_address, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ip_address') } }
 
+      field :is_billable, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_billable') } }
+
       field :size, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
+
+      field :webhook_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('webhook_id') } }
 
       field :workspace_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
 
 
-      sig { params(integration_type: ::String, method: ::String, name: ::String, path: ::String, status: ::String, type: ::UnifiedRubySDK::Shared::ApiCallType, connection_id: T.nilable(::String), created_at: T.nilable(::DateTime), environment: T.nilable(::String), error: T.nilable(::String), external_xref: T.nilable(::String), id: T.nilable(::String), ip_address: T.nilable(::String), size: T.nilable(::Float), workspace_id: T.nilable(::String)).void }
-      def initialize(integration_type: nil, method: nil, name: nil, path: nil, status: nil, type: nil, connection_id: nil, created_at: nil, environment: nil, error: nil, external_xref: nil, id: nil, ip_address: nil, size: nil, workspace_id: nil)
+      sig { params(integration_type: ::String, method: ::String, name: ::String, path: ::String, status: ::String, type: ::UnifiedRubySDK::Shared::ApiCallType, connection_id: T.nilable(::String), created_at: T.nilable(::DateTime), environment: T.nilable(::String), error: T.nilable(::String), external_xref: T.nilable(::String), id: T.nilable(::String), ip_address: T.nilable(::String), is_billable: T.nilable(T::Boolean), size: T.nilable(::Float), webhook_id: T.nilable(::String), workspace_id: T.nilable(::String)).void }
+      def initialize(integration_type: nil, method: nil, name: nil, path: nil, status: nil, type: nil, connection_id: nil, created_at: nil, environment: nil, error: nil, external_xref: nil, id: nil, ip_address: nil, is_billable: nil, size: nil, webhook_id: nil, workspace_id: nil)
         @integration_type = integration_type
         @method = method
         @name = name
@@ -58,7 +62,9 @@ module UnifiedRubySDK
         @external_xref = external_xref
         @id = id
         @ip_address = ip_address
+        @is_billable = is_billable
         @size = size
+        @webhook_id = webhook_id
         @workspace_id = workspace_id
       end
     end
