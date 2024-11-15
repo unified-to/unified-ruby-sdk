@@ -1,4 +1,5 @@
 # Payslip
+(*payslip*)
 
 ## Overview
 
@@ -25,9 +26,9 @@ s.config_security(
 )
 
     
-res = s.payslip.get_hris_payslip(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.payslip.get_hris_payslip(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.hris_payslip.nil?
   # handle response
@@ -46,7 +47,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetHrisPayslipResponse)](../../models/operations/gethrispayslipresponse.md)**
-
 
 
 
@@ -69,7 +69,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListHrisPayslipsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.payslip.list_hris_payslips(req)
@@ -89,5 +89,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListHrisPayslipsResponse)](../../models/operations/listhrispayslipsresponse.md)**
-
 
