@@ -32,12 +32,12 @@ module UnifiedRubySDK
 
       field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-      field :updated_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
+      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
       field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
 
-      sig { params(name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), has_subchannels: T.nilable(T::Boolean), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), members: T.nilable(T::Array[::UnifiedRubySDK::Shared::MessagingMember]), parent_channel_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::String), web_url: T.nilable(::String)).void }
+      sig { params(name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), has_subchannels: T.nilable(T::Boolean), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), members: T.nilable(T::Array[::UnifiedRubySDK::Shared::MessagingMember]), parent_channel_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
       def initialize(name: nil, created_at: nil, description: nil, has_subchannels: nil, id: nil, is_active: nil, is_private: nil, members: nil, parent_channel_id: nil, raw: nil, updated_at: nil, web_url: nil)
         @name = name
         @created_at = created_at

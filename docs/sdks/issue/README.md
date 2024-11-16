@@ -1,4 +1,5 @@
 # Issue
+(*issue*)
 
 ## Overview
 
@@ -43,5 +44,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIssuesResponse)](../../models/operations/listunifiedissuesresponse.md)**
-
 
