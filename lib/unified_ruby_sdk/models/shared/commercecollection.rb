@@ -12,13 +12,13 @@ module UnifiedRubySDK
       extend T::Sig
 
 
-      field :id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
       field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
       field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
       field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+
+      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
       field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
@@ -27,6 +27,8 @@ module UnifiedRubySDK
       field :is_visible, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_visible') } }
 
       field :media, T.nilable(T::Array[::UnifiedRubySDK::Shared::CommerceItemMedia]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
+
+      field :metadata, T.nilable(T::Array[::UnifiedRubySDK::Shared::CommerceMetadata]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
       field :parent_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
@@ -43,16 +45,17 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(id: ::String, name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), is_active: T.nilable(T::Boolean), is_featured: T.nilable(T::Boolean), is_visible: T.nilable(T::Boolean), media: T.nilable(T::Array[::UnifiedRubySDK::Shared::CommerceItemMedia]), parent_id: T.nilable(::String), public_description: T.nilable(::String), public_name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), tags: T.nilable(T::Array[::String]), type: T.nilable(::UnifiedRubySDK::Shared::CommerceCollectionType), updated_at: T.nilable(::DateTime)).void }
-      def initialize(id: nil, name: nil, created_at: nil, description: nil, is_active: nil, is_featured: nil, is_visible: nil, media: nil, parent_id: nil, public_description: nil, public_name: nil, raw: nil, tags: nil, type: nil, updated_at: nil)
-        @id = id
+      sig { params(name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_featured: T.nilable(T::Boolean), is_visible: T.nilable(T::Boolean), media: T.nilable(T::Array[::UnifiedRubySDK::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[::UnifiedRubySDK::Shared::CommerceMetadata]), parent_id: T.nilable(::String), public_description: T.nilable(::String), public_name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), tags: T.nilable(T::Array[::String]), type: T.nilable(::UnifiedRubySDK::Shared::CommerceCollectionType), updated_at: T.nilable(::DateTime)).void }
+      def initialize(name: nil, created_at: nil, description: nil, id: nil, is_active: nil, is_featured: nil, is_visible: nil, media: nil, metadata: nil, parent_id: nil, public_description: nil, public_name: nil, raw: nil, tags: nil, type: nil, updated_at: nil)
         @name = name
         @created_at = created_at
         @description = description
+        @id = id
         @is_active = is_active
         @is_featured = is_featured
         @is_visible = is_visible
         @media = media
+        @metadata = metadata
         @parent_id = parent_id
         @public_description = public_description
         @public_name = public_name

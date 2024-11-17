@@ -1,4 +1,5 @@
 # Applicationstatus
+(*applicationstatus*)
 
 ## Overview
 
@@ -25,7 +26,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListAtsApplicationstatusesRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.applicationstatus.list_ats_applicationstatuses(req)
@@ -45,5 +46,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListAtsApplicationstatusesResponse)](../../models/operations/listatsapplicationstatusesresponse.md)**
-
 
