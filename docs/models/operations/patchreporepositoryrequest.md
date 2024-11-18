@@ -1,0 +1,11 @@
+# PatchRepoRepositoryRequest
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `connection_id`                                                                              | *::String*                                                                                   | :heavy_check_mark:                                                                           | ID of the connection                                                                         |
+| `id`                                                                                         | *::String*                                                                                   | :heavy_check_mark:                                                                           | ID of the Repository                                                                         |
+| `repo_repository`                                                                            | [T.nilable(::UnifiedRubySDK::Shared::RepoRepository)](../../models/shared/reporepository.md) | :heavy_minus_sign:                                                                           | N/A                                                                                          |
+| `fields_`                                                                                    | T::Array<*::String*>                                                                         | :heavy_minus_sign:                                                                           | Comma-delimited fields to return                                                             |

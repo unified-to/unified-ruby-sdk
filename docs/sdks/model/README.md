@@ -1,4 +1,5 @@
 # Model
+(*model*)
 
 ## Overview
 
@@ -25,7 +26,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListGenaiModelsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.model.list_genai_models(req)
@@ -45,5 +46,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListGenaiModelsResponse)](../../models/operations/listgenaimodelsresponse.md)**
-
 
