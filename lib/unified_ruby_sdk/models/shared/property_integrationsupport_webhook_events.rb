@@ -12,14 +12,14 @@ module UnifiedRubySDK
       extend T::Sig
 
 
-      field :created, T.nilable(T::Array[::UnifiedRubySDK::Shared::PropertyPropertyIntegrationSupportWebhookEventsCreated]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created') } }
+      field :created, T.nilable(T::Array[::UnifiedRubySDK::Shared::PropertyIntegrationSupportWebhookEventsCreated]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created') } }
 
-      field :deleted, T.nilable(T::Array[::UnifiedRubySDK::Shared::PropertyPropertyIntegrationSupportWebhookEventsDeleted]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('deleted') } }
+      field :deleted, T.nilable(T::Array[::UnifiedRubySDK::Shared::PropertyIntegrationSupportWebhookEventsDeleted]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('deleted') } }
 
-      field :updated, T.nilable(T::Array[::UnifiedRubySDK::Shared::PropertyPropertyIntegrationSupportWebhookEventsUpdated]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated') } }
+      field :updated, T.nilable(T::Array[::UnifiedRubySDK::Shared::PropertyIntegrationSupportWebhookEventsUpdated]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated') } }
 
 
-      sig { params(created: T.nilable(T::Array[::UnifiedRubySDK::Shared::PropertyPropertyIntegrationSupportWebhookEventsCreated]), deleted: T.nilable(T::Array[::UnifiedRubySDK::Shared::PropertyPropertyIntegrationSupportWebhookEventsDeleted]), updated: T.nilable(T::Array[::UnifiedRubySDK::Shared::PropertyPropertyIntegrationSupportWebhookEventsUpdated])).void }
+      sig { params(created: T.nilable(T::Array[::UnifiedRubySDK::Shared::PropertyIntegrationSupportWebhookEventsCreated]), deleted: T.nilable(T::Array[::UnifiedRubySDK::Shared::PropertyIntegrationSupportWebhookEventsDeleted]), updated: T.nilable(T::Array[::UnifiedRubySDK::Shared::PropertyIntegrationSupportWebhookEventsUpdated])).void }
       def initialize(created: nil, deleted: nil, updated: nil)
         @created = created
         @deleted = deleted
