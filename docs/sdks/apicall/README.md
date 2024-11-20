@@ -1,4 +1,5 @@
 # Apicall
+(*apicall*)
 
 ## Overview
 
@@ -25,7 +26,7 @@ s.config_security(
 )
 
     
-res = s.apicall.get_unified_apicall(id="<value>")
+res = s.apicall.get_unified_apicall(id="<id>")
 
 if ! res.api_call.nil?
   # handle response
@@ -42,7 +43,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetUnifiedApicallResponse)](../../models/operations/getunifiedapicallresponse.md)**
-
 
 
 
@@ -83,5 +83,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListUnifiedApicallsResponse)](../../models/operations/listunifiedapicallsresponse.md)**
-
 

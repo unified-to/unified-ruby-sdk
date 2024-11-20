@@ -1,0 +1,11 @@
+# PatchLmsCourseRequest
+
+
+## Fields
+
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `connection_id`                                                                    | *::String*                                                                         | :heavy_check_mark:                                                                 | ID of the connection                                                               |
+| `id`                                                                               | *::String*                                                                         | :heavy_check_mark:                                                                 | ID of the Course                                                                   |
+| `lms_course`                                                                       | [T.nilable(::UnifiedRubySDK::Shared::LmsCourse)](../../models/shared/lmscourse.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `fields_`                                                                          | T::Array<*::String*>                                                               | :heavy_minus_sign:                                                                 | Comma-delimited fields to return                                                   |
