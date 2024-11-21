@@ -542,7 +542,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveCrmCompanyResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+                
+        res.headers = r.headers
+      end
       res
     end
 
@@ -577,7 +581,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveHrisCompanyResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+                
+        res.headers = r.headers
+      end
       res
     end
 
