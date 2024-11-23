@@ -10,11 +10,12 @@ generation:
     requestResponseComponentNamesFeb2024: false
   auth:
     oAuth2ClientCredentialsEnabled: false
+    oAuth2PasswordEnabled: false
   baseServerURL: ""
   flattenGlobalSecurity: true
   telemetryEnabled: false
 ruby:
-  version: 0.4.90
+  version: 0.5.0
   author: Unified
   description: Ruby Client SDK for Unified.to
   imports:

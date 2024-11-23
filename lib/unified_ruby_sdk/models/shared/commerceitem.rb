@@ -12,6 +12,8 @@ module UnifiedRubySDK
       extend T::Sig
 
 
+      field :account_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_id') } }
+
       field :collection_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('collection_ids') } }
 
       field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -25,6 +27,8 @@ module UnifiedRubySDK
       field :is_taxable, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_taxable') } }
 
       field :media, T.nilable(T::Array[::UnifiedRubySDK::Shared::CommerceItemMedia]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
+
+      field :metadata, T.nilable(T::Array[::UnifiedRubySDK::Shared::CommerceItemMetadata]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
       field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
@@ -47,8 +51,9 @@ module UnifiedRubySDK
       field :vendor_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('vendor_name') } }
 
 
-      sig { params(collection_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_taxable: T.nilable(T::Boolean), media: T.nilable(T::Array[::UnifiedRubySDK::Shared::CommerceItemMedia]), name: T.nilable(::String), public_description: T.nilable(::String), public_name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), slug: T.nilable(::String), tags: T.nilable(T::Array[::String]), type: T.nilable(::String), updated_at: T.nilable(::DateTime), variants: T.nilable(T::Array[::UnifiedRubySDK::Shared::CommerceItemVariant]), vendor_name: T.nilable(::String)).void }
-      def initialize(collection_ids: nil, created_at: nil, description: nil, id: nil, is_active: nil, is_taxable: nil, media: nil, name: nil, public_description: nil, public_name: nil, raw: nil, slug: nil, tags: nil, type: nil, updated_at: nil, variants: nil, vendor_name: nil)
+      sig { params(account_id: T.nilable(::String), collection_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_taxable: T.nilable(T::Boolean), media: T.nilable(T::Array[::UnifiedRubySDK::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[::UnifiedRubySDK::Shared::CommerceItemMetadata]), name: T.nilable(::String), public_description: T.nilable(::String), public_name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), slug: T.nilable(::String), tags: T.nilable(T::Array[::String]), type: T.nilable(::String), updated_at: T.nilable(::DateTime), variants: T.nilable(T::Array[::UnifiedRubySDK::Shared::CommerceItemVariant]), vendor_name: T.nilable(::String)).void }
+      def initialize(account_id: nil, collection_ids: nil, created_at: nil, description: nil, id: nil, is_active: nil, is_taxable: nil, media: nil, metadata: nil, name: nil, public_description: nil, public_name: nil, raw: nil, slug: nil, tags: nil, type: nil, updated_at: nil, variants: nil, vendor_name: nil)
+        @account_id = account_id
         @collection_ids = collection_ids
         @created_at = created_at
         @description = description
@@ -56,6 +61,7 @@ module UnifiedRubySDK
         @is_active = is_active
         @is_taxable = is_taxable
         @media = media
+        @metadata = metadata
         @name = name
         @public_description = public_description
         @public_name = public_name

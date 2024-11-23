@@ -1,4 +1,5 @@
 # Timeoff
+(*timeoff*)
 
 ## Overview
 
@@ -25,9 +26,9 @@ s.config_security(
 )
 
     
-res = s.timeoff.get_hris_timeoff(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.timeoff.get_hris_timeoff(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.hris_timeoff.nil?
   # handle response
@@ -46,7 +47,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetHrisTimeoffResponse)](../../models/operations/gethristimeoffresponse.md)**
-
 
 
 
@@ -69,7 +69,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListHrisTimeoffsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.timeoff.list_hris_timeoffs(req)
@@ -89,5 +89,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListHrisTimeoffsResponse)](../../models/operations/listhristimeoffsresponse.md)**
-
 
