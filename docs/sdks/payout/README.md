@@ -1,4 +1,5 @@
 # Payout
+(*payout*)
 
 ## Overview
 
@@ -25,9 +26,9 @@ s.config_security(
 )
 
     
-res = s.payout.get_payment_payout(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.payout.get_payment_payout(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.payment_payout.nil?
   # handle response
@@ -46,7 +47,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetPaymentPayoutResponse)](../../models/operations/getpaymentpayoutresponse.md)**
-
 
 
 
@@ -69,7 +69,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListPaymentPayoutsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.payout.list_payment_payouts(req)
@@ -89,5 +89,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListPaymentPayoutsResponse)](../../models/operations/listpaymentpayoutsresponse.md)**
-
 
