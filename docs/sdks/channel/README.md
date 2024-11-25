@@ -1,4 +1,5 @@
 # Channel
+(*channel*)
 
 ## Overview
 
@@ -25,9 +26,9 @@ s.config_security(
 )
 
     
-res = s.channel.get_messaging_channel(connection_id="<value>", id="<value>", fields_=[
-    "<value>",
-  ])
+res = s.channel.get_messaging_channel(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
 
 if ! res.messaging_channel.nil?
   # handle response
@@ -46,7 +47,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetMessagingChannelResponse)](../../models/operations/getmessagingchannelresponse.md)**
-
 
 
 
@@ -69,7 +69,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListMessagingChannelsRequest.new(
-  connection_id: "<value>",
+  connection_id: "<id>",
 )
     
 res = s.channel.list_messaging_channels(req)
@@ -89,5 +89,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListMessagingChannelsResponse)](../../models/operations/listmessagingchannelsresponse.md)**
-
 
