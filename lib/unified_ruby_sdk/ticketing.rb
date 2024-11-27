@@ -67,6 +67,7 @@ module UnifiedRubySDK
           res.ticketing_customer = out
         end
       end
+
       res
     end
 
@@ -119,6 +120,7 @@ module UnifiedRubySDK
           res.ticketing_note = out
         end
       end
+
       res
     end
 
@@ -171,6 +173,7 @@ module UnifiedRubySDK
           res.ticketing_ticket = out
         end
       end
+
       res
     end
 
@@ -214,6 +217,7 @@ module UnifiedRubySDK
           res.ticketing_customer = out
         end
       end
+
       res
     end
 
@@ -257,6 +261,7 @@ module UnifiedRubySDK
           res.ticketing_note = out
         end
       end
+
       res
     end
 
@@ -300,6 +305,7 @@ module UnifiedRubySDK
           res.ticketing_ticket = out
         end
       end
+
       res
     end
 
@@ -337,6 +343,7 @@ module UnifiedRubySDK
           res.ticketing_customers = out
         end
       end
+
       res
     end
 
@@ -374,6 +381,7 @@ module UnifiedRubySDK
           res.ticketing_notes = out
         end
       end
+
       res
     end
 
@@ -411,6 +419,7 @@ module UnifiedRubySDK
           res.ticketing_tickets = out
         end
       end
+
       res
     end
 
@@ -464,6 +473,7 @@ module UnifiedRubySDK
           res.ticketing_customer = out
         end
       end
+
       res
     end
 
@@ -517,6 +527,7 @@ module UnifiedRubySDK
           res.ticketing_note = out
         end
       end
+
       res
     end
 
@@ -570,6 +581,7 @@ module UnifiedRubySDK
           res.ticketing_ticket = out
         end
       end
+
       res
     end
 
@@ -604,7 +616,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveTicketingCustomerResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
 
@@ -639,7 +655,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveTicketingNoteResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
 
@@ -674,7 +694,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveTicketingTicketResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
 
@@ -728,6 +752,7 @@ module UnifiedRubySDK
           res.ticketing_customer = out
         end
       end
+
       res
     end
 
@@ -781,6 +806,7 @@ module UnifiedRubySDK
           res.ticketing_note = out
         end
       end
+
       res
     end
 
@@ -834,6 +860,7 @@ module UnifiedRubySDK
           res.ticketing_ticket = out
         end
       end
+
       res
     end
   end

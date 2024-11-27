@@ -58,6 +58,7 @@ module UnifiedRubySDK
           res.enrich_company = out
         end
       end
+
       res
     end
 
@@ -95,6 +96,7 @@ module UnifiedRubySDK
           res.enrich_person = out
         end
       end
+
       res
     end
   end

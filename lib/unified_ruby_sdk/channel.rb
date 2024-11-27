@@ -58,6 +58,7 @@ module UnifiedRubySDK
           res.messaging_channel = out
         end
       end
+
       res
     end
 
@@ -95,6 +96,7 @@ module UnifiedRubySDK
           res.messaging_channels = out
         end
       end
+
       res
     end
   end

@@ -1,4 +1,5 @@
 # Unified
+(*unified*)
 
 ## Overview
 
@@ -45,11 +46,11 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Shared::Connection.new(
   categories: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::KMS,
+    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::LMS,
   ],
   integration_type: "<value>",
   permissions: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::ATS_DOCUMENT_WRITE,
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_DEAL_WRITE,
   ],
 )
     
@@ -73,7 +74,6 @@ end
 
 
 
-
 ## create_unified_webhook
 
 The data payload received by your server is described at https://docs.unified.to/unified/overview. The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free accounts.
@@ -93,11 +93,11 @@ s.config_security(
 
     
 res = s.unified.create_unified_webhook(webhook=::UnifiedRubySDK::Shared::Webhook.new(
-    connection_id: "<value>",
-    event: ::UnifiedRubySDK::Shared::Event::CREATED,
-    hook_url: "<value>",
-    object_type: ::UnifiedRubySDK::Shared::ObjectType::ACCOUNTING_TRANSACTION,
-  ), include_all=false)
+  connection_id: "<id>",
+  event: ::UnifiedRubySDK::Shared::Event::CREATED,
+  hook_url: "https://blind-platypus.org/",
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::CRM_CONTACT,
+), include_all=false)
 
 if ! res.webhook.nil?
   # handle response
@@ -107,15 +107,14 @@ end
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `webhook`                                                           | [::UnifiedRubySDK::Shared::Webhook](../../models/shared/webhook.md) | :heavy_minus_sign:                                                  | A webhook is used to POST new/updated information to your server.   |
-| `include_all`                                                       | *T::Boolean*                                                        | :heavy_minus_sign:                                                  | When set, all of the existing data will sent back to your server.   |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `webhook`                                                                      | [T.nilable(::UnifiedRubySDK::Shared::Webhook)](../../models/shared/webhook.md) | :heavy_minus_sign:                                                             | A webhook is used to POST new/updated information to your server.              |
+| `include_all`                                                                  | *T.nilable(T::Boolean)*                                                        | :heavy_minus_sign:                                                             | When set, all of the existing data will sent back to your server.              |
 
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::CreateUnifiedWebhookResponse)](../../models/operations/createunifiedwebhookresponse.md)**
-
 
 
 
@@ -137,7 +136,7 @@ s.config_security(
 )
 
     
-res = s.unified.get_unified_apicall(id="<value>")
+res = s.unified.get_unified_apicall(id="<id>")
 
 if ! res.api_call.nil?
   # handle response
@@ -154,7 +153,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetUnifiedApicallResponse)](../../models/operations/getunifiedapicallresponse.md)**
-
 
 
 
@@ -176,7 +174,7 @@ s.config_security(
 )
 
     
-res = s.unified.get_unified_connection(id="<value>")
+res = s.unified.get_unified_connection(id="<id>")
 
 if ! res.connection.nil?
   # handle response
@@ -193,7 +191,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetUnifiedConnectionResponse)](../../models/operations/getunifiedconnectionresponse.md)**
-
 
 
 
@@ -217,7 +214,7 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Operations::GetUnifiedIntegrationAuthRequest.new(
   integration_type: "<value>",
-  workspace_id: "<value>",
+  workspace_id: "<id>",
 )
     
 res = s.unified.get_unified_integration_auth(req)
@@ -240,7 +237,6 @@ end
 
 
 
-
 ## get_unified_webhook
 
 Retrieve webhook by its ID
@@ -259,7 +255,7 @@ s.config_security(
 )
 
     
-res = s.unified.get_unified_webhook(id="<value>")
+res = s.unified.get_unified_webhook(id="<id>")
 
 if ! res.webhook.nil?
   # handle response
@@ -276,7 +272,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::GetUnifiedWebhookResponse)](../../models/operations/getunifiedwebhookresponse.md)**
-
 
 
 
@@ -320,7 +315,6 @@ end
 
 
 
-
 ## list_unified_connections
 
 List all connections
@@ -361,7 +355,6 @@ end
 
 
 
-
 ## list_unified_integration_workspaces
 
 No authentication required as this is to be used by front-end interface
@@ -381,7 +374,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::ListUnifiedIntegrationWorkspacesRequest.new(
-  workspace_id: "<value>",
+  workspace_id: "<id>",
 )
     
 res = s.unified.list_unified_integration_workspaces(req)
@@ -401,7 +394,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIntegrationWorkspacesResponse)](../../models/operations/listunifiedintegrationworkspacesresponse.md)**
-
 
 
 
@@ -445,7 +437,6 @@ end
 
 
 
-
 ## list_unified_issues
 
 List support issues
@@ -483,7 +474,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIssuesResponse)](../../models/operations/listunifiedissuesresponse.md)**
-
 
 
 
@@ -527,7 +517,6 @@ end
 
 
 
-
 ## patch_unified_connection
 
 Update connection
@@ -546,15 +535,15 @@ s.config_security(
 )
 
     
-res = s.unified.patch_unified_connection(id="<value>", connection=::UnifiedRubySDK::Shared::Connection.new(
-    categories: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionCategories::COMMERCE,
-    ],
-    integration_type: "<value>",
-    permissions: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::HRIS_GROUP_READ,
-    ],
-  ))
+res = s.unified.patch_unified_connection(id="<id>", connection=::UnifiedRubySDK::Shared::Connection.new(
+  categories: [
+    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::GENAI,
+  ],
+  integration_type: "<value>",
+  permissions: [
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::REPO_PULLREQUEST_WRITE,
+  ],
+))
 
 if ! res.connection.nil?
   # handle response
@@ -564,15 +553,14 @@ end
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `id`                                                                      | *::String*                                                                | :heavy_check_mark:                                                        | ID of the Connection                                                      |
-| `connection`                                                              | [::UnifiedRubySDK::Shared::Connection](../../models/shared/connection.md) | :heavy_minus_sign:                                                        | A connection represents a specific authentication of an integration.      |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `id`                                                                                 | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the Connection                                                                 |
+| `connection`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::Connection)](../../models/shared/connection.md) | :heavy_minus_sign:                                                                   | A connection represents a specific authentication of an integration.                 |
 
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::PatchUnifiedConnectionResponse)](../../models/operations/patchunifiedconnectionresponse.md)**
-
 
 
 
@@ -594,12 +582,12 @@ s.config_security(
 )
 
     
-res = s.unified.patch_unified_webhook(id="<value>", webhook=::UnifiedRubySDK::Shared::Webhook.new(
-    connection_id: "<value>",
-    event: ::UnifiedRubySDK::Shared::Event::DELETED,
-    hook_url: "<value>",
-    object_type: ::UnifiedRubySDK::Shared::ObjectType::PASSTHROUGH,
-  ))
+res = s.unified.patch_unified_webhook(id="<id>", webhook=::UnifiedRubySDK::Shared::Webhook.new(
+  connection_id: "<id>",
+  event: ::UnifiedRubySDK::Shared::Event::DELETED,
+  hook_url: "https://calculating-habit.name/",
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::COMMERCE_COLLECTION,
+))
 
 if ! res.webhook.nil?
   # handle response
@@ -609,15 +597,14 @@ end
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Webhook                                                   |
-| `webhook`                                                           | [::UnifiedRubySDK::Shared::Webhook](../../models/shared/webhook.md) | :heavy_minus_sign:                                                  | A webhook is used to POST new/updated information to your server.   |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `id`                                                                           | *::String*                                                                     | :heavy_check_mark:                                                             | ID of the Webhook                                                              |
+| `webhook`                                                                      | [T.nilable(::UnifiedRubySDK::Shared::Webhook)](../../models/shared/webhook.md) | :heavy_minus_sign:                                                             | A webhook is used to POST new/updated information to your server.              |
 
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::PatchUnifiedWebhookResponse)](../../models/operations/patchunifiedwebhookresponse.md)**
-
 
 
 
@@ -639,7 +626,7 @@ s.config_security(
 )
 
     
-res = s.unified.patch_unified_webhook_trigger(id="<value>")
+res = s.unified.patch_unified_webhook_trigger(id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -656,7 +643,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::PatchUnifiedWebhookTriggerResponse)](../../models/operations/patchunifiedwebhooktriggerresponse.md)**
-
 
 
 
@@ -678,7 +664,7 @@ s.config_security(
 )
 
     
-res = s.unified.remove_unified_connection(id="<value>")
+res = s.unified.remove_unified_connection(id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -695,7 +681,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveUnifiedConnectionResponse)](../../models/operations/removeunifiedconnectionresponse.md)**
-
 
 
 
@@ -717,7 +702,7 @@ s.config_security(
 )
 
     
-res = s.unified.remove_unified_webhook(id="<value>")
+res = s.unified.remove_unified_webhook(id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -734,7 +719,6 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveUnifiedWebhookResponse)](../../models/operations/removeunifiedwebhookresponse.md)**
-
 
 
 
@@ -756,15 +740,15 @@ s.config_security(
 )
 
     
-res = s.unified.update_unified_connection(id="<value>", connection=::UnifiedRubySDK::Shared::Connection.new(
-    categories: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionCategories::GENAI,
-    ],
-    integration_type: "<value>",
-    permissions: [
-      ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_DEAL_WRITE,
-    ],
-  ))
+res = s.unified.update_unified_connection(id="<id>", connection=::UnifiedRubySDK::Shared::Connection.new(
+  categories: [
+    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::KMS,
+  ],
+  integration_type: "<value>",
+  permissions: [
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::REPO_PULLREQUEST_READ,
+  ],
+))
 
 if ! res.connection.nil?
   # handle response
@@ -774,15 +758,14 @@ end
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `id`                                                                      | *::String*                                                                | :heavy_check_mark:                                                        | ID of the Connection                                                      |
-| `connection`                                                              | [::UnifiedRubySDK::Shared::Connection](../../models/shared/connection.md) | :heavy_minus_sign:                                                        | A connection represents a specific authentication of an integration.      |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `id`                                                                                 | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the Connection                                                                 |
+| `connection`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::Connection)](../../models/shared/connection.md) | :heavy_minus_sign:                                                                   | A connection represents a specific authentication of an integration.                 |
 
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateUnifiedConnectionResponse)](../../models/operations/updateunifiedconnectionresponse.md)**
-
 
 
 
@@ -804,12 +787,12 @@ s.config_security(
 )
 
     
-res = s.unified.update_unified_webhook(id="<value>", webhook=::UnifiedRubySDK::Shared::Webhook.new(
-    connection_id: "<value>",
-    event: ::UnifiedRubySDK::Shared::Event::CREATED,
-    hook_url: "<value>",
-    object_type: ::UnifiedRubySDK::Shared::ObjectType::HRIS_GROUP,
-  ))
+res = s.unified.update_unified_webhook(id="<id>", webhook=::UnifiedRubySDK::Shared::Webhook.new(
+  connection_id: "<id>",
+  event: ::UnifiedRubySDK::Shared::Event::CREATED,
+  hook_url: "https://glaring-postbox.info/",
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::SCIM_GROUPS,
+))
 
 if ! res.webhook.nil?
   # handle response
@@ -819,15 +802,14 @@ end
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Webhook                                                   |
-| `webhook`                                                           | [::UnifiedRubySDK::Shared::Webhook](../../models/shared/webhook.md) | :heavy_minus_sign:                                                  | A webhook is used to POST new/updated information to your server.   |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `id`                                                                           | *::String*                                                                     | :heavy_check_mark:                                                             | ID of the Webhook                                                              |
+| `webhook`                                                                      | [T.nilable(::UnifiedRubySDK::Shared::Webhook)](../../models/shared/webhook.md) | :heavy_minus_sign:                                                             | A webhook is used to POST new/updated information to your server.              |
 
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateUnifiedWebhookResponse)](../../models/operations/updateunifiedwebhookresponse.md)**
-
 
 
 
@@ -849,7 +831,7 @@ s.config_security(
 )
 
     
-res = s.unified.update_unified_webhook_trigger(id="<value>")
+res = s.unified.update_unified_webhook_trigger(id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -866,5 +848,4 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::UpdateUnifiedWebhookTriggerResponse)](../../models/operations/updateunifiedwebhooktriggerresponse.md)**
-
 

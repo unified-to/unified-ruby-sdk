@@ -67,6 +67,7 @@ module UnifiedRubySDK
           res.hris_employee = out
         end
       end
+
       res
     end
 
@@ -110,6 +111,7 @@ module UnifiedRubySDK
           res.hris_employee = out
         end
       end
+
       res
     end
 
@@ -147,6 +149,7 @@ module UnifiedRubySDK
           res.hris_employees = out
         end
       end
+
       res
     end
 
@@ -200,6 +203,7 @@ module UnifiedRubySDK
           res.hris_employee = out
         end
       end
+
       res
     end
 
@@ -234,7 +238,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveHrisEmployeeResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
 
@@ -288,6 +296,7 @@ module UnifiedRubySDK
           res.hris_employee = out
         end
       end
+
       res
     end
   end

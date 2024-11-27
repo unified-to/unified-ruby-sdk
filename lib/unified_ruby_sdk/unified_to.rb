@@ -13,7 +13,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :contact, :invoice, :journal, :organization, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :employee, :group, :payslip, :timeoff, :kms, :page, :space, :martech, :list, :member, :messaging, :channel, :message, :passthrough, :payment, :link, :payout, :refund, :storage, :file, :task, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
+    attr_accessor :accounting, :account, :contact, :invoice, :journal, :order, :organization, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :metadata, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :employee, :group, :payslip, :timeoff, :kms, :page, :space, :lms, :class_, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :passthrough, :payment, :link, :payout, :refund, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :storage, :file, :task, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
 
     sig do
       params(client: Faraday::Request,
@@ -80,6 +80,7 @@ module UnifiedRubySDK
       @contact = Contact.new(@sdk_configuration)
       @invoice = Invoice.new(@sdk_configuration)
       @journal = Journal.new(@sdk_configuration)
+      @order = Order.new(@sdk_configuration)
       @organization = Organization.new(@sdk_configuration)
       @taxrate = Taxrate.new(@sdk_configuration)
       @transaction = Transaction.new(@sdk_configuration)
@@ -98,6 +99,7 @@ module UnifiedRubySDK
       @inventory = Inventory.new(@sdk_configuration)
       @item = Item.new(@sdk_configuration)
       @location = Location.new(@sdk_configuration)
+      @metadata = Metadata.new(@sdk_configuration)
       @crm = Crm.new(@sdk_configuration)
       @deal = Deal.new(@sdk_configuration)
       @event = Event.new(@sdk_configuration)
@@ -116,6 +118,11 @@ module UnifiedRubySDK
       @kms = Kms.new(@sdk_configuration)
       @page = Page.new(@sdk_configuration)
       @space = Space.new(@sdk_configuration)
+      @lms = Lms.new(@sdk_configuration)
+      @class_ = Class.new(@sdk_configuration)
+      @course = Course.new(@sdk_configuration)
+      @instructor = Instructor.new(@sdk_configuration)
+      @student = Student.new(@sdk_configuration)
       @martech = Martech.new(@sdk_configuration)
       @list = List.new(@sdk_configuration)
       @member = Member.new(@sdk_configuration)
@@ -127,6 +134,13 @@ module UnifiedRubySDK
       @link = Link.new(@sdk_configuration)
       @payout = Payout.new(@sdk_configuration)
       @refund = Refund.new(@sdk_configuration)
+      @repo = Repo.new(@sdk_configuration)
+      @branch = Branch.new(@sdk_configuration)
+      @commit = Commit.new(@sdk_configuration)
+      @pullrequest = Pullrequest.new(@sdk_configuration)
+      @repository = Repository.new(@sdk_configuration)
+      @scim = Scim.new(@sdk_configuration)
+      @user = User.new(@sdk_configuration)
       @storage = Storage.new(@sdk_configuration)
       @file = File.new(@sdk_configuration)
       @task = Task.new(@sdk_configuration)

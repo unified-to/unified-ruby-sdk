@@ -67,6 +67,7 @@ module UnifiedRubySDK
           res.messaging_message = out
         end
       end
+
       res
     end
 
@@ -110,6 +111,7 @@ module UnifiedRubySDK
           res.messaging_channel = out
         end
       end
+
       res
     end
 
@@ -153,6 +155,7 @@ module UnifiedRubySDK
           res.messaging_message = out
         end
       end
+
       res
     end
 
@@ -190,6 +193,7 @@ module UnifiedRubySDK
           res.messaging_channels = out
         end
       end
+
       res
     end
 
@@ -227,6 +231,7 @@ module UnifiedRubySDK
           res.messaging_messages = out
         end
       end
+
       res
     end
 
@@ -280,6 +285,7 @@ module UnifiedRubySDK
           res.messaging_message = out
         end
       end
+
       res
     end
 
@@ -314,7 +320,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveMessagingMessageResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
 
@@ -368,6 +378,7 @@ module UnifiedRubySDK
           res.messaging_message = out
         end
       end
+
       res
     end
   end

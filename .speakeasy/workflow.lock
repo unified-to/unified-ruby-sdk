@@ -1,0 +1,30 @@
+speakeasyVersion: 1.448.2
+sources:
+    my-source:
+        sourceNamespace: my-source
+        sourceRevisionDigest: sha256:d44ed7f24d6645d192b52abcd17196e5b326c1b1b4b552d1d54c318071369ea4
+        sourceBlobDigest: sha256:67c147e8682542de89705a35a12d9c69f682f4604d302953b820e9ff08abeffd
+        tags:
+            - latest
+            - speakeasy-sdk-regen-1732737951
+            - "1.0"
+targets:
+    ruby-target:
+        source: my-source
+        sourceNamespace: my-source
+        sourceRevisionDigest: sha256:d44ed7f24d6645d192b52abcd17196e5b326c1b1b4b552d1d54c318071369ea4
+        sourceBlobDigest: sha256:67c147e8682542de89705a35a12d9c69f682f4604d302953b820e9ff08abeffd
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        my-source:
+            inputs:
+                - location: https://api.unified.to/openapi.json
+                  authSecret: $openapi_doc_auth_token
+            registry:
+                location: registry.speakeasyapi.dev/unified/unified/my-source
+    targets:
+        ruby-target:
+            target: ruby
+            source: my-source

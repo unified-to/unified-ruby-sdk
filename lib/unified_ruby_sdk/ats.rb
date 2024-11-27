@@ -67,6 +67,7 @@ module UnifiedRubySDK
           res.ats_activity = out
         end
       end
+
       res
     end
 
@@ -119,6 +120,7 @@ module UnifiedRubySDK
           res.ats_application = out
         end
       end
+
       res
     end
 
@@ -171,6 +173,7 @@ module UnifiedRubySDK
           res.ats_candidate = out
         end
       end
+
       res
     end
 
@@ -223,6 +226,7 @@ module UnifiedRubySDK
           res.ats_document = out
         end
       end
+
       res
     end
 
@@ -275,6 +279,7 @@ module UnifiedRubySDK
           res.ats_interview = out
         end
       end
+
       res
     end
 
@@ -327,6 +332,7 @@ module UnifiedRubySDK
           res.ats_job = out
         end
       end
+
       res
     end
 
@@ -379,6 +385,7 @@ module UnifiedRubySDK
           res.ats_scorecard = out
         end
       end
+
       res
     end
 
@@ -422,6 +429,7 @@ module UnifiedRubySDK
           res.ats_activity = out
         end
       end
+
       res
     end
 
@@ -465,6 +473,7 @@ module UnifiedRubySDK
           res.ats_application = out
         end
       end
+
       res
     end
 
@@ -508,6 +517,7 @@ module UnifiedRubySDK
           res.ats_candidate = out
         end
       end
+
       res
     end
 
@@ -551,6 +561,7 @@ module UnifiedRubySDK
           res.ats_company = out
         end
       end
+
       res
     end
 
@@ -594,6 +605,7 @@ module UnifiedRubySDK
           res.ats_document = out
         end
       end
+
       res
     end
 
@@ -637,6 +649,7 @@ module UnifiedRubySDK
           res.ats_interview = out
         end
       end
+
       res
     end
 
@@ -680,6 +693,7 @@ module UnifiedRubySDK
           res.ats_job = out
         end
       end
+
       res
     end
 
@@ -723,6 +737,7 @@ module UnifiedRubySDK
           res.ats_scorecard = out
         end
       end
+
       res
     end
 
@@ -760,6 +775,7 @@ module UnifiedRubySDK
           res.ats_activities = out
         end
       end
+
       res
     end
 
@@ -797,6 +813,7 @@ module UnifiedRubySDK
           res.ats_applications = out
         end
       end
+
       res
     end
 
@@ -834,6 +851,7 @@ module UnifiedRubySDK
           res.ats_statuses = out
         end
       end
+
       res
     end
 
@@ -871,6 +889,7 @@ module UnifiedRubySDK
           res.ats_candidates = out
         end
       end
+
       res
     end
 
@@ -908,6 +927,7 @@ module UnifiedRubySDK
           res.ats_companies = out
         end
       end
+
       res
     end
 
@@ -945,6 +965,7 @@ module UnifiedRubySDK
           res.ats_documents = out
         end
       end
+
       res
     end
 
@@ -982,6 +1003,7 @@ module UnifiedRubySDK
           res.ats_interviews = out
         end
       end
+
       res
     end
 
@@ -1019,6 +1041,7 @@ module UnifiedRubySDK
           res.ats_jobs = out
         end
       end
+
       res
     end
 
@@ -1056,6 +1079,7 @@ module UnifiedRubySDK
           res.ats_scorecards = out
         end
       end
+
       res
     end
 
@@ -1109,6 +1133,7 @@ module UnifiedRubySDK
           res.ats_activity = out
         end
       end
+
       res
     end
 
@@ -1162,6 +1187,7 @@ module UnifiedRubySDK
           res.ats_application = out
         end
       end
+
       res
     end
 
@@ -1215,6 +1241,7 @@ module UnifiedRubySDK
           res.ats_candidate = out
         end
       end
+
       res
     end
 
@@ -1268,6 +1295,7 @@ module UnifiedRubySDK
           res.ats_document = out
         end
       end
+
       res
     end
 
@@ -1321,6 +1349,7 @@ module UnifiedRubySDK
           res.ats_interview = out
         end
       end
+
       res
     end
 
@@ -1374,6 +1403,7 @@ module UnifiedRubySDK
           res.ats_job = out
         end
       end
+
       res
     end
 
@@ -1427,6 +1457,7 @@ module UnifiedRubySDK
           res.ats_scorecard = out
         end
       end
+
       res
     end
 
@@ -1461,7 +1492,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveAtsActivityResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
 
@@ -1496,7 +1531,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveAtsApplicationResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
 
@@ -1531,7 +1570,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveAtsCandidateResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
 
@@ -1566,7 +1609,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveAtsDocumentResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
 
@@ -1601,7 +1648,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveAtsInterviewResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
 
@@ -1636,7 +1687,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveAtsJobResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
 
@@ -1671,7 +1726,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveAtsScorecardResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
 
@@ -1725,6 +1784,7 @@ module UnifiedRubySDK
           res.ats_activity = out
         end
       end
+
       res
     end
 
@@ -1778,6 +1838,7 @@ module UnifiedRubySDK
           res.ats_application = out
         end
       end
+
       res
     end
 
@@ -1831,6 +1892,7 @@ module UnifiedRubySDK
           res.ats_candidate = out
         end
       end
+
       res
     end
 
@@ -1884,6 +1946,7 @@ module UnifiedRubySDK
           res.ats_document = out
         end
       end
+
       res
     end
 
@@ -1937,6 +2000,7 @@ module UnifiedRubySDK
           res.ats_interview = out
         end
       end
+
       res
     end
 
@@ -1990,6 +2054,7 @@ module UnifiedRubySDK
           res.ats_job = out
         end
       end
+
       res
     end
 
@@ -2043,6 +2108,7 @@ module UnifiedRubySDK
           res.ats_scorecard = out
         end
       end
+
       res
     end
   end

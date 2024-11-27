@@ -52,6 +52,7 @@ module UnifiedRubySDK
           res.ats_statuses = out
         end
       end
+
       res
     end
   end

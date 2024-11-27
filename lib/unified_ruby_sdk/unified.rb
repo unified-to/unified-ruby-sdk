@@ -55,6 +55,7 @@ module UnifiedRubySDK
           res.connection = out
         end
       end
+
       res
     end
 
@@ -102,6 +103,7 @@ module UnifiedRubySDK
           res.webhook = out
         end
       end
+
       res
     end
 
@@ -141,6 +143,7 @@ module UnifiedRubySDK
           res.api_call = out
         end
       end
+
       res
     end
 
@@ -180,6 +183,7 @@ module UnifiedRubySDK
           res.connection = out
         end
       end
+
       res
     end
 
@@ -214,8 +218,8 @@ module UnifiedRubySDK
       )
       if r.status == 200
         res.res = r.env.response_body if Utils.match_content_type(content_type, 'text/plain')
-      
       end
+
       res
     end
 
@@ -255,6 +259,7 @@ module UnifiedRubySDK
           res.webhook = out
         end
       end
+
       res
     end
 
@@ -287,6 +292,7 @@ module UnifiedRubySDK
           res.api_calls = out
         end
       end
+
       res
     end
 
@@ -319,6 +325,7 @@ module UnifiedRubySDK
           res.connections = out
         end
       end
+
       res
     end
 
@@ -357,6 +364,7 @@ module UnifiedRubySDK
           res.integrations = out
         end
       end
+
       res
     end
 
@@ -389,6 +397,7 @@ module UnifiedRubySDK
           res.integrations = out
         end
       end
+
       res
     end
 
@@ -421,6 +430,7 @@ module UnifiedRubySDK
           res.issues = out
         end
       end
+
       res
     end
 
@@ -453,6 +463,7 @@ module UnifiedRubySDK
           res.webhooks = out
         end
       end
+
       res
     end
 
@@ -502,6 +513,7 @@ module UnifiedRubySDK
           res.connection = out
         end
       end
+
       res
     end
 
@@ -551,6 +563,7 @@ module UnifiedRubySDK
           res.webhook = out
         end
       end
+
       res
     end
 
@@ -584,7 +597,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::PatchUnifiedWebhookTriggerResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
 
@@ -618,7 +635,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveUnifiedConnectionResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
 
@@ -652,7 +673,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveUnifiedWebhookResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
 
@@ -702,6 +727,7 @@ module UnifiedRubySDK
           res.connection = out
         end
       end
+
       res
     end
 
@@ -751,6 +777,7 @@ module UnifiedRubySDK
           res.webhook = out
         end
       end
+
       res
     end
 
@@ -784,7 +811,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::UpdateUnifiedWebhookTriggerResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
   end

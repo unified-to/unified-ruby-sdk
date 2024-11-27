@@ -47,6 +47,7 @@ module UnifiedRubySDK
           res.issues = out
         end
       end
+
       res
     end
   end

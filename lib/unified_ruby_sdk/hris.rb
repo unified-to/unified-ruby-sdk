@@ -67,6 +67,7 @@ module UnifiedRubySDK
           res.hris_company = out
         end
       end
+
       res
     end
 
@@ -119,6 +120,7 @@ module UnifiedRubySDK
           res.hris_employee = out
         end
       end
+
       res
     end
 
@@ -171,6 +173,7 @@ module UnifiedRubySDK
           res.hris_group = out
         end
       end
+
       res
     end
 
@@ -223,6 +226,7 @@ module UnifiedRubySDK
           res.hris_location = out
         end
       end
+
       res
     end
 
@@ -266,6 +270,7 @@ module UnifiedRubySDK
           res.hris_company = out
         end
       end
+
       res
     end
 
@@ -309,6 +314,7 @@ module UnifiedRubySDK
           res.hris_employee = out
         end
       end
+
       res
     end
 
@@ -352,6 +358,7 @@ module UnifiedRubySDK
           res.hris_group = out
         end
       end
+
       res
     end
 
@@ -395,6 +402,7 @@ module UnifiedRubySDK
           res.hris_location = out
         end
       end
+
       res
     end
 
@@ -438,6 +446,7 @@ module UnifiedRubySDK
           res.hris_payslip = out
         end
       end
+
       res
     end
 
@@ -481,6 +490,7 @@ module UnifiedRubySDK
           res.hris_timeoff = out
         end
       end
+
       res
     end
 
@@ -518,6 +528,7 @@ module UnifiedRubySDK
           res.hris_companies = out
         end
       end
+
       res
     end
 
@@ -555,6 +566,7 @@ module UnifiedRubySDK
           res.hris_employees = out
         end
       end
+
       res
     end
 
@@ -592,6 +604,7 @@ module UnifiedRubySDK
           res.hris_groups = out
         end
       end
+
       res
     end
 
@@ -629,6 +642,7 @@ module UnifiedRubySDK
           res.hris_locations = out
         end
       end
+
       res
     end
 
@@ -666,6 +680,7 @@ module UnifiedRubySDK
           res.hris_payslips = out
         end
       end
+
       res
     end
 
@@ -703,6 +718,7 @@ module UnifiedRubySDK
           res.hris_timeoffs = out
         end
       end
+
       res
     end
 
@@ -756,6 +772,7 @@ module UnifiedRubySDK
           res.hris_company = out
         end
       end
+
       res
     end
 
@@ -809,6 +826,7 @@ module UnifiedRubySDK
           res.hris_employee = out
         end
       end
+
       res
     end
 
@@ -862,6 +880,7 @@ module UnifiedRubySDK
           res.hris_group = out
         end
       end
+
       res
     end
 
@@ -915,6 +934,7 @@ module UnifiedRubySDK
           res.hris_location = out
         end
       end
+
       res
     end
 
@@ -949,7 +969,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveHrisCompanyResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
 
@@ -984,7 +1008,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveHrisEmployeeResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
 
@@ -1019,7 +1047,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveHrisGroupResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
 
@@ -1054,7 +1086,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveHrisLocationResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
 
@@ -1108,6 +1144,7 @@ module UnifiedRubySDK
           res.hris_company = out
         end
       end
+
       res
     end
 
@@ -1161,6 +1198,7 @@ module UnifiedRubySDK
           res.hris_employee = out
         end
       end
+
       res
     end
 
@@ -1214,6 +1252,7 @@ module UnifiedRubySDK
           res.hris_group = out
         end
       end
+
       res
     end
 
@@ -1267,6 +1306,7 @@ module UnifiedRubySDK
           res.hris_location = out
         end
       end
+
       res
     end
   end

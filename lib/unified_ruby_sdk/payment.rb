@@ -67,6 +67,7 @@ module UnifiedRubySDK
           res.payment_link = out
         end
       end
+
       res
     end
 
@@ -119,6 +120,7 @@ module UnifiedRubySDK
           res.payment_payment = out
         end
       end
+
       res
     end
 
@@ -162,6 +164,7 @@ module UnifiedRubySDK
           res.payment_link = out
         end
       end
+
       res
     end
 
@@ -205,6 +208,7 @@ module UnifiedRubySDK
           res.payment_payment = out
         end
       end
+
       res
     end
 
@@ -248,6 +252,7 @@ module UnifiedRubySDK
           res.payment_payout = out
         end
       end
+
       res
     end
 
@@ -291,6 +296,7 @@ module UnifiedRubySDK
           res.payment_refund = out
         end
       end
+
       res
     end
 
@@ -328,6 +334,7 @@ module UnifiedRubySDK
           res.payment_links = out
         end
       end
+
       res
     end
 
@@ -365,6 +372,7 @@ module UnifiedRubySDK
           res.payment_payments = out
         end
       end
+
       res
     end
 
@@ -402,6 +410,7 @@ module UnifiedRubySDK
           res.payment_payouts = out
         end
       end
+
       res
     end
 
@@ -439,6 +448,7 @@ module UnifiedRubySDK
           res.payment_refunds = out
         end
       end
+
       res
     end
 
@@ -492,6 +502,7 @@ module UnifiedRubySDK
           res.payment_link = out
         end
       end
+
       res
     end
 
@@ -545,6 +556,7 @@ module UnifiedRubySDK
           res.payment_payment = out
         end
       end
+
       res
     end
 
@@ -579,7 +591,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemovePaymentLinkResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
 
@@ -614,7 +630,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemovePaymentPaymentResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
 
@@ -668,6 +688,7 @@ module UnifiedRubySDK
           res.payment_link = out
         end
       end
+
       res
     end
 
@@ -721,6 +742,7 @@ module UnifiedRubySDK
           res.payment_payment = out
         end
       end
+
       res
     end
   end

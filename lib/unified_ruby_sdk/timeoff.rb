@@ -58,6 +58,7 @@ module UnifiedRubySDK
           res.hris_timeoff = out
         end
       end
+
       res
     end
 
@@ -95,6 +96,7 @@ module UnifiedRubySDK
           res.hris_timeoffs = out
         end
       end
+
       res
     end
   end

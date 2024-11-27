@@ -12,6 +12,7 @@
 | `ACCOUNTING_INVOICE`      | accounting_invoice        |
 | `ACCOUNTING_TAXRATE`      | accounting_taxrate        |
 | `ACCOUNTING_ORGANIZATION` | accounting_organization   |
+| `ACCOUNTING_ORDER`        | accounting_order          |
 | `PAYMENT_PAYMENT`         | payment_payment           |
 | `PAYMENT_LINK`            | payment_link              |
 | `PAYMENT_PAYOUT`          | payment_payout            |
@@ -20,6 +21,7 @@
 | `COMMERCE_COLLECTION`     | commerce_collection       |
 | `COMMERCE_INVENTORY`      | commerce_inventory        |
 | `COMMERCE_LOCATION`       | commerce_location         |
+| `COMMERCE_METADATA`       | commerce_metadata         |
 | `ATS_ACTIVITY`            | ats_activity              |
 | `ATS_APPLICATION`         | ats_application           |
 | `ATS_APPLICATIONSTATUS`   | ats_applicationstatus     |
@@ -60,3 +62,14 @@
 | `KMS_PAGE`                | kms_page                  |
 | `TASK_PROJECT`            | task_project              |
 | `TASK_TASK`               | task_task                 |
+| `SCIM_USERS`              | scim_users                |
+| `SCIM_GROUPS`             | scim_groups               |
+| `LMS_COURSE`              | lms_course                |
+| `LMS_CLASS`               | lms_class                 |
+| `LMS_STUDENT`             | lms_student               |
+| `LMS_INSTRUCTOR`          | lms_instructor            |
+| `REPO_ORGANIZATION`       | repo_organization         |
+| `REPO_REPOSITORY`         | repo_repository           |
+| `REPO_BRANCH`             | repo_branch               |
+| `REPO_COMMIT`             | repo_commit               |
+| `REPO_PULLREQUEST`        | repo_pullrequest          |

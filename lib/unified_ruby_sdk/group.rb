@@ -67,6 +67,57 @@ module UnifiedRubySDK
           res.hris_group = out
         end
       end
+
+      res
+    end
+
+
+    sig { params(connection_id: ::String, scim_group: T.nilable(::UnifiedRubySDK::Shared::ScimGroup)).returns(::UnifiedRubySDK::Operations::CreateScimGroupsResponse) }
+    def create_scim_groups(connection_id, scim_group = nil)
+      # create_scim_groups - Create group
+      request = ::UnifiedRubySDK::Operations::CreateScimGroupsRequest.new(
+        
+        connection_id: connection_id,
+        scim_group: scim_group
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::CreateScimGroupsRequest,
+        base_url,
+        '/scim/{connection_id}/groups',
+        request
+      )
+      headers = {}
+      req_content_type, data, form = Utils.serialize_request_body(request, :scim_group, :json)
+      headers['content-type'] = req_content_type
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.post(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        if form
+          req.body = Utils.encode_form(form)
+        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+          req.body = URI.encode_www_form(data)
+        else
+          req.body = data
+        end
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::CreateScimGroupsResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::ScimGroup)
+          res.scim_group = out
+        end
+      end
+
       res
     end
 
@@ -110,6 +161,48 @@ module UnifiedRubySDK
           res.hris_group = out
         end
       end
+
+      res
+    end
+
+
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::GetScimGroupsResponse) }
+    def get_scim_groups(connection_id, id)
+      # get_scim_groups - Get group
+      request = ::UnifiedRubySDK::Operations::GetScimGroupsRequest.new(
+        
+        connection_id: connection_id,
+        id: id
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::GetScimGroupsRequest,
+        base_url,
+        '/scim/{connection_id}/groups/{id}',
+        request
+      )
+      headers = {}
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.get(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::GetScimGroupsResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::ScimGroup)
+          res.scim_group = out
+        end
+      end
+
       res
     end
 
@@ -147,6 +240,45 @@ module UnifiedRubySDK
           res.hris_groups = out
         end
       end
+
+      res
+    end
+
+
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListScimGroupsRequest)).returns(::UnifiedRubySDK::Operations::ListScimGroupsResponse) }
+    def list_scim_groups(request)
+      # list_scim_groups - List groups
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::ListScimGroupsRequest,
+        base_url,
+        '/scim/{connection_id}/groups',
+        request
+      )
+      headers = {}
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::ListScimGroupsRequest, request)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.get(url) do |req|
+        req.headers = headers
+        req.params = query_params
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::ListScimGroupsResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, T::Array[::UnifiedRubySDK::Shared::ScimGroup])
+          res.scim_groups = out
+        end
+      end
+
       res
     end
 
@@ -200,6 +332,58 @@ module UnifiedRubySDK
           res.hris_group = out
         end
       end
+
+      res
+    end
+
+
+    sig { params(connection_id: ::String, id: ::String, scim_group: T.nilable(::UnifiedRubySDK::Shared::ScimGroup)).returns(::UnifiedRubySDK::Operations::PatchScimGroupsResponse) }
+    def patch_scim_groups(connection_id, id, scim_group = nil)
+      # patch_scim_groups - Update group
+      request = ::UnifiedRubySDK::Operations::PatchScimGroupsRequest.new(
+        
+        connection_id: connection_id,
+        id: id,
+        scim_group: scim_group
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::PatchScimGroupsRequest,
+        base_url,
+        '/scim/{connection_id}/groups/{id}',
+        request
+      )
+      headers = {}
+      req_content_type, data, form = Utils.serialize_request_body(request, :scim_group, :json)
+      headers['content-type'] = req_content_type
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.patch(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        if form
+          req.body = Utils.encode_form(form)
+        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+          req.body = URI.encode_www_form(data)
+        else
+          req.body = data
+        end
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::PatchScimGroupsResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::ScimGroup)
+          res.scim_group = out
+        end
+      end
+
       res
     end
 
@@ -234,7 +418,50 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveHrisGroupResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
+      res
+    end
+
+
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveScimGroupsResponse) }
+    def remove_scim_groups(connection_id, id)
+      # remove_scim_groups - Delete group
+      request = ::UnifiedRubySDK::Operations::RemoveScimGroupsRequest.new(
+        
+        connection_id: connection_id,
+        id: id
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::RemoveScimGroupsRequest,
+        base_url,
+        '/scim/{connection_id}/groups/{id}',
+        request
+      )
+      headers = {}
+      headers['Accept'] = '*/*'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.delete(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::RemoveScimGroupsResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
 
@@ -288,6 +515,58 @@ module UnifiedRubySDK
           res.hris_group = out
         end
       end
+
+      res
+    end
+
+
+    sig { params(connection_id: ::String, id: ::String, scim_group: T.nilable(::UnifiedRubySDK::Shared::ScimGroup)).returns(::UnifiedRubySDK::Operations::UpdateScimGroupsResponse) }
+    def update_scim_groups(connection_id, id, scim_group = nil)
+      # update_scim_groups - Update group
+      request = ::UnifiedRubySDK::Operations::UpdateScimGroupsRequest.new(
+        
+        connection_id: connection_id,
+        id: id,
+        scim_group: scim_group
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::UpdateScimGroupsRequest,
+        base_url,
+        '/scim/{connection_id}/groups/{id}',
+        request
+      )
+      headers = {}
+      req_content_type, data, form = Utils.serialize_request_body(request, :scim_group, :json)
+      headers['content-type'] = req_content_type
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.put(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        if form
+          req.body = Utils.encode_form(form)
+        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+          req.body = URI.encode_www_form(data)
+        else
+          req.body = data
+        end
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::UpdateScimGroupsResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::ScimGroup)
+          res.scim_group = out
+        end
+      end
+
       res
     end
   end

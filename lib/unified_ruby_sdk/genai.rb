@@ -67,6 +67,7 @@ module UnifiedRubySDK
           res.genai_prompt = out
         end
       end
+
       res
     end
 
@@ -104,6 +105,7 @@ module UnifiedRubySDK
           res.genai_models = out
         end
       end
+
       res
     end
   end

@@ -58,6 +58,7 @@ module UnifiedRubySDK
           res.hris_payslip = out
         end
       end
+
       res
     end
 
@@ -95,6 +96,7 @@ module UnifiedRubySDK
           res.hris_payslips = out
         end
       end
+
       res
     end
   end

@@ -58,6 +58,7 @@ module UnifiedRubySDK
           res.payment_payout = out
         end
       end
+
       res
     end
 
@@ -95,6 +96,7 @@ module UnifiedRubySDK
           res.payment_payouts = out
         end
       end
+
       res
     end
   end

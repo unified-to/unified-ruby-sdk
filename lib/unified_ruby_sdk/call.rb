@@ -52,6 +52,7 @@ module UnifiedRubySDK
           res.uc_calls = out
         end
       end
+
       res
     end
   end

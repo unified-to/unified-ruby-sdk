@@ -1,0 +1,17 @@
+# RepoRepository
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `created_at`                                                         | [Date](https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html) | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `description`                                                        | *T.nilable(::String)*                                                | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `id`                                                                 | *T.nilable(::String)*                                                | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `is_private`                                                         | *T.nilable(T::Boolean)*                                              | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `name`                                                               | *::String*                                                           | :heavy_check_mark:                                                   | N/A                                                                  |
+| `org_id`                                                             | *T.nilable(::String)*                                                | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `owner`                                                              | *T.nilable(::String)*                                                | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `raw`                                                                | T::Hash[Symbol, *::Object*]                                          | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `updated_at`                                                         | [Date](https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html) | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `web_url`                                                            | *T.nilable(::String)*                                                | :heavy_minus_sign:                                                   | N/A                                                                  |

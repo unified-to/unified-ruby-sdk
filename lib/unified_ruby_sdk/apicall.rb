@@ -54,6 +54,7 @@ module UnifiedRubySDK
           res.api_call = out
         end
       end
+
       res
     end
 
@@ -86,6 +87,7 @@ module UnifiedRubySDK
           res.api_calls = out
         end
       end
+
       res
     end
   end

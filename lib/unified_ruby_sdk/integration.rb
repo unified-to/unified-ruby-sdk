@@ -49,8 +49,8 @@ module UnifiedRubySDK
       )
       if r.status == 200
         res.res = r.env.response_body if Utils.match_content_type(content_type, 'text/plain')
-      
       end
+
       res
     end
 
@@ -89,6 +89,7 @@ module UnifiedRubySDK
           res.integrations = out
         end
       end
+
       res
     end
 
@@ -121,6 +122,7 @@ module UnifiedRubySDK
           res.integrations = out
         end
       end
+
       res
     end
   end

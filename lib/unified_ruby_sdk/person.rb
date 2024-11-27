@@ -52,6 +52,7 @@ module UnifiedRubySDK
           res.enrich_person = out
         end
       end
+
       res
     end
   end

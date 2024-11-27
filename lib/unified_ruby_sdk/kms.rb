@@ -67,6 +67,7 @@ module UnifiedRubySDK
           res.kms_page = out
         end
       end
+
       res
     end
 
@@ -119,6 +120,7 @@ module UnifiedRubySDK
           res.kms_space = out
         end
       end
+
       res
     end
 
@@ -162,6 +164,7 @@ module UnifiedRubySDK
           res.kms_page = out
         end
       end
+
       res
     end
 
@@ -205,6 +208,7 @@ module UnifiedRubySDK
           res.kms_space = out
         end
       end
+
       res
     end
 
@@ -242,6 +246,7 @@ module UnifiedRubySDK
           res.kms_pages = out
         end
       end
+
       res
     end
 
@@ -279,6 +284,7 @@ module UnifiedRubySDK
           res.kms_spaces = out
         end
       end
+
       res
     end
 
@@ -332,6 +338,7 @@ module UnifiedRubySDK
           res.kms_page = out
         end
       end
+
       res
     end
 
@@ -385,6 +392,7 @@ module UnifiedRubySDK
           res.kms_space = out
         end
       end
+
       res
     end
 
@@ -419,7 +427,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveKmsPageResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
 
@@ -454,7 +466,11 @@ module UnifiedRubySDK
       res = ::UnifiedRubySDK::Operations::RemoveKmsSpaceResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
-      
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
       res
     end
 
@@ -508,6 +524,7 @@ module UnifiedRubySDK
           res.kms_page = out
         end
       end
+
       res
     end
 
@@ -561,6 +578,7 @@ module UnifiedRubySDK
           res.kms_space = out
         end
       end
+
       res
     end
   end
