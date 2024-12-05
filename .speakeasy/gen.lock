@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: a69d016e113a8d9eb83404e95207c9eb
+  docChecksum: 3707cd341db19ec6652e51126ae52977
   docVersion: "1.0"
-  speakeasyVersion: 1.448.2
-  generationVersion: 2.467.4
-  releaseVersion: 0.5.0
-  configChecksum: bfd165c64b3d55c7758164903e75ffd0
+  speakeasyVersion: 1.451.4
+  generationVersion: 2.471.2
+  releaseVersion: 0.5.1
+  configChecksum: 5156d4fd843258339ffd600610502795
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -893,6 +893,7 @@ generatedFiles:
   - docs/models/shared/issue.md
   - docs/models/shared/issuestatus.md
   - docs/models/shared/kmspage.md
+  - docs/models/shared/kmspagemetadata.md
   - docs/models/shared/kmspagetype.md
   - docs/models/shared/kmsspace.md
   - docs/models/shared/listaccountid.md
@@ -2100,6 +2101,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/issue_status.rb
   - lib/unified_ruby_sdk/models/shared/kmspage.rb
   - lib/unified_ruby_sdk/models/shared/kmspage_type.rb
+  - lib/unified_ruby_sdk/models/shared/kmspagemetadata.rb
   - lib/unified_ruby_sdk/models/shared/kmsspace.rb
   - lib/unified_ruby_sdk/models/shared/list_account_id.rb
   - lib/unified_ruby_sdk/models/shared/list_application_id.rb

@@ -22,6 +22,8 @@ module UnifiedRubySDK
 
       field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
+      field :parent_page_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_page_id') } }
+
       field :parent_space_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_space_id') } }
 
       field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
@@ -31,13 +33,14 @@ module UnifiedRubySDK
       field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
 
-      sig { params(name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), parent_space_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-      def initialize(name: nil, created_at: nil, description: nil, id: nil, is_active: nil, parent_space_id: nil, raw: nil, updated_at: nil, user_id: nil)
+      sig { params(name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), parent_page_id: T.nilable(::String), parent_space_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+      def initialize(name: nil, created_at: nil, description: nil, id: nil, is_active: nil, parent_page_id: nil, parent_space_id: nil, raw: nil, updated_at: nil, user_id: nil)
         @name = name
         @created_at = created_at
         @description = description
         @id = id
         @is_active = is_active
+        @parent_page_id = parent_page_id
         @parent_space_id = parent_space_id
         @raw = raw
         @updated_at = updated_at

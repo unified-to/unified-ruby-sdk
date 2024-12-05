@@ -164,6 +164,7 @@ module UnifiedRubySDK
     autoload :ScimGroupMember, 'unified_ruby_sdk/models/shared/scimgroupmember.rb'
     autoload :KmsPageType, 'unified_ruby_sdk/models/shared/kmspage_type.rb'
     autoload :KmsPage, 'unified_ruby_sdk/models/shared/kmspage.rb'
+    autoload :KmsPageMetadata, 'unified_ruby_sdk/models/shared/kmspagemetadata.rb'
     autoload :KmsSpace, 'unified_ruby_sdk/models/shared/kmsspace.rb'
     autoload :LmsClass, 'unified_ruby_sdk/models/shared/lmsclass.rb'
     autoload :LmsMediaType, 'unified_ruby_sdk/models/shared/lmsmedia_type.rb'

@@ -11,3 +11,7 @@ targets:
     ruby-target:
         target: ruby
         source: my-source
+        codeSamples:
+            registry:
+                location: registry.speakeasyapi.dev/unified/unified/my-source-ruby-code-samples
+            blocking: false
