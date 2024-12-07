@@ -11,14 +11,14 @@ module UnifiedRubySDK
     class ListUnifiedWebhooksRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
-      # A connection represents a specific authentication of an integration.
-      field :connection_id, T.nilable(::UnifiedRubySDK::Operations::ConnectionId), { 'query_param': { 'field_name': 'connection_id', 'style': 'form', 'explode': true } }
+      # Filter the results to just this integration
+      field :connection_id, T.nilable(::String), { 'query_param': { 'field_name': 'connection_id', 'style': 'form', 'explode': true } }
       # Return only results whose created date is equal or less to this value
       field :created_lte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'created_lte', 'style': 'form', 'explode': true } }
 
       field :env, T.nilable(::String), { 'query_param': { 'field_name': 'env', 'style': 'form', 'explode': true } }
-      # Informational object for supported integrations.
-      field :integration_type, T.nilable(::UnifiedRubySDK::Operations::IntegrationType), { 'query_param': { 'field_name': 'integration_type', 'style': 'form', 'explode': true } }
+      # Filter the results to just this integration
+      field :integration_type, T.nilable(::String), { 'query_param': { 'field_name': 'integration_type', 'style': 'form', 'explode': true } }
 
       field :limit, T.nilable(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
       # Filter the results for webhooks for only this object
@@ -33,7 +33,7 @@ module UnifiedRubySDK
       field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: T.nilable(::UnifiedRubySDK::Operations::ConnectionId), created_lte: T.nilable(::DateTime), env: T.nilable(::String), integration_type: T.nilable(::UnifiedRubySDK::Operations::IntegrationType), limit: T.nilable(::Float), object: T.nilable(::String), offset: T.nilable(::Float), order: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
+      sig { params(connection_id: T.nilable(::String), created_lte: T.nilable(::DateTime), env: T.nilable(::String), integration_type: T.nilable(::String), limit: T.nilable(::Float), object: T.nilable(::String), offset: T.nilable(::Float), order: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
       def initialize(connection_id: nil, created_lte: nil, env: nil, integration_type: nil, limit: nil, object: nil, offset: nil, order: nil, sort: nil, updated_gte: nil)
         @connection_id = connection_id
         @created_lte = created_lte

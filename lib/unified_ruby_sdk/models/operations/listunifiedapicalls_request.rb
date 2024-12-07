@@ -11,7 +11,7 @@ module UnifiedRubySDK
     class ListUnifiedApicallsRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
-      # Filter the results to just this integration's API calls
+      # Filter the results to just this integration
       field :connection_id, T.nilable(::String), { 'query_param': { 'field_name': 'connection_id', 'style': 'form', 'explode': true } }
 
       field :env, T.nilable(::String), { 'query_param': { 'field_name': 'env', 'style': 'form', 'explode': true } }
@@ -19,7 +19,7 @@ module UnifiedRubySDK
       field :error, T.nilable(T::Boolean), { 'query_param': { 'field_name': 'error', 'style': 'form', 'explode': true } }
       # Filter the results to only those integrations for your user referenced by this value
       field :external_xref, T.nilable(::String), { 'query_param': { 'field_name': 'external_xref', 'style': 'form', 'explode': true } }
-      # Filter the results for connections with this integration
+      # Filter the results to just this integration
       field :integration_type, T.nilable(::String), { 'query_param': { 'field_name': 'integration_type', 'style': 'form', 'explode': true } }
 
       field :limit, T.nilable(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }

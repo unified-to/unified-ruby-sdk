@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: fdbcce3cd82999739c54ae5c1af3eaae
+  docChecksum: 42f573170bad12dc387a71808ef7cd22
   docVersion: "1.0"
-  speakeasyVersion: 1.453.0
-  generationVersion: 2.472.1
-  releaseVersion: 0.5.2
-  configChecksum: b351b551d60ec5dca699bca5b0729beb
+  speakeasyVersion: 1.453.1
+  generationVersion: 2.474.4
+  releaseVersion: 0.5.3
+  configChecksum: f97ad7f6662912e27b7091addf697bbd
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
 features:
   ruby:
-    core: 3.4.1
+    core: 3.4.2
     flattening: 2.81.1
     globalSecurity: 2.81.7
     globalServerURLs: 2.82.3
@@ -25,7 +25,6 @@ generatedFiles:
   - Rakefile
   - USAGE.md
   - docs/models/operations/categories.md
-  - docs/models/operations/connectionid.md
   - docs/models/operations/createaccountingaccountrequest.md
   - docs/models/operations/createaccountingaccountresponse.md
   - docs/models/operations/createaccountingcontactrequest.md
@@ -275,7 +274,6 @@ generatedFiles:
   - docs/models/operations/getunifiedintegrationloginresponse.md
   - docs/models/operations/getunifiedwebhookrequest.md
   - docs/models/operations/getunifiedwebhookresponse.md
-  - docs/models/operations/integrationtype.md
   - docs/models/operations/listaccountingaccountsrequest.md
   - docs/models/operations/listaccountingaccountsresponse.md
   - docs/models/operations/listaccountingcontactsrequest.md
@@ -923,6 +921,7 @@ generatedFiles:
   - docs/models/shared/listprojectid.md
   - docs/models/shared/listquery.md
   - docs/models/shared/listrawfields.md
+  - docs/models/shared/listrootid.md
   - docs/models/shared/listsortbycreatedat.md
   - docs/models/shared/listsortbyname.md
   - docs/models/shared/listsortbyupdatedat.md
@@ -1231,7 +1230,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/model.rb
   - lib/unified_ruby_sdk/models/operations.rb
   - lib/unified_ruby_sdk/models/operations/categories.rb
-  - lib/unified_ruby_sdk/models/operations/connection_id.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingaccount_request.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingaccount_response.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingcontact_request.rb
@@ -1481,7 +1479,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getunifiedintegrationlogin_response.rb
   - lib/unified_ruby_sdk/models/operations/getunifiedwebhook_request.rb
   - lib/unified_ruby_sdk/models/operations/getunifiedwebhook_response.rb
-  - lib/unified_ruby_sdk/models/operations/integration_type.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingaccounts_request.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingaccounts_response.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingcontacts_request.rb
@@ -2130,6 +2127,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_project_id.rb
   - lib/unified_ruby_sdk/models/shared/list_query.rb
   - lib/unified_ruby_sdk/models/shared/list_raw_fields.rb
+  - lib/unified_ruby_sdk/models/shared/list_root_id.rb
   - lib/unified_ruby_sdk/models/shared/list_sort_by_created_at.rb
   - lib/unified_ruby_sdk/models/shared/list_sort_by_name.rb
   - lib/unified_ruby_sdk/models/shared/list_sort_by_updated_at.rb

@@ -358,7 +358,7 @@ module UnifiedRubySDK
 
     sig { params(content_type: String, pattern: String).returns(T::Boolean) }
     def self.match_content_type(content_type, pattern)
-      return true if content_type == pattern || pattern == '*' || pattern == '*/*'
+      return true if content_type == pattern || ['*', '*/*'].include?(pattern)
 
       pieces = content_type.split(';')
       pieces.each do |piece|

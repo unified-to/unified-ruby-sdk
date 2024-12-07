@@ -285,6 +285,7 @@ module UnifiedRubySDK
     autoload :ListProjectId, 'unified_ruby_sdk/models/shared/list_project_id.rb'
     autoload :ListQuery, 'unified_ruby_sdk/models/shared/list_query.rb'
     autoload :ListRawFields, 'unified_ruby_sdk/models/shared/list_raw_fields.rb'
+    autoload :ListRootId, 'unified_ruby_sdk/models/shared/list_root_id.rb'
     autoload :ListSortByCreatedAt, 'unified_ruby_sdk/models/shared/list_sort_by_created_at.rb'
     autoload :ListSortByName, 'unified_ruby_sdk/models/shared/list_sort_by_name.rb'
     autoload :ListSortByUpdatedAt, 'unified_ruby_sdk/models/shared/list_sort_by_updated_at.rb'

@@ -28,13 +28,15 @@ module UnifiedRubySDK
       # Query string to search. eg. email address or name
       field :query, T.nilable(::String), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
 
+      field :root_id, T.nilable(::String), { 'query_param': { 'field_name': 'root_id', 'style': 'form', 'explode': true } }
+
       field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
       # Return only results whose updated date is equal or greater to this value
       field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, channel_id: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
-      def initialize(connection_id: nil, channel_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, parent_id: nil, query: nil, sort: nil, updated_gte: nil)
+      sig { params(connection_id: ::String, channel_id: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), root_id: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
+      def initialize(connection_id: nil, channel_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, parent_id: nil, query: nil, root_id: nil, sort: nil, updated_gte: nil)
         @connection_id = connection_id
         @channel_id = channel_id
         @fields_ = fields_
@@ -43,6 +45,7 @@ module UnifiedRubySDK
         @order = order
         @parent_id = parent_id
         @query = query
+        @root_id = root_id
         @sort = sort
         @updated_gte = updated_gte
       end
