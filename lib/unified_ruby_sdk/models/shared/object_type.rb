@@ -26,7 +26,6 @@ module UnifiedRubySDK
         COMMERCE_COLLECTION = new('commerce_collection')
         COMMERCE_INVENTORY = new('commerce_inventory')
         COMMERCE_LOCATION = new('commerce_location')
-        COMMERCE_METADATA = new('commerce_metadata')
         ATS_ACTIVITY = new('ats_activity')
         ATS_APPLICATION = new('ats_application')
         ATS_APPLICATIONSTATUS = new('ats_applicationstatus')
@@ -78,6 +77,7 @@ module UnifiedRubySDK
         REPO_BRANCH = new('repo_branch')
         REPO_COMMIT = new('repo_commit')
         REPO_PULLREQUEST = new('repo_pullrequest')
+        METADATA_METADATA = new('metadata_metadata')
       end
     end
   end

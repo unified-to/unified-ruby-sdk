@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 42f573170bad12dc387a71808ef7cd22
+  docChecksum: 41f6fed774011bab102d612247a8bfd9
   docVersion: "1.0"
-  speakeasyVersion: 1.453.1
-  generationVersion: 2.474.4
-  releaseVersion: 0.5.3
-  configChecksum: f97ad7f6662912e27b7091addf697bbd
+  speakeasyVersion: 1.453.10
+  generationVersion: 2.474.15
+  releaseVersion: 0.5.4
+  configChecksum: 9309f740a49d6aaf5d2db7dfc6c62c15
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -61,8 +61,6 @@ generatedFiles:
   - docs/models/operations/createcommerceitemresponse.md
   - docs/models/operations/createcommercelocationrequest.md
   - docs/models/operations/createcommercelocationresponse.md
-  - docs/models/operations/createcommercemetadatarequest.md
-  - docs/models/operations/createcommercemetadataresponse.md
   - docs/models/operations/createcrmcompanyrequest.md
   - docs/models/operations/createcrmcompanyresponse.md
   - docs/models/operations/createcrmcontactrequest.md
@@ -103,6 +101,8 @@ generatedFiles:
   - docs/models/operations/createmartechmemberresponse.md
   - docs/models/operations/createmessagingmessagerequest.md
   - docs/models/operations/createmessagingmessageresponse.md
+  - docs/models/operations/createmetadatametadatarequest.md
+  - docs/models/operations/createmetadatametadataresponse.md
   - docs/models/operations/createpassthroughjsonrequest.md
   - docs/models/operations/createpassthroughjsonresponse.md
   - docs/models/operations/createpassthroughrawrequest.md
@@ -182,8 +182,6 @@ generatedFiles:
   - docs/models/operations/getcommerceitemresponse.md
   - docs/models/operations/getcommercelocationrequest.md
   - docs/models/operations/getcommercelocationresponse.md
-  - docs/models/operations/getcommercemetadatarequest.md
-  - docs/models/operations/getcommercemetadataresponse.md
   - docs/models/operations/getcrmcompanyrequest.md
   - docs/models/operations/getcrmcompanyresponse.md
   - docs/models/operations/getcrmcontactrequest.md
@@ -228,6 +226,8 @@ generatedFiles:
   - docs/models/operations/getmessagingchannelresponse.md
   - docs/models/operations/getmessagingmessagerequest.md
   - docs/models/operations/getmessagingmessageresponse.md
+  - docs/models/operations/getmetadatametadatarequest.md
+  - docs/models/operations/getmetadatametadataresponse.md
   - docs/models/operations/getpaymentlinkrequest.md
   - docs/models/operations/getpaymentlinkresponse.md
   - docs/models/operations/getpaymentpaymentrequest.md
@@ -316,8 +316,6 @@ generatedFiles:
   - docs/models/operations/listcommerceitemsresponse.md
   - docs/models/operations/listcommercelocationsrequest.md
   - docs/models/operations/listcommercelocationsresponse.md
-  - docs/models/operations/listcommercemetadatasrequest.md
-  - docs/models/operations/listcommercemetadatasresponse.md
   - docs/models/operations/listcrmcompaniesrequest.md
   - docs/models/operations/listcrmcompaniesresponse.md
   - docs/models/operations/listcrmcontactsrequest.md
@@ -368,6 +366,8 @@ generatedFiles:
   - docs/models/operations/listmessagingchannelsresponse.md
   - docs/models/operations/listmessagingmessagesrequest.md
   - docs/models/operations/listmessagingmessagesresponse.md
+  - docs/models/operations/listmetadatametadatasrequest.md
+  - docs/models/operations/listmetadatametadatasresponse.md
   - docs/models/operations/listpassthroughsrequest.md
   - docs/models/operations/listpassthroughsresponse.md
   - docs/models/operations/listpaymentlinksrequest.md
@@ -457,8 +457,6 @@ generatedFiles:
   - docs/models/operations/patchcommerceitemresponse.md
   - docs/models/operations/patchcommercelocationrequest.md
   - docs/models/operations/patchcommercelocationresponse.md
-  - docs/models/operations/patchcommercemetadatarequest.md
-  - docs/models/operations/patchcommercemetadataresponse.md
   - docs/models/operations/patchcrmcompanyrequest.md
   - docs/models/operations/patchcrmcompanyresponse.md
   - docs/models/operations/patchcrmcontactrequest.md
@@ -497,6 +495,8 @@ generatedFiles:
   - docs/models/operations/patchmartechmemberresponse.md
   - docs/models/operations/patchmessagingmessagerequest.md
   - docs/models/operations/patchmessagingmessageresponse.md
+  - docs/models/operations/patchmetadatametadatarequest.md
+  - docs/models/operations/patchmetadatametadataresponse.md
   - docs/models/operations/patchpassthroughjsonrequest.md
   - docs/models/operations/patchpassthroughjsonresponse.md
   - docs/models/operations/patchpassthroughrawrequest.md
@@ -576,8 +576,6 @@ generatedFiles:
   - docs/models/operations/removecommerceitemresponse.md
   - docs/models/operations/removecommercelocationrequest.md
   - docs/models/operations/removecommercelocationresponse.md
-  - docs/models/operations/removecommercemetadatarequest.md
-  - docs/models/operations/removecommercemetadataresponse.md
   - docs/models/operations/removecrmcompanyrequest.md
   - docs/models/operations/removecrmcompanyresponse.md
   - docs/models/operations/removecrmcontactrequest.md
@@ -616,6 +614,8 @@ generatedFiles:
   - docs/models/operations/removemartechmemberresponse.md
   - docs/models/operations/removemessagingmessagerequest.md
   - docs/models/operations/removemessagingmessageresponse.md
+  - docs/models/operations/removemetadatametadatarequest.md
+  - docs/models/operations/removemetadatametadataresponse.md
   - docs/models/operations/removepassthroughrequest.md
   - docs/models/operations/removepassthroughresponse.md
   - docs/models/operations/removepaymentlinkrequest.md
@@ -691,8 +691,6 @@ generatedFiles:
   - docs/models/operations/updatecommerceitemresponse.md
   - docs/models/operations/updatecommercelocationrequest.md
   - docs/models/operations/updatecommercelocationresponse.md
-  - docs/models/operations/updatecommercemetadatarequest.md
-  - docs/models/operations/updatecommercemetadataresponse.md
   - docs/models/operations/updatecrmcompanyrequest.md
   - docs/models/operations/updatecrmcompanyresponse.md
   - docs/models/operations/updatecrmcontactrequest.md
@@ -731,6 +729,8 @@ generatedFiles:
   - docs/models/operations/updatemartechmemberresponse.md
   - docs/models/operations/updatemessagingmessagerequest.md
   - docs/models/operations/updatemessagingmessageresponse.md
+  - docs/models/operations/updatemetadatametadatarequest.md
+  - docs/models/operations/updatemetadatametadataresponse.md
   - docs/models/operations/updatepassthroughjsonrequest.md
   - docs/models/operations/updatepassthroughjsonresponse.md
   - docs/models/operations/updatepassthroughrawrequest.md
@@ -835,7 +835,6 @@ generatedFiles:
   - docs/models/shared/commerceitemprice.md
   - docs/models/shared/commerceitemvariant.md
   - docs/models/shared/commercelocation.md
-  - docs/models/shared/commercemetadata.md
   - docs/models/shared/connection.md
   - docs/models/shared/crmcompany.md
   - docs/models/shared/crmcontact.md
@@ -949,6 +948,7 @@ generatedFiles:
   - docs/models/shared/messagingchannel.md
   - docs/models/shared/messagingmember.md
   - docs/models/shared/messagingmessage.md
+  - docs/models/shared/metadatametadata.md
   - docs/models/shared/nativewebhookparentid.md
   - docs/models/shared/nativewebhookprojectid.md
   - docs/models/shared/objecttype.md
@@ -1266,8 +1266,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createcommerceitem_response.rb
   - lib/unified_ruby_sdk/models/operations/createcommercelocation_request.rb
   - lib/unified_ruby_sdk/models/operations/createcommercelocation_response.rb
-  - lib/unified_ruby_sdk/models/operations/createcommercemetadata_request.rb
-  - lib/unified_ruby_sdk/models/operations/createcommercemetadata_response.rb
   - lib/unified_ruby_sdk/models/operations/createcrmcompany_request.rb
   - lib/unified_ruby_sdk/models/operations/createcrmcompany_response.rb
   - lib/unified_ruby_sdk/models/operations/createcrmcontact_request.rb
@@ -1308,6 +1306,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createmartechmember_response.rb
   - lib/unified_ruby_sdk/models/operations/createmessagingmessage_request.rb
   - lib/unified_ruby_sdk/models/operations/createmessagingmessage_response.rb
+  - lib/unified_ruby_sdk/models/operations/createmetadatametadata_request.rb
+  - lib/unified_ruby_sdk/models/operations/createmetadatametadata_response.rb
   - lib/unified_ruby_sdk/models/operations/createpassthrough_json_request.rb
   - lib/unified_ruby_sdk/models/operations/createpassthrough_json_response.rb
   - lib/unified_ruby_sdk/models/operations/createpassthrough_raw_request.rb
@@ -1387,8 +1387,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getcommerceitem_response.rb
   - lib/unified_ruby_sdk/models/operations/getcommercelocation_request.rb
   - lib/unified_ruby_sdk/models/operations/getcommercelocation_response.rb
-  - lib/unified_ruby_sdk/models/operations/getcommercemetadata_request.rb
-  - lib/unified_ruby_sdk/models/operations/getcommercemetadata_response.rb
   - lib/unified_ruby_sdk/models/operations/getcrmcompany_request.rb
   - lib/unified_ruby_sdk/models/operations/getcrmcompany_response.rb
   - lib/unified_ruby_sdk/models/operations/getcrmcontact_request.rb
@@ -1433,6 +1431,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getmessagingchannel_response.rb
   - lib/unified_ruby_sdk/models/operations/getmessagingmessage_request.rb
   - lib/unified_ruby_sdk/models/operations/getmessagingmessage_response.rb
+  - lib/unified_ruby_sdk/models/operations/getmetadatametadata_request.rb
+  - lib/unified_ruby_sdk/models/operations/getmetadatametadata_response.rb
   - lib/unified_ruby_sdk/models/operations/getpaymentlink_request.rb
   - lib/unified_ruby_sdk/models/operations/getpaymentlink_response.rb
   - lib/unified_ruby_sdk/models/operations/getpaymentpayment_request.rb
@@ -1521,8 +1521,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listcommerceitems_response.rb
   - lib/unified_ruby_sdk/models/operations/listcommercelocations_request.rb
   - lib/unified_ruby_sdk/models/operations/listcommercelocations_response.rb
-  - lib/unified_ruby_sdk/models/operations/listcommercemetadatas_request.rb
-  - lib/unified_ruby_sdk/models/operations/listcommercemetadatas_response.rb
   - lib/unified_ruby_sdk/models/operations/listcrmcompanies_request.rb
   - lib/unified_ruby_sdk/models/operations/listcrmcompanies_response.rb
   - lib/unified_ruby_sdk/models/operations/listcrmcontacts_request.rb
@@ -1573,6 +1571,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listmessagingchannels_response.rb
   - lib/unified_ruby_sdk/models/operations/listmessagingmessages_request.rb
   - lib/unified_ruby_sdk/models/operations/listmessagingmessages_response.rb
+  - lib/unified_ruby_sdk/models/operations/listmetadatametadatas_request.rb
+  - lib/unified_ruby_sdk/models/operations/listmetadatametadatas_response.rb
   - lib/unified_ruby_sdk/models/operations/listpassthroughs_request.rb
   - lib/unified_ruby_sdk/models/operations/listpassthroughs_response.rb
   - lib/unified_ruby_sdk/models/operations/listpaymentlinks_request.rb
@@ -1662,8 +1662,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchcommerceitem_response.rb
   - lib/unified_ruby_sdk/models/operations/patchcommercelocation_request.rb
   - lib/unified_ruby_sdk/models/operations/patchcommercelocation_response.rb
-  - lib/unified_ruby_sdk/models/operations/patchcommercemetadata_request.rb
-  - lib/unified_ruby_sdk/models/operations/patchcommercemetadata_response.rb
   - lib/unified_ruby_sdk/models/operations/patchcrmcompany_request.rb
   - lib/unified_ruby_sdk/models/operations/patchcrmcompany_response.rb
   - lib/unified_ruby_sdk/models/operations/patchcrmcontact_request.rb
@@ -1702,6 +1700,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchmartechmember_response.rb
   - lib/unified_ruby_sdk/models/operations/patchmessagingmessage_request.rb
   - lib/unified_ruby_sdk/models/operations/patchmessagingmessage_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchmetadatametadata_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchmetadatametadata_response.rb
   - lib/unified_ruby_sdk/models/operations/patchpassthrough_json_request.rb
   - lib/unified_ruby_sdk/models/operations/patchpassthrough_json_response.rb
   - lib/unified_ruby_sdk/models/operations/patchpassthrough_raw_request.rb
@@ -1781,8 +1781,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removecommerceitem_response.rb
   - lib/unified_ruby_sdk/models/operations/removecommercelocation_request.rb
   - lib/unified_ruby_sdk/models/operations/removecommercelocation_response.rb
-  - lib/unified_ruby_sdk/models/operations/removecommercemetadata_request.rb
-  - lib/unified_ruby_sdk/models/operations/removecommercemetadata_response.rb
   - lib/unified_ruby_sdk/models/operations/removecrmcompany_request.rb
   - lib/unified_ruby_sdk/models/operations/removecrmcompany_response.rb
   - lib/unified_ruby_sdk/models/operations/removecrmcontact_request.rb
@@ -1821,6 +1819,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removemartechmember_response.rb
   - lib/unified_ruby_sdk/models/operations/removemessagingmessage_request.rb
   - lib/unified_ruby_sdk/models/operations/removemessagingmessage_response.rb
+  - lib/unified_ruby_sdk/models/operations/removemetadatametadata_request.rb
+  - lib/unified_ruby_sdk/models/operations/removemetadatametadata_response.rb
   - lib/unified_ruby_sdk/models/operations/removepassthrough_request.rb
   - lib/unified_ruby_sdk/models/operations/removepassthrough_response.rb
   - lib/unified_ruby_sdk/models/operations/removepaymentlink_request.rb
@@ -1896,8 +1896,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatecommerceitem_response.rb
   - lib/unified_ruby_sdk/models/operations/updatecommercelocation_request.rb
   - lib/unified_ruby_sdk/models/operations/updatecommercelocation_response.rb
-  - lib/unified_ruby_sdk/models/operations/updatecommercemetadata_request.rb
-  - lib/unified_ruby_sdk/models/operations/updatecommercemetadata_response.rb
   - lib/unified_ruby_sdk/models/operations/updatecrmcompany_request.rb
   - lib/unified_ruby_sdk/models/operations/updatecrmcompany_response.rb
   - lib/unified_ruby_sdk/models/operations/updatecrmcontact_request.rb
@@ -1936,6 +1934,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatemartechmember_response.rb
   - lib/unified_ruby_sdk/models/operations/updatemessagingmessage_request.rb
   - lib/unified_ruby_sdk/models/operations/updatemessagingmessage_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatemetadatametadata_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatemetadatametadata_response.rb
   - lib/unified_ruby_sdk/models/operations/updatepassthrough_json_request.rb
   - lib/unified_ruby_sdk/models/operations/updatepassthrough_json_response.rb
   - lib/unified_ruby_sdk/models/operations/updatepassthrough_raw_request.rb
@@ -2041,7 +2041,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/commerceitemprice.rb
   - lib/unified_ruby_sdk/models/shared/commerceitemvariant.rb
   - lib/unified_ruby_sdk/models/shared/commercelocation.rb
-  - lib/unified_ruby_sdk/models/shared/commercemetadata.rb
   - lib/unified_ruby_sdk/models/shared/connection.rb
   - lib/unified_ruby_sdk/models/shared/crmcompany.rb
   - lib/unified_ruby_sdk/models/shared/crmcontact.rb
@@ -2155,6 +2154,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/messagingchannel.rb
   - lib/unified_ruby_sdk/models/shared/messagingmember.rb
   - lib/unified_ruby_sdk/models/shared/messagingmessage.rb
+  - lib/unified_ruby_sdk/models/shared/metadatametadata.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_parent_id.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_project_id.rb
   - lib/unified_ruby_sdk/models/shared/object_type.rb
@@ -5222,4 +5222,58 @@ examples:
         path:
           connection_id: "<id>"
           id: "<id>"
+  createMetadataMetadata:
+    speakeasy-default-create-metadata-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>", "object_type": "<value>"}
+  getMetadataMetadata:
+    speakeasy-default-get-metadata-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>", "object_type": "<value>"}
+  listMetadataMetadatas:
+    speakeasy-default-list-metadata-metadatas:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: []
+  patchMetadataMetadata:
+    speakeasy-default-patch-metadata-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>", "object_type": "<value>"}
+  removeMetadataMetadata:
+    speakeasy-default-remove-metadata-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateMetadataMetadata:
+    speakeasy-default-update-metadata-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>", "object_type": "<value>"}
 generatedTests: {}

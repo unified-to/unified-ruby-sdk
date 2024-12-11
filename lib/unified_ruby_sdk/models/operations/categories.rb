@@ -30,6 +30,7 @@ module UnifiedRubySDK
         SCIM = new('scim')
         LMS = new('lms')
         REPO = new('repo')
+        METADATA = new('metadata')
       end
     end
   end

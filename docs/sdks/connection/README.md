@@ -32,11 +32,11 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Shared::Connection.new(
   categories: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::LMS,
+    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::REPO,
   ],
   integration_type: "<value>",
   permissions: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_DEAL_WRITE,
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_EVENT_WRITE,
   ],
 )
     
@@ -162,7 +162,7 @@ res = s.connection.patch_unified_connection(id="<id>", connection=::UnifiedRubyS
   ],
   integration_type: "<value>",
   permissions: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::REPO_PULLREQUEST_WRITE,
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::METADATA_METADATA_WRITE,
   ],
 ))
 
@@ -243,11 +243,11 @@ s.config_security(
     
 res = s.connection.update_unified_connection(id="<id>", connection=::UnifiedRubySDK::Shared::Connection.new(
   categories: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::KMS,
+    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::TASK,
   ],
   integration_type: "<value>",
   permissions: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::REPO_PULLREQUEST_READ,
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::METADATA_METADATA_READ,
   ],
 ))
 

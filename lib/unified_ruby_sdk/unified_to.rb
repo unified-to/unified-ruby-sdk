@@ -13,7 +13,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :contact, :invoice, :journal, :order, :organization, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :metadata, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :employee, :group, :payslip, :timeoff, :kms, :page, :space, :lms, :class_, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :passthrough, :payment, :link, :payout, :refund, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :storage, :file, :task, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
+    attr_accessor :accounting, :account, :contact, :invoice, :journal, :order, :organization, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :employee, :group, :payslip, :timeoff, :kms, :page, :space, :lms, :class_, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :link, :payout, :refund, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :storage, :file, :task, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
 
     sig do
       params(client: Faraday::Request,
@@ -99,7 +99,6 @@ module UnifiedRubySDK
       @inventory = Inventory.new(@sdk_configuration)
       @item = Item.new(@sdk_configuration)
       @location = Location.new(@sdk_configuration)
-      @metadata = Metadata.new(@sdk_configuration)
       @crm = Crm.new(@sdk_configuration)
       @deal = Deal.new(@sdk_configuration)
       @event = Event.new(@sdk_configuration)
@@ -129,6 +128,7 @@ module UnifiedRubySDK
       @messaging = Messaging.new(@sdk_configuration)
       @channel = Channel.new(@sdk_configuration)
       @message = Message.new(@sdk_configuration)
+      @metadata = Metadata.new(@sdk_configuration)
       @passthrough = Passthrough.new(@sdk_configuration)
       @payment = Payment.new(@sdk_configuration)
       @link = Link.new(@sdk_configuration)

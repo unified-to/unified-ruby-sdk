@@ -36,7 +36,7 @@ res = s.webhook.create_unified_webhook(webhook=::UnifiedRubySDK::Shared::Webhook
   connection_id: "<id>",
   event: ::UnifiedRubySDK::Shared::Event::CREATED,
   hook_url: "https://blind-platypus.org/",
-  object_type: ::UnifiedRubySDK::Shared::ObjectType::CRM_CONTACT,
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::CRM_DEAL,
 ), include_all=false)
 
 if ! res.webhook.nil?
@@ -278,7 +278,7 @@ res = s.webhook.update_unified_webhook(id="<id>", webhook=::UnifiedRubySDK::Shar
   connection_id: "<id>",
   event: ::UnifiedRubySDK::Shared::Event::CREATED,
   hook_url: "https://glaring-postbox.info/",
-  object_type: ::UnifiedRubySDK::Shared::ObjectType::SCIM_GROUPS,
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::LMS_COURSE,
 ))
 
 if ! res.webhook.nil?

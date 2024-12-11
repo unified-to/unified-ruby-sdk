@@ -46,11 +46,11 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Shared::Connection.new(
   categories: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::LMS,
+    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::REPO,
   ],
   integration_type: "<value>",
   permissions: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_DEAL_WRITE,
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_EVENT_WRITE,
   ],
 )
     
@@ -96,7 +96,7 @@ res = s.unified.create_unified_webhook(webhook=::UnifiedRubySDK::Shared::Webhook
   connection_id: "<id>",
   event: ::UnifiedRubySDK::Shared::Event::CREATED,
   hook_url: "https://blind-platypus.org/",
-  object_type: ::UnifiedRubySDK::Shared::ObjectType::CRM_CONTACT,
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::CRM_DEAL,
 ), include_all=false)
 
 if ! res.webhook.nil?
@@ -541,7 +541,7 @@ res = s.unified.patch_unified_connection(id="<id>", connection=::UnifiedRubySDK:
   ],
   integration_type: "<value>",
   permissions: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::REPO_PULLREQUEST_WRITE,
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::METADATA_METADATA_WRITE,
   ],
 ))
 
@@ -742,11 +742,11 @@ s.config_security(
     
 res = s.unified.update_unified_connection(id="<id>", connection=::UnifiedRubySDK::Shared::Connection.new(
   categories: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::KMS,
+    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::TASK,
   ],
   integration_type: "<value>",
   permissions: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::REPO_PULLREQUEST_READ,
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::METADATA_METADATA_READ,
   ],
 ))
 
@@ -791,7 +791,7 @@ res = s.unified.update_unified_webhook(id="<id>", webhook=::UnifiedRubySDK::Shar
   connection_id: "<id>",
   event: ::UnifiedRubySDK::Shared::Event::CREATED,
   hook_url: "https://glaring-postbox.info/",
-  object_type: ::UnifiedRubySDK::Shared::ObjectType::SCIM_GROUPS,
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::LMS_COURSE,
 ))
 
 if ! res.webhook.nil?

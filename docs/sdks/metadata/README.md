@@ -5,14 +5,14 @@
 
 ### Available Operations
 
-* [create_commerce_metadata](#create_commerce_metadata) - Create a metadata
-* [get_commerce_metadata](#get_commerce_metadata) - Retrieve a metadata
-* [list_commerce_metadatas](#list_commerce_metadatas) - List all metadatas
-* [patch_commerce_metadata](#patch_commerce_metadata) - Update a metadata
-* [remove_commerce_metadata](#remove_commerce_metadata) - Remove a metadata
-* [update_commerce_metadata](#update_commerce_metadata) - Update a metadata
+* [create_metadata_metadata](#create_metadata_metadata) - Create a metadata
+* [get_metadata_metadata](#get_metadata_metadata) - Retrieve a metadata
+* [list_metadata_metadatas](#list_metadata_metadatas) - List all metadatas
+* [patch_metadata_metadata](#patch_metadata_metadata) - Update a metadata
+* [remove_metadata_metadata](#remove_metadata_metadata) - Remove a metadata
+* [update_metadata_metadata](#update_metadata_metadata) - Update a metadata
 
-## create_commerce_metadata
+## create_metadata_metadata
 
 Create a metadata
 
@@ -30,11 +30,14 @@ s.config_security(
 )
 
     
-res = s.metadata.create_commerce_metadata(connection_id="<id>", commerce_metadata=::UnifiedRubySDK::Shared::CommerceMetadata.new(), fields_=[
+res = s.metadata.create_metadata_metadata(connection_id="<id>", metadata_metadata=::UnifiedRubySDK::Shared::MetadataMetadata.new(
+  name: "<value>",
+  object_type: "<value>",
+), fields_=[
   "<value>",
 ])
 
-if ! res.commerce_metadata.nil?
+if ! res.metadata_metadata.nil?
   # handle response
 end
 
@@ -45,16 +48,16 @@ end
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                  | *::String*                                                                                       | :heavy_check_mark:                                                                               | ID of the connection                                                                             |
-| `commerce_metadata`                                                                              | [T.nilable(::UnifiedRubySDK::Shared::CommerceMetadata)](../../models/shared/commercemetadata.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
+| `metadata_metadata`                                                                              | [T.nilable(::UnifiedRubySDK::Shared::MetadataMetadata)](../../models/shared/metadatametadata.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
 | `fields_`                                                                                        | T::Array<*::String*>                                                                             | :heavy_minus_sign:                                                                               | Comma-delimited fields to return                                                                 |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::CreateCommerceMetadataResponse)](../../models/operations/createcommercemetadataresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::CreateMetadataMetadataResponse)](../../models/operations/createmetadatametadataresponse.md)**
 
 
 
-## get_commerce_metadata
+## get_metadata_metadata
 
 Retrieve a metadata
 
@@ -72,11 +75,11 @@ s.config_security(
 )
 
     
-res = s.metadata.get_commerce_metadata(connection_id="<id>", id="<id>", fields_=[
+res = s.metadata.get_metadata_metadata(connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
-if ! res.commerce_metadata.nil?
+if ! res.metadata_metadata.nil?
   # handle response
 end
 
@@ -92,11 +95,11 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::GetCommerceMetadataResponse)](../../models/operations/getcommercemetadataresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::GetMetadataMetadataResponse)](../../models/operations/getmetadatametadataresponse.md)**
 
 
 
-## list_commerce_metadatas
+## list_metadata_metadatas
 
 List all metadatas
 
@@ -114,13 +117,13 @@ s.config_security(
 )
 
 
-req = ::UnifiedRubySDK::Operations::ListCommerceMetadatasRequest.new(
+req = ::UnifiedRubySDK::Operations::ListMetadataMetadatasRequest.new(
   connection_id: "<id>",
 )
     
-res = s.metadata.list_commerce_metadatas(req)
+res = s.metadata.list_metadata_metadatas(req)
 
-if ! res.commerce_metadatas.nil?
+if ! res.metadata_metadatas.nil?
   # handle response
 end
 
@@ -130,15 +133,15 @@ end
 
 | Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
 | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                             | [::UnifiedRubySDK::Operations::ListCommerceMetadatasRequest](../../models/operations/listcommercemetadatasrequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| `request`                                                                                                             | [::UnifiedRubySDK::Operations::ListMetadataMetadatasRequest](../../models/operations/listmetadatametadatasrequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::ListCommerceMetadatasResponse)](../../models/operations/listcommercemetadatasresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::ListMetadataMetadatasResponse)](../../models/operations/listmetadatametadatasresponse.md)**
 
 
 
-## patch_commerce_metadata
+## patch_metadata_metadata
 
 Update a metadata
 
@@ -156,11 +159,14 @@ s.config_security(
 )
 
     
-res = s.metadata.patch_commerce_metadata(connection_id="<id>", id="<id>", commerce_metadata=::UnifiedRubySDK::Shared::CommerceMetadata.new(), fields_=[
+res = s.metadata.patch_metadata_metadata(connection_id="<id>", id="<id>", metadata_metadata=::UnifiedRubySDK::Shared::MetadataMetadata.new(
+  name: "<value>",
+  object_type: "<value>",
+), fields_=[
   "<value>",
 ])
 
-if ! res.commerce_metadata.nil?
+if ! res.metadata_metadata.nil?
   # handle response
 end
 
@@ -172,16 +178,16 @@ end
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                  | *::String*                                                                                       | :heavy_check_mark:                                                                               | ID of the connection                                                                             |
 | `id`                                                                                             | *::String*                                                                                       | :heavy_check_mark:                                                                               | ID of the Metadata                                                                               |
-| `commerce_metadata`                                                                              | [T.nilable(::UnifiedRubySDK::Shared::CommerceMetadata)](../../models/shared/commercemetadata.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
+| `metadata_metadata`                                                                              | [T.nilable(::UnifiedRubySDK::Shared::MetadataMetadata)](../../models/shared/metadatametadata.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
 | `fields_`                                                                                        | T::Array<*::String*>                                                                             | :heavy_minus_sign:                                                                               | Comma-delimited fields to return                                                                 |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::PatchCommerceMetadataResponse)](../../models/operations/patchcommercemetadataresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::PatchMetadataMetadataResponse)](../../models/operations/patchmetadatametadataresponse.md)**
 
 
 
-## remove_commerce_metadata
+## remove_metadata_metadata
 
 Remove a metadata
 
@@ -199,7 +205,7 @@ s.config_security(
 )
 
     
-res = s.metadata.remove_commerce_metadata(connection_id="<id>", id="<id>")
+res = s.metadata.remove_metadata_metadata(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
   # handle response
@@ -216,11 +222,11 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::RemoveCommerceMetadataResponse)](../../models/operations/removecommercemetadataresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::RemoveMetadataMetadataResponse)](../../models/operations/removemetadatametadataresponse.md)**
 
 
 
-## update_commerce_metadata
+## update_metadata_metadata
 
 Update a metadata
 
@@ -238,11 +244,14 @@ s.config_security(
 )
 
     
-res = s.metadata.update_commerce_metadata(connection_id="<id>", id="<id>", commerce_metadata=::UnifiedRubySDK::Shared::CommerceMetadata.new(), fields_=[
+res = s.metadata.update_metadata_metadata(connection_id="<id>", id="<id>", metadata_metadata=::UnifiedRubySDK::Shared::MetadataMetadata.new(
+  name: "<value>",
+  object_type: "<value>",
+), fields_=[
   "<value>",
 ])
 
-if ! res.commerce_metadata.nil?
+if ! res.metadata_metadata.nil?
   # handle response
 end
 
@@ -254,10 +263,10 @@ end
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                  | *::String*                                                                                       | :heavy_check_mark:                                                                               | ID of the connection                                                                             |
 | `id`                                                                                             | *::String*                                                                                       | :heavy_check_mark:                                                                               | ID of the Metadata                                                                               |
-| `commerce_metadata`                                                                              | [T.nilable(::UnifiedRubySDK::Shared::CommerceMetadata)](../../models/shared/commercemetadata.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
+| `metadata_metadata`                                                                              | [T.nilable(::UnifiedRubySDK::Shared::MetadataMetadata)](../../models/shared/metadatametadata.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
 | `fields_`                                                                                        | T::Array<*::String*>                                                                             | :heavy_minus_sign:                                                                               | Comma-delimited fields to return                                                                 |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::UpdateCommerceMetadataResponse)](../../models/operations/updatecommercemetadataresponse.md)**
+**[T.nilable(::UnifiedRubySDK::Operations::UpdateMetadataMetadataResponse)](../../models/operations/updatemetadatametadataresponse.md)**
 

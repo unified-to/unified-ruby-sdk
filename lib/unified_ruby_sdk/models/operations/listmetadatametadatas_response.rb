@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetCommerceMetadataResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListMetadataMetadatasResponse < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation
@@ -18,15 +18,15 @@ module UnifiedRubySDK
       # HTTP response status code for this operation
       field :status_code, ::Integer
       # Successful
-      field :commerce_metadata, T.nilable(::UnifiedRubySDK::Shared::CommerceMetadata)
+      field :metadata_metadatas, T.nilable(T::Array[::UnifiedRubySDK::Shared::MetadataMetadata])
 
 
-      sig { params(content_type: ::String, raw_response: ::Faraday::Response, status_code: ::Integer, commerce_metadata: T.nilable(::UnifiedRubySDK::Shared::CommerceMetadata)).void }
-      def initialize(content_type: nil, raw_response: nil, status_code: nil, commerce_metadata: nil)
+      sig { params(content_type: ::String, raw_response: ::Faraday::Response, status_code: ::Integer, metadata_metadatas: T.nilable(T::Array[::UnifiedRubySDK::Shared::MetadataMetadata])).void }
+      def initialize(content_type: nil, raw_response: nil, status_code: nil, metadata_metadatas: nil)
         @content_type = content_type
         @raw_response = raw_response
         @status_code = status_code
-        @commerce_metadata = commerce_metadata
+        @metadata_metadatas = metadata_metadatas
       end
     end
   end

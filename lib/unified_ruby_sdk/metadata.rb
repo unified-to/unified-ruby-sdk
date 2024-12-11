@@ -19,27 +19,27 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, commerce_metadata: T.nilable(::UnifiedRubySDK::Shared::CommerceMetadata), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCommerceMetadataResponse) }
-    def create_commerce_metadata(connection_id, commerce_metadata = nil, fields_ = nil)
-      # create_commerce_metadata - Create a metadata
-      request = ::UnifiedRubySDK::Operations::CreateCommerceMetadataRequest.new(
+    sig { params(connection_id: ::String, metadata_metadata: T.nilable(::UnifiedRubySDK::Shared::MetadataMetadata), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateMetadataMetadataResponse) }
+    def create_metadata_metadata(connection_id, metadata_metadata = nil, fields_ = nil)
+      # create_metadata_metadata - Create a metadata
+      request = ::UnifiedRubySDK::Operations::CreateMetadataMetadataRequest.new(
         
         connection_id: connection_id,
-        commerce_metadata: commerce_metadata,
+        metadata_metadata: metadata_metadata,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::CreateCommerceMetadataRequest,
+        ::UnifiedRubySDK::Operations::CreateMetadataMetadataRequest,
         base_url,
-        '/commerce/{connection_id}/metadata',
+        '/metadata/{connection_id}/metadata',
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :commerce_metadata, :json)
+      req_content_type, data, form = Utils.serialize_request_body(request, :metadata_metadata, :json)
       headers['content-type'] = req_content_type
-      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateCommerceMetadataRequest, request)
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateMetadataMetadataRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -58,13 +58,13 @@ module UnifiedRubySDK
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
 
-      res = ::UnifiedRubySDK::Operations::CreateCommerceMetadataResponse.new(
+      res = ::UnifiedRubySDK::Operations::CreateMetadataMetadataResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::CommerceMetadata)
-          res.commerce_metadata = out
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::MetadataMetadata)
+          res.metadata_metadata = out
         end
       end
 
@@ -72,10 +72,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCommerceMetadataResponse) }
-    def get_commerce_metadata(connection_id, id, fields_ = nil)
-      # get_commerce_metadata - Retrieve a metadata
-      request = ::UnifiedRubySDK::Operations::GetCommerceMetadataRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetMetadataMetadataResponse) }
+    def get_metadata_metadata(connection_id, id, fields_ = nil)
+      # get_metadata_metadata - Retrieve a metadata
+      request = ::UnifiedRubySDK::Operations::GetMetadataMetadataRequest.new(
         
         connection_id: connection_id,
         id: id,
@@ -84,13 +84,13 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::GetCommerceMetadataRequest,
+        ::UnifiedRubySDK::Operations::GetMetadataMetadataRequest,
         base_url,
-        '/commerce/{connection_id}/metadata/{id}',
+        '/metadata/{connection_id}/metadata/{id}',
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::GetCommerceMetadataRequest, request)
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::GetMetadataMetadataRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -102,13 +102,13 @@ module UnifiedRubySDK
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
 
-      res = ::UnifiedRubySDK::Operations::GetCommerceMetadataResponse.new(
+      res = ::UnifiedRubySDK::Operations::GetMetadataMetadataResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::CommerceMetadata)
-          res.commerce_metadata = out
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::MetadataMetadata)
+          res.metadata_metadata = out
         end
       end
 
@@ -116,19 +116,19 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCommerceMetadatasRequest)).returns(::UnifiedRubySDK::Operations::ListCommerceMetadatasResponse) }
-    def list_commerce_metadatas(request)
-      # list_commerce_metadatas - List all metadatas
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListMetadataMetadatasRequest)).returns(::UnifiedRubySDK::Operations::ListMetadataMetadatasResponse) }
+    def list_metadata_metadatas(request)
+      # list_metadata_metadatas - List all metadatas
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::ListCommerceMetadatasRequest,
+        ::UnifiedRubySDK::Operations::ListMetadataMetadatasRequest,
         base_url,
-        '/commerce/{connection_id}/metadata',
+        '/metadata/{connection_id}/metadata',
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::ListCommerceMetadatasRequest, request)
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::ListMetadataMetadatasRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -140,13 +140,13 @@ module UnifiedRubySDK
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
 
-      res = ::UnifiedRubySDK::Operations::ListCommerceMetadatasResponse.new(
+      res = ::UnifiedRubySDK::Operations::ListMetadataMetadatasResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, T::Array[::UnifiedRubySDK::Shared::CommerceMetadata])
-          res.commerce_metadatas = out
+          out = Utils.unmarshal_complex(r.env.response_body, T::Array[::UnifiedRubySDK::Shared::MetadataMetadata])
+          res.metadata_metadatas = out
         end
       end
 
@@ -154,28 +154,28 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_metadata: T.nilable(::UnifiedRubySDK::Shared::CommerceMetadata), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCommerceMetadataResponse) }
-    def patch_commerce_metadata(connection_id, id, commerce_metadata = nil, fields_ = nil)
-      # patch_commerce_metadata - Update a metadata
-      request = ::UnifiedRubySDK::Operations::PatchCommerceMetadataRequest.new(
+    sig { params(connection_id: ::String, id: ::String, metadata_metadata: T.nilable(::UnifiedRubySDK::Shared::MetadataMetadata), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchMetadataMetadataResponse) }
+    def patch_metadata_metadata(connection_id, id, metadata_metadata = nil, fields_ = nil)
+      # patch_metadata_metadata - Update a metadata
+      request = ::UnifiedRubySDK::Operations::PatchMetadataMetadataRequest.new(
         
         connection_id: connection_id,
         id: id,
-        commerce_metadata: commerce_metadata,
+        metadata_metadata: metadata_metadata,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::PatchCommerceMetadataRequest,
+        ::UnifiedRubySDK::Operations::PatchMetadataMetadataRequest,
         base_url,
-        '/commerce/{connection_id}/metadata/{id}',
+        '/metadata/{connection_id}/metadata/{id}',
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :commerce_metadata, :json)
+      req_content_type, data, form = Utils.serialize_request_body(request, :metadata_metadata, :json)
       headers['content-type'] = req_content_type
-      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchCommerceMetadataRequest, request)
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchMetadataMetadataRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -194,13 +194,13 @@ module UnifiedRubySDK
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
 
-      res = ::UnifiedRubySDK::Operations::PatchCommerceMetadataResponse.new(
+      res = ::UnifiedRubySDK::Operations::PatchMetadataMetadataResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::CommerceMetadata)
-          res.commerce_metadata = out
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::MetadataMetadata)
+          res.metadata_metadata = out
         end
       end
 
@@ -208,10 +208,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCommerceMetadataResponse) }
-    def remove_commerce_metadata(connection_id, id)
-      # remove_commerce_metadata - Remove a metadata
-      request = ::UnifiedRubySDK::Operations::RemoveCommerceMetadataRequest.new(
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveMetadataMetadataResponse) }
+    def remove_metadata_metadata(connection_id, id)
+      # remove_metadata_metadata - Remove a metadata
+      request = ::UnifiedRubySDK::Operations::RemoveMetadataMetadataRequest.new(
         
         connection_id: connection_id,
         id: id
@@ -219,9 +219,9 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::RemoveCommerceMetadataRequest,
+        ::UnifiedRubySDK::Operations::RemoveMetadataMetadataRequest,
         base_url,
-        '/commerce/{connection_id}/metadata/{id}',
+        '/metadata/{connection_id}/metadata/{id}',
         request
       )
       headers = {}
@@ -235,7 +235,7 @@ module UnifiedRubySDK
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
 
-      res = ::UnifiedRubySDK::Operations::RemoveCommerceMetadataResponse.new(
+      res = ::UnifiedRubySDK::Operations::RemoveMetadataMetadataResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
       if r.status == 200
@@ -247,28 +247,28 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_metadata: T.nilable(::UnifiedRubySDK::Shared::CommerceMetadata), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCommerceMetadataResponse) }
-    def update_commerce_metadata(connection_id, id, commerce_metadata = nil, fields_ = nil)
-      # update_commerce_metadata - Update a metadata
-      request = ::UnifiedRubySDK::Operations::UpdateCommerceMetadataRequest.new(
+    sig { params(connection_id: ::String, id: ::String, metadata_metadata: T.nilable(::UnifiedRubySDK::Shared::MetadataMetadata), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateMetadataMetadataResponse) }
+    def update_metadata_metadata(connection_id, id, metadata_metadata = nil, fields_ = nil)
+      # update_metadata_metadata - Update a metadata
+      request = ::UnifiedRubySDK::Operations::UpdateMetadataMetadataRequest.new(
         
         connection_id: connection_id,
         id: id,
-        commerce_metadata: commerce_metadata,
+        metadata_metadata: metadata_metadata,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::UpdateCommerceMetadataRequest,
+        ::UnifiedRubySDK::Operations::UpdateMetadataMetadataRequest,
         base_url,
-        '/commerce/{connection_id}/metadata/{id}',
+        '/metadata/{connection_id}/metadata/{id}',
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :commerce_metadata, :json)
+      req_content_type, data, form = Utils.serialize_request_body(request, :metadata_metadata, :json)
       headers['content-type'] = req_content_type
-      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateCommerceMetadataRequest, request)
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateMetadataMetadataRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -287,13 +287,13 @@ module UnifiedRubySDK
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
 
-      res = ::UnifiedRubySDK::Operations::UpdateCommerceMetadataResponse.new(
+      res = ::UnifiedRubySDK::Operations::UpdateMetadataMetadataResponse.new(
         status_code: r.status, content_type: content_type, raw_response: r
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::CommerceMetadata)
-          res.commerce_metadata = out
+          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::MetadataMetadata)
+          res.metadata_metadata = out
         end
       end
 

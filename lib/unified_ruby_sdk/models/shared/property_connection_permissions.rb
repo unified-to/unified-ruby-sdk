@@ -40,8 +40,6 @@ module UnifiedRubySDK
         COMMERCE_INVENTORY_WRITE = new('commerce_inventory_write')
         COMMERCE_LOCATION_READ = new('commerce_location_read')
         COMMERCE_LOCATION_WRITE = new('commerce_location_write')
-        COMMERCE_METADATA_READ = new('commerce_metadata_read')
-        COMMERCE_METADATA_WRITE = new('commerce_metadata_write')
         ATS_ACTIVITY_READ = new('ats_activity_read')
         ATS_ACTIVITY_WRITE = new('ats_activity_write')
         ATS_APPLICATION_READ = new('ats_application_read')
@@ -134,6 +132,8 @@ module UnifiedRubySDK
         REPO_COMMIT_WRITE = new('repo_commit_write')
         REPO_PULLREQUEST_READ = new('repo_pullrequest_read')
         REPO_PULLREQUEST_WRITE = new('repo_pullrequest_write')
+        METADATA_METADATA_READ = new('metadata_metadata_read')
+        METADATA_METADATA_WRITE = new('metadata_metadata_write')
       end
     end
   end
