@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: aa3c8602e58a30faa2d1085e078be4b2
+  docChecksum: 5cab2e21dd40857ac20e5d0a4eaf95d0
   docVersion: "1.0"
-  speakeasyVersion: 1.454.2
-  generationVersion: 2.477.4
-  releaseVersion: 0.5.5
-  configChecksum: e5aa6165b294f1f01bb9f9bac98de0f8
+  speakeasyVersion: 1.455.3
+  generationVersion: 2.479.3
+  releaseVersion: 0.5.6
+  configChecksum: dd86caf093303fd9fd7abd6cb38b9e0d
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -916,10 +916,12 @@ generatedFiles:
   - docs/models/shared/listlocationid.md
   - docs/models/shared/listoffset.md
   - docs/models/shared/listorder.md
+  - docs/models/shared/listorgid.md
   - docs/models/shared/listparentid.md
   - docs/models/shared/listprojectid.md
   - docs/models/shared/listquery.md
   - docs/models/shared/listrawfields.md
+  - docs/models/shared/listrepoid.md
   - docs/models/shared/listrootid.md
   - docs/models/shared/listsortbycreatedat.md
   - docs/models/shared/listsortbyname.md
@@ -1080,6 +1082,7 @@ generatedFiles:
   - docs/models/shared/virtualwebhookcompanyid.md
   - docs/models/shared/virtualwebhookcontactid.md
   - docs/models/shared/virtualwebhookdealid.md
+  - docs/models/shared/virtualwebhookjobid.md
   - docs/models/shared/virtualwebhooklimit.md
   - docs/models/shared/virtualwebhookparentid.md
   - docs/models/shared/virtualwebhookticketid.md
@@ -2122,10 +2125,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_location_id.rb
   - lib/unified_ruby_sdk/models/shared/list_offset.rb
   - lib/unified_ruby_sdk/models/shared/list_order.rb
+  - lib/unified_ruby_sdk/models/shared/list_org_id.rb
   - lib/unified_ruby_sdk/models/shared/list_parent_id.rb
   - lib/unified_ruby_sdk/models/shared/list_project_id.rb
   - lib/unified_ruby_sdk/models/shared/list_query.rb
   - lib/unified_ruby_sdk/models/shared/list_raw_fields.rb
+  - lib/unified_ruby_sdk/models/shared/list_repo_id.rb
   - lib/unified_ruby_sdk/models/shared/list_root_id.rb
   - lib/unified_ruby_sdk/models/shared/list_sort_by_created_at.rb
   - lib/unified_ruby_sdk/models/shared/list_sort_by_name.rb
@@ -2286,6 +2291,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_company_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_contact_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_deal_id.rb
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_job_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_limit.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_parent_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_ticket_id.rb
