@@ -593,7 +593,7 @@ module UnifiedRubySDK
           file_fields = val.fields
 
           file_name = ''
-          field_name = ''
+          field_name = field_metadata[:field_name]
           content = nil
 
           file_fields.each do |file_field|
@@ -603,11 +603,10 @@ module UnifiedRubySDK
             if file_metadata[:content] == true
               content = val.send(file_field.name)
             else
-              field_name = file_metadata.fetch(:field_name, file_field.name)
               file_name = val.send(file_field.name)
             end
           end
-          raise StandardError, 'invalid multipart/form-data file' if field_name == '' || file_name == '' || content == nil?
+          raise StandardError, 'invalid multipart/form-data file' if file_name == '' || content == nil?
 
           form.append([field_name, [file_name, content]])
         elsif field_metadata[:json] == true
