@@ -91,6 +91,8 @@ module UnifiedRubySDK
         HRIS_LOCATION_READ = new('hris_location_read')
         HRIS_LOCATION_WRITE = new('hris_location_write')
         UC_CALL_READ = new('uc_call_read')
+        UC_CONTACT_READ = new('uc_contact_read')
+        UC_CONTACT_WRITE = new('uc_contact_write')
         STORAGE_FILE_READ = new('storage_file_read')
         STORAGE_FILE_WRITE = new('storage_file_write')
         WEBHOOK = new('webhook')

@@ -36,7 +36,7 @@ req = ::UnifiedRubySDK::Shared::Connection.new(
   ],
   integration_type: "<value>",
   permissions: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_EVENT_WRITE,
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_LEAD_READ,
   ],
 )
     

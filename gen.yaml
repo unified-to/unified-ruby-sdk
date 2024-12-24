@@ -15,7 +15,7 @@ generation:
   flattenGlobalSecurity: true
   telemetryEnabled: false
 ruby:
-  version: 0.5.7
+  version: 0.5.8
   author: Unified
   description: Ruby Client SDK for Unified.to
   imports:
