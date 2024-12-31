@@ -15,6 +15,9 @@ module UnifiedRubySDK
         TASK = new('TASK')
         MEETING = new('MEETING')
         CALL = new('CALL')
+        MARKETING_EMAIL = new('MARKETING_EMAIL')
+        FORM = new('FORM')
+        PAGE_VIEW = new('PAGE_VIEW')
       end
     end
   end

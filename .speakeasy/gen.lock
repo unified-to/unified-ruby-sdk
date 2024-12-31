@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 11363cbfd40306b24119fb60c9ea2fc5
+  docChecksum: 05ab7803e5b317202af3aacb4835f336
   docVersion: "1.0"
-  speakeasyVersion: 1.460.2
+  speakeasyVersion: 1.460.3
   generationVersion: 2.484.0
-  releaseVersion: 0.5.8
-  configChecksum: 6d75808db29056e3d2490408a3ba1aa6
+  releaseVersion: 0.5.9
+  configChecksum: 3313e60a8040e6f0a03e03556ea3d2b3
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -842,6 +842,9 @@ generatedFiles:
   - docs/models/shared/crmemail.md
   - docs/models/shared/crmemailtype.md
   - docs/models/shared/crmevent.md
+  - docs/models/shared/crmeventformfield.md
+  - docs/models/shared/crmeventformfieldtype.md
+  - docs/models/shared/crmeventformoption.md
   - docs/models/shared/crmeventtype.md
   - docs/models/shared/crmlead.md
   - docs/models/shared/crmpipeline.md
@@ -983,8 +986,11 @@ generatedFiles:
   - docs/models/shared/propertycrmcontactaddress.md
   - docs/models/shared/propertycrmeventcall.md
   - docs/models/shared/propertycrmeventemail.md
+  - docs/models/shared/propertycrmeventform.md
+  - docs/models/shared/propertycrmeventmarketingemail.md
   - docs/models/shared/propertycrmeventmeeting.md
   - docs/models/shared/propertycrmeventnote.md
+  - docs/models/shared/propertycrmeventpageview.md
   - docs/models/shared/propertycrmeventtask.md
   - docs/models/shared/propertycrmeventtaskstatus.md
   - docs/models/shared/propertycrmleadaddress.md
@@ -2052,6 +2058,9 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/crmemail_type.rb
   - lib/unified_ruby_sdk/models/shared/crmevent.rb
   - lib/unified_ruby_sdk/models/shared/crmevent_type.rb
+  - lib/unified_ruby_sdk/models/shared/crmeventformfield.rb
+  - lib/unified_ruby_sdk/models/shared/crmeventformfield_type.rb
+  - lib/unified_ruby_sdk/models/shared/crmeventformoption.rb
   - lib/unified_ruby_sdk/models/shared/crmlead.rb
   - lib/unified_ruby_sdk/models/shared/crmpipeline.rb
   - lib/unified_ruby_sdk/models/shared/crmstage.rb
@@ -2192,8 +2201,11 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_crmcontact_address.rb
   - lib/unified_ruby_sdk/models/shared/property_crmevent_call.rb
   - lib/unified_ruby_sdk/models/shared/property_crmevent_email.rb
+  - lib/unified_ruby_sdk/models/shared/property_crmevent_form.rb
+  - lib/unified_ruby_sdk/models/shared/property_crmevent_marketing_email.rb
   - lib/unified_ruby_sdk/models/shared/property_crmevent_meeting.rb
   - lib/unified_ruby_sdk/models/shared/property_crmevent_note.rb
+  - lib/unified_ruby_sdk/models/shared/property_crmevent_page_view.rb
   - lib/unified_ruby_sdk/models/shared/property_crmevent_task.rb
   - lib/unified_ruby_sdk/models/shared/property_crmevent_task_status.rb
   - lib/unified_ruby_sdk/models/shared/property_crmlead_address.rb
