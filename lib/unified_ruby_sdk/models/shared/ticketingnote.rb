@@ -24,12 +24,12 @@ module UnifiedRubySDK
 
       field :ticket_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ticket_id') } }
 
-      field :updated_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
+      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
       field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
 
-      sig { params(created_at: T.nilable(::DateTime), customer_id: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), ticket_id: T.nilable(::String), updated_at: T.nilable(::String), user_id: T.nilable(::String)).void }
+      sig { params(created_at: T.nilable(::DateTime), customer_id: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), ticket_id: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
       def initialize(created_at: nil, customer_id: nil, description: nil, id: nil, raw: nil, ticket_id: nil, updated_at: nil, user_id: nil)
         @created_at = created_at
         @customer_id = customer_id

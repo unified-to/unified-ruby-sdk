@@ -16,7 +16,7 @@ module UnifiedRubySDK
 
       field :total_amount, ::Float, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
 
-      field :created_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
+      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
       field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
@@ -30,10 +30,10 @@ module UnifiedRubySDK
 
       field :status, T.nilable(::UnifiedRubySDK::Shared::PaymentRefundStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::PaymentRefundStatus, true) } }
 
-      field :updated_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
+      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(payment_id: ::String, total_amount: ::Float, created_at: T.nilable(::String), currency: T.nilable(::String), id: T.nilable(::String), notes: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), status: T.nilable(::UnifiedRubySDK::Shared::PaymentRefundStatus), updated_at: T.nilable(::String)).void }
+      sig { params(payment_id: ::String, total_amount: ::Float, created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), notes: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), status: T.nilable(::UnifiedRubySDK::Shared::PaymentRefundStatus), updated_at: T.nilable(::DateTime)).void }
       def initialize(payment_id: nil, total_amount: nil, created_at: nil, currency: nil, id: nil, notes: nil, raw: nil, reference: nil, status: nil, updated_at: nil)
         @payment_id = payment_id
         @total_amount = total_amount

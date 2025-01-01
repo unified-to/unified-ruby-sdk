@@ -32,6 +32,8 @@ module UnifiedRubySDK
         PAYMENT_REFUND_READ = new('payment_refund_read')
         PAYMENT_LINK_READ = new('payment_link_read')
         PAYMENT_LINK_WRITE = new('payment_link_write')
+        PAYMENT_SUBSCRIPTION_READ = new('payment_subscription_read')
+        PAYMENT_SUBSCRIPTION_WRITE = new('payment_subscription_write')
         COMMERCE_ITEM_READ = new('commerce_item_read')
         COMMERCE_ITEM_WRITE = new('commerce_item_write')
         COMMERCE_COLLECTION_READ = new('commerce_collection_read')

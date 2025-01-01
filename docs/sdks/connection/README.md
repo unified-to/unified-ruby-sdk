@@ -36,7 +36,7 @@ req = ::UnifiedRubySDK::Shared::Connection.new(
   ],
   integration_type: "<value>",
   permissions: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_LEAD_READ,
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_EVENT_WRITE,
   ],
 )
     
@@ -247,7 +247,7 @@ res = s.connection.update_unified_connection(id="<id>", connection=::UnifiedRuby
   ],
   integration_type: "<value>",
   permissions: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::METADATA_METADATA_READ,
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::REPO_PULLREQUEST_WRITE,
   ],
 ))
 

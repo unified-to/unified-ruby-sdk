@@ -13,7 +13,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :contact, :invoice, :journal, :order, :organization, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :employee, :group, :payslip, :timeoff, :kms, :page, :space, :lms, :class_, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :link, :payout, :refund, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :storage, :file, :task, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
+    attr_accessor :accounting, :account, :contact, :invoice, :journal, :order, :organization, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :employee, :group, :payslip, :timeoff, :kms, :page, :space, :lms, :class_, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :link, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :storage, :file, :task, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
 
     sig do
       params(client: Faraday::Request,
@@ -134,6 +134,7 @@ module UnifiedRubySDK
       @link = Link.new(@sdk_configuration)
       @payout = Payout.new(@sdk_configuration)
       @refund = Refund.new(@sdk_configuration)
+      @subscription = Subscription.new(@sdk_configuration)
       @repo = Repo.new(@sdk_configuration)
       @branch = Branch.new(@sdk_configuration)
       @commit = Commit.new(@sdk_configuration)

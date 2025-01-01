@@ -32,9 +32,7 @@ s.config_security(
 )
 
     
-res = s.organization.create_repo_organization(connection_id="<id>", repo_organization=::UnifiedRubySDK::Shared::RepoOrganization.new(
-  name: "<value>",
-), fields_=[
+res = s.organization.create_repo_organization(connection_id="<id>", repo_organization=::UnifiedRubySDK::Shared::RepoOrganization.new(), fields_=[
   "<value>",
 ])
 
@@ -244,9 +242,7 @@ s.config_security(
 )
 
     
-res = s.organization.patch_repo_organization(connection_id="<id>", id="<id>", repo_organization=::UnifiedRubySDK::Shared::RepoOrganization.new(
-  name: "<value>",
-), fields_=[
+res = s.organization.patch_repo_organization(connection_id="<id>", id="<id>", repo_organization=::UnifiedRubySDK::Shared::RepoOrganization.new(), fields_=[
   "<value>",
 ])
 
@@ -328,9 +324,7 @@ s.config_security(
 )
 
     
-res = s.organization.update_repo_organization(connection_id="<id>", id="<id>", repo_organization=::UnifiedRubySDK::Shared::RepoOrganization.new(
-  name: "<value>",
-), fields_=[
+res = s.organization.update_repo_organization(connection_id="<id>", id="<id>", repo_organization=::UnifiedRubySDK::Shared::RepoOrganization.new(), fields_=[
   "<value>",
 ])
 

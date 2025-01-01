@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class PaymentLinkLineitem < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PaymentLineitem < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
 

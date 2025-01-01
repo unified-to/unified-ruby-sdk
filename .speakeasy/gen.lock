@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 05ab7803e5b317202af3aacb4835f336
+  docChecksum: d3ff121f2a7d483c6c660192f0d72464
   docVersion: "1.0"
   speakeasyVersion: 1.460.3
   generationVersion: 2.484.0
-  releaseVersion: 0.5.9
-  configChecksum: 3313e60a8040e6f0a03e03556ea3d2b3
+  releaseVersion: 0.5.10
+  configChecksum: ea38fe24cbaa1b7fb21ed46e7eb82913
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -111,6 +111,8 @@ generatedFiles:
   - docs/models/operations/createpaymentlinkresponse.md
   - docs/models/operations/createpaymentpaymentrequest.md
   - docs/models/operations/createpaymentpaymentresponse.md
+  - docs/models/operations/createpaymentsubscriptionrequest.md
+  - docs/models/operations/createpaymentsubscriptionresponse.md
   - docs/models/operations/createrepobranchrequest.md
   - docs/models/operations/createrepobranchresponse.md
   - docs/models/operations/createrepocommitrequest.md
@@ -236,6 +238,8 @@ generatedFiles:
   - docs/models/operations/getpaymentpayoutresponse.md
   - docs/models/operations/getpaymentrefundrequest.md
   - docs/models/operations/getpaymentrefundresponse.md
+  - docs/models/operations/getpaymentsubscriptionrequest.md
+  - docs/models/operations/getpaymentsubscriptionresponse.md
   - docs/models/operations/getrepobranchrequest.md
   - docs/models/operations/getrepobranchresponse.md
   - docs/models/operations/getrepocommitrequest.md
@@ -378,6 +382,8 @@ generatedFiles:
   - docs/models/operations/listpaymentpayoutsresponse.md
   - docs/models/operations/listpaymentrefundsrequest.md
   - docs/models/operations/listpaymentrefundsresponse.md
+  - docs/models/operations/listpaymentsubscriptionsrequest.md
+  - docs/models/operations/listpaymentsubscriptionsresponse.md
   - docs/models/operations/listrepobranchesrequest.md
   - docs/models/operations/listrepobranchesresponse.md
   - docs/models/operations/listrepocommitsrequest.md
@@ -505,6 +511,8 @@ generatedFiles:
   - docs/models/operations/patchpaymentlinkresponse.md
   - docs/models/operations/patchpaymentpaymentrequest.md
   - docs/models/operations/patchpaymentpaymentresponse.md
+  - docs/models/operations/patchpaymentsubscriptionrequest.md
+  - docs/models/operations/patchpaymentsubscriptionresponse.md
   - docs/models/operations/patchrepobranchrequest.md
   - docs/models/operations/patchrepobranchresponse.md
   - docs/models/operations/patchrepocommitrequest.md
@@ -622,6 +630,8 @@ generatedFiles:
   - docs/models/operations/removepaymentlinkresponse.md
   - docs/models/operations/removepaymentpaymentrequest.md
   - docs/models/operations/removepaymentpaymentresponse.md
+  - docs/models/operations/removepaymentsubscriptionrequest.md
+  - docs/models/operations/removepaymentsubscriptionresponse.md
   - docs/models/operations/removerepobranchrequest.md
   - docs/models/operations/removerepobranchresponse.md
   - docs/models/operations/removerepocommitrequest.md
@@ -739,6 +749,8 @@ generatedFiles:
   - docs/models/operations/updatepaymentlinkresponse.md
   - docs/models/operations/updatepaymentpaymentrequest.md
   - docs/models/operations/updatepaymentpaymentresponse.md
+  - docs/models/operations/updatepaymentsubscriptionrequest.md
+  - docs/models/operations/updatepaymentsubscriptionresponse.md
   - docs/models/operations/updaterepobranchrequest.md
   - docs/models/operations/updaterepobranchresponse.md
   - docs/models/operations/updaterepocommitrequest.md
@@ -890,6 +902,7 @@ generatedFiles:
   - docs/models/shared/hristimeofftype.md
   - docs/models/shared/integration.md
   - docs/models/shared/integrationsupport.md
+  - docs/models/shared/intervalunit.md
   - docs/models/shared/issue.md
   - docs/models/shared/issuestatus.md
   - docs/models/shared/kmspage.md
@@ -960,13 +973,15 @@ generatedFiles:
   - docs/models/shared/operation.md
   - docs/models/shared/origin.md
   - docs/models/shared/paymentcollectionmethod.md
+  - docs/models/shared/paymentlineitem.md
   - docs/models/shared/paymentlink.md
-  - docs/models/shared/paymentlinklineitem.md
   - docs/models/shared/paymentpayment.md
   - docs/models/shared/paymentpayout.md
   - docs/models/shared/paymentpayoutstatus.md
   - docs/models/shared/paymentrefund.md
   - docs/models/shared/paymentrefundstatus.md
+  - docs/models/shared/paymentsubscription.md
+  - docs/models/shared/paymentsubscriptionstatus.md
   - docs/models/shared/paymenttype.md
   - docs/models/shared/priority.md
   - docs/models/shared/propertyaccountingcontactbillingaddress.md
@@ -1172,6 +1187,7 @@ generatedFiles:
   - docs/sdks/space/README.md
   - docs/sdks/storage/README.md
   - docs/sdks/student/README.md
+  - docs/sdks/subscription/README.md
   - docs/sdks/task/README.md
   - docs/sdks/taxrate/README.md
   - docs/sdks/ticket/README.md
@@ -1325,6 +1341,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createpaymentlink_response.rb
   - lib/unified_ruby_sdk/models/operations/createpaymentpayment_request.rb
   - lib/unified_ruby_sdk/models/operations/createpaymentpayment_response.rb
+  - lib/unified_ruby_sdk/models/operations/createpaymentsubscription_request.rb
+  - lib/unified_ruby_sdk/models/operations/createpaymentsubscription_response.rb
   - lib/unified_ruby_sdk/models/operations/createrepobranch_request.rb
   - lib/unified_ruby_sdk/models/operations/createrepobranch_response.rb
   - lib/unified_ruby_sdk/models/operations/createrepocommit_request.rb
@@ -1450,6 +1468,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getpaymentpayout_response.rb
   - lib/unified_ruby_sdk/models/operations/getpaymentrefund_request.rb
   - lib/unified_ruby_sdk/models/operations/getpaymentrefund_response.rb
+  - lib/unified_ruby_sdk/models/operations/getpaymentsubscription_request.rb
+  - lib/unified_ruby_sdk/models/operations/getpaymentsubscription_response.rb
   - lib/unified_ruby_sdk/models/operations/getrepobranch_request.rb
   - lib/unified_ruby_sdk/models/operations/getrepobranch_response.rb
   - lib/unified_ruby_sdk/models/operations/getrepocommit_request.rb
@@ -1592,6 +1612,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listpaymentpayouts_response.rb
   - lib/unified_ruby_sdk/models/operations/listpaymentrefunds_request.rb
   - lib/unified_ruby_sdk/models/operations/listpaymentrefunds_response.rb
+  - lib/unified_ruby_sdk/models/operations/listpaymentsubscriptions_request.rb
+  - lib/unified_ruby_sdk/models/operations/listpaymentsubscriptions_response.rb
   - lib/unified_ruby_sdk/models/operations/listrepobranches_request.rb
   - lib/unified_ruby_sdk/models/operations/listrepobranches_response.rb
   - lib/unified_ruby_sdk/models/operations/listrepocommits_request.rb
@@ -1719,6 +1741,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchpaymentlink_response.rb
   - lib/unified_ruby_sdk/models/operations/patchpaymentpayment_request.rb
   - lib/unified_ruby_sdk/models/operations/patchpaymentpayment_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchpaymentsubscription_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchpaymentsubscription_response.rb
   - lib/unified_ruby_sdk/models/operations/patchrepobranch_request.rb
   - lib/unified_ruby_sdk/models/operations/patchrepobranch_response.rb
   - lib/unified_ruby_sdk/models/operations/patchrepocommit_request.rb
@@ -1836,6 +1860,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removepaymentlink_response.rb
   - lib/unified_ruby_sdk/models/operations/removepaymentpayment_request.rb
   - lib/unified_ruby_sdk/models/operations/removepaymentpayment_response.rb
+  - lib/unified_ruby_sdk/models/operations/removepaymentsubscription_request.rb
+  - lib/unified_ruby_sdk/models/operations/removepaymentsubscription_response.rb
   - lib/unified_ruby_sdk/models/operations/removerepobranch_request.rb
   - lib/unified_ruby_sdk/models/operations/removerepobranch_response.rb
   - lib/unified_ruby_sdk/models/operations/removerepocommit_request.rb
@@ -1953,6 +1979,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatepaymentlink_response.rb
   - lib/unified_ruby_sdk/models/operations/updatepaymentpayment_request.rb
   - lib/unified_ruby_sdk/models/operations/updatepaymentpayment_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatepaymentsubscription_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatepaymentsubscription_response.rb
   - lib/unified_ruby_sdk/models/operations/updaterepobranch_request.rb
   - lib/unified_ruby_sdk/models/operations/updaterepobranch_response.rb
   - lib/unified_ruby_sdk/models/operations/updaterepocommit_request.rb
@@ -2105,6 +2133,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/hristimeoff_type.rb
   - lib/unified_ruby_sdk/models/shared/integration.rb
   - lib/unified_ruby_sdk/models/shared/integrationsupport.rb
+  - lib/unified_ruby_sdk/models/shared/interval_unit.rb
   - lib/unified_ruby_sdk/models/shared/issue.rb
   - lib/unified_ruby_sdk/models/shared/issue_status.rb
   - lib/unified_ruby_sdk/models/shared/kmspage.rb
@@ -2176,13 +2205,15 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/origin.rb
   - lib/unified_ruby_sdk/models/shared/payment_collection_method.rb
   - lib/unified_ruby_sdk/models/shared/payment_type.rb
+  - lib/unified_ruby_sdk/models/shared/paymentlineitem.rb
   - lib/unified_ruby_sdk/models/shared/paymentlink.rb
-  - lib/unified_ruby_sdk/models/shared/paymentlinklineitem.rb
   - lib/unified_ruby_sdk/models/shared/paymentpayment.rb
   - lib/unified_ruby_sdk/models/shared/paymentpayout.rb
   - lib/unified_ruby_sdk/models/shared/paymentpayout_status.rb
   - lib/unified_ruby_sdk/models/shared/paymentrefund.rb
   - lib/unified_ruby_sdk/models/shared/paymentrefund_status.rb
+  - lib/unified_ruby_sdk/models/shared/paymentsubscription.rb
+  - lib/unified_ruby_sdk/models/shared/paymentsubscription_status.rb
   - lib/unified_ruby_sdk/models/shared/priority.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingcontact_billing_address.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingcontact_shipping_address.rb
@@ -2335,6 +2366,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/space.rb
   - lib/unified_ruby_sdk/storage.rb
   - lib/unified_ruby_sdk/student.rb
+  - lib/unified_ruby_sdk/subscription.rb
   - lib/unified_ruby_sdk/task.rb
   - lib/unified_ruby_sdk/taxrate.rb
   - lib/unified_ruby_sdk/ticket.rb
@@ -5798,4 +5830,58 @@ examples:
       responses:
         "200":
           application/json: {"name": "<value>", "object_type": "<value>"}
+  createPaymentSubscription:
+    speakeasy-default-create-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  getPaymentSubscription:
+    speakeasy-default-get-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  listPaymentSubscriptions:
+    speakeasy-default-list-payment-subscriptions:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}]
+  patchPaymentSubscription:
+    speakeasy-default-patch-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  removePaymentSubscription:
+    speakeasy-default-remove-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updatePaymentSubscription:
+    speakeasy-default-update-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
 generatedTests: {}

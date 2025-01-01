@@ -12,7 +12,7 @@ module UnifiedRubySDK
       extend T::Sig
 
 
-      field :created_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
+      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
       field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
@@ -30,10 +30,10 @@ module UnifiedRubySDK
 
       field :taxrate_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('taxrate_id') } }
 
-      field :updated_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
+      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(created_at: T.nilable(::String), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingJournalLineitem]), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), tax_amount: T.nilable(::Float), taxrate_id: T.nilable(::String), updated_at: T.nilable(::String)).void }
+      sig { params(created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingJournalLineitem]), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), tax_amount: T.nilable(::Float), taxrate_id: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
       def initialize(created_at: nil, currency: nil, description: nil, id: nil, lineitems: nil, raw: nil, reference: nil, tax_amount: nil, taxrate_id: nil, updated_at: nil)
         @created_at = created_at
         @currency = currency

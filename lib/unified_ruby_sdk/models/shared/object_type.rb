@@ -22,6 +22,7 @@ module UnifiedRubySDK
         PAYMENT_LINK = new('payment_link')
         PAYMENT_PAYOUT = new('payment_payout')
         PAYMENT_REFUND = new('payment_refund')
+        PAYMENT_SUBSCRIPTION = new('payment_subscription')
         COMMERCE_ITEM = new('commerce_item')
         COMMERCE_COLLECTION = new('commerce_collection')
         COMMERCE_INVENTORY = new('commerce_inventory')

@@ -15,13 +15,13 @@ module UnifiedRubySDK
       field :attachment_file_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attachment_file_ids') } }
 
       field :body, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('body') } }
-      # The event email's cc name & email (name )
+      # The event email's cc name & email (name <test@test.com>)
       field :cc, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cc') } }
 
       field :from, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('from') } }
 
       field :subject, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subject') } }
-      # The event email's "to" name & email (name )
+      # The event email's "to" name & email (name <test@test.com>)
       field :to, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('to') } }
 
 

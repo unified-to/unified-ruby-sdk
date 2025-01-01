@@ -66,6 +66,7 @@ module UnifiedRubySDK
   autoload :Link, 'unified_ruby_sdk/link'
   autoload :Payout, 'unified_ruby_sdk/payout'
   autoload :Refund, 'unified_ruby_sdk/refund'
+  autoload :Subscription, 'unified_ruby_sdk/subscription'
   autoload :Repo, 'unified_ruby_sdk/repo'
   autoload :Branch, 'unified_ruby_sdk/branch'
   autoload :Commit, 'unified_ruby_sdk/commit'
