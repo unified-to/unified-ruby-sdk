@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: d3ff121f2a7d483c6c660192f0d72464
+  docChecksum: 20714033389bb63e345a793caa0911b9
   docVersion: "1.0"
-  speakeasyVersion: 1.460.3
+  speakeasyVersion: 1.460.5
   generationVersion: 2.484.0
-  releaseVersion: 0.5.10
-  configChecksum: ea38fe24cbaa1b7fb21ed46e7eb82913
+  releaseVersion: 0.5.11
+  configChecksum: e128e2a4db0cd5d3aeb6ddfaf5360b92
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -129,6 +129,8 @@ generatedFiles:
   - docs/models/operations/createscimusersresponse.md
   - docs/models/operations/createstoragefilerequest.md
   - docs/models/operations/createstoragefileresponse.md
+  - docs/models/operations/createtaskcommentrequest.md
+  - docs/models/operations/createtaskcommentresponse.md
   - docs/models/operations/createtaskprojectrequest.md
   - docs/models/operations/createtaskprojectresponse.md
   - docs/models/operations/createtasktaskrequest.md
@@ -256,6 +258,8 @@ generatedFiles:
   - docs/models/operations/getscimusersresponse.md
   - docs/models/operations/getstoragefilerequest.md
   - docs/models/operations/getstoragefileresponse.md
+  - docs/models/operations/gettaskcommentrequest.md
+  - docs/models/operations/gettaskcommentresponse.md
   - docs/models/operations/gettaskprojectrequest.md
   - docs/models/operations/gettaskprojectresponse.md
   - docs/models/operations/gettasktaskrequest.md
@@ -400,6 +404,8 @@ generatedFiles:
   - docs/models/operations/listscimusersresponse.md
   - docs/models/operations/liststoragefilesrequest.md
   - docs/models/operations/liststoragefilesresponse.md
+  - docs/models/operations/listtaskcommentsrequest.md
+  - docs/models/operations/listtaskcommentsresponse.md
   - docs/models/operations/listtaskprojectsrequest.md
   - docs/models/operations/listtaskprojectsresponse.md
   - docs/models/operations/listtasktasksrequest.md
@@ -529,6 +535,8 @@ generatedFiles:
   - docs/models/operations/patchscimusersresponse.md
   - docs/models/operations/patchstoragefilerequest.md
   - docs/models/operations/patchstoragefileresponse.md
+  - docs/models/operations/patchtaskcommentrequest.md
+  - docs/models/operations/patchtaskcommentresponse.md
   - docs/models/operations/patchtaskprojectrequest.md
   - docs/models/operations/patchtaskprojectresponse.md
   - docs/models/operations/patchtasktaskrequest.md
@@ -648,6 +656,8 @@ generatedFiles:
   - docs/models/operations/removescimusersresponse.md
   - docs/models/operations/removestoragefilerequest.md
   - docs/models/operations/removestoragefileresponse.md
+  - docs/models/operations/removetaskcommentrequest.md
+  - docs/models/operations/removetaskcommentresponse.md
   - docs/models/operations/removetaskprojectrequest.md
   - docs/models/operations/removetaskprojectresponse.md
   - docs/models/operations/removetasktaskrequest.md
@@ -767,6 +777,8 @@ generatedFiles:
   - docs/models/operations/updatescimusersresponse.md
   - docs/models/operations/updatestoragefilerequest.md
   - docs/models/operations/updatestoragefileresponse.md
+  - docs/models/operations/updatetaskcommentrequest.md
+  - docs/models/operations/updatetaskcommentresponse.md
   - docs/models/operations/updatetaskprojectrequest.md
   - docs/models/operations/updatetaskprojectresponse.md
   - docs/models/operations/updatetasktaskrequest.md
@@ -1080,6 +1092,7 @@ generatedFiles:
   - docs/models/shared/storagefile.md
   - docs/models/shared/storagefiletype.md
   - docs/models/shared/storagepermission.md
+  - docs/models/shared/taskcomment.md
   - docs/models/shared/taskproject.md
   - docs/models/shared/tasktask.md
   - docs/models/shared/tasktaskstatus.md
@@ -1127,6 +1140,7 @@ generatedFiles:
   - docs/sdks/channel/README.md
   - docs/sdks/class/README.md
   - docs/sdks/collection/README.md
+  - docs/sdks/comment/README.md
   - docs/sdks/commerce/README.md
   - docs/sdks/commit/README.md
   - docs/sdks/company/README.md
@@ -1214,6 +1228,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/channel.rb
   - lib/unified_ruby_sdk/class_.rb
   - lib/unified_ruby_sdk/collection.rb
+  - lib/unified_ruby_sdk/comment.rb
   - lib/unified_ruby_sdk/commerce.rb
   - lib/unified_ruby_sdk/commit.rb
   - lib/unified_ruby_sdk/company.rb
@@ -1359,6 +1374,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createscimusers_response.rb
   - lib/unified_ruby_sdk/models/operations/createstoragefile_request.rb
   - lib/unified_ruby_sdk/models/operations/createstoragefile_response.rb
+  - lib/unified_ruby_sdk/models/operations/createtaskcomment_request.rb
+  - lib/unified_ruby_sdk/models/operations/createtaskcomment_response.rb
   - lib/unified_ruby_sdk/models/operations/createtaskproject_request.rb
   - lib/unified_ruby_sdk/models/operations/createtaskproject_response.rb
   - lib/unified_ruby_sdk/models/operations/createtasktask_request.rb
@@ -1486,6 +1503,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getscimusers_response.rb
   - lib/unified_ruby_sdk/models/operations/getstoragefile_request.rb
   - lib/unified_ruby_sdk/models/operations/getstoragefile_response.rb
+  - lib/unified_ruby_sdk/models/operations/gettaskcomment_request.rb
+  - lib/unified_ruby_sdk/models/operations/gettaskcomment_response.rb
   - lib/unified_ruby_sdk/models/operations/gettaskproject_request.rb
   - lib/unified_ruby_sdk/models/operations/gettaskproject_response.rb
   - lib/unified_ruby_sdk/models/operations/gettasktask_request.rb
@@ -1630,6 +1649,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listscimusers_response.rb
   - lib/unified_ruby_sdk/models/operations/liststoragefiles_request.rb
   - lib/unified_ruby_sdk/models/operations/liststoragefiles_response.rb
+  - lib/unified_ruby_sdk/models/operations/listtaskcomments_request.rb
+  - lib/unified_ruby_sdk/models/operations/listtaskcomments_response.rb
   - lib/unified_ruby_sdk/models/operations/listtaskprojects_request.rb
   - lib/unified_ruby_sdk/models/operations/listtaskprojects_response.rb
   - lib/unified_ruby_sdk/models/operations/listtasktasks_request.rb
@@ -1759,6 +1780,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchscimusers_response.rb
   - lib/unified_ruby_sdk/models/operations/patchstoragefile_request.rb
   - lib/unified_ruby_sdk/models/operations/patchstoragefile_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchtaskcomment_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchtaskcomment_response.rb
   - lib/unified_ruby_sdk/models/operations/patchtaskproject_request.rb
   - lib/unified_ruby_sdk/models/operations/patchtaskproject_response.rb
   - lib/unified_ruby_sdk/models/operations/patchtasktask_request.rb
@@ -1878,6 +1901,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removescimusers_response.rb
   - lib/unified_ruby_sdk/models/operations/removestoragefile_request.rb
   - lib/unified_ruby_sdk/models/operations/removestoragefile_response.rb
+  - lib/unified_ruby_sdk/models/operations/removetaskcomment_request.rb
+  - lib/unified_ruby_sdk/models/operations/removetaskcomment_response.rb
   - lib/unified_ruby_sdk/models/operations/removetaskproject_request.rb
   - lib/unified_ruby_sdk/models/operations/removetaskproject_response.rb
   - lib/unified_ruby_sdk/models/operations/removetasktask_request.rb
@@ -1997,6 +2022,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatescimusers_response.rb
   - lib/unified_ruby_sdk/models/operations/updatestoragefile_request.rb
   - lib/unified_ruby_sdk/models/operations/updatestoragefile_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatetaskcomment_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatetaskcomment_response.rb
   - lib/unified_ruby_sdk/models/operations/updatetaskproject_request.rb
   - lib/unified_ruby_sdk/models/operations/updatetaskproject_response.rb
   - lib/unified_ruby_sdk/models/operations/updatetasktask_request.rb
@@ -2311,6 +2338,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/storagefile.rb
   - lib/unified_ruby_sdk/models/shared/storagefile_type.rb
   - lib/unified_ruby_sdk/models/shared/storagepermission.rb
+  - lib/unified_ruby_sdk/models/shared/taskcomment.rb
   - lib/unified_ruby_sdk/models/shared/taskproject.rb
   - lib/unified_ruby_sdk/models/shared/tasktask.rb
   - lib/unified_ruby_sdk/models/shared/tasktask_status.rb
@@ -5884,4 +5912,58 @@ examples:
       responses:
         "200":
           application/json: {}
+  createTaskComment:
+    speakeasy-default-create-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"task_id": "<id>", "text": "<value>"}
+  getTaskComment:
+    speakeasy-default-get-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"task_id": "<id>", "text": "<value>"}
+  listTaskComments:
+    speakeasy-default-list-task-comments:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: []
+  patchTaskComment:
+    speakeasy-default-patch-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"task_id": "<id>", "text": "<value>"}
+  removeTaskComment:
+    speakeasy-default-remove-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateTaskComment:
+    speakeasy-default-update-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"task_id": "<id>", "text": "<value>"}
 generatedTests: {}

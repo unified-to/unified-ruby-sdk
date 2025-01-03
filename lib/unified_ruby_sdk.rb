@@ -77,6 +77,7 @@ module UnifiedRubySDK
   autoload :Storage, 'unified_ruby_sdk/storage'
   autoload :File, 'unified_ruby_sdk/file'
   autoload :Task, 'unified_ruby_sdk/task'
+  autoload :Comment, 'unified_ruby_sdk/comment'
   autoload :Project, 'unified_ruby_sdk/project'
   autoload :Ticketing, 'unified_ruby_sdk/ticketing'
   autoload :Customer, 'unified_ruby_sdk/customer'

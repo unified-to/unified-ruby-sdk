@@ -114,6 +114,8 @@ module UnifiedRubySDK
         TASK_PROJECT_WRITE = new('task_project_write')
         TASK_TASK_READ = new('task_task_read')
         TASK_TASK_WRITE = new('task_task_write')
+        TASK_COMMENT_READ = new('task_comment_read')
+        TASK_COMMENT_WRITE = new('task_comment_write')
         SCIM_USERS_READ = new('scim_users_read')
         SCIM_USERS_WRITE = new('scim_users_write')
         SCIM_GROUPS_READ = new('scim_groups_read')

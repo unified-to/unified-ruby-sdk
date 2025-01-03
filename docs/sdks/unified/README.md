@@ -50,7 +50,7 @@ req = ::UnifiedRubySDK::Shared::Connection.new(
   ],
   integration_type: "<value>",
   permissions: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_EVENT_WRITE,
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_LEAD_READ,
   ],
 )
     
@@ -96,7 +96,7 @@ res = s.unified.create_unified_webhook(webhook=::UnifiedRubySDK::Shared::Webhook
   connection_id: "<id>",
   event: ::UnifiedRubySDK::Shared::Event::CREATED,
   hook_url: "https://blind-platypus.org/",
-  object_type: ::UnifiedRubySDK::Shared::ObjectType::CRM_CONTACT,
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::CRM_DEAL,
 ), include_all=false)
 
 if ! res.webhook.nil?
@@ -586,7 +586,7 @@ res = s.unified.patch_unified_webhook(id="<id>", webhook=::UnifiedRubySDK::Share
   connection_id: "<id>",
   event: ::UnifiedRubySDK::Shared::Event::DELETED,
   hook_url: "https://calculating-habit.name/",
-  object_type: ::UnifiedRubySDK::Shared::ObjectType::COMMERCE_ITEM,
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::COMMERCE_COLLECTION,
 ))
 
 if ! res.webhook.nil?

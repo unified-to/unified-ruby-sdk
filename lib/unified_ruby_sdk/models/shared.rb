@@ -241,6 +241,7 @@ module UnifiedRubySDK
     autoload :StorageFile, 'unified_ruby_sdk/models/shared/storagefile.rb'
     autoload :StoragePermission, 'unified_ruby_sdk/models/shared/storagepermission.rb'
     autoload :PropertyStoragePermissionRoles, 'unified_ruby_sdk/models/shared/property_storagepermission_roles.rb'
+    autoload :TaskComment, 'unified_ruby_sdk/models/shared/taskcomment.rb'
     autoload :TaskProject, 'unified_ruby_sdk/models/shared/taskproject.rb'
     autoload :TaskTaskStatus, 'unified_ruby_sdk/models/shared/tasktask_status.rb'
     autoload :TaskTask, 'unified_ruby_sdk/models/shared/tasktask.rb'

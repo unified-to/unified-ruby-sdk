@@ -67,6 +67,7 @@ module UnifiedRubySDK
         KMS_PAGE = new('kms_page')
         TASK_PROJECT = new('task_project')
         TASK_TASK = new('task_task')
+        TASK_COMMENT = new('task_comment')
         SCIM_USERS = new('scim_users')
         SCIM_GROUPS = new('scim_groups')
         LMS_COURSE = new('lms_course')
