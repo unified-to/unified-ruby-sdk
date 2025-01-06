@@ -39,9 +39,9 @@ module UnifiedRubySDK
       @security = security
       @language = 'ruby'
       @openapi_doc_version = '1.0'
-      @sdk_version = '0.5.11'
-      @gen_version = '2.484.0'
-      @user_agent = 'speakeasy-sdk/ruby 0.5.11 2.484.0 1.0 unified_ruby_sdk'
+      @sdk_version = '0.6.0'
+      @gen_version = '2.486.1'
+      @user_agent = 'speakeasy-sdk/ruby 0.6.0 2.486.1 1.0 unified_ruby_sdk'
     end
 
     sig { returns([String, T::Hash[Symbol, String]]) }
