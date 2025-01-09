@@ -44,9 +44,11 @@ module UnifiedRubySDK
 
       field :version, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('version') } }
 
+      field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-      sig { params(created_at: T.nilable(::DateTime), data: T.nilable(::String), description: T.nilable(::String), download_url: T.nilable(::String), hash: T.nilable(::String), id: T.nilable(::String), mime_type: T.nilable(::String), name: T.nilable(::String), parent_id: T.nilable(::String), permissions: T.nilable(T::Array[::UnifiedRubySDK::Shared::StoragePermission]), raw: T.nilable(T::Hash[Symbol, ::Object]), size: T.nilable(::Float), type: T.nilable(::UnifiedRubySDK::Shared::StorageFileType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), version: T.nilable(::String)).void }
-      def initialize(created_at: nil, data: nil, description: nil, download_url: nil, hash: nil, id: nil, mime_type: nil, name: nil, parent_id: nil, permissions: nil, raw: nil, size: nil, type: nil, updated_at: nil, user_id: nil, version: nil)
+
+      sig { params(created_at: T.nilable(::DateTime), data: T.nilable(::String), description: T.nilable(::String), download_url: T.nilable(::String), hash: T.nilable(::String), id: T.nilable(::String), mime_type: T.nilable(::String), name: T.nilable(::String), parent_id: T.nilable(::String), permissions: T.nilable(T::Array[::UnifiedRubySDK::Shared::StoragePermission]), raw: T.nilable(T::Hash[Symbol, ::Object]), size: T.nilable(::Float), type: T.nilable(::UnifiedRubySDK::Shared::StorageFileType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), version: T.nilable(::String), web_url: T.nilable(::String)).void }
+      def initialize(created_at: nil, data: nil, description: nil, download_url: nil, hash: nil, id: nil, mime_type: nil, name: nil, parent_id: nil, permissions: nil, raw: nil, size: nil, type: nil, updated_at: nil, user_id: nil, version: nil, web_url: nil)
         @created_at = created_at
         @data = data
         @description = description
@@ -63,6 +65,7 @@ module UnifiedRubySDK
         @updated_at = updated_at
         @user_id = user_id
         @version = version
+        @web_url = web_url
       end
     end
   end
