@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 3613acd1631dbba37d5cd8b1d0150cb1
+  docChecksum: d4d729a2453d8e64af714d75ba2fa32b
   docVersion: "1.0"
-  speakeasyVersion: 1.465.1
-  generationVersion: 2.488.4
-  releaseVersion: 0.6.1
-  configChecksum: 41116c5099938d163a14edaa518bc916
+  speakeasyVersion: 1.468.2
+  generationVersion: 2.493.4
+  releaseVersion: 0.6.2
+  configChecksum: 48e356c096070d0cd892a998db8ba42b
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -19,7 +19,6 @@ features:
 generatedFiles:
   - .gitattributes
   - .rubocop.yml
-  - CONTRIBUTING.md
   - Gemfile
   - Gemfile.lock
   - Rakefile
@@ -956,6 +955,7 @@ generatedFiles:
   - docs/models/shared/listsortbyupdatedat.md
   - docs/models/shared/listspaceid.md
   - docs/models/shared/liststudentid.md
+  - docs/models/shared/listtaskid.md
   - docs/models/shared/listticketid.md
   - docs/models/shared/listtype.md
   - docs/models/shared/listupdatedgte.md
@@ -2202,6 +2202,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_sort_by_updated_at.rb
   - lib/unified_ruby_sdk/models/shared/list_space_id.rb
   - lib/unified_ruby_sdk/models/shared/list_student_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_task_id.rb
   - lib/unified_ruby_sdk/models/shared/list_ticket_id.rb
   - lib/unified_ruby_sdk/models/shared/list_type.rb
   - lib/unified_ruby_sdk/models/shared/list_updated_gte.rb

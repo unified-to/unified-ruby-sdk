@@ -303,6 +303,7 @@ module UnifiedRubySDK
     autoload :ListSortByUpdatedAt, 'unified_ruby_sdk/models/shared/list_sort_by_updated_at.rb'
     autoload :ListSpaceId, 'unified_ruby_sdk/models/shared/list_space_id.rb'
     autoload :ListStudentId, 'unified_ruby_sdk/models/shared/list_student_id.rb'
+    autoload :ListTaskId, 'unified_ruby_sdk/models/shared/list_task_id.rb'
     autoload :ListTicketId, 'unified_ruby_sdk/models/shared/list_ticket_id.rb'
     autoload :ListType, 'unified_ruby_sdk/models/shared/list_type.rb'
     autoload :ListUpdatedGte, 'unified_ruby_sdk/models/shared/list_updated_gte.rb'

@@ -24,15 +24,18 @@ module UnifiedRubySDK
 
       field :temperature, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('temperature') } }
 
+      field :tokens_used, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tokens_used') } }
 
-      sig { params(max_tokens: T.nilable(::Float), messages: T.nilable(T::Array[::UnifiedRubySDK::Shared::GenaiContent]), model_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), responses: T.nilable(T::Array[::String]), temperature: T.nilable(::Float)).void }
-      def initialize(max_tokens: nil, messages: nil, model_id: nil, raw: nil, responses: nil, temperature: nil)
+
+      sig { params(max_tokens: T.nilable(::Float), messages: T.nilable(T::Array[::UnifiedRubySDK::Shared::GenaiContent]), model_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), responses: T.nilable(T::Array[::String]), temperature: T.nilable(::Float), tokens_used: T.nilable(::Float)).void }
+      def initialize(max_tokens: nil, messages: nil, model_id: nil, raw: nil, responses: nil, temperature: nil, tokens_used: nil)
         @max_tokens = max_tokens
         @messages = messages
         @model_id = model_id
         @raw = raw
         @responses = responses
         @temperature = temperature
+        @tokens_used = tokens_used
       end
     end
   end
