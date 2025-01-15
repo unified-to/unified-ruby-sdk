@@ -12,24 +12,39 @@ module UnifiedRubySDK
       extend T::Sig
 
 
-      field :created_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
+      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+      field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+
+      field :end_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
       field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+      field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
       field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
       # The raw data returned by the integration for this list
       field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
+      field :start_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
       field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+      field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-      sig { params(created_at: T.nilable(::String), id: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
-      def initialize(created_at: nil, id: nil, name: nil, raw: nil, updated_at: nil)
+
+      sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), end_at: T.nilable(::DateTime), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+      def initialize(created_at: nil, description: nil, end_at: nil, id: nil, is_active: nil, name: nil, raw: nil, start_at: nil, updated_at: nil, user_id: nil)
         @created_at = created_at
+        @description = description
+        @end_at = end_at
         @id = id
+        @is_active = is_active
         @name = name
         @raw = raw
+        @start_at = start_at
         @updated_at = updated_at
+        @user_id = user_id
       end
     end
   end

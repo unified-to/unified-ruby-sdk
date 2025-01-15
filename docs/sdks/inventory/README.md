@@ -243,7 +243,7 @@ s.config_security(
 
     
 res = s.inventory.update_commerce_inventory(connection_id="<id>", id="<id>", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
-  available: 9360.01,
+  available: 9360.02,
 ), fields_=[
   "<value>",
 ])
