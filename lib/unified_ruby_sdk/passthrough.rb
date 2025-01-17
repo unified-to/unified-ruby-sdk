@@ -61,7 +61,8 @@ module UnifiedRubySDK
       )
 
       res.headers = r.headers
-      if [204, 205, 304].include?(r.status)
+      if [204, 205].include?(r.status)
+      elsif r.status == 304
       else
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, ::Object)
@@ -119,7 +120,8 @@ module UnifiedRubySDK
       )
 
       res.headers = r.headers
-      if [204, 205, 304].include?(r.status)
+      if [204, 205].include?(r.status)
+      elsif r.status == 304
       else
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, ::Object)
@@ -167,7 +169,8 @@ module UnifiedRubySDK
       )
 
       res.headers = r.headers
-      if [204, 205, 304].include?(r.status)
+      if [204, 205].include?(r.status)
+      elsif r.status == 304
       else
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, ::Object)
@@ -225,7 +228,8 @@ module UnifiedRubySDK
       )
 
       res.headers = r.headers
-      if [204, 205, 304].include?(r.status)
+      if [204, 205].include?(r.status)
+      elsif r.status == 304
       else
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, ::Object)
@@ -283,7 +287,8 @@ module UnifiedRubySDK
       )
 
       res.headers = r.headers
-      if [204, 205, 304].include?(r.status)
+      if [204, 205].include?(r.status)
+      elsif r.status == 304
       else
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, ::Object)
@@ -331,7 +336,8 @@ module UnifiedRubySDK
       )
 
       res.headers = r.headers
-      if [204, 205, 304].include?(r.status)
+      if [204, 205].include?(r.status)
+      elsif r.status == 304
       else
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, ::Object)
@@ -389,7 +395,8 @@ module UnifiedRubySDK
       )
 
       res.headers = r.headers
-      if [204, 205, 304].include?(r.status)
+      if [204, 205].include?(r.status)
+      elsif r.status == 304
       else
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, ::Object)
@@ -447,7 +454,8 @@ module UnifiedRubySDK
       )
 
       res.headers = r.headers
-      if [204, 205, 304].include?(r.status)
+      if [204, 205].include?(r.status)
+      elsif r.status == 304
       else
         if Utils.match_content_type(content_type, 'application/json')
           out = Utils.unmarshal_complex(r.env.response_body, ::Object)

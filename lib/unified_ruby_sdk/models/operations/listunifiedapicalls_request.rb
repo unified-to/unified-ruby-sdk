@@ -21,6 +21,8 @@ module UnifiedRubySDK
       field :external_xref, T.nilable(::String), { 'query_param': { 'field_name': 'external_xref', 'style': 'form', 'explode': true } }
       # Filter the results to just this integration
       field :integration_type, T.nilable(::String), { 'query_param': { 'field_name': 'integration_type', 'style': 'form', 'explode': true } }
+      # Filter the results for only billable API Calls
+      field :is_billable, T.nilable(T::Boolean), { 'query_param': { 'field_name': 'is_billable', 'style': 'form', 'explode': true } }
 
       field :limit, T.nilable(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
 
@@ -29,22 +31,29 @@ module UnifiedRubySDK
       field :order, T.nilable(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
 
       field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
+      # Filter the results to just this type
+      field :type, T.nilable(::String), { 'query_param': { 'field_name': 'type', 'style': 'form', 'explode': true } }
       # Return only results whose updated date is equal or greater to this value
       field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
+      # Filter the results to just this webhook
+      field :webhook_id, T.nilable(::String), { 'query_param': { 'field_name': 'webhook_id', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: T.nilable(::String), env: T.nilable(::String), error: T.nilable(T::Boolean), external_xref: T.nilable(::String), integration_type: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
-      def initialize(connection_id: nil, env: nil, error: nil, external_xref: nil, integration_type: nil, limit: nil, offset: nil, order: nil, sort: nil, updated_gte: nil)
+      sig { params(connection_id: T.nilable(::String), env: T.nilable(::String), error: T.nilable(T::Boolean), external_xref: T.nilable(::String), integration_type: T.nilable(::String), is_billable: T.nilable(T::Boolean), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), sort: T.nilable(::String), type: T.nilable(::String), updated_gte: T.nilable(::DateTime), webhook_id: T.nilable(::String)).void }
+      def initialize(connection_id: nil, env: nil, error: nil, external_xref: nil, integration_type: nil, is_billable: nil, limit: nil, offset: nil, order: nil, sort: nil, type: nil, updated_gte: nil, webhook_id: nil)
         @connection_id = connection_id
         @env = env
         @error = error
         @external_xref = external_xref
         @integration_type = integration_type
+        @is_billable = is_billable
         @limit = limit
         @offset = offset
         @order = order
         @sort = sort
+        @type = type
         @updated_gte = updated_gte
+        @webhook_id = webhook_id
       end
     end
   end
