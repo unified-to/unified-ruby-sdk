@@ -16,10 +16,10 @@ module UnifiedRubySDK
 
       field :type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
 
-      field :value, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
+      field :value, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 
 
-      sig { params(name: ::String, type: T.nilable(::String), value: T.nilable(T::Hash[Symbol, ::Object])).void }
+      sig { params(name: ::String, type: T.nilable(::String), value: T.nilable(::String)).void }
       def initialize(name: nil, type: nil, value: nil)
         @name = name
         @type = type
