@@ -5,12 +5,62 @@
 
 ### Available Operations
 
+* [create_kms_comment](#create_kms_comment) - Create a comment
 * [create_task_comment](#create_task_comment) - Create a comment
+* [get_kms_comment](#get_kms_comment) - Retrieve a comment
 * [get_task_comment](#get_task_comment) - Retrieve a comment
+* [list_kms_comments](#list_kms_comments) - List all comments
 * [list_task_comments](#list_task_comments) - List all comments
+* [patch_kms_comment](#patch_kms_comment) - Update a comment
 * [patch_task_comment](#patch_task_comment) - Update a comment
+* [remove_kms_comment](#remove_kms_comment) - Remove a comment
 * [remove_task_comment](#remove_task_comment) - Remove a comment
+* [update_kms_comment](#update_kms_comment) - Update a comment
 * [update_task_comment](#update_task_comment) - Update a comment
+
+## create_kms_comment
+
+Create a comment
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.comment.create_kms_comment(connection_id="<id>", kms_comment=::UnifiedRubySDK::Shared::KmsComment.new(
+  content: "<value>",
+), fields_=[
+  "<value>",
+])
+
+if ! res.kms_comment.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `connection_id`                                                                      | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the connection                                                                 |
+| `kms_comment`                                                                        | [T.nilable(::UnifiedRubySDK::Shared::KmsComment)](../../models/shared/kmscomment.md) | :heavy_minus_sign:                                                                   | N/A                                                                                  |
+| `fields_`                                                                            | T::Array<*::String*>                                                                 | :heavy_minus_sign:                                                                   | Comma-delimited fields to return                                                     |
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::CreateKmsCommentResponse)](../../models/operations/createkmscommentresponse.md)**
+
+
 
 ## create_task_comment
 
@@ -57,6 +107,48 @@ end
 
 
 
+## get_kms_comment
+
+Retrieve a comment
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.comment.get_kms_comment(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
+
+if ! res.kms_comment.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                        | Type                             | Required                         | Description                      |
+| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Comment                |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::GetKmsCommentResponse)](../../models/operations/getkmscommentresponse.md)**
+
+
+
 ## get_task_comment
 
 Retrieve a comment
@@ -99,6 +191,48 @@ end
 
 
 
+## list_kms_comments
+
+List all comments
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+
+req = ::UnifiedRubySDK::Operations::ListKmsCommentsRequest.new(
+  connection_id: "<id>",
+)
+    
+res = s.comment.list_kms_comments(req)
+
+if ! res.kms_comments.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [::UnifiedRubySDK::Operations::ListKmsCommentsRequest](../../models/operations/listkmscommentsrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::ListKmsCommentsResponse)](../../models/operations/listkmscommentsresponse.md)**
+
+
+
 ## list_task_comments
 
 List all comments
@@ -138,6 +272,51 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListTaskCommentsResponse)](../../models/operations/listtaskcommentsresponse.md)**
+
+
+
+## patch_kms_comment
+
+Update a comment
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.comment.patch_kms_comment(connection_id="<id>", id="<id>", kms_comment=::UnifiedRubySDK::Shared::KmsComment.new(
+  content: "<value>",
+), fields_=[
+  "<value>",
+])
+
+if ! res.kms_comment.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `connection_id`                                                                      | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the connection                                                                 |
+| `id`                                                                                 | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the Comment                                                                    |
+| `kms_comment`                                                                        | [T.nilable(::UnifiedRubySDK::Shared::KmsComment)](../../models/shared/kmscomment.md) | :heavy_minus_sign:                                                                   | N/A                                                                                  |
+| `fields_`                                                                            | T::Array<*::String*>                                                                 | :heavy_minus_sign:                                                                   | Comma-delimited fields to return                                                     |
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::PatchKmsCommentResponse)](../../models/operations/patchkmscommentresponse.md)**
 
 
 
@@ -187,6 +366,45 @@ end
 
 
 
+## remove_kms_comment
+
+Remove a comment
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.comment.remove_kms_comment(connection_id="<id>", id="<id>")
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Comment    |
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::RemoveKmsCommentResponse)](../../models/operations/removekmscommentresponse.md)**
+
+
+
 ## remove_task_comment
 
 Remove a comment
@@ -223,6 +441,51 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::RemoveTaskCommentResponse)](../../models/operations/removetaskcommentresponse.md)**
+
+
+
+## update_kms_comment
+
+Update a comment
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+
+s = ::UnifiedRubySDK::UnifiedTo.new
+s.config_security(
+  ::UnifiedRubySDK::Shared::Security.new(
+    jwt: "<YOUR_API_KEY_HERE>",
+  )
+)
+
+    
+res = s.comment.update_kms_comment(connection_id="<id>", id="<id>", kms_comment=::UnifiedRubySDK::Shared::KmsComment.new(
+  content: "<value>",
+), fields_=[
+  "<value>",
+])
+
+if ! res.kms_comment.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `connection_id`                                                                      | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the connection                                                                 |
+| `id`                                                                                 | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the Comment                                                                    |
+| `kms_comment`                                                                        | [T.nilable(::UnifiedRubySDK::Shared::KmsComment)](../../models/shared/kmscomment.md) | :heavy_minus_sign:                                                                   | N/A                                                                                  |
+| `fields_`                                                                            | T::Array<*::String*>                                                                 | :heavy_minus_sign:                                                                   | Comma-delimited fields to return                                                     |
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::UpdateKmsCommentResponse)](../../models/operations/updatekmscommentresponse.md)**
 
 
 

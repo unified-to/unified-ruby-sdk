@@ -65,6 +65,7 @@ module UnifiedRubySDK
         MESSAGING_CHANNEL = new('messaging_channel')
         KMS_SPACE = new('kms_space')
         KMS_PAGE = new('kms_page')
+        KMS_COMMENT = new('kms_comment')
         TASK_PROJECT = new('task_project')
         TASK_TASK = new('task_task')
         TASK_COMMENT = new('task_comment')

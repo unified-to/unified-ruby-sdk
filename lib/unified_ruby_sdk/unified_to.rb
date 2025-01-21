@@ -13,7 +13,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :contact, :invoice, :journal, :order, :organization, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :employee, :group, :payslip, :timeoff, :kms, :page, :space, :lms, :class_, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :link, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :storage, :file, :task, :comment, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
+    attr_accessor :accounting, :account, :contact, :invoice, :journal, :order, :organization, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :employee, :group, :payslip, :timeoff, :kms, :comment, :page, :space, :lms, :class_, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :link, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :storage, :file, :task, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
 
     sig do
       params(client: Faraday::Request,
@@ -115,6 +115,7 @@ module UnifiedRubySDK
       @payslip = Payslip.new(@sdk_configuration)
       @timeoff = Timeoff.new(@sdk_configuration)
       @kms = Kms.new(@sdk_configuration)
+      @comment = Comment.new(@sdk_configuration)
       @page = Page.new(@sdk_configuration)
       @space = Space.new(@sdk_configuration)
       @lms = Lms.new(@sdk_configuration)
@@ -145,7 +146,6 @@ module UnifiedRubySDK
       @storage = Storage.new(@sdk_configuration)
       @file = File.new(@sdk_configuration)
       @task = Task.new(@sdk_configuration)
-      @comment = Comment.new(@sdk_configuration)
       @project = Project.new(@sdk_configuration)
       @ticketing = Ticketing.new(@sdk_configuration)
       @customer = Customer.new(@sdk_configuration)
