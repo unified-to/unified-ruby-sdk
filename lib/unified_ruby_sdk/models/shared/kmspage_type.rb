@@ -13,6 +13,7 @@ module UnifiedRubySDK
         HTML = new('HTML')
         MARKDOWN = new('MARKDOWN')
         TEXT = new('TEXT')
+        OTHER = new('OTHER')
       end
     end
   end

@@ -87,7 +87,6 @@ s.config_security(
 
     
 res = s.kms.create_kms_page(connection_id="<id>", kms_page=::UnifiedRubySDK::Shared::KmsPage.new(
-  download_url: "https://bitter-adult.biz/",
   title: "<value>",
   type: ::UnifiedRubySDK::Shared::KmsPageType::HTML,
 ), fields_=[
@@ -474,9 +473,8 @@ s.config_security(
 
     
 res = s.kms.patch_kms_page(connection_id="<id>", id="<id>", kms_page=::UnifiedRubySDK::Shared::KmsPage.new(
-  download_url: "https://evil-tackle.info",
   title: "<value>",
-  type: ::UnifiedRubySDK::Shared::KmsPageType::MARKDOWN,
+  type: ::UnifiedRubySDK::Shared::KmsPageType::TEXT,
 ), fields_=[
   "<value>",
 ])
@@ -728,9 +726,8 @@ s.config_security(
 
     
 res = s.kms.update_kms_page(connection_id="<id>", id="<id>", kms_page=::UnifiedRubySDK::Shared::KmsPage.new(
-  download_url: "https://salty-devil.com",
   title: "<value>",
-  type: ::UnifiedRubySDK::Shared::KmsPageType::TEXT,
+  type: ::UnifiedRubySDK::Shared::KmsPageType::OTHER,
 ), fields_=[
   "<value>",
 ])
