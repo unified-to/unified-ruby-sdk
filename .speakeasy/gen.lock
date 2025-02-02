@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 0348382e89126471fa3b06fe46a31486
+  docChecksum: 00e71c38f182c4bad7a19b0c7bb3e211
   docVersion: "1.0"
-  speakeasyVersion: 1.474.0
-  generationVersion: 2.495.0
-  releaseVersion: 0.6.8
-  configChecksum: e54acf3d3045150fdfdd290999d9921c
+  speakeasyVersion: 1.481.1
+  generationVersion: 2.500.5
+  releaseVersion: 0.6.9
+  configChecksum: f123fe202521bdb2f3f7d76cedae60f6
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
 features:
   ruby:
-    core: 3.5.1
+    core: 3.5.3
     flattening: 2.81.1
     globalSecurity: 2.81.7
     globalServerURLs: 2.82.3
@@ -862,14 +862,17 @@ generatedFiles:
   - docs/models/shared/commercecollection.md
   - docs/models/shared/commercecollectiontype.md
   - docs/models/shared/commerceinventory.md
+  - docs/models/shared/commerceinventoryraw.md
   - docs/models/shared/commerceitem.md
   - docs/models/shared/commerceitemmedia.md
   - docs/models/shared/commerceitemmediatype.md
   - docs/models/shared/commerceitemmetadata.md
   - docs/models/shared/commerceitemoption.md
   - docs/models/shared/commerceitemprice.md
+  - docs/models/shared/commerceitemraw.md
   - docs/models/shared/commerceitemvariant.md
   - docs/models/shared/commercelocation.md
+  - docs/models/shared/commercelocationraw.md
   - docs/models/shared/connection.md
   - docs/models/shared/contenttype.md
   - docs/models/shared/crmcompany.md
@@ -898,6 +901,7 @@ generatedFiles:
   - docs/models/shared/enrichtelephonetype.md
   - docs/models/shared/ethnicity.md
   - docs/models/shared/event.md
+  - docs/models/shared/extradata.md
   - docs/models/shared/frequency.md
   - docs/models/shared/fromwebhook.md
   - docs/models/shared/genaicontent.md
@@ -1066,6 +1070,7 @@ generatedFiles:
   - docs/models/shared/propertystoragepermissionroles.md
   - docs/models/shared/propertyuccalltelephone.md
   - docs/models/shared/propertyuccalltelephonetype.md
+  - docs/models/shared/raw.md
   - docs/models/shared/recommendation.md
   - docs/models/shared/repobranch.md
   - docs/models/shared/repocommit.md
@@ -1127,6 +1132,7 @@ generatedFiles:
   - docs/models/shared/ucemailtype.md
   - docs/models/shared/uctelephone.md
   - docs/models/shared/uctelephonetype.md
+  - docs/models/shared/value.md
   - docs/models/shared/virtualwebhookchannelid.md
   - docs/models/shared/virtualwebhookcompanyid.md
   - docs/models/shared/virtualwebhookcontactid.md
@@ -2124,7 +2130,9 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/commercecollection.rb
   - lib/unified_ruby_sdk/models/shared/commercecollection_type.rb
   - lib/unified_ruby_sdk/models/shared/commerceinventory.rb
+  - lib/unified_ruby_sdk/models/shared/commerceinventory_raw.rb
   - lib/unified_ruby_sdk/models/shared/commerceitem.rb
+  - lib/unified_ruby_sdk/models/shared/commerceitem_raw.rb
   - lib/unified_ruby_sdk/models/shared/commerceitemmedia.rb
   - lib/unified_ruby_sdk/models/shared/commerceitemmedia_type.rb
   - lib/unified_ruby_sdk/models/shared/commerceitemmetadata.rb
@@ -2132,6 +2140,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/commerceitemprice.rb
   - lib/unified_ruby_sdk/models/shared/commerceitemvariant.rb
   - lib/unified_ruby_sdk/models/shared/commercelocation.rb
+  - lib/unified_ruby_sdk/models/shared/commercelocation_raw.rb
   - lib/unified_ruby_sdk/models/shared/connection.rb
   - lib/unified_ruby_sdk/models/shared/content_type.rb
   - lib/unified_ruby_sdk/models/shared/crmcompany.rb
@@ -2160,6 +2169,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/enrichtelephone_type.rb
   - lib/unified_ruby_sdk/models/shared/ethnicity.rb
   - lib/unified_ruby_sdk/models/shared/event.rb
+  - lib/unified_ruby_sdk/models/shared/extra_data.rb
   - lib/unified_ruby_sdk/models/shared/frequency.rb
   - lib/unified_ruby_sdk/models/shared/from_webhook.rb
   - lib/unified_ruby_sdk/models/shared/genaicontent.rb
@@ -2328,6 +2338,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_storagepermission_roles.rb
   - lib/unified_ruby_sdk/models/shared/property_uccall_telephone.rb
   - lib/unified_ruby_sdk/models/shared/property_uccall_telephone_type.rb
+  - lib/unified_ruby_sdk/models/shared/raw.rb
   - lib/unified_ruby_sdk/models/shared/recommendation.rb
   - lib/unified_ruby_sdk/models/shared/repobranch.rb
   - lib/unified_ruby_sdk/models/shared/repocommit.rb
@@ -2389,6 +2400,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/ucemail_type.rb
   - lib/unified_ruby_sdk/models/shared/uctelephone.rb
   - lib/unified_ruby_sdk/models/shared/uctelephone_type.rb
+  - lib/unified_ruby_sdk/models/shared/value.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_channel_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_company_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_contact_id.rb
