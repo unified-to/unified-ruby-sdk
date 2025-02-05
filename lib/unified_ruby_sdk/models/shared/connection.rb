@@ -14,6 +14,8 @@ module UnifiedRubySDK
       # The Integration categories that this connection supports
       field :categories, T::Array[::UnifiedRubySDK::Shared::PropertyConnectionCategories], { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('categories') } }
 
+      field :integration_name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('integration_name') } }
+
       field :integration_type, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('integration_type') } }
 
       field :permissions, T::Array[::UnifiedRubySDK::Shared::PropertyConnectionPermissions], { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('permissions') } }
@@ -41,9 +43,10 @@ module UnifiedRubySDK
       field :workspace_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
 
 
-      sig { params(categories: T::Array[::UnifiedRubySDK::Shared::PropertyConnectionCategories], integration_type: ::String, permissions: T::Array[::UnifiedRubySDK::Shared::PropertyConnectionPermissions], auth: T.nilable(::UnifiedRubySDK::Shared::PropertyConnectionAuth), auth_aws_arn: T.nilable(::String), created_at: T.nilable(::DateTime), environment: T.nilable(::String), external_xref: T.nilable(::String), id: T.nilable(::String), is_paused: T.nilable(T::Boolean), last_healthy_at: T.nilable(::DateTime), last_unhealthy_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), workspace_id: T.nilable(::String)).void }
-      def initialize(categories: nil, integration_type: nil, permissions: nil, auth: nil, auth_aws_arn: nil, created_at: nil, environment: nil, external_xref: nil, id: nil, is_paused: nil, last_healthy_at: nil, last_unhealthy_at: nil, updated_at: nil, workspace_id: nil)
+      sig { params(categories: T::Array[::UnifiedRubySDK::Shared::PropertyConnectionCategories], integration_name: ::String, integration_type: ::String, permissions: T::Array[::UnifiedRubySDK::Shared::PropertyConnectionPermissions], auth: T.nilable(::UnifiedRubySDK::Shared::PropertyConnectionAuth), auth_aws_arn: T.nilable(::String), created_at: T.nilable(::DateTime), environment: T.nilable(::String), external_xref: T.nilable(::String), id: T.nilable(::String), is_paused: T.nilable(T::Boolean), last_healthy_at: T.nilable(::DateTime), last_unhealthy_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), workspace_id: T.nilable(::String)).void }
+      def initialize(categories: nil, integration_name: nil, integration_type: nil, permissions: nil, auth: nil, auth_aws_arn: nil, created_at: nil, environment: nil, external_xref: nil, id: nil, is_paused: nil, last_healthy_at: nil, last_unhealthy_at: nil, updated_at: nil, workspace_id: nil)
         @categories = categories
+        @integration_name = integration_name
         @integration_type = integration_type
         @permissions = permissions
         @auth = auth

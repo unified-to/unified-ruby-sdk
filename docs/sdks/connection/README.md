@@ -34,6 +34,7 @@ req = ::UnifiedRubySDK::Shared::Connection.new(
   categories: [
     ::UnifiedRubySDK::Shared::PropertyConnectionCategories::REPO,
   ],
+  integration_name: "<value>",
   integration_type: "<value>",
   permissions: [
     ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_LEAD_READ,
@@ -160,6 +161,7 @@ res = s.connection.patch_unified_connection(id="<id>", connection=::UnifiedRubyS
   categories: [
     ::UnifiedRubySDK::Shared::PropertyConnectionCategories::GENAI,
   ],
+  integration_name: "<value>",
   integration_type: "<value>",
   permissions: [
     ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::METADATA_METADATA_WRITE,
@@ -245,6 +247,7 @@ res = s.connection.update_unified_connection(id="<id>", connection=::UnifiedRuby
   categories: [
     ::UnifiedRubySDK::Shared::PropertyConnectionCategories::TASK,
   ],
+  integration_name: "<value>",
   integration_type: "<value>",
   permissions: [
     ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::REPO_PULLREQUEST_WRITE,

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 00e71c38f182c4bad7a19b0c7bb3e211
+  docChecksum: 075b9cea2675db23b5f8cea829ebb57f
   docVersion: "1.0"
-  speakeasyVersion: 1.481.1
-  generationVersion: 2.500.5
-  releaseVersion: 0.6.9
-  configChecksum: f123fe202521bdb2f3f7d76cedae60f6
+  speakeasyVersion: 1.484.1
+  generationVersion: 2.503.2
+  releaseVersion: 0.6.10
+  configChecksum: 91e7244946ab7deca623df9ba879a986
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -969,6 +969,7 @@ generatedFiles:
   - docs/models/shared/listquery.md
   - docs/models/shared/listrawfields.md
   - docs/models/shared/listrepoid.md
+  - docs/models/shared/listrootid.md
   - docs/models/shared/listsortbycreatedat.md
   - docs/models/shared/listsortbyname.md
   - docs/models/shared/listsortbyupdatedat.md
@@ -997,6 +998,7 @@ generatedFiles:
   - docs/models/shared/messagingchannel.md
   - docs/models/shared/messagingmember.md
   - docs/models/shared/messagingmessage.md
+  - docs/models/shared/meta.md
   - docs/models/shared/metadatametadata.md
   - docs/models/shared/nativewebhookparentid.md
   - docs/models/shared/nativewebhookprojectid.md
@@ -1026,6 +1028,7 @@ generatedFiles:
   - docs/models/shared/propertyatscompanyaddress.md
   - docs/models/shared/propertycommercelocationaddress.md
   - docs/models/shared/propertyconnectionauth.md
+  - docs/models/shared/propertyconnectionauthmeta.md
   - docs/models/shared/propertyconnectioncategories.md
   - docs/models/shared/propertyconnectionpermissions.md
   - docs/models/shared/propertycrmcompanyaddress.md
@@ -2237,6 +2240,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_query.rb
   - lib/unified_ruby_sdk/models/shared/list_raw_fields.rb
   - lib/unified_ruby_sdk/models/shared/list_repo_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_root_id.rb
   - lib/unified_ruby_sdk/models/shared/list_sort_by_created_at.rb
   - lib/unified_ruby_sdk/models/shared/list_sort_by_name.rb
   - lib/unified_ruby_sdk/models/shared/list_sort_by_updated_at.rb
@@ -2265,6 +2269,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/messagingchannel.rb
   - lib/unified_ruby_sdk/models/shared/messagingmember.rb
   - lib/unified_ruby_sdk/models/shared/messagingmessage.rb
+  - lib/unified_ruby_sdk/models/shared/meta.rb
   - lib/unified_ruby_sdk/models/shared/metadatametadata.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_parent_id.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_project_id.rb
@@ -2294,6 +2299,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_atscompany_address.rb
   - lib/unified_ruby_sdk/models/shared/property_commercelocation_address.rb
   - lib/unified_ruby_sdk/models/shared/property_connection_auth.rb
+  - lib/unified_ruby_sdk/models/shared/property_connection_auth_meta.rb
   - lib/unified_ruby_sdk/models/shared/property_connection_categories.rb
   - lib/unified_ruby_sdk/models/shared/property_connection_permissions.rb
   - lib/unified_ruby_sdk/models/shared/property_crmcompany_address.rb
@@ -5857,7 +5863,7 @@ examples:
     speakeasy-default-create-unified-connection:
       responses:
         "200":
-          application/json: {"categories": ["accounting", "martech", "martech"], "integration_type": "<value>", "permissions": ["lms_course_read", "scim_users_read"]}
+          application/json: {"categories": ["accounting", "martech", "martech"], "integration_name": "<value>", "integration_type": "<value>", "permissions": ["lms_course_read", "scim_users_read"]}
   createUnifiedWebhook:
     speakeasy-default-create-unified-webhook:
       responses:
@@ -5878,7 +5884,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"categories": ["storage"], "integration_type": "<value>", "permissions": ["kms_page_read"]}
+          application/json: {"categories": ["storage"], "integration_name": "<value>", "integration_type": "<value>", "permissions": ["kms_page_read"]}
   getUnifiedIntegrationAuth:
     speakeasy-default-get-unified-integration-auth:
       parameters:
@@ -5906,7 +5912,7 @@ examples:
     speakeasy-default-list-unified-connections:
       responses:
         "200":
-          application/json: [{"categories": [], "integration_type": "<value>", "permissions": ["kms_comment_write", "kms_space_read"]}, {"categories": ["auth"], "integration_type": "<value>", "permissions": ["crm_deal_write", "ats_interview_read", "repo_pullrequest_read"]}]
+          application/json: [{"categories": [], "integration_name": "<value>", "integration_type": "<value>", "permissions": ["kms_comment_write", "kms_space_read"]}, {"categories": ["auth"], "integration_name": "<value>", "integration_type": "<value>", "permissions": ["crm_deal_write", "ats_interview_read", "repo_pullrequest_read"]}]
   listUnifiedIntegrationWorkspaces:
     speakeasy-default-list-unified-integration-workspaces:
       parameters:
@@ -5938,7 +5944,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"categories": ["metadata", "crm"], "integration_type": "<value>", "permissions": []}
+          application/json: {"categories": ["metadata", "crm"], "integration_name": "<value>", "integration_type": "<value>", "permissions": []}
   patchUnifiedWebhook:
     speakeasy-default-patch-unified-webhook:
       parameters:
@@ -5969,7 +5975,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"categories": ["metadata", "accounting", "metadata"], "integration_type": "<value>", "permissions": []}
+          application/json: {"categories": ["metadata", "accounting", "metadata"], "integration_name": "<value>", "integration_type": "<value>", "permissions": []}
   updateUnifiedWebhook:
     speakeasy-default-update-unified-webhook:
       parameters:
