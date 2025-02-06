@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 075b9cea2675db23b5f8cea829ebb57f
+  docChecksum: d11952529f2b721f734977d81996920c
   docVersion: "1.0"
   speakeasyVersion: 1.484.1
   generationVersion: 2.503.2
-  releaseVersion: 0.6.10
-  configChecksum: 91e7244946ab7deca623df9ba879a986
+  releaseVersion: 0.6.11
+  configChecksum: 3146d4049fd6cc9ea76d58f253efa1ec
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -1000,6 +1000,8 @@ generatedFiles:
   - docs/models/shared/messagingmessage.md
   - docs/models/shared/meta.md
   - docs/models/shared/metadatametadata.md
+  - docs/models/shared/metadatametadataraw.md
+  - docs/models/shared/metadatametadatatype.md
   - docs/models/shared/nativewebhookparentid.md
   - docs/models/shared/nativewebhookprojectid.md
   - docs/models/shared/objecttype.md
@@ -2271,6 +2273,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/messagingmessage.rb
   - lib/unified_ruby_sdk/models/shared/meta.rb
   - lib/unified_ruby_sdk/models/shared/metadatametadata.rb
+  - lib/unified_ruby_sdk/models/shared/metadatametadata_raw.rb
+  - lib/unified_ruby_sdk/models/shared/metadatametadata_type.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_parent_id.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_project_id.rb
   - lib/unified_ruby_sdk/models/shared/object_type.rb

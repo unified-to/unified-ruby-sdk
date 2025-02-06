@@ -22,20 +22,23 @@ module UnifiedRubySDK
 
       field :objects, T.nilable(T::Hash[Symbol, ::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('objects') } }
 
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :options, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
 
-      field :type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
+      field :raw, T.nilable(::UnifiedRubySDK::Shared::MetadataMetadataRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+      field :type, T.nilable(::UnifiedRubySDK::Shared::MetadataMetadataType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::MetadataMetadataType, true) } }
 
       field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(name: ::String, object_type: ::String, created_at: T.nilable(::DateTime), id: T.nilable(::String), objects: T.nilable(T::Hash[Symbol, ::String]), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-      def initialize(name: nil, object_type: nil, created_at: nil, id: nil, objects: nil, raw: nil, type: nil, updated_at: nil)
+      sig { params(name: ::String, object_type: ::String, created_at: T.nilable(::DateTime), id: T.nilable(::String), objects: T.nilable(T::Hash[Symbol, ::String]), options: T.nilable(T::Array[::String]), raw: T.nilable(::UnifiedRubySDK::Shared::MetadataMetadataRaw), type: T.nilable(::UnifiedRubySDK::Shared::MetadataMetadataType), updated_at: T.nilable(::DateTime)).void }
+      def initialize(name: nil, object_type: nil, created_at: nil, id: nil, objects: nil, options: nil, raw: nil, type: nil, updated_at: nil)
         @name = name
         @object_type = object_type
         @created_at = created_at
         @id = id
         @objects = objects
+        @options = options
         @raw = raw
         @type = type
         @updated_at = updated_at

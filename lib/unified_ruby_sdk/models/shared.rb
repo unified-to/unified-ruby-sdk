@@ -200,6 +200,8 @@ module UnifiedRubySDK
     autoload :PropertyMessagingMessageAuthorMember, 'unified_ruby_sdk/models/shared/property_messagingmessage_author_member.rb'
     autoload :MessagingAttachment, 'unified_ruby_sdk/models/shared/messagingattachment.rb'
     autoload :MessagingChannel, 'unified_ruby_sdk/models/shared/messagingchannel.rb'
+    autoload :MetadataMetadataRaw, 'unified_ruby_sdk/models/shared/metadatametadata_raw.rb'
+    autoload :MetadataMetadataType, 'unified_ruby_sdk/models/shared/metadatametadata_type.rb'
     autoload :MetadataMetadata, 'unified_ruby_sdk/models/shared/metadatametadata.rb'
     autoload :PaymentLink, 'unified_ruby_sdk/models/shared/paymentlink.rb'
     autoload :PaymentLineitem, 'unified_ruby_sdk/models/shared/paymentlineitem.rb'
