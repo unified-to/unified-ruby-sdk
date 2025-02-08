@@ -28,7 +28,7 @@ module UnifiedRubySDK
 
       field :location, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location') } }
 
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(::UnifiedRubySDK::Shared::AtsInterviewRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :start_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
@@ -39,7 +39,7 @@ module UnifiedRubySDK
       field :user_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
 
 
-      sig { params(application_id: T.nilable(::String), candidate_id: T.nilable(::String), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), external_event_xref: T.nilable(::String), id: T.nilable(::String), job_id: T.nilable(::String), location: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(::UnifiedRubySDK::Shared::AtsInterviewStatus), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
+      sig { params(application_id: T.nilable(::String), candidate_id: T.nilable(::String), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), external_event_xref: T.nilable(::String), id: T.nilable(::String), job_id: T.nilable(::String), location: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::AtsInterviewRaw), start_at: T.nilable(::DateTime), status: T.nilable(::UnifiedRubySDK::Shared::AtsInterviewStatus), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
       def initialize(application_id: nil, candidate_id: nil, created_at: nil, end_at: nil, external_event_xref: nil, id: nil, job_id: nil, location: nil, raw: nil, start_at: nil, status: nil, updated_at: nil, user_ids: nil)
         @application_id = application_id
         @candidate_id = candidate_id

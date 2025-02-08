@@ -37,12 +37,14 @@ module UnifiedRubySDK
       field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
       field :number_of_openings, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('number_of_openings') } }
+      # Public job postings
+      field :postings, T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsJobPosting]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('postings') } }
       # URLs for pages containing public listings for the job
       field :public_job_urls, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('public_job_urls') } }
 
       field :questions, T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsJobQuestion]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('questions') } }
 
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(::UnifiedRubySDK::Shared::AtsJobRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :recruiter_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recruiter_ids') } }
 
@@ -53,8 +55,8 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(addresses: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsAddress]), closed_at: T.nilable(::DateTime), company_id: T.nilable(::String), compensation: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsCompensation]), created_at: T.nilable(::DateTime), departments: T.nilable(T::Array[::String]), description: T.nilable(::String), employment_type: T.nilable(::UnifiedRubySDK::Shared::EmploymentType), hiring_manager_ids: T.nilable(T::Array[::String]), id: T.nilable(::String), language_locale: T.nilable(::String), name: T.nilable(::String), number_of_openings: T.nilable(::Float), public_job_urls: T.nilable(T::Array[::String]), questions: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsJobQuestion]), raw: T.nilable(T::Hash[Symbol, ::Object]), recruiter_ids: T.nilable(T::Array[::String]), remote: T.nilable(T::Boolean), status: T.nilable(::UnifiedRubySDK::Shared::AtsJobStatus), updated_at: T.nilable(::DateTime)).void }
-      def initialize(addresses: nil, closed_at: nil, company_id: nil, compensation: nil, created_at: nil, departments: nil, description: nil, employment_type: nil, hiring_manager_ids: nil, id: nil, language_locale: nil, name: nil, number_of_openings: nil, public_job_urls: nil, questions: nil, raw: nil, recruiter_ids: nil, remote: nil, status: nil, updated_at: nil)
+      sig { params(addresses: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsAddress]), closed_at: T.nilable(::DateTime), company_id: T.nilable(::String), compensation: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsCompensation]), created_at: T.nilable(::DateTime), departments: T.nilable(T::Array[::String]), description: T.nilable(::String), employment_type: T.nilable(::UnifiedRubySDK::Shared::EmploymentType), hiring_manager_ids: T.nilable(T::Array[::String]), id: T.nilable(::String), language_locale: T.nilable(::String), name: T.nilable(::String), number_of_openings: T.nilable(::Float), postings: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsJobPosting]), public_job_urls: T.nilable(T::Array[::String]), questions: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsJobQuestion]), raw: T.nilable(::UnifiedRubySDK::Shared::AtsJobRaw), recruiter_ids: T.nilable(T::Array[::String]), remote: T.nilable(T::Boolean), status: T.nilable(::UnifiedRubySDK::Shared::AtsJobStatus), updated_at: T.nilable(::DateTime)).void }
+      def initialize(addresses: nil, closed_at: nil, company_id: nil, compensation: nil, created_at: nil, departments: nil, description: nil, employment_type: nil, hiring_manager_ids: nil, id: nil, language_locale: nil, name: nil, number_of_openings: nil, postings: nil, public_job_urls: nil, questions: nil, raw: nil, recruiter_ids: nil, remote: nil, status: nil, updated_at: nil)
         @addresses = addresses
         @closed_at = closed_at
         @company_id = company_id
@@ -68,6 +70,7 @@ module UnifiedRubySDK
         @language_locale = language_locale
         @name = name
         @number_of_openings = number_of_openings
+        @postings = postings
         @public_job_urls = public_job_urls
         @questions = questions
         @raw = raw

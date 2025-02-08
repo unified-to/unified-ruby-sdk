@@ -18,12 +18,12 @@ module UnifiedRubySDK
 
       field :original_status, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('original_status') } }
 
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(::UnifiedRubySDK::Shared::AtsStatusRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :status, T.nilable(::UnifiedRubySDK::Shared::AtsStatusStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::AtsStatusStatus, true) } }
 
 
-      sig { params(description: T.nilable(::String), id: T.nilable(::String), original_status: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(::UnifiedRubySDK::Shared::AtsStatusStatus)).void }
+      sig { params(description: T.nilable(::String), id: T.nilable(::String), original_status: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::AtsStatusRaw), status: T.nilable(::UnifiedRubySDK::Shared::AtsStatusStatus)).void }
       def initialize(description: nil, id: nil, original_status: nil, raw: nil, status: nil)
         @description = description
         @id = id

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: d11952529f2b721f734977d81996920c
+  docChecksum: 079a662c33e65673ca2fb2b1cc54edc4
   docVersion: "1.0"
-  speakeasyVersion: 1.484.1
-  generationVersion: 2.503.2
-  releaseVersion: 0.6.11
-  configChecksum: 3146d4049fd6cc9ea76d58f253efa1ec
+  speakeasyVersion: 1.487.1
+  generationVersion: 2.506.0
+  releaseVersion: 0.6.12
+  configChecksum: 1d56b90f7c113a7a92a169c8d8a34807
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -837,29 +837,39 @@ generatedFiles:
   - docs/models/shared/atsaddress.md
   - docs/models/shared/atsapplication.md
   - docs/models/shared/atsapplicationanswer.md
+  - docs/models/shared/atsapplicationraw.md
   - docs/models/shared/atsapplicationstatus.md
   - docs/models/shared/atscandidate.md
+  - docs/models/shared/atscandidateraw.md
   - docs/models/shared/atscompany.md
+  - docs/models/shared/atscompanyraw.md
   - docs/models/shared/atscompensation.md
   - docs/models/shared/atscompensationtype.md
   - docs/models/shared/atsdocument.md
+  - docs/models/shared/atsdocumentraw.md
   - docs/models/shared/atsdocumenttype.md
   - docs/models/shared/atsemail.md
   - docs/models/shared/atsemailtype.md
   - docs/models/shared/atsinterview.md
+  - docs/models/shared/atsinterviewraw.md
   - docs/models/shared/atsinterviewstatus.md
   - docs/models/shared/atsjob.md
+  - docs/models/shared/atsjobposting.md
   - docs/models/shared/atsjobquestion.md
   - docs/models/shared/atsjobquestiontype.md
+  - docs/models/shared/atsjobraw.md
   - docs/models/shared/atsjobstatus.md
   - docs/models/shared/atsoffer.md
   - docs/models/shared/atsscorecard.md
   - docs/models/shared/atsscorecardquestion.md
+  - docs/models/shared/atsscorecardraw.md
   - docs/models/shared/atsstatus.md
+  - docs/models/shared/atsstatusraw.md
   - docs/models/shared/atsstatusstatus.md
   - docs/models/shared/atstelephone.md
   - docs/models/shared/atstelephonetype.md
   - docs/models/shared/commercecollection.md
+  - docs/models/shared/commercecollectionraw.md
   - docs/models/shared/commercecollectiontype.md
   - docs/models/shared/commerceinventory.md
   - docs/models/shared/commerceinventoryraw.md
@@ -1028,6 +1038,7 @@ generatedFiles:
   - docs/models/shared/propertyatsactivityfromtype.md
   - docs/models/shared/propertyatscandidateaddress.md
   - docs/models/shared/propertyatscompanyaddress.md
+  - docs/models/shared/propertyatsjobpostingaddress.md
   - docs/models/shared/propertycommercelocationaddress.md
   - docs/models/shared/propertyconnectionauth.md
   - docs/models/shared/propertyconnectionauthmeta.md
@@ -2109,30 +2120,40 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/atsactivity_type.rb
   - lib/unified_ruby_sdk/models/shared/atsaddress.rb
   - lib/unified_ruby_sdk/models/shared/atsapplication.rb
+  - lib/unified_ruby_sdk/models/shared/atsapplication_raw.rb
   - lib/unified_ruby_sdk/models/shared/atsapplication_status.rb
   - lib/unified_ruby_sdk/models/shared/atsapplicationanswer.rb
   - lib/unified_ruby_sdk/models/shared/atscandidate.rb
+  - lib/unified_ruby_sdk/models/shared/atscandidate_raw.rb
   - lib/unified_ruby_sdk/models/shared/atscompany.rb
+  - lib/unified_ruby_sdk/models/shared/atscompany_raw.rb
   - lib/unified_ruby_sdk/models/shared/atscompensation.rb
   - lib/unified_ruby_sdk/models/shared/atscompensation_type.rb
   - lib/unified_ruby_sdk/models/shared/atsdocument.rb
+  - lib/unified_ruby_sdk/models/shared/atsdocument_raw.rb
   - lib/unified_ruby_sdk/models/shared/atsdocument_type.rb
   - lib/unified_ruby_sdk/models/shared/atsemail.rb
   - lib/unified_ruby_sdk/models/shared/atsemail_type.rb
   - lib/unified_ruby_sdk/models/shared/atsinterview.rb
+  - lib/unified_ruby_sdk/models/shared/atsinterview_raw.rb
   - lib/unified_ruby_sdk/models/shared/atsinterview_status.rb
   - lib/unified_ruby_sdk/models/shared/atsjob.rb
+  - lib/unified_ruby_sdk/models/shared/atsjob_raw.rb
   - lib/unified_ruby_sdk/models/shared/atsjob_status.rb
+  - lib/unified_ruby_sdk/models/shared/atsjobposting.rb
   - lib/unified_ruby_sdk/models/shared/atsjobquestion.rb
   - lib/unified_ruby_sdk/models/shared/atsjobquestion_type.rb
   - lib/unified_ruby_sdk/models/shared/atsoffer.rb
   - lib/unified_ruby_sdk/models/shared/atsscorecard.rb
+  - lib/unified_ruby_sdk/models/shared/atsscorecard_raw.rb
   - lib/unified_ruby_sdk/models/shared/atsscorecardquestion.rb
   - lib/unified_ruby_sdk/models/shared/atsstatus.rb
+  - lib/unified_ruby_sdk/models/shared/atsstatus_raw.rb
   - lib/unified_ruby_sdk/models/shared/atsstatus_status.rb
   - lib/unified_ruby_sdk/models/shared/atstelephone.rb
   - lib/unified_ruby_sdk/models/shared/atstelephone_type.rb
   - lib/unified_ruby_sdk/models/shared/commercecollection.rb
+  - lib/unified_ruby_sdk/models/shared/commercecollection_raw.rb
   - lib/unified_ruby_sdk/models/shared/commercecollection_type.rb
   - lib/unified_ruby_sdk/models/shared/commerceinventory.rb
   - lib/unified_ruby_sdk/models/shared/commerceinventory_raw.rb
@@ -2301,6 +2322,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_atsactivity_from_type.rb
   - lib/unified_ruby_sdk/models/shared/property_atscandidate_address.rb
   - lib/unified_ruby_sdk/models/shared/property_atscompany_address.rb
+  - lib/unified_ruby_sdk/models/shared/property_atsjobposting_address.rb
   - lib/unified_ruby_sdk/models/shared/property_commercelocation_address.rb
   - lib/unified_ruby_sdk/models/shared/property_connection_auth.rb
   - lib/unified_ruby_sdk/models/shared/property_connection_auth_meta.rb

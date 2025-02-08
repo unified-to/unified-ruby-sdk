@@ -24,7 +24,7 @@ module UnifiedRubySDK
 
       field :phone, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('phone') } }
 
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(::UnifiedRubySDK::Shared::AtsCompanyRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :recruiter_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recruiter_ids') } }
 
@@ -33,7 +33,7 @@ module UnifiedRubySDK
       field :website_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('website_url') } }
 
 
-      sig { params(name: ::String, address: T.nilable(::UnifiedRubySDK::Shared::PropertyAtsCompanyAddress), created_at: T.nilable(::DateTime), id: T.nilable(::String), parent_id: T.nilable(::String), phone: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), recruiter_ids: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), website_url: T.nilable(::String)).void }
+      sig { params(name: ::String, address: T.nilable(::UnifiedRubySDK::Shared::PropertyAtsCompanyAddress), created_at: T.nilable(::DateTime), id: T.nilable(::String), parent_id: T.nilable(::String), phone: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::AtsCompanyRaw), recruiter_ids: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), website_url: T.nilable(::String)).void }
       def initialize(name: nil, address: nil, created_at: nil, id: nil, parent_id: nil, phone: nil, raw: nil, recruiter_ids: nil, updated_at: nil, website_url: nil)
         @name = name
         @address = address

@@ -30,14 +30,14 @@ module UnifiedRubySDK
 
       field :questions, T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsScorecardQuestion]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('questions') } }
 
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(::UnifiedRubySDK::Shared::AtsScorecardRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :recommendation, T.nilable(::UnifiedRubySDK::Shared::Recommendation), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recommendation'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::Recommendation, true) } }
 
       field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(application_id: T.nilable(::String), candidate_id: T.nilable(::String), comment: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), interview_id: T.nilable(::String), interviewer_id: T.nilable(::String), job_id: T.nilable(::String), questions: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsScorecardQuestion]), raw: T.nilable(T::Hash[Symbol, ::Object]), recommendation: T.nilable(::UnifiedRubySDK::Shared::Recommendation), updated_at: T.nilable(::DateTime)).void }
+      sig { params(application_id: T.nilable(::String), candidate_id: T.nilable(::String), comment: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), interview_id: T.nilable(::String), interviewer_id: T.nilable(::String), job_id: T.nilable(::String), questions: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsScorecardQuestion]), raw: T.nilable(::UnifiedRubySDK::Shared::AtsScorecardRaw), recommendation: T.nilable(::UnifiedRubySDK::Shared::Recommendation), updated_at: T.nilable(::DateTime)).void }
       def initialize(application_id: nil, candidate_id: nil, comment: nil, created_at: nil, id: nil, interview_id: nil, interviewer_id: nil, job_id: nil, questions: nil, raw: nil, recommendation: nil, updated_at: nil)
         @application_id = application_id
         @candidate_id = candidate_id
