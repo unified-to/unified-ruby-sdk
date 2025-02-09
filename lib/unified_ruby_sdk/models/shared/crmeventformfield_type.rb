@@ -17,6 +17,7 @@ module UnifiedRubySDK
         MULTIPLE_CHOICE = new('MULTIPLE_CHOICE')
         FILE = new('FILE')
         TEXTAREA = new('TEXTAREA')
+        SINGLE_SELECT = new('SINGLE_SELECT')
         MULTIPLE_SELECT = new('MULTIPLE_SELECT')
         EMAIL = new('EMAIL')
         PHONE = new('PHONE')

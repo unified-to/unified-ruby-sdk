@@ -16,6 +16,10 @@ module UnifiedRubySDK
 
       field :closed_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+      field :company_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_ids') } }
+
+      field :contact_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_ids') } }
+
       field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
       field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
@@ -31,8 +35,8 @@ module UnifiedRubySDK
       field :pipeline_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pipeline_id') } }
 
       field :probability, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('probability') } }
-      # The raw data returned by the integration for this deal
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+      field :raw, T.nilable(::UnifiedRubySDK::Shared::CrmDealRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :source, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source') } }
 
@@ -49,10 +53,12 @@ module UnifiedRubySDK
       field :won_reason, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('won_reason') } }
 
 
-      sig { params(amount: T.nilable(::Float), closed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), lost_reason: T.nilable(::String), name: T.nilable(::String), pipeline: T.nilable(::String), pipeline_id: T.nilable(::String), probability: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), source: T.nilable(::String), stage: T.nilable(::String), stage_id: T.nilable(::String), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), won_reason: T.nilable(::String)).void }
-      def initialize(amount: nil, closed_at: nil, created_at: nil, currency: nil, id: nil, lost_reason: nil, name: nil, pipeline: nil, pipeline_id: nil, probability: nil, raw: nil, source: nil, stage: nil, stage_id: nil, tags: nil, updated_at: nil, user_id: nil, won_reason: nil)
+      sig { params(amount: T.nilable(::Float), closed_at: T.nilable(::DateTime), company_ids: T.nilable(T::Array[::String]), contact_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), lost_reason: T.nilable(::String), name: T.nilable(::String), pipeline: T.nilable(::String), pipeline_id: T.nilable(::String), probability: T.nilable(::Float), raw: T.nilable(::UnifiedRubySDK::Shared::CrmDealRaw), source: T.nilable(::String), stage: T.nilable(::String), stage_id: T.nilable(::String), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), won_reason: T.nilable(::String)).void }
+      def initialize(amount: nil, closed_at: nil, company_ids: nil, contact_ids: nil, created_at: nil, currency: nil, id: nil, lost_reason: nil, name: nil, pipeline: nil, pipeline_id: nil, probability: nil, raw: nil, source: nil, stage: nil, stage_id: nil, tags: nil, updated_at: nil, user_id: nil, won_reason: nil)
         @amount = amount
         @closed_at = closed_at
+        @company_ids = company_ids
+        @contact_ids = contact_ids
         @created_at = created_at
         @currency = currency
         @id = id

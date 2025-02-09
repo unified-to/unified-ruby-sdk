@@ -28,7 +28,7 @@ module UnifiedRubySDK
 
       field :parent_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(::UnifiedRubySDK::Shared::HrisGroupRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :type, T.nilable(::UnifiedRubySDK::Shared::HrisGroupType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::HrisGroupType, true) } }
 
@@ -37,7 +37,7 @@ module UnifiedRubySDK
       field :user_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
 
 
-      sig { params(company_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), manager_ids: T.nilable(T::Array[::String]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(::UnifiedRubySDK::Shared::HrisGroupType), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
+      sig { params(company_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), manager_ids: T.nilable(T::Array[::String]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::HrisGroupRaw), type: T.nilable(::UnifiedRubySDK::Shared::HrisGroupType), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
       def initialize(company_id: nil, created_at: nil, description: nil, id: nil, is_active: nil, manager_ids: nil, name: nil, parent_id: nil, raw: nil, type: nil, updated_at: nil, user_ids: nil)
         @company_id = company_id
         @created_at = created_at

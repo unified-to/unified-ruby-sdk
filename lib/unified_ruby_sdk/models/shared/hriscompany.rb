@@ -22,12 +22,12 @@ module UnifiedRubySDK
 
       field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(::UnifiedRubySDK::Shared::HrisCompanyRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(address: T.nilable(::UnifiedRubySDK::Shared::PropertyHrisCompanyAddress), created_at: T.nilable(::DateTime), id: T.nilable(::String), legal_name: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
+      sig { params(address: T.nilable(::UnifiedRubySDK::Shared::PropertyHrisCompanyAddress), created_at: T.nilable(::DateTime), id: T.nilable(::String), legal_name: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::HrisCompanyRaw), updated_at: T.nilable(::DateTime)).void }
       def initialize(address: nil, created_at: nil, id: nil, legal_name: nil, name: nil, raw: nil, updated_at: nil)
         @address = address
         @created_at = created_at

@@ -12,9 +12,9 @@ module UnifiedRubySDK
       extend T::Sig
 
 
-      field :raw, T::Hash[Symbol, ::Object], { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, ::UnifiedRubySDK::Shared::HrisPayslipRaw, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-      field :user_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
+      field :company_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
 
       field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
@@ -38,11 +38,13 @@ module UnifiedRubySDK
 
       field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+      field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-      sig { params(raw: T::Hash[Symbol, ::Object], user_id: ::String, created_at: T.nilable(::DateTime), currency: T.nilable(::String), details: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisPayslipDetail]), end_at: T.nilable(::DateTime), gross_amount: T.nilable(::Float), id: T.nilable(::String), net_amount: T.nilable(::Float), paid_at: T.nilable(::DateTime), payment_type: T.nilable(::UnifiedRubySDK::Shared::PaymentType), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime)).void }
-      def initialize(raw: nil, user_id: nil, created_at: nil, currency: nil, details: nil, end_at: nil, gross_amount: nil, id: nil, net_amount: nil, paid_at: nil, payment_type: nil, start_at: nil, updated_at: nil)
+
+      sig { params(raw: ::UnifiedRubySDK::Shared::HrisPayslipRaw, company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), details: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisPayslipDetail]), end_at: T.nilable(::DateTime), gross_amount: T.nilable(::Float), id: T.nilable(::String), net_amount: T.nilable(::Float), paid_at: T.nilable(::DateTime), payment_type: T.nilable(::UnifiedRubySDK::Shared::PaymentType), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+      def initialize(raw: nil, company_id: nil, created_at: nil, currency: nil, details: nil, end_at: nil, gross_amount: nil, id: nil, net_amount: nil, paid_at: nil, payment_type: nil, start_at: nil, updated_at: nil, user_id: nil)
         @raw = raw
-        @user_id = user_id
+        @company_id = company_id
         @created_at = created_at
         @currency = currency
         @details = details
@@ -54,6 +56,7 @@ module UnifiedRubySDK
         @payment_type = payment_type
         @start_at = start_at
         @updated_at = updated_at
+        @user_id = user_id
       end
     end
   end

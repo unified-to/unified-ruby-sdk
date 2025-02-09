@@ -22,7 +22,7 @@ module UnifiedRubySDK
       # new field name
       field :lineitems, T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingJournalLineitem]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lineitems') } }
 
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(::UnifiedRubySDK::Shared::AccountingJournalRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :reference, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference') } }
 
@@ -33,7 +33,7 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingJournalLineitem]), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), tax_amount: T.nilable(::Float), taxrate_id: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+      sig { params(created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingJournalLineitem]), raw: T.nilable(::UnifiedRubySDK::Shared::AccountingJournalRaw), reference: T.nilable(::String), tax_amount: T.nilable(::Float), taxrate_id: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
       def initialize(created_at: nil, currency: nil, description: nil, id: nil, lineitems: nil, raw: nil, reference: nil, tax_amount: nil, taxrate_id: nil, updated_at: nil)
         @created_at = created_at
         @currency = currency

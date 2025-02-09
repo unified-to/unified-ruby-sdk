@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 079a662c33e65673ca2fb2b1cc54edc4
+  docChecksum: b8229482579a72269cca223071c1d36c
   docVersion: "1.0"
   speakeasyVersion: 1.487.1
   generationVersion: 2.506.0
-  releaseVersion: 0.6.12
-  configChecksum: 1d56b90f7c113a7a92a169c8d8a34807
+  releaseVersion: 0.6.13
+  configChecksum: a2137b464d58be44dc0a12de148aaae9
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -812,27 +812,35 @@ generatedFiles:
   - docs/models/shared/accountingcontact.md
   - docs/models/shared/accountingcontactpaymentmethod.md
   - docs/models/shared/accountingcontactpaymentmethodtype.md
+  - docs/models/shared/accountingcontactraw.md
   - docs/models/shared/accountingemail.md
   - docs/models/shared/accountingemailtype.md
   - docs/models/shared/accountinginvoice.md
+  - docs/models/shared/accountinginvoiceraw.md
   - docs/models/shared/accountinginvoicestatus.md
   - docs/models/shared/accountinginvoicetype.md
   - docs/models/shared/accountingjournal.md
   - docs/models/shared/accountingjournallineitem.md
+  - docs/models/shared/accountingjournalraw.md
   - docs/models/shared/accountinglineitem.md
   - docs/models/shared/accountingorder.md
+  - docs/models/shared/accountingorderraw.md
   - docs/models/shared/accountingorderstatus.md
   - docs/models/shared/accountingordertype.md
   - docs/models/shared/accountingorganization.md
+  - docs/models/shared/accountingorganizationraw.md
   - docs/models/shared/accountingtaxrate.md
+  - docs/models/shared/accountingtaxrateraw.md
   - docs/models/shared/accountingtelephone.md
   - docs/models/shared/accountingtelephonetype.md
   - docs/models/shared/accountingtransaction.md
   - docs/models/shared/accountingtransactioncontact.md
   - docs/models/shared/accountingtransactionlineitem.md
+  - docs/models/shared/accountingtransactionraw.md
   - docs/models/shared/apicall.md
   - docs/models/shared/apicalltype.md
   - docs/models/shared/atsactivity.md
+  - docs/models/shared/atsactivityraw.md
   - docs/models/shared/atsactivitytype.md
   - docs/models/shared/atsaddress.md
   - docs/models/shared/atsapplication.md
@@ -860,6 +868,8 @@ generatedFiles:
   - docs/models/shared/atsjobraw.md
   - docs/models/shared/atsjobstatus.md
   - docs/models/shared/atsoffer.md
+  - docs/models/shared/atsofferraw.md
+  - docs/models/shared/atsofferstatus.md
   - docs/models/shared/atsscorecard.md
   - docs/models/shared/atsscorecardquestion.md
   - docs/models/shared/atsscorecardraw.md
@@ -886,17 +896,23 @@ generatedFiles:
   - docs/models/shared/connection.md
   - docs/models/shared/contenttype.md
   - docs/models/shared/crmcompany.md
+  - docs/models/shared/crmcompanyraw.md
   - docs/models/shared/crmcontact.md
+  - docs/models/shared/crmcontactraw.md
   - docs/models/shared/crmdeal.md
+  - docs/models/shared/crmdealraw.md
   - docs/models/shared/crmemail.md
   - docs/models/shared/crmemailtype.md
   - docs/models/shared/crmevent.md
   - docs/models/shared/crmeventformfield.md
   - docs/models/shared/crmeventformfieldtype.md
   - docs/models/shared/crmeventformoption.md
+  - docs/models/shared/crmeventraw.md
   - docs/models/shared/crmeventtype.md
   - docs/models/shared/crmlead.md
+  - docs/models/shared/crmleadraw.md
   - docs/models/shared/crmpipeline.md
+  - docs/models/shared/crmpipelineraw.md
   - docs/models/shared/crmstage.md
   - docs/models/shared/crmtelephone.md
   - docs/models/shared/crmtelephonetype.md
@@ -919,6 +935,7 @@ generatedFiles:
   - docs/models/shared/genaiprompt.md
   - docs/models/shared/gender.md
   - docs/models/shared/hriscompany.md
+  - docs/models/shared/hriscompanyraw.md
   - docs/models/shared/hriscompensation.md
   - docs/models/shared/hriscompensationfrequency.md
   - docs/models/shared/hriscompensationtype.md
@@ -927,15 +944,20 @@ generatedFiles:
   - docs/models/shared/hrisemployee.md
   - docs/models/shared/hrisemployeeemploymenttype.md
   - docs/models/shared/hrisemployeegender.md
+  - docs/models/shared/hrisemployeeraw.md
   - docs/models/shared/hrisgroup.md
+  - docs/models/shared/hrisgroupraw.md
   - docs/models/shared/hrisgrouptype.md
   - docs/models/shared/hrislocation.md
+  - docs/models/shared/hrislocationraw.md
   - docs/models/shared/hrispayslip.md
   - docs/models/shared/hrispayslipdetail.md
   - docs/models/shared/hrispayslipdetailtype.md
+  - docs/models/shared/hrispayslipraw.md
   - docs/models/shared/hristelephone.md
   - docs/models/shared/hristelephonetype.md
   - docs/models/shared/hristimeoff.md
+  - docs/models/shared/hristimeoffraw.md
   - docs/models/shared/hristimeoffstatus.md
   - docs/models/shared/hristimeofftype.md
   - docs/models/shared/integration.md
@@ -2094,29 +2116,37 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared.rb
   - lib/unified_ruby_sdk/models/shared/accountingaccount.rb
   - lib/unified_ruby_sdk/models/shared/accountingcontact.rb
+  - lib/unified_ruby_sdk/models/shared/accountingcontact_raw.rb
   - lib/unified_ruby_sdk/models/shared/accountingcontactpaymentmethod.rb
   - lib/unified_ruby_sdk/models/shared/accountingcontactpaymentmethod_type.rb
   - lib/unified_ruby_sdk/models/shared/accountingemail.rb
   - lib/unified_ruby_sdk/models/shared/accountingemail_type.rb
   - lib/unified_ruby_sdk/models/shared/accountinginvoice.rb
+  - lib/unified_ruby_sdk/models/shared/accountinginvoice_raw.rb
   - lib/unified_ruby_sdk/models/shared/accountinginvoice_status.rb
   - lib/unified_ruby_sdk/models/shared/accountinginvoice_type.rb
   - lib/unified_ruby_sdk/models/shared/accountingjournal.rb
+  - lib/unified_ruby_sdk/models/shared/accountingjournal_raw.rb
   - lib/unified_ruby_sdk/models/shared/accountingjournallineitem.rb
   - lib/unified_ruby_sdk/models/shared/accountinglineitem.rb
   - lib/unified_ruby_sdk/models/shared/accountingorder.rb
+  - lib/unified_ruby_sdk/models/shared/accountingorder_raw.rb
   - lib/unified_ruby_sdk/models/shared/accountingorder_status.rb
   - lib/unified_ruby_sdk/models/shared/accountingorder_type.rb
   - lib/unified_ruby_sdk/models/shared/accountingorganization.rb
+  - lib/unified_ruby_sdk/models/shared/accountingorganization_raw.rb
   - lib/unified_ruby_sdk/models/shared/accountingtaxrate.rb
+  - lib/unified_ruby_sdk/models/shared/accountingtaxrate_raw.rb
   - lib/unified_ruby_sdk/models/shared/accountingtelephone.rb
   - lib/unified_ruby_sdk/models/shared/accountingtelephone_type.rb
   - lib/unified_ruby_sdk/models/shared/accountingtransaction.rb
+  - lib/unified_ruby_sdk/models/shared/accountingtransaction_raw.rb
   - lib/unified_ruby_sdk/models/shared/accountingtransactioncontact.rb
   - lib/unified_ruby_sdk/models/shared/accountingtransactionlineitem.rb
   - lib/unified_ruby_sdk/models/shared/apicall.rb
   - lib/unified_ruby_sdk/models/shared/apicall_type.rb
   - lib/unified_ruby_sdk/models/shared/atsactivity.rb
+  - lib/unified_ruby_sdk/models/shared/atsactivity_raw.rb
   - lib/unified_ruby_sdk/models/shared/atsactivity_type.rb
   - lib/unified_ruby_sdk/models/shared/atsaddress.rb
   - lib/unified_ruby_sdk/models/shared/atsapplication.rb
@@ -2144,6 +2174,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/atsjobquestion.rb
   - lib/unified_ruby_sdk/models/shared/atsjobquestion_type.rb
   - lib/unified_ruby_sdk/models/shared/atsoffer.rb
+  - lib/unified_ruby_sdk/models/shared/atsoffer_raw.rb
+  - lib/unified_ruby_sdk/models/shared/atsoffer_status.rb
   - lib/unified_ruby_sdk/models/shared/atsscorecard.rb
   - lib/unified_ruby_sdk/models/shared/atsscorecard_raw.rb
   - lib/unified_ruby_sdk/models/shared/atsscorecardquestion.rb
@@ -2170,17 +2202,23 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/connection.rb
   - lib/unified_ruby_sdk/models/shared/content_type.rb
   - lib/unified_ruby_sdk/models/shared/crmcompany.rb
+  - lib/unified_ruby_sdk/models/shared/crmcompany_raw.rb
   - lib/unified_ruby_sdk/models/shared/crmcontact.rb
+  - lib/unified_ruby_sdk/models/shared/crmcontact_raw.rb
   - lib/unified_ruby_sdk/models/shared/crmdeal.rb
+  - lib/unified_ruby_sdk/models/shared/crmdeal_raw.rb
   - lib/unified_ruby_sdk/models/shared/crmemail.rb
   - lib/unified_ruby_sdk/models/shared/crmemail_type.rb
   - lib/unified_ruby_sdk/models/shared/crmevent.rb
+  - lib/unified_ruby_sdk/models/shared/crmevent_raw.rb
   - lib/unified_ruby_sdk/models/shared/crmevent_type.rb
   - lib/unified_ruby_sdk/models/shared/crmeventformfield.rb
   - lib/unified_ruby_sdk/models/shared/crmeventformfield_type.rb
   - lib/unified_ruby_sdk/models/shared/crmeventformoption.rb
   - lib/unified_ruby_sdk/models/shared/crmlead.rb
+  - lib/unified_ruby_sdk/models/shared/crmlead_raw.rb
   - lib/unified_ruby_sdk/models/shared/crmpipeline.rb
+  - lib/unified_ruby_sdk/models/shared/crmpipeline_raw.rb
   - lib/unified_ruby_sdk/models/shared/crmstage.rb
   - lib/unified_ruby_sdk/models/shared/crmtelephone.rb
   - lib/unified_ruby_sdk/models/shared/crmtelephone_type.rb
@@ -2203,6 +2241,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/genaiprompt.rb
   - lib/unified_ruby_sdk/models/shared/gender.rb
   - lib/unified_ruby_sdk/models/shared/hriscompany.rb
+  - lib/unified_ruby_sdk/models/shared/hriscompany_raw.rb
   - lib/unified_ruby_sdk/models/shared/hriscompensation.rb
   - lib/unified_ruby_sdk/models/shared/hriscompensation_frequency.rb
   - lib/unified_ruby_sdk/models/shared/hriscompensation_type.rb
@@ -2211,15 +2250,20 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/hrisemployee.rb
   - lib/unified_ruby_sdk/models/shared/hrisemployee_employment_type.rb
   - lib/unified_ruby_sdk/models/shared/hrisemployee_gender.rb
+  - lib/unified_ruby_sdk/models/shared/hrisemployee_raw.rb
   - lib/unified_ruby_sdk/models/shared/hrisgroup.rb
+  - lib/unified_ruby_sdk/models/shared/hrisgroup_raw.rb
   - lib/unified_ruby_sdk/models/shared/hrisgroup_type.rb
   - lib/unified_ruby_sdk/models/shared/hrislocation.rb
+  - lib/unified_ruby_sdk/models/shared/hrislocation_raw.rb
   - lib/unified_ruby_sdk/models/shared/hrispayslip.rb
+  - lib/unified_ruby_sdk/models/shared/hrispayslip_raw.rb
   - lib/unified_ruby_sdk/models/shared/hrispayslipdetail.rb
   - lib/unified_ruby_sdk/models/shared/hrispayslipdetail_type.rb
   - lib/unified_ruby_sdk/models/shared/hristelephone.rb
   - lib/unified_ruby_sdk/models/shared/hristelephone_type.rb
   - lib/unified_ruby_sdk/models/shared/hristimeoff.rb
+  - lib/unified_ruby_sdk/models/shared/hristimeoff_raw.rb
   - lib/unified_ruby_sdk/models/shared/hristimeoff_status.rb
   - lib/unified_ruby_sdk/models/shared/hristimeoff_type.rb
   - lib/unified_ruby_sdk/models/shared/integration.rb
@@ -4205,7 +4249,7 @@ examples:
         query: {}
       responses:
         "200":
-          application/json: [{"raw": {"key": "<value>"}, "user_id": "<id>"}]
+          application/json: [{"raw": {}, "user_id": "<id>"}]
   listHrisTimeoffs:
     speakeasy-default-list-hris-timeoffs:
       parameters:

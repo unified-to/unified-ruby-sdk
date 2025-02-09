@@ -14,13 +14,13 @@ module UnifiedRubySDK
 
       field :start_at, ::DateTime, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(false) } }
 
-      field :user_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
-
       field :approved_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('approved_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
       field :approver_user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('approver_user_id') } }
 
       field :comments, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('comments') } }
+
+      field :company_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
 
       field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
@@ -28,7 +28,7 @@ module UnifiedRubySDK
 
       field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+      field :raw, T.nilable(::UnifiedRubySDK::Shared::HrisTimeoffRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :status, T.nilable(::UnifiedRubySDK::Shared::HrisTimeoffStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::HrisTimeoffStatus, true) } }
 
@@ -36,14 +36,16 @@ module UnifiedRubySDK
 
       field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+      field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-      sig { params(start_at: ::DateTime, user_id: ::String, approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), comments: T.nilable(::String), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(::UnifiedRubySDK::Shared::HrisTimeoffStatus), type: T.nilable(::UnifiedRubySDK::Shared::HrisTimeoffType), updated_at: T.nilable(::DateTime)).void }
-      def initialize(start_at: nil, user_id: nil, approved_at: nil, approver_user_id: nil, comments: nil, created_at: nil, end_at: nil, id: nil, raw: nil, status: nil, type: nil, updated_at: nil)
+
+      sig { params(start_at: ::DateTime, approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), comments: T.nilable(::String), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), id: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::HrisTimeoffRaw), status: T.nilable(::UnifiedRubySDK::Shared::HrisTimeoffStatus), type: T.nilable(::UnifiedRubySDK::Shared::HrisTimeoffType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+      def initialize(start_at: nil, approved_at: nil, approver_user_id: nil, comments: nil, company_id: nil, created_at: nil, end_at: nil, id: nil, raw: nil, status: nil, type: nil, updated_at: nil, user_id: nil)
         @start_at = start_at
-        @user_id = user_id
         @approved_at = approved_at
         @approver_user_id = approver_user_id
         @comments = comments
+        @company_id = company_id
         @created_at = created_at
         @end_at = end_at
         @id = id
@@ -51,6 +53,7 @@ module UnifiedRubySDK
         @status = status
         @type = type
         @updated_at = updated_at
+        @user_id = user_id
       end
     end
   end

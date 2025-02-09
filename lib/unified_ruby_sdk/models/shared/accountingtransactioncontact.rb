@@ -12,9 +12,19 @@ module UnifiedRubySDK
       extend T::Sig
 
 
+      field :id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      
-      def initialize; end
+      field :is_customer, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_customer') } }
+
+      field :is_supplier, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_supplier') } }
+
+
+      sig { params(id: ::String, is_customer: T.nilable(T::Boolean), is_supplier: T.nilable(T::Boolean)).void }
+      def initialize(id: nil, is_customer: nil, is_supplier: nil)
+        @id = id
+        @is_customer = is_customer
+        @is_supplier = is_supplier
+      end
     end
   end
 end

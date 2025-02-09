@@ -31,12 +31,12 @@ module UnifiedRubySDK
       field :industry, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('industry') } }
 
       field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
-
+      # Additional URLs associated with the contact e.g., LinkedIn, website, etc
       field :link_urls, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('link_urls') } }
 
       field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-      # The raw data returned by the integration for this company
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+      field :raw, T.nilable(::UnifiedRubySDK::Shared::CrmCompanyRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :tags, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
 
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       field :websites, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('websites') } }
 
 
-      sig { params(address: T.nilable(::UnifiedRubySDK::Shared::PropertyCrmCompanyAddress), contact_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), deal_ids: T.nilable(T::Array[::String]), description: T.nilable(::String), emails: T.nilable(T::Array[::UnifiedRubySDK::Shared::CrmEmail]), employees: T.nilable(::Float), id: T.nilable(::String), industry: T.nilable(::String), is_active: T.nilable(T::Boolean), link_urls: T.nilable(T::Array[::String]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), tags: T.nilable(T::Array[::String]), telephones: T.nilable(T::Array[::UnifiedRubySDK::Shared::CrmTelephone]), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), websites: T.nilable(T::Array[::String])).void }
+      sig { params(address: T.nilable(::UnifiedRubySDK::Shared::PropertyCrmCompanyAddress), contact_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), deal_ids: T.nilable(T::Array[::String]), description: T.nilable(::String), emails: T.nilable(T::Array[::UnifiedRubySDK::Shared::CrmEmail]), employees: T.nilable(::Float), id: T.nilable(::String), industry: T.nilable(::String), is_active: T.nilable(T::Boolean), link_urls: T.nilable(T::Array[::String]), name: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::CrmCompanyRaw), tags: T.nilable(T::Array[::String]), telephones: T.nilable(T::Array[::UnifiedRubySDK::Shared::CrmTelephone]), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), websites: T.nilable(T::Array[::String])).void }
       def initialize(address: nil, contact_ids: nil, created_at: nil, deal_ids: nil, description: nil, emails: nil, employees: nil, id: nil, industry: nil, is_active: nil, link_urls: nil, name: nil, raw: nil, tags: nil, telephones: nil, timezone: nil, updated_at: nil, user_id: nil, websites: nil)
         @address = address
         @contact_ids = contact_ids
