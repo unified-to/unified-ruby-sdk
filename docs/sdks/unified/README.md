@@ -95,8 +95,7 @@ s.config_security(
 res = s.unified.create_unified_webhook(webhook=::UnifiedRubySDK::Shared::Webhook.new(
   connection_id: "<id>",
   event: ::UnifiedRubySDK::Shared::Event::CREATED,
-  hook_url: "https://blind-platypus.org/",
-  object_type: ::UnifiedRubySDK::Shared::ObjectType::CRM_DEAL,
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::HRIS_EMPLOYEE,
 ), include_all=false)
 
 if ! res.webhook.nil?
@@ -585,8 +584,7 @@ s.config_security(
 res = s.unified.patch_unified_webhook(id="<id>", webhook=::UnifiedRubySDK::Shared::Webhook.new(
   connection_id: "<id>",
   event: ::UnifiedRubySDK::Shared::Event::DELETED,
-  hook_url: "https://calculating-habit.name/",
-  object_type: ::UnifiedRubySDK::Shared::ObjectType::COMMERCE_COLLECTION,
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::CRM_DEAL,
 ))
 
 if ! res.webhook.nil?
@@ -790,8 +788,7 @@ s.config_security(
 res = s.unified.update_unified_webhook(id="<id>", webhook=::UnifiedRubySDK::Shared::Webhook.new(
   connection_id: "<id>",
   event: ::UnifiedRubySDK::Shared::Event::CREATED,
-  hook_url: "https://glaring-postbox.info/",
-  object_type: ::UnifiedRubySDK::Shared::ObjectType::LMS_COURSE,
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::PAYMENT_LINK,
 ))
 
 if ! res.webhook.nil?

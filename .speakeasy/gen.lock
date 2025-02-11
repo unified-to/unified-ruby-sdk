@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: b8229482579a72269cca223071c1d36c
+  docChecksum: 9242e0b56a832180eec64ef3e27e0be0
   docVersion: "1.0"
-  speakeasyVersion: 1.487.1
+  speakeasyVersion: 1.488.0
   generationVersion: 2.506.0
-  releaseVersion: 0.6.13
-  configChecksum: a2137b464d58be44dc0a12de148aaae9
+  releaseVersion: 0.6.14
+  configChecksum: aeb99fb66b175b3ba69276622e6535b9
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -916,6 +916,7 @@ generatedFiles:
   - docs/models/shared/crmstage.md
   - docs/models/shared/crmtelephone.md
   - docs/models/shared/crmtelephonetype.md
+  - docs/models/shared/dbtype.md
   - docs/models/shared/employmentstatus.md
   - docs/models/shared/employmenttype.md
   - docs/models/shared/enrichcompany.md
@@ -2222,6 +2223,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/crmstage.rb
   - lib/unified_ruby_sdk/models/shared/crmtelephone.rb
   - lib/unified_ruby_sdk/models/shared/crmtelephone_type.rb
+  - lib/unified_ruby_sdk/models/shared/db_type.rb
   - lib/unified_ruby_sdk/models/shared/employment_status.rb
   - lib/unified_ruby_sdk/models/shared/employment_type.rb
   - lib/unified_ruby_sdk/models/shared/enrichcompany.rb

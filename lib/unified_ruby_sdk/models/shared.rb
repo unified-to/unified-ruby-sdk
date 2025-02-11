@@ -305,6 +305,7 @@ module UnifiedRubySDK
     autoload :PropertyConnectionCategories, 'unified_ruby_sdk/models/shared/property_connection_categories.rb'
     autoload :PropertyConnectionAuthMeta, 'unified_ruby_sdk/models/shared/property_connection_auth_meta.rb'
     autoload :PropertyConnectionAuth, 'unified_ruby_sdk/models/shared/property_connection_auth.rb'
+    autoload :DbType, 'unified_ruby_sdk/models/shared/db_type.rb'
     autoload :Event, 'unified_ruby_sdk/models/shared/event.rb'
     autoload :Meta, 'unified_ruby_sdk/models/shared/meta.rb'
     autoload :ObjectType, 'unified_ruby_sdk/models/shared/object_type.rb'
