@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 3da93e71a8a8edbd419c4dd261a040f9
+  docChecksum: c0d6af0ca0a33fa3f44a1fca666d6fae
   docVersion: "1.0"
-  speakeasyVersion: 1.494.0
-  generationVersion: 2.515.0
-  releaseVersion: 0.6.15
-  configChecksum: 3a1fd4341d9c4853438cdfa668b78e05
+  speakeasyVersion: 1.501.0
+  generationVersion: 2.522.1
+  releaseVersion: 0.6.16
+  configChecksum: 7938bbd36352d57bc505c04926756489
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -858,6 +858,8 @@ generatedFiles:
   - docs/models/shared/atsdocumenttype.md
   - docs/models/shared/atsemail.md
   - docs/models/shared/atsemailtype.md
+  - docs/models/shared/atsgroup.md
+  - docs/models/shared/atsgrouptype.md
   - docs/models/shared/atsinterview.md
   - docs/models/shared/atsinterviewraw.md
   - docs/models/shared/atsinterviewstatus.md
@@ -929,6 +931,7 @@ generatedFiles:
   - docs/models/shared/ethnicity.md
   - docs/models/shared/event.md
   - docs/models/shared/extradata.md
+  - docs/models/shared/format.md
   - docs/models/shared/frequency.md
   - docs/models/shared/fromwebhook.md
   - docs/models/shared/genaicontent.md
@@ -1034,7 +1037,6 @@ generatedFiles:
   - docs/models/shared/meta.md
   - docs/models/shared/metadatametadata.md
   - docs/models/shared/metadatametadataraw.md
-  - docs/models/shared/metadatametadatatype.md
   - docs/models/shared/nativewebhookparentid.md
   - docs/models/shared/nativewebhookprojectid.md
   - docs/models/shared/objecttype.md
@@ -2165,6 +2167,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/atsdocument_type.rb
   - lib/unified_ruby_sdk/models/shared/atsemail.rb
   - lib/unified_ruby_sdk/models/shared/atsemail_type.rb
+  - lib/unified_ruby_sdk/models/shared/atsgroup.rb
+  - lib/unified_ruby_sdk/models/shared/atsgroup_type.rb
   - lib/unified_ruby_sdk/models/shared/atsinterview.rb
   - lib/unified_ruby_sdk/models/shared/atsinterview_raw.rb
   - lib/unified_ruby_sdk/models/shared/atsinterview_status.rb
@@ -2236,6 +2240,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/ethnicity.rb
   - lib/unified_ruby_sdk/models/shared/event.rb
   - lib/unified_ruby_sdk/models/shared/extra_data.rb
+  - lib/unified_ruby_sdk/models/shared/format.rb
   - lib/unified_ruby_sdk/models/shared/frequency.rb
   - lib/unified_ruby_sdk/models/shared/from_webhook.rb
   - lib/unified_ruby_sdk/models/shared/genaicontent.rb
@@ -2341,7 +2346,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/meta.rb
   - lib/unified_ruby_sdk/models/shared/metadatametadata.rb
   - lib/unified_ruby_sdk/models/shared/metadatametadata_raw.rb
-  - lib/unified_ruby_sdk/models/shared/metadatametadata_type.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_parent_id.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_project_id.rb
   - lib/unified_ruby_sdk/models/shared/object_type.rb

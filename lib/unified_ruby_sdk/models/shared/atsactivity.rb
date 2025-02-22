@@ -25,6 +25,8 @@ module UnifiedRubySDK
       field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
       field :document_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('document_id') } }
+      # IDs for AtsDocument.get
+      field :document_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('document_ids') } }
 
       field :from, T.nilable(::UnifiedRubySDK::Shared::PropertyAtsActivityFrom), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('from') } }
 
@@ -51,8 +53,8 @@ module UnifiedRubySDK
       field :user_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
 
 
-      sig { params(application_id: T.nilable(::String), bcc: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), candidate_id: T.nilable(::String), cc: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), created_at: T.nilable(::DateTime), description: T.nilable(::String), document_id: T.nilable(::String), from: T.nilable(::UnifiedRubySDK::Shared::PropertyAtsActivityFrom), id: T.nilable(::String), interview_id: T.nilable(::String), is_private: T.nilable(T::Boolean), job_id: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::AtsActivityRaw), sub_type: T.nilable(::String), title: T.nilable(::String), to: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), type: T.nilable(::UnifiedRubySDK::Shared::AtsActivityType), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
-      def initialize(application_id: nil, bcc: nil, candidate_id: nil, cc: nil, created_at: nil, description: nil, document_id: nil, from: nil, id: nil, interview_id: nil, is_private: nil, job_id: nil, raw: nil, sub_type: nil, title: nil, to: nil, type: nil, updated_at: nil, user_ids: nil)
+      sig { params(application_id: T.nilable(::String), bcc: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), candidate_id: T.nilable(::String), cc: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), created_at: T.nilable(::DateTime), description: T.nilable(::String), document_id: T.nilable(::String), document_ids: T.nilable(T::Array[::String]), from: T.nilable(::UnifiedRubySDK::Shared::PropertyAtsActivityFrom), id: T.nilable(::String), interview_id: T.nilable(::String), is_private: T.nilable(T::Boolean), job_id: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::AtsActivityRaw), sub_type: T.nilable(::String), title: T.nilable(::String), to: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), type: T.nilable(::UnifiedRubySDK::Shared::AtsActivityType), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
+      def initialize(application_id: nil, bcc: nil, candidate_id: nil, cc: nil, created_at: nil, description: nil, document_id: nil, document_ids: nil, from: nil, id: nil, interview_id: nil, is_private: nil, job_id: nil, raw: nil, sub_type: nil, title: nil, to: nil, type: nil, updated_at: nil, user_ids: nil)
         @application_id = application_id
         @bcc = bcc
         @candidate_id = candidate_id
@@ -60,6 +62,7 @@ module UnifiedRubySDK
         @created_at = created_at
         @description = description
         @document_id = document_id
+        @document_ids = document_ids
         @from = from
         @id = id
         @interview_id = interview_id

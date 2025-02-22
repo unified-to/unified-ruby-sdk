@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class MetadataMetadataType < T::Enum
+    class Format < T::Enum
       enums do
         TEXT = new('TEXT')
         NUMBER = new('NUMBER')
