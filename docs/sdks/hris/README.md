@@ -52,7 +52,7 @@ s.config_security(
 )
 
     
-res = s.hris.create_hris_company(connection_id="<id>", hris_company=::UnifiedRubySDK::Shared::HrisCompany.new(), fields_=[
+res = s.hris.create_hris_company(hris_company=::UnifiedRubySDK::Shared::HrisCompany.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -64,11 +64,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_id`                                                                        | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the connection                                                                   |
-| `hris_company`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::HrisCompany)](../../models/shared/hriscompany.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
-| `fields_`                                                                              | T::Array<*::String*>                                                                   | :heavy_minus_sign:                                                                     | Comma-delimited fields to return                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `hris_company`                                                              | [::UnifiedRubySDK::Shared::HrisCompany](../../models/shared/hriscompany.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -94,7 +94,7 @@ s.config_security(
 )
 
     
-res = s.hris.create_hris_employee(connection_id="<id>", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new(), fields_=[
+res = s.hris.create_hris_employee(hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -106,11 +106,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `connection_id`                                                                          | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the connection                                                                     |
-| `hris_employee`                                                                          | [T.nilable(::UnifiedRubySDK::Shared::HrisEmployee)](../../models/shared/hrisemployee.md) | :heavy_minus_sign:                                                                       | N/A                                                                                      |
-| `fields_`                                                                                | T::Array<*::String*>                                                                     | :heavy_minus_sign:                                                                       | Comma-delimited fields to return                                                         |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `hris_employee`                                                               | [::UnifiedRubySDK::Shared::HrisEmployee](../../models/shared/hrisemployee.md) | :heavy_check_mark:                                                            | N/A                                                                           |
+| `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
+| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
 
 ### Response
 
@@ -136,7 +136,7 @@ s.config_security(
 )
 
     
-res = s.hris.create_hris_group(connection_id="<id>", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(), fields_=[
+res = s.hris.create_hris_group(hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -148,11 +148,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `connection_id`                                                                    | *::String*                                                                         | :heavy_check_mark:                                                                 | ID of the connection                                                               |
-| `hris_group`                                                                       | [T.nilable(::UnifiedRubySDK::Shared::HrisGroup)](../../models/shared/hrisgroup.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |
-| `fields_`                                                                          | T::Array<*::String*>                                                               | :heavy_minus_sign:                                                                 | Comma-delimited fields to return                                                   |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `hris_group`                                                            | [::UnifiedRubySDK::Shared::HrisGroup](../../models/shared/hrisgroup.md) | :heavy_check_mark:                                                      | N/A                                                                     |
+| `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
+| `fields_`                                                               | T::Array<*::String*>                                                    | :heavy_minus_sign:                                                      | Comma-delimited fields to return                                        |
 
 ### Response
 
@@ -178,7 +178,7 @@ s.config_security(
 )
 
     
-res = s.hris.create_hris_location(connection_id="<id>", hris_location=::UnifiedRubySDK::Shared::HrisLocation.new(), fields_=[
+res = s.hris.create_hris_location(hris_location=::UnifiedRubySDK::Shared::HrisLocation.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -190,11 +190,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `connection_id`                                                                          | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the connection                                                                     |
-| `hris_location`                                                                          | [T.nilable(::UnifiedRubySDK::Shared::HrisLocation)](../../models/shared/hrislocation.md) | :heavy_minus_sign:                                                                       | N/A                                                                                      |
-| `fields_`                                                                                | T::Array<*::String*>                                                                     | :heavy_minus_sign:                                                                       | Comma-delimited fields to return                                                         |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `hris_location`                                                               | [::UnifiedRubySDK::Shared::HrisLocation](../../models/shared/hrislocation.md) | :heavy_check_mark:                                                            | N/A                                                                           |
+| `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
+| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
 
 ### Response
 
@@ -724,7 +724,7 @@ s.config_security(
 )
 
     
-res = s.hris.patch_hris_company(connection_id="<id>", id="<id>", hris_company=::UnifiedRubySDK::Shared::HrisCompany.new(), fields_=[
+res = s.hris.patch_hris_company(hris_company=::UnifiedRubySDK::Shared::HrisCompany.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -736,12 +736,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_id`                                                                        | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the connection                                                                   |
-| `id`                                                                                   | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the Company                                                                      |
-| `hris_company`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::HrisCompany)](../../models/shared/hriscompany.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
-| `fields_`                                                                              | T::Array<*::String*>                                                                   | :heavy_minus_sign:                                                                     | Comma-delimited fields to return                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `hris_company`                                                              | [::UnifiedRubySDK::Shared::HrisCompany](../../models/shared/hriscompany.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Company                                                           |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -767,7 +767,7 @@ s.config_security(
 )
 
     
-res = s.hris.patch_hris_employee(connection_id="<id>", id="<id>", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new(), fields_=[
+res = s.hris.patch_hris_employee(hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -779,12 +779,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `connection_id`                                                                          | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the connection                                                                     |
-| `id`                                                                                     | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the Employee                                                                       |
-| `hris_employee`                                                                          | [T.nilable(::UnifiedRubySDK::Shared::HrisEmployee)](../../models/shared/hrisemployee.md) | :heavy_minus_sign:                                                                       | N/A                                                                                      |
-| `fields_`                                                                                | T::Array<*::String*>                                                                     | :heavy_minus_sign:                                                                       | Comma-delimited fields to return                                                         |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `hris_employee`                                                               | [::UnifiedRubySDK::Shared::HrisEmployee](../../models/shared/hrisemployee.md) | :heavy_check_mark:                                                            | N/A                                                                           |
+| `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
+| `id`                                                                          | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the Employee                                                            |
+| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
 
 ### Response
 
@@ -810,7 +810,7 @@ s.config_security(
 )
 
     
-res = s.hris.patch_hris_group(connection_id="<id>", id="<id>", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(), fields_=[
+res = s.hris.patch_hris_group(hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -822,12 +822,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `connection_id`                                                                    | *::String*                                                                         | :heavy_check_mark:                                                                 | ID of the connection                                                               |
-| `id`                                                                               | *::String*                                                                         | :heavy_check_mark:                                                                 | ID of the Group                                                                    |
-| `hris_group`                                                                       | [T.nilable(::UnifiedRubySDK::Shared::HrisGroup)](../../models/shared/hrisgroup.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |
-| `fields_`                                                                          | T::Array<*::String*>                                                               | :heavy_minus_sign:                                                                 | Comma-delimited fields to return                                                   |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `hris_group`                                                            | [::UnifiedRubySDK::Shared::HrisGroup](../../models/shared/hrisgroup.md) | :heavy_check_mark:                                                      | N/A                                                                     |
+| `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
+| `id`                                                                    | *::String*                                                              | :heavy_check_mark:                                                      | ID of the Group                                                         |
+| `fields_`                                                               | T::Array<*::String*>                                                    | :heavy_minus_sign:                                                      | Comma-delimited fields to return                                        |
 
 ### Response
 
@@ -853,7 +853,7 @@ s.config_security(
 )
 
     
-res = s.hris.patch_hris_location(connection_id="<id>", id="<id>", hris_location=::UnifiedRubySDK::Shared::HrisLocation.new(), fields_=[
+res = s.hris.patch_hris_location(hris_location=::UnifiedRubySDK::Shared::HrisLocation.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -865,12 +865,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `connection_id`                                                                          | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the connection                                                                     |
-| `id`                                                                                     | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the Location                                                                       |
-| `hris_location`                                                                          | [T.nilable(::UnifiedRubySDK::Shared::HrisLocation)](../../models/shared/hrislocation.md) | :heavy_minus_sign:                                                                       | N/A                                                                                      |
-| `fields_`                                                                                | T::Array<*::String*>                                                                     | :heavy_minus_sign:                                                                       | Comma-delimited fields to return                                                         |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `hris_location`                                                               | [::UnifiedRubySDK::Shared::HrisLocation](../../models/shared/hrislocation.md) | :heavy_check_mark:                                                            | N/A                                                                           |
+| `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
+| `id`                                                                          | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the Location                                                            |
+| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
 
 ### Response
 
@@ -1052,7 +1052,7 @@ s.config_security(
 )
 
     
-res = s.hris.update_hris_company(connection_id="<id>", id="<id>", hris_company=::UnifiedRubySDK::Shared::HrisCompany.new(), fields_=[
+res = s.hris.update_hris_company(hris_company=::UnifiedRubySDK::Shared::HrisCompany.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1064,12 +1064,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_id`                                                                        | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the connection                                                                   |
-| `id`                                                                                   | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the Company                                                                      |
-| `hris_company`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::HrisCompany)](../../models/shared/hriscompany.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
-| `fields_`                                                                              | T::Array<*::String*>                                                                   | :heavy_minus_sign:                                                                     | Comma-delimited fields to return                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `hris_company`                                                              | [::UnifiedRubySDK::Shared::HrisCompany](../../models/shared/hriscompany.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Company                                                           |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -1095,7 +1095,7 @@ s.config_security(
 )
 
     
-res = s.hris.update_hris_employee(connection_id="<id>", id="<id>", hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new(), fields_=[
+res = s.hris.update_hris_employee(hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1107,12 +1107,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `connection_id`                                                                          | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the connection                                                                     |
-| `id`                                                                                     | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the Employee                                                                       |
-| `hris_employee`                                                                          | [T.nilable(::UnifiedRubySDK::Shared::HrisEmployee)](../../models/shared/hrisemployee.md) | :heavy_minus_sign:                                                                       | N/A                                                                                      |
-| `fields_`                                                                                | T::Array<*::String*>                                                                     | :heavy_minus_sign:                                                                       | Comma-delimited fields to return                                                         |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `hris_employee`                                                               | [::UnifiedRubySDK::Shared::HrisEmployee](../../models/shared/hrisemployee.md) | :heavy_check_mark:                                                            | N/A                                                                           |
+| `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
+| `id`                                                                          | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the Employee                                                            |
+| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
 
 ### Response
 
@@ -1138,7 +1138,7 @@ s.config_security(
 )
 
     
-res = s.hris.update_hris_group(connection_id="<id>", id="<id>", hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(), fields_=[
+res = s.hris.update_hris_group(hris_group=::UnifiedRubySDK::Shared::HrisGroup.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1150,12 +1150,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `connection_id`                                                                    | *::String*                                                                         | :heavy_check_mark:                                                                 | ID of the connection                                                               |
-| `id`                                                                               | *::String*                                                                         | :heavy_check_mark:                                                                 | ID of the Group                                                                    |
-| `hris_group`                                                                       | [T.nilable(::UnifiedRubySDK::Shared::HrisGroup)](../../models/shared/hrisgroup.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |
-| `fields_`                                                                          | T::Array<*::String*>                                                               | :heavy_minus_sign:                                                                 | Comma-delimited fields to return                                                   |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `hris_group`                                                            | [::UnifiedRubySDK::Shared::HrisGroup](../../models/shared/hrisgroup.md) | :heavy_check_mark:                                                      | N/A                                                                     |
+| `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
+| `id`                                                                    | *::String*                                                              | :heavy_check_mark:                                                      | ID of the Group                                                         |
+| `fields_`                                                               | T::Array<*::String*>                                                    | :heavy_minus_sign:                                                      | Comma-delimited fields to return                                        |
 
 ### Response
 
@@ -1181,7 +1181,7 @@ s.config_security(
 )
 
     
-res = s.hris.update_hris_location(connection_id="<id>", id="<id>", hris_location=::UnifiedRubySDK::Shared::HrisLocation.new(), fields_=[
+res = s.hris.update_hris_location(hris_location=::UnifiedRubySDK::Shared::HrisLocation.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1193,12 +1193,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `connection_id`                                                                          | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the connection                                                                     |
-| `id`                                                                                     | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the Location                                                                       |
-| `hris_location`                                                                          | [T.nilable(::UnifiedRubySDK::Shared::HrisLocation)](../../models/shared/hrislocation.md) | :heavy_minus_sign:                                                                       | N/A                                                                                      |
-| `fields_`                                                                                | T::Array<*::String*>                                                                     | :heavy_minus_sign:                                                                       | Comma-delimited fields to return                                                         |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `hris_location`                                                               | [::UnifiedRubySDK::Shared::HrisLocation](../../models/shared/hrislocation.md) | :heavy_check_mark:                                                            | N/A                                                                           |
+| `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
+| `id`                                                                          | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the Location                                                            |
+| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
 
 ### Response
 

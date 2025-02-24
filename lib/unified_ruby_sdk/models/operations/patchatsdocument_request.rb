@@ -11,21 +11,21 @@ module UnifiedRubySDK
     class PatchAtsDocumentRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
+
+      field :ats_document, ::UnifiedRubySDK::Shared::AtsDocument, { 'request': { 'media_type': 'application/json' } }
       # ID of the connection
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
       # ID of the Document
       field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
-
-      field :ats_document, T.nilable(::UnifiedRubySDK::Shared::AtsDocument), { 'request': { 'media_type': 'application/json' } }
       # Comma-delimited fields to return
       field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, id: ::String, ats_document: T.nilable(::UnifiedRubySDK::Shared::AtsDocument), fields_: T.nilable(T::Array[::String])).void }
-      def initialize(connection_id: nil, id: nil, ats_document: nil, fields_: nil)
+      sig { params(ats_document: ::UnifiedRubySDK::Shared::AtsDocument, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).void }
+      def initialize(ats_document: nil, connection_id: nil, id: nil, fields_: nil)
+        @ats_document = ats_document
         @connection_id = connection_id
         @id = id
-        @ats_document = ats_document
         @fields_ = fields_
       end
     end

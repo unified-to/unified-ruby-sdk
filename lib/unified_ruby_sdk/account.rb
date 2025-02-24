@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, accounting_account: T.nilable(::UnifiedRubySDK::Shared::AccountingAccount), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateAccountingAccountResponse) }
-    def create_accounting_account(connection_id, accounting_account = nil, fields_ = nil)
+    sig { params(accounting_account: ::UnifiedRubySDK::Shared::AccountingAccount, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateAccountingAccountResponse) }
+    def create_accounting_account(accounting_account, connection_id, fields_ = nil)
       # create_accounting_account - Create an account
       request = ::UnifiedRubySDK::Operations::CreateAccountingAccountRequest.new(
         
-        connection_id: connection_id,
         accounting_account: accounting_account,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :accounting_account, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateAccountingAccountRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -154,14 +155,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_account: T.nilable(::UnifiedRubySDK::Shared::AccountingAccount), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchAccountingAccountResponse) }
-    def patch_accounting_account(connection_id, id, accounting_account = nil, fields_ = nil)
+    sig { params(accounting_account: ::UnifiedRubySDK::Shared::AccountingAccount, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchAccountingAccountResponse) }
+    def patch_accounting_account(accounting_account, connection_id, id, fields_ = nil)
       # patch_accounting_account - Update an account
       request = ::UnifiedRubySDK::Operations::PatchAccountingAccountRequest.new(
         
+        accounting_account: accounting_account,
         connection_id: connection_id,
         id: id,
-        accounting_account: accounting_account,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -175,6 +176,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :accounting_account, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchAccountingAccountRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -247,14 +249,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_account: T.nilable(::UnifiedRubySDK::Shared::AccountingAccount), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateAccountingAccountResponse) }
-    def update_accounting_account(connection_id, id, accounting_account = nil, fields_ = nil)
+    sig { params(accounting_account: ::UnifiedRubySDK::Shared::AccountingAccount, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateAccountingAccountResponse) }
+    def update_accounting_account(accounting_account, connection_id, id, fields_ = nil)
       # update_accounting_account - Update an account
       request = ::UnifiedRubySDK::Operations::UpdateAccountingAccountRequest.new(
         
+        accounting_account: accounting_account,
         connection_id: connection_id,
         id: id,
-        accounting_account: accounting_account,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -268,6 +270,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :accounting_account, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateAccountingAccountRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

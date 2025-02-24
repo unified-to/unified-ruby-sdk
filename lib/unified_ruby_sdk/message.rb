@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, messaging_message: T.nilable(::UnifiedRubySDK::Shared::MessagingMessage), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateMessagingMessageResponse) }
-    def create_messaging_message(connection_id, messaging_message = nil, fields_ = nil)
+    sig { params(messaging_message: ::UnifiedRubySDK::Shared::MessagingMessage, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateMessagingMessageResponse) }
+    def create_messaging_message(messaging_message, connection_id, fields_ = nil)
       # create_messaging_message - Create a message
       request = ::UnifiedRubySDK::Operations::CreateMessagingMessageRequest.new(
         
-        connection_id: connection_id,
         messaging_message: messaging_message,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :messaging_message, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateMessagingMessageRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -154,14 +155,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, messaging_message: T.nilable(::UnifiedRubySDK::Shared::MessagingMessage), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchMessagingMessageResponse) }
-    def patch_messaging_message(connection_id, id, messaging_message = nil, fields_ = nil)
+    sig { params(messaging_message: ::UnifiedRubySDK::Shared::MessagingMessage, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchMessagingMessageResponse) }
+    def patch_messaging_message(messaging_message, connection_id, id, fields_ = nil)
       # patch_messaging_message - Update a message
       request = ::UnifiedRubySDK::Operations::PatchMessagingMessageRequest.new(
         
+        messaging_message: messaging_message,
         connection_id: connection_id,
         id: id,
-        messaging_message: messaging_message,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -175,6 +176,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :messaging_message, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchMessagingMessageRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -247,14 +249,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, messaging_message: T.nilable(::UnifiedRubySDK::Shared::MessagingMessage), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateMessagingMessageResponse) }
-    def update_messaging_message(connection_id, id, messaging_message = nil, fields_ = nil)
+    sig { params(messaging_message: ::UnifiedRubySDK::Shared::MessagingMessage, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateMessagingMessageResponse) }
+    def update_messaging_message(messaging_message, connection_id, id, fields_ = nil)
       # update_messaging_message - Update a message
       request = ::UnifiedRubySDK::Operations::UpdateMessagingMessageRequest.new(
         
+        messaging_message: messaging_message,
         connection_id: connection_id,
         id: id,
-        messaging_message: messaging_message,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -268,6 +270,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :messaging_message, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateMessagingMessageRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

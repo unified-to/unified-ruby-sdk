@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, hris_group: T.nilable(::UnifiedRubySDK::Shared::HrisGroup), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateHrisGroupResponse) }
-    def create_hris_group(connection_id, hris_group = nil, fields_ = nil)
+    sig { params(hris_group: ::UnifiedRubySDK::Shared::HrisGroup, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateHrisGroupResponse) }
+    def create_hris_group(hris_group, connection_id, fields_ = nil)
       # create_hris_group - Create a group
       request = ::UnifiedRubySDK::Operations::CreateHrisGroupRequest.new(
         
-        connection_id: connection_id,
         hris_group: hris_group,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :hris_group, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateHrisGroupRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -72,13 +73,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, scim_group: T.nilable(::UnifiedRubySDK::Shared::ScimGroup)).returns(::UnifiedRubySDK::Operations::CreateScimGroupsResponse) }
-    def create_scim_groups(connection_id, scim_group = nil)
+    sig { params(scim_group: ::UnifiedRubySDK::Shared::ScimGroup, connection_id: ::String).returns(::UnifiedRubySDK::Operations::CreateScimGroupsResponse) }
+    def create_scim_groups(scim_group, connection_id)
       # create_scim_groups - Create group
       request = ::UnifiedRubySDK::Operations::CreateScimGroupsRequest.new(
         
-        connection_id: connection_id,
-        scim_group: scim_group
+        scim_group: scim_group,
+        connection_id: connection_id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -91,6 +92,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :scim_group, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -283,14 +285,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, hris_group: T.nilable(::UnifiedRubySDK::Shared::HrisGroup), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchHrisGroupResponse) }
-    def patch_hris_group(connection_id, id, hris_group = nil, fields_ = nil)
+    sig { params(hris_group: ::UnifiedRubySDK::Shared::HrisGroup, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchHrisGroupResponse) }
+    def patch_hris_group(hris_group, connection_id, id, fields_ = nil)
       # patch_hris_group - Update a group
       request = ::UnifiedRubySDK::Operations::PatchHrisGroupRequest.new(
         
+        hris_group: hris_group,
         connection_id: connection_id,
         id: id,
-        hris_group: hris_group,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -304,6 +306,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :hris_group, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchHrisGroupRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -337,14 +340,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, scim_group: T.nilable(::UnifiedRubySDK::Shared::ScimGroup)).returns(::UnifiedRubySDK::Operations::PatchScimGroupsResponse) }
-    def patch_scim_groups(connection_id, id, scim_group = nil)
+    sig { params(scim_group: ::UnifiedRubySDK::Shared::ScimGroup, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::PatchScimGroupsResponse) }
+    def patch_scim_groups(scim_group, connection_id, id)
       # patch_scim_groups - Update group
       request = ::UnifiedRubySDK::Operations::PatchScimGroupsRequest.new(
         
+        scim_group: scim_group,
         connection_id: connection_id,
-        id: id,
-        scim_group: scim_group
+        id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -357,6 +360,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :scim_group, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -466,14 +470,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, hris_group: T.nilable(::UnifiedRubySDK::Shared::HrisGroup), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateHrisGroupResponse) }
-    def update_hris_group(connection_id, id, hris_group = nil, fields_ = nil)
+    sig { params(hris_group: ::UnifiedRubySDK::Shared::HrisGroup, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateHrisGroupResponse) }
+    def update_hris_group(hris_group, connection_id, id, fields_ = nil)
       # update_hris_group - Update a group
       request = ::UnifiedRubySDK::Operations::UpdateHrisGroupRequest.new(
         
+        hris_group: hris_group,
         connection_id: connection_id,
         id: id,
-        hris_group: hris_group,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -487,6 +491,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :hris_group, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateHrisGroupRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -520,14 +525,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, scim_group: T.nilable(::UnifiedRubySDK::Shared::ScimGroup)).returns(::UnifiedRubySDK::Operations::UpdateScimGroupsResponse) }
-    def update_scim_groups(connection_id, id, scim_group = nil)
+    sig { params(scim_group: ::UnifiedRubySDK::Shared::ScimGroup, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::UpdateScimGroupsResponse) }
+    def update_scim_groups(scim_group, connection_id, id)
       # update_scim_groups - Update group
       request = ::UnifiedRubySDK::Operations::UpdateScimGroupsRequest.new(
         
+        scim_group: scim_group,
         connection_id: connection_id,
-        id: id,
-        scim_group: scim_group
+        id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -540,6 +545,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :scim_group, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 

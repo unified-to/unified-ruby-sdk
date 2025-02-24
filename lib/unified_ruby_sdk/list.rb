@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, marketing_list: T.nilable(::UnifiedRubySDK::Shared::MarketingList), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateMartechListResponse) }
-    def create_martech_list(connection_id, marketing_list = nil, fields_ = nil)
+    sig { params(marketing_list: ::UnifiedRubySDK::Shared::MarketingList, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateMartechListResponse) }
+    def create_martech_list(marketing_list, connection_id, fields_ = nil)
       # create_martech_list - Create a list
       request = ::UnifiedRubySDK::Operations::CreateMartechListRequest.new(
         
-        connection_id: connection_id,
         marketing_list: marketing_list,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :marketing_list, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateMartechListRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -154,14 +155,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, marketing_list: T.nilable(::UnifiedRubySDK::Shared::MarketingList), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchMartechListResponse) }
-    def patch_martech_list(connection_id, id, marketing_list = nil, fields_ = nil)
+    sig { params(marketing_list: ::UnifiedRubySDK::Shared::MarketingList, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchMartechListResponse) }
+    def patch_martech_list(marketing_list, connection_id, id, fields_ = nil)
       # patch_martech_list - Update a list
       request = ::UnifiedRubySDK::Operations::PatchMartechListRequest.new(
         
+        marketing_list: marketing_list,
         connection_id: connection_id,
         id: id,
-        marketing_list: marketing_list,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -175,6 +176,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :marketing_list, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchMartechListRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -247,14 +249,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, marketing_list: T.nilable(::UnifiedRubySDK::Shared::MarketingList), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateMartechListResponse) }
-    def update_martech_list(connection_id, id, marketing_list = nil, fields_ = nil)
+    sig { params(marketing_list: ::UnifiedRubySDK::Shared::MarketingList, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateMartechListResponse) }
+    def update_martech_list(marketing_list, connection_id, id, fields_ = nil)
       # update_martech_list - Update a list
       request = ::UnifiedRubySDK::Operations::UpdateMartechListRequest.new(
         
+        marketing_list: marketing_list,
         connection_id: connection_id,
         id: id,
-        marketing_list: marketing_list,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -268,6 +270,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :marketing_list, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateMartechListRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

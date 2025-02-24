@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, task_comment: T.nilable(::UnifiedRubySDK::Shared::TaskComment), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateTaskCommentResponse) }
-    def create_task_comment(connection_id, task_comment = nil, fields_ = nil)
+    sig { params(task_comment: ::UnifiedRubySDK::Shared::TaskComment, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateTaskCommentResponse) }
+    def create_task_comment(task_comment, connection_id, fields_ = nil)
       # create_task_comment - Create a comment
       request = ::UnifiedRubySDK::Operations::CreateTaskCommentRequest.new(
         
-        connection_id: connection_id,
         task_comment: task_comment,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :task_comment, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateTaskCommentRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -72,13 +73,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, task_project: T.nilable(::UnifiedRubySDK::Shared::TaskProject), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateTaskProjectResponse) }
-    def create_task_project(connection_id, task_project = nil, fields_ = nil)
+    sig { params(task_project: ::UnifiedRubySDK::Shared::TaskProject, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateTaskProjectResponse) }
+    def create_task_project(task_project, connection_id, fields_ = nil)
       # create_task_project - Create a project
       request = ::UnifiedRubySDK::Operations::CreateTaskProjectRequest.new(
         
-        connection_id: connection_id,
         task_project: task_project,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -92,6 +93,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :task_project, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateTaskProjectRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -125,13 +127,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, task_task: T.nilable(::UnifiedRubySDK::Shared::TaskTask), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateTaskTaskResponse) }
-    def create_task_task(connection_id, task_task = nil, fields_ = nil)
+    sig { params(task_task: ::UnifiedRubySDK::Shared::TaskTask, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateTaskTaskResponse) }
+    def create_task_task(task_task, connection_id, fields_ = nil)
       # create_task_task - Create a task
       request = ::UnifiedRubySDK::Operations::CreateTaskTaskRequest.new(
         
-        connection_id: connection_id,
         task_task: task_task,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -145,6 +147,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :task_task, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateTaskTaskRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -424,14 +427,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, task_comment: T.nilable(::UnifiedRubySDK::Shared::TaskComment), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchTaskCommentResponse) }
-    def patch_task_comment(connection_id, id, task_comment = nil, fields_ = nil)
+    sig { params(task_comment: ::UnifiedRubySDK::Shared::TaskComment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchTaskCommentResponse) }
+    def patch_task_comment(task_comment, connection_id, id, fields_ = nil)
       # patch_task_comment - Update a comment
       request = ::UnifiedRubySDK::Operations::PatchTaskCommentRequest.new(
         
+        task_comment: task_comment,
         connection_id: connection_id,
         id: id,
-        task_comment: task_comment,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -445,6 +448,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :task_comment, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchTaskCommentRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -478,14 +482,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, task_project: T.nilable(::UnifiedRubySDK::Shared::TaskProject), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchTaskProjectResponse) }
-    def patch_task_project(connection_id, id, task_project = nil, fields_ = nil)
+    sig { params(task_project: ::UnifiedRubySDK::Shared::TaskProject, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchTaskProjectResponse) }
+    def patch_task_project(task_project, connection_id, id, fields_ = nil)
       # patch_task_project - Update a project
       request = ::UnifiedRubySDK::Operations::PatchTaskProjectRequest.new(
         
+        task_project: task_project,
         connection_id: connection_id,
         id: id,
-        task_project: task_project,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -499,6 +503,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :task_project, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchTaskProjectRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -532,14 +537,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, task_task: T.nilable(::UnifiedRubySDK::Shared::TaskTask), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchTaskTaskResponse) }
-    def patch_task_task(connection_id, id, task_task = nil, fields_ = nil)
+    sig { params(task_task: ::UnifiedRubySDK::Shared::TaskTask, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchTaskTaskResponse) }
+    def patch_task_task(task_task, connection_id, id, fields_ = nil)
       # patch_task_task - Update a task
       request = ::UnifiedRubySDK::Operations::PatchTaskTaskRequest.new(
         
+        task_task: task_task,
         connection_id: connection_id,
         id: id,
-        task_task: task_task,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -553,6 +558,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :task_task, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchTaskTaskRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -703,14 +709,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, task_comment: T.nilable(::UnifiedRubySDK::Shared::TaskComment), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateTaskCommentResponse) }
-    def update_task_comment(connection_id, id, task_comment = nil, fields_ = nil)
+    sig { params(task_comment: ::UnifiedRubySDK::Shared::TaskComment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateTaskCommentResponse) }
+    def update_task_comment(task_comment, connection_id, id, fields_ = nil)
       # update_task_comment - Update a comment
       request = ::UnifiedRubySDK::Operations::UpdateTaskCommentRequest.new(
         
+        task_comment: task_comment,
         connection_id: connection_id,
         id: id,
-        task_comment: task_comment,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -724,6 +730,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :task_comment, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateTaskCommentRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -757,14 +764,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, task_project: T.nilable(::UnifiedRubySDK::Shared::TaskProject), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateTaskProjectResponse) }
-    def update_task_project(connection_id, id, task_project = nil, fields_ = nil)
+    sig { params(task_project: ::UnifiedRubySDK::Shared::TaskProject, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateTaskProjectResponse) }
+    def update_task_project(task_project, connection_id, id, fields_ = nil)
       # update_task_project - Update a project
       request = ::UnifiedRubySDK::Operations::UpdateTaskProjectRequest.new(
         
+        task_project: task_project,
         connection_id: connection_id,
         id: id,
-        task_project: task_project,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -778,6 +785,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :task_project, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateTaskProjectRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -811,14 +819,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, task_task: T.nilable(::UnifiedRubySDK::Shared::TaskTask), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateTaskTaskResponse) }
-    def update_task_task(connection_id, id, task_task = nil, fields_ = nil)
+    sig { params(task_task: ::UnifiedRubySDK::Shared::TaskTask, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateTaskTaskResponse) }
+    def update_task_task(task_task, connection_id, id, fields_ = nil)
       # update_task_task - Update a task
       request = ::UnifiedRubySDK::Operations::UpdateTaskTaskRequest.new(
         
+        task_task: task_task,
         connection_id: connection_id,
         id: id,
-        task_task: task_task,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -832,6 +840,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :task_task, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateTaskTaskRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

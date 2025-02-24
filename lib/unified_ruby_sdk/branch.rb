@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, repo_branch: T.nilable(::UnifiedRubySDK::Shared::RepoBranch), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateRepoBranchResponse) }
-    def create_repo_branch(connection_id, repo_branch = nil, fields_ = nil)
+    sig { params(repo_branch: ::UnifiedRubySDK::Shared::RepoBranch, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateRepoBranchResponse) }
+    def create_repo_branch(repo_branch, connection_id, fields_ = nil)
       # create_repo_branch - Create a branch
       request = ::UnifiedRubySDK::Operations::CreateRepoBranchRequest.new(
         
-        connection_id: connection_id,
         repo_branch: repo_branch,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :repo_branch, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateRepoBranchRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -154,14 +155,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, repo_branch: T.nilable(::UnifiedRubySDK::Shared::RepoBranch), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchRepoBranchResponse) }
-    def patch_repo_branch(connection_id, id, repo_branch = nil, fields_ = nil)
+    sig { params(repo_branch: ::UnifiedRubySDK::Shared::RepoBranch, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchRepoBranchResponse) }
+    def patch_repo_branch(repo_branch, connection_id, id, fields_ = nil)
       # patch_repo_branch - Update a branch
       request = ::UnifiedRubySDK::Operations::PatchRepoBranchRequest.new(
         
+        repo_branch: repo_branch,
         connection_id: connection_id,
         id: id,
-        repo_branch: repo_branch,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -175,6 +176,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :repo_branch, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchRepoBranchRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -247,14 +249,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, repo_branch: T.nilable(::UnifiedRubySDK::Shared::RepoBranch), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateRepoBranchResponse) }
-    def update_repo_branch(connection_id, id, repo_branch = nil, fields_ = nil)
+    sig { params(repo_branch: ::UnifiedRubySDK::Shared::RepoBranch, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateRepoBranchResponse) }
+    def update_repo_branch(repo_branch, connection_id, id, fields_ = nil)
       # update_repo_branch - Update a branch
       request = ::UnifiedRubySDK::Operations::UpdateRepoBranchRequest.new(
         
+        repo_branch: repo_branch,
         connection_id: connection_id,
         id: id,
-        repo_branch: repo_branch,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -268,6 +270,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :repo_branch, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateRepoBranchRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

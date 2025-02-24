@@ -30,7 +30,7 @@ s.config_security(
 )
 
     
-res = s.lead.create_crm_lead(connection_id="<id>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), fields_=[
+res = s.lead.create_crm_lead(crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -42,11 +42,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `connection_id`                                                                | *::String*                                                                     | :heavy_check_mark:                                                             | ID of the connection                                                           |
-| `crm_lead`                                                                     | [T.nilable(::UnifiedRubySDK::Shared::CrmLead)](../../models/shared/crmlead.md) | :heavy_minus_sign:                                                             | N/A                                                                            |
-| `fields_`                                                                      | T::Array<*::String*>                                                           | :heavy_minus_sign:                                                             | Comma-delimited fields to return                                               |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `crm_lead`                                                          | [::UnifiedRubySDK::Shared::CrmLead](../../models/shared/crmlead.md) | :heavy_check_mark:                                                  | N/A                                                                 |
+| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 
@@ -156,7 +156,7 @@ s.config_security(
 )
 
     
-res = s.lead.patch_crm_lead(connection_id="<id>", id="<id>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), fields_=[
+res = s.lead.patch_crm_lead(crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -168,12 +168,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `connection_id`                                                                | *::String*                                                                     | :heavy_check_mark:                                                             | ID of the connection                                                           |
-| `id`                                                                           | *::String*                                                                     | :heavy_check_mark:                                                             | ID of the Lead                                                                 |
-| `crm_lead`                                                                     | [T.nilable(::UnifiedRubySDK::Shared::CrmLead)](../../models/shared/crmlead.md) | :heavy_minus_sign:                                                             | N/A                                                                            |
-| `fields_`                                                                      | T::Array<*::String*>                                                           | :heavy_minus_sign:                                                             | Comma-delimited fields to return                                               |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `crm_lead`                                                          | [::UnifiedRubySDK::Shared::CrmLead](../../models/shared/crmlead.md) | :heavy_check_mark:                                                  | N/A                                                                 |
+| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
+| `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Lead                                                      |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 
@@ -238,7 +238,7 @@ s.config_security(
 )
 
     
-res = s.lead.update_crm_lead(connection_id="<id>", id="<id>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), fields_=[
+res = s.lead.update_crm_lead(crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -250,12 +250,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `connection_id`                                                                | *::String*                                                                     | :heavy_check_mark:                                                             | ID of the connection                                                           |
-| `id`                                                                           | *::String*                                                                     | :heavy_check_mark:                                                             | ID of the Lead                                                                 |
-| `crm_lead`                                                                     | [T.nilable(::UnifiedRubySDK::Shared::CrmLead)](../../models/shared/crmlead.md) | :heavy_minus_sign:                                                             | N/A                                                                            |
-| `fields_`                                                                      | T::Array<*::String*>                                                           | :heavy_minus_sign:                                                             | Comma-delimited fields to return                                               |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `crm_lead`                                                          | [::UnifiedRubySDK::Shared::CrmLead](../../models/shared/crmlead.md) | :heavy_check_mark:                                                  | N/A                                                                 |
+| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
+| `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Lead                                                      |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 

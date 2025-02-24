@@ -32,7 +32,7 @@ s.config_security(
 )
 
     
-res = s.organization.create_repo_organization(connection_id="<id>", repo_organization=::UnifiedRubySDK::Shared::RepoOrganization.new(), fields_=[
+res = s.organization.create_repo_organization(repo_organization=::UnifiedRubySDK::Shared::RepoOrganization.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -44,11 +44,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `connection_id`                                                                                  | *::String*                                                                                       | :heavy_check_mark:                                                                               | ID of the connection                                                                             |
-| `repo_organization`                                                                              | [T.nilable(::UnifiedRubySDK::Shared::RepoOrganization)](../../models/shared/repoorganization.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
-| `fields_`                                                                                        | T::Array<*::String*>                                                                             | :heavy_minus_sign:                                                                               | Comma-delimited fields to return                                                                 |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `repo_organization`                                                                   | [::UnifiedRubySDK::Shared::RepoOrganization](../../models/shared/repoorganization.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `connection_id`                                                                       | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the connection                                                                  |
+| `fields_`                                                                             | T::Array<*::String*>                                                                  | :heavy_minus_sign:                                                                    | Comma-delimited fields to return                                                      |
 
 ### Response
 
@@ -242,7 +242,7 @@ s.config_security(
 )
 
     
-res = s.organization.patch_repo_organization(connection_id="<id>", id="<id>", repo_organization=::UnifiedRubySDK::Shared::RepoOrganization.new(), fields_=[
+res = s.organization.patch_repo_organization(repo_organization=::UnifiedRubySDK::Shared::RepoOrganization.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -254,12 +254,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `connection_id`                                                                                  | *::String*                                                                                       | :heavy_check_mark:                                                                               | ID of the connection                                                                             |
-| `id`                                                                                             | *::String*                                                                                       | :heavy_check_mark:                                                                               | ID of the Organization                                                                           |
-| `repo_organization`                                                                              | [T.nilable(::UnifiedRubySDK::Shared::RepoOrganization)](../../models/shared/repoorganization.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
-| `fields_`                                                                                        | T::Array<*::String*>                                                                             | :heavy_minus_sign:                                                                               | Comma-delimited fields to return                                                                 |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `repo_organization`                                                                   | [::UnifiedRubySDK::Shared::RepoOrganization](../../models/shared/repoorganization.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `connection_id`                                                                       | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the connection                                                                  |
+| `id`                                                                                  | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the Organization                                                                |
+| `fields_`                                                                             | T::Array<*::String*>                                                                  | :heavy_minus_sign:                                                                    | Comma-delimited fields to return                                                      |
 
 ### Response
 
@@ -324,7 +324,7 @@ s.config_security(
 )
 
     
-res = s.organization.update_repo_organization(connection_id="<id>", id="<id>", repo_organization=::UnifiedRubySDK::Shared::RepoOrganization.new(), fields_=[
+res = s.organization.update_repo_organization(repo_organization=::UnifiedRubySDK::Shared::RepoOrganization.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -336,12 +336,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `connection_id`                                                                                  | *::String*                                                                                       | :heavy_check_mark:                                                                               | ID of the connection                                                                             |
-| `id`                                                                                             | *::String*                                                                                       | :heavy_check_mark:                                                                               | ID of the Organization                                                                           |
-| `repo_organization`                                                                              | [T.nilable(::UnifiedRubySDK::Shared::RepoOrganization)](../../models/shared/repoorganization.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
-| `fields_`                                                                                        | T::Array<*::String*>                                                                             | :heavy_minus_sign:                                                                               | Comma-delimited fields to return                                                                 |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `repo_organization`                                                                   | [::UnifiedRubySDK::Shared::RepoOrganization](../../models/shared/repoorganization.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `connection_id`                                                                       | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the connection                                                                  |
+| `id`                                                                                  | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the Organization                                                                |
+| `fields_`                                                                             | T::Array<*::String*>                                                                  | :heavy_minus_sign:                                                                    | Comma-delimited fields to return                                                      |
 
 ### Response
 

@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, kms_comment: T.nilable(::UnifiedRubySDK::Shared::KmsComment), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateKmsCommentResponse) }
-    def create_kms_comment(connection_id, kms_comment = nil, fields_ = nil)
+    sig { params(kms_comment: ::UnifiedRubySDK::Shared::KmsComment, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateKmsCommentResponse) }
+    def create_kms_comment(kms_comment, connection_id, fields_ = nil)
       # create_kms_comment - Create a comment
       request = ::UnifiedRubySDK::Operations::CreateKmsCommentRequest.new(
         
-        connection_id: connection_id,
         kms_comment: kms_comment,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :kms_comment, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateKmsCommentRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -72,13 +73,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, kms_page: T.nilable(::UnifiedRubySDK::Shared::KmsPage), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateKmsPageResponse) }
-    def create_kms_page(connection_id, kms_page = nil, fields_ = nil)
+    sig { params(kms_page: ::UnifiedRubySDK::Shared::KmsPage, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateKmsPageResponse) }
+    def create_kms_page(kms_page, connection_id, fields_ = nil)
       # create_kms_page - Create a page
       request = ::UnifiedRubySDK::Operations::CreateKmsPageRequest.new(
         
-        connection_id: connection_id,
         kms_page: kms_page,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -92,6 +93,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :kms_page, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateKmsPageRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -125,13 +127,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, kms_space: T.nilable(::UnifiedRubySDK::Shared::KmsSpace), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateKmsSpaceResponse) }
-    def create_kms_space(connection_id, kms_space = nil, fields_ = nil)
+    sig { params(kms_space: ::UnifiedRubySDK::Shared::KmsSpace, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateKmsSpaceResponse) }
+    def create_kms_space(kms_space, connection_id, fields_ = nil)
       # create_kms_space - Create a space
       request = ::UnifiedRubySDK::Operations::CreateKmsSpaceRequest.new(
         
-        connection_id: connection_id,
         kms_space: kms_space,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -145,6 +147,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :kms_space, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateKmsSpaceRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -424,14 +427,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, kms_comment: T.nilable(::UnifiedRubySDK::Shared::KmsComment), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchKmsCommentResponse) }
-    def patch_kms_comment(connection_id, id, kms_comment = nil, fields_ = nil)
+    sig { params(kms_comment: ::UnifiedRubySDK::Shared::KmsComment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchKmsCommentResponse) }
+    def patch_kms_comment(kms_comment, connection_id, id, fields_ = nil)
       # patch_kms_comment - Update a comment
       request = ::UnifiedRubySDK::Operations::PatchKmsCommentRequest.new(
         
+        kms_comment: kms_comment,
         connection_id: connection_id,
         id: id,
-        kms_comment: kms_comment,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -445,6 +448,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :kms_comment, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchKmsCommentRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -478,14 +482,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, kms_page: T.nilable(::UnifiedRubySDK::Shared::KmsPage), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchKmsPageResponse) }
-    def patch_kms_page(connection_id, id, kms_page = nil, fields_ = nil)
+    sig { params(kms_page: ::UnifiedRubySDK::Shared::KmsPage, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchKmsPageResponse) }
+    def patch_kms_page(kms_page, connection_id, id, fields_ = nil)
       # patch_kms_page - Update a page
       request = ::UnifiedRubySDK::Operations::PatchKmsPageRequest.new(
         
+        kms_page: kms_page,
         connection_id: connection_id,
         id: id,
-        kms_page: kms_page,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -499,6 +503,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :kms_page, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchKmsPageRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -532,14 +537,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, kms_space: T.nilable(::UnifiedRubySDK::Shared::KmsSpace), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchKmsSpaceResponse) }
-    def patch_kms_space(connection_id, id, kms_space = nil, fields_ = nil)
+    sig { params(kms_space: ::UnifiedRubySDK::Shared::KmsSpace, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchKmsSpaceResponse) }
+    def patch_kms_space(kms_space, connection_id, id, fields_ = nil)
       # patch_kms_space - Update a space
       request = ::UnifiedRubySDK::Operations::PatchKmsSpaceRequest.new(
         
+        kms_space: kms_space,
         connection_id: connection_id,
         id: id,
-        kms_space: kms_space,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -553,6 +558,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :kms_space, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchKmsSpaceRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -703,14 +709,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, kms_comment: T.nilable(::UnifiedRubySDK::Shared::KmsComment), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateKmsCommentResponse) }
-    def update_kms_comment(connection_id, id, kms_comment = nil, fields_ = nil)
+    sig { params(kms_comment: ::UnifiedRubySDK::Shared::KmsComment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateKmsCommentResponse) }
+    def update_kms_comment(kms_comment, connection_id, id, fields_ = nil)
       # update_kms_comment - Update a comment
       request = ::UnifiedRubySDK::Operations::UpdateKmsCommentRequest.new(
         
+        kms_comment: kms_comment,
         connection_id: connection_id,
         id: id,
-        kms_comment: kms_comment,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -724,6 +730,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :kms_comment, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateKmsCommentRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -757,14 +764,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, kms_page: T.nilable(::UnifiedRubySDK::Shared::KmsPage), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateKmsPageResponse) }
-    def update_kms_page(connection_id, id, kms_page = nil, fields_ = nil)
+    sig { params(kms_page: ::UnifiedRubySDK::Shared::KmsPage, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateKmsPageResponse) }
+    def update_kms_page(kms_page, connection_id, id, fields_ = nil)
       # update_kms_page - Update a page
       request = ::UnifiedRubySDK::Operations::UpdateKmsPageRequest.new(
         
+        kms_page: kms_page,
         connection_id: connection_id,
         id: id,
-        kms_page: kms_page,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -778,6 +785,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :kms_page, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateKmsPageRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -811,14 +819,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, kms_space: T.nilable(::UnifiedRubySDK::Shared::KmsSpace), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateKmsSpaceResponse) }
-    def update_kms_space(connection_id, id, kms_space = nil, fields_ = nil)
+    sig { params(kms_space: ::UnifiedRubySDK::Shared::KmsSpace, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateKmsSpaceResponse) }
+    def update_kms_space(kms_space, connection_id, id, fields_ = nil)
       # update_kms_space - Update a space
       request = ::UnifiedRubySDK::Operations::UpdateKmsSpaceRequest.new(
         
+        kms_space: kms_space,
         connection_id: connection_id,
         id: id,
-        kms_space: kms_space,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -832,6 +840,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :kms_space, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateKmsSpaceRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

@@ -30,7 +30,7 @@ s.config_security(
 )
 
     
-res = s.pipeline.create_crm_pipeline(connection_id="<id>", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(), fields_=[
+res = s.pipeline.create_crm_pipeline(crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -42,11 +42,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_id`                                                                        | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the connection                                                                   |
-| `crm_pipeline`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::CrmPipeline)](../../models/shared/crmpipeline.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
-| `fields_`                                                                              | T::Array<*::String*>                                                                   | :heavy_minus_sign:                                                                     | Comma-delimited fields to return                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `crm_pipeline`                                                              | [::UnifiedRubySDK::Shared::CrmPipeline](../../models/shared/crmpipeline.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -156,7 +156,7 @@ s.config_security(
 )
 
     
-res = s.pipeline.patch_crm_pipeline(connection_id="<id>", id="<id>", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(), fields_=[
+res = s.pipeline.patch_crm_pipeline(crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -168,12 +168,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_id`                                                                        | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the connection                                                                   |
-| `id`                                                                                   | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the Pipeline                                                                     |
-| `crm_pipeline`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::CrmPipeline)](../../models/shared/crmpipeline.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
-| `fields_`                                                                              | T::Array<*::String*>                                                                   | :heavy_minus_sign:                                                                     | Comma-delimited fields to return                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `crm_pipeline`                                                              | [::UnifiedRubySDK::Shared::CrmPipeline](../../models/shared/crmpipeline.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Pipeline                                                          |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -238,7 +238,7 @@ s.config_security(
 )
 
     
-res = s.pipeline.update_crm_pipeline(connection_id="<id>", id="<id>", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(), fields_=[
+res = s.pipeline.update_crm_pipeline(crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -250,12 +250,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_id`                                                                        | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the connection                                                                   |
-| `id`                                                                                   | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the Pipeline                                                                     |
-| `crm_pipeline`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::CrmPipeline)](../../models/shared/crmpipeline.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
-| `fields_`                                                                              | T::Array<*::String*>                                                                   | :heavy_minus_sign:                                                                     | Comma-delimited fields to return                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `crm_pipeline`                                                              | [::UnifiedRubySDK::Shared::CrmPipeline](../../models/shared/crmpipeline.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Pipeline                                                          |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 

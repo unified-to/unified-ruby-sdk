@@ -30,9 +30,9 @@ s.config_security(
 )
 
     
-res = s.inventory.create_commerce_inventory(connection_id="<id>", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
+res = s.inventory.create_commerce_inventory(commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
   available: 5165.08,
-), fields_=[
+), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -44,11 +44,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
-| `commerce_inventory`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::CommerceInventory)](../../models/shared/commerceinventory.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
-| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `commerce_inventory`                                                                    | [::UnifiedRubySDK::Shared::CommerceInventory](../../models/shared/commerceinventory.md) | :heavy_check_mark:                                                                      | N/A                                                                                     |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -158,9 +158,9 @@ s.config_security(
 )
 
     
-res = s.inventory.patch_commerce_inventory(connection_id="<id>", id="<id>", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
+res = s.inventory.patch_commerce_inventory(commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
   available: 615.23,
-), fields_=[
+), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -172,12 +172,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
-| `id`                                                                                               | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the Inventory                                                                                |
-| `commerce_inventory`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::CommerceInventory)](../../models/shared/commerceinventory.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
-| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `commerce_inventory`                                                                    | [::UnifiedRubySDK::Shared::CommerceInventory](../../models/shared/commerceinventory.md) | :heavy_check_mark:                                                                      | N/A                                                                                     |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Inventory                                                                     |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -242,9 +242,9 @@ s.config_security(
 )
 
     
-res = s.inventory.update_commerce_inventory(connection_id="<id>", id="<id>", commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
+res = s.inventory.update_commerce_inventory(commerce_inventory=::UnifiedRubySDK::Shared::CommerceInventory.new(
   available: 9360.02,
-), fields_=[
+), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -256,12 +256,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
-| `id`                                                                                               | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the Inventory                                                                                |
-| `commerce_inventory`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::CommerceInventory)](../../models/shared/commerceinventory.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
-| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `commerce_inventory`                                                                    | [::UnifiedRubySDK::Shared::CommerceInventory](../../models/shared/commerceinventory.md) | :heavy_check_mark:                                                                      | N/A                                                                                     |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Inventory                                                                     |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 

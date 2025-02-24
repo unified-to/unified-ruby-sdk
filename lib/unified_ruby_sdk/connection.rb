@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Shared::Connection)).returns(::UnifiedRubySDK::Operations::CreateUnifiedConnectionResponse) }
+    sig { params(request: ::UnifiedRubySDK::Shared::Connection).returns(::UnifiedRubySDK::Operations::CreateUnifiedConnectionResponse) }
     def create_unified_connection(request)
       # create_unified_connection - Create connection
       # Used only to import existing customer credentials; use "Create connection indirectly" instead
@@ -29,6 +29,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :request, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -133,13 +134,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String, connection: T.nilable(::UnifiedRubySDK::Shared::Connection)).returns(::UnifiedRubySDK::Operations::PatchUnifiedConnectionResponse) }
-    def patch_unified_connection(id, connection = nil)
+    sig { params(connection: ::UnifiedRubySDK::Shared::Connection, id: ::String).returns(::UnifiedRubySDK::Operations::PatchUnifiedConnectionResponse) }
+    def patch_unified_connection(connection, id)
       # patch_unified_connection - Update connection
       request = ::UnifiedRubySDK::Operations::PatchUnifiedConnectionRequest.new(
         
-        id: id,
-        connection: connection
+        connection: connection,
+        id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -152,6 +153,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :connection, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -221,13 +223,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String, connection: T.nilable(::UnifiedRubySDK::Shared::Connection)).returns(::UnifiedRubySDK::Operations::UpdateUnifiedConnectionResponse) }
-    def update_unified_connection(id, connection = nil)
+    sig { params(connection: ::UnifiedRubySDK::Shared::Connection, id: ::String).returns(::UnifiedRubySDK::Operations::UpdateUnifiedConnectionResponse) }
+    def update_unified_connection(connection, id)
       # update_unified_connection - Update connection
       request = ::UnifiedRubySDK::Operations::UpdateUnifiedConnectionRequest.new(
         
-        id: id,
-        connection: connection
+        connection: connection,
+        id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -240,6 +242,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :connection, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 

@@ -30,7 +30,7 @@ s.config_security(
 )
 
     
-res = s.event.create_crm_event(connection_id="<id>", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), fields_=[
+res = s.event.create_crm_event(crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -44,8 +44,8 @@ end
 
 | Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `crm_event`                                                                                                     | [::UnifiedRubySDK::Shared::CrmEvent](../../models/shared/crmevent.md)                                           | :heavy_check_mark:                                                                                              | An event represents an event, activity, or engagement and is always associated with a deal, contact, or company |
 | `connection_id`                                                                                                 | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the connection                                                                                            |
-| `crm_event`                                                                                                     | [T.nilable(::UnifiedRubySDK::Shared::CrmEvent)](../../models/shared/crmevent.md)                                | :heavy_minus_sign:                                                                                              | An event represents an event, activity, or engagement and is always associated with a deal, contact, or company |
 | `fields_`                                                                                                       | T::Array<*::String*>                                                                                            | :heavy_minus_sign:                                                                                              | Comma-delimited fields to return                                                                                |
 
 ### Response
@@ -156,7 +156,7 @@ s.config_security(
 )
 
     
-res = s.event.patch_crm_event(connection_id="<id>", id="<id>", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), fields_=[
+res = s.event.patch_crm_event(crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -170,9 +170,9 @@ end
 
 | Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `crm_event`                                                                                                     | [::UnifiedRubySDK::Shared::CrmEvent](../../models/shared/crmevent.md)                                           | :heavy_check_mark:                                                                                              | An event represents an event, activity, or engagement and is always associated with a deal, contact, or company |
 | `connection_id`                                                                                                 | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the connection                                                                                            |
 | `id`                                                                                                            | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the Event                                                                                                 |
-| `crm_event`                                                                                                     | [T.nilable(::UnifiedRubySDK::Shared::CrmEvent)](../../models/shared/crmevent.md)                                | :heavy_minus_sign:                                                                                              | An event represents an event, activity, or engagement and is always associated with a deal, contact, or company |
 | `fields_`                                                                                                       | T::Array<*::String*>                                                                                            | :heavy_minus_sign:                                                                                              | Comma-delimited fields to return                                                                                |
 
 ### Response
@@ -238,7 +238,7 @@ s.config_security(
 )
 
     
-res = s.event.update_crm_event(connection_id="<id>", id="<id>", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), fields_=[
+res = s.event.update_crm_event(crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -252,9 +252,9 @@ end
 
 | Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `crm_event`                                                                                                     | [::UnifiedRubySDK::Shared::CrmEvent](../../models/shared/crmevent.md)                                           | :heavy_check_mark:                                                                                              | An event represents an event, activity, or engagement and is always associated with a deal, contact, or company |
 | `connection_id`                                                                                                 | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the connection                                                                                            |
 | `id`                                                                                                            | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the Event                                                                                                 |
-| `crm_event`                                                                                                     | [T.nilable(::UnifiedRubySDK::Shared::CrmEvent)](../../models/shared/crmevent.md)                                | :heavy_minus_sign:                                                                                              | An event represents an event, activity, or engagement and is always associated with a deal, contact, or company |
 | `fields_`                                                                                                       | T::Array<*::String*>                                                                                            | :heavy_minus_sign:                                                                                              | Comma-delimited fields to return                                                                                |
 
 ### Response

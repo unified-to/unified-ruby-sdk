@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, scim_group: T.nilable(::UnifiedRubySDK::Shared::ScimGroup)).returns(::UnifiedRubySDK::Operations::CreateScimGroupsResponse) }
-    def create_scim_groups(connection_id, scim_group = nil)
+    sig { params(scim_group: ::UnifiedRubySDK::Shared::ScimGroup, connection_id: ::String).returns(::UnifiedRubySDK::Operations::CreateScimGroupsResponse) }
+    def create_scim_groups(scim_group, connection_id)
       # create_scim_groups - Create group
       request = ::UnifiedRubySDK::Operations::CreateScimGroupsRequest.new(
         
-        connection_id: connection_id,
-        scim_group: scim_group
+        scim_group: scim_group,
+        connection_id: connection_id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -38,6 +38,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :scim_group, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -69,7 +70,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::CreateScimUsersRequest)).returns(::UnifiedRubySDK::Operations::CreateScimUsersResponse) }
+    sig { params(request: ::UnifiedRubySDK::Operations::CreateScimUsersRequest).returns(::UnifiedRubySDK::Operations::CreateScimUsersResponse) }
     def create_scim_users(request)
       # create_scim_users - Create user
       url, params = @sdk_configuration.get_server_details
@@ -83,6 +84,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :scim_user, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateScimUsersRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -274,14 +276,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, scim_group: T.nilable(::UnifiedRubySDK::Shared::ScimGroup)).returns(::UnifiedRubySDK::Operations::PatchScimGroupsResponse) }
-    def patch_scim_groups(connection_id, id, scim_group = nil)
+    sig { params(scim_group: ::UnifiedRubySDK::Shared::ScimGroup, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::PatchScimGroupsResponse) }
+    def patch_scim_groups(scim_group, connection_id, id)
       # patch_scim_groups - Update group
       request = ::UnifiedRubySDK::Operations::PatchScimGroupsRequest.new(
         
+        scim_group: scim_group,
         connection_id: connection_id,
-        id: id,
-        scim_group: scim_group
+        id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -294,6 +296,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :scim_group, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -325,14 +328,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, scim_user: T.nilable(::UnifiedRubySDK::Shared::ScimUser)).returns(::UnifiedRubySDK::Operations::PatchScimUsersResponse) }
-    def patch_scim_users(connection_id, id, scim_user = nil)
+    sig { params(scim_user: ::UnifiedRubySDK::Shared::ScimUser, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::PatchScimUsersResponse) }
+    def patch_scim_users(scim_user, connection_id, id)
       # patch_scim_users - Update user
       request = ::UnifiedRubySDK::Operations::PatchScimUsersRequest.new(
         
+        scim_user: scim_user,
         connection_id: connection_id,
-        id: id,
-        scim_user: scim_user
+        id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -345,6 +348,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :scim_user, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -454,14 +458,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, scim_group: T.nilable(::UnifiedRubySDK::Shared::ScimGroup)).returns(::UnifiedRubySDK::Operations::UpdateScimGroupsResponse) }
-    def update_scim_groups(connection_id, id, scim_group = nil)
+    sig { params(scim_group: ::UnifiedRubySDK::Shared::ScimGroup, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::UpdateScimGroupsResponse) }
+    def update_scim_groups(scim_group, connection_id, id)
       # update_scim_groups - Update group
       request = ::UnifiedRubySDK::Operations::UpdateScimGroupsRequest.new(
         
+        scim_group: scim_group,
         connection_id: connection_id,
-        id: id,
-        scim_group: scim_group
+        id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -474,6 +478,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :scim_group, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -505,14 +510,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, scim_user: T.nilable(::UnifiedRubySDK::Shared::ScimUser)).returns(::UnifiedRubySDK::Operations::UpdateScimUsersResponse) }
-    def update_scim_users(connection_id, id, scim_user = nil)
+    sig { params(scim_user: ::UnifiedRubySDK::Shared::ScimUser, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::UpdateScimUsersResponse) }
+    def update_scim_users(scim_user, connection_id, id)
       # update_scim_users - Update user
       request = ::UnifiedRubySDK::Operations::UpdateScimUsersRequest.new(
         
+        scim_user: scim_user,
         connection_id: connection_id,
-        id: id,
-        scim_user: scim_user
+        id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -525,6 +530,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :scim_user, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 

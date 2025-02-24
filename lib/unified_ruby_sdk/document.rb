@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ats_document: T.nilable(::UnifiedRubySDK::Shared::AtsDocument), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateAtsDocumentResponse) }
-    def create_ats_document(connection_id, ats_document = nil, fields_ = nil)
+    sig { params(ats_document: ::UnifiedRubySDK::Shared::AtsDocument, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateAtsDocumentResponse) }
+    def create_ats_document(ats_document, connection_id, fields_ = nil)
       # create_ats_document - Create a document
       request = ::UnifiedRubySDK::Operations::CreateAtsDocumentRequest.new(
         
-        connection_id: connection_id,
         ats_document: ats_document,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_document, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateAtsDocumentRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -154,14 +155,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_document: T.nilable(::UnifiedRubySDK::Shared::AtsDocument), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchAtsDocumentResponse) }
-    def patch_ats_document(connection_id, id, ats_document = nil, fields_ = nil)
+    sig { params(ats_document: ::UnifiedRubySDK::Shared::AtsDocument, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchAtsDocumentResponse) }
+    def patch_ats_document(ats_document, connection_id, id, fields_ = nil)
       # patch_ats_document - Update a document
       request = ::UnifiedRubySDK::Operations::PatchAtsDocumentRequest.new(
         
+        ats_document: ats_document,
         connection_id: connection_id,
         id: id,
-        ats_document: ats_document,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -175,6 +176,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_document, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchAtsDocumentRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -247,14 +249,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_document: T.nilable(::UnifiedRubySDK::Shared::AtsDocument), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateAtsDocumentResponse) }
-    def update_ats_document(connection_id, id, ats_document = nil, fields_ = nil)
+    sig { params(ats_document: ::UnifiedRubySDK::Shared::AtsDocument, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateAtsDocumentResponse) }
+    def update_ats_document(ats_document, connection_id, id, fields_ = nil)
       # update_ats_document - Update a document
       request = ::UnifiedRubySDK::Operations::UpdateAtsDocumentRequest.new(
         
+        ats_document: ats_document,
         connection_id: connection_id,
         id: id,
-        ats_document: ats_document,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -268,6 +270,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_document, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateAtsDocumentRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

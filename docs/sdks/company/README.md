@@ -39,7 +39,7 @@ s.config_security(
 )
 
     
-res = s.company.create_crm_company(connection_id="<id>", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(), fields_=[
+res = s.company.create_crm_company(crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -53,8 +53,8 @@ end
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `crm_company`                                                                                  | [::UnifiedRubySDK::Shared::CrmCompany](../../models/shared/crmcompany.md)                      | :heavy_check_mark:                                                                             | A company represents an organization that optionally is associated with a deal and/or contacts |
 | `connection_id`                                                                                | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the connection                                                                           |
-| `crm_company`                                                                                  | [T.nilable(::UnifiedRubySDK::Shared::CrmCompany)](../../models/shared/crmcompany.md)           | :heavy_minus_sign:                                                                             | A company represents an organization that optionally is associated with a deal and/or contacts |
 | `fields_`                                                                                      | T::Array<*::String*>                                                                           | :heavy_minus_sign:                                                                             | Comma-delimited fields to return                                                               |
 
 ### Response
@@ -81,7 +81,7 @@ s.config_security(
 )
 
     
-res = s.company.create_hris_company(connection_id="<id>", hris_company=::UnifiedRubySDK::Shared::HrisCompany.new(), fields_=[
+res = s.company.create_hris_company(hris_company=::UnifiedRubySDK::Shared::HrisCompany.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -93,11 +93,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_id`                                                                        | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the connection                                                                   |
-| `hris_company`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::HrisCompany)](../../models/shared/hriscompany.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
-| `fields_`                                                                              | T::Array<*::String*>                                                                   | :heavy_minus_sign:                                                                     | Comma-delimited fields to return                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `hris_company`                                                              | [::UnifiedRubySDK::Shared::HrisCompany](../../models/shared/hriscompany.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -415,7 +415,7 @@ s.config_security(
 )
 
     
-res = s.company.patch_crm_company(connection_id="<id>", id="<id>", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(), fields_=[
+res = s.company.patch_crm_company(crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -429,9 +429,9 @@ end
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `crm_company`                                                                                  | [::UnifiedRubySDK::Shared::CrmCompany](../../models/shared/crmcompany.md)                      | :heavy_check_mark:                                                                             | A company represents an organization that optionally is associated with a deal and/or contacts |
 | `connection_id`                                                                                | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the connection                                                                           |
 | `id`                                                                                           | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the Company                                                                              |
-| `crm_company`                                                                                  | [T.nilable(::UnifiedRubySDK::Shared::CrmCompany)](../../models/shared/crmcompany.md)           | :heavy_minus_sign:                                                                             | A company represents an organization that optionally is associated with a deal and/or contacts |
 | `fields_`                                                                                      | T::Array<*::String*>                                                                           | :heavy_minus_sign:                                                                             | Comma-delimited fields to return                                                               |
 
 ### Response
@@ -458,7 +458,7 @@ s.config_security(
 )
 
     
-res = s.company.patch_hris_company(connection_id="<id>", id="<id>", hris_company=::UnifiedRubySDK::Shared::HrisCompany.new(), fields_=[
+res = s.company.patch_hris_company(hris_company=::UnifiedRubySDK::Shared::HrisCompany.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -470,12 +470,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_id`                                                                        | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the connection                                                                   |
-| `id`                                                                                   | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the Company                                                                      |
-| `hris_company`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::HrisCompany)](../../models/shared/hriscompany.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
-| `fields_`                                                                              | T::Array<*::String*>                                                                   | :heavy_minus_sign:                                                                     | Comma-delimited fields to return                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `hris_company`                                                              | [::UnifiedRubySDK::Shared::HrisCompany](../../models/shared/hriscompany.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Company                                                           |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -579,7 +579,7 @@ s.config_security(
 )
 
     
-res = s.company.update_crm_company(connection_id="<id>", id="<id>", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(), fields_=[
+res = s.company.update_crm_company(crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -593,9 +593,9 @@ end
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `crm_company`                                                                                  | [::UnifiedRubySDK::Shared::CrmCompany](../../models/shared/crmcompany.md)                      | :heavy_check_mark:                                                                             | A company represents an organization that optionally is associated with a deal and/or contacts |
 | `connection_id`                                                                                | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the connection                                                                           |
 | `id`                                                                                           | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the Company                                                                              |
-| `crm_company`                                                                                  | [T.nilable(::UnifiedRubySDK::Shared::CrmCompany)](../../models/shared/crmcompany.md)           | :heavy_minus_sign:                                                                             | A company represents an organization that optionally is associated with a deal and/or contacts |
 | `fields_`                                                                                      | T::Array<*::String*>                                                                           | :heavy_minus_sign:                                                                             | Comma-delimited fields to return                                                               |
 
 ### Response
@@ -622,7 +622,7 @@ s.config_security(
 )
 
     
-res = s.company.update_hris_company(connection_id="<id>", id="<id>", hris_company=::UnifiedRubySDK::Shared::HrisCompany.new(), fields_=[
+res = s.company.update_hris_company(hris_company=::UnifiedRubySDK::Shared::HrisCompany.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -634,12 +634,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_id`                                                                        | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the connection                                                                   |
-| `id`                                                                                   | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the Company                                                                      |
-| `hris_company`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::HrisCompany)](../../models/shared/hriscompany.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
-| `fields_`                                                                              | T::Array<*::String*>                                                                   | :heavy_minus_sign:                                                                     | Comma-delimited fields to return                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `hris_company`                                                              | [::UnifiedRubySDK::Shared::HrisCompany](../../models/shared/hriscompany.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Company                                                           |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 

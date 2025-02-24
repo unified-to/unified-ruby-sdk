@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ats_candidate: T.nilable(::UnifiedRubySDK::Shared::AtsCandidate), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateAtsCandidateResponse) }
-    def create_ats_candidate(connection_id, ats_candidate = nil, fields_ = nil)
+    sig { params(ats_candidate: ::UnifiedRubySDK::Shared::AtsCandidate, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateAtsCandidateResponse) }
+    def create_ats_candidate(ats_candidate, connection_id, fields_ = nil)
       # create_ats_candidate - Create a candidate
       request = ::UnifiedRubySDK::Operations::CreateAtsCandidateRequest.new(
         
-        connection_id: connection_id,
         ats_candidate: ats_candidate,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_candidate, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateAtsCandidateRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -154,14 +155,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_candidate: T.nilable(::UnifiedRubySDK::Shared::AtsCandidate), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchAtsCandidateResponse) }
-    def patch_ats_candidate(connection_id, id, ats_candidate = nil, fields_ = nil)
+    sig { params(ats_candidate: ::UnifiedRubySDK::Shared::AtsCandidate, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchAtsCandidateResponse) }
+    def patch_ats_candidate(ats_candidate, connection_id, id, fields_ = nil)
       # patch_ats_candidate - Update a candidate
       request = ::UnifiedRubySDK::Operations::PatchAtsCandidateRequest.new(
         
+        ats_candidate: ats_candidate,
         connection_id: connection_id,
         id: id,
-        ats_candidate: ats_candidate,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -175,6 +176,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_candidate, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchAtsCandidateRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -247,14 +249,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_candidate: T.nilable(::UnifiedRubySDK::Shared::AtsCandidate), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateAtsCandidateResponse) }
-    def update_ats_candidate(connection_id, id, ats_candidate = nil, fields_ = nil)
+    sig { params(ats_candidate: ::UnifiedRubySDK::Shared::AtsCandidate, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateAtsCandidateResponse) }
+    def update_ats_candidate(ats_candidate, connection_id, id, fields_ = nil)
       # update_ats_candidate - Update a candidate
       request = ::UnifiedRubySDK::Operations::UpdateAtsCandidateRequest.new(
         
+        ats_candidate: ats_candidate,
         connection_id: connection_id,
         id: id,
-        ats_candidate: ats_candidate,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -268,6 +270,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_candidate, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateAtsCandidateRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, lms_course: T.nilable(::UnifiedRubySDK::Shared::LmsCourse), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateLmsCourseResponse) }
-    def create_lms_course(connection_id, lms_course = nil, fields_ = nil)
+    sig { params(lms_course: ::UnifiedRubySDK::Shared::LmsCourse, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateLmsCourseResponse) }
+    def create_lms_course(lms_course, connection_id, fields_ = nil)
       # create_lms_course - Create a course
       request = ::UnifiedRubySDK::Operations::CreateLmsCourseRequest.new(
         
-        connection_id: connection_id,
         lms_course: lms_course,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :lms_course, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateLmsCourseRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -154,14 +155,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, lms_course: T.nilable(::UnifiedRubySDK::Shared::LmsCourse), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchLmsCourseResponse) }
-    def patch_lms_course(connection_id, id, lms_course = nil, fields_ = nil)
+    sig { params(lms_course: ::UnifiedRubySDK::Shared::LmsCourse, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchLmsCourseResponse) }
+    def patch_lms_course(lms_course, connection_id, id, fields_ = nil)
       # patch_lms_course - Update a course
       request = ::UnifiedRubySDK::Operations::PatchLmsCourseRequest.new(
         
+        lms_course: lms_course,
         connection_id: connection_id,
         id: id,
-        lms_course: lms_course,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -175,6 +176,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :lms_course, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchLmsCourseRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -247,14 +249,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, lms_course: T.nilable(::UnifiedRubySDK::Shared::LmsCourse), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateLmsCourseResponse) }
-    def update_lms_course(connection_id, id, lms_course = nil, fields_ = nil)
+    sig { params(lms_course: ::UnifiedRubySDK::Shared::LmsCourse, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateLmsCourseResponse) }
+    def update_lms_course(lms_course, connection_id, id, fields_ = nil)
       # update_lms_course - Update a course
       request = ::UnifiedRubySDK::Operations::UpdateLmsCourseRequest.new(
         
+        lms_course: lms_course,
         connection_id: connection_id,
         id: id,
-        lms_course: lms_course,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -268,6 +270,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :lms_course, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateLmsCourseRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

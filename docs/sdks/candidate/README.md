@@ -30,7 +30,7 @@ s.config_security(
 )
 
     
-res = s.candidate.create_ats_candidate(connection_id="<id>", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new(), fields_=[
+res = s.candidate.create_ats_candidate(ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -42,11 +42,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `connection_id`                                                                          | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the connection                                                                     |
-| `ats_candidate`                                                                          | [T.nilable(::UnifiedRubySDK::Shared::AtsCandidate)](../../models/shared/atscandidate.md) | :heavy_minus_sign:                                                                       | N/A                                                                                      |
-| `fields_`                                                                                | T::Array<*::String*>                                                                     | :heavy_minus_sign:                                                                       | Comma-delimited fields to return                                                         |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `ats_candidate`                                                               | [::UnifiedRubySDK::Shared::AtsCandidate](../../models/shared/atscandidate.md) | :heavy_check_mark:                                                            | N/A                                                                           |
+| `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
+| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
 
 ### Response
 
@@ -156,7 +156,7 @@ s.config_security(
 )
 
     
-res = s.candidate.patch_ats_candidate(connection_id="<id>", id="<id>", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new(), fields_=[
+res = s.candidate.patch_ats_candidate(ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -168,12 +168,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `connection_id`                                                                          | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the connection                                                                     |
-| `id`                                                                                     | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the Candidate                                                                      |
-| `ats_candidate`                                                                          | [T.nilable(::UnifiedRubySDK::Shared::AtsCandidate)](../../models/shared/atscandidate.md) | :heavy_minus_sign:                                                                       | N/A                                                                                      |
-| `fields_`                                                                                | T::Array<*::String*>                                                                     | :heavy_minus_sign:                                                                       | Comma-delimited fields to return                                                         |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `ats_candidate`                                                               | [::UnifiedRubySDK::Shared::AtsCandidate](../../models/shared/atscandidate.md) | :heavy_check_mark:                                                            | N/A                                                                           |
+| `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
+| `id`                                                                          | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the Candidate                                                           |
+| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
 
 ### Response
 
@@ -238,7 +238,7 @@ s.config_security(
 )
 
     
-res = s.candidate.update_ats_candidate(connection_id="<id>", id="<id>", ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new(), fields_=[
+res = s.candidate.update_ats_candidate(ats_candidate=::UnifiedRubySDK::Shared::AtsCandidate.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -250,12 +250,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `connection_id`                                                                          | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the connection                                                                     |
-| `id`                                                                                     | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the Candidate                                                                      |
-| `ats_candidate`                                                                          | [T.nilable(::UnifiedRubySDK::Shared::AtsCandidate)](../../models/shared/atscandidate.md) | :heavy_minus_sign:                                                                       | N/A                                                                                      |
-| `fields_`                                                                                | T::Array<*::String*>                                                                     | :heavy_minus_sign:                                                                       | Comma-delimited fields to return                                                         |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `ats_candidate`                                                               | [::UnifiedRubySDK::Shared::AtsCandidate](../../models/shared/atscandidate.md) | :heavy_check_mark:                                                            | N/A                                                                           |
+| `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
+| `id`                                                                          | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the Candidate                                                           |
+| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
 
 ### Response
 

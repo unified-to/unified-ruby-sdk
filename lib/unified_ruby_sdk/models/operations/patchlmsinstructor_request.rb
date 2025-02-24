@@ -15,18 +15,18 @@ module UnifiedRubySDK
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
       # ID of the Instructor
       field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
+
+      field :lms_instructor, ::UnifiedRubySDK::Shared::LmsInstructor, { 'request': { 'media_type': 'application/json' } }
       # Comma-delimited fields to return
       field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
-      field :lms_instructor, T.nilable(::UnifiedRubySDK::Shared::LmsInstructor), { 'request': { 'media_type': 'application/json' } }
 
-
-      sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), lms_instructor: T.nilable(::UnifiedRubySDK::Shared::LmsInstructor)).void }
-      def initialize(connection_id: nil, id: nil, fields_: nil, lms_instructor: nil)
+      sig { params(connection_id: ::String, id: ::String, lms_instructor: ::UnifiedRubySDK::Shared::LmsInstructor, fields_: T.nilable(T::Array[::String])).void }
+      def initialize(connection_id: nil, id: nil, lms_instructor: nil, fields_: nil)
         @connection_id = connection_id
         @id = id
-        @fields_ = fields_
         @lms_instructor = lms_instructor
+        @fields_ = fields_
       end
     end
   end

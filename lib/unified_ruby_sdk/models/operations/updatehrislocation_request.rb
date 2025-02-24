@@ -13,20 +13,20 @@ module UnifiedRubySDK
 
       # ID of the connection
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+
+      field :hris_location, ::UnifiedRubySDK::Shared::HrisLocation, { 'request': { 'media_type': 'application/json' } }
       # ID of the Location
       field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
       # Comma-delimited fields to return
       field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
-      field :hris_location, T.nilable(::UnifiedRubySDK::Shared::HrisLocation), { 'request': { 'media_type': 'application/json' } }
 
-
-      sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), hris_location: T.nilable(::UnifiedRubySDK::Shared::HrisLocation)).void }
-      def initialize(connection_id: nil, id: nil, fields_: nil, hris_location: nil)
+      sig { params(connection_id: ::String, hris_location: ::UnifiedRubySDK::Shared::HrisLocation, id: ::String, fields_: T.nilable(T::Array[::String])).void }
+      def initialize(connection_id: nil, hris_location: nil, id: nil, fields_: nil)
         @connection_id = connection_id
+        @hris_location = hris_location
         @id = id
         @fields_ = fields_
-        @hris_location = hris_location
       end
     end
   end

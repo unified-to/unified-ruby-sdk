@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ats_job: T.nilable(::UnifiedRubySDK::Shared::AtsJob), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateAtsJobResponse) }
-    def create_ats_job(connection_id, ats_job = nil, fields_ = nil)
+    sig { params(ats_job: ::UnifiedRubySDK::Shared::AtsJob, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateAtsJobResponse) }
+    def create_ats_job(ats_job, connection_id, fields_ = nil)
       # create_ats_job - Create a job
       request = ::UnifiedRubySDK::Operations::CreateAtsJobRequest.new(
         
-        connection_id: connection_id,
         ats_job: ats_job,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_job, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateAtsJobRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -154,14 +155,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_job: T.nilable(::UnifiedRubySDK::Shared::AtsJob), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchAtsJobResponse) }
-    def patch_ats_job(connection_id, id, ats_job = nil, fields_ = nil)
+    sig { params(ats_job: ::UnifiedRubySDK::Shared::AtsJob, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchAtsJobResponse) }
+    def patch_ats_job(ats_job, connection_id, id, fields_ = nil)
       # patch_ats_job - Update a job
       request = ::UnifiedRubySDK::Operations::PatchAtsJobRequest.new(
         
+        ats_job: ats_job,
         connection_id: connection_id,
         id: id,
-        ats_job: ats_job,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -175,6 +176,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_job, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchAtsJobRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -247,14 +249,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_job: T.nilable(::UnifiedRubySDK::Shared::AtsJob), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateAtsJobResponse) }
-    def update_ats_job(connection_id, id, ats_job = nil, fields_ = nil)
+    sig { params(ats_job: ::UnifiedRubySDK::Shared::AtsJob, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateAtsJobResponse) }
+    def update_ats_job(ats_job, connection_id, id, fields_ = nil)
       # update_ats_job - Update a job
       request = ::UnifiedRubySDK::Operations::UpdateAtsJobRequest.new(
         
+        ats_job: ats_job,
         connection_id: connection_id,
         id: id,
-        ats_job: ats_job,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -268,6 +270,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_job, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateAtsJobRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

@@ -48,7 +48,7 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_account(connection_id="<id>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), fields_=[
+res = s.accounting.create_accounting_account(accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1112,7 +1112,7 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_account(connection_id="<id>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), fields_=[
+res = s.accounting.create_accounting_account(accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1139,7 +1139,7 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_account(connection_id="<id>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), fields_=[
+res = s.accounting.create_accounting_account(accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 

@@ -30,7 +30,7 @@ s.config_security(
 )
 
     
-res = s.account.create_accounting_account(connection_id="<id>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), fields_=[
+res = s.account.create_accounting_account(accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -42,11 +42,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
-| `accounting_account`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::AccountingAccount)](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                                                 | Chart of accounts                                                                                  |
-| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `accounting_account`                                                                    | [::UnifiedRubySDK::Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_check_mark:                                                                      | Chart of accounts                                                                       |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -156,7 +156,7 @@ s.config_security(
 )
 
     
-res = s.account.patch_accounting_account(connection_id="<id>", id="<id>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), fields_=[
+res = s.account.patch_accounting_account(accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -168,12 +168,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
-| `id`                                                                                               | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the Account                                                                                  |
-| `accounting_account`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::AccountingAccount)](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                                                 | Chart of accounts                                                                                  |
-| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `accounting_account`                                                                    | [::UnifiedRubySDK::Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_check_mark:                                                                      | Chart of accounts                                                                       |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Account                                                                       |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -238,7 +238,7 @@ s.config_security(
 )
 
     
-res = s.account.update_accounting_account(connection_id="<id>", id="<id>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), fields_=[
+res = s.account.update_accounting_account(accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -250,12 +250,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
-| `id`                                                                                               | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the Account                                                                                  |
-| `accounting_account`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::AccountingAccount)](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                                                 | Chart of accounts                                                                                  |
-| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `accounting_account`                                                                    | [::UnifiedRubySDK::Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_check_mark:                                                                      | Chart of accounts                                                                       |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Account                                                                       |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 

@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, commerce_inventory: T.nilable(::UnifiedRubySDK::Shared::CommerceInventory), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCommerceInventoryResponse) }
-    def create_commerce_inventory(connection_id, commerce_inventory = nil, fields_ = nil)
+    sig { params(commerce_inventory: ::UnifiedRubySDK::Shared::CommerceInventory, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCommerceInventoryResponse) }
+    def create_commerce_inventory(commerce_inventory, connection_id, fields_ = nil)
       # create_commerce_inventory - Create an inventory
       request = ::UnifiedRubySDK::Operations::CreateCommerceInventoryRequest.new(
         
-        connection_id: connection_id,
         commerce_inventory: commerce_inventory,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_inventory, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateCommerceInventoryRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -154,14 +155,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_inventory: T.nilable(::UnifiedRubySDK::Shared::CommerceInventory), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCommerceInventoryResponse) }
-    def patch_commerce_inventory(connection_id, id, commerce_inventory = nil, fields_ = nil)
+    sig { params(commerce_inventory: ::UnifiedRubySDK::Shared::CommerceInventory, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCommerceInventoryResponse) }
+    def patch_commerce_inventory(commerce_inventory, connection_id, id, fields_ = nil)
       # patch_commerce_inventory - Update an inventory
       request = ::UnifiedRubySDK::Operations::PatchCommerceInventoryRequest.new(
         
+        commerce_inventory: commerce_inventory,
         connection_id: connection_id,
         id: id,
-        commerce_inventory: commerce_inventory,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -175,6 +176,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_inventory, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchCommerceInventoryRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -247,14 +249,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, commerce_inventory: T.nilable(::UnifiedRubySDK::Shared::CommerceInventory), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCommerceInventoryResponse) }
-    def update_commerce_inventory(connection_id, id, commerce_inventory = nil, fields_ = nil)
+    sig { params(commerce_inventory: ::UnifiedRubySDK::Shared::CommerceInventory, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCommerceInventoryResponse) }
+    def update_commerce_inventory(commerce_inventory, connection_id, id, fields_ = nil)
       # update_commerce_inventory - Update an inventory
       request = ::UnifiedRubySDK::Operations::UpdateCommerceInventoryRequest.new(
         
+        commerce_inventory: commerce_inventory,
         connection_id: connection_id,
         id: id,
-        commerce_inventory: commerce_inventory,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -268,6 +270,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_inventory, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateCommerceInventoryRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, repo_commit: T.nilable(::UnifiedRubySDK::Shared::RepoCommit), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateRepoCommitResponse) }
-    def create_repo_commit(connection_id, repo_commit = nil, fields_ = nil)
+    sig { params(repo_commit: ::UnifiedRubySDK::Shared::RepoCommit, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateRepoCommitResponse) }
+    def create_repo_commit(repo_commit, connection_id, fields_ = nil)
       # create_repo_commit - Create a commit
       request = ::UnifiedRubySDK::Operations::CreateRepoCommitRequest.new(
         
-        connection_id: connection_id,
         repo_commit: repo_commit,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :repo_commit, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateRepoCommitRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -154,14 +155,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, repo_commit: T.nilable(::UnifiedRubySDK::Shared::RepoCommit), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchRepoCommitResponse) }
-    def patch_repo_commit(connection_id, id, repo_commit = nil, fields_ = nil)
+    sig { params(repo_commit: ::UnifiedRubySDK::Shared::RepoCommit, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchRepoCommitResponse) }
+    def patch_repo_commit(repo_commit, connection_id, id, fields_ = nil)
       # patch_repo_commit - Update a commit
       request = ::UnifiedRubySDK::Operations::PatchRepoCommitRequest.new(
         
+        repo_commit: repo_commit,
         connection_id: connection_id,
         id: id,
-        repo_commit: repo_commit,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -175,6 +176,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :repo_commit, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchRepoCommitRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -247,14 +249,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, repo_commit: T.nilable(::UnifiedRubySDK::Shared::RepoCommit), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateRepoCommitResponse) }
-    def update_repo_commit(connection_id, id, repo_commit = nil, fields_ = nil)
+    sig { params(repo_commit: ::UnifiedRubySDK::Shared::RepoCommit, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateRepoCommitResponse) }
+    def update_repo_commit(repo_commit, connection_id, id, fields_ = nil)
       # update_repo_commit - Update a commit
       request = ::UnifiedRubySDK::Operations::UpdateRepoCommitRequest.new(
         
+        repo_commit: repo_commit,
         connection_id: connection_id,
         id: id,
-        repo_commit: repo_commit,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -268,6 +270,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :repo_commit, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateRepoCommitRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

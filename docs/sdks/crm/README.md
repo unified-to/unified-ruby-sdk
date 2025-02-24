@@ -60,7 +60,7 @@ s.config_security(
 )
 
     
-res = s.crm.create_crm_company(connection_id="<id>", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(), fields_=[
+res = s.crm.create_crm_company(crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -74,8 +74,8 @@ end
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `crm_company`                                                                                  | [::UnifiedRubySDK::Shared::CrmCompany](../../models/shared/crmcompany.md)                      | :heavy_check_mark:                                                                             | A company represents an organization that optionally is associated with a deal and/or contacts |
 | `connection_id`                                                                                | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the connection                                                                           |
-| `crm_company`                                                                                  | [T.nilable(::UnifiedRubySDK::Shared::CrmCompany)](../../models/shared/crmcompany.md)           | :heavy_minus_sign:                                                                             | A company represents an organization that optionally is associated with a deal and/or contacts |
 | `fields_`                                                                                      | T::Array<*::String*>                                                                           | :heavy_minus_sign:                                                                             | Comma-delimited fields to return                                                               |
 
 ### Response
@@ -102,7 +102,7 @@ s.config_security(
 )
 
     
-res = s.crm.create_crm_contact(connection_id="<id>", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new(), fields_=[
+res = s.crm.create_crm_contact(crm_contact=::UnifiedRubySDK::Shared::CrmContact.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -116,8 +116,8 @@ end
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `crm_contact`                                                                            | [::UnifiedRubySDK::Shared::CrmContact](../../models/shared/crmcontact.md)                | :heavy_check_mark:                                                                       | A contact represents a person that optionally is associated with a deal and/or a company |
 | `connection_id`                                                                          | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the connection                                                                     |
-| `crm_contact`                                                                            | [T.nilable(::UnifiedRubySDK::Shared::CrmContact)](../../models/shared/crmcontact.md)     | :heavy_minus_sign:                                                                       | A contact represents a person that optionally is associated with a deal and/or a company |
 | `fields_`                                                                                | T::Array<*::String*>                                                                     | :heavy_minus_sign:                                                                       | Comma-delimited fields to return                                                         |
 
 ### Response
@@ -144,7 +144,7 @@ s.config_security(
 )
 
     
-res = s.crm.create_crm_deal(connection_id="<id>", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new(), fields_=[
+res = s.crm.create_crm_deal(crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -156,11 +156,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `connection_id`                                                                | *::String*                                                                     | :heavy_check_mark:                                                             | ID of the connection                                                           |
-| `crm_deal`                                                                     | [T.nilable(::UnifiedRubySDK::Shared::CrmDeal)](../../models/shared/crmdeal.md) | :heavy_minus_sign:                                                             | A deal represents an opportunity with companies and/or contacts                |
-| `fields_`                                                                      | T::Array<*::String*>                                                           | :heavy_minus_sign:                                                             | Comma-delimited fields to return                                               |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `crm_deal`                                                          | [::UnifiedRubySDK::Shared::CrmDeal](../../models/shared/crmdeal.md) | :heavy_check_mark:                                                  | A deal represents an opportunity with companies and/or contacts     |
+| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 
@@ -186,7 +186,7 @@ s.config_security(
 )
 
     
-res = s.crm.create_crm_event(connection_id="<id>", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), fields_=[
+res = s.crm.create_crm_event(crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -200,8 +200,8 @@ end
 
 | Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `crm_event`                                                                                                     | [::UnifiedRubySDK::Shared::CrmEvent](../../models/shared/crmevent.md)                                           | :heavy_check_mark:                                                                                              | An event represents an event, activity, or engagement and is always associated with a deal, contact, or company |
 | `connection_id`                                                                                                 | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the connection                                                                                            |
-| `crm_event`                                                                                                     | [T.nilable(::UnifiedRubySDK::Shared::CrmEvent)](../../models/shared/crmevent.md)                                | :heavy_minus_sign:                                                                                              | An event represents an event, activity, or engagement and is always associated with a deal, contact, or company |
 | `fields_`                                                                                                       | T::Array<*::String*>                                                                                            | :heavy_minus_sign:                                                                                              | Comma-delimited fields to return                                                                                |
 
 ### Response
@@ -228,7 +228,7 @@ s.config_security(
 )
 
     
-res = s.crm.create_crm_lead(connection_id="<id>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), fields_=[
+res = s.crm.create_crm_lead(crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -240,11 +240,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `connection_id`                                                                | *::String*                                                                     | :heavy_check_mark:                                                             | ID of the connection                                                           |
-| `crm_lead`                                                                     | [T.nilable(::UnifiedRubySDK::Shared::CrmLead)](../../models/shared/crmlead.md) | :heavy_minus_sign:                                                             | N/A                                                                            |
-| `fields_`                                                                      | T::Array<*::String*>                                                           | :heavy_minus_sign:                                                             | Comma-delimited fields to return                                               |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `crm_lead`                                                          | [::UnifiedRubySDK::Shared::CrmLead](../../models/shared/crmlead.md) | :heavy_check_mark:                                                  | N/A                                                                 |
+| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 
@@ -270,7 +270,7 @@ s.config_security(
 )
 
     
-res = s.crm.create_crm_pipeline(connection_id="<id>", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(), fields_=[
+res = s.crm.create_crm_pipeline(crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -282,11 +282,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_id`                                                                        | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the connection                                                                   |
-| `crm_pipeline`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::CrmPipeline)](../../models/shared/crmpipeline.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
-| `fields_`                                                                              | T::Array<*::String*>                                                                   | :heavy_minus_sign:                                                                     | Comma-delimited fields to return                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `crm_pipeline`                                                              | [::UnifiedRubySDK::Shared::CrmPipeline](../../models/shared/crmpipeline.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -816,7 +816,7 @@ s.config_security(
 )
 
     
-res = s.crm.patch_crm_company(connection_id="<id>", id="<id>", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(), fields_=[
+res = s.crm.patch_crm_company(crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -830,9 +830,9 @@ end
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `crm_company`                                                                                  | [::UnifiedRubySDK::Shared::CrmCompany](../../models/shared/crmcompany.md)                      | :heavy_check_mark:                                                                             | A company represents an organization that optionally is associated with a deal and/or contacts |
 | `connection_id`                                                                                | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the connection                                                                           |
 | `id`                                                                                           | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the Company                                                                              |
-| `crm_company`                                                                                  | [T.nilable(::UnifiedRubySDK::Shared::CrmCompany)](../../models/shared/crmcompany.md)           | :heavy_minus_sign:                                                                             | A company represents an organization that optionally is associated with a deal and/or contacts |
 | `fields_`                                                                                      | T::Array<*::String*>                                                                           | :heavy_minus_sign:                                                                             | Comma-delimited fields to return                                                               |
 
 ### Response
@@ -859,7 +859,7 @@ s.config_security(
 )
 
     
-res = s.crm.patch_crm_contact(connection_id="<id>", id="<id>", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new(), fields_=[
+res = s.crm.patch_crm_contact(crm_contact=::UnifiedRubySDK::Shared::CrmContact.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -873,9 +873,9 @@ end
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `crm_contact`                                                                            | [::UnifiedRubySDK::Shared::CrmContact](../../models/shared/crmcontact.md)                | :heavy_check_mark:                                                                       | A contact represents a person that optionally is associated with a deal and/or a company |
 | `connection_id`                                                                          | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the connection                                                                     |
 | `id`                                                                                     | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the Contact                                                                        |
-| `crm_contact`                                                                            | [T.nilable(::UnifiedRubySDK::Shared::CrmContact)](../../models/shared/crmcontact.md)     | :heavy_minus_sign:                                                                       | A contact represents a person that optionally is associated with a deal and/or a company |
 | `fields_`                                                                                | T::Array<*::String*>                                                                     | :heavy_minus_sign:                                                                       | Comma-delimited fields to return                                                         |
 
 ### Response
@@ -902,7 +902,7 @@ s.config_security(
 )
 
     
-res = s.crm.patch_crm_deal(connection_id="<id>", id="<id>", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new(), fields_=[
+res = s.crm.patch_crm_deal(crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -914,12 +914,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `connection_id`                                                                | *::String*                                                                     | :heavy_check_mark:                                                             | ID of the connection                                                           |
-| `id`                                                                           | *::String*                                                                     | :heavy_check_mark:                                                             | ID of the Deal                                                                 |
-| `crm_deal`                                                                     | [T.nilable(::UnifiedRubySDK::Shared::CrmDeal)](../../models/shared/crmdeal.md) | :heavy_minus_sign:                                                             | A deal represents an opportunity with companies and/or contacts                |
-| `fields_`                                                                      | T::Array<*::String*>                                                           | :heavy_minus_sign:                                                             | Comma-delimited fields to return                                               |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `crm_deal`                                                          | [::UnifiedRubySDK::Shared::CrmDeal](../../models/shared/crmdeal.md) | :heavy_check_mark:                                                  | A deal represents an opportunity with companies and/or contacts     |
+| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
+| `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Deal                                                      |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 
@@ -945,7 +945,7 @@ s.config_security(
 )
 
     
-res = s.crm.patch_crm_event(connection_id="<id>", id="<id>", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), fields_=[
+res = s.crm.patch_crm_event(crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -959,9 +959,9 @@ end
 
 | Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `crm_event`                                                                                                     | [::UnifiedRubySDK::Shared::CrmEvent](../../models/shared/crmevent.md)                                           | :heavy_check_mark:                                                                                              | An event represents an event, activity, or engagement and is always associated with a deal, contact, or company |
 | `connection_id`                                                                                                 | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the connection                                                                                            |
 | `id`                                                                                                            | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the Event                                                                                                 |
-| `crm_event`                                                                                                     | [T.nilable(::UnifiedRubySDK::Shared::CrmEvent)](../../models/shared/crmevent.md)                                | :heavy_minus_sign:                                                                                              | An event represents an event, activity, or engagement and is always associated with a deal, contact, or company |
 | `fields_`                                                                                                       | T::Array<*::String*>                                                                                            | :heavy_minus_sign:                                                                                              | Comma-delimited fields to return                                                                                |
 
 ### Response
@@ -988,7 +988,7 @@ s.config_security(
 )
 
     
-res = s.crm.patch_crm_lead(connection_id="<id>", id="<id>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), fields_=[
+res = s.crm.patch_crm_lead(crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1000,12 +1000,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `connection_id`                                                                | *::String*                                                                     | :heavy_check_mark:                                                             | ID of the connection                                                           |
-| `id`                                                                           | *::String*                                                                     | :heavy_check_mark:                                                             | ID of the Lead                                                                 |
-| `crm_lead`                                                                     | [T.nilable(::UnifiedRubySDK::Shared::CrmLead)](../../models/shared/crmlead.md) | :heavy_minus_sign:                                                             | N/A                                                                            |
-| `fields_`                                                                      | T::Array<*::String*>                                                           | :heavy_minus_sign:                                                             | Comma-delimited fields to return                                               |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `crm_lead`                                                          | [::UnifiedRubySDK::Shared::CrmLead](../../models/shared/crmlead.md) | :heavy_check_mark:                                                  | N/A                                                                 |
+| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
+| `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Lead                                                      |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 
@@ -1031,7 +1031,7 @@ s.config_security(
 )
 
     
-res = s.crm.patch_crm_pipeline(connection_id="<id>", id="<id>", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(), fields_=[
+res = s.crm.patch_crm_pipeline(crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1043,12 +1043,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_id`                                                                        | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the connection                                                                   |
-| `id`                                                                                   | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the Pipeline                                                                     |
-| `crm_pipeline`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::CrmPipeline)](../../models/shared/crmpipeline.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
-| `fields_`                                                                              | T::Array<*::String*>                                                                   | :heavy_minus_sign:                                                                     | Comma-delimited fields to return                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `crm_pipeline`                                                              | [::UnifiedRubySDK::Shared::CrmPipeline](../../models/shared/crmpipeline.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Pipeline                                                          |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -1308,7 +1308,7 @@ s.config_security(
 )
 
     
-res = s.crm.update_crm_company(connection_id="<id>", id="<id>", crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(), fields_=[
+res = s.crm.update_crm_company(crm_company=::UnifiedRubySDK::Shared::CrmCompany.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1322,9 +1322,9 @@ end
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `crm_company`                                                                                  | [::UnifiedRubySDK::Shared::CrmCompany](../../models/shared/crmcompany.md)                      | :heavy_check_mark:                                                                             | A company represents an organization that optionally is associated with a deal and/or contacts |
 | `connection_id`                                                                                | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the connection                                                                           |
 | `id`                                                                                           | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the Company                                                                              |
-| `crm_company`                                                                                  | [T.nilable(::UnifiedRubySDK::Shared::CrmCompany)](../../models/shared/crmcompany.md)           | :heavy_minus_sign:                                                                             | A company represents an organization that optionally is associated with a deal and/or contacts |
 | `fields_`                                                                                      | T::Array<*::String*>                                                                           | :heavy_minus_sign:                                                                             | Comma-delimited fields to return                                                               |
 
 ### Response
@@ -1351,7 +1351,7 @@ s.config_security(
 )
 
     
-res = s.crm.update_crm_contact(connection_id="<id>", id="<id>", crm_contact=::UnifiedRubySDK::Shared::CrmContact.new(), fields_=[
+res = s.crm.update_crm_contact(crm_contact=::UnifiedRubySDK::Shared::CrmContact.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1365,9 +1365,9 @@ end
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `crm_contact`                                                                            | [::UnifiedRubySDK::Shared::CrmContact](../../models/shared/crmcontact.md)                | :heavy_check_mark:                                                                       | A contact represents a person that optionally is associated with a deal and/or a company |
 | `connection_id`                                                                          | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the connection                                                                     |
 | `id`                                                                                     | *::String*                                                                               | :heavy_check_mark:                                                                       | ID of the Contact                                                                        |
-| `crm_contact`                                                                            | [T.nilable(::UnifiedRubySDK::Shared::CrmContact)](../../models/shared/crmcontact.md)     | :heavy_minus_sign:                                                                       | A contact represents a person that optionally is associated with a deal and/or a company |
 | `fields_`                                                                                | T::Array<*::String*>                                                                     | :heavy_minus_sign:                                                                       | Comma-delimited fields to return                                                         |
 
 ### Response
@@ -1394,7 +1394,7 @@ s.config_security(
 )
 
     
-res = s.crm.update_crm_deal(connection_id="<id>", id="<id>", crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new(), fields_=[
+res = s.crm.update_crm_deal(crm_deal=::UnifiedRubySDK::Shared::CrmDeal.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1406,12 +1406,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `connection_id`                                                                | *::String*                                                                     | :heavy_check_mark:                                                             | ID of the connection                                                           |
-| `id`                                                                           | *::String*                                                                     | :heavy_check_mark:                                                             | ID of the Deal                                                                 |
-| `crm_deal`                                                                     | [T.nilable(::UnifiedRubySDK::Shared::CrmDeal)](../../models/shared/crmdeal.md) | :heavy_minus_sign:                                                             | A deal represents an opportunity with companies and/or contacts                |
-| `fields_`                                                                      | T::Array<*::String*>                                                           | :heavy_minus_sign:                                                             | Comma-delimited fields to return                                               |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `crm_deal`                                                          | [::UnifiedRubySDK::Shared::CrmDeal](../../models/shared/crmdeal.md) | :heavy_check_mark:                                                  | A deal represents an opportunity with companies and/or contacts     |
+| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
+| `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Deal                                                      |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 
@@ -1437,7 +1437,7 @@ s.config_security(
 )
 
     
-res = s.crm.update_crm_event(connection_id="<id>", id="<id>", crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), fields_=[
+res = s.crm.update_crm_event(crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1451,9 +1451,9 @@ end
 
 | Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `crm_event`                                                                                                     | [::UnifiedRubySDK::Shared::CrmEvent](../../models/shared/crmevent.md)                                           | :heavy_check_mark:                                                                                              | An event represents an event, activity, or engagement and is always associated with a deal, contact, or company |
 | `connection_id`                                                                                                 | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the connection                                                                                            |
 | `id`                                                                                                            | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the Event                                                                                                 |
-| `crm_event`                                                                                                     | [T.nilable(::UnifiedRubySDK::Shared::CrmEvent)](../../models/shared/crmevent.md)                                | :heavy_minus_sign:                                                                                              | An event represents an event, activity, or engagement and is always associated with a deal, contact, or company |
 | `fields_`                                                                                                       | T::Array<*::String*>                                                                                            | :heavy_minus_sign:                                                                                              | Comma-delimited fields to return                                                                                |
 
 ### Response
@@ -1480,7 +1480,7 @@ s.config_security(
 )
 
     
-res = s.crm.update_crm_lead(connection_id="<id>", id="<id>", crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), fields_=[
+res = s.crm.update_crm_lead(crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1492,12 +1492,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `connection_id`                                                                | *::String*                                                                     | :heavy_check_mark:                                                             | ID of the connection                                                           |
-| `id`                                                                           | *::String*                                                                     | :heavy_check_mark:                                                             | ID of the Lead                                                                 |
-| `crm_lead`                                                                     | [T.nilable(::UnifiedRubySDK::Shared::CrmLead)](../../models/shared/crmlead.md) | :heavy_minus_sign:                                                             | N/A                                                                            |
-| `fields_`                                                                      | T::Array<*::String*>                                                           | :heavy_minus_sign:                                                             | Comma-delimited fields to return                                               |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `crm_lead`                                                          | [::UnifiedRubySDK::Shared::CrmLead](../../models/shared/crmlead.md) | :heavy_check_mark:                                                  | N/A                                                                 |
+| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
+| `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Lead                                                      |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 
@@ -1523,7 +1523,7 @@ s.config_security(
 )
 
     
-res = s.crm.update_crm_pipeline(connection_id="<id>", id="<id>", crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(), fields_=[
+res = s.crm.update_crm_pipeline(crm_pipeline=::UnifiedRubySDK::Shared::CrmPipeline.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1535,12 +1535,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_id`                                                                        | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the connection                                                                   |
-| `id`                                                                                   | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the Pipeline                                                                     |
-| `crm_pipeline`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::CrmPipeline)](../../models/shared/crmpipeline.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
-| `fields_`                                                                              | T::Array<*::String*>                                                                   | :heavy_minus_sign:                                                                     | Comma-delimited fields to return                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `crm_pipeline`                                                              | [::UnifiedRubySDK::Shared::CrmPipeline](../../models/shared/crmpipeline.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Pipeline                                                          |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 

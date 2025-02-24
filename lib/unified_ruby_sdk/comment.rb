@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, kms_comment: T.nilable(::UnifiedRubySDK::Shared::KmsComment), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateKmsCommentResponse) }
-    def create_kms_comment(connection_id, kms_comment = nil, fields_ = nil)
+    sig { params(kms_comment: ::UnifiedRubySDK::Shared::KmsComment, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateKmsCommentResponse) }
+    def create_kms_comment(kms_comment, connection_id, fields_ = nil)
       # create_kms_comment - Create a comment
       request = ::UnifiedRubySDK::Operations::CreateKmsCommentRequest.new(
         
-        connection_id: connection_id,
         kms_comment: kms_comment,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :kms_comment, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateKmsCommentRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -72,13 +73,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, task_comment: T.nilable(::UnifiedRubySDK::Shared::TaskComment), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateTaskCommentResponse) }
-    def create_task_comment(connection_id, task_comment = nil, fields_ = nil)
+    sig { params(task_comment: ::UnifiedRubySDK::Shared::TaskComment, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateTaskCommentResponse) }
+    def create_task_comment(task_comment, connection_id, fields_ = nil)
       # create_task_comment - Create a comment
       request = ::UnifiedRubySDK::Operations::CreateTaskCommentRequest.new(
         
-        connection_id: connection_id,
         task_comment: task_comment,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -92,6 +93,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :task_comment, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateTaskCommentRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -289,14 +291,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, kms_comment: T.nilable(::UnifiedRubySDK::Shared::KmsComment), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchKmsCommentResponse) }
-    def patch_kms_comment(connection_id, id, kms_comment = nil, fields_ = nil)
+    sig { params(kms_comment: ::UnifiedRubySDK::Shared::KmsComment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchKmsCommentResponse) }
+    def patch_kms_comment(kms_comment, connection_id, id, fields_ = nil)
       # patch_kms_comment - Update a comment
       request = ::UnifiedRubySDK::Operations::PatchKmsCommentRequest.new(
         
+        kms_comment: kms_comment,
         connection_id: connection_id,
         id: id,
-        kms_comment: kms_comment,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -310,6 +312,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :kms_comment, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchKmsCommentRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -343,14 +346,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, task_comment: T.nilable(::UnifiedRubySDK::Shared::TaskComment), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchTaskCommentResponse) }
-    def patch_task_comment(connection_id, id, task_comment = nil, fields_ = nil)
+    sig { params(task_comment: ::UnifiedRubySDK::Shared::TaskComment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchTaskCommentResponse) }
+    def patch_task_comment(task_comment, connection_id, id, fields_ = nil)
       # patch_task_comment - Update a comment
       request = ::UnifiedRubySDK::Operations::PatchTaskCommentRequest.new(
         
+        task_comment: task_comment,
         connection_id: connection_id,
         id: id,
-        task_comment: task_comment,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -364,6 +367,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :task_comment, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchTaskCommentRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -475,14 +479,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, kms_comment: T.nilable(::UnifiedRubySDK::Shared::KmsComment), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateKmsCommentResponse) }
-    def update_kms_comment(connection_id, id, kms_comment = nil, fields_ = nil)
+    sig { params(kms_comment: ::UnifiedRubySDK::Shared::KmsComment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateKmsCommentResponse) }
+    def update_kms_comment(kms_comment, connection_id, id, fields_ = nil)
       # update_kms_comment - Update a comment
       request = ::UnifiedRubySDK::Operations::UpdateKmsCommentRequest.new(
         
+        kms_comment: kms_comment,
         connection_id: connection_id,
         id: id,
-        kms_comment: kms_comment,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -496,6 +500,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :kms_comment, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateKmsCommentRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -529,14 +534,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, task_comment: T.nilable(::UnifiedRubySDK::Shared::TaskComment), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateTaskCommentResponse) }
-    def update_task_comment(connection_id, id, task_comment = nil, fields_ = nil)
+    sig { params(task_comment: ::UnifiedRubySDK::Shared::TaskComment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateTaskCommentResponse) }
+    def update_task_comment(task_comment, connection_id, id, fields_ = nil)
       # update_task_comment - Update a comment
       request = ::UnifiedRubySDK::Operations::UpdateTaskCommentRequest.new(
         
+        task_comment: task_comment,
         connection_id: connection_id,
         id: id,
-        task_comment: task_comment,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -550,6 +555,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :task_comment, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateTaskCommentRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

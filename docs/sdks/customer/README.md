@@ -30,7 +30,7 @@ s.config_security(
 )
 
     
-res = s.customer.create_ticketing_customer(connection_id="<id>", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new(), fields_=[
+res = s.customer.create_ticketing_customer(ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -42,11 +42,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
-| `ticketing_customer`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::TicketingCustomer)](../../models/shared/ticketingcustomer.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
-| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `ticketing_customer`                                                                    | [::UnifiedRubySDK::Shared::TicketingCustomer](../../models/shared/ticketingcustomer.md) | :heavy_check_mark:                                                                      | N/A                                                                                     |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -156,7 +156,7 @@ s.config_security(
 )
 
     
-res = s.customer.patch_ticketing_customer(connection_id="<id>", id="<id>", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new(), fields_=[
+res = s.customer.patch_ticketing_customer(ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -168,12 +168,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
-| `id`                                                                                               | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the Customer                                                                                 |
-| `ticketing_customer`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::TicketingCustomer)](../../models/shared/ticketingcustomer.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
-| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `ticketing_customer`                                                                    | [::UnifiedRubySDK::Shared::TicketingCustomer](../../models/shared/ticketingcustomer.md) | :heavy_check_mark:                                                                      | N/A                                                                                     |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Customer                                                                      |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -238,7 +238,7 @@ s.config_security(
 )
 
     
-res = s.customer.update_ticketing_customer(connection_id="<id>", id="<id>", ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new(), fields_=[
+res = s.customer.update_ticketing_customer(ticketing_customer=::UnifiedRubySDK::Shared::TicketingCustomer.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -250,12 +250,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
-| `id`                                                                                               | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the Customer                                                                                 |
-| `ticketing_customer`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::TicketingCustomer)](../../models/shared/ticketingcustomer.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
-| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `ticketing_customer`                                                                    | [::UnifiedRubySDK::Shared::TicketingCustomer](../../models/shared/ticketingcustomer.md) | :heavy_check_mark:                                                                      | N/A                                                                                     |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Customer                                                                      |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 

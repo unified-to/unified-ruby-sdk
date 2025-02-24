@@ -36,9 +36,9 @@ s.config_security(
 )
 
     
-res = s.scim.create_scim_groups(connection_id="<id>", scim_group=::UnifiedRubySDK::Shared::ScimGroup.new(
+res = s.scim.create_scim_groups(scim_group=::UnifiedRubySDK::Shared::ScimGroup.new(
   display_name: "Bert89",
-))
+), connection_id="<id>")
 
 if ! res.scim_group.nil?
   # handle response
@@ -48,10 +48,10 @@ end
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `connection_id`                                                                    | *::String*                                                                         | :heavy_check_mark:                                                                 | ID of the connection                                                               |
-| `scim_group`                                                                       | [T.nilable(::UnifiedRubySDK::Shared::ScimGroup)](../../models/shared/scimgroup.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `scim_group`                                                            | [::UnifiedRubySDK::Shared::ScimGroup](../../models/shared/scimgroup.md) | :heavy_check_mark:                                                      | N/A                                                                     |
+| `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
 
 ### Response
 
@@ -78,6 +78,7 @@ s.config_security(
 
 
 req = ::UnifiedRubySDK::Operations::CreateScimUsersRequest.new(
+  scim_user: ::UnifiedRubySDK::Shared::ScimUser.new(),
   connection_id: "<id>",
 )
     
@@ -281,9 +282,9 @@ s.config_security(
 )
 
     
-res = s.scim.patch_scim_groups(connection_id="<id>", id="<id>", scim_group=::UnifiedRubySDK::Shared::ScimGroup.new(
+res = s.scim.patch_scim_groups(scim_group=::UnifiedRubySDK::Shared::ScimGroup.new(
   display_name: "Damon_Rutherford93",
-))
+), connection_id="<id>", id="<id>")
 
 if ! res.scim_group.nil?
   # handle response
@@ -293,11 +294,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `connection_id`                                                                    | *::String*                                                                         | :heavy_check_mark:                                                                 | ID of the connection                                                               |
-| `id`                                                                               | *::String*                                                                         | :heavy_check_mark:                                                                 | ID of the Group                                                                    |
-| `scim_group`                                                                       | [T.nilable(::UnifiedRubySDK::Shared::ScimGroup)](../../models/shared/scimgroup.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `scim_group`                                                            | [::UnifiedRubySDK::Shared::ScimGroup](../../models/shared/scimgroup.md) | :heavy_check_mark:                                                      | N/A                                                                     |
+| `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
+| `id`                                                                    | *::String*                                                              | :heavy_check_mark:                                                      | ID of the Group                                                         |
 
 ### Response
 
@@ -323,7 +324,7 @@ s.config_security(
 )
 
     
-res = s.scim.patch_scim_users(connection_id="<id>", id="<id>", scim_user=::UnifiedRubySDK::Shared::ScimUser.new())
+res = s.scim.patch_scim_users(scim_user=::UnifiedRubySDK::Shared::ScimUser.new(), connection_id="<id>", id="<id>")
 
 if ! res.scim_user.nil?
   # handle response
@@ -333,11 +334,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `connection_id`                                                                  | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the connection                                                             |
-| `id`                                                                             | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the User                                                                   |
-| `scim_user`                                                                      | [T.nilable(::UnifiedRubySDK::Shared::ScimUser)](../../models/shared/scimuser.md) | :heavy_minus_sign:                                                               | N/A                                                                              |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `scim_user`                                                           | [::UnifiedRubySDK::Shared::ScimUser](../../models/shared/scimuser.md) | :heavy_check_mark:                                                    | N/A                                                                   |
+| `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
+| `id`                                                                  | *::String*                                                            | :heavy_check_mark:                                                    | ID of the User                                                        |
 
 ### Response
 
@@ -441,9 +442,9 @@ s.config_security(
 )
 
     
-res = s.scim.update_scim_groups(connection_id="<id>", id="<id>", scim_group=::UnifiedRubySDK::Shared::ScimGroup.new(
+res = s.scim.update_scim_groups(scim_group=::UnifiedRubySDK::Shared::ScimGroup.new(
   display_name: "Frederic.Reichel",
-))
+), connection_id="<id>", id="<id>")
 
 if ! res.scim_group.nil?
   # handle response
@@ -453,11 +454,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `connection_id`                                                                    | *::String*                                                                         | :heavy_check_mark:                                                                 | ID of the connection                                                               |
-| `id`                                                                               | *::String*                                                                         | :heavy_check_mark:                                                                 | ID of the Group                                                                    |
-| `scim_group`                                                                       | [T.nilable(::UnifiedRubySDK::Shared::ScimGroup)](../../models/shared/scimgroup.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `scim_group`                                                            | [::UnifiedRubySDK::Shared::ScimGroup](../../models/shared/scimgroup.md) | :heavy_check_mark:                                                      | N/A                                                                     |
+| `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
+| `id`                                                                    | *::String*                                                              | :heavy_check_mark:                                                      | ID of the Group                                                         |
 
 ### Response
 
@@ -483,7 +484,7 @@ s.config_security(
 )
 
     
-res = s.scim.update_scim_users(connection_id="<id>", id="<id>", scim_user=::UnifiedRubySDK::Shared::ScimUser.new())
+res = s.scim.update_scim_users(scim_user=::UnifiedRubySDK::Shared::ScimUser.new(), connection_id="<id>", id="<id>")
 
 if ! res.scim_user.nil?
   # handle response
@@ -493,11 +494,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `connection_id`                                                                  | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the connection                                                             |
-| `id`                                                                             | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the User                                                                   |
-| `scim_user`                                                                      | [T.nilable(::UnifiedRubySDK::Shared::ScimUser)](../../models/shared/scimuser.md) | :heavy_minus_sign:                                                               | N/A                                                                              |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `scim_user`                                                           | [::UnifiedRubySDK::Shared::ScimUser](../../models/shared/scimuser.md) | :heavy_check_mark:                                                    | N/A                                                                   |
+| `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
+| `id`                                                                  | *::String*                                                            | :heavy_check_mark:                                                    | ID of the User                                                        |
 
 ### Response
 

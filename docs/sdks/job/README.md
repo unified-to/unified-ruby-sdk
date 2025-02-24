@@ -30,7 +30,7 @@ s.config_security(
 )
 
     
-res = s.job.create_ats_job(connection_id="<id>", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(), fields_=[
+res = s.job.create_ats_job(ats_job=::UnifiedRubySDK::Shared::AtsJob.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -42,11 +42,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `connection_id`                                                              | *::String*                                                                   | :heavy_check_mark:                                                           | ID of the connection                                                         |
-| `ats_job`                                                                    | [T.nilable(::UnifiedRubySDK::Shared::AtsJob)](../../models/shared/atsjob.md) | :heavy_minus_sign:                                                           | N/A                                                                          |
-| `fields_`                                                                    | T::Array<*::String*>                                                         | :heavy_minus_sign:                                                           | Comma-delimited fields to return                                             |
+| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `ats_job`                                                         | [::UnifiedRubySDK::Shared::AtsJob](../../models/shared/atsjob.md) | :heavy_check_mark:                                                | N/A                                                               |
+| `connection_id`                                                   | *::String*                                                        | :heavy_check_mark:                                                | ID of the connection                                              |
+| `fields_`                                                         | T::Array<*::String*>                                              | :heavy_minus_sign:                                                | Comma-delimited fields to return                                  |
 
 ### Response
 
@@ -156,7 +156,7 @@ s.config_security(
 )
 
     
-res = s.job.patch_ats_job(connection_id="<id>", id="<id>", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(), fields_=[
+res = s.job.patch_ats_job(ats_job=::UnifiedRubySDK::Shared::AtsJob.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -168,12 +168,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `connection_id`                                                              | *::String*                                                                   | :heavy_check_mark:                                                           | ID of the connection                                                         |
-| `id`                                                                         | *::String*                                                                   | :heavy_check_mark:                                                           | ID of the Job                                                                |
-| `ats_job`                                                                    | [T.nilable(::UnifiedRubySDK::Shared::AtsJob)](../../models/shared/atsjob.md) | :heavy_minus_sign:                                                           | N/A                                                                          |
-| `fields_`                                                                    | T::Array<*::String*>                                                         | :heavy_minus_sign:                                                           | Comma-delimited fields to return                                             |
+| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `ats_job`                                                         | [::UnifiedRubySDK::Shared::AtsJob](../../models/shared/atsjob.md) | :heavy_check_mark:                                                | N/A                                                               |
+| `connection_id`                                                   | *::String*                                                        | :heavy_check_mark:                                                | ID of the connection                                              |
+| `id`                                                              | *::String*                                                        | :heavy_check_mark:                                                | ID of the Job                                                     |
+| `fields_`                                                         | T::Array<*::String*>                                              | :heavy_minus_sign:                                                | Comma-delimited fields to return                                  |
 
 ### Response
 
@@ -238,7 +238,7 @@ s.config_security(
 )
 
     
-res = s.job.update_ats_job(connection_id="<id>", id="<id>", ats_job=::UnifiedRubySDK::Shared::AtsJob.new(), fields_=[
+res = s.job.update_ats_job(ats_job=::UnifiedRubySDK::Shared::AtsJob.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -250,12 +250,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `connection_id`                                                              | *::String*                                                                   | :heavy_check_mark:                                                           | ID of the connection                                                         |
-| `id`                                                                         | *::String*                                                                   | :heavy_check_mark:                                                           | ID of the Job                                                                |
-| `ats_job`                                                                    | [T.nilable(::UnifiedRubySDK::Shared::AtsJob)](../../models/shared/atsjob.md) | :heavy_minus_sign:                                                           | N/A                                                                          |
-| `fields_`                                                                    | T::Array<*::String*>                                                         | :heavy_minus_sign:                                                           | Comma-delimited fields to return                                             |
+| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `ats_job`                                                         | [::UnifiedRubySDK::Shared::AtsJob](../../models/shared/atsjob.md) | :heavy_check_mark:                                                | N/A                                                               |
+| `connection_id`                                                   | *::String*                                                        | :heavy_check_mark:                                                | ID of the connection                                              |
+| `id`                                                              | *::String*                                                        | :heavy_check_mark:                                                | ID of the Job                                                     |
+| `fields_`                                                         | T::Array<*::String*>                                              | :heavy_minus_sign:                                                | Comma-delimited fields to return                                  |
 
 ### Response
 

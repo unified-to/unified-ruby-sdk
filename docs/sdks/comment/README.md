@@ -36,9 +36,9 @@ s.config_security(
 )
 
     
-res = s.comment.create_kms_comment(connection_id="<id>", kms_comment=::UnifiedRubySDK::Shared::KmsComment.new(
+res = s.comment.create_kms_comment(kms_comment=::UnifiedRubySDK::Shared::KmsComment.new(
   content: "<value>",
-), fields_=[
+), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -50,11 +50,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `connection_id`                                                                      | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the connection                                                                 |
-| `kms_comment`                                                                        | [T.nilable(::UnifiedRubySDK::Shared::KmsComment)](../../models/shared/kmscomment.md) | :heavy_minus_sign:                                                                   | N/A                                                                                  |
-| `fields_`                                                                            | T::Array<*::String*>                                                                 | :heavy_minus_sign:                                                                   | Comma-delimited fields to return                                                     |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `kms_comment`                                                             | [::UnifiedRubySDK::Shared::KmsComment](../../models/shared/kmscomment.md) | :heavy_check_mark:                                                        | N/A                                                                       |
+| `connection_id`                                                           | *::String*                                                                | :heavy_check_mark:                                                        | ID of the connection                                                      |
+| `fields_`                                                                 | T::Array<*::String*>                                                      | :heavy_minus_sign:                                                        | Comma-delimited fields to return                                          |
 
 ### Response
 
@@ -80,10 +80,10 @@ s.config_security(
 )
 
     
-res = s.comment.create_task_comment(connection_id="<id>", task_comment=::UnifiedRubySDK::Shared::TaskComment.new(
+res = s.comment.create_task_comment(task_comment=::UnifiedRubySDK::Shared::TaskComment.new(
   task_id: "<id>",
   text: "<value>",
-), fields_=[
+), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -95,11 +95,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_id`                                                                        | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the connection                                                                   |
-| `task_comment`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::TaskComment)](../../models/shared/taskcomment.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
-| `fields_`                                                                              | T::Array<*::String*>                                                                   | :heavy_minus_sign:                                                                     | Comma-delimited fields to return                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `task_comment`                                                              | [::UnifiedRubySDK::Shared::TaskComment](../../models/shared/taskcomment.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -293,9 +293,9 @@ s.config_security(
 )
 
     
-res = s.comment.patch_kms_comment(connection_id="<id>", id="<id>", kms_comment=::UnifiedRubySDK::Shared::KmsComment.new(
+res = s.comment.patch_kms_comment(kms_comment=::UnifiedRubySDK::Shared::KmsComment.new(
   content: "<value>",
-), fields_=[
+), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -307,12 +307,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `connection_id`                                                                      | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the connection                                                                 |
-| `id`                                                                                 | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the Comment                                                                    |
-| `kms_comment`                                                                        | [T.nilable(::UnifiedRubySDK::Shared::KmsComment)](../../models/shared/kmscomment.md) | :heavy_minus_sign:                                                                   | N/A                                                                                  |
-| `fields_`                                                                            | T::Array<*::String*>                                                                 | :heavy_minus_sign:                                                                   | Comma-delimited fields to return                                                     |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `kms_comment`                                                             | [::UnifiedRubySDK::Shared::KmsComment](../../models/shared/kmscomment.md) | :heavy_check_mark:                                                        | N/A                                                                       |
+| `connection_id`                                                           | *::String*                                                                | :heavy_check_mark:                                                        | ID of the connection                                                      |
+| `id`                                                                      | *::String*                                                                | :heavy_check_mark:                                                        | ID of the Comment                                                         |
+| `fields_`                                                                 | T::Array<*::String*>                                                      | :heavy_minus_sign:                                                        | Comma-delimited fields to return                                          |
 
 ### Response
 
@@ -338,10 +338,10 @@ s.config_security(
 )
 
     
-res = s.comment.patch_task_comment(connection_id="<id>", id="<id>", task_comment=::UnifiedRubySDK::Shared::TaskComment.new(
+res = s.comment.patch_task_comment(task_comment=::UnifiedRubySDK::Shared::TaskComment.new(
   task_id: "<id>",
   text: "<value>",
-), fields_=[
+), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -353,12 +353,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_id`                                                                        | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the connection                                                                   |
-| `id`                                                                                   | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the Comment                                                                      |
-| `task_comment`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::TaskComment)](../../models/shared/taskcomment.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
-| `fields_`                                                                              | T::Array<*::String*>                                                                   | :heavy_minus_sign:                                                                     | Comma-delimited fields to return                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `task_comment`                                                              | [::UnifiedRubySDK::Shared::TaskComment](../../models/shared/taskcomment.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Comment                                                           |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -462,9 +462,9 @@ s.config_security(
 )
 
     
-res = s.comment.update_kms_comment(connection_id="<id>", id="<id>", kms_comment=::UnifiedRubySDK::Shared::KmsComment.new(
+res = s.comment.update_kms_comment(kms_comment=::UnifiedRubySDK::Shared::KmsComment.new(
   content: "<value>",
-), fields_=[
+), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -476,12 +476,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `connection_id`                                                                      | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the connection                                                                 |
-| `id`                                                                                 | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the Comment                                                                    |
-| `kms_comment`                                                                        | [T.nilable(::UnifiedRubySDK::Shared::KmsComment)](../../models/shared/kmscomment.md) | :heavy_minus_sign:                                                                   | N/A                                                                                  |
-| `fields_`                                                                            | T::Array<*::String*>                                                                 | :heavy_minus_sign:                                                                   | Comma-delimited fields to return                                                     |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `kms_comment`                                                             | [::UnifiedRubySDK::Shared::KmsComment](../../models/shared/kmscomment.md) | :heavy_check_mark:                                                        | N/A                                                                       |
+| `connection_id`                                                           | *::String*                                                                | :heavy_check_mark:                                                        | ID of the connection                                                      |
+| `id`                                                                      | *::String*                                                                | :heavy_check_mark:                                                        | ID of the Comment                                                         |
+| `fields_`                                                                 | T::Array<*::String*>                                                      | :heavy_minus_sign:                                                        | Comma-delimited fields to return                                          |
 
 ### Response
 
@@ -507,10 +507,10 @@ s.config_security(
 )
 
     
-res = s.comment.update_task_comment(connection_id="<id>", id="<id>", task_comment=::UnifiedRubySDK::Shared::TaskComment.new(
+res = s.comment.update_task_comment(task_comment=::UnifiedRubySDK::Shared::TaskComment.new(
   task_id: "<id>",
   text: "<value>",
-), fields_=[
+), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -522,12 +522,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_id`                                                                        | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the connection                                                                   |
-| `id`                                                                                   | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the Comment                                                                      |
-| `task_comment`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::TaskComment)](../../models/shared/taskcomment.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
-| `fields_`                                                                              | T::Array<*::String*>                                                                   | :heavy_minus_sign:                                                                     | Comma-delimited fields to return                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `task_comment`                                                              | [::UnifiedRubySDK::Shared::TaskComment](../../models/shared/taskcomment.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Comment                                                           |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 

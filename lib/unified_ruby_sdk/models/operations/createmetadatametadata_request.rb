@@ -13,17 +13,17 @@ module UnifiedRubySDK
 
       # ID of the connection
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+
+      field :metadata_metadata, ::UnifiedRubySDK::Shared::MetadataMetadata, { 'request': { 'media_type': 'application/json' } }
       # Comma-delimited fields to return
       field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
-      field :metadata_metadata, T.nilable(::UnifiedRubySDK::Shared::MetadataMetadata), { 'request': { 'media_type': 'application/json' } }
 
-
-      sig { params(connection_id: ::String, fields_: T.nilable(T::Array[::String]), metadata_metadata: T.nilable(::UnifiedRubySDK::Shared::MetadataMetadata)).void }
-      def initialize(connection_id: nil, fields_: nil, metadata_metadata: nil)
+      sig { params(connection_id: ::String, metadata_metadata: ::UnifiedRubySDK::Shared::MetadataMetadata, fields_: T.nilable(T::Array[::String])).void }
+      def initialize(connection_id: nil, metadata_metadata: nil, fields_: nil)
         @connection_id = connection_id
-        @fields_ = fields_
         @metadata_metadata = metadata_metadata
+        @fields_ = fields_
       end
     end
   end

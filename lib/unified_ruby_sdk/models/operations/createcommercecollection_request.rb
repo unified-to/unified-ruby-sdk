@@ -11,18 +11,18 @@ module UnifiedRubySDK
     class CreateCommerceCollectionRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
+      # A collection of items/products/services
+      field :commerce_collection, ::UnifiedRubySDK::Shared::CommerceCollection, { 'request': { 'media_type': 'application/json' } }
       # ID of the connection
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-      # A collection of items/products/services
-      field :commerce_collection, T.nilable(::UnifiedRubySDK::Shared::CommerceCollection), { 'request': { 'media_type': 'application/json' } }
       # Comma-delimited fields to return
       field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, commerce_collection: T.nilable(::UnifiedRubySDK::Shared::CommerceCollection), fields_: T.nilable(T::Array[::String])).void }
-      def initialize(connection_id: nil, commerce_collection: nil, fields_: nil)
-        @connection_id = connection_id
+      sig { params(commerce_collection: ::UnifiedRubySDK::Shared::CommerceCollection, connection_id: ::String, fields_: T.nilable(T::Array[::String])).void }
+      def initialize(commerce_collection: nil, connection_id: nil, fields_: nil)
         @commerce_collection = commerce_collection
+        @connection_id = connection_id
         @fields_ = fields_
       end
     end

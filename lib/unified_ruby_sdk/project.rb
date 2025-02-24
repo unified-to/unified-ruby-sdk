@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, task_project: T.nilable(::UnifiedRubySDK::Shared::TaskProject), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateTaskProjectResponse) }
-    def create_task_project(connection_id, task_project = nil, fields_ = nil)
+    sig { params(task_project: ::UnifiedRubySDK::Shared::TaskProject, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateTaskProjectResponse) }
+    def create_task_project(task_project, connection_id, fields_ = nil)
       # create_task_project - Create a project
       request = ::UnifiedRubySDK::Operations::CreateTaskProjectRequest.new(
         
-        connection_id: connection_id,
         task_project: task_project,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :task_project, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateTaskProjectRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -154,14 +155,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, task_project: T.nilable(::UnifiedRubySDK::Shared::TaskProject), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchTaskProjectResponse) }
-    def patch_task_project(connection_id, id, task_project = nil, fields_ = nil)
+    sig { params(task_project: ::UnifiedRubySDK::Shared::TaskProject, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchTaskProjectResponse) }
+    def patch_task_project(task_project, connection_id, id, fields_ = nil)
       # patch_task_project - Update a project
       request = ::UnifiedRubySDK::Operations::PatchTaskProjectRequest.new(
         
+        task_project: task_project,
         connection_id: connection_id,
         id: id,
-        task_project: task_project,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -175,6 +176,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :task_project, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchTaskProjectRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -247,14 +249,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, task_project: T.nilable(::UnifiedRubySDK::Shared::TaskProject), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateTaskProjectResponse) }
-    def update_task_project(connection_id, id, task_project = nil, fields_ = nil)
+    sig { params(task_project: ::UnifiedRubySDK::Shared::TaskProject, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateTaskProjectResponse) }
+    def update_task_project(task_project, connection_id, id, fields_ = nil)
       # update_task_project - Update a project
       request = ::UnifiedRubySDK::Operations::UpdateTaskProjectRequest.new(
         
+        task_project: task_project,
         connection_id: connection_id,
         id: id,
-        task_project: task_project,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -268,6 +270,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :task_project, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateTaskProjectRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

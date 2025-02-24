@@ -13,20 +13,20 @@ module UnifiedRubySDK
 
       # ID of the connection
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+
+      field :hris_group, ::UnifiedRubySDK::Shared::HrisGroup, { 'request': { 'media_type': 'application/json' } }
       # ID of the Group
       field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
       # Comma-delimited fields to return
       field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
-      field :hris_group, T.nilable(::UnifiedRubySDK::Shared::HrisGroup), { 'request': { 'media_type': 'application/json' } }
 
-
-      sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), hris_group: T.nilable(::UnifiedRubySDK::Shared::HrisGroup)).void }
-      def initialize(connection_id: nil, id: nil, fields_: nil, hris_group: nil)
+      sig { params(connection_id: ::String, hris_group: ::UnifiedRubySDK::Shared::HrisGroup, id: ::String, fields_: T.nilable(T::Array[::String])).void }
+      def initialize(connection_id: nil, hris_group: nil, id: nil, fields_: nil)
         @connection_id = connection_id
+        @hris_group = hris_group
         @id = id
         @fields_ = fields_
-        @hris_group = hris_group
       end
     end
   end

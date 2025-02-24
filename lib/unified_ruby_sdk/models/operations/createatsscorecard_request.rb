@@ -11,18 +11,18 @@ module UnifiedRubySDK
     class CreateAtsScorecardRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
+
+      field :ats_scorecard, ::UnifiedRubySDK::Shared::AtsScorecard, { 'request': { 'media_type': 'application/json' } }
       # ID of the connection
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-
-      field :ats_scorecard, T.nilable(::UnifiedRubySDK::Shared::AtsScorecard), { 'request': { 'media_type': 'application/json' } }
       # Comma-delimited fields to return
       field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, ats_scorecard: T.nilable(::UnifiedRubySDK::Shared::AtsScorecard), fields_: T.nilable(T::Array[::String])).void }
-      def initialize(connection_id: nil, ats_scorecard: nil, fields_: nil)
-        @connection_id = connection_id
+      sig { params(ats_scorecard: ::UnifiedRubySDK::Shared::AtsScorecard, connection_id: ::String, fields_: T.nilable(T::Array[::String])).void }
+      def initialize(ats_scorecard: nil, connection_id: nil, fields_: nil)
         @ats_scorecard = ats_scorecard
+        @connection_id = connection_id
         @fields_ = fields_
       end
     end

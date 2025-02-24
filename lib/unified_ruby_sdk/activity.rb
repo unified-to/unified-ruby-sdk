@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ats_activity: T.nilable(::UnifiedRubySDK::Shared::AtsActivity), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateAtsActivityResponse) }
-    def create_ats_activity(connection_id, ats_activity = nil, fields_ = nil)
+    sig { params(ats_activity: ::UnifiedRubySDK::Shared::AtsActivity, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateAtsActivityResponse) }
+    def create_ats_activity(ats_activity, connection_id, fields_ = nil)
       # create_ats_activity - Create an activity
       request = ::UnifiedRubySDK::Operations::CreateAtsActivityRequest.new(
         
-        connection_id: connection_id,
         ats_activity: ats_activity,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_activity, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateAtsActivityRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -154,14 +155,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_activity: T.nilable(::UnifiedRubySDK::Shared::AtsActivity), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchAtsActivityResponse) }
-    def patch_ats_activity(connection_id, id, ats_activity = nil, fields_ = nil)
+    sig { params(ats_activity: ::UnifiedRubySDK::Shared::AtsActivity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchAtsActivityResponse) }
+    def patch_ats_activity(ats_activity, connection_id, id, fields_ = nil)
       # patch_ats_activity - Update an activity
       request = ::UnifiedRubySDK::Operations::PatchAtsActivityRequest.new(
         
+        ats_activity: ats_activity,
         connection_id: connection_id,
         id: id,
-        ats_activity: ats_activity,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -175,6 +176,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_activity, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchAtsActivityRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -247,14 +249,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ats_activity: T.nilable(::UnifiedRubySDK::Shared::AtsActivity), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateAtsActivityResponse) }
-    def update_ats_activity(connection_id, id, ats_activity = nil, fields_ = nil)
+    sig { params(ats_activity: ::UnifiedRubySDK::Shared::AtsActivity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateAtsActivityResponse) }
+    def update_ats_activity(ats_activity, connection_id, id, fields_ = nil)
       # update_ats_activity - Update an activity
       request = ::UnifiedRubySDK::Operations::UpdateAtsActivityRequest.new(
         
+        ats_activity: ats_activity,
         connection_id: connection_id,
         id: id,
-        ats_activity: ats_activity,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -268,6 +270,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ats_activity, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateAtsActivityRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

@@ -11,18 +11,18 @@ module UnifiedRubySDK
     class CreateAccountingInvoiceRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
+
+      field :accounting_invoice, ::UnifiedRubySDK::Shared::AccountingInvoice, { 'request': { 'media_type': 'application/json' } }
       # ID of the connection
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-
-      field :accounting_invoice, T.nilable(::UnifiedRubySDK::Shared::AccountingInvoice), { 'request': { 'media_type': 'application/json' } }
       # Comma-delimited fields to return
       field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, accounting_invoice: T.nilable(::UnifiedRubySDK::Shared::AccountingInvoice), fields_: T.nilable(T::Array[::String])).void }
-      def initialize(connection_id: nil, accounting_invoice: nil, fields_: nil)
-        @connection_id = connection_id
+      sig { params(accounting_invoice: ::UnifiedRubySDK::Shared::AccountingInvoice, connection_id: ::String, fields_: T.nilable(T::Array[::String])).void }
+      def initialize(accounting_invoice: nil, connection_id: nil, fields_: nil)
         @accounting_invoice = accounting_invoice
+        @connection_id = connection_id
         @fields_ = fields_
       end
     end

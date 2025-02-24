@@ -19,7 +19,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Shared::Connection)).returns(::UnifiedRubySDK::Operations::CreateUnifiedConnectionResponse) }
+    sig { params(request: ::UnifiedRubySDK::Shared::Connection).returns(::UnifiedRubySDK::Operations::CreateUnifiedConnectionResponse) }
     def create_unified_connection(request)
       # create_unified_connection - Create connection
       # Used only to import existing customer credentials; use "Create connection indirectly" instead
@@ -29,6 +29,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :request, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -60,8 +61,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(webhook: T.nilable(::UnifiedRubySDK::Shared::Webhook), include_all: T.nilable(T::Boolean)).returns(::UnifiedRubySDK::Operations::CreateUnifiedWebhookResponse) }
-    def create_unified_webhook(webhook = nil, include_all = nil)
+    sig { params(webhook: ::UnifiedRubySDK::Shared::Webhook, include_all: T.nilable(T::Boolean)).returns(::UnifiedRubySDK::Operations::CreateUnifiedWebhookResponse) }
+    def create_unified_webhook(webhook, include_all = nil)
       # create_unified_webhook - Create webhook subscription
       # The data payload received by your server is described at https://docs.unified.to/unified/overview. The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free accounts.
       request = ::UnifiedRubySDK::Operations::CreateUnifiedWebhookRequest.new(
@@ -75,6 +76,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :webhook, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateUnifiedWebhookRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -468,13 +470,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String, connection: T.nilable(::UnifiedRubySDK::Shared::Connection)).returns(::UnifiedRubySDK::Operations::PatchUnifiedConnectionResponse) }
-    def patch_unified_connection(id, connection = nil)
+    sig { params(connection: ::UnifiedRubySDK::Shared::Connection, id: ::String).returns(::UnifiedRubySDK::Operations::PatchUnifiedConnectionResponse) }
+    def patch_unified_connection(connection, id)
       # patch_unified_connection - Update connection
       request = ::UnifiedRubySDK::Operations::PatchUnifiedConnectionRequest.new(
         
-        id: id,
-        connection: connection
+        connection: connection,
+        id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -487,6 +489,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :connection, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -518,13 +521,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String, webhook: T.nilable(::UnifiedRubySDK::Shared::Webhook)).returns(::UnifiedRubySDK::Operations::PatchUnifiedWebhookResponse) }
-    def patch_unified_webhook(id, webhook = nil)
+    sig { params(webhook: ::UnifiedRubySDK::Shared::Webhook, id: ::String).returns(::UnifiedRubySDK::Operations::PatchUnifiedWebhookResponse) }
+    def patch_unified_webhook(webhook, id)
       # patch_unified_webhook - Update webhook subscription
       request = ::UnifiedRubySDK::Operations::PatchUnifiedWebhookRequest.new(
         
-        id: id,
-        webhook: webhook
+        webhook: webhook,
+        id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -537,6 +540,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :webhook, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -682,13 +686,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String, connection: T.nilable(::UnifiedRubySDK::Shared::Connection)).returns(::UnifiedRubySDK::Operations::UpdateUnifiedConnectionResponse) }
-    def update_unified_connection(id, connection = nil)
+    sig { params(connection: ::UnifiedRubySDK::Shared::Connection, id: ::String).returns(::UnifiedRubySDK::Operations::UpdateUnifiedConnectionResponse) }
+    def update_unified_connection(connection, id)
       # update_unified_connection - Update connection
       request = ::UnifiedRubySDK::Operations::UpdateUnifiedConnectionRequest.new(
         
-        id: id,
-        connection: connection
+        connection: connection,
+        id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -701,6 +705,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :connection, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -732,13 +737,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String, webhook: T.nilable(::UnifiedRubySDK::Shared::Webhook)).returns(::UnifiedRubySDK::Operations::UpdateUnifiedWebhookResponse) }
-    def update_unified_webhook(id, webhook = nil)
+    sig { params(webhook: ::UnifiedRubySDK::Shared::Webhook, id: ::String).returns(::UnifiedRubySDK::Operations::UpdateUnifiedWebhookResponse) }
+    def update_unified_webhook(webhook, id)
       # update_unified_webhook - Update webhook subscription
       request = ::UnifiedRubySDK::Operations::UpdateUnifiedWebhookRequest.new(
         
-        id: id,
-        webhook: webhook
+        webhook: webhook,
+        id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -751,6 +756,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :webhook, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 

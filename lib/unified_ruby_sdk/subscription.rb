@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, payment_subscription: T.nilable(::UnifiedRubySDK::Shared::PaymentSubscription), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreatePaymentSubscriptionResponse) }
-    def create_payment_subscription(connection_id, payment_subscription = nil, fields_ = nil)
+    sig { params(payment_subscription: ::UnifiedRubySDK::Shared::PaymentSubscription, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreatePaymentSubscriptionResponse) }
+    def create_payment_subscription(payment_subscription, connection_id, fields_ = nil)
       # create_payment_subscription - Create a subscription
       request = ::UnifiedRubySDK::Operations::CreatePaymentSubscriptionRequest.new(
         
-        connection_id: connection_id,
         payment_subscription: payment_subscription,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :payment_subscription, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreatePaymentSubscriptionRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -154,14 +155,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, payment_subscription: T.nilable(::UnifiedRubySDK::Shared::PaymentSubscription), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchPaymentSubscriptionResponse) }
-    def patch_payment_subscription(connection_id, id, payment_subscription = nil, fields_ = nil)
+    sig { params(payment_subscription: ::UnifiedRubySDK::Shared::PaymentSubscription, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchPaymentSubscriptionResponse) }
+    def patch_payment_subscription(payment_subscription, connection_id, id, fields_ = nil)
       # patch_payment_subscription - Update a subscription
       request = ::UnifiedRubySDK::Operations::PatchPaymentSubscriptionRequest.new(
         
+        payment_subscription: payment_subscription,
         connection_id: connection_id,
         id: id,
-        payment_subscription: payment_subscription,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -175,6 +176,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :payment_subscription, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchPaymentSubscriptionRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -247,14 +249,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, payment_subscription: T.nilable(::UnifiedRubySDK::Shared::PaymentSubscription), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdatePaymentSubscriptionResponse) }
-    def update_payment_subscription(connection_id, id, payment_subscription = nil, fields_ = nil)
+    sig { params(payment_subscription: ::UnifiedRubySDK::Shared::PaymentSubscription, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdatePaymentSubscriptionResponse) }
+    def update_payment_subscription(payment_subscription, connection_id, id, fields_ = nil)
       # update_payment_subscription - Update a subscription
       request = ::UnifiedRubySDK::Operations::UpdatePaymentSubscriptionRequest.new(
         
+        payment_subscription: payment_subscription,
         connection_id: connection_id,
         id: id,
-        payment_subscription: payment_subscription,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -268,6 +270,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :payment_subscription, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdatePaymentSubscriptionRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

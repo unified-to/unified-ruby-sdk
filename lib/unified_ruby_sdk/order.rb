@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, accounting_order: T.nilable(::UnifiedRubySDK::Shared::AccountingOrder), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateAccountingOrderResponse) }
-    def create_accounting_order(connection_id, accounting_order = nil, fields_ = nil)
+    sig { params(accounting_order: ::UnifiedRubySDK::Shared::AccountingOrder, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateAccountingOrderResponse) }
+    def create_accounting_order(accounting_order, connection_id, fields_ = nil)
       # create_accounting_order - Create an order
       request = ::UnifiedRubySDK::Operations::CreateAccountingOrderRequest.new(
         
-        connection_id: connection_id,
         accounting_order: accounting_order,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :accounting_order, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateAccountingOrderRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -154,14 +155,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_order: T.nilable(::UnifiedRubySDK::Shared::AccountingOrder), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchAccountingOrderResponse) }
-    def patch_accounting_order(connection_id, id, accounting_order = nil, fields_ = nil)
+    sig { params(accounting_order: ::UnifiedRubySDK::Shared::AccountingOrder, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchAccountingOrderResponse) }
+    def patch_accounting_order(accounting_order, connection_id, id, fields_ = nil)
       # patch_accounting_order - Update an order
       request = ::UnifiedRubySDK::Operations::PatchAccountingOrderRequest.new(
         
+        accounting_order: accounting_order,
         connection_id: connection_id,
         id: id,
-        accounting_order: accounting_order,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -175,6 +176,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :accounting_order, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchAccountingOrderRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -247,14 +249,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_order: T.nilable(::UnifiedRubySDK::Shared::AccountingOrder), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateAccountingOrderResponse) }
-    def update_accounting_order(connection_id, id, accounting_order = nil, fields_ = nil)
+    sig { params(accounting_order: ::UnifiedRubySDK::Shared::AccountingOrder, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateAccountingOrderResponse) }
+    def update_accounting_order(accounting_order, connection_id, id, fields_ = nil)
       # update_accounting_order - Update an order
       request = ::UnifiedRubySDK::Operations::UpdateAccountingOrderRequest.new(
         
+        accounting_order: accounting_order,
         connection_id: connection_id,
         id: id,
-        accounting_order: accounting_order,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -268,6 +270,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :accounting_order, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateAccountingOrderRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

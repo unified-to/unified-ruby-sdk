@@ -30,10 +30,10 @@ s.config_security(
 )
 
     
-res = s.class_.create_lms_class(connection_id="<id>", lms_class=::UnifiedRubySDK::Shared::LmsClass.new(
+res = s.class_.create_lms_class(lms_class=::UnifiedRubySDK::Shared::LmsClass.new(
   course_id: "<id>",
   name: "<value>",
-), fields_=[
+), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -45,11 +45,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `connection_id`                                                                  | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the connection                                                             |
-| `lms_class`                                                                      | [T.nilable(::UnifiedRubySDK::Shared::LmsClass)](../../models/shared/lmsclass.md) | :heavy_minus_sign:                                                               | N/A                                                                              |
-| `fields_`                                                                        | T::Array<*::String*>                                                             | :heavy_minus_sign:                                                               | Comma-delimited fields to return                                                 |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `lms_class`                                                           | [::UnifiedRubySDK::Shared::LmsClass](../../models/shared/lmsclass.md) | :heavy_check_mark:                                                    | N/A                                                                   |
+| `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
+| `fields_`                                                             | T::Array<*::String*>                                                  | :heavy_minus_sign:                                                    | Comma-delimited fields to return                                      |
 
 ### Response
 
@@ -159,10 +159,10 @@ s.config_security(
 )
 
     
-res = s.class_.patch_lms_class(connection_id="<id>", id="<id>", lms_class=::UnifiedRubySDK::Shared::LmsClass.new(
+res = s.class_.patch_lms_class(lms_class=::UnifiedRubySDK::Shared::LmsClass.new(
   course_id: "<id>",
   name: "<value>",
-), fields_=[
+), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -174,12 +174,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `connection_id`                                                                  | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the connection                                                             |
-| `id`                                                                             | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the Class                                                                  |
-| `lms_class`                                                                      | [T.nilable(::UnifiedRubySDK::Shared::LmsClass)](../../models/shared/lmsclass.md) | :heavy_minus_sign:                                                               | N/A                                                                              |
-| `fields_`                                                                        | T::Array<*::String*>                                                             | :heavy_minus_sign:                                                               | Comma-delimited fields to return                                                 |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `lms_class`                                                           | [::UnifiedRubySDK::Shared::LmsClass](../../models/shared/lmsclass.md) | :heavy_check_mark:                                                    | N/A                                                                   |
+| `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
+| `id`                                                                  | *::String*                                                            | :heavy_check_mark:                                                    | ID of the Class                                                       |
+| `fields_`                                                             | T::Array<*::String*>                                                  | :heavy_minus_sign:                                                    | Comma-delimited fields to return                                      |
 
 ### Response
 
@@ -244,10 +244,10 @@ s.config_security(
 )
 
     
-res = s.class_.update_lms_class(connection_id="<id>", id="<id>", lms_class=::UnifiedRubySDK::Shared::LmsClass.new(
+res = s.class_.update_lms_class(lms_class=::UnifiedRubySDK::Shared::LmsClass.new(
   course_id: "<id>",
   name: "<value>",
-), fields_=[
+), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -259,12 +259,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `connection_id`                                                                  | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the connection                                                             |
-| `id`                                                                             | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the Class                                                                  |
-| `lms_class`                                                                      | [T.nilable(::UnifiedRubySDK::Shared::LmsClass)](../../models/shared/lmsclass.md) | :heavy_minus_sign:                                                               | N/A                                                                              |
-| `fields_`                                                                        | T::Array<*::String*>                                                             | :heavy_minus_sign:                                                               | Comma-delimited fields to return                                                 |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `lms_class`                                                           | [::UnifiedRubySDK::Shared::LmsClass](../../models/shared/lmsclass.md) | :heavy_check_mark:                                                    | N/A                                                                   |
+| `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
+| `id`                                                                  | *::String*                                                            | :heavy_check_mark:                                                    | ID of the Class                                                       |
+| `fields_`                                                             | T::Array<*::String*>                                                  | :heavy_minus_sign:                                                    | Comma-delimited fields to return                                      |
 
 ### Response
 

@@ -30,10 +30,10 @@ s.config_security(
 )
 
     
-res = s.branch.create_repo_branch(connection_id="<id>", repo_branch=::UnifiedRubySDK::Shared::RepoBranch.new(
+res = s.branch.create_repo_branch(repo_branch=::UnifiedRubySDK::Shared::RepoBranch.new(
   name: "<value>",
   repo_id: "<id>",
-), fields_=[
+), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -45,11 +45,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `connection_id`                                                                      | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the connection                                                                 |
-| `repo_branch`                                                                        | [T.nilable(::UnifiedRubySDK::Shared::RepoBranch)](../../models/shared/repobranch.md) | :heavy_minus_sign:                                                                   | N/A                                                                                  |
-| `fields_`                                                                            | T::Array<*::String*>                                                                 | :heavy_minus_sign:                                                                   | Comma-delimited fields to return                                                     |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `repo_branch`                                                             | [::UnifiedRubySDK::Shared::RepoBranch](../../models/shared/repobranch.md) | :heavy_check_mark:                                                        | N/A                                                                       |
+| `connection_id`                                                           | *::String*                                                                | :heavy_check_mark:                                                        | ID of the connection                                                      |
+| `fields_`                                                                 | T::Array<*::String*>                                                      | :heavy_minus_sign:                                                        | Comma-delimited fields to return                                          |
 
 ### Response
 
@@ -159,10 +159,10 @@ s.config_security(
 )
 
     
-res = s.branch.patch_repo_branch(connection_id="<id>", id="<id>", repo_branch=::UnifiedRubySDK::Shared::RepoBranch.new(
+res = s.branch.patch_repo_branch(repo_branch=::UnifiedRubySDK::Shared::RepoBranch.new(
   name: "<value>",
   repo_id: "<id>",
-), fields_=[
+), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -174,12 +174,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `connection_id`                                                                      | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the connection                                                                 |
-| `id`                                                                                 | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the Branch                                                                     |
-| `repo_branch`                                                                        | [T.nilable(::UnifiedRubySDK::Shared::RepoBranch)](../../models/shared/repobranch.md) | :heavy_minus_sign:                                                                   | N/A                                                                                  |
-| `fields_`                                                                            | T::Array<*::String*>                                                                 | :heavy_minus_sign:                                                                   | Comma-delimited fields to return                                                     |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `repo_branch`                                                             | [::UnifiedRubySDK::Shared::RepoBranch](../../models/shared/repobranch.md) | :heavy_check_mark:                                                        | N/A                                                                       |
+| `connection_id`                                                           | *::String*                                                                | :heavy_check_mark:                                                        | ID of the connection                                                      |
+| `id`                                                                      | *::String*                                                                | :heavy_check_mark:                                                        | ID of the Branch                                                          |
+| `fields_`                                                                 | T::Array<*::String*>                                                      | :heavy_minus_sign:                                                        | Comma-delimited fields to return                                          |
 
 ### Response
 
@@ -244,10 +244,10 @@ s.config_security(
 )
 
     
-res = s.branch.update_repo_branch(connection_id="<id>", id="<id>", repo_branch=::UnifiedRubySDK::Shared::RepoBranch.new(
+res = s.branch.update_repo_branch(repo_branch=::UnifiedRubySDK::Shared::RepoBranch.new(
   name: "<value>",
   repo_id: "<id>",
-), fields_=[
+), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -259,12 +259,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `connection_id`                                                                      | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the connection                                                                 |
-| `id`                                                                                 | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the Branch                                                                     |
-| `repo_branch`                                                                        | [T.nilable(::UnifiedRubySDK::Shared::RepoBranch)](../../models/shared/repobranch.md) | :heavy_minus_sign:                                                                   | N/A                                                                                  |
-| `fields_`                                                                            | T::Array<*::String*>                                                                 | :heavy_minus_sign:                                                                   | Comma-delimited fields to return                                                     |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `repo_branch`                                                             | [::UnifiedRubySDK::Shared::RepoBranch](../../models/shared/repobranch.md) | :heavy_check_mark:                                                        | N/A                                                                       |
+| `connection_id`                                                           | *::String*                                                                | :heavy_check_mark:                                                        | ID of the connection                                                      |
+| `id`                                                                      | *::String*                                                                | :heavy_check_mark:                                                        | ID of the Branch                                                          |
+| `fields_`                                                                 | T::Array<*::String*>                                                      | :heavy_minus_sign:                                                        | Comma-delimited fields to return                                          |
 
 ### Response
 

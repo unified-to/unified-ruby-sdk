@@ -13,17 +13,17 @@ module UnifiedRubySDK
 
       # ID of the connection
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+
+      field :repo_branch, ::UnifiedRubySDK::Shared::RepoBranch, { 'request': { 'media_type': 'application/json' } }
       # Comma-delimited fields to return
       field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
-      field :repo_branch, T.nilable(::UnifiedRubySDK::Shared::RepoBranch), { 'request': { 'media_type': 'application/json' } }
 
-
-      sig { params(connection_id: ::String, fields_: T.nilable(T::Array[::String]), repo_branch: T.nilable(::UnifiedRubySDK::Shared::RepoBranch)).void }
-      def initialize(connection_id: nil, fields_: nil, repo_branch: nil)
+      sig { params(connection_id: ::String, repo_branch: ::UnifiedRubySDK::Shared::RepoBranch, fields_: T.nilable(T::Array[::String])).void }
+      def initialize(connection_id: nil, repo_branch: nil, fields_: nil)
         @connection_id = connection_id
-        @fields_ = fields_
         @repo_branch = repo_branch
+        @fields_ = fields_
       end
     end
   end

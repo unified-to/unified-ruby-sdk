@@ -11,21 +11,21 @@ module UnifiedRubySDK
     class UpdateAccountingAccountRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
+      # Chart of accounts
+      field :accounting_account, ::UnifiedRubySDK::Shared::AccountingAccount, { 'request': { 'media_type': 'application/json' } }
       # ID of the connection
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
       # ID of the Account
       field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
-      # Chart of accounts
-      field :accounting_account, T.nilable(::UnifiedRubySDK::Shared::AccountingAccount), { 'request': { 'media_type': 'application/json' } }
       # Comma-delimited fields to return
       field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, id: ::String, accounting_account: T.nilable(::UnifiedRubySDK::Shared::AccountingAccount), fields_: T.nilable(T::Array[::String])).void }
-      def initialize(connection_id: nil, id: nil, accounting_account: nil, fields_: nil)
+      sig { params(accounting_account: ::UnifiedRubySDK::Shared::AccountingAccount, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).void }
+      def initialize(accounting_account: nil, connection_id: nil, id: nil, fields_: nil)
+        @accounting_account = accounting_account
         @connection_id = connection_id
         @id = id
-        @accounting_account = accounting_account
         @fields_ = fields_
       end
     end

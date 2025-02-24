@@ -14,12 +14,12 @@ module UnifiedRubySDK
       # ID of the connection
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
       # A contact represents a person that optionally is associated with a deal and/or a company
-      field :crm_contact, T.nilable(::UnifiedRubySDK::Shared::CrmContact), { 'request': { 'media_type': 'application/json' } }
+      field :crm_contact, ::UnifiedRubySDK::Shared::CrmContact, { 'request': { 'media_type': 'application/json' } }
       # Comma-delimited fields to return
       field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact), fields_: T.nilable(T::Array[::String])).void }
+      sig { params(connection_id: ::String, crm_contact: ::UnifiedRubySDK::Shared::CrmContact, fields_: T.nilable(T::Array[::String])).void }
       def initialize(connection_id: nil, crm_contact: nil, fields_: nil)
         @connection_id = connection_id
         @crm_contact = crm_contact

@@ -106,10 +106,10 @@ end
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `webhook`                                                                      | [T.nilable(::UnifiedRubySDK::Shared::Webhook)](../../models/shared/webhook.md) | :heavy_minus_sign:                                                             | A webhook is used to POST new/updated information to your server.              |
-| `include_all`                                                                  | *T.nilable(T::Boolean)*                                                        | :heavy_minus_sign:                                                             | When set, all of the existing data will sent back to your server.              |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `webhook`                                                           | [::UnifiedRubySDK::Shared::Webhook](../../models/shared/webhook.md) | :heavy_check_mark:                                                  | A webhook is used to POST new/updated information to your server.   |
+| `include_all`                                                       | *T.nilable(T::Boolean)*                                             | :heavy_minus_sign:                                                  | When set, all of the existing data will sent back to your server.   |
 
 ### Response
 
@@ -534,7 +534,7 @@ s.config_security(
 )
 
     
-res = s.unified.patch_unified_connection(id="<id>", connection=::UnifiedRubySDK::Shared::Connection.new(
+res = s.unified.patch_unified_connection(connection=::UnifiedRubySDK::Shared::Connection.new(
   categories: [
     ::UnifiedRubySDK::Shared::PropertyConnectionCategories::GENAI,
   ],
@@ -542,7 +542,7 @@ res = s.unified.patch_unified_connection(id="<id>", connection=::UnifiedRubySDK:
   permissions: [
     ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::METADATA_METADATA_WRITE,
   ],
-))
+), id="<id>")
 
 if ! res.connection.nil?
   # handle response
@@ -552,10 +552,10 @@ end
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `id`                                                                                 | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the Connection                                                                 |
-| `connection`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::Connection)](../../models/shared/connection.md) | :heavy_minus_sign:                                                                   | A connection represents a specific authentication of an integration.                 |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `connection`                                                              | [::UnifiedRubySDK::Shared::Connection](../../models/shared/connection.md) | :heavy_check_mark:                                                        | A connection represents a specific authentication of an integration.      |
+| `id`                                                                      | *::String*                                                                | :heavy_check_mark:                                                        | ID of the Connection                                                      |
 
 ### Response
 
@@ -581,11 +581,11 @@ s.config_security(
 )
 
     
-res = s.unified.patch_unified_webhook(id="<id>", webhook=::UnifiedRubySDK::Shared::Webhook.new(
+res = s.unified.patch_unified_webhook(webhook=::UnifiedRubySDK::Shared::Webhook.new(
   connection_id: "<id>",
   event: ::UnifiedRubySDK::Shared::Event::DELETED,
   object_type: ::UnifiedRubySDK::Shared::ObjectType::CRM_DEAL,
-))
+), id="<id>")
 
 if ! res.webhook.nil?
   # handle response
@@ -595,10 +595,10 @@ end
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `id`                                                                           | *::String*                                                                     | :heavy_check_mark:                                                             | ID of the Webhook                                                              |
-| `webhook`                                                                      | [T.nilable(::UnifiedRubySDK::Shared::Webhook)](../../models/shared/webhook.md) | :heavy_minus_sign:                                                             | A webhook is used to POST new/updated information to your server.              |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `webhook`                                                           | [::UnifiedRubySDK::Shared::Webhook](../../models/shared/webhook.md) | :heavy_check_mark:                                                  | A webhook is used to POST new/updated information to your server.   |
+| `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Webhook                                                   |
 
 ### Response
 
@@ -738,7 +738,7 @@ s.config_security(
 )
 
     
-res = s.unified.update_unified_connection(id="<id>", connection=::UnifiedRubySDK::Shared::Connection.new(
+res = s.unified.update_unified_connection(connection=::UnifiedRubySDK::Shared::Connection.new(
   categories: [
     ::UnifiedRubySDK::Shared::PropertyConnectionCategories::TASK,
   ],
@@ -746,7 +746,7 @@ res = s.unified.update_unified_connection(id="<id>", connection=::UnifiedRubySDK
   permissions: [
     ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::REPO_PULLREQUEST_WRITE,
   ],
-))
+), id="<id>")
 
 if ! res.connection.nil?
   # handle response
@@ -756,10 +756,10 @@ end
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `id`                                                                                 | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the Connection                                                                 |
-| `connection`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::Connection)](../../models/shared/connection.md) | :heavy_minus_sign:                                                                   | A connection represents a specific authentication of an integration.                 |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `connection`                                                              | [::UnifiedRubySDK::Shared::Connection](../../models/shared/connection.md) | :heavy_check_mark:                                                        | A connection represents a specific authentication of an integration.      |
+| `id`                                                                      | *::String*                                                                | :heavy_check_mark:                                                        | ID of the Connection                                                      |
 
 ### Response
 
@@ -785,11 +785,11 @@ s.config_security(
 )
 
     
-res = s.unified.update_unified_webhook(id="<id>", webhook=::UnifiedRubySDK::Shared::Webhook.new(
+res = s.unified.update_unified_webhook(webhook=::UnifiedRubySDK::Shared::Webhook.new(
   connection_id: "<id>",
   event: ::UnifiedRubySDK::Shared::Event::CREATED,
   object_type: ::UnifiedRubySDK::Shared::ObjectType::PAYMENT_LINK,
-))
+), id="<id>")
 
 if ! res.webhook.nil?
   # handle response
@@ -799,10 +799,10 @@ end
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `id`                                                                           | *::String*                                                                     | :heavy_check_mark:                                                             | ID of the Webhook                                                              |
-| `webhook`                                                                      | [T.nilable(::UnifiedRubySDK::Shared::Webhook)](../../models/shared/webhook.md) | :heavy_minus_sign:                                                             | A webhook is used to POST new/updated information to your server.              |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `webhook`                                                           | [::UnifiedRubySDK::Shared::Webhook](../../models/shared/webhook.md) | :heavy_check_mark:                                                  | A webhook is used to POST new/updated information to your server.   |
+| `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Webhook                                                   |
 
 ### Response
 

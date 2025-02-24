@@ -30,7 +30,7 @@ s.config_security(
 )
 
     
-res = s.pullrequest.create_repo_pullrequest(connection_id="<id>", repo_pullrequest=::UnifiedRubySDK::Shared::RepoPullrequest.new(), fields_=[
+res = s.pullrequest.create_repo_pullrequest(repo_pullrequest=::UnifiedRubySDK::Shared::RepoPullrequest.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -42,11 +42,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the connection                                                                           |
-| `repo_pullrequest`                                                                             | [T.nilable(::UnifiedRubySDK::Shared::RepoPullrequest)](../../models/shared/repopullrequest.md) | :heavy_minus_sign:                                                                             | N/A                                                                                            |
-| `fields_`                                                                                      | T::Array<*::String*>                                                                           | :heavy_minus_sign:                                                                             | Comma-delimited fields to return                                                               |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `repo_pullrequest`                                                                  | [::UnifiedRubySDK::Shared::RepoPullrequest](../../models/shared/repopullrequest.md) | :heavy_check_mark:                                                                  | N/A                                                                                 |
+| `connection_id`                                                                     | *::String*                                                                          | :heavy_check_mark:                                                                  | ID of the connection                                                                |
+| `fields_`                                                                           | T::Array<*::String*>                                                                | :heavy_minus_sign:                                                                  | Comma-delimited fields to return                                                    |
 
 ### Response
 
@@ -156,7 +156,7 @@ s.config_security(
 )
 
     
-res = s.pullrequest.patch_repo_pullrequest(connection_id="<id>", id="<id>", repo_pullrequest=::UnifiedRubySDK::Shared::RepoPullrequest.new(), fields_=[
+res = s.pullrequest.patch_repo_pullrequest(repo_pullrequest=::UnifiedRubySDK::Shared::RepoPullrequest.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -168,12 +168,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the connection                                                                           |
-| `id`                                                                                           | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the Pullrequest                                                                          |
-| `repo_pullrequest`                                                                             | [T.nilable(::UnifiedRubySDK::Shared::RepoPullrequest)](../../models/shared/repopullrequest.md) | :heavy_minus_sign:                                                                             | N/A                                                                                            |
-| `fields_`                                                                                      | T::Array<*::String*>                                                                           | :heavy_minus_sign:                                                                             | Comma-delimited fields to return                                                               |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `repo_pullrequest`                                                                  | [::UnifiedRubySDK::Shared::RepoPullrequest](../../models/shared/repopullrequest.md) | :heavy_check_mark:                                                                  | N/A                                                                                 |
+| `connection_id`                                                                     | *::String*                                                                          | :heavy_check_mark:                                                                  | ID of the connection                                                                |
+| `id`                                                                                | *::String*                                                                          | :heavy_check_mark:                                                                  | ID of the Pullrequest                                                               |
+| `fields_`                                                                           | T::Array<*::String*>                                                                | :heavy_minus_sign:                                                                  | Comma-delimited fields to return                                                    |
 
 ### Response
 
@@ -238,7 +238,7 @@ s.config_security(
 )
 
     
-res = s.pullrequest.update_repo_pullrequest(connection_id="<id>", id="<id>", repo_pullrequest=::UnifiedRubySDK::Shared::RepoPullrequest.new(), fields_=[
+res = s.pullrequest.update_repo_pullrequest(repo_pullrequest=::UnifiedRubySDK::Shared::RepoPullrequest.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -250,12 +250,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the connection                                                                           |
-| `id`                                                                                           | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the Pullrequest                                                                          |
-| `repo_pullrequest`                                                                             | [T.nilable(::UnifiedRubySDK::Shared::RepoPullrequest)](../../models/shared/repopullrequest.md) | :heavy_minus_sign:                                                                             | N/A                                                                                            |
-| `fields_`                                                                                      | T::Array<*::String*>                                                                           | :heavy_minus_sign:                                                                             | Comma-delimited fields to return                                                               |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `repo_pullrequest`                                                                  | [::UnifiedRubySDK::Shared::RepoPullrequest](../../models/shared/repopullrequest.md) | :heavy_check_mark:                                                                  | N/A                                                                                 |
+| `connection_id`                                                                     | *::String*                                                                          | :heavy_check_mark:                                                                  | ID of the connection                                                                |
+| `id`                                                                                | *::String*                                                                          | :heavy_check_mark:                                                                  | ID of the Pullrequest                                                               |
+| `fields_`                                                                           | T::Array<*::String*>                                                                | :heavy_minus_sign:                                                                  | Comma-delimited fields to return                                                    |
 
 ### Response
 

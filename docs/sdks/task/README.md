@@ -42,10 +42,10 @@ s.config_security(
 )
 
     
-res = s.task.create_task_comment(connection_id="<id>", task_comment=::UnifiedRubySDK::Shared::TaskComment.new(
+res = s.task.create_task_comment(task_comment=::UnifiedRubySDK::Shared::TaskComment.new(
   task_id: "<id>",
   text: "<value>",
-), fields_=[
+), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -57,11 +57,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_id`                                                                        | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the connection                                                                   |
-| `task_comment`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::TaskComment)](../../models/shared/taskcomment.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
-| `fields_`                                                                              | T::Array<*::String*>                                                                   | :heavy_minus_sign:                                                                     | Comma-delimited fields to return                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `task_comment`                                                              | [::UnifiedRubySDK::Shared::TaskComment](../../models/shared/taskcomment.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -87,7 +87,7 @@ s.config_security(
 )
 
     
-res = s.task.create_task_project(connection_id="<id>", task_project=::UnifiedRubySDK::Shared::TaskProject.new(), fields_=[
+res = s.task.create_task_project(task_project=::UnifiedRubySDK::Shared::TaskProject.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -99,11 +99,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_id`                                                                        | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the connection                                                                   |
-| `task_project`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::TaskProject)](../../models/shared/taskproject.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
-| `fields_`                                                                              | T::Array<*::String*>                                                                   | :heavy_minus_sign:                                                                     | Comma-delimited fields to return                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `task_project`                                                              | [::UnifiedRubySDK::Shared::TaskProject](../../models/shared/taskproject.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -129,7 +129,7 @@ s.config_security(
 )
 
     
-res = s.task.create_task_task(connection_id="<id>", task_task=::UnifiedRubySDK::Shared::TaskTask.new(), fields_=[
+res = s.task.create_task_task(task_task=::UnifiedRubySDK::Shared::TaskTask.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -141,11 +141,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `connection_id`                                                                  | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the connection                                                             |
-| `task_task`                                                                      | [T.nilable(::UnifiedRubySDK::Shared::TaskTask)](../../models/shared/tasktask.md) | :heavy_minus_sign:                                                               | N/A                                                                              |
-| `fields_`                                                                        | T::Array<*::String*>                                                             | :heavy_minus_sign:                                                               | Comma-delimited fields to return                                                 |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `task_task`                                                           | [::UnifiedRubySDK::Shared::TaskTask](../../models/shared/tasktask.md) | :heavy_check_mark:                                                    | N/A                                                                   |
+| `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
+| `fields_`                                                             | T::Array<*::String*>                                                  | :heavy_minus_sign:                                                    | Comma-delimited fields to return                                      |
 
 ### Response
 
@@ -423,10 +423,10 @@ s.config_security(
 )
 
     
-res = s.task.patch_task_comment(connection_id="<id>", id="<id>", task_comment=::UnifiedRubySDK::Shared::TaskComment.new(
+res = s.task.patch_task_comment(task_comment=::UnifiedRubySDK::Shared::TaskComment.new(
   task_id: "<id>",
   text: "<value>",
-), fields_=[
+), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -438,12 +438,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_id`                                                                        | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the connection                                                                   |
-| `id`                                                                                   | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the Comment                                                                      |
-| `task_comment`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::TaskComment)](../../models/shared/taskcomment.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
-| `fields_`                                                                              | T::Array<*::String*>                                                                   | :heavy_minus_sign:                                                                     | Comma-delimited fields to return                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `task_comment`                                                              | [::UnifiedRubySDK::Shared::TaskComment](../../models/shared/taskcomment.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Comment                                                           |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -469,7 +469,7 @@ s.config_security(
 )
 
     
-res = s.task.patch_task_project(connection_id="<id>", id="<id>", task_project=::UnifiedRubySDK::Shared::TaskProject.new(), fields_=[
+res = s.task.patch_task_project(task_project=::UnifiedRubySDK::Shared::TaskProject.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -481,12 +481,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_id`                                                                        | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the connection                                                                   |
-| `id`                                                                                   | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the Project                                                                      |
-| `task_project`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::TaskProject)](../../models/shared/taskproject.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
-| `fields_`                                                                              | T::Array<*::String*>                                                                   | :heavy_minus_sign:                                                                     | Comma-delimited fields to return                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `task_project`                                                              | [::UnifiedRubySDK::Shared::TaskProject](../../models/shared/taskproject.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Project                                                           |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -512,7 +512,7 @@ s.config_security(
 )
 
     
-res = s.task.patch_task_task(connection_id="<id>", id="<id>", task_task=::UnifiedRubySDK::Shared::TaskTask.new(), fields_=[
+res = s.task.patch_task_task(task_task=::UnifiedRubySDK::Shared::TaskTask.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -524,12 +524,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `connection_id`                                                                  | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the connection                                                             |
-| `id`                                                                             | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the Task                                                                   |
-| `task_task`                                                                      | [T.nilable(::UnifiedRubySDK::Shared::TaskTask)](../../models/shared/tasktask.md) | :heavy_minus_sign:                                                               | N/A                                                                              |
-| `fields_`                                                                        | T::Array<*::String*>                                                             | :heavy_minus_sign:                                                               | Comma-delimited fields to return                                                 |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `task_task`                                                           | [::UnifiedRubySDK::Shared::TaskTask](../../models/shared/tasktask.md) | :heavy_check_mark:                                                    | N/A                                                                   |
+| `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
+| `id`                                                                  | *::String*                                                            | :heavy_check_mark:                                                    | ID of the Task                                                        |
+| `fields_`                                                             | T::Array<*::String*>                                                  | :heavy_minus_sign:                                                    | Comma-delimited fields to return                                      |
 
 ### Response
 
@@ -672,10 +672,10 @@ s.config_security(
 )
 
     
-res = s.task.update_task_comment(connection_id="<id>", id="<id>", task_comment=::UnifiedRubySDK::Shared::TaskComment.new(
+res = s.task.update_task_comment(task_comment=::UnifiedRubySDK::Shared::TaskComment.new(
   task_id: "<id>",
   text: "<value>",
-), fields_=[
+), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -687,12 +687,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_id`                                                                        | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the connection                                                                   |
-| `id`                                                                                   | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the Comment                                                                      |
-| `task_comment`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::TaskComment)](../../models/shared/taskcomment.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
-| `fields_`                                                                              | T::Array<*::String*>                                                                   | :heavy_minus_sign:                                                                     | Comma-delimited fields to return                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `task_comment`                                                              | [::UnifiedRubySDK::Shared::TaskComment](../../models/shared/taskcomment.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Comment                                                           |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -718,7 +718,7 @@ s.config_security(
 )
 
     
-res = s.task.update_task_project(connection_id="<id>", id="<id>", task_project=::UnifiedRubySDK::Shared::TaskProject.new(), fields_=[
+res = s.task.update_task_project(task_project=::UnifiedRubySDK::Shared::TaskProject.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -730,12 +730,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_id`                                                                        | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the connection                                                                   |
-| `id`                                                                                   | *::String*                                                                             | :heavy_check_mark:                                                                     | ID of the Project                                                                      |
-| `task_project`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::TaskProject)](../../models/shared/taskproject.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
-| `fields_`                                                                              | T::Array<*::String*>                                                                   | :heavy_minus_sign:                                                                     | Comma-delimited fields to return                                                       |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `task_project`                                                              | [::UnifiedRubySDK::Shared::TaskProject](../../models/shared/taskproject.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
+| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Project                                                           |
+| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
 
 ### Response
 
@@ -761,7 +761,7 @@ s.config_security(
 )
 
     
-res = s.task.update_task_task(connection_id="<id>", id="<id>", task_task=::UnifiedRubySDK::Shared::TaskTask.new(), fields_=[
+res = s.task.update_task_task(task_task=::UnifiedRubySDK::Shared::TaskTask.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -773,12 +773,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `connection_id`                                                                  | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the connection                                                             |
-| `id`                                                                             | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the Task                                                                   |
-| `task_task`                                                                      | [T.nilable(::UnifiedRubySDK::Shared::TaskTask)](../../models/shared/tasktask.md) | :heavy_minus_sign:                                                               | N/A                                                                              |
-| `fields_`                                                                        | T::Array<*::String*>                                                             | :heavy_minus_sign:                                                               | Comma-delimited fields to return                                                 |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `task_task`                                                           | [::UnifiedRubySDK::Shared::TaskTask](../../models/shared/tasktask.md) | :heavy_check_mark:                                                    | N/A                                                                   |
+| `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
+| `id`                                                                  | *::String*                                                            | :heavy_check_mark:                                                    | ID of the Task                                                        |
+| `fields_`                                                             | T::Array<*::String*>                                                  | :heavy_minus_sign:                                                    | Comma-delimited fields to return                                      |
 
 ### Response
 

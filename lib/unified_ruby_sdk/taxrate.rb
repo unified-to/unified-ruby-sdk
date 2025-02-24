@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, accounting_taxrate: T.nilable(::UnifiedRubySDK::Shared::AccountingTaxrate), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateAccountingTaxrateResponse) }
-    def create_accounting_taxrate(connection_id, accounting_taxrate = nil, fields_ = nil)
+    sig { params(accounting_taxrate: ::UnifiedRubySDK::Shared::AccountingTaxrate, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateAccountingTaxrateResponse) }
+    def create_accounting_taxrate(accounting_taxrate, connection_id, fields_ = nil)
       # create_accounting_taxrate - Create a taxrate
       request = ::UnifiedRubySDK::Operations::CreateAccountingTaxrateRequest.new(
         
-        connection_id: connection_id,
         accounting_taxrate: accounting_taxrate,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :accounting_taxrate, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateAccountingTaxrateRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -154,14 +155,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_taxrate: T.nilable(::UnifiedRubySDK::Shared::AccountingTaxrate), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchAccountingTaxrateResponse) }
-    def patch_accounting_taxrate(connection_id, id, accounting_taxrate = nil, fields_ = nil)
+    sig { params(accounting_taxrate: ::UnifiedRubySDK::Shared::AccountingTaxrate, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchAccountingTaxrateResponse) }
+    def patch_accounting_taxrate(accounting_taxrate, connection_id, id, fields_ = nil)
       # patch_accounting_taxrate - Update a taxrate
       request = ::UnifiedRubySDK::Operations::PatchAccountingTaxrateRequest.new(
         
+        accounting_taxrate: accounting_taxrate,
         connection_id: connection_id,
         id: id,
-        accounting_taxrate: accounting_taxrate,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -175,6 +176,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :accounting_taxrate, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchAccountingTaxrateRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -247,14 +249,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, accounting_taxrate: T.nilable(::UnifiedRubySDK::Shared::AccountingTaxrate), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateAccountingTaxrateResponse) }
-    def update_accounting_taxrate(connection_id, id, accounting_taxrate = nil, fields_ = nil)
+    sig { params(accounting_taxrate: ::UnifiedRubySDK::Shared::AccountingTaxrate, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateAccountingTaxrateResponse) }
+    def update_accounting_taxrate(accounting_taxrate, connection_id, id, fields_ = nil)
       # update_accounting_taxrate - Update a taxrate
       request = ::UnifiedRubySDK::Operations::UpdateAccountingTaxrateRequest.new(
         
+        accounting_taxrate: accounting_taxrate,
         connection_id: connection_id,
         id: id,
-        accounting_taxrate: accounting_taxrate,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -268,6 +270,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :accounting_taxrate, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateAccountingTaxrateRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

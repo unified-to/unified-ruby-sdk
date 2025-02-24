@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, storage_file: T.nilable(::UnifiedRubySDK::Shared::StorageFile), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateStorageFileResponse) }
-    def create_storage_file(connection_id, storage_file = nil, fields_ = nil)
+    sig { params(storage_file: ::UnifiedRubySDK::Shared::StorageFile, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateStorageFileResponse) }
+    def create_storage_file(storage_file, connection_id, fields_ = nil)
       # create_storage_file - Create a file
       request = ::UnifiedRubySDK::Operations::CreateStorageFileRequest.new(
         
-        connection_id: connection_id,
         storage_file: storage_file,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :storage_file, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateStorageFileRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -154,14 +155,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, storage_file: T.nilable(::UnifiedRubySDK::Shared::StorageFile), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchStorageFileResponse) }
-    def patch_storage_file(connection_id, id, storage_file = nil, fields_ = nil)
+    sig { params(storage_file: ::UnifiedRubySDK::Shared::StorageFile, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchStorageFileResponse) }
+    def patch_storage_file(storage_file, connection_id, id, fields_ = nil)
       # patch_storage_file - Update a file
       request = ::UnifiedRubySDK::Operations::PatchStorageFileRequest.new(
         
+        storage_file: storage_file,
         connection_id: connection_id,
         id: id,
-        storage_file: storage_file,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -175,6 +176,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :storage_file, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchStorageFileRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -247,14 +249,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, storage_file: T.nilable(::UnifiedRubySDK::Shared::StorageFile), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateStorageFileResponse) }
-    def update_storage_file(connection_id, id, storage_file = nil, fields_ = nil)
+    sig { params(storage_file: ::UnifiedRubySDK::Shared::StorageFile, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateStorageFileResponse) }
+    def update_storage_file(storage_file, connection_id, id, fields_ = nil)
       # update_storage_file - Update a file
       request = ::UnifiedRubySDK::Operations::UpdateStorageFileRequest.new(
         
+        storage_file: storage_file,
         connection_id: connection_id,
         id: id,
-        storage_file: storage_file,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -268,6 +270,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :storage_file, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateStorageFileRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

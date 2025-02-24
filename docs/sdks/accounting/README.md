@@ -68,7 +68,7 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_account(connection_id="<id>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), fields_=[
+res = s.accounting.create_accounting_account(accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -80,11 +80,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
-| `accounting_account`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::AccountingAccount)](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                                                 | Chart of accounts                                                                                  |
-| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `accounting_account`                                                                    | [::UnifiedRubySDK::Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_check_mark:                                                                      | Chart of accounts                                                                       |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -110,7 +110,7 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_contact(connection_id="<id>", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new(), fields_=[
+res = s.accounting.create_accounting_contact(accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -122,11 +122,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
-| `accounting_contact`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::AccountingContact)](../../models/shared/accountingcontact.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
-| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `accounting_contact`                                                                    | [::UnifiedRubySDK::Shared::AccountingContact](../../models/shared/accountingcontact.md) | :heavy_check_mark:                                                                      | N/A                                                                                     |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -152,7 +152,7 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_invoice(connection_id="<id>", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new(), fields_=[
+res = s.accounting.create_accounting_invoice(accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -164,11 +164,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
-| `accounting_invoice`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::AccountingInvoice)](../../models/shared/accountinginvoice.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
-| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `accounting_invoice`                                                                    | [::UnifiedRubySDK::Shared::AccountingInvoice](../../models/shared/accountinginvoice.md) | :heavy_check_mark:                                                                      | N/A                                                                                     |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -194,7 +194,7 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_journal(connection_id="<id>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), fields_=[
+res = s.accounting.create_accounting_journal(accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -206,11 +206,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
-| `accounting_journal`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::AccountingJournal)](../../models/shared/accountingjournal.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
-| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `accounting_journal`                                                                    | [::UnifiedRubySDK::Shared::AccountingJournal](../../models/shared/accountingjournal.md) | :heavy_check_mark:                                                                      | N/A                                                                                     |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -236,7 +236,7 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_order(connection_id="<id>", accounting_order=::UnifiedRubySDK::Shared::AccountingOrder.new(), fields_=[
+res = s.accounting.create_accounting_order(accounting_order=::UnifiedRubySDK::Shared::AccountingOrder.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -248,11 +248,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the connection                                                                           |
-| `accounting_order`                                                                             | [T.nilable(::UnifiedRubySDK::Shared::AccountingOrder)](../../models/shared/accountingorder.md) | :heavy_minus_sign:                                                                             | N/A                                                                                            |
-| `fields_`                                                                                      | T::Array<*::String*>                                                                           | :heavy_minus_sign:                                                                             | Comma-delimited fields to return                                                               |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `accounting_order`                                                                  | [::UnifiedRubySDK::Shared::AccountingOrder](../../models/shared/accountingorder.md) | :heavy_check_mark:                                                                  | N/A                                                                                 |
+| `connection_id`                                                                     | *::String*                                                                          | :heavy_check_mark:                                                                  | ID of the connection                                                                |
+| `fields_`                                                                           | T::Array<*::String*>                                                                | :heavy_minus_sign:                                                                  | Comma-delimited fields to return                                                    |
 
 ### Response
 
@@ -278,7 +278,7 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_taxrate(connection_id="<id>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(), fields_=[
+res = s.accounting.create_accounting_taxrate(accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -290,11 +290,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
-| `accounting_taxrate`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::AccountingTaxrate)](../../models/shared/accountingtaxrate.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
-| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `accounting_taxrate`                                                                    | [::UnifiedRubySDK::Shared::AccountingTaxrate](../../models/shared/accountingtaxrate.md) | :heavy_check_mark:                                                                      | N/A                                                                                     |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -320,7 +320,7 @@ s.config_security(
 )
 
     
-res = s.accounting.create_accounting_transaction(connection_id="<id>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(), fields_=[
+res = s.accounting.create_accounting_transaction(accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -332,11 +332,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                            | *::String*                                                                                                 | :heavy_check_mark:                                                                                         | ID of the connection                                                                                       |
-| `accounting_transaction`                                                                                   | [T.nilable(::UnifiedRubySDK::Shared::AccountingTransaction)](../../models/shared/accountingtransaction.md) | :heavy_minus_sign:                                                                                         | N/A                                                                                                        |
-| `fields_`                                                                                                  | T::Array<*::String*>                                                                                       | :heavy_minus_sign:                                                                                         | Comma-delimited fields to return                                                                           |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `accounting_transaction`                                                                        | [::UnifiedRubySDK::Shared::AccountingTransaction](../../models/shared/accountingtransaction.md) | :heavy_check_mark:                                                                              | N/A                                                                                             |
+| `connection_id`                                                                                 | *::String*                                                                                      | :heavy_check_mark:                                                                              | ID of the connection                                                                            |
+| `fields_`                                                                                       | T::Array<*::String*>                                                                            | :heavy_minus_sign:                                                                              | Comma-delimited fields to return                                                                |
 
 ### Response
 
@@ -1034,7 +1034,7 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_account(connection_id="<id>", id="<id>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), fields_=[
+res = s.accounting.patch_accounting_account(accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1046,12 +1046,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
-| `id`                                                                                               | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the Account                                                                                  |
-| `accounting_account`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::AccountingAccount)](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                                                 | Chart of accounts                                                                                  |
-| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `accounting_account`                                                                    | [::UnifiedRubySDK::Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_check_mark:                                                                      | Chart of accounts                                                                       |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Account                                                                       |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -1077,7 +1077,7 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_contact(connection_id="<id>", id="<id>", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new(), fields_=[
+res = s.accounting.patch_accounting_contact(accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1089,12 +1089,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
-| `id`                                                                                               | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the Contact                                                                                  |
-| `accounting_contact`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::AccountingContact)](../../models/shared/accountingcontact.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
-| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `accounting_contact`                                                                    | [::UnifiedRubySDK::Shared::AccountingContact](../../models/shared/accountingcontact.md) | :heavy_check_mark:                                                                      | N/A                                                                                     |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Contact                                                                       |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -1120,7 +1120,7 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_invoice(connection_id="<id>", id="<id>", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new(), fields_=[
+res = s.accounting.patch_accounting_invoice(accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1132,12 +1132,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
-| `id`                                                                                               | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the Invoice                                                                                  |
-| `accounting_invoice`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::AccountingInvoice)](../../models/shared/accountinginvoice.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
-| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `accounting_invoice`                                                                    | [::UnifiedRubySDK::Shared::AccountingInvoice](../../models/shared/accountinginvoice.md) | :heavy_check_mark:                                                                      | N/A                                                                                     |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Invoice                                                                       |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -1163,7 +1163,7 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_journal(connection_id="<id>", id="<id>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), fields_=[
+res = s.accounting.patch_accounting_journal(accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1175,12 +1175,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
-| `id`                                                                                               | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the Journal                                                                                  |
-| `accounting_journal`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::AccountingJournal)](../../models/shared/accountingjournal.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
-| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `accounting_journal`                                                                    | [::UnifiedRubySDK::Shared::AccountingJournal](../../models/shared/accountingjournal.md) | :heavy_check_mark:                                                                      | N/A                                                                                     |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Journal                                                                       |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -1206,7 +1206,7 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_order(connection_id="<id>", id="<id>", accounting_order=::UnifiedRubySDK::Shared::AccountingOrder.new(), fields_=[
+res = s.accounting.patch_accounting_order(accounting_order=::UnifiedRubySDK::Shared::AccountingOrder.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1218,12 +1218,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the connection                                                                           |
-| `id`                                                                                           | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the Order                                                                                |
-| `accounting_order`                                                                             | [T.nilable(::UnifiedRubySDK::Shared::AccountingOrder)](../../models/shared/accountingorder.md) | :heavy_minus_sign:                                                                             | N/A                                                                                            |
-| `fields_`                                                                                      | T::Array<*::String*>                                                                           | :heavy_minus_sign:                                                                             | Comma-delimited fields to return                                                               |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `accounting_order`                                                                  | [::UnifiedRubySDK::Shared::AccountingOrder](../../models/shared/accountingorder.md) | :heavy_check_mark:                                                                  | N/A                                                                                 |
+| `connection_id`                                                                     | *::String*                                                                          | :heavy_check_mark:                                                                  | ID of the connection                                                                |
+| `id`                                                                                | *::String*                                                                          | :heavy_check_mark:                                                                  | ID of the Order                                                                     |
+| `fields_`                                                                           | T::Array<*::String*>                                                                | :heavy_minus_sign:                                                                  | Comma-delimited fields to return                                                    |
 
 ### Response
 
@@ -1249,7 +1249,7 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_taxrate(connection_id="<id>", id="<id>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(), fields_=[
+res = s.accounting.patch_accounting_taxrate(accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1261,12 +1261,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
-| `id`                                                                                               | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the Taxrate                                                                                  |
-| `accounting_taxrate`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::AccountingTaxrate)](../../models/shared/accountingtaxrate.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
-| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `accounting_taxrate`                                                                    | [::UnifiedRubySDK::Shared::AccountingTaxrate](../../models/shared/accountingtaxrate.md) | :heavy_check_mark:                                                                      | N/A                                                                                     |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Taxrate                                                                       |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -1292,7 +1292,7 @@ s.config_security(
 )
 
     
-res = s.accounting.patch_accounting_transaction(connection_id="<id>", id="<id>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(), fields_=[
+res = s.accounting.patch_accounting_transaction(accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1304,12 +1304,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                            | *::String*                                                                                                 | :heavy_check_mark:                                                                                         | ID of the connection                                                                                       |
-| `id`                                                                                                       | *::String*                                                                                                 | :heavy_check_mark:                                                                                         | ID of the Transaction                                                                                      |
-| `accounting_transaction`                                                                                   | [T.nilable(::UnifiedRubySDK::Shared::AccountingTransaction)](../../models/shared/accountingtransaction.md) | :heavy_minus_sign:                                                                                         | N/A                                                                                                        |
-| `fields_`                                                                                                  | T::Array<*::String*>                                                                                       | :heavy_minus_sign:                                                                                         | Comma-delimited fields to return                                                                           |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `accounting_transaction`                                                                        | [::UnifiedRubySDK::Shared::AccountingTransaction](../../models/shared/accountingtransaction.md) | :heavy_check_mark:                                                                              | N/A                                                                                             |
+| `connection_id`                                                                                 | *::String*                                                                                      | :heavy_check_mark:                                                                              | ID of the connection                                                                            |
+| `id`                                                                                            | *::String*                                                                                      | :heavy_check_mark:                                                                              | ID of the Transaction                                                                           |
+| `fields_`                                                                                       | T::Array<*::String*>                                                                            | :heavy_minus_sign:                                                                              | Comma-delimited fields to return                                                                |
 
 ### Response
 
@@ -1608,7 +1608,7 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_account(connection_id="<id>", id="<id>", accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), fields_=[
+res = s.accounting.update_accounting_account(accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1620,12 +1620,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
-| `id`                                                                                               | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the Account                                                                                  |
-| `accounting_account`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::AccountingAccount)](../../models/shared/accountingaccount.md) | :heavy_minus_sign:                                                                                 | Chart of accounts                                                                                  |
-| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `accounting_account`                                                                    | [::UnifiedRubySDK::Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_check_mark:                                                                      | Chart of accounts                                                                       |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Account                                                                       |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -1651,7 +1651,7 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_contact(connection_id="<id>", id="<id>", accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new(), fields_=[
+res = s.accounting.update_accounting_contact(accounting_contact=::UnifiedRubySDK::Shared::AccountingContact.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1663,12 +1663,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
-| `id`                                                                                               | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the Contact                                                                                  |
-| `accounting_contact`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::AccountingContact)](../../models/shared/accountingcontact.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
-| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `accounting_contact`                                                                    | [::UnifiedRubySDK::Shared::AccountingContact](../../models/shared/accountingcontact.md) | :heavy_check_mark:                                                                      | N/A                                                                                     |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Contact                                                                       |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -1694,7 +1694,7 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_invoice(connection_id="<id>", id="<id>", accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new(), fields_=[
+res = s.accounting.update_accounting_invoice(accounting_invoice=::UnifiedRubySDK::Shared::AccountingInvoice.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1706,12 +1706,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
-| `id`                                                                                               | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the Invoice                                                                                  |
-| `accounting_invoice`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::AccountingInvoice)](../../models/shared/accountinginvoice.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
-| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `accounting_invoice`                                                                    | [::UnifiedRubySDK::Shared::AccountingInvoice](../../models/shared/accountinginvoice.md) | :heavy_check_mark:                                                                      | N/A                                                                                     |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Invoice                                                                       |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -1737,7 +1737,7 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_journal(connection_id="<id>", id="<id>", accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), fields_=[
+res = s.accounting.update_accounting_journal(accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1749,12 +1749,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
-| `id`                                                                                               | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the Journal                                                                                  |
-| `accounting_journal`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::AccountingJournal)](../../models/shared/accountingjournal.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
-| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `accounting_journal`                                                                    | [::UnifiedRubySDK::Shared::AccountingJournal](../../models/shared/accountingjournal.md) | :heavy_check_mark:                                                                      | N/A                                                                                     |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Journal                                                                       |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -1780,7 +1780,7 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_order(connection_id="<id>", id="<id>", accounting_order=::UnifiedRubySDK::Shared::AccountingOrder.new(), fields_=[
+res = s.accounting.update_accounting_order(accounting_order=::UnifiedRubySDK::Shared::AccountingOrder.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1792,12 +1792,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the connection                                                                           |
-| `id`                                                                                           | *::String*                                                                                     | :heavy_check_mark:                                                                             | ID of the Order                                                                                |
-| `accounting_order`                                                                             | [T.nilable(::UnifiedRubySDK::Shared::AccountingOrder)](../../models/shared/accountingorder.md) | :heavy_minus_sign:                                                                             | N/A                                                                                            |
-| `fields_`                                                                                      | T::Array<*::String*>                                                                           | :heavy_minus_sign:                                                                             | Comma-delimited fields to return                                                               |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `accounting_order`                                                                  | [::UnifiedRubySDK::Shared::AccountingOrder](../../models/shared/accountingorder.md) | :heavy_check_mark:                                                                  | N/A                                                                                 |
+| `connection_id`                                                                     | *::String*                                                                          | :heavy_check_mark:                                                                  | ID of the connection                                                                |
+| `id`                                                                                | *::String*                                                                          | :heavy_check_mark:                                                                  | ID of the Order                                                                     |
+| `fields_`                                                                           | T::Array<*::String*>                                                                | :heavy_minus_sign:                                                                  | Comma-delimited fields to return                                                    |
 
 ### Response
 
@@ -1823,7 +1823,7 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_taxrate(connection_id="<id>", id="<id>", accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(), fields_=[
+res = s.accounting.update_accounting_taxrate(accounting_taxrate=::UnifiedRubySDK::Shared::AccountingTaxrate.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1835,12 +1835,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                    | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the connection                                                                               |
-| `id`                                                                                               | *::String*                                                                                         | :heavy_check_mark:                                                                                 | ID of the Taxrate                                                                                  |
-| `accounting_taxrate`                                                                               | [T.nilable(::UnifiedRubySDK::Shared::AccountingTaxrate)](../../models/shared/accountingtaxrate.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
-| `fields_`                                                                                          | T::Array<*::String*>                                                                               | :heavy_minus_sign:                                                                                 | Comma-delimited fields to return                                                                   |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `accounting_taxrate`                                                                    | [::UnifiedRubySDK::Shared::AccountingTaxrate](../../models/shared/accountingtaxrate.md) | :heavy_check_mark:                                                                      | N/A                                                                                     |
+| `connection_id`                                                                         | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the connection                                                                    |
+| `id`                                                                                    | *::String*                                                                              | :heavy_check_mark:                                                                      | ID of the Taxrate                                                                       |
+| `fields_`                                                                               | T::Array<*::String*>                                                                    | :heavy_minus_sign:                                                                      | Comma-delimited fields to return                                                        |
 
 ### Response
 
@@ -1866,7 +1866,7 @@ s.config_security(
 )
 
     
-res = s.accounting.update_accounting_transaction(connection_id="<id>", id="<id>", accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(), fields_=[
+res = s.accounting.update_accounting_transaction(accounting_transaction=::UnifiedRubySDK::Shared::AccountingTransaction.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -1878,12 +1878,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                            | *::String*                                                                                                 | :heavy_check_mark:                                                                                         | ID of the connection                                                                                       |
-| `id`                                                                                                       | *::String*                                                                                                 | :heavy_check_mark:                                                                                         | ID of the Transaction                                                                                      |
-| `accounting_transaction`                                                                                   | [T.nilable(::UnifiedRubySDK::Shared::AccountingTransaction)](../../models/shared/accountingtransaction.md) | :heavy_minus_sign:                                                                                         | N/A                                                                                                        |
-| `fields_`                                                                                                  | T::Array<*::String*>                                                                                       | :heavy_minus_sign:                                                                                         | Comma-delimited fields to return                                                                           |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `accounting_transaction`                                                                        | [::UnifiedRubySDK::Shared::AccountingTransaction](../../models/shared/accountingtransaction.md) | :heavy_check_mark:                                                                              | N/A                                                                                             |
+| `connection_id`                                                                                 | *::String*                                                                                      | :heavy_check_mark:                                                                              | ID of the connection                                                                            |
+| `id`                                                                                            | *::String*                                                                                      | :heavy_check_mark:                                                                              | ID of the Transaction                                                                           |
+| `fields_`                                                                                       | T::Array<*::String*>                                                                            | :heavy_minus_sign:                                                                              | Comma-delimited fields to return                                                                |
 
 ### Response
 

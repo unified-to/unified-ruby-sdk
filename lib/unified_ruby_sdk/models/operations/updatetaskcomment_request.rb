@@ -15,18 +15,18 @@ module UnifiedRubySDK
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
       # ID of the Comment
       field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
+
+      field :task_comment, ::UnifiedRubySDK::Shared::TaskComment, { 'request': { 'media_type': 'application/json' } }
       # Comma-delimited fields to return
       field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
-      field :task_comment, T.nilable(::UnifiedRubySDK::Shared::TaskComment), { 'request': { 'media_type': 'application/json' } }
 
-
-      sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), task_comment: T.nilable(::UnifiedRubySDK::Shared::TaskComment)).void }
-      def initialize(connection_id: nil, id: nil, fields_: nil, task_comment: nil)
+      sig { params(connection_id: ::String, id: ::String, task_comment: ::UnifiedRubySDK::Shared::TaskComment, fields_: T.nilable(T::Array[::String])).void }
+      def initialize(connection_id: nil, id: nil, task_comment: nil, fields_: nil)
         @connection_id = connection_id
         @id = id
-        @fields_ = fields_
         @task_comment = task_comment
+        @fields_ = fields_
       end
     end
   end

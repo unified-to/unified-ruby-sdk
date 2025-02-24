@@ -30,10 +30,10 @@ s.config_security(
 )
 
     
-res = s.metadata.create_metadata_metadata(connection_id="<id>", metadata_metadata=::UnifiedRubySDK::Shared::MetadataMetadata.new(
+res = s.metadata.create_metadata_metadata(metadata_metadata=::UnifiedRubySDK::Shared::MetadataMetadata.new(
   name: "<value>",
   object_type: "<value>",
-), fields_=[
+), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -45,11 +45,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `connection_id`                                                                                  | *::String*                                                                                       | :heavy_check_mark:                                                                               | ID of the connection                                                                             |
-| `metadata_metadata`                                                                              | [T.nilable(::UnifiedRubySDK::Shared::MetadataMetadata)](../../models/shared/metadatametadata.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
-| `fields_`                                                                                        | T::Array<*::String*>                                                                             | :heavy_minus_sign:                                                                               | Comma-delimited fields to return                                                                 |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `metadata_metadata`                                                                   | [::UnifiedRubySDK::Shared::MetadataMetadata](../../models/shared/metadatametadata.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `connection_id`                                                                       | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the connection                                                                  |
+| `fields_`                                                                             | T::Array<*::String*>                                                                  | :heavy_minus_sign:                                                                    | Comma-delimited fields to return                                                      |
 
 ### Response
 
@@ -159,10 +159,10 @@ s.config_security(
 )
 
     
-res = s.metadata.patch_metadata_metadata(connection_id="<id>", id="<id>", metadata_metadata=::UnifiedRubySDK::Shared::MetadataMetadata.new(
+res = s.metadata.patch_metadata_metadata(metadata_metadata=::UnifiedRubySDK::Shared::MetadataMetadata.new(
   name: "<value>",
   object_type: "<value>",
-), fields_=[
+), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -174,12 +174,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `connection_id`                                                                                  | *::String*                                                                                       | :heavy_check_mark:                                                                               | ID of the connection                                                                             |
-| `id`                                                                                             | *::String*                                                                                       | :heavy_check_mark:                                                                               | ID of the Metadata                                                                               |
-| `metadata_metadata`                                                                              | [T.nilable(::UnifiedRubySDK::Shared::MetadataMetadata)](../../models/shared/metadatametadata.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
-| `fields_`                                                                                        | T::Array<*::String*>                                                                             | :heavy_minus_sign:                                                                               | Comma-delimited fields to return                                                                 |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `metadata_metadata`                                                                   | [::UnifiedRubySDK::Shared::MetadataMetadata](../../models/shared/metadatametadata.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `connection_id`                                                                       | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the connection                                                                  |
+| `id`                                                                                  | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the Metadata                                                                    |
+| `fields_`                                                                             | T::Array<*::String*>                                                                  | :heavy_minus_sign:                                                                    | Comma-delimited fields to return                                                      |
 
 ### Response
 
@@ -244,10 +244,10 @@ s.config_security(
 )
 
     
-res = s.metadata.update_metadata_metadata(connection_id="<id>", id="<id>", metadata_metadata=::UnifiedRubySDK::Shared::MetadataMetadata.new(
+res = s.metadata.update_metadata_metadata(metadata_metadata=::UnifiedRubySDK::Shared::MetadataMetadata.new(
   name: "<value>",
   object_type: "<value>",
-), fields_=[
+), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -259,12 +259,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `connection_id`                                                                                  | *::String*                                                                                       | :heavy_check_mark:                                                                               | ID of the connection                                                                             |
-| `id`                                                                                             | *::String*                                                                                       | :heavy_check_mark:                                                                               | ID of the Metadata                                                                               |
-| `metadata_metadata`                                                                              | [T.nilable(::UnifiedRubySDK::Shared::MetadataMetadata)](../../models/shared/metadatametadata.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
-| `fields_`                                                                                        | T::Array<*::String*>                                                                             | :heavy_minus_sign:                                                                               | Comma-delimited fields to return                                                                 |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `metadata_metadata`                                                                   | [::UnifiedRubySDK::Shared::MetadataMetadata](../../models/shared/metadatametadata.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `connection_id`                                                                       | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the connection                                                                  |
+| `id`                                                                                  | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the Metadata                                                                    |
+| `fields_`                                                                             | T::Array<*::String*>                                                                  | :heavy_minus_sign:                                                                    | Comma-delimited fields to return                                                      |
 
 ### Response
 

@@ -14,10 +14,10 @@ module UnifiedRubySDK
       # ID of the Webhook
       field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
       # A webhook is used to POST new/updated information to your server.
-      field :webhook, T.nilable(::UnifiedRubySDK::Shared::Webhook), { 'request': { 'media_type': 'application/json' } }
+      field :webhook, ::UnifiedRubySDK::Shared::Webhook, { 'request': { 'media_type': 'application/json' } }
 
 
-      sig { params(id: ::String, webhook: T.nilable(::UnifiedRubySDK::Shared::Webhook)).void }
+      sig { params(id: ::String, webhook: ::UnifiedRubySDK::Shared::Webhook).void }
       def initialize(id: nil, webhook: nil)
         @id = id
         @webhook = webhook

@@ -16,10 +16,10 @@ module UnifiedRubySDK
       # ID of the Group
       field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
 
-      field :scim_group, T.nilable(::UnifiedRubySDK::Shared::ScimGroup), { 'request': { 'media_type': 'application/json' } }
+      field :scim_group, ::UnifiedRubySDK::Shared::ScimGroup, { 'request': { 'media_type': 'application/json' } }
 
 
-      sig { params(connection_id: ::String, id: ::String, scim_group: T.nilable(::UnifiedRubySDK::Shared::ScimGroup)).void }
+      sig { params(connection_id: ::String, id: ::String, scim_group: ::UnifiedRubySDK::Shared::ScimGroup).void }
       def initialize(connection_id: nil, id: nil, scim_group: nil)
         @connection_id = connection_id
         @id = id

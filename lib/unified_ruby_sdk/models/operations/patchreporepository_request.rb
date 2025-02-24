@@ -15,18 +15,18 @@ module UnifiedRubySDK
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
       # ID of the Repository
       field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
+
+      field :repo_repository, ::UnifiedRubySDK::Shared::RepoRepository, { 'request': { 'media_type': 'application/json' } }
       # Comma-delimited fields to return
       field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
-      field :repo_repository, T.nilable(::UnifiedRubySDK::Shared::RepoRepository), { 'request': { 'media_type': 'application/json' } }
 
-
-      sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), repo_repository: T.nilable(::UnifiedRubySDK::Shared::RepoRepository)).void }
-      def initialize(connection_id: nil, id: nil, fields_: nil, repo_repository: nil)
+      sig { params(connection_id: ::String, id: ::String, repo_repository: ::UnifiedRubySDK::Shared::RepoRepository, fields_: T.nilable(T::Array[::String])).void }
+      def initialize(connection_id: nil, id: nil, repo_repository: nil, fields_: nil)
         @connection_id = connection_id
         @id = id
-        @fields_ = fields_
         @repo_repository = repo_repository
+        @fields_ = fields_
       end
     end
   end

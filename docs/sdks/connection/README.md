@@ -156,7 +156,7 @@ s.config_security(
 )
 
     
-res = s.connection.patch_unified_connection(id="<id>", connection=::UnifiedRubySDK::Shared::Connection.new(
+res = s.connection.patch_unified_connection(connection=::UnifiedRubySDK::Shared::Connection.new(
   categories: [
     ::UnifiedRubySDK::Shared::PropertyConnectionCategories::GENAI,
   ],
@@ -164,7 +164,7 @@ res = s.connection.patch_unified_connection(id="<id>", connection=::UnifiedRubyS
   permissions: [
     ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::METADATA_METADATA_WRITE,
   ],
-))
+), id="<id>")
 
 if ! res.connection.nil?
   # handle response
@@ -174,10 +174,10 @@ end
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `id`                                                                                 | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the Connection                                                                 |
-| `connection`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::Connection)](../../models/shared/connection.md) | :heavy_minus_sign:                                                                   | A connection represents a specific authentication of an integration.                 |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `connection`                                                              | [::UnifiedRubySDK::Shared::Connection](../../models/shared/connection.md) | :heavy_check_mark:                                                        | A connection represents a specific authentication of an integration.      |
+| `id`                                                                      | *::String*                                                                | :heavy_check_mark:                                                        | ID of the Connection                                                      |
 
 ### Response
 
@@ -241,7 +241,7 @@ s.config_security(
 )
 
     
-res = s.connection.update_unified_connection(id="<id>", connection=::UnifiedRubySDK::Shared::Connection.new(
+res = s.connection.update_unified_connection(connection=::UnifiedRubySDK::Shared::Connection.new(
   categories: [
     ::UnifiedRubySDK::Shared::PropertyConnectionCategories::TASK,
   ],
@@ -249,7 +249,7 @@ res = s.connection.update_unified_connection(id="<id>", connection=::UnifiedRuby
   permissions: [
     ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::REPO_PULLREQUEST_WRITE,
   ],
-))
+), id="<id>")
 
 if ! res.connection.nil?
   # handle response
@@ -259,10 +259,10 @@ end
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `id`                                                                                 | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the Connection                                                                 |
-| `connection`                                                                         | [T.nilable(::UnifiedRubySDK::Shared::Connection)](../../models/shared/connection.md) | :heavy_minus_sign:                                                                   | A connection represents a specific authentication of an integration.                 |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `connection`                                                              | [::UnifiedRubySDK::Shared::Connection](../../models/shared/connection.md) | :heavy_check_mark:                                                        | A connection represents a specific authentication of an integration.      |
+| `id`                                                                      | *::String*                                                                | :heavy_check_mark:                                                        | ID of the Connection                                                      |
 
 ### Response
 

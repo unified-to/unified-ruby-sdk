@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, ticketing_note: T.nilable(::UnifiedRubySDK::Shared::TicketingNote), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateTicketingNoteResponse) }
-    def create_ticketing_note(connection_id, ticketing_note = nil, fields_ = nil)
+    sig { params(ticketing_note: ::UnifiedRubySDK::Shared::TicketingNote, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateTicketingNoteResponse) }
+    def create_ticketing_note(ticketing_note, connection_id, fields_ = nil)
       # create_ticketing_note - Create a note
       request = ::UnifiedRubySDK::Operations::CreateTicketingNoteRequest.new(
         
-        connection_id: connection_id,
         ticketing_note: ticketing_note,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ticketing_note, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateTicketingNoteRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -154,14 +155,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ticketing_note: T.nilable(::UnifiedRubySDK::Shared::TicketingNote), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchTicketingNoteResponse) }
-    def patch_ticketing_note(connection_id, id, ticketing_note = nil, fields_ = nil)
+    sig { params(ticketing_note: ::UnifiedRubySDK::Shared::TicketingNote, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchTicketingNoteResponse) }
+    def patch_ticketing_note(ticketing_note, connection_id, id, fields_ = nil)
       # patch_ticketing_note - Update a note
       request = ::UnifiedRubySDK::Operations::PatchTicketingNoteRequest.new(
         
+        ticketing_note: ticketing_note,
         connection_id: connection_id,
         id: id,
-        ticketing_note: ticketing_note,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -175,6 +176,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ticketing_note, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchTicketingNoteRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -247,14 +249,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, ticketing_note: T.nilable(::UnifiedRubySDK::Shared::TicketingNote), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateTicketingNoteResponse) }
-    def update_ticketing_note(connection_id, id, ticketing_note = nil, fields_ = nil)
+    sig { params(ticketing_note: ::UnifiedRubySDK::Shared::TicketingNote, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateTicketingNoteResponse) }
+    def update_ticketing_note(ticketing_note, connection_id, id, fields_ = nil)
       # update_ticketing_note - Update a note
       request = ::UnifiedRubySDK::Operations::UpdateTicketingNoteRequest.new(
         
+        ticketing_note: ticketing_note,
         connection_id: connection_id,
         id: id,
-        ticketing_note: ticketing_note,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -268,6 +270,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :ticketing_note, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateTicketingNoteRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

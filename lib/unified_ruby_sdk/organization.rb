@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, repo_organization: T.nilable(::UnifiedRubySDK::Shared::RepoOrganization), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateRepoOrganizationResponse) }
-    def create_repo_organization(connection_id, repo_organization = nil, fields_ = nil)
+    sig { params(repo_organization: ::UnifiedRubySDK::Shared::RepoOrganization, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateRepoOrganizationResponse) }
+    def create_repo_organization(repo_organization, connection_id, fields_ = nil)
       # create_repo_organization - Create an organization
       request = ::UnifiedRubySDK::Operations::CreateRepoOrganizationRequest.new(
         
-        connection_id: connection_id,
         repo_organization: repo_organization,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :repo_organization, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateRepoOrganizationRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -236,14 +237,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, repo_organization: T.nilable(::UnifiedRubySDK::Shared::RepoOrganization), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchRepoOrganizationResponse) }
-    def patch_repo_organization(connection_id, id, repo_organization = nil, fields_ = nil)
+    sig { params(repo_organization: ::UnifiedRubySDK::Shared::RepoOrganization, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchRepoOrganizationResponse) }
+    def patch_repo_organization(repo_organization, connection_id, id, fields_ = nil)
       # patch_repo_organization - Update an organization
       request = ::UnifiedRubySDK::Operations::PatchRepoOrganizationRequest.new(
         
+        repo_organization: repo_organization,
         connection_id: connection_id,
         id: id,
-        repo_organization: repo_organization,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -257,6 +258,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :repo_organization, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchRepoOrganizationRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -329,14 +331,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, repo_organization: T.nilable(::UnifiedRubySDK::Shared::RepoOrganization), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateRepoOrganizationResponse) }
-    def update_repo_organization(connection_id, id, repo_organization = nil, fields_ = nil)
+    sig { params(repo_organization: ::UnifiedRubySDK::Shared::RepoOrganization, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateRepoOrganizationResponse) }
+    def update_repo_organization(repo_organization, connection_id, id, fields_ = nil)
       # update_repo_organization - Update an organization
       request = ::UnifiedRubySDK::Operations::UpdateRepoOrganizationRequest.new(
         
+        repo_organization: repo_organization,
         connection_id: connection_id,
         id: id,
-        repo_organization: repo_organization,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -350,6 +352,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :repo_organization, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateRepoOrganizationRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

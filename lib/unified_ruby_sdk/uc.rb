@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateUcContactResponse) }
-    def create_uc_contact(connection_id, uc_contact = nil, fields_ = nil)
+    sig { params(uc_contact: ::UnifiedRubySDK::Shared::UcContact, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateUcContactResponse) }
+    def create_uc_contact(uc_contact, connection_id, fields_ = nil)
       # create_uc_contact - Create a contact
       request = ::UnifiedRubySDK::Operations::CreateUcContactRequest.new(
         
-        connection_id: connection_id,
         uc_contact: uc_contact,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :uc_contact, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateUcContactRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -192,14 +193,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchUcContactResponse) }
-    def patch_uc_contact(connection_id, id, uc_contact = nil, fields_ = nil)
+    sig { params(uc_contact: ::UnifiedRubySDK::Shared::UcContact, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchUcContactResponse) }
+    def patch_uc_contact(uc_contact, connection_id, id, fields_ = nil)
       # patch_uc_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::PatchUcContactRequest.new(
         
+        uc_contact: uc_contact,
         connection_id: connection_id,
         id: id,
-        uc_contact: uc_contact,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -213,6 +214,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :uc_contact, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchUcContactRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -285,14 +287,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, uc_contact: T.nilable(::UnifiedRubySDK::Shared::UcContact), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateUcContactResponse) }
-    def update_uc_contact(connection_id, id, uc_contact = nil, fields_ = nil)
+    sig { params(uc_contact: ::UnifiedRubySDK::Shared::UcContact, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateUcContactResponse) }
+    def update_uc_contact(uc_contact, connection_id, id, fields_ = nil)
       # update_uc_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::UpdateUcContactRequest.new(
         
+        uc_contact: uc_contact,
         connection_id: connection_id,
         id: id,
-        uc_contact: uc_contact,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -306,6 +308,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :uc_contact, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateUcContactRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

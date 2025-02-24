@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, crm_company: T.nilable(::UnifiedRubySDK::Shared::CrmCompany), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCrmCompanyResponse) }
-    def create_crm_company(connection_id, crm_company = nil, fields_ = nil)
+    sig { params(crm_company: ::UnifiedRubySDK::Shared::CrmCompany, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCrmCompanyResponse) }
+    def create_crm_company(crm_company, connection_id, fields_ = nil)
       # create_crm_company - Create a company
       request = ::UnifiedRubySDK::Operations::CreateCrmCompanyRequest.new(
         
-        connection_id: connection_id,
         crm_company: crm_company,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_company, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateCrmCompanyRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -72,13 +73,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCrmContactResponse) }
-    def create_crm_contact(connection_id, crm_contact = nil, fields_ = nil)
+    sig { params(crm_contact: ::UnifiedRubySDK::Shared::CrmContact, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCrmContactResponse) }
+    def create_crm_contact(crm_contact, connection_id, fields_ = nil)
       # create_crm_contact - Create a contact
       request = ::UnifiedRubySDK::Operations::CreateCrmContactRequest.new(
         
-        connection_id: connection_id,
         crm_contact: crm_contact,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -92,6 +93,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_contact, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateCrmContactRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -125,13 +127,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCrmDealResponse) }
-    def create_crm_deal(connection_id, crm_deal = nil, fields_ = nil)
+    sig { params(crm_deal: ::UnifiedRubySDK::Shared::CrmDeal, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCrmDealResponse) }
+    def create_crm_deal(crm_deal, connection_id, fields_ = nil)
       # create_crm_deal - Create a deal
       request = ::UnifiedRubySDK::Operations::CreateCrmDealRequest.new(
         
-        connection_id: connection_id,
         crm_deal: crm_deal,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -145,6 +147,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_deal, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateCrmDealRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -178,13 +181,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, crm_event: T.nilable(::UnifiedRubySDK::Shared::CrmEvent), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCrmEventResponse) }
-    def create_crm_event(connection_id, crm_event = nil, fields_ = nil)
+    sig { params(crm_event: ::UnifiedRubySDK::Shared::CrmEvent, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCrmEventResponse) }
+    def create_crm_event(crm_event, connection_id, fields_ = nil)
       # create_crm_event - Create an event
       request = ::UnifiedRubySDK::Operations::CreateCrmEventRequest.new(
         
-        connection_id: connection_id,
         crm_event: crm_event,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -198,6 +201,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_event, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateCrmEventRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -231,13 +235,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, crm_lead: T.nilable(::UnifiedRubySDK::Shared::CrmLead), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCrmLeadResponse) }
-    def create_crm_lead(connection_id, crm_lead = nil, fields_ = nil)
+    sig { params(crm_lead: ::UnifiedRubySDK::Shared::CrmLead, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCrmLeadResponse) }
+    def create_crm_lead(crm_lead, connection_id, fields_ = nil)
       # create_crm_lead - Create a lead
       request = ::UnifiedRubySDK::Operations::CreateCrmLeadRequest.new(
         
-        connection_id: connection_id,
         crm_lead: crm_lead,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -251,6 +255,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_lead, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateCrmLeadRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -284,13 +289,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, crm_pipeline: T.nilable(::UnifiedRubySDK::Shared::CrmPipeline), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCrmPipelineResponse) }
-    def create_crm_pipeline(connection_id, crm_pipeline = nil, fields_ = nil)
+    sig { params(crm_pipeline: ::UnifiedRubySDK::Shared::CrmPipeline, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCrmPipelineResponse) }
+    def create_crm_pipeline(crm_pipeline, connection_id, fields_ = nil)
       # create_crm_pipeline - Create a pipeline
       request = ::UnifiedRubySDK::Operations::CreateCrmPipelineRequest.new(
         
-        connection_id: connection_id,
         crm_pipeline: crm_pipeline,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -304,6 +309,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_pipeline, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateCrmPipelineRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -829,14 +835,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_company: T.nilable(::UnifiedRubySDK::Shared::CrmCompany), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCrmCompanyResponse) }
-    def patch_crm_company(connection_id, id, crm_company = nil, fields_ = nil)
+    sig { params(crm_company: ::UnifiedRubySDK::Shared::CrmCompany, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCrmCompanyResponse) }
+    def patch_crm_company(crm_company, connection_id, id, fields_ = nil)
       # patch_crm_company - Update a company
       request = ::UnifiedRubySDK::Operations::PatchCrmCompanyRequest.new(
         
+        crm_company: crm_company,
         connection_id: connection_id,
         id: id,
-        crm_company: crm_company,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -850,6 +856,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_company, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchCrmCompanyRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -883,14 +890,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCrmContactResponse) }
-    def patch_crm_contact(connection_id, id, crm_contact = nil, fields_ = nil)
+    sig { params(crm_contact: ::UnifiedRubySDK::Shared::CrmContact, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCrmContactResponse) }
+    def patch_crm_contact(crm_contact, connection_id, id, fields_ = nil)
       # patch_crm_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::PatchCrmContactRequest.new(
         
+        crm_contact: crm_contact,
         connection_id: connection_id,
         id: id,
-        crm_contact: crm_contact,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -904,6 +911,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_contact, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchCrmContactRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -937,14 +945,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCrmDealResponse) }
-    def patch_crm_deal(connection_id, id, crm_deal = nil, fields_ = nil)
+    sig { params(crm_deal: ::UnifiedRubySDK::Shared::CrmDeal, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCrmDealResponse) }
+    def patch_crm_deal(crm_deal, connection_id, id, fields_ = nil)
       # patch_crm_deal - Update a deal
       request = ::UnifiedRubySDK::Operations::PatchCrmDealRequest.new(
         
+        crm_deal: crm_deal,
         connection_id: connection_id,
         id: id,
-        crm_deal: crm_deal,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -958,6 +966,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_deal, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchCrmDealRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -991,14 +1000,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_event: T.nilable(::UnifiedRubySDK::Shared::CrmEvent), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCrmEventResponse) }
-    def patch_crm_event(connection_id, id, crm_event = nil, fields_ = nil)
+    sig { params(crm_event: ::UnifiedRubySDK::Shared::CrmEvent, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCrmEventResponse) }
+    def patch_crm_event(crm_event, connection_id, id, fields_ = nil)
       # patch_crm_event - Update an event
       request = ::UnifiedRubySDK::Operations::PatchCrmEventRequest.new(
         
+        crm_event: crm_event,
         connection_id: connection_id,
         id: id,
-        crm_event: crm_event,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -1012,6 +1021,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_event, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchCrmEventRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -1045,14 +1055,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_lead: T.nilable(::UnifiedRubySDK::Shared::CrmLead), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCrmLeadResponse) }
-    def patch_crm_lead(connection_id, id, crm_lead = nil, fields_ = nil)
+    sig { params(crm_lead: ::UnifiedRubySDK::Shared::CrmLead, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCrmLeadResponse) }
+    def patch_crm_lead(crm_lead, connection_id, id, fields_ = nil)
       # patch_crm_lead - Update a lead
       request = ::UnifiedRubySDK::Operations::PatchCrmLeadRequest.new(
         
+        crm_lead: crm_lead,
         connection_id: connection_id,
         id: id,
-        crm_lead: crm_lead,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -1066,6 +1076,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_lead, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchCrmLeadRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -1099,14 +1110,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_pipeline: T.nilable(::UnifiedRubySDK::Shared::CrmPipeline), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCrmPipelineResponse) }
-    def patch_crm_pipeline(connection_id, id, crm_pipeline = nil, fields_ = nil)
+    sig { params(crm_pipeline: ::UnifiedRubySDK::Shared::CrmPipeline, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCrmPipelineResponse) }
+    def patch_crm_pipeline(crm_pipeline, connection_id, id, fields_ = nil)
       # patch_crm_pipeline - Update a pipeline
       request = ::UnifiedRubySDK::Operations::PatchCrmPipelineRequest.new(
         
+        crm_pipeline: crm_pipeline,
         connection_id: connection_id,
         id: id,
-        crm_pipeline: crm_pipeline,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -1120,6 +1131,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_pipeline, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchCrmPipelineRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -1387,14 +1399,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_company: T.nilable(::UnifiedRubySDK::Shared::CrmCompany), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCrmCompanyResponse) }
-    def update_crm_company(connection_id, id, crm_company = nil, fields_ = nil)
+    sig { params(crm_company: ::UnifiedRubySDK::Shared::CrmCompany, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCrmCompanyResponse) }
+    def update_crm_company(crm_company, connection_id, id, fields_ = nil)
       # update_crm_company - Update a company
       request = ::UnifiedRubySDK::Operations::UpdateCrmCompanyRequest.new(
         
+        crm_company: crm_company,
         connection_id: connection_id,
         id: id,
-        crm_company: crm_company,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -1408,6 +1420,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_company, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateCrmCompanyRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -1441,14 +1454,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_contact: T.nilable(::UnifiedRubySDK::Shared::CrmContact), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCrmContactResponse) }
-    def update_crm_contact(connection_id, id, crm_contact = nil, fields_ = nil)
+    sig { params(crm_contact: ::UnifiedRubySDK::Shared::CrmContact, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCrmContactResponse) }
+    def update_crm_contact(crm_contact, connection_id, id, fields_ = nil)
       # update_crm_contact - Update a contact
       request = ::UnifiedRubySDK::Operations::UpdateCrmContactRequest.new(
         
+        crm_contact: crm_contact,
         connection_id: connection_id,
         id: id,
-        crm_contact: crm_contact,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -1462,6 +1475,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_contact, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateCrmContactRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -1495,14 +1509,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_deal: T.nilable(::UnifiedRubySDK::Shared::CrmDeal), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCrmDealResponse) }
-    def update_crm_deal(connection_id, id, crm_deal = nil, fields_ = nil)
+    sig { params(crm_deal: ::UnifiedRubySDK::Shared::CrmDeal, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCrmDealResponse) }
+    def update_crm_deal(crm_deal, connection_id, id, fields_ = nil)
       # update_crm_deal - Update a deal
       request = ::UnifiedRubySDK::Operations::UpdateCrmDealRequest.new(
         
+        crm_deal: crm_deal,
         connection_id: connection_id,
         id: id,
-        crm_deal: crm_deal,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -1516,6 +1530,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_deal, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateCrmDealRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -1549,14 +1564,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_event: T.nilable(::UnifiedRubySDK::Shared::CrmEvent), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCrmEventResponse) }
-    def update_crm_event(connection_id, id, crm_event = nil, fields_ = nil)
+    sig { params(crm_event: ::UnifiedRubySDK::Shared::CrmEvent, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCrmEventResponse) }
+    def update_crm_event(crm_event, connection_id, id, fields_ = nil)
       # update_crm_event - Update an event
       request = ::UnifiedRubySDK::Operations::UpdateCrmEventRequest.new(
         
+        crm_event: crm_event,
         connection_id: connection_id,
         id: id,
-        crm_event: crm_event,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -1570,6 +1585,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_event, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateCrmEventRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -1603,14 +1619,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_lead: T.nilable(::UnifiedRubySDK::Shared::CrmLead), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCrmLeadResponse) }
-    def update_crm_lead(connection_id, id, crm_lead = nil, fields_ = nil)
+    sig { params(crm_lead: ::UnifiedRubySDK::Shared::CrmLead, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCrmLeadResponse) }
+    def update_crm_lead(crm_lead, connection_id, id, fields_ = nil)
       # update_crm_lead - Update a lead
       request = ::UnifiedRubySDK::Operations::UpdateCrmLeadRequest.new(
         
+        crm_lead: crm_lead,
         connection_id: connection_id,
         id: id,
-        crm_lead: crm_lead,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -1624,6 +1640,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_lead, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateCrmLeadRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -1657,14 +1674,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, crm_pipeline: T.nilable(::UnifiedRubySDK::Shared::CrmPipeline), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCrmPipelineResponse) }
-    def update_crm_pipeline(connection_id, id, crm_pipeline = nil, fields_ = nil)
+    sig { params(crm_pipeline: ::UnifiedRubySDK::Shared::CrmPipeline, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCrmPipelineResponse) }
+    def update_crm_pipeline(crm_pipeline, connection_id, id, fields_ = nil)
       # update_crm_pipeline - Update a pipeline
       request = ::UnifiedRubySDK::Operations::UpdateCrmPipelineRequest.new(
         
+        crm_pipeline: crm_pipeline,
         connection_id: connection_id,
         id: id,
-        crm_pipeline: crm_pipeline,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -1678,6 +1695,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :crm_pipeline, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateCrmPipelineRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

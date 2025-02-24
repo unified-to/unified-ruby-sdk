@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, payment_link: T.nilable(::UnifiedRubySDK::Shared::PaymentLink), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreatePaymentLinkResponse) }
-    def create_payment_link(connection_id, payment_link = nil, fields_ = nil)
+    sig { params(payment_link: ::UnifiedRubySDK::Shared::PaymentLink, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreatePaymentLinkResponse) }
+    def create_payment_link(payment_link, connection_id, fields_ = nil)
       # create_payment_link - Create a link
       request = ::UnifiedRubySDK::Operations::CreatePaymentLinkRequest.new(
         
-        connection_id: connection_id,
         payment_link: payment_link,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :payment_link, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreatePaymentLinkRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -154,14 +155,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, payment_link: T.nilable(::UnifiedRubySDK::Shared::PaymentLink), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchPaymentLinkResponse) }
-    def patch_payment_link(connection_id, id, payment_link = nil, fields_ = nil)
+    sig { params(payment_link: ::UnifiedRubySDK::Shared::PaymentLink, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchPaymentLinkResponse) }
+    def patch_payment_link(payment_link, connection_id, id, fields_ = nil)
       # patch_payment_link - Update a link
       request = ::UnifiedRubySDK::Operations::PatchPaymentLinkRequest.new(
         
+        payment_link: payment_link,
         connection_id: connection_id,
         id: id,
-        payment_link: payment_link,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -175,6 +176,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :payment_link, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchPaymentLinkRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -247,14 +249,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, payment_link: T.nilable(::UnifiedRubySDK::Shared::PaymentLink), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdatePaymentLinkResponse) }
-    def update_payment_link(connection_id, id, payment_link = nil, fields_ = nil)
+    sig { params(payment_link: ::UnifiedRubySDK::Shared::PaymentLink, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdatePaymentLinkResponse) }
+    def update_payment_link(payment_link, connection_id, id, fields_ = nil)
       # update_payment_link - Update a link
       request = ::UnifiedRubySDK::Operations::UpdatePaymentLinkRequest.new(
         
+        payment_link: payment_link,
         connection_id: connection_id,
         id: id,
-        payment_link: payment_link,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -268,6 +270,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :payment_link, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdatePaymentLinkRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

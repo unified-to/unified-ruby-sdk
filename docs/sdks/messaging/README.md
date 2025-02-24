@@ -32,7 +32,7 @@ s.config_security(
 )
 
     
-res = s.messaging.create_messaging_message(connection_id="<id>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), fields_=[
+res = s.messaging.create_messaging_message(messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -44,11 +44,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `connection_id`                                                                                  | *::String*                                                                                       | :heavy_check_mark:                                                                               | ID of the connection                                                                             |
-| `messaging_message`                                                                              | [T.nilable(::UnifiedRubySDK::Shared::MessagingMessage)](../../models/shared/messagingmessage.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
-| `fields_`                                                                                        | T::Array<*::String*>                                                                             | :heavy_minus_sign:                                                                               | Comma-delimited fields to return                                                                 |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `messaging_message`                                                                   | [::UnifiedRubySDK::Shared::MessagingMessage](../../models/shared/messagingmessage.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `connection_id`                                                                       | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the connection                                                                  |
+| `fields_`                                                                             | T::Array<*::String*>                                                                  | :heavy_minus_sign:                                                                    | Comma-delimited fields to return                                                      |
 
 ### Response
 
@@ -242,7 +242,7 @@ s.config_security(
 )
 
     
-res = s.messaging.patch_messaging_message(connection_id="<id>", id="<id>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), fields_=[
+res = s.messaging.patch_messaging_message(messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -254,12 +254,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `connection_id`                                                                                  | *::String*                                                                                       | :heavy_check_mark:                                                                               | ID of the connection                                                                             |
-| `id`                                                                                             | *::String*                                                                                       | :heavy_check_mark:                                                                               | ID of the Message                                                                                |
-| `messaging_message`                                                                              | [T.nilable(::UnifiedRubySDK::Shared::MessagingMessage)](../../models/shared/messagingmessage.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
-| `fields_`                                                                                        | T::Array<*::String*>                                                                             | :heavy_minus_sign:                                                                               | Comma-delimited fields to return                                                                 |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `messaging_message`                                                                   | [::UnifiedRubySDK::Shared::MessagingMessage](../../models/shared/messagingmessage.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `connection_id`                                                                       | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the connection                                                                  |
+| `id`                                                                                  | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the Message                                                                     |
+| `fields_`                                                                             | T::Array<*::String*>                                                                  | :heavy_minus_sign:                                                                    | Comma-delimited fields to return                                                      |
 
 ### Response
 
@@ -324,7 +324,7 @@ s.config_security(
 )
 
     
-res = s.messaging.update_messaging_message(connection_id="<id>", id="<id>", messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), fields_=[
+res = s.messaging.update_messaging_message(messaging_message=::UnifiedRubySDK::Shared::MessagingMessage.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -336,12 +336,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `connection_id`                                                                                  | *::String*                                                                                       | :heavy_check_mark:                                                                               | ID of the connection                                                                             |
-| `id`                                                                                             | *::String*                                                                                       | :heavy_check_mark:                                                                               | ID of the Message                                                                                |
-| `messaging_message`                                                                              | [T.nilable(::UnifiedRubySDK::Shared::MessagingMessage)](../../models/shared/messagingmessage.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
-| `fields_`                                                                                        | T::Array<*::String*>                                                                             | :heavy_minus_sign:                                                                               | Comma-delimited fields to return                                                                 |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `messaging_message`                                                                   | [::UnifiedRubySDK::Shared::MessagingMessage](../../models/shared/messagingmessage.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `connection_id`                                                                       | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the connection                                                                  |
+| `id`                                                                                  | *::String*                                                                            | :heavy_check_mark:                                                                    | ID of the Message                                                                     |
+| `fields_`                                                                             | T::Array<*::String*>                                                                  | :heavy_minus_sign:                                                                    | Comma-delimited fields to return                                                      |
 
 ### Response
 

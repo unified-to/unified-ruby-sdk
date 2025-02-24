@@ -42,9 +42,9 @@ s.config_security(
 )
 
     
-res = s.kms.create_kms_comment(connection_id="<id>", kms_comment=::UnifiedRubySDK::Shared::KmsComment.new(
+res = s.kms.create_kms_comment(kms_comment=::UnifiedRubySDK::Shared::KmsComment.new(
   content: "<value>",
-), fields_=[
+), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -56,11 +56,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `connection_id`                                                                      | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the connection                                                                 |
-| `kms_comment`                                                                        | [T.nilable(::UnifiedRubySDK::Shared::KmsComment)](../../models/shared/kmscomment.md) | :heavy_minus_sign:                                                                   | N/A                                                                                  |
-| `fields_`                                                                            | T::Array<*::String*>                                                                 | :heavy_minus_sign:                                                                   | Comma-delimited fields to return                                                     |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `kms_comment`                                                             | [::UnifiedRubySDK::Shared::KmsComment](../../models/shared/kmscomment.md) | :heavy_check_mark:                                                        | N/A                                                                       |
+| `connection_id`                                                           | *::String*                                                                | :heavy_check_mark:                                                        | ID of the connection                                                      |
+| `fields_`                                                                 | T::Array<*::String*>                                                      | :heavy_minus_sign:                                                        | Comma-delimited fields to return                                          |
 
 ### Response
 
@@ -86,10 +86,10 @@ s.config_security(
 )
 
     
-res = s.kms.create_kms_page(connection_id="<id>", kms_page=::UnifiedRubySDK::Shared::KmsPage.new(
+res = s.kms.create_kms_page(kms_page=::UnifiedRubySDK::Shared::KmsPage.new(
   title: "<value>",
   type: ::UnifiedRubySDK::Shared::KmsPageType::HTML,
-), fields_=[
+), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -101,11 +101,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `connection_id`                                                                | *::String*                                                                     | :heavy_check_mark:                                                             | ID of the connection                                                           |
-| `kms_page`                                                                     | [T.nilable(::UnifiedRubySDK::Shared::KmsPage)](../../models/shared/kmspage.md) | :heavy_minus_sign:                                                             | N/A                                                                            |
-| `fields_`                                                                      | T::Array<*::String*>                                                           | :heavy_minus_sign:                                                             | Comma-delimited fields to return                                               |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `kms_page`                                                          | [::UnifiedRubySDK::Shared::KmsPage](../../models/shared/kmspage.md) | :heavy_check_mark:                                                  | N/A                                                                 |
+| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 
@@ -131,9 +131,9 @@ s.config_security(
 )
 
     
-res = s.kms.create_kms_space(connection_id="<id>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
+res = s.kms.create_kms_space(kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
   name: "<value>",
-), fields_=[
+), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -145,11 +145,11 @@ end
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `connection_id`                                                                  | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the connection                                                             |
-| `kms_space`                                                                      | [T.nilable(::UnifiedRubySDK::Shared::KmsSpace)](../../models/shared/kmsspace.md) | :heavy_minus_sign:                                                               | N/A                                                                              |
-| `fields_`                                                                        | T::Array<*::String*>                                                             | :heavy_minus_sign:                                                               | Comma-delimited fields to return                                                 |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `kms_space`                                                           | [::UnifiedRubySDK::Shared::KmsSpace](../../models/shared/kmsspace.md) | :heavy_check_mark:                                                    | N/A                                                                   |
+| `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
+| `fields_`                                                             | T::Array<*::String*>                                                  | :heavy_minus_sign:                                                    | Comma-delimited fields to return                                      |
 
 ### Response
 
@@ -427,9 +427,9 @@ s.config_security(
 )
 
     
-res = s.kms.patch_kms_comment(connection_id="<id>", id="<id>", kms_comment=::UnifiedRubySDK::Shared::KmsComment.new(
+res = s.kms.patch_kms_comment(kms_comment=::UnifiedRubySDK::Shared::KmsComment.new(
   content: "<value>",
-), fields_=[
+), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -441,12 +441,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `connection_id`                                                                      | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the connection                                                                 |
-| `id`                                                                                 | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the Comment                                                                    |
-| `kms_comment`                                                                        | [T.nilable(::UnifiedRubySDK::Shared::KmsComment)](../../models/shared/kmscomment.md) | :heavy_minus_sign:                                                                   | N/A                                                                                  |
-| `fields_`                                                                            | T::Array<*::String*>                                                                 | :heavy_minus_sign:                                                                   | Comma-delimited fields to return                                                     |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `kms_comment`                                                             | [::UnifiedRubySDK::Shared::KmsComment](../../models/shared/kmscomment.md) | :heavy_check_mark:                                                        | N/A                                                                       |
+| `connection_id`                                                           | *::String*                                                                | :heavy_check_mark:                                                        | ID of the connection                                                      |
+| `id`                                                                      | *::String*                                                                | :heavy_check_mark:                                                        | ID of the Comment                                                         |
+| `fields_`                                                                 | T::Array<*::String*>                                                      | :heavy_minus_sign:                                                        | Comma-delimited fields to return                                          |
 
 ### Response
 
@@ -472,10 +472,10 @@ s.config_security(
 )
 
     
-res = s.kms.patch_kms_page(connection_id="<id>", id="<id>", kms_page=::UnifiedRubySDK::Shared::KmsPage.new(
+res = s.kms.patch_kms_page(kms_page=::UnifiedRubySDK::Shared::KmsPage.new(
   title: "<value>",
   type: ::UnifiedRubySDK::Shared::KmsPageType::TEXT,
-), fields_=[
+), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -487,12 +487,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `connection_id`                                                                | *::String*                                                                     | :heavy_check_mark:                                                             | ID of the connection                                                           |
-| `id`                                                                           | *::String*                                                                     | :heavy_check_mark:                                                             | ID of the Page                                                                 |
-| `kms_page`                                                                     | [T.nilable(::UnifiedRubySDK::Shared::KmsPage)](../../models/shared/kmspage.md) | :heavy_minus_sign:                                                             | N/A                                                                            |
-| `fields_`                                                                      | T::Array<*::String*>                                                           | :heavy_minus_sign:                                                             | Comma-delimited fields to return                                               |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `kms_page`                                                          | [::UnifiedRubySDK::Shared::KmsPage](../../models/shared/kmspage.md) | :heavy_check_mark:                                                  | N/A                                                                 |
+| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
+| `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Page                                                      |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 
@@ -518,9 +518,9 @@ s.config_security(
 )
 
     
-res = s.kms.patch_kms_space(connection_id="<id>", id="<id>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
+res = s.kms.patch_kms_space(kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
   name: "<value>",
-), fields_=[
+), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -532,12 +532,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `connection_id`                                                                  | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the connection                                                             |
-| `id`                                                                             | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the Space                                                                  |
-| `kms_space`                                                                      | [T.nilable(::UnifiedRubySDK::Shared::KmsSpace)](../../models/shared/kmsspace.md) | :heavy_minus_sign:                                                               | N/A                                                                              |
-| `fields_`                                                                        | T::Array<*::String*>                                                             | :heavy_minus_sign:                                                               | Comma-delimited fields to return                                                 |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `kms_space`                                                           | [::UnifiedRubySDK::Shared::KmsSpace](../../models/shared/kmsspace.md) | :heavy_check_mark:                                                    | N/A                                                                   |
+| `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
+| `id`                                                                  | *::String*                                                            | :heavy_check_mark:                                                    | ID of the Space                                                       |
+| `fields_`                                                             | T::Array<*::String*>                                                  | :heavy_minus_sign:                                                    | Comma-delimited fields to return                                      |
 
 ### Response
 
@@ -680,9 +680,9 @@ s.config_security(
 )
 
     
-res = s.kms.update_kms_comment(connection_id="<id>", id="<id>", kms_comment=::UnifiedRubySDK::Shared::KmsComment.new(
+res = s.kms.update_kms_comment(kms_comment=::UnifiedRubySDK::Shared::KmsComment.new(
   content: "<value>",
-), fields_=[
+), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -694,12 +694,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `connection_id`                                                                      | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the connection                                                                 |
-| `id`                                                                                 | *::String*                                                                           | :heavy_check_mark:                                                                   | ID of the Comment                                                                    |
-| `kms_comment`                                                                        | [T.nilable(::UnifiedRubySDK::Shared::KmsComment)](../../models/shared/kmscomment.md) | :heavy_minus_sign:                                                                   | N/A                                                                                  |
-| `fields_`                                                                            | T::Array<*::String*>                                                                 | :heavy_minus_sign:                                                                   | Comma-delimited fields to return                                                     |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `kms_comment`                                                             | [::UnifiedRubySDK::Shared::KmsComment](../../models/shared/kmscomment.md) | :heavy_check_mark:                                                        | N/A                                                                       |
+| `connection_id`                                                           | *::String*                                                                | :heavy_check_mark:                                                        | ID of the connection                                                      |
+| `id`                                                                      | *::String*                                                                | :heavy_check_mark:                                                        | ID of the Comment                                                         |
+| `fields_`                                                                 | T::Array<*::String*>                                                      | :heavy_minus_sign:                                                        | Comma-delimited fields to return                                          |
 
 ### Response
 
@@ -725,10 +725,10 @@ s.config_security(
 )
 
     
-res = s.kms.update_kms_page(connection_id="<id>", id="<id>", kms_page=::UnifiedRubySDK::Shared::KmsPage.new(
+res = s.kms.update_kms_page(kms_page=::UnifiedRubySDK::Shared::KmsPage.new(
   title: "<value>",
   type: ::UnifiedRubySDK::Shared::KmsPageType::OTHER,
-), fields_=[
+), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -740,12 +740,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `connection_id`                                                                | *::String*                                                                     | :heavy_check_mark:                                                             | ID of the connection                                                           |
-| `id`                                                                           | *::String*                                                                     | :heavy_check_mark:                                                             | ID of the Page                                                                 |
-| `kms_page`                                                                     | [T.nilable(::UnifiedRubySDK::Shared::KmsPage)](../../models/shared/kmspage.md) | :heavy_minus_sign:                                                             | N/A                                                                            |
-| `fields_`                                                                      | T::Array<*::String*>                                                           | :heavy_minus_sign:                                                             | Comma-delimited fields to return                                               |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `kms_page`                                                          | [::UnifiedRubySDK::Shared::KmsPage](../../models/shared/kmspage.md) | :heavy_check_mark:                                                  | N/A                                                                 |
+| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
+| `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Page                                                      |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 
@@ -771,9 +771,9 @@ s.config_security(
 )
 
     
-res = s.kms.update_kms_space(connection_id="<id>", id="<id>", kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
+res = s.kms.update_kms_space(kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
   name: "<value>",
-), fields_=[
+), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -785,12 +785,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `connection_id`                                                                  | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the connection                                                             |
-| `id`                                                                             | *::String*                                                                       | :heavy_check_mark:                                                               | ID of the Space                                                                  |
-| `kms_space`                                                                      | [T.nilable(::UnifiedRubySDK::Shared::KmsSpace)](../../models/shared/kmsspace.md) | :heavy_minus_sign:                                                               | N/A                                                                              |
-| `fields_`                                                                        | T::Array<*::String*>                                                             | :heavy_minus_sign:                                                               | Comma-delimited fields to return                                                 |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `kms_space`                                                           | [::UnifiedRubySDK::Shared::KmsSpace](../../models/shared/kmsspace.md) | :heavy_check_mark:                                                    | N/A                                                                   |
+| `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
+| `id`                                                                  | *::String*                                                            | :heavy_check_mark:                                                    | ID of the Space                                                       |
+| `fields_`                                                             | T::Array<*::String*>                                                  | :heavy_minus_sign:                                                    | Comma-delimited fields to return                                      |
 
 ### Response
 

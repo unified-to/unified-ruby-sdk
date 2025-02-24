@@ -19,13 +19,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, metadata_metadata: T.nilable(::UnifiedRubySDK::Shared::MetadataMetadata), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateMetadataMetadataResponse) }
-    def create_metadata_metadata(connection_id, metadata_metadata = nil, fields_ = nil)
+    sig { params(metadata_metadata: ::UnifiedRubySDK::Shared::MetadataMetadata, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateMetadataMetadataResponse) }
+    def create_metadata_metadata(metadata_metadata, connection_id, fields_ = nil)
       # create_metadata_metadata - Create a metadata
       request = ::UnifiedRubySDK::Operations::CreateMetadataMetadataRequest.new(
         
-        connection_id: connection_id,
         metadata_metadata: metadata_metadata,
+        connection_id: connection_id,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -39,6 +39,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :metadata_metadata, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateMetadataMetadataRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -154,14 +155,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, metadata_metadata: T.nilable(::UnifiedRubySDK::Shared::MetadataMetadata), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchMetadataMetadataResponse) }
-    def patch_metadata_metadata(connection_id, id, metadata_metadata = nil, fields_ = nil)
+    sig { params(metadata_metadata: ::UnifiedRubySDK::Shared::MetadataMetadata, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchMetadataMetadataResponse) }
+    def patch_metadata_metadata(metadata_metadata, connection_id, id, fields_ = nil)
       # patch_metadata_metadata - Update a metadata
       request = ::UnifiedRubySDK::Operations::PatchMetadataMetadataRequest.new(
         
+        metadata_metadata: metadata_metadata,
         connection_id: connection_id,
         id: id,
-        metadata_metadata: metadata_metadata,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -175,6 +176,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :metadata_metadata, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchMetadataMetadataRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -247,14 +249,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, metadata_metadata: T.nilable(::UnifiedRubySDK::Shared::MetadataMetadata), fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateMetadataMetadataResponse) }
-    def update_metadata_metadata(connection_id, id, metadata_metadata = nil, fields_ = nil)
+    sig { params(metadata_metadata: ::UnifiedRubySDK::Shared::MetadataMetadata, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateMetadataMetadataResponse) }
+    def update_metadata_metadata(metadata_metadata, connection_id, id, fields_ = nil)
       # update_metadata_metadata - Update a metadata
       request = ::UnifiedRubySDK::Operations::UpdateMetadataMetadataRequest.new(
         
+        metadata_metadata: metadata_metadata,
         connection_id: connection_id,
         id: id,
-        metadata_metadata: metadata_metadata,
         fields_: fields_
       )
       url, params = @sdk_configuration.get_server_details
@@ -268,6 +270,7 @@ module UnifiedRubySDK
       headers = {}
       req_content_type, data, form = Utils.serialize_request_body(request, :metadata_metadata, :json)
       headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateMetadataMetadataRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent

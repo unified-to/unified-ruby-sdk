@@ -11,16 +11,16 @@ module UnifiedRubySDK
     class PatchUnifiedConnectionRequest < ::UnifiedRubySDK::Utils::FieldAugmented
       extend T::Sig
 
+      # A connection represents a specific authentication of an integration.
+      field :connection, ::UnifiedRubySDK::Shared::Connection, { 'request': { 'media_type': 'application/json' } }
       # ID of the Connection
       field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
-      # A connection represents a specific authentication of an integration.
-      field :connection, T.nilable(::UnifiedRubySDK::Shared::Connection), { 'request': { 'media_type': 'application/json' } }
 
 
-      sig { params(id: ::String, connection: T.nilable(::UnifiedRubySDK::Shared::Connection)).void }
-      def initialize(id: nil, connection: nil)
-        @id = id
+      sig { params(connection: ::UnifiedRubySDK::Shared::Connection, id: ::String).void }
+      def initialize(connection: nil, id: nil)
         @connection = connection
+        @id = id
       end
     end
   end
