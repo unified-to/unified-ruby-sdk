@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 3c83ac41ca19a0aa4a6ad1896f8a1398
+  docChecksum: 9075a5eee0d5e437f7630ea01fb59832
   docVersion: "1.0"
-  speakeasyVersion: 1.501.0
-  generationVersion: 2.522.1
-  releaseVersion: 0.6.17
-  configChecksum: a402771015e971d80c3328510ed1e125
+  speakeasyVersion: 1.502.0
+  generationVersion: 2.524.1
+  releaseVersion: 0.6.18
+  configChecksum: 5f4c5b6f6247de84221160f25e5f2316
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -986,6 +986,7 @@ generatedFiles:
   - docs/models/shared/listcourseid.md
   - docs/models/shared/listcustomerid.md
   - docs/models/shared/listdealid.md
+  - docs/models/shared/listendle.md
   - docs/models/shared/listinstructorid.md
   - docs/models/shared/listinterviewid.md
   - docs/models/shared/listinvoiceid.md
@@ -1010,6 +1011,7 @@ generatedFiles:
   - docs/models/shared/listsortbyname.md
   - docs/models/shared/listsortbyupdatedat.md
   - docs/models/shared/listspaceid.md
+  - docs/models/shared/liststartgte.md
   - docs/models/shared/liststudentid.md
   - docs/models/shared/listtaskid.md
   - docs/models/shared/listticketid.md
@@ -2295,6 +2297,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_course_id.rb
   - lib/unified_ruby_sdk/models/shared/list_customer_id.rb
   - lib/unified_ruby_sdk/models/shared/list_deal_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_end_le.rb
   - lib/unified_ruby_sdk/models/shared/list_instructor_id.rb
   - lib/unified_ruby_sdk/models/shared/list_interview_id.rb
   - lib/unified_ruby_sdk/models/shared/list_invoice_id.rb
@@ -2319,6 +2322,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_sort_by_name.rb
   - lib/unified_ruby_sdk/models/shared/list_sort_by_updated_at.rb
   - lib/unified_ruby_sdk/models/shared/list_space_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_start_gte.rb
   - lib/unified_ruby_sdk/models/shared/list_student_id.rb
   - lib/unified_ruby_sdk/models/shared/list_task_id.rb
   - lib/unified_ruby_sdk/models/shared/list_ticket_id.rb
