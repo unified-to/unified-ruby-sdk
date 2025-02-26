@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class ScimEmail < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ScimEmail < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class PropertyHrisCompanyAddress < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyHrisCompanyAddress < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

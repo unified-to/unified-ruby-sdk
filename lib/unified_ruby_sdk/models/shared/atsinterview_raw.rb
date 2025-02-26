@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class AtsInterviewRaw < ::UnifiedRubySDK::Utils::FieldAugmented
+    class AtsInterviewRaw < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

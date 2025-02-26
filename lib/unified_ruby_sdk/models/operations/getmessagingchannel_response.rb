@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetMessagingChannelResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetMessagingChannelResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

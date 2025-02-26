@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListUnifiedConnectionsRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListUnifiedConnectionsRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # Filter the results on these categories

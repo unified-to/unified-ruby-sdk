@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListEnrichCompaniesRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListEnrichCompaniesRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class Security < ::UnifiedRubySDK::Utils::FieldAugmented
+    class Security < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

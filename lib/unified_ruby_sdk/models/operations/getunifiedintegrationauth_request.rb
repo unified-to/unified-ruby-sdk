@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetUnifiedIntegrationAuthRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetUnifiedIntegrationAuthRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # Type of the supported integration

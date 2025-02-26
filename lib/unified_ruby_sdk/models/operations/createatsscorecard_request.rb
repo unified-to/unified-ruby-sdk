@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreateAtsScorecardRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreateAtsScorecardRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class PropertyConnectionAuthMeta < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyConnectionAuthMeta < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

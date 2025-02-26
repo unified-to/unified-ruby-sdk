@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetUnifiedIntegrationLoginResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetUnifiedIntegrationLoginResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

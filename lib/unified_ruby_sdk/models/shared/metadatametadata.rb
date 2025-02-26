@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class MetadataMetadata < ::UnifiedRubySDK::Utils::FieldAugmented
+    class MetadataMetadata < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

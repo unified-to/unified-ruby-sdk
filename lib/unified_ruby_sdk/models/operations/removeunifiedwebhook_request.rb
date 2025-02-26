@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveUnifiedWebhookRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveUnifiedWebhookRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the Webhook

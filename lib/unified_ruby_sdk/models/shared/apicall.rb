@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class ApiCall < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ApiCall < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

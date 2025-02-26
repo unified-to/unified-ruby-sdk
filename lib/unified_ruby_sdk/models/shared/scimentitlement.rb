@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class ScimEntitlement < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ScimEntitlement < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

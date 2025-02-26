@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListUnifiedApicallsRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListUnifiedApicallsRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # Filter the results to just this integration

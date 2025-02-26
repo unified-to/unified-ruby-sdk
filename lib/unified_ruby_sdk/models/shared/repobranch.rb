@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class RepoBranch < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RepoBranch < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

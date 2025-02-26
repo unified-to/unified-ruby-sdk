@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetKmsPageRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetKmsPageRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

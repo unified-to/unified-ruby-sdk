@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchKmsSpaceResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchKmsSpaceResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class Meta < ::UnifiedRubySDK::Utils::FieldAugmented
+    class Meta < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

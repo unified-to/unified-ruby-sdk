@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListGenaiModelsRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListGenaiModelsRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class AccountingTransaction < ::UnifiedRubySDK::Utils::FieldAugmented
+    class AccountingTransaction < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

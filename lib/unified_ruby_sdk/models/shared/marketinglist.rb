@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
     # Mailing List
-    class MarketingList < ::UnifiedRubySDK::Utils::FieldAugmented
+    class MarketingList < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreateCommerceLocationResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreateCommerceLocationResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

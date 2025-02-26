@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class CommerceLocation < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CommerceLocation < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

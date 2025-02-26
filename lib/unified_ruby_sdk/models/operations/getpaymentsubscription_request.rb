@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetPaymentSubscriptionRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetPaymentSubscriptionRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

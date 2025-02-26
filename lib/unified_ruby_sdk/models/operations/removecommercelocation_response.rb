@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveCommerceLocationResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveCommerceLocationResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

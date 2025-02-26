@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListCrmPipelinesResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListCrmPipelinesResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

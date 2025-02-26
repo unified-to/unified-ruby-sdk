@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveAtsScorecardRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveAtsScorecardRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

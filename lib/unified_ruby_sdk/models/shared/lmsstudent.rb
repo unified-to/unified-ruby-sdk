@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class LmsStudent < ::UnifiedRubySDK::Utils::FieldAugmented
+    class LmsStudent < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

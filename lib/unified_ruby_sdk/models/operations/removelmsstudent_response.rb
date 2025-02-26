@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveLmsStudentResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveLmsStudentResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

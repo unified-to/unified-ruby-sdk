@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class Value < ::UnifiedRubySDK::Utils::FieldAugmented
+    class Value < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetPaymentRefundResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetPaymentRefundResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

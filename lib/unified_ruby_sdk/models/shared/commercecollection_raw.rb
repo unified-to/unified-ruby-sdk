@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class CommerceCollectionRaw < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CommerceCollectionRaw < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

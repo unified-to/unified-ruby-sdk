@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetUcContactResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetUcContactResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

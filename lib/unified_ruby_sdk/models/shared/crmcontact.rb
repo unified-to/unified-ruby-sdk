@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
     # A contact represents a person that optionally is associated with a deal and/or a company
-    class CrmContact < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CrmContact < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

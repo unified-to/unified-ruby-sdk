@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreateGenaiPromptRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreateGenaiPromptRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveMetadataMetadataResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveMetadataMetadataResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

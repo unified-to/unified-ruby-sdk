@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreatePassthroughJsonResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreatePassthroughJsonResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetRepoBranchRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetRepoBranchRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

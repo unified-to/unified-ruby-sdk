@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveAccountingTransactionResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveAccountingTransactionResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

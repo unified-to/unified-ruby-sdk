@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchTicketingTicketRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchTicketingTicketRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

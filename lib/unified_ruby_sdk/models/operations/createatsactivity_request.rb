@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreateAtsActivityRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreateAtsActivityRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

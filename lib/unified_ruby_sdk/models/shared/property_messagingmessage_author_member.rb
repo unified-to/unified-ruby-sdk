@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class PropertyMessagingMessageAuthorMember < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyMessagingMessageAuthorMember < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

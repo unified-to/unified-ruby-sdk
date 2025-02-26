@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchHrisGroupRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchHrisGroupRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

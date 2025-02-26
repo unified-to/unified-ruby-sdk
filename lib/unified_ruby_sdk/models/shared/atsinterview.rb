@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class AtsInterview < ::UnifiedRubySDK::Utils::FieldAugmented
+    class AtsInterview < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

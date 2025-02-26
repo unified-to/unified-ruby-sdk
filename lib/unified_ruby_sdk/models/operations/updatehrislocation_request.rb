@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class UpdateHrisLocationRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class UpdateHrisLocationRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

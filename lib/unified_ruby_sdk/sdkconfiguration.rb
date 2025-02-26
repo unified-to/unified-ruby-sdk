@@ -16,7 +16,7 @@ module UnifiedRubySDK
   ].freeze
   # Contains the list of servers available to the SDK
 
-  class SDKConfiguration < ::UnifiedRubySDK::Utils::FieldAugmented
+  class SDKConfiguration < ::Crystalline::FieldAugmented
     extend T::Sig
 
     field :client, T.nilable(Faraday::Connection)
@@ -39,9 +39,9 @@ module UnifiedRubySDK
       @security = security
       @language = 'ruby'
       @openapi_doc_version = '1.0'
-      @sdk_version = '0.6.18'
-      @gen_version = '2.524.1'
-      @user_agent = 'speakeasy-sdk/ruby 0.6.18 2.524.1 1.0 unified_ruby_sdk'
+      @sdk_version = '0.6.19'
+      @gen_version = '2.529.2'
+      @user_agent = 'speakeasy-sdk/ruby 0.6.19 2.529.2 1.0 unified_ruby_sdk'
     end
 
     sig { returns([String, T::Hash[Symbol, String]]) }

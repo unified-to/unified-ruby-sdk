@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class UpdateTicketingCustomerResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class UpdateTicketingCustomerResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

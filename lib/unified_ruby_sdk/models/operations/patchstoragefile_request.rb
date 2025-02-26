@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchStorageFileRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchStorageFileRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

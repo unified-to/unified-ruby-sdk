@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class UpdateUnifiedConnectionRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class UpdateUnifiedConnectionRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # A connection represents a specific authentication of an integration.

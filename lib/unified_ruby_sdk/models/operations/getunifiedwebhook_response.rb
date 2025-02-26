@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetUnifiedWebhookResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetUnifiedWebhookResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

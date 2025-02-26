@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemovePaymentSubscriptionRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemovePaymentSubscriptionRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

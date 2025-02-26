@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListUnifiedIntegrationWorkspacesRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListUnifiedIntegrationWorkspacesRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # The ID of the workspace

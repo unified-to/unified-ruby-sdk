@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class PropertyAtsActivityFrom < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyAtsActivityFrom < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

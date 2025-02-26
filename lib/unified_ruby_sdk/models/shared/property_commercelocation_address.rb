@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class PropertyCommerceLocationAddress < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyCommerceLocationAddress < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

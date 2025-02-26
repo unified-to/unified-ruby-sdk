@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
     # Informational object for supported integrations.
-    class Integration < ::UnifiedRubySDK::Utils::FieldAugmented
+    class Integration < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # The categories of support solutions that this integration has

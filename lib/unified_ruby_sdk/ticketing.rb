@@ -64,7 +64,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::TicketingCustomer)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::TicketingCustomer)
           res.ticketing_customer = out
         end
       end
@@ -118,7 +118,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::TicketingNote)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::TicketingNote)
           res.ticketing_note = out
         end
       end
@@ -172,7 +172,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::TicketingTicket)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::TicketingTicket)
           res.ticketing_ticket = out
         end
       end
@@ -216,7 +216,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::TicketingCustomer)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::TicketingCustomer)
           res.ticketing_customer = out
         end
       end
@@ -260,7 +260,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::TicketingNote)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::TicketingNote)
           res.ticketing_note = out
         end
       end
@@ -304,7 +304,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::TicketingTicket)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::TicketingTicket)
           res.ticketing_ticket = out
         end
       end
@@ -342,7 +342,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, T::Array[::UnifiedRubySDK::Shared::TicketingCustomer])
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), T::Array[::UnifiedRubySDK::Shared::TicketingCustomer])
           res.ticketing_customers = out
         end
       end
@@ -380,7 +380,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, T::Array[::UnifiedRubySDK::Shared::TicketingNote])
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), T::Array[::UnifiedRubySDK::Shared::TicketingNote])
           res.ticketing_notes = out
         end
       end
@@ -418,7 +418,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, T::Array[::UnifiedRubySDK::Shared::TicketingTicket])
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), T::Array[::UnifiedRubySDK::Shared::TicketingTicket])
           res.ticketing_tickets = out
         end
       end
@@ -473,7 +473,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::TicketingCustomer)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::TicketingCustomer)
           res.ticketing_customer = out
         end
       end
@@ -528,7 +528,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::TicketingNote)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::TicketingNote)
           res.ticketing_note = out
         end
       end
@@ -583,7 +583,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::TicketingTicket)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::TicketingTicket)
           res.ticketing_ticket = out
         end
       end
@@ -755,7 +755,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::TicketingCustomer)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::TicketingCustomer)
           res.ticketing_customer = out
         end
       end
@@ -810,7 +810,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::TicketingNote)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::TicketingNote)
           res.ticketing_note = out
         end
       end
@@ -865,7 +865,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::TicketingTicket)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::TicketingTicket)
           res.ticketing_ticket = out
         end
       end

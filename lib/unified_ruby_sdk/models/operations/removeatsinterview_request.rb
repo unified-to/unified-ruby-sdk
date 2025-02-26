@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveAtsInterviewRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveAtsInterviewRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

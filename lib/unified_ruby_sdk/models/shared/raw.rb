@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class Raw < ::UnifiedRubySDK::Utils::FieldAugmented
+    class Raw < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

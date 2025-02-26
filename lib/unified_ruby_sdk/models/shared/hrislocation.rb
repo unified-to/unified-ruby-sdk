@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class HrisLocation < ::UnifiedRubySDK::Utils::FieldAugmented
+    class HrisLocation < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

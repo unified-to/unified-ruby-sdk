@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class AccountingTelephone < ::UnifiedRubySDK::Utils::FieldAugmented
+    class AccountingTelephone < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

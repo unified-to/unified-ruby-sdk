@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class PropertyLmsStudentAddress < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyLmsStudentAddress < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

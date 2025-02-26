@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class UpdateRepoRepositoryResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class UpdateRepoRepositoryResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

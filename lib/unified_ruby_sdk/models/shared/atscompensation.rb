@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class AtsCompensation < ::UnifiedRubySDK::Utils::FieldAugmented
+    class AtsCompensation < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

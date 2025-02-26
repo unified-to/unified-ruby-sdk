@@ -8,13 +8,15 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListMessagingMessagesRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListMessagingMessagesRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection
       field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
 
       field :channel_id, T.nilable(::String), { 'query_param': { 'field_name': 'channel_id', 'style': 'form', 'explode': true } }
+
+      field :end_le, T.nilable(::String), { 'query_param': { 'field_name': 'end_le', 'style': 'form', 'explode': true } }
       # Comma-delimited fields to return
       field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
@@ -29,14 +31,17 @@ module UnifiedRubySDK
       field :query, T.nilable(::String), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
 
       field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
+
+      field :start_gte, T.nilable(::String), { 'query_param': { 'field_name': 'start_gte', 'style': 'form', 'explode': true } }
       # Return only results whose updated date is equal or greater to this value
       field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, channel_id: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
-      def initialize(connection_id: nil, channel_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, parent_id: nil, query: nil, sort: nil, updated_gte: nil)
+      sig { params(connection_id: ::String, channel_id: T.nilable(::String), end_le: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
+      def initialize(connection_id: nil, channel_id: nil, end_le: nil, fields_: nil, limit: nil, offset: nil, order: nil, parent_id: nil, query: nil, sort: nil, start_gte: nil, updated_gte: nil)
         @connection_id = connection_id
         @channel_id = channel_id
+        @end_le = end_le
         @fields_ = fields_
         @limit = limit
         @offset = offset
@@ -44,6 +49,7 @@ module UnifiedRubySDK
         @parent_id = parent_id
         @query = query
         @sort = sort
+        @start_gte = start_gte
         @updated_gte = updated_gte
       end
     end

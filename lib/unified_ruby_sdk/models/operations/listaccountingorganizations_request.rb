@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListAccountingOrganizationsRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListAccountingOrganizationsRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

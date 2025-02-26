@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListAtsDocumentsResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListAtsDocumentsResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

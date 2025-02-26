@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveAtsScorecardResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveAtsScorecardResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

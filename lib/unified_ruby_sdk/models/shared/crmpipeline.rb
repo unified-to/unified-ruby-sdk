@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class CrmPipeline < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CrmPipeline < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

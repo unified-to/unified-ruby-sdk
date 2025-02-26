@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class CrmTelephone < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CrmTelephone < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

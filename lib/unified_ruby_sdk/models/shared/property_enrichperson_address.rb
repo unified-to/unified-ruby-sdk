@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
     # The address of the person
-    class PropertyEnrichPersonAddress < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyEnrichPersonAddress < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

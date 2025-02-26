@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
     # The telephone number called
-    class PropertyUcCallTelephone < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyUcCallTelephone < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

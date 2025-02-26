@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class LmsMedia < ::UnifiedRubySDK::Utils::FieldAugmented
+    class LmsMedia < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

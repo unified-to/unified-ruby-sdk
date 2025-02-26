@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveAccountingJournalRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveAccountingJournalRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

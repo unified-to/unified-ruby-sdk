@@ -64,7 +64,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentLink)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::PaymentLink)
           res.payment_link = out
         end
       end
@@ -118,7 +118,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentPayment)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::PaymentPayment)
           res.payment_payment = out
         end
       end
@@ -172,7 +172,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentSubscription)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::PaymentSubscription)
           res.payment_subscription = out
         end
       end
@@ -216,7 +216,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentLink)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::PaymentLink)
           res.payment_link = out
         end
       end
@@ -260,7 +260,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentPayment)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::PaymentPayment)
           res.payment_payment = out
         end
       end
@@ -304,7 +304,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentPayout)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::PaymentPayout)
           res.payment_payout = out
         end
       end
@@ -348,7 +348,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentRefund)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::PaymentRefund)
           res.payment_refund = out
         end
       end
@@ -392,7 +392,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentSubscription)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::PaymentSubscription)
           res.payment_subscription = out
         end
       end
@@ -430,7 +430,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, T::Array[::UnifiedRubySDK::Shared::PaymentLink])
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), T::Array[::UnifiedRubySDK::Shared::PaymentLink])
           res.payment_links = out
         end
       end
@@ -468,7 +468,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, T::Array[::UnifiedRubySDK::Shared::PaymentPayment])
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), T::Array[::UnifiedRubySDK::Shared::PaymentPayment])
           res.payment_payments = out
         end
       end
@@ -506,7 +506,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, T::Array[::UnifiedRubySDK::Shared::PaymentPayout])
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), T::Array[::UnifiedRubySDK::Shared::PaymentPayout])
           res.payment_payouts = out
         end
       end
@@ -544,7 +544,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, T::Array[::UnifiedRubySDK::Shared::PaymentRefund])
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), T::Array[::UnifiedRubySDK::Shared::PaymentRefund])
           res.payment_refunds = out
         end
       end
@@ -582,7 +582,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, T::Array[::UnifiedRubySDK::Shared::PaymentSubscription])
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), T::Array[::UnifiedRubySDK::Shared::PaymentSubscription])
           res.payment_subscriptions = out
         end
       end
@@ -637,7 +637,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentLink)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::PaymentLink)
           res.payment_link = out
         end
       end
@@ -692,7 +692,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentPayment)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::PaymentPayment)
           res.payment_payment = out
         end
       end
@@ -747,7 +747,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentSubscription)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::PaymentSubscription)
           res.payment_subscription = out
         end
       end
@@ -919,7 +919,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentLink)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::PaymentLink)
           res.payment_link = out
         end
       end
@@ -974,7 +974,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentPayment)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::PaymentPayment)
           res.payment_payment = out
         end
       end
@@ -1029,7 +1029,7 @@ module UnifiedRubySDK
       )
       if r.status == 200
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::UnifiedRubySDK::Shared::PaymentSubscription)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::PaymentSubscription)
           res.payment_subscription = out
         end
       end

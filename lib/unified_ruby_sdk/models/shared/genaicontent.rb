@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class GenaiContent < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GenaiContent < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

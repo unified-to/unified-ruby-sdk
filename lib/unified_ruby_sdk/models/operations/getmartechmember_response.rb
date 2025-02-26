@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetMartechMemberResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetMartechMemberResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

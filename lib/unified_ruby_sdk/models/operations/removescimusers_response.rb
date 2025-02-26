@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveScimUsersResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveScimUsersResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

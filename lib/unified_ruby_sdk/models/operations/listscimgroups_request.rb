@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListScimGroupsRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListScimGroupsRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

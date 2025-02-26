@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
     # An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
-    class CrmEvent < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CrmEvent < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # The call object, when type = call

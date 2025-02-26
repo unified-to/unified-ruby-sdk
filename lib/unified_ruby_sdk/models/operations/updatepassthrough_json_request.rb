@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class UpdatePassthroughJsonRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class UpdatePassthroughJsonRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

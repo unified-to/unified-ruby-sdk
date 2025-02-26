@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class CrmStage < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CrmStage < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

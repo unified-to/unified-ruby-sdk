@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class MetadataMetadataRaw < ::UnifiedRubySDK::Utils::FieldAugmented
+    class MetadataMetadataRaw < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

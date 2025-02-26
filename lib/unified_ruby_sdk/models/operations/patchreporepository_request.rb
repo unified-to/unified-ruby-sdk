@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchRepoRepositoryRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchRepoRepositoryRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

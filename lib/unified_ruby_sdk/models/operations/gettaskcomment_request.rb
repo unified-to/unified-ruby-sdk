@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetTaskCommentRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetTaskCommentRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

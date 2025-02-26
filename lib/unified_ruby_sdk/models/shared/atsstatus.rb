@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class AtsStatus < ::UnifiedRubySDK::Utils::FieldAugmented
+    class AtsStatus < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

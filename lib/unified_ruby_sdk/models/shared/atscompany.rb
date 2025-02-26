@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class AtsCompany < ::UnifiedRubySDK::Utils::FieldAugmented
+    class AtsCompany < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

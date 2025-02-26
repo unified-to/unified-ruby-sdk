@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListKmsCommentsRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListKmsCommentsRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

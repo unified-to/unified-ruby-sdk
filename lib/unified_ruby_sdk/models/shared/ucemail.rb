@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class UcEmail < ::UnifiedRubySDK::Utils::FieldAugmented
+    class UcEmail < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

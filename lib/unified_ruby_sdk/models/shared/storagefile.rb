@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class StorageFile < ::UnifiedRubySDK::Utils::FieldAugmented
+    class StorageFile < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

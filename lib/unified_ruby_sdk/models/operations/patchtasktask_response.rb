@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchTaskTaskResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchTaskTaskResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

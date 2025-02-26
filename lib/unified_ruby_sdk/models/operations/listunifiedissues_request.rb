@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListUnifiedIssuesRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListUnifiedIssuesRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

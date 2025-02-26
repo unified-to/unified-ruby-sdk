@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListHrisPayslipsResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListHrisPayslipsResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

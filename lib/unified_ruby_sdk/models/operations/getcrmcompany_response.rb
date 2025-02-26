@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetCrmCompanyResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetCrmCompanyResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

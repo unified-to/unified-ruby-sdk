@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class AtsScorecardQuestion < ::UnifiedRubySDK::Utils::FieldAugmented
+    class AtsScorecardQuestion < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

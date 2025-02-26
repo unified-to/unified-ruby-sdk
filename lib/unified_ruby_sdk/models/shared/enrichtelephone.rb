@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class EnrichTelephone < ::UnifiedRubySDK::Utils::FieldAugmented
+    class EnrichTelephone < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

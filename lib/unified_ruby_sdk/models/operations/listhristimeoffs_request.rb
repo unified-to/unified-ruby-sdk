@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListHrisTimeoffsRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListHrisTimeoffsRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

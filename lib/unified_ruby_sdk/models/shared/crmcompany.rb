@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
     # A company represents an organization that optionally is associated with a deal and/or contacts
-    class CrmCompany < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CrmCompany < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

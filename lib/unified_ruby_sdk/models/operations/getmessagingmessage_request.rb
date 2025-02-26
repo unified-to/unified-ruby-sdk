@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetMessagingMessageRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetMessagingMessageRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

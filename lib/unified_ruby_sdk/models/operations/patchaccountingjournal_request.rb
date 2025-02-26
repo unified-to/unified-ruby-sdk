@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchAccountingJournalRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchAccountingJournalRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

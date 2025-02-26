@@ -95,7 +95,6 @@ module UnifiedRubySDK
   autoload :Webhook, 'unified_ruby_sdk/webhook'
 end
 
-require_relative 'unified_ruby_sdk/utils/t'
 require_relative 'unified_ruby_sdk/utils/utils'
-require_relative 'unified_ruby_sdk/utils/metadata_fields'
+require_relative 'crystalline'
 require_relative 'unified_ruby_sdk/sdkconfiguration'

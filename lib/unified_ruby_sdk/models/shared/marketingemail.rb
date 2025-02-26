@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class MarketingEmail < ::UnifiedRubySDK::Utils::FieldAugmented
+    class MarketingEmail < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

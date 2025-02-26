@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreateUnifiedWebhookRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreateUnifiedWebhookRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # A webhook is used to POST new/updated information to your server.

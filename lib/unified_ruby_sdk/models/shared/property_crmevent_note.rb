@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
     # The note object, when type = note
-    class PropertyCrmEventNote < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyCrmEventNote < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

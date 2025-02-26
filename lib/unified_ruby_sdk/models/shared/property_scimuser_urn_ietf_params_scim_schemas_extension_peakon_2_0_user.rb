@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

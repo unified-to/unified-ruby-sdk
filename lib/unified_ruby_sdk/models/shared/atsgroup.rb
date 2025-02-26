@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class AtsGroup < ::UnifiedRubySDK::Utils::FieldAugmented
+    class AtsGroup < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

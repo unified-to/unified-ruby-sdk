@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchAtsApplicationResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchAtsApplicationResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

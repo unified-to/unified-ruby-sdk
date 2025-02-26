@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
     # A contact represents a person that optionally is associated with a call
-    class UcContact < ::UnifiedRubySDK::Utils::FieldAugmented
+    class UcContact < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

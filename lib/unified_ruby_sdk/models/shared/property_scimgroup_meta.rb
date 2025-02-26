@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class PropertyScimGroupMeta < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyScimGroupMeta < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

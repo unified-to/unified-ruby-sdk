@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
     # A collection of items/products/services
-    class CommerceCollection < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CommerceCollection < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

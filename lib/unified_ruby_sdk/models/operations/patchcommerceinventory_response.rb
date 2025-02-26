@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchCommerceInventoryResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchCommerceInventoryResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

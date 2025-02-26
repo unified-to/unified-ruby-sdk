@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchKmsSpaceRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchKmsSpaceRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

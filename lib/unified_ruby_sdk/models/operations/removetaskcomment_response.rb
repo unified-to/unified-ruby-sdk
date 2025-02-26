@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveTaskCommentResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveTaskCommentResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

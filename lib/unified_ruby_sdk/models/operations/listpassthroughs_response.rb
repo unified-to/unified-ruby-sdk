@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListPassthroughsResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListPassthroughsResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchScimGroupsRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchScimGroupsRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

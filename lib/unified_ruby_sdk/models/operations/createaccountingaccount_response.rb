@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreateAccountingAccountResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreateAccountingAccountResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

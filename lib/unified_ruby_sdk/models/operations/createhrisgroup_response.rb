@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreateHrisGroupResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreateHrisGroupResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListKmsPagesResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListKmsPagesResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

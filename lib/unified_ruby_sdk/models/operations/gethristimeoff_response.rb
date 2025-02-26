@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetHrisTimeoffResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetHrisTimeoffResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

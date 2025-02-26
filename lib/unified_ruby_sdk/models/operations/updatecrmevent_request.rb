@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class UpdateCrmEventRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class UpdateCrmEventRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

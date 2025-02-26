@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class PropertyCrmEventPageView < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyCrmEventPageView < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

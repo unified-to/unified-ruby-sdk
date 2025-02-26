@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveAtsInterviewResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveAtsInterviewResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

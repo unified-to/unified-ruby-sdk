@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreateAtsDocumentRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreateAtsDocumentRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

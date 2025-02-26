@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListTicketingTicketsRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListTicketingTicketsRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

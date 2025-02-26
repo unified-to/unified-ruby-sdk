@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListCrmContactsRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListCrmContactsRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

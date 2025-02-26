@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class UpdateKmsCommentResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class UpdateKmsCommentResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class TicketingEmail < ::UnifiedRubySDK::Utils::FieldAugmented
+    class TicketingEmail < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

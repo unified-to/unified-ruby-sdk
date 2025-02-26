@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class AccountingOrderRaw < ::UnifiedRubySDK::Utils::FieldAugmented
+    class AccountingOrderRaw < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

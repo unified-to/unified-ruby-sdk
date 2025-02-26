@@ -65,7 +65,7 @@ module UnifiedRubySDK
       elsif r.status == 304
       else
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::Object)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::Object)
           res.default_application_json_any = out
         end
         res.default_application_xml_res = r.env.response_body if Utils.match_content_type(content_type, 'application/xml')
@@ -124,7 +124,7 @@ module UnifiedRubySDK
       elsif r.status == 304
       else
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::Object)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::Object)
           res.default_application_json_any = out
         end
         res.default_application_xml_res = r.env.response_body if Utils.match_content_type(content_type, 'application/xml')
@@ -173,7 +173,7 @@ module UnifiedRubySDK
       elsif r.status == 304
       else
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::Object)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::Object)
           res.default_application_json_any = out
         end
         res.default_application_xml_res = r.env.response_body if Utils.match_content_type(content_type, 'application/xml')
@@ -232,7 +232,7 @@ module UnifiedRubySDK
       elsif r.status == 304
       else
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::Object)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::Object)
           res.default_application_json_any = out
         end
         res.default_application_xml_res = r.env.response_body if Utils.match_content_type(content_type, 'application/xml')
@@ -291,7 +291,7 @@ module UnifiedRubySDK
       elsif r.status == 304
       else
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::Object)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::Object)
           res.default_application_json_any = out
         end
         res.default_application_xml_res = r.env.response_body if Utils.match_content_type(content_type, 'application/xml')
@@ -340,7 +340,7 @@ module UnifiedRubySDK
       elsif r.status == 304
       else
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::Object)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::Object)
           res.default_application_json_any = out
         end
         res.default_application_xml_res = r.env.response_body if Utils.match_content_type(content_type, 'application/xml')
@@ -399,7 +399,7 @@ module UnifiedRubySDK
       elsif r.status == 304
       else
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::Object)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::Object)
           res.default_application_json_any = out
         end
         res.default_application_xml_res = r.env.response_body if Utils.match_content_type(content_type, 'application/xml')
@@ -458,7 +458,7 @@ module UnifiedRubySDK
       elsif r.status == 304
       else
         if Utils.match_content_type(content_type, 'application/json')
-          out = Utils.unmarshal_complex(r.env.response_body, ::Object)
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::Object)
           res.default_application_json_any = out
         end
         res.default_application_xml_res = r.env.response_body if Utils.match_content_type(content_type, 'application/xml')

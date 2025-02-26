@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListPaymentLinksRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListPaymentLinksRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

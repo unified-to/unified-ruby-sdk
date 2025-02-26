@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
     # "id" attribute of another User.
-    class ScimManager < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ScimManager < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListHrisCompaniesResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListHrisCompaniesResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

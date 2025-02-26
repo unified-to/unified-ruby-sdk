@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchUnifiedWebhookTriggerRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchUnifiedWebhookTriggerRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the Webhook

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchAtsScorecardRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchAtsScorecardRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemovePassthroughRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemovePassthroughRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreateRepoOrganizationRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreateRepoOrganizationRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

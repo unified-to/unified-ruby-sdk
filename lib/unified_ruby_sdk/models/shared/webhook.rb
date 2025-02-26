@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
     # A webhook is used to POST new/updated information to your server.
-    class Webhook < ::UnifiedRubySDK::Utils::FieldAugmented
+    class Webhook < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreateCommerceLocationRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreateCommerceLocationRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

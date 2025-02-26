@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class KmsComment < ::UnifiedRubySDK::Utils::FieldAugmented
+    class KmsComment < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

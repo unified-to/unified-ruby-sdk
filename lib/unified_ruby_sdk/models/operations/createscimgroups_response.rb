@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreateScimGroupsResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreateScimGroupsResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

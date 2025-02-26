@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class AtsCandidate < ::UnifiedRubySDK::Utils::FieldAugmented
+    class AtsCandidate < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveCrmContactRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveCrmContactRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

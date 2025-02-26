@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreateCommerceInventoryRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreateCommerceInventoryRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

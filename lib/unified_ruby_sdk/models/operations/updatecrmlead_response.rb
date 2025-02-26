@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class UpdateCrmLeadResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class UpdateCrmLeadResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class HrisCompensation < ::UnifiedRubySDK::Utils::FieldAugmented
+    class HrisCompensation < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

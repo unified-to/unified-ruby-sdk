@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class UcCall < ::UnifiedRubySDK::Utils::FieldAugmented
+    class UcCall < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

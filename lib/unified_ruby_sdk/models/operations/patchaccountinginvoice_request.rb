@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchAccountingInvoiceRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchAccountingInvoiceRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

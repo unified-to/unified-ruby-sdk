@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetPaymentRefundRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetPaymentRefundRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

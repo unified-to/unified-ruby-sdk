@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class AtsTelephone < ::UnifiedRubySDK::Utils::FieldAugmented
+    class AtsTelephone < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

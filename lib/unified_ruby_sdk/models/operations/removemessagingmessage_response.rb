@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveMessagingMessageResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveMessagingMessageResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

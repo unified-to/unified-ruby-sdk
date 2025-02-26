@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveCommerceLocationRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveCommerceLocationRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

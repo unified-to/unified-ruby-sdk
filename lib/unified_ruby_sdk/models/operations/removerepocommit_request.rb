@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveRepoCommitRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveRepoCommitRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

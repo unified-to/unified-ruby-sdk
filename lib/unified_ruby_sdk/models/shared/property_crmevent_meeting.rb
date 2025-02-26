@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
     # The meeting object, when type = meeting
-    class PropertyCrmEventMeeting < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyCrmEventMeeting < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

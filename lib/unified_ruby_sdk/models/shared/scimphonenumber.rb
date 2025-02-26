@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class ScimPhoneNumber < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ScimPhoneNumber < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

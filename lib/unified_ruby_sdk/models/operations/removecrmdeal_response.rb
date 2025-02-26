@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveCrmDealResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveCrmDealResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

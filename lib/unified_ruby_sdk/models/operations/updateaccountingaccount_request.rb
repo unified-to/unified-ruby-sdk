@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class UpdateAccountingAccountRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class UpdateAccountingAccountRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # Chart of accounts

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class AtsAddress < ::UnifiedRubySDK::Utils::FieldAugmented
+    class AtsAddress < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

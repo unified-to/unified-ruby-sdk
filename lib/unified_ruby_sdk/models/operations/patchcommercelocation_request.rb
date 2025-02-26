@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchCommerceLocationRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchCommerceLocationRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

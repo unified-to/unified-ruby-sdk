@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetAccountingInvoiceRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetAccountingInvoiceRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

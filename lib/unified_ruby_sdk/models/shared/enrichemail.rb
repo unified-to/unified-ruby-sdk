@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class EnrichEmail < ::UnifiedRubySDK::Utils::FieldAugmented
+    class EnrichEmail < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

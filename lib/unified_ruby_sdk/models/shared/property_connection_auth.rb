@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
     # An authentication object that represents a specific authorized user's connection to an integration.
-    class PropertyConnectionAuth < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyConnectionAuth < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

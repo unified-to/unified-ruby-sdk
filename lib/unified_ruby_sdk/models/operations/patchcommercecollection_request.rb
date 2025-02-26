@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchCommerceCollectionRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchCommerceCollectionRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # A collection of items/products/services

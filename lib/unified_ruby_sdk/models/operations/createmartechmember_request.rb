@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreateMartechMemberRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreateMartechMemberRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

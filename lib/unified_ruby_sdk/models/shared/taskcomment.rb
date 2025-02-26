@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class TaskComment < ::UnifiedRubySDK::Utils::FieldAugmented
+    class TaskComment < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveAtsJobRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveAtsJobRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

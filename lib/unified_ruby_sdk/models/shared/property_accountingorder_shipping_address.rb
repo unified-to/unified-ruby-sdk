@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class PropertyAccountingOrderShippingAddress < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyAccountingOrderShippingAddress < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class RepoOrganization < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RepoOrganization < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveAccountingTransactionRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveAccountingTransactionRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

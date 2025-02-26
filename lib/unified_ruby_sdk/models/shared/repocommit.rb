@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class RepoCommit < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RepoCommit < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

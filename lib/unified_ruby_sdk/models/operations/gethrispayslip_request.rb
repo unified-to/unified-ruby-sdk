@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetHrisPayslipRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetHrisPayslipRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

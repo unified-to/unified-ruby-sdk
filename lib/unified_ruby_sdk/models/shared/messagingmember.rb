@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class MessagingMember < ::UnifiedRubySDK::Utils::FieldAugmented
+    class MessagingMember < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveRepoPullrequestResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveRepoPullrequestResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

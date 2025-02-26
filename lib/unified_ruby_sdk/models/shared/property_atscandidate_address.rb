@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class PropertyAtsCandidateAddress < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyAtsCandidateAddress < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

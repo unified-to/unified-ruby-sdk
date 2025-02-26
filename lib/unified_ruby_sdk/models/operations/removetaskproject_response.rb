@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveTaskProjectResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveTaskProjectResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

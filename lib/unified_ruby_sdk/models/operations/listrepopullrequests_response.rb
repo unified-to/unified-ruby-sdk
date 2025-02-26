@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListRepoPullrequestsResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListRepoPullrequestsResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

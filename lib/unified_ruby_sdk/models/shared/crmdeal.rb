@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
     # A deal represents an opportunity with companies and/or contacts
-    class CrmDeal < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CrmDeal < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

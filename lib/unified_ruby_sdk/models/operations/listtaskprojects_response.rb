@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListTaskProjectsResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListTaskProjectsResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

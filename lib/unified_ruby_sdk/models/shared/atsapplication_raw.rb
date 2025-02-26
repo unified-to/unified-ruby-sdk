@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class AtsApplicationRaw < ::UnifiedRubySDK::Utils::FieldAugmented
+    class AtsApplicationRaw < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

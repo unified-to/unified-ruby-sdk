@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
     # A member represents a person
-    class MarketingMember < ::UnifiedRubySDK::Utils::FieldAugmented
+    class MarketingMember < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

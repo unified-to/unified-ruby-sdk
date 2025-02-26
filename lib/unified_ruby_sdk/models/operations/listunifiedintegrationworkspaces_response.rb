@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListUnifiedIntegrationWorkspacesResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListUnifiedIntegrationWorkspacesResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

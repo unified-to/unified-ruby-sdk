@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class PropertyAccountingContactBillingAddress < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyAccountingContactBillingAddress < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

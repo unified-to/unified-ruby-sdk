@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchRepoPullrequestResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchRepoPullrequestResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class HrisEmployeeRaw < ::UnifiedRubySDK::Utils::FieldAugmented
+    class HrisEmployeeRaw < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

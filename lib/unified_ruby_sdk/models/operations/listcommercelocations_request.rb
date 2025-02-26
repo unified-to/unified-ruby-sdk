@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListCommerceLocationsRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListCommerceLocationsRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

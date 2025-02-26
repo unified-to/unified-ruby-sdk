@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class AtsJobPosting < ::UnifiedRubySDK::Utils::FieldAugmented
+    class AtsJobPosting < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # job-post-specific address

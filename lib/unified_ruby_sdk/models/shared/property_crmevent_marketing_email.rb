@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class PropertyCrmEventMarketingEmail < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyCrmEventMarketingEmail < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class ExtraData < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ExtraData < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

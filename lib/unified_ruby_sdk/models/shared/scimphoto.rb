@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class ScimPhoto < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ScimPhoto < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

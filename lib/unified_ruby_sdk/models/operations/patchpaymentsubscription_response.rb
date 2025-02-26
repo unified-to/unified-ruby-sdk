@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchPaymentSubscriptionResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchPaymentSubscriptionResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

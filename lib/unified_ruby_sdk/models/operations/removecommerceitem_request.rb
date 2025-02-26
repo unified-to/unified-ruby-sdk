@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveCommerceItemRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveCommerceItemRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

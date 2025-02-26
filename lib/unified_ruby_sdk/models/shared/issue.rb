@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class Issue < ::UnifiedRubySDK::Utils::FieldAugmented
+    class Issue < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

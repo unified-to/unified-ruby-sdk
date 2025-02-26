@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class UpdatePassthroughRawRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class UpdatePassthroughRawRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

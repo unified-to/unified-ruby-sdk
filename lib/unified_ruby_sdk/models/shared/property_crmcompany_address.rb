@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class PropertyCrmCompanyAddress < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyCrmCompanyAddress < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

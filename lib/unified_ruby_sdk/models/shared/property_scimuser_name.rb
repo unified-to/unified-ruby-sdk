@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class PropertyScimUserName < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyScimUserName < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

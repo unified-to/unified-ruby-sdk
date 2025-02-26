@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListAccountingJournalsResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListAccountingJournalsResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

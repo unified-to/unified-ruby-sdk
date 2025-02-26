@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreateLmsCourseRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreateLmsCourseRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

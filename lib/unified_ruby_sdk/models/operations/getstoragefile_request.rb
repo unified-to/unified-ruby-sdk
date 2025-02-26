@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetStorageFileRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetStorageFileRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

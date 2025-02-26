@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreateAccountingContactRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreateAccountingContactRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

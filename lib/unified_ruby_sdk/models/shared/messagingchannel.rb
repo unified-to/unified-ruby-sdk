@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class MessagingChannel < ::UnifiedRubySDK::Utils::FieldAugmented
+    class MessagingChannel < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

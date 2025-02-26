@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListRepoBranchesResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListRepoBranchesResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

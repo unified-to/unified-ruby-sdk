@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class HrisEmail < ::UnifiedRubySDK::Utils::FieldAugmented
+    class HrisEmail < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

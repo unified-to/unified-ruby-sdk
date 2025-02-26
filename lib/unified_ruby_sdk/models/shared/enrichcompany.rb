@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
     # A company object from an enrichment integration
-    class EnrichCompany < ::UnifiedRubySDK::Utils::FieldAugmented
+    class EnrichCompany < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # The address of the company

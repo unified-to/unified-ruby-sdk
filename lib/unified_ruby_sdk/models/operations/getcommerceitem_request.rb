@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetCommerceItemRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetCommerceItemRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

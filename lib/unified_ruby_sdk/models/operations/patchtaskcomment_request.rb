@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchTaskCommentRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchTaskCommentRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

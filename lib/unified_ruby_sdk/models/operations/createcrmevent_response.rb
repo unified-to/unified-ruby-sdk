@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreateCrmEventResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreateCrmEventResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

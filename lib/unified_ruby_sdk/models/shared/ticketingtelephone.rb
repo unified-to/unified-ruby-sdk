@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class TicketingTelephone < ::UnifiedRubySDK::Utils::FieldAugmented
+    class TicketingTelephone < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveTaskTaskRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveTaskTaskRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

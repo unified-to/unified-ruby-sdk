@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class TaskTask < ::UnifiedRubySDK::Utils::FieldAugmented
+    class TaskTask < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

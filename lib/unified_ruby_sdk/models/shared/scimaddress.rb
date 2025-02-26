@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class ScimAddress < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ScimAddress < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

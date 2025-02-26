@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class KmsPage < ::UnifiedRubySDK::Utils::FieldAugmented
+    class KmsPage < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

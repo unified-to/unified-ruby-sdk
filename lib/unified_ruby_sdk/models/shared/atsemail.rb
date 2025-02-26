@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class AtsEmail < ::UnifiedRubySDK::Utils::FieldAugmented
+    class AtsEmail < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

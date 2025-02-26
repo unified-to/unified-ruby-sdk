@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreateCommerceCollectionRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreateCommerceCollectionRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # A collection of items/products/services

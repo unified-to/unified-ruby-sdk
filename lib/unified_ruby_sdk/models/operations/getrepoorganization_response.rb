@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetRepoOrganizationResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetRepoOrganizationResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

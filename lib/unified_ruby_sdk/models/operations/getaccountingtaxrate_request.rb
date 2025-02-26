@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetAccountingTaxrateRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetAccountingTaxrateRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListTaskProjectsRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListTaskProjectsRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

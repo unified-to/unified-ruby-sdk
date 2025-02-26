@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListGenaiModelsResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListGenaiModelsResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

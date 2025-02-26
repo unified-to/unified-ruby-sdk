@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetUcContactRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetUcContactRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

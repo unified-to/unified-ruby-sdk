@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class UpdateMartechListResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class UpdateMartechListResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

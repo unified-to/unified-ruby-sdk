@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemovePassthroughResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemovePassthroughResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

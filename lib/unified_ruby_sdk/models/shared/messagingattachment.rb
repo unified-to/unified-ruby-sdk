@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class MessagingAttachment < ::UnifiedRubySDK::Utils::FieldAugmented
+    class MessagingAttachment < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

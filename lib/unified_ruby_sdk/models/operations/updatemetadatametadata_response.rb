@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class UpdateMetadataMetadataResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class UpdateMetadataMetadataResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class HrisPayslipDetail < ::UnifiedRubySDK::Utils::FieldAugmented
+    class HrisPayslipDetail < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreateLmsClassResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreateLmsClassResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

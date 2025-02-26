@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveKmsPageResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveKmsPageResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

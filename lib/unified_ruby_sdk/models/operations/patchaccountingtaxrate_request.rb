@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchAccountingTaxrateRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchAccountingTaxrateRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

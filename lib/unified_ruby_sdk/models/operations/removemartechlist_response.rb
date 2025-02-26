@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveMartechListResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveMartechListResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

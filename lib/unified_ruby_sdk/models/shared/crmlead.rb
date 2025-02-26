@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class CrmLead < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CrmLead < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

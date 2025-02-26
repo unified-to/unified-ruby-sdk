@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class AccountingJournalLineitem < ::UnifiedRubySDK::Utils::FieldAugmented
+    class AccountingJournalLineitem < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

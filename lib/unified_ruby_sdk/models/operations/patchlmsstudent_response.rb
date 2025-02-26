@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchLmsStudentResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchLmsStudentResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

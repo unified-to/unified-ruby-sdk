@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class RepoPullrequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RepoPullrequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

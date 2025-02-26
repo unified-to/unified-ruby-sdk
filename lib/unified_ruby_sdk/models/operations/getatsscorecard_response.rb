@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetAtsScorecardResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetAtsScorecardResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

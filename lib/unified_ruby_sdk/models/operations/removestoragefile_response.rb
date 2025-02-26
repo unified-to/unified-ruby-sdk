@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveStorageFileResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveStorageFileResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

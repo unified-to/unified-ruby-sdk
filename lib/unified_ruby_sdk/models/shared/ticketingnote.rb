@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class TicketingNote < ::UnifiedRubySDK::Utils::FieldAugmented
+    class TicketingNote < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

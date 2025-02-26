@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchTicketingNoteResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchTicketingNoteResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetAtsScorecardRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetAtsScorecardRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

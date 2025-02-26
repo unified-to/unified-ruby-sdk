@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveAtsActivityRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveAtsActivityRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

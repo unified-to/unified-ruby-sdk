@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchMetadataMetadataRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchMetadataMetadataRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

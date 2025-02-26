@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetUnifiedApicallRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetUnifiedApicallRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the Apicall

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class PaymentPayment < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PaymentPayment < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

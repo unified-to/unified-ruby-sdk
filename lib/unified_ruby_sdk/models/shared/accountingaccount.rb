@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
     # Chart of accounts
-    class AccountingAccount < ::UnifiedRubySDK::Utils::FieldAugmented
+    class AccountingAccount < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

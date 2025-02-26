@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetAtsInterviewRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetAtsInterviewRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

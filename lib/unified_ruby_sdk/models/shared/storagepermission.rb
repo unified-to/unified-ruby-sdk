@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class StoragePermission < ::UnifiedRubySDK::Utils::FieldAugmented
+    class StoragePermission < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

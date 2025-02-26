@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveAtsActivityResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveAtsActivityResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

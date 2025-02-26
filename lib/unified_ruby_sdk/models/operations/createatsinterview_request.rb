@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreateAtsInterviewRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreateAtsInterviewRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

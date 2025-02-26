@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
     # The task object, when type = task
-    class PropertyCrmEventTask < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyCrmEventTask < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

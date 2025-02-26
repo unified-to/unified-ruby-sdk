@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class AtsScorecardRaw < ::UnifiedRubySDK::Utils::FieldAugmented
+    class AtsScorecardRaw < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

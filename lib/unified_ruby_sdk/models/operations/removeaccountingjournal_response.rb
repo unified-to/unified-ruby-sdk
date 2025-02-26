@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveAccountingJournalResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveAccountingJournalResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

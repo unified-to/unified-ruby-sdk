@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveUnifiedConnectionRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveUnifiedConnectionRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the Connection

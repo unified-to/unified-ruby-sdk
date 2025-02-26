@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class CrmEmail < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CrmEmail < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

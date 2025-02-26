@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveTicketingNoteRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveTicketingNoteRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

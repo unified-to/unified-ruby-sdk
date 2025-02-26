@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveHrisLocationResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveHrisLocationResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
     # an organization.
-    class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

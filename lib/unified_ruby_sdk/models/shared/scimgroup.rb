@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class ScimGroup < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ScimGroup < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

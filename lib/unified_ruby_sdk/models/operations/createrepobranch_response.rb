@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreateRepoBranchResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreateRepoBranchResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

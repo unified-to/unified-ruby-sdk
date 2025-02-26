@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class GenaiPrompt < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GenaiPrompt < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

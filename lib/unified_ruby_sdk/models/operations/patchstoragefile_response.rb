@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchStorageFileResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchStorageFileResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

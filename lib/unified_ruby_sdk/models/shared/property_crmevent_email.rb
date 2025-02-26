@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
     # The email object, when type = email
-    class PropertyCrmEventEmail < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyCrmEventEmail < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

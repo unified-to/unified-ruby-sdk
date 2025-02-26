@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class HrisTimeoffRaw < ::UnifiedRubySDK::Utils::FieldAugmented
+    class HrisTimeoffRaw < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

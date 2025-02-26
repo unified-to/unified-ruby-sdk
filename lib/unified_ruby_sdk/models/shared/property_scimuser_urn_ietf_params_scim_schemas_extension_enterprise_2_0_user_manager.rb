@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
     # "id" attribute of another User.
-    class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

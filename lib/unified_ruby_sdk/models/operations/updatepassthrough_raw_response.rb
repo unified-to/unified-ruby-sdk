@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class UpdatePassthroughRawResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class UpdatePassthroughRawResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

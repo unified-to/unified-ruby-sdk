@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class EnrichPersonWorkHistory < ::UnifiedRubySDK::Utils::FieldAugmented
+    class EnrichPersonWorkHistory < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

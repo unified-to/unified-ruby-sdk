@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class AccountingTaxrateRaw < ::UnifiedRubySDK::Utils::FieldAugmented
+    class AccountingTaxrateRaw < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

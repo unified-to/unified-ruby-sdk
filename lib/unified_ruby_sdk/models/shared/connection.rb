@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
     # A connection represents a specific authentication of an integration.
-    class Connection < ::UnifiedRubySDK::Utils::FieldAugmented
+    class Connection < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # The Integration categories that this connection supports

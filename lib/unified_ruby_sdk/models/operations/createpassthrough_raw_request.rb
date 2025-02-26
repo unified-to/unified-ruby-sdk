@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreatePassthroughRawRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreatePassthroughRawRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class CrmContactRaw < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CrmContactRaw < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

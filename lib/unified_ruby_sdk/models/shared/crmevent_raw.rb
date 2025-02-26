@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class CrmEventRaw < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CrmEventRaw < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

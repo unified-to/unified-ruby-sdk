@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreateAtsInterviewResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreateAtsInterviewResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

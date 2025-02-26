@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class CommerceItemVariant < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CommerceItemVariant < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

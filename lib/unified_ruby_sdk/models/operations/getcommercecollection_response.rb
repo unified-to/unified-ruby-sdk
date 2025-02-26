@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class GetCommerceCollectionResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class GetCommerceCollectionResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation

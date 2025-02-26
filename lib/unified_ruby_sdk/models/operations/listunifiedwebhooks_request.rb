@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListUnifiedWebhooksRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListUnifiedWebhooksRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # Filter the results to just this integration

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class PatchPaymentPaymentRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PatchPaymentPaymentRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

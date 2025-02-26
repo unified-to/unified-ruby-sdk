@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreateRepoPullrequestRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreateRepoPullrequestRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

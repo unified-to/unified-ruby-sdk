@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreateAccountingJournalRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreateAccountingJournalRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

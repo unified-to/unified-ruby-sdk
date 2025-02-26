@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListUcCallsRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListUcCallsRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

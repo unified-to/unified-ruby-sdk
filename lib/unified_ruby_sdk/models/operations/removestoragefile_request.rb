@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveStorageFileRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveStorageFileRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # ID of the connection

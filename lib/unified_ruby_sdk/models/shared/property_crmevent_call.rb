@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
     # The call object, when type = call
-    class PropertyCrmEventCall < ::UnifiedRubySDK::Utils::FieldAugmented
+    class PropertyCrmEventCall < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

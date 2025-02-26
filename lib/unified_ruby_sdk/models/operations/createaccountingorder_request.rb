@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class CreateAccountingOrderRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class CreateAccountingOrderRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

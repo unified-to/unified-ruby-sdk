@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class HrisTelephone < ::UnifiedRubySDK::Utils::FieldAugmented
+    class HrisTelephone < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

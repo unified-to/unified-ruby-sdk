@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class AccountingContactRaw < ::UnifiedRubySDK::Utils::FieldAugmented
+    class AccountingContactRaw < ::Crystalline::FieldAugmented
       extend T::Sig
 
 

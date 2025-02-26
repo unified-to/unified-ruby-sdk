@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class ListUnifiedIntegrationsRequest < ::UnifiedRubySDK::Utils::FieldAugmented
+    class ListUnifiedIntegrationsRequest < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # Filter the results for only the workspace's active integrations

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Operations
   
 
-    class RemoveRepoBranchResponse < ::UnifiedRubySDK::Utils::FieldAugmented
+    class RemoveRepoBranchResponse < ::Crystalline::FieldAugmented
       extend T::Sig
 
       # HTTP response content type for this operation
