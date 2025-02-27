@@ -79,6 +79,8 @@ module UnifiedRubySDK
     autoload :AtsCandidate, 'unified_ruby_sdk/models/shared/atscandidate.rb'
     autoload :AtsTelephoneType, 'unified_ruby_sdk/models/shared/atstelephone_type.rb'
     autoload :AtsTelephone, 'unified_ruby_sdk/models/shared/atstelephone.rb'
+    autoload :AtsCandidateExperience, 'unified_ruby_sdk/models/shared/atscandidateexperience.rb'
+    autoload :AtsCandidateEducation, 'unified_ruby_sdk/models/shared/atscandidateeducation.rb'
     autoload :PropertyAtsCandidateAddress, 'unified_ruby_sdk/models/shared/property_atscandidate_address.rb'
     autoload :AtsDocumentRaw, 'unified_ruby_sdk/models/shared/atsdocument_raw.rb'
     autoload :AtsDocumentType, 'unified_ruby_sdk/models/shared/atsdocument_type.rb'

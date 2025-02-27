@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: eed3e21cce15d18d6d589ec03e5be2ce
+  docChecksum: a642c7bece4e0a94752d9efa149625ea
   docVersion: "1.0"
-  speakeasyVersion: 1.504.1
-  generationVersion: 2.529.2
-  releaseVersion: 0.6.19
-  configChecksum: a8a2ef5459e303d8d85da6a58d0bc210
+  speakeasyVersion: 1.505.1
+  generationVersion: 2.531.0
+  releaseVersion: 0.6.20
+  configChecksum: 9b17c61a81818268b420a29a3d8217b8
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -848,6 +848,8 @@ generatedFiles:
   - docs/models/shared/atsapplicationraw.md
   - docs/models/shared/atsapplicationstatus.md
   - docs/models/shared/atscandidate.md
+  - docs/models/shared/atscandidateeducation.md
+  - docs/models/shared/atscandidateexperience.md
   - docs/models/shared/atscandidateraw.md
   - docs/models/shared/atscompany.md
   - docs/models/shared/atscompanyraw.md
@@ -2164,6 +2166,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/atsapplicationanswer.rb
   - lib/unified_ruby_sdk/models/shared/atscandidate.rb
   - lib/unified_ruby_sdk/models/shared/atscandidate_raw.rb
+  - lib/unified_ruby_sdk/models/shared/atscandidateeducation.rb
+  - lib/unified_ruby_sdk/models/shared/atscandidateexperience.rb
   - lib/unified_ruby_sdk/models/shared/atscompany.rb
   - lib/unified_ruby_sdk/models/shared/atscompany_raw.rb
   - lib/unified_ruby_sdk/models/shared/atscompensation.rb
