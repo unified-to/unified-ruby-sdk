@@ -140,6 +140,16 @@ module UnifiedRubySDK
         REPO_PULLREQUEST_WRITE = new('repo_pullrequest_write')
         METADATA_METADATA_READ = new('metadata_metadata_read')
         METADATA_METADATA_WRITE = new('metadata_metadata_write')
+        CALENDAR_CALENDAR_READ = new('calendar_calendar_read')
+        CALENDAR_CALENDAR_WRITE = new('calendar_calendar_write')
+        CALENDAR_EVENT_READ = new('calendar_event_read')
+        CALENDAR_EVENT_WRITE = new('calendar_event_write')
+        CALENDAR_BUSY_READ = new('calendar_busy_read')
+        CALENDAR_BUSY_WRITE = new('calendar_busy_write')
+        CALENDAR_LINK_READ = new('calendar_link_read')
+        CALENDAR_LINK_WRITE = new('calendar_link_write')
+        CALENDAR_RECORDING_READ = new('calendar_recording_read')
+        CALENDAR_RECORDING_WRITE = new('calendar_recording_write')
       end
     end
   end

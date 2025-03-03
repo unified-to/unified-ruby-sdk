@@ -81,6 +81,11 @@ module UnifiedRubySDK
         REPO_COMMIT = new('repo_commit')
         REPO_PULLREQUEST = new('repo_pullrequest')
         METADATA_METADATA = new('metadata_metadata')
+        CALENDAR_CALENDAR = new('calendar_calendar')
+        CALENDAR_EVENT = new('calendar_event')
+        CALENDAR_BUSY = new('calendar_busy')
+        CALENDAR_LINK = new('calendar_link')
+        CALENDAR_RECORDING = new('calendar_recording')
       end
     end
   end

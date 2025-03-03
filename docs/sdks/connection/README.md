@@ -32,11 +32,11 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Shared::Connection.new(
   categories: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::REPO,
+    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::METADATA,
   ],
   integration_type: "<value>",
   permissions: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_LEAD_READ,
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::MARTECH_LIST_READ,
   ],
 )
     
@@ -158,11 +158,11 @@ s.config_security(
     
 res = s.connection.patch_unified_connection(connection=::UnifiedRubySDK::Shared::Connection.new(
   categories: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::GENAI,
+    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::MESSAGING,
   ],
   integration_type: "<value>",
   permissions: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::METADATA_METADATA_WRITE,
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CALENDAR_RECORDING_WRITE,
   ],
 ), id="<id>")
 
@@ -243,11 +243,11 @@ s.config_security(
     
 res = s.connection.update_unified_connection(connection=::UnifiedRubySDK::Shared::Connection.new(
   categories: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::TASK,
+    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::SCIM,
   ],
   integration_type: "<value>",
   permissions: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::REPO_PULLREQUEST_WRITE,
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CALENDAR_LINK_WRITE,
   ],
 ), id="<id>")
 

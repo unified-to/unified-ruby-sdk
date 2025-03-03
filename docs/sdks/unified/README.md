@@ -46,11 +46,11 @@ s.config_security(
 
 req = ::UnifiedRubySDK::Shared::Connection.new(
   categories: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::REPO,
+    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::METADATA,
   ],
   integration_type: "<value>",
   permissions: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_LEAD_READ,
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::MARTECH_LIST_READ,
   ],
 )
     
@@ -95,7 +95,7 @@ s.config_security(
 res = s.unified.create_unified_webhook(webhook=::UnifiedRubySDK::Shared::Webhook.new(
   connection_id: "<id>",
   event: ::UnifiedRubySDK::Shared::Event::CREATED,
-  object_type: ::UnifiedRubySDK::Shared::ObjectType::HRIS_EMPLOYEE,
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::HRIS_PAYSLIP,
 ), include_all=false)
 
 if ! res.webhook.nil?
@@ -536,11 +536,11 @@ s.config_security(
     
 res = s.unified.patch_unified_connection(connection=::UnifiedRubySDK::Shared::Connection.new(
   categories: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::GENAI,
+    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::MESSAGING,
   ],
   integration_type: "<value>",
   permissions: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::METADATA_METADATA_WRITE,
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CALENDAR_RECORDING_WRITE,
   ],
 ), id="<id>")
 
@@ -584,7 +584,7 @@ s.config_security(
 res = s.unified.patch_unified_webhook(webhook=::UnifiedRubySDK::Shared::Webhook.new(
   connection_id: "<id>",
   event: ::UnifiedRubySDK::Shared::Event::DELETED,
-  object_type: ::UnifiedRubySDK::Shared::ObjectType::CRM_DEAL,
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::CRM_LEAD,
 ), id="<id>")
 
 if ! res.webhook.nil?
@@ -740,11 +740,11 @@ s.config_security(
     
 res = s.unified.update_unified_connection(connection=::UnifiedRubySDK::Shared::Connection.new(
   categories: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::TASK,
+    ::UnifiedRubySDK::Shared::PropertyConnectionCategories::SCIM,
   ],
   integration_type: "<value>",
   permissions: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::REPO_PULLREQUEST_WRITE,
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CALENDAR_LINK_WRITE,
   ],
 ), id="<id>")
 
@@ -788,7 +788,7 @@ s.config_security(
 res = s.unified.update_unified_webhook(webhook=::UnifiedRubySDK::Shared::Webhook.new(
   connection_id: "<id>",
   event: ::UnifiedRubySDK::Shared::Event::CREATED,
-  object_type: ::UnifiedRubySDK::Shared::ObjectType::PAYMENT_LINK,
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::PAYMENT_PAYOUT,
 ), id="<id>")
 
 if ! res.webhook.nil?

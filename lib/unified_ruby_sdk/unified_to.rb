@@ -13,7 +13,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :contact, :invoice, :journal, :order, :organization, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :event, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :employee, :group, :payslip, :timeoff, :kms, :comment, :page, :space, :lms, :class_, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :link, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :storage, :file, :task, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
+    attr_accessor :accounting, :account, :contact, :invoice, :journal, :order, :organization, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :event, :link, :recording, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :employee, :group, :payslip, :timeoff, :kms, :comment, :page, :space, :lms, :class_, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :storage, :file, :task, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
 
     sig do
       params(client: Faraday::Request,
@@ -94,6 +94,11 @@ module UnifiedRubySDK
       @interview = Interview.new(@sdk_configuration)
       @job = Job.new(@sdk_configuration)
       @scorecard = Scorecard.new(@sdk_configuration)
+      @calendar = Calendar.new(@sdk_configuration)
+      @busy = Busy.new(@sdk_configuration)
+      @event = Event.new(@sdk_configuration)
+      @link = Link.new(@sdk_configuration)
+      @recording = Recording.new(@sdk_configuration)
       @commerce = Commerce.new(@sdk_configuration)
       @collection = Collection.new(@sdk_configuration)
       @inventory = Inventory.new(@sdk_configuration)
@@ -101,7 +106,6 @@ module UnifiedRubySDK
       @location = Location.new(@sdk_configuration)
       @crm = Crm.new(@sdk_configuration)
       @deal = Deal.new(@sdk_configuration)
-      @event = Event.new(@sdk_configuration)
       @lead = Lead.new(@sdk_configuration)
       @pipeline = Pipeline.new(@sdk_configuration)
       @enrich = Enrich.new(@sdk_configuration)
@@ -132,7 +136,6 @@ module UnifiedRubySDK
       @metadata = Metadata.new(@sdk_configuration)
       @passthrough = Passthrough.new(@sdk_configuration)
       @payment = Payment.new(@sdk_configuration)
-      @link = Link.new(@sdk_configuration)
       @payout = Payout.new(@sdk_configuration)
       @refund = Refund.new(@sdk_configuration)
       @subscription = Subscription.new(@sdk_configuration)

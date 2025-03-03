@@ -35,7 +35,7 @@ s.config_security(
 res = s.webhook.create_unified_webhook(webhook=::UnifiedRubySDK::Shared::Webhook.new(
   connection_id: "<id>",
   event: ::UnifiedRubySDK::Shared::Event::CREATED,
-  object_type: ::UnifiedRubySDK::Shared::ObjectType::HRIS_EMPLOYEE,
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::HRIS_PAYSLIP,
 ), include_all=false)
 
 if ! res.webhook.nil?
@@ -156,7 +156,7 @@ s.config_security(
 res = s.webhook.patch_unified_webhook(webhook=::UnifiedRubySDK::Shared::Webhook.new(
   connection_id: "<id>",
   event: ::UnifiedRubySDK::Shared::Event::DELETED,
-  object_type: ::UnifiedRubySDK::Shared::ObjectType::CRM_DEAL,
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::CRM_LEAD,
 ), id="<id>")
 
 if ! res.webhook.nil?
@@ -275,7 +275,7 @@ s.config_security(
 res = s.webhook.update_unified_webhook(webhook=::UnifiedRubySDK::Shared::Webhook.new(
   connection_id: "<id>",
   event: ::UnifiedRubySDK::Shared::Event::CREATED,
-  object_type: ::UnifiedRubySDK::Shared::ObjectType::PAYMENT_LINK,
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::PAYMENT_PAYOUT,
 ), id="<id>")
 
 if ! res.webhook.nil?

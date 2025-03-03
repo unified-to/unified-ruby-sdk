@@ -31,6 +31,7 @@ module UnifiedRubySDK
         LMS = new('lms')
         REPO = new('repo')
         METADATA = new('metadata')
+        CALENDAR = new('calendar')
       end
     end
   end

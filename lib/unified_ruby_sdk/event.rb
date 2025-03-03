@@ -19,6 +19,60 @@ module UnifiedRubySDK
     end
 
 
+    sig { params(calendar_event: ::UnifiedRubySDK::Shared::CalendarEvent, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCalendarEventResponse) }
+    def create_calendar_event(calendar_event, connection_id, fields_ = nil)
+      # create_calendar_event - Create an event
+      request = ::UnifiedRubySDK::Operations::CreateCalendarEventRequest.new(
+        
+        calendar_event: calendar_event,
+        connection_id: connection_id,
+        fields_: fields_
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::CreateCalendarEventRequest,
+        base_url,
+        '/calendar/{connection_id}/event',
+        request
+      )
+      headers = {}
+      req_content_type, data, form = Utils.serialize_request_body(request, :calendar_event, :json)
+      headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateCalendarEventRequest, request)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.post(url) do |req|
+        req.headers = headers
+        req.params = query_params
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        if form
+          req.body = Utils.encode_form(form)
+        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+          req.body = URI.encode_www_form(data)
+        else
+          req.body = data
+        end
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::CreateCalendarEventResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::CalendarEvent)
+          res.calendar_event = out
+        end
+      end
+
+      res
+    end
+
+
     sig { params(crm_event: ::UnifiedRubySDK::Shared::CrmEvent, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateCrmEventResponse) }
     def create_crm_event(crm_event, connection_id, fields_ = nil)
       # create_crm_event - Create an event
@@ -73,6 +127,50 @@ module UnifiedRubySDK
     end
 
 
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCalendarEventResponse) }
+    def get_calendar_event(connection_id, id, fields_ = nil)
+      # get_calendar_event - Retrieve an event
+      request = ::UnifiedRubySDK::Operations::GetCalendarEventRequest.new(
+        
+        connection_id: connection_id,
+        id: id,
+        fields_: fields_
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::GetCalendarEventRequest,
+        base_url,
+        '/calendar/{connection_id}/event/{id}',
+        request
+      )
+      headers = {}
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::GetCalendarEventRequest, request)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.get(url) do |req|
+        req.headers = headers
+        req.params = query_params
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::GetCalendarEventResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::CalendarEvent)
+          res.calendar_event = out
+        end
+      end
+
+      res
+    end
+
+
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetCrmEventResponse) }
     def get_crm_event(connection_id, id, fields_ = nil)
       # get_crm_event - Retrieve an event
@@ -117,6 +215,44 @@ module UnifiedRubySDK
     end
 
 
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCalendarEventsRequest)).returns(::UnifiedRubySDK::Operations::ListCalendarEventsResponse) }
+    def list_calendar_events(request)
+      # list_calendar_events - List all events
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::ListCalendarEventsRequest,
+        base_url,
+        '/calendar/{connection_id}/event',
+        request
+      )
+      headers = {}
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::ListCalendarEventsRequest, request)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.get(url) do |req|
+        req.headers = headers
+        req.params = query_params
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::ListCalendarEventsResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), T::Array[::UnifiedRubySDK::Shared::CalendarEvent])
+          res.calendar_events = out
+        end
+      end
+
+      res
+    end
+
+
     sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListCrmEventsRequest)).returns(::UnifiedRubySDK::Operations::ListCrmEventsResponse) }
     def list_crm_events(request)
       # list_crm_events - List all events
@@ -148,6 +284,61 @@ module UnifiedRubySDK
         if Utils.match_content_type(content_type, 'application/json')
           out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), T::Array[::UnifiedRubySDK::Shared::CrmEvent])
           res.crm_events = out
+        end
+      end
+
+      res
+    end
+
+
+    sig { params(calendar_event: ::UnifiedRubySDK::Shared::CalendarEvent, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchCalendarEventResponse) }
+    def patch_calendar_event(calendar_event, connection_id, id, fields_ = nil)
+      # patch_calendar_event - Update an event
+      request = ::UnifiedRubySDK::Operations::PatchCalendarEventRequest.new(
+        
+        calendar_event: calendar_event,
+        connection_id: connection_id,
+        id: id,
+        fields_: fields_
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::PatchCalendarEventRequest,
+        base_url,
+        '/calendar/{connection_id}/event/{id}',
+        request
+      )
+      headers = {}
+      req_content_type, data, form = Utils.serialize_request_body(request, :calendar_event, :json)
+      headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchCalendarEventRequest, request)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.patch(url) do |req|
+        req.headers = headers
+        req.params = query_params
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        if form
+          req.body = Utils.encode_form(form)
+        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+          req.body = URI.encode_www_form(data)
+        else
+          req.body = data
+        end
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::PatchCalendarEventResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::CalendarEvent)
+          res.calendar_event = out
         end
       end
 
@@ -210,6 +401,45 @@ module UnifiedRubySDK
     end
 
 
+    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCalendarEventResponse) }
+    def remove_calendar_event(connection_id, id)
+      # remove_calendar_event - Remove an event
+      request = ::UnifiedRubySDK::Operations::RemoveCalendarEventRequest.new(
+        
+        connection_id: connection_id,
+        id: id
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::RemoveCalendarEventRequest,
+        base_url,
+        '/calendar/{connection_id}/event/{id}',
+        request
+      )
+      headers = {}
+      headers['Accept'] = '*/*'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.delete(url) do |req|
+        req.headers = headers
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::RemoveCalendarEventResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+      else
+        res.headers = r.headers
+      end
+
+      res
+    end
+
+
     sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveCrmEventResponse) }
     def remove_crm_event(connection_id, id)
       # remove_crm_event - Remove an event
@@ -243,6 +473,61 @@ module UnifiedRubySDK
       if r.status == 200
       else
         res.headers = r.headers
+      end
+
+      res
+    end
+
+
+    sig { params(calendar_event: ::UnifiedRubySDK::Shared::CalendarEvent, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateCalendarEventResponse) }
+    def update_calendar_event(calendar_event, connection_id, id, fields_ = nil)
+      # update_calendar_event - Update an event
+      request = ::UnifiedRubySDK::Operations::UpdateCalendarEventRequest.new(
+        
+        calendar_event: calendar_event,
+        connection_id: connection_id,
+        id: id,
+        fields_: fields_
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        ::UnifiedRubySDK::Operations::UpdateCalendarEventRequest,
+        base_url,
+        '/calendar/{connection_id}/event/{id}',
+        request
+      )
+      headers = {}
+      req_content_type, data, form = Utils.serialize_request_body(request, :calendar_event, :json)
+      headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
+      query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateCalendarEventRequest, request)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      r = @sdk_configuration.client.put(url) do |req|
+        req.headers = headers
+        req.params = query_params
+        Utils.configure_request_security(req, @sdk_configuration.security) if !@sdk_configuration.nil? && !@sdk_configuration.security.nil?
+        if form
+          req.body = Utils.encode_form(form)
+        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+          req.body = URI.encode_www_form(data)
+        else
+          req.body = data
+        end
+      end
+
+      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
+
+      res = ::UnifiedRubySDK::Operations::UpdateCalendarEventResponse.new(
+        status_code: r.status, content_type: content_type, raw_response: r
+      )
+      if r.status == 200
+        if Utils.match_content_type(content_type, 'application/json')
+          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::UnifiedRubySDK::Shared::CalendarEvent)
+          res.calendar_event = out
+        end
       end
 
       res

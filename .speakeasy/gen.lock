@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: a642c7bece4e0a94752d9efa149625ea
+  docChecksum: 04bf3a6a3ccbffee7bf0c8268abe98b3
   docVersion: "1.0"
-  speakeasyVersion: 1.505.1
-  generationVersion: 2.531.0
-  releaseVersion: 0.6.20
-  configChecksum: 9b17c61a81818268b420a29a3d8217b8
+  speakeasyVersion: 1.508.1
+  generationVersion: 2.536.0
+  releaseVersion: 0.6.21
+  configChecksum: d8050d5454648c15de477af061613fd3
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -52,6 +52,12 @@ generatedFiles:
   - docs/models/operations/createatsjobresponse.md
   - docs/models/operations/createatsscorecardrequest.md
   - docs/models/operations/createatsscorecardresponse.md
+  - docs/models/operations/createcalendarcalendarrequest.md
+  - docs/models/operations/createcalendarcalendarresponse.md
+  - docs/models/operations/createcalendareventrequest.md
+  - docs/models/operations/createcalendareventresponse.md
+  - docs/models/operations/createcalendarlinkrequest.md
+  - docs/models/operations/createcalendarlinkresponse.md
   - docs/models/operations/createcommercecollectionrequest.md
   - docs/models/operations/createcommercecollectionresponse.md
   - docs/models/operations/createcommerceinventoryrequest.md
@@ -179,6 +185,14 @@ generatedFiles:
   - docs/models/operations/getatsjobresponse.md
   - docs/models/operations/getatsscorecardrequest.md
   - docs/models/operations/getatsscorecardresponse.md
+  - docs/models/operations/getcalendarcalendarrequest.md
+  - docs/models/operations/getcalendarcalendarresponse.md
+  - docs/models/operations/getcalendareventrequest.md
+  - docs/models/operations/getcalendareventresponse.md
+  - docs/models/operations/getcalendarlinkrequest.md
+  - docs/models/operations/getcalendarlinkresponse.md
+  - docs/models/operations/getcalendarrecordingrequest.md
+  - docs/models/operations/getcalendarrecordingresponse.md
   - docs/models/operations/getcommercecollectionrequest.md
   - docs/models/operations/getcommercecollectionresponse.md
   - docs/models/operations/getcommerceinventoryrequest.md
@@ -319,6 +333,16 @@ generatedFiles:
   - docs/models/operations/listatsjobsresponse.md
   - docs/models/operations/listatsscorecardsrequest.md
   - docs/models/operations/listatsscorecardsresponse.md
+  - docs/models/operations/listcalendarbusiesrequest.md
+  - docs/models/operations/listcalendarbusiesresponse.md
+  - docs/models/operations/listcalendarcalendarsrequest.md
+  - docs/models/operations/listcalendarcalendarsresponse.md
+  - docs/models/operations/listcalendareventsrequest.md
+  - docs/models/operations/listcalendareventsresponse.md
+  - docs/models/operations/listcalendarlinksrequest.md
+  - docs/models/operations/listcalendarlinksresponse.md
+  - docs/models/operations/listcalendarrecordingsrequest.md
+  - docs/models/operations/listcalendarrecordingsresponse.md
   - docs/models/operations/listcommercecollectionsrequest.md
   - docs/models/operations/listcommercecollectionsresponse.md
   - docs/models/operations/listcommerceinventoriesrequest.md
@@ -466,6 +490,12 @@ generatedFiles:
   - docs/models/operations/patchatsjobresponse.md
   - docs/models/operations/patchatsscorecardrequest.md
   - docs/models/operations/patchatsscorecardresponse.md
+  - docs/models/operations/patchcalendarcalendarrequest.md
+  - docs/models/operations/patchcalendarcalendarresponse.md
+  - docs/models/operations/patchcalendareventrequest.md
+  - docs/models/operations/patchcalendareventresponse.md
+  - docs/models/operations/patchcalendarlinkrequest.md
+  - docs/models/operations/patchcalendarlinkresponse.md
   - docs/models/operations/patchcommercecollectionrequest.md
   - docs/models/operations/patchcommercecollectionresponse.md
   - docs/models/operations/patchcommerceinventoryrequest.md
@@ -591,6 +621,12 @@ generatedFiles:
   - docs/models/operations/removeatsjobresponse.md
   - docs/models/operations/removeatsscorecardrequest.md
   - docs/models/operations/removeatsscorecardresponse.md
+  - docs/models/operations/removecalendarcalendarrequest.md
+  - docs/models/operations/removecalendarcalendarresponse.md
+  - docs/models/operations/removecalendareventrequest.md
+  - docs/models/operations/removecalendareventresponse.md
+  - docs/models/operations/removecalendarlinkrequest.md
+  - docs/models/operations/removecalendarlinkresponse.md
   - docs/models/operations/removecommercecollectionrequest.md
   - docs/models/operations/removecommercecollectionresponse.md
   - docs/models/operations/removecommerceinventoryrequest.md
@@ -712,6 +748,12 @@ generatedFiles:
   - docs/models/operations/updateatsjobresponse.md
   - docs/models/operations/updateatsscorecardrequest.md
   - docs/models/operations/updateatsscorecardresponse.md
+  - docs/models/operations/updatecalendarcalendarrequest.md
+  - docs/models/operations/updatecalendarcalendarresponse.md
+  - docs/models/operations/updatecalendareventrequest.md
+  - docs/models/operations/updatecalendareventresponse.md
+  - docs/models/operations/updatecalendarlinkrequest.md
+  - docs/models/operations/updatecalendarlinkresponse.md
   - docs/models/operations/updatecommercecollectionrequest.md
   - docs/models/operations/updatecommercecollectionresponse.md
   - docs/models/operations/updatecommerceinventoryrequest.md
@@ -882,6 +924,21 @@ generatedFiles:
   - docs/models/shared/atsstatusstatus.md
   - docs/models/shared/atstelephone.md
   - docs/models/shared/atstelephonetype.md
+  - docs/models/shared/calendarattendee.md
+  - docs/models/shared/calendarattendeestatus.md
+  - docs/models/shared/calendarbusy.md
+  - docs/models/shared/calendarbusyraw.md
+  - docs/models/shared/calendarcalendar.md
+  - docs/models/shared/calendarcalendarraw.md
+  - docs/models/shared/calendarevent.md
+  - docs/models/shared/calendareventraw.md
+  - docs/models/shared/calendareventstatus.md
+  - docs/models/shared/calendarlink.md
+  - docs/models/shared/calendarlinkraw.md
+  - docs/models/shared/calendarrecording.md
+  - docs/models/shared/calendarrecordingmedia.md
+  - docs/models/shared/calendarrecordingraw.md
+  - docs/models/shared/calendarrecordingtranscript.md
   - docs/models/shared/commercecollection.md
   - docs/models/shared/commercecollectionraw.md
   - docs/models/shared/commercecollectiontype.md
@@ -979,6 +1036,7 @@ generatedFiles:
   - docs/models/shared/kmsspace.md
   - docs/models/shared/listaccountid.md
   - docs/models/shared/listapplicationid.md
+  - docs/models/shared/listcalendarid.md
   - docs/models/shared/listcandidateid.md
   - docs/models/shared/listchannelid.md
   - docs/models/shared/listclassid.md
@@ -989,6 +1047,7 @@ generatedFiles:
   - docs/models/shared/listcustomerid.md
   - docs/models/shared/listdealid.md
   - docs/models/shared/listendle.md
+  - docs/models/shared/listeventid.md
   - docs/models/shared/listinstructorid.md
   - docs/models/shared/listinterviewid.md
   - docs/models/shared/listinvoiceid.md
@@ -1068,6 +1127,10 @@ generatedFiles:
   - docs/models/shared/propertyatscandidateaddress.md
   - docs/models/shared/propertyatscompanyaddress.md
   - docs/models/shared/propertyatsjobpostingaddress.md
+  - docs/models/shared/propertycalendareventorganizer.md
+  - docs/models/shared/propertycalendareventorganizerstatus.md
+  - docs/models/shared/propertycalendarrecordingtranscriptattendee.md
+  - docs/models/shared/propertycalendarrecordingtranscriptattendeestatus.md
   - docs/models/shared/propertycommercelocationaddress.md
   - docs/models/shared/propertyconnectionauth.md
   - docs/models/shared/propertyconnectionauthmeta.md
@@ -1201,6 +1264,8 @@ generatedFiles:
   - docs/sdks/ats/README.md
   - docs/sdks/auth/README.md
   - docs/sdks/branch/README.md
+  - docs/sdks/busy/README.md
+  - docs/sdks/calendar/README.md
   - docs/sdks/call/README.md
   - docs/sdks/candidate/README.md
   - docs/sdks/channel/README.md
@@ -1259,6 +1324,7 @@ generatedFiles:
   - docs/sdks/project/README.md
   - docs/sdks/prompt/README.md
   - docs/sdks/pullrequest/README.md
+  - docs/sdks/recording/README.md
   - docs/sdks/refund/README.md
   - docs/sdks/repo/README.md
   - docs/sdks/repository/README.md
@@ -1293,6 +1359,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/ats.rb
   - lib/unified_ruby_sdk/auth.rb
   - lib/unified_ruby_sdk/branch.rb
+  - lib/unified_ruby_sdk/busy.rb
+  - lib/unified_ruby_sdk/calendar.rb
   - lib/unified_ruby_sdk/call.rb
   - lib/unified_ruby_sdk/candidate.rb
   - lib/unified_ruby_sdk/channel.rb
@@ -1368,6 +1436,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createatsjob_response.rb
   - lib/unified_ruby_sdk/models/operations/createatsscorecard_request.rb
   - lib/unified_ruby_sdk/models/operations/createatsscorecard_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcalendarcalendar_request.rb
+  - lib/unified_ruby_sdk/models/operations/createcalendarcalendar_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcalendarevent_request.rb
+  - lib/unified_ruby_sdk/models/operations/createcalendarevent_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcalendarlink_request.rb
+  - lib/unified_ruby_sdk/models/operations/createcalendarlink_response.rb
   - lib/unified_ruby_sdk/models/operations/createcommercecollection_request.rb
   - lib/unified_ruby_sdk/models/operations/createcommercecollection_response.rb
   - lib/unified_ruby_sdk/models/operations/createcommerceinventory_request.rb
@@ -1495,6 +1569,14 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getatsjob_response.rb
   - lib/unified_ruby_sdk/models/operations/getatsscorecard_request.rb
   - lib/unified_ruby_sdk/models/operations/getatsscorecard_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcalendarcalendar_request.rb
+  - lib/unified_ruby_sdk/models/operations/getcalendarcalendar_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcalendarevent_request.rb
+  - lib/unified_ruby_sdk/models/operations/getcalendarevent_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcalendarlink_request.rb
+  - lib/unified_ruby_sdk/models/operations/getcalendarlink_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcalendarrecording_request.rb
+  - lib/unified_ruby_sdk/models/operations/getcalendarrecording_response.rb
   - lib/unified_ruby_sdk/models/operations/getcommercecollection_request.rb
   - lib/unified_ruby_sdk/models/operations/getcommercecollection_response.rb
   - lib/unified_ruby_sdk/models/operations/getcommerceinventory_request.rb
@@ -1635,6 +1717,16 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listatsjobs_response.rb
   - lib/unified_ruby_sdk/models/operations/listatsscorecards_request.rb
   - lib/unified_ruby_sdk/models/operations/listatsscorecards_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcalendarbusies_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcalendarbusies_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcalendarcalendars_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcalendarcalendars_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcalendarevents_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcalendarevents_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcalendarlinks_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcalendarlinks_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcalendarrecordings_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcalendarrecordings_response.rb
   - lib/unified_ruby_sdk/models/operations/listcommercecollections_request.rb
   - lib/unified_ruby_sdk/models/operations/listcommercecollections_response.rb
   - lib/unified_ruby_sdk/models/operations/listcommerceinventories_request.rb
@@ -1782,6 +1874,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchatsjob_response.rb
   - lib/unified_ruby_sdk/models/operations/patchatsscorecard_request.rb
   - lib/unified_ruby_sdk/models/operations/patchatsscorecard_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcalendarcalendar_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchcalendarcalendar_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcalendarevent_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchcalendarevent_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcalendarlink_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchcalendarlink_response.rb
   - lib/unified_ruby_sdk/models/operations/patchcommercecollection_request.rb
   - lib/unified_ruby_sdk/models/operations/patchcommercecollection_response.rb
   - lib/unified_ruby_sdk/models/operations/patchcommerceinventory_request.rb
@@ -1907,6 +2005,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removeatsjob_response.rb
   - lib/unified_ruby_sdk/models/operations/removeatsscorecard_request.rb
   - lib/unified_ruby_sdk/models/operations/removeatsscorecard_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecalendarcalendar_request.rb
+  - lib/unified_ruby_sdk/models/operations/removecalendarcalendar_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecalendarevent_request.rb
+  - lib/unified_ruby_sdk/models/operations/removecalendarevent_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecalendarlink_request.rb
+  - lib/unified_ruby_sdk/models/operations/removecalendarlink_response.rb
   - lib/unified_ruby_sdk/models/operations/removecommercecollection_request.rb
   - lib/unified_ruby_sdk/models/operations/removecommercecollection_response.rb
   - lib/unified_ruby_sdk/models/operations/removecommerceinventory_request.rb
@@ -2028,6 +2132,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updateatsjob_response.rb
   - lib/unified_ruby_sdk/models/operations/updateatsscorecard_request.rb
   - lib/unified_ruby_sdk/models/operations/updateatsscorecard_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecalendarcalendar_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatecalendarcalendar_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecalendarevent_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatecalendarevent_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecalendarlink_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatecalendarlink_response.rb
   - lib/unified_ruby_sdk/models/operations/updatecommercecollection_request.rb
   - lib/unified_ruby_sdk/models/operations/updatecommercecollection_response.rb
   - lib/unified_ruby_sdk/models/operations/updatecommerceinventory_request.rb
@@ -2199,6 +2309,21 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/atsstatus_status.rb
   - lib/unified_ruby_sdk/models/shared/atstelephone.rb
   - lib/unified_ruby_sdk/models/shared/atstelephone_type.rb
+  - lib/unified_ruby_sdk/models/shared/calendarattendee.rb
+  - lib/unified_ruby_sdk/models/shared/calendarattendee_status.rb
+  - lib/unified_ruby_sdk/models/shared/calendarbusy.rb
+  - lib/unified_ruby_sdk/models/shared/calendarbusy_raw.rb
+  - lib/unified_ruby_sdk/models/shared/calendarcalendar.rb
+  - lib/unified_ruby_sdk/models/shared/calendarcalendar_raw.rb
+  - lib/unified_ruby_sdk/models/shared/calendarevent.rb
+  - lib/unified_ruby_sdk/models/shared/calendarevent_raw.rb
+  - lib/unified_ruby_sdk/models/shared/calendarevent_status.rb
+  - lib/unified_ruby_sdk/models/shared/calendarlink.rb
+  - lib/unified_ruby_sdk/models/shared/calendarlink_raw.rb
+  - lib/unified_ruby_sdk/models/shared/calendarrecording.rb
+  - lib/unified_ruby_sdk/models/shared/calendarrecording_raw.rb
+  - lib/unified_ruby_sdk/models/shared/calendarrecordingmedia.rb
+  - lib/unified_ruby_sdk/models/shared/calendarrecordingtranscript.rb
   - lib/unified_ruby_sdk/models/shared/commercecollection.rb
   - lib/unified_ruby_sdk/models/shared/commercecollection_raw.rb
   - lib/unified_ruby_sdk/models/shared/commercecollection_type.rb
@@ -2296,6 +2421,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/kmsspace.rb
   - lib/unified_ruby_sdk/models/shared/list_account_id.rb
   - lib/unified_ruby_sdk/models/shared/list_application_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_calendar_id.rb
   - lib/unified_ruby_sdk/models/shared/list_candidate_id.rb
   - lib/unified_ruby_sdk/models/shared/list_channel_id.rb
   - lib/unified_ruby_sdk/models/shared/list_class_id.rb
@@ -2306,6 +2432,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_customer_id.rb
   - lib/unified_ruby_sdk/models/shared/list_deal_id.rb
   - lib/unified_ruby_sdk/models/shared/list_end_le.rb
+  - lib/unified_ruby_sdk/models/shared/list_event_id.rb
   - lib/unified_ruby_sdk/models/shared/list_instructor_id.rb
   - lib/unified_ruby_sdk/models/shared/list_interview_id.rb
   - lib/unified_ruby_sdk/models/shared/list_invoice_id.rb
@@ -2385,6 +2512,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_atscandidate_address.rb
   - lib/unified_ruby_sdk/models/shared/property_atscompany_address.rb
   - lib/unified_ruby_sdk/models/shared/property_atsjobposting_address.rb
+  - lib/unified_ruby_sdk/models/shared/property_calendarevent_organizer.rb
+  - lib/unified_ruby_sdk/models/shared/property_calendarevent_organizer_status.rb
+  - lib/unified_ruby_sdk/models/shared/property_calendarrecordingtranscript_attendee.rb
+  - lib/unified_ruby_sdk/models/shared/property_calendarrecordingtranscript_attendee_status.rb
   - lib/unified_ruby_sdk/models/shared/property_commercelocation_address.rb
   - lib/unified_ruby_sdk/models/shared/property_connection_auth.rb
   - lib/unified_ruby_sdk/models/shared/property_connection_auth_meta.rb
@@ -2522,6 +2653,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/project.rb
   - lib/unified_ruby_sdk/prompt.rb
   - lib/unified_ruby_sdk/pullrequest.rb
+  - lib/unified_ruby_sdk/recording.rb
   - lib/unified_ruby_sdk/refund.rb
   - lib/unified_ruby_sdk/repo.rb
   - lib/unified_ruby_sdk/repository.rb
@@ -6441,5 +6573,213 @@ examples:
       responses:
         "200":
           text/plain: "<value>"
+  createCalendarCalendar:
+    speakeasy-default-create-calendar-calendar:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  createCalendarEvent:
+    speakeasy-default-create-calendar-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+      responses:
+        "200":
+          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+  createCalendarLink:
+    speakeasy-default-create-calendar-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"url": "https://sturdy-begonia.biz/"}
+      responses:
+        "200":
+          application/json: {"url": "https://mealy-crest.com"}
+  getCalendarCalendar:
+    speakeasy-default-get-calendar-calendar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  getCalendarEvent:
+    speakeasy-default-get-calendar-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+  getCalendarLink:
+    speakeasy-default-get-calendar-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"url": "https://helpful-rule.com/"}
+  getCalendarRecording:
+    speakeasy-default-get-calendar-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  listCalendarBusies:
+    speakeasy-default-list-calendar-busies:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"end_at": "2024-10-27T10:02:59.053Z", "start_at": "2025-09-24T22:24:48.779Z"}, {"end_at": "2024-03-01T22:16:54.474Z", "start_at": "2025-05-11T06:32:32.457Z"}, {"end_at": "2023-06-10T22:37:04.573Z", "start_at": "2023-09-17T05:28:38.179Z"}]
+  listCalendarCalendars:
+    speakeasy-default-list-calendar-calendars:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"name": "<value>"}, {"name": "<value>"}, {"name": "<value>"}]
+  listCalendarEvents:
+    speakeasy-default-list-calendar-events:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}, {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}, {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}]
+  listCalendarLinks:
+    speakeasy-default-list-calendar-links:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"url": "https://unwritten-approach.info/"}, {"url": "https://innocent-ruin.biz/"}]
+  listCalendarRecordings:
+    speakeasy-default-list-calendar-recordings:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}, {}, {}]
+  patchCalendarCalendar:
+    speakeasy-default-patch-calendar-calendar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  patchCalendarEvent:
+    speakeasy-default-patch-calendar-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+      responses:
+        "200":
+          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+  patchCalendarLink:
+    speakeasy-default-patch-calendar-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"url": "https://curly-skyline.biz/"}
+      responses:
+        "200":
+          application/json: {"url": "https://first-testimonial.biz/"}
+  removeCalendarCalendar:
+    speakeasy-default-remove-calendar-calendar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeCalendarEvent:
+    speakeasy-default-remove-calendar-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeCalendarLink:
+    speakeasy-default-remove-calendar-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateCalendarCalendar:
+    speakeasy-default-update-calendar-calendar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  updateCalendarEvent:
+    speakeasy-default-update-calendar-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+      responses:
+        "200":
+          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+  updateCalendarLink:
+    speakeasy-default-update-calendar-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"url": "https://quiet-coordination.name"}
+      responses:
+        "200":
+          application/json: {"url": "https://standard-birth.info/"}
 examplesVersion: 1.0.0
 generatedTests: {}
