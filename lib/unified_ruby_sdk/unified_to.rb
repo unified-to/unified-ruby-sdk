@@ -16,24 +16,23 @@ module UnifiedRubySDK
     attr_accessor :accounting, :account, :contact, :invoice, :journal, :order, :organization, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :event, :link, :recording, :commerce, :collection, :inventory, :item, :location, :crm, :deal, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :employee, :group, :payslip, :timeoff, :kms, :comment, :page, :space, :lms, :class_, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :storage, :file, :task, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
 
     sig do
-      params(client: Faraday::Request,
-             security: T.nilable(Shared::Security),
-             server_idx: Integer,
-             server_url: String,
-             url_params: T::Hash[Symbol, String]).void
+      params(
+        client: T.nilable(Faraday::Request),
+        security: T.nilable(::UnifiedRubySDK::Shared::Security),
+        security_source: T.nilable(T.proc.returns(::UnifiedRubySDK::Shared::Security)),
+        server_idx: T.nilable(Integer),
+        server_url: T.nilable(String),
+        url_params: T.nilable(T::Hash[Symbol, String])
+      ).void
     end
-    def initialize(client: nil,
-                   security: nil,
-                   server_idx: nil,
-                   server_url: nil,
-                   url_params: nil)
-
+    def initialize(client: nil, security: nil, security_source: nil, server_idx: nil, server_url: nil, url_params: nil)
       ## Instantiates the SDK configuring it with the provided parameters.
-      # @param [Faraday::Request] client The faraday HTTP client to use for all operations
-      # @param [Shared::Security] security The security details required for authentication
-      # @param [::Integer] server_idx The index of the server to use for all operations
-      # @param [::String] server_url The server URL to use for all operations
-      # @param [::Hash<::Symbol, ::String>] url_params Parameters to optionally template the server URL with
+      # @param [T.nilable(Faraday::Request)] client The faraday HTTP client to use for all operations
+      # @param [T.nilable(::UnifiedRubySDK::Shared::Security)] security: The security details required for authentication
+      # @param [T.proc.returns(T.nilable(::UnifiedRubySDK::Shared::Security))] security_source: A function that returns security details required for authentication
+      # @param [T.nilable(::Integer)] server_idx The index of the server to use for all operations
+      # @param [T.nilable(::String)] server_url The server URL to use for all operations
+      # @param [T.nilable(::Hash<::Symbol, ::String>)] url_params Parameters to optionally template the server URL with
 
       if client.nil?
         client = Faraday.new(request: {
@@ -50,8 +49,13 @@ module UnifiedRubySDK
         end
       end
       server_idx = 0 if server_idx.nil?
-
-      @sdk_configuration = SDKConfiguration.new(client, security, server_url, server_idx)
+      @sdk_configuration = SDKConfiguration.new(
+        client,
+        security,
+        security_source,
+        server_url,
+        server_idx
+      )
       init_sdks
     end
 
@@ -66,11 +70,6 @@ module UnifiedRubySDK
       raise StandardError, "Invalid server index #{server_idx}" if server_idx.negative? || server_idx >= SERVERS.length
       @sdk_configuration.server_idx = server_idx
       init_sdks
-    end
-
-    sig { params(security: ::UnifiedRubySDK::Shared::Security).void }
-    def config_security(security)
-      @sdk_configuration.security = security
     end
 
     sig { void }

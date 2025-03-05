@@ -20,6 +20,8 @@ module UnifiedRubySDK
 
       field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+      field :primary, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('primary') } }
+
       field :raw, T.nilable(::UnifiedRubySDK::Shared::CalendarCalendarRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
       field :timezone, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
@@ -27,12 +29,13 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::CalendarCalendarRaw), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-      def initialize(name: nil, created_at: nil, description: nil, id: nil, raw: nil, timezone: nil, updated_at: nil)
+      sig { params(name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), primary: T.nilable(T::Boolean), raw: T.nilable(::UnifiedRubySDK::Shared::CalendarCalendarRaw), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+      def initialize(name: nil, created_at: nil, description: nil, id: nil, primary: nil, raw: nil, timezone: nil, updated_at: nil)
         @name = name
         @created_at = created_at
         @description = description
         @id = id
+        @primary = primary
         @raw = raw
         @timezone = timezone
         @updated_at = updated_at
