@@ -48,6 +48,7 @@ module UnifiedRubySDK
           server_url = Utils.template_url(server_url, url_params)
         end
       end
+
       server_idx = 0 if server_idx.nil?
       @sdk_configuration = SDKConfiguration.new(
         client,
@@ -56,19 +57,6 @@ module UnifiedRubySDK
         server_url,
         server_idx
       )
-      init_sdks
-    end
-
-    sig { params(server_url: String).void }
-    def config_server_url(server_url)
-      @sdk_configuration.server_url = server_url
-      init_sdks
-    end
-
-    sig { params(server_idx: Integer).void }
-    def config_server(server_idx)
-      raise StandardError, "Invalid server index #{server_idx}" if server_idx.negative? || server_idx >= SERVERS.length
-      @sdk_configuration.server_idx = server_idx
       init_sdks
     end
 

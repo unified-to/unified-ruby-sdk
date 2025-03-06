@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 03fb3687a9211f1c85a85fd634fa1c98
+  docChecksum: 469567133059289c1dda4dbb71768014
   docVersion: "1.0"
-  speakeasyVersion: 1.509.1
-  generationVersion: 2.539.1
-  releaseVersion: 0.6.22
-  configChecksum: 8d0ebb05ea5befe097fb93eae243f2de
+  speakeasyVersion: 1.510.0
+  generationVersion: 2.541.0
+  releaseVersion: 0.6.23
+  configChecksum: 80e8ad725d2a4d720eaeb52be20a45c8
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
 features:
   ruby:
-    core: 3.5.3
+    core: 3.5.4
     flattening: 2.81.1
     globalSecurity: 2.81.8
     globalServerURLs: 2.82.3
@@ -719,7 +719,6 @@ generatedFiles:
   - docs/models/operations/removeunifiedconnectionresponse.md
   - docs/models/operations/removeunifiedwebhookrequest.md
   - docs/models/operations/removeunifiedwebhookresponse.md
-  - docs/models/operations/scopes.md
   - docs/models/operations/updateaccountingaccountrequest.md
   - docs/models/operations/updateaccountingaccountresponse.md
   - docs/models/operations/updateaccountingcontactrequest.md
@@ -2103,7 +2102,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removeunifiedconnection_response.rb
   - lib/unified_ruby_sdk/models/operations/removeunifiedwebhook_request.rb
   - lib/unified_ruby_sdk/models/operations/removeunifiedwebhook_response.rb
-  - lib/unified_ruby_sdk/models/operations/scopes.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingaccount_request.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingaccount_response.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingcontact_request.rb

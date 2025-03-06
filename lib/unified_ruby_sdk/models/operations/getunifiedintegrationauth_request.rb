@@ -26,7 +26,7 @@ module UnifiedRubySDK
 
       field :redirect, T.nilable(T::Boolean), { 'query_param': { 'field_name': 'redirect', 'style': 'form', 'explode': true } }
 
-      field :scopes, T.nilable(T::Array[::UnifiedRubySDK::Operations::Scopes]), { 'query_param': { 'field_name': 'scopes', 'style': 'form', 'explode': true } }
+      field :scopes, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'scopes', 'style': 'form', 'explode': true } }
       # Extra state to send back to your success URL
       field :state, T.nilable(::String), { 'query_param': { 'field_name': 'state', 'style': 'form', 'explode': true } }
 
@@ -35,7 +35,7 @@ module UnifiedRubySDK
       field :success_redirect, T.nilable(::String), { 'query_param': { 'field_name': 'success_redirect', 'style': 'form', 'explode': true } }
 
 
-      sig { params(integration_type: ::String, workspace_id: ::String, env: T.nilable(::String), external_xref: T.nilable(::String), failure_redirect: T.nilable(::String), lang: T.nilable(::String), redirect: T.nilable(T::Boolean), scopes: T.nilable(T::Array[::UnifiedRubySDK::Operations::Scopes]), state: T.nilable(::String), subdomain: T.nilable(::String), success_redirect: T.nilable(::String)).void }
+      sig { params(integration_type: ::String, workspace_id: ::String, env: T.nilable(::String), external_xref: T.nilable(::String), failure_redirect: T.nilable(::String), lang: T.nilable(::String), redirect: T.nilable(T::Boolean), scopes: T.nilable(T::Array[::String]), state: T.nilable(::String), subdomain: T.nilable(::String), success_redirect: T.nilable(::String)).void }
       def initialize(integration_type: nil, workspace_id: nil, env: nil, external_xref: nil, failure_redirect: nil, lang: nil, redirect: nil, scopes: nil, state: nil, subdomain: nil, success_redirect: nil)
         @integration_type = integration_type
         @workspace_id = workspace_id

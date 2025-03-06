@@ -794,7 +794,6 @@ module UnifiedRubySDK
     autoload :GetUnifiedApicallResponse, 'unified_ruby_sdk/models/operations/getunifiedapicall_response.rb'
     autoload :GetUnifiedConnectionRequest, 'unified_ruby_sdk/models/operations/getunifiedconnection_request.rb'
     autoload :GetUnifiedConnectionResponse, 'unified_ruby_sdk/models/operations/getunifiedconnection_response.rb'
-    autoload :Scopes, 'unified_ruby_sdk/models/operations/scopes.rb'
     autoload :GetUnifiedIntegrationAuthRequest, 'unified_ruby_sdk/models/operations/getunifiedintegrationauth_request.rb'
     autoload :GetUnifiedIntegrationAuthResponse, 'unified_ruby_sdk/models/operations/getunifiedintegrationauth_response.rb'
     autoload :GetUnifiedWebhookRequest, 'unified_ruby_sdk/models/operations/getunifiedwebhook_request.rb'
