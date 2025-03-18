@@ -21,15 +21,12 @@ Create a lead
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.lead.create_crm_lead(crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
@@ -63,15 +60,12 @@ Retrieve a lead
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.lead.get_crm_lead(connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
@@ -105,19 +99,16 @@ List all leads
 ```ruby
 require 'unified_ruby_sdk'
 
-
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
 req = ::UnifiedRubySDK::Operations::ListCrmLeadsRequest.new(
   connection_id: "<id>",
 )
-    
+
 res = s.lead.list_crm_leads(req)
 
 if ! res.crm_leads.nil?
@@ -147,15 +138,12 @@ Update a lead
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.lead.patch_crm_lead(crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
@@ -190,15 +178,12 @@ Remove a lead
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.lead.remove_crm_lead(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
@@ -229,15 +214,12 @@ Update a lead
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.lead.update_crm_lead(crm_lead=::UnifiedRubySDK::Shared::CrmLead.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])

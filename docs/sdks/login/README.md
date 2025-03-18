@@ -16,20 +16,17 @@ Returns an authentication URL for the specified integration.  Once a successful 
 ```ruby
 require 'unified_ruby_sdk'
 
-
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
 req = ::UnifiedRubySDK::Operations::GetUnifiedIntegrationLoginRequest.new(
   integration_type: "<value>",
   workspace_id: "<id>",
 )
-    
+
 res = s.login.get_unified_integration_login(req)
 
 if ! res.res.nil?

@@ -45,15 +45,12 @@ Create a branch
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.create_repo_branch(repo_branch=::UnifiedRubySDK::Shared::RepoBranch.new(
   name: "<value>",
   repo_id: "<id>",
@@ -90,15 +87,12 @@ Create a commit
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.create_repo_commit(repo_commit=::UnifiedRubySDK::Shared::RepoCommit.new(
   repo_id: "<id>",
   user_id: "<id>",
@@ -135,15 +129,12 @@ Create an organization
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.create_repo_organization(repo_organization=::UnifiedRubySDK::Shared::RepoOrganization.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
@@ -177,15 +168,12 @@ Create a pullrequest
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.create_repo_pullrequest(repo_pullrequest=::UnifiedRubySDK::Shared::RepoPullrequest.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
@@ -219,15 +207,12 @@ Create a repository
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.create_repo_repository(repo_repository=::UnifiedRubySDK::Shared::RepoRepository.new(
   name: "<value>",
 ), connection_id="<id>", fields_=[
@@ -263,15 +248,12 @@ Retrieve a branch
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.get_repo_branch(connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
@@ -305,15 +287,12 @@ Retrieve a commit
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.get_repo_commit(connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
@@ -347,15 +326,12 @@ Retrieve an organization
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.get_repo_organization(connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
@@ -389,15 +365,12 @@ Retrieve a pullrequest
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.get_repo_pullrequest(connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
@@ -431,15 +404,12 @@ Retrieve a repository
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.get_repo_repository(connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
@@ -473,19 +443,16 @@ List all branches
 ```ruby
 require 'unified_ruby_sdk'
 
-
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
 req = ::UnifiedRubySDK::Operations::ListRepoBranchesRequest.new(
   connection_id: "<id>",
 )
-    
+
 res = s.repo.list_repo_branches(req)
 
 if ! res.repo_branches.nil?
@@ -515,19 +482,16 @@ List all commits
 ```ruby
 require 'unified_ruby_sdk'
 
-
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
 req = ::UnifiedRubySDK::Operations::ListRepoCommitsRequest.new(
   connection_id: "<id>",
 )
-    
+
 res = s.repo.list_repo_commits(req)
 
 if ! res.repo_commits.nil?
@@ -557,19 +521,16 @@ List all organizations
 ```ruby
 require 'unified_ruby_sdk'
 
-
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
 req = ::UnifiedRubySDK::Operations::ListRepoOrganizationsRequest.new(
   connection_id: "<id>",
 )
-    
+
 res = s.repo.list_repo_organizations(req)
 
 if ! res.repo_organizations.nil?
@@ -599,19 +560,16 @@ List all pullrequests
 ```ruby
 require 'unified_ruby_sdk'
 
-
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
 req = ::UnifiedRubySDK::Operations::ListRepoPullrequestsRequest.new(
   connection_id: "<id>",
 )
-    
+
 res = s.repo.list_repo_pullrequests(req)
 
 if ! res.repo_pullrequests.nil?
@@ -641,19 +599,16 @@ List all repositories
 ```ruby
 require 'unified_ruby_sdk'
 
-
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
 req = ::UnifiedRubySDK::Operations::ListRepoRepositoriesRequest.new(
   connection_id: "<id>",
 )
-    
+
 res = s.repo.list_repo_repositories(req)
 
 if ! res.repo_repositories.nil?
@@ -683,15 +638,12 @@ Update a branch
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.patch_repo_branch(repo_branch=::UnifiedRubySDK::Shared::RepoBranch.new(
   name: "<value>",
   repo_id: "<id>",
@@ -729,15 +681,12 @@ Update a commit
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.patch_repo_commit(repo_commit=::UnifiedRubySDK::Shared::RepoCommit.new(
   repo_id: "<id>",
   user_id: "<id>",
@@ -775,15 +724,12 @@ Update an organization
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.patch_repo_organization(repo_organization=::UnifiedRubySDK::Shared::RepoOrganization.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
@@ -818,15 +764,12 @@ Update a pullrequest
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.patch_repo_pullrequest(repo_pullrequest=::UnifiedRubySDK::Shared::RepoPullrequest.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
@@ -861,15 +804,12 @@ Update a repository
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.patch_repo_repository(repo_repository=::UnifiedRubySDK::Shared::RepoRepository.new(
   name: "<value>",
 ), connection_id="<id>", id="<id>", fields_=[
@@ -906,15 +846,12 @@ Remove a branch
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.remove_repo_branch(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
@@ -945,15 +882,12 @@ Remove a commit
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.remove_repo_commit(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
@@ -984,15 +918,12 @@ Remove an organization
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.remove_repo_organization(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
@@ -1023,15 +954,12 @@ Remove a pullrequest
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.remove_repo_pullrequest(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
@@ -1062,15 +990,12 @@ Remove a repository
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.remove_repo_repository(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
@@ -1101,15 +1026,12 @@ Update a branch
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.update_repo_branch(repo_branch=::UnifiedRubySDK::Shared::RepoBranch.new(
   name: "<value>",
   repo_id: "<id>",
@@ -1147,15 +1069,12 @@ Update a commit
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.update_repo_commit(repo_commit=::UnifiedRubySDK::Shared::RepoCommit.new(
   repo_id: "<id>",
   user_id: "<id>",
@@ -1193,15 +1112,12 @@ Update an organization
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.update_repo_organization(repo_organization=::UnifiedRubySDK::Shared::RepoOrganization.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
@@ -1236,15 +1152,12 @@ Update a pullrequest
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.update_repo_pullrequest(repo_pullrequest=::UnifiedRubySDK::Shared::RepoPullrequest.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
@@ -1279,15 +1192,12 @@ Update a repository
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.repo.update_repo_repository(repo_repository=::UnifiedRubySDK::Shared::RepoRepository.new(
   name: "<value>",
 ), connection_id="<id>", id="<id>", fields_=[

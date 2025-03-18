@@ -5,7 +5,9 @@
 
 require 'faraday'
 require 'faraday/multipart'
+require 'faraday/retry'
 require 'sorbet-runtime'
+require_relative 'utils/retries'
 
 module UnifiedRubySDK
   extend T::Sig
@@ -19,8 +21,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object)).returns(::UnifiedRubySDK::Operations::CreatePassthroughJsonResponse) }
-    def create_passthrough_json(connection_id, path, request_body = nil)
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::CreatePassthroughJsonResponse) }
+    def create_passthrough_json(connection_id, path, request_body = nil, timeout_ms = nil)
       # create_passthrough_json - Passthrough POST
       request = ::UnifiedRubySDK::Operations::CreatePassthroughJsonRequest.new(
         
@@ -42,8 +44,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.post(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.post(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
         if form
@@ -79,8 +87,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String)).returns(::UnifiedRubySDK::Operations::CreatePassthroughRawResponse) }
-    def create_passthrough_raw(connection_id, path, request_body = nil)
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::CreatePassthroughRawResponse) }
+    def create_passthrough_raw(connection_id, path, request_body = nil, timeout_ms = nil)
       # create_passthrough_raw - Passthrough POST
       request = ::UnifiedRubySDK::Operations::CreatePassthroughRawRequest.new(
         
@@ -102,8 +110,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.post(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.post(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
         if form
@@ -139,8 +153,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String).returns(::UnifiedRubySDK::Operations::ListPassthroughsResponse) }
-    def list_passthroughs(connection_id, path)
+    sig { params(connection_id: ::String, path: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListPassthroughsResponse) }
+    def list_passthroughs(connection_id, path, timeout_ms = nil)
       # list_passthroughs - Passthrough GET
       request = ::UnifiedRubySDK::Operations::ListPassthroughsRequest.new(
         
@@ -159,8 +173,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -189,8 +209,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object)).returns(::UnifiedRubySDK::Operations::PatchPassthroughJsonResponse) }
-    def patch_passthrough_json(connection_id, path, request_body = nil)
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::PatchPassthroughJsonResponse) }
+    def patch_passthrough_json(connection_id, path, request_body = nil, timeout_ms = nil)
       # patch_passthrough_json - Passthrough PUT
       request = ::UnifiedRubySDK::Operations::PatchPassthroughJsonRequest.new(
         
@@ -212,8 +232,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.patch(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.patch(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
         if form
@@ -249,8 +275,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String)).returns(::UnifiedRubySDK::Operations::PatchPassthroughRawResponse) }
-    def patch_passthrough_raw(connection_id, path, request_body = nil)
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::PatchPassthroughRawResponse) }
+    def patch_passthrough_raw(connection_id, path, request_body = nil, timeout_ms = nil)
       # patch_passthrough_raw - Passthrough PUT
       request = ::UnifiedRubySDK::Operations::PatchPassthroughRawRequest.new(
         
@@ -272,8 +298,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.patch(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.patch(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
         if form
@@ -309,8 +341,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String).returns(::UnifiedRubySDK::Operations::RemovePassthroughResponse) }
-    def remove_passthrough(connection_id, path)
+    sig { params(connection_id: ::String, path: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::RemovePassthroughResponse) }
+    def remove_passthrough(connection_id, path, timeout_ms = nil)
       # remove_passthrough - Passthrough DELETE
       request = ::UnifiedRubySDK::Operations::RemovePassthroughRequest.new(
         
@@ -329,8 +361,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.delete(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.delete(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -359,8 +397,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object)).returns(::UnifiedRubySDK::Operations::UpdatePassthroughJsonResponse) }
-    def update_passthrough_json(connection_id, path, request_body = nil)
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::UpdatePassthroughJsonResponse) }
+    def update_passthrough_json(connection_id, path, request_body = nil, timeout_ms = nil)
       # update_passthrough_json - Passthrough PUT
       request = ::UnifiedRubySDK::Operations::UpdatePassthroughJsonRequest.new(
         
@@ -382,8 +420,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.put(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.put(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
         if form
@@ -419,8 +463,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String)).returns(::UnifiedRubySDK::Operations::UpdatePassthroughRawResponse) }
-    def update_passthrough_raw(connection_id, path, request_body = nil)
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::UpdatePassthroughRawResponse) }
+    def update_passthrough_raw(connection_id, path, request_body = nil, timeout_ms = nil)
       # update_passthrough_raw - Passthrough PUT
       request = ::UnifiedRubySDK::Operations::UpdatePassthroughRawRequest.new(
         
@@ -442,8 +486,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.put(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.put(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
         if form

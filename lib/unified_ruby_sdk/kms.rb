@@ -5,7 +5,9 @@
 
 require 'faraday'
 require 'faraday/multipart'
+require 'faraday/retry'
 require 'sorbet-runtime'
+require_relative 'utils/retries'
 
 module UnifiedRubySDK
   extend T::Sig
@@ -19,8 +21,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(kms_comment: ::UnifiedRubySDK::Shared::KmsComment, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateKmsCommentResponse) }
-    def create_kms_comment(kms_comment, connection_id, fields_ = nil)
+    sig { params(kms_comment: ::UnifiedRubySDK::Shared::KmsComment, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::CreateKmsCommentResponse) }
+    def create_kms_comment(kms_comment, connection_id, fields_ = nil, timeout_ms = nil)
       # create_kms_comment - Create a comment
       request = ::UnifiedRubySDK::Operations::CreateKmsCommentRequest.new(
         
@@ -44,8 +46,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.post(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.post(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -74,8 +82,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(kms_page: ::UnifiedRubySDK::Shared::KmsPage, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateKmsPageResponse) }
-    def create_kms_page(kms_page, connection_id, fields_ = nil)
+    sig { params(kms_page: ::UnifiedRubySDK::Shared::KmsPage, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::CreateKmsPageResponse) }
+    def create_kms_page(kms_page, connection_id, fields_ = nil, timeout_ms = nil)
       # create_kms_page - Create a page
       request = ::UnifiedRubySDK::Operations::CreateKmsPageRequest.new(
         
@@ -99,8 +107,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.post(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.post(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -129,8 +143,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(kms_space: ::UnifiedRubySDK::Shared::KmsSpace, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateKmsSpaceResponse) }
-    def create_kms_space(kms_space, connection_id, fields_ = nil)
+    sig { params(kms_space: ::UnifiedRubySDK::Shared::KmsSpace, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::CreateKmsSpaceResponse) }
+    def create_kms_space(kms_space, connection_id, fields_ = nil, timeout_ms = nil)
       # create_kms_space - Create a space
       request = ::UnifiedRubySDK::Operations::CreateKmsSpaceRequest.new(
         
@@ -154,8 +168,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.post(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.post(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -184,8 +204,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetKmsCommentResponse) }
-    def get_kms_comment(connection_id, id, fields_ = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::GetKmsCommentResponse) }
+    def get_kms_comment(connection_id, id, fields_ = nil, timeout_ms = nil)
       # get_kms_comment - Retrieve a comment
       request = ::UnifiedRubySDK::Operations::GetKmsCommentRequest.new(
         
@@ -206,8 +226,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -229,8 +255,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetKmsPageResponse) }
-    def get_kms_page(connection_id, id, fields_ = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::GetKmsPageResponse) }
+    def get_kms_page(connection_id, id, fields_ = nil, timeout_ms = nil)
       # get_kms_page - Retrieve a page
       request = ::UnifiedRubySDK::Operations::GetKmsPageRequest.new(
         
@@ -251,8 +277,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -274,8 +306,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetKmsSpaceResponse) }
-    def get_kms_space(connection_id, id, fields_ = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::GetKmsSpaceResponse) }
+    def get_kms_space(connection_id, id, fields_ = nil, timeout_ms = nil)
       # get_kms_space - Retrieve a space
       request = ::UnifiedRubySDK::Operations::GetKmsSpaceRequest.new(
         
@@ -296,8 +328,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -319,8 +357,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListKmsCommentsRequest)).returns(::UnifiedRubySDK::Operations::ListKmsCommentsResponse) }
-    def list_kms_comments(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListKmsCommentsRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListKmsCommentsResponse) }
+    def list_kms_comments(request, timeout_ms = nil)
       # list_kms_comments - List all comments
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -335,8 +373,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -358,8 +402,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListKmsPagesRequest)).returns(::UnifiedRubySDK::Operations::ListKmsPagesResponse) }
-    def list_kms_pages(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListKmsPagesRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListKmsPagesResponse) }
+    def list_kms_pages(request, timeout_ms = nil)
       # list_kms_pages - List all pages
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -374,8 +418,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -397,8 +447,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListKmsSpacesRequest)).returns(::UnifiedRubySDK::Operations::ListKmsSpacesResponse) }
-    def list_kms_spaces(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListKmsSpacesRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListKmsSpacesResponse) }
+    def list_kms_spaces(request, timeout_ms = nil)
       # list_kms_spaces - List all spaces
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -413,8 +463,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -436,8 +492,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(kms_comment: ::UnifiedRubySDK::Shared::KmsComment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchKmsCommentResponse) }
-    def patch_kms_comment(kms_comment, connection_id, id, fields_ = nil)
+    sig { params(kms_comment: ::UnifiedRubySDK::Shared::KmsComment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::PatchKmsCommentResponse) }
+    def patch_kms_comment(kms_comment, connection_id, id, fields_ = nil, timeout_ms = nil)
       # patch_kms_comment - Update a comment
       request = ::UnifiedRubySDK::Operations::PatchKmsCommentRequest.new(
         
@@ -462,8 +518,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.patch(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.patch(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -492,8 +554,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(kms_page: ::UnifiedRubySDK::Shared::KmsPage, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchKmsPageResponse) }
-    def patch_kms_page(kms_page, connection_id, id, fields_ = nil)
+    sig { params(kms_page: ::UnifiedRubySDK::Shared::KmsPage, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::PatchKmsPageResponse) }
+    def patch_kms_page(kms_page, connection_id, id, fields_ = nil, timeout_ms = nil)
       # patch_kms_page - Update a page
       request = ::UnifiedRubySDK::Operations::PatchKmsPageRequest.new(
         
@@ -518,8 +580,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.patch(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.patch(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -548,8 +616,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(kms_space: ::UnifiedRubySDK::Shared::KmsSpace, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchKmsSpaceResponse) }
-    def patch_kms_space(kms_space, connection_id, id, fields_ = nil)
+    sig { params(kms_space: ::UnifiedRubySDK::Shared::KmsSpace, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::PatchKmsSpaceResponse) }
+    def patch_kms_space(kms_space, connection_id, id, fields_ = nil, timeout_ms = nil)
       # patch_kms_space - Update a space
       request = ::UnifiedRubySDK::Operations::PatchKmsSpaceRequest.new(
         
@@ -574,8 +642,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.patch(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.patch(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -604,8 +678,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveKmsCommentResponse) }
-    def remove_kms_comment(connection_id, id)
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::RemoveKmsCommentResponse) }
+    def remove_kms_comment(connection_id, id, timeout_ms = nil)
       # remove_kms_comment - Remove a comment
       request = ::UnifiedRubySDK::Operations::RemoveKmsCommentRequest.new(
         
@@ -624,8 +698,14 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.delete(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.delete(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -644,8 +724,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveKmsPageResponse) }
-    def remove_kms_page(connection_id, id)
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::RemoveKmsPageResponse) }
+    def remove_kms_page(connection_id, id, timeout_ms = nil)
       # remove_kms_page - Remove a page
       request = ::UnifiedRubySDK::Operations::RemoveKmsPageRequest.new(
         
@@ -664,8 +744,14 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.delete(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.delete(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -684,8 +770,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveKmsSpaceResponse) }
-    def remove_kms_space(connection_id, id)
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::RemoveKmsSpaceResponse) }
+    def remove_kms_space(connection_id, id, timeout_ms = nil)
       # remove_kms_space - Remove a space
       request = ::UnifiedRubySDK::Operations::RemoveKmsSpaceRequest.new(
         
@@ -704,8 +790,14 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.delete(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.delete(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -724,8 +816,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(kms_comment: ::UnifiedRubySDK::Shared::KmsComment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateKmsCommentResponse) }
-    def update_kms_comment(kms_comment, connection_id, id, fields_ = nil)
+    sig { params(kms_comment: ::UnifiedRubySDK::Shared::KmsComment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::UpdateKmsCommentResponse) }
+    def update_kms_comment(kms_comment, connection_id, id, fields_ = nil, timeout_ms = nil)
       # update_kms_comment - Update a comment
       request = ::UnifiedRubySDK::Operations::UpdateKmsCommentRequest.new(
         
@@ -750,8 +842,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.put(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.put(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -780,8 +878,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(kms_page: ::UnifiedRubySDK::Shared::KmsPage, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateKmsPageResponse) }
-    def update_kms_page(kms_page, connection_id, id, fields_ = nil)
+    sig { params(kms_page: ::UnifiedRubySDK::Shared::KmsPage, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::UpdateKmsPageResponse) }
+    def update_kms_page(kms_page, connection_id, id, fields_ = nil, timeout_ms = nil)
       # update_kms_page - Update a page
       request = ::UnifiedRubySDK::Operations::UpdateKmsPageRequest.new(
         
@@ -806,8 +904,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.put(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.put(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -836,8 +940,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(kms_space: ::UnifiedRubySDK::Shared::KmsSpace, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateKmsSpaceResponse) }
-    def update_kms_space(kms_space, connection_id, id, fields_ = nil)
+    sig { params(kms_space: ::UnifiedRubySDK::Shared::KmsSpace, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::UpdateKmsSpaceResponse) }
+    def update_kms_space(kms_space, connection_id, id, fields_ = nil, timeout_ms = nil)
       # update_kms_space - Update a space
       request = ::UnifiedRubySDK::Operations::UpdateKmsSpaceRequest.new(
         
@@ -862,8 +966,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.put(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.put(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?

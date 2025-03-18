@@ -21,15 +21,12 @@ Create a journal
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.journal.create_accounting_journal(accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
@@ -63,15 +60,12 @@ Retrieve a journal
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.journal.get_accounting_journal(connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
@@ -105,19 +99,16 @@ List all journals
 ```ruby
 require 'unified_ruby_sdk'
 
-
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
 req = ::UnifiedRubySDK::Operations::ListAccountingJournalsRequest.new(
   connection_id: "<id>",
 )
-    
+
 res = s.journal.list_accounting_journals(req)
 
 if ! res.accounting_journals.nil?
@@ -147,15 +138,12 @@ Update a journal
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.journal.patch_accounting_journal(accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
@@ -190,15 +178,12 @@ Remove a journal
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.journal.remove_accounting_journal(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
@@ -229,15 +214,12 @@ Update a journal
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.journal.update_accounting_journal(accounting_journal=::UnifiedRubySDK::Shared::AccountingJournal.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])

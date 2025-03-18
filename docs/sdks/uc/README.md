@@ -22,15 +22,12 @@ Create a contact
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.uc.create_uc_contact(uc_contact=::UnifiedRubySDK::Shared::UcContact.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
@@ -64,15 +61,12 @@ Retrieve a contact
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.uc.get_uc_contact(connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
@@ -106,19 +100,16 @@ List all calls
 ```ruby
 require 'unified_ruby_sdk'
 
-
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
 req = ::UnifiedRubySDK::Operations::ListUcCallsRequest.new(
   connection_id: "<id>",
 )
-    
+
 res = s.uc.list_uc_calls(req)
 
 if ! res.uc_calls.nil?
@@ -148,19 +139,16 @@ List all contacts
 ```ruby
 require 'unified_ruby_sdk'
 
-
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
 req = ::UnifiedRubySDK::Operations::ListUcContactsRequest.new(
   connection_id: "<id>",
 )
-    
+
 res = s.uc.list_uc_contacts(req)
 
 if ! res.uc_contacts.nil?
@@ -190,15 +178,12 @@ Update a contact
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.uc.patch_uc_contact(uc_contact=::UnifiedRubySDK::Shared::UcContact.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
@@ -233,15 +218,12 @@ Remove a contact
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.uc.remove_uc_contact(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
@@ -272,15 +254,12 @@ Update a contact
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.uc.update_uc_contact(uc_contact=::UnifiedRubySDK::Shared::UcContact.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])

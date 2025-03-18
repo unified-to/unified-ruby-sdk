@@ -21,15 +21,12 @@ Create an application
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.application.create_ats_application(ats_application=::UnifiedRubySDK::Shared::AtsApplication.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
@@ -63,15 +60,12 @@ Retrieve an application
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.application.get_ats_application(connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
@@ -105,19 +99,16 @@ List all applications
 ```ruby
 require 'unified_ruby_sdk'
 
-
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
 req = ::UnifiedRubySDK::Operations::ListAtsApplicationsRequest.new(
   connection_id: "<id>",
 )
-    
+
 res = s.application.list_ats_applications(req)
 
 if ! res.ats_applications.nil?
@@ -147,15 +138,12 @@ Update an application
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.application.patch_ats_application(ats_application=::UnifiedRubySDK::Shared::AtsApplication.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
@@ -190,15 +178,12 @@ Remove an application
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.application.remove_ats_application(connection_id="<id>", id="<id>")
 
 if res.status_code == 200
@@ -229,15 +214,12 @@ Update an application
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.application.update_ats_application(ats_application=::UnifiedRubySDK::Shared::AtsApplication.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])

@@ -5,7 +5,9 @@
 
 require 'faraday'
 require 'faraday/multipart'
+require 'faraday/retry'
 require 'sorbet-runtime'
+require_relative 'utils/retries'
 
 module UnifiedRubySDK
   extend T::Sig
@@ -19,8 +21,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_class: ::UnifiedRubySDK::Shared::LmsClass, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateLmsClassResponse) }
-    def create_lms_class(lms_class, connection_id, fields_ = nil)
+    sig { params(lms_class: ::UnifiedRubySDK::Shared::LmsClass, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::CreateLmsClassResponse) }
+    def create_lms_class(lms_class, connection_id, fields_ = nil, timeout_ms = nil)
       # create_lms_class - Create a class
       request = ::UnifiedRubySDK::Operations::CreateLmsClassRequest.new(
         
@@ -44,8 +46,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.post(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.post(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -74,8 +82,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_course: ::UnifiedRubySDK::Shared::LmsCourse, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateLmsCourseResponse) }
-    def create_lms_course(lms_course, connection_id, fields_ = nil)
+    sig { params(lms_course: ::UnifiedRubySDK::Shared::LmsCourse, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::CreateLmsCourseResponse) }
+    def create_lms_course(lms_course, connection_id, fields_ = nil, timeout_ms = nil)
       # create_lms_course - Create a course
       request = ::UnifiedRubySDK::Operations::CreateLmsCourseRequest.new(
         
@@ -99,8 +107,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.post(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.post(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -129,8 +143,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_instructor: ::UnifiedRubySDK::Shared::LmsInstructor, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateLmsInstructorResponse) }
-    def create_lms_instructor(lms_instructor, connection_id, fields_ = nil)
+    sig { params(lms_instructor: ::UnifiedRubySDK::Shared::LmsInstructor, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::CreateLmsInstructorResponse) }
+    def create_lms_instructor(lms_instructor, connection_id, fields_ = nil, timeout_ms = nil)
       # create_lms_instructor - Create an instructor
       request = ::UnifiedRubySDK::Operations::CreateLmsInstructorRequest.new(
         
@@ -154,8 +168,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.post(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.post(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -184,8 +204,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_student: ::UnifiedRubySDK::Shared::LmsStudent, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateLmsStudentResponse) }
-    def create_lms_student(lms_student, connection_id, fields_ = nil)
+    sig { params(lms_student: ::UnifiedRubySDK::Shared::LmsStudent, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::CreateLmsStudentResponse) }
+    def create_lms_student(lms_student, connection_id, fields_ = nil, timeout_ms = nil)
       # create_lms_student - Create a student
       request = ::UnifiedRubySDK::Operations::CreateLmsStudentRequest.new(
         
@@ -209,8 +229,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.post(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.post(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -239,8 +265,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetLmsClassResponse) }
-    def get_lms_class(connection_id, id, fields_ = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::GetLmsClassResponse) }
+    def get_lms_class(connection_id, id, fields_ = nil, timeout_ms = nil)
       # get_lms_class - Retrieve a class
       request = ::UnifiedRubySDK::Operations::GetLmsClassRequest.new(
         
@@ -261,8 +287,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -284,8 +316,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetLmsCourseResponse) }
-    def get_lms_course(connection_id, id, fields_ = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::GetLmsCourseResponse) }
+    def get_lms_course(connection_id, id, fields_ = nil, timeout_ms = nil)
       # get_lms_course - Retrieve a course
       request = ::UnifiedRubySDK::Operations::GetLmsCourseRequest.new(
         
@@ -306,8 +338,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -329,8 +367,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetLmsInstructorResponse) }
-    def get_lms_instructor(connection_id, id, fields_ = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::GetLmsInstructorResponse) }
+    def get_lms_instructor(connection_id, id, fields_ = nil, timeout_ms = nil)
       # get_lms_instructor - Retrieve an instructor
       request = ::UnifiedRubySDK::Operations::GetLmsInstructorRequest.new(
         
@@ -351,8 +389,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -374,8 +418,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetLmsStudentResponse) }
-    def get_lms_student(connection_id, id, fields_ = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::GetLmsStudentResponse) }
+    def get_lms_student(connection_id, id, fields_ = nil, timeout_ms = nil)
       # get_lms_student - Retrieve a student
       request = ::UnifiedRubySDK::Operations::GetLmsStudentRequest.new(
         
@@ -396,8 +440,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -419,8 +469,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListLmsClassesRequest)).returns(::UnifiedRubySDK::Operations::ListLmsClassesResponse) }
-    def list_lms_classes(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListLmsClassesRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListLmsClassesResponse) }
+    def list_lms_classes(request, timeout_ms = nil)
       # list_lms_classes - List all classes
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -435,8 +485,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -458,8 +514,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListLmsCoursesRequest)).returns(::UnifiedRubySDK::Operations::ListLmsCoursesResponse) }
-    def list_lms_courses(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListLmsCoursesRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListLmsCoursesResponse) }
+    def list_lms_courses(request, timeout_ms = nil)
       # list_lms_courses - List all courses
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -474,8 +530,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -497,8 +559,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListLmsInstructorsRequest)).returns(::UnifiedRubySDK::Operations::ListLmsInstructorsResponse) }
-    def list_lms_instructors(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListLmsInstructorsRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListLmsInstructorsResponse) }
+    def list_lms_instructors(request, timeout_ms = nil)
       # list_lms_instructors - List all instructors
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -513,8 +575,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -536,8 +604,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListLmsStudentsRequest)).returns(::UnifiedRubySDK::Operations::ListLmsStudentsResponse) }
-    def list_lms_students(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListLmsStudentsRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListLmsStudentsResponse) }
+    def list_lms_students(request, timeout_ms = nil)
       # list_lms_students - List all students
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -552,8 +620,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -575,8 +649,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_class: ::UnifiedRubySDK::Shared::LmsClass, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchLmsClassResponse) }
-    def patch_lms_class(lms_class, connection_id, id, fields_ = nil)
+    sig { params(lms_class: ::UnifiedRubySDK::Shared::LmsClass, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::PatchLmsClassResponse) }
+    def patch_lms_class(lms_class, connection_id, id, fields_ = nil, timeout_ms = nil)
       # patch_lms_class - Update a class
       request = ::UnifiedRubySDK::Operations::PatchLmsClassRequest.new(
         
@@ -601,8 +675,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.patch(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.patch(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -631,8 +711,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_course: ::UnifiedRubySDK::Shared::LmsCourse, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchLmsCourseResponse) }
-    def patch_lms_course(lms_course, connection_id, id, fields_ = nil)
+    sig { params(lms_course: ::UnifiedRubySDK::Shared::LmsCourse, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::PatchLmsCourseResponse) }
+    def patch_lms_course(lms_course, connection_id, id, fields_ = nil, timeout_ms = nil)
       # patch_lms_course - Update a course
       request = ::UnifiedRubySDK::Operations::PatchLmsCourseRequest.new(
         
@@ -657,8 +737,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.patch(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.patch(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -687,8 +773,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_instructor: ::UnifiedRubySDK::Shared::LmsInstructor, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchLmsInstructorResponse) }
-    def patch_lms_instructor(lms_instructor, connection_id, id, fields_ = nil)
+    sig { params(lms_instructor: ::UnifiedRubySDK::Shared::LmsInstructor, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::PatchLmsInstructorResponse) }
+    def patch_lms_instructor(lms_instructor, connection_id, id, fields_ = nil, timeout_ms = nil)
       # patch_lms_instructor - Update an instructor
       request = ::UnifiedRubySDK::Operations::PatchLmsInstructorRequest.new(
         
@@ -713,8 +799,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.patch(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.patch(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -743,8 +835,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_student: ::UnifiedRubySDK::Shared::LmsStudent, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchLmsStudentResponse) }
-    def patch_lms_student(lms_student, connection_id, id, fields_ = nil)
+    sig { params(lms_student: ::UnifiedRubySDK::Shared::LmsStudent, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::PatchLmsStudentResponse) }
+    def patch_lms_student(lms_student, connection_id, id, fields_ = nil, timeout_ms = nil)
       # patch_lms_student - Update a student
       request = ::UnifiedRubySDK::Operations::PatchLmsStudentRequest.new(
         
@@ -769,8 +861,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.patch(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.patch(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -799,8 +897,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveLmsClassResponse) }
-    def remove_lms_class(connection_id, id)
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::RemoveLmsClassResponse) }
+    def remove_lms_class(connection_id, id, timeout_ms = nil)
       # remove_lms_class - Remove a class
       request = ::UnifiedRubySDK::Operations::RemoveLmsClassRequest.new(
         
@@ -819,8 +917,14 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.delete(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.delete(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -839,8 +943,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveLmsCourseResponse) }
-    def remove_lms_course(connection_id, id)
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::RemoveLmsCourseResponse) }
+    def remove_lms_course(connection_id, id, timeout_ms = nil)
       # remove_lms_course - Remove a course
       request = ::UnifiedRubySDK::Operations::RemoveLmsCourseRequest.new(
         
@@ -859,8 +963,14 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.delete(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.delete(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -879,8 +989,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveLmsInstructorResponse) }
-    def remove_lms_instructor(connection_id, id)
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::RemoveLmsInstructorResponse) }
+    def remove_lms_instructor(connection_id, id, timeout_ms = nil)
       # remove_lms_instructor - Remove an instructor
       request = ::UnifiedRubySDK::Operations::RemoveLmsInstructorRequest.new(
         
@@ -899,8 +1009,14 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.delete(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.delete(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -919,8 +1035,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveLmsStudentResponse) }
-    def remove_lms_student(connection_id, id)
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::RemoveLmsStudentResponse) }
+    def remove_lms_student(connection_id, id, timeout_ms = nil)
       # remove_lms_student - Remove a student
       request = ::UnifiedRubySDK::Operations::RemoveLmsStudentRequest.new(
         
@@ -939,8 +1055,14 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.delete(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.delete(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -959,8 +1081,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_class: ::UnifiedRubySDK::Shared::LmsClass, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateLmsClassResponse) }
-    def update_lms_class(lms_class, connection_id, id, fields_ = nil)
+    sig { params(lms_class: ::UnifiedRubySDK::Shared::LmsClass, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::UpdateLmsClassResponse) }
+    def update_lms_class(lms_class, connection_id, id, fields_ = nil, timeout_ms = nil)
       # update_lms_class - Update a class
       request = ::UnifiedRubySDK::Operations::UpdateLmsClassRequest.new(
         
@@ -985,8 +1107,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.put(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.put(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -1015,8 +1143,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_course: ::UnifiedRubySDK::Shared::LmsCourse, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateLmsCourseResponse) }
-    def update_lms_course(lms_course, connection_id, id, fields_ = nil)
+    sig { params(lms_course: ::UnifiedRubySDK::Shared::LmsCourse, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::UpdateLmsCourseResponse) }
+    def update_lms_course(lms_course, connection_id, id, fields_ = nil, timeout_ms = nil)
       # update_lms_course - Update a course
       request = ::UnifiedRubySDK::Operations::UpdateLmsCourseRequest.new(
         
@@ -1041,8 +1169,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.put(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.put(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -1071,8 +1205,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_instructor: ::UnifiedRubySDK::Shared::LmsInstructor, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateLmsInstructorResponse) }
-    def update_lms_instructor(lms_instructor, connection_id, id, fields_ = nil)
+    sig { params(lms_instructor: ::UnifiedRubySDK::Shared::LmsInstructor, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::UpdateLmsInstructorResponse) }
+    def update_lms_instructor(lms_instructor, connection_id, id, fields_ = nil, timeout_ms = nil)
       # update_lms_instructor - Update an instructor
       request = ::UnifiedRubySDK::Operations::UpdateLmsInstructorRequest.new(
         
@@ -1097,8 +1231,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.put(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.put(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -1127,8 +1267,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_student: ::UnifiedRubySDK::Shared::LmsStudent, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateLmsStudentResponse) }
-    def update_lms_student(lms_student, connection_id, id, fields_ = nil)
+    sig { params(lms_student: ::UnifiedRubySDK::Shared::LmsStudent, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::UpdateLmsStudentResponse) }
+    def update_lms_student(lms_student, connection_id, id, fields_ = nil, timeout_ms = nil)
       # update_lms_student - Update a student
       request = ::UnifiedRubySDK::Operations::UpdateLmsStudentRequest.new(
         
@@ -1153,8 +1293,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.put(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.put(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?

@@ -1615,3 +1615,11 @@ Based on:
 - Speakeasy CLI 1.510.0 (2.541.0) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [ruby v0.6.23] .
+
+## 2025-03-18 00:17:15
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.519.0 (2.552.1) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [ruby v0.7.0] .

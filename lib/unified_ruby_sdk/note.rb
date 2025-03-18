@@ -5,7 +5,9 @@
 
 require 'faraday'
 require 'faraday/multipart'
+require 'faraday/retry'
 require 'sorbet-runtime'
+require_relative 'utils/retries'
 
 module UnifiedRubySDK
   extend T::Sig
@@ -19,8 +21,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ticketing_note: ::UnifiedRubySDK::Shared::TicketingNote, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateTicketingNoteResponse) }
-    def create_ticketing_note(ticketing_note, connection_id, fields_ = nil)
+    sig { params(ticketing_note: ::UnifiedRubySDK::Shared::TicketingNote, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::CreateTicketingNoteResponse) }
+    def create_ticketing_note(ticketing_note, connection_id, fields_ = nil, timeout_ms = nil)
       # create_ticketing_note - Create a note
       request = ::UnifiedRubySDK::Operations::CreateTicketingNoteRequest.new(
         
@@ -44,8 +46,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.post(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.post(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -74,8 +82,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetTicketingNoteResponse) }
-    def get_ticketing_note(connection_id, id, fields_ = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::GetTicketingNoteResponse) }
+    def get_ticketing_note(connection_id, id, fields_ = nil, timeout_ms = nil)
       # get_ticketing_note - Retrieve a note
       request = ::UnifiedRubySDK::Operations::GetTicketingNoteRequest.new(
         
@@ -96,8 +104,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -119,8 +133,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListTicketingNotesRequest)).returns(::UnifiedRubySDK::Operations::ListTicketingNotesResponse) }
-    def list_ticketing_notes(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListTicketingNotesRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListTicketingNotesResponse) }
+    def list_ticketing_notes(request, timeout_ms = nil)
       # list_ticketing_notes - List all notes
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -135,8 +149,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -158,8 +178,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ticketing_note: ::UnifiedRubySDK::Shared::TicketingNote, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchTicketingNoteResponse) }
-    def patch_ticketing_note(ticketing_note, connection_id, id, fields_ = nil)
+    sig { params(ticketing_note: ::UnifiedRubySDK::Shared::TicketingNote, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::PatchTicketingNoteResponse) }
+    def patch_ticketing_note(ticketing_note, connection_id, id, fields_ = nil, timeout_ms = nil)
       # patch_ticketing_note - Update a note
       request = ::UnifiedRubySDK::Operations::PatchTicketingNoteRequest.new(
         
@@ -184,8 +204,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.patch(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.patch(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -214,8 +240,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveTicketingNoteResponse) }
-    def remove_ticketing_note(connection_id, id)
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::RemoveTicketingNoteResponse) }
+    def remove_ticketing_note(connection_id, id, timeout_ms = nil)
       # remove_ticketing_note - Remove a note
       request = ::UnifiedRubySDK::Operations::RemoveTicketingNoteRequest.new(
         
@@ -234,8 +260,14 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.delete(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.delete(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -254,8 +286,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ticketing_note: ::UnifiedRubySDK::Shared::TicketingNote, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateTicketingNoteResponse) }
-    def update_ticketing_note(ticketing_note, connection_id, id, fields_ = nil)
+    sig { params(ticketing_note: ::UnifiedRubySDK::Shared::TicketingNote, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::UpdateTicketingNoteResponse) }
+    def update_ticketing_note(ticketing_note, connection_id, id, fields_ = nil, timeout_ms = nil)
       # update_ticketing_note - Update a note
       request = ::UnifiedRubySDK::Operations::UpdateTicketingNoteRequest.new(
         
@@ -280,8 +312,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.put(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.put(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?

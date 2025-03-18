@@ -5,7 +5,9 @@
 
 require 'faraday'
 require 'faraday/multipart'
+require 'faraday/retry'
 require 'sorbet-runtime'
+require_relative 'utils/retries'
 
 module UnifiedRubySDK
   extend T::Sig
@@ -19,8 +21,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(messaging_message: ::UnifiedRubySDK::Shared::MessagingMessage, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateMessagingMessageResponse) }
-    def create_messaging_message(messaging_message, connection_id, fields_ = nil)
+    sig { params(messaging_message: ::UnifiedRubySDK::Shared::MessagingMessage, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::CreateMessagingMessageResponse) }
+    def create_messaging_message(messaging_message, connection_id, fields_ = nil, timeout_ms = nil)
       # create_messaging_message - Create a message
       request = ::UnifiedRubySDK::Operations::CreateMessagingMessageRequest.new(
         
@@ -44,8 +46,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.post(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.post(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -74,8 +82,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetMessagingChannelResponse) }
-    def get_messaging_channel(connection_id, id, fields_ = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::GetMessagingChannelResponse) }
+    def get_messaging_channel(connection_id, id, fields_ = nil, timeout_ms = nil)
       # get_messaging_channel - Retrieve a channel
       request = ::UnifiedRubySDK::Operations::GetMessagingChannelRequest.new(
         
@@ -96,8 +104,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -119,8 +133,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetMessagingMessageResponse) }
-    def get_messaging_message(connection_id, id, fields_ = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::GetMessagingMessageResponse) }
+    def get_messaging_message(connection_id, id, fields_ = nil, timeout_ms = nil)
       # get_messaging_message - Retrieve a message
       request = ::UnifiedRubySDK::Operations::GetMessagingMessageRequest.new(
         
@@ -141,8 +155,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -164,8 +184,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListMessagingChannelsRequest)).returns(::UnifiedRubySDK::Operations::ListMessagingChannelsResponse) }
-    def list_messaging_channels(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListMessagingChannelsRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListMessagingChannelsResponse) }
+    def list_messaging_channels(request, timeout_ms = nil)
       # list_messaging_channels - List all channels
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -180,8 +200,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -203,8 +229,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListMessagingMessagesRequest)).returns(::UnifiedRubySDK::Operations::ListMessagingMessagesResponse) }
-    def list_messaging_messages(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListMessagingMessagesRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListMessagingMessagesResponse) }
+    def list_messaging_messages(request, timeout_ms = nil)
       # list_messaging_messages - List all messages
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -219,8 +245,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -242,8 +274,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(messaging_message: ::UnifiedRubySDK::Shared::MessagingMessage, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchMessagingMessageResponse) }
-    def patch_messaging_message(messaging_message, connection_id, id, fields_ = nil)
+    sig { params(messaging_message: ::UnifiedRubySDK::Shared::MessagingMessage, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::PatchMessagingMessageResponse) }
+    def patch_messaging_message(messaging_message, connection_id, id, fields_ = nil, timeout_ms = nil)
       # patch_messaging_message - Update a message
       request = ::UnifiedRubySDK::Operations::PatchMessagingMessageRequest.new(
         
@@ -268,8 +300,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.patch(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.patch(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -298,8 +336,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveMessagingMessageResponse) }
-    def remove_messaging_message(connection_id, id)
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::RemoveMessagingMessageResponse) }
+    def remove_messaging_message(connection_id, id, timeout_ms = nil)
       # remove_messaging_message - Remove a message
       request = ::UnifiedRubySDK::Operations::RemoveMessagingMessageRequest.new(
         
@@ -318,8 +356,14 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.delete(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.delete(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -338,8 +382,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(messaging_message: ::UnifiedRubySDK::Shared::MessagingMessage, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateMessagingMessageResponse) }
-    def update_messaging_message(messaging_message, connection_id, id, fields_ = nil)
+    sig { params(messaging_message: ::UnifiedRubySDK::Shared::MessagingMessage, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::UpdateMessagingMessageResponse) }
+    def update_messaging_message(messaging_message, connection_id, id, fields_ = nil, timeout_ms = nil)
       # update_messaging_message - Update a message
       request = ::UnifiedRubySDK::Operations::UpdateMessagingMessageRequest.new(
         
@@ -364,8 +408,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.put(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.put(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?

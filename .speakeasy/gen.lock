@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 469567133059289c1dda4dbb71768014
+  docChecksum: fa3dba9630fbcda044134e4fb89d5cd7
   docVersion: "1.0"
-  speakeasyVersion: 1.510.0
-  generationVersion: 2.541.0
-  releaseVersion: 0.6.23
-  configChecksum: 80e8ad725d2a4d720eaeb52be20a45c8
+  speakeasyVersion: 1.519.0
+  generationVersion: 2.552.1
+  releaseVersion: 0.7.0
+  configChecksum: 61cc7589677c21f0402c5d2d8d282135
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
 features:
   ruby:
-    core: 3.5.4
+    core: 3.6.0
     flattening: 2.81.1
     globalSecurity: 2.81.8
     globalServerURLs: 2.82.3
@@ -1053,6 +1053,7 @@ generatedFiles:
   - docs/models/shared/listitemid.md
   - docs/models/shared/listitemvariantid.md
   - docs/models/shared/listjobid.md
+  - docs/models/shared/listleadid.md
   - docs/models/shared/listlimit.md
   - docs/models/shared/listlinkid.md
   - docs/models/shared/listlistid.md
@@ -2437,6 +2438,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_item_id.rb
   - lib/unified_ruby_sdk/models/shared/list_item_variant_id.rb
   - lib/unified_ruby_sdk/models/shared/list_job_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_lead_id.rb
   - lib/unified_ruby_sdk/models/shared/list_limit.rb
   - lib/unified_ruby_sdk/models/shared/list_link_id.rb
   - lib/unified_ruby_sdk/models/shared/list_list_id.rb
@@ -2672,6 +2674,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/unified.rb
   - lib/unified_ruby_sdk/unified_to.rb
   - lib/unified_ruby_sdk/user.rb
+  - lib/unified_ruby_sdk/utils/retries.rb
   - lib/unified_ruby_sdk/utils/utils.rb
   - lib/unified_ruby_sdk/webhook.rb
   - sorbet/config
@@ -2684,6 +2687,7 @@ generatedFiles:
   - sorbet/rbi/gems/erubi@1.12.0.rbi
   - sorbet/rbi/gems/faraday-multipart@1.0.4.rbi
   - sorbet/rbi/gems/faraday-net_http@3.0.2.rbi
+  - sorbet/rbi/gems/faraday-retry@2.2.1.rbi
   - sorbet/rbi/gems/faraday@2.7.11.rbi
   - sorbet/rbi/gems/json@2.6.3.rbi
   - sorbet/rbi/gems/language_server-protocol@3.17.0.3.rbi

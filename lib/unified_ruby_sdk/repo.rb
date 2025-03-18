@@ -5,7 +5,9 @@
 
 require 'faraday'
 require 'faraday/multipart'
+require 'faraday/retry'
 require 'sorbet-runtime'
+require_relative 'utils/retries'
 
 module UnifiedRubySDK
   extend T::Sig
@@ -19,8 +21,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_branch: ::UnifiedRubySDK::Shared::RepoBranch, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateRepoBranchResponse) }
-    def create_repo_branch(repo_branch, connection_id, fields_ = nil)
+    sig { params(repo_branch: ::UnifiedRubySDK::Shared::RepoBranch, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::CreateRepoBranchResponse) }
+    def create_repo_branch(repo_branch, connection_id, fields_ = nil, timeout_ms = nil)
       # create_repo_branch - Create a branch
       request = ::UnifiedRubySDK::Operations::CreateRepoBranchRequest.new(
         
@@ -44,8 +46,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.post(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.post(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -74,8 +82,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_commit: ::UnifiedRubySDK::Shared::RepoCommit, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateRepoCommitResponse) }
-    def create_repo_commit(repo_commit, connection_id, fields_ = nil)
+    sig { params(repo_commit: ::UnifiedRubySDK::Shared::RepoCommit, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::CreateRepoCommitResponse) }
+    def create_repo_commit(repo_commit, connection_id, fields_ = nil, timeout_ms = nil)
       # create_repo_commit - Create a commit
       request = ::UnifiedRubySDK::Operations::CreateRepoCommitRequest.new(
         
@@ -99,8 +107,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.post(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.post(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -129,8 +143,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_organization: ::UnifiedRubySDK::Shared::RepoOrganization, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateRepoOrganizationResponse) }
-    def create_repo_organization(repo_organization, connection_id, fields_ = nil)
+    sig { params(repo_organization: ::UnifiedRubySDK::Shared::RepoOrganization, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::CreateRepoOrganizationResponse) }
+    def create_repo_organization(repo_organization, connection_id, fields_ = nil, timeout_ms = nil)
       # create_repo_organization - Create an organization
       request = ::UnifiedRubySDK::Operations::CreateRepoOrganizationRequest.new(
         
@@ -154,8 +168,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.post(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.post(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -184,8 +204,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_pullrequest: ::UnifiedRubySDK::Shared::RepoPullrequest, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateRepoPullrequestResponse) }
-    def create_repo_pullrequest(repo_pullrequest, connection_id, fields_ = nil)
+    sig { params(repo_pullrequest: ::UnifiedRubySDK::Shared::RepoPullrequest, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::CreateRepoPullrequestResponse) }
+    def create_repo_pullrequest(repo_pullrequest, connection_id, fields_ = nil, timeout_ms = nil)
       # create_repo_pullrequest - Create a pullrequest
       request = ::UnifiedRubySDK::Operations::CreateRepoPullrequestRequest.new(
         
@@ -209,8 +229,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.post(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.post(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -239,8 +265,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_repository: ::UnifiedRubySDK::Shared::RepoRepository, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateRepoRepositoryResponse) }
-    def create_repo_repository(repo_repository, connection_id, fields_ = nil)
+    sig { params(repo_repository: ::UnifiedRubySDK::Shared::RepoRepository, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::CreateRepoRepositoryResponse) }
+    def create_repo_repository(repo_repository, connection_id, fields_ = nil, timeout_ms = nil)
       # create_repo_repository - Create a repository
       request = ::UnifiedRubySDK::Operations::CreateRepoRepositoryRequest.new(
         
@@ -264,8 +290,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.post(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.post(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -294,8 +326,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetRepoBranchResponse) }
-    def get_repo_branch(connection_id, id, fields_ = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::GetRepoBranchResponse) }
+    def get_repo_branch(connection_id, id, fields_ = nil, timeout_ms = nil)
       # get_repo_branch - Retrieve a branch
       request = ::UnifiedRubySDK::Operations::GetRepoBranchRequest.new(
         
@@ -316,8 +348,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -339,8 +377,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetRepoCommitResponse) }
-    def get_repo_commit(connection_id, id, fields_ = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::GetRepoCommitResponse) }
+    def get_repo_commit(connection_id, id, fields_ = nil, timeout_ms = nil)
       # get_repo_commit - Retrieve a commit
       request = ::UnifiedRubySDK::Operations::GetRepoCommitRequest.new(
         
@@ -361,8 +399,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -384,8 +428,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetRepoOrganizationResponse) }
-    def get_repo_organization(connection_id, id, fields_ = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::GetRepoOrganizationResponse) }
+    def get_repo_organization(connection_id, id, fields_ = nil, timeout_ms = nil)
       # get_repo_organization - Retrieve an organization
       request = ::UnifiedRubySDK::Operations::GetRepoOrganizationRequest.new(
         
@@ -406,8 +450,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -429,8 +479,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetRepoPullrequestResponse) }
-    def get_repo_pullrequest(connection_id, id, fields_ = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::GetRepoPullrequestResponse) }
+    def get_repo_pullrequest(connection_id, id, fields_ = nil, timeout_ms = nil)
       # get_repo_pullrequest - Retrieve a pullrequest
       request = ::UnifiedRubySDK::Operations::GetRepoPullrequestRequest.new(
         
@@ -451,8 +501,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -474,8 +530,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::GetRepoRepositoryResponse) }
-    def get_repo_repository(connection_id, id, fields_ = nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::GetRepoRepositoryResponse) }
+    def get_repo_repository(connection_id, id, fields_ = nil, timeout_ms = nil)
       # get_repo_repository - Retrieve a repository
       request = ::UnifiedRubySDK::Operations::GetRepoRepositoryRequest.new(
         
@@ -496,8 +552,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -519,8 +581,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListRepoBranchesRequest)).returns(::UnifiedRubySDK::Operations::ListRepoBranchesResponse) }
-    def list_repo_branches(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListRepoBranchesRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListRepoBranchesResponse) }
+    def list_repo_branches(request, timeout_ms = nil)
       # list_repo_branches - List all branches
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -535,8 +597,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -558,8 +626,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListRepoCommitsRequest)).returns(::UnifiedRubySDK::Operations::ListRepoCommitsResponse) }
-    def list_repo_commits(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListRepoCommitsRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListRepoCommitsResponse) }
+    def list_repo_commits(request, timeout_ms = nil)
       # list_repo_commits - List all commits
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -574,8 +642,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -597,8 +671,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListRepoOrganizationsRequest)).returns(::UnifiedRubySDK::Operations::ListRepoOrganizationsResponse) }
-    def list_repo_organizations(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListRepoOrganizationsRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListRepoOrganizationsResponse) }
+    def list_repo_organizations(request, timeout_ms = nil)
       # list_repo_organizations - List all organizations
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -613,8 +687,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -636,8 +716,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListRepoPullrequestsRequest)).returns(::UnifiedRubySDK::Operations::ListRepoPullrequestsResponse) }
-    def list_repo_pullrequests(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListRepoPullrequestsRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListRepoPullrequestsResponse) }
+    def list_repo_pullrequests(request, timeout_ms = nil)
       # list_repo_pullrequests - List all pullrequests
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -652,8 +732,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -675,8 +761,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListRepoRepositoriesRequest)).returns(::UnifiedRubySDK::Operations::ListRepoRepositoriesResponse) }
-    def list_repo_repositories(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListRepoRepositoriesRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListRepoRepositoriesResponse) }
+    def list_repo_repositories(request, timeout_ms = nil)
       # list_repo_repositories - List all repositories
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -691,8 +777,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -714,8 +806,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_branch: ::UnifiedRubySDK::Shared::RepoBranch, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchRepoBranchResponse) }
-    def patch_repo_branch(repo_branch, connection_id, id, fields_ = nil)
+    sig { params(repo_branch: ::UnifiedRubySDK::Shared::RepoBranch, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::PatchRepoBranchResponse) }
+    def patch_repo_branch(repo_branch, connection_id, id, fields_ = nil, timeout_ms = nil)
       # patch_repo_branch - Update a branch
       request = ::UnifiedRubySDK::Operations::PatchRepoBranchRequest.new(
         
@@ -740,8 +832,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.patch(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.patch(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -770,8 +868,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_commit: ::UnifiedRubySDK::Shared::RepoCommit, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchRepoCommitResponse) }
-    def patch_repo_commit(repo_commit, connection_id, id, fields_ = nil)
+    sig { params(repo_commit: ::UnifiedRubySDK::Shared::RepoCommit, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::PatchRepoCommitResponse) }
+    def patch_repo_commit(repo_commit, connection_id, id, fields_ = nil, timeout_ms = nil)
       # patch_repo_commit - Update a commit
       request = ::UnifiedRubySDK::Operations::PatchRepoCommitRequest.new(
         
@@ -796,8 +894,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.patch(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.patch(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -826,8 +930,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_organization: ::UnifiedRubySDK::Shared::RepoOrganization, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchRepoOrganizationResponse) }
-    def patch_repo_organization(repo_organization, connection_id, id, fields_ = nil)
+    sig { params(repo_organization: ::UnifiedRubySDK::Shared::RepoOrganization, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::PatchRepoOrganizationResponse) }
+    def patch_repo_organization(repo_organization, connection_id, id, fields_ = nil, timeout_ms = nil)
       # patch_repo_organization - Update an organization
       request = ::UnifiedRubySDK::Operations::PatchRepoOrganizationRequest.new(
         
@@ -852,8 +956,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.patch(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.patch(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -882,8 +992,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_pullrequest: ::UnifiedRubySDK::Shared::RepoPullrequest, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchRepoPullrequestResponse) }
-    def patch_repo_pullrequest(repo_pullrequest, connection_id, id, fields_ = nil)
+    sig { params(repo_pullrequest: ::UnifiedRubySDK::Shared::RepoPullrequest, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::PatchRepoPullrequestResponse) }
+    def patch_repo_pullrequest(repo_pullrequest, connection_id, id, fields_ = nil, timeout_ms = nil)
       # patch_repo_pullrequest - Update a pullrequest
       request = ::UnifiedRubySDK::Operations::PatchRepoPullrequestRequest.new(
         
@@ -908,8 +1018,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.patch(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.patch(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -938,8 +1054,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_repository: ::UnifiedRubySDK::Shared::RepoRepository, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::PatchRepoRepositoryResponse) }
-    def patch_repo_repository(repo_repository, connection_id, id, fields_ = nil)
+    sig { params(repo_repository: ::UnifiedRubySDK::Shared::RepoRepository, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::PatchRepoRepositoryResponse) }
+    def patch_repo_repository(repo_repository, connection_id, id, fields_ = nil, timeout_ms = nil)
       # patch_repo_repository - Update a repository
       request = ::UnifiedRubySDK::Operations::PatchRepoRepositoryRequest.new(
         
@@ -964,8 +1080,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.patch(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.patch(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -994,8 +1116,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveRepoBranchResponse) }
-    def remove_repo_branch(connection_id, id)
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::RemoveRepoBranchResponse) }
+    def remove_repo_branch(connection_id, id, timeout_ms = nil)
       # remove_repo_branch - Remove a branch
       request = ::UnifiedRubySDK::Operations::RemoveRepoBranchRequest.new(
         
@@ -1014,8 +1136,14 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.delete(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.delete(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -1034,8 +1162,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveRepoCommitResponse) }
-    def remove_repo_commit(connection_id, id)
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::RemoveRepoCommitResponse) }
+    def remove_repo_commit(connection_id, id, timeout_ms = nil)
       # remove_repo_commit - Remove a commit
       request = ::UnifiedRubySDK::Operations::RemoveRepoCommitRequest.new(
         
@@ -1054,8 +1182,14 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.delete(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.delete(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -1074,8 +1208,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveRepoOrganizationResponse) }
-    def remove_repo_organization(connection_id, id)
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::RemoveRepoOrganizationResponse) }
+    def remove_repo_organization(connection_id, id, timeout_ms = nil)
       # remove_repo_organization - Remove an organization
       request = ::UnifiedRubySDK::Operations::RemoveRepoOrganizationRequest.new(
         
@@ -1094,8 +1228,14 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.delete(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.delete(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -1114,8 +1254,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveRepoPullrequestResponse) }
-    def remove_repo_pullrequest(connection_id, id)
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::RemoveRepoPullrequestResponse) }
+    def remove_repo_pullrequest(connection_id, id, timeout_ms = nil)
       # remove_repo_pullrequest - Remove a pullrequest
       request = ::UnifiedRubySDK::Operations::RemoveRepoPullrequestRequest.new(
         
@@ -1134,8 +1274,14 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.delete(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.delete(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -1154,8 +1300,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveRepoRepositoryResponse) }
-    def remove_repo_repository(connection_id, id)
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::RemoveRepoRepositoryResponse) }
+    def remove_repo_repository(connection_id, id, timeout_ms = nil)
       # remove_repo_repository - Remove a repository
       request = ::UnifiedRubySDK::Operations::RemoveRepoRepositoryRequest.new(
         
@@ -1174,8 +1320,14 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.delete(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.delete(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -1194,8 +1346,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_branch: ::UnifiedRubySDK::Shared::RepoBranch, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateRepoBranchResponse) }
-    def update_repo_branch(repo_branch, connection_id, id, fields_ = nil)
+    sig { params(repo_branch: ::UnifiedRubySDK::Shared::RepoBranch, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::UpdateRepoBranchResponse) }
+    def update_repo_branch(repo_branch, connection_id, id, fields_ = nil, timeout_ms = nil)
       # update_repo_branch - Update a branch
       request = ::UnifiedRubySDK::Operations::UpdateRepoBranchRequest.new(
         
@@ -1220,8 +1372,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.put(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.put(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -1250,8 +1408,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_commit: ::UnifiedRubySDK::Shared::RepoCommit, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateRepoCommitResponse) }
-    def update_repo_commit(repo_commit, connection_id, id, fields_ = nil)
+    sig { params(repo_commit: ::UnifiedRubySDK::Shared::RepoCommit, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::UpdateRepoCommitResponse) }
+    def update_repo_commit(repo_commit, connection_id, id, fields_ = nil, timeout_ms = nil)
       # update_repo_commit - Update a commit
       request = ::UnifiedRubySDK::Operations::UpdateRepoCommitRequest.new(
         
@@ -1276,8 +1434,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.put(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.put(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -1306,8 +1470,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_organization: ::UnifiedRubySDK::Shared::RepoOrganization, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateRepoOrganizationResponse) }
-    def update_repo_organization(repo_organization, connection_id, id, fields_ = nil)
+    sig { params(repo_organization: ::UnifiedRubySDK::Shared::RepoOrganization, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::UpdateRepoOrganizationResponse) }
+    def update_repo_organization(repo_organization, connection_id, id, fields_ = nil, timeout_ms = nil)
       # update_repo_organization - Update an organization
       request = ::UnifiedRubySDK::Operations::UpdateRepoOrganizationRequest.new(
         
@@ -1332,8 +1496,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.put(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.put(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -1362,8 +1532,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_pullrequest: ::UnifiedRubySDK::Shared::RepoPullrequest, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateRepoPullrequestResponse) }
-    def update_repo_pullrequest(repo_pullrequest, connection_id, id, fields_ = nil)
+    sig { params(repo_pullrequest: ::UnifiedRubySDK::Shared::RepoPullrequest, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::UpdateRepoPullrequestResponse) }
+    def update_repo_pullrequest(repo_pullrequest, connection_id, id, fields_ = nil, timeout_ms = nil)
       # update_repo_pullrequest - Update a pullrequest
       request = ::UnifiedRubySDK::Operations::UpdateRepoPullrequestRequest.new(
         
@@ -1388,8 +1558,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.put(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.put(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -1418,8 +1594,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_repository: ::UnifiedRubySDK::Shared::RepoRepository, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::UpdateRepoRepositoryResponse) }
-    def update_repo_repository(repo_repository, connection_id, id, fields_ = nil)
+    sig { params(repo_repository: ::UnifiedRubySDK::Shared::RepoRepository, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::UpdateRepoRepositoryResponse) }
+    def update_repo_repository(repo_repository, connection_id, id, fields_ = nil, timeout_ms = nil)
       # update_repo_repository - Update a repository
       request = ::UnifiedRubySDK::Operations::UpdateRepoRepositoryRequest.new(
         
@@ -1444,8 +1620,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.put(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.put(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?

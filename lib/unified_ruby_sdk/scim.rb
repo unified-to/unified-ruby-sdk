@@ -5,7 +5,9 @@
 
 require 'faraday'
 require 'faraday/multipart'
+require 'faraday/retry'
 require 'sorbet-runtime'
+require_relative 'utils/retries'
 
 module UnifiedRubySDK
   extend T::Sig
@@ -19,8 +21,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(scim_group: ::UnifiedRubySDK::Shared::ScimGroup, connection_id: ::String).returns(::UnifiedRubySDK::Operations::CreateScimGroupsResponse) }
-    def create_scim_groups(scim_group, connection_id)
+    sig { params(scim_group: ::UnifiedRubySDK::Shared::ScimGroup, connection_id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::CreateScimGroupsResponse) }
+    def create_scim_groups(scim_group, connection_id, timeout_ms = nil)
       # create_scim_groups - Create group
       request = ::UnifiedRubySDK::Operations::CreateScimGroupsRequest.new(
         
@@ -42,8 +44,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.post(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.post(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
         if form
@@ -71,8 +79,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: ::UnifiedRubySDK::Operations::CreateScimUsersRequest).returns(::UnifiedRubySDK::Operations::CreateScimUsersResponse) }
-    def create_scim_users(request)
+    sig { params(request: ::UnifiedRubySDK::Operations::CreateScimUsersRequest, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::CreateScimUsersResponse) }
+    def create_scim_users(request, timeout_ms = nil)
       # create_scim_users - Create user
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -90,8 +98,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.post(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.post(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -120,8 +134,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::GetScimGroupsResponse) }
-    def get_scim_groups(connection_id, id)
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::GetScimGroupsResponse) }
+    def get_scim_groups(connection_id, id, timeout_ms = nil)
       # get_scim_groups - Get group
       request = ::UnifiedRubySDK::Operations::GetScimGroupsRequest.new(
         
@@ -140,8 +154,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -162,8 +182,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::GetScimUsersResponse) }
-    def get_scim_users(connection_id, id)
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::GetScimUsersResponse) }
+    def get_scim_users(connection_id, id, timeout_ms = nil)
       # get_scim_users - Get user
       request = ::UnifiedRubySDK::Operations::GetScimUsersRequest.new(
         
@@ -182,8 +202,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -204,8 +230,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListScimGroupsRequest)).returns(::UnifiedRubySDK::Operations::ListScimGroupsResponse) }
-    def list_scim_groups(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListScimGroupsRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListScimGroupsResponse) }
+    def list_scim_groups(request, timeout_ms = nil)
       # list_scim_groups - List groups
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -220,8 +246,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -243,8 +275,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListScimUsersRequest)).returns(::UnifiedRubySDK::Operations::ListScimUsersResponse) }
-    def list_scim_users(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListScimUsersRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListScimUsersResponse) }
+    def list_scim_users(request, timeout_ms = nil)
       # list_scim_users - List users
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -259,8 +291,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -282,8 +320,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(scim_group: ::UnifiedRubySDK::Shared::ScimGroup, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::PatchScimGroupsResponse) }
-    def patch_scim_groups(scim_group, connection_id, id)
+    sig { params(scim_group: ::UnifiedRubySDK::Shared::ScimGroup, connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::PatchScimGroupsResponse) }
+    def patch_scim_groups(scim_group, connection_id, id, timeout_ms = nil)
       # patch_scim_groups - Update group
       request = ::UnifiedRubySDK::Operations::PatchScimGroupsRequest.new(
         
@@ -306,8 +344,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.patch(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.patch(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
         if form
@@ -335,8 +379,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(scim_user: ::UnifiedRubySDK::Shared::ScimUser, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::PatchScimUsersResponse) }
-    def patch_scim_users(scim_user, connection_id, id)
+    sig { params(scim_user: ::UnifiedRubySDK::Shared::ScimUser, connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::PatchScimUsersResponse) }
+    def patch_scim_users(scim_user, connection_id, id, timeout_ms = nil)
       # patch_scim_users - Update user
       request = ::UnifiedRubySDK::Operations::PatchScimUsersRequest.new(
         
@@ -359,8 +403,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.patch(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.patch(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
         if form
@@ -388,8 +438,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveScimGroupsResponse) }
-    def remove_scim_groups(connection_id, id)
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::RemoveScimGroupsResponse) }
+    def remove_scim_groups(connection_id, id, timeout_ms = nil)
       # remove_scim_groups - Delete group
       request = ::UnifiedRubySDK::Operations::RemoveScimGroupsRequest.new(
         
@@ -408,8 +458,14 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.delete(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.delete(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -428,8 +484,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::RemoveScimUsersResponse) }
-    def remove_scim_users(connection_id, id)
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::RemoveScimUsersResponse) }
+    def remove_scim_users(connection_id, id, timeout_ms = nil)
       # remove_scim_users - Delete user
       request = ::UnifiedRubySDK::Operations::RemoveScimUsersRequest.new(
         
@@ -448,8 +504,14 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.delete(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.delete(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -468,8 +530,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(scim_group: ::UnifiedRubySDK::Shared::ScimGroup, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::UpdateScimGroupsResponse) }
-    def update_scim_groups(scim_group, connection_id, id)
+    sig { params(scim_group: ::UnifiedRubySDK::Shared::ScimGroup, connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::UpdateScimGroupsResponse) }
+    def update_scim_groups(scim_group, connection_id, id, timeout_ms = nil)
       # update_scim_groups - Update group
       request = ::UnifiedRubySDK::Operations::UpdateScimGroupsRequest.new(
         
@@ -492,8 +554,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.put(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.put(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
         if form
@@ -521,8 +589,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(scim_user: ::UnifiedRubySDK::Shared::ScimUser, connection_id: ::String, id: ::String).returns(::UnifiedRubySDK::Operations::UpdateScimUsersResponse) }
-    def update_scim_users(scim_user, connection_id, id)
+    sig { params(scim_user: ::UnifiedRubySDK::Shared::ScimUser, connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::UpdateScimUsersResponse) }
+    def update_scim_users(scim_user, connection_id, id, timeout_ms = nil)
       # update_scim_users - Update user
       request = ::UnifiedRubySDK::Operations::UpdateScimUsersRequest.new(
         
@@ -545,8 +613,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.put(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.put(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
         if form

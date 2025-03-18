@@ -5,7 +5,9 @@
 
 require 'faraday'
 require 'faraday/multipart'
+require 'faraday/retry'
 require 'sorbet-runtime'
+require_relative 'utils/retries'
 
 module UnifiedRubySDK
   extend T::Sig
@@ -19,8 +21,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(genai_prompt: ::UnifiedRubySDK::Shared::GenaiPrompt, connection_id: ::String, fields_: T.nilable(T::Array[::String])).returns(::UnifiedRubySDK::Operations::CreateGenaiPromptResponse) }
-    def create_genai_prompt(genai_prompt, connection_id, fields_ = nil)
+    sig { params(genai_prompt: ::UnifiedRubySDK::Shared::GenaiPrompt, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::CreateGenaiPromptResponse) }
+    def create_genai_prompt(genai_prompt, connection_id, fields_ = nil, timeout_ms = nil)
       # create_genai_prompt - Create a prompt
       request = ::UnifiedRubySDK::Operations::CreateGenaiPromptRequest.new(
         
@@ -44,8 +46,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.post(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.post(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -74,8 +82,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListGenaiModelsRequest)).returns(::UnifiedRubySDK::Operations::ListGenaiModelsResponse) }
-    def list_genai_models(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListGenaiModelsRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListGenaiModelsResponse) }
+    def list_genai_models(request, timeout_ms = nil)
       # list_genai_models - List all models
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -90,8 +98,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?

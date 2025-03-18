@@ -5,7 +5,9 @@
 
 require 'faraday'
 require 'faraday/multipart'
+require 'faraday/retry'
 require 'sorbet-runtime'
+require_relative 'utils/retries'
 
 module UnifiedRubySDK
   extend T::Sig
@@ -19,8 +21,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: ::UnifiedRubySDK::Shared::Connection).returns(::UnifiedRubySDK::Operations::CreateUnifiedConnectionResponse) }
-    def create_unified_connection(request)
+    sig { params(request: ::UnifiedRubySDK::Shared::Connection, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::CreateUnifiedConnectionResponse) }
+    def create_unified_connection(request, timeout_ms = nil)
       # create_unified_connection - Create connection
       # Used only to import existing customer credentials; use "Create connection indirectly" instead
       url, params = @sdk_configuration.get_server_details
@@ -33,8 +35,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.post(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.post(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
         if form
@@ -62,8 +70,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String).returns(::UnifiedRubySDK::Operations::GetUnifiedConnectionResponse) }
-    def get_unified_connection(id)
+    sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::GetUnifiedConnectionResponse) }
+    def get_unified_connection(id, timeout_ms = nil)
       # get_unified_connection - Retrieve connection
       request = ::UnifiedRubySDK::Operations::GetUnifiedConnectionRequest.new(
         
@@ -81,8 +89,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -103,8 +117,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedConnectionsRequest)).returns(::UnifiedRubySDK::Operations::ListUnifiedConnectionsResponse) }
-    def list_unified_connections(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedConnectionsRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListUnifiedConnectionsResponse) }
+    def list_unified_connections(request, timeout_ms = nil)
       # list_unified_connections - List all connections
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -114,8 +128,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -137,8 +157,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection: ::UnifiedRubySDK::Shared::Connection, id: ::String).returns(::UnifiedRubySDK::Operations::PatchUnifiedConnectionResponse) }
-    def patch_unified_connection(connection, id)
+    sig { params(connection: ::UnifiedRubySDK::Shared::Connection, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::PatchUnifiedConnectionResponse) }
+    def patch_unified_connection(connection, id, timeout_ms = nil)
       # patch_unified_connection - Update connection
       request = ::UnifiedRubySDK::Operations::PatchUnifiedConnectionRequest.new(
         
@@ -160,8 +180,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.patch(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.patch(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
         if form
@@ -189,8 +215,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String).returns(::UnifiedRubySDK::Operations::RemoveUnifiedConnectionResponse) }
-    def remove_unified_connection(id)
+    sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::RemoveUnifiedConnectionResponse) }
+    def remove_unified_connection(id, timeout_ms = nil)
       # remove_unified_connection - Remove connection
       request = ::UnifiedRubySDK::Operations::RemoveUnifiedConnectionRequest.new(
         
@@ -208,8 +234,14 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.delete(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.delete(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -228,8 +260,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection: ::UnifiedRubySDK::Shared::Connection, id: ::String).returns(::UnifiedRubySDK::Operations::UpdateUnifiedConnectionResponse) }
-    def update_unified_connection(connection, id)
+    sig { params(connection: ::UnifiedRubySDK::Shared::Connection, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::UpdateUnifiedConnectionResponse) }
+    def update_unified_connection(connection, id, timeout_ms = nil)
       # update_unified_connection - Update connection
       request = ::UnifiedRubySDK::Operations::UpdateUnifiedConnectionRequest.new(
         
@@ -251,8 +283,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.put(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.put(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
         if form

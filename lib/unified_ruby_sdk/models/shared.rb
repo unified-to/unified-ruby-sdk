@@ -358,6 +358,7 @@ module UnifiedRubySDK
     autoload :ListItemId, 'unified_ruby_sdk/models/shared/list_item_id.rb'
     autoload :ListItemVariantId, 'unified_ruby_sdk/models/shared/list_item_variant_id.rb'
     autoload :ListJobId, 'unified_ruby_sdk/models/shared/list_job_id.rb'
+    autoload :ListLeadId, 'unified_ruby_sdk/models/shared/list_lead_id.rb'
     autoload :ListLimit, 'unified_ruby_sdk/models/shared/list_limit.rb'
     autoload :ListLinkId, 'unified_ruby_sdk/models/shared/list_link_id.rb'
     autoload :ListListId, 'unified_ruby_sdk/models/shared/list_list_id.rb'

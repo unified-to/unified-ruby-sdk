@@ -5,7 +5,9 @@
 
 require 'faraday'
 require 'faraday/multipart'
+require 'faraday/retry'
 require 'sorbet-runtime'
+require_relative 'utils/retries'
 
 module UnifiedRubySDK
   extend T::Sig
@@ -19,8 +21,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: ::UnifiedRubySDK::Shared::Connection).returns(::UnifiedRubySDK::Operations::CreateUnifiedConnectionResponse) }
-    def create_unified_connection(request)
+    sig { params(request: ::UnifiedRubySDK::Shared::Connection, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::CreateUnifiedConnectionResponse) }
+    def create_unified_connection(request, timeout_ms = nil)
       # create_unified_connection - Create connection
       # Used only to import existing customer credentials; use "Create connection indirectly" instead
       url, params = @sdk_configuration.get_server_details
@@ -33,8 +35,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.post(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.post(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
         if form
@@ -62,8 +70,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(webhook: ::UnifiedRubySDK::Shared::Webhook, include_all: T.nilable(T::Boolean)).returns(::UnifiedRubySDK::Operations::CreateUnifiedWebhookResponse) }
-    def create_unified_webhook(webhook, include_all = nil)
+    sig { params(webhook: ::UnifiedRubySDK::Shared::Webhook, include_all: T.nilable(T::Boolean), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::CreateUnifiedWebhookResponse) }
+    def create_unified_webhook(webhook, include_all = nil, timeout_ms = nil)
       # create_unified_webhook - Create webhook subscription
       # The data payload received by your server is described at https://docs.unified.to/unified/overview. The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free accounts.
       request = ::UnifiedRubySDK::Operations::CreateUnifiedWebhookRequest.new(
@@ -82,8 +90,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.post(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.post(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -112,8 +126,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String).returns(::UnifiedRubySDK::Operations::GetUnifiedApicallResponse) }
-    def get_unified_apicall(id)
+    sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::GetUnifiedApicallResponse) }
+    def get_unified_apicall(id, timeout_ms = nil)
       # get_unified_apicall - Retrieve specific API Call by its ID
       request = ::UnifiedRubySDK::Operations::GetUnifiedApicallRequest.new(
         
@@ -131,8 +145,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -153,8 +173,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String).returns(::UnifiedRubySDK::Operations::GetUnifiedConnectionResponse) }
-    def get_unified_connection(id)
+    sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::GetUnifiedConnectionResponse) }
+    def get_unified_connection(id, timeout_ms = nil)
       # get_unified_connection - Retrieve connection
       request = ::UnifiedRubySDK::Operations::GetUnifiedConnectionRequest.new(
         
@@ -172,8 +192,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -194,8 +220,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::GetUnifiedIntegrationAuthRequest)).returns(::UnifiedRubySDK::Operations::GetUnifiedIntegrationAuthResponse) }
-    def get_unified_integration_auth(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::GetUnifiedIntegrationAuthRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::GetUnifiedIntegrationAuthResponse) }
+    def get_unified_integration_auth(request, timeout_ms = nil)
       # get_unified_integration_auth - Create connection indirectly
       # Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
       url, params = @sdk_configuration.get_server_details
@@ -211,8 +237,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'text/plain'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -231,8 +263,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String).returns(::UnifiedRubySDK::Operations::GetUnifiedWebhookResponse) }
-    def get_unified_webhook(id)
+    sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::GetUnifiedWebhookResponse) }
+    def get_unified_webhook(id, timeout_ms = nil)
       # get_unified_webhook - Retrieve webhook by its ID
       request = ::UnifiedRubySDK::Operations::GetUnifiedWebhookRequest.new(
         
@@ -250,8 +282,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -272,8 +310,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedApicallsRequest)).returns(::UnifiedRubySDK::Operations::ListUnifiedApicallsResponse) }
-    def list_unified_apicalls(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedApicallsRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListUnifiedApicallsResponse) }
+    def list_unified_apicalls(request, timeout_ms = nil)
       # list_unified_apicalls - Returns API Calls
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -283,8 +321,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -306,8 +350,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedConnectionsRequest)).returns(::UnifiedRubySDK::Operations::ListUnifiedConnectionsResponse) }
-    def list_unified_connections(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedConnectionsRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListUnifiedConnectionsResponse) }
+    def list_unified_connections(request, timeout_ms = nil)
       # list_unified_connections - List all connections
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -317,8 +361,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -340,8 +390,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIntegrationWorkspacesRequest)).returns(::UnifiedRubySDK::Operations::ListUnifiedIntegrationWorkspacesResponse) }
-    def list_unified_integration_workspaces(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIntegrationWorkspacesRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListUnifiedIntegrationWorkspacesResponse) }
+    def list_unified_integration_workspaces(request, timeout_ms = nil)
       # list_unified_integration_workspaces - Returns all activated integrations in a workspace
       # No authentication required as this is to be used by front-end interface
       url, params = @sdk_configuration.get_server_details
@@ -357,8 +407,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -380,8 +436,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIntegrationsRequest)).returns(::UnifiedRubySDK::Operations::ListUnifiedIntegrationsResponse) }
-    def list_unified_integrations(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIntegrationsRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListUnifiedIntegrationsResponse) }
+    def list_unified_integrations(request, timeout_ms = nil)
       # list_unified_integrations - Returns all integrations
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -391,8 +447,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -414,8 +476,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIssuesRequest)).returns(::UnifiedRubySDK::Operations::ListUnifiedIssuesResponse) }
-    def list_unified_issues(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedIssuesRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListUnifiedIssuesResponse) }
+    def list_unified_issues(request, timeout_ms = nil)
       # list_unified_issues - List support issues
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -425,8 +487,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -448,8 +516,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedWebhooksRequest)).returns(::UnifiedRubySDK::Operations::ListUnifiedWebhooksResponse) }
-    def list_unified_webhooks(request)
+    sig { params(request: T.nilable(::UnifiedRubySDK::Operations::ListUnifiedWebhooksRequest), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListUnifiedWebhooksResponse) }
+    def list_unified_webhooks(request, timeout_ms = nil)
       # list_unified_webhooks - Returns all registered webhooks
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -459,8 +527,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.get(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.get(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         req.params = query_params
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
@@ -482,8 +556,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection: ::UnifiedRubySDK::Shared::Connection, id: ::String).returns(::UnifiedRubySDK::Operations::PatchUnifiedConnectionResponse) }
-    def patch_unified_connection(connection, id)
+    sig { params(connection: ::UnifiedRubySDK::Shared::Connection, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::PatchUnifiedConnectionResponse) }
+    def patch_unified_connection(connection, id, timeout_ms = nil)
       # patch_unified_connection - Update connection
       request = ::UnifiedRubySDK::Operations::PatchUnifiedConnectionRequest.new(
         
@@ -505,8 +579,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.patch(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.patch(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
         if form
@@ -534,8 +614,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(webhook: ::UnifiedRubySDK::Shared::Webhook, id: ::String).returns(::UnifiedRubySDK::Operations::PatchUnifiedWebhookResponse) }
-    def patch_unified_webhook(webhook, id)
+    sig { params(webhook: ::UnifiedRubySDK::Shared::Webhook, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::PatchUnifiedWebhookResponse) }
+    def patch_unified_webhook(webhook, id, timeout_ms = nil)
       # patch_unified_webhook - Update webhook subscription
       request = ::UnifiedRubySDK::Operations::PatchUnifiedWebhookRequest.new(
         
@@ -557,8 +637,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.patch(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.patch(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
         if form
@@ -586,8 +672,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String).returns(::UnifiedRubySDK::Operations::PatchUnifiedWebhookTriggerResponse) }
-    def patch_unified_webhook_trigger(id)
+    sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::PatchUnifiedWebhookTriggerResponse) }
+    def patch_unified_webhook_trigger(id, timeout_ms = nil)
       # patch_unified_webhook_trigger - Trigger webhook
       request = ::UnifiedRubySDK::Operations::PatchUnifiedWebhookTriggerRequest.new(
         
@@ -605,8 +691,14 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.patch(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.patch(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -625,8 +717,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String).returns(::UnifiedRubySDK::Operations::RemoveUnifiedConnectionResponse) }
-    def remove_unified_connection(id)
+    sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::RemoveUnifiedConnectionResponse) }
+    def remove_unified_connection(id, timeout_ms = nil)
       # remove_unified_connection - Remove connection
       request = ::UnifiedRubySDK::Operations::RemoveUnifiedConnectionRequest.new(
         
@@ -644,8 +736,14 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.delete(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.delete(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -664,8 +762,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String).returns(::UnifiedRubySDK::Operations::RemoveUnifiedWebhookResponse) }
-    def remove_unified_webhook(id)
+    sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::RemoveUnifiedWebhookResponse) }
+    def remove_unified_webhook(id, timeout_ms = nil)
       # remove_unified_webhook - Remove webhook subscription
       request = ::UnifiedRubySDK::Operations::RemoveUnifiedWebhookRequest.new(
         
@@ -683,8 +781,14 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.delete(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.delete(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end
@@ -703,8 +807,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection: ::UnifiedRubySDK::Shared::Connection, id: ::String).returns(::UnifiedRubySDK::Operations::UpdateUnifiedConnectionResponse) }
-    def update_unified_connection(connection, id)
+    sig { params(connection: ::UnifiedRubySDK::Shared::Connection, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::UpdateUnifiedConnectionResponse) }
+    def update_unified_connection(connection, id, timeout_ms = nil)
       # update_unified_connection - Update connection
       request = ::UnifiedRubySDK::Operations::UpdateUnifiedConnectionRequest.new(
         
@@ -726,8 +830,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.put(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.put(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
         if form
@@ -755,8 +865,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(webhook: ::UnifiedRubySDK::Shared::Webhook, id: ::String).returns(::UnifiedRubySDK::Operations::UpdateUnifiedWebhookResponse) }
-    def update_unified_webhook(webhook, id)
+    sig { params(webhook: ::UnifiedRubySDK::Shared::Webhook, id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::UpdateUnifiedWebhookResponse) }
+    def update_unified_webhook(webhook, id, timeout_ms = nil)
       # update_unified_webhook - Update webhook subscription
       request = ::UnifiedRubySDK::Operations::UpdateUnifiedWebhookRequest.new(
         
@@ -778,8 +888,14 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.put(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.put(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
         if form
@@ -807,8 +923,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String).returns(::UnifiedRubySDK::Operations::UpdateUnifiedWebhookTriggerResponse) }
-    def update_unified_webhook_trigger(id)
+    sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::UpdateUnifiedWebhookTriggerResponse) }
+    def update_unified_webhook_trigger(id, timeout_ms = nil)
       # update_unified_webhook_trigger - Trigger webhook
       request = ::UnifiedRubySDK::Operations::UpdateUnifiedWebhookTriggerRequest.new(
         
@@ -826,8 +942,14 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      r = @sdk_configuration.client.put(url) do |req|
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+
+      connection = @sdk_configuration.client
+
+      r = connection.put(url) do |req|
         req.headers = headers
+        req.options.timeout = timeout
         security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
         Utils.configure_request_security(req, security) if !security.nil?
       end

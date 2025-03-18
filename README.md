@@ -15,6 +15,7 @@ Unified.to API: One API to Rule Them All
 <!-- $toc-max-depth=2 -->
   * [SDK Installation](#sdk-installation)
   * [SDK Example Usage](#sdk-example-usage)
+  * [Authentication](#authentication)
   * [Available Resources and Operations](#available-resources-and-operations)
   * [Server Selection](#server-selection)
 
@@ -39,15 +40,12 @@ gem specific_install https://github.com/unified-to/unified-ruby-sdk
 ```ruby
 require 'unified_ruby_sdk'
 
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
 
-s = ::UnifiedRubySDK::UnifiedTo.new
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
-
-    
 res = s.accounting.create_accounting_account(accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
@@ -58,6 +56,38 @@ end
 
 ```
 <!-- End SDK Example Usage [usage] -->
+
+<!-- Start Authentication [security] -->
+## Authentication
+
+### Per-Client Security Schemes
+
+This SDK supports the following security scheme globally:
+
+| Name  | Type   | Scheme  |
+| ----- | ------ | ------- |
+| `jwt` | apiKey | API key |
+
+You can set the security parameters through the `security` optional parameter when initializing the SDK client instance. For example:
+```ruby
+require 'unified_ruby_sdk'
+
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
+
+res = s.accounting.create_accounting_account(accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), connection_id="<id>", fields_=[
+  "<value>",
+])
+
+if ! res.accounting_account.nil?
+  # handle response
+end
+
+```
+<!-- End Authentication [security] -->
 
 <!-- Start Available Resources and Operations [operations] -->
 ## Available Resources and Operations
@@ -1146,17 +1176,13 @@ You can override the default server globally by passing a server index to the `s
 ```ruby
 require 'unified_ruby_sdk'
 
-
 s = ::UnifiedRubySDK::UnifiedTo.new(
       server_idx: 1,
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
     )
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
-    
 res = s.accounting.create_accounting_account(accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
@@ -1173,17 +1199,13 @@ The default server can also be overridden globally by passing a URL to the `serv
 ```ruby
 require 'unified_ruby_sdk'
 
-
 s = ::UnifiedRubySDK::UnifiedTo.new(
       server_url: "https://api.unified.to",
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
     )
-s.config_security(
-  ::UnifiedRubySDK::Shared::Security.new(
-    jwt: "<YOUR_API_KEY_HERE>",
-  )
-)
 
-    
 res = s.accounting.create_accounting_account(accounting_account=::UnifiedRubySDK::Shared::AccountingAccount.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
