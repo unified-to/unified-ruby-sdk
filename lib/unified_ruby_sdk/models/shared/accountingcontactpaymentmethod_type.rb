@@ -17,6 +17,8 @@ module UnifiedRubySDK
         IDEAL = new('IDEAL')
         OTHER = new('OTHER')
         PAYPAL = new('PAYPAL')
+        WIRE = new('WIRE')
+        CHECK = new('CHECK')
       end
     end
   end

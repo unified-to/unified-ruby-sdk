@@ -7,6 +7,7 @@ require 'faraday'
 require 'faraday/multipart'
 require 'faraday/retry'
 require 'sorbet-runtime'
+require_relative 'sdk_hooks/hooks'
 require_relative 'utils/retries'
 
 module UnifiedRubySDK
@@ -49,6 +50,7 @@ module UnifiedRubySDK
 
       client ||= Faraday.new(**connection_options) do |f|
         f.request :multipart, {}
+        # f.response :logger, nil, { headers: true, bodies: true, errors: true }
       end
 
       if !server_url.nil?
@@ -58,8 +60,10 @@ module UnifiedRubySDK
       end
 
       server_idx = 0 if server_idx.nil?
+      hooks = SDKHooks::Hooks.new
       @sdk_configuration = SDKConfiguration.new(
         client,
+        hooks,
         retry_config,
         timeout_ms,
         security,
@@ -67,6 +71,11 @@ module UnifiedRubySDK
         server_url,
         server_idx
       )
+
+      original_server_url = @sdk_configuration.get_server_details.first
+      new_server_url, @sdk_configuration.client = hooks.sdk_init(base_url: original_server_url, client: client)
+      @sdk_configuration.server_url = new_server_url if new_server_url != original_server_url
+
       init_sdks
     end
 

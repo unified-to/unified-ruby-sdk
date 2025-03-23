@@ -7,6 +7,7 @@ require 'faraday'
 require 'faraday/multipart'
 require 'faraday/retry'
 require 'sorbet-runtime'
+require_relative 'sdk_hooks/hooks'
 require_relative 'utils/retries'
 
 module UnifiedRubySDK
@@ -22,6 +23,7 @@ module UnifiedRubySDK
     extend T::Sig
 
     field :client, T.nilable(Faraday::Connection)
+    field :hooks, ::UnifiedRubySDK::SDKHooks::Hooks
     field :retry_config, T.nilable(::UnifiedRubySDK::Utils::RetryConfig)
     field :timeout, T.nilable(Float)
     field :security_source, T.nilable(T.proc.returns(T.nilable(::UnifiedRubySDK::Shared::Security)))
@@ -36,6 +38,7 @@ module UnifiedRubySDK
     sig do
       params(
         client: T.nilable(Faraday::Connection),
+        hooks: ::UnifiedRubySDK::SDKHooks::Hooks,
         retry_config: T.nilable(::UnifiedRubySDK::Utils::RetryConfig),
         timeout_ms: T.nilable(Integer),
         security: T.nilable(::UnifiedRubySDK::Shared::Security),
@@ -44,8 +47,9 @@ module UnifiedRubySDK
         server_idx: T.nilable(Integer)
       ).void
     end
-    def initialize(client, retry_config, timeout_ms, security, security_source, server_url, server_idx)
+    def initialize(client, hooks, retry_config, timeout_ms, security, security_source, server_url, server_idx)
       @client = client
+      @hooks = hooks
       @retry_config = retry_config
       @server_url = server_url
       @timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
@@ -58,9 +62,9 @@ module UnifiedRubySDK
       end
       @language = 'ruby'
       @openapi_doc_version = '1.0'
-      @sdk_version = '0.7.0'
-      @gen_version = '2.552.1'
-      @user_agent = 'speakeasy-sdk/ruby 0.7.0 2.552.1 1.0 unified_ruby_sdk'
+      @sdk_version = '0.7.1'
+      @gen_version = '2.559.0'
+      @user_agent = 'speakeasy-sdk/ruby 0.7.1 2.559.0 1.0 unified_ruby_sdk'
     end
 
     sig { returns([String, T::Hash[Symbol, String]]) }

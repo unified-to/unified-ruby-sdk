@@ -7,6 +7,7 @@ require 'faraday'
 require 'faraday/multipart'
 require 'faraday/retry'
 require 'sorbet-runtime'
+require_relative 'sdk_hooks/hooks'
 require_relative 'utils/retries'
 
 module UnifiedRubySDK
@@ -42,27 +43,73 @@ module UnifiedRubySDK
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_collection, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
+
+      if form
+        body = Utils.encode_form(form)
+      elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+        body = URI.encode_www_form(data)
+      else
+        body = data
+      end
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateCommerceCollectionRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
+
+      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
 
       connection = @sdk_configuration.client
 
-      r = connection.post(url) do |req|
-        req.headers = headers
-        req.options.timeout = timeout
-        req.params = query_params
-        security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
-        Utils.configure_request_security(req, security) if !security.nil?
-        if form
-          req.body = Utils.encode_form(form)
-        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-          req.body = URI.encode_www_form(data)
+      hook_ctx = SDKHooks::HookContext.new(
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'createCommerceCollection',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      r = T.let(nil, T.nilable(Faraday::Response))
+      
+      begin
+        r = connection.post(url) do |req|
+          req.body = body
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if r.nil? || Utils.error_status?(r.status)
+          r = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
         else
-          req.body = data
+          r = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        end
+        
+        if r.nil?
+          raise error if !error.nil?
+          raise 'no response'
         end
       end
 
@@ -103,27 +150,73 @@ module UnifiedRubySDK
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_inventory, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
+
+      if form
+        body = Utils.encode_form(form)
+      elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+        body = URI.encode_www_form(data)
+      else
+        body = data
+      end
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateCommerceInventoryRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
+
+      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
 
       connection = @sdk_configuration.client
 
-      r = connection.post(url) do |req|
-        req.headers = headers
-        req.options.timeout = timeout
-        req.params = query_params
-        security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
-        Utils.configure_request_security(req, security) if !security.nil?
-        if form
-          req.body = Utils.encode_form(form)
-        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-          req.body = URI.encode_www_form(data)
+      hook_ctx = SDKHooks::HookContext.new(
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'createCommerceInventory',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      r = T.let(nil, T.nilable(Faraday::Response))
+      
+      begin
+        r = connection.post(url) do |req|
+          req.body = body
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if r.nil? || Utils.error_status?(r.status)
+          r = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
         else
-          req.body = data
+          r = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        end
+        
+        if r.nil?
+          raise error if !error.nil?
+          raise 'no response'
         end
       end
 
@@ -164,27 +257,73 @@ module UnifiedRubySDK
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_item, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
+
+      if form
+        body = Utils.encode_form(form)
+      elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+        body = URI.encode_www_form(data)
+      else
+        body = data
+      end
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateCommerceItemRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
+
+      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
 
       connection = @sdk_configuration.client
 
-      r = connection.post(url) do |req|
-        req.headers = headers
-        req.options.timeout = timeout
-        req.params = query_params
-        security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
-        Utils.configure_request_security(req, security) if !security.nil?
-        if form
-          req.body = Utils.encode_form(form)
-        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-          req.body = URI.encode_www_form(data)
+      hook_ctx = SDKHooks::HookContext.new(
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'createCommerceItem',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      r = T.let(nil, T.nilable(Faraday::Response))
+      
+      begin
+        r = connection.post(url) do |req|
+          req.body = body
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if r.nil? || Utils.error_status?(r.status)
+          r = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
         else
-          req.body = data
+          r = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        end
+        
+        if r.nil?
+          raise error if !error.nil?
+          raise 'no response'
         end
       end
 
@@ -225,27 +364,73 @@ module UnifiedRubySDK
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_location, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
+
+      if form
+        body = Utils.encode_form(form)
+      elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+        body = URI.encode_www_form(data)
+      else
+        body = data
+      end
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::CreateCommerceLocationRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
+
+      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
 
       connection = @sdk_configuration.client
 
-      r = connection.post(url) do |req|
-        req.headers = headers
-        req.options.timeout = timeout
-        req.params = query_params
-        security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
-        Utils.configure_request_security(req, security) if !security.nil?
-        if form
-          req.body = Utils.encode_form(form)
-        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-          req.body = URI.encode_www_form(data)
+      hook_ctx = SDKHooks::HookContext.new(
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'createCommerceLocation',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      r = T.let(nil, T.nilable(Faraday::Response))
+      
+      begin
+        r = connection.post(url) do |req|
+          req.body = body
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if r.nil? || Utils.error_status?(r.status)
+          r = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
         else
-          req.body = data
+          r = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        end
+        
+        if r.nil?
+          raise error if !error.nil?
+          raise 'no response'
         end
       end
 
@@ -287,17 +472,61 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
+      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
 
       connection = @sdk_configuration.client
 
-      r = connection.get(url) do |req|
-        req.headers = headers
-        req.options.timeout = timeout
-        req.params = query_params
-        security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
-        Utils.configure_request_security(req, security) if !security.nil?
+      hook_ctx = SDKHooks::HookContext.new(
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'getCommerceCollection',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      r = T.let(nil, T.nilable(Faraday::Response))
+      
+      begin
+        r = connection.get(url) do |req|
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if r.nil? || Utils.error_status?(r.status)
+          r = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        else
+          r = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        end
+        
+        if r.nil?
+          raise error if !error.nil?
+          raise 'no response'
+        end
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -338,17 +567,61 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
+      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
 
       connection = @sdk_configuration.client
 
-      r = connection.get(url) do |req|
-        req.headers = headers
-        req.options.timeout = timeout
-        req.params = query_params
-        security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
-        Utils.configure_request_security(req, security) if !security.nil?
+      hook_ctx = SDKHooks::HookContext.new(
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'getCommerceInventory',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      r = T.let(nil, T.nilable(Faraday::Response))
+      
+      begin
+        r = connection.get(url) do |req|
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if r.nil? || Utils.error_status?(r.status)
+          r = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        else
+          r = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        end
+        
+        if r.nil?
+          raise error if !error.nil?
+          raise 'no response'
+        end
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -389,17 +662,61 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
+      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
 
       connection = @sdk_configuration.client
 
-      r = connection.get(url) do |req|
-        req.headers = headers
-        req.options.timeout = timeout
-        req.params = query_params
-        security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
-        Utils.configure_request_security(req, security) if !security.nil?
+      hook_ctx = SDKHooks::HookContext.new(
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'getCommerceItem',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      r = T.let(nil, T.nilable(Faraday::Response))
+      
+      begin
+        r = connection.get(url) do |req|
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if r.nil? || Utils.error_status?(r.status)
+          r = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        else
+          r = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        end
+        
+        if r.nil?
+          raise error if !error.nil?
+          raise 'no response'
+        end
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -440,17 +757,61 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
+      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
 
       connection = @sdk_configuration.client
 
-      r = connection.get(url) do |req|
-        req.headers = headers
-        req.options.timeout = timeout
-        req.params = query_params
-        security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
-        Utils.configure_request_security(req, security) if !security.nil?
+      hook_ctx = SDKHooks::HookContext.new(
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'getCommerceLocation',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      r = T.let(nil, T.nilable(Faraday::Response))
+      
+      begin
+        r = connection.get(url) do |req|
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if r.nil? || Utils.error_status?(r.status)
+          r = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        else
+          r = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        end
+        
+        if r.nil?
+          raise error if !error.nil?
+          raise 'no response'
+        end
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -485,17 +846,61 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
+      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
 
       connection = @sdk_configuration.client
 
-      r = connection.get(url) do |req|
-        req.headers = headers
-        req.options.timeout = timeout
-        req.params = query_params
-        security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
-        Utils.configure_request_security(req, security) if !security.nil?
+      hook_ctx = SDKHooks::HookContext.new(
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'listCommerceCollections',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      r = T.let(nil, T.nilable(Faraday::Response))
+      
+      begin
+        r = connection.get(url) do |req|
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if r.nil? || Utils.error_status?(r.status)
+          r = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        else
+          r = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        end
+        
+        if r.nil?
+          raise error if !error.nil?
+          raise 'no response'
+        end
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -530,17 +935,61 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
+      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
 
       connection = @sdk_configuration.client
 
-      r = connection.get(url) do |req|
-        req.headers = headers
-        req.options.timeout = timeout
-        req.params = query_params
-        security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
-        Utils.configure_request_security(req, security) if !security.nil?
+      hook_ctx = SDKHooks::HookContext.new(
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'listCommerceInventories',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      r = T.let(nil, T.nilable(Faraday::Response))
+      
+      begin
+        r = connection.get(url) do |req|
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if r.nil? || Utils.error_status?(r.status)
+          r = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        else
+          r = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        end
+        
+        if r.nil?
+          raise error if !error.nil?
+          raise 'no response'
+        end
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -575,17 +1024,61 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
+      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
 
       connection = @sdk_configuration.client
 
-      r = connection.get(url) do |req|
-        req.headers = headers
-        req.options.timeout = timeout
-        req.params = query_params
-        security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
-        Utils.configure_request_security(req, security) if !security.nil?
+      hook_ctx = SDKHooks::HookContext.new(
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'listCommerceItems',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      r = T.let(nil, T.nilable(Faraday::Response))
+      
+      begin
+        r = connection.get(url) do |req|
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if r.nil? || Utils.error_status?(r.status)
+          r = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        else
+          r = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        end
+        
+        if r.nil?
+          raise error if !error.nil?
+          raise 'no response'
+        end
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -620,17 +1113,61 @@ module UnifiedRubySDK
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
+      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
 
       connection = @sdk_configuration.client
 
-      r = connection.get(url) do |req|
-        req.headers = headers
-        req.options.timeout = timeout
-        req.params = query_params
-        security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
-        Utils.configure_request_security(req, security) if !security.nil?
+      hook_ctx = SDKHooks::HookContext.new(
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'listCommerceLocations',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      r = T.let(nil, T.nilable(Faraday::Response))
+      
+      begin
+        r = connection.get(url) do |req|
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if r.nil? || Utils.error_status?(r.status)
+          r = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        else
+          r = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        end
+        
+        if r.nil?
+          raise error if !error.nil?
+          raise 'no response'
+        end
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -671,27 +1208,73 @@ module UnifiedRubySDK
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_collection, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
+
+      if form
+        body = Utils.encode_form(form)
+      elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+        body = URI.encode_www_form(data)
+      else
+        body = data
+      end
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchCommerceCollectionRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
+
+      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
 
       connection = @sdk_configuration.client
 
-      r = connection.patch(url) do |req|
-        req.headers = headers
-        req.options.timeout = timeout
-        req.params = query_params
-        security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
-        Utils.configure_request_security(req, security) if !security.nil?
-        if form
-          req.body = Utils.encode_form(form)
-        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-          req.body = URI.encode_www_form(data)
+      hook_ctx = SDKHooks::HookContext.new(
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'patchCommerceCollection',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      r = T.let(nil, T.nilable(Faraday::Response))
+      
+      begin
+        r = connection.patch(url) do |req|
+          req.body = body
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if r.nil? || Utils.error_status?(r.status)
+          r = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
         else
-          req.body = data
+          r = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        end
+        
+        if r.nil?
+          raise error if !error.nil?
+          raise 'no response'
         end
       end
 
@@ -733,27 +1316,73 @@ module UnifiedRubySDK
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_inventory, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
+
+      if form
+        body = Utils.encode_form(form)
+      elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+        body = URI.encode_www_form(data)
+      else
+        body = data
+      end
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchCommerceInventoryRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
+
+      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
 
       connection = @sdk_configuration.client
 
-      r = connection.patch(url) do |req|
-        req.headers = headers
-        req.options.timeout = timeout
-        req.params = query_params
-        security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
-        Utils.configure_request_security(req, security) if !security.nil?
-        if form
-          req.body = Utils.encode_form(form)
-        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-          req.body = URI.encode_www_form(data)
+      hook_ctx = SDKHooks::HookContext.new(
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'patchCommerceInventory',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      r = T.let(nil, T.nilable(Faraday::Response))
+      
+      begin
+        r = connection.patch(url) do |req|
+          req.body = body
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if r.nil? || Utils.error_status?(r.status)
+          r = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
         else
-          req.body = data
+          r = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        end
+        
+        if r.nil?
+          raise error if !error.nil?
+          raise 'no response'
         end
       end
 
@@ -795,27 +1424,73 @@ module UnifiedRubySDK
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_item, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
+
+      if form
+        body = Utils.encode_form(form)
+      elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+        body = URI.encode_www_form(data)
+      else
+        body = data
+      end
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchCommerceItemRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
+
+      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
 
       connection = @sdk_configuration.client
 
-      r = connection.patch(url) do |req|
-        req.headers = headers
-        req.options.timeout = timeout
-        req.params = query_params
-        security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
-        Utils.configure_request_security(req, security) if !security.nil?
-        if form
-          req.body = Utils.encode_form(form)
-        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-          req.body = URI.encode_www_form(data)
+      hook_ctx = SDKHooks::HookContext.new(
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'patchCommerceItem',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      r = T.let(nil, T.nilable(Faraday::Response))
+      
+      begin
+        r = connection.patch(url) do |req|
+          req.body = body
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if r.nil? || Utils.error_status?(r.status)
+          r = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
         else
-          req.body = data
+          r = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        end
+        
+        if r.nil?
+          raise error if !error.nil?
+          raise 'no response'
         end
       end
 
@@ -857,27 +1532,73 @@ module UnifiedRubySDK
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_location, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
+
+      if form
+        body = Utils.encode_form(form)
+      elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+        body = URI.encode_www_form(data)
+      else
+        body = data
+      end
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::PatchCommerceLocationRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
+
+      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
 
       connection = @sdk_configuration.client
 
-      r = connection.patch(url) do |req|
-        req.headers = headers
-        req.options.timeout = timeout
-        req.params = query_params
-        security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
-        Utils.configure_request_security(req, security) if !security.nil?
-        if form
-          req.body = Utils.encode_form(form)
-        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-          req.body = URI.encode_www_form(data)
+      hook_ctx = SDKHooks::HookContext.new(
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'patchCommerceLocation',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      r = T.let(nil, T.nilable(Faraday::Response))
+      
+      begin
+        r = connection.patch(url) do |req|
+          req.body = body
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if r.nil? || Utils.error_status?(r.status)
+          r = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
         else
-          req.body = data
+          r = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        end
+        
+        if r.nil?
+          raise error if !error.nil?
+          raise 'no response'
         end
       end
 
@@ -917,16 +1638,60 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
+      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
 
       connection = @sdk_configuration.client
 
-      r = connection.delete(url) do |req|
-        req.headers = headers
-        req.options.timeout = timeout
-        security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
-        Utils.configure_request_security(req, security) if !security.nil?
+      hook_ctx = SDKHooks::HookContext.new(
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'removeCommerceCollection',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      r = T.let(nil, T.nilable(Faraday::Response))
+      
+      begin
+        r = connection.delete(url) do |req|
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if r.nil? || Utils.error_status?(r.status)
+          r = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        else
+          r = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        end
+        
+        if r.nil?
+          raise error if !error.nil?
+          raise 'no response'
+        end
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -963,16 +1728,60 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
+      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
 
       connection = @sdk_configuration.client
 
-      r = connection.delete(url) do |req|
-        req.headers = headers
-        req.options.timeout = timeout
-        security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
-        Utils.configure_request_security(req, security) if !security.nil?
+      hook_ctx = SDKHooks::HookContext.new(
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'removeCommerceInventory',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      r = T.let(nil, T.nilable(Faraday::Response))
+      
+      begin
+        r = connection.delete(url) do |req|
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if r.nil? || Utils.error_status?(r.status)
+          r = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        else
+          r = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        end
+        
+        if r.nil?
+          raise error if !error.nil?
+          raise 'no response'
+        end
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -1009,16 +1818,60 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
+      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
 
       connection = @sdk_configuration.client
 
-      r = connection.delete(url) do |req|
-        req.headers = headers
-        req.options.timeout = timeout
-        security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
-        Utils.configure_request_security(req, security) if !security.nil?
+      hook_ctx = SDKHooks::HookContext.new(
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'removeCommerceItem',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      r = T.let(nil, T.nilable(Faraday::Response))
+      
+      begin
+        r = connection.delete(url) do |req|
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if r.nil? || Utils.error_status?(r.status)
+          r = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        else
+          r = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        end
+        
+        if r.nil?
+          raise error if !error.nil?
+          raise 'no response'
+        end
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -1055,16 +1908,60 @@ module UnifiedRubySDK
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
+      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
 
       connection = @sdk_configuration.client
 
-      r = connection.delete(url) do |req|
-        req.headers = headers
-        req.options.timeout = timeout
-        security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
-        Utils.configure_request_security(req, security) if !security.nil?
+      hook_ctx = SDKHooks::HookContext.new(
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'removeCommerceLocation',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      r = T.let(nil, T.nilable(Faraday::Response))
+      
+      begin
+        r = connection.delete(url) do |req|
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if r.nil? || Utils.error_status?(r.status)
+          r = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        else
+          r = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        end
+        
+        if r.nil?
+          raise error if !error.nil?
+          raise 'no response'
+        end
       end
 
       content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
@@ -1103,27 +2000,73 @@ module UnifiedRubySDK
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_collection, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
+
+      if form
+        body = Utils.encode_form(form)
+      elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+        body = URI.encode_www_form(data)
+      else
+        body = data
+      end
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateCommerceCollectionRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
+
+      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
 
       connection = @sdk_configuration.client
 
-      r = connection.put(url) do |req|
-        req.headers = headers
-        req.options.timeout = timeout
-        req.params = query_params
-        security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
-        Utils.configure_request_security(req, security) if !security.nil?
-        if form
-          req.body = Utils.encode_form(form)
-        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-          req.body = URI.encode_www_form(data)
+      hook_ctx = SDKHooks::HookContext.new(
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'updateCommerceCollection',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      r = T.let(nil, T.nilable(Faraday::Response))
+      
+      begin
+        r = connection.put(url) do |req|
+          req.body = body
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if r.nil? || Utils.error_status?(r.status)
+          r = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
         else
-          req.body = data
+          r = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        end
+        
+        if r.nil?
+          raise error if !error.nil?
+          raise 'no response'
         end
       end
 
@@ -1165,27 +2108,73 @@ module UnifiedRubySDK
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_inventory, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
+
+      if form
+        body = Utils.encode_form(form)
+      elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+        body = URI.encode_www_form(data)
+      else
+        body = data
+      end
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateCommerceInventoryRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
+
+      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
 
       connection = @sdk_configuration.client
 
-      r = connection.put(url) do |req|
-        req.headers = headers
-        req.options.timeout = timeout
-        req.params = query_params
-        security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
-        Utils.configure_request_security(req, security) if !security.nil?
-        if form
-          req.body = Utils.encode_form(form)
-        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-          req.body = URI.encode_www_form(data)
+      hook_ctx = SDKHooks::HookContext.new(
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'updateCommerceInventory',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      r = T.let(nil, T.nilable(Faraday::Response))
+      
+      begin
+        r = connection.put(url) do |req|
+          req.body = body
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if r.nil? || Utils.error_status?(r.status)
+          r = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
         else
-          req.body = data
+          r = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        end
+        
+        if r.nil?
+          raise error if !error.nil?
+          raise 'no response'
         end
       end
 
@@ -1227,27 +2216,73 @@ module UnifiedRubySDK
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_item, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
+
+      if form
+        body = Utils.encode_form(form)
+      elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+        body = URI.encode_www_form(data)
+      else
+        body = data
+      end
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateCommerceItemRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
+
+      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
 
       connection = @sdk_configuration.client
 
-      r = connection.put(url) do |req|
-        req.headers = headers
-        req.options.timeout = timeout
-        req.params = query_params
-        security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
-        Utils.configure_request_security(req, security) if !security.nil?
-        if form
-          req.body = Utils.encode_form(form)
-        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-          req.body = URI.encode_www_form(data)
+      hook_ctx = SDKHooks::HookContext.new(
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'updateCommerceItem',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      r = T.let(nil, T.nilable(Faraday::Response))
+      
+      begin
+        r = connection.put(url) do |req|
+          req.body = body
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if r.nil? || Utils.error_status?(r.status)
+          r = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
         else
-          req.body = data
+          r = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        end
+        
+        if r.nil?
+          raise error if !error.nil?
+          raise 'no response'
         end
       end
 
@@ -1289,27 +2324,73 @@ module UnifiedRubySDK
       req_content_type, data, form = Utils.serialize_request_body(request, :commerce_location, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
+
+      if form
+        body = Utils.encode_form(form)
+      elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+        body = URI.encode_www_form(data)
+      else
+        body = data
+      end
       query_params = Utils.get_query_params(::UnifiedRubySDK::Operations::UpdateCommerceLocationRequest, request)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
+
+      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
 
       connection = @sdk_configuration.client
 
-      r = connection.put(url) do |req|
-        req.headers = headers
-        req.options.timeout = timeout
-        req.params = query_params
-        security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
-        Utils.configure_request_security(req, security) if !security.nil?
-        if form
-          req.body = Utils.encode_form(form)
-        elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-          req.body = URI.encode_www_form(data)
+      hook_ctx = SDKHooks::HookContext.new(
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'updateCommerceLocation',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      r = T.let(nil, T.nilable(Faraday::Response))
+      
+      begin
+        r = connection.put(url) do |req|
+          req.body = body
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if r.nil? || Utils.error_status?(r.status)
+          r = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
         else
-          req.body = data
+          r = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: r
+          )
+        end
+        
+        if r.nil?
+          raise error if !error.nil?
+          raise 'no response'
         end
       end
 
