@@ -64,7 +64,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'createUcContact',
         security_source: @sdk_configuration.security_source
       )
@@ -160,7 +160,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'getUcContact',
         security_source: @sdk_configuration.security_source
       )
@@ -249,7 +249,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'listUcCalls',
         security_source: @sdk_configuration.security_source
       )
@@ -338,7 +338,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'listUcContacts',
         security_source: @sdk_configuration.security_source
       )
@@ -445,7 +445,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'patchUcContact',
         security_source: @sdk_configuration.security_source
       )
@@ -539,7 +539,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'removeUcContact',
         security_source: @sdk_configuration.security_source
       )
@@ -643,7 +643,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'updateUcContact',
         security_source: @sdk_configuration.security_source
       )

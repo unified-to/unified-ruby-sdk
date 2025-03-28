@@ -64,7 +64,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'createCrmLead',
         security_source: @sdk_configuration.security_source
       )
@@ -160,7 +160,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'getCrmLead',
         security_source: @sdk_configuration.security_source
       )
@@ -249,7 +249,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'listCrmLeads',
         security_source: @sdk_configuration.security_source
       )
@@ -356,7 +356,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'patchCrmLead',
         security_source: @sdk_configuration.security_source
       )
@@ -450,7 +450,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'removeCrmLead',
         security_source: @sdk_configuration.security_source
       )
@@ -554,7 +554,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'updateCrmLead',
         security_source: @sdk_configuration.security_source
       )

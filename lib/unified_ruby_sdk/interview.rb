@@ -64,7 +64,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'createAtsInterview',
         security_source: @sdk_configuration.security_source
       )
@@ -160,7 +160,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'getAtsInterview',
         security_source: @sdk_configuration.security_source
       )
@@ -249,7 +249,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'listAtsInterviews',
         security_source: @sdk_configuration.security_source
       )
@@ -356,7 +356,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'patchAtsInterview',
         security_source: @sdk_configuration.security_source
       )
@@ -450,7 +450,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'removeAtsInterview',
         security_source: @sdk_configuration.security_source
       )
@@ -554,7 +554,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'updateAtsInterview',
         security_source: @sdk_configuration.security_source
       )

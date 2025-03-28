@@ -64,7 +64,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'createCalendarEvent',
         security_source: @sdk_configuration.security_source
       )
@@ -171,7 +171,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'createCrmEvent',
         security_source: @sdk_configuration.security_source
       )
@@ -267,7 +267,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'getCalendarEvent',
         security_source: @sdk_configuration.security_source
       )
@@ -362,7 +362,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'getCrmEvent',
         security_source: @sdk_configuration.security_source
       )
@@ -451,7 +451,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'listCalendarEvents',
         security_source: @sdk_configuration.security_source
       )
@@ -540,7 +540,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'listCrmEvents',
         security_source: @sdk_configuration.security_source
       )
@@ -647,7 +647,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'patchCalendarEvent',
         security_source: @sdk_configuration.security_source
       )
@@ -755,7 +755,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'patchCrmEvent',
         security_source: @sdk_configuration.security_source
       )
@@ -849,7 +849,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'removeCalendarEvent',
         security_source: @sdk_configuration.security_source
       )
@@ -939,7 +939,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'removeCrmEvent',
         security_source: @sdk_configuration.security_source
       )
@@ -1043,7 +1043,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'updateCalendarEvent',
         security_source: @sdk_configuration.security_source
       )
@@ -1151,7 +1151,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'updateCrmEvent',
         security_source: @sdk_configuration.security_source
       )

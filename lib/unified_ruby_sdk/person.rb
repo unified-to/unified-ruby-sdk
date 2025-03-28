@@ -47,7 +47,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'listEnrichPeople',
         security_source: @sdk_configuration.security_source
       )

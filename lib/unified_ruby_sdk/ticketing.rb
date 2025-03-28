@@ -64,7 +64,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'createTicketingCustomer',
         security_source: @sdk_configuration.security_source
       )
@@ -171,7 +171,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'createTicketingNote',
         security_source: @sdk_configuration.security_source
       )
@@ -278,7 +278,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'createTicketingTicket',
         security_source: @sdk_configuration.security_source
       )
@@ -374,7 +374,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'getTicketingCustomer',
         security_source: @sdk_configuration.security_source
       )
@@ -469,7 +469,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'getTicketingNote',
         security_source: @sdk_configuration.security_source
       )
@@ -564,7 +564,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'getTicketingTicket',
         security_source: @sdk_configuration.security_source
       )
@@ -653,7 +653,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'listTicketingCustomers',
         security_source: @sdk_configuration.security_source
       )
@@ -742,7 +742,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'listTicketingNotes',
         security_source: @sdk_configuration.security_source
       )
@@ -831,7 +831,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'listTicketingTickets',
         security_source: @sdk_configuration.security_source
       )
@@ -938,7 +938,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'patchTicketingCustomer',
         security_source: @sdk_configuration.security_source
       )
@@ -1046,7 +1046,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'patchTicketingNote',
         security_source: @sdk_configuration.security_source
       )
@@ -1154,7 +1154,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'patchTicketingTicket',
         security_source: @sdk_configuration.security_source
       )
@@ -1248,7 +1248,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'removeTicketingCustomer',
         security_source: @sdk_configuration.security_source
       )
@@ -1338,7 +1338,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'removeTicketingNote',
         security_source: @sdk_configuration.security_source
       )
@@ -1428,7 +1428,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'removeTicketingTicket',
         security_source: @sdk_configuration.security_source
       )
@@ -1532,7 +1532,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'updateTicketingCustomer',
         security_source: @sdk_configuration.security_source
       )
@@ -1640,7 +1640,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'updateTicketingNote',
         security_source: @sdk_configuration.security_source
       )
@@ -1748,7 +1748,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'updateTicketingTicket',
         security_source: @sdk_configuration.security_source
       )

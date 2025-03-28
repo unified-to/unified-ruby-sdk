@@ -36,6 +36,8 @@ module UnifiedRubySDK
       # URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)
       field :link_urls, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('link_urls') } }
 
+      field :metadata, T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsMetadata]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
       field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
       field :origin, T.nilable(::UnifiedRubySDK::Shared::Origin), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('origin'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::Origin, true) } }
@@ -59,8 +61,8 @@ module UnifiedRubySDK
       field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
 
-      sig { params(address: T.nilable(::UnifiedRubySDK::Shared::PropertyAtsCandidateAddress), company_id: T.nilable(::String), company_name: T.nilable(::String), created_at: T.nilable(::DateTime), date_of_birth: T.nilable(::DateTime), education: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsCandidateEducation]), emails: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), experiences: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsCandidateExperience]), external_identifier: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), link_urls: T.nilable(T::Array[::String]), name: T.nilable(::String), origin: T.nilable(::UnifiedRubySDK::Shared::Origin), raw: T.nilable(::UnifiedRubySDK::Shared::AtsCandidateRaw), skills: T.nilable(T::Array[::String]), sources: T.nilable(T::Array[::String]), tags: T.nilable(T::Array[::String]), telephones: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), web_url: T.nilable(::String)).void }
-      def initialize(address: nil, company_id: nil, company_name: nil, created_at: nil, date_of_birth: nil, education: nil, emails: nil, experiences: nil, external_identifier: nil, id: nil, image_url: nil, link_urls: nil, name: nil, origin: nil, raw: nil, skills: nil, sources: nil, tags: nil, telephones: nil, title: nil, updated_at: nil, user_id: nil, web_url: nil)
+      sig { params(address: T.nilable(::UnifiedRubySDK::Shared::PropertyAtsCandidateAddress), company_id: T.nilable(::String), company_name: T.nilable(::String), created_at: T.nilable(::DateTime), date_of_birth: T.nilable(::DateTime), education: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsCandidateEducation]), emails: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsEmail]), experiences: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsCandidateExperience]), external_identifier: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), link_urls: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsMetadata]), name: T.nilable(::String), origin: T.nilable(::UnifiedRubySDK::Shared::Origin), raw: T.nilable(::UnifiedRubySDK::Shared::AtsCandidateRaw), skills: T.nilable(T::Array[::String]), sources: T.nilable(T::Array[::String]), tags: T.nilable(T::Array[::String]), telephones: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), web_url: T.nilable(::String)).void }
+      def initialize(address: nil, company_id: nil, company_name: nil, created_at: nil, date_of_birth: nil, education: nil, emails: nil, experiences: nil, external_identifier: nil, id: nil, image_url: nil, link_urls: nil, metadata: nil, name: nil, origin: nil, raw: nil, skills: nil, sources: nil, tags: nil, telephones: nil, title: nil, updated_at: nil, user_id: nil, web_url: nil)
         @address = address
         @company_id = company_id
         @company_name = company_name
@@ -73,6 +75,7 @@ module UnifiedRubySDK
         @id = id
         @image_url = image_url
         @link_urls = link_urls
+        @metadata = metadata
         @name = name
         @origin = origin
         @raw = raw

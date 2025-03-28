@@ -14,7 +14,7 @@ module UnifiedRubySDK
 
       field :key, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('key') } }
 
-      field :extra_data, T.nilable(::UnifiedRubySDK::Shared::ExtraData), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('extra_data') } }
+      field :extra_data, T.nilable(::UnifiedRubySDK::Shared::CommerceItemMetadataExtraData), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('extra_data') } }
 
       field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
@@ -22,10 +22,10 @@ module UnifiedRubySDK
 
       field :type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
 
-      field :value, T.nilable(::UnifiedRubySDK::Shared::Value), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
+      field :value, T.nilable(::UnifiedRubySDK::Shared::CommerceItemMetadataValue), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 
 
-      sig { params(key: ::String, extra_data: T.nilable(::UnifiedRubySDK::Shared::ExtraData), id: T.nilable(::String), namespace: T.nilable(::String), type: T.nilable(::String), value: T.nilable(::UnifiedRubySDK::Shared::Value)).void }
+      sig { params(key: ::String, extra_data: T.nilable(::UnifiedRubySDK::Shared::CommerceItemMetadataExtraData), id: T.nilable(::String), namespace: T.nilable(::String), type: T.nilable(::String), value: T.nilable(::UnifiedRubySDK::Shared::CommerceItemMetadataValue)).void }
       def initialize(key: nil, extra_data: nil, id: nil, namespace: nil, type: nil, value: nil)
         @key = key
         @extra_data = extra_data

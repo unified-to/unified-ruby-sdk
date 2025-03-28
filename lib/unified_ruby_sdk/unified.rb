@@ -53,7 +53,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'createUnifiedConnection',
         security_source: @sdk_configuration.security_source
       )
@@ -154,7 +154,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'createUnifiedWebhook',
         security_source: @sdk_configuration.security_source
       )
@@ -247,7 +247,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'getUnifiedApicall',
         security_source: @sdk_configuration.security_source
       )
@@ -338,7 +338,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'getUnifiedConnection',
         security_source: @sdk_configuration.security_source
       )
@@ -427,7 +427,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'getUnifiedIntegrationAuth',
         security_source: @sdk_configuration.security_source
       )
@@ -516,7 +516,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'getUnifiedWebhook',
         security_source: @sdk_configuration.security_source
       )
@@ -599,7 +599,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'listUnifiedApicalls',
         security_source: @sdk_configuration.security_source
       )
@@ -683,7 +683,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'listUnifiedConnections',
         security_source: @sdk_configuration.security_source
       )
@@ -773,7 +773,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'listUnifiedIntegrationWorkspaces',
         security_source: @sdk_configuration.security_source
       )
@@ -857,7 +857,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'listUnifiedIntegrations',
         security_source: @sdk_configuration.security_source
       )
@@ -941,7 +941,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'listUnifiedIssues',
         security_source: @sdk_configuration.security_source
       )
@@ -1025,7 +1025,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'listUnifiedWebhooks',
         security_source: @sdk_configuration.security_source
       )
@@ -1129,7 +1129,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'patchUnifiedConnection',
         security_source: @sdk_configuration.security_source
       )
@@ -1233,7 +1233,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'patchUnifiedWebhook',
         security_source: @sdk_configuration.security_source
       )
@@ -1325,7 +1325,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'patchUnifiedWebhookTrigger',
         security_source: @sdk_configuration.security_source
       )
@@ -1414,7 +1414,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'removeUnifiedConnection',
         security_source: @sdk_configuration.security_source
       )
@@ -1503,7 +1503,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'removeUnifiedWebhook',
         security_source: @sdk_configuration.security_source
       )
@@ -1604,7 +1604,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'updateUnifiedConnection',
         security_source: @sdk_configuration.security_source
       )
@@ -1708,7 +1708,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'updateUnifiedWebhook',
         security_source: @sdk_configuration.security_source
       )
@@ -1800,7 +1800,7 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'updateUnifiedWebhookTrigger',
         security_source: @sdk_configuration.security_source
       )

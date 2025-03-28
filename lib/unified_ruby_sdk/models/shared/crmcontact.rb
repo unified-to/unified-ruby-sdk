@@ -28,6 +28,8 @@ module UnifiedRubySDK
       # Additional URLs associated with the contact e.g., LinkedIn, website, etc
       field :link_urls, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('link_urls') } }
 
+      field :metadata, T.nilable(T::Array[::UnifiedRubySDK::Shared::CrmMetadata]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
       field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
       field :raw, T.nilable(::UnifiedRubySDK::Shared::CrmContactRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
@@ -41,8 +43,8 @@ module UnifiedRubySDK
       field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
 
-      sig { params(address: T.nilable(::UnifiedRubySDK::Shared::PropertyCrmContactAddress), company: T.nilable(::String), company_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), deal_ids: T.nilable(T::Array[::String]), emails: T.nilable(T::Array[::UnifiedRubySDK::Shared::CrmEmail]), id: T.nilable(::String), link_urls: T.nilable(T::Array[::String]), name: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::CrmContactRaw), telephones: T.nilable(T::Array[::UnifiedRubySDK::Shared::CrmTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-      def initialize(address: nil, company: nil, company_ids: nil, created_at: nil, deal_ids: nil, emails: nil, id: nil, link_urls: nil, name: nil, raw: nil, telephones: nil, title: nil, updated_at: nil, user_id: nil)
+      sig { params(address: T.nilable(::UnifiedRubySDK::Shared::PropertyCrmContactAddress), company: T.nilable(::String), company_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), deal_ids: T.nilable(T::Array[::String]), emails: T.nilable(T::Array[::UnifiedRubySDK::Shared::CrmEmail]), id: T.nilable(::String), link_urls: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[::UnifiedRubySDK::Shared::CrmMetadata]), name: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::CrmContactRaw), telephones: T.nilable(T::Array[::UnifiedRubySDK::Shared::CrmTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+      def initialize(address: nil, company: nil, company_ids: nil, created_at: nil, deal_ids: nil, emails: nil, id: nil, link_urls: nil, metadata: nil, name: nil, raw: nil, telephones: nil, title: nil, updated_at: nil, user_id: nil)
         @address = address
         @company = company
         @company_ids = company_ids
@@ -51,6 +53,7 @@ module UnifiedRubySDK
         @emails = emails
         @id = id
         @link_urls = link_urls
+        @metadata = metadata
         @name = name
         @raw = raw
         @telephones = telephones

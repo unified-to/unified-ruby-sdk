@@ -20,6 +20,8 @@ module UnifiedRubySDK
 
       field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+      field :metadata, T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsMetadata]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
       field :parent_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
       field :phone, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('phone') } }
@@ -33,12 +35,13 @@ module UnifiedRubySDK
       field :website_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('website_url') } }
 
 
-      sig { params(name: ::String, address: T.nilable(::UnifiedRubySDK::Shared::PropertyAtsCompanyAddress), created_at: T.nilable(::DateTime), id: T.nilable(::String), parent_id: T.nilable(::String), phone: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::AtsCompanyRaw), recruiter_ids: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), website_url: T.nilable(::String)).void }
-      def initialize(name: nil, address: nil, created_at: nil, id: nil, parent_id: nil, phone: nil, raw: nil, recruiter_ids: nil, updated_at: nil, website_url: nil)
+      sig { params(name: ::String, address: T.nilable(::UnifiedRubySDK::Shared::PropertyAtsCompanyAddress), created_at: T.nilable(::DateTime), id: T.nilable(::String), metadata: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsMetadata]), parent_id: T.nilable(::String), phone: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::AtsCompanyRaw), recruiter_ids: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), website_url: T.nilable(::String)).void }
+      def initialize(name: nil, address: nil, created_at: nil, id: nil, metadata: nil, parent_id: nil, phone: nil, raw: nil, recruiter_ids: nil, updated_at: nil, website_url: nil)
         @name = name
         @address = address
         @created_at = created_at
         @id = id
+        @metadata = metadata
         @parent_id = parent_id
         @phone = phone
         @raw = raw

@@ -1,0 +1,13 @@
+# AtsMetadata
+
+
+## Fields
+
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `extra_data`                                                                       | [T.nilable(::UnifiedRubySDK::Shared::ExtraData)](../../models/shared/extradata.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `id`                                                                               | *T.nilable(::String)*                                                              | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `key`                                                                              | *::String*                                                                         | :heavy_check_mark:                                                                 | N/A                                                                                |
+| `namespace`                                                                        | *T.nilable(::String)*                                                              | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `type`                                                                             | *T.nilable(::String)*                                                              | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `value`                                                                            | [T.nilable(::UnifiedRubySDK::Shared::Value)](../../models/shared/value.md)         | :heavy_minus_sign:                                                                 | N/A                                                                                |
