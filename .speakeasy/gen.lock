@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 9857048e17c51b706f1f1755ce5dafdc
+  docChecksum: b86a0a7e009b89c881979b0459cdcf9b
   docVersion: "1.0"
-  speakeasyVersion: 1.526.0
-  generationVersion: 2.563.0
-  releaseVersion: 0.7.3
-  configChecksum: 89d16d4ddd9c282535fdda08a7d5e51b
+  speakeasyVersion: 1.526.6
+  generationVersion: 2.563.1
+  releaseVersion: 0.7.4
+  configChecksum: 979956984a0399258fcbe0bcb6878b53
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -1106,7 +1106,6 @@ generatedFiles:
   - docs/models/shared/messagingchannel.md
   - docs/models/shared/messagingmember.md
   - docs/models/shared/messagingmessage.md
-  - docs/models/shared/meta.md
   - docs/models/shared/metadatametadata.md
   - docs/models/shared/metadatametadataraw.md
   - docs/models/shared/nativewebhookparentid.md
@@ -1142,7 +1141,6 @@ generatedFiles:
   - docs/models/shared/propertycalendarrecordingtranscriptattendeestatus.md
   - docs/models/shared/propertycommercelocationaddress.md
   - docs/models/shared/propertyconnectionauth.md
-  - docs/models/shared/propertyconnectionauthmeta.md
   - docs/models/shared/propertyconnectioncategories.md
   - docs/models/shared/propertyconnectionpermissions.md
   - docs/models/shared/propertycrmcompanyaddress.md
@@ -2500,7 +2498,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/messagingchannel.rb
   - lib/unified_ruby_sdk/models/shared/messagingmember.rb
   - lib/unified_ruby_sdk/models/shared/messagingmessage.rb
-  - lib/unified_ruby_sdk/models/shared/meta.rb
   - lib/unified_ruby_sdk/models/shared/metadatametadata.rb
   - lib/unified_ruby_sdk/models/shared/metadatametadata_raw.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_parent_id.rb
@@ -2536,7 +2533,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_calendarrecordingtranscript_attendee_status.rb
   - lib/unified_ruby_sdk/models/shared/property_commercelocation_address.rb
   - lib/unified_ruby_sdk/models/shared/property_connection_auth.rb
-  - lib/unified_ruby_sdk/models/shared/property_connection_auth_meta.rb
   - lib/unified_ruby_sdk/models/shared/property_connection_categories.rb
   - lib/unified_ruby_sdk/models/shared/property_connection_permissions.rb
   - lib/unified_ruby_sdk/models/shared/property_crmcompany_address.rb

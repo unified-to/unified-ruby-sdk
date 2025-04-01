@@ -38,7 +38,7 @@ module UnifiedRubySDK
 
       field :key, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('key') } }
 
-      field :meta, T.nilable(::UnifiedRubySDK::Shared::PropertyConnectionAuthMeta), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('meta') } }
+      field :meta, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('meta') } }
 
       field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
       # When integration.auth_type = "other", this field contains the authentication credentials in the same order as token_names
@@ -61,7 +61,7 @@ module UnifiedRubySDK
       field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
 
-      sig { params(access_token: T.nilable(::String), api_url: T.nilable(::String), app_id: T.nilable(::String), authorize_url: T.nilable(::String), client_id: T.nilable(::String), client_secret: T.nilable(::String), consumer_key: T.nilable(::String), consumer_secret: T.nilable(::String), dev_api_key: T.nilable(::String), emails: T.nilable(T::Array[::String]), expires_in: T.nilable(::Float), expiry_date: T.nilable(::DateTime), key: T.nilable(::String), meta: T.nilable(::UnifiedRubySDK::Shared::PropertyConnectionAuthMeta), name: T.nilable(::String), other_auth_info: T.nilable(T::Array[::String]), pem: T.nilable(::String), refresh_token: T.nilable(::String), refresh_token_expires_date: T.nilable(::DateTime), refresh_token_expires_in: T.nilable(::Float), state: T.nilable(::String), token: T.nilable(::String), token_url: T.nilable(::String), user_id: T.nilable(::String)).void }
+      sig { params(access_token: T.nilable(::String), api_url: T.nilable(::String), app_id: T.nilable(::String), authorize_url: T.nilable(::String), client_id: T.nilable(::String), client_secret: T.nilable(::String), consumer_key: T.nilable(::String), consumer_secret: T.nilable(::String), dev_api_key: T.nilable(::String), emails: T.nilable(T::Array[::String]), expires_in: T.nilable(::Float), expiry_date: T.nilable(::DateTime), key: T.nilable(::String), meta: T.nilable(T::Hash[Symbol, ::Object]), name: T.nilable(::String), other_auth_info: T.nilable(T::Array[::String]), pem: T.nilable(::String), refresh_token: T.nilable(::String), refresh_token_expires_date: T.nilable(::DateTime), refresh_token_expires_in: T.nilable(::Float), state: T.nilable(::String), token: T.nilable(::String), token_url: T.nilable(::String), user_id: T.nilable(::String)).void }
       def initialize(access_token: nil, api_url: nil, app_id: nil, authorize_url: nil, client_id: nil, client_secret: nil, consumer_key: nil, consumer_secret: nil, dev_api_key: nil, emails: nil, expires_in: nil, expiry_date: nil, key: nil, meta: nil, name: nil, other_auth_info: nil, pem: nil, refresh_token: nil, refresh_token_expires_date: nil, refresh_token_expires_in: nil, state: nil, token: nil, token_url: nil, user_id: nil)
         @access_token = access_token
         @api_url = api_url
