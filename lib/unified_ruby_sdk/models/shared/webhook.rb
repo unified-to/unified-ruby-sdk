@@ -32,7 +32,7 @@ module UnifiedRubySDK
 
       field :fields_, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fields') } }
 
-      field :filters, T.nilable(T::Hash[Symbol, ::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('filters') } }
+      field :filters, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('filters') } }
 
       field :hook_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('hook_url') } }
 
@@ -59,7 +59,7 @@ module UnifiedRubySDK
       field :workspace_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
 
 
-      sig { params(connection_id: ::String, event: ::UnifiedRubySDK::Shared::Event, object_type: ::UnifiedRubySDK::Shared::ObjectType, checked_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), db_name_prefix: T.nilable(::String), db_type: T.nilable(::UnifiedRubySDK::Shared::DbType), db_url: T.nilable(::String), environment: T.nilable(::String), fields_: T.nilable(::String), filters: T.nilable(T::Hash[Symbol, ::String]), hook_url: T.nilable(::String), id: T.nilable(::String), integration_type: T.nilable(::String), interval: T.nilable(::Float), is_healthy: T.nilable(T::Boolean), is_paused: T.nilable(T::Boolean), meta: T.nilable(T::Hash[Symbol, ::Object]), page_max_limit: T.nilable(::Float), runs: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), webhook_type: T.nilable(::UnifiedRubySDK::Shared::WebhookType), workspace_id: T.nilable(::String)).void }
+      sig { params(connection_id: ::String, event: ::UnifiedRubySDK::Shared::Event, object_type: ::UnifiedRubySDK::Shared::ObjectType, checked_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), db_name_prefix: T.nilable(::String), db_type: T.nilable(::UnifiedRubySDK::Shared::DbType), db_url: T.nilable(::String), environment: T.nilable(::String), fields_: T.nilable(::String), filters: T.nilable(T::Hash[Symbol, ::Object]), hook_url: T.nilable(::String), id: T.nilable(::String), integration_type: T.nilable(::String), interval: T.nilable(::Float), is_healthy: T.nilable(T::Boolean), is_paused: T.nilable(T::Boolean), meta: T.nilable(T::Hash[Symbol, ::Object]), page_max_limit: T.nilable(::Float), runs: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), webhook_type: T.nilable(::UnifiedRubySDK::Shared::WebhookType), workspace_id: T.nilable(::String)).void }
       def initialize(connection_id: nil, event: nil, object_type: nil, checked_at: nil, created_at: nil, db_name_prefix: nil, db_type: nil, db_url: nil, environment: nil, fields_: nil, filters: nil, hook_url: nil, id: nil, integration_type: nil, interval: nil, is_healthy: nil, is_paused: nil, meta: nil, page_max_limit: nil, runs: nil, updated_at: nil, webhook_type: nil, workspace_id: nil)
         @connection_id = connection_id
         @event = event

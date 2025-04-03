@@ -62,9 +62,9 @@ module UnifiedRubySDK
       end
       @language = 'ruby'
       @openapi_doc_version = '1.0'
-      @sdk_version = '0.7.4'
-      @gen_version = '2.563.1'
-      @user_agent = 'speakeasy-sdk/ruby 0.7.4 2.563.1 1.0 unified_ruby_sdk'
+      @sdk_version = '0.7.5'
+      @gen_version = '2.565.1'
+      @user_agent = 'speakeasy-sdk/ruby 0.7.5 2.565.1 1.0 unified_ruby_sdk'
     end
 
     sig { returns([String, T::Hash[Symbol, String]]) }

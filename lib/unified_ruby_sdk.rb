@@ -14,6 +14,7 @@ module UnifiedRubySDK
   autoload :Journal, 'unified_ruby_sdk/journal'
   autoload :Order, 'unified_ruby_sdk/order'
   autoload :Organization, 'unified_ruby_sdk/organization'
+  autoload :Report, 'unified_ruby_sdk/report'
   autoload :Taxrate, 'unified_ruby_sdk/taxrate'
   autoload :Transaction, 'unified_ruby_sdk/transaction'
   autoload :Ats, 'unified_ruby_sdk/ats'

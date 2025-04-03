@@ -33,7 +33,7 @@ req = ::UnifiedRubySDK::Shared::Connection.new(
   ],
   integration_type: "<value>",
   permissions: [
-    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::MARTECH_LIST_READ,
+    ::UnifiedRubySDK::Shared::PropertyConnectionPermissions::CRM_PIPELINE_WRITE,
   ],
 )
 

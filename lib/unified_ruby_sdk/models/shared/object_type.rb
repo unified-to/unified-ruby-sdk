@@ -18,6 +18,7 @@ module UnifiedRubySDK
         ACCOUNTING_TAXRATE = new('accounting_taxrate')
         ACCOUNTING_ORGANIZATION = new('accounting_organization')
         ACCOUNTING_ORDER = new('accounting_order')
+        ACCOUNTING_REPORT = new('accounting_report')
         PAYMENT_PAYMENT = new('payment_payment')
         PAYMENT_LINK = new('payment_link')
         PAYMENT_PAYOUT = new('payment_payout')

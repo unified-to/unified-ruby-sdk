@@ -26,6 +26,8 @@ module UnifiedRubySDK
         ACCOUNTING_ORGANIZATION_READ = new('accounting_organization_read')
         ACCOUNTING_ORDER_READ = new('accounting_order_read')
         ACCOUNTING_ORDER_WRITE = new('accounting_order_write')
+        ACCOUNTING_REPORT_READ = new('accounting_report_read')
+        ACCOUNTING_REPORT_WRITE = new('accounting_report_write')
         PAYMENT_PAYMENT_READ = new('payment_payment_read')
         PAYMENT_PAYMENT_WRITE = new('payment_payment_write')
         PAYMENT_PAYOUT_READ = new('payment_payout_read')

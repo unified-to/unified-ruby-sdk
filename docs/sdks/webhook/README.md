@@ -254,7 +254,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.webhook.update_unified_webhook(webhook=::UnifiedRubySDK::Shared::Webhook.new(
   connection_id: "<id>",
   event: ::UnifiedRubySDK::Shared::Event::CREATED,
-  object_type: ::UnifiedRubySDK::Shared::ObjectType::PAYMENT_PAYOUT,
+  object_type: ::UnifiedRubySDK::Shared::ObjectType::PAYMENT_LINK,
 ), id="<id>")
 
 if ! res.webhook.nil?

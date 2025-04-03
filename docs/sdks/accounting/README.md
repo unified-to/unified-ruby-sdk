@@ -18,6 +18,7 @@
 * [get_accounting_journal](#get_accounting_journal) - Retrieve a journal
 * [get_accounting_order](#get_accounting_order) - Retrieve an order
 * [get_accounting_organization](#get_accounting_organization) - Retrieve an organization
+* [get_accounting_report](#get_accounting_report) - Retrieve a report
 * [get_accounting_taxrate](#get_accounting_taxrate) - Retrieve a taxrate
 * [get_accounting_transaction](#get_accounting_transaction) - Retrieve a transaction
 * [list_accounting_accounts](#list_accounting_accounts) - List all accounts
@@ -26,6 +27,7 @@
 * [list_accounting_journals](#list_accounting_journals) - List all journals
 * [list_accounting_orders](#list_accounting_orders) - List all orders
 * [list_accounting_organizations](#list_accounting_organizations) - List all organizations
+* [list_accounting_reports](#list_accounting_reports) - List all reports
 * [list_accounting_taxrates](#list_accounting_taxrates) - List all taxrates
 * [list_accounting_transactions](#list_accounting_transactions) - List all transactions
 * [patch_accounting_account](#patch_accounting_account) - Update an account
@@ -557,6 +559,45 @@ end
 
 
 
+## get_accounting_report
+
+Retrieve a report
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
+
+res = s.accounting.get_accounting_report(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
+
+if ! res.accounting_report.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                        | Type                             | Required                         | Description                      |
+| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Report                 |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::GetAccountingReportResponse)](../../models/operations/getaccountingreportresponse.md)**
+
+
+
 ## get_accounting_taxrate
 
 Retrieve a taxrate
@@ -866,6 +907,45 @@ end
 ### Response
 
 **[T.nilable(::UnifiedRubySDK::Operations::ListAccountingOrganizationsResponse)](../../models/operations/listaccountingorganizationsresponse.md)**
+
+
+
+## list_accounting_reports
+
+List all reports
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: ::UnifiedRubySDK::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
+
+req = ::UnifiedRubySDK::Operations::ListAccountingReportsRequest.new(
+  connection_id: "<id>",
+)
+
+res = s.accounting.list_accounting_reports(req)
+
+if ! res.accounting_reports.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                             | [::UnifiedRubySDK::Operations::ListAccountingReportsRequest](../../models/operations/listaccountingreportsrequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+
+### Response
+
+**[T.nilable(::UnifiedRubySDK::Operations::ListAccountingReportsResponse)](../../models/operations/listaccountingreportsresponse.md)**
 
 
 
