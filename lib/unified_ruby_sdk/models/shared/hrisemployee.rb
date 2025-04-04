@@ -72,6 +72,12 @@ module UnifiedRubySDK
 
       field :ssn_sin, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ssn_sin') } }
 
+      field :storage_quota_allocated, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('storage_quota_allocated') } }
+
+      field :storage_quota_available, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('storage_quota_available') } }
+
+      field :storage_quota_used, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('storage_quota_used') } }
+
       field :telephones, T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisTelephone]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
 
       field :terminated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('terminated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -83,8 +89,8 @@ module UnifiedRubySDK
       field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(address: T.nilable(::UnifiedRubySDK::Shared::PropertyHrisEmployeeAddress), bio: T.nilable(::String), company_id: T.nilable(::String), compensation: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisCompensation]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), date_of_birth: T.nilable(::DateTime), department: T.nilable(::String), division: T.nilable(::String), emails: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisEmail]), employee_number: T.nilable(::String), employee_roles: T.nilable(T::Array[::UnifiedRubySDK::Shared::PropertyHrisEmployeeEmployeeRoles]), employment_status: T.nilable(::UnifiedRubySDK::Shared::EmploymentStatus), employment_type: T.nilable(::UnifiedRubySDK::Shared::HrisEmployeeEmploymentType), gender: T.nilable(::UnifiedRubySDK::Shared::HrisEmployeeGender), groups: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisGroup]), hired_at: T.nilable(::DateTime), id: T.nilable(::String), image_url: T.nilable(::String), language_locale: T.nilable(::String), location: T.nilable(::String), locations: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisLocation]), manager_id: T.nilable(::String), marital_status: T.nilable(::UnifiedRubySDK::Shared::MaritalStatus), metadata: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisMetadata]), name: T.nilable(::String), pronouns: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::HrisEmployeeRaw), salutation: T.nilable(::String), ssn_sin: T.nilable(::String), telephones: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisTelephone]), terminated_at: T.nilable(::DateTime), timezone: T.nilable(::String), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-      def initialize(address: nil, bio: nil, company_id: nil, compensation: nil, created_at: nil, currency: nil, date_of_birth: nil, department: nil, division: nil, emails: nil, employee_number: nil, employee_roles: nil, employment_status: nil, employment_type: nil, gender: nil, groups: nil, hired_at: nil, id: nil, image_url: nil, language_locale: nil, location: nil, locations: nil, manager_id: nil, marital_status: nil, metadata: nil, name: nil, pronouns: nil, raw: nil, salutation: nil, ssn_sin: nil, telephones: nil, terminated_at: nil, timezone: nil, title: nil, updated_at: nil)
+      sig { params(address: T.nilable(::UnifiedRubySDK::Shared::PropertyHrisEmployeeAddress), bio: T.nilable(::String), company_id: T.nilable(::String), compensation: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisCompensation]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), date_of_birth: T.nilable(::DateTime), department: T.nilable(::String), division: T.nilable(::String), emails: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisEmail]), employee_number: T.nilable(::String), employee_roles: T.nilable(T::Array[::UnifiedRubySDK::Shared::PropertyHrisEmployeeEmployeeRoles]), employment_status: T.nilable(::UnifiedRubySDK::Shared::EmploymentStatus), employment_type: T.nilable(::UnifiedRubySDK::Shared::HrisEmployeeEmploymentType), gender: T.nilable(::UnifiedRubySDK::Shared::HrisEmployeeGender), groups: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisGroup]), hired_at: T.nilable(::DateTime), id: T.nilable(::String), image_url: T.nilable(::String), language_locale: T.nilable(::String), location: T.nilable(::String), locations: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisLocation]), manager_id: T.nilable(::String), marital_status: T.nilable(::UnifiedRubySDK::Shared::MaritalStatus), metadata: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisMetadata]), name: T.nilable(::String), pronouns: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::HrisEmployeeRaw), salutation: T.nilable(::String), ssn_sin: T.nilable(::String), storage_quota_allocated: T.nilable(::Float), storage_quota_available: T.nilable(::Float), storage_quota_used: T.nilable(::Float), telephones: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisTelephone]), terminated_at: T.nilable(::DateTime), timezone: T.nilable(::String), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+      def initialize(address: nil, bio: nil, company_id: nil, compensation: nil, created_at: nil, currency: nil, date_of_birth: nil, department: nil, division: nil, emails: nil, employee_number: nil, employee_roles: nil, employment_status: nil, employment_type: nil, gender: nil, groups: nil, hired_at: nil, id: nil, image_url: nil, language_locale: nil, location: nil, locations: nil, manager_id: nil, marital_status: nil, metadata: nil, name: nil, pronouns: nil, raw: nil, salutation: nil, ssn_sin: nil, storage_quota_allocated: nil, storage_quota_available: nil, storage_quota_used: nil, telephones: nil, terminated_at: nil, timezone: nil, title: nil, updated_at: nil)
         @address = address
         @bio = bio
         @company_id = company_id
@@ -115,6 +121,9 @@ module UnifiedRubySDK
         @raw = raw
         @salutation = salutation
         @ssn_sin = ssn_sin
+        @storage_quota_allocated = storage_quota_allocated
+        @storage_quota_available = storage_quota_available
+        @storage_quota_used = storage_quota_used
         @telephones = telephones
         @terminated_at = terminated_at
         @timezone = timezone
