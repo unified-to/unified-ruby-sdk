@@ -28,7 +28,7 @@ module UnifiedRubySDK
 
       field :media, T.nilable(T::Array[::UnifiedRubySDK::Shared::CommerceItemMedia]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
 
-      field :metadata, T.nilable(T::Array[::UnifiedRubySDK::Shared::CommerceItemMetadata]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+      field :metadata, T.nilable(T::Array[::UnifiedRubySDK::Shared::CommerceMetadata]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
       field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       field :vendor_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('vendor_name') } }
 
 
-      sig { params(account_id: T.nilable(::String), collection_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_taxable: T.nilable(T::Boolean), media: T.nilable(T::Array[::UnifiedRubySDK::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[::UnifiedRubySDK::Shared::CommerceItemMetadata]), name: T.nilable(::String), public_description: T.nilable(::String), public_name: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::CommerceItemRaw), slug: T.nilable(::String), tags: T.nilable(T::Array[::String]), type: T.nilable(::String), updated_at: T.nilable(::DateTime), variants: T.nilable(T::Array[::UnifiedRubySDK::Shared::CommerceItemVariant]), vendor_name: T.nilable(::String)).void }
+      sig { params(account_id: T.nilable(::String), collection_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_taxable: T.nilable(T::Boolean), media: T.nilable(T::Array[::UnifiedRubySDK::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[::UnifiedRubySDK::Shared::CommerceMetadata]), name: T.nilable(::String), public_description: T.nilable(::String), public_name: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::CommerceItemRaw), slug: T.nilable(::String), tags: T.nilable(T::Array[::String]), type: T.nilable(::String), updated_at: T.nilable(::DateTime), variants: T.nilable(T::Array[::UnifiedRubySDK::Shared::CommerceItemVariant]), vendor_name: T.nilable(::String)).void }
       def initialize(account_id: nil, collection_ids: nil, created_at: nil, description: nil, id: nil, is_active: nil, is_taxable: nil, media: nil, metadata: nil, name: nil, public_description: nil, public_name: nil, raw: nil, slug: nil, tags: nil, type: nil, updated_at: nil, variants: nil, vendor_name: nil)
         @account_id = account_id
         @collection_ids = collection_ids

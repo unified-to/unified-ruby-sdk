@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Shared
   
 
-    class CommerceItemMetadataExtraData < ::Crystalline::FieldAugmented
+    class CommerceMetadataExtraData < ::Crystalline::FieldAugmented
       extend T::Sig
 
 
