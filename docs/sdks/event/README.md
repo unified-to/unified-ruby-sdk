@@ -28,12 +28,12 @@ Create an event
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.event.create_calendar_event(calendar_event=::UnifiedRubySDK::Shared::CalendarEvent.new(
+res = s.event.create_calendar_event(calendar_event=Models::Shared::CalendarEvent.new(
   end_at: "<value>",
   start_at: "<value>",
   subject: "<value>",
@@ -49,15 +49,15 @@ end
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `calendar_event`                                                                | [::UnifiedRubySDK::Shared::CalendarEvent](../../models/shared/calendarevent.md) | :heavy_check_mark:                                                              | N/A                                                                             |
-| `connection_id`                                                                 | *::String*                                                                      | :heavy_check_mark:                                                              | ID of the connection                                                            |
-| `fields_`                                                                       | T::Array<*::String*>                                                            | :heavy_minus_sign:                                                              | Comma-delimited fields to return                                                |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `calendar_event`                                                      | [Models::Shared::CalendarEvent](../../models/shared/calendarevent.md) | :heavy_check_mark:                                                    | N/A                                                                   |
+| `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
+| `fields_`                                                             | T::Array<*::String*>                                                  | :heavy_minus_sign:                                                    | Comma-delimited fields to return                                      |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::CreateCalendarEventResponse)](../../models/operations/createcalendareventresponse.md)**
+**[T.nilable(Models::Operations::CreateCalendarEventResponse)](../../models/operations/createcalendareventresponse.md)**
 
 
 
@@ -71,12 +71,12 @@ Create an event
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.event.create_crm_event(crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), connection_id="<id>", fields_=[
+res = s.event.create_crm_event(crm_event=Models::Shared::CrmEvent.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -90,13 +90,13 @@ end
 
 | Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `crm_event`                                                                                                     | [::UnifiedRubySDK::Shared::CrmEvent](../../models/shared/crmevent.md)                                           | :heavy_check_mark:                                                                                              | An event represents an event, activity, or engagement and is always associated with a deal, contact, or company |
+| `crm_event`                                                                                                     | [Models::Shared::CrmEvent](../../models/shared/crmevent.md)                                                     | :heavy_check_mark:                                                                                              | An event represents an event, activity, or engagement and is always associated with a deal, contact, or company |
 | `connection_id`                                                                                                 | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the connection                                                                                            |
 | `fields_`                                                                                                       | T::Array<*::String*>                                                                                            | :heavy_minus_sign:                                                                                              | Comma-delimited fields to return                                                                                |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::CreateCrmEventResponse)](../../models/operations/createcrmeventresponse.md)**
+**[T.nilable(Models::Operations::CreateCrmEventResponse)](../../models/operations/createcrmeventresponse.md)**
 
 
 
@@ -110,7 +110,7 @@ Retrieve an event
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -135,7 +135,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::GetCalendarEventResponse)](../../models/operations/getcalendareventresponse.md)**
+**[T.nilable(Models::Operations::GetCalendarEventResponse)](../../models/operations/getcalendareventresponse.md)**
 
 
 
@@ -149,7 +149,7 @@ Retrieve an event
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -174,7 +174,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::GetCrmEventResponse)](../../models/operations/getcrmeventresponse.md)**
+**[T.nilable(Models::Operations::GetCrmEventResponse)](../../models/operations/getcrmeventresponse.md)**
 
 
 
@@ -188,12 +188,12 @@ List all events
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-req = ::UnifiedRubySDK::Operations::ListCalendarEventsRequest.new(
+req = Models::Operations::ListCalendarEventsRequest.new(
   connection_id: "<id>",
 )
 
@@ -207,13 +207,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                       | [::UnifiedRubySDK::Operations::ListCalendarEventsRequest](../../models/operations/listcalendareventsrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::ListCalendarEventsRequest](../../models/operations/listcalendareventsrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::ListCalendarEventsResponse)](../../models/operations/listcalendareventsresponse.md)**
+**[T.nilable(Models::Operations::ListCalendarEventsResponse)](../../models/operations/listcalendareventsresponse.md)**
 
 
 
@@ -227,12 +227,12 @@ List all events
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-req = ::UnifiedRubySDK::Operations::ListCrmEventsRequest.new(
+req = Models::Operations::ListCrmEventsRequest.new(
   connection_id: "<id>",
 )
 
@@ -246,13 +246,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [::UnifiedRubySDK::Operations::ListCrmEventsRequest](../../models/operations/listcrmeventsrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [Models::Operations::ListCrmEventsRequest](../../models/operations/listcrmeventsrequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::ListCrmEventsResponse)](../../models/operations/listcrmeventsresponse.md)**
+**[T.nilable(Models::Operations::ListCrmEventsResponse)](../../models/operations/listcrmeventsresponse.md)**
 
 
 
@@ -266,12 +266,12 @@ Update an event
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.event.patch_calendar_event(calendar_event=::UnifiedRubySDK::Shared::CalendarEvent.new(
+res = s.event.patch_calendar_event(calendar_event=Models::Shared::CalendarEvent.new(
   end_at: "<value>",
   start_at: "<value>",
   subject: "<value>",
@@ -287,16 +287,16 @@ end
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `calendar_event`                                                                | [::UnifiedRubySDK::Shared::CalendarEvent](../../models/shared/calendarevent.md) | :heavy_check_mark:                                                              | N/A                                                                             |
-| `connection_id`                                                                 | *::String*                                                                      | :heavy_check_mark:                                                              | ID of the connection                                                            |
-| `id`                                                                            | *::String*                                                                      | :heavy_check_mark:                                                              | ID of the Event                                                                 |
-| `fields_`                                                                       | T::Array<*::String*>                                                            | :heavy_minus_sign:                                                              | Comma-delimited fields to return                                                |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `calendar_event`                                                      | [Models::Shared::CalendarEvent](../../models/shared/calendarevent.md) | :heavy_check_mark:                                                    | N/A                                                                   |
+| `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
+| `id`                                                                  | *::String*                                                            | :heavy_check_mark:                                                    | ID of the Event                                                       |
+| `fields_`                                                             | T::Array<*::String*>                                                  | :heavy_minus_sign:                                                    | Comma-delimited fields to return                                      |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::PatchCalendarEventResponse)](../../models/operations/patchcalendareventresponse.md)**
+**[T.nilable(Models::Operations::PatchCalendarEventResponse)](../../models/operations/patchcalendareventresponse.md)**
 
 
 
@@ -310,12 +310,12 @@ Update an event
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.event.patch_crm_event(crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), connection_id="<id>", id="<id>", fields_=[
+res = s.event.patch_crm_event(crm_event=Models::Shared::CrmEvent.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -329,14 +329,14 @@ end
 
 | Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `crm_event`                                                                                                     | [::UnifiedRubySDK::Shared::CrmEvent](../../models/shared/crmevent.md)                                           | :heavy_check_mark:                                                                                              | An event represents an event, activity, or engagement and is always associated with a deal, contact, or company |
+| `crm_event`                                                                                                     | [Models::Shared::CrmEvent](../../models/shared/crmevent.md)                                                     | :heavy_check_mark:                                                                                              | An event represents an event, activity, or engagement and is always associated with a deal, contact, or company |
 | `connection_id`                                                                                                 | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the connection                                                                                            |
 | `id`                                                                                                            | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the Event                                                                                                 |
 | `fields_`                                                                                                       | T::Array<*::String*>                                                                                            | :heavy_minus_sign:                                                                                              | Comma-delimited fields to return                                                                                |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::PatchCrmEventResponse)](../../models/operations/patchcrmeventresponse.md)**
+**[T.nilable(Models::Operations::PatchCrmEventResponse)](../../models/operations/patchcrmeventresponse.md)**
 
 
 
@@ -350,7 +350,7 @@ Remove an event
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -372,7 +372,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::RemoveCalendarEventResponse)](../../models/operations/removecalendareventresponse.md)**
+**[T.nilable(Models::Operations::RemoveCalendarEventResponse)](../../models/operations/removecalendareventresponse.md)**
 
 
 
@@ -386,7 +386,7 @@ Remove an event
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -408,7 +408,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::RemoveCrmEventResponse)](../../models/operations/removecrmeventresponse.md)**
+**[T.nilable(Models::Operations::RemoveCrmEventResponse)](../../models/operations/removecrmeventresponse.md)**
 
 
 
@@ -422,12 +422,12 @@ Update an event
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.event.update_calendar_event(calendar_event=::UnifiedRubySDK::Shared::CalendarEvent.new(
+res = s.event.update_calendar_event(calendar_event=Models::Shared::CalendarEvent.new(
   end_at: "<value>",
   start_at: "<value>",
   subject: "<value>",
@@ -443,16 +443,16 @@ end
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `calendar_event`                                                                | [::UnifiedRubySDK::Shared::CalendarEvent](../../models/shared/calendarevent.md) | :heavy_check_mark:                                                              | N/A                                                                             |
-| `connection_id`                                                                 | *::String*                                                                      | :heavy_check_mark:                                                              | ID of the connection                                                            |
-| `id`                                                                            | *::String*                                                                      | :heavy_check_mark:                                                              | ID of the Event                                                                 |
-| `fields_`                                                                       | T::Array<*::String*>                                                            | :heavy_minus_sign:                                                              | Comma-delimited fields to return                                                |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `calendar_event`                                                      | [Models::Shared::CalendarEvent](../../models/shared/calendarevent.md) | :heavy_check_mark:                                                    | N/A                                                                   |
+| `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
+| `id`                                                                  | *::String*                                                            | :heavy_check_mark:                                                    | ID of the Event                                                       |
+| `fields_`                                                             | T::Array<*::String*>                                                  | :heavy_minus_sign:                                                    | Comma-delimited fields to return                                      |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::UpdateCalendarEventResponse)](../../models/operations/updatecalendareventresponse.md)**
+**[T.nilable(Models::Operations::UpdateCalendarEventResponse)](../../models/operations/updatecalendareventresponse.md)**
 
 
 
@@ -466,12 +466,12 @@ Update an event
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.event.update_crm_event(crm_event=::UnifiedRubySDK::Shared::CrmEvent.new(), connection_id="<id>", id="<id>", fields_=[
+res = s.event.update_crm_event(crm_event=Models::Shared::CrmEvent.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -485,12 +485,12 @@ end
 
 | Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `crm_event`                                                                                                     | [::UnifiedRubySDK::Shared::CrmEvent](../../models/shared/crmevent.md)                                           | :heavy_check_mark:                                                                                              | An event represents an event, activity, or engagement and is always associated with a deal, contact, or company |
+| `crm_event`                                                                                                     | [Models::Shared::CrmEvent](../../models/shared/crmevent.md)                                                     | :heavy_check_mark:                                                                                              | An event represents an event, activity, or engagement and is always associated with a deal, contact, or company |
 | `connection_id`                                                                                                 | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the connection                                                                                            |
 | `id`                                                                                                            | *::String*                                                                                                      | :heavy_check_mark:                                                                                              | ID of the Event                                                                                                 |
 | `fields_`                                                                                                       | T::Array<*::String*>                                                                                            | :heavy_minus_sign:                                                                                              | Comma-delimited fields to return                                                                                |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::UpdateCrmEventResponse)](../../models/operations/updatecrmeventresponse.md)**
+**[T.nilable(Models::Operations::UpdateCrmEventResponse)](../../models/operations/updatecrmeventresponse.md)**
 

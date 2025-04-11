@@ -5,67 +5,92 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
-    # Chart of accounts
-    class AccountingAccount < ::Crystalline::FieldAugmented
-      extend T::Sig
+  module Models
+    module Shared
+    
+      # Chart of accounts
+      class AccountingAccount
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      field :balance, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('balance') } }
+        field :balance, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('balance') } }
 
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+        field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-      field :customer_defined_code, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('customer_defined_code') } }
+        field :customer_defined_code, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('customer_defined_code') } }
 
-      field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-      field :group, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group') } }
+        field :group, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group') } }
 
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :is_payable, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_payable') } }
+        field :is_payable, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_payable') } }
 
-      field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-      field :parent_account_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_account_id') } }
+        field :parent_account_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_account_id') } }
 
-      field :raw, T.nilable(::UnifiedRubySDK::Shared::Raw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-      field :section, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('section') } }
+        field :section, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('section') } }
 
-      field :status, T.nilable(::UnifiedRubySDK::Shared::Status), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::Status, true) } }
+        field :status, T.nilable(Models::Shared::Status), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::Status, true) } }
 
-      field :subgroup, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subgroup') } }
+        field :subgroup, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subgroup') } }
 
-      field :subsection, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subsection') } }
+        field :subsection, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subsection') } }
 
-      field :type, T.nilable(::UnifiedRubySDK::Shared::Type), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::Type, true) } }
+        field :type, T.nilable(Models::Shared::Type), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::Type, true) } }
 
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(balance: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), customer_defined_code: T.nilable(::String), description: T.nilable(::String), group: T.nilable(::String), id: T.nilable(::String), is_payable: T.nilable(T::Boolean), name: T.nilable(::String), parent_account_id: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::Raw), section: T.nilable(::String), status: T.nilable(::UnifiedRubySDK::Shared::Status), subgroup: T.nilable(::String), subsection: T.nilable(::String), type: T.nilable(::UnifiedRubySDK::Shared::Type), updated_at: T.nilable(::DateTime)).void }
-      def initialize(balance: nil, created_at: nil, currency: nil, customer_defined_code: nil, description: nil, group: nil, id: nil, is_payable: nil, name: nil, parent_account_id: nil, raw: nil, section: nil, status: nil, subgroup: nil, subsection: nil, type: nil, updated_at: nil)
-        @balance = balance
-        @created_at = created_at
-        @currency = currency
-        @customer_defined_code = customer_defined_code
-        @description = description
-        @group = group
-        @id = id
-        @is_payable = is_payable
-        @name = name
-        @parent_account_id = parent_account_id
-        @raw = raw
-        @section = section
-        @status = status
-        @subgroup = subgroup
-        @subsection = subsection
-        @type = type
-        @updated_at = updated_at
+        sig { params(balance: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), customer_defined_code: T.nilable(::String), description: T.nilable(::String), group: T.nilable(::String), id: T.nilable(::String), is_payable: T.nilable(T::Boolean), name: T.nilable(::String), parent_account_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), section: T.nilable(::String), status: T.nilable(Models::Shared::Status), subgroup: T.nilable(::String), subsection: T.nilable(::String), type: T.nilable(Models::Shared::Type), updated_at: T.nilable(::DateTime)).void }
+        def initialize(balance: nil, created_at: nil, currency: nil, customer_defined_code: nil, description: nil, group: nil, id: nil, is_payable: nil, name: nil, parent_account_id: nil, raw: nil, section: nil, status: nil, subgroup: nil, subsection: nil, type: nil, updated_at: nil)
+          @balance = balance
+          @created_at = created_at
+          @currency = currency
+          @customer_defined_code = customer_defined_code
+          @description = description
+          @group = group
+          @id = id
+          @is_payable = is_payable
+          @name = name
+          @parent_account_id = parent_account_id
+          @raw = raw
+          @section = section
+          @status = status
+          @subgroup = subgroup
+          @subsection = subsection
+          @type = type
+          @updated_at = updated_at
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @balance == other.balance
+          return false unless @created_at == other.created_at
+          return false unless @currency == other.currency
+          return false unless @customer_defined_code == other.customer_defined_code
+          return false unless @description == other.description
+          return false unless @group == other.group
+          return false unless @id == other.id
+          return false unless @is_payable == other.is_payable
+          return false unless @name == other.name
+          return false unless @parent_account_id == other.parent_account_id
+          return false unless @raw == other.raw
+          return false unless @section == other.section
+          return false unless @status == other.status
+          return false unless @subgroup == other.subgroup
+          return false unless @subsection == other.subsection
+          return false unless @type == other.type
+          return false unless @updated_at == other.updated_at
+          true
+        end
       end
     end
   end

@@ -5,31 +5,44 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
-    # "id" attribute of another User.
-    class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager < ::Crystalline::FieldAugmented
-      extend T::Sig
+  module Models
+    module Shared
+    
+      # "id" attribute of another User.
+      class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      field :dollar_ref, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('$ref') } }
+        field :dollar_ref, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('$ref') } }
 
-      field :display_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('displayName') } }
+        field :display_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('displayName') } }
 
-      field :manager_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('managerId') } }
+        field :manager_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('managerId') } }
 
-      field :type, T.nilable(::UnifiedRubySDK::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType, true) } }
+        field :type, T.nilable(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType, true) } }
 
-      field :value, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
+        field :value, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 
 
-      sig { params(dollar_ref: T.nilable(::String), display_name: T.nilable(::String), manager_id: T.nilable(::String), type: T.nilable(::UnifiedRubySDK::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType), value: T.nilable(::String)).void }
-      def initialize(dollar_ref: nil, display_name: nil, manager_id: nil, type: nil, value: nil)
-        @dollar_ref = dollar_ref
-        @display_name = display_name
-        @manager_id = manager_id
-        @type = type
-        @value = value
+        sig { params(dollar_ref: T.nilable(::String), display_name: T.nilable(::String), manager_id: T.nilable(::String), type: T.nilable(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType), value: T.nilable(::String)).void }
+        def initialize(dollar_ref: nil, display_name: nil, manager_id: nil, type: nil, value: nil)
+          @dollar_ref = dollar_ref
+          @display_name = display_name
+          @manager_id = manager_id
+          @type = type
+          @value = value
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @dollar_ref == other.dollar_ref
+          return false unless @display_name == other.display_name
+          return false unless @manager_id == other.manager_id
+          return false unless @type == other.type
+          return false unless @value == other.value
+          true
+        end
       end
     end
   end

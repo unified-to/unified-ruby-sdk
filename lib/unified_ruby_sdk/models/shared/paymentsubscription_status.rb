@@ -5,15 +5,17 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class PaymentSubscriptionStatus < T::Enum
-      enums do
-        ACTIVE = new('ACTIVE')
-        INACTIVE = new('INACTIVE')
-        CANCELED = new('CANCELED')
-        PAUSED = new('PAUSED')
+      class PaymentSubscriptionStatus < T::Enum
+        enums do
+          ACTIVE = new('ACTIVE')
+          INACTIVE = new('INACTIVE')
+          CANCELED = new('CANCELED')
+          PAUSED = new('PAUSED')
+        end
       end
     end
   end

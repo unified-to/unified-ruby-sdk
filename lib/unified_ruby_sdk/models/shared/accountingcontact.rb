@@ -5,73 +5,100 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AccountingContact < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :billing_address, T.nilable(::UnifiedRubySDK::Shared::PropertyAccountingContactBillingAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('billing_address') } }
-
-      field :company_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_name') } }
-
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
-
-      field :emails, T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingEmail]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :identification, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('identification') } }
-
-      field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
-
-      field :is_customer, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_customer') } }
-
-      field :is_supplier, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_supplier') } }
-
-      field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
-      field :payment_methods, T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingContactPaymentMethod]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_methods') } }
-
-      field :portal_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('portal_url') } }
-
-      field :raw, T.nilable(::UnifiedRubySDK::Shared::AccountingContactRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :shipping_address, T.nilable(::UnifiedRubySDK::Shared::PropertyAccountingContactShippingAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('shipping_address') } }
-
-      field :tax_exemption, T.nilable(::UnifiedRubySDK::Shared::TaxExemption), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_exemption'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::TaxExemption, true) } }
-
-      field :tax_number, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_number') } }
-
-      field :telephones, T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingTelephone]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
-
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      class AccountingContact
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(billing_address: T.nilable(::UnifiedRubySDK::Shared::PropertyAccountingContactBillingAddress), company_name: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), emails: T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingEmail]), id: T.nilable(::String), identification: T.nilable(::String), is_active: T.nilable(T::Boolean), is_customer: T.nilable(T::Boolean), is_supplier: T.nilable(T::Boolean), name: T.nilable(::String), payment_methods: T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingContactPaymentMethod]), portal_url: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::AccountingContactRaw), shipping_address: T.nilable(::UnifiedRubySDK::Shared::PropertyAccountingContactShippingAddress), tax_exemption: T.nilable(::UnifiedRubySDK::Shared::TaxExemption), tax_number: T.nilable(::String), telephones: T.nilable(T::Array[::UnifiedRubySDK::Shared::AccountingTelephone]), updated_at: T.nilable(::DateTime)).void }
-      def initialize(billing_address: nil, company_name: nil, created_at: nil, currency: nil, emails: nil, id: nil, identification: nil, is_active: nil, is_customer: nil, is_supplier: nil, name: nil, payment_methods: nil, portal_url: nil, raw: nil, shipping_address: nil, tax_exemption: nil, tax_number: nil, telephones: nil, updated_at: nil)
-        @billing_address = billing_address
-        @company_name = company_name
-        @created_at = created_at
-        @currency = currency
-        @emails = emails
-        @id = id
-        @identification = identification
-        @is_active = is_active
-        @is_customer = is_customer
-        @is_supplier = is_supplier
-        @name = name
-        @payment_methods = payment_methods
-        @portal_url = portal_url
-        @raw = raw
-        @shipping_address = shipping_address
-        @tax_exemption = tax_exemption
-        @tax_number = tax_number
-        @telephones = telephones
-        @updated_at = updated_at
+        field :billing_address, T.nilable(Models::Shared::PropertyAccountingContactBillingAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('billing_address') } }
+
+        field :company_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_name') } }
+
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+
+        field :emails, T.nilable(T::Array[Models::Shared::AccountingEmail]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :identification, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('identification') } }
+
+        field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
+
+        field :is_customer, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_customer') } }
+
+        field :is_supplier, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_supplier') } }
+
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :payment_methods, T.nilable(T::Array[Models::Shared::AccountingContactPaymentMethod]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_methods') } }
+
+        field :portal_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('portal_url') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :shipping_address, T.nilable(Models::Shared::PropertyAccountingContactShippingAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('shipping_address') } }
+
+        field :tax_exemption, T.nilable(Models::Shared::TaxExemption), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_exemption'), 'decoder': Utils.enum_from_string(Models::Shared::TaxExemption, true) } }
+
+        field :tax_number, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_number') } }
+
+        field :telephones, T.nilable(T::Array[Models::Shared::AccountingTelephone]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
+
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+
+        sig { params(billing_address: T.nilable(Models::Shared::PropertyAccountingContactBillingAddress), company_name: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), emails: T.nilable(T::Array[Models::Shared::AccountingEmail]), id: T.nilable(::String), identification: T.nilable(::String), is_active: T.nilable(T::Boolean), is_customer: T.nilable(T::Boolean), is_supplier: T.nilable(T::Boolean), name: T.nilable(::String), payment_methods: T.nilable(T::Array[Models::Shared::AccountingContactPaymentMethod]), portal_url: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), shipping_address: T.nilable(Models::Shared::PropertyAccountingContactShippingAddress), tax_exemption: T.nilable(Models::Shared::TaxExemption), tax_number: T.nilable(::String), telephones: T.nilable(T::Array[Models::Shared::AccountingTelephone]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(billing_address: nil, company_name: nil, created_at: nil, currency: nil, emails: nil, id: nil, identification: nil, is_active: nil, is_customer: nil, is_supplier: nil, name: nil, payment_methods: nil, portal_url: nil, raw: nil, shipping_address: nil, tax_exemption: nil, tax_number: nil, telephones: nil, updated_at: nil)
+          @billing_address = billing_address
+          @company_name = company_name
+          @created_at = created_at
+          @currency = currency
+          @emails = emails
+          @id = id
+          @identification = identification
+          @is_active = is_active
+          @is_customer = is_customer
+          @is_supplier = is_supplier
+          @name = name
+          @payment_methods = payment_methods
+          @portal_url = portal_url
+          @raw = raw
+          @shipping_address = shipping_address
+          @tax_exemption = tax_exemption
+          @tax_number = tax_number
+          @telephones = telephones
+          @updated_at = updated_at
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @billing_address == other.billing_address
+          return false unless @company_name == other.company_name
+          return false unless @created_at == other.created_at
+          return false unless @currency == other.currency
+          return false unless @emails == other.emails
+          return false unless @id == other.id
+          return false unless @identification == other.identification
+          return false unless @is_active == other.is_active
+          return false unless @is_customer == other.is_customer
+          return false unless @is_supplier == other.is_supplier
+          return false unless @name == other.name
+          return false unless @payment_methods == other.payment_methods
+          return false unless @portal_url == other.portal_url
+          return false unless @raw == other.raw
+          return false unless @shipping_address == other.shipping_address
+          return false unless @tax_exemption == other.tax_exemption
+          return false unless @tax_number == other.tax_number
+          return false unless @telephones == other.telephones
+          return false unless @updated_at == other.updated_at
+          true
+        end
       end
     end
   end

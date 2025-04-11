@@ -5,67 +5,92 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class ApiCall < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :integration_type, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('integration_type') } }
-
-      field :method, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('method') } }
-
-      field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
-      field :path, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('path') } }
-
-      field :status, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status') } }
-
-      field :type, ::UnifiedRubySDK::Shared::ApiCallType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ApiCallType, false) } }
-
-      field :connection_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('connection_id') } }
-
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :environment, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('environment') } }
-
-      field :error, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('error') } }
-
-      field :external_xref, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_xref') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :ip_address, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ip_address') } }
-
-      field :is_billable, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_billable') } }
-
-      field :size, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
-
-      field :webhook_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('webhook_id') } }
-
-      field :workspace_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
+      class ApiCall
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(integration_type: ::String, method: ::String, name: ::String, path: ::String, status: ::String, type: ::UnifiedRubySDK::Shared::ApiCallType, connection_id: T.nilable(::String), created_at: T.nilable(::DateTime), environment: T.nilable(::String), error: T.nilable(::String), external_xref: T.nilable(::String), id: T.nilable(::String), ip_address: T.nilable(::String), is_billable: T.nilable(T::Boolean), size: T.nilable(::Float), webhook_id: T.nilable(::String), workspace_id: T.nilable(::String)).void }
-      def initialize(integration_type: nil, method: nil, name: nil, path: nil, status: nil, type: nil, connection_id: nil, created_at: nil, environment: nil, error: nil, external_xref: nil, id: nil, ip_address: nil, is_billable: nil, size: nil, webhook_id: nil, workspace_id: nil)
-        @integration_type = integration_type
-        @method = method
-        @name = name
-        @path = path
-        @status = status
-        @type = type
-        @connection_id = connection_id
-        @created_at = created_at
-        @environment = environment
-        @error = error
-        @external_xref = external_xref
-        @id = id
-        @ip_address = ip_address
-        @is_billable = is_billable
-        @size = size
-        @webhook_id = webhook_id
-        @workspace_id = workspace_id
+        field :integration_type, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('integration_type') } }
+
+        field :method, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('method') } }
+
+        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :path, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('path') } }
+
+        field :status, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status') } }
+
+        field :type, Models::Shared::ApiCallType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ApiCallType, false) } }
+
+        field :connection_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('connection_id') } }
+
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :environment, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('environment') } }
+
+        field :error, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('error') } }
+
+        field :external_xref, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_xref') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :ip_address, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ip_address') } }
+
+        field :is_billable, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_billable') } }
+
+        field :size, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
+
+        field :webhook_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('webhook_id') } }
+
+        field :workspace_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
+
+
+        sig { params(integration_type: ::String, method: ::String, name: ::String, path: ::String, status: ::String, type: Models::Shared::ApiCallType, connection_id: T.nilable(::String), created_at: T.nilable(::DateTime), environment: T.nilable(::String), error: T.nilable(::String), external_xref: T.nilable(::String), id: T.nilable(::String), ip_address: T.nilable(::String), is_billable: T.nilable(T::Boolean), size: T.nilable(::Float), webhook_id: T.nilable(::String), workspace_id: T.nilable(::String)).void }
+        def initialize(integration_type: nil, method: nil, name: nil, path: nil, status: nil, type: nil, connection_id: nil, created_at: nil, environment: nil, error: nil, external_xref: nil, id: nil, ip_address: nil, is_billable: nil, size: nil, webhook_id: nil, workspace_id: nil)
+          @integration_type = integration_type
+          @method = method
+          @name = name
+          @path = path
+          @status = status
+          @type = type
+          @connection_id = connection_id
+          @created_at = created_at
+          @environment = environment
+          @error = error
+          @external_xref = external_xref
+          @id = id
+          @ip_address = ip_address
+          @is_billable = is_billable
+          @size = size
+          @webhook_id = webhook_id
+          @workspace_id = workspace_id
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @integration_type == other.integration_type
+          return false unless @method == other.method
+          return false unless @name == other.name
+          return false unless @path == other.path
+          return false unless @status == other.status
+          return false unless @type == other.type
+          return false unless @connection_id == other.connection_id
+          return false unless @created_at == other.created_at
+          return false unless @environment == other.environment
+          return false unless @error == other.error
+          return false unless @external_xref == other.external_xref
+          return false unless @id == other.id
+          return false unless @ip_address == other.ip_address
+          return false unless @is_billable == other.is_billable
+          return false unless @size == other.size
+          return false unless @webhook_id == other.webhook_id
+          return false unless @workspace_id == other.workspace_id
+          true
+        end
       end
     end
   end

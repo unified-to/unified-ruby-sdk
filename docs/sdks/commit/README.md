@@ -22,12 +22,12 @@ Create a commit
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.commit.create_repo_commit(repo_commit=::UnifiedRubySDK::Shared::RepoCommit.new(
+res = s.commit.create_repo_commit(repo_commit=Models::Shared::RepoCommit.new(
   repo_id: "<id>",
   user_id: "<id>",
 ), connection_id="<id>", fields_=[
@@ -42,15 +42,15 @@ end
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `repo_commit`                                                             | [::UnifiedRubySDK::Shared::RepoCommit](../../models/shared/repocommit.md) | :heavy_check_mark:                                                        | N/A                                                                       |
-| `connection_id`                                                           | *::String*                                                                | :heavy_check_mark:                                                        | ID of the connection                                                      |
-| `fields_`                                                                 | T::Array<*::String*>                                                      | :heavy_minus_sign:                                                        | Comma-delimited fields to return                                          |
+| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `repo_commit`                                                   | [Models::Shared::RepoCommit](../../models/shared/repocommit.md) | :heavy_check_mark:                                              | N/A                                                             |
+| `connection_id`                                                 | *::String*                                                      | :heavy_check_mark:                                              | ID of the connection                                            |
+| `fields_`                                                       | T::Array<*::String*>                                            | :heavy_minus_sign:                                              | Comma-delimited fields to return                                |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::CreateRepoCommitResponse)](../../models/operations/createrepocommitresponse.md)**
+**[T.nilable(Models::Operations::CreateRepoCommitResponse)](../../models/operations/createrepocommitresponse.md)**
 
 
 
@@ -64,7 +64,7 @@ Retrieve a commit
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -89,7 +89,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::GetRepoCommitResponse)](../../models/operations/getrepocommitresponse.md)**
+**[T.nilable(Models::Operations::GetRepoCommitResponse)](../../models/operations/getrepocommitresponse.md)**
 
 
 
@@ -103,12 +103,12 @@ List all commits
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-req = ::UnifiedRubySDK::Operations::ListRepoCommitsRequest.new(
+req = Models::Operations::ListRepoCommitsRequest.new(
   connection_id: "<id>",
 )
 
@@ -122,13 +122,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                 | [::UnifiedRubySDK::Operations::ListRepoCommitsRequest](../../models/operations/listrepocommitsrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [Models::Operations::ListRepoCommitsRequest](../../models/operations/listrepocommitsrequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::ListRepoCommitsResponse)](../../models/operations/listrepocommitsresponse.md)**
+**[T.nilable(Models::Operations::ListRepoCommitsResponse)](../../models/operations/listrepocommitsresponse.md)**
 
 
 
@@ -142,12 +142,12 @@ Update a commit
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.commit.patch_repo_commit(repo_commit=::UnifiedRubySDK::Shared::RepoCommit.new(
+res = s.commit.patch_repo_commit(repo_commit=Models::Shared::RepoCommit.new(
   repo_id: "<id>",
   user_id: "<id>",
 ), connection_id="<id>", id="<id>", fields_=[
@@ -162,16 +162,16 @@ end
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `repo_commit`                                                             | [::UnifiedRubySDK::Shared::RepoCommit](../../models/shared/repocommit.md) | :heavy_check_mark:                                                        | N/A                                                                       |
-| `connection_id`                                                           | *::String*                                                                | :heavy_check_mark:                                                        | ID of the connection                                                      |
-| `id`                                                                      | *::String*                                                                | :heavy_check_mark:                                                        | ID of the Commit                                                          |
-| `fields_`                                                                 | T::Array<*::String*>                                                      | :heavy_minus_sign:                                                        | Comma-delimited fields to return                                          |
+| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `repo_commit`                                                   | [Models::Shared::RepoCommit](../../models/shared/repocommit.md) | :heavy_check_mark:                                              | N/A                                                             |
+| `connection_id`                                                 | *::String*                                                      | :heavy_check_mark:                                              | ID of the connection                                            |
+| `id`                                                            | *::String*                                                      | :heavy_check_mark:                                              | ID of the Commit                                                |
+| `fields_`                                                       | T::Array<*::String*>                                            | :heavy_minus_sign:                                              | Comma-delimited fields to return                                |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::PatchRepoCommitResponse)](../../models/operations/patchrepocommitresponse.md)**
+**[T.nilable(Models::Operations::PatchRepoCommitResponse)](../../models/operations/patchrepocommitresponse.md)**
 
 
 
@@ -185,7 +185,7 @@ Remove a commit
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -207,7 +207,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::RemoveRepoCommitResponse)](../../models/operations/removerepocommitresponse.md)**
+**[T.nilable(Models::Operations::RemoveRepoCommitResponse)](../../models/operations/removerepocommitresponse.md)**
 
 
 
@@ -221,12 +221,12 @@ Update a commit
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.commit.update_repo_commit(repo_commit=::UnifiedRubySDK::Shared::RepoCommit.new(
+res = s.commit.update_repo_commit(repo_commit=Models::Shared::RepoCommit.new(
   repo_id: "<id>",
   user_id: "<id>",
 ), connection_id="<id>", id="<id>", fields_=[
@@ -241,14 +241,14 @@ end
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `repo_commit`                                                             | [::UnifiedRubySDK::Shared::RepoCommit](../../models/shared/repocommit.md) | :heavy_check_mark:                                                        | N/A                                                                       |
-| `connection_id`                                                           | *::String*                                                                | :heavy_check_mark:                                                        | ID of the connection                                                      |
-| `id`                                                                      | *::String*                                                                | :heavy_check_mark:                                                        | ID of the Commit                                                          |
-| `fields_`                                                                 | T::Array<*::String*>                                                      | :heavy_minus_sign:                                                        | Comma-delimited fields to return                                          |
+| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `repo_commit`                                                   | [Models::Shared::RepoCommit](../../models/shared/repocommit.md) | :heavy_check_mark:                                              | N/A                                                             |
+| `connection_id`                                                 | *::String*                                                      | :heavy_check_mark:                                              | ID of the connection                                            |
+| `id`                                                            | *::String*                                                      | :heavy_check_mark:                                              | ID of the Commit                                                |
+| `fields_`                                                       | T::Array<*::String*>                                            | :heavy_minus_sign:                                              | Comma-delimited fields to return                                |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::UpdateRepoCommitResponse)](../../models/operations/updaterepocommitresponse.md)**
+**[T.nilable(Models::Operations::UpdateRepoCommitResponse)](../../models/operations/updaterepocommitresponse.md)**
 

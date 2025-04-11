@@ -5,25 +5,36 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class CreatePassthroughJsonRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class CreatePassthroughJsonRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # ID of the connection
-      field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # ID of the connection
+        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
 
-      field :path, ::String, { 'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': false } }
-      # integration-specific payload
-      field :request_body, T.nilable(::Object), { 'request': { 'media_type': 'application/json' } }
+        field :path, ::String, { 'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': false } }
+        # integration-specific payload
+        field :request_body, T.nilable(::Object), { 'request': { 'media_type': 'application/json' } }
 
 
-      sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object)).void }
-      def initialize(connection_id: nil, path: nil, request_body: nil)
-        @connection_id = connection_id
-        @path = path
-        @request_body = request_body
+        sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object)).void }
+        def initialize(connection_id: nil, path: nil, request_body: nil)
+          @connection_id = connection_id
+          @path = path
+          @request_body = request_body
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @connection_id == other.connection_id
+          return false unless @path == other.path
+          return false unless @request_body == other.request_body
+          true
+        end
       end
     end
   end

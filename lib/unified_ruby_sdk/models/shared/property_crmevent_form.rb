@@ -5,28 +5,40 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class PropertyCrmEventForm < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :archived_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('archived_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :fields_, T.nilable(T::Array[::UnifiedRubySDK::Shared::CrmEventFormField]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fields') } }
-
-      field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
-      field :redirect_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('redirect_url') } }
+      class PropertyCrmEventForm
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(archived_at: T.nilable(::DateTime), fields_: T.nilable(T::Array[::UnifiedRubySDK::Shared::CrmEventFormField]), name: T.nilable(::String), redirect_url: T.nilable(::String)).void }
-      def initialize(archived_at: nil, fields_: nil, name: nil, redirect_url: nil)
-        @archived_at = archived_at
-        @fields_ = fields_
-        @name = name
-        @redirect_url = redirect_url
+        field :archived_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('archived_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :fields_, T.nilable(T::Array[Models::Shared::CrmEventFormField]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fields') } }
+
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :redirect_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('redirect_url') } }
+
+
+        sig { params(archived_at: T.nilable(::DateTime), fields_: T.nilable(T::Array[Models::Shared::CrmEventFormField]), name: T.nilable(::String), redirect_url: T.nilable(::String)).void }
+        def initialize(archived_at: nil, fields_: nil, name: nil, redirect_url: nil)
+          @archived_at = archived_at
+          @fields_ = fields_
+          @name = name
+          @redirect_url = redirect_url
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @archived_at == other.archived_at
+          return false unless @fields_ == other.fields_
+          return false unless @name == other.name
+          return false unless @redirect_url == other.redirect_url
+          true
+        end
       end
     end
   end

@@ -5,13 +5,15 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class KmsCommentType < T::Enum
-      enums do
-        PAGE_INLINE = new('PAGE-INLINE')
-        PAGE = new('PAGE')
+      class KmsCommentType < T::Enum
+        enums do
+          PAGE_INLINE = new('PAGE-INLINE')
+          PAGE = new('PAGE')
+        end
       end
     end
   end

@@ -5,15 +5,17 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class PropertyCrmEventTaskStatus < T::Enum
-      enums do
-        COMPLETED = new('COMPLETED')
-        NOT_STARTED = new('NOT_STARTED')
-        WORK_IN_PROGRESS = new('WORK_IN_PROGRESS')
-        DEFERRED = new('DEFERRED')
+      class PropertyCrmEventTaskStatus < T::Enum
+        enums do
+          COMPLETED = new('COMPLETED')
+          NOT_STARTED = new('NOT_STARTED')
+          WORK_IN_PROGRESS = new('WORK_IN_PROGRESS')
+          DEFERRED = new('DEFERRED')
+        end
       end
     end
   end

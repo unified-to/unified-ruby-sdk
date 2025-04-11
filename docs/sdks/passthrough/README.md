@@ -24,7 +24,7 @@ Passthrough POST
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -47,7 +47,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::CreatePassthroughJsonResponse)](../../models/operations/createpassthroughjsonresponse.md)**
+**[T.nilable(Models::Operations::CreatePassthroughJsonResponse)](../../models/operations/createpassthroughjsonresponse.md)**
 
 
 
@@ -61,7 +61,7 @@ Passthrough POST
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -84,7 +84,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::CreatePassthroughRawResponse)](../../models/operations/createpassthroughrawresponse.md)**
+**[T.nilable(Models::Operations::CreatePassthroughRawResponse)](../../models/operations/createpassthroughrawresponse.md)**
 
 
 
@@ -98,7 +98,7 @@ Passthrough GET
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -120,7 +120,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::ListPassthroughsResponse)](../../models/operations/listpassthroughsresponse.md)**
+**[T.nilable(Models::Operations::ListPassthroughsResponse)](../../models/operations/listpassthroughsresponse.md)**
 
 
 
@@ -134,7 +134,7 @@ Passthrough PUT
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -157,7 +157,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::PatchPassthroughJsonResponse)](../../models/operations/patchpassthroughjsonresponse.md)**
+**[T.nilable(Models::Operations::PatchPassthroughJsonResponse)](../../models/operations/patchpassthroughjsonresponse.md)**
 
 
 
@@ -171,7 +171,7 @@ Passthrough PUT
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -194,7 +194,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::PatchPassthroughRawResponse)](../../models/operations/patchpassthroughrawresponse.md)**
+**[T.nilable(Models::Operations::PatchPassthroughRawResponse)](../../models/operations/patchpassthroughrawresponse.md)**
 
 
 
@@ -208,7 +208,7 @@ Passthrough DELETE
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -230,7 +230,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::RemovePassthroughResponse)](../../models/operations/removepassthroughresponse.md)**
+**[T.nilable(Models::Operations::RemovePassthroughResponse)](../../models/operations/removepassthroughresponse.md)**
 
 
 
@@ -244,7 +244,7 @@ Passthrough PUT
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -267,7 +267,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::UpdatePassthroughJsonResponse)](../../models/operations/updatepassthroughjsonresponse.md)**
+**[T.nilable(Models::Operations::UpdatePassthroughJsonResponse)](../../models/operations/updatepassthroughjsonresponse.md)**
 
 
 
@@ -281,7 +281,7 @@ Passthrough PUT
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -304,5 +304,5 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::UpdatePassthroughRawResponse)](../../models/operations/updatepassthroughrawresponse.md)**
+**[T.nilable(Models::Operations::UpdatePassthroughRawResponse)](../../models/operations/updatepassthroughrawresponse.md)**
 

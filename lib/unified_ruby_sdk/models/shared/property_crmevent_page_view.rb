@@ -5,25 +5,36 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class PropertyCrmEventPageView < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :average, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('average') } }
-
-      field :count, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('count') } }
-
-      field :url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
+      class PropertyCrmEventPageView
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(average: T.nilable(::Float), count: T.nilable(::Float), url: T.nilable(::String)).void }
-      def initialize(average: nil, count: nil, url: nil)
-        @average = average
-        @count = count
-        @url = url
+        field :average, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('average') } }
+
+        field :count, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('count') } }
+
+        field :url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
+
+
+        sig { params(average: T.nilable(::Float), count: T.nilable(::Float), url: T.nilable(::String)).void }
+        def initialize(average: nil, count: nil, url: nil)
+          @average = average
+          @count = count
+          @url = url
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @average == other.average
+          return false unless @count == other.count
+          return false unless @url == other.url
+          true
+        end
       end
     end
   end

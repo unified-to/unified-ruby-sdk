@@ -5,25 +5,36 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class CreateCommerceInventoryRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :commerce_inventory, ::UnifiedRubySDK::Shared::CommerceInventory, { 'request': { 'media_type': 'application/json' } }
-      # ID of the connection
-      field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-      # Comma-delimited fields to return
-      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+      class CreateCommerceInventoryRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(commerce_inventory: ::UnifiedRubySDK::Shared::CommerceInventory, connection_id: ::String, fields_: T.nilable(T::Array[::String])).void }
-      def initialize(commerce_inventory: nil, connection_id: nil, fields_: nil)
-        @commerce_inventory = commerce_inventory
-        @connection_id = connection_id
-        @fields_ = fields_
+        field :commerce_inventory, Models::Shared::CommerceInventory, { 'request': { 'media_type': 'application/json' } }
+        # ID of the connection
+        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # Comma-delimited fields to return
+        field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+
+
+        sig { params(commerce_inventory: Models::Shared::CommerceInventory, connection_id: ::String, fields_: T.nilable(T::Array[::String])).void }
+        def initialize(commerce_inventory: nil, connection_id: nil, fields_: nil)
+          @commerce_inventory = commerce_inventory
+          @connection_id = connection_id
+          @fields_ = fields_
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @commerce_inventory == other.commerce_inventory
+          return false unless @connection_id == other.connection_id
+          return false unless @fields_ == other.fields_
+          true
+        end
       end
     end
   end

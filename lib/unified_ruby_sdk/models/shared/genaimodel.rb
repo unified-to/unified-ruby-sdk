@@ -5,37 +5,52 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class GenaiModel < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
-      field :has_temperature, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_temperature') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :max_tokens, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_tokens') } }
-
-      field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
+      class GenaiModel
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(description: T.nilable(::String), has_temperature: T.nilable(T::Boolean), id: T.nilable(::String), max_tokens: T.nilable(::Float), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), web_url: T.nilable(::String)).void }
-      def initialize(description: nil, has_temperature: nil, id: nil, max_tokens: nil, name: nil, raw: nil, web_url: nil)
-        @description = description
-        @has_temperature = has_temperature
-        @id = id
-        @max_tokens = max_tokens
-        @name = name
-        @raw = raw
-        @web_url = web_url
+        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+
+        field :has_temperature, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_temperature') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :max_tokens, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_tokens') } }
+
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
+
+
+        sig { params(description: T.nilable(::String), has_temperature: T.nilable(T::Boolean), id: T.nilable(::String), max_tokens: T.nilable(::Float), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), web_url: T.nilable(::String)).void }
+        def initialize(description: nil, has_temperature: nil, id: nil, max_tokens: nil, name: nil, raw: nil, web_url: nil)
+          @description = description
+          @has_temperature = has_temperature
+          @id = id
+          @max_tokens = max_tokens
+          @name = name
+          @raw = raw
+          @web_url = web_url
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @description == other.description
+          return false unless @has_temperature == other.has_temperature
+          return false unless @id == other.id
+          return false unless @max_tokens == other.max_tokens
+          return false unless @name == other.name
+          return false unless @raw == other.raw
+          return false unless @web_url == other.web_url
+          true
+        end
       end
     end
   end

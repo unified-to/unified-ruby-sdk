@@ -5,16 +5,18 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AtsInterviewStatus < T::Enum
-      enums do
-        SCHEDULED = new('SCHEDULED')
-        AWAITING_FEEDBACK = new('AWAITING_FEEDBACK')
-        COMPLETE = new('COMPLETE')
-        CANCELED = new('CANCELED')
-        NEEDS_SCHEDULING = new('NEEDS_SCHEDULING')
+      class AtsInterviewStatus < T::Enum
+        enums do
+          SCHEDULED = new('SCHEDULED')
+          AWAITING_FEEDBACK = new('AWAITING_FEEDBACK')
+          COMPLETE = new('COMPLETE')
+          CANCELED = new('CANCELED')
+          NEEDS_SCHEDULING = new('NEEDS_SCHEDULING')
+        end
       end
     end
   end

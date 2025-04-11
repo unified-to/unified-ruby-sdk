@@ -5,15 +5,17 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class Recommendation < T::Enum
-      enums do
-        DEFINITELY_NO = new('DEFINITELY_NO')
-        NO = new('NO')
-        YES = new('YES')
-        STRONG_YES = new('STRONG_YES')
+      class Recommendation < T::Enum
+        enums do
+          DEFINITELY_NO = new('DEFINITELY_NO')
+          NO = new('NO')
+          YES = new('YES')
+          STRONG_YES = new('STRONG_YES')
+        end
       end
     end
   end

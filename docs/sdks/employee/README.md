@@ -22,12 +22,12 @@ Create an employee
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.employee.create_hris_employee(hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new(), connection_id="<id>", fields_=[
+res = s.employee.create_hris_employee(hris_employee=Models::Shared::HrisEmployee.new(), connection_id="<id>", fields_=[
   "<value>",
 ])
 
@@ -39,15 +39,15 @@ end
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `hris_employee`                                                               | [::UnifiedRubySDK::Shared::HrisEmployee](../../models/shared/hrisemployee.md) | :heavy_check_mark:                                                            | N/A                                                                           |
-| `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
-| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `hris_employee`                                                     | [Models::Shared::HrisEmployee](../../models/shared/hrisemployee.md) | :heavy_check_mark:                                                  | N/A                                                                 |
+| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::CreateHrisEmployeeResponse)](../../models/operations/createhrisemployeeresponse.md)**
+**[T.nilable(Models::Operations::CreateHrisEmployeeResponse)](../../models/operations/createhrisemployeeresponse.md)**
 
 
 
@@ -61,7 +61,7 @@ Retrieve an employee
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -86,7 +86,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::GetHrisEmployeeResponse)](../../models/operations/gethrisemployeeresponse.md)**
+**[T.nilable(Models::Operations::GetHrisEmployeeResponse)](../../models/operations/gethrisemployeeresponse.md)**
 
 
 
@@ -100,12 +100,12 @@ List all employees
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-req = ::UnifiedRubySDK::Operations::ListHrisEmployeesRequest.new(
+req = Models::Operations::ListHrisEmployeesRequest.new(
   connection_id: "<id>",
 )
 
@@ -119,13 +119,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                     | [::UnifiedRubySDK::Operations::ListHrisEmployeesRequest](../../models/operations/listhrisemployeesrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::ListHrisEmployeesRequest](../../models/operations/listhrisemployeesrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::ListHrisEmployeesResponse)](../../models/operations/listhrisemployeesresponse.md)**
+**[T.nilable(Models::Operations::ListHrisEmployeesResponse)](../../models/operations/listhrisemployeesresponse.md)**
 
 
 
@@ -139,12 +139,12 @@ Update an employee
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.employee.patch_hris_employee(hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new(), connection_id="<id>", id="<id>", fields_=[
+res = s.employee.patch_hris_employee(hris_employee=Models::Shared::HrisEmployee.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -156,16 +156,16 @@ end
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `hris_employee`                                                               | [::UnifiedRubySDK::Shared::HrisEmployee](../../models/shared/hrisemployee.md) | :heavy_check_mark:                                                            | N/A                                                                           |
-| `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
-| `id`                                                                          | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the Employee                                                            |
-| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `hris_employee`                                                     | [Models::Shared::HrisEmployee](../../models/shared/hrisemployee.md) | :heavy_check_mark:                                                  | N/A                                                                 |
+| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
+| `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Employee                                                  |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::PatchHrisEmployeeResponse)](../../models/operations/patchhrisemployeeresponse.md)**
+**[T.nilable(Models::Operations::PatchHrisEmployeeResponse)](../../models/operations/patchhrisemployeeresponse.md)**
 
 
 
@@ -179,7 +179,7 @@ Remove an employee
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -201,7 +201,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::RemoveHrisEmployeeResponse)](../../models/operations/removehrisemployeeresponse.md)**
+**[T.nilable(Models::Operations::RemoveHrisEmployeeResponse)](../../models/operations/removehrisemployeeresponse.md)**
 
 
 
@@ -215,12 +215,12 @@ Update an employee
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.employee.update_hris_employee(hris_employee=::UnifiedRubySDK::Shared::HrisEmployee.new(), connection_id="<id>", id="<id>", fields_=[
+res = s.employee.update_hris_employee(hris_employee=Models::Shared::HrisEmployee.new(), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
 
@@ -232,14 +232,14 @@ end
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `hris_employee`                                                               | [::UnifiedRubySDK::Shared::HrisEmployee](../../models/shared/hrisemployee.md) | :heavy_check_mark:                                                            | N/A                                                                           |
-| `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
-| `id`                                                                          | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the Employee                                                            |
-| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `hris_employee`                                                     | [Models::Shared::HrisEmployee](../../models/shared/hrisemployee.md) | :heavy_check_mark:                                                  | N/A                                                                 |
+| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
+| `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Employee                                                  |
+| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::UpdateHrisEmployeeResponse)](../../models/operations/updatehrisemployeeresponse.md)**
+**[T.nilable(Models::Operations::UpdateHrisEmployeeResponse)](../../models/operations/updatehrisemployeeresponse.md)**
 

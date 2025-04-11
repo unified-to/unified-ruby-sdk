@@ -5,13 +5,15 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class Status < T::Enum
-      enums do
-        ACTIVE = new('ACTIVE')
-        ARCHIVED = new('ARCHIVED')
+      class Status < T::Enum
+        enums do
+          ACTIVE = new('ACTIVE')
+          ARCHIVED = new('ARCHIVED')
+        end
       end
     end
   end

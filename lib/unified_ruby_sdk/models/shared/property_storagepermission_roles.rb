@@ -5,14 +5,16 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class PropertyStoragePermissionRoles < T::Enum
-      enums do
-        OWNER = new('OWNER')
-        READ = new('READ')
-        WRITE = new('WRITE')
+      class PropertyStoragePermissionRoles < T::Enum
+        enums do
+          OWNER = new('OWNER')
+          READ = new('READ')
+          WRITE = new('WRITE')
+        end
       end
     end
   end

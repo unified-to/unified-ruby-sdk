@@ -5,28 +5,40 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class CrmEventFormField < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
-      field :options, T.nilable(T::Array[::UnifiedRubySDK::Shared::CrmEventFormOption]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
-
-      field :required, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('required') } }
-
-      field :type, T.nilable(::UnifiedRubySDK::Shared::CrmEventFormFieldType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::CrmEventFormFieldType, true) } }
+      class CrmEventFormField
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(name: T.nilable(::String), options: T.nilable(T::Array[::UnifiedRubySDK::Shared::CrmEventFormOption]), required: T.nilable(T::Boolean), type: T.nilable(::UnifiedRubySDK::Shared::CrmEventFormFieldType)).void }
-      def initialize(name: nil, options: nil, required: nil, type: nil)
-        @name = name
-        @options = options
-        @required = required
-        @type = type
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :options, T.nilable(T::Array[Models::Shared::CrmEventFormOption]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
+
+        field :required, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('required') } }
+
+        field :type, T.nilable(Models::Shared::CrmEventFormFieldType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::CrmEventFormFieldType, true) } }
+
+
+        sig { params(name: T.nilable(::String), options: T.nilable(T::Array[Models::Shared::CrmEventFormOption]), required: T.nilable(T::Boolean), type: T.nilable(Models::Shared::CrmEventFormFieldType)).void }
+        def initialize(name: nil, options: nil, required: nil, type: nil)
+          @name = name
+          @options = options
+          @required = required
+          @type = type
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @name == other.name
+          return false unless @options == other.options
+          return false unless @required == other.required
+          return false unless @type == other.type
+          true
+        end
       end
     end
   end

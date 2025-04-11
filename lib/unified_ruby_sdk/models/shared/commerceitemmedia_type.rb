@@ -5,13 +5,15 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class CommerceItemMediaType < T::Enum
-      enums do
-        IMAGE = new('image')
-        VIDEO = new('video')
+      class CommerceItemMediaType < T::Enum
+        enums do
+          IMAGE = new('image')
+          VIDEO = new('video')
+        end
       end
     end
   end

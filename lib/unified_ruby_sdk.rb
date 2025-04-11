@@ -5,8 +5,6 @@
 
 module UnifiedRubySDK
   autoload :UnifiedTo, 'unified_ruby_sdk/unified_to'
-  autoload :Shared, 'unified_ruby_sdk/models/shared'
-  autoload :Operations, 'unified_ruby_sdk/models/operations'
   autoload :Accounting, 'unified_ruby_sdk/accounting'
   autoload :Account, 'unified_ruby_sdk/account'
   autoload :Contact, 'unified_ruby_sdk/contact'
@@ -97,6 +95,11 @@ module UnifiedRubySDK
   autoload :Login, 'unified_ruby_sdk/login'
   autoload :Issue, 'unified_ruby_sdk/issue'
   autoload :Webhook, 'unified_ruby_sdk/webhook'
+  module Models
+    autoload :Shared, 'unified_ruby_sdk/models/shared'
+    autoload :Operations, 'unified_ruby_sdk/models/operations'
+    autoload :Errors, 'unified_ruby_sdk/models/errors'
+  end
 end
 
 require_relative 'unified_ruby_sdk/utils/utils'

@@ -5,25 +5,36 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
-    # The call object, when type = call
-    class PropertyCrmEventCall < ::Crystalline::FieldAugmented
-      extend T::Sig
+  module Models
+    module Shared
+    
+      # The call object, when type = call
+      class PropertyCrmEventCall
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-      field :duration, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('duration') } }
+        field :duration, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('duration') } }
 
-      field :start_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(description: T.nilable(::String), duration: T.nilable(::Float), start_at: T.nilable(::DateTime)).void }
-      def initialize(description: nil, duration: nil, start_at: nil)
-        @description = description
-        @duration = duration
-        @start_at = start_at
+        sig { params(description: T.nilable(::String), duration: T.nilable(::Float), start_at: T.nilable(::DateTime)).void }
+        def initialize(description: nil, duration: nil, start_at: nil)
+          @description = description
+          @duration = duration
+          @start_at = start_at
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @description == other.description
+          return false unless @duration == other.duration
+          return false unless @start_at == other.start_at
+          true
+        end
       end
     end
   end

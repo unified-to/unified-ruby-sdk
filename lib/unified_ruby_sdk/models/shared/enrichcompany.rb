@@ -5,97 +5,132 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
-    # A company object from an enrichment integration
-    class EnrichCompany < ::Crystalline::FieldAugmented
-      extend T::Sig
+  module Models
+    module Shared
+    
+      # A company object from an enrichment integration
+      class EnrichCompany
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # The address of the company
-      field :address, T.nilable(::UnifiedRubySDK::Shared::PropertyEnrichCompanyAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
+        # The address of the company
+        field :address, T.nilable(Models::Shared::PropertyEnrichCompanyAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
 
-      field :alexa_rank, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('alexa_rank') } }
+        field :alexa_rank, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('alexa_rank') } }
 
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :crunchbase_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('crunchbase_url') } }
+        field :crunchbase_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('crunchbase_url') } }
 
-      field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-      field :domain, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('domain') } }
+        field :domain, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('domain') } }
 
-      field :employees, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employees') } }
+        field :employees, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employees') } }
 
-      field :exchange, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('exchange') } }
+        field :exchange, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('exchange') } }
 
-      field :facebook_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('facebook_url') } }
+        field :facebook_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('facebook_url') } }
 
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :industry, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('industry') } }
+        field :industry, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('industry') } }
 
-      field :instagram_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('instagram_url') } }
+        field :instagram_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('instagram_url') } }
 
-      field :linkedin_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('linkedin_url') } }
+        field :linkedin_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('linkedin_url') } }
 
-      field :logo_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('logo_url') } }
+        field :logo_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('logo_url') } }
 
-      field :naics_code, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('naics_code') } }
+        field :naics_code, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('naics_code') } }
 
-      field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-      # The raw data returned by the integration for this company
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        # The raw data returned by the integration for this company
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-      field :revenue, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('revenue') } }
+        field :revenue, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('revenue') } }
 
-      field :sic_code, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sic_code') } }
+        field :sic_code, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sic_code') } }
 
-      field :stock, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('stock') } }
-      # An array of telephones for this company
-      field :telephones, T.nilable(T::Array[::UnifiedRubySDK::Shared::EnrichTelephone]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
+        field :stock, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('stock') } }
+        # An array of telephones for this company
+        field :telephones, T.nilable(T::Array[Models::Shared::EnrichTelephone]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
 
-      field :twitter_handle, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('twitter_handle') } }
+        field :twitter_handle, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('twitter_handle') } }
 
-      field :twitter_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('twitter_url') } }
+        field :twitter_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('twitter_url') } }
 
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :year_founded, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('year_founded') } }
+        field :year_founded, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('year_founded') } }
 
-      field :yelp_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('yelp_url') } }
+        field :yelp_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('yelp_url') } }
 
-      field :youtube_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('youtube_url') } }
+        field :youtube_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('youtube_url') } }
 
 
-      sig { params(address: T.nilable(::UnifiedRubySDK::Shared::PropertyEnrichCompanyAddress), alexa_rank: T.nilable(::Float), created_at: T.nilable(::DateTime), crunchbase_url: T.nilable(::String), description: T.nilable(::String), domain: T.nilable(::String), employees: T.nilable(::String), exchange: T.nilable(::String), facebook_url: T.nilable(::String), id: T.nilable(::String), industry: T.nilable(::String), instagram_url: T.nilable(::String), linkedin_url: T.nilable(::String), logo_url: T.nilable(::String), naics_code: T.nilable(::Float), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), revenue: T.nilable(::String), sic_code: T.nilable(::Float), stock: T.nilable(::String), telephones: T.nilable(T::Array[::UnifiedRubySDK::Shared::EnrichTelephone]), twitter_handle: T.nilable(::String), twitter_url: T.nilable(::String), updated_at: T.nilable(::DateTime), year_founded: T.nilable(::Float), yelp_url: T.nilable(::String), youtube_url: T.nilable(::String)).void }
-      def initialize(address: nil, alexa_rank: nil, created_at: nil, crunchbase_url: nil, description: nil, domain: nil, employees: nil, exchange: nil, facebook_url: nil, id: nil, industry: nil, instagram_url: nil, linkedin_url: nil, logo_url: nil, naics_code: nil, name: nil, raw: nil, revenue: nil, sic_code: nil, stock: nil, telephones: nil, twitter_handle: nil, twitter_url: nil, updated_at: nil, year_founded: nil, yelp_url: nil, youtube_url: nil)
-        @address = address
-        @alexa_rank = alexa_rank
-        @created_at = created_at
-        @crunchbase_url = crunchbase_url
-        @description = description
-        @domain = domain
-        @employees = employees
-        @exchange = exchange
-        @facebook_url = facebook_url
-        @id = id
-        @industry = industry
-        @instagram_url = instagram_url
-        @linkedin_url = linkedin_url
-        @logo_url = logo_url
-        @naics_code = naics_code
-        @name = name
-        @raw = raw
-        @revenue = revenue
-        @sic_code = sic_code
-        @stock = stock
-        @telephones = telephones
-        @twitter_handle = twitter_handle
-        @twitter_url = twitter_url
-        @updated_at = updated_at
-        @year_founded = year_founded
-        @yelp_url = yelp_url
-        @youtube_url = youtube_url
+        sig { params(address: T.nilable(Models::Shared::PropertyEnrichCompanyAddress), alexa_rank: T.nilable(::Float), created_at: T.nilable(::DateTime), crunchbase_url: T.nilable(::String), description: T.nilable(::String), domain: T.nilable(::String), employees: T.nilable(::String), exchange: T.nilable(::String), facebook_url: T.nilable(::String), id: T.nilable(::String), industry: T.nilable(::String), instagram_url: T.nilable(::String), linkedin_url: T.nilable(::String), logo_url: T.nilable(::String), naics_code: T.nilable(::Float), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), revenue: T.nilable(::String), sic_code: T.nilable(::Float), stock: T.nilable(::String), telephones: T.nilable(T::Array[Models::Shared::EnrichTelephone]), twitter_handle: T.nilable(::String), twitter_url: T.nilable(::String), updated_at: T.nilable(::DateTime), year_founded: T.nilable(::Float), yelp_url: T.nilable(::String), youtube_url: T.nilable(::String)).void }
+        def initialize(address: nil, alexa_rank: nil, created_at: nil, crunchbase_url: nil, description: nil, domain: nil, employees: nil, exchange: nil, facebook_url: nil, id: nil, industry: nil, instagram_url: nil, linkedin_url: nil, logo_url: nil, naics_code: nil, name: nil, raw: nil, revenue: nil, sic_code: nil, stock: nil, telephones: nil, twitter_handle: nil, twitter_url: nil, updated_at: nil, year_founded: nil, yelp_url: nil, youtube_url: nil)
+          @address = address
+          @alexa_rank = alexa_rank
+          @created_at = created_at
+          @crunchbase_url = crunchbase_url
+          @description = description
+          @domain = domain
+          @employees = employees
+          @exchange = exchange
+          @facebook_url = facebook_url
+          @id = id
+          @industry = industry
+          @instagram_url = instagram_url
+          @linkedin_url = linkedin_url
+          @logo_url = logo_url
+          @naics_code = naics_code
+          @name = name
+          @raw = raw
+          @revenue = revenue
+          @sic_code = sic_code
+          @stock = stock
+          @telephones = telephones
+          @twitter_handle = twitter_handle
+          @twitter_url = twitter_url
+          @updated_at = updated_at
+          @year_founded = year_founded
+          @yelp_url = yelp_url
+          @youtube_url = youtube_url
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @address == other.address
+          return false unless @alexa_rank == other.alexa_rank
+          return false unless @created_at == other.created_at
+          return false unless @crunchbase_url == other.crunchbase_url
+          return false unless @description == other.description
+          return false unless @domain == other.domain
+          return false unless @employees == other.employees
+          return false unless @exchange == other.exchange
+          return false unless @facebook_url == other.facebook_url
+          return false unless @id == other.id
+          return false unless @industry == other.industry
+          return false unless @instagram_url == other.instagram_url
+          return false unless @linkedin_url == other.linkedin_url
+          return false unless @logo_url == other.logo_url
+          return false unless @naics_code == other.naics_code
+          return false unless @name == other.name
+          return false unless @raw == other.raw
+          return false unless @revenue == other.revenue
+          return false unless @sic_code == other.sic_code
+          return false unless @stock == other.stock
+          return false unless @telephones == other.telephones
+          return false unless @twitter_handle == other.twitter_handle
+          return false unless @twitter_url == other.twitter_url
+          return false unless @updated_at == other.updated_at
+          return false unless @year_founded == other.year_founded
+          return false unless @yelp_url == other.yelp_url
+          return false unless @youtube_url == other.youtube_url
+          true
+        end
       end
     end
   end

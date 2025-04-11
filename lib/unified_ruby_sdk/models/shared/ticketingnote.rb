@@ -5,40 +5,56 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class TicketingNote < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :customer_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('customer_id') } }
-
-      field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :ticket_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ticket_id') } }
-
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
+      class TicketingNote
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(created_at: T.nilable(::DateTime), customer_id: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), ticket_id: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-      def initialize(created_at: nil, customer_id: nil, description: nil, id: nil, raw: nil, ticket_id: nil, updated_at: nil, user_id: nil)
-        @created_at = created_at
-        @customer_id = customer_id
-        @description = description
-        @id = id
-        @raw = raw
-        @ticket_id = ticket_id
-        @updated_at = updated_at
-        @user_id = user_id
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :customer_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('customer_id') } }
+
+        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :ticket_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ticket_id') } }
+
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
+
+
+        sig { params(created_at: T.nilable(::DateTime), customer_id: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), ticket_id: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(created_at: nil, customer_id: nil, description: nil, id: nil, raw: nil, ticket_id: nil, updated_at: nil, user_id: nil)
+          @created_at = created_at
+          @customer_id = customer_id
+          @description = description
+          @id = id
+          @raw = raw
+          @ticket_id = ticket_id
+          @updated_at = updated_at
+          @user_id = user_id
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @created_at == other.created_at
+          return false unless @customer_id == other.customer_id
+          return false unless @description == other.description
+          return false unless @id == other.id
+          return false unless @raw == other.raw
+          return false unless @ticket_id == other.ticket_id
+          return false unless @updated_at == other.updated_at
+          return false unless @user_id == other.user_id
+          true
+        end
       end
     end
   end

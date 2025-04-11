@@ -5,13 +5,15 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class TicketingTicketStatus < T::Enum
-      enums do
-        ACTIVE = new('ACTIVE')
-        CLOSED = new('CLOSED')
+      class TicketingTicketStatus < T::Enum
+        enums do
+          ACTIVE = new('ACTIVE')
+          CLOSED = new('CLOSED')
+        end
       end
     end
   end

@@ -5,25 +5,36 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class PropertyIntegrationSupportWebhookEvents < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :created, T.nilable(T::Array[::UnifiedRubySDK::Shared::PropertyIntegrationSupportWebhookEventsCreated]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created') } }
-
-      field :deleted, T.nilable(T::Array[::UnifiedRubySDK::Shared::PropertyIntegrationSupportWebhookEventsDeleted]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('deleted') } }
-
-      field :updated, T.nilable(T::Array[::UnifiedRubySDK::Shared::PropertyIntegrationSupportWebhookEventsUpdated]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated') } }
+      class PropertyIntegrationSupportWebhookEvents
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(created: T.nilable(T::Array[::UnifiedRubySDK::Shared::PropertyIntegrationSupportWebhookEventsCreated]), deleted: T.nilable(T::Array[::UnifiedRubySDK::Shared::PropertyIntegrationSupportWebhookEventsDeleted]), updated: T.nilable(T::Array[::UnifiedRubySDK::Shared::PropertyIntegrationSupportWebhookEventsUpdated])).void }
-      def initialize(created: nil, deleted: nil, updated: nil)
-        @created = created
-        @deleted = deleted
-        @updated = updated
+        field :created, T.nilable(T::Array[Models::Shared::PropertyIntegrationSupportWebhookEventsCreated]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created') } }
+
+        field :deleted, T.nilable(T::Array[Models::Shared::PropertyIntegrationSupportWebhookEventsDeleted]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('deleted') } }
+
+        field :updated, T.nilable(T::Array[Models::Shared::PropertyIntegrationSupportWebhookEventsUpdated]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated') } }
+
+
+        sig { params(created: T.nilable(T::Array[Models::Shared::PropertyIntegrationSupportWebhookEventsCreated]), deleted: T.nilable(T::Array[Models::Shared::PropertyIntegrationSupportWebhookEventsDeleted]), updated: T.nilable(T::Array[Models::Shared::PropertyIntegrationSupportWebhookEventsUpdated])).void }
+        def initialize(created: nil, deleted: nil, updated: nil)
+          @created = created
+          @deleted = deleted
+          @updated = updated
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @created == other.created
+          return false unless @deleted == other.deleted
+          return false unless @updated == other.updated
+          true
+        end
       end
     end
   end

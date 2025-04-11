@@ -5,16 +5,18 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class DbType < T::Enum
-      enums do
-        MONGODB = new('mongodb')
-        MYSQL = new('mysql')
-        POSTGRES = new('postgres')
-        MSSQL = new('mssql')
-        MARIADB = new('mariadb')
+      class DbType < T::Enum
+        enums do
+          MONGODB = new('mongodb')
+          MYSQL = new('mysql')
+          POSTGRES = new('postgres')
+          MSSQL = new('mssql')
+          MARIADB = new('mariadb')
+        end
       end
     end
   end

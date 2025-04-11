@@ -5,31 +5,44 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class StoragePermission < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :roles, T::Array[::UnifiedRubySDK::Shared::PropertyStoragePermissionRoles], { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('roles') } }
-
-      field :group_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_id') } }
-
-      field :is_hidden, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_hidden') } }
-
-      field :is_public, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_public') } }
-
-      field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
+      class StoragePermission
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(roles: T::Array[::UnifiedRubySDK::Shared::PropertyStoragePermissionRoles], group_id: T.nilable(::String), is_hidden: T.nilable(T::Boolean), is_public: T.nilable(T::Boolean), user_id: T.nilable(::String)).void }
-      def initialize(roles: nil, group_id: nil, is_hidden: nil, is_public: nil, user_id: nil)
-        @roles = roles
-        @group_id = group_id
-        @is_hidden = is_hidden
-        @is_public = is_public
-        @user_id = user_id
+        field :roles, T::Array[Models::Shared::PropertyStoragePermissionRoles], { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('roles') } }
+
+        field :group_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_id') } }
+
+        field :is_hidden, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_hidden') } }
+
+        field :is_public, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_public') } }
+
+        field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
+
+
+        sig { params(roles: T::Array[Models::Shared::PropertyStoragePermissionRoles], group_id: T.nilable(::String), is_hidden: T.nilable(T::Boolean), is_public: T.nilable(T::Boolean), user_id: T.nilable(::String)).void }
+        def initialize(roles: nil, group_id: nil, is_hidden: nil, is_public: nil, user_id: nil)
+          @roles = roles
+          @group_id = group_id
+          @is_hidden = is_hidden
+          @is_public = is_public
+          @user_id = user_id
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @roles == other.roles
+          return false unless @group_id == other.group_id
+          return false unless @is_hidden == other.is_hidden
+          return false unless @is_public == other.is_public
+          return false unless @user_id == other.user_id
+          true
+        end
       end
     end
   end

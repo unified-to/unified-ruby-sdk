@@ -5,49 +5,68 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class LmsClass < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :course_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('course_id') } }
-
-      field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :instructor_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('instructor_ids') } }
-
-      field :languages, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('languages') } }
-
-      field :media, T.nilable(T::Array[::UnifiedRubySDK::Shared::LmsMedia]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
-
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :student_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('student_ids') } }
-
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      class LmsClass
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(course_id: ::String, name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), instructor_ids: T.nilable(T::Array[::String]), languages: T.nilable(T::Array[::String]), media: T.nilable(T::Array[::UnifiedRubySDK::Shared::LmsMedia]), raw: T.nilable(T::Hash[Symbol, ::Object]), student_ids: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime)).void }
-      def initialize(course_id: nil, name: nil, created_at: nil, description: nil, id: nil, instructor_ids: nil, languages: nil, media: nil, raw: nil, student_ids: nil, updated_at: nil)
-        @course_id = course_id
-        @name = name
-        @created_at = created_at
-        @description = description
-        @id = id
-        @instructor_ids = instructor_ids
-        @languages = languages
-        @media = media
-        @raw = raw
-        @student_ids = student_ids
-        @updated_at = updated_at
+        field :course_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('course_id') } }
+
+        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :instructor_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('instructor_ids') } }
+
+        field :languages, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('languages') } }
+
+        field :media, T.nilable(T::Array[Models::Shared::LmsMedia]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :student_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('student_ids') } }
+
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+
+        sig { params(course_id: ::String, name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), instructor_ids: T.nilable(T::Array[::String]), languages: T.nilable(T::Array[::String]), media: T.nilable(T::Array[Models::Shared::LmsMedia]), raw: T.nilable(T::Hash[Symbol, ::Object]), student_ids: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(course_id: nil, name: nil, created_at: nil, description: nil, id: nil, instructor_ids: nil, languages: nil, media: nil, raw: nil, student_ids: nil, updated_at: nil)
+          @course_id = course_id
+          @name = name
+          @created_at = created_at
+          @description = description
+          @id = id
+          @instructor_ids = instructor_ids
+          @languages = languages
+          @media = media
+          @raw = raw
+          @student_ids = student_ids
+          @updated_at = updated_at
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @course_id == other.course_id
+          return false unless @name == other.name
+          return false unless @created_at == other.created_at
+          return false unless @description == other.description
+          return false unless @id == other.id
+          return false unless @instructor_ids == other.instructor_ids
+          return false unless @languages == other.languages
+          return false unless @media == other.media
+          return false unless @raw == other.raw
+          return false unless @student_ids == other.student_ids
+          return false unless @updated_at == other.updated_at
+          true
+        end
       end
     end
   end

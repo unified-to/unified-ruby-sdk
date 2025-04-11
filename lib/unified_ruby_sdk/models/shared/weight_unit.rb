@@ -5,15 +5,17 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class WeightUnit < T::Enum
-      enums do
-        G = new('g')
-        KG = new('kg')
-        OZ = new('oz')
-        LB = new('lb')
+      class WeightUnit < T::Enum
+        enums do
+          G = new('g')
+          KG = new('kg')
+          OZ = new('oz')
+          LB = new('lb')
+        end
       end
     end
   end

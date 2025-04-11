@@ -5,16 +5,18 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class TicketingTelephoneType < T::Enum
-      enums do
-        WORK = new('WORK')
-        HOME = new('HOME')
-        OTHER = new('OTHER')
-        FAX = new('FAX')
-        MOBILE = new('MOBILE')
+      class TicketingTelephoneType < T::Enum
+        enums do
+          WORK = new('WORK')
+          HOME = new('HOME')
+          OTHER = new('OTHER')
+          FAX = new('FAX')
+          MOBILE = new('MOBILE')
+        end
       end
     end
   end

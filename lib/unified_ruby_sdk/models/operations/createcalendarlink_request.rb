@@ -5,25 +5,36 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class CreateCalendarLinkRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :calendar_link, ::UnifiedRubySDK::Shared::CalendarLink, { 'request': { 'media_type': 'application/json' } }
-      # ID of the connection
-      field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-      # Comma-delimited fields to return
-      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+      class CreateCalendarLinkRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(calendar_link: ::UnifiedRubySDK::Shared::CalendarLink, connection_id: ::String, fields_: T.nilable(T::Array[::String])).void }
-      def initialize(calendar_link: nil, connection_id: nil, fields_: nil)
-        @calendar_link = calendar_link
-        @connection_id = connection_id
-        @fields_ = fields_
+        field :calendar_link, Models::Shared::CalendarLink, { 'request': { 'media_type': 'application/json' } }
+        # ID of the connection
+        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # Comma-delimited fields to return
+        field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+
+
+        sig { params(calendar_link: Models::Shared::CalendarLink, connection_id: ::String, fields_: T.nilable(T::Array[::String])).void }
+        def initialize(calendar_link: nil, connection_id: nil, fields_: nil)
+          @calendar_link = calendar_link
+          @connection_id = connection_id
+          @fields_ = fields_
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @calendar_link == other.calendar_link
+          return false unless @connection_id == other.connection_id
+          return false unless @fields_ == other.fields_
+          true
+        end
       end
     end
   end

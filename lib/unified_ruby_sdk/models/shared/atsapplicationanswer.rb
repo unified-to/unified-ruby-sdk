@@ -5,22 +5,32 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AtsApplicationAnswer < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :answers, T::Array[::String], { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('answers') } }
-
-      field :question_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('question_id') } }
+      class AtsApplicationAnswer
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(answers: T::Array[::String], question_id: ::String).void }
-      def initialize(answers: nil, question_id: nil)
-        @answers = answers
-        @question_id = question_id
+        field :answers, T::Array[::String], { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('answers') } }
+
+        field :question_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('question_id') } }
+
+
+        sig { params(answers: T::Array[::String], question_id: ::String).void }
+        def initialize(answers: nil, question_id: nil)
+          @answers = answers
+          @question_id = question_id
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @answers == other.answers
+          return false unless @question_id == other.question_id
+          true
+        end
       end
     end
   end

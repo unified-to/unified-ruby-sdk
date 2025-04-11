@@ -5,13 +5,15 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class ScimPhotoType < T::Enum
-      enums do
-        PHOTO = new('photo')
-        THUMBNAIL = new('thumbnail')
+      class ScimPhotoType < T::Enum
+        enums do
+          PHOTO = new('photo')
+          THUMBNAIL = new('thumbnail')
+        end
       end
     end
   end

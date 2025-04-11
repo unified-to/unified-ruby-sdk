@@ -5,16 +5,18 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class PropertyHrisEmployeeEmployeeRoles < T::Enum
-      enums do
-        ADMIN = new('ADMIN')
-        MANAGER = new('MANAGER')
-        RECRUITER = new('RECRUITER')
-        SALESREP = new('SALESREP')
-        INTERVIEWER = new('INTERVIEWER')
+      class PropertyHrisEmployeeEmployeeRoles < T::Enum
+        enums do
+          ADMIN = new('ADMIN')
+          MANAGER = new('MANAGER')
+          RECRUITER = new('RECRUITER')
+          SALESREP = new('SALESREP')
+          INTERVIEWER = new('INTERVIEWER')
+        end
       end
     end
   end

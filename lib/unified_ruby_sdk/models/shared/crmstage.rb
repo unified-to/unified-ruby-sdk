@@ -5,37 +5,52 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class CrmStage < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('active') } }
-
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :deal_probability, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('deal_probability') } }
-
-      field :display_order, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('display_order') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      class CrmStage
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(active: T.nilable(T::Boolean), created_at: T.nilable(::DateTime), deal_probability: T.nilable(::Float), display_order: T.nilable(::Float), id: T.nilable(::String), name: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-      def initialize(active: nil, created_at: nil, deal_probability: nil, display_order: nil, id: nil, name: nil, updated_at: nil)
-        @active = active
-        @created_at = created_at
-        @deal_probability = deal_probability
-        @display_order = display_order
-        @id = id
-        @name = name
-        @updated_at = updated_at
+        field :active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('active') } }
+
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :deal_probability, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('deal_probability') } }
+
+        field :display_order, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('display_order') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+
+        sig { params(active: T.nilable(T::Boolean), created_at: T.nilable(::DateTime), deal_probability: T.nilable(::Float), display_order: T.nilable(::Float), id: T.nilable(::String), name: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(active: nil, created_at: nil, deal_probability: nil, display_order: nil, id: nil, name: nil, updated_at: nil)
+          @active = active
+          @created_at = created_at
+          @deal_probability = deal_probability
+          @display_order = display_order
+          @id = id
+          @name = name
+          @updated_at = updated_at
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @active == other.active
+          return false unless @created_at == other.created_at
+          return false unless @deal_probability == other.deal_probability
+          return false unless @display_order == other.display_order
+          return false unless @id == other.id
+          return false unless @name == other.name
+          return false unless @updated_at == other.updated_at
+          true
+        end
       end
     end
   end

@@ -5,43 +5,60 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AtsJobPosting < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class AtsJobPosting
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # job-post-specific address
-      field :address, T.nilable(::UnifiedRubySDK::Shared::PropertyAtsJobPostingAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
+        # job-post-specific address
+        field :address, T.nilable(Models::Shared::PropertyAtsJobPostingAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
 
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
+        field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
-      field :location, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location') } }
+        field :location, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location') } }
 
-      field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-      field :posting_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('posting_url') } }
+        field :posting_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('posting_url') } }
 
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(address: T.nilable(::UnifiedRubySDK::Shared::PropertyAtsJobPostingAddress), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), location: T.nilable(::String), name: T.nilable(::String), posting_url: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-      def initialize(address: nil, created_at: nil, description: nil, id: nil, is_active: nil, location: nil, name: nil, posting_url: nil, updated_at: nil)
-        @address = address
-        @created_at = created_at
-        @description = description
-        @id = id
-        @is_active = is_active
-        @location = location
-        @name = name
-        @posting_url = posting_url
-        @updated_at = updated_at
+        sig { params(address: T.nilable(Models::Shared::PropertyAtsJobPostingAddress), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), location: T.nilable(::String), name: T.nilable(::String), posting_url: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(address: nil, created_at: nil, description: nil, id: nil, is_active: nil, location: nil, name: nil, posting_url: nil, updated_at: nil)
+          @address = address
+          @created_at = created_at
+          @description = description
+          @id = id
+          @is_active = is_active
+          @location = location
+          @name = name
+          @posting_url = posting_url
+          @updated_at = updated_at
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @address == other.address
+          return false unless @created_at == other.created_at
+          return false unless @description == other.description
+          return false unless @id == other.id
+          return false unless @is_active == other.is_active
+          return false unless @location == other.location
+          return false unless @name == other.name
+          return false unless @posting_url == other.posting_url
+          return false unless @updated_at == other.updated_at
+          true
+        end
       end
     end
   end

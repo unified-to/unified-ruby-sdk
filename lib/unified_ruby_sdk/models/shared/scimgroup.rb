@@ -5,37 +5,52 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class ScimGroup < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :display_name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('displayName') } }
-
-      field :external_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('externalId') } }
-
-      field :group_type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('groupType') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-      # An array of members
-      field :members, T.nilable(T::Array[::UnifiedRubySDK::Shared::ScimGroupMember]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('members') } }
-
-      field :meta, T.nilable(::UnifiedRubySDK::Shared::PropertyScimGroupMeta), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('meta') } }
-      # Array of schema URIs
-      field :schemas, T.nilable(T::Array[::UnifiedRubySDK::Shared::PropertyScimGroupSchemas]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('schemas') } }
+      class ScimGroup
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(display_name: ::String, external_id: T.nilable(::String), group_type: T.nilable(::String), id: T.nilable(::String), members: T.nilable(T::Array[::UnifiedRubySDK::Shared::ScimGroupMember]), meta: T.nilable(::UnifiedRubySDK::Shared::PropertyScimGroupMeta), schemas: T.nilable(T::Array[::UnifiedRubySDK::Shared::PropertyScimGroupSchemas])).void }
-      def initialize(display_name: nil, external_id: nil, group_type: nil, id: nil, members: nil, meta: nil, schemas: nil)
-        @display_name = display_name
-        @external_id = external_id
-        @group_type = group_type
-        @id = id
-        @members = members
-        @meta = meta
-        @schemas = schemas
+        field :display_name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('displayName') } }
+
+        field :external_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('externalId') } }
+
+        field :group_type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('groupType') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        # An array of members
+        field :members, T.nilable(T::Array[Models::Shared::ScimGroupMember]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('members') } }
+
+        field :meta, T.nilable(Models::Shared::PropertyScimGroupMeta), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('meta') } }
+        # Array of schema URIs
+        field :schemas, T.nilable(T::Array[Models::Shared::PropertyScimGroupSchemas]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('schemas') } }
+
+
+        sig { params(display_name: ::String, external_id: T.nilable(::String), group_type: T.nilable(::String), id: T.nilable(::String), members: T.nilable(T::Array[Models::Shared::ScimGroupMember]), meta: T.nilable(Models::Shared::PropertyScimGroupMeta), schemas: T.nilable(T::Array[Models::Shared::PropertyScimGroupSchemas])).void }
+        def initialize(display_name: nil, external_id: nil, group_type: nil, id: nil, members: nil, meta: nil, schemas: nil)
+          @display_name = display_name
+          @external_id = external_id
+          @group_type = group_type
+          @id = id
+          @members = members
+          @meta = meta
+          @schemas = schemas
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @display_name == other.display_name
+          return false unless @external_id == other.external_id
+          return false unless @group_type == other.group_type
+          return false unless @id == other.id
+          return false unless @members == other.members
+          return false unless @meta == other.meta
+          return false unless @schemas == other.schemas
+          true
+        end
       end
     end
   end

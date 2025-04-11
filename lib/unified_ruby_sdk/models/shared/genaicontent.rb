@@ -5,22 +5,32 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class GenaiContent < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :content, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
-
-      field :role, T.nilable(::UnifiedRubySDK::Shared::Role), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('role'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::Role, true) } }
+      class GenaiContent
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(content: ::String, role: T.nilable(::UnifiedRubySDK::Shared::Role)).void }
-      def initialize(content: nil, role: nil)
-        @content = content
-        @role = role
+        field :content, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
+
+        field :role, T.nilable(Models::Shared::Role), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('role'), 'decoder': Utils.enum_from_string(Models::Shared::Role, true) } }
+
+
+        sig { params(content: ::String, role: T.nilable(Models::Shared::Role)).void }
+        def initialize(content: nil, role: nil)
+          @content = content
+          @role = role
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @content == other.content
+          return false unless @role == other.role
+          true
+        end
       end
     end
   end

@@ -5,22 +5,32 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class PatchUnifiedWebhookRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class PatchUnifiedWebhookRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # ID of the Webhook
-      field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
-      # A webhook is used to POST new/updated information to your server.
-      field :webhook, ::UnifiedRubySDK::Shared::Webhook, { 'request': { 'media_type': 'application/json' } }
+        # ID of the Webhook
+        field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
+        # A webhook is used to POST new/updated information to your server.
+        field :webhook, Models::Shared::Webhook, { 'request': { 'media_type': 'application/json' } }
 
 
-      sig { params(id: ::String, webhook: ::UnifiedRubySDK::Shared::Webhook).void }
-      def initialize(id: nil, webhook: nil)
-        @id = id
-        @webhook = webhook
+        sig { params(id: ::String, webhook: Models::Shared::Webhook).void }
+        def initialize(id: nil, webhook: nil)
+          @id = id
+          @webhook = webhook
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @id == other.id
+          return false unless @webhook == other.webhook
+          true
+        end
       end
     end
   end

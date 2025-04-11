@@ -5,28 +5,40 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
-    # The meeting object, when type = meeting
-    class PropertyCrmEventMeeting < ::Crystalline::FieldAugmented
-      extend T::Sig
+  module Models
+    module Shared
+    
+      # The meeting object, when type = meeting
+      class PropertyCrmEventMeeting
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-      field :end_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :start_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :title, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
+        field :title, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
 
 
-      sig { params(description: T.nilable(::String), end_at: T.nilable(::DateTime), start_at: T.nilable(::DateTime), title: T.nilable(::String)).void }
-      def initialize(description: nil, end_at: nil, start_at: nil, title: nil)
-        @description = description
-        @end_at = end_at
-        @start_at = start_at
-        @title = title
+        sig { params(description: T.nilable(::String), end_at: T.nilable(::DateTime), start_at: T.nilable(::DateTime), title: T.nilable(::String)).void }
+        def initialize(description: nil, end_at: nil, start_at: nil, title: nil)
+          @description = description
+          @end_at = end_at
+          @start_at = start_at
+          @title = title
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @description == other.description
+          return false unless @end_at == other.end_at
+          return false unless @start_at == other.start_at
+          return false unless @title == other.title
+          true
+        end
       end
     end
   end

@@ -5,17 +5,19 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class Origin < T::Enum
-      enums do
-        AGENCY = new('AGENCY')
-        APPLIED = new('APPLIED')
-        INTERNAL = new('INTERNAL')
-        REFERRED = new('REFERRED')
-        SOURCED = new('SOURCED')
-        UNIVERSITY = new('UNIVERSITY')
+      class Origin < T::Enum
+        enums do
+          AGENCY = new('AGENCY')
+          APPLIED = new('APPLIED')
+          INTERNAL = new('INTERNAL')
+          REFERRED = new('REFERRED')
+          SOURCED = new('SOURCED')
+          UNIVERSITY = new('UNIVERSITY')
+        end
       end
     end
   end

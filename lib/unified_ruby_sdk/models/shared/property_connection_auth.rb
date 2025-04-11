@@ -5,88 +5,120 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
-    # An authentication object that represents a specific authorized user's connection to an integration.
-    class PropertyConnectionAuth < ::Crystalline::FieldAugmented
-      extend T::Sig
+  module Models
+    module Shared
+    
+      # An authentication object that represents a specific authorized user's connection to an integration.
+      class PropertyConnectionAuth
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      field :access_token, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('access_token') } }
+        field :access_token, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('access_token') } }
 
-      field :api_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('api_url') } }
+        field :api_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('api_url') } }
 
-      field :app_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('app_id') } }
+        field :app_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('app_id') } }
 
-      field :authorize_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('authorize_url') } }
+        field :authorize_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('authorize_url') } }
 
-      field :client_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('client_id') } }
+        field :client_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('client_id') } }
 
-      field :client_secret, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('client_secret') } }
+        field :client_secret, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('client_secret') } }
 
-      field :consumer_key, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('consumer_key') } }
+        field :consumer_key, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('consumer_key') } }
 
-      field :consumer_secret, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('consumer_secret') } }
+        field :consumer_secret, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('consumer_secret') } }
 
-      field :dev_api_key, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('dev_api_key') } }
+        field :dev_api_key, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('dev_api_key') } }
 
-      field :emails, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
+        field :emails, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
 
-      field :expires_in, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_in') } }
+        field :expires_in, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_in') } }
 
-      field :expiry_date, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expiry_date'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :expiry_date, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expiry_date'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :key, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('key') } }
+        field :key, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('key') } }
 
-      field :meta, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('meta') } }
+        field :meta, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('meta') } }
 
-      field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-      # When integration.auth_type = "other", this field contains the authentication credentials in the same order as token_names
-      field :other_auth_info, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('other_auth_info') } }
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        # When integration.auth_type = "other", this field contains the authentication credentials in the same order as token_names
+        field :other_auth_info, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('other_auth_info') } }
 
-      field :pem, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pem') } }
+        field :pem, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pem') } }
 
-      field :refresh_token, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refresh_token') } }
+        field :refresh_token, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refresh_token') } }
 
-      field :refresh_token_expires_date, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refresh_token_expires_date'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :refresh_token_expires_date, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refresh_token_expires_date'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :refresh_token_expires_in, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refresh_token_expires_in') } }
+        field :refresh_token_expires_in, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refresh_token_expires_in') } }
 
-      field :state, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('state') } }
+        field :state, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('state') } }
 
-      field :token, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('token') } }
+        field :token, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('token') } }
 
-      field :token_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('token_url') } }
+        field :token_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('token_url') } }
 
-      field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
+        field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
 
-      sig { params(access_token: T.nilable(::String), api_url: T.nilable(::String), app_id: T.nilable(::String), authorize_url: T.nilable(::String), client_id: T.nilable(::String), client_secret: T.nilable(::String), consumer_key: T.nilable(::String), consumer_secret: T.nilable(::String), dev_api_key: T.nilable(::String), emails: T.nilable(T::Array[::String]), expires_in: T.nilable(::Float), expiry_date: T.nilable(::DateTime), key: T.nilable(::String), meta: T.nilable(T::Hash[Symbol, ::Object]), name: T.nilable(::String), other_auth_info: T.nilable(T::Array[::String]), pem: T.nilable(::String), refresh_token: T.nilable(::String), refresh_token_expires_date: T.nilable(::DateTime), refresh_token_expires_in: T.nilable(::Float), state: T.nilable(::String), token: T.nilable(::String), token_url: T.nilable(::String), user_id: T.nilable(::String)).void }
-      def initialize(access_token: nil, api_url: nil, app_id: nil, authorize_url: nil, client_id: nil, client_secret: nil, consumer_key: nil, consumer_secret: nil, dev_api_key: nil, emails: nil, expires_in: nil, expiry_date: nil, key: nil, meta: nil, name: nil, other_auth_info: nil, pem: nil, refresh_token: nil, refresh_token_expires_date: nil, refresh_token_expires_in: nil, state: nil, token: nil, token_url: nil, user_id: nil)
-        @access_token = access_token
-        @api_url = api_url
-        @app_id = app_id
-        @authorize_url = authorize_url
-        @client_id = client_id
-        @client_secret = client_secret
-        @consumer_key = consumer_key
-        @consumer_secret = consumer_secret
-        @dev_api_key = dev_api_key
-        @emails = emails
-        @expires_in = expires_in
-        @expiry_date = expiry_date
-        @key = key
-        @meta = meta
-        @name = name
-        @other_auth_info = other_auth_info
-        @pem = pem
-        @refresh_token = refresh_token
-        @refresh_token_expires_date = refresh_token_expires_date
-        @refresh_token_expires_in = refresh_token_expires_in
-        @state = state
-        @token = token
-        @token_url = token_url
-        @user_id = user_id
+        sig { params(access_token: T.nilable(::String), api_url: T.nilable(::String), app_id: T.nilable(::String), authorize_url: T.nilable(::String), client_id: T.nilable(::String), client_secret: T.nilable(::String), consumer_key: T.nilable(::String), consumer_secret: T.nilable(::String), dev_api_key: T.nilable(::String), emails: T.nilable(T::Array[::String]), expires_in: T.nilable(::Float), expiry_date: T.nilable(::DateTime), key: T.nilable(::String), meta: T.nilable(T::Hash[Symbol, ::Object]), name: T.nilable(::String), other_auth_info: T.nilable(T::Array[::String]), pem: T.nilable(::String), refresh_token: T.nilable(::String), refresh_token_expires_date: T.nilable(::DateTime), refresh_token_expires_in: T.nilable(::Float), state: T.nilable(::String), token: T.nilable(::String), token_url: T.nilable(::String), user_id: T.nilable(::String)).void }
+        def initialize(access_token: nil, api_url: nil, app_id: nil, authorize_url: nil, client_id: nil, client_secret: nil, consumer_key: nil, consumer_secret: nil, dev_api_key: nil, emails: nil, expires_in: nil, expiry_date: nil, key: nil, meta: nil, name: nil, other_auth_info: nil, pem: nil, refresh_token: nil, refresh_token_expires_date: nil, refresh_token_expires_in: nil, state: nil, token: nil, token_url: nil, user_id: nil)
+          @access_token = access_token
+          @api_url = api_url
+          @app_id = app_id
+          @authorize_url = authorize_url
+          @client_id = client_id
+          @client_secret = client_secret
+          @consumer_key = consumer_key
+          @consumer_secret = consumer_secret
+          @dev_api_key = dev_api_key
+          @emails = emails
+          @expires_in = expires_in
+          @expiry_date = expiry_date
+          @key = key
+          @meta = meta
+          @name = name
+          @other_auth_info = other_auth_info
+          @pem = pem
+          @refresh_token = refresh_token
+          @refresh_token_expires_date = refresh_token_expires_date
+          @refresh_token_expires_in = refresh_token_expires_in
+          @state = state
+          @token = token
+          @token_url = token_url
+          @user_id = user_id
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @access_token == other.access_token
+          return false unless @api_url == other.api_url
+          return false unless @app_id == other.app_id
+          return false unless @authorize_url == other.authorize_url
+          return false unless @client_id == other.client_id
+          return false unless @client_secret == other.client_secret
+          return false unless @consumer_key == other.consumer_key
+          return false unless @consumer_secret == other.consumer_secret
+          return false unless @dev_api_key == other.dev_api_key
+          return false unless @emails == other.emails
+          return false unless @expires_in == other.expires_in
+          return false unless @expiry_date == other.expiry_date
+          return false unless @key == other.key
+          return false unless @meta == other.meta
+          return false unless @name == other.name
+          return false unless @other_auth_info == other.other_auth_info
+          return false unless @pem == other.pem
+          return false unless @refresh_token == other.refresh_token
+          return false unless @refresh_token_expires_date == other.refresh_token_expires_date
+          return false unless @refresh_token_expires_in == other.refresh_token_expires_in
+          return false unless @state == other.state
+          return false unless @token == other.token
+          return false unless @token_url == other.token_url
+          return false unless @user_id == other.user_id
+          true
+        end
       end
     end
   end

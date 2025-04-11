@@ -5,25 +5,36 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class MessagingMember < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :email, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
-
-      field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
-      field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
+      class MessagingMember
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(email: T.nilable(::String), name: T.nilable(::String), user_id: T.nilable(::String)).void }
-      def initialize(email: nil, name: nil, user_id: nil)
-        @email = email
-        @name = name
-        @user_id = user_id
+        field :email, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
+
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
+
+
+        sig { params(email: T.nilable(::String), name: T.nilable(::String), user_id: T.nilable(::String)).void }
+        def initialize(email: nil, name: nil, user_id: nil)
+          @email = email
+          @name = name
+          @user_id = user_id
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @email == other.email
+          return false unless @name == other.name
+          return false unless @user_id == other.user_id
+          true
+        end
       end
     end
   end

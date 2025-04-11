@@ -5,16 +5,18 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AtsCompensationType < T::Enum
-      enums do
-        SALARY = new('SALARY')
-        BONUS = new('BONUS')
-        STOCK_OPTIONS = new('STOCK_OPTIONS')
-        EQUITY = new('EQUITY')
-        OTHER = new('OTHER')
+      class AtsCompensationType < T::Enum
+        enums do
+          SALARY = new('SALARY')
+          BONUS = new('BONUS')
+          STOCK_OPTIONS = new('STOCK_OPTIONS')
+          EQUITY = new('EQUITY')
+          OTHER = new('OTHER')
+        end
       end
     end
   end

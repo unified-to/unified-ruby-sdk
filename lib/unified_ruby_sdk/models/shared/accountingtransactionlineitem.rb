@@ -5,40 +5,56 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AccountingTransactionLineItem < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :account_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_id') } }
-
-      field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
-      field :object_type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_type') } }
-
-      field :total_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
-
-      field :unit_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unit_amount') } }
-
-      field :unit_quantity, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unit_quantity') } }
+      class AccountingTransactionLineItem
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(account_id: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), name: T.nilable(::String), object_type: T.nilable(::String), total_amount: T.nilable(::Float), unit_amount: T.nilable(::Float), unit_quantity: T.nilable(::Float)).void }
-      def initialize(account_id: nil, description: nil, id: nil, name: nil, object_type: nil, total_amount: nil, unit_amount: nil, unit_quantity: nil)
-        @account_id = account_id
-        @description = description
-        @id = id
-        @name = name
-        @object_type = object_type
-        @total_amount = total_amount
-        @unit_amount = unit_amount
-        @unit_quantity = unit_quantity
+        field :account_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_id') } }
+
+        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :object_type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_type') } }
+
+        field :total_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
+
+        field :unit_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unit_amount') } }
+
+        field :unit_quantity, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unit_quantity') } }
+
+
+        sig { params(account_id: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), name: T.nilable(::String), object_type: T.nilable(::String), total_amount: T.nilable(::Float), unit_amount: T.nilable(::Float), unit_quantity: T.nilable(::Float)).void }
+        def initialize(account_id: nil, description: nil, id: nil, name: nil, object_type: nil, total_amount: nil, unit_amount: nil, unit_quantity: nil)
+          @account_id = account_id
+          @description = description
+          @id = id
+          @name = name
+          @object_type = object_type
+          @total_amount = total_amount
+          @unit_amount = unit_amount
+          @unit_quantity = unit_quantity
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @account_id == other.account_id
+          return false unless @description == other.description
+          return false unless @id == other.id
+          return false unless @name == other.name
+          return false unless @object_type == other.object_type
+          return false unless @total_amount == other.total_amount
+          return false unless @unit_amount == other.unit_amount
+          return false unless @unit_quantity == other.unit_quantity
+          true
+        end
       end
     end
   end

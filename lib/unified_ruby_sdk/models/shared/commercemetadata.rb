@@ -5,37 +5,52 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class CommerceMetadata < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :extra_data, T.nilable(::UnifiedRubySDK::Shared::CommerceMetadataExtraData), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('extra_data') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :key, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('key') } }
-
-      field :namespace, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('namespace') } }
-
-      field :slug, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('slug') } }
-
-      field :type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
-
-      field :value, T.nilable(::UnifiedRubySDK::Shared::CommerceMetadataValue), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
+      class CommerceMetadata
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(extra_data: T.nilable(::UnifiedRubySDK::Shared::CommerceMetadataExtraData), id: T.nilable(::String), key: T.nilable(::String), namespace: T.nilable(::String), slug: T.nilable(::String), type: T.nilable(::String), value: T.nilable(::UnifiedRubySDK::Shared::CommerceMetadataValue)).void }
-      def initialize(extra_data: nil, id: nil, key: nil, namespace: nil, slug: nil, type: nil, value: nil)
-        @extra_data = extra_data
-        @id = id
-        @key = key
-        @namespace = namespace
-        @slug = slug
-        @type = type
-        @value = value
+        field :extra_data, T.nilable(Models::Shared::CommerceMetadataExtraData), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('extra_data') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :key, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('key') } }
+
+        field :namespace, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('namespace') } }
+
+        field :slug, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('slug') } }
+
+        field :type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
+
+        field :value, T.nilable(Models::Shared::CommerceMetadataValue), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
+
+
+        sig { params(extra_data: T.nilable(Models::Shared::CommerceMetadataExtraData), id: T.nilable(::String), key: T.nilable(::String), namespace: T.nilable(::String), slug: T.nilable(::String), type: T.nilable(::String), value: T.nilable(Models::Shared::CommerceMetadataValue)).void }
+        def initialize(extra_data: nil, id: nil, key: nil, namespace: nil, slug: nil, type: nil, value: nil)
+          @extra_data = extra_data
+          @id = id
+          @key = key
+          @namespace = namespace
+          @slug = slug
+          @type = type
+          @value = value
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @extra_data == other.extra_data
+          return false unless @id == other.id
+          return false unless @key == other.key
+          return false unless @namespace == other.namespace
+          return false unless @slug == other.slug
+          return false unless @type == other.type
+          return false unless @value == other.value
+          true
+        end
       end
     end
   end

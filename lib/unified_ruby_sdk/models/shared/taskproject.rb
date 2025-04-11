@@ -5,46 +5,64 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class TaskProject < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
-      field :group_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_ids') } }
-
-      field :has_tasks, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_tasks') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
-      field :parent_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
-
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :user_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
+      class TaskProject
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), group_ids: T.nilable(T::Array[::String]), has_tasks: T.nilable(T::Boolean), id: T.nilable(::String), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
-      def initialize(created_at: nil, description: nil, group_ids: nil, has_tasks: nil, id: nil, name: nil, parent_id: nil, raw: nil, updated_at: nil, user_ids: nil)
-        @created_at = created_at
-        @description = description
-        @group_ids = group_ids
-        @has_tasks = has_tasks
-        @id = id
-        @name = name
-        @parent_id = parent_id
-        @raw = raw
-        @updated_at = updated_at
-        @user_ids = user_ids
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+
+        field :group_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_ids') } }
+
+        field :has_tasks, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_tasks') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :parent_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :user_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
+
+
+        sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), group_ids: T.nilable(T::Array[::String]), has_tasks: T.nilable(T::Boolean), id: T.nilable(::String), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
+        def initialize(created_at: nil, description: nil, group_ids: nil, has_tasks: nil, id: nil, name: nil, parent_id: nil, raw: nil, updated_at: nil, user_ids: nil)
+          @created_at = created_at
+          @description = description
+          @group_ids = group_ids
+          @has_tasks = has_tasks
+          @id = id
+          @name = name
+          @parent_id = parent_id
+          @raw = raw
+          @updated_at = updated_at
+          @user_ids = user_ids
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @created_at == other.created_at
+          return false unless @description == other.description
+          return false unless @group_ids == other.group_ids
+          return false unless @has_tasks == other.has_tasks
+          return false unless @id == other.id
+          return false unless @name == other.name
+          return false unless @parent_id == other.parent_id
+          return false unless @raw == other.raw
+          return false unless @updated_at == other.updated_at
+          return false unless @user_ids == other.user_ids
+          true
+        end
       end
     end
   end

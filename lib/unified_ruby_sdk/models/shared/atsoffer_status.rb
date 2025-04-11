@@ -5,15 +5,17 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AtsOfferStatus < T::Enum
-      enums do
-        CREATED = new('CREATED')
-        SENT = new('SENT')
-        ACCEPTED = new('ACCEPTED')
-        REJECTED = new('REJECTED')
+      class AtsOfferStatus < T::Enum
+        enums do
+          CREATED = new('CREATED')
+          SENT = new('SENT')
+          ACCEPTED = new('ACCEPTED')
+          REJECTED = new('REJECTED')
+        end
       end
     end
   end

@@ -5,14 +5,16 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class ListOrder < T::Enum
-      enums do
-        SUPPORTED_REQUIRED = new('supported-required')
-        SUPPORTED = new('supported')
-        NOT_SUPPORTED = new('not-supported')
+      class ListOrder < T::Enum
+        enums do
+          SUPPORTED_REQUIRED = new('supported-required')
+          SUPPORTED = new('supported')
+          NOT_SUPPORTED = new('not-supported')
+        end
       end
     end
   end

@@ -5,14 +5,16 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class Event < T::Enum
-      enums do
-        UPDATED = new('updated')
-        CREATED = new('created')
-        DELETED = new('deleted')
+      class Event < T::Enum
+        enums do
+          UPDATED = new('updated')
+          CREATED = new('created')
+          DELETED = new('deleted')
+        end
       end
     end
   end

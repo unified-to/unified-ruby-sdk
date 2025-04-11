@@ -5,22 +5,32 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class CrmEventFormOption < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :label, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('label') } }
-
-      field :value, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
+      class CrmEventFormOption
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(label: T.nilable(::String), value: T.nilable(::String)).void }
-      def initialize(label: nil, value: nil)
-        @label = label
-        @value = value
+        field :label, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('label') } }
+
+        field :value, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
+
+
+        sig { params(label: T.nilable(::String), value: T.nilable(::String)).void }
+        def initialize(label: nil, value: nil)
+          @label = label
+          @value = value
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @label == other.label
+          return false unless @value == other.value
+          true
+        end
       end
     end
   end

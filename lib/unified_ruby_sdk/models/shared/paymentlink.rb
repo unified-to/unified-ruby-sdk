@@ -5,55 +5,76 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class PaymentLink < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
-
-      field :contact_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
-
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
-
-      field :is_chargeable_now, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_chargeable_now') } }
-
-      field :lineitems, T.nilable(T::Array[::UnifiedRubySDK::Shared::PaymentLineitem]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lineitems') } }
-
-      field :payment_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_id') } }
-
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :success_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('success_url') } }
-
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
+      class PaymentLink
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(amount: T.nilable(::Float), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_chargeable_now: T.nilable(T::Boolean), lineitems: T.nilable(T::Array[::UnifiedRubySDK::Shared::PaymentLineitem]), payment_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), success_url: T.nilable(::String), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
-      def initialize(amount: nil, contact_id: nil, created_at: nil, currency: nil, id: nil, is_active: nil, is_chargeable_now: nil, lineitems: nil, payment_id: nil, raw: nil, success_url: nil, updated_at: nil, url: nil)
-        @amount = amount
-        @contact_id = contact_id
-        @created_at = created_at
-        @currency = currency
-        @id = id
-        @is_active = is_active
-        @is_chargeable_now = is_chargeable_now
-        @lineitems = lineitems
-        @payment_id = payment_id
-        @raw = raw
-        @success_url = success_url
-        @updated_at = updated_at
-        @url = url
+        field :amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
+
+        field :contact_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
+
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
+
+        field :is_chargeable_now, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_chargeable_now') } }
+
+        field :lineitems, T.nilable(T::Array[Models::Shared::PaymentLineitem]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lineitems') } }
+
+        field :payment_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_id') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :success_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('success_url') } }
+
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
+
+
+        sig { params(amount: T.nilable(::Float), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_chargeable_now: T.nilable(T::Boolean), lineitems: T.nilable(T::Array[Models::Shared::PaymentLineitem]), payment_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), success_url: T.nilable(::String), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
+        def initialize(amount: nil, contact_id: nil, created_at: nil, currency: nil, id: nil, is_active: nil, is_chargeable_now: nil, lineitems: nil, payment_id: nil, raw: nil, success_url: nil, updated_at: nil, url: nil)
+          @amount = amount
+          @contact_id = contact_id
+          @created_at = created_at
+          @currency = currency
+          @id = id
+          @is_active = is_active
+          @is_chargeable_now = is_chargeable_now
+          @lineitems = lineitems
+          @payment_id = payment_id
+          @raw = raw
+          @success_url = success_url
+          @updated_at = updated_at
+          @url = url
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @amount == other.amount
+          return false unless @contact_id == other.contact_id
+          return false unless @created_at == other.created_at
+          return false unless @currency == other.currency
+          return false unless @id == other.id
+          return false unless @is_active == other.is_active
+          return false unless @is_chargeable_now == other.is_chargeable_now
+          return false unless @lineitems == other.lineitems
+          return false unless @payment_id == other.payment_id
+          return false unless @raw == other.raw
+          return false unless @success_url == other.success_url
+          return false unless @updated_at == other.updated_at
+          return false unless @url == other.url
+          true
+        end
       end
     end
   end

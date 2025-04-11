@@ -5,49 +5,68 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class ListKmsCommentsRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class ListKmsCommentsRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # ID of the connection
-      field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-      # Comma-delimited fields to return
-      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        # ID of the connection
+        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # Comma-delimited fields to return
+        field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
-      field :limit, T.nilable(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
+        field :limit, T.nilable(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
 
-      field :offset, T.nilable(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
+        field :offset, T.nilable(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
 
-      field :order, T.nilable(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
+        field :order, T.nilable(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
 
-      field :page_id, T.nilable(::String), { 'query_param': { 'field_name': 'page_id', 'style': 'form', 'explode': true } }
+        field :page_id, T.nilable(::String), { 'query_param': { 'field_name': 'page_id', 'style': 'form', 'explode': true } }
 
-      field :parent_id, T.nilable(::String), { 'query_param': { 'field_name': 'parent_id', 'style': 'form', 'explode': true } }
-      # Query string to search. eg. email address or name
-      field :query, T.nilable(::String), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
+        field :parent_id, T.nilable(::String), { 'query_param': { 'field_name': 'parent_id', 'style': 'form', 'explode': true } }
+        # Query string to search. eg. email address or name
+        field :query, T.nilable(::String), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
 
-      field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
+        field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
 
-      field :type, T.nilable(::String), { 'query_param': { 'field_name': 'type', 'style': 'form', 'explode': true } }
-      # Return only results whose updated date is equal or greater to this value
-      field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
+        field :type, T.nilable(::String), { 'query_param': { 'field_name': 'type', 'style': 'form', 'explode': true } }
+        # Return only results whose updated date is equal or greater to this value
+        field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), page_id: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), sort: T.nilable(::String), type: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
-      def initialize(connection_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, page_id: nil, parent_id: nil, query: nil, sort: nil, type: nil, updated_gte: nil)
-        @connection_id = connection_id
-        @fields_ = fields_
-        @limit = limit
-        @offset = offset
-        @order = order
-        @page_id = page_id
-        @parent_id = parent_id
-        @query = query
-        @sort = sort
-        @type = type
-        @updated_gte = updated_gte
+        sig { params(connection_id: ::String, fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), page_id: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), sort: T.nilable(::String), type: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
+        def initialize(connection_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, page_id: nil, parent_id: nil, query: nil, sort: nil, type: nil, updated_gte: nil)
+          @connection_id = connection_id
+          @fields_ = fields_
+          @limit = limit
+          @offset = offset
+          @order = order
+          @page_id = page_id
+          @parent_id = parent_id
+          @query = query
+          @sort = sort
+          @type = type
+          @updated_gte = updated_gte
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @connection_id == other.connection_id
+          return false unless @fields_ == other.fields_
+          return false unless @limit == other.limit
+          return false unless @offset == other.offset
+          return false unless @order == other.order
+          return false unless @page_id == other.page_id
+          return false unless @parent_id == other.parent_id
+          return false unless @query == other.query
+          return false unless @sort == other.sort
+          return false unless @type == other.type
+          return false unless @updated_gte == other.updated_gte
+          true
+        end
       end
     end
   end

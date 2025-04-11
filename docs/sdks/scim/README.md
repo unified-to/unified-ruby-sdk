@@ -28,12 +28,12 @@ Create group
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.scim.create_scim_groups(scim_group=::UnifiedRubySDK::Shared::ScimGroup.new(
+res = s.scim.create_scim_groups(scim_group=Models::Shared::ScimGroup.new(
   display_name: "Bert89",
 ), connection_id="<id>")
 
@@ -45,14 +45,14 @@ end
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `scim_group`                                                            | [::UnifiedRubySDK::Shared::ScimGroup](../../models/shared/scimgroup.md) | :heavy_check_mark:                                                      | N/A                                                                     |
-| `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
+| Parameter                                                     | Type                                                          | Required                                                      | Description                                                   |
+| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| `scim_group`                                                  | [Models::Shared::ScimGroup](../../models/shared/scimgroup.md) | :heavy_check_mark:                                            | N/A                                                           |
+| `connection_id`                                               | *::String*                                                    | :heavy_check_mark:                                            | ID of the connection                                          |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::CreateScimGroupsResponse)](../../models/operations/createscimgroupsresponse.md)**
+**[T.nilable(Models::Operations::CreateScimGroupsResponse)](../../models/operations/createscimgroupsresponse.md)**
 
 
 
@@ -66,13 +66,13 @@ Create user
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-req = ::UnifiedRubySDK::Operations::CreateScimUsersRequest.new(
-  scim_user: ::UnifiedRubySDK::Shared::ScimUser.new(),
+req = Models::Operations::CreateScimUsersRequest.new(
+  scim_user: Models::Shared::ScimUser.new(),
   connection_id: "<id>",
 )
 
@@ -86,13 +86,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                 | [::UnifiedRubySDK::Operations::CreateScimUsersRequest](../../models/operations/createscimusersrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [Models::Operations::CreateScimUsersRequest](../../models/operations/createscimusersrequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::CreateScimUsersResponse)](../../models/operations/createscimusersresponse.md)**
+**[T.nilable(Models::Operations::CreateScimUsersResponse)](../../models/operations/createscimusersresponse.md)**
 
 
 
@@ -106,7 +106,7 @@ Get group
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -128,7 +128,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::GetScimGroupsResponse)](../../models/operations/getscimgroupsresponse.md)**
+**[T.nilable(Models::Operations::GetScimGroupsResponse)](../../models/operations/getscimgroupsresponse.md)**
 
 
 
@@ -142,7 +142,7 @@ Get user
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -164,7 +164,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::GetScimUsersResponse)](../../models/operations/getscimusersresponse.md)**
+**[T.nilable(Models::Operations::GetScimUsersResponse)](../../models/operations/getscimusersresponse.md)**
 
 
 
@@ -178,12 +178,12 @@ List groups
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-req = ::UnifiedRubySDK::Operations::ListScimGroupsRequest.new(
+req = Models::Operations::ListScimGroupsRequest.new(
   connection_id: "<id>",
 )
 
@@ -197,13 +197,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                               | [::UnifiedRubySDK::Operations::ListScimGroupsRequest](../../models/operations/listscimgroupsrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [Models::Operations::ListScimGroupsRequest](../../models/operations/listscimgroupsrequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::ListScimGroupsResponse)](../../models/operations/listscimgroupsresponse.md)**
+**[T.nilable(Models::Operations::ListScimGroupsResponse)](../../models/operations/listscimgroupsresponse.md)**
 
 
 
@@ -217,12 +217,12 @@ List users
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-req = ::UnifiedRubySDK::Operations::ListScimUsersRequest.new(
+req = Models::Operations::ListScimUsersRequest.new(
   connection_id: "<id>",
 )
 
@@ -236,13 +236,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [::UnifiedRubySDK::Operations::ListScimUsersRequest](../../models/operations/listscimusersrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [Models::Operations::ListScimUsersRequest](../../models/operations/listscimusersrequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::ListScimUsersResponse)](../../models/operations/listscimusersresponse.md)**
+**[T.nilable(Models::Operations::ListScimUsersResponse)](../../models/operations/listscimusersresponse.md)**
 
 
 
@@ -256,12 +256,12 @@ Update group
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.scim.patch_scim_groups(scim_group=::UnifiedRubySDK::Shared::ScimGroup.new(
+res = s.scim.patch_scim_groups(scim_group=Models::Shared::ScimGroup.new(
   display_name: "Damon_Rutherford93",
 ), connection_id="<id>", id="<id>")
 
@@ -273,15 +273,15 @@ end
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `scim_group`                                                            | [::UnifiedRubySDK::Shared::ScimGroup](../../models/shared/scimgroup.md) | :heavy_check_mark:                                                      | N/A                                                                     |
-| `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
-| `id`                                                                    | *::String*                                                              | :heavy_check_mark:                                                      | ID of the Group                                                         |
+| Parameter                                                     | Type                                                          | Required                                                      | Description                                                   |
+| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| `scim_group`                                                  | [Models::Shared::ScimGroup](../../models/shared/scimgroup.md) | :heavy_check_mark:                                            | N/A                                                           |
+| `connection_id`                                               | *::String*                                                    | :heavy_check_mark:                                            | ID of the connection                                          |
+| `id`                                                          | *::String*                                                    | :heavy_check_mark:                                            | ID of the Group                                               |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::PatchScimGroupsResponse)](../../models/operations/patchscimgroupsresponse.md)**
+**[T.nilable(Models::Operations::PatchScimGroupsResponse)](../../models/operations/patchscimgroupsresponse.md)**
 
 
 
@@ -295,12 +295,12 @@ Update user
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.scim.patch_scim_users(scim_user=::UnifiedRubySDK::Shared::ScimUser.new(), connection_id="<id>", id="<id>")
+res = s.scim.patch_scim_users(scim_user=Models::Shared::ScimUser.new(), connection_id="<id>", id="<id>")
 
 if ! res.scim_user.nil?
   # handle response
@@ -310,15 +310,15 @@ end
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `scim_user`                                                           | [::UnifiedRubySDK::Shared::ScimUser](../../models/shared/scimuser.md) | :heavy_check_mark:                                                    | N/A                                                                   |
-| `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
-| `id`                                                                  | *::String*                                                            | :heavy_check_mark:                                                    | ID of the User                                                        |
+| Parameter                                                   | Type                                                        | Required                                                    | Description                                                 |
+| ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
+| `scim_user`                                                 | [Models::Shared::ScimUser](../../models/shared/scimuser.md) | :heavy_check_mark:                                          | N/A                                                         |
+| `connection_id`                                             | *::String*                                                  | :heavy_check_mark:                                          | ID of the connection                                        |
+| `id`                                                        | *::String*                                                  | :heavy_check_mark:                                          | ID of the User                                              |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::PatchScimUsersResponse)](../../models/operations/patchscimusersresponse.md)**
+**[T.nilable(Models::Operations::PatchScimUsersResponse)](../../models/operations/patchscimusersresponse.md)**
 
 
 
@@ -332,7 +332,7 @@ Delete group
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -354,7 +354,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::RemoveScimGroupsResponse)](../../models/operations/removescimgroupsresponse.md)**
+**[T.nilable(Models::Operations::RemoveScimGroupsResponse)](../../models/operations/removescimgroupsresponse.md)**
 
 
 
@@ -368,7 +368,7 @@ Delete user
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -390,7 +390,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::RemoveScimUsersResponse)](../../models/operations/removescimusersresponse.md)**
+**[T.nilable(Models::Operations::RemoveScimUsersResponse)](../../models/operations/removescimusersresponse.md)**
 
 
 
@@ -404,12 +404,12 @@ Update group
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.scim.update_scim_groups(scim_group=::UnifiedRubySDK::Shared::ScimGroup.new(
+res = s.scim.update_scim_groups(scim_group=Models::Shared::ScimGroup.new(
   display_name: "Frederic.Reichel",
 ), connection_id="<id>", id="<id>")
 
@@ -421,15 +421,15 @@ end
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `scim_group`                                                            | [::UnifiedRubySDK::Shared::ScimGroup](../../models/shared/scimgroup.md) | :heavy_check_mark:                                                      | N/A                                                                     |
-| `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
-| `id`                                                                    | *::String*                                                              | :heavy_check_mark:                                                      | ID of the Group                                                         |
+| Parameter                                                     | Type                                                          | Required                                                      | Description                                                   |
+| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| `scim_group`                                                  | [Models::Shared::ScimGroup](../../models/shared/scimgroup.md) | :heavy_check_mark:                                            | N/A                                                           |
+| `connection_id`                                               | *::String*                                                    | :heavy_check_mark:                                            | ID of the connection                                          |
+| `id`                                                          | *::String*                                                    | :heavy_check_mark:                                            | ID of the Group                                               |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::UpdateScimGroupsResponse)](../../models/operations/updatescimgroupsresponse.md)**
+**[T.nilable(Models::Operations::UpdateScimGroupsResponse)](../../models/operations/updatescimgroupsresponse.md)**
 
 
 
@@ -443,12 +443,12 @@ Update user
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.scim.update_scim_users(scim_user=::UnifiedRubySDK::Shared::ScimUser.new(), connection_id="<id>", id="<id>")
+res = s.scim.update_scim_users(scim_user=Models::Shared::ScimUser.new(), connection_id="<id>", id="<id>")
 
 if ! res.scim_user.nil?
   # handle response
@@ -458,13 +458,13 @@ end
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `scim_user`                                                           | [::UnifiedRubySDK::Shared::ScimUser](../../models/shared/scimuser.md) | :heavy_check_mark:                                                    | N/A                                                                   |
-| `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
-| `id`                                                                  | *::String*                                                            | :heavy_check_mark:                                                    | ID of the User                                                        |
+| Parameter                                                   | Type                                                        | Required                                                    | Description                                                 |
+| ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
+| `scim_user`                                                 | [Models::Shared::ScimUser](../../models/shared/scimuser.md) | :heavy_check_mark:                                          | N/A                                                         |
+| `connection_id`                                             | *::String*                                                  | :heavy_check_mark:                                          | ID of the connection                                        |
+| `id`                                                        | *::String*                                                  | :heavy_check_mark:                                          | ID of the User                                              |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::UpdateScimUsersResponse)](../../models/operations/updatescimusersresponse.md)**
+**[T.nilable(Models::Operations::UpdateScimUsersResponse)](../../models/operations/updatescimusersresponse.md)**
 

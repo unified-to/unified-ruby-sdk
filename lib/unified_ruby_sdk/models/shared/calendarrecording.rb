@@ -5,46 +5,64 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class CalendarRecording < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :end_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :event_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('event_id') } }
-
-      field :expires_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :media, T.nilable(T::Array[::UnifiedRubySDK::Shared::CalendarRecordingMedia]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
-
-      field :raw, T.nilable(::UnifiedRubySDK::Shared::CalendarRecordingRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :start_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
+      class CalendarRecording
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), event_id: T.nilable(::String), expires_at: T.nilable(::DateTime), id: T.nilable(::String), media: T.nilable(T::Array[::UnifiedRubySDK::Shared::CalendarRecordingMedia]), raw: T.nilable(::UnifiedRubySDK::Shared::CalendarRecordingRaw), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
-      def initialize(created_at: nil, end_at: nil, event_id: nil, expires_at: nil, id: nil, media: nil, raw: nil, start_at: nil, updated_at: nil, web_url: nil)
-        @created_at = created_at
-        @end_at = end_at
-        @event_id = event_id
-        @expires_at = expires_at
-        @id = id
-        @media = media
-        @raw = raw
-        @start_at = start_at
-        @updated_at = updated_at
-        @web_url = web_url
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :end_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :event_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('event_id') } }
+
+        field :expires_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :media, T.nilable(T::Array[Models::Shared::CalendarRecordingMedia]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :start_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
+
+
+        sig { params(created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), event_id: T.nilable(::String), expires_at: T.nilable(::DateTime), id: T.nilable(::String), media: T.nilable(T::Array[Models::Shared::CalendarRecordingMedia]), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
+        def initialize(created_at: nil, end_at: nil, event_id: nil, expires_at: nil, id: nil, media: nil, raw: nil, start_at: nil, updated_at: nil, web_url: nil)
+          @created_at = created_at
+          @end_at = end_at
+          @event_id = event_id
+          @expires_at = expires_at
+          @id = id
+          @media = media
+          @raw = raw
+          @start_at = start_at
+          @updated_at = updated_at
+          @web_url = web_url
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @created_at == other.created_at
+          return false unless @end_at == other.end_at
+          return false unless @event_id == other.event_id
+          return false unless @expires_at == other.expires_at
+          return false unless @id == other.id
+          return false unless @media == other.media
+          return false unless @raw == other.raw
+          return false unless @start_at == other.start_at
+          return false unless @updated_at == other.updated_at
+          return false unless @web_url == other.web_url
+          true
+        end
       end
     end
   end

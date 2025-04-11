@@ -5,14 +5,16 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class SexualOrientation < T::Enum
-      enums do
-        QUEER = new('Queer')
-        HETEROSEXUAL = new('Heterosexual')
-        STRAIGHT = new('Straight')
+      class SexualOrientation < T::Enum
+        enums do
+          QUEER = new('Queer')
+          HETEROSEXUAL = new('Heterosexual')
+          STRAIGHT = new('Straight')
+        end
       end
     end
   end

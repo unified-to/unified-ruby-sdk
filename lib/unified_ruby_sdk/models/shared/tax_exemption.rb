@@ -5,22 +5,24 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class TaxExemption < T::Enum
-      enums do
-        FEDERAL_GOV = new('FEDERAL_GOV')
-        REGION_GOV = new('REGION_GOV')
-        LOCAL_GOV = new('LOCAL_GOV')
-        TRIBAL_GOV = new('TRIBAL_GOV')
-        CHARITABLE_ORG = new('CHARITABLE_ORG')
-        RELIGIOUS_ORG = new('RELIGIOUS_ORG')
-        EDUCATIONAL_ORG = new('EDUCATIONAL_ORG')
-        MEDICAL_ORG = new('MEDICAL_ORG')
-        RESALE = new('RESALE')
-        FOREIGN = new('FOREIGN')
-        OTHER = new('OTHER')
+      class TaxExemption < T::Enum
+        enums do
+          FEDERAL_GOV = new('FEDERAL_GOV')
+          REGION_GOV = new('REGION_GOV')
+          LOCAL_GOV = new('LOCAL_GOV')
+          TRIBAL_GOV = new('TRIBAL_GOV')
+          CHARITABLE_ORG = new('CHARITABLE_ORG')
+          RELIGIOUS_ORG = new('RELIGIOUS_ORG')
+          EDUCATIONAL_ORG = new('EDUCATIONAL_ORG')
+          MEDICAL_ORG = new('MEDICAL_ORG')
+          RESALE = new('RESALE')
+          FOREIGN = new('FOREIGN')
+          OTHER = new('OTHER')
+        end
       end
     end
   end

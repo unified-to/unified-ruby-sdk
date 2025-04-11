@@ -5,40 +5,56 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class CommerceLocation < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
-      field :address, T.nilable(::UnifiedRubySDK::Shared::PropertyCommerceLocationAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
-
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
-
-      field :raw, T.nilable(::UnifiedRubySDK::Shared::CommerceLocationRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      class CommerceLocation
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(name: ::String, address: T.nilable(::UnifiedRubySDK::Shared::PropertyCommerceLocationAddress), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), raw: T.nilable(::UnifiedRubySDK::Shared::CommerceLocationRaw), updated_at: T.nilable(::DateTime)).void }
-      def initialize(name: nil, address: nil, created_at: nil, description: nil, id: nil, is_active: nil, raw: nil, updated_at: nil)
-        @name = name
-        @address = address
-        @created_at = created_at
-        @description = description
-        @id = id
-        @is_active = is_active
-        @raw = raw
-        @updated_at = updated_at
+        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :address, T.nilable(Models::Shared::PropertyCommerceLocationAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
+
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+
+        sig { params(name: ::String, address: T.nilable(Models::Shared::PropertyCommerceLocationAddress), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(name: nil, address: nil, created_at: nil, description: nil, id: nil, is_active: nil, raw: nil, updated_at: nil)
+          @name = name
+          @address = address
+          @created_at = created_at
+          @description = description
+          @id = id
+          @is_active = is_active
+          @raw = raw
+          @updated_at = updated_at
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @name == other.name
+          return false unless @address == other.address
+          return false unless @created_at == other.created_at
+          return false unless @description == other.description
+          return false unless @id == other.id
+          return false unless @is_active == other.is_active
+          return false unless @raw == other.raw
+          return false unless @updated_at == other.updated_at
+          true
+        end
       end
     end
   end

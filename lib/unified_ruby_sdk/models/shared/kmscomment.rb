@@ -5,46 +5,64 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class KmsComment < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :content, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
-
-      field :content_type, T.nilable(::UnifiedRubySDK::Shared::ContentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content_type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ContentType, true) } }
-
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :page_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('page_id') } }
-
-      field :parent_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
-
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :type, T.nilable(::UnifiedRubySDK::Shared::KmsCommentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::KmsCommentType, true) } }
-
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
+      class KmsComment
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(content: ::String, content_type: T.nilable(::UnifiedRubySDK::Shared::ContentType), created_at: T.nilable(::DateTime), id: T.nilable(::String), page_id: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(::UnifiedRubySDK::Shared::KmsCommentType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-      def initialize(content: nil, content_type: nil, created_at: nil, id: nil, page_id: nil, parent_id: nil, raw: nil, type: nil, updated_at: nil, user_id: nil)
-        @content = content
-        @content_type = content_type
-        @created_at = created_at
-        @id = id
-        @page_id = page_id
-        @parent_id = parent_id
-        @raw = raw
-        @type = type
-        @updated_at = updated_at
-        @user_id = user_id
+        field :content, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
+
+        field :content_type, T.nilable(Models::Shared::ContentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content_type'), 'decoder': Utils.enum_from_string(Models::Shared::ContentType, true) } }
+
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :page_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('page_id') } }
+
+        field :parent_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :type, T.nilable(Models::Shared::KmsCommentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::KmsCommentType, true) } }
+
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
+
+
+        sig { params(content: ::String, content_type: T.nilable(Models::Shared::ContentType), created_at: T.nilable(::DateTime), id: T.nilable(::String), page_id: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::KmsCommentType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(content: nil, content_type: nil, created_at: nil, id: nil, page_id: nil, parent_id: nil, raw: nil, type: nil, updated_at: nil, user_id: nil)
+          @content = content
+          @content_type = content_type
+          @created_at = created_at
+          @id = id
+          @page_id = page_id
+          @parent_id = parent_id
+          @raw = raw
+          @type = type
+          @updated_at = updated_at
+          @user_id = user_id
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @content == other.content
+          return false unless @content_type == other.content_type
+          return false unless @created_at == other.created_at
+          return false unless @id == other.id
+          return false unless @page_id == other.page_id
+          return false unless @parent_id == other.parent_id
+          return false unless @raw == other.raw
+          return false unless @type == other.type
+          return false unless @updated_at == other.updated_at
+          return false unless @user_id == other.user_id
+          true
+        end
       end
     end
   end

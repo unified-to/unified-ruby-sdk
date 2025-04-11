@@ -5,13 +5,15 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class WebhookType < T::Enum
-      enums do
-        VIRTUAL = new('virtual')
-        NATIVE = new('native')
+      class WebhookType < T::Enum
+        enums do
+          VIRTUAL = new('virtual')
+          NATIVE = new('native')
+        end
       end
     end
   end

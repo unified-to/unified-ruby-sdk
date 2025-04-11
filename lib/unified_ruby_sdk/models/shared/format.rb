@@ -5,24 +5,26 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class Format < T::Enum
-      enums do
-        TEXT = new('TEXT')
-        NUMBER = new('NUMBER')
-        DATE = new('DATE')
-        BOOLEAN = new('BOOLEAN')
-        FILE = new('FILE')
-        TEXTAREA = new('TEXTAREA')
-        SINGLE_SELECT = new('SINGLE_SELECT')
-        MULTIPLE_SELECT = new('MULTIPLE_SELECT')
-        MEASUREMENT = new('MEASUREMENT')
-        PRICE = new('PRICE')
-        YES_NO = new('YES_NO')
-        CURRENCY = new('CURRENCY')
-        URL = new('URL')
+      class Format < T::Enum
+        enums do
+          TEXT = new('TEXT')
+          NUMBER = new('NUMBER')
+          DATE = new('DATE')
+          BOOLEAN = new('BOOLEAN')
+          FILE = new('FILE')
+          TEXTAREA = new('TEXTAREA')
+          SINGLE_SELECT = new('SINGLE_SELECT')
+          MULTIPLE_SELECT = new('MULTIPLE_SELECT')
+          MEASUREMENT = new('MEASUREMENT')
+          PRICE = new('PRICE')
+          YES_NO = new('YES_NO')
+          CURRENCY = new('CURRENCY')
+          URL = new('URL')
+        end
       end
     end
   end

@@ -5,28 +5,40 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class UpdateAccountingAccountRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class UpdateAccountingAccountRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # Chart of accounts
-      field :accounting_account, ::UnifiedRubySDK::Shared::AccountingAccount, { 'request': { 'media_type': 'application/json' } }
-      # ID of the connection
-      field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-      # ID of the Account
-      field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
-      # Comma-delimited fields to return
-      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        # Chart of accounts
+        field :accounting_account, Models::Shared::AccountingAccount, { 'request': { 'media_type': 'application/json' } }
+        # ID of the connection
+        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # ID of the Account
+        field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
+        # Comma-delimited fields to return
+        field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(accounting_account: ::UnifiedRubySDK::Shared::AccountingAccount, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).void }
-      def initialize(accounting_account: nil, connection_id: nil, id: nil, fields_: nil)
-        @accounting_account = accounting_account
-        @connection_id = connection_id
-        @id = id
-        @fields_ = fields_
+        sig { params(accounting_account: Models::Shared::AccountingAccount, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).void }
+        def initialize(accounting_account: nil, connection_id: nil, id: nil, fields_: nil)
+          @accounting_account = accounting_account
+          @connection_id = connection_id
+          @id = id
+          @fields_ = fields_
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @accounting_account == other.accounting_account
+          return false unless @connection_id == other.connection_id
+          return false unless @id == other.id
+          return false unless @fields_ == other.fields_
+          true
+        end
       end
     end
   end

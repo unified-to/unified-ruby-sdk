@@ -5,28 +5,40 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class HrisCompensation < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
-
-      field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
-
-      field :frequency, T.nilable(::UnifiedRubySDK::Shared::HrisCompensationFrequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::HrisCompensationFrequency, true) } }
-
-      field :type, T.nilable(::UnifiedRubySDK::Shared::HrisCompensationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::HrisCompensationType, true) } }
+      class HrisCompensation
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(amount: T.nilable(::Float), currency: T.nilable(::String), frequency: T.nilable(::UnifiedRubySDK::Shared::HrisCompensationFrequency), type: T.nilable(::UnifiedRubySDK::Shared::HrisCompensationType)).void }
-      def initialize(amount: nil, currency: nil, frequency: nil, type: nil)
-        @amount = amount
-        @currency = currency
-        @frequency = frequency
-        @type = type
+        field :amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
+
+        field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+
+        field :frequency, T.nilable(Models::Shared::HrisCompensationFrequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency'), 'decoder': Utils.enum_from_string(Models::Shared::HrisCompensationFrequency, true) } }
+
+        field :type, T.nilable(Models::Shared::HrisCompensationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisCompensationType, true) } }
+
+
+        sig { params(amount: T.nilable(::Float), currency: T.nilable(::String), frequency: T.nilable(Models::Shared::HrisCompensationFrequency), type: T.nilable(Models::Shared::HrisCompensationType)).void }
+        def initialize(amount: nil, currency: nil, frequency: nil, type: nil)
+          @amount = amount
+          @currency = currency
+          @frequency = frequency
+          @type = type
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @amount == other.amount
+          return false unless @currency == other.currency
+          return false unless @frequency == other.frequency
+          return false unless @type == other.type
+          true
+        end
       end
     end
   end

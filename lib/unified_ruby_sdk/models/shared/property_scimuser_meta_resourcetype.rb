@@ -5,13 +5,15 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class PropertyScimUserMetaResourceType < T::Enum
-      enums do
-        USER = new('User')
-        GROUP = new('Group')
+      class PropertyScimUserMetaResourceType < T::Enum
+        enums do
+          USER = new('User')
+          GROUP = new('Group')
+        end
       end
     end
   end

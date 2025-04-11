@@ -5,31 +5,44 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AtsStatus < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :original_status, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('original_status') } }
-
-      field :raw, T.nilable(::UnifiedRubySDK::Shared::AtsStatusRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :status, T.nilable(::UnifiedRubySDK::Shared::AtsStatusStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::AtsStatusStatus, true) } }
+      class AtsStatus
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(description: T.nilable(::String), id: T.nilable(::String), original_status: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::AtsStatusRaw), status: T.nilable(::UnifiedRubySDK::Shared::AtsStatusStatus)).void }
-      def initialize(description: nil, id: nil, original_status: nil, raw: nil, status: nil)
-        @description = description
-        @id = id
-        @original_status = original_status
-        @raw = raw
-        @status = status
+        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :original_status, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('original_status') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :status, T.nilable(Models::Shared::AtsStatusStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AtsStatusStatus, true) } }
+
+
+        sig { params(description: T.nilable(::String), id: T.nilable(::String), original_status: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::AtsStatusStatus)).void }
+        def initialize(description: nil, id: nil, original_status: nil, raw: nil, status: nil)
+          @description = description
+          @id = id
+          @original_status = original_status
+          @raw = raw
+          @status = status
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @description == other.description
+          return false unless @id == other.id
+          return false unless @original_status == other.original_status
+          return false unless @raw == other.raw
+          return false unless @status == other.status
+          true
+        end
       end
     end
   end

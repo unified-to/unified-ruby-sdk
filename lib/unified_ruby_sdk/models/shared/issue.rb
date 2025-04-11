@@ -5,52 +5,72 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class Issue < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :status, ::UnifiedRubySDK::Shared::IssueStatus, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::IssueStatus, false) } }
-
-      field :ticket_ref, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ticket_ref') } }
-
-      field :title, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
-
-      field :workspace_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
-
-      field :created_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :importance, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('importance') } }
-
-      field :resolution_time, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('resolution_time') } }
-
-      field :size, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
-
-      field :type, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
-
-      field :updated_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
-
-      field :url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
+      class Issue
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(status: ::UnifiedRubySDK::Shared::IssueStatus, ticket_ref: ::String, title: ::String, workspace_id: ::String, created_at: T.nilable(::String), id: T.nilable(::String), importance: T.nilable(::Float), resolution_time: T.nilable(::Float), size: T.nilable(::Float), type: T.nilable(T::Array[::String]), updated_at: T.nilable(::String), url: T.nilable(::String)).void }
-      def initialize(status: nil, ticket_ref: nil, title: nil, workspace_id: nil, created_at: nil, id: nil, importance: nil, resolution_time: nil, size: nil, type: nil, updated_at: nil, url: nil)
-        @status = status
-        @ticket_ref = ticket_ref
-        @title = title
-        @workspace_id = workspace_id
-        @created_at = created_at
-        @id = id
-        @importance = importance
-        @resolution_time = resolution_time
-        @size = size
-        @type = type
-        @updated_at = updated_at
-        @url = url
+        field :status, Models::Shared::IssueStatus, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::IssueStatus, false) } }
+
+        field :ticket_ref, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ticket_ref') } }
+
+        field :title, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
+
+        field :workspace_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
+
+        field :created_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :importance, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('importance') } }
+
+        field :resolution_time, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('resolution_time') } }
+
+        field :size, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
+
+        field :type, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
+
+        field :updated_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
+
+        field :url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
+
+
+        sig { params(status: Models::Shared::IssueStatus, ticket_ref: ::String, title: ::String, workspace_id: ::String, created_at: T.nilable(::String), id: T.nilable(::String), importance: T.nilable(::Float), resolution_time: T.nilable(::Float), size: T.nilable(::Float), type: T.nilable(T::Array[::String]), updated_at: T.nilable(::String), url: T.nilable(::String)).void }
+        def initialize(status: nil, ticket_ref: nil, title: nil, workspace_id: nil, created_at: nil, id: nil, importance: nil, resolution_time: nil, size: nil, type: nil, updated_at: nil, url: nil)
+          @status = status
+          @ticket_ref = ticket_ref
+          @title = title
+          @workspace_id = workspace_id
+          @created_at = created_at
+          @id = id
+          @importance = importance
+          @resolution_time = resolution_time
+          @size = size
+          @type = type
+          @updated_at = updated_at
+          @url = url
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @status == other.status
+          return false unless @ticket_ref == other.ticket_ref
+          return false unless @title == other.title
+          return false unless @workspace_id == other.workspace_id
+          return false unless @created_at == other.created_at
+          return false unless @id == other.id
+          return false unless @importance == other.importance
+          return false unless @resolution_time == other.resolution_time
+          return false unless @size == other.size
+          return false unless @type == other.type
+          return false unless @updated_at == other.updated_at
+          return false unless @url == other.url
+          true
+        end
       end
     end
   end

@@ -5,28 +5,40 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class GetCalendarRecordingResponse < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class GetCalendarRecordingResponse
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # HTTP response content type for this operation
-      field :content_type, ::String
-      # Raw HTTP response; suitable for custom response parsing
-      field :raw_response, ::Faraday::Response
-      # HTTP response status code for this operation
-      field :status_code, ::Integer
-      # Successful
-      field :calendar_recording, T.nilable(::UnifiedRubySDK::Shared::CalendarRecording)
+        # HTTP response content type for this operation
+        field :content_type, ::String
+        # Raw HTTP response; suitable for custom response parsing
+        field :raw_response, ::Faraday::Response
+        # HTTP response status code for this operation
+        field :status_code, ::Integer
+        # Successful
+        field :calendar_recording, T.nilable(Models::Shared::CalendarRecording)
 
 
-      sig { params(content_type: ::String, raw_response: ::Faraday::Response, status_code: ::Integer, calendar_recording: T.nilable(::UnifiedRubySDK::Shared::CalendarRecording)).void }
-      def initialize(content_type: nil, raw_response: nil, status_code: nil, calendar_recording: nil)
-        @content_type = content_type
-        @raw_response = raw_response
-        @status_code = status_code
-        @calendar_recording = calendar_recording
+        sig { params(content_type: ::String, raw_response: ::Faraday::Response, status_code: ::Integer, calendar_recording: T.nilable(Models::Shared::CalendarRecording)).void }
+        def initialize(content_type: nil, raw_response: nil, status_code: nil, calendar_recording: nil)
+          @content_type = content_type
+          @raw_response = raw_response
+          @status_code = status_code
+          @calendar_recording = calendar_recording
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @content_type == other.content_type
+          return false unless @raw_response == other.raw_response
+          return false unless @status_code == other.status_code
+          return false unless @calendar_recording == other.calendar_recording
+          true
+        end
       end
     end
   end

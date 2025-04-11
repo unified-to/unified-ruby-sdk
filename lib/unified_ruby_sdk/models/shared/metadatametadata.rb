@@ -5,49 +5,68 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class MetadataMetadata < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
-      field :object_type, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_type') } }
-
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :format, T.nilable(::UnifiedRubySDK::Shared::Format), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('format'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::Format, true) } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :objects, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('objects') } }
-
-      field :options, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
-
-      field :original_format, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('original_format') } }
-
-      field :raw, T.nilable(::UnifiedRubySDK::Shared::MetadataMetadataRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :slug, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('slug') } }
-
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      class MetadataMetadata
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(name: ::String, object_type: ::String, created_at: T.nilable(::DateTime), format: T.nilable(::UnifiedRubySDK::Shared::Format), id: T.nilable(::String), objects: T.nilable(T::Hash[Symbol, ::Object]), options: T.nilable(T::Array[::String]), original_format: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::MetadataMetadataRaw), slug: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-      def initialize(name: nil, object_type: nil, created_at: nil, format: nil, id: nil, objects: nil, options: nil, original_format: nil, raw: nil, slug: nil, updated_at: nil)
-        @name = name
-        @object_type = object_type
-        @created_at = created_at
-        @format = format
-        @id = id
-        @objects = objects
-        @options = options
-        @original_format = original_format
-        @raw = raw
-        @slug = slug
-        @updated_at = updated_at
+        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :object_type, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_type') } }
+
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :format, T.nilable(Models::Shared::Format), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('format'), 'decoder': Utils.enum_from_string(Models::Shared::Format, true) } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :objects, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('objects') } }
+
+        field :options, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
+
+        field :original_format, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('original_format') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :slug, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('slug') } }
+
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+
+        sig { params(name: ::String, object_type: ::String, created_at: T.nilable(::DateTime), format: T.nilable(Models::Shared::Format), id: T.nilable(::String), objects: T.nilable(T::Hash[Symbol, ::Object]), options: T.nilable(T::Array[::String]), original_format: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), slug: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(name: nil, object_type: nil, created_at: nil, format: nil, id: nil, objects: nil, options: nil, original_format: nil, raw: nil, slug: nil, updated_at: nil)
+          @name = name
+          @object_type = object_type
+          @created_at = created_at
+          @format = format
+          @id = id
+          @objects = objects
+          @options = options
+          @original_format = original_format
+          @raw = raw
+          @slug = slug
+          @updated_at = updated_at
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @name == other.name
+          return false unless @object_type == other.object_type
+          return false unless @created_at == other.created_at
+          return false unless @format == other.format
+          return false unless @id == other.id
+          return false unless @objects == other.objects
+          return false unless @options == other.options
+          return false unless @original_format == other.original_format
+          return false unless @raw == other.raw
+          return false unless @slug == other.slug
+          return false unless @updated_at == other.updated_at
+          true
+        end
       end
     end
   end

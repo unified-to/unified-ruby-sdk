@@ -5,25 +5,36 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class CreateAtsActivityRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :ats_activity, ::UnifiedRubySDK::Shared::AtsActivity, { 'request': { 'media_type': 'application/json' } }
-      # ID of the connection
-      field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-      # Comma-delimited fields to return
-      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+      class CreateAtsActivityRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(ats_activity: ::UnifiedRubySDK::Shared::AtsActivity, connection_id: ::String, fields_: T.nilable(T::Array[::String])).void }
-      def initialize(ats_activity: nil, connection_id: nil, fields_: nil)
-        @ats_activity = ats_activity
-        @connection_id = connection_id
-        @fields_ = fields_
+        field :ats_activity, Models::Shared::AtsActivity, { 'request': { 'media_type': 'application/json' } }
+        # ID of the connection
+        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # Comma-delimited fields to return
+        field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+
+
+        sig { params(ats_activity: Models::Shared::AtsActivity, connection_id: ::String, fields_: T.nilable(T::Array[::String])).void }
+        def initialize(ats_activity: nil, connection_id: nil, fields_: nil)
+          @ats_activity = ats_activity
+          @connection_id = connection_id
+          @fields_ = fields_
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @ats_activity == other.ats_activity
+          return false unless @connection_id == other.connection_id
+          return false unless @fields_ == other.fields_
+          true
+        end
       end
     end
   end

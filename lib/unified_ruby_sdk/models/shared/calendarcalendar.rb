@@ -5,40 +5,56 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class CalendarCalendar < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :primary, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('primary') } }
-
-      field :raw, T.nilable(::UnifiedRubySDK::Shared::CalendarCalendarRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :timezone, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
-
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      class CalendarCalendar
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), primary: T.nilable(T::Boolean), raw: T.nilable(::UnifiedRubySDK::Shared::CalendarCalendarRaw), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-      def initialize(name: nil, created_at: nil, description: nil, id: nil, primary: nil, raw: nil, timezone: nil, updated_at: nil)
-        @name = name
-        @created_at = created_at
-        @description = description
-        @id = id
-        @primary = primary
-        @raw = raw
-        @timezone = timezone
-        @updated_at = updated_at
+        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :primary, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('primary') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :timezone, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
+
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+
+        sig { params(name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), primary: T.nilable(T::Boolean), raw: T.nilable(T::Hash[Symbol, ::Object]), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(name: nil, created_at: nil, description: nil, id: nil, primary: nil, raw: nil, timezone: nil, updated_at: nil)
+          @name = name
+          @created_at = created_at
+          @description = description
+          @id = id
+          @primary = primary
+          @raw = raw
+          @timezone = timezone
+          @updated_at = updated_at
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @name == other.name
+          return false unless @created_at == other.created_at
+          return false unless @description == other.description
+          return false unless @id == other.id
+          return false unless @primary == other.primary
+          return false unless @raw == other.raw
+          return false unless @timezone == other.timezone
+          return false unless @updated_at == other.updated_at
+          true
+        end
       end
     end
   end

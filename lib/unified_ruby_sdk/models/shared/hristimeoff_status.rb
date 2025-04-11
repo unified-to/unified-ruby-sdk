@@ -5,14 +5,16 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class HrisTimeoffStatus < T::Enum
-      enums do
-        APPROVED = new('APPROVED')
-        PENDING = new('PENDING')
-        DENIED = new('DENIED')
+      class HrisTimeoffStatus < T::Enum
+        enums do
+          APPROVED = new('APPROVED')
+          PENDING = new('PENDING')
+          DENIED = new('DENIED')
+        end
       end
     end
   end

@@ -5,13 +5,15 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class Gender < T::Enum
-      enums do
-        MALE = new('MALE')
-        FEMALE = new('FEMALE')
+      class Gender < T::Enum
+        enums do
+          MALE = new('MALE')
+          FEMALE = new('FEMALE')
+        end
       end
     end
   end

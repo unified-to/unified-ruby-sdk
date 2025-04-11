@@ -5,14 +5,16 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class ScimAddressType < T::Enum
-      enums do
-        WORK = new('work')
-        HOME = new('home')
-        OTHER = new('other')
+      class ScimAddressType < T::Enum
+        enums do
+          WORK = new('work')
+          HOME = new('home')
+          OTHER = new('other')
+        end
       end
     end
   end

@@ -5,14 +5,16 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class CalendarEventStatus < T::Enum
-      enums do
-        CANCELED = new('CANCELED')
-        CONFIRMED = new('CONFIRMED')
-        TENTATIVE = new('TENTATIVE')
+      class CalendarEventStatus < T::Enum
+        enums do
+          CANCELED = new('CANCELED')
+          CONFIRMED = new('CONFIRMED')
+          TENTATIVE = new('TENTATIVE')
+        end
       end
     end
   end

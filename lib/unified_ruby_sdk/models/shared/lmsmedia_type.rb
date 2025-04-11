@@ -5,17 +5,19 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class LmsMediaType < T::Enum
-      enums do
-        IMAGE = new('IMAGE')
-        HEADSHOT = new('HEADSHOT')
-        VIDEO = new('VIDEO')
-        WEB = new('WEB')
-        DOCUMENT = new('DOCUMENT')
-        OTHER = new('OTHER')
+      class LmsMediaType < T::Enum
+        enums do
+          IMAGE = new('IMAGE')
+          HEADSHOT = new('HEADSHOT')
+          VIDEO = new('VIDEO')
+          WEB = new('WEB')
+          DOCUMENT = new('DOCUMENT')
+          OTHER = new('OTHER')
+        end
       end
     end
   end

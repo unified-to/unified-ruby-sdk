@@ -5,25 +5,36 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class CreateTicketingNoteRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class CreateTicketingNoteRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # ID of the connection
-      field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # ID of the connection
+        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
 
-      field :ticketing_note, ::UnifiedRubySDK::Shared::TicketingNote, { 'request': { 'media_type': 'application/json' } }
-      # Comma-delimited fields to return
-      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        field :ticketing_note, Models::Shared::TicketingNote, { 'request': { 'media_type': 'application/json' } }
+        # Comma-delimited fields to return
+        field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, ticketing_note: ::UnifiedRubySDK::Shared::TicketingNote, fields_: T.nilable(T::Array[::String])).void }
-      def initialize(connection_id: nil, ticketing_note: nil, fields_: nil)
-        @connection_id = connection_id
-        @ticketing_note = ticketing_note
-        @fields_ = fields_
+        sig { params(connection_id: ::String, ticketing_note: Models::Shared::TicketingNote, fields_: T.nilable(T::Array[::String])).void }
+        def initialize(connection_id: nil, ticketing_note: nil, fields_: nil)
+          @connection_id = connection_id
+          @ticketing_note = ticketing_note
+          @fields_ = fields_
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @connection_id == other.connection_id
+          return false unless @ticketing_note == other.ticketing_note
+          return false unless @fields_ == other.fields_
+          true
+        end
       end
     end
   end

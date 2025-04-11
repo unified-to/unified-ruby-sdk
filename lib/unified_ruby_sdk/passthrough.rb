@@ -22,10 +22,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::CreatePassthroughJsonResponse) }
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePassthroughJsonResponse) }
     def create_passthrough_json(connection_id, path, request_body = nil, timeout_ms = nil)
       # create_passthrough_json - Passthrough POST
-      request = ::UnifiedRubySDK::Operations::CreatePassthroughJsonRequest.new(
+      request = Models::Operations::CreatePassthroughJsonRequest.new(
         
         connection_id: connection_id,
         path: path,
@@ -34,7 +34,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::CreatePassthroughJsonRequest,
+        Models::Operations::CreatePassthroughJsonRequest,
         base_url,
         '/passthrough/{connection_id}/{path}',
         request
@@ -62,16 +62,17 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: nil,
+        oauth2_scopes: [],
         operation_id: 'createPassthrough_json',
         security_source: @sdk_configuration.security_source
       )
 
       error = T.let(nil, T.nilable(StandardError))
-      r = T.let(nil, T.nilable(Faraday::Response))
+      http_response = T.let(nil, T.nilable(Faraday::Response))
+      
       
       begin
-        r = connection.post(url) do |req|
+        http_response = connection.post(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -87,57 +88,151 @@ module UnifiedRubySDK
       rescue StandardError => e
         error = e
       ensure
-        if r.nil? || Utils.error_status?(r.status)
-          r = @sdk_configuration.hooks.after_error(
+        if http_response.nil? || Utils.error_status?(http_response.status)
+          http_response = @sdk_configuration.hooks.after_error(
             error: error,
             hook_ctx: SDKHooks::AfterErrorHookContext.new(
               hook_ctx: hook_ctx
             ),
-            response: r
+            response: http_response
           )
         else
-          r = @sdk_configuration.hooks.after_success(
+          http_response = @sdk_configuration.hooks.after_success(
             hook_ctx: SDKHooks::AfterSuccessHookContext.new(
               hook_ctx: hook_ctx
             ),
-            response: r
+            response: http_response
           )
         end
         
-        if r.nil?
+        if http_response.nil?
           raise error if !error.nil?
           raise 'no response'
         end
       end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = ::UnifiedRubySDK::Operations::CreatePassthroughJsonResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-
-      res.headers = r.headers
-      if [204, 205].include?(r.status)
-      elsif r.status == 304
+      
+      content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
+      if Utils.match_status_code(http_response.status, ['204', '205'])
+        http_response = @sdk_configuration.hooks.after_success(
+          hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+            hook_ctx: hook_ctx
+          ),
+          response: http_response
+        )
+        return Models::Operations::CreatePassthroughJsonResponse.new(
+          status_code: http_response.status,
+          content_type: content_type,
+          raw_response: http_response
+        )
+      elsif Utils.match_status_code(http_response.status, ['304'])
+        http_response = @sdk_configuration.hooks.after_success(
+          hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+            hook_ctx: hook_ctx
+          ),
+          response: http_response
+        )
+        return Models::Operations::CreatePassthroughJsonResponse.new(
+          status_code: http_response.status,
+          content_type: content_type,
+          raw_response: http_response
+        )
+      elsif Utils.match_status_code(http_response.status, ['4XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
+      elsif Utils.match_status_code(http_response.status, ['5XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
       else
         if Utils.match_content_type(content_type, 'application/json')
-          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::Object)
-          res.default_application_json_any = out
-        end
-        res.default_application_xml_res = r.env.response_body if Utils.match_content_type(content_type, 'application/xml')
-        res.default_text_csv_res = r.env.response_body if Utils.match_content_type(content_type, 'text/csv')
-        res.default_text_plain_res = r.env.response_body if Utils.match_content_type(content_type, 'text/plain')
-        res.default_wildcard_wildcard_bytes = r.env.response_body if Utils.match_content_type(content_type, '*/*')
-      end
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), ::Object)
+          response = Models::Operations::CreatePassthroughJsonResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_application_json_any: obj
+          )
 
-      res
+          return response
+        elsif Utils.match_content_type(content_type, 'application/xml')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::CreatePassthroughJsonResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_application_xml_res: obj
+          )
+        elsif Utils.match_content_type(content_type, 'text/csv')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::CreatePassthroughJsonResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_text_csv_res: obj
+          )
+        elsif Utils.match_content_type(content_type, 'text/plain')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::CreatePassthroughJsonResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_text_plain_res: obj
+          )
+        elsif Utils.match_content_type(content_type, '*/*')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::CreatePassthroughJsonResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_wildcard_wildcard_bytes: obj
+          )
+        else
+          raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'Unknown content type received'
+        end
+      end
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::CreatePassthroughRawResponse) }
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePassthroughRawResponse) }
     def create_passthrough_raw(connection_id, path, request_body = nil, timeout_ms = nil)
       # create_passthrough_raw - Passthrough POST
-      request = ::UnifiedRubySDK::Operations::CreatePassthroughRawRequest.new(
+      request = Models::Operations::CreatePassthroughRawRequest.new(
         
         connection_id: connection_id,
         path: path,
@@ -146,7 +241,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::CreatePassthroughRawRequest,
+        Models::Operations::CreatePassthroughRawRequest,
         base_url,
         '/passthrough/{connection_id}/{path}',
         request
@@ -174,16 +269,17 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: nil,
+        oauth2_scopes: [],
         operation_id: 'createPassthrough_raw',
         security_source: @sdk_configuration.security_source
       )
 
       error = T.let(nil, T.nilable(StandardError))
-      r = T.let(nil, T.nilable(Faraday::Response))
+      http_response = T.let(nil, T.nilable(Faraday::Response))
+      
       
       begin
-        r = connection.post(url) do |req|
+        http_response = connection.post(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -199,57 +295,151 @@ module UnifiedRubySDK
       rescue StandardError => e
         error = e
       ensure
-        if r.nil? || Utils.error_status?(r.status)
-          r = @sdk_configuration.hooks.after_error(
+        if http_response.nil? || Utils.error_status?(http_response.status)
+          http_response = @sdk_configuration.hooks.after_error(
             error: error,
             hook_ctx: SDKHooks::AfterErrorHookContext.new(
               hook_ctx: hook_ctx
             ),
-            response: r
+            response: http_response
           )
         else
-          r = @sdk_configuration.hooks.after_success(
+          http_response = @sdk_configuration.hooks.after_success(
             hook_ctx: SDKHooks::AfterSuccessHookContext.new(
               hook_ctx: hook_ctx
             ),
-            response: r
+            response: http_response
           )
         end
         
-        if r.nil?
+        if http_response.nil?
           raise error if !error.nil?
           raise 'no response'
         end
       end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = ::UnifiedRubySDK::Operations::CreatePassthroughRawResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-
-      res.headers = r.headers
-      if [204, 205].include?(r.status)
-      elsif r.status == 304
+      
+      content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
+      if Utils.match_status_code(http_response.status, ['204', '205'])
+        http_response = @sdk_configuration.hooks.after_success(
+          hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+            hook_ctx: hook_ctx
+          ),
+          response: http_response
+        )
+        return Models::Operations::CreatePassthroughRawResponse.new(
+          status_code: http_response.status,
+          content_type: content_type,
+          raw_response: http_response
+        )
+      elsif Utils.match_status_code(http_response.status, ['304'])
+        http_response = @sdk_configuration.hooks.after_success(
+          hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+            hook_ctx: hook_ctx
+          ),
+          response: http_response
+        )
+        return Models::Operations::CreatePassthroughRawResponse.new(
+          status_code: http_response.status,
+          content_type: content_type,
+          raw_response: http_response
+        )
+      elsif Utils.match_status_code(http_response.status, ['4XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
+      elsif Utils.match_status_code(http_response.status, ['5XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
       else
         if Utils.match_content_type(content_type, 'application/json')
-          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::Object)
-          res.default_application_json_any = out
-        end
-        res.default_application_xml_res = r.env.response_body if Utils.match_content_type(content_type, 'application/xml')
-        res.default_text_csv_res = r.env.response_body if Utils.match_content_type(content_type, 'text/csv')
-        res.default_text_plain_res = r.env.response_body if Utils.match_content_type(content_type, 'text/plain')
-        res.default_wildcard_wildcard_bytes = r.env.response_body if Utils.match_content_type(content_type, '*/*')
-      end
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), ::Object)
+          response = Models::Operations::CreatePassthroughRawResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_application_json_any: obj
+          )
 
-      res
+          return response
+        elsif Utils.match_content_type(content_type, 'application/xml')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::CreatePassthroughRawResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_application_xml_res: obj
+          )
+        elsif Utils.match_content_type(content_type, 'text/csv')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::CreatePassthroughRawResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_text_csv_res: obj
+          )
+        elsif Utils.match_content_type(content_type, 'text/plain')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::CreatePassthroughRawResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_text_plain_res: obj
+          )
+        elsif Utils.match_content_type(content_type, '*/*')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::CreatePassthroughRawResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_wildcard_wildcard_bytes: obj
+          )
+        else
+          raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'Unknown content type received'
+        end
+      end
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::ListPassthroughsResponse) }
+    sig { params(connection_id: ::String, path: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPassthroughsResponse) }
     def list_passthroughs(connection_id, path, timeout_ms = nil)
       # list_passthroughs - Passthrough GET
-      request = ::UnifiedRubySDK::Operations::ListPassthroughsRequest.new(
+      request = Models::Operations::ListPassthroughsRequest.new(
         
         connection_id: connection_id,
         path: path
@@ -257,7 +447,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::ListPassthroughsRequest,
+        Models::Operations::ListPassthroughsRequest,
         base_url,
         '/passthrough/{connection_id}/{path}',
         request
@@ -275,16 +465,17 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: nil,
+        oauth2_scopes: [],
         operation_id: 'listPassthroughs',
         security_source: @sdk_configuration.security_source
       )
 
       error = T.let(nil, T.nilable(StandardError))
-      r = T.let(nil, T.nilable(Faraday::Response))
+      http_response = T.let(nil, T.nilable(Faraday::Response))
+      
       
       begin
-        r = connection.get(url) do |req|
+        http_response = connection.get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           Utils.configure_request_security(req, security)
@@ -299,57 +490,151 @@ module UnifiedRubySDK
       rescue StandardError => e
         error = e
       ensure
-        if r.nil? || Utils.error_status?(r.status)
-          r = @sdk_configuration.hooks.after_error(
+        if http_response.nil? || Utils.error_status?(http_response.status)
+          http_response = @sdk_configuration.hooks.after_error(
             error: error,
             hook_ctx: SDKHooks::AfterErrorHookContext.new(
               hook_ctx: hook_ctx
             ),
-            response: r
+            response: http_response
           )
         else
-          r = @sdk_configuration.hooks.after_success(
+          http_response = @sdk_configuration.hooks.after_success(
             hook_ctx: SDKHooks::AfterSuccessHookContext.new(
               hook_ctx: hook_ctx
             ),
-            response: r
+            response: http_response
           )
         end
         
-        if r.nil?
+        if http_response.nil?
           raise error if !error.nil?
           raise 'no response'
         end
       end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = ::UnifiedRubySDK::Operations::ListPassthroughsResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-
-      res.headers = r.headers
-      if [204, 205].include?(r.status)
-      elsif r.status == 304
+      
+      content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
+      if Utils.match_status_code(http_response.status, ['204', '205'])
+        http_response = @sdk_configuration.hooks.after_success(
+          hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+            hook_ctx: hook_ctx
+          ),
+          response: http_response
+        )
+        return Models::Operations::ListPassthroughsResponse.new(
+          status_code: http_response.status,
+          content_type: content_type,
+          raw_response: http_response
+        )
+      elsif Utils.match_status_code(http_response.status, ['304'])
+        http_response = @sdk_configuration.hooks.after_success(
+          hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+            hook_ctx: hook_ctx
+          ),
+          response: http_response
+        )
+        return Models::Operations::ListPassthroughsResponse.new(
+          status_code: http_response.status,
+          content_type: content_type,
+          raw_response: http_response
+        )
+      elsif Utils.match_status_code(http_response.status, ['4XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
+      elsif Utils.match_status_code(http_response.status, ['5XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
       else
         if Utils.match_content_type(content_type, 'application/json')
-          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::Object)
-          res.default_application_json_any = out
-        end
-        res.default_application_xml_res = r.env.response_body if Utils.match_content_type(content_type, 'application/xml')
-        res.default_text_csv_res = r.env.response_body if Utils.match_content_type(content_type, 'text/csv')
-        res.default_text_plain_res = r.env.response_body if Utils.match_content_type(content_type, 'text/plain')
-        res.default_wildcard_wildcard_bytes = r.env.response_body if Utils.match_content_type(content_type, '*/*')
-      end
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), ::Object)
+          response = Models::Operations::ListPassthroughsResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_application_json_any: obj
+          )
 
-      res
+          return response
+        elsif Utils.match_content_type(content_type, 'application/xml')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::ListPassthroughsResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_application_xml_res: obj
+          )
+        elsif Utils.match_content_type(content_type, 'text/csv')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::ListPassthroughsResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_text_csv_res: obj
+          )
+        elsif Utils.match_content_type(content_type, 'text/plain')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::ListPassthroughsResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_text_plain_res: obj
+          )
+        elsif Utils.match_content_type(content_type, '*/*')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::ListPassthroughsResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_wildcard_wildcard_bytes: obj
+          )
+        else
+          raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'Unknown content type received'
+        end
+      end
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::PatchPassthroughJsonResponse) }
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPassthroughJsonResponse) }
     def patch_passthrough_json(connection_id, path, request_body = nil, timeout_ms = nil)
       # patch_passthrough_json - Passthrough PUT
-      request = ::UnifiedRubySDK::Operations::PatchPassthroughJsonRequest.new(
+      request = Models::Operations::PatchPassthroughJsonRequest.new(
         
         connection_id: connection_id,
         path: path,
@@ -358,7 +643,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::PatchPassthroughJsonRequest,
+        Models::Operations::PatchPassthroughJsonRequest,
         base_url,
         '/passthrough/{connection_id}/{path}',
         request
@@ -386,16 +671,17 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: nil,
+        oauth2_scopes: [],
         operation_id: 'patchPassthrough_json',
         security_source: @sdk_configuration.security_source
       )
 
       error = T.let(nil, T.nilable(StandardError))
-      r = T.let(nil, T.nilable(Faraday::Response))
+      http_response = T.let(nil, T.nilable(Faraday::Response))
+      
       
       begin
-        r = connection.patch(url) do |req|
+        http_response = connection.patch(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -411,57 +697,151 @@ module UnifiedRubySDK
       rescue StandardError => e
         error = e
       ensure
-        if r.nil? || Utils.error_status?(r.status)
-          r = @sdk_configuration.hooks.after_error(
+        if http_response.nil? || Utils.error_status?(http_response.status)
+          http_response = @sdk_configuration.hooks.after_error(
             error: error,
             hook_ctx: SDKHooks::AfterErrorHookContext.new(
               hook_ctx: hook_ctx
             ),
-            response: r
+            response: http_response
           )
         else
-          r = @sdk_configuration.hooks.after_success(
+          http_response = @sdk_configuration.hooks.after_success(
             hook_ctx: SDKHooks::AfterSuccessHookContext.new(
               hook_ctx: hook_ctx
             ),
-            response: r
+            response: http_response
           )
         end
         
-        if r.nil?
+        if http_response.nil?
           raise error if !error.nil?
           raise 'no response'
         end
       end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = ::UnifiedRubySDK::Operations::PatchPassthroughJsonResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-
-      res.headers = r.headers
-      if [204, 205].include?(r.status)
-      elsif r.status == 304
+      
+      content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
+      if Utils.match_status_code(http_response.status, ['204', '205'])
+        http_response = @sdk_configuration.hooks.after_success(
+          hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+            hook_ctx: hook_ctx
+          ),
+          response: http_response
+        )
+        return Models::Operations::PatchPassthroughJsonResponse.new(
+          status_code: http_response.status,
+          content_type: content_type,
+          raw_response: http_response
+        )
+      elsif Utils.match_status_code(http_response.status, ['304'])
+        http_response = @sdk_configuration.hooks.after_success(
+          hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+            hook_ctx: hook_ctx
+          ),
+          response: http_response
+        )
+        return Models::Operations::PatchPassthroughJsonResponse.new(
+          status_code: http_response.status,
+          content_type: content_type,
+          raw_response: http_response
+        )
+      elsif Utils.match_status_code(http_response.status, ['4XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
+      elsif Utils.match_status_code(http_response.status, ['5XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
       else
         if Utils.match_content_type(content_type, 'application/json')
-          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::Object)
-          res.default_application_json_any = out
-        end
-        res.default_application_xml_res = r.env.response_body if Utils.match_content_type(content_type, 'application/xml')
-        res.default_text_csv_res = r.env.response_body if Utils.match_content_type(content_type, 'text/csv')
-        res.default_text_plain_res = r.env.response_body if Utils.match_content_type(content_type, 'text/plain')
-        res.default_wildcard_wildcard_bytes = r.env.response_body if Utils.match_content_type(content_type, '*/*')
-      end
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), ::Object)
+          response = Models::Operations::PatchPassthroughJsonResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_application_json_any: obj
+          )
 
-      res
+          return response
+        elsif Utils.match_content_type(content_type, 'application/xml')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::PatchPassthroughJsonResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_application_xml_res: obj
+          )
+        elsif Utils.match_content_type(content_type, 'text/csv')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::PatchPassthroughJsonResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_text_csv_res: obj
+          )
+        elsif Utils.match_content_type(content_type, 'text/plain')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::PatchPassthroughJsonResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_text_plain_res: obj
+          )
+        elsif Utils.match_content_type(content_type, '*/*')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::PatchPassthroughJsonResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_wildcard_wildcard_bytes: obj
+          )
+        else
+          raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'Unknown content type received'
+        end
+      end
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::PatchPassthroughRawResponse) }
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPassthroughRawResponse) }
     def patch_passthrough_raw(connection_id, path, request_body = nil, timeout_ms = nil)
       # patch_passthrough_raw - Passthrough PUT
-      request = ::UnifiedRubySDK::Operations::PatchPassthroughRawRequest.new(
+      request = Models::Operations::PatchPassthroughRawRequest.new(
         
         connection_id: connection_id,
         path: path,
@@ -470,7 +850,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::PatchPassthroughRawRequest,
+        Models::Operations::PatchPassthroughRawRequest,
         base_url,
         '/passthrough/{connection_id}/{path}',
         request
@@ -498,16 +878,17 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: nil,
+        oauth2_scopes: [],
         operation_id: 'patchPassthrough_raw',
         security_source: @sdk_configuration.security_source
       )
 
       error = T.let(nil, T.nilable(StandardError))
-      r = T.let(nil, T.nilable(Faraday::Response))
+      http_response = T.let(nil, T.nilable(Faraday::Response))
+      
       
       begin
-        r = connection.patch(url) do |req|
+        http_response = connection.patch(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -523,57 +904,151 @@ module UnifiedRubySDK
       rescue StandardError => e
         error = e
       ensure
-        if r.nil? || Utils.error_status?(r.status)
-          r = @sdk_configuration.hooks.after_error(
+        if http_response.nil? || Utils.error_status?(http_response.status)
+          http_response = @sdk_configuration.hooks.after_error(
             error: error,
             hook_ctx: SDKHooks::AfterErrorHookContext.new(
               hook_ctx: hook_ctx
             ),
-            response: r
+            response: http_response
           )
         else
-          r = @sdk_configuration.hooks.after_success(
+          http_response = @sdk_configuration.hooks.after_success(
             hook_ctx: SDKHooks::AfterSuccessHookContext.new(
               hook_ctx: hook_ctx
             ),
-            response: r
+            response: http_response
           )
         end
         
-        if r.nil?
+        if http_response.nil?
           raise error if !error.nil?
           raise 'no response'
         end
       end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = ::UnifiedRubySDK::Operations::PatchPassthroughRawResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-
-      res.headers = r.headers
-      if [204, 205].include?(r.status)
-      elsif r.status == 304
+      
+      content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
+      if Utils.match_status_code(http_response.status, ['204', '205'])
+        http_response = @sdk_configuration.hooks.after_success(
+          hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+            hook_ctx: hook_ctx
+          ),
+          response: http_response
+        )
+        return Models::Operations::PatchPassthroughRawResponse.new(
+          status_code: http_response.status,
+          content_type: content_type,
+          raw_response: http_response
+        )
+      elsif Utils.match_status_code(http_response.status, ['304'])
+        http_response = @sdk_configuration.hooks.after_success(
+          hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+            hook_ctx: hook_ctx
+          ),
+          response: http_response
+        )
+        return Models::Operations::PatchPassthroughRawResponse.new(
+          status_code: http_response.status,
+          content_type: content_type,
+          raw_response: http_response
+        )
+      elsif Utils.match_status_code(http_response.status, ['4XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
+      elsif Utils.match_status_code(http_response.status, ['5XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
       else
         if Utils.match_content_type(content_type, 'application/json')
-          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::Object)
-          res.default_application_json_any = out
-        end
-        res.default_application_xml_res = r.env.response_body if Utils.match_content_type(content_type, 'application/xml')
-        res.default_text_csv_res = r.env.response_body if Utils.match_content_type(content_type, 'text/csv')
-        res.default_text_plain_res = r.env.response_body if Utils.match_content_type(content_type, 'text/plain')
-        res.default_wildcard_wildcard_bytes = r.env.response_body if Utils.match_content_type(content_type, '*/*')
-      end
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), ::Object)
+          response = Models::Operations::PatchPassthroughRawResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_application_json_any: obj
+          )
 
-      res
+          return response
+        elsif Utils.match_content_type(content_type, 'application/xml')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::PatchPassthroughRawResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_application_xml_res: obj
+          )
+        elsif Utils.match_content_type(content_type, 'text/csv')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::PatchPassthroughRawResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_text_csv_res: obj
+          )
+        elsif Utils.match_content_type(content_type, 'text/plain')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::PatchPassthroughRawResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_text_plain_res: obj
+          )
+        elsif Utils.match_content_type(content_type, '*/*')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::PatchPassthroughRawResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_wildcard_wildcard_bytes: obj
+          )
+        else
+          raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'Unknown content type received'
+        end
+      end
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::RemovePassthroughResponse) }
+    sig { params(connection_id: ::String, path: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemovePassthroughResponse) }
     def remove_passthrough(connection_id, path, timeout_ms = nil)
       # remove_passthrough - Passthrough DELETE
-      request = ::UnifiedRubySDK::Operations::RemovePassthroughRequest.new(
+      request = Models::Operations::RemovePassthroughRequest.new(
         
         connection_id: connection_id,
         path: path
@@ -581,7 +1056,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::RemovePassthroughRequest,
+        Models::Operations::RemovePassthroughRequest,
         base_url,
         '/passthrough/{connection_id}/{path}',
         request
@@ -599,16 +1074,17 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: nil,
+        oauth2_scopes: [],
         operation_id: 'removePassthrough',
         security_source: @sdk_configuration.security_source
       )
 
       error = T.let(nil, T.nilable(StandardError))
-      r = T.let(nil, T.nilable(Faraday::Response))
+      http_response = T.let(nil, T.nilable(Faraday::Response))
+      
       
       begin
-        r = connection.delete(url) do |req|
+        http_response = connection.delete(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           Utils.configure_request_security(req, security)
@@ -623,57 +1099,151 @@ module UnifiedRubySDK
       rescue StandardError => e
         error = e
       ensure
-        if r.nil? || Utils.error_status?(r.status)
-          r = @sdk_configuration.hooks.after_error(
+        if http_response.nil? || Utils.error_status?(http_response.status)
+          http_response = @sdk_configuration.hooks.after_error(
             error: error,
             hook_ctx: SDKHooks::AfterErrorHookContext.new(
               hook_ctx: hook_ctx
             ),
-            response: r
+            response: http_response
           )
         else
-          r = @sdk_configuration.hooks.after_success(
+          http_response = @sdk_configuration.hooks.after_success(
             hook_ctx: SDKHooks::AfterSuccessHookContext.new(
               hook_ctx: hook_ctx
             ),
-            response: r
+            response: http_response
           )
         end
         
-        if r.nil?
+        if http_response.nil?
           raise error if !error.nil?
           raise 'no response'
         end
       end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = ::UnifiedRubySDK::Operations::RemovePassthroughResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-
-      res.headers = r.headers
-      if [204, 205].include?(r.status)
-      elsif r.status == 304
+      
+      content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
+      if Utils.match_status_code(http_response.status, ['204', '205'])
+        http_response = @sdk_configuration.hooks.after_success(
+          hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+            hook_ctx: hook_ctx
+          ),
+          response: http_response
+        )
+        return Models::Operations::RemovePassthroughResponse.new(
+          status_code: http_response.status,
+          content_type: content_type,
+          raw_response: http_response
+        )
+      elsif Utils.match_status_code(http_response.status, ['304'])
+        http_response = @sdk_configuration.hooks.after_success(
+          hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+            hook_ctx: hook_ctx
+          ),
+          response: http_response
+        )
+        return Models::Operations::RemovePassthroughResponse.new(
+          status_code: http_response.status,
+          content_type: content_type,
+          raw_response: http_response
+        )
+      elsif Utils.match_status_code(http_response.status, ['4XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
+      elsif Utils.match_status_code(http_response.status, ['5XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
       else
         if Utils.match_content_type(content_type, 'application/json')
-          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::Object)
-          res.default_application_json_any = out
-        end
-        res.default_application_xml_res = r.env.response_body if Utils.match_content_type(content_type, 'application/xml')
-        res.default_text_csv_res = r.env.response_body if Utils.match_content_type(content_type, 'text/csv')
-        res.default_text_plain_res = r.env.response_body if Utils.match_content_type(content_type, 'text/plain')
-        res.default_wildcard_wildcard_bytes = r.env.response_body if Utils.match_content_type(content_type, '*/*')
-      end
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), ::Object)
+          response = Models::Operations::RemovePassthroughResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_application_json_any: obj
+          )
 
-      res
+          return response
+        elsif Utils.match_content_type(content_type, 'application/xml')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::RemovePassthroughResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_application_xml_res: obj
+          )
+        elsif Utils.match_content_type(content_type, 'text/csv')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::RemovePassthroughResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_text_csv_res: obj
+          )
+        elsif Utils.match_content_type(content_type, 'text/plain')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::RemovePassthroughResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_text_plain_res: obj
+          )
+        elsif Utils.match_content_type(content_type, '*/*')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::RemovePassthroughResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_wildcard_wildcard_bytes: obj
+          )
+        else
+          raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'Unknown content type received'
+        end
+      end
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::UpdatePassthroughJsonResponse) }
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePassthroughJsonResponse) }
     def update_passthrough_json(connection_id, path, request_body = nil, timeout_ms = nil)
       # update_passthrough_json - Passthrough PUT
-      request = ::UnifiedRubySDK::Operations::UpdatePassthroughJsonRequest.new(
+      request = Models::Operations::UpdatePassthroughJsonRequest.new(
         
         connection_id: connection_id,
         path: path,
@@ -682,7 +1252,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::UpdatePassthroughJsonRequest,
+        Models::Operations::UpdatePassthroughJsonRequest,
         base_url,
         '/passthrough/{connection_id}/{path}',
         request
@@ -710,16 +1280,17 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: nil,
+        oauth2_scopes: [],
         operation_id: 'updatePassthrough_json',
         security_source: @sdk_configuration.security_source
       )
 
       error = T.let(nil, T.nilable(StandardError))
-      r = T.let(nil, T.nilable(Faraday::Response))
+      http_response = T.let(nil, T.nilable(Faraday::Response))
+      
       
       begin
-        r = connection.put(url) do |req|
+        http_response = connection.put(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -735,57 +1306,151 @@ module UnifiedRubySDK
       rescue StandardError => e
         error = e
       ensure
-        if r.nil? || Utils.error_status?(r.status)
-          r = @sdk_configuration.hooks.after_error(
+        if http_response.nil? || Utils.error_status?(http_response.status)
+          http_response = @sdk_configuration.hooks.after_error(
             error: error,
             hook_ctx: SDKHooks::AfterErrorHookContext.new(
               hook_ctx: hook_ctx
             ),
-            response: r
+            response: http_response
           )
         else
-          r = @sdk_configuration.hooks.after_success(
+          http_response = @sdk_configuration.hooks.after_success(
             hook_ctx: SDKHooks::AfterSuccessHookContext.new(
               hook_ctx: hook_ctx
             ),
-            response: r
+            response: http_response
           )
         end
         
-        if r.nil?
+        if http_response.nil?
           raise error if !error.nil?
           raise 'no response'
         end
       end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = ::UnifiedRubySDK::Operations::UpdatePassthroughJsonResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-
-      res.headers = r.headers
-      if [204, 205].include?(r.status)
-      elsif r.status == 304
+      
+      content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
+      if Utils.match_status_code(http_response.status, ['204', '205'])
+        http_response = @sdk_configuration.hooks.after_success(
+          hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+            hook_ctx: hook_ctx
+          ),
+          response: http_response
+        )
+        return Models::Operations::UpdatePassthroughJsonResponse.new(
+          status_code: http_response.status,
+          content_type: content_type,
+          raw_response: http_response
+        )
+      elsif Utils.match_status_code(http_response.status, ['304'])
+        http_response = @sdk_configuration.hooks.after_success(
+          hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+            hook_ctx: hook_ctx
+          ),
+          response: http_response
+        )
+        return Models::Operations::UpdatePassthroughJsonResponse.new(
+          status_code: http_response.status,
+          content_type: content_type,
+          raw_response: http_response
+        )
+      elsif Utils.match_status_code(http_response.status, ['4XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
+      elsif Utils.match_status_code(http_response.status, ['5XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
       else
         if Utils.match_content_type(content_type, 'application/json')
-          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::Object)
-          res.default_application_json_any = out
-        end
-        res.default_application_xml_res = r.env.response_body if Utils.match_content_type(content_type, 'application/xml')
-        res.default_text_csv_res = r.env.response_body if Utils.match_content_type(content_type, 'text/csv')
-        res.default_text_plain_res = r.env.response_body if Utils.match_content_type(content_type, 'text/plain')
-        res.default_wildcard_wildcard_bytes = r.env.response_body if Utils.match_content_type(content_type, '*/*')
-      end
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), ::Object)
+          response = Models::Operations::UpdatePassthroughJsonResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_application_json_any: obj
+          )
 
-      res
+          return response
+        elsif Utils.match_content_type(content_type, 'application/xml')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::UpdatePassthroughJsonResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_application_xml_res: obj
+          )
+        elsif Utils.match_content_type(content_type, 'text/csv')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::UpdatePassthroughJsonResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_text_csv_res: obj
+          )
+        elsif Utils.match_content_type(content_type, 'text/plain')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::UpdatePassthroughJsonResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_text_plain_res: obj
+          )
+        elsif Utils.match_content_type(content_type, '*/*')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::UpdatePassthroughJsonResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_wildcard_wildcard_bytes: obj
+          )
+        else
+          raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'Unknown content type received'
+        end
+      end
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(::UnifiedRubySDK::Operations::UpdatePassthroughRawResponse) }
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePassthroughRawResponse) }
     def update_passthrough_raw(connection_id, path, request_body = nil, timeout_ms = nil)
       # update_passthrough_raw - Passthrough PUT
-      request = ::UnifiedRubySDK::Operations::UpdatePassthroughRawRequest.new(
+      request = Models::Operations::UpdatePassthroughRawRequest.new(
         
         connection_id: connection_id,
         path: path,
@@ -794,7 +1459,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        ::UnifiedRubySDK::Operations::UpdatePassthroughRawRequest,
+        Models::Operations::UpdatePassthroughRawRequest,
         base_url,
         '/passthrough/{connection_id}/{path}',
         request
@@ -822,16 +1487,17 @@ module UnifiedRubySDK
 
       hook_ctx = SDKHooks::HookContext.new(
         base_url: base_url,
-        oauth2_scopes: nil,
+        oauth2_scopes: [],
         operation_id: 'updatePassthrough_raw',
         security_source: @sdk_configuration.security_source
       )
 
       error = T.let(nil, T.nilable(StandardError))
-      r = T.let(nil, T.nilable(Faraday::Response))
+      http_response = T.let(nil, T.nilable(Faraday::Response))
+      
       
       begin
-        r = connection.put(url) do |req|
+        http_response = connection.put(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -847,50 +1513,144 @@ module UnifiedRubySDK
       rescue StandardError => e
         error = e
       ensure
-        if r.nil? || Utils.error_status?(r.status)
-          r = @sdk_configuration.hooks.after_error(
+        if http_response.nil? || Utils.error_status?(http_response.status)
+          http_response = @sdk_configuration.hooks.after_error(
             error: error,
             hook_ctx: SDKHooks::AfterErrorHookContext.new(
               hook_ctx: hook_ctx
             ),
-            response: r
+            response: http_response
           )
         else
-          r = @sdk_configuration.hooks.after_success(
+          http_response = @sdk_configuration.hooks.after_success(
             hook_ctx: SDKHooks::AfterSuccessHookContext.new(
               hook_ctx: hook_ctx
             ),
-            response: r
+            response: http_response
           )
         end
         
-        if r.nil?
+        if http_response.nil?
           raise error if !error.nil?
           raise 'no response'
         end
       end
-
-      content_type = r.headers.fetch('Content-Type', 'application/octet-stream')
-
-      res = ::UnifiedRubySDK::Operations::UpdatePassthroughRawResponse.new(
-        status_code: r.status, content_type: content_type, raw_response: r
-      )
-
-      res.headers = r.headers
-      if [204, 205].include?(r.status)
-      elsif r.status == 304
+      
+      content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
+      if Utils.match_status_code(http_response.status, ['204', '205'])
+        http_response = @sdk_configuration.hooks.after_success(
+          hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+            hook_ctx: hook_ctx
+          ),
+          response: http_response
+        )
+        return Models::Operations::UpdatePassthroughRawResponse.new(
+          status_code: http_response.status,
+          content_type: content_type,
+          raw_response: http_response
+        )
+      elsif Utils.match_status_code(http_response.status, ['304'])
+        http_response = @sdk_configuration.hooks.after_success(
+          hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+            hook_ctx: hook_ctx
+          ),
+          response: http_response
+        )
+        return Models::Operations::UpdatePassthroughRawResponse.new(
+          status_code: http_response.status,
+          content_type: content_type,
+          raw_response: http_response
+        )
+      elsif Utils.match_status_code(http_response.status, ['4XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
+      elsif Utils.match_status_code(http_response.status, ['5XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
       else
         if Utils.match_content_type(content_type, 'application/json')
-          out = Crystalline.unmarshal_json(JSON.parse(r.env.response_body), ::Object)
-          res.default_application_json_any = out
-        end
-        res.default_application_xml_res = r.env.response_body if Utils.match_content_type(content_type, 'application/xml')
-        res.default_text_csv_res = r.env.response_body if Utils.match_content_type(content_type, 'text/csv')
-        res.default_text_plain_res = r.env.response_body if Utils.match_content_type(content_type, 'text/plain')
-        res.default_wildcard_wildcard_bytes = r.env.response_body if Utils.match_content_type(content_type, '*/*')
-      end
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), ::Object)
+          response = Models::Operations::UpdatePassthroughRawResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_application_json_any: obj
+          )
 
-      res
+          return response
+        elsif Utils.match_content_type(content_type, 'application/xml')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::UpdatePassthroughRawResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_application_xml_res: obj
+          )
+        elsif Utils.match_content_type(content_type, 'text/csv')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::UpdatePassthroughRawResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_text_csv_res: obj
+          )
+        elsif Utils.match_content_type(content_type, 'text/plain')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::UpdatePassthroughRawResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_text_plain_res: obj
+          )
+        elsif Utils.match_content_type(content_type, '*/*')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          obj = http_response.env.body
+
+          return Models::Operations::UpdatePassthroughRawResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            headers: http_response.get_headers,
+            default_wildcard_wildcard_bytes: obj
+          )
+        else
+          raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'Unknown content type received'
+        end
+      end
     end
   end
 end

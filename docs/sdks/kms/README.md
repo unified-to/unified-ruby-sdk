@@ -34,12 +34,12 @@ Create a comment
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.kms.create_kms_comment(kms_comment=::UnifiedRubySDK::Shared::KmsComment.new(
+res = s.kms.create_kms_comment(kms_comment=Models::Shared::KmsComment.new(
   content: "<value>",
 ), connection_id="<id>", fields_=[
   "<value>",
@@ -53,15 +53,15 @@ end
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `kms_comment`                                                             | [::UnifiedRubySDK::Shared::KmsComment](../../models/shared/kmscomment.md) | :heavy_check_mark:                                                        | N/A                                                                       |
-| `connection_id`                                                           | *::String*                                                                | :heavy_check_mark:                                                        | ID of the connection                                                      |
-| `fields_`                                                                 | T::Array<*::String*>                                                      | :heavy_minus_sign:                                                        | Comma-delimited fields to return                                          |
+| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `kms_comment`                                                   | [Models::Shared::KmsComment](../../models/shared/kmscomment.md) | :heavy_check_mark:                                              | N/A                                                             |
+| `connection_id`                                                 | *::String*                                                      | :heavy_check_mark:                                              | ID of the connection                                            |
+| `fields_`                                                       | T::Array<*::String*>                                            | :heavy_minus_sign:                                              | Comma-delimited fields to return                                |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::CreateKmsCommentResponse)](../../models/operations/createkmscommentresponse.md)**
+**[T.nilable(Models::Operations::CreateKmsCommentResponse)](../../models/operations/createkmscommentresponse.md)**
 
 
 
@@ -75,14 +75,14 @@ Create a page
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.kms.create_kms_page(kms_page=::UnifiedRubySDK::Shared::KmsPage.new(
+res = s.kms.create_kms_page(kms_page=Models::Shared::KmsPage.new(
   title: "<value>",
-  type: ::UnifiedRubySDK::Shared::KmsPageType::HTML,
+  type: Models::Shared::KmsPageType::HTML,
 ), connection_id="<id>", fields_=[
   "<value>",
 ])
@@ -95,15 +95,15 @@ end
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `kms_page`                                                          | [::UnifiedRubySDK::Shared::KmsPage](../../models/shared/kmspage.md) | :heavy_check_mark:                                                  | N/A                                                                 |
-| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
-| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
+| Parameter                                                 | Type                                                      | Required                                                  | Description                                               |
+| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
+| `kms_page`                                                | [Models::Shared::KmsPage](../../models/shared/kmspage.md) | :heavy_check_mark:                                        | N/A                                                       |
+| `connection_id`                                           | *::String*                                                | :heavy_check_mark:                                        | ID of the connection                                      |
+| `fields_`                                                 | T::Array<*::String*>                                      | :heavy_minus_sign:                                        | Comma-delimited fields to return                          |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::CreateKmsPageResponse)](../../models/operations/createkmspageresponse.md)**
+**[T.nilable(Models::Operations::CreateKmsPageResponse)](../../models/operations/createkmspageresponse.md)**
 
 
 
@@ -117,12 +117,12 @@ Create a space
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.kms.create_kms_space(kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
+res = s.kms.create_kms_space(kms_space=Models::Shared::KmsSpace.new(
   name: "<value>",
 ), connection_id="<id>", fields_=[
   "<value>",
@@ -136,15 +136,15 @@ end
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `kms_space`                                                           | [::UnifiedRubySDK::Shared::KmsSpace](../../models/shared/kmsspace.md) | :heavy_check_mark:                                                    | N/A                                                                   |
-| `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
-| `fields_`                                                             | T::Array<*::String*>                                                  | :heavy_minus_sign:                                                    | Comma-delimited fields to return                                      |
+| Parameter                                                   | Type                                                        | Required                                                    | Description                                                 |
+| ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
+| `kms_space`                                                 | [Models::Shared::KmsSpace](../../models/shared/kmsspace.md) | :heavy_check_mark:                                          | N/A                                                         |
+| `connection_id`                                             | *::String*                                                  | :heavy_check_mark:                                          | ID of the connection                                        |
+| `fields_`                                                   | T::Array<*::String*>                                        | :heavy_minus_sign:                                          | Comma-delimited fields to return                            |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::CreateKmsSpaceResponse)](../../models/operations/createkmsspaceresponse.md)**
+**[T.nilable(Models::Operations::CreateKmsSpaceResponse)](../../models/operations/createkmsspaceresponse.md)**
 
 
 
@@ -158,7 +158,7 @@ Retrieve a comment
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -183,7 +183,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::GetKmsCommentResponse)](../../models/operations/getkmscommentresponse.md)**
+**[T.nilable(Models::Operations::GetKmsCommentResponse)](../../models/operations/getkmscommentresponse.md)**
 
 
 
@@ -197,7 +197,7 @@ Retrieve a page
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -222,7 +222,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::GetKmsPageResponse)](../../models/operations/getkmspageresponse.md)**
+**[T.nilable(Models::Operations::GetKmsPageResponse)](../../models/operations/getkmspageresponse.md)**
 
 
 
@@ -236,7 +236,7 @@ Retrieve a space
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -261,7 +261,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::GetKmsSpaceResponse)](../../models/operations/getkmsspaceresponse.md)**
+**[T.nilable(Models::Operations::GetKmsSpaceResponse)](../../models/operations/getkmsspaceresponse.md)**
 
 
 
@@ -275,12 +275,12 @@ List all comments
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-req = ::UnifiedRubySDK::Operations::ListKmsCommentsRequest.new(
+req = Models::Operations::ListKmsCommentsRequest.new(
   connection_id: "<id>",
 )
 
@@ -294,13 +294,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                 | [::UnifiedRubySDK::Operations::ListKmsCommentsRequest](../../models/operations/listkmscommentsrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [Models::Operations::ListKmsCommentsRequest](../../models/operations/listkmscommentsrequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::ListKmsCommentsResponse)](../../models/operations/listkmscommentsresponse.md)**
+**[T.nilable(Models::Operations::ListKmsCommentsResponse)](../../models/operations/listkmscommentsresponse.md)**
 
 
 
@@ -314,12 +314,12 @@ List all pages
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-req = ::UnifiedRubySDK::Operations::ListKmsPagesRequest.new(
+req = Models::Operations::ListKmsPagesRequest.new(
   connection_id: "<id>",
 )
 
@@ -333,13 +333,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [::UnifiedRubySDK::Operations::ListKmsPagesRequest](../../models/operations/listkmspagesrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [Models::Operations::ListKmsPagesRequest](../../models/operations/listkmspagesrequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::ListKmsPagesResponse)](../../models/operations/listkmspagesresponse.md)**
+**[T.nilable(Models::Operations::ListKmsPagesResponse)](../../models/operations/listkmspagesresponse.md)**
 
 
 
@@ -353,12 +353,12 @@ List all spaces
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-req = ::UnifiedRubySDK::Operations::ListKmsSpacesRequest.new(
+req = Models::Operations::ListKmsSpacesRequest.new(
   connection_id: "<id>",
 )
 
@@ -372,13 +372,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [::UnifiedRubySDK::Operations::ListKmsSpacesRequest](../../models/operations/listkmsspacesrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [Models::Operations::ListKmsSpacesRequest](../../models/operations/listkmsspacesrequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::ListKmsSpacesResponse)](../../models/operations/listkmsspacesresponse.md)**
+**[T.nilable(Models::Operations::ListKmsSpacesResponse)](../../models/operations/listkmsspacesresponse.md)**
 
 
 
@@ -392,12 +392,12 @@ Update a comment
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.kms.patch_kms_comment(kms_comment=::UnifiedRubySDK::Shared::KmsComment.new(
+res = s.kms.patch_kms_comment(kms_comment=Models::Shared::KmsComment.new(
   content: "<value>",
 ), connection_id="<id>", id="<id>", fields_=[
   "<value>",
@@ -411,16 +411,16 @@ end
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `kms_comment`                                                             | [::UnifiedRubySDK::Shared::KmsComment](../../models/shared/kmscomment.md) | :heavy_check_mark:                                                        | N/A                                                                       |
-| `connection_id`                                                           | *::String*                                                                | :heavy_check_mark:                                                        | ID of the connection                                                      |
-| `id`                                                                      | *::String*                                                                | :heavy_check_mark:                                                        | ID of the Comment                                                         |
-| `fields_`                                                                 | T::Array<*::String*>                                                      | :heavy_minus_sign:                                                        | Comma-delimited fields to return                                          |
+| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `kms_comment`                                                   | [Models::Shared::KmsComment](../../models/shared/kmscomment.md) | :heavy_check_mark:                                              | N/A                                                             |
+| `connection_id`                                                 | *::String*                                                      | :heavy_check_mark:                                              | ID of the connection                                            |
+| `id`                                                            | *::String*                                                      | :heavy_check_mark:                                              | ID of the Comment                                               |
+| `fields_`                                                       | T::Array<*::String*>                                            | :heavy_minus_sign:                                              | Comma-delimited fields to return                                |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::PatchKmsCommentResponse)](../../models/operations/patchkmscommentresponse.md)**
+**[T.nilable(Models::Operations::PatchKmsCommentResponse)](../../models/operations/patchkmscommentresponse.md)**
 
 
 
@@ -434,14 +434,14 @@ Update a page
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.kms.patch_kms_page(kms_page=::UnifiedRubySDK::Shared::KmsPage.new(
+res = s.kms.patch_kms_page(kms_page=Models::Shared::KmsPage.new(
   title: "<value>",
-  type: ::UnifiedRubySDK::Shared::KmsPageType::TEXT,
+  type: Models::Shared::KmsPageType::TEXT,
 ), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
@@ -454,16 +454,16 @@ end
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `kms_page`                                                          | [::UnifiedRubySDK::Shared::KmsPage](../../models/shared/kmspage.md) | :heavy_check_mark:                                                  | N/A                                                                 |
-| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
-| `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Page                                                      |
-| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
+| Parameter                                                 | Type                                                      | Required                                                  | Description                                               |
+| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
+| `kms_page`                                                | [Models::Shared::KmsPage](../../models/shared/kmspage.md) | :heavy_check_mark:                                        | N/A                                                       |
+| `connection_id`                                           | *::String*                                                | :heavy_check_mark:                                        | ID of the connection                                      |
+| `id`                                                      | *::String*                                                | :heavy_check_mark:                                        | ID of the Page                                            |
+| `fields_`                                                 | T::Array<*::String*>                                      | :heavy_minus_sign:                                        | Comma-delimited fields to return                          |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::PatchKmsPageResponse)](../../models/operations/patchkmspageresponse.md)**
+**[T.nilable(Models::Operations::PatchKmsPageResponse)](../../models/operations/patchkmspageresponse.md)**
 
 
 
@@ -477,12 +477,12 @@ Update a space
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.kms.patch_kms_space(kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
+res = s.kms.patch_kms_space(kms_space=Models::Shared::KmsSpace.new(
   name: "<value>",
 ), connection_id="<id>", id="<id>", fields_=[
   "<value>",
@@ -496,16 +496,16 @@ end
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `kms_space`                                                           | [::UnifiedRubySDK::Shared::KmsSpace](../../models/shared/kmsspace.md) | :heavy_check_mark:                                                    | N/A                                                                   |
-| `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
-| `id`                                                                  | *::String*                                                            | :heavy_check_mark:                                                    | ID of the Space                                                       |
-| `fields_`                                                             | T::Array<*::String*>                                                  | :heavy_minus_sign:                                                    | Comma-delimited fields to return                                      |
+| Parameter                                                   | Type                                                        | Required                                                    | Description                                                 |
+| ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
+| `kms_space`                                                 | [Models::Shared::KmsSpace](../../models/shared/kmsspace.md) | :heavy_check_mark:                                          | N/A                                                         |
+| `connection_id`                                             | *::String*                                                  | :heavy_check_mark:                                          | ID of the connection                                        |
+| `id`                                                        | *::String*                                                  | :heavy_check_mark:                                          | ID of the Space                                             |
+| `fields_`                                                   | T::Array<*::String*>                                        | :heavy_minus_sign:                                          | Comma-delimited fields to return                            |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::PatchKmsSpaceResponse)](../../models/operations/patchkmsspaceresponse.md)**
+**[T.nilable(Models::Operations::PatchKmsSpaceResponse)](../../models/operations/patchkmsspaceresponse.md)**
 
 
 
@@ -519,7 +519,7 @@ Remove a comment
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -541,7 +541,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::RemoveKmsCommentResponse)](../../models/operations/removekmscommentresponse.md)**
+**[T.nilable(Models::Operations::RemoveKmsCommentResponse)](../../models/operations/removekmscommentresponse.md)**
 
 
 
@@ -555,7 +555,7 @@ Remove a page
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -577,7 +577,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::RemoveKmsPageResponse)](../../models/operations/removekmspageresponse.md)**
+**[T.nilable(Models::Operations::RemoveKmsPageResponse)](../../models/operations/removekmspageresponse.md)**
 
 
 
@@ -591,7 +591,7 @@ Remove a space
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
@@ -613,7 +613,7 @@ end
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::RemoveKmsSpaceResponse)](../../models/operations/removekmsspaceresponse.md)**
+**[T.nilable(Models::Operations::RemoveKmsSpaceResponse)](../../models/operations/removekmsspaceresponse.md)**
 
 
 
@@ -627,12 +627,12 @@ Update a comment
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.kms.update_kms_comment(kms_comment=::UnifiedRubySDK::Shared::KmsComment.new(
+res = s.kms.update_kms_comment(kms_comment=Models::Shared::KmsComment.new(
   content: "<value>",
 ), connection_id="<id>", id="<id>", fields_=[
   "<value>",
@@ -646,16 +646,16 @@ end
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `kms_comment`                                                             | [::UnifiedRubySDK::Shared::KmsComment](../../models/shared/kmscomment.md) | :heavy_check_mark:                                                        | N/A                                                                       |
-| `connection_id`                                                           | *::String*                                                                | :heavy_check_mark:                                                        | ID of the connection                                                      |
-| `id`                                                                      | *::String*                                                                | :heavy_check_mark:                                                        | ID of the Comment                                                         |
-| `fields_`                                                                 | T::Array<*::String*>                                                      | :heavy_minus_sign:                                                        | Comma-delimited fields to return                                          |
+| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `kms_comment`                                                   | [Models::Shared::KmsComment](../../models/shared/kmscomment.md) | :heavy_check_mark:                                              | N/A                                                             |
+| `connection_id`                                                 | *::String*                                                      | :heavy_check_mark:                                              | ID of the connection                                            |
+| `id`                                                            | *::String*                                                      | :heavy_check_mark:                                              | ID of the Comment                                               |
+| `fields_`                                                       | T::Array<*::String*>                                            | :heavy_minus_sign:                                              | Comma-delimited fields to return                                |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::UpdateKmsCommentResponse)](../../models/operations/updatekmscommentresponse.md)**
+**[T.nilable(Models::Operations::UpdateKmsCommentResponse)](../../models/operations/updatekmscommentresponse.md)**
 
 
 
@@ -669,14 +669,14 @@ Update a page
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.kms.update_kms_page(kms_page=::UnifiedRubySDK::Shared::KmsPage.new(
+res = s.kms.update_kms_page(kms_page=Models::Shared::KmsPage.new(
   title: "<value>",
-  type: ::UnifiedRubySDK::Shared::KmsPageType::OTHER,
+  type: Models::Shared::KmsPageType::OTHER,
 ), connection_id="<id>", id="<id>", fields_=[
   "<value>",
 ])
@@ -689,16 +689,16 @@ end
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `kms_page`                                                          | [::UnifiedRubySDK::Shared::KmsPage](../../models/shared/kmspage.md) | :heavy_check_mark:                                                  | N/A                                                                 |
-| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
-| `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Page                                                      |
-| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
+| Parameter                                                 | Type                                                      | Required                                                  | Description                                               |
+| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
+| `kms_page`                                                | [Models::Shared::KmsPage](../../models/shared/kmspage.md) | :heavy_check_mark:                                        | N/A                                                       |
+| `connection_id`                                           | *::String*                                                | :heavy_check_mark:                                        | ID of the connection                                      |
+| `id`                                                      | *::String*                                                | :heavy_check_mark:                                        | ID of the Page                                            |
+| `fields_`                                                 | T::Array<*::String*>                                      | :heavy_minus_sign:                                        | Comma-delimited fields to return                          |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::UpdateKmsPageResponse)](../../models/operations/updatekmspageresponse.md)**
+**[T.nilable(Models::Operations::UpdateKmsPageResponse)](../../models/operations/updatekmspageresponse.md)**
 
 
 
@@ -712,12 +712,12 @@ Update a space
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: ::UnifiedRubySDK::Shared::Security.new(
+      security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),
     )
 
-res = s.kms.update_kms_space(kms_space=::UnifiedRubySDK::Shared::KmsSpace.new(
+res = s.kms.update_kms_space(kms_space=Models::Shared::KmsSpace.new(
   name: "<value>",
 ), connection_id="<id>", id="<id>", fields_=[
   "<value>",
@@ -731,14 +731,14 @@ end
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `kms_space`                                                           | [::UnifiedRubySDK::Shared::KmsSpace](../../models/shared/kmsspace.md) | :heavy_check_mark:                                                    | N/A                                                                   |
-| `connection_id`                                                       | *::String*                                                            | :heavy_check_mark:                                                    | ID of the connection                                                  |
-| `id`                                                                  | *::String*                                                            | :heavy_check_mark:                                                    | ID of the Space                                                       |
-| `fields_`                                                             | T::Array<*::String*>                                                  | :heavy_minus_sign:                                                    | Comma-delimited fields to return                                      |
+| Parameter                                                   | Type                                                        | Required                                                    | Description                                                 |
+| ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
+| `kms_space`                                                 | [Models::Shared::KmsSpace](../../models/shared/kmsspace.md) | :heavy_check_mark:                                          | N/A                                                         |
+| `connection_id`                                             | *::String*                                                  | :heavy_check_mark:                                          | ID of the connection                                        |
+| `id`                                                        | *::String*                                                  | :heavy_check_mark:                                          | ID of the Space                                             |
+| `fields_`                                                   | T::Array<*::String*>                                        | :heavy_minus_sign:                                          | Comma-delimited fields to return                            |
 
 ### Response
 
-**[T.nilable(::UnifiedRubySDK::Operations::UpdateKmsSpaceResponse)](../../models/operations/updatekmsspaceresponse.md)**
+**[T.nilable(Models::Operations::UpdateKmsSpaceResponse)](../../models/operations/updatekmsspaceresponse.md)**
 

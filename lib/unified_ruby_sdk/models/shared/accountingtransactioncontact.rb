@@ -5,25 +5,36 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AccountingTransactionContact < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :is_customer, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_customer') } }
-
-      field :is_supplier, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_supplier') } }
+      class AccountingTransactionContact
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(id: ::String, is_customer: T.nilable(T::Boolean), is_supplier: T.nilable(T::Boolean)).void }
-      def initialize(id: nil, is_customer: nil, is_supplier: nil)
-        @id = id
-        @is_customer = is_customer
-        @is_supplier = is_supplier
+        field :id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :is_customer, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_customer') } }
+
+        field :is_supplier, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_supplier') } }
+
+
+        sig { params(id: ::String, is_customer: T.nilable(T::Boolean), is_supplier: T.nilable(T::Boolean)).void }
+        def initialize(id: nil, is_customer: nil, is_supplier: nil)
+          @id = id
+          @is_customer = is_customer
+          @is_supplier = is_supplier
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @id == other.id
+          return false unless @is_customer == other.is_customer
+          return false unless @is_supplier == other.is_supplier
+          true
+        end
       end
     end
   end

@@ -5,67 +5,92 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class StorageFile < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :data, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('data') } }
-
-      field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
-      field :download_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('download_url') } }
-
-      field :hash, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('hash') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :mime_type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mime_type') } }
-
-      field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
-      field :parent_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
-
-      field :permissions, T.nilable(T::Array[::UnifiedRubySDK::Shared::StoragePermission]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('permissions') } }
-
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :size, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
-
-      field :type, T.nilable(::UnifiedRubySDK::Shared::StorageFileType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::StorageFileType, true) } }
-
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
-
-      field :version, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('version') } }
-
-      field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
+      class StorageFile
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(created_at: T.nilable(::DateTime), data: T.nilable(::String), description: T.nilable(::String), download_url: T.nilable(::String), hash: T.nilable(::String), id: T.nilable(::String), mime_type: T.nilable(::String), name: T.nilable(::String), parent_id: T.nilable(::String), permissions: T.nilable(T::Array[::UnifiedRubySDK::Shared::StoragePermission]), raw: T.nilable(T::Hash[Symbol, ::Object]), size: T.nilable(::Float), type: T.nilable(::UnifiedRubySDK::Shared::StorageFileType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), version: T.nilable(::String), web_url: T.nilable(::String)).void }
-      def initialize(created_at: nil, data: nil, description: nil, download_url: nil, hash: nil, id: nil, mime_type: nil, name: nil, parent_id: nil, permissions: nil, raw: nil, size: nil, type: nil, updated_at: nil, user_id: nil, version: nil, web_url: nil)
-        @created_at = created_at
-        @data = data
-        @description = description
-        @download_url = download_url
-        @hash = hash
-        @id = id
-        @mime_type = mime_type
-        @name = name
-        @parent_id = parent_id
-        @permissions = permissions
-        @raw = raw
-        @size = size
-        @type = type
-        @updated_at = updated_at
-        @user_id = user_id
-        @version = version
-        @web_url = web_url
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :data, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('data') } }
+
+        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+
+        field :download_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('download_url') } }
+
+        field :hash, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('hash') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :mime_type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mime_type') } }
+
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :parent_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
+
+        field :permissions, T.nilable(T::Array[Models::Shared::StoragePermission]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('permissions') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :size, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
+
+        field :type, T.nilable(Models::Shared::StorageFileType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::StorageFileType, true) } }
+
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
+
+        field :version, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('version') } }
+
+        field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
+
+
+        sig { params(created_at: T.nilable(::DateTime), data: T.nilable(::String), description: T.nilable(::String), download_url: T.nilable(::String), hash: T.nilable(::String), id: T.nilable(::String), mime_type: T.nilable(::String), name: T.nilable(::String), parent_id: T.nilable(::String), permissions: T.nilable(T::Array[Models::Shared::StoragePermission]), raw: T.nilable(T::Hash[Symbol, ::Object]), size: T.nilable(::Float), type: T.nilable(Models::Shared::StorageFileType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), version: T.nilable(::String), web_url: T.nilable(::String)).void }
+        def initialize(created_at: nil, data: nil, description: nil, download_url: nil, hash: nil, id: nil, mime_type: nil, name: nil, parent_id: nil, permissions: nil, raw: nil, size: nil, type: nil, updated_at: nil, user_id: nil, version: nil, web_url: nil)
+          @created_at = created_at
+          @data = data
+          @description = description
+          @download_url = download_url
+          @hash = hash
+          @id = id
+          @mime_type = mime_type
+          @name = name
+          @parent_id = parent_id
+          @permissions = permissions
+          @raw = raw
+          @size = size
+          @type = type
+          @updated_at = updated_at
+          @user_id = user_id
+          @version = version
+          @web_url = web_url
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @created_at == other.created_at
+          return false unless @data == other.data
+          return false unless @description == other.description
+          return false unless @download_url == other.download_url
+          return false unless @hash == other.hash
+          return false unless @id == other.id
+          return false unless @mime_type == other.mime_type
+          return false unless @name == other.name
+          return false unless @parent_id == other.parent_id
+          return false unless @permissions == other.permissions
+          return false unless @raw == other.raw
+          return false unless @size == other.size
+          return false unless @type == other.type
+          return false unless @updated_at == other.updated_at
+          return false unless @user_id == other.user_id
+          return false unless @version == other.version
+          return false unless @web_url == other.web_url
+          true
+        end
       end
     end
   end

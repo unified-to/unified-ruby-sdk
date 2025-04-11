@@ -5,34 +5,48 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class RepoBranch < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
-      field :repo_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('repo_id') } }
-
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      class RepoBranch
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(name: ::String, repo_id: ::String, created_at: T.nilable(::DateTime), id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
-      def initialize(name: nil, repo_id: nil, created_at: nil, id: nil, raw: nil, updated_at: nil)
-        @name = name
-        @repo_id = repo_id
-        @created_at = created_at
-        @id = id
-        @raw = raw
-        @updated_at = updated_at
+        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :repo_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('repo_id') } }
+
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+
+        sig { params(name: ::String, repo_id: ::String, created_at: T.nilable(::DateTime), id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(name: nil, repo_id: nil, created_at: nil, id: nil, raw: nil, updated_at: nil)
+          @name = name
+          @repo_id = repo_id
+          @created_at = created_at
+          @id = id
+          @raw = raw
+          @updated_at = updated_at
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @name == other.name
+          return false unless @repo_id == other.repo_id
+          return false unless @created_at == other.created_at
+          return false unless @id == other.id
+          return false unless @raw == other.raw
+          return false unless @updated_at == other.updated_at
+          true
+        end
       end
     end
   end

@@ -5,25 +5,36 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class CreateLmsStudentRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class CreateLmsStudentRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # ID of the connection
-      field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # ID of the connection
+        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
 
-      field :lms_student, ::UnifiedRubySDK::Shared::LmsStudent, { 'request': { 'media_type': 'application/json' } }
-      # Comma-delimited fields to return
-      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        field :lms_student, Models::Shared::LmsStudent, { 'request': { 'media_type': 'application/json' } }
+        # Comma-delimited fields to return
+        field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, lms_student: ::UnifiedRubySDK::Shared::LmsStudent, fields_: T.nilable(T::Array[::String])).void }
-      def initialize(connection_id: nil, lms_student: nil, fields_: nil)
-        @connection_id = connection_id
-        @lms_student = lms_student
-        @fields_ = fields_
+        sig { params(connection_id: ::String, lms_student: Models::Shared::LmsStudent, fields_: T.nilable(T::Array[::String])).void }
+        def initialize(connection_id: nil, lms_student: nil, fields_: nil)
+          @connection_id = connection_id
+          @lms_student = lms_student
+          @fields_ = fields_
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @connection_id == other.connection_id
+          return false unless @lms_student == other.lms_student
+          return false unless @fields_ == other.fields_
+          true
+        end
       end
     end
   end

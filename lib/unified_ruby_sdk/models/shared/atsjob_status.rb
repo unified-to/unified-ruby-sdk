@@ -5,16 +5,18 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AtsJobStatus < T::Enum
-      enums do
-        ARCHIVED = new('ARCHIVED')
-        PENDING = new('PENDING')
-        DRAFT = new('DRAFT')
-        OPEN = new('OPEN')
-        CLOSED = new('CLOSED')
+      class AtsJobStatus < T::Enum
+        enums do
+          ARCHIVED = new('ARCHIVED')
+          PENDING = new('PENDING')
+          DRAFT = new('DRAFT')
+          OPEN = new('OPEN')
+          CLOSED = new('CLOSED')
+        end
       end
     end
   end

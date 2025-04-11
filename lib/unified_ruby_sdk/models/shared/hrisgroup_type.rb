@@ -5,18 +5,20 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class HrisGroupType < T::Enum
-      enums do
-        TEAM = new('TEAM')
-        GROUP = new('GROUP')
-        DEPARTMENT = new('DEPARTMENT')
-        DIVISION = new('DIVISION')
-        BUSINESS_UNIT = new('BUSINESS_UNIT')
-        BRANCH = new('BRANCH')
-        SUB_DEPARTMENT = new('SUB_DEPARTMENT')
+      class HrisGroupType < T::Enum
+        enums do
+          TEAM = new('TEAM')
+          GROUP = new('GROUP')
+          DEPARTMENT = new('DEPARTMENT')
+          DIVISION = new('DIVISION')
+          BUSINESS_UNIT = new('BUSINESS_UNIT')
+          BRANCH = new('BRANCH')
+          SUB_DEPARTMENT = new('SUB_DEPARTMENT')
+        end
       end
     end
   end

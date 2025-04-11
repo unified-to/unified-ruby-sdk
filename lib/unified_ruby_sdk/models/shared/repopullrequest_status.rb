@@ -5,14 +5,16 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class RepoPullrequestStatus < T::Enum
-      enums do
-        PENDING = new('PENDING')
-        APPROVED = new('APPROVED')
-        REJECTED = new('REJECTED')
+      class RepoPullrequestStatus < T::Enum
+        enums do
+          PENDING = new('PENDING')
+          APPROVED = new('APPROVED')
+          REJECTED = new('REJECTED')
+        end
       end
     end
   end

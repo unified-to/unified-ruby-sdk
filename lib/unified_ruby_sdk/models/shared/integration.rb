@@ -5,88 +5,120 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
-    # Informational object for supported integrations.
-    class Integration < ::Crystalline::FieldAugmented
-      extend T::Sig
+  module Models
+    module Shared
+    
+      # Informational object for supported integrations.
+      class Integration
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # The categories of support solutions that this integration has
-      field :categories, T::Array[::UnifiedRubySDK::Shared::PropertyIntegrationCategories], { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('categories') } }
+        # The categories of support solutions that this integration has
+        field :categories, T::Array[Models::Shared::PropertyIntegrationCategories], { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('categories') } }
 
-      field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-      field :type, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
+        field :type, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
 
-      field :active_healthy_connections, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('active_healthy_connections') } }
+        field :active_healthy_connections, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('active_healthy_connections') } }
 
-      field :api, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('api') } }
+        field :api, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('api') } }
 
-      field :api_docs_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('api_docs_url') } }
+        field :api_docs_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('api_docs_url') } }
 
-      field :beta, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('beta') } }
+        field :beta, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('beta') } }
 
-      field :color, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('color') } }
+        field :color, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('color') } }
 
-      field :created_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
+        field :created_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
 
-      field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-      field :fa_icon, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fa_icon') } }
+        field :fa_icon, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fa_icon') } }
 
-      field :featured, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('featured') } }
+        field :featured, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('featured') } }
 
-      field :in_progress, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('in_progress') } }
+        field :in_progress, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('in_progress') } }
 
-      field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
+        field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
-      field :logo_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('logo_url') } }
+        field :logo_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('logo_url') } }
 
-      field :popularity, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('popularity') } }
+        field :popularity, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('popularity') } }
 
-      field :rate_limit_description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rate_limit_description') } }
+        field :rate_limit_description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rate_limit_description') } }
 
-      field :support, T.nilable(T::Hash[Symbol, ::UnifiedRubySDK::Shared::IntegrationSupport]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('support') } }
+        field :support, T.nilable(T::Hash[Symbol, Models::Shared::IntegrationSupport]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('support') } }
 
-      field :tested_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tested_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :tested_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tested_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-      field :text_color, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('text_color') } }
-      # instructions for the user on how to find the token/key
-      field :token_instructions, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('token_instructions') } }
-      # if auth_types = 'token'
-      field :token_names, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('token_names') } }
+        field :text_color, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('text_color') } }
+        # instructions for the user on how to find the token/key
+        field :token_instructions, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('token_instructions') } }
+        # if auth_types = 'token'
+        field :token_names, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('token_names') } }
 
-      field :updated_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
+        field :updated_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
 
-      field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
+        field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
 
-      sig { params(categories: T::Array[::UnifiedRubySDK::Shared::PropertyIntegrationCategories], name: ::String, type: ::String, active_healthy_connections: T.nilable(::Float), api: T.nilable(T::Hash[Symbol, ::Object]), api_docs_url: T.nilable(::String), beta: T.nilable(T::Boolean), color: T.nilable(::String), created_at: T.nilable(::String), description: T.nilable(::String), fa_icon: T.nilable(::String), featured: T.nilable(T::Boolean), in_progress: T.nilable(T::Boolean), is_active: T.nilable(T::Boolean), logo_url: T.nilable(::String), popularity: T.nilable(::Float), rate_limit_description: T.nilable(::String), support: T.nilable(T::Hash[Symbol, ::UnifiedRubySDK::Shared::IntegrationSupport]), tested_at: T.nilable(::DateTime), text_color: T.nilable(::String), token_instructions: T.nilable(T::Array[::String]), token_names: T.nilable(T::Array[::String]), updated_at: T.nilable(::String), web_url: T.nilable(::String)).void }
-      def initialize(categories: nil, name: nil, type: nil, active_healthy_connections: nil, api: nil, api_docs_url: nil, beta: nil, color: nil, created_at: nil, description: nil, fa_icon: nil, featured: nil, in_progress: nil, is_active: nil, logo_url: nil, popularity: nil, rate_limit_description: nil, support: nil, tested_at: nil, text_color: nil, token_instructions: nil, token_names: nil, updated_at: nil, web_url: nil)
-        @categories = categories
-        @name = name
-        @type = type
-        @active_healthy_connections = active_healthy_connections
-        @api = api
-        @api_docs_url = api_docs_url
-        @beta = beta
-        @color = color
-        @created_at = created_at
-        @description = description
-        @fa_icon = fa_icon
-        @featured = featured
-        @in_progress = in_progress
-        @is_active = is_active
-        @logo_url = logo_url
-        @popularity = popularity
-        @rate_limit_description = rate_limit_description
-        @support = support
-        @tested_at = tested_at
-        @text_color = text_color
-        @token_instructions = token_instructions
-        @token_names = token_names
-        @updated_at = updated_at
-        @web_url = web_url
+        sig { params(categories: T::Array[Models::Shared::PropertyIntegrationCategories], name: ::String, type: ::String, active_healthy_connections: T.nilable(::Float), api: T.nilable(T::Hash[Symbol, ::Object]), api_docs_url: T.nilable(::String), beta: T.nilable(T::Boolean), color: T.nilable(::String), created_at: T.nilable(::String), description: T.nilable(::String), fa_icon: T.nilable(::String), featured: T.nilable(T::Boolean), in_progress: T.nilable(T::Boolean), is_active: T.nilable(T::Boolean), logo_url: T.nilable(::String), popularity: T.nilable(::Float), rate_limit_description: T.nilable(::String), support: T.nilable(T::Hash[Symbol, Models::Shared::IntegrationSupport]), tested_at: T.nilable(::DateTime), text_color: T.nilable(::String), token_instructions: T.nilable(T::Array[::String]), token_names: T.nilable(T::Array[::String]), updated_at: T.nilable(::String), web_url: T.nilable(::String)).void }
+        def initialize(categories: nil, name: nil, type: nil, active_healthy_connections: nil, api: nil, api_docs_url: nil, beta: nil, color: nil, created_at: nil, description: nil, fa_icon: nil, featured: nil, in_progress: nil, is_active: nil, logo_url: nil, popularity: nil, rate_limit_description: nil, support: nil, tested_at: nil, text_color: nil, token_instructions: nil, token_names: nil, updated_at: nil, web_url: nil)
+          @categories = categories
+          @name = name
+          @type = type
+          @active_healthy_connections = active_healthy_connections
+          @api = api
+          @api_docs_url = api_docs_url
+          @beta = beta
+          @color = color
+          @created_at = created_at
+          @description = description
+          @fa_icon = fa_icon
+          @featured = featured
+          @in_progress = in_progress
+          @is_active = is_active
+          @logo_url = logo_url
+          @popularity = popularity
+          @rate_limit_description = rate_limit_description
+          @support = support
+          @tested_at = tested_at
+          @text_color = text_color
+          @token_instructions = token_instructions
+          @token_names = token_names
+          @updated_at = updated_at
+          @web_url = web_url
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @categories == other.categories
+          return false unless @name == other.name
+          return false unless @type == other.type
+          return false unless @active_healthy_connections == other.active_healthy_connections
+          return false unless @api == other.api
+          return false unless @api_docs_url == other.api_docs_url
+          return false unless @beta == other.beta
+          return false unless @color == other.color
+          return false unless @created_at == other.created_at
+          return false unless @description == other.description
+          return false unless @fa_icon == other.fa_icon
+          return false unless @featured == other.featured
+          return false unless @in_progress == other.in_progress
+          return false unless @is_active == other.is_active
+          return false unless @logo_url == other.logo_url
+          return false unless @popularity == other.popularity
+          return false unless @rate_limit_description == other.rate_limit_description
+          return false unless @support == other.support
+          return false unless @tested_at == other.tested_at
+          return false unless @text_color == other.text_color
+          return false unless @token_instructions == other.token_instructions
+          return false unless @token_names == other.token_names
+          return false unless @updated_at == other.updated_at
+          return false unless @web_url == other.web_url
+          true
+        end
       end
     end
   end

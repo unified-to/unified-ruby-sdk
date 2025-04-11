@@ -19,14 +19,16 @@ module UnifiedRubySDK
   ].freeze
   # Contains the list of servers available to the SDK
 
-  class SDKConfiguration < ::Crystalline::FieldAugmented
+  class SDKConfiguration
     extend T::Sig
+    include Crystalline::MetadataFields
+
 
     field :client, T.nilable(Faraday::Connection)
     field :hooks, ::UnifiedRubySDK::SDKHooks::Hooks
     field :retry_config, T.nilable(::UnifiedRubySDK::Utils::RetryConfig)
     field :timeout, T.nilable(Float)
-    field :security_source, T.nilable(T.proc.returns(T.nilable(::UnifiedRubySDK::Shared::Security)))
+    field :security_source, T.nilable(T.proc.returns(T.nilable(Models::Shared::Security)))
     field :server_url, T.nilable(String)
     field :server_idx, T.nilable(Integer)
     field :language, String
@@ -41,8 +43,8 @@ module UnifiedRubySDK
         hooks: ::UnifiedRubySDK::SDKHooks::Hooks,
         retry_config: T.nilable(::UnifiedRubySDK::Utils::RetryConfig),
         timeout_ms: T.nilable(Integer),
-        security: T.nilable(::UnifiedRubySDK::Shared::Security),
-        security_source: T.nilable(T.proc.returns(::UnifiedRubySDK::Shared::Security)),
+        security: T.nilable(Models::Shared::Security),
+        security_source: T.nilable(T.proc.returns(Models::Shared::Security)),
         server_url: T.nilable(String),
         server_idx: T.nilable(Integer)
       ).void
@@ -62,9 +64,9 @@ module UnifiedRubySDK
       end
       @language = 'ruby'
       @openapi_doc_version = '1.0'
-      @sdk_version = '0.9.0'
-      @gen_version = '2.565.1'
-      @user_agent = 'speakeasy-sdk/ruby 0.9.0 2.565.1 1.0 unified_ruby_sdk'
+      @sdk_version = '0.10.0'
+      @gen_version = '2.570.0'
+      @user_agent = 'speakeasy-sdk/ruby 0.10.0 2.570.0 1.0 unified_ruby_sdk'
     end
 
     sig { returns([String, T::Hash[Symbol, String]]) }

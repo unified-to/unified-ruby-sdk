@@ -5,28 +5,40 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class UpdateCommerceCollectionRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class UpdateCommerceCollectionRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # A collection of items/products/services
-      field :commerce_collection, ::UnifiedRubySDK::Shared::CommerceCollection, { 'request': { 'media_type': 'application/json' } }
-      # ID of the connection
-      field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-      # ID of the Collection
-      field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
-      # Comma-delimited fields to return
-      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        # A collection of items/products/services
+        field :commerce_collection, Models::Shared::CommerceCollection, { 'request': { 'media_type': 'application/json' } }
+        # ID of the connection
+        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # ID of the Collection
+        field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
+        # Comma-delimited fields to return
+        field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(commerce_collection: ::UnifiedRubySDK::Shared::CommerceCollection, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).void }
-      def initialize(commerce_collection: nil, connection_id: nil, id: nil, fields_: nil)
-        @commerce_collection = commerce_collection
-        @connection_id = connection_id
-        @id = id
-        @fields_ = fields_
+        sig { params(commerce_collection: Models::Shared::CommerceCollection, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).void }
+        def initialize(commerce_collection: nil, connection_id: nil, id: nil, fields_: nil)
+          @commerce_collection = commerce_collection
+          @connection_id = connection_id
+          @id = id
+          @fields_ = fields_
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @commerce_collection == other.commerce_collection
+          return false unless @connection_id == other.connection_id
+          return false unless @id == other.id
+          return false unless @fields_ == other.fields_
+          true
+        end
       end
     end
   end

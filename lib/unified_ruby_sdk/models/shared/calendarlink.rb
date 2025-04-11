@@ -5,49 +5,68 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class CalendarLink < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :url, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
-
-      field :created_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
-
-      field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
-      field :duration, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('duration') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
-
-      field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
-      field :price_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price_amount') } }
-
-      field :price_currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price_currency') } }
-
-      field :raw, T.nilable(::UnifiedRubySDK::Shared::CalendarLinkRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :updated_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
+      class CalendarLink
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(url: ::String, created_at: T.nilable(::String), description: T.nilable(::String), duration: T.nilable(::Float), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), price_amount: T.nilable(::Float), price_currency: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::CalendarLinkRaw), updated_at: T.nilable(::String)).void }
-      def initialize(url: nil, created_at: nil, description: nil, duration: nil, id: nil, is_active: nil, name: nil, price_amount: nil, price_currency: nil, raw: nil, updated_at: nil)
-        @url = url
-        @created_at = created_at
-        @description = description
-        @duration = duration
-        @id = id
-        @is_active = is_active
-        @name = name
-        @price_amount = price_amount
-        @price_currency = price_currency
-        @raw = raw
-        @updated_at = updated_at
+        field :url, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
+
+        field :created_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
+
+        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+
+        field :duration, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('duration') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
+
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :price_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price_amount') } }
+
+        field :price_currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price_currency') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :updated_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
+
+
+        sig { params(url: ::String, created_at: T.nilable(::String), description: T.nilable(::String), duration: T.nilable(::Float), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), price_amount: T.nilable(::Float), price_currency: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::String)).void }
+        def initialize(url: nil, created_at: nil, description: nil, duration: nil, id: nil, is_active: nil, name: nil, price_amount: nil, price_currency: nil, raw: nil, updated_at: nil)
+          @url = url
+          @created_at = created_at
+          @description = description
+          @duration = duration
+          @id = id
+          @is_active = is_active
+          @name = name
+          @price_amount = price_amount
+          @price_currency = price_currency
+          @raw = raw
+          @updated_at = updated_at
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @url == other.url
+          return false unless @created_at == other.created_at
+          return false unless @description == other.description
+          return false unless @duration == other.duration
+          return false unless @id == other.id
+          return false unless @is_active == other.is_active
+          return false unless @name == other.name
+          return false unless @price_amount == other.price_amount
+          return false unless @price_currency == other.price_currency
+          return false unless @raw == other.raw
+          return false unless @updated_at == other.updated_at
+          true
+        end
       end
     end
   end

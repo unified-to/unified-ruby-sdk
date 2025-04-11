@@ -5,28 +5,40 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class PatchMetadataMetadataRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class PatchMetadataMetadataRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # ID of the connection
-      field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-      # ID of the Metadata
-      field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
+        # ID of the connection
+        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # ID of the Metadata
+        field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
 
-      field :metadata_metadata, ::UnifiedRubySDK::Shared::MetadataMetadata, { 'request': { 'media_type': 'application/json' } }
-      # Comma-delimited fields to return
-      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        field :metadata_metadata, Models::Shared::MetadataMetadata, { 'request': { 'media_type': 'application/json' } }
+        # Comma-delimited fields to return
+        field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, id: ::String, metadata_metadata: ::UnifiedRubySDK::Shared::MetadataMetadata, fields_: T.nilable(T::Array[::String])).void }
-      def initialize(connection_id: nil, id: nil, metadata_metadata: nil, fields_: nil)
-        @connection_id = connection_id
-        @id = id
-        @metadata_metadata = metadata_metadata
-        @fields_ = fields_
+        sig { params(connection_id: ::String, id: ::String, metadata_metadata: Models::Shared::MetadataMetadata, fields_: T.nilable(T::Array[::String])).void }
+        def initialize(connection_id: nil, id: nil, metadata_metadata: nil, fields_: nil)
+          @connection_id = connection_id
+          @id = id
+          @metadata_metadata = metadata_metadata
+          @fields_ = fields_
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @connection_id == other.connection_id
+          return false unless @id == other.id
+          return false unless @metadata_metadata == other.metadata_metadata
+          return false unless @fields_ == other.fields_
+          true
+        end
       end
     end
   end

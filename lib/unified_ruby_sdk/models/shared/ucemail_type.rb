@@ -5,14 +5,16 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class UcEmailType < T::Enum
-      enums do
-        WORK = new('WORK')
-        HOME = new('HOME')
-        OTHER = new('OTHER')
+      class UcEmailType < T::Enum
+        enums do
+          WORK = new('WORK')
+          HOME = new('HOME')
+          OTHER = new('OTHER')
+        end
       end
     end
   end

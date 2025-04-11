@@ -5,43 +5,60 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class LmsInstructor < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :emails, T.nilable(T::Array[::UnifiedRubySDK::Shared::LmsEmail]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :image_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('image_url') } }
-
-      field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :telephones, T.nilable(T::Array[::UnifiedRubySDK::Shared::LmsTelephone]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
-
-      field :title, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
-
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      class LmsInstructor
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[::UnifiedRubySDK::Shared::LmsEmail]), id: T.nilable(::String), image_url: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), telephones: T.nilable(T::Array[::UnifiedRubySDK::Shared::LmsTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-      def initialize(created_at: nil, emails: nil, id: nil, image_url: nil, name: nil, raw: nil, telephones: nil, title: nil, updated_at: nil)
-        @created_at = created_at
-        @emails = emails
-        @id = id
-        @image_url = image_url
-        @name = name
-        @raw = raw
-        @telephones = telephones
-        @title = title
-        @updated_at = updated_at
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :emails, T.nilable(T::Array[Models::Shared::LmsEmail]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :image_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('image_url') } }
+
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :telephones, T.nilable(T::Array[Models::Shared::LmsTelephone]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
+
+        field :title, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
+
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+
+        sig { params(created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::LmsEmail]), id: T.nilable(::String), image_url: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::LmsTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(created_at: nil, emails: nil, id: nil, image_url: nil, name: nil, raw: nil, telephones: nil, title: nil, updated_at: nil)
+          @created_at = created_at
+          @emails = emails
+          @id = id
+          @image_url = image_url
+          @name = name
+          @raw = raw
+          @telephones = telephones
+          @title = title
+          @updated_at = updated_at
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @created_at == other.created_at
+          return false unless @emails == other.emails
+          return false unless @id == other.id
+          return false unless @image_url == other.image_url
+          return false unless @name == other.name
+          return false unless @raw == other.raw
+          return false unless @telephones == other.telephones
+          return false unless @title == other.title
+          return false unless @updated_at == other.updated_at
+          true
+        end
       end
     end
   end

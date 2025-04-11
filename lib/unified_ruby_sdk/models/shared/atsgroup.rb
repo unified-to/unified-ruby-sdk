@@ -5,25 +5,36 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AtsGroup < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
-      field :type, T.nilable(::UnifiedRubySDK::Shared::AtsGroupType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::AtsGroupType, true) } }
+      class AtsGroup
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(id: T.nilable(::String), name: T.nilable(::String), type: T.nilable(::UnifiedRubySDK::Shared::AtsGroupType)).void }
-      def initialize(id: nil, name: nil, type: nil)
-        @id = id
-        @name = name
-        @type = type
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :type, T.nilable(Models::Shared::AtsGroupType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AtsGroupType, true) } }
+
+
+        sig { params(id: T.nilable(::String), name: T.nilable(::String), type: T.nilable(Models::Shared::AtsGroupType)).void }
+        def initialize(id: nil, name: nil, type: nil)
+          @id = id
+          @name = name
+          @type = type
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @id == other.id
+          return false unless @name == other.name
+          return false unless @type == other.type
+          true
+        end
       end
     end
   end

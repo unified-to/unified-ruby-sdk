@@ -5,20 +5,22 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AccountingContactPaymentMethodType < T::Enum
-      enums do
-        ACH = new('ACH')
-        ALIPAY = new('ALIPAY')
-        CARD = new('CARD')
-        GIROPAY = new('GIROPAY')
-        IDEAL = new('IDEAL')
-        OTHER = new('OTHER')
-        PAYPAL = new('PAYPAL')
-        WIRE = new('WIRE')
-        CHECK = new('CHECK')
+      class AccountingContactPaymentMethodType < T::Enum
+        enums do
+          ACH = new('ACH')
+          ALIPAY = new('ALIPAY')
+          CARD = new('CARD')
+          GIROPAY = new('GIROPAY')
+          IDEAL = new('IDEAL')
+          OTHER = new('OTHER')
+          PAYPAL = new('PAYPAL')
+          WIRE = new('WIRE')
+          CHECK = new('CHECK')
+        end
       end
     end
   end

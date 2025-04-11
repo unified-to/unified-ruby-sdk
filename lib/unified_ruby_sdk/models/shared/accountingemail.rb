@@ -5,22 +5,32 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AccountingEmail < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :email, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
-
-      field :type, T.nilable(::UnifiedRubySDK::Shared::AccountingEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::AccountingEmailType, true) } }
+      class AccountingEmail
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(email: T.nilable(::String), type: T.nilable(::UnifiedRubySDK::Shared::AccountingEmailType)).void }
-      def initialize(email: nil, type: nil)
-        @email = email
-        @type = type
+        field :email, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
+
+        field :type, T.nilable(Models::Shared::AccountingEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingEmailType, true) } }
+
+
+        sig { params(email: T.nilable(::String), type: T.nilable(Models::Shared::AccountingEmailType)).void }
+        def initialize(email: nil, type: nil)
+          @email = email
+          @type = type
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @email == other.email
+          return false unless @type == other.type
+          true
+        end
       end
     end
   end

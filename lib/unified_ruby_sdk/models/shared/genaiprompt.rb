@@ -5,37 +5,52 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class GenaiPrompt < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :max_tokens, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_tokens') } }
-
-      field :messages, T.nilable(T::Array[::UnifiedRubySDK::Shared::GenaiContent]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('messages') } }
-
-      field :model_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('model_id') } }
-
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :responses, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('responses') } }
-
-      field :temperature, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('temperature') } }
-
-      field :tokens_used, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tokens_used') } }
+      class GenaiPrompt
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(max_tokens: T.nilable(::Float), messages: T.nilable(T::Array[::UnifiedRubySDK::Shared::GenaiContent]), model_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), responses: T.nilable(T::Array[::String]), temperature: T.nilable(::Float), tokens_used: T.nilable(::Float)).void }
-      def initialize(max_tokens: nil, messages: nil, model_id: nil, raw: nil, responses: nil, temperature: nil, tokens_used: nil)
-        @max_tokens = max_tokens
-        @messages = messages
-        @model_id = model_id
-        @raw = raw
-        @responses = responses
-        @temperature = temperature
-        @tokens_used = tokens_used
+        field :max_tokens, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_tokens') } }
+
+        field :messages, T.nilable(T::Array[Models::Shared::GenaiContent]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('messages') } }
+
+        field :model_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('model_id') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :responses, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('responses') } }
+
+        field :temperature, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('temperature') } }
+
+        field :tokens_used, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tokens_used') } }
+
+
+        sig { params(max_tokens: T.nilable(::Float), messages: T.nilable(T::Array[Models::Shared::GenaiContent]), model_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), responses: T.nilable(T::Array[::String]), temperature: T.nilable(::Float), tokens_used: T.nilable(::Float)).void }
+        def initialize(max_tokens: nil, messages: nil, model_id: nil, raw: nil, responses: nil, temperature: nil, tokens_used: nil)
+          @max_tokens = max_tokens
+          @messages = messages
+          @model_id = model_id
+          @raw = raw
+          @responses = responses
+          @temperature = temperature
+          @tokens_used = tokens_used
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @max_tokens == other.max_tokens
+          return false unless @messages == other.messages
+          return false unless @model_id == other.model_id
+          return false unless @raw == other.raw
+          return false unless @responses == other.responses
+          return false unless @temperature == other.temperature
+          return false unless @tokens_used == other.tokens_used
+          true
+        end
       end
     end
   end

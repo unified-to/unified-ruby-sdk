@@ -5,19 +5,21 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class ScimImsType < T::Enum
-      enums do
-        AIM = new('aim')
-        QTALK = new('qtalk')
-        ICQ = new('icq')
-        XMPP = new('xmpp')
-        MSN = new('msn')
-        SKYPE = new('skype')
-        QQ = new('qq')
-        YAHOO = new('yahoo')
+      class ScimImsType < T::Enum
+        enums do
+          AIM = new('aim')
+          QTALK = new('qtalk')
+          ICQ = new('icq')
+          XMPP = new('xmpp')
+          MSN = new('msn')
+          SKYPE = new('skype')
+          QQ = new('qq')
+          YAHOO = new('yahoo')
+        end
       end
     end
   end

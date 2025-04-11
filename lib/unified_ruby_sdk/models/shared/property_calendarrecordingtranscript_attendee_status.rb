@@ -5,14 +5,16 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class PropertyCalendarRecordingTranscriptAttendeeStatus < T::Enum
-      enums do
-        ACCEPTED = new('ACCEPTED')
-        REJECTED = new('REJECTED')
-        TENTATIVE = new('TENTATIVE')
+      class PropertyCalendarRecordingTranscriptAttendeeStatus < T::Enum
+        enums do
+          ACCEPTED = new('ACCEPTED')
+          REJECTED = new('REJECTED')
+          TENTATIVE = new('TENTATIVE')
+        end
       end
     end
   end

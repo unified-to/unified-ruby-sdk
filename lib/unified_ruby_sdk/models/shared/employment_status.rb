@@ -5,13 +5,15 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class EmploymentStatus < T::Enum
-      enums do
-        ACTIVE = new('ACTIVE')
-        INACTIVE = new('INACTIVE')
+      class EmploymentStatus < T::Enum
+        enums do
+          ACTIVE = new('ACTIVE')
+          INACTIVE = new('INACTIVE')
+        end
       end
     end
   end

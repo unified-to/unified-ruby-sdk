@@ -5,19 +5,28 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class Security < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class Security
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      field :jwt, ::String, { 'security': { 'scheme': true, 'type': 'apiKey', 'sub_type': 'header', 'field_name': 'authorization' } }
+        field :jwt, ::String, { 'security': { 'scheme': true, 'type': 'apiKey', 'sub_type': 'header', 'field_name': 'authorization' } }
 
 
-      sig { params(jwt: ::String).void }
-      def initialize(jwt: nil)
-        @jwt = jwt
+        sig { params(jwt: ::String).void }
+        def initialize(jwt: nil)
+          @jwt = jwt
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @jwt == other.jwt
+          true
+        end
       end
     end
   end

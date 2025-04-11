@@ -5,28 +5,40 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AccountingContactPaymentMethod < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :type, ::UnifiedRubySDK::Shared::AccountingContactPaymentMethodType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::AccountingContactPaymentMethodType, false) } }
-
-      field :default, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('default') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+      class AccountingContactPaymentMethod
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(type: ::UnifiedRubySDK::Shared::AccountingContactPaymentMethodType, default: T.nilable(T::Boolean), id: T.nilable(::String), name: T.nilable(::String)).void }
-      def initialize(type: nil, default: nil, id: nil, name: nil)
-        @type = type
-        @default = default
-        @id = id
-        @name = name
+        field :type, Models::Shared::AccountingContactPaymentMethodType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingContactPaymentMethodType, false) } }
+
+        field :default, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('default') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+
+        sig { params(type: Models::Shared::AccountingContactPaymentMethodType, default: T.nilable(T::Boolean), id: T.nilable(::String), name: T.nilable(::String)).void }
+        def initialize(type: nil, default: nil, id: nil, name: nil)
+          @type = type
+          @default = default
+          @id = id
+          @name = name
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @type == other.type
+          return false unless @default == other.default
+          return false unless @id == other.id
+          return false unless @name == other.name
+          true
+        end
       end
     end
   end

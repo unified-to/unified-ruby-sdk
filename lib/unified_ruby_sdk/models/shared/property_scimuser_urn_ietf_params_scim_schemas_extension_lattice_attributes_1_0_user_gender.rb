@@ -5,13 +5,15 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender < T::Enum
-      enums do
-        MALE = new('male')
-        FEMALE = new('female')
+      class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender < T::Enum
+        enums do
+          MALE = new('male')
+          FEMALE = new('female')
+        end
       end
     end
   end

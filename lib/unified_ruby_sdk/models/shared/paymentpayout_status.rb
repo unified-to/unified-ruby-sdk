@@ -5,15 +5,17 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class PaymentPayoutStatus < T::Enum
-      enums do
-        SUCCEEDED = new('SUCCEEDED')
-        PENDING = new('PENDING')
-        FAILED = new('FAILED')
-        CANCELED = new('CANCELED')
+      class PaymentPayoutStatus < T::Enum
+        enums do
+          SUCCEEDED = new('SUCCEEDED')
+          PENDING = new('PENDING')
+          FAILED = new('FAILED')
+          CANCELED = new('CANCELED')
+        end
       end
     end
   end

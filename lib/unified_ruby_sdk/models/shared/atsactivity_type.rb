@@ -5,14 +5,16 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AtsActivityType < T::Enum
-      enums do
-        NOTE = new('NOTE')
-        TASK = new('TASK')
-        EMAIL = new('EMAIL')
+      class AtsActivityType < T::Enum
+        enums do
+          NOTE = new('NOTE')
+          TASK = new('TASK')
+          EMAIL = new('EMAIL')
+        end
       end
     end
   end

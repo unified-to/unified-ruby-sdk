@@ -5,13 +5,15 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class Role < T::Enum
-      enums do
-        SYSTEM = new('SYSTEM')
-        USER = new('USER')
+      class Role < T::Enum
+        enums do
+          SYSTEM = new('SYSTEM')
+          USER = new('USER')
+        end
       end
     end
   end

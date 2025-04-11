@@ -5,14 +5,16 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class CommerceCollectionType < T::Enum
-      enums do
-        COLLECTION = new('COLLECTION')
-        SAVED_SEARCH = new('SAVED_SEARCH')
-        CATEGORY = new('CATEGORY')
+      class CommerceCollectionType < T::Enum
+        enums do
+          COLLECTION = new('COLLECTION')
+          SAVED_SEARCH = new('SAVED_SEARCH')
+          CATEGORY = new('CATEGORY')
+        end
       end
     end
   end

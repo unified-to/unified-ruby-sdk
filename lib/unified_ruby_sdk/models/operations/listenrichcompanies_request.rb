@@ -5,25 +5,36 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class ListEnrichCompaniesRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class ListEnrichCompaniesRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # ID of the connection
-      field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-      # The domain of the company to search
-      field :domain, T.nilable(::String), { 'query_param': { 'field_name': 'domain', 'style': 'form', 'explode': true } }
-      # The name of the company to search
-      field :name, T.nilable(::String), { 'query_param': { 'field_name': 'name', 'style': 'form', 'explode': true } }
+        # ID of the connection
+        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # The domain of the company to search
+        field :domain, T.nilable(::String), { 'query_param': { 'field_name': 'domain', 'style': 'form', 'explode': true } }
+        # The name of the company to search
+        field :name, T.nilable(::String), { 'query_param': { 'field_name': 'name', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, domain: T.nilable(::String), name: T.nilable(::String)).void }
-      def initialize(connection_id: nil, domain: nil, name: nil)
-        @connection_id = connection_id
-        @domain = domain
-        @name = name
+        sig { params(connection_id: ::String, domain: T.nilable(::String), name: T.nilable(::String)).void }
+        def initialize(connection_id: nil, domain: nil, name: nil)
+          @connection_id = connection_id
+          @domain = domain
+          @name = name
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @connection_id == other.connection_id
+          return false unless @domain == other.domain
+          return false unless @name == other.name
+          true
+        end
       end
     end
   end

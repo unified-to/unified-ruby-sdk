@@ -5,25 +5,36 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class CreatePaymentPaymentRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class CreatePaymentPaymentRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # ID of the connection
-      field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # ID of the connection
+        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
 
-      field :payment_payment, ::UnifiedRubySDK::Shared::PaymentPayment, { 'request': { 'media_type': 'application/json' } }
-      # Comma-delimited fields to return
-      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        field :payment_payment, Models::Shared::PaymentPayment, { 'request': { 'media_type': 'application/json' } }
+        # Comma-delimited fields to return
+        field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, payment_payment: ::UnifiedRubySDK::Shared::PaymentPayment, fields_: T.nilable(T::Array[::String])).void }
-      def initialize(connection_id: nil, payment_payment: nil, fields_: nil)
-        @connection_id = connection_id
-        @payment_payment = payment_payment
-        @fields_ = fields_
+        sig { params(connection_id: ::String, payment_payment: Models::Shared::PaymentPayment, fields_: T.nilable(T::Array[::String])).void }
+        def initialize(connection_id: nil, payment_payment: nil, fields_: nil)
+          @connection_id = connection_id
+          @payment_payment = payment_payment
+          @fields_ = fields_
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @connection_id == other.connection_id
+          return false unless @payment_payment == other.payment_payment
+          return false unless @fields_ == other.fields_
+          true
+        end
       end
     end
   end

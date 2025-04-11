@@ -5,12 +5,14 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class PropertyScimGroupSchemas < T::Enum
-      enums do
-        URN_IETF_PARAMS_SCIM_SCHEMAS_CORE_2_0_GROUP = new('urn:ietf:params:scim:schemas:core:2.0:Group')
+      class PropertyScimGroupSchemas < T::Enum
+        enums do
+          URN_IETF_PARAMS_SCIM_SCHEMAS_CORE_2_0_GROUP = new('urn:ietf:params:scim:schemas:core:2.0:Group')
+        end
       end
     end
   end

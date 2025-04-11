@@ -5,14 +5,16 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AccountingReportType < T::Enum
-      enums do
-        TRIAL_BALANCE = new('TRIAL_BALANCE')
-        BALANCE_SHEET = new('BALANCE_SHEET')
-        PROFIT_AND_LOSS = new('PROFIT_AND_LOSS')
+      class AccountingReportType < T::Enum
+        enums do
+          TRIAL_BALANCE = new('TRIAL_BALANCE')
+          BALANCE_SHEET = new('BALANCE_SHEET')
+          PROFIT_AND_LOSS = new('PROFIT_AND_LOSS')
+        end
       end
     end
   end

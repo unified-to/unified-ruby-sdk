@@ -5,25 +5,36 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class UpdateScimUsersRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class UpdateScimUsersRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # ID of the connection
-      field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-      # ID of the User
-      field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
+        # ID of the connection
+        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # ID of the User
+        field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
 
-      field :scim_user, ::UnifiedRubySDK::Shared::ScimUser, { 'request': { 'media_type': 'application/json' } }
+        field :scim_user, Models::Shared::ScimUser, { 'request': { 'media_type': 'application/json' } }
 
 
-      sig { params(connection_id: ::String, id: ::String, scim_user: ::UnifiedRubySDK::Shared::ScimUser).void }
-      def initialize(connection_id: nil, id: nil, scim_user: nil)
-        @connection_id = connection_id
-        @id = id
-        @scim_user = scim_user
+        sig { params(connection_id: ::String, id: ::String, scim_user: Models::Shared::ScimUser).void }
+        def initialize(connection_id: nil, id: nil, scim_user: nil)
+          @connection_id = connection_id
+          @id = id
+          @scim_user = scim_user
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @connection_id == other.connection_id
+          return false unless @id == other.id
+          return false unless @scim_user == other.scim_user
+          true
+        end
       end
     end
   end

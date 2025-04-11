@@ -3,18 +3,10 @@
 # typed: true
 # frozen_string_literal: true
 
-
 module UnifiedRubySDK
-  module Shared
-  
-
-    class CrmEventRaw < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-
-      
-      def initialize; end
+  module Models
+    module Errors
+      autoload :APIError, 'unified_ruby_sdk/models/errors/apierror.rb'
     end
   end
 end

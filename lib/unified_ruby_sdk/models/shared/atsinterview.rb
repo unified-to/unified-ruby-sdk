@@ -5,55 +5,76 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AtsInterview < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :application_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('application_id') } }
-
-      field :candidate_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('candidate_id') } }
-
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :end_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :external_event_xref, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_event_xref') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :job_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('job_id') } }
-
-      field :location, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location') } }
-
-      field :raw, T.nilable(::UnifiedRubySDK::Shared::AtsInterviewRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :start_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :status, T.nilable(::UnifiedRubySDK::Shared::AtsInterviewStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::AtsInterviewStatus, true) } }
-
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :user_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
+      class AtsInterview
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(application_id: T.nilable(::String), candidate_id: T.nilable(::String), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), external_event_xref: T.nilable(::String), id: T.nilable(::String), job_id: T.nilable(::String), location: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::AtsInterviewRaw), start_at: T.nilable(::DateTime), status: T.nilable(::UnifiedRubySDK::Shared::AtsInterviewStatus), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
-      def initialize(application_id: nil, candidate_id: nil, created_at: nil, end_at: nil, external_event_xref: nil, id: nil, job_id: nil, location: nil, raw: nil, start_at: nil, status: nil, updated_at: nil, user_ids: nil)
-        @application_id = application_id
-        @candidate_id = candidate_id
-        @created_at = created_at
-        @end_at = end_at
-        @external_event_xref = external_event_xref
-        @id = id
-        @job_id = job_id
-        @location = location
-        @raw = raw
-        @start_at = start_at
-        @status = status
-        @updated_at = updated_at
-        @user_ids = user_ids
+        field :application_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('application_id') } }
+
+        field :candidate_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('candidate_id') } }
+
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :end_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :external_event_xref, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_event_xref') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :job_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('job_id') } }
+
+        field :location, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :start_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :status, T.nilable(Models::Shared::AtsInterviewStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AtsInterviewStatus, true) } }
+
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :user_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
+
+
+        sig { params(application_id: T.nilable(::String), candidate_id: T.nilable(::String), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), external_event_xref: T.nilable(::String), id: T.nilable(::String), job_id: T.nilable(::String), location: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::AtsInterviewStatus), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
+        def initialize(application_id: nil, candidate_id: nil, created_at: nil, end_at: nil, external_event_xref: nil, id: nil, job_id: nil, location: nil, raw: nil, start_at: nil, status: nil, updated_at: nil, user_ids: nil)
+          @application_id = application_id
+          @candidate_id = candidate_id
+          @created_at = created_at
+          @end_at = end_at
+          @external_event_xref = external_event_xref
+          @id = id
+          @job_id = job_id
+          @location = location
+          @raw = raw
+          @start_at = start_at
+          @status = status
+          @updated_at = updated_at
+          @user_ids = user_ids
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @application_id == other.application_id
+          return false unless @candidate_id == other.candidate_id
+          return false unless @created_at == other.created_at
+          return false unless @end_at == other.end_at
+          return false unless @external_event_xref == other.external_event_xref
+          return false unless @id == other.id
+          return false unless @job_id == other.job_id
+          return false unless @location == other.location
+          return false unless @raw == other.raw
+          return false unless @start_at == other.start_at
+          return false unless @status == other.status
+          return false unless @updated_at == other.updated_at
+          return false unless @user_ids == other.user_ids
+          true
+        end
       end
     end
   end

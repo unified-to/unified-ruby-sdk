@@ -5,25 +5,36 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class CreateMessagingMessageRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class CreateMessagingMessageRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # ID of the connection
-      field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # ID of the connection
+        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
 
-      field :messaging_message, ::UnifiedRubySDK::Shared::MessagingMessage, { 'request': { 'media_type': 'application/json' } }
-      # Comma-delimited fields to return
-      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        field :messaging_message, Models::Shared::MessagingMessage, { 'request': { 'media_type': 'application/json' } }
+        # Comma-delimited fields to return
+        field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, messaging_message: ::UnifiedRubySDK::Shared::MessagingMessage, fields_: T.nilable(T::Array[::String])).void }
-      def initialize(connection_id: nil, messaging_message: nil, fields_: nil)
-        @connection_id = connection_id
-        @messaging_message = messaging_message
-        @fields_ = fields_
+        sig { params(connection_id: ::String, messaging_message: Models::Shared::MessagingMessage, fields_: T.nilable(T::Array[::String])).void }
+        def initialize(connection_id: nil, messaging_message: nil, fields_: nil)
+          @connection_id = connection_id
+          @messaging_message = messaging_message
+          @fields_ = fields_
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @connection_id == other.connection_id
+          return false unless @messaging_message == other.messaging_message
+          return false unless @fields_ == other.fields_
+          true
+        end
       end
     end
   end

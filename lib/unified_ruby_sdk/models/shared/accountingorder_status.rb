@@ -5,18 +5,20 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AccountingOrderStatus < T::Enum
-      enums do
-        DRAFT = new('DRAFT')
-        VOIDED = new('VOIDED')
-        AUTHORIZED = new('AUTHORIZED')
-        PAID = new('PAID')
-        PARTIALLY_PAID = new('PARTIALLY_PAID')
-        PARTIALLY_REFUNDED = new('PARTIALLY_REFUNDED')
-        REFUNDED = new('REFUNDED')
+      class AccountingOrderStatus < T::Enum
+        enums do
+          DRAFT = new('DRAFT')
+          VOIDED = new('VOIDED')
+          AUTHORIZED = new('AUTHORIZED')
+          PAID = new('PAID')
+          PARTIALLY_PAID = new('PARTIALLY_PAID')
+          PARTIALLY_REFUNDED = new('PARTIALLY_REFUNDED')
+          REFUNDED = new('REFUNDED')
+        end
       end
     end
   end

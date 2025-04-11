@@ -5,14 +5,16 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class Priority < T::Enum
-      enums do
-        HIGH = new('HIGH')
-        MEDIUM = new('MEDIUM')
-        LOW = new('LOW')
+      class Priority < T::Enum
+        enums do
+          HIGH = new('HIGH')
+          MEDIUM = new('MEDIUM')
+          LOW = new('LOW')
+        end
       end
     end
   end

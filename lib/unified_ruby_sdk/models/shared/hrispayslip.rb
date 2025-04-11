@@ -5,58 +5,80 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class HrisPayslip < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :raw, ::UnifiedRubySDK::Shared::HrisPayslipRaw, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :company_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
-
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
-
-      field :details, T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisPayslipDetail]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('details') } }
-
-      field :end_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :gross_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gross_amount') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :net_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('net_amount') } }
-
-      field :paid_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paid_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :payment_type, T.nilable(::UnifiedRubySDK::Shared::PaymentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::PaymentType, true) } }
-
-      field :start_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
+      class HrisPayslip
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(raw: ::UnifiedRubySDK::Shared::HrisPayslipRaw, company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), details: T.nilable(T::Array[::UnifiedRubySDK::Shared::HrisPayslipDetail]), end_at: T.nilable(::DateTime), gross_amount: T.nilable(::Float), id: T.nilable(::String), net_amount: T.nilable(::Float), paid_at: T.nilable(::DateTime), payment_type: T.nilable(::UnifiedRubySDK::Shared::PaymentType), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-      def initialize(raw: nil, company_id: nil, created_at: nil, currency: nil, details: nil, end_at: nil, gross_amount: nil, id: nil, net_amount: nil, paid_at: nil, payment_type: nil, start_at: nil, updated_at: nil, user_id: nil)
-        @raw = raw
-        @company_id = company_id
-        @created_at = created_at
-        @currency = currency
-        @details = details
-        @end_at = end_at
-        @gross_amount = gross_amount
-        @id = id
-        @net_amount = net_amount
-        @paid_at = paid_at
-        @payment_type = payment_type
-        @start_at = start_at
-        @updated_at = updated_at
-        @user_id = user_id
+        field :raw, T::Hash[Symbol, ::Object], { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :company_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
+
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+
+        field :details, T.nilable(T::Array[Models::Shared::HrisPayslipDetail]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('details') } }
+
+        field :end_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :gross_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gross_amount') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :net_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('net_amount') } }
+
+        field :paid_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paid_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :payment_type, T.nilable(Models::Shared::PaymentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_type'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentType, true) } }
+
+        field :start_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
+
+
+        sig { params(raw: T::Hash[Symbol, ::Object], company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), details: T.nilable(T::Array[Models::Shared::HrisPayslipDetail]), end_at: T.nilable(::DateTime), gross_amount: T.nilable(::Float), id: T.nilable(::String), net_amount: T.nilable(::Float), paid_at: T.nilable(::DateTime), payment_type: T.nilable(Models::Shared::PaymentType), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(raw: nil, company_id: nil, created_at: nil, currency: nil, details: nil, end_at: nil, gross_amount: nil, id: nil, net_amount: nil, paid_at: nil, payment_type: nil, start_at: nil, updated_at: nil, user_id: nil)
+          @raw = raw
+          @company_id = company_id
+          @created_at = created_at
+          @currency = currency
+          @details = details
+          @end_at = end_at
+          @gross_amount = gross_amount
+          @id = id
+          @net_amount = net_amount
+          @paid_at = paid_at
+          @payment_type = payment_type
+          @start_at = start_at
+          @updated_at = updated_at
+          @user_id = user_id
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @raw == other.raw
+          return false unless @company_id == other.company_id
+          return false unless @created_at == other.created_at
+          return false unless @currency == other.currency
+          return false unless @details == other.details
+          return false unless @end_at == other.end_at
+          return false unless @gross_amount == other.gross_amount
+          return false unless @id == other.id
+          return false unless @net_amount == other.net_amount
+          return false unless @paid_at == other.paid_at
+          return false unless @payment_type == other.payment_type
+          return false unless @start_at == other.start_at
+          return false unless @updated_at == other.updated_at
+          return false unless @user_id == other.user_id
+          true
+        end
       end
     end
   end

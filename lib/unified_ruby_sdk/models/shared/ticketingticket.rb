@@ -5,64 +5,88 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class TicketingTicket < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :category, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category') } }
-
-      field :closed_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :customer_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('customer_id') } }
-
-      field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :priority, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('priority') } }
-
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :source, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source') } }
-
-      field :source_ref, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source_ref') } }
-
-      field :status, T.nilable(::UnifiedRubySDK::Shared::TicketingTicketStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::TicketingTicketStatus, true) } }
-
-      field :subject, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subject') } }
-
-      field :tags, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
-
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
-
-      field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
+      class TicketingTicket
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(category: T.nilable(::String), closed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), customer_id: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), priority: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), source: T.nilable(::String), source_ref: T.nilable(::String), status: T.nilable(::UnifiedRubySDK::Shared::TicketingTicketStatus), subject: T.nilable(::String), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), url: T.nilable(::String), user_id: T.nilable(::String)).void }
-      def initialize(category: nil, closed_at: nil, created_at: nil, customer_id: nil, description: nil, id: nil, priority: nil, raw: nil, source: nil, source_ref: nil, status: nil, subject: nil, tags: nil, updated_at: nil, url: nil, user_id: nil)
-        @category = category
-        @closed_at = closed_at
-        @created_at = created_at
-        @customer_id = customer_id
-        @description = description
-        @id = id
-        @priority = priority
-        @raw = raw
-        @source = source
-        @source_ref = source_ref
-        @status = status
-        @subject = subject
-        @tags = tags
-        @updated_at = updated_at
-        @url = url
-        @user_id = user_id
+        field :category, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category') } }
+
+        field :closed_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :customer_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('customer_id') } }
+
+        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :priority, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('priority') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :source, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source') } }
+
+        field :source_ref, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source_ref') } }
+
+        field :status, T.nilable(Models::Shared::TicketingTicketStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::TicketingTicketStatus, true) } }
+
+        field :subject, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subject') } }
+
+        field :tags, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
+
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
+
+        field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
+
+
+        sig { params(category: T.nilable(::String), closed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), customer_id: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), priority: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), source: T.nilable(::String), source_ref: T.nilable(::String), status: T.nilable(Models::Shared::TicketingTicketStatus), subject: T.nilable(::String), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), url: T.nilable(::String), user_id: T.nilable(::String)).void }
+        def initialize(category: nil, closed_at: nil, created_at: nil, customer_id: nil, description: nil, id: nil, priority: nil, raw: nil, source: nil, source_ref: nil, status: nil, subject: nil, tags: nil, updated_at: nil, url: nil, user_id: nil)
+          @category = category
+          @closed_at = closed_at
+          @created_at = created_at
+          @customer_id = customer_id
+          @description = description
+          @id = id
+          @priority = priority
+          @raw = raw
+          @source = source
+          @source_ref = source_ref
+          @status = status
+          @subject = subject
+          @tags = tags
+          @updated_at = updated_at
+          @url = url
+          @user_id = user_id
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @category == other.category
+          return false unless @closed_at == other.closed_at
+          return false unless @created_at == other.created_at
+          return false unless @customer_id == other.customer_id
+          return false unless @description == other.description
+          return false unless @id == other.id
+          return false unless @priority == other.priority
+          return false unless @raw == other.raw
+          return false unless @source == other.source
+          return false unless @source_ref == other.source_ref
+          return false unless @status == other.status
+          return false unless @subject == other.subject
+          return false unless @tags == other.tags
+          return false unless @updated_at == other.updated_at
+          return false unless @url == other.url
+          return false unless @user_id == other.user_id
+          true
+        end
       end
     end
   end

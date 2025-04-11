@@ -5,25 +5,27 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AtsStatusStatus < T::Enum
-      enums do
-        NEW = new('NEW')
-        REVIEWING = new('REVIEWING')
-        SCREENING = new('SCREENING')
-        SUBMITTED = new('SUBMITTED')
-        FIRST_INTERVIEW = new('FIRST_INTERVIEW')
-        SECOND_INTERVIEW = new('SECOND_INTERVIEW')
-        THIRD_INTERVIEW = new('THIRD_INTERVIEW')
-        BACKGROUND_CHECK = new('BACKGROUND_CHECK')
-        OFFERED = new('OFFERED')
-        ACCEPTED = new('ACCEPTED')
-        HIRED = new('HIRED')
-        REJECTED = new('REJECTED')
-        DECLINED = new('DECLINED')
-        WITHDRAWN = new('WITHDRAWN')
+      class AtsStatusStatus < T::Enum
+        enums do
+          NEW = new('NEW')
+          REVIEWING = new('REVIEWING')
+          SCREENING = new('SCREENING')
+          SUBMITTED = new('SUBMITTED')
+          FIRST_INTERVIEW = new('FIRST_INTERVIEW')
+          SECOND_INTERVIEW = new('SECOND_INTERVIEW')
+          THIRD_INTERVIEW = new('THIRD_INTERVIEW')
+          BACKGROUND_CHECK = new('BACKGROUND_CHECK')
+          OFFERED = new('OFFERED')
+          ACCEPTED = new('ACCEPTED')
+          HIRED = new('HIRED')
+          REJECTED = new('REJECTED')
+          DECLINED = new('DECLINED')
+          WITHDRAWN = new('WITHDRAWN')
+        end
       end
     end
   end

@@ -5,19 +5,28 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class RemoveUnifiedConnectionRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class RemoveUnifiedConnectionRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # ID of the Connection
-      field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
+        # ID of the Connection
+        field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
 
 
-      sig { params(id: ::String).void }
-      def initialize(id: nil)
-        @id = id
+        sig { params(id: ::String).void }
+        def initialize(id: nil)
+          @id = id
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @id == other.id
+          true
+        end
       end
     end
   end

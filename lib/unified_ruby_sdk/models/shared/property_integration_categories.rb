@@ -5,33 +5,35 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class PropertyIntegrationCategories < T::Enum
-      enums do
-        PASSTHROUGH = new('passthrough')
-        HRIS = new('hris')
-        ATS = new('ats')
-        AUTH = new('auth')
-        CRM = new('crm')
-        ENRICH = new('enrich')
-        MARTECH = new('martech')
-        TICKETING = new('ticketing')
-        UC = new('uc')
-        ACCOUNTING = new('accounting')
-        STORAGE = new('storage')
-        COMMERCE = new('commerce')
-        PAYMENT = new('payment')
-        GENAI = new('genai')
-        MESSAGING = new('messaging')
-        KMS = new('kms')
-        TASK = new('task')
-        SCIM = new('scim')
-        LMS = new('lms')
-        REPO = new('repo')
-        METADATA = new('metadata')
-        CALENDAR = new('calendar')
+      class PropertyIntegrationCategories < T::Enum
+        enums do
+          PASSTHROUGH = new('passthrough')
+          HRIS = new('hris')
+          ATS = new('ats')
+          AUTH = new('auth')
+          CRM = new('crm')
+          ENRICH = new('enrich')
+          MARTECH = new('martech')
+          TICKETING = new('ticketing')
+          UC = new('uc')
+          ACCOUNTING = new('accounting')
+          STORAGE = new('storage')
+          COMMERCE = new('commerce')
+          PAYMENT = new('payment')
+          GENAI = new('genai')
+          MESSAGING = new('messaging')
+          KMS = new('kms')
+          TASK = new('task')
+          SCIM = new('scim')
+          LMS = new('lms')
+          REPO = new('repo')
+          METADATA = new('metadata')
+          CALENDAR = new('calendar')
+        end
       end
     end
   end

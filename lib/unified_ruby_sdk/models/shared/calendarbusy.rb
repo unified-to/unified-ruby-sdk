@@ -5,34 +5,48 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class CalendarBusy < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :end_at, ::DateTime, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(false) } }
-
-      field :start_at, ::DateTime, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(false) } }
-
-      field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :raw, T.nilable(::UnifiedRubySDK::Shared::CalendarBusyRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :timezone, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
+      class CalendarBusy
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(end_at: ::DateTime, start_at: ::DateTime, description: T.nilable(::String), id: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::CalendarBusyRaw), timezone: T.nilable(::String)).void }
-      def initialize(end_at: nil, start_at: nil, description: nil, id: nil, raw: nil, timezone: nil)
-        @end_at = end_at
-        @start_at = start_at
-        @description = description
-        @id = id
-        @raw = raw
-        @timezone = timezone
+        field :end_at, ::DateTime, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(false) } }
+
+        field :start_at, ::DateTime, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(false) } }
+
+        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :timezone, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
+
+
+        sig { params(end_at: ::DateTime, start_at: ::DateTime, description: T.nilable(::String), id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), timezone: T.nilable(::String)).void }
+        def initialize(end_at: nil, start_at: nil, description: nil, id: nil, raw: nil, timezone: nil)
+          @end_at = end_at
+          @start_at = start_at
+          @description = description
+          @id = id
+          @raw = raw
+          @timezone = timezone
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @end_at == other.end_at
+          return false unless @start_at == other.start_at
+          return false unless @description == other.description
+          return false unless @id == other.id
+          return false unless @raw == other.raw
+          return false unless @timezone == other.timezone
+          true
+        end
       end
     end
   end

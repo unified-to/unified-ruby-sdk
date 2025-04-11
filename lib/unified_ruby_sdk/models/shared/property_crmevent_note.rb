@@ -5,22 +5,32 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
-    # The note object, when type = note
-    class PropertyCrmEventNote < ::Crystalline::FieldAugmented
-      extend T::Sig
+  module Models
+    module Shared
+    
+      # The note object, when type = note
+      class PropertyCrmEventNote
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-      field :title, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
+        field :title, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
 
 
-      sig { params(description: T.nilable(::String), title: T.nilable(::String)).void }
-      def initialize(description: nil, title: nil)
-        @description = description
-        @title = title
+        sig { params(description: T.nilable(::String), title: T.nilable(::String)).void }
+        def initialize(description: nil, title: nil)
+          @description = description
+          @title = title
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @description == other.description
+          return false unless @title == other.title
+          true
+        end
       end
     end
   end

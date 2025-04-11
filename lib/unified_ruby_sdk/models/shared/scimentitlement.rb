@@ -5,28 +5,40 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class ScimEntitlement < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :value, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
-
-      field :display, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('display') } }
-
-      field :primary, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('primary') } }
-
-      field :type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
+      class ScimEntitlement
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(value: ::String, display: T.nilable(::String), primary: T.nilable(T::Boolean), type: T.nilable(::String)).void }
-      def initialize(value: nil, display: nil, primary: nil, type: nil)
-        @value = value
-        @display = display
-        @primary = primary
-        @type = type
+        field :value, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
+
+        field :display, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('display') } }
+
+        field :primary, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('primary') } }
+
+        field :type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
+
+
+        sig { params(value: ::String, display: T.nilable(::String), primary: T.nilable(T::Boolean), type: T.nilable(::String)).void }
+        def initialize(value: nil, display: nil, primary: nil, type: nil)
+          @value = value
+          @display = display
+          @primary = primary
+          @type = type
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @value == other.value
+          return false unless @display == other.display
+          return false unless @primary == other.primary
+          return false unless @type == other.type
+          true
+        end
       end
     end
   end

@@ -5,25 +5,36 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class EnrichEmail < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :email, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
-
-      field :is_verified, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_verified') } }
-
-      field :type, T.nilable(::UnifiedRubySDK::Shared::EnrichEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::EnrichEmailType, true) } }
+      class EnrichEmail
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(email: ::String, is_verified: T.nilable(T::Boolean), type: T.nilable(::UnifiedRubySDK::Shared::EnrichEmailType)).void }
-      def initialize(email: nil, is_verified: nil, type: nil)
-        @email = email
-        @is_verified = is_verified
-        @type = type
+        field :email, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
+
+        field :is_verified, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_verified') } }
+
+        field :type, T.nilable(Models::Shared::EnrichEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::EnrichEmailType, true) } }
+
+
+        sig { params(email: ::String, is_verified: T.nilable(T::Boolean), type: T.nilable(Models::Shared::EnrichEmailType)).void }
+        def initialize(email: nil, is_verified: nil, type: nil)
+          @email = email
+          @is_verified = is_verified
+          @type = type
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @email == other.email
+          return false unless @is_verified == other.is_verified
+          return false unless @type == other.type
+          true
+        end
       end
     end
   end

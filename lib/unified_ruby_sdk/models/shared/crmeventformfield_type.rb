@@ -5,25 +5,27 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class CrmEventFormFieldType < T::Enum
-      enums do
-        TEXT = new('TEXT')
-        NUMBER = new('NUMBER')
-        DATE = new('DATE')
-        BOOLEAN = new('BOOLEAN')
-        MULTIPLE_CHOICE = new('MULTIPLE_CHOICE')
-        FILE = new('FILE')
-        TEXTAREA = new('TEXTAREA')
-        SINGLE_SELECT = new('SINGLE_SELECT')
-        MULTIPLE_SELECT = new('MULTIPLE_SELECT')
-        EMAIL = new('EMAIL')
-        PHONE = new('PHONE')
-        YES_NO = new('YES_NO')
-        CURRENCY = new('CURRENCY')
-        URL = new('URL')
+      class CrmEventFormFieldType < T::Enum
+        enums do
+          TEXT = new('TEXT')
+          NUMBER = new('NUMBER')
+          DATE = new('DATE')
+          BOOLEAN = new('BOOLEAN')
+          MULTIPLE_CHOICE = new('MULTIPLE_CHOICE')
+          FILE = new('FILE')
+          TEXTAREA = new('TEXTAREA')
+          SINGLE_SELECT = new('SINGLE_SELECT')
+          MULTIPLE_SELECT = new('MULTIPLE_SELECT')
+          EMAIL = new('EMAIL')
+          PHONE = new('PHONE')
+          YES_NO = new('YES_NO')
+          CURRENCY = new('CURRENCY')
+          URL = new('URL')
+        end
       end
     end
   end

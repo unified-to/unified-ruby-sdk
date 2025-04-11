@@ -5,13 +5,15 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class PaymentCollectionMethod < T::Enum
-      enums do
-        SEND_INVOICE = new('send_invoice')
-        CHARGE_AUTOMATICALLY = new('charge_automatically')
+      class PaymentCollectionMethod < T::Enum
+        enums do
+          SEND_INVOICE = new('send_invoice')
+          CHARGE_AUTOMATICALLY = new('charge_automatically')
+        end
       end
     end
   end

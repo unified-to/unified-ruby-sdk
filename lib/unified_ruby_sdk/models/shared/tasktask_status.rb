@@ -5,14 +5,16 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class TaskTaskStatus < T::Enum
-      enums do
-        OPENED = new('OPENED')
-        IN_PROGRESS = new('IN_PROGRESS')
-        COMPLETED = new('COMPLETED')
+      class TaskTaskStatus < T::Enum
+        enums do
+          OPENED = new('OPENED')
+          IN_PROGRESS = new('IN_PROGRESS')
+          COMPLETED = new('COMPLETED')
+        end
       end
     end
   end

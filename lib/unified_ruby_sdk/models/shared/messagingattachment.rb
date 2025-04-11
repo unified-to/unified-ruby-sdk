@@ -5,34 +5,48 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class MessagingAttachment < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :content_identifier, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content_identifier') } }
-
-      field :content_type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content_type') } }
-
-      field :download_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('download_url') } }
-
-      field :filename, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('filename') } }
-
-      field :message_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message_id') } }
-
-      field :size, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
+      class MessagingAttachment
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(content_identifier: T.nilable(::String), content_type: T.nilable(::String), download_url: T.nilable(::String), filename: T.nilable(::String), message_id: T.nilable(::String), size: T.nilable(::Float)).void }
-      def initialize(content_identifier: nil, content_type: nil, download_url: nil, filename: nil, message_id: nil, size: nil)
-        @content_identifier = content_identifier
-        @content_type = content_type
-        @download_url = download_url
-        @filename = filename
-        @message_id = message_id
-        @size = size
+        field :content_identifier, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content_identifier') } }
+
+        field :content_type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content_type') } }
+
+        field :download_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('download_url') } }
+
+        field :filename, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('filename') } }
+
+        field :message_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message_id') } }
+
+        field :size, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
+
+
+        sig { params(content_identifier: T.nilable(::String), content_type: T.nilable(::String), download_url: T.nilable(::String), filename: T.nilable(::String), message_id: T.nilable(::String), size: T.nilable(::Float)).void }
+        def initialize(content_identifier: nil, content_type: nil, download_url: nil, filename: nil, message_id: nil, size: nil)
+          @content_identifier = content_identifier
+          @content_type = content_type
+          @download_url = download_url
+          @filename = filename
+          @message_id = message_id
+          @size = size
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @content_identifier == other.content_identifier
+          return false unless @content_type == other.content_type
+          return false unless @download_url == other.download_url
+          return false unless @filename == other.filename
+          return false unless @message_id == other.message_id
+          return false unless @size == other.size
+          true
+        end
       end
     end
   end

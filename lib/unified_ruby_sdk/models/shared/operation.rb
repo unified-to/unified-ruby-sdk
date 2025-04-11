@@ -5,13 +5,15 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class Operation < T::Enum
-      enums do
-        ADD = new('add')
-        DELETE = new('delete')
+      class Operation < T::Enum
+        enums do
+          ADD = new('add')
+          DELETE = new('delete')
+        end
       end
     end
   end

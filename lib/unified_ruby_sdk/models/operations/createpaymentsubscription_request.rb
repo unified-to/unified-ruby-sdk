@@ -5,25 +5,36 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class CreatePaymentSubscriptionRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class CreatePaymentSubscriptionRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # ID of the connection
-      field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # ID of the connection
+        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
 
-      field :payment_subscription, ::UnifiedRubySDK::Shared::PaymentSubscription, { 'request': { 'media_type': 'application/json' } }
-      # Comma-delimited fields to return
-      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        field :payment_subscription, Models::Shared::PaymentSubscription, { 'request': { 'media_type': 'application/json' } }
+        # Comma-delimited fields to return
+        field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, payment_subscription: ::UnifiedRubySDK::Shared::PaymentSubscription, fields_: T.nilable(T::Array[::String])).void }
-      def initialize(connection_id: nil, payment_subscription: nil, fields_: nil)
-        @connection_id = connection_id
-        @payment_subscription = payment_subscription
-        @fields_ = fields_
+        sig { params(connection_id: ::String, payment_subscription: Models::Shared::PaymentSubscription, fields_: T.nilable(T::Array[::String])).void }
+        def initialize(connection_id: nil, payment_subscription: nil, fields_: nil)
+          @connection_id = connection_id
+          @payment_subscription = payment_subscription
+          @fields_ = fields_
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @connection_id == other.connection_id
+          return false unless @payment_subscription == other.payment_subscription
+          return false unless @fields_ == other.fields_
+          true
+        end
       end
     end
   end

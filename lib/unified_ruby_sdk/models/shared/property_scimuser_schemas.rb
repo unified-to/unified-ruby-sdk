@@ -5,15 +5,17 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class PropertyScimUserSchemas < T::Enum
-      enums do
-        URN_IETF_PARAMS_SCIM_SCHEMAS_CORE_2_0_USER = new('urn:ietf:params:scim:schemas:core:2.0:User')
-        URN_IETF_PARAMS_SCIM_SCHEMAS_EXTENSION_ENTERPRISE_2_0_USER = new('urn:ietf:params:scim:schemas:extension:enterprise:2.0:User')
-        URN_IETF_PARAMS_SCIM_SCHEMAS_EXTENSION_LATTICE_ATTRIBUTES_1_0_USER = new('urn:ietf:params:scim:schemas:extension:lattice:attributes:1.0:User')
-        URN_IETF_PARAMS_SCIM_SCHEMAS_EXTENSION_PEAKON_2_0_USER = new('urn:ietf:params:scim:schemas:extension:peakon:2.0:User')
+      class PropertyScimUserSchemas < T::Enum
+        enums do
+          URN_IETF_PARAMS_SCIM_SCHEMAS_CORE_2_0_USER = new('urn:ietf:params:scim:schemas:core:2.0:User')
+          URN_IETF_PARAMS_SCIM_SCHEMAS_EXTENSION_ENTERPRISE_2_0_USER = new('urn:ietf:params:scim:schemas:extension:enterprise:2.0:User')
+          URN_IETF_PARAMS_SCIM_SCHEMAS_EXTENSION_LATTICE_ATTRIBUTES_1_0_USER = new('urn:ietf:params:scim:schemas:extension:lattice:attributes:1.0:User')
+          URN_IETF_PARAMS_SCIM_SCHEMAS_EXTENSION_PEAKON_2_0_USER = new('urn:ietf:params:scim:schemas:extension:peakon:2.0:User')
+        end
       end
     end
   end

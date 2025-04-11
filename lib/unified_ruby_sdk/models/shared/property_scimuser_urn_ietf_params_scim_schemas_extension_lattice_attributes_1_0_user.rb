@@ -5,46 +5,64 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :birth_date, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('birthDate'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :ethnicity, T.nilable(::UnifiedRubySDK::Shared::Ethnicity), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ethnicity'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::Ethnicity, true) } }
-
-      field :gender, T.nilable(::UnifiedRubySDK::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gender'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender, true) } }
-
-      field :job_level, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Job Level') } }
-
-      field :people_manager_reviews, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('People Manager (Reviews)') } }
-
-      field :remote_work_location, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Remote Work - Location') } }
-
-      field :salary_information, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Salary Information') } }
-
-      field :sexual_orientation, T.nilable(::UnifiedRubySDK::Shared::SexualOrientation), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sexualOrientation'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::SexualOrientation, true) } }
-
-      field :start_date, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('startDate'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :sub_departments, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Sub Departments') } }
+      class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(birth_date: T.nilable(::DateTime), ethnicity: T.nilable(::UnifiedRubySDK::Shared::Ethnicity), gender: T.nilable(::UnifiedRubySDK::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender), job_level: T.nilable(::String), people_manager_reviews: T.nilable(::String), remote_work_location: T.nilable(::String), salary_information: T.nilable(::String), sexual_orientation: T.nilable(::UnifiedRubySDK::Shared::SexualOrientation), start_date: T.nilable(::DateTime), sub_departments: T.nilable(::String)).void }
-      def initialize(birth_date: nil, ethnicity: nil, gender: nil, job_level: nil, people_manager_reviews: nil, remote_work_location: nil, salary_information: nil, sexual_orientation: nil, start_date: nil, sub_departments: nil)
-        @birth_date = birth_date
-        @ethnicity = ethnicity
-        @gender = gender
-        @job_level = job_level
-        @people_manager_reviews = people_manager_reviews
-        @remote_work_location = remote_work_location
-        @salary_information = salary_information
-        @sexual_orientation = sexual_orientation
-        @start_date = start_date
-        @sub_departments = sub_departments
+        field :birth_date, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('birthDate'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :ethnicity, T.nilable(Models::Shared::Ethnicity), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ethnicity'), 'decoder': Utils.enum_from_string(Models::Shared::Ethnicity, true) } }
+
+        field :gender, T.nilable(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gender'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender, true) } }
+
+        field :job_level, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Job Level') } }
+
+        field :people_manager_reviews, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('People Manager (Reviews)') } }
+
+        field :remote_work_location, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Remote Work - Location') } }
+
+        field :salary_information, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Salary Information') } }
+
+        field :sexual_orientation, T.nilable(Models::Shared::SexualOrientation), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sexualOrientation'), 'decoder': Utils.enum_from_string(Models::Shared::SexualOrientation, true) } }
+
+        field :start_date, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('startDate'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :sub_departments, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Sub Departments') } }
+
+
+        sig { params(birth_date: T.nilable(::DateTime), ethnicity: T.nilable(Models::Shared::Ethnicity), gender: T.nilable(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender), job_level: T.nilable(::String), people_manager_reviews: T.nilable(::String), remote_work_location: T.nilable(::String), salary_information: T.nilable(::String), sexual_orientation: T.nilable(Models::Shared::SexualOrientation), start_date: T.nilable(::DateTime), sub_departments: T.nilable(::String)).void }
+        def initialize(birth_date: nil, ethnicity: nil, gender: nil, job_level: nil, people_manager_reviews: nil, remote_work_location: nil, salary_information: nil, sexual_orientation: nil, start_date: nil, sub_departments: nil)
+          @birth_date = birth_date
+          @ethnicity = ethnicity
+          @gender = gender
+          @job_level = job_level
+          @people_manager_reviews = people_manager_reviews
+          @remote_work_location = remote_work_location
+          @salary_information = salary_information
+          @sexual_orientation = sexual_orientation
+          @start_date = start_date
+          @sub_departments = sub_departments
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @birth_date == other.birth_date
+          return false unless @ethnicity == other.ethnicity
+          return false unless @gender == other.gender
+          return false unless @job_level == other.job_level
+          return false unless @people_manager_reviews == other.people_manager_reviews
+          return false unless @remote_work_location == other.remote_work_location
+          return false unless @salary_information == other.salary_information
+          return false unless @sexual_orientation == other.sexual_orientation
+          return false unless @start_date == other.start_date
+          return false unless @sub_departments == other.sub_departments
+          true
+        end
       end
     end
   end

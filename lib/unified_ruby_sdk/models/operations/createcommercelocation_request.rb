@@ -5,25 +5,36 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class CreateCommerceLocationRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :commerce_location, ::UnifiedRubySDK::Shared::CommerceLocation, { 'request': { 'media_type': 'application/json' } }
-      # ID of the connection
-      field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-      # Comma-delimited fields to return
-      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+      class CreateCommerceLocationRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(commerce_location: ::UnifiedRubySDK::Shared::CommerceLocation, connection_id: ::String, fields_: T.nilable(T::Array[::String])).void }
-      def initialize(commerce_location: nil, connection_id: nil, fields_: nil)
-        @commerce_location = commerce_location
-        @connection_id = connection_id
-        @fields_ = fields_
+        field :commerce_location, Models::Shared::CommerceLocation, { 'request': { 'media_type': 'application/json' } }
+        # ID of the connection
+        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # Comma-delimited fields to return
+        field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+
+
+        sig { params(commerce_location: Models::Shared::CommerceLocation, connection_id: ::String, fields_: T.nilable(T::Array[::String])).void }
+        def initialize(commerce_location: nil, connection_id: nil, fields_: nil)
+          @commerce_location = commerce_location
+          @connection_id = connection_id
+          @fields_ = fields_
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @commerce_location == other.commerce_location
+          return false unless @connection_id == other.connection_id
+          return false unless @fields_ == other.fields_
+          true
+        end
       end
     end
   end

@@ -5,31 +5,44 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AtsCompensation < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
-
-      field :frequency, T.nilable(::UnifiedRubySDK::Shared::Frequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::Frequency, true) } }
-
-      field :max, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max') } }
-
-      field :min, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('min') } }
-
-      field :type, T.nilable(::UnifiedRubySDK::Shared::AtsCompensationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::AtsCompensationType, true) } }
+      class AtsCompensation
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(currency: T.nilable(::String), frequency: T.nilable(::UnifiedRubySDK::Shared::Frequency), max: T.nilable(::Float), min: T.nilable(::Float), type: T.nilable(::UnifiedRubySDK::Shared::AtsCompensationType)).void }
-      def initialize(currency: nil, frequency: nil, max: nil, min: nil, type: nil)
-        @currency = currency
-        @frequency = frequency
-        @max = max
-        @min = min
-        @type = type
+        field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+
+        field :frequency, T.nilable(Models::Shared::Frequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency'), 'decoder': Utils.enum_from_string(Models::Shared::Frequency, true) } }
+
+        field :max, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max') } }
+
+        field :min, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('min') } }
+
+        field :type, T.nilable(Models::Shared::AtsCompensationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AtsCompensationType, true) } }
+
+
+        sig { params(currency: T.nilable(::String), frequency: T.nilable(Models::Shared::Frequency), max: T.nilable(::Float), min: T.nilable(::Float), type: T.nilable(Models::Shared::AtsCompensationType)).void }
+        def initialize(currency: nil, frequency: nil, max: nil, min: nil, type: nil)
+          @currency = currency
+          @frequency = frequency
+          @max = max
+          @min = min
+          @type = type
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @currency == other.currency
+          return false unless @frequency == other.frequency
+          return false unless @max == other.max
+          return false unless @min == other.min
+          return false unless @type == other.type
+          true
+        end
       end
     end
   end

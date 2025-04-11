@@ -5,37 +5,52 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class HrisCompany < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :address, T.nilable(::UnifiedRubySDK::Shared::PropertyHrisCompanyAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
-
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :legal_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('legal_name') } }
-
-      field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
-      field :raw, T.nilable(::UnifiedRubySDK::Shared::HrisCompanyRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      class HrisCompany
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(address: T.nilable(::UnifiedRubySDK::Shared::PropertyHrisCompanyAddress), created_at: T.nilable(::DateTime), id: T.nilable(::String), legal_name: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::HrisCompanyRaw), updated_at: T.nilable(::DateTime)).void }
-      def initialize(address: nil, created_at: nil, id: nil, legal_name: nil, name: nil, raw: nil, updated_at: nil)
-        @address = address
-        @created_at = created_at
-        @id = id
-        @legal_name = legal_name
-        @name = name
-        @raw = raw
-        @updated_at = updated_at
+        field :address, T.nilable(Models::Shared::PropertyHrisCompanyAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
+
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :legal_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('legal_name') } }
+
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+
+        sig { params(address: T.nilable(Models::Shared::PropertyHrisCompanyAddress), created_at: T.nilable(::DateTime), id: T.nilable(::String), legal_name: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(address: nil, created_at: nil, id: nil, legal_name: nil, name: nil, raw: nil, updated_at: nil)
+          @address = address
+          @created_at = created_at
+          @id = id
+          @legal_name = legal_name
+          @name = name
+          @raw = raw
+          @updated_at = updated_at
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @address == other.address
+          return false unless @created_at == other.created_at
+          return false unless @id == other.id
+          return false unless @legal_name == other.legal_name
+          return false unless @name == other.name
+          return false unless @raw == other.raw
+          return false unless @updated_at == other.updated_at
+          true
+        end
       end
     end
   end

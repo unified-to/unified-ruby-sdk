@@ -5,13 +5,15 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class StorageFileType < T::Enum
-      enums do
-        FILE = new('FILE')
-        FOLDER = new('FOLDER')
+      class StorageFileType < T::Enum
+        enums do
+          FILE = new('FILE')
+          FOLDER = new('FOLDER')
+        end
       end
     end
   end

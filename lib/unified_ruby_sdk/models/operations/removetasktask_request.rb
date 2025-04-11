@@ -5,22 +5,32 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class RemoveTaskTaskRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class RemoveTaskTaskRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # ID of the connection
-      field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-      # ID of the Task
-      field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
+        # ID of the connection
+        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # ID of the Task
+        field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
 
 
-      sig { params(connection_id: ::String, id: ::String).void }
-      def initialize(connection_id: nil, id: nil)
-        @connection_id = connection_id
-        @id = id
+        sig { params(connection_id: ::String, id: ::String).void }
+        def initialize(connection_id: nil, id: nil)
+          @connection_id = connection_id
+          @id = id
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @connection_id == other.connection_id
+          return false unless @id == other.id
+          true
+        end
       end
     end
   end

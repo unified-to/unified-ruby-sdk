@@ -5,14 +5,16 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class PaymentType < T::Enum
-      enums do
-        DIRECT = new('DIRECT')
-        CHEQUE = new('CHEQUE')
-        CASH = new('CASH')
+      class PaymentType < T::Enum
+        enums do
+          DIRECT = new('DIRECT')
+          CHEQUE = new('CHEQUE')
+          CASH = new('CASH')
+        end
       end
     end
   end

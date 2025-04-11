@@ -5,37 +5,52 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class ScimAddress < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :country, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('country') } }
-
-      field :formatted, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('formatted') } }
-
-      field :locality, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('locality') } }
-
-      field :postal_code, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('postalCode') } }
-
-      field :region, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('region') } }
-
-      field :street_address, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('streetAddress') } }
-
-      field :type, T.nilable(::UnifiedRubySDK::Shared::ScimAddressType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ScimAddressType, true) } }
+      class ScimAddress
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(country: T.nilable(::String), formatted: T.nilable(::String), locality: T.nilable(::String), postal_code: T.nilable(::String), region: T.nilable(::String), street_address: T.nilable(::String), type: T.nilable(::UnifiedRubySDK::Shared::ScimAddressType)).void }
-      def initialize(country: nil, formatted: nil, locality: nil, postal_code: nil, region: nil, street_address: nil, type: nil)
-        @country = country
-        @formatted = formatted
-        @locality = locality
-        @postal_code = postal_code
-        @region = region
-        @street_address = street_address
-        @type = type
+        field :country, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('country') } }
+
+        field :formatted, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('formatted') } }
+
+        field :locality, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('locality') } }
+
+        field :postal_code, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('postalCode') } }
+
+        field :region, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('region') } }
+
+        field :street_address, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('streetAddress') } }
+
+        field :type, T.nilable(Models::Shared::ScimAddressType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ScimAddressType, true) } }
+
+
+        sig { params(country: T.nilable(::String), formatted: T.nilable(::String), locality: T.nilable(::String), postal_code: T.nilable(::String), region: T.nilable(::String), street_address: T.nilable(::String), type: T.nilable(Models::Shared::ScimAddressType)).void }
+        def initialize(country: nil, formatted: nil, locality: nil, postal_code: nil, region: nil, street_address: nil, type: nil)
+          @country = country
+          @formatted = formatted
+          @locality = locality
+          @postal_code = postal_code
+          @region = region
+          @street_address = street_address
+          @type = type
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @country == other.country
+          return false unless @formatted == other.formatted
+          return false unless @locality == other.locality
+          return false unless @postal_code == other.postal_code
+          return false unless @region == other.region
+          return false unless @street_address == other.street_address
+          return false unless @type == other.type
+          true
+        end
       end
     end
   end

@@ -5,28 +5,40 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class ListStorageFilesResponse < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class ListStorageFilesResponse
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # HTTP response content type for this operation
-      field :content_type, ::String
-      # Raw HTTP response; suitable for custom response parsing
-      field :raw_response, ::Faraday::Response
-      # HTTP response status code for this operation
-      field :status_code, ::Integer
-      # Successful
-      field :storage_files, T.nilable(T::Array[::UnifiedRubySDK::Shared::StorageFile])
+        # HTTP response content type for this operation
+        field :content_type, ::String
+        # Raw HTTP response; suitable for custom response parsing
+        field :raw_response, ::Faraday::Response
+        # HTTP response status code for this operation
+        field :status_code, ::Integer
+        # Successful
+        field :storage_files, T.nilable(T::Array[Models::Shared::StorageFile])
 
 
-      sig { params(content_type: ::String, raw_response: ::Faraday::Response, status_code: ::Integer, storage_files: T.nilable(T::Array[::UnifiedRubySDK::Shared::StorageFile])).void }
-      def initialize(content_type: nil, raw_response: nil, status_code: nil, storage_files: nil)
-        @content_type = content_type
-        @raw_response = raw_response
-        @status_code = status_code
-        @storage_files = storage_files
+        sig { params(content_type: ::String, raw_response: ::Faraday::Response, status_code: ::Integer, storage_files: T.nilable(T::Array[Models::Shared::StorageFile])).void }
+        def initialize(content_type: nil, raw_response: nil, status_code: nil, storage_files: nil)
+          @content_type = content_type
+          @raw_response = raw_response
+          @status_code = status_code
+          @storage_files = storage_files
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @content_type == other.content_type
+          return false unless @raw_response == other.raw_response
+          return false unless @status_code == other.status_code
+          return false unless @storage_files == other.storage_files
+          true
+        end
       end
     end
   end

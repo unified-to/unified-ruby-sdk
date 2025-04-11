@@ -5,34 +5,48 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class ListEnrichPeopleRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class ListEnrichPeopleRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # ID of the connection
-      field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-      # The name of the company the person is associated with.  Not valid by itself.
-      field :company_name, T.nilable(::String), { 'query_param': { 'field_name': 'company_name', 'style': 'form', 'explode': true } }
-      # The email of the person to search
-      field :email, T.nilable(::String), { 'query_param': { 'field_name': 'email', 'style': 'form', 'explode': true } }
-      # The LinkedIn URL of the person to search
-      field :linkedin_url, T.nilable(::String), { 'query_param': { 'field_name': 'linkedin_url', 'style': 'form', 'explode': true } }
-      # The name of the person to search
-      field :name, T.nilable(::String), { 'query_param': { 'field_name': 'name', 'style': 'form', 'explode': true } }
-      # The twitter handle of the person to search
-      field :twitter, T.nilable(::String), { 'query_param': { 'field_name': 'twitter', 'style': 'form', 'explode': true } }
+        # ID of the connection
+        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # The name of the company the person is associated with.  Not valid by itself.
+        field :company_name, T.nilable(::String), { 'query_param': { 'field_name': 'company_name', 'style': 'form', 'explode': true } }
+        # The email of the person to search
+        field :email, T.nilable(::String), { 'query_param': { 'field_name': 'email', 'style': 'form', 'explode': true } }
+        # The LinkedIn URL of the person to search
+        field :linkedin_url, T.nilable(::String), { 'query_param': { 'field_name': 'linkedin_url', 'style': 'form', 'explode': true } }
+        # The name of the person to search
+        field :name, T.nilable(::String), { 'query_param': { 'field_name': 'name', 'style': 'form', 'explode': true } }
+        # The twitter handle of the person to search
+        field :twitter, T.nilable(::String), { 'query_param': { 'field_name': 'twitter', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, company_name: T.nilable(::String), email: T.nilable(::String), linkedin_url: T.nilable(::String), name: T.nilable(::String), twitter: T.nilable(::String)).void }
-      def initialize(connection_id: nil, company_name: nil, email: nil, linkedin_url: nil, name: nil, twitter: nil)
-        @connection_id = connection_id
-        @company_name = company_name
-        @email = email
-        @linkedin_url = linkedin_url
-        @name = name
-        @twitter = twitter
+        sig { params(connection_id: ::String, company_name: T.nilable(::String), email: T.nilable(::String), linkedin_url: T.nilable(::String), name: T.nilable(::String), twitter: T.nilable(::String)).void }
+        def initialize(connection_id: nil, company_name: nil, email: nil, linkedin_url: nil, name: nil, twitter: nil)
+          @connection_id = connection_id
+          @company_name = company_name
+          @email = email
+          @linkedin_url = linkedin_url
+          @name = name
+          @twitter = twitter
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @connection_id == other.connection_id
+          return false unless @company_name == other.company_name
+          return false unless @email == other.email
+          return false unless @linkedin_url == other.linkedin_url
+          return false unless @name == other.name
+          return false unless @twitter == other.twitter
+          true
+        end
       end
     end
   end

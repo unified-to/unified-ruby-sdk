@@ -5,28 +5,40 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class PatchCrmEventRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class PatchCrmEventRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # ID of the connection
-      field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-      # An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
-      field :crm_event, ::UnifiedRubySDK::Shared::CrmEvent, { 'request': { 'media_type': 'application/json' } }
-      # ID of the Event
-      field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
-      # Comma-delimited fields to return
-      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        # ID of the connection
+        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
+        field :crm_event, Models::Shared::CrmEvent, { 'request': { 'media_type': 'application/json' } }
+        # ID of the Event
+        field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
+        # Comma-delimited fields to return
+        field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, crm_event: ::UnifiedRubySDK::Shared::CrmEvent, id: ::String, fields_: T.nilable(T::Array[::String])).void }
-      def initialize(connection_id: nil, crm_event: nil, id: nil, fields_: nil)
-        @connection_id = connection_id
-        @crm_event = crm_event
-        @id = id
-        @fields_ = fields_
+        sig { params(connection_id: ::String, crm_event: Models::Shared::CrmEvent, id: ::String, fields_: T.nilable(T::Array[::String])).void }
+        def initialize(connection_id: nil, crm_event: nil, id: nil, fields_: nil)
+          @connection_id = connection_id
+          @crm_event = crm_event
+          @id = id
+          @fields_ = fields_
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @connection_id == other.connection_id
+          return false unless @crm_event == other.crm_event
+          return false unless @id == other.id
+          return false unless @fields_ == other.fields_
+          true
+        end
       end
     end
   end

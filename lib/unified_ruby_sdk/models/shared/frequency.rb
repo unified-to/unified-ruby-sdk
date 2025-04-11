@@ -5,18 +5,20 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class Frequency < T::Enum
-      enums do
-        ONE_TIME = new('ONE_TIME')
-        DAY = new('DAY')
-        QUARTER = new('QUARTER')
-        YEAR = new('YEAR')
-        HOUR = new('HOUR')
-        MONTH = new('MONTH')
-        WEEK = new('WEEK')
+      class Frequency < T::Enum
+        enums do
+          ONE_TIME = new('ONE_TIME')
+          DAY = new('DAY')
+          QUARTER = new('QUARTER')
+          YEAR = new('YEAR')
+          HOUR = new('HOUR')
+          MONTH = new('MONTH')
+          WEEK = new('WEEK')
+        end
       end
     end
   end

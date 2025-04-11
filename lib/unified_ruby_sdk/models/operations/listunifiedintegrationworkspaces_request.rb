@@ -5,40 +5,56 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class ListUnifiedIntegrationWorkspacesRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class ListUnifiedIntegrationWorkspacesRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # The ID of the workspace
-      field :workspace_id, ::String, { 'path_param': { 'field_name': 'workspace_id', 'style': 'simple', 'explode': false } }
-      # Filter the results for only the workspace's active integrations
-      field :active, T.nilable(T::Boolean), { 'query_param': { 'field_name': 'active', 'style': 'form', 'explode': true } }
-      # Filter the results on these categories
-      field :categories, T.nilable(T::Array[::UnifiedRubySDK::Operations::QueryParamCategories]), { 'query_param': { 'field_name': 'categories', 'style': 'form', 'explode': true } }
+        # The ID of the workspace
+        field :workspace_id, ::String, { 'path_param': { 'field_name': 'workspace_id', 'style': 'simple', 'explode': false } }
+        # Filter the results for only the workspace's active integrations
+        field :active, T.nilable(T::Boolean), { 'query_param': { 'field_name': 'active', 'style': 'form', 'explode': true } }
+        # Filter the results on these categories
+        field :categories, T.nilable(T::Array[Models::Operations::QueryParamCategories]), { 'query_param': { 'field_name': 'categories', 'style': 'form', 'explode': true } }
 
-      field :env, T.nilable(::String), { 'query_param': { 'field_name': 'env', 'style': 'form', 'explode': true } }
+        field :env, T.nilable(::String), { 'query_param': { 'field_name': 'env', 'style': 'form', 'explode': true } }
 
-      field :limit, T.nilable(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
+        field :limit, T.nilable(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
 
-      field :offset, T.nilable(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
+        field :offset, T.nilable(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
 
-      field :summary, T.nilable(T::Boolean), { 'query_param': { 'field_name': 'summary', 'style': 'form', 'explode': true } }
+        field :summary, T.nilable(T::Boolean), { 'query_param': { 'field_name': 'summary', 'style': 'form', 'explode': true } }
 
-      field :updated_gte, T.nilable(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
+        field :updated_gte, T.nilable(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
 
-      sig { params(workspace_id: ::String, active: T.nilable(T::Boolean), categories: T.nilable(T::Array[::UnifiedRubySDK::Operations::QueryParamCategories]), env: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), summary: T.nilable(T::Boolean), updated_gte: T.nilable(::String)).void }
-      def initialize(workspace_id: nil, active: nil, categories: nil, env: nil, limit: nil, offset: nil, summary: nil, updated_gte: nil)
-        @workspace_id = workspace_id
-        @active = active
-        @categories = categories
-        @env = env
-        @limit = limit
-        @offset = offset
-        @summary = summary
-        @updated_gte = updated_gte
+        sig { params(workspace_id: ::String, active: T.nilable(T::Boolean), categories: T.nilable(T::Array[Models::Operations::QueryParamCategories]), env: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), summary: T.nilable(T::Boolean), updated_gte: T.nilable(::String)).void }
+        def initialize(workspace_id: nil, active: nil, categories: nil, env: nil, limit: nil, offset: nil, summary: nil, updated_gte: nil)
+          @workspace_id = workspace_id
+          @active = active
+          @categories = categories
+          @env = env
+          @limit = limit
+          @offset = offset
+          @summary = summary
+          @updated_gte = updated_gte
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @workspace_id == other.workspace_id
+          return false unless @active == other.active
+          return false unless @categories == other.categories
+          return false unless @env == other.env
+          return false unless @limit == other.limit
+          return false unless @offset == other.offset
+          return false unless @summary == other.summary
+          return false unless @updated_gte == other.updated_gte
+          true
+        end
       end
     end
   end

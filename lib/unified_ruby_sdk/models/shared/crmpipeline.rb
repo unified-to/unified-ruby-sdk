@@ -5,43 +5,60 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class CrmPipeline < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :deal_probability, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('deal_probability') } }
-
-      field :display_order, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('display_order') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
-
-      field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
-      field :raw, T.nilable(::UnifiedRubySDK::Shared::CrmPipelineRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :stages, T.nilable(T::Array[::UnifiedRubySDK::Shared::CrmStage]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('stages') } }
-
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      class CrmPipeline
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(created_at: T.nilable(::DateTime), deal_probability: T.nilable(::Float), display_order: T.nilable(::Float), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::CrmPipelineRaw), stages: T.nilable(T::Array[::UnifiedRubySDK::Shared::CrmStage]), updated_at: T.nilable(::DateTime)).void }
-      def initialize(created_at: nil, deal_probability: nil, display_order: nil, id: nil, is_active: nil, name: nil, raw: nil, stages: nil, updated_at: nil)
-        @created_at = created_at
-        @deal_probability = deal_probability
-        @display_order = display_order
-        @id = id
-        @is_active = is_active
-        @name = name
-        @raw = raw
-        @stages = stages
-        @updated_at = updated_at
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :deal_probability, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('deal_probability') } }
+
+        field :display_order, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('display_order') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
+
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :stages, T.nilable(T::Array[Models::Shared::CrmStage]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('stages') } }
+
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+
+        sig { params(created_at: T.nilable(::DateTime), deal_probability: T.nilable(::Float), display_order: T.nilable(::Float), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), stages: T.nilable(T::Array[Models::Shared::CrmStage]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(created_at: nil, deal_probability: nil, display_order: nil, id: nil, is_active: nil, name: nil, raw: nil, stages: nil, updated_at: nil)
+          @created_at = created_at
+          @deal_probability = deal_probability
+          @display_order = display_order
+          @id = id
+          @is_active = is_active
+          @name = name
+          @raw = raw
+          @stages = stages
+          @updated_at = updated_at
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @created_at == other.created_at
+          return false unless @deal_probability == other.deal_probability
+          return false unless @display_order == other.display_order
+          return false unless @id == other.id
+          return false unless @is_active == other.is_active
+          return false unless @name == other.name
+          return false unless @raw == other.raw
+          return false unless @stages == other.stages
+          return false unless @updated_at == other.updated_at
+          true
+        end
       end
     end
   end

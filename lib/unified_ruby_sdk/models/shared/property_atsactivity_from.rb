@@ -5,25 +5,36 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class PropertyAtsActivityFrom < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :email, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
-
-      field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
-      field :type, T.nilable(::UnifiedRubySDK::Shared::PropertyAtsActivityFromType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::PropertyAtsActivityFromType, true) } }
+      class PropertyAtsActivityFrom
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(email: ::String, name: T.nilable(::String), type: T.nilable(::UnifiedRubySDK::Shared::PropertyAtsActivityFromType)).void }
-      def initialize(email: nil, name: nil, type: nil)
-        @email = email
-        @name = name
-        @type = type
+        field :email, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
+
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :type, T.nilable(Models::Shared::PropertyAtsActivityFromType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAtsActivityFromType, true) } }
+
+
+        sig { params(email: ::String, name: T.nilable(::String), type: T.nilable(Models::Shared::PropertyAtsActivityFromType)).void }
+        def initialize(email: nil, name: nil, type: nil)
+          @email = email
+          @name = name
+          @type = type
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @email == other.email
+          return false unless @name == other.name
+          return false unless @type == other.type
+          true
+        end
       end
     end
   end

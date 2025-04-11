@@ -5,15 +5,17 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class ContentType < T::Enum
-      enums do
-        HTML = new('HTML')
-        MARKDOWN = new('MARKDOWN')
-        TEXT = new('TEXT')
-        OTHER = new('OTHER')
+      class ContentType < T::Enum
+        enums do
+          HTML = new('HTML')
+          MARKDOWN = new('MARKDOWN')
+          TEXT = new('TEXT')
+          OTHER = new('OTHER')
+        end
       end
     end
   end

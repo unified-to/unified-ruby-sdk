@@ -5,85 +5,116 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AtsJob < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :addresses, T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsAddress]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('addresses') } }
-
-      field :closed_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :company_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
-
-      field :compensation, T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsCompensation]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('compensation') } }
-
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-      # @deprecated Use `groups` instead
-      field :departments, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('departments') } }
-
-      field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
-      field :employment_type, T.nilable(::UnifiedRubySDK::Shared::EmploymentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employment_type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::EmploymentType, true) } }
-      # The departments/divisions/teams that this job belongs to
-      field :groups, T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsGroup]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('groups') } }
-
-      field :hiring_manager_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('hiring_manager_ids') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :language_locale, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language_locale') } }
-
-      field :metadata, T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsMetadata]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
-
-      field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
-      field :number_of_openings, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('number_of_openings') } }
-      # Public job postings
-      field :postings, T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsJobPosting]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('postings') } }
-      # URLs for pages containing public listings for the job
-      field :public_job_urls, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('public_job_urls') } }
-
-      field :questions, T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsJobQuestion]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('questions') } }
-
-      field :raw, T.nilable(::UnifiedRubySDK::Shared::AtsJobRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :recruiter_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recruiter_ids') } }
-
-      field :remote, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('remote') } }
-
-      field :status, T.nilable(::UnifiedRubySDK::Shared::AtsJobStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::AtsJobStatus, true) } }
-
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      class AtsJob
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(addresses: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsAddress]), closed_at: T.nilable(::DateTime), company_id: T.nilable(::String), compensation: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsCompensation]), created_at: T.nilable(::DateTime), departments: T.nilable(T::Array[::String]), description: T.nilable(::String), employment_type: T.nilable(::UnifiedRubySDK::Shared::EmploymentType), groups: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsGroup]), hiring_manager_ids: T.nilable(T::Array[::String]), id: T.nilable(::String), language_locale: T.nilable(::String), metadata: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsMetadata]), name: T.nilable(::String), number_of_openings: T.nilable(::Float), postings: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsJobPosting]), public_job_urls: T.nilable(T::Array[::String]), questions: T.nilable(T::Array[::UnifiedRubySDK::Shared::AtsJobQuestion]), raw: T.nilable(::UnifiedRubySDK::Shared::AtsJobRaw), recruiter_ids: T.nilable(T::Array[::String]), remote: T.nilable(T::Boolean), status: T.nilable(::UnifiedRubySDK::Shared::AtsJobStatus), updated_at: T.nilable(::DateTime)).void }
-      def initialize(addresses: nil, closed_at: nil, company_id: nil, compensation: nil, created_at: nil, departments: nil, description: nil, employment_type: nil, groups: nil, hiring_manager_ids: nil, id: nil, language_locale: nil, metadata: nil, name: nil, number_of_openings: nil, postings: nil, public_job_urls: nil, questions: nil, raw: nil, recruiter_ids: nil, remote: nil, status: nil, updated_at: nil)
-        @addresses = addresses
-        @closed_at = closed_at
-        @company_id = company_id
-        @compensation = compensation
-        @created_at = created_at
-        @departments = departments
-        @description = description
-        @employment_type = employment_type
-        @groups = groups
-        @hiring_manager_ids = hiring_manager_ids
-        @id = id
-        @language_locale = language_locale
-        @metadata = metadata
-        @name = name
-        @number_of_openings = number_of_openings
-        @postings = postings
-        @public_job_urls = public_job_urls
-        @questions = questions
-        @raw = raw
-        @recruiter_ids = recruiter_ids
-        @remote = remote
-        @status = status
-        @updated_at = updated_at
+        field :addresses, T.nilable(T::Array[Models::Shared::AtsAddress]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('addresses') } }
+
+        field :closed_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :company_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
+
+        field :compensation, T.nilable(T::Array[Models::Shared::AtsCompensation]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('compensation') } }
+
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        # @deprecated Use `groups` instead
+        field :departments, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('departments') } }
+
+        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+
+        field :employment_type, T.nilable(Models::Shared::EmploymentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employment_type'), 'decoder': Utils.enum_from_string(Models::Shared::EmploymentType, true) } }
+        # The departments/divisions/teams that this job belongs to
+        field :groups, T.nilable(T::Array[Models::Shared::AtsGroup]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('groups') } }
+
+        field :hiring_manager_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('hiring_manager_ids') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :language_locale, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language_locale') } }
+
+        field :metadata, T.nilable(T::Array[Models::Shared::AtsMetadata]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :number_of_openings, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('number_of_openings') } }
+        # Public job postings
+        field :postings, T.nilable(T::Array[Models::Shared::AtsJobPosting]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('postings') } }
+        # URLs for pages containing public listings for the job
+        field :public_job_urls, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('public_job_urls') } }
+
+        field :questions, T.nilable(T::Array[Models::Shared::AtsJobQuestion]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('questions') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :recruiter_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recruiter_ids') } }
+
+        field :remote, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('remote') } }
+
+        field :status, T.nilable(Models::Shared::AtsJobStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AtsJobStatus, true) } }
+
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+
+        sig { params(addresses: T.nilable(T::Array[Models::Shared::AtsAddress]), closed_at: T.nilable(::DateTime), company_id: T.nilable(::String), compensation: T.nilable(T::Array[Models::Shared::AtsCompensation]), created_at: T.nilable(::DateTime), departments: T.nilable(T::Array[::String]), description: T.nilable(::String), employment_type: T.nilable(Models::Shared::EmploymentType), groups: T.nilable(T::Array[Models::Shared::AtsGroup]), hiring_manager_ids: T.nilable(T::Array[::String]), id: T.nilable(::String), language_locale: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), name: T.nilable(::String), number_of_openings: T.nilable(::Float), postings: T.nilable(T::Array[Models::Shared::AtsJobPosting]), public_job_urls: T.nilable(T::Array[::String]), questions: T.nilable(T::Array[Models::Shared::AtsJobQuestion]), raw: T.nilable(T::Hash[Symbol, ::Object]), recruiter_ids: T.nilable(T::Array[::String]), remote: T.nilable(T::Boolean), status: T.nilable(Models::Shared::AtsJobStatus), updated_at: T.nilable(::DateTime)).void }
+        def initialize(addresses: nil, closed_at: nil, company_id: nil, compensation: nil, created_at: nil, departments: nil, description: nil, employment_type: nil, groups: nil, hiring_manager_ids: nil, id: nil, language_locale: nil, metadata: nil, name: nil, number_of_openings: nil, postings: nil, public_job_urls: nil, questions: nil, raw: nil, recruiter_ids: nil, remote: nil, status: nil, updated_at: nil)
+          @addresses = addresses
+          @closed_at = closed_at
+          @company_id = company_id
+          @compensation = compensation
+          @created_at = created_at
+          @departments = departments
+          @description = description
+          @employment_type = employment_type
+          @groups = groups
+          @hiring_manager_ids = hiring_manager_ids
+          @id = id
+          @language_locale = language_locale
+          @metadata = metadata
+          @name = name
+          @number_of_openings = number_of_openings
+          @postings = postings
+          @public_job_urls = public_job_urls
+          @questions = questions
+          @raw = raw
+          @recruiter_ids = recruiter_ids
+          @remote = remote
+          @status = status
+          @updated_at = updated_at
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @addresses == other.addresses
+          return false unless @closed_at == other.closed_at
+          return false unless @company_id == other.company_id
+          return false unless @compensation == other.compensation
+          return false unless @created_at == other.created_at
+          return false unless @departments == other.departments
+          return false unless @description == other.description
+          return false unless @employment_type == other.employment_type
+          return false unless @groups == other.groups
+          return false unless @hiring_manager_ids == other.hiring_manager_ids
+          return false unless @id == other.id
+          return false unless @language_locale == other.language_locale
+          return false unless @metadata == other.metadata
+          return false unless @name == other.name
+          return false unless @number_of_openings == other.number_of_openings
+          return false unless @postings == other.postings
+          return false unless @public_job_urls == other.public_job_urls
+          return false unless @questions == other.questions
+          return false unless @raw == other.raw
+          return false unless @recruiter_ids == other.recruiter_ids
+          return false unless @remote == other.remote
+          return false unless @status == other.status
+          return false unless @updated_at == other.updated_at
+          true
+        end
       end
     end
   end

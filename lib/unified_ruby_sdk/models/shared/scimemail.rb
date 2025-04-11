@@ -5,28 +5,40 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class ScimEmail < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :type, ::UnifiedRubySDK::Shared::ScimEmailType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ScimEmailType, false) } }
-
-      field :display, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('display') } }
-
-      field :primary, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('primary') } }
-
-      field :value, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
+      class ScimEmail
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(type: ::UnifiedRubySDK::Shared::ScimEmailType, display: T.nilable(::String), primary: T.nilable(T::Boolean), value: T.nilable(::String)).void }
-      def initialize(type: nil, display: nil, primary: nil, value: nil)
-        @type = type
-        @display = display
-        @primary = primary
-        @value = value
+        field :type, Models::Shared::ScimEmailType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ScimEmailType, false) } }
+
+        field :display, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('display') } }
+
+        field :primary, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('primary') } }
+
+        field :value, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
+
+
+        sig { params(type: Models::Shared::ScimEmailType, display: T.nilable(::String), primary: T.nilable(T::Boolean), value: T.nilable(::String)).void }
+        def initialize(type: nil, display: nil, primary: nil, value: nil)
+          @type = type
+          @display = display
+          @primary = primary
+          @value = value
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @type == other.type
+          return false unless @display == other.display
+          return false unless @primary == other.primary
+          return false unless @value == other.value
+          true
+        end
       end
     end
   end

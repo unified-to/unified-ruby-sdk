@@ -5,13 +5,15 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class ScimManagerType < T::Enum
-      enums do
-        DIRECT = new('direct')
-        INDIRECT = new('indirect')
+      class ScimManagerType < T::Enum
+        enums do
+          DIRECT = new('direct')
+          INDIRECT = new('indirect')
+        end
       end
     end
   end

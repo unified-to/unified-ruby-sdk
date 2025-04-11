@@ -5,13 +5,15 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AccountingOrderType < T::Enum
-      enums do
-        SALES = new('SALES')
-        PURCHASE = new('PURCHASE')
+      class AccountingOrderType < T::Enum
+        enums do
+          SALES = new('SALES')
+          PURCHASE = new('PURCHASE')
+        end
       end
     end
   end

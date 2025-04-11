@@ -5,25 +5,36 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class CreateRepoPullrequestRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class CreateRepoPullrequestRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # ID of the connection
-      field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # ID of the connection
+        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
 
-      field :repo_pullrequest, ::UnifiedRubySDK::Shared::RepoPullrequest, { 'request': { 'media_type': 'application/json' } }
-      # Comma-delimited fields to return
-      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        field :repo_pullrequest, Models::Shared::RepoPullrequest, { 'request': { 'media_type': 'application/json' } }
+        # Comma-delimited fields to return
+        field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, repo_pullrequest: ::UnifiedRubySDK::Shared::RepoPullrequest, fields_: T.nilable(T::Array[::String])).void }
-      def initialize(connection_id: nil, repo_pullrequest: nil, fields_: nil)
-        @connection_id = connection_id
-        @repo_pullrequest = repo_pullrequest
-        @fields_ = fields_
+        sig { params(connection_id: ::String, repo_pullrequest: Models::Shared::RepoPullrequest, fields_: T.nilable(T::Array[::String])).void }
+        def initialize(connection_id: nil, repo_pullrequest: nil, fields_: nil)
+          @connection_id = connection_id
+          @repo_pullrequest = repo_pullrequest
+          @fields_ = fields_
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @connection_id == other.connection_id
+          return false unless @repo_pullrequest == other.repo_pullrequest
+          return false unless @fields_ == other.fields_
+          true
+        end
       end
     end
   end

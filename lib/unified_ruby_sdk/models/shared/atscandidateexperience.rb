@@ -5,28 +5,40 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AtsCandidateExperience < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :company_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_name') } }
-
-      field :end_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :start_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :title, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
+      class AtsCandidateExperience
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(company_name: T.nilable(::String), end_at: T.nilable(::DateTime), start_at: T.nilable(::DateTime), title: T.nilable(::String)).void }
-      def initialize(company_name: nil, end_at: nil, start_at: nil, title: nil)
-        @company_name = company_name
-        @end_at = end_at
-        @start_at = start_at
-        @title = title
+        field :company_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_name') } }
+
+        field :end_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :start_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :title, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
+
+
+        sig { params(company_name: T.nilable(::String), end_at: T.nilable(::DateTime), start_at: T.nilable(::DateTime), title: T.nilable(::String)).void }
+        def initialize(company_name: nil, end_at: nil, start_at: nil, title: nil)
+          @company_name = company_name
+          @end_at = end_at
+          @start_at = start_at
+          @title = title
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @company_name == other.company_name
+          return false unless @end_at == other.end_at
+          return false unless @start_at == other.start_at
+          return false unless @title == other.title
+          true
+        end
       end
     end
   end

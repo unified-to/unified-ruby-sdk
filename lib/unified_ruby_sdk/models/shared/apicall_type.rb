@@ -5,14 +5,16 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class ApiCallType < T::Enum
-      enums do
-        LOGIN = new('login')
-        WEBHOOK = new('webhook')
-        INBOUND = new('inbound')
+      class ApiCallType < T::Enum
+        enums do
+          LOGIN = new('login')
+          WEBHOOK = new('webhook')
+          INBOUND = new('inbound')
+        end
       end
     end
   end

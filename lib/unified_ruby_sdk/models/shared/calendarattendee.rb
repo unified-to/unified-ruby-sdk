@@ -5,31 +5,44 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class CalendarAttendee < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :email, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
-
-      field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
-      field :required, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('required') } }
-
-      field :status, T.nilable(::UnifiedRubySDK::Shared::CalendarAttendeeStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::CalendarAttendeeStatus, true) } }
-
-      field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
+      class CalendarAttendee
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(email: T.nilable(::String), name: T.nilable(::String), required: T.nilable(T::Boolean), status: T.nilable(::UnifiedRubySDK::Shared::CalendarAttendeeStatus), user_id: T.nilable(::String)).void }
-      def initialize(email: nil, name: nil, required: nil, status: nil, user_id: nil)
-        @email = email
-        @name = name
-        @required = required
-        @status = status
-        @user_id = user_id
+        field :email, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
+
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :required, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('required') } }
+
+        field :status, T.nilable(Models::Shared::CalendarAttendeeStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::CalendarAttendeeStatus, true) } }
+
+        field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
+
+
+        sig { params(email: T.nilable(::String), name: T.nilable(::String), required: T.nilable(T::Boolean), status: T.nilable(Models::Shared::CalendarAttendeeStatus), user_id: T.nilable(::String)).void }
+        def initialize(email: nil, name: nil, required: nil, status: nil, user_id: nil)
+          @email = email
+          @name = name
+          @required = required
+          @status = status
+          @user_id = user_id
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @email == other.email
+          return false unless @name == other.name
+          return false unless @required == other.required
+          return false unless @status == other.status
+          return false unless @user_id == other.user_id
+          true
+        end
       end
     end
   end

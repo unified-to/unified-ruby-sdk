@@ -5,34 +5,48 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AtsCandidateEducation < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :degree, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('degree') } }
-
-      field :end_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :field_of_study, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('field_of_study') } }
-
-      field :institution, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('institution') } }
-
-      field :level, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('level') } }
-
-      field :start_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      class AtsCandidateEducation
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(degree: T.nilable(::String), end_at: T.nilable(::DateTime), field_of_study: T.nilable(::String), institution: T.nilable(::String), level: T.nilable(::String), start_at: T.nilable(::DateTime)).void }
-      def initialize(degree: nil, end_at: nil, field_of_study: nil, institution: nil, level: nil, start_at: nil)
-        @degree = degree
-        @end_at = end_at
-        @field_of_study = field_of_study
-        @institution = institution
-        @level = level
-        @start_at = start_at
+        field :degree, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('degree') } }
+
+        field :end_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :field_of_study, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('field_of_study') } }
+
+        field :institution, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('institution') } }
+
+        field :level, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('level') } }
+
+        field :start_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+
+        sig { params(degree: T.nilable(::String), end_at: T.nilable(::DateTime), field_of_study: T.nilable(::String), institution: T.nilable(::String), level: T.nilable(::String), start_at: T.nilable(::DateTime)).void }
+        def initialize(degree: nil, end_at: nil, field_of_study: nil, institution: nil, level: nil, start_at: nil)
+          @degree = degree
+          @end_at = end_at
+          @field_of_study = field_of_study
+          @institution = institution
+          @level = level
+          @start_at = start_at
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @degree == other.degree
+          return false unless @end_at == other.end_at
+          return false unless @field_of_study == other.field_of_study
+          return false unless @institution == other.institution
+          return false unless @level == other.level
+          return false unless @start_at == other.start_at
+          true
+        end
       end
     end
   end

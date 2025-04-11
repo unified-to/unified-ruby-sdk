@@ -5,28 +5,40 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class ScimUserGroups < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :value, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
-
-      field :dollar_ref, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('$ref') } }
-
-      field :display, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('display') } }
-
-      field :type, T.nilable(::UnifiedRubySDK::Shared::ScimUserGroupsType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::ScimUserGroupsType, true) } }
+      class ScimUserGroups
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(value: ::String, dollar_ref: T.nilable(::String), display: T.nilable(::String), type: T.nilable(::UnifiedRubySDK::Shared::ScimUserGroupsType)).void }
-      def initialize(value: nil, dollar_ref: nil, display: nil, type: nil)
-        @value = value
-        @dollar_ref = dollar_ref
-        @display = display
-        @type = type
+        field :value, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
+
+        field :dollar_ref, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('$ref') } }
+
+        field :display, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('display') } }
+
+        field :type, T.nilable(Models::Shared::ScimUserGroupsType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ScimUserGroupsType, true) } }
+
+
+        sig { params(value: ::String, dollar_ref: T.nilable(::String), display: T.nilable(::String), type: T.nilable(Models::Shared::ScimUserGroupsType)).void }
+        def initialize(value: nil, dollar_ref: nil, display: nil, type: nil)
+          @value = value
+          @dollar_ref = dollar_ref
+          @display = display
+          @type = type
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @value == other.value
+          return false unless @dollar_ref == other.dollar_ref
+          return false unless @display == other.display
+          return false unless @type == other.type
+          true
+        end
       end
     end
   end

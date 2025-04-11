@@ -5,28 +5,40 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class PatchUcContactRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class PatchUcContactRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # ID of the connection
-      field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-      # ID of the Contact
-      field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
-      # A contact represents a person that optionally is associated with a call
-      field :uc_contact, ::UnifiedRubySDK::Shared::UcContact, { 'request': { 'media_type': 'application/json' } }
-      # Comma-delimited fields to return
-      field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        # ID of the connection
+        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # ID of the Contact
+        field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
+        # A contact represents a person that optionally is associated with a call
+        field :uc_contact, Models::Shared::UcContact, { 'request': { 'media_type': 'application/json' } }
+        # Comma-delimited fields to return
+        field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: ::String, id: ::String, uc_contact: ::UnifiedRubySDK::Shared::UcContact, fields_: T.nilable(T::Array[::String])).void }
-      def initialize(connection_id: nil, id: nil, uc_contact: nil, fields_: nil)
-        @connection_id = connection_id
-        @id = id
-        @uc_contact = uc_contact
-        @fields_ = fields_
+        sig { params(connection_id: ::String, id: ::String, uc_contact: Models::Shared::UcContact, fields_: T.nilable(T::Array[::String])).void }
+        def initialize(connection_id: nil, id: nil, uc_contact: nil, fields_: nil)
+          @connection_id = connection_id
+          @id = id
+          @uc_contact = uc_contact
+          @fields_ = fields_
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @connection_id == other.connection_id
+          return false unless @id == other.id
+          return false unless @uc_contact == other.uc_contact
+          return false unless @fields_ == other.fields_
+          true
+        end
       end
     end
   end

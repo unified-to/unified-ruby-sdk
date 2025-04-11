@@ -5,22 +5,32 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class PatchUnifiedConnectionRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class PatchUnifiedConnectionRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # A connection represents a specific authentication of an integration.
-      field :connection, ::UnifiedRubySDK::Shared::Connection, { 'request': { 'media_type': 'application/json' } }
-      # ID of the Connection
-      field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
+        # A connection represents a specific authentication of an integration.
+        field :connection, Models::Shared::Connection, { 'request': { 'media_type': 'application/json' } }
+        # ID of the Connection
+        field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
 
 
-      sig { params(connection: ::UnifiedRubySDK::Shared::Connection, id: ::String).void }
-      def initialize(connection: nil, id: nil)
-        @connection = connection
-        @id = id
+        sig { params(connection: Models::Shared::Connection, id: ::String).void }
+        def initialize(connection: nil, id: nil)
+          @connection = connection
+          @id = id
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @connection == other.connection
+          return false unless @id == other.id
+          true
+        end
       end
     end
   end

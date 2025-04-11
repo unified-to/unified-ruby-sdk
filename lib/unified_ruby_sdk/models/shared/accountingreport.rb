@@ -5,46 +5,64 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AccountingReport < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :account_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_id') } }
-
-      field :amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
-
-      field :contact_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
-
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :group, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :raw, T.nilable(::UnifiedRubySDK::Shared::AccountingReportRaw), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :subgroup, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subgroup') } }
-
-      field :type, T.nilable(::UnifiedRubySDK::Shared::AccountingReportType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::AccountingReportType, true) } }
-
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      class AccountingReport
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(account_id: T.nilable(::String), amount: T.nilable(::Float), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), group: T.nilable(::String), id: T.nilable(::String), raw: T.nilable(::UnifiedRubySDK::Shared::AccountingReportRaw), subgroup: T.nilable(::String), type: T.nilable(::UnifiedRubySDK::Shared::AccountingReportType), updated_at: T.nilable(::DateTime)).void }
-      def initialize(account_id: nil, amount: nil, contact_id: nil, created_at: nil, group: nil, id: nil, raw: nil, subgroup: nil, type: nil, updated_at: nil)
-        @account_id = account_id
-        @amount = amount
-        @contact_id = contact_id
-        @created_at = created_at
-        @group = group
-        @id = id
-        @raw = raw
-        @subgroup = subgroup
-        @type = type
-        @updated_at = updated_at
+        field :account_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_id') } }
+
+        field :amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
+
+        field :contact_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
+
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :group, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :subgroup, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subgroup') } }
+
+        field :type, T.nilable(Models::Shared::AccountingReportType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingReportType, true) } }
+
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+
+        sig { params(account_id: T.nilable(::String), amount: T.nilable(::Float), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), group: T.nilable(::String), id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), subgroup: T.nilable(::String), type: T.nilable(Models::Shared::AccountingReportType), updated_at: T.nilable(::DateTime)).void }
+        def initialize(account_id: nil, amount: nil, contact_id: nil, created_at: nil, group: nil, id: nil, raw: nil, subgroup: nil, type: nil, updated_at: nil)
+          @account_id = account_id
+          @amount = amount
+          @contact_id = contact_id
+          @created_at = created_at
+          @group = group
+          @id = id
+          @raw = raw
+          @subgroup = subgroup
+          @type = type
+          @updated_at = updated_at
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @account_id == other.account_id
+          return false unless @amount == other.amount
+          return false unless @contact_id == other.contact_id
+          return false unless @created_at == other.created_at
+          return false unless @group == other.group
+          return false unless @id == other.id
+          return false unless @raw == other.raw
+          return false unless @subgroup == other.subgroup
+          return false unless @type == other.type
+          return false unless @updated_at == other.updated_at
+          true
+        end
       end
     end
   end

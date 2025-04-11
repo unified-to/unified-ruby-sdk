@@ -5,22 +5,32 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class HrisTelephone < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :telephone, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephone') } }
-
-      field :type, T.nilable(::UnifiedRubySDK::Shared::HrisTelephoneType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::HrisTelephoneType, true) } }
+      class HrisTelephone
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(telephone: ::String, type: T.nilable(::UnifiedRubySDK::Shared::HrisTelephoneType)).void }
-      def initialize(telephone: nil, type: nil)
-        @telephone = telephone
-        @type = type
+        field :telephone, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephone') } }
+
+        field :type, T.nilable(Models::Shared::HrisTelephoneType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisTelephoneType, true) } }
+
+
+        sig { params(telephone: ::String, type: T.nilable(Models::Shared::HrisTelephoneType)).void }
+        def initialize(telephone: nil, type: nil)
+          @telephone = telephone
+          @type = type
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @telephone == other.telephone
+          return false unless @type == other.type
+          true
+        end
       end
     end
   end

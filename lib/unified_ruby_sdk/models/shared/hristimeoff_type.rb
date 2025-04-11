@@ -5,13 +5,15 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class HrisTimeoffType < T::Enum
-      enums do
-        PAID = new('PAID')
-        UNPAID = new('UNPAID')
+      class HrisTimeoffType < T::Enum
+        enums do
+          PAID = new('PAID')
+          UNPAID = new('UNPAID')
+        end
       end
     end
   end

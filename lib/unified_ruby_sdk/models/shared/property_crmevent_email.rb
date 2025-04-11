@@ -5,34 +5,48 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
-    # The email object, when type = email
-    class PropertyCrmEventEmail < ::Crystalline::FieldAugmented
-      extend T::Sig
+  module Models
+    module Shared
+    
+      # The email object, when type = email
+      class PropertyCrmEventEmail
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      field :attachment_file_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attachment_file_ids') } }
+        field :attachment_file_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attachment_file_ids') } }
 
-      field :body, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('body') } }
-      # The event email's cc name & email (name <test@test.com>)
-      field :cc, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cc') } }
+        field :body, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('body') } }
+        # The event email's cc name & email (name <test@test.com>)
+        field :cc, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cc') } }
 
-      field :from, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('from') } }
+        field :from, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('from') } }
 
-      field :subject, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subject') } }
-      # The event email's "to" name & email (name <test@test.com>)
-      field :to, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('to') } }
+        field :subject, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subject') } }
+        # The event email's "to" name & email (name <test@test.com>)
+        field :to, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('to') } }
 
 
-      sig { params(attachment_file_ids: T.nilable(T::Array[::String]), body: T.nilable(::String), cc: T.nilable(T::Array[::String]), from: T.nilable(::String), subject: T.nilable(::String), to: T.nilable(T::Array[::String])).void }
-      def initialize(attachment_file_ids: nil, body: nil, cc: nil, from: nil, subject: nil, to: nil)
-        @attachment_file_ids = attachment_file_ids
-        @body = body
-        @cc = cc
-        @from = from
-        @subject = subject
-        @to = to
+        sig { params(attachment_file_ids: T.nilable(T::Array[::String]), body: T.nilable(::String), cc: T.nilable(T::Array[::String]), from: T.nilable(::String), subject: T.nilable(::String), to: T.nilable(T::Array[::String])).void }
+        def initialize(attachment_file_ids: nil, body: nil, cc: nil, from: nil, subject: nil, to: nil)
+          @attachment_file_ids = attachment_file_ids
+          @body = body
+          @cc = cc
+          @from = from
+          @subject = subject
+          @to = to
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @attachment_file_ids == other.attachment_file_ids
+          return false unless @body == other.body
+          return false unless @cc == other.cc
+          return false unless @from == other.from
+          return false unless @subject == other.subject
+          return false unless @to == other.to
+          true
+        end
       end
     end
   end

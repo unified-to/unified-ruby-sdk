@@ -5,17 +5,19 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class ScimPhoneNumberType < T::Enum
-      enums do
-        WORK = new('work')
-        HOME = new('home')
-        OTHER = new('other')
-        MOBILE = new('mobile')
-        FAX = new('fax')
-        PAGER = new('pager')
+      class ScimPhoneNumberType < T::Enum
+        enums do
+          WORK = new('work')
+          HOME = new('home')
+          OTHER = new('other')
+          MOBILE = new('mobile')
+          FAX = new('fax')
+          PAGER = new('pager')
+        end
       end
     end
   end

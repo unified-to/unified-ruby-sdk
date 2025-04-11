@@ -5,43 +5,60 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
-    # A contact represents a person that optionally is associated with a call
-    class UcContact < ::Crystalline::FieldAugmented
-      extend T::Sig
+  module Models
+    module Shared
+    
+      # A contact represents a person that optionally is associated with a call
+      class UcContact
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      field :company, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company') } }
+        field :company, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company') } }
 
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-      # An array of email addresses for this contact
-      field :emails, T.nilable(T::Array[::UnifiedRubySDK::Shared::UcEmail]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        # An array of email addresses for this contact
+        field :emails, T.nilable(T::Array[Models::Shared::UcEmail]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
 
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-      field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-      # The raw data returned by the integration for this contact
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-      # An array of telephones for this contact
-      field :telephones, T.nilable(T::Array[::UnifiedRubySDK::Shared::UcTelephone]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        # The raw data returned by the integration for this contact
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        # An array of telephones for this contact
+        field :telephones, T.nilable(T::Array[Models::Shared::UcTelephone]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
 
-      field :title, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
+        field :title, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
 
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-      sig { params(company: T.nilable(::String), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[::UnifiedRubySDK::Shared::UcEmail]), id: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), telephones: T.nilable(T::Array[::UnifiedRubySDK::Shared::UcTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-      def initialize(company: nil, created_at: nil, emails: nil, id: nil, name: nil, raw: nil, telephones: nil, title: nil, updated_at: nil)
-        @company = company
-        @created_at = created_at
-        @emails = emails
-        @id = id
-        @name = name
-        @raw = raw
-        @telephones = telephones
-        @title = title
-        @updated_at = updated_at
+        sig { params(company: T.nilable(::String), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::UcEmail]), id: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::UcTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(company: nil, created_at: nil, emails: nil, id: nil, name: nil, raw: nil, telephones: nil, title: nil, updated_at: nil)
+          @company = company
+          @created_at = created_at
+          @emails = emails
+          @id = id
+          @name = name
+          @raw = raw
+          @telephones = telephones
+          @title = title
+          @updated_at = updated_at
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @company == other.company
+          return false unless @created_at == other.created_at
+          return false unless @emails == other.emails
+          return false unless @id == other.id
+          return false unless @name == other.name
+          return false unless @raw == other.raw
+          return false unless @telephones == other.telephones
+          return false unless @title == other.title
+          return false unless @updated_at == other.updated_at
+          true
+        end
       end
     end
   end

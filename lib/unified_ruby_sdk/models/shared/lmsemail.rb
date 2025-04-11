@@ -5,16 +5,24 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class LmsEmail < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class LmsEmail
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
 
-      
-      def initialize; end
+        
+        def initialize; end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          true
+        end
+      end
     end
   end
 end

@@ -5,16 +5,18 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class HrisEmployeeGender < T::Enum
-      enums do
-        MALE = new('MALE')
-        FEMALE = new('FEMALE')
-        INTERSEX = new('INTERSEX')
-        TRANS = new('TRANS')
-        NON_BINARY = new('NON_BINARY')
+      class HrisEmployeeGender < T::Enum
+        enums do
+          MALE = new('MALE')
+          FEMALE = new('FEMALE')
+          INTERSEX = new('INTERSEX')
+          TRANS = new('TRANS')
+          NON_BINARY = new('NON_BINARY')
+        end
       end
     end
   end

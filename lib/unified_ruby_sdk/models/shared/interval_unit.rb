@@ -5,15 +5,17 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class IntervalUnit < T::Enum
-      enums do
-        YEAR = new('YEAR')
-        MONTH = new('MONTH')
-        WEEK = new('WEEK')
-        DAY = new('DAY')
+      class IntervalUnit < T::Enum
+        enums do
+          YEAR = new('YEAR')
+          MONTH = new('MONTH')
+          WEEK = new('WEEK')
+          DAY = new('DAY')
+        end
       end
     end
   end

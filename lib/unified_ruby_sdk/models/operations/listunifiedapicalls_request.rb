@@ -5,55 +5,76 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class ListUnifiedApicallsRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class ListUnifiedApicallsRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # Filter the results to just this integration
-      field :connection_id, T.nilable(::String), { 'query_param': { 'field_name': 'connection_id', 'style': 'form', 'explode': true } }
+        # Filter the results to just this integration
+        field :connection_id, T.nilable(::String), { 'query_param': { 'field_name': 'connection_id', 'style': 'form', 'explode': true } }
 
-      field :env, T.nilable(::String), { 'query_param': { 'field_name': 'env', 'style': 'form', 'explode': true } }
-      # Filter the results for API Calls with errors
-      field :error, T.nilable(T::Boolean), { 'query_param': { 'field_name': 'error', 'style': 'form', 'explode': true } }
-      # Filter the results to only those integrations for your user referenced by this value
-      field :external_xref, T.nilable(::String), { 'query_param': { 'field_name': 'external_xref', 'style': 'form', 'explode': true } }
-      # Filter the results to just this integration
-      field :integration_type, T.nilable(::String), { 'query_param': { 'field_name': 'integration_type', 'style': 'form', 'explode': true } }
-      # Filter the results for only billable API Calls
-      field :is_billable, T.nilable(T::Boolean), { 'query_param': { 'field_name': 'is_billable', 'style': 'form', 'explode': true } }
+        field :env, T.nilable(::String), { 'query_param': { 'field_name': 'env', 'style': 'form', 'explode': true } }
+        # Filter the results for API Calls with errors
+        field :error, T.nilable(T::Boolean), { 'query_param': { 'field_name': 'error', 'style': 'form', 'explode': true } }
+        # Filter the results to only those integrations for your user referenced by this value
+        field :external_xref, T.nilable(::String), { 'query_param': { 'field_name': 'external_xref', 'style': 'form', 'explode': true } }
+        # Filter the results to just this integration
+        field :integration_type, T.nilable(::String), { 'query_param': { 'field_name': 'integration_type', 'style': 'form', 'explode': true } }
+        # Filter the results for only billable API Calls
+        field :is_billable, T.nilable(T::Boolean), { 'query_param': { 'field_name': 'is_billable', 'style': 'form', 'explode': true } }
 
-      field :limit, T.nilable(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
+        field :limit, T.nilable(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
 
-      field :offset, T.nilable(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
+        field :offset, T.nilable(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
 
-      field :order, T.nilable(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
+        field :order, T.nilable(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
 
-      field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
-      # Filter the results to just this type
-      field :type, T.nilable(::String), { 'query_param': { 'field_name': 'type', 'style': 'form', 'explode': true } }
-      # Return only results whose updated date is equal or greater to this value
-      field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
-      # Filter the results to just this webhook
-      field :webhook_id, T.nilable(::String), { 'query_param': { 'field_name': 'webhook_id', 'style': 'form', 'explode': true } }
+        field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
+        # Filter the results to just this type
+        field :type, T.nilable(::String), { 'query_param': { 'field_name': 'type', 'style': 'form', 'explode': true } }
+        # Return only results whose updated date is equal or greater to this value
+        field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
+        # Filter the results to just this webhook
+        field :webhook_id, T.nilable(::String), { 'query_param': { 'field_name': 'webhook_id', 'style': 'form', 'explode': true } }
 
 
-      sig { params(connection_id: T.nilable(::String), env: T.nilable(::String), error: T.nilable(T::Boolean), external_xref: T.nilable(::String), integration_type: T.nilable(::String), is_billable: T.nilable(T::Boolean), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), sort: T.nilable(::String), type: T.nilable(::String), updated_gte: T.nilable(::DateTime), webhook_id: T.nilable(::String)).void }
-      def initialize(connection_id: nil, env: nil, error: nil, external_xref: nil, integration_type: nil, is_billable: nil, limit: nil, offset: nil, order: nil, sort: nil, type: nil, updated_gte: nil, webhook_id: nil)
-        @connection_id = connection_id
-        @env = env
-        @error = error
-        @external_xref = external_xref
-        @integration_type = integration_type
-        @is_billable = is_billable
-        @limit = limit
-        @offset = offset
-        @order = order
-        @sort = sort
-        @type = type
-        @updated_gte = updated_gte
-        @webhook_id = webhook_id
+        sig { params(connection_id: T.nilable(::String), env: T.nilable(::String), error: T.nilable(T::Boolean), external_xref: T.nilable(::String), integration_type: T.nilable(::String), is_billable: T.nilable(T::Boolean), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), sort: T.nilable(::String), type: T.nilable(::String), updated_gte: T.nilable(::DateTime), webhook_id: T.nilable(::String)).void }
+        def initialize(connection_id: nil, env: nil, error: nil, external_xref: nil, integration_type: nil, is_billable: nil, limit: nil, offset: nil, order: nil, sort: nil, type: nil, updated_gte: nil, webhook_id: nil)
+          @connection_id = connection_id
+          @env = env
+          @error = error
+          @external_xref = external_xref
+          @integration_type = integration_type
+          @is_billable = is_billable
+          @limit = limit
+          @offset = offset
+          @order = order
+          @sort = sort
+          @type = type
+          @updated_gte = updated_gte
+          @webhook_id = webhook_id
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @connection_id == other.connection_id
+          return false unless @env == other.env
+          return false unless @error == other.error
+          return false unless @external_xref == other.external_xref
+          return false unless @integration_type == other.integration_type
+          return false unless @is_billable == other.is_billable
+          return false unless @limit == other.limit
+          return false unless @offset == other.offset
+          return false unless @order == other.order
+          return false unless @sort == other.sort
+          return false unless @type == other.type
+          return false unless @updated_gte == other.updated_gte
+          return false unless @webhook_id == other.webhook_id
+          true
+        end
       end
     end
   end

@@ -5,14 +5,16 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AccountingInvoiceType < T::Enum
-      enums do
-        BILL = new('BILL')
-        INVOICE = new('INVOICE')
-        CREDITMEMO = new('CREDITMEMO')
+      class AccountingInvoiceType < T::Enum
+        enums do
+          BILL = new('BILL')
+          INVOICE = new('INVOICE')
+          CREDITMEMO = new('CREDITMEMO')
+        end
       end
     end
   end

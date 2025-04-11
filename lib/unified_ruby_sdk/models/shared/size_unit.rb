@@ -5,13 +5,15 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class SizeUnit < T::Enum
-      enums do
-        CM = new('cm')
-        INCH = new('inch')
+      class SizeUnit < T::Enum
+        enums do
+          CM = new('cm')
+          INCH = new('inch')
+        end
       end
     end
   end

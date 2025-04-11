@@ -5,40 +5,56 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class RepoCommit < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :repo_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('repo_id') } }
-
-      field :user_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
-
-      field :branch_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('branch_id') } }
-
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :message, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message') } }
-
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+      class RepoCommit
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(repo_id: ::String, user_id: ::String, branch_id: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), message: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
-      def initialize(repo_id: nil, user_id: nil, branch_id: nil, created_at: nil, id: nil, message: nil, raw: nil, updated_at: nil)
-        @repo_id = repo_id
-        @user_id = user_id
-        @branch_id = branch_id
-        @created_at = created_at
-        @id = id
-        @message = message
-        @raw = raw
-        @updated_at = updated_at
+        field :repo_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('repo_id') } }
+
+        field :user_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
+
+        field :branch_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('branch_id') } }
+
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :message, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+
+        sig { params(repo_id: ::String, user_id: ::String, branch_id: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), message: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(repo_id: nil, user_id: nil, branch_id: nil, created_at: nil, id: nil, message: nil, raw: nil, updated_at: nil)
+          @repo_id = repo_id
+          @user_id = user_id
+          @branch_id = branch_id
+          @created_at = created_at
+          @id = id
+          @message = message
+          @raw = raw
+          @updated_at = updated_at
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @repo_id == other.repo_id
+          return false unless @user_id == other.user_id
+          return false unless @branch_id == other.branch_id
+          return false unless @created_at == other.created_at
+          return false unless @id == other.id
+          return false unless @message == other.message
+          return false unless @raw == other.raw
+          return false unless @updated_at == other.updated_at
+          true
+        end
       end
     end
   end

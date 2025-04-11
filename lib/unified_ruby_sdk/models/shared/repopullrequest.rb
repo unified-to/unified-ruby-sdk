@@ -5,46 +5,64 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class RepoPullrequest < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :closed_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :commit_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('commit_ids') } }
-
-      field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :labels, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('labels') } }
-
-      field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
-      field :repo_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('repo_id') } }
-
-      field :status, T.nilable(::UnifiedRubySDK::Shared::RepoPullrequestStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::RepoPullrequestStatus, true) } }
-
-      field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :user_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
+      class RepoPullrequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(closed_at: T.nilable(::DateTime), commit_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), id: T.nilable(::String), labels: T.nilable(T::Array[::String]), raw: T.nilable(T::Hash[Symbol, ::Object]), repo_id: T.nilable(::String), status: T.nilable(::UnifiedRubySDK::Shared::RepoPullrequestStatus), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
-      def initialize(closed_at: nil, commit_ids: nil, created_at: nil, id: nil, labels: nil, raw: nil, repo_id: nil, status: nil, updated_at: nil, user_ids: nil)
-        @closed_at = closed_at
-        @commit_ids = commit_ids
-        @created_at = created_at
-        @id = id
-        @labels = labels
-        @raw = raw
-        @repo_id = repo_id
-        @status = status
-        @updated_at = updated_at
-        @user_ids = user_ids
+        field :closed_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :commit_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('commit_ids') } }
+
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :labels, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('labels') } }
+
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
+        field :repo_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('repo_id') } }
+
+        field :status, T.nilable(Models::Shared::RepoPullrequestStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::RepoPullrequestStatus, true) } }
+
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :user_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
+
+
+        sig { params(closed_at: T.nilable(::DateTime), commit_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), id: T.nilable(::String), labels: T.nilable(T::Array[::String]), raw: T.nilable(T::Hash[Symbol, ::Object]), repo_id: T.nilable(::String), status: T.nilable(Models::Shared::RepoPullrequestStatus), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
+        def initialize(closed_at: nil, commit_ids: nil, created_at: nil, id: nil, labels: nil, raw: nil, repo_id: nil, status: nil, updated_at: nil, user_ids: nil)
+          @closed_at = closed_at
+          @commit_ids = commit_ids
+          @created_at = created_at
+          @id = id
+          @labels = labels
+          @raw = raw
+          @repo_id = repo_id
+          @status = status
+          @updated_at = updated_at
+          @user_ids = user_ids
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @closed_at == other.closed_at
+          return false unless @commit_ids == other.commit_ids
+          return false unless @created_at == other.created_at
+          return false unless @id == other.id
+          return false unless @labels == other.labels
+          return false unless @raw == other.raw
+          return false unless @repo_id == other.repo_id
+          return false unless @status == other.status
+          return false unless @updated_at == other.updated_at
+          return false unless @user_ids == other.user_ids
+          true
+        end
       end
     end
   end

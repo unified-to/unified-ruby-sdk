@@ -5,25 +5,36 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class KmsPageMetadata < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
-      field :type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
-
-      field :value, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
+      class KmsPageMetadata
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(name: ::String, type: T.nilable(::String), value: T.nilable(::String)).void }
-      def initialize(name: nil, type: nil, value: nil)
-        @name = name
-        @type = type
-        @value = value
+        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
+
+        field :value, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
+
+
+        sig { params(name: ::String, type: T.nilable(::String), value: T.nilable(::String)).void }
+        def initialize(name: nil, type: nil, value: nil)
+          @name = name
+          @type = type
+          @value = value
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @name == other.name
+          return false unless @type == other.type
+          return false unless @value == other.value
+          true
+        end
       end
     end
   end

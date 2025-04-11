@@ -5,37 +5,52 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class AtsJobQuestion < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :question, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('question') } }
-
-      field :type, ::UnifiedRubySDK::Shared::AtsJobQuestionType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::AtsJobQuestionType, false) } }
-
-      field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
-      field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-      field :options, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
-
-      field :prompt, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('prompt') } }
-
-      field :required, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('required') } }
+      class AtsJobQuestion
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(question: ::String, type: ::UnifiedRubySDK::Shared::AtsJobQuestionType, description: T.nilable(::String), id: T.nilable(::String), options: T.nilable(T::Array[::String]), prompt: T.nilable(::String), required: T.nilable(T::Boolean)).void }
-      def initialize(question: nil, type: nil, description: nil, id: nil, options: nil, prompt: nil, required: nil)
-        @question = question
-        @type = type
-        @description = description
-        @id = id
-        @options = options
-        @prompt = prompt
-        @required = required
+        field :question, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('question') } }
+
+        field :type, Models::Shared::AtsJobQuestionType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AtsJobQuestionType, false) } }
+
+        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :options, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
+
+        field :prompt, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('prompt') } }
+
+        field :required, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('required') } }
+
+
+        sig { params(question: ::String, type: Models::Shared::AtsJobQuestionType, description: T.nilable(::String), id: T.nilable(::String), options: T.nilable(T::Array[::String]), prompt: T.nilable(::String), required: T.nilable(T::Boolean)).void }
+        def initialize(question: nil, type: nil, description: nil, id: nil, options: nil, prompt: nil, required: nil)
+          @question = question
+          @type = type
+          @description = description
+          @id = id
+          @options = options
+          @prompt = prompt
+          @required = required
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @question == other.question
+          return false unless @type == other.type
+          return false unless @description == other.description
+          return false unless @id == other.id
+          return false unless @options == other.options
+          return false unless @prompt == other.prompt
+          return false unless @required == other.required
+          true
+        end
       end
     end
   end

@@ -5,40 +5,56 @@
 
 
 module UnifiedRubySDK
-  module Operations
-  
+  module Models
+    module Operations
+    
 
-    class ListUnifiedConnectionsRequest < ::Crystalline::FieldAugmented
-      extend T::Sig
+      class ListUnifiedConnectionsRequest
+        extend T::Sig
+        include Crystalline::MetadataFields
 
-      # Filter the results on these categories
-      field :categories, T.nilable(T::Array[::UnifiedRubySDK::Operations::Categories]), { 'query_param': { 'field_name': 'categories', 'style': 'form', 'explode': true } }
+        # Filter the results on these categories
+        field :categories, T.nilable(T::Array[Models::Operations::Categories]), { 'query_param': { 'field_name': 'categories', 'style': 'form', 'explode': true } }
 
-      field :env, T.nilable(::String), { 'query_param': { 'field_name': 'env', 'style': 'form', 'explode': true } }
-      # Filter the results to only those integrations for your user referenced by this value
-      field :external_xref, T.nilable(::String), { 'query_param': { 'field_name': 'external_xref', 'style': 'form', 'explode': true } }
+        field :env, T.nilable(::String), { 'query_param': { 'field_name': 'env', 'style': 'form', 'explode': true } }
+        # Filter the results to only those integrations for your user referenced by this value
+        field :external_xref, T.nilable(::String), { 'query_param': { 'field_name': 'external_xref', 'style': 'form', 'explode': true } }
 
-      field :limit, T.nilable(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
+        field :limit, T.nilable(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
 
-      field :offset, T.nilable(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
+        field :offset, T.nilable(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
 
-      field :order, T.nilable(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
+        field :order, T.nilable(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
 
-      field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
-      # Return only results whose updated date is equal or greater to this value
-      field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
+        field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
+        # Return only results whose updated date is equal or greater to this value
+        field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
 
-      sig { params(categories: T.nilable(T::Array[::UnifiedRubySDK::Operations::Categories]), env: T.nilable(::String), external_xref: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
-      def initialize(categories: nil, env: nil, external_xref: nil, limit: nil, offset: nil, order: nil, sort: nil, updated_gte: nil)
-        @categories = categories
-        @env = env
-        @external_xref = external_xref
-        @limit = limit
-        @offset = offset
-        @order = order
-        @sort = sort
-        @updated_gte = updated_gte
+        sig { params(categories: T.nilable(T::Array[Models::Operations::Categories]), env: T.nilable(::String), external_xref: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
+        def initialize(categories: nil, env: nil, external_xref: nil, limit: nil, offset: nil, order: nil, sort: nil, updated_gte: nil)
+          @categories = categories
+          @env = env
+          @external_xref = external_xref
+          @limit = limit
+          @offset = offset
+          @order = order
+          @sort = sort
+          @updated_gte = updated_gte
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @categories == other.categories
+          return false unless @env == other.env
+          return false unless @external_xref == other.external_xref
+          return false unless @limit == other.limit
+          return false unless @offset == other.offset
+          return false unless @order == other.order
+          return false unless @sort == other.sort
+          return false unless @updated_gte == other.updated_gte
+          true
+        end
       end
     end
   end

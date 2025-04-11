@@ -5,21 +5,23 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class Type < T::Enum
-      enums do
-        ACCOUNTS_PAYABLE = new('ACCOUNTS_PAYABLE')
-        ACCOUNTS_RECEIVABLE = new('ACCOUNTS_RECEIVABLE')
-        BANK = new('BANK')
-        CREDIT_CARD = new('CREDIT_CARD')
-        FIXED_ASSET = new('FIXED_ASSET')
-        LIABILITY = new('LIABILITY')
-        EQUITY = new('EQUITY')
-        EXPENSE = new('EXPENSE')
-        REVENUE = new('REVENUE')
-        OTHER = new('OTHER')
+      class Type < T::Enum
+        enums do
+          ACCOUNTS_PAYABLE = new('ACCOUNTS_PAYABLE')
+          ACCOUNTS_RECEIVABLE = new('ACCOUNTS_RECEIVABLE')
+          BANK = new('BANK')
+          CREDIT_CARD = new('CREDIT_CARD')
+          FIXED_ASSET = new('FIXED_ASSET')
+          LIABILITY = new('LIABILITY')
+          EQUITY = new('EQUITY')
+          EXPENSE = new('EXPENSE')
+          REVENUE = new('REVENUE')
+          OTHER = new('OTHER')
+        end
       end
     end
   end

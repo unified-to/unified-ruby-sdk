@@ -5,19 +5,21 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class CrmEventType < T::Enum
-      enums do
-        NOTE = new('NOTE')
-        EMAIL = new('EMAIL')
-        TASK = new('TASK')
-        MEETING = new('MEETING')
-        CALL = new('CALL')
-        MARKETING_EMAIL = new('MARKETING_EMAIL')
-        FORM = new('FORM')
-        PAGE_VIEW = new('PAGE_VIEW')
+      class CrmEventType < T::Enum
+        enums do
+          NOTE = new('NOTE')
+          EMAIL = new('EMAIL')
+          TASK = new('TASK')
+          MEETING = new('MEETING')
+          CALL = new('CALL')
+          MARKETING_EMAIL = new('MARKETING_EMAIL')
+          FORM = new('FORM')
+          PAGE_VIEW = new('PAGE_VIEW')
+        end
       end
     end
   end

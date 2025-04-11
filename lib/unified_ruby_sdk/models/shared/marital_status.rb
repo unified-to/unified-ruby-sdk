@@ -5,13 +5,15 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class MaritalStatus < T::Enum
-      enums do
-        MARRIED = new('MARRIED')
-        SINGLE = new('SINGLE')
+      class MaritalStatus < T::Enum
+        enums do
+          MARRIED = new('MARRIED')
+          SINGLE = new('SINGLE')
+        end
       end
     end
   end

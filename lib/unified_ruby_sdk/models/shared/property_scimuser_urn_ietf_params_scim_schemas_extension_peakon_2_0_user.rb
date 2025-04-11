@@ -5,28 +5,40 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :date_of_birth, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Date of Birth'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-      field :gender, T.nilable(::UnifiedRubySDK::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Gender'), 'decoder': Utils.enum_from_string(::UnifiedRubySDK::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender, true) } }
-
-      field :manager, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Manager') } }
-
-      field :team, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Team') } }
+      class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(date_of_birth: T.nilable(::DateTime), gender: T.nilable(::UnifiedRubySDK::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender), manager: T.nilable(::String), team: T.nilable(::String)).void }
-      def initialize(date_of_birth: nil, gender: nil, manager: nil, team: nil)
-        @date_of_birth = date_of_birth
-        @gender = gender
-        @manager = manager
-        @team = team
+        field :date_of_birth, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Date of Birth'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :gender, T.nilable(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Gender'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender, true) } }
+
+        field :manager, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Manager') } }
+
+        field :team, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Team') } }
+
+
+        sig { params(date_of_birth: T.nilable(::DateTime), gender: T.nilable(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender), manager: T.nilable(::String), team: T.nilable(::String)).void }
+        def initialize(date_of_birth: nil, gender: nil, manager: nil, team: nil)
+          @date_of_birth = date_of_birth
+          @gender = gender
+          @manager = manager
+          @team = team
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @date_of_birth == other.date_of_birth
+          return false unless @gender == other.gender
+          return false unless @manager == other.manager
+          return false unless @team == other.team
+          true
+        end
       end
     end
   end

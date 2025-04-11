@@ -5,25 +5,36 @@
 
 
 module UnifiedRubySDK
-  module Shared
-  
+  module Models
+    module Shared
+    
 
-    class CommerceItemPrice < ::Crystalline::FieldAugmented
-      extend T::Sig
-
-
-      field :price, ::Float, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price') } }
-
-      field :compare_at_price, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('compare_at_price') } }
-
-      field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+      class CommerceItemPrice
+        extend T::Sig
+        include Crystalline::MetadataFields
 
 
-      sig { params(price: ::Float, compare_at_price: T.nilable(::Float), currency: T.nilable(::String)).void }
-      def initialize(price: nil, compare_at_price: nil, currency: nil)
-        @price = price
-        @compare_at_price = compare_at_price
-        @currency = currency
+        field :price, ::Float, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price') } }
+
+        field :compare_at_price, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('compare_at_price') } }
+
+        field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+
+
+        sig { params(price: ::Float, compare_at_price: T.nilable(::Float), currency: T.nilable(::String)).void }
+        def initialize(price: nil, compare_at_price: nil, currency: nil)
+          @price = price
+          @compare_at_price = compare_at_price
+          @currency = currency
+        end
+
+        def ==(other)
+          return false unless other.is_a? self.class
+          return false unless @price == other.price
+          return false unless @compare_at_price == other.compare_at_price
+          return false unless @currency == other.currency
+          true
+        end
       end
     end
   end
