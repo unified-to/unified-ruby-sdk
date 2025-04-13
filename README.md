@@ -1177,6 +1177,7 @@ You can override the default server globally by passing a server index to the `s
 | --- | --------------------------- | -------------------------- |
 | 0   | `https://api.unified.to`    | North American data region |
 | 1   | `https://api-eu.unified.to` | European data region       |
+| 2   | `https://api-au.unified.to` | Australian data region     |
 
 #### Example
 
@@ -1184,7 +1185,7 @@ You can override the default server globally by passing a server index to the `s
 require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      server_idx: 1,
+      server_idx: 2,
       security: Models::Shared::Security.new(
         jwt: "<YOUR_API_KEY_HERE>",
       ),

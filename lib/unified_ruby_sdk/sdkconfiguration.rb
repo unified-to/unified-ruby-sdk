@@ -16,6 +16,7 @@ module UnifiedRubySDK
   SERVERS = [
     'https://api.unified.to', # 1 - North American data region
     'https://api-eu.unified.to', # 1 - European data region
+    'https://api-au.unified.to', # 1 - Australian data region
   ].freeze
   # Contains the list of servers available to the SDK
 
@@ -64,9 +65,9 @@ module UnifiedRubySDK
       end
       @language = 'ruby'
       @openapi_doc_version = '1.0'
-      @sdk_version = '0.10.0'
-      @gen_version = '2.570.0'
-      @user_agent = 'speakeasy-sdk/ruby 0.10.0 2.570.0 1.0 unified_ruby_sdk'
+      @sdk_version = '0.10.1'
+      @gen_version = '2.570.4'
+      @user_agent = 'speakeasy-sdk/ruby 0.10.1 2.570.4 1.0 unified_ruby_sdk'
     end
 
     sig { returns([String, T::Hash[Symbol, String]]) }
