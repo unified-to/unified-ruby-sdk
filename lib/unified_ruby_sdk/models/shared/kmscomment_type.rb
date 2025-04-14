@@ -11,7 +11,7 @@ module UnifiedRubySDK
 
       class KmsCommentType < T::Enum
         enums do
-          PAGE_INLINE = new('PAGE-INLINE')
+          PAGE_INLINE = new('PAGE_INLINE')
           PAGE = new('PAGE')
         end
       end
