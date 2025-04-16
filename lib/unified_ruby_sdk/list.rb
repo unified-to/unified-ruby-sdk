@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(marketing_list: Models::Shared::MarketingList, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMartechListResponse) }
-    def create_martech_list(marketing_list, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_martech_list(marketing_list:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_martech_list - Create a list
       request = Models::Operations::CreateMartechListRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMartechListResponse) }
-    def get_martech_list(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_martech_list(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_martech_list - Retrieve a list
       request = Models::Operations::GetMartechListRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListMartechListsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMartechListsResponse) }
-    def list_martech_lists(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListMartechListsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMartechListsResponse) }
+    def list_martech_lists(request:, timeout_ms: nil)
       # list_martech_lists - List all lists
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(marketing_list: Models::Shared::MarketingList, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMartechListResponse) }
-    def patch_martech_list(marketing_list, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_martech_list(marketing_list:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_martech_list - Update a list
       request = Models::Operations::PatchMartechListRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveMartechListResponse) }
-    def remove_martech_list(connection_id, id, timeout_ms = nil)
+    def remove_martech_list(connection_id:, id:, timeout_ms: nil)
       # remove_martech_list - Remove a list
       request = Models::Operations::RemoveMartechListRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(marketing_list: Models::Shared::MarketingList, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMartechListResponse) }
-    def update_martech_list(marketing_list, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_martech_list(marketing_list:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_martech_list - Update a list
       request = Models::Operations::UpdateMartechListRequest.new(
         

@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(calendar_link: Models::Shared::CalendarLink, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCalendarLinkResponse) }
-    def create_calendar_link(calendar_link, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_calendar_link(calendar_link:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_calendar_link - Create a link
       request = Models::Operations::CreateCalendarLinkRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(payment_link: Models::Shared::PaymentLink, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePaymentLinkResponse) }
-    def create_payment_link(payment_link, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_payment_link(payment_link:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_payment_link - Create a link
       request = Models::Operations::CreatePaymentLinkRequest.new(
         
@@ -271,7 +271,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarLinkResponse) }
-    def get_calendar_link(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_calendar_link(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_calendar_link - Retrieve a link
       request = Models::Operations::GetCalendarLinkRequest.new(
         
@@ -383,7 +383,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentLinkResponse) }
-    def get_payment_link(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_payment_link(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_payment_link - Retrieve a link
       request = Models::Operations::GetPaymentLinkRequest.new(
         
@@ -494,8 +494,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListCalendarLinksRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarLinksResponse) }
-    def list_calendar_links(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListCalendarLinksRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarLinksResponse) }
+    def list_calendar_links(request:, timeout_ms: nil)
       # list_calendar_links - List all links
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -600,8 +600,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListPaymentLinksRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentLinksResponse) }
-    def list_payment_links(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListPaymentLinksRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentLinksResponse) }
+    def list_payment_links(request:, timeout_ms: nil)
       # list_payment_links - List all links
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -707,7 +707,7 @@ module UnifiedRubySDK
 
 
     sig { params(calendar_link: Models::Shared::CalendarLink, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCalendarLinkResponse) }
-    def patch_calendar_link(calendar_link, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_calendar_link(calendar_link:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_calendar_link - Update a link
       request = Models::Operations::PatchCalendarLinkRequest.new(
         
@@ -832,7 +832,7 @@ module UnifiedRubySDK
 
 
     sig { params(payment_link: Models::Shared::PaymentLink, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPaymentLinkResponse) }
-    def patch_payment_link(payment_link, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_payment_link(payment_link:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_payment_link - Update a link
       request = Models::Operations::PatchPaymentLinkRequest.new(
         
@@ -957,7 +957,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCalendarLinkResponse) }
-    def remove_calendar_link(connection_id, id, timeout_ms = nil)
+    def remove_calendar_link(connection_id:, id:, timeout_ms: nil)
       # remove_calendar_link - Remove a link
       request = Models::Operations::RemoveCalendarLinkRequest.new(
         
@@ -1067,7 +1067,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemovePaymentLinkResponse) }
-    def remove_payment_link(connection_id, id, timeout_ms = nil)
+    def remove_payment_link(connection_id:, id:, timeout_ms: nil)
       # remove_payment_link - Remove a link
       request = Models::Operations::RemovePaymentLinkRequest.new(
         
@@ -1177,7 +1177,7 @@ module UnifiedRubySDK
 
 
     sig { params(calendar_link: Models::Shared::CalendarLink, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCalendarLinkResponse) }
-    def update_calendar_link(calendar_link, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_calendar_link(calendar_link:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_calendar_link - Update a link
       request = Models::Operations::UpdateCalendarLinkRequest.new(
         
@@ -1302,7 +1302,7 @@ module UnifiedRubySDK
 
 
     sig { params(payment_link: Models::Shared::PaymentLink, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePaymentLinkResponse) }
-    def update_payment_link(payment_link, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_payment_link(payment_link:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_payment_link - Update a link
       request = Models::Operations::UpdatePaymentLinkRequest.new(
         

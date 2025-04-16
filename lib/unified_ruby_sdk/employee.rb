@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(hris_employee: Models::Shared::HrisEmployee, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisEmployeeResponse) }
-    def create_hris_employee(hris_employee, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_hris_employee(hris_employee:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_hris_employee - Create an employee
       request = Models::Operations::CreateHrisEmployeeRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisEmployeeResponse) }
-    def get_hris_employee(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_hris_employee(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_hris_employee - Retrieve an employee
       request = Models::Operations::GetHrisEmployeeRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListHrisEmployeesRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisEmployeesResponse) }
-    def list_hris_employees(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListHrisEmployeesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisEmployeesResponse) }
+    def list_hris_employees(request:, timeout_ms: nil)
       # list_hris_employees - List all employees
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(hris_employee: Models::Shared::HrisEmployee, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisEmployeeResponse) }
-    def patch_hris_employee(hris_employee, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_hris_employee(hris_employee:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_hris_employee - Update an employee
       request = Models::Operations::PatchHrisEmployeeRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisEmployeeResponse) }
-    def remove_hris_employee(connection_id, id, timeout_ms = nil)
+    def remove_hris_employee(connection_id:, id:, timeout_ms: nil)
       # remove_hris_employee - Remove an employee
       request = Models::Operations::RemoveHrisEmployeeRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(hris_employee: Models::Shared::HrisEmployee, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisEmployeeResponse) }
-    def update_hris_employee(hris_employee, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_hris_employee(hris_employee:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_hris_employee - Update an employee
       request = Models::Operations::UpdateHrisEmployeeRequest.new(
         

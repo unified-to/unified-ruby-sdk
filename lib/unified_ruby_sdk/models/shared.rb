@@ -7,6 +7,7 @@ module UnifiedRubySDK
   module Models
     module Shared
       autoload :AccountingAccount, 'unified_ruby_sdk/models/shared/accountingaccount.rb'
+      autoload :AccountingAttachment, 'unified_ruby_sdk/models/shared/accountingattachment.rb'
       autoload :AccountingContact, 'unified_ruby_sdk/models/shared/accountingcontact.rb'
       autoload :AccountingContactPaymentMethod, 'unified_ruby_sdk/models/shared/accountingcontactpaymentmethod.rb'
       autoload :AccountingContactPaymentMethodType, 'unified_ruby_sdk/models/shared/accountingcontactpaymentmethod_type.rb'

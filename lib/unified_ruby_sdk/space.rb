@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(kms_space: Models::Shared::KmsSpace, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateKmsSpaceResponse) }
-    def create_kms_space(kms_space, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_kms_space(kms_space:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_kms_space - Create a space
       request = Models::Operations::CreateKmsSpaceRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetKmsSpaceResponse) }
-    def get_kms_space(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_kms_space(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_kms_space - Retrieve a space
       request = Models::Operations::GetKmsSpaceRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListKmsSpacesRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListKmsSpacesResponse) }
-    def list_kms_spaces(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListKmsSpacesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListKmsSpacesResponse) }
+    def list_kms_spaces(request:, timeout_ms: nil)
       # list_kms_spaces - List all spaces
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(kms_space: Models::Shared::KmsSpace, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchKmsSpaceResponse) }
-    def patch_kms_space(kms_space, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_kms_space(kms_space:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_kms_space - Update a space
       request = Models::Operations::PatchKmsSpaceRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveKmsSpaceResponse) }
-    def remove_kms_space(connection_id, id, timeout_ms = nil)
+    def remove_kms_space(connection_id:, id:, timeout_ms: nil)
       # remove_kms_space - Remove a space
       request = Models::Operations::RemoveKmsSpaceRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(kms_space: Models::Shared::KmsSpace, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateKmsSpaceResponse) }
-    def update_kms_space(kms_space, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_kms_space(kms_space:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_kms_space - Update a space
       request = Models::Operations::UpdateKmsSpaceRequest.new(
         

@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(genai_prompt: Models::Shared::GenaiPrompt, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateGenaiPromptResponse) }
-    def create_genai_prompt(genai_prompt, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_genai_prompt(genai_prompt:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_genai_prompt - Create a prompt
       request = Models::Operations::CreateGenaiPromptRequest.new(
         

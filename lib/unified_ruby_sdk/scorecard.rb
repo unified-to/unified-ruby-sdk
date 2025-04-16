@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(ats_scorecard: Models::Shared::AtsScorecard, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsScorecardResponse) }
-    def create_ats_scorecard(ats_scorecard, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_ats_scorecard(ats_scorecard:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_ats_scorecard - Create a scorecard
       request = Models::Operations::CreateAtsScorecardRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsScorecardResponse) }
-    def get_ats_scorecard(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_ats_scorecard(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_ats_scorecard - Retrieve a scorecard
       request = Models::Operations::GetAtsScorecardRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListAtsScorecardsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsScorecardsResponse) }
-    def list_ats_scorecards(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListAtsScorecardsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsScorecardsResponse) }
+    def list_ats_scorecards(request:, timeout_ms: nil)
       # list_ats_scorecards - List all scorecards
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(ats_scorecard: Models::Shared::AtsScorecard, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsScorecardResponse) }
-    def patch_ats_scorecard(ats_scorecard, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_ats_scorecard(ats_scorecard:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_ats_scorecard - Update a scorecard
       request = Models::Operations::PatchAtsScorecardRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsScorecardResponse) }
-    def remove_ats_scorecard(connection_id, id, timeout_ms = nil)
+    def remove_ats_scorecard(connection_id:, id:, timeout_ms: nil)
       # remove_ats_scorecard - Remove a scorecard
       request = Models::Operations::RemoveAtsScorecardRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(ats_scorecard: Models::Shared::AtsScorecard, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsScorecardResponse) }
-    def update_ats_scorecard(ats_scorecard, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_ats_scorecard(ats_scorecard:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_ats_scorecard - Update a scorecard
       request = Models::Operations::UpdateAtsScorecardRequest.new(
         

@@ -22,8 +22,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListUnifiedIssuesRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedIssuesResponse) }
-    def list_unified_issues(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListUnifiedIssuesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedIssuesResponse) }
+    def list_unified_issues(request:, timeout_ms: nil)
       # list_unified_issues - List support issues
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)

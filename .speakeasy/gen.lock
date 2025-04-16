@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: f8c33b302b35d5dce19e700a53e8ea50
+  docChecksum: ce6ebc30e4ad046db9275dc804220d8b
   docVersion: "1.0"
-  speakeasyVersion: 1.531.4
-  generationVersion: 2.570.4
-  releaseVersion: 0.10.2
-  configChecksum: 39bb4d2a5b2441da848e26a2bf8f6978
+  speakeasyVersion: 1.533.0
+  generationVersion: 2.578.0
+  releaseVersion: 0.10.3
+  configChecksum: ca976810e59290ea4e77fc2d3e1c4d48
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -855,6 +855,7 @@ generatedFiles:
   - docs/models/operations/updateunifiedwebhooktriggerrequest.md
   - docs/models/operations/updateunifiedwebhooktriggerresponse.md
   - docs/models/shared/accountingaccount.md
+  - docs/models/shared/accountingattachment.md
   - docs/models/shared/accountingcontact.md
   - docs/models/shared/accountingcontactpaymentmethod.md
   - docs/models/shared/accountingcontactpaymentmethodtype.md
@@ -2216,6 +2217,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updateunifiedwebhooktrigger_response.rb
   - lib/unified_ruby_sdk/models/shared.rb
   - lib/unified_ruby_sdk/models/shared/accountingaccount.rb
+  - lib/unified_ruby_sdk/models/shared/accountingattachment.rb
   - lib/unified_ruby_sdk/models/shared/accountingcontact.rb
   - lib/unified_ruby_sdk/models/shared/accountingcontactpaymentmethod.rb
   - lib/unified_ruby_sdk/models/shared/accountingcontactpaymentmethod_type.rb

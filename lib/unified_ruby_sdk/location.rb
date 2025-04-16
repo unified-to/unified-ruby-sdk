@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(commerce_location: Models::Shared::CommerceLocation, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceLocationResponse) }
-    def create_commerce_location(commerce_location, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_commerce_location(commerce_location:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_commerce_location - Create a location
       request = Models::Operations::CreateCommerceLocationRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(hris_location: Models::Shared::HrisLocation, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisLocationResponse) }
-    def create_hris_location(hris_location, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_hris_location(hris_location:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_hris_location - Create a location
       request = Models::Operations::CreateHrisLocationRequest.new(
         
@@ -271,7 +271,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceLocationResponse) }
-    def get_commerce_location(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_commerce_location(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_commerce_location - Retrieve a location
       request = Models::Operations::GetCommerceLocationRequest.new(
         
@@ -383,7 +383,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisLocationResponse) }
-    def get_hris_location(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_hris_location(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_hris_location - Retrieve a location
       request = Models::Operations::GetHrisLocationRequest.new(
         
@@ -494,8 +494,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListCommerceLocationsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceLocationsResponse) }
-    def list_commerce_locations(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListCommerceLocationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceLocationsResponse) }
+    def list_commerce_locations(request:, timeout_ms: nil)
       # list_commerce_locations - List all locations
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -600,8 +600,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListHrisLocationsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisLocationsResponse) }
-    def list_hris_locations(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListHrisLocationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisLocationsResponse) }
+    def list_hris_locations(request:, timeout_ms: nil)
       # list_hris_locations - List all locations
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -707,7 +707,7 @@ module UnifiedRubySDK
 
 
     sig { params(commerce_location: Models::Shared::CommerceLocation, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceLocationResponse) }
-    def patch_commerce_location(commerce_location, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_commerce_location(commerce_location:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_commerce_location - Update a location
       request = Models::Operations::PatchCommerceLocationRequest.new(
         
@@ -832,7 +832,7 @@ module UnifiedRubySDK
 
 
     sig { params(hris_location: Models::Shared::HrisLocation, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisLocationResponse) }
-    def patch_hris_location(hris_location, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_hris_location(hris_location:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_hris_location - Update a location
       request = Models::Operations::PatchHrisLocationRequest.new(
         
@@ -957,7 +957,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceLocationResponse) }
-    def remove_commerce_location(connection_id, id, timeout_ms = nil)
+    def remove_commerce_location(connection_id:, id:, timeout_ms: nil)
       # remove_commerce_location - Remove a location
       request = Models::Operations::RemoveCommerceLocationRequest.new(
         
@@ -1067,7 +1067,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisLocationResponse) }
-    def remove_hris_location(connection_id, id, timeout_ms = nil)
+    def remove_hris_location(connection_id:, id:, timeout_ms: nil)
       # remove_hris_location - Remove a location
       request = Models::Operations::RemoveHrisLocationRequest.new(
         
@@ -1177,7 +1177,7 @@ module UnifiedRubySDK
 
 
     sig { params(commerce_location: Models::Shared::CommerceLocation, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceLocationResponse) }
-    def update_commerce_location(commerce_location, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_commerce_location(commerce_location:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_commerce_location - Update a location
       request = Models::Operations::UpdateCommerceLocationRequest.new(
         
@@ -1302,7 +1302,7 @@ module UnifiedRubySDK
 
 
     sig { params(hris_location: Models::Shared::HrisLocation, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisLocationResponse) }
-    def update_hris_location(hris_location, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_hris_location(hris_location:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_hris_location - Update a location
       request = Models::Operations::UpdateHrisLocationRequest.new(
         

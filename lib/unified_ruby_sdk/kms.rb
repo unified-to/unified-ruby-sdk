@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(kms_comment: Models::Shared::KmsComment, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateKmsCommentResponse) }
-    def create_kms_comment(kms_comment, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_kms_comment(kms_comment:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_kms_comment - Create a comment
       request = Models::Operations::CreateKmsCommentRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(kms_page: Models::Shared::KmsPage, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateKmsPageResponse) }
-    def create_kms_page(kms_page, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_kms_page(kms_page:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_kms_page - Create a page
       request = Models::Operations::CreateKmsPageRequest.new(
         
@@ -271,7 +271,7 @@ module UnifiedRubySDK
 
 
     sig { params(kms_space: Models::Shared::KmsSpace, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateKmsSpaceResponse) }
-    def create_kms_space(kms_space, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_kms_space(kms_space:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_kms_space - Create a space
       request = Models::Operations::CreateKmsSpaceRequest.new(
         
@@ -395,7 +395,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetKmsCommentResponse) }
-    def get_kms_comment(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_kms_comment(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_kms_comment - Retrieve a comment
       request = Models::Operations::GetKmsCommentRequest.new(
         
@@ -507,7 +507,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetKmsPageResponse) }
-    def get_kms_page(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_kms_page(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_kms_page - Retrieve a page
       request = Models::Operations::GetKmsPageRequest.new(
         
@@ -619,7 +619,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetKmsSpaceResponse) }
-    def get_kms_space(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_kms_space(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_kms_space - Retrieve a space
       request = Models::Operations::GetKmsSpaceRequest.new(
         
@@ -730,8 +730,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListKmsCommentsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListKmsCommentsResponse) }
-    def list_kms_comments(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListKmsCommentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListKmsCommentsResponse) }
+    def list_kms_comments(request:, timeout_ms: nil)
       # list_kms_comments - List all comments
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -836,8 +836,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListKmsPagesRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListKmsPagesResponse) }
-    def list_kms_pages(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListKmsPagesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListKmsPagesResponse) }
+    def list_kms_pages(request:, timeout_ms: nil)
       # list_kms_pages - List all pages
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -942,8 +942,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListKmsSpacesRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListKmsSpacesResponse) }
-    def list_kms_spaces(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListKmsSpacesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListKmsSpacesResponse) }
+    def list_kms_spaces(request:, timeout_ms: nil)
       # list_kms_spaces - List all spaces
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1049,7 +1049,7 @@ module UnifiedRubySDK
 
 
     sig { params(kms_comment: Models::Shared::KmsComment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchKmsCommentResponse) }
-    def patch_kms_comment(kms_comment, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_kms_comment(kms_comment:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_kms_comment - Update a comment
       request = Models::Operations::PatchKmsCommentRequest.new(
         
@@ -1174,7 +1174,7 @@ module UnifiedRubySDK
 
 
     sig { params(kms_page: Models::Shared::KmsPage, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchKmsPageResponse) }
-    def patch_kms_page(kms_page, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_kms_page(kms_page:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_kms_page - Update a page
       request = Models::Operations::PatchKmsPageRequest.new(
         
@@ -1299,7 +1299,7 @@ module UnifiedRubySDK
 
 
     sig { params(kms_space: Models::Shared::KmsSpace, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchKmsSpaceResponse) }
-    def patch_kms_space(kms_space, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_kms_space(kms_space:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_kms_space - Update a space
       request = Models::Operations::PatchKmsSpaceRequest.new(
         
@@ -1424,7 +1424,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveKmsCommentResponse) }
-    def remove_kms_comment(connection_id, id, timeout_ms = nil)
+    def remove_kms_comment(connection_id:, id:, timeout_ms: nil)
       # remove_kms_comment - Remove a comment
       request = Models::Operations::RemoveKmsCommentRequest.new(
         
@@ -1534,7 +1534,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveKmsPageResponse) }
-    def remove_kms_page(connection_id, id, timeout_ms = nil)
+    def remove_kms_page(connection_id:, id:, timeout_ms: nil)
       # remove_kms_page - Remove a page
       request = Models::Operations::RemoveKmsPageRequest.new(
         
@@ -1644,7 +1644,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveKmsSpaceResponse) }
-    def remove_kms_space(connection_id, id, timeout_ms = nil)
+    def remove_kms_space(connection_id:, id:, timeout_ms: nil)
       # remove_kms_space - Remove a space
       request = Models::Operations::RemoveKmsSpaceRequest.new(
         
@@ -1754,7 +1754,7 @@ module UnifiedRubySDK
 
 
     sig { params(kms_comment: Models::Shared::KmsComment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateKmsCommentResponse) }
-    def update_kms_comment(kms_comment, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_kms_comment(kms_comment:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_kms_comment - Update a comment
       request = Models::Operations::UpdateKmsCommentRequest.new(
         
@@ -1879,7 +1879,7 @@ module UnifiedRubySDK
 
 
     sig { params(kms_page: Models::Shared::KmsPage, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateKmsPageResponse) }
-    def update_kms_page(kms_page, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_kms_page(kms_page:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_kms_page - Update a page
       request = Models::Operations::UpdateKmsPageRequest.new(
         
@@ -2004,7 +2004,7 @@ module UnifiedRubySDK
 
 
     sig { params(kms_space: Models::Shared::KmsSpace, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateKmsSpaceResponse) }
-    def update_kms_space(kms_space, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_kms_space(kms_space:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_kms_space - Update a space
       request = Models::Operations::UpdateKmsSpaceRequest.new(
         

@@ -22,8 +22,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListUcCallsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUcCallsResponse) }
-    def list_uc_calls(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListUcCallsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUcCallsResponse) }
+    def list_uc_calls(request:, timeout_ms: nil)
       # list_uc_calls - List all calls
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)

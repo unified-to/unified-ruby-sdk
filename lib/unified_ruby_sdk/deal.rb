@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(crm_deal: Models::Shared::CrmDeal, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmDealResponse) }
-    def create_crm_deal(crm_deal, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_crm_deal(crm_deal:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_crm_deal - Create a deal
       request = Models::Operations::CreateCrmDealRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmDealResponse) }
-    def get_crm_deal(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_crm_deal(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_crm_deal - Retrieve a deal
       request = Models::Operations::GetCrmDealRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListCrmDealsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmDealsResponse) }
-    def list_crm_deals(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListCrmDealsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmDealsResponse) }
+    def list_crm_deals(request:, timeout_ms: nil)
       # list_crm_deals - List all deals
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(crm_deal: Models::Shared::CrmDeal, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmDealResponse) }
-    def patch_crm_deal(crm_deal, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_crm_deal(crm_deal:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_crm_deal - Update a deal
       request = Models::Operations::PatchCrmDealRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmDealResponse) }
-    def remove_crm_deal(connection_id, id, timeout_ms = nil)
+    def remove_crm_deal(connection_id:, id:, timeout_ms: nil)
       # remove_crm_deal - Remove a deal
       request = Models::Operations::RemoveCrmDealRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(crm_deal: Models::Shared::CrmDeal, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmDealResponse) }
-    def update_crm_deal(crm_deal, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_crm_deal(crm_deal:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_crm_deal - Update a deal
       request = Models::Operations::UpdateCrmDealRequest.new(
         

@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(repo_pullrequest: Models::Shared::RepoPullrequest, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoPullrequestResponse) }
-    def create_repo_pullrequest(repo_pullrequest, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_repo_pullrequest(repo_pullrequest:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_repo_pullrequest - Create a pullrequest
       request = Models::Operations::CreateRepoPullrequestRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoPullrequestResponse) }
-    def get_repo_pullrequest(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_repo_pullrequest(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_repo_pullrequest - Retrieve a pullrequest
       request = Models::Operations::GetRepoPullrequestRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListRepoPullrequestsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoPullrequestsResponse) }
-    def list_repo_pullrequests(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListRepoPullrequestsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoPullrequestsResponse) }
+    def list_repo_pullrequests(request:, timeout_ms: nil)
       # list_repo_pullrequests - List all pullrequests
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(repo_pullrequest: Models::Shared::RepoPullrequest, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoPullrequestResponse) }
-    def patch_repo_pullrequest(repo_pullrequest, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_repo_pullrequest(repo_pullrequest:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_repo_pullrequest - Update a pullrequest
       request = Models::Operations::PatchRepoPullrequestRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoPullrequestResponse) }
-    def remove_repo_pullrequest(connection_id, id, timeout_ms = nil)
+    def remove_repo_pullrequest(connection_id:, id:, timeout_ms: nil)
       # remove_repo_pullrequest - Remove a pullrequest
       request = Models::Operations::RemoveRepoPullrequestRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(repo_pullrequest: Models::Shared::RepoPullrequest, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoPullrequestResponse) }
-    def update_repo_pullrequest(repo_pullrequest, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_repo_pullrequest(repo_pullrequest:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_repo_pullrequest - Update a pullrequest
       request = Models::Operations::UpdateRepoPullrequestRequest.new(
         

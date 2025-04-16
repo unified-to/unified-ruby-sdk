@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(kms_comment: Models::Shared::KmsComment, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateKmsCommentResponse) }
-    def create_kms_comment(kms_comment, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_kms_comment(kms_comment:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_kms_comment - Create a comment
       request = Models::Operations::CreateKmsCommentRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(task_comment: Models::Shared::TaskComment, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskCommentResponse) }
-    def create_task_comment(task_comment, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_task_comment(task_comment:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_task_comment - Create a comment
       request = Models::Operations::CreateTaskCommentRequest.new(
         
@@ -271,7 +271,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetKmsCommentResponse) }
-    def get_kms_comment(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_kms_comment(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_kms_comment - Retrieve a comment
       request = Models::Operations::GetKmsCommentRequest.new(
         
@@ -383,7 +383,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskCommentResponse) }
-    def get_task_comment(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_task_comment(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_task_comment - Retrieve a comment
       request = Models::Operations::GetTaskCommentRequest.new(
         
@@ -494,8 +494,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListKmsCommentsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListKmsCommentsResponse) }
-    def list_kms_comments(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListKmsCommentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListKmsCommentsResponse) }
+    def list_kms_comments(request:, timeout_ms: nil)
       # list_kms_comments - List all comments
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -600,8 +600,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListTaskCommentsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTaskCommentsResponse) }
-    def list_task_comments(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListTaskCommentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTaskCommentsResponse) }
+    def list_task_comments(request:, timeout_ms: nil)
       # list_task_comments - List all comments
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -707,7 +707,7 @@ module UnifiedRubySDK
 
 
     sig { params(kms_comment: Models::Shared::KmsComment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchKmsCommentResponse) }
-    def patch_kms_comment(kms_comment, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_kms_comment(kms_comment:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_kms_comment - Update a comment
       request = Models::Operations::PatchKmsCommentRequest.new(
         
@@ -832,7 +832,7 @@ module UnifiedRubySDK
 
 
     sig { params(task_comment: Models::Shared::TaskComment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTaskCommentResponse) }
-    def patch_task_comment(task_comment, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_task_comment(task_comment:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_task_comment - Update a comment
       request = Models::Operations::PatchTaskCommentRequest.new(
         
@@ -957,7 +957,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveKmsCommentResponse) }
-    def remove_kms_comment(connection_id, id, timeout_ms = nil)
+    def remove_kms_comment(connection_id:, id:, timeout_ms: nil)
       # remove_kms_comment - Remove a comment
       request = Models::Operations::RemoveKmsCommentRequest.new(
         
@@ -1067,7 +1067,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveTaskCommentResponse) }
-    def remove_task_comment(connection_id, id, timeout_ms = nil)
+    def remove_task_comment(connection_id:, id:, timeout_ms: nil)
       # remove_task_comment - Remove a comment
       request = Models::Operations::RemoveTaskCommentRequest.new(
         
@@ -1177,7 +1177,7 @@ module UnifiedRubySDK
 
 
     sig { params(kms_comment: Models::Shared::KmsComment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateKmsCommentResponse) }
-    def update_kms_comment(kms_comment, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_kms_comment(kms_comment:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_kms_comment - Update a comment
       request = Models::Operations::UpdateKmsCommentRequest.new(
         
@@ -1302,7 +1302,7 @@ module UnifiedRubySDK
 
 
     sig { params(task_comment: Models::Shared::TaskComment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTaskCommentResponse) }
-    def update_task_comment(task_comment, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_task_comment(task_comment:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_task_comment - Update a comment
       request = Models::Operations::UpdateTaskCommentRequest.new(
         

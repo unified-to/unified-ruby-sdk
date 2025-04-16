@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(request: Models::Shared::Connection, timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUnifiedConnectionResponse) }
-    def create_unified_connection(request, timeout_ms = nil)
+    def create_unified_connection(request:, timeout_ms: nil)
       # create_unified_connection - Create connection
       # Used only to import existing customer credentials; use "Create connection indirectly" instead
       url, params = @sdk_configuration.get_server_details
@@ -135,7 +135,7 @@ module UnifiedRubySDK
 
 
     sig { params(webhook: Models::Shared::Webhook, include_all: T.nilable(T::Boolean), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUnifiedWebhookResponse) }
-    def create_unified_webhook(webhook, include_all = nil, timeout_ms = nil)
+    def create_unified_webhook(webhook:, include_all: nil, timeout_ms: nil)
       # create_unified_webhook - Create webhook subscription
       # The data payload received by your server is described at https://docs.unified.to/unified/overview. The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free accounts.
       request = Models::Operations::CreateUnifiedWebhookRequest.new(
@@ -254,7 +254,7 @@ module UnifiedRubySDK
 
 
     sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUnifiedApicallResponse) }
-    def get_unified_apicall(id, timeout_ms = nil)
+    def get_unified_apicall(id:, timeout_ms: nil)
       # get_unified_apicall - Retrieve specific API Call by its ID
       request = Models::Operations::GetUnifiedApicallRequest.new(
         
@@ -362,7 +362,7 @@ module UnifiedRubySDK
 
 
     sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUnifiedConnectionResponse) }
-    def get_unified_connection(id, timeout_ms = nil)
+    def get_unified_connection(id:, timeout_ms: nil)
       # get_unified_connection - Retrieve connection
       request = Models::Operations::GetUnifiedConnectionRequest.new(
         
@@ -469,8 +469,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::GetUnifiedIntegrationAuthRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUnifiedIntegrationAuthResponse) }
-    def get_unified_integration_auth(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::GetUnifiedIntegrationAuthRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUnifiedIntegrationAuthResponse) }
+    def get_unified_integration_auth(request:, timeout_ms: nil)
       # get_unified_integration_auth - Create connection indirectly
       # Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
       url, params = @sdk_configuration.get_server_details
@@ -576,7 +576,7 @@ module UnifiedRubySDK
 
 
     sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUnifiedWebhookResponse) }
-    def get_unified_webhook(id, timeout_ms = nil)
+    def get_unified_webhook(id:, timeout_ms: nil)
       # get_unified_webhook - Retrieve webhook by its ID
       request = Models::Operations::GetUnifiedWebhookRequest.new(
         
@@ -683,8 +683,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListUnifiedApicallsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedApicallsResponse) }
-    def list_unified_apicalls(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListUnifiedApicallsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedApicallsResponse) }
+    def list_unified_apicalls(request:, timeout_ms: nil)
       # list_unified_apicalls - Returns API Calls
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -784,8 +784,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListUnifiedConnectionsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedConnectionsResponse) }
-    def list_unified_connections(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListUnifiedConnectionsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedConnectionsResponse) }
+    def list_unified_connections(request:, timeout_ms: nil)
       # list_unified_connections - List all connections
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -885,8 +885,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListUnifiedIntegrationWorkspacesRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedIntegrationWorkspacesResponse) }
-    def list_unified_integration_workspaces(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListUnifiedIntegrationWorkspacesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedIntegrationWorkspacesResponse) }
+    def list_unified_integration_workspaces(request:, timeout_ms: nil)
       # list_unified_integration_workspaces - Returns all activated integrations in a workspace
       # No authentication required as this is to be used by front-end interface
       url, params = @sdk_configuration.get_server_details
@@ -992,8 +992,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListUnifiedIntegrationsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedIntegrationsResponse) }
-    def list_unified_integrations(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListUnifiedIntegrationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedIntegrationsResponse) }
+    def list_unified_integrations(request:, timeout_ms: nil)
       # list_unified_integrations - Returns all integrations
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1093,8 +1093,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListUnifiedIssuesRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedIssuesResponse) }
-    def list_unified_issues(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListUnifiedIssuesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedIssuesResponse) }
+    def list_unified_issues(request:, timeout_ms: nil)
       # list_unified_issues - List support issues
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1194,8 +1194,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListUnifiedWebhooksRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedWebhooksResponse) }
-    def list_unified_webhooks(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListUnifiedWebhooksRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedWebhooksResponse) }
+    def list_unified_webhooks(request:, timeout_ms: nil)
       # list_unified_webhooks - Returns all registered webhooks
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1296,7 +1296,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection: Models::Shared::Connection, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchUnifiedConnectionResponse) }
-    def patch_unified_connection(connection, id, timeout_ms = nil)
+    def patch_unified_connection(connection:, id:, timeout_ms: nil)
       # patch_unified_connection - Update connection
       request = Models::Operations::PatchUnifiedConnectionRequest.new(
         
@@ -1417,7 +1417,7 @@ module UnifiedRubySDK
 
 
     sig { params(webhook: Models::Shared::Webhook, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchUnifiedWebhookResponse) }
-    def patch_unified_webhook(webhook, id, timeout_ms = nil)
+    def patch_unified_webhook(webhook:, id:, timeout_ms: nil)
       # patch_unified_webhook - Update webhook subscription
       request = Models::Operations::PatchUnifiedWebhookRequest.new(
         
@@ -1538,7 +1538,7 @@ module UnifiedRubySDK
 
 
     sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchUnifiedWebhookTriggerResponse) }
-    def patch_unified_webhook_trigger(id, timeout_ms = nil)
+    def patch_unified_webhook_trigger(id:, timeout_ms: nil)
       # patch_unified_webhook_trigger - Trigger webhook
       request = Models::Operations::PatchUnifiedWebhookTriggerRequest.new(
         
@@ -1647,7 +1647,7 @@ module UnifiedRubySDK
 
 
     sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveUnifiedConnectionResponse) }
-    def remove_unified_connection(id, timeout_ms = nil)
+    def remove_unified_connection(id:, timeout_ms: nil)
       # remove_unified_connection - Remove connection
       request = Models::Operations::RemoveUnifiedConnectionRequest.new(
         
@@ -1756,7 +1756,7 @@ module UnifiedRubySDK
 
 
     sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveUnifiedWebhookResponse) }
-    def remove_unified_webhook(id, timeout_ms = nil)
+    def remove_unified_webhook(id:, timeout_ms: nil)
       # remove_unified_webhook - Remove webhook subscription
       request = Models::Operations::RemoveUnifiedWebhookRequest.new(
         
@@ -1865,7 +1865,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection: Models::Shared::Connection, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateUnifiedConnectionResponse) }
-    def update_unified_connection(connection, id, timeout_ms = nil)
+    def update_unified_connection(connection:, id:, timeout_ms: nil)
       # update_unified_connection - Update connection
       request = Models::Operations::UpdateUnifiedConnectionRequest.new(
         
@@ -1986,7 +1986,7 @@ module UnifiedRubySDK
 
 
     sig { params(webhook: Models::Shared::Webhook, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateUnifiedWebhookResponse) }
-    def update_unified_webhook(webhook, id, timeout_ms = nil)
+    def update_unified_webhook(webhook:, id:, timeout_ms: nil)
       # update_unified_webhook - Update webhook subscription
       request = Models::Operations::UpdateUnifiedWebhookRequest.new(
         
@@ -2107,7 +2107,7 @@ module UnifiedRubySDK
 
 
     sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateUnifiedWebhookTriggerResponse) }
-    def update_unified_webhook_trigger(id, timeout_ms = nil)
+    def update_unified_webhook_trigger(id:, timeout_ms: nil)
       # update_unified_webhook_trigger - Trigger webhook
       request = Models::Operations::UpdateUnifiedWebhookTriggerRequest.new(
         

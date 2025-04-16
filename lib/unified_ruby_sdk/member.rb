@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(marketing_member: Models::Shared::MarketingMember, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMartechMemberResponse) }
-    def create_martech_member(marketing_member, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_martech_member(marketing_member:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_martech_member - Create a member
       request = Models::Operations::CreateMartechMemberRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMartechMemberResponse) }
-    def get_martech_member(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_martech_member(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_martech_member - Retrieve a member
       request = Models::Operations::GetMartechMemberRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListMartechMembersRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMartechMembersResponse) }
-    def list_martech_members(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListMartechMembersRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMartechMembersResponse) }
+    def list_martech_members(request:, timeout_ms: nil)
       # list_martech_members - List all members
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(marketing_member: Models::Shared::MarketingMember, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMartechMemberResponse) }
-    def patch_martech_member(marketing_member, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_martech_member(marketing_member:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_martech_member - Update a member
       request = Models::Operations::PatchMartechMemberRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveMartechMemberResponse) }
-    def remove_martech_member(connection_id, id, timeout_ms = nil)
+    def remove_martech_member(connection_id:, id:, timeout_ms: nil)
       # remove_martech_member - Remove a member
       request = Models::Operations::RemoveMartechMemberRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(marketing_member: Models::Shared::MarketingMember, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMartechMemberResponse) }
-    def update_martech_member(marketing_member, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_martech_member(marketing_member:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_martech_member - Update a member
       request = Models::Operations::UpdateMartechMemberRequest.new(
         

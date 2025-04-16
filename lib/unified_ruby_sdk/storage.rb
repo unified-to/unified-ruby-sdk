@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(storage_file: Models::Shared::StorageFile, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateStorageFileResponse) }
-    def create_storage_file(storage_file, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_storage_file(storage_file:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_storage_file - Create a file
       request = Models::Operations::CreateStorageFileRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetStorageFileResponse) }
-    def get_storage_file(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_storage_file(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_storage_file - Retrieve a file
       request = Models::Operations::GetStorageFileRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListStorageFilesRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListStorageFilesResponse) }
-    def list_storage_files(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListStorageFilesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListStorageFilesResponse) }
+    def list_storage_files(request:, timeout_ms: nil)
       # list_storage_files - List all files
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(storage_file: Models::Shared::StorageFile, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchStorageFileResponse) }
-    def patch_storage_file(storage_file, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_storage_file(storage_file:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_storage_file - Update a file
       request = Models::Operations::PatchStorageFileRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveStorageFileResponse) }
-    def remove_storage_file(connection_id, id, timeout_ms = nil)
+    def remove_storage_file(connection_id:, id:, timeout_ms: nil)
       # remove_storage_file - Remove a file
       request = Models::Operations::RemoveStorageFileRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(storage_file: Models::Shared::StorageFile, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateStorageFileResponse) }
-    def update_storage_file(storage_file, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_storage_file(storage_file:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_storage_file - Update a file
       request = Models::Operations::UpdateStorageFileRequest.new(
         

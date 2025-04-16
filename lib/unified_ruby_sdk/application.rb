@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(ats_application: Models::Shared::AtsApplication, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsApplicationResponse) }
-    def create_ats_application(ats_application, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_ats_application(ats_application:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_ats_application - Create an application
       request = Models::Operations::CreateAtsApplicationRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsApplicationResponse) }
-    def get_ats_application(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_ats_application(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_ats_application - Retrieve an application
       request = Models::Operations::GetAtsApplicationRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListAtsApplicationsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsApplicationsResponse) }
-    def list_ats_applications(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListAtsApplicationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsApplicationsResponse) }
+    def list_ats_applications(request:, timeout_ms: nil)
       # list_ats_applications - List all applications
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(ats_application: Models::Shared::AtsApplication, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsApplicationResponse) }
-    def patch_ats_application(ats_application, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_ats_application(ats_application:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_ats_application - Update an application
       request = Models::Operations::PatchAtsApplicationRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsApplicationResponse) }
-    def remove_ats_application(connection_id, id, timeout_ms = nil)
+    def remove_ats_application(connection_id:, id:, timeout_ms: nil)
       # remove_ats_application - Remove an application
       request = Models::Operations::RemoveAtsApplicationRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(ats_application: Models::Shared::AtsApplication, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsApplicationResponse) }
-    def update_ats_application(ats_application, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_ats_application(ats_application:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_ats_application - Update an application
       request = Models::Operations::UpdateAtsApplicationRequest.new(
         

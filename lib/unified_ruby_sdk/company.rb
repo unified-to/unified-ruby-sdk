@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(crm_company: Models::Shared::CrmCompany, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmCompanyResponse) }
-    def create_crm_company(crm_company, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_crm_company(crm_company:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_crm_company - Create a company
       request = Models::Operations::CreateCrmCompanyRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(hris_company: Models::Shared::HrisCompany, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisCompanyResponse) }
-    def create_hris_company(hris_company, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_hris_company(hris_company:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_hris_company - Create a company
       request = Models::Operations::CreateHrisCompanyRequest.new(
         
@@ -271,7 +271,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsCompanyResponse) }
-    def get_ats_company(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_ats_company(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_ats_company - Retrieve a company
       request = Models::Operations::GetAtsCompanyRequest.new(
         
@@ -383,7 +383,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmCompanyResponse) }
-    def get_crm_company(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_crm_company(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_crm_company - Retrieve a company
       request = Models::Operations::GetCrmCompanyRequest.new(
         
@@ -495,7 +495,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisCompanyResponse) }
-    def get_hris_company(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_hris_company(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_hris_company - Retrieve a company
       request = Models::Operations::GetHrisCompanyRequest.new(
         
@@ -606,8 +606,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListAtsCompaniesRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsCompaniesResponse) }
-    def list_ats_companies(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListAtsCompaniesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsCompaniesResponse) }
+    def list_ats_companies(request:, timeout_ms: nil)
       # list_ats_companies - List all companies
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -712,8 +712,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListCrmCompaniesRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmCompaniesResponse) }
-    def list_crm_companies(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListCrmCompaniesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmCompaniesResponse) }
+    def list_crm_companies(request:, timeout_ms: nil)
       # list_crm_companies - List all companies
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -819,7 +819,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, domain: T.nilable(::String), name: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListEnrichCompaniesResponse) }
-    def list_enrich_companies(connection_id, domain = nil, name = nil, timeout_ms = nil)
+    def list_enrich_companies(connection_id:, domain: nil, name: nil, timeout_ms: nil)
       # list_enrich_companies - Retrieve enrichment information for a company
       request = Models::Operations::ListEnrichCompaniesRequest.new(
         
@@ -930,8 +930,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListHrisCompaniesRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisCompaniesResponse) }
-    def list_hris_companies(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListHrisCompaniesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisCompaniesResponse) }
+    def list_hris_companies(request:, timeout_ms: nil)
       # list_hris_companies - List all companies
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1037,7 +1037,7 @@ module UnifiedRubySDK
 
 
     sig { params(crm_company: Models::Shared::CrmCompany, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmCompanyResponse) }
-    def patch_crm_company(crm_company, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_crm_company(crm_company:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_crm_company - Update a company
       request = Models::Operations::PatchCrmCompanyRequest.new(
         
@@ -1162,7 +1162,7 @@ module UnifiedRubySDK
 
 
     sig { params(hris_company: Models::Shared::HrisCompany, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisCompanyResponse) }
-    def patch_hris_company(hris_company, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_hris_company(hris_company:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_hris_company - Update a company
       request = Models::Operations::PatchHrisCompanyRequest.new(
         
@@ -1287,7 +1287,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmCompanyResponse) }
-    def remove_crm_company(connection_id, id, timeout_ms = nil)
+    def remove_crm_company(connection_id:, id:, timeout_ms: nil)
       # remove_crm_company - Remove a company
       request = Models::Operations::RemoveCrmCompanyRequest.new(
         
@@ -1397,7 +1397,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisCompanyResponse) }
-    def remove_hris_company(connection_id, id, timeout_ms = nil)
+    def remove_hris_company(connection_id:, id:, timeout_ms: nil)
       # remove_hris_company - Remove a company
       request = Models::Operations::RemoveHrisCompanyRequest.new(
         
@@ -1507,7 +1507,7 @@ module UnifiedRubySDK
 
 
     sig { params(crm_company: Models::Shared::CrmCompany, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmCompanyResponse) }
-    def update_crm_company(crm_company, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_crm_company(crm_company:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_crm_company - Update a company
       request = Models::Operations::UpdateCrmCompanyRequest.new(
         
@@ -1632,7 +1632,7 @@ module UnifiedRubySDK
 
 
     sig { params(hris_company: Models::Shared::HrisCompany, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisCompanyResponse) }
-    def update_hris_company(hris_company, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_hris_company(hris_company:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_hris_company - Update a company
       request = Models::Operations::UpdateHrisCompanyRequest.new(
         

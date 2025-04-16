@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(repo_commit: Models::Shared::RepoCommit, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoCommitResponse) }
-    def create_repo_commit(repo_commit, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_repo_commit(repo_commit:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_repo_commit - Create a commit
       request = Models::Operations::CreateRepoCommitRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoCommitResponse) }
-    def get_repo_commit(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_repo_commit(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_repo_commit - Retrieve a commit
       request = Models::Operations::GetRepoCommitRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListRepoCommitsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoCommitsResponse) }
-    def list_repo_commits(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListRepoCommitsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoCommitsResponse) }
+    def list_repo_commits(request:, timeout_ms: nil)
       # list_repo_commits - List all commits
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(repo_commit: Models::Shared::RepoCommit, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoCommitResponse) }
-    def patch_repo_commit(repo_commit, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_repo_commit(repo_commit:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_repo_commit - Update a commit
       request = Models::Operations::PatchRepoCommitRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoCommitResponse) }
-    def remove_repo_commit(connection_id, id, timeout_ms = nil)
+    def remove_repo_commit(connection_id:, id:, timeout_ms: nil)
       # remove_repo_commit - Remove a commit
       request = Models::Operations::RemoveRepoCommitRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(repo_commit: Models::Shared::RepoCommit, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoCommitResponse) }
-    def update_repo_commit(repo_commit, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_repo_commit(repo_commit:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_repo_commit - Update a commit
       request = Models::Operations::UpdateRepoCommitRequest.new(
         

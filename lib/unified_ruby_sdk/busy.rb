@@ -22,8 +22,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListCalendarBusiesRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarBusiesResponse) }
-    def list_calendar_busies(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListCalendarBusiesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarBusiesResponse) }
+    def list_calendar_busies(request:, timeout_ms: nil)
       # list_calendar_busies - List all busies
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)

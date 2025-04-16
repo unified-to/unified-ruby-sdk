@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(accounting_contact: Models::Shared::AccountingContact, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingContactResponse) }
-    def create_accounting_contact(accounting_contact, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_accounting_contact(accounting_contact:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_accounting_contact - Create a contact
       request = Models::Operations::CreateAccountingContactRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(crm_contact: Models::Shared::CrmContact, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmContactResponse) }
-    def create_crm_contact(crm_contact, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_crm_contact(crm_contact:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_crm_contact - Create a contact
       request = Models::Operations::CreateCrmContactRequest.new(
         
@@ -271,7 +271,7 @@ module UnifiedRubySDK
 
 
     sig { params(uc_contact: Models::Shared::UcContact, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUcContactResponse) }
-    def create_uc_contact(uc_contact, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_uc_contact(uc_contact:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_uc_contact - Create a contact
       request = Models::Operations::CreateUcContactRequest.new(
         
@@ -395,7 +395,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingContactResponse) }
-    def get_accounting_contact(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_accounting_contact(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_accounting_contact - Retrieve a contact
       request = Models::Operations::GetAccountingContactRequest.new(
         
@@ -507,7 +507,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmContactResponse) }
-    def get_crm_contact(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_crm_contact(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_crm_contact - Retrieve a contact
       request = Models::Operations::GetCrmContactRequest.new(
         
@@ -619,7 +619,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcContactResponse) }
-    def get_uc_contact(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_uc_contact(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_uc_contact - Retrieve a contact
       request = Models::Operations::GetUcContactRequest.new(
         
@@ -730,8 +730,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListAccountingContactsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingContactsResponse) }
-    def list_accounting_contacts(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListAccountingContactsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingContactsResponse) }
+    def list_accounting_contacts(request:, timeout_ms: nil)
       # list_accounting_contacts - List all contacts
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -836,8 +836,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListCrmContactsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmContactsResponse) }
-    def list_crm_contacts(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListCrmContactsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmContactsResponse) }
+    def list_crm_contacts(request:, timeout_ms: nil)
       # list_crm_contacts - List all contacts
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -942,8 +942,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListUcContactsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUcContactsResponse) }
-    def list_uc_contacts(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListUcContactsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUcContactsResponse) }
+    def list_uc_contacts(request:, timeout_ms: nil)
       # list_uc_contacts - List all contacts
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1049,7 +1049,7 @@ module UnifiedRubySDK
 
 
     sig { params(accounting_contact: Models::Shared::AccountingContact, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingContactResponse) }
-    def patch_accounting_contact(accounting_contact, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_accounting_contact(accounting_contact:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_accounting_contact - Update a contact
       request = Models::Operations::PatchAccountingContactRequest.new(
         
@@ -1174,7 +1174,7 @@ module UnifiedRubySDK
 
 
     sig { params(crm_contact: Models::Shared::CrmContact, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmContactResponse) }
-    def patch_crm_contact(crm_contact, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_crm_contact(crm_contact:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_crm_contact - Update a contact
       request = Models::Operations::PatchCrmContactRequest.new(
         
@@ -1299,7 +1299,7 @@ module UnifiedRubySDK
 
 
     sig { params(uc_contact: Models::Shared::UcContact, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchUcContactResponse) }
-    def patch_uc_contact(uc_contact, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_uc_contact(uc_contact:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_uc_contact - Update a contact
       request = Models::Operations::PatchUcContactRequest.new(
         
@@ -1424,7 +1424,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingContactResponse) }
-    def remove_accounting_contact(connection_id, id, timeout_ms = nil)
+    def remove_accounting_contact(connection_id:, id:, timeout_ms: nil)
       # remove_accounting_contact - Remove a contact
       request = Models::Operations::RemoveAccountingContactRequest.new(
         
@@ -1534,7 +1534,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmContactResponse) }
-    def remove_crm_contact(connection_id, id, timeout_ms = nil)
+    def remove_crm_contact(connection_id:, id:, timeout_ms: nil)
       # remove_crm_contact - Remove a contact
       request = Models::Operations::RemoveCrmContactRequest.new(
         
@@ -1644,7 +1644,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveUcContactResponse) }
-    def remove_uc_contact(connection_id, id, timeout_ms = nil)
+    def remove_uc_contact(connection_id:, id:, timeout_ms: nil)
       # remove_uc_contact - Remove a contact
       request = Models::Operations::RemoveUcContactRequest.new(
         
@@ -1754,7 +1754,7 @@ module UnifiedRubySDK
 
 
     sig { params(accounting_contact: Models::Shared::AccountingContact, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingContactResponse) }
-    def update_accounting_contact(accounting_contact, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_accounting_contact(accounting_contact:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_accounting_contact - Update a contact
       request = Models::Operations::UpdateAccountingContactRequest.new(
         
@@ -1879,7 +1879,7 @@ module UnifiedRubySDK
 
 
     sig { params(crm_contact: Models::Shared::CrmContact, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmContactResponse) }
-    def update_crm_contact(crm_contact, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_crm_contact(crm_contact:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_crm_contact - Update a contact
       request = Models::Operations::UpdateCrmContactRequest.new(
         
@@ -2004,7 +2004,7 @@ module UnifiedRubySDK
 
 
     sig { params(uc_contact: Models::Shared::UcContact, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateUcContactResponse) }
-    def update_uc_contact(uc_contact, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_uc_contact(uc_contact:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_uc_contact - Update a contact
       request = Models::Operations::UpdateUcContactRequest.new(
         

@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisTimeoffResponse) }
-    def get_hris_timeoff(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_hris_timeoff(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_hris_timeoff - Retrieve a timeoff
       request = Models::Operations::GetHrisTimeoffRequest.new(
         
@@ -134,8 +134,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListHrisTimeoffsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisTimeoffsResponse) }
-    def list_hris_timeoffs(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListHrisTimeoffsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisTimeoffsResponse) }
+    def list_hris_timeoffs(request:, timeout_ms: nil)
       # list_hris_timeoffs - List all timeoffs
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)

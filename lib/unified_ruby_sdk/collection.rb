@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(commerce_collection: Models::Shared::CommerceCollection, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceCollectionResponse) }
-    def create_commerce_collection(commerce_collection, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_commerce_collection(commerce_collection:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_commerce_collection - Create a collection
       request = Models::Operations::CreateCommerceCollectionRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceCollectionResponse) }
-    def get_commerce_collection(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_commerce_collection(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_commerce_collection - Retrieve a collection
       request = Models::Operations::GetCommerceCollectionRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListCommerceCollectionsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceCollectionsResponse) }
-    def list_commerce_collections(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListCommerceCollectionsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceCollectionsResponse) }
+    def list_commerce_collections(request:, timeout_ms: nil)
       # list_commerce_collections - List all collections
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(commerce_collection: Models::Shared::CommerceCollection, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceCollectionResponse) }
-    def patch_commerce_collection(commerce_collection, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_commerce_collection(commerce_collection:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_commerce_collection - Update a collection
       request = Models::Operations::PatchCommerceCollectionRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceCollectionResponse) }
-    def remove_commerce_collection(connection_id, id, timeout_ms = nil)
+    def remove_commerce_collection(connection_id:, id:, timeout_ms: nil)
       # remove_commerce_collection - Remove a collection
       request = Models::Operations::RemoveCommerceCollectionRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(commerce_collection: Models::Shared::CommerceCollection, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceCollectionResponse) }
-    def update_commerce_collection(commerce_collection, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_commerce_collection(commerce_collection:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_commerce_collection - Update a collection
       request = Models::Operations::UpdateCommerceCollectionRequest.new(
         

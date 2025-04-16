@@ -22,8 +22,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListAtsApplicationstatusesRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsApplicationstatusesResponse) }
-    def list_ats_applicationstatuses(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListAtsApplicationstatusesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsApplicationstatusesResponse) }
+    def list_ats_applicationstatuses(request:, timeout_ms: nil)
       # list_ats_applicationstatuses - List all applicationstatuses
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)

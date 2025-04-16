@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(ats_document: Models::Shared::AtsDocument, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsDocumentResponse) }
-    def create_ats_document(ats_document, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_ats_document(ats_document:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_ats_document - Create a document
       request = Models::Operations::CreateAtsDocumentRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsDocumentResponse) }
-    def get_ats_document(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_ats_document(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_ats_document - Retrieve a document
       request = Models::Operations::GetAtsDocumentRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListAtsDocumentsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsDocumentsResponse) }
-    def list_ats_documents(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListAtsDocumentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsDocumentsResponse) }
+    def list_ats_documents(request:, timeout_ms: nil)
       # list_ats_documents - List all documents
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(ats_document: Models::Shared::AtsDocument, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsDocumentResponse) }
-    def patch_ats_document(ats_document, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_ats_document(ats_document:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_ats_document - Update a document
       request = Models::Operations::PatchAtsDocumentRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsDocumentResponse) }
-    def remove_ats_document(connection_id, id, timeout_ms = nil)
+    def remove_ats_document(connection_id:, id:, timeout_ms: nil)
       # remove_ats_document - Remove a document
       request = Models::Operations::RemoveAtsDocumentRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(ats_document: Models::Shared::AtsDocument, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsDocumentResponse) }
-    def update_ats_document(ats_document, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_ats_document(ats_document:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_ats_document - Update a document
       request = Models::Operations::UpdateAtsDocumentRequest.new(
         

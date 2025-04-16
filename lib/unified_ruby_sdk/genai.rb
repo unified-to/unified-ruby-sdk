@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(genai_prompt: Models::Shared::GenaiPrompt, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateGenaiPromptResponse) }
-    def create_genai_prompt(genai_prompt, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_genai_prompt(genai_prompt:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_genai_prompt - Create a prompt
       request = Models::Operations::CreateGenaiPromptRequest.new(
         
@@ -146,8 +146,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListGenaiModelsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListGenaiModelsResponse) }
-    def list_genai_models(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListGenaiModelsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListGenaiModelsResponse) }
+    def list_genai_models(request:, timeout_ms: nil)
       # list_genai_models - List all models
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)

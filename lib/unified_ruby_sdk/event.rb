@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(calendar_event: Models::Shared::CalendarEvent, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCalendarEventResponse) }
-    def create_calendar_event(calendar_event, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_calendar_event(calendar_event:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_calendar_event - Create an event
       request = Models::Operations::CreateCalendarEventRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(crm_event: Models::Shared::CrmEvent, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmEventResponse) }
-    def create_crm_event(crm_event, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_crm_event(crm_event:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_crm_event - Create an event
       request = Models::Operations::CreateCrmEventRequest.new(
         
@@ -271,7 +271,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarEventResponse) }
-    def get_calendar_event(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_calendar_event(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_calendar_event - Retrieve an event
       request = Models::Operations::GetCalendarEventRequest.new(
         
@@ -383,7 +383,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmEventResponse) }
-    def get_crm_event(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_crm_event(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_crm_event - Retrieve an event
       request = Models::Operations::GetCrmEventRequest.new(
         
@@ -494,8 +494,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListCalendarEventsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarEventsResponse) }
-    def list_calendar_events(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListCalendarEventsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarEventsResponse) }
+    def list_calendar_events(request:, timeout_ms: nil)
       # list_calendar_events - List all events
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -600,8 +600,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListCrmEventsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmEventsResponse) }
-    def list_crm_events(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListCrmEventsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmEventsResponse) }
+    def list_crm_events(request:, timeout_ms: nil)
       # list_crm_events - List all events
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -707,7 +707,7 @@ module UnifiedRubySDK
 
 
     sig { params(calendar_event: Models::Shared::CalendarEvent, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCalendarEventResponse) }
-    def patch_calendar_event(calendar_event, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_calendar_event(calendar_event:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_calendar_event - Update an event
       request = Models::Operations::PatchCalendarEventRequest.new(
         
@@ -832,7 +832,7 @@ module UnifiedRubySDK
 
 
     sig { params(crm_event: Models::Shared::CrmEvent, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmEventResponse) }
-    def patch_crm_event(crm_event, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_crm_event(crm_event:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_crm_event - Update an event
       request = Models::Operations::PatchCrmEventRequest.new(
         
@@ -957,7 +957,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCalendarEventResponse) }
-    def remove_calendar_event(connection_id, id, timeout_ms = nil)
+    def remove_calendar_event(connection_id:, id:, timeout_ms: nil)
       # remove_calendar_event - Remove an event
       request = Models::Operations::RemoveCalendarEventRequest.new(
         
@@ -1067,7 +1067,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmEventResponse) }
-    def remove_crm_event(connection_id, id, timeout_ms = nil)
+    def remove_crm_event(connection_id:, id:, timeout_ms: nil)
       # remove_crm_event - Remove an event
       request = Models::Operations::RemoveCrmEventRequest.new(
         
@@ -1177,7 +1177,7 @@ module UnifiedRubySDK
 
 
     sig { params(calendar_event: Models::Shared::CalendarEvent, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCalendarEventResponse) }
-    def update_calendar_event(calendar_event, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_calendar_event(calendar_event:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_calendar_event - Update an event
       request = Models::Operations::UpdateCalendarEventRequest.new(
         
@@ -1302,7 +1302,7 @@ module UnifiedRubySDK
 
 
     sig { params(crm_event: Models::Shared::CrmEvent, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmEventResponse) }
-    def update_crm_event(crm_event, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_crm_event(crm_event:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_crm_event - Update an event
       request = Models::Operations::UpdateCrmEventRequest.new(
         

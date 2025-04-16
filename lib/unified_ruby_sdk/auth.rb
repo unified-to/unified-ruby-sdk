@@ -22,8 +22,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::GetUnifiedIntegrationAuthRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUnifiedIntegrationAuthResponse) }
-    def get_unified_integration_auth(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::GetUnifiedIntegrationAuthRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUnifiedIntegrationAuthResponse) }
+    def get_unified_integration_auth(request:, timeout_ms: nil)
       # get_unified_integration_auth - Create connection indirectly
       # Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
       url, params = @sdk_configuration.get_server_details
@@ -128,8 +128,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::GetUnifiedIntegrationLoginRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUnifiedIntegrationLoginResponse) }
-    def get_unified_integration_login(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::GetUnifiedIntegrationLoginRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUnifiedIntegrationLoginResponse) }
+    def get_unified_integration_login(request:, timeout_ms: nil)
       # get_unified_integration_login - Sign in a user
       # Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
       url, params = @sdk_configuration.get_server_details

@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePassthroughJsonResponse) }
-    def create_passthrough_json(connection_id, path, request_body = nil, timeout_ms = nil)
+    def create_passthrough_json(connection_id:, path:, request_body: nil, timeout_ms: nil)
       # create_passthrough_json - Passthrough POST
       request = Models::Operations::CreatePassthroughJsonRequest.new(
         
@@ -230,7 +230,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePassthroughRawResponse) }
-    def create_passthrough_raw(connection_id, path, request_body = nil, timeout_ms = nil)
+    def create_passthrough_raw(connection_id:, path:, request_body: nil, timeout_ms: nil)
       # create_passthrough_raw - Passthrough POST
       request = Models::Operations::CreatePassthroughRawRequest.new(
         
@@ -437,7 +437,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, path: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPassthroughsResponse) }
-    def list_passthroughs(connection_id, path, timeout_ms = nil)
+    def list_passthroughs(connection_id:, path:, timeout_ms: nil)
       # list_passthroughs - Passthrough GET
       request = Models::Operations::ListPassthroughsRequest.new(
         
@@ -632,7 +632,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPassthroughJsonResponse) }
-    def patch_passthrough_json(connection_id, path, request_body = nil, timeout_ms = nil)
+    def patch_passthrough_json(connection_id:, path:, request_body: nil, timeout_ms: nil)
       # patch_passthrough_json - Passthrough PUT
       request = Models::Operations::PatchPassthroughJsonRequest.new(
         
@@ -839,7 +839,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPassthroughRawResponse) }
-    def patch_passthrough_raw(connection_id, path, request_body = nil, timeout_ms = nil)
+    def patch_passthrough_raw(connection_id:, path:, request_body: nil, timeout_ms: nil)
       # patch_passthrough_raw - Passthrough PUT
       request = Models::Operations::PatchPassthroughRawRequest.new(
         
@@ -1046,7 +1046,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, path: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemovePassthroughResponse) }
-    def remove_passthrough(connection_id, path, timeout_ms = nil)
+    def remove_passthrough(connection_id:, path:, timeout_ms: nil)
       # remove_passthrough - Passthrough DELETE
       request = Models::Operations::RemovePassthroughRequest.new(
         
@@ -1241,7 +1241,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePassthroughJsonResponse) }
-    def update_passthrough_json(connection_id, path, request_body = nil, timeout_ms = nil)
+    def update_passthrough_json(connection_id:, path:, request_body: nil, timeout_ms: nil)
       # update_passthrough_json - Passthrough PUT
       request = Models::Operations::UpdatePassthroughJsonRequest.new(
         
@@ -1448,7 +1448,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePassthroughRawResponse) }
-    def update_passthrough_raw(connection_id, path, request_body = nil, timeout_ms = nil)
+    def update_passthrough_raw(connection_id:, path:, request_body: nil, timeout_ms: nil)
       # update_passthrough_raw - Passthrough PUT
       request = Models::Operations::UpdatePassthroughRawRequest.new(
         

@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, domain: T.nilable(::String), name: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListEnrichCompaniesResponse) }
-    def list_enrich_companies(connection_id, domain = nil, name = nil, timeout_ms = nil)
+    def list_enrich_companies(connection_id:, domain: nil, name: nil, timeout_ms: nil)
       # list_enrich_companies - Retrieve enrichment information for a company
       request = Models::Operations::ListEnrichCompaniesRequest.new(
         
@@ -134,8 +134,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListEnrichPeopleRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListEnrichPeopleResponse) }
-    def list_enrich_people(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListEnrichPeopleRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListEnrichPeopleResponse) }
+    def list_enrich_people(request:, timeout_ms: nil)
       # list_enrich_people - Retrieve enrichment information for a person
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)

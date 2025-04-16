@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(repo_branch: Models::Shared::RepoBranch, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoBranchResponse) }
-    def create_repo_branch(repo_branch, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_repo_branch(repo_branch:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_repo_branch - Create a branch
       request = Models::Operations::CreateRepoBranchRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoBranchResponse) }
-    def get_repo_branch(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_repo_branch(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_repo_branch - Retrieve a branch
       request = Models::Operations::GetRepoBranchRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListRepoBranchesRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoBranchesResponse) }
-    def list_repo_branches(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListRepoBranchesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoBranchesResponse) }
+    def list_repo_branches(request:, timeout_ms: nil)
       # list_repo_branches - List all branches
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(repo_branch: Models::Shared::RepoBranch, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoBranchResponse) }
-    def patch_repo_branch(repo_branch, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_repo_branch(repo_branch:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_repo_branch - Update a branch
       request = Models::Operations::PatchRepoBranchRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoBranchResponse) }
-    def remove_repo_branch(connection_id, id, timeout_ms = nil)
+    def remove_repo_branch(connection_id:, id:, timeout_ms: nil)
       # remove_repo_branch - Remove a branch
       request = Models::Operations::RemoveRepoBranchRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(repo_branch: Models::Shared::RepoBranch, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoBranchResponse) }
-    def update_repo_branch(repo_branch, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_repo_branch(repo_branch:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_repo_branch - Update a branch
       request = Models::Operations::UpdateRepoBranchRequest.new(
         

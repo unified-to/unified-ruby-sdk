@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(task_comment: Models::Shared::TaskComment, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskCommentResponse) }
-    def create_task_comment(task_comment, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_task_comment(task_comment:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_task_comment - Create a comment
       request = Models::Operations::CreateTaskCommentRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(task_project: Models::Shared::TaskProject, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskProjectResponse) }
-    def create_task_project(task_project, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_task_project(task_project:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_task_project - Create a project
       request = Models::Operations::CreateTaskProjectRequest.new(
         
@@ -271,7 +271,7 @@ module UnifiedRubySDK
 
 
     sig { params(task_task: Models::Shared::TaskTask, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskTaskResponse) }
-    def create_task_task(task_task, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_task_task(task_task:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_task_task - Create a task
       request = Models::Operations::CreateTaskTaskRequest.new(
         
@@ -395,7 +395,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskCommentResponse) }
-    def get_task_comment(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_task_comment(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_task_comment - Retrieve a comment
       request = Models::Operations::GetTaskCommentRequest.new(
         
@@ -507,7 +507,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskProjectResponse) }
-    def get_task_project(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_task_project(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_task_project - Retrieve a project
       request = Models::Operations::GetTaskProjectRequest.new(
         
@@ -619,7 +619,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskTaskResponse) }
-    def get_task_task(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_task_task(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_task_task - Retrieve a task
       request = Models::Operations::GetTaskTaskRequest.new(
         
@@ -730,8 +730,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListTaskCommentsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTaskCommentsResponse) }
-    def list_task_comments(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListTaskCommentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTaskCommentsResponse) }
+    def list_task_comments(request:, timeout_ms: nil)
       # list_task_comments - List all comments
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -836,8 +836,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListTaskProjectsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTaskProjectsResponse) }
-    def list_task_projects(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListTaskProjectsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTaskProjectsResponse) }
+    def list_task_projects(request:, timeout_ms: nil)
       # list_task_projects - List all projects
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -942,8 +942,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListTaskTasksRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTaskTasksResponse) }
-    def list_task_tasks(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListTaskTasksRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTaskTasksResponse) }
+    def list_task_tasks(request:, timeout_ms: nil)
       # list_task_tasks - List all tasks
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1049,7 +1049,7 @@ module UnifiedRubySDK
 
 
     sig { params(task_comment: Models::Shared::TaskComment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTaskCommentResponse) }
-    def patch_task_comment(task_comment, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_task_comment(task_comment:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_task_comment - Update a comment
       request = Models::Operations::PatchTaskCommentRequest.new(
         
@@ -1174,7 +1174,7 @@ module UnifiedRubySDK
 
 
     sig { params(task_project: Models::Shared::TaskProject, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTaskProjectResponse) }
-    def patch_task_project(task_project, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_task_project(task_project:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_task_project - Update a project
       request = Models::Operations::PatchTaskProjectRequest.new(
         
@@ -1299,7 +1299,7 @@ module UnifiedRubySDK
 
 
     sig { params(task_task: Models::Shared::TaskTask, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTaskTaskResponse) }
-    def patch_task_task(task_task, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_task_task(task_task:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_task_task - Update a task
       request = Models::Operations::PatchTaskTaskRequest.new(
         
@@ -1424,7 +1424,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveTaskCommentResponse) }
-    def remove_task_comment(connection_id, id, timeout_ms = nil)
+    def remove_task_comment(connection_id:, id:, timeout_ms: nil)
       # remove_task_comment - Remove a comment
       request = Models::Operations::RemoveTaskCommentRequest.new(
         
@@ -1534,7 +1534,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveTaskProjectResponse) }
-    def remove_task_project(connection_id, id, timeout_ms = nil)
+    def remove_task_project(connection_id:, id:, timeout_ms: nil)
       # remove_task_project - Remove a project
       request = Models::Operations::RemoveTaskProjectRequest.new(
         
@@ -1644,7 +1644,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveTaskTaskResponse) }
-    def remove_task_task(connection_id, id, timeout_ms = nil)
+    def remove_task_task(connection_id:, id:, timeout_ms: nil)
       # remove_task_task - Remove a task
       request = Models::Operations::RemoveTaskTaskRequest.new(
         
@@ -1754,7 +1754,7 @@ module UnifiedRubySDK
 
 
     sig { params(task_comment: Models::Shared::TaskComment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTaskCommentResponse) }
-    def update_task_comment(task_comment, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_task_comment(task_comment:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_task_comment - Update a comment
       request = Models::Operations::UpdateTaskCommentRequest.new(
         
@@ -1879,7 +1879,7 @@ module UnifiedRubySDK
 
 
     sig { params(task_project: Models::Shared::TaskProject, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTaskProjectResponse) }
-    def update_task_project(task_project, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_task_project(task_project:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_task_project - Update a project
       request = Models::Operations::UpdateTaskProjectRequest.new(
         
@@ -2004,7 +2004,7 @@ module UnifiedRubySDK
 
 
     sig { params(task_task: Models::Shared::TaskTask, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTaskTaskResponse) }
-    def update_task_task(task_task, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_task_task(task_task:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_task_task - Update a task
       request = Models::Operations::UpdateTaskTaskRequest.new(
         

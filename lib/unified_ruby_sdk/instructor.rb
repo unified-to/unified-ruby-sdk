@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(lms_instructor: Models::Shared::LmsInstructor, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsInstructorResponse) }
-    def create_lms_instructor(lms_instructor, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_lms_instructor(lms_instructor:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_lms_instructor - Create an instructor
       request = Models::Operations::CreateLmsInstructorRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsInstructorResponse) }
-    def get_lms_instructor(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_lms_instructor(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_lms_instructor - Retrieve an instructor
       request = Models::Operations::GetLmsInstructorRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListLmsInstructorsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLmsInstructorsResponse) }
-    def list_lms_instructors(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListLmsInstructorsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLmsInstructorsResponse) }
+    def list_lms_instructors(request:, timeout_ms: nil)
       # list_lms_instructors - List all instructors
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(lms_instructor: Models::Shared::LmsInstructor, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLmsInstructorResponse) }
-    def patch_lms_instructor(lms_instructor, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_lms_instructor(lms_instructor:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_lms_instructor - Update an instructor
       request = Models::Operations::PatchLmsInstructorRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveLmsInstructorResponse) }
-    def remove_lms_instructor(connection_id, id, timeout_ms = nil)
+    def remove_lms_instructor(connection_id:, id:, timeout_ms: nil)
       # remove_lms_instructor - Remove an instructor
       request = Models::Operations::RemoveLmsInstructorRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(lms_instructor: Models::Shared::LmsInstructor, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLmsInstructorResponse) }
-    def update_lms_instructor(lms_instructor, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_lms_instructor(lms_instructor:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_lms_instructor - Update an instructor
       request = Models::Operations::UpdateLmsInstructorRequest.new(
         

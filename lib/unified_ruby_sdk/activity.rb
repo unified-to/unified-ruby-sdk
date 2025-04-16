@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(ats_activity: Models::Shared::AtsActivity, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsActivityResponse) }
-    def create_ats_activity(ats_activity, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_ats_activity(ats_activity:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_ats_activity - Create an activity
       request = Models::Operations::CreateAtsActivityRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsActivityResponse) }
-    def get_ats_activity(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_ats_activity(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_ats_activity - Retrieve an activity
       request = Models::Operations::GetAtsActivityRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListAtsActivitiesRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsActivitiesResponse) }
-    def list_ats_activities(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListAtsActivitiesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsActivitiesResponse) }
+    def list_ats_activities(request:, timeout_ms: nil)
       # list_ats_activities - List all activities
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(ats_activity: Models::Shared::AtsActivity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsActivityResponse) }
-    def patch_ats_activity(ats_activity, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_ats_activity(ats_activity:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_ats_activity - Update an activity
       request = Models::Operations::PatchAtsActivityRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsActivityResponse) }
-    def remove_ats_activity(connection_id, id, timeout_ms = nil)
+    def remove_ats_activity(connection_id:, id:, timeout_ms: nil)
       # remove_ats_activity - Remove an activity
       request = Models::Operations::RemoveAtsActivityRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(ats_activity: Models::Shared::AtsActivity, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsActivityResponse) }
-    def update_ats_activity(ats_activity, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_ats_activity(ats_activity:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_ats_activity - Update an activity
       request = Models::Operations::UpdateAtsActivityRequest.new(
         

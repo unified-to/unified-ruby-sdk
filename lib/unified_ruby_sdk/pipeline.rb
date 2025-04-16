@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(crm_pipeline: Models::Shared::CrmPipeline, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmPipelineResponse) }
-    def create_crm_pipeline(crm_pipeline, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_crm_pipeline(crm_pipeline:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_crm_pipeline - Create a pipeline
       request = Models::Operations::CreateCrmPipelineRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmPipelineResponse) }
-    def get_crm_pipeline(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_crm_pipeline(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_crm_pipeline - Retrieve a pipeline
       request = Models::Operations::GetCrmPipelineRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListCrmPipelinesRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmPipelinesResponse) }
-    def list_crm_pipelines(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListCrmPipelinesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmPipelinesResponse) }
+    def list_crm_pipelines(request:, timeout_ms: nil)
       # list_crm_pipelines - List all pipelines
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(crm_pipeline: Models::Shared::CrmPipeline, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmPipelineResponse) }
-    def patch_crm_pipeline(crm_pipeline, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_crm_pipeline(crm_pipeline:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_crm_pipeline - Update a pipeline
       request = Models::Operations::PatchCrmPipelineRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmPipelineResponse) }
-    def remove_crm_pipeline(connection_id, id, timeout_ms = nil)
+    def remove_crm_pipeline(connection_id:, id:, timeout_ms: nil)
       # remove_crm_pipeline - Remove a pipeline
       request = Models::Operations::RemoveCrmPipelineRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(crm_pipeline: Models::Shared::CrmPipeline, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmPipelineResponse) }
-    def update_crm_pipeline(crm_pipeline, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_crm_pipeline(crm_pipeline:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_crm_pipeline - Update a pipeline
       request = Models::Operations::UpdateCrmPipelineRequest.new(
         

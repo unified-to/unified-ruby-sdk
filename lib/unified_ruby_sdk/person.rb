@@ -22,8 +22,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListEnrichPeopleRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListEnrichPeopleResponse) }
-    def list_enrich_people(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListEnrichPeopleRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListEnrichPeopleResponse) }
+    def list_enrich_people(request:, timeout_ms: nil)
       # list_enrich_people - Retrieve enrichment information for a person
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)

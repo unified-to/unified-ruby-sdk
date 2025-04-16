@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(lms_class: Models::Shared::LmsClass, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsClassResponse) }
-    def create_lms_class(lms_class, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_lms_class(lms_class:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_lms_class - Create a class
       request = Models::Operations::CreateLmsClassRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsClassResponse) }
-    def get_lms_class(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_lms_class(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_lms_class - Retrieve a class
       request = Models::Operations::GetLmsClassRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListLmsClassesRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLmsClassesResponse) }
-    def list_lms_classes(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListLmsClassesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLmsClassesResponse) }
+    def list_lms_classes(request:, timeout_ms: nil)
       # list_lms_classes - List all classes
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(lms_class: Models::Shared::LmsClass, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLmsClassResponse) }
-    def patch_lms_class(lms_class, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_lms_class(lms_class:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_lms_class - Update a class
       request = Models::Operations::PatchLmsClassRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveLmsClassResponse) }
-    def remove_lms_class(connection_id, id, timeout_ms = nil)
+    def remove_lms_class(connection_id:, id:, timeout_ms: nil)
       # remove_lms_class - Remove a class
       request = Models::Operations::RemoveLmsClassRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(lms_class: Models::Shared::LmsClass, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLmsClassResponse) }
-    def update_lms_class(lms_class, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_lms_class(lms_class:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_lms_class - Update a class
       request = Models::Operations::UpdateLmsClassRequest.new(
         

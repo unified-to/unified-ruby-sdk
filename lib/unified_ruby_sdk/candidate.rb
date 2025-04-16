@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(ats_candidate: Models::Shared::AtsCandidate, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsCandidateResponse) }
-    def create_ats_candidate(ats_candidate, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_ats_candidate(ats_candidate:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_ats_candidate - Create a candidate
       request = Models::Operations::CreateAtsCandidateRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsCandidateResponse) }
-    def get_ats_candidate(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_ats_candidate(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_ats_candidate - Retrieve a candidate
       request = Models::Operations::GetAtsCandidateRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListAtsCandidatesRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsCandidatesResponse) }
-    def list_ats_candidates(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListAtsCandidatesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsCandidatesResponse) }
+    def list_ats_candidates(request:, timeout_ms: nil)
       # list_ats_candidates - List all candidates
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(ats_candidate: Models::Shared::AtsCandidate, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsCandidateResponse) }
-    def patch_ats_candidate(ats_candidate, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_ats_candidate(ats_candidate:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_ats_candidate - Update a candidate
       request = Models::Operations::PatchAtsCandidateRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsCandidateResponse) }
-    def remove_ats_candidate(connection_id, id, timeout_ms = nil)
+    def remove_ats_candidate(connection_id:, id:, timeout_ms: nil)
       # remove_ats_candidate - Remove a candidate
       request = Models::Operations::RemoveAtsCandidateRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(ats_candidate: Models::Shared::AtsCandidate, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsCandidateResponse) }
-    def update_ats_candidate(ats_candidate, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_ats_candidate(ats_candidate:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_ats_candidate - Update a candidate
       request = Models::Operations::UpdateAtsCandidateRequest.new(
         

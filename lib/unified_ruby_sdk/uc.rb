@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(uc_contact: Models::Shared::UcContact, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUcContactResponse) }
-    def create_uc_contact(uc_contact, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_uc_contact(uc_contact:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_uc_contact - Create a contact
       request = Models::Operations::CreateUcContactRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcContactResponse) }
-    def get_uc_contact(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_uc_contact(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_uc_contact - Retrieve a contact
       request = Models::Operations::GetUcContactRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListUcCallsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUcCallsResponse) }
-    def list_uc_calls(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListUcCallsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUcCallsResponse) }
+    def list_uc_calls(request:, timeout_ms: nil)
       # list_uc_calls - List all calls
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -364,8 +364,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListUcContactsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUcContactsResponse) }
-    def list_uc_contacts(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListUcContactsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUcContactsResponse) }
+    def list_uc_contacts(request:, timeout_ms: nil)
       # list_uc_contacts - List all contacts
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -471,7 +471,7 @@ module UnifiedRubySDK
 
 
     sig { params(uc_contact: Models::Shared::UcContact, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchUcContactResponse) }
-    def patch_uc_contact(uc_contact, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_uc_contact(uc_contact:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_uc_contact - Update a contact
       request = Models::Operations::PatchUcContactRequest.new(
         
@@ -596,7 +596,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveUcContactResponse) }
-    def remove_uc_contact(connection_id, id, timeout_ms = nil)
+    def remove_uc_contact(connection_id:, id:, timeout_ms: nil)
       # remove_uc_contact - Remove a contact
       request = Models::Operations::RemoveUcContactRequest.new(
         
@@ -706,7 +706,7 @@ module UnifiedRubySDK
 
 
     sig { params(uc_contact: Models::Shared::UcContact, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateUcContactResponse) }
-    def update_uc_contact(uc_contact, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_uc_contact(uc_contact:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_uc_contact - Update a contact
       request = Models::Operations::UpdateUcContactRequest.new(
         

@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(repo_repository: Models::Shared::RepoRepository, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoRepositoryResponse) }
-    def create_repo_repository(repo_repository, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_repo_repository(repo_repository:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_repo_repository - Create a repository
       request = Models::Operations::CreateRepoRepositoryRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoRepositoryResponse) }
-    def get_repo_repository(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_repo_repository(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_repo_repository - Retrieve a repository
       request = Models::Operations::GetRepoRepositoryRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListRepoRepositoriesRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoRepositoriesResponse) }
-    def list_repo_repositories(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListRepoRepositoriesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoRepositoriesResponse) }
+    def list_repo_repositories(request:, timeout_ms: nil)
       # list_repo_repositories - List all repositories
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(repo_repository: Models::Shared::RepoRepository, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoRepositoryResponse) }
-    def patch_repo_repository(repo_repository, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_repo_repository(repo_repository:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_repo_repository - Update a repository
       request = Models::Operations::PatchRepoRepositoryRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoRepositoryResponse) }
-    def remove_repo_repository(connection_id, id, timeout_ms = nil)
+    def remove_repo_repository(connection_id:, id:, timeout_ms: nil)
       # remove_repo_repository - Remove a repository
       request = Models::Operations::RemoveRepoRepositoryRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(repo_repository: Models::Shared::RepoRepository, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoRepositoryResponse) }
-    def update_repo_repository(repo_repository, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_repo_repository(repo_repository:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_repo_repository - Update a repository
       request = Models::Operations::UpdateRepoRepositoryRequest.new(
         

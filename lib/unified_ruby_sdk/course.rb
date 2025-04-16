@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(lms_course: Models::Shared::LmsCourse, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsCourseResponse) }
-    def create_lms_course(lms_course, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_lms_course(lms_course:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_lms_course - Create a course
       request = Models::Operations::CreateLmsCourseRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsCourseResponse) }
-    def get_lms_course(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_lms_course(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_lms_course - Retrieve a course
       request = Models::Operations::GetLmsCourseRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListLmsCoursesRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLmsCoursesResponse) }
-    def list_lms_courses(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListLmsCoursesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLmsCoursesResponse) }
+    def list_lms_courses(request:, timeout_ms: nil)
       # list_lms_courses - List all courses
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(lms_course: Models::Shared::LmsCourse, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLmsCourseResponse) }
-    def patch_lms_course(lms_course, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_lms_course(lms_course:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_lms_course - Update a course
       request = Models::Operations::PatchLmsCourseRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveLmsCourseResponse) }
-    def remove_lms_course(connection_id, id, timeout_ms = nil)
+    def remove_lms_course(connection_id:, id:, timeout_ms: nil)
       # remove_lms_course - Remove a course
       request = Models::Operations::RemoveLmsCourseRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(lms_course: Models::Shared::LmsCourse, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLmsCourseResponse) }
-    def update_lms_course(lms_course, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_lms_course(lms_course:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_lms_course - Update a course
       request = Models::Operations::UpdateLmsCourseRequest.new(
         

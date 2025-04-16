@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(request: Models::Shared::Connection, timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUnifiedConnectionResponse) }
-    def create_unified_connection(request, timeout_ms = nil)
+    def create_unified_connection(request:, timeout_ms: nil)
       # create_unified_connection - Create connection
       # Used only to import existing customer credentials; use "Create connection indirectly" instead
       url, params = @sdk_configuration.get_server_details
@@ -135,7 +135,7 @@ module UnifiedRubySDK
 
 
     sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUnifiedConnectionResponse) }
-    def get_unified_connection(id, timeout_ms = nil)
+    def get_unified_connection(id:, timeout_ms: nil)
       # get_unified_connection - Retrieve connection
       request = Models::Operations::GetUnifiedConnectionRequest.new(
         
@@ -242,8 +242,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListUnifiedConnectionsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedConnectionsResponse) }
-    def list_unified_connections(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListUnifiedConnectionsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedConnectionsResponse) }
+    def list_unified_connections(request:, timeout_ms: nil)
       # list_unified_connections - List all connections
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -344,7 +344,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection: Models::Shared::Connection, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchUnifiedConnectionResponse) }
-    def patch_unified_connection(connection, id, timeout_ms = nil)
+    def patch_unified_connection(connection:, id:, timeout_ms: nil)
       # patch_unified_connection - Update connection
       request = Models::Operations::PatchUnifiedConnectionRequest.new(
         
@@ -465,7 +465,7 @@ module UnifiedRubySDK
 
 
     sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveUnifiedConnectionResponse) }
-    def remove_unified_connection(id, timeout_ms = nil)
+    def remove_unified_connection(id:, timeout_ms: nil)
       # remove_unified_connection - Remove connection
       request = Models::Operations::RemoveUnifiedConnectionRequest.new(
         
@@ -574,7 +574,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection: Models::Shared::Connection, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateUnifiedConnectionResponse) }
-    def update_unified_connection(connection, id, timeout_ms = nil)
+    def update_unified_connection(connection:, id:, timeout_ms: nil)
       # update_unified_connection - Update connection
       request = Models::Operations::UpdateUnifiedConnectionRequest.new(
         

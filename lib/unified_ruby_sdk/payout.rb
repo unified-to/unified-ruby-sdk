@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentPayoutResponse) }
-    def get_payment_payout(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_payment_payout(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_payment_payout - Retrieve a payout
       request = Models::Operations::GetPaymentPayoutRequest.new(
         
@@ -134,8 +134,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListPaymentPayoutsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentPayoutsResponse) }
-    def list_payment_payouts(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListPaymentPayoutsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentPayoutsResponse) }
+    def list_payment_payouts(request:, timeout_ms: nil)
       # list_payment_payouts - List all payouts
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)

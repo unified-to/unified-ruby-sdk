@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarRecordingResponse) }
-    def get_calendar_recording(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_calendar_recording(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_calendar_recording - Retrieve a recording
       request = Models::Operations::GetCalendarRecordingRequest.new(
         
@@ -134,8 +134,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListCalendarRecordingsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarRecordingsResponse) }
-    def list_calendar_recordings(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListCalendarRecordingsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarRecordingsResponse) }
+    def list_calendar_recordings(request:, timeout_ms: nil)
       # list_calendar_recordings - List all recordings
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)

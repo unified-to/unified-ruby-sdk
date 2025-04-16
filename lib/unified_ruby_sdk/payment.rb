@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(payment_link: Models::Shared::PaymentLink, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePaymentLinkResponse) }
-    def create_payment_link(payment_link, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_payment_link(payment_link:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_payment_link - Create a link
       request = Models::Operations::CreatePaymentLinkRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(payment_payment: Models::Shared::PaymentPayment, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePaymentPaymentResponse) }
-    def create_payment_payment(payment_payment, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_payment_payment(payment_payment:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_payment_payment - Create a payment
       request = Models::Operations::CreatePaymentPaymentRequest.new(
         
@@ -271,7 +271,7 @@ module UnifiedRubySDK
 
 
     sig { params(payment_subscription: Models::Shared::PaymentSubscription, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePaymentSubscriptionResponse) }
-    def create_payment_subscription(payment_subscription, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_payment_subscription(payment_subscription:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_payment_subscription - Create a subscription
       request = Models::Operations::CreatePaymentSubscriptionRequest.new(
         
@@ -395,7 +395,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentLinkResponse) }
-    def get_payment_link(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_payment_link(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_payment_link - Retrieve a link
       request = Models::Operations::GetPaymentLinkRequest.new(
         
@@ -507,7 +507,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentPaymentResponse) }
-    def get_payment_payment(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_payment_payment(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_payment_payment - Retrieve a payment
       request = Models::Operations::GetPaymentPaymentRequest.new(
         
@@ -619,7 +619,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentPayoutResponse) }
-    def get_payment_payout(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_payment_payout(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_payment_payout - Retrieve a payout
       request = Models::Operations::GetPaymentPayoutRequest.new(
         
@@ -731,7 +731,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentRefundResponse) }
-    def get_payment_refund(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_payment_refund(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_payment_refund - Retrieve a refund
       request = Models::Operations::GetPaymentRefundRequest.new(
         
@@ -843,7 +843,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentSubscriptionResponse) }
-    def get_payment_subscription(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_payment_subscription(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_payment_subscription - Retrieve a subscription
       request = Models::Operations::GetPaymentSubscriptionRequest.new(
         
@@ -954,8 +954,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListPaymentLinksRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentLinksResponse) }
-    def list_payment_links(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListPaymentLinksRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentLinksResponse) }
+    def list_payment_links(request:, timeout_ms: nil)
       # list_payment_links - List all links
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1060,8 +1060,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListPaymentPaymentsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentPaymentsResponse) }
-    def list_payment_payments(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListPaymentPaymentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentPaymentsResponse) }
+    def list_payment_payments(request:, timeout_ms: nil)
       # list_payment_payments - List all payments
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1166,8 +1166,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListPaymentPayoutsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentPayoutsResponse) }
-    def list_payment_payouts(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListPaymentPayoutsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentPayoutsResponse) }
+    def list_payment_payouts(request:, timeout_ms: nil)
       # list_payment_payouts - List all payouts
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1272,8 +1272,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListPaymentRefundsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentRefundsResponse) }
-    def list_payment_refunds(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListPaymentRefundsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentRefundsResponse) }
+    def list_payment_refunds(request:, timeout_ms: nil)
       # list_payment_refunds - List all refunds
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1378,8 +1378,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListPaymentSubscriptionsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentSubscriptionsResponse) }
-    def list_payment_subscriptions(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListPaymentSubscriptionsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentSubscriptionsResponse) }
+    def list_payment_subscriptions(request:, timeout_ms: nil)
       # list_payment_subscriptions - List all subscriptions
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1485,7 +1485,7 @@ module UnifiedRubySDK
 
 
     sig { params(payment_link: Models::Shared::PaymentLink, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPaymentLinkResponse) }
-    def patch_payment_link(payment_link, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_payment_link(payment_link:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_payment_link - Update a link
       request = Models::Operations::PatchPaymentLinkRequest.new(
         
@@ -1610,7 +1610,7 @@ module UnifiedRubySDK
 
 
     sig { params(payment_payment: Models::Shared::PaymentPayment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPaymentPaymentResponse) }
-    def patch_payment_payment(payment_payment, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_payment_payment(payment_payment:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_payment_payment - Update a payment
       request = Models::Operations::PatchPaymentPaymentRequest.new(
         
@@ -1735,7 +1735,7 @@ module UnifiedRubySDK
 
 
     sig { params(payment_subscription: Models::Shared::PaymentSubscription, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPaymentSubscriptionResponse) }
-    def patch_payment_subscription(payment_subscription, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_payment_subscription(payment_subscription:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_payment_subscription - Update a subscription
       request = Models::Operations::PatchPaymentSubscriptionRequest.new(
         
@@ -1860,7 +1860,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemovePaymentLinkResponse) }
-    def remove_payment_link(connection_id, id, timeout_ms = nil)
+    def remove_payment_link(connection_id:, id:, timeout_ms: nil)
       # remove_payment_link - Remove a link
       request = Models::Operations::RemovePaymentLinkRequest.new(
         
@@ -1970,7 +1970,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemovePaymentPaymentResponse) }
-    def remove_payment_payment(connection_id, id, timeout_ms = nil)
+    def remove_payment_payment(connection_id:, id:, timeout_ms: nil)
       # remove_payment_payment - Remove a payment
       request = Models::Operations::RemovePaymentPaymentRequest.new(
         
@@ -2080,7 +2080,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemovePaymentSubscriptionResponse) }
-    def remove_payment_subscription(connection_id, id, timeout_ms = nil)
+    def remove_payment_subscription(connection_id:, id:, timeout_ms: nil)
       # remove_payment_subscription - Remove a subscription
       request = Models::Operations::RemovePaymentSubscriptionRequest.new(
         
@@ -2190,7 +2190,7 @@ module UnifiedRubySDK
 
 
     sig { params(payment_link: Models::Shared::PaymentLink, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePaymentLinkResponse) }
-    def update_payment_link(payment_link, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_payment_link(payment_link:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_payment_link - Update a link
       request = Models::Operations::UpdatePaymentLinkRequest.new(
         
@@ -2315,7 +2315,7 @@ module UnifiedRubySDK
 
 
     sig { params(payment_payment: Models::Shared::PaymentPayment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePaymentPaymentResponse) }
-    def update_payment_payment(payment_payment, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_payment_payment(payment_payment:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_payment_payment - Update a payment
       request = Models::Operations::UpdatePaymentPaymentRequest.new(
         
@@ -2440,7 +2440,7 @@ module UnifiedRubySDK
 
 
     sig { params(payment_subscription: Models::Shared::PaymentSubscription, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePaymentSubscriptionResponse) }
-    def update_payment_subscription(payment_subscription, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_payment_subscription(payment_subscription:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_payment_subscription - Update a subscription
       request = Models::Operations::UpdatePaymentSubscriptionRequest.new(
         

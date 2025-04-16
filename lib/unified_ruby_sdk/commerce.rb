@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(commerce_collection: Models::Shared::CommerceCollection, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceCollectionResponse) }
-    def create_commerce_collection(commerce_collection, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_commerce_collection(commerce_collection:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_commerce_collection - Create a collection
       request = Models::Operations::CreateCommerceCollectionRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(commerce_inventory: Models::Shared::CommerceInventory, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceInventoryResponse) }
-    def create_commerce_inventory(commerce_inventory, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_commerce_inventory(commerce_inventory:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_commerce_inventory - Create an inventory
       request = Models::Operations::CreateCommerceInventoryRequest.new(
         
@@ -271,7 +271,7 @@ module UnifiedRubySDK
 
 
     sig { params(commerce_item: Models::Shared::CommerceItem, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceItemResponse) }
-    def create_commerce_item(commerce_item, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_commerce_item(commerce_item:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_commerce_item - Create an item
       request = Models::Operations::CreateCommerceItemRequest.new(
         
@@ -395,7 +395,7 @@ module UnifiedRubySDK
 
 
     sig { params(commerce_location: Models::Shared::CommerceLocation, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceLocationResponse) }
-    def create_commerce_location(commerce_location, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_commerce_location(commerce_location:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_commerce_location - Create a location
       request = Models::Operations::CreateCommerceLocationRequest.new(
         
@@ -519,7 +519,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceCollectionResponse) }
-    def get_commerce_collection(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_commerce_collection(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_commerce_collection - Retrieve a collection
       request = Models::Operations::GetCommerceCollectionRequest.new(
         
@@ -631,7 +631,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceInventoryResponse) }
-    def get_commerce_inventory(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_commerce_inventory(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_commerce_inventory - Retrieve an inventory
       request = Models::Operations::GetCommerceInventoryRequest.new(
         
@@ -743,7 +743,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceItemResponse) }
-    def get_commerce_item(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_commerce_item(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_commerce_item - Retrieve an item
       request = Models::Operations::GetCommerceItemRequest.new(
         
@@ -855,7 +855,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceLocationResponse) }
-    def get_commerce_location(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_commerce_location(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_commerce_location - Retrieve a location
       request = Models::Operations::GetCommerceLocationRequest.new(
         
@@ -966,8 +966,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListCommerceCollectionsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceCollectionsResponse) }
-    def list_commerce_collections(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListCommerceCollectionsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceCollectionsResponse) }
+    def list_commerce_collections(request:, timeout_ms: nil)
       # list_commerce_collections - List all collections
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1072,8 +1072,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListCommerceInventoriesRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceInventoriesResponse) }
-    def list_commerce_inventories(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListCommerceInventoriesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceInventoriesResponse) }
+    def list_commerce_inventories(request:, timeout_ms: nil)
       # list_commerce_inventories - List all inventories
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1178,8 +1178,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListCommerceItemsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceItemsResponse) }
-    def list_commerce_items(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListCommerceItemsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceItemsResponse) }
+    def list_commerce_items(request:, timeout_ms: nil)
       # list_commerce_items - List all items
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1284,8 +1284,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListCommerceLocationsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceLocationsResponse) }
-    def list_commerce_locations(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListCommerceLocationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceLocationsResponse) }
+    def list_commerce_locations(request:, timeout_ms: nil)
       # list_commerce_locations - List all locations
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1391,7 +1391,7 @@ module UnifiedRubySDK
 
 
     sig { params(commerce_collection: Models::Shared::CommerceCollection, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceCollectionResponse) }
-    def patch_commerce_collection(commerce_collection, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_commerce_collection(commerce_collection:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_commerce_collection - Update a collection
       request = Models::Operations::PatchCommerceCollectionRequest.new(
         
@@ -1516,7 +1516,7 @@ module UnifiedRubySDK
 
 
     sig { params(commerce_inventory: Models::Shared::CommerceInventory, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceInventoryResponse) }
-    def patch_commerce_inventory(commerce_inventory, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_commerce_inventory(commerce_inventory:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_commerce_inventory - Update an inventory
       request = Models::Operations::PatchCommerceInventoryRequest.new(
         
@@ -1641,7 +1641,7 @@ module UnifiedRubySDK
 
 
     sig { params(commerce_item: Models::Shared::CommerceItem, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceItemResponse) }
-    def patch_commerce_item(commerce_item, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_commerce_item(commerce_item:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_commerce_item - Update an item
       request = Models::Operations::PatchCommerceItemRequest.new(
         
@@ -1766,7 +1766,7 @@ module UnifiedRubySDK
 
 
     sig { params(commerce_location: Models::Shared::CommerceLocation, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceLocationResponse) }
-    def patch_commerce_location(commerce_location, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_commerce_location(commerce_location:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_commerce_location - Update a location
       request = Models::Operations::PatchCommerceLocationRequest.new(
         
@@ -1891,7 +1891,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceCollectionResponse) }
-    def remove_commerce_collection(connection_id, id, timeout_ms = nil)
+    def remove_commerce_collection(connection_id:, id:, timeout_ms: nil)
       # remove_commerce_collection - Remove a collection
       request = Models::Operations::RemoveCommerceCollectionRequest.new(
         
@@ -2001,7 +2001,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceInventoryResponse) }
-    def remove_commerce_inventory(connection_id, id, timeout_ms = nil)
+    def remove_commerce_inventory(connection_id:, id:, timeout_ms: nil)
       # remove_commerce_inventory - Remove an inventory
       request = Models::Operations::RemoveCommerceInventoryRequest.new(
         
@@ -2111,7 +2111,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceItemResponse) }
-    def remove_commerce_item(connection_id, id, timeout_ms = nil)
+    def remove_commerce_item(connection_id:, id:, timeout_ms: nil)
       # remove_commerce_item - Remove an item
       request = Models::Operations::RemoveCommerceItemRequest.new(
         
@@ -2221,7 +2221,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceLocationResponse) }
-    def remove_commerce_location(connection_id, id, timeout_ms = nil)
+    def remove_commerce_location(connection_id:, id:, timeout_ms: nil)
       # remove_commerce_location - Remove a location
       request = Models::Operations::RemoveCommerceLocationRequest.new(
         
@@ -2331,7 +2331,7 @@ module UnifiedRubySDK
 
 
     sig { params(commerce_collection: Models::Shared::CommerceCollection, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceCollectionResponse) }
-    def update_commerce_collection(commerce_collection, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_commerce_collection(commerce_collection:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_commerce_collection - Update a collection
       request = Models::Operations::UpdateCommerceCollectionRequest.new(
         
@@ -2456,7 +2456,7 @@ module UnifiedRubySDK
 
 
     sig { params(commerce_inventory: Models::Shared::CommerceInventory, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceInventoryResponse) }
-    def update_commerce_inventory(commerce_inventory, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_commerce_inventory(commerce_inventory:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_commerce_inventory - Update an inventory
       request = Models::Operations::UpdateCommerceInventoryRequest.new(
         
@@ -2581,7 +2581,7 @@ module UnifiedRubySDK
 
 
     sig { params(commerce_item: Models::Shared::CommerceItem, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceItemResponse) }
-    def update_commerce_item(commerce_item, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_commerce_item(commerce_item:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_commerce_item - Update an item
       request = Models::Operations::UpdateCommerceItemRequest.new(
         
@@ -2706,7 +2706,7 @@ module UnifiedRubySDK
 
 
     sig { params(commerce_location: Models::Shared::CommerceLocation, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceLocationResponse) }
-    def update_commerce_location(commerce_location, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_commerce_location(commerce_location:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_commerce_location - Update a location
       request = Models::Operations::UpdateCommerceLocationRequest.new(
         

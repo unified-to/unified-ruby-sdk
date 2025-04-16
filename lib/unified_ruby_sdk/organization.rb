@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(repo_organization: Models::Shared::RepoOrganization, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoOrganizationResponse) }
-    def create_repo_organization(repo_organization, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_repo_organization(repo_organization:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_repo_organization - Create an organization
       request = Models::Operations::CreateRepoOrganizationRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingOrganizationResponse) }
-    def get_accounting_organization(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_accounting_organization(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_accounting_organization - Retrieve an organization
       request = Models::Operations::GetAccountingOrganizationRequest.new(
         
@@ -259,7 +259,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoOrganizationResponse) }
-    def get_repo_organization(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_repo_organization(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_repo_organization - Retrieve an organization
       request = Models::Operations::GetRepoOrganizationRequest.new(
         
@@ -370,8 +370,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListAccountingOrganizationsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingOrganizationsResponse) }
-    def list_accounting_organizations(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListAccountingOrganizationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingOrganizationsResponse) }
+    def list_accounting_organizations(request:, timeout_ms: nil)
       # list_accounting_organizations - List all organizations
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -476,8 +476,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListRepoOrganizationsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoOrganizationsResponse) }
-    def list_repo_organizations(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListRepoOrganizationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoOrganizationsResponse) }
+    def list_repo_organizations(request:, timeout_ms: nil)
       # list_repo_organizations - List all organizations
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -583,7 +583,7 @@ module UnifiedRubySDK
 
 
     sig { params(repo_organization: Models::Shared::RepoOrganization, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoOrganizationResponse) }
-    def patch_repo_organization(repo_organization, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_repo_organization(repo_organization:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_repo_organization - Update an organization
       request = Models::Operations::PatchRepoOrganizationRequest.new(
         
@@ -708,7 +708,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoOrganizationResponse) }
-    def remove_repo_organization(connection_id, id, timeout_ms = nil)
+    def remove_repo_organization(connection_id:, id:, timeout_ms: nil)
       # remove_repo_organization - Remove an organization
       request = Models::Operations::RemoveRepoOrganizationRequest.new(
         
@@ -818,7 +818,7 @@ module UnifiedRubySDK
 
 
     sig { params(repo_organization: Models::Shared::RepoOrganization, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoOrganizationResponse) }
-    def update_repo_organization(repo_organization, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_repo_organization(repo_organization:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_repo_organization - Update an organization
       request = Models::Operations::UpdateRepoOrganizationRequest.new(
         

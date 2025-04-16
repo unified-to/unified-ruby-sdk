@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(scim_group: Models::Shared::ScimGroup, connection_id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateScimGroupsResponse) }
-    def create_scim_groups(scim_group, connection_id, timeout_ms = nil)
+    def create_scim_groups(scim_group:, connection_id:, timeout_ms: nil)
       # create_scim_groups - Create group
       request = Models::Operations::CreateScimGroupsRequest.new(
         
@@ -144,7 +144,7 @@ module UnifiedRubySDK
 
 
     sig { params(request: Models::Operations::CreateScimUsersRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateScimUsersResponse) }
-    def create_scim_users(request, timeout_ms = nil)
+    def create_scim_users(request:, timeout_ms: nil)
       # create_scim_users - Create user
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -262,7 +262,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetScimGroupsResponse) }
-    def get_scim_groups(connection_id, id, timeout_ms = nil)
+    def get_scim_groups(connection_id:, id:, timeout_ms: nil)
       # get_scim_groups - Get group
       request = Models::Operations::GetScimGroupsRequest.new(
         
@@ -371,7 +371,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetScimUsersResponse) }
-    def get_scim_users(connection_id, id, timeout_ms = nil)
+    def get_scim_users(connection_id:, id:, timeout_ms: nil)
       # get_scim_users - Get user
       request = Models::Operations::GetScimUsersRequest.new(
         
@@ -479,8 +479,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListScimGroupsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListScimGroupsResponse) }
-    def list_scim_groups(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListScimGroupsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListScimGroupsResponse) }
+    def list_scim_groups(request:, timeout_ms: nil)
       # list_scim_groups - List groups
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -585,8 +585,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListScimUsersRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListScimUsersResponse) }
-    def list_scim_users(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListScimUsersRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListScimUsersResponse) }
+    def list_scim_users(request:, timeout_ms: nil)
       # list_scim_users - List users
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -692,7 +692,7 @@ module UnifiedRubySDK
 
 
     sig { params(scim_group: Models::Shared::ScimGroup, connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchScimGroupsResponse) }
-    def patch_scim_groups(scim_group, connection_id, id, timeout_ms = nil)
+    def patch_scim_groups(scim_group:, connection_id:, id:, timeout_ms: nil)
       # patch_scim_groups - Update group
       request = Models::Operations::PatchScimGroupsRequest.new(
         
@@ -814,7 +814,7 @@ module UnifiedRubySDK
 
 
     sig { params(scim_user: Models::Shared::ScimUser, connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchScimUsersResponse) }
-    def patch_scim_users(scim_user, connection_id, id, timeout_ms = nil)
+    def patch_scim_users(scim_user:, connection_id:, id:, timeout_ms: nil)
       # patch_scim_users - Update user
       request = Models::Operations::PatchScimUsersRequest.new(
         
@@ -936,7 +936,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveScimGroupsResponse) }
-    def remove_scim_groups(connection_id, id, timeout_ms = nil)
+    def remove_scim_groups(connection_id:, id:, timeout_ms: nil)
       # remove_scim_groups - Delete group
       request = Models::Operations::RemoveScimGroupsRequest.new(
         
@@ -1046,7 +1046,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveScimUsersResponse) }
-    def remove_scim_users(connection_id, id, timeout_ms = nil)
+    def remove_scim_users(connection_id:, id:, timeout_ms: nil)
       # remove_scim_users - Delete user
       request = Models::Operations::RemoveScimUsersRequest.new(
         
@@ -1156,7 +1156,7 @@ module UnifiedRubySDK
 
 
     sig { params(scim_group: Models::Shared::ScimGroup, connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateScimGroupsResponse) }
-    def update_scim_groups(scim_group, connection_id, id, timeout_ms = nil)
+    def update_scim_groups(scim_group:, connection_id:, id:, timeout_ms: nil)
       # update_scim_groups - Update group
       request = Models::Operations::UpdateScimGroupsRequest.new(
         
@@ -1278,7 +1278,7 @@ module UnifiedRubySDK
 
 
     sig { params(scim_user: Models::Shared::ScimUser, connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateScimUsersResponse) }
-    def update_scim_users(scim_user, connection_id, id, timeout_ms = nil)
+    def update_scim_users(scim_user:, connection_id:, id:, timeout_ms: nil)
       # update_scim_users - Update user
       request = Models::Operations::UpdateScimUsersRequest.new(
         

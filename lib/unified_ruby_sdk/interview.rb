@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(ats_interview: Models::Shared::AtsInterview, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsInterviewResponse) }
-    def create_ats_interview(ats_interview, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_ats_interview(ats_interview:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_ats_interview - Create an interview
       request = Models::Operations::CreateAtsInterviewRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsInterviewResponse) }
-    def get_ats_interview(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_ats_interview(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_ats_interview - Retrieve an interview
       request = Models::Operations::GetAtsInterviewRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListAtsInterviewsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsInterviewsResponse) }
-    def list_ats_interviews(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListAtsInterviewsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsInterviewsResponse) }
+    def list_ats_interviews(request:, timeout_ms: nil)
       # list_ats_interviews - List all interviews
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(ats_interview: Models::Shared::AtsInterview, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsInterviewResponse) }
-    def patch_ats_interview(ats_interview, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_ats_interview(ats_interview:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_ats_interview - Update an interview
       request = Models::Operations::PatchAtsInterviewRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsInterviewResponse) }
-    def remove_ats_interview(connection_id, id, timeout_ms = nil)
+    def remove_ats_interview(connection_id:, id:, timeout_ms: nil)
       # remove_ats_interview - Remove an interview
       request = Models::Operations::RemoveAtsInterviewRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(ats_interview: Models::Shared::AtsInterview, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsInterviewResponse) }
-    def update_ats_interview(ats_interview, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_ats_interview(ats_interview:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_ats_interview - Update an interview
       request = Models::Operations::UpdateAtsInterviewRequest.new(
         

@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentRefundResponse) }
-    def get_payment_refund(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_payment_refund(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_payment_refund - Retrieve a refund
       request = Models::Operations::GetPaymentRefundRequest.new(
         
@@ -134,8 +134,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListPaymentRefundsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentRefundsResponse) }
-    def list_payment_refunds(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListPaymentRefundsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentRefundsResponse) }
+    def list_payment_refunds(request:, timeout_ms: nil)
       # list_payment_refunds - List all refunds
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)

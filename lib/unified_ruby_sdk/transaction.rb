@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(accounting_transaction: Models::Shared::AccountingTransaction, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingTransactionResponse) }
-    def create_accounting_transaction(accounting_transaction, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_accounting_transaction(accounting_transaction:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_accounting_transaction - Create a transaction
       request = Models::Operations::CreateAccountingTransactionRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingTransactionResponse) }
-    def get_accounting_transaction(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_accounting_transaction(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_accounting_transaction - Retrieve a transaction
       request = Models::Operations::GetAccountingTransactionRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListAccountingTransactionsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingTransactionsResponse) }
-    def list_accounting_transactions(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListAccountingTransactionsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingTransactionsResponse) }
+    def list_accounting_transactions(request:, timeout_ms: nil)
       # list_accounting_transactions - List all transactions
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(accounting_transaction: Models::Shared::AccountingTransaction, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingTransactionResponse) }
-    def patch_accounting_transaction(accounting_transaction, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_accounting_transaction(accounting_transaction:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_accounting_transaction - Update a transaction
       request = Models::Operations::PatchAccountingTransactionRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingTransactionResponse) }
-    def remove_accounting_transaction(connection_id, id, timeout_ms = nil)
+    def remove_accounting_transaction(connection_id:, id:, timeout_ms: nil)
       # remove_accounting_transaction - Remove a transaction
       request = Models::Operations::RemoveAccountingTransactionRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(accounting_transaction: Models::Shared::AccountingTransaction, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingTransactionResponse) }
-    def update_accounting_transaction(accounting_transaction, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_accounting_transaction(accounting_transaction:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_accounting_transaction - Update a transaction
       request = Models::Operations::UpdateAccountingTransactionRequest.new(
         

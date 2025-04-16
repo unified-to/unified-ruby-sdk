@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(webhook: Models::Shared::Webhook, include_all: T.nilable(T::Boolean), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUnifiedWebhookResponse) }
-    def create_unified_webhook(webhook, include_all = nil, timeout_ms = nil)
+    def create_unified_webhook(webhook:, include_all: nil, timeout_ms: nil)
       # create_unified_webhook - Create webhook subscription
       # The data payload received by your server is described at https://docs.unified.to/unified/overview. The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free accounts.
       request = Models::Operations::CreateUnifiedWebhookRequest.new(
@@ -142,7 +142,7 @@ module UnifiedRubySDK
 
 
     sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUnifiedWebhookResponse) }
-    def get_unified_webhook(id, timeout_ms = nil)
+    def get_unified_webhook(id:, timeout_ms: nil)
       # get_unified_webhook - Retrieve webhook by its ID
       request = Models::Operations::GetUnifiedWebhookRequest.new(
         
@@ -249,8 +249,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListUnifiedWebhooksRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedWebhooksResponse) }
-    def list_unified_webhooks(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListUnifiedWebhooksRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedWebhooksResponse) }
+    def list_unified_webhooks(request:, timeout_ms: nil)
       # list_unified_webhooks - Returns all registered webhooks
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -351,7 +351,7 @@ module UnifiedRubySDK
 
 
     sig { params(webhook: Models::Shared::Webhook, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchUnifiedWebhookResponse) }
-    def patch_unified_webhook(webhook, id, timeout_ms = nil)
+    def patch_unified_webhook(webhook:, id:, timeout_ms: nil)
       # patch_unified_webhook - Update webhook subscription
       request = Models::Operations::PatchUnifiedWebhookRequest.new(
         
@@ -472,7 +472,7 @@ module UnifiedRubySDK
 
 
     sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchUnifiedWebhookTriggerResponse) }
-    def patch_unified_webhook_trigger(id, timeout_ms = nil)
+    def patch_unified_webhook_trigger(id:, timeout_ms: nil)
       # patch_unified_webhook_trigger - Trigger webhook
       request = Models::Operations::PatchUnifiedWebhookTriggerRequest.new(
         
@@ -581,7 +581,7 @@ module UnifiedRubySDK
 
 
     sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveUnifiedWebhookResponse) }
-    def remove_unified_webhook(id, timeout_ms = nil)
+    def remove_unified_webhook(id:, timeout_ms: nil)
       # remove_unified_webhook - Remove webhook subscription
       request = Models::Operations::RemoveUnifiedWebhookRequest.new(
         
@@ -690,7 +690,7 @@ module UnifiedRubySDK
 
 
     sig { params(webhook: Models::Shared::Webhook, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateUnifiedWebhookResponse) }
-    def update_unified_webhook(webhook, id, timeout_ms = nil)
+    def update_unified_webhook(webhook:, id:, timeout_ms: nil)
       # update_unified_webhook - Update webhook subscription
       request = Models::Operations::UpdateUnifiedWebhookRequest.new(
         
@@ -811,7 +811,7 @@ module UnifiedRubySDK
 
 
     sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateUnifiedWebhookTriggerResponse) }
-    def update_unified_webhook_trigger(id, timeout_ms = nil)
+    def update_unified_webhook_trigger(id:, timeout_ms: nil)
       # update_unified_webhook_trigger - Trigger webhook
       request = Models::Operations::UpdateUnifiedWebhookTriggerRequest.new(
         

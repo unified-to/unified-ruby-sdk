@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMessagingChannelResponse) }
-    def get_messaging_channel(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_messaging_channel(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_messaging_channel - Retrieve a channel
       request = Models::Operations::GetMessagingChannelRequest.new(
         
@@ -134,8 +134,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListMessagingChannelsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMessagingChannelsResponse) }
-    def list_messaging_channels(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListMessagingChannelsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMessagingChannelsResponse) }
+    def list_messaging_channels(request:, timeout_ms: nil)
       # list_messaging_channels - List all channels
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)

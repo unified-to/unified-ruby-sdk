@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisPayslipResponse) }
-    def get_hris_payslip(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_hris_payslip(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_hris_payslip - Retrieve a payslip
       request = Models::Operations::GetHrisPayslipRequest.new(
         
@@ -134,8 +134,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListHrisPayslipsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisPayslipsResponse) }
-    def list_hris_payslips(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListHrisPayslipsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisPayslipsResponse) }
+    def list_hris_payslips(request:, timeout_ms: nil)
       # list_hris_payslips - List all payslips
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)

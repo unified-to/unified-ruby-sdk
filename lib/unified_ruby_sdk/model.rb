@@ -22,8 +22,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListGenaiModelsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListGenaiModelsResponse) }
-    def list_genai_models(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListGenaiModelsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListGenaiModelsResponse) }
+    def list_genai_models(request:, timeout_ms: nil)
       # list_genai_models - List all models
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)

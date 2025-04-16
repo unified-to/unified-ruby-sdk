@@ -22,8 +22,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::GetUnifiedIntegrationAuthRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUnifiedIntegrationAuthResponse) }
-    def get_unified_integration_auth(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::GetUnifiedIntegrationAuthRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUnifiedIntegrationAuthResponse) }
+    def get_unified_integration_auth(request:, timeout_ms: nil)
       # get_unified_integration_auth - Create connection indirectly
       # Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
       url, params = @sdk_configuration.get_server_details
@@ -128,8 +128,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListUnifiedIntegrationWorkspacesRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedIntegrationWorkspacesResponse) }
-    def list_unified_integration_workspaces(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListUnifiedIntegrationWorkspacesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedIntegrationWorkspacesResponse) }
+    def list_unified_integration_workspaces(request:, timeout_ms: nil)
       # list_unified_integration_workspaces - Returns all activated integrations in a workspace
       # No authentication required as this is to be used by front-end interface
       url, params = @sdk_configuration.get_server_details
@@ -235,8 +235,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListUnifiedIntegrationsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedIntegrationsResponse) }
-    def list_unified_integrations(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListUnifiedIntegrationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedIntegrationsResponse) }
+    def list_unified_integrations(request:, timeout_ms: nil)
       # list_unified_integrations - Returns all integrations
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)

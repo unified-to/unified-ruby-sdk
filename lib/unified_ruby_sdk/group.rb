@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(hris_group: Models::Shared::HrisGroup, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisGroupResponse) }
-    def create_hris_group(hris_group, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_hris_group(hris_group:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_hris_group - Create a group
       request = Models::Operations::CreateHrisGroupRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(scim_group: Models::Shared::ScimGroup, connection_id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateScimGroupsResponse) }
-    def create_scim_groups(scim_group, connection_id, timeout_ms = nil)
+    def create_scim_groups(scim_group:, connection_id:, timeout_ms: nil)
       # create_scim_groups - Create group
       request = Models::Operations::CreateScimGroupsRequest.new(
         
@@ -268,7 +268,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisGroupResponse) }
-    def get_hris_group(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_hris_group(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_hris_group - Retrieve a group
       request = Models::Operations::GetHrisGroupRequest.new(
         
@@ -380,7 +380,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetScimGroupsResponse) }
-    def get_scim_groups(connection_id, id, timeout_ms = nil)
+    def get_scim_groups(connection_id:, id:, timeout_ms: nil)
       # get_scim_groups - Get group
       request = Models::Operations::GetScimGroupsRequest.new(
         
@@ -488,8 +488,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListHrisGroupsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisGroupsResponse) }
-    def list_hris_groups(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListHrisGroupsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisGroupsResponse) }
+    def list_hris_groups(request:, timeout_ms: nil)
       # list_hris_groups - List all groups
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -594,8 +594,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListScimGroupsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListScimGroupsResponse) }
-    def list_scim_groups(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListScimGroupsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListScimGroupsResponse) }
+    def list_scim_groups(request:, timeout_ms: nil)
       # list_scim_groups - List groups
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -701,7 +701,7 @@ module UnifiedRubySDK
 
 
     sig { params(hris_group: Models::Shared::HrisGroup, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisGroupResponse) }
-    def patch_hris_group(hris_group, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_hris_group(hris_group:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_hris_group - Update a group
       request = Models::Operations::PatchHrisGroupRequest.new(
         
@@ -826,7 +826,7 @@ module UnifiedRubySDK
 
 
     sig { params(scim_group: Models::Shared::ScimGroup, connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchScimGroupsResponse) }
-    def patch_scim_groups(scim_group, connection_id, id, timeout_ms = nil)
+    def patch_scim_groups(scim_group:, connection_id:, id:, timeout_ms: nil)
       # patch_scim_groups - Update group
       request = Models::Operations::PatchScimGroupsRequest.new(
         
@@ -948,7 +948,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisGroupResponse) }
-    def remove_hris_group(connection_id, id, timeout_ms = nil)
+    def remove_hris_group(connection_id:, id:, timeout_ms: nil)
       # remove_hris_group - Remove a group
       request = Models::Operations::RemoveHrisGroupRequest.new(
         
@@ -1058,7 +1058,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveScimGroupsResponse) }
-    def remove_scim_groups(connection_id, id, timeout_ms = nil)
+    def remove_scim_groups(connection_id:, id:, timeout_ms: nil)
       # remove_scim_groups - Delete group
       request = Models::Operations::RemoveScimGroupsRequest.new(
         
@@ -1168,7 +1168,7 @@ module UnifiedRubySDK
 
 
     sig { params(hris_group: Models::Shared::HrisGroup, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisGroupResponse) }
-    def update_hris_group(hris_group, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_hris_group(hris_group:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_hris_group - Update a group
       request = Models::Operations::UpdateHrisGroupRequest.new(
         
@@ -1293,7 +1293,7 @@ module UnifiedRubySDK
 
 
     sig { params(scim_group: Models::Shared::ScimGroup, connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateScimGroupsResponse) }
-    def update_scim_groups(scim_group, connection_id, id, timeout_ms = nil)
+    def update_scim_groups(scim_group:, connection_id:, id:, timeout_ms: nil)
       # update_scim_groups - Update group
       request = Models::Operations::UpdateScimGroupsRequest.new(
         

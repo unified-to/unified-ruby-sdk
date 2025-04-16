@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUnifiedApicallResponse) }
-    def get_unified_apicall(id, timeout_ms = nil)
+    def get_unified_apicall(id:, timeout_ms: nil)
       # get_unified_apicall - Retrieve specific API Call by its ID
       request = Models::Operations::GetUnifiedApicallRequest.new(
         
@@ -130,8 +130,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListUnifiedApicallsRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedApicallsResponse) }
-    def list_unified_apicalls(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListUnifiedApicallsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedApicallsResponse) }
+    def list_unified_apicalls(request:, timeout_ms: nil)
       # list_unified_apicalls - Returns API Calls
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)

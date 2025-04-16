@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(messaging_message: Models::Shared::MessagingMessage, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMessagingMessageResponse) }
-    def create_messaging_message(messaging_message, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_messaging_message(messaging_message:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_messaging_message - Create a message
       request = Models::Operations::CreateMessagingMessageRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMessagingMessageResponse) }
-    def get_messaging_message(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_messaging_message(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_messaging_message - Retrieve a message
       request = Models::Operations::GetMessagingMessageRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListMessagingMessagesRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMessagingMessagesResponse) }
-    def list_messaging_messages(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListMessagingMessagesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMessagingMessagesResponse) }
+    def list_messaging_messages(request:, timeout_ms: nil)
       # list_messaging_messages - List all messages
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(messaging_message: Models::Shared::MessagingMessage, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMessagingMessageResponse) }
-    def patch_messaging_message(messaging_message, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_messaging_message(messaging_message:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_messaging_message - Update a message
       request = Models::Operations::PatchMessagingMessageRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveMessagingMessageResponse) }
-    def remove_messaging_message(connection_id, id, timeout_ms = nil)
+    def remove_messaging_message(connection_id:, id:, timeout_ms: nil)
       # remove_messaging_message - Remove a message
       request = Models::Operations::RemoveMessagingMessageRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(messaging_message: Models::Shared::MessagingMessage, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMessagingMessageResponse) }
-    def update_messaging_message(messaging_message, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_messaging_message(messaging_message:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_messaging_message - Update a message
       request = Models::Operations::UpdateMessagingMessageRequest.new(
         

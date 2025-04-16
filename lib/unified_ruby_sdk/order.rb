@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(accounting_order: Models::Shared::AccountingOrder, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingOrderResponse) }
-    def create_accounting_order(accounting_order, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_accounting_order(accounting_order:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_accounting_order - Create an order
       request = Models::Operations::CreateAccountingOrderRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingOrderResponse) }
-    def get_accounting_order(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_accounting_order(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_accounting_order - Retrieve an order
       request = Models::Operations::GetAccountingOrderRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListAccountingOrdersRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingOrdersResponse) }
-    def list_accounting_orders(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListAccountingOrdersRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingOrdersResponse) }
+    def list_accounting_orders(request:, timeout_ms: nil)
       # list_accounting_orders - List all orders
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(accounting_order: Models::Shared::AccountingOrder, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingOrderResponse) }
-    def patch_accounting_order(accounting_order, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_accounting_order(accounting_order:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_accounting_order - Update an order
       request = Models::Operations::PatchAccountingOrderRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingOrderResponse) }
-    def remove_accounting_order(connection_id, id, timeout_ms = nil)
+    def remove_accounting_order(connection_id:, id:, timeout_ms: nil)
       # remove_accounting_order - Remove an order
       request = Models::Operations::RemoveAccountingOrderRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(accounting_order: Models::Shared::AccountingOrder, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingOrderResponse) }
-    def update_accounting_order(accounting_order, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_accounting_order(accounting_order:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_accounting_order - Update an order
       request = Models::Operations::UpdateAccountingOrderRequest.new(
         

@@ -23,7 +23,7 @@ module UnifiedRubySDK
 
 
     sig { params(metadata_metadata: Models::Shared::MetadataMetadata, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMetadataMetadataResponse) }
-    def create_metadata_metadata(metadata_metadata, connection_id, fields_ = nil, timeout_ms = nil)
+    def create_metadata_metadata(metadata_metadata:, connection_id:, fields_: nil, timeout_ms: nil)
       # create_metadata_metadata - Create a metadata
       request = Models::Operations::CreateMetadataMetadataRequest.new(
         
@@ -147,7 +147,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMetadataMetadataResponse) }
-    def get_metadata_metadata(connection_id, id, fields_ = nil, timeout_ms = nil)
+    def get_metadata_metadata(connection_id:, id:, fields_: nil, timeout_ms: nil)
       # get_metadata_metadata - Retrieve a metadata
       request = Models::Operations::GetMetadataMetadataRequest.new(
         
@@ -258,8 +258,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: T.nilable(Models::Operations::ListMetadataMetadatasRequest), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMetadataMetadatasResponse) }
-    def list_metadata_metadatas(request, timeout_ms = nil)
+    sig { params(request: Models::Operations::ListMetadataMetadatasRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMetadataMetadatasResponse) }
+    def list_metadata_metadatas(request:, timeout_ms: nil)
       # list_metadata_metadatas - List all metadatas
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -365,7 +365,7 @@ module UnifiedRubySDK
 
 
     sig { params(metadata_metadata: Models::Shared::MetadataMetadata, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMetadataMetadataResponse) }
-    def patch_metadata_metadata(metadata_metadata, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def patch_metadata_metadata(metadata_metadata:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # patch_metadata_metadata - Update a metadata
       request = Models::Operations::PatchMetadataMetadataRequest.new(
         
@@ -490,7 +490,7 @@ module UnifiedRubySDK
 
 
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveMetadataMetadataResponse) }
-    def remove_metadata_metadata(connection_id, id, timeout_ms = nil)
+    def remove_metadata_metadata(connection_id:, id:, timeout_ms: nil)
       # remove_metadata_metadata - Remove a metadata
       request = Models::Operations::RemoveMetadataMetadataRequest.new(
         
@@ -600,7 +600,7 @@ module UnifiedRubySDK
 
 
     sig { params(metadata_metadata: Models::Shared::MetadataMetadata, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMetadataMetadataResponse) }
-    def update_metadata_metadata(metadata_metadata, connection_id, id, fields_ = nil, timeout_ms = nil)
+    def update_metadata_metadata(metadata_metadata:, connection_id:, id:, fields_: nil, timeout_ms: nil)
       # update_metadata_metadata - Update a metadata
       request = Models::Operations::UpdateMetadataMetadataRequest.new(
         
