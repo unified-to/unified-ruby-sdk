@@ -45,6 +45,7 @@ module UnifiedRubySDK
   autoload :Model, 'unified_ruby_sdk/model'
   autoload :Prompt, 'unified_ruby_sdk/prompt'
   autoload :Hris, 'unified_ruby_sdk/hris'
+  autoload :Device, 'unified_ruby_sdk/device'
   autoload :Employee, 'unified_ruby_sdk/employee'
   autoload :Group, 'unified_ruby_sdk/group'
   autoload :Payslip, 'unified_ruby_sdk/payslip'

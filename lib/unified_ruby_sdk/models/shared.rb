@@ -7,6 +7,7 @@ module UnifiedRubySDK
   module Models
     module Shared
       autoload :AccountingAccount, 'unified_ruby_sdk/models/shared/accountingaccount.rb'
+      autoload :AccountingAssociatedContact, 'unified_ruby_sdk/models/shared/accountingassociatedcontact.rb'
       autoload :AccountingAttachment, 'unified_ruby_sdk/models/shared/accountingattachment.rb'
       autoload :AccountingContact, 'unified_ruby_sdk/models/shared/accountingcontact.rb'
       autoload :AccountingContactPaymentMethod, 'unified_ruby_sdk/models/shared/accountingcontactpaymentmethod.rb'
@@ -54,6 +55,8 @@ module UnifiedRubySDK
       autoload :AtsInterview, 'unified_ruby_sdk/models/shared/atsinterview.rb'
       autoload :AtsInterviewStatus, 'unified_ruby_sdk/models/shared/atsinterview_status.rb'
       autoload :AtsJob, 'unified_ruby_sdk/models/shared/atsjob.rb'
+      autoload :AtsJobOpening, 'unified_ruby_sdk/models/shared/atsjobopening.rb'
+      autoload :AtsJobOpeningStatus, 'unified_ruby_sdk/models/shared/atsjobopening_status.rb'
       autoload :AtsJobPosting, 'unified_ruby_sdk/models/shared/atsjobposting.rb'
       autoload :AtsJobQuestion, 'unified_ruby_sdk/models/shared/atsjobquestion.rb'
       autoload :AtsJobQuestionType, 'unified_ruby_sdk/models/shared/atsjobquestion_type.rb'
@@ -123,6 +126,7 @@ module UnifiedRubySDK
       autoload :HrisCompensation, 'unified_ruby_sdk/models/shared/hriscompensation.rb'
       autoload :HrisCompensationFrequency, 'unified_ruby_sdk/models/shared/hriscompensation_frequency.rb'
       autoload :HrisCompensationType, 'unified_ruby_sdk/models/shared/hriscompensation_type.rb'
+      autoload :HrisDevice, 'unified_ruby_sdk/models/shared/hrisdevice.rb'
       autoload :HrisEmail, 'unified_ruby_sdk/models/shared/hrisemail.rb'
       autoload :HrisEmailType, 'unified_ruby_sdk/models/shared/hrisemail_type.rb'
       autoload :HrisEmployee, 'unified_ruby_sdk/models/shared/hrisemployee.rb'

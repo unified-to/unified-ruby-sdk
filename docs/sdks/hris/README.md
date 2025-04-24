@@ -6,30 +6,36 @@
 ### Available Operations
 
 * [create_hris_company](#create_hris_company) - Create a company
+* [create_hris_device](#create_hris_device) - Create a device
 * [create_hris_employee](#create_hris_employee) - Create an employee
 * [create_hris_group](#create_hris_group) - Create a group
 * [create_hris_location](#create_hris_location) - Create a location
 * [get_hris_company](#get_hris_company) - Retrieve a company
+* [get_hris_device](#get_hris_device) - Retrieve a device
 * [get_hris_employee](#get_hris_employee) - Retrieve an employee
 * [get_hris_group](#get_hris_group) - Retrieve a group
 * [get_hris_location](#get_hris_location) - Retrieve a location
 * [get_hris_payslip](#get_hris_payslip) - Retrieve a payslip
 * [get_hris_timeoff](#get_hris_timeoff) - Retrieve a timeoff
 * [list_hris_companies](#list_hris_companies) - List all companies
+* [list_hris_devices](#list_hris_devices) - List all devices
 * [list_hris_employees](#list_hris_employees) - List all employees
 * [list_hris_groups](#list_hris_groups) - List all groups
 * [list_hris_locations](#list_hris_locations) - List all locations
 * [list_hris_payslips](#list_hris_payslips) - List all payslips
 * [list_hris_timeoffs](#list_hris_timeoffs) - List all timeoffs
 * [patch_hris_company](#patch_hris_company) - Update a company
+* [patch_hris_device](#patch_hris_device) - Update a device
 * [patch_hris_employee](#patch_hris_employee) - Update an employee
 * [patch_hris_group](#patch_hris_group) - Update a group
 * [patch_hris_location](#patch_hris_location) - Update a location
 * [remove_hris_company](#remove_hris_company) - Remove a company
+* [remove_hris_device](#remove_hris_device) - Remove a device
 * [remove_hris_employee](#remove_hris_employee) - Remove an employee
 * [remove_hris_group](#remove_hris_group) - Remove a group
 * [remove_hris_location](#remove_hris_location) - Remove a location
 * [update_hris_company](#update_hris_company) - Update a company
+* [update_hris_device](#update_hris_device) - Update a device
 * [update_hris_employee](#update_hris_employee) - Update an employee
 * [update_hris_group](#update_hris_group) - Update a group
 * [update_hris_location](#update_hris_location) - Update a location
@@ -70,6 +76,47 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateHrisCompanyResponse)](../../models/operations/createhriscompanyresponse.md)**
+
+
+
+## create_hris_device
+
+Create a device
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
+
+res = s.hris.create_hris_device(hris_device=Models::Shared::HrisDevice.new(
+  name: "<value>",
+), connection_id="<id>", fields_=[
+  "<value>",
+])
+
+if ! res.hris_device.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `hris_device`                                                   | [Models::Shared::HrisDevice](../../models/shared/hrisdevice.md) | :heavy_check_mark:                                              | N/A                                                             |
+| `connection_id`                                                 | *::String*                                                      | :heavy_check_mark:                                              | ID of the connection                                            |
+| `fields_`                                                       | T::Array<*::String*>                                            | :heavy_minus_sign:                                              | Comma-delimited fields to return                                |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateHrisDeviceResponse)](../../models/operations/createhrisdeviceresponse.md)**
 
 
 
@@ -226,6 +273,45 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetHrisCompanyResponse)](../../models/operations/gethriscompanyresponse.md)**
+
+
+
+## get_hris_device
+
+Retrieve a device
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
+
+res = s.hris.get_hris_device(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
+
+if ! res.hris_device.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                        | Type                             | Required                         | Description                      |
+| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Device                 |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+
+### Response
+
+**[T.nilable(Models::Operations::GetHrisDeviceResponse)](../../models/operations/gethrisdeviceresponse.md)**
 
 
 
@@ -460,6 +546,45 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::ListHrisCompaniesResponse)](../../models/operations/listhriscompaniesresponse.md)**
+
+
+
+## list_hris_devices
+
+List all devices
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
+
+req = Models::Operations::ListHrisDevicesRequest.new(
+  connection_id: "<id>",
+)
+
+res = s.hris.list_hris_devices(req)
+
+if ! res.hris_devices.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [Models::Operations::ListHrisDevicesRequest](../../models/operations/listhrisdevicesrequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+
+### Response
+
+**[T.nilable(Models::Operations::ListHrisDevicesResponse)](../../models/operations/listhrisdevicesresponse.md)**
 
 
 
@@ -698,6 +823,48 @@ end
 
 
 
+## patch_hris_device
+
+Update a device
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
+
+res = s.hris.patch_hris_device(hris_device=Models::Shared::HrisDevice.new(
+  name: "<value>",
+), connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
+
+if ! res.hris_device.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `hris_device`                                                   | [Models::Shared::HrisDevice](../../models/shared/hrisdevice.md) | :heavy_check_mark:                                              | N/A                                                             |
+| `connection_id`                                                 | *::String*                                                      | :heavy_check_mark:                                              | ID of the connection                                            |
+| `id`                                                            | *::String*                                                      | :heavy_check_mark:                                              | ID of the Device                                                |
+| `fields_`                                                       | T::Array<*::String*>                                            | :heavy_minus_sign:                                              | Comma-delimited fields to return                                |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchHrisDeviceResponse)](../../models/operations/patchhrisdeviceresponse.md)**
+
+
+
 ## patch_hris_employee
 
 Update an employee
@@ -854,6 +1021,42 @@ end
 
 
 
+## remove_hris_device
+
+Remove a device
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
+
+res = s.hris.remove_hris_device(connection_id="<id>", id="<id>")
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Device     |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveHrisDeviceResponse)](../../models/operations/removehrisdeviceresponse.md)**
+
+
+
 ## remove_hris_employee
 
 Remove an employee
@@ -999,6 +1202,48 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::UpdateHrisCompanyResponse)](../../models/operations/updatehriscompanyresponse.md)**
+
+
+
+## update_hris_device
+
+Update a device
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
+
+res = s.hris.update_hris_device(hris_device=Models::Shared::HrisDevice.new(
+  name: "<value>",
+), connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
+
+if ! res.hris_device.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `hris_device`                                                   | [Models::Shared::HrisDevice](../../models/shared/hrisdevice.md) | :heavy_check_mark:                                              | N/A                                                             |
+| `connection_id`                                                 | *::String*                                                      | :heavy_check_mark:                                              | ID of the connection                                            |
+| `id`                                                            | *::String*                                                      | :heavy_check_mark:                                              | ID of the Device                                                |
+| `fields_`                                                       | T::Array<*::String*>                                            | :heavy_minus_sign:                                              | Comma-delimited fields to return                                |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateHrisDeviceResponse)](../../models/operations/updatehrisdeviceresponse.md)**
 
 
 

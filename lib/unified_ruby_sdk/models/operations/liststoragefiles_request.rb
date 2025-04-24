@@ -29,12 +29,14 @@ module UnifiedRubySDK
         field :query, T.nilable(::String), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
 
         field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
+
+        field :type, T.nilable(::String), { 'query_param': { 'field_name': 'type', 'style': 'form', 'explode': true } }
         # Return only results whose updated date is equal or greater to this value
         field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
 
-        sig { params(connection_id: ::String, fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
-        def initialize(connection_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, parent_id: nil, query: nil, sort: nil, updated_gte: nil)
+        sig { params(connection_id: ::String, fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), sort: T.nilable(::String), type: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
+        def initialize(connection_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, parent_id: nil, query: nil, sort: nil, type: nil, updated_gte: nil)
           @connection_id = connection_id
           @fields_ = fields_
           @limit = limit
@@ -43,6 +45,7 @@ module UnifiedRubySDK
           @parent_id = parent_id
           @query = query
           @sort = sort
+          @type = type
           @updated_gte = updated_gte
         end
 
@@ -56,6 +59,7 @@ module UnifiedRubySDK
           return false unless @parent_id == other.parent_id
           return false unless @query == other.query
           return false unless @sort == other.sort
+          return false unless @type == other.type
           return false unless @updated_gte == other.updated_gte
           true
         end
