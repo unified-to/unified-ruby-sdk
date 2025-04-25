@@ -14,51 +14,59 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :account_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_id') } }
-
-        field :amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
-
-        field :contact_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
+        field :balance_sheet, T.nilable(Models::Shared::PropertyAccountingReportBalanceSheet), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('balance_sheet') } }
 
         field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :group, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group') } }
+        field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+
+        field :end_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :profit_and_loss, T.nilable(Models::Shared::PropertyAccountingReportProfitAndLoss), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profit_and_loss') } }
+
         field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :subgroup, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subgroup') } }
+        field :start_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :trial_balance, T.nilable(Models::Shared::PropertyAccountingReportTrialBalance), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('trial_balance') } }
 
         field :type, T.nilable(Models::Shared::AccountingReportType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingReportType, true) } }
 
         field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-        sig { params(account_id: T.nilable(::String), amount: T.nilable(::Float), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), group: T.nilable(::String), id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), subgroup: T.nilable(::String), type: T.nilable(Models::Shared::AccountingReportType), updated_at: T.nilable(::DateTime)).void }
-        def initialize(account_id: nil, amount: nil, contact_id: nil, created_at: nil, group: nil, id: nil, raw: nil, subgroup: nil, type: nil, updated_at: nil)
-          @account_id = account_id
-          @amount = amount
-          @contact_id = contact_id
+        sig { params(balance_sheet: T.nilable(Models::Shared::PropertyAccountingReportBalanceSheet), created_at: T.nilable(::DateTime), currency: T.nilable(::String), end_at: T.nilable(::DateTime), id: T.nilable(::String), name: T.nilable(::String), profit_and_loss: T.nilable(Models::Shared::PropertyAccountingReportProfitAndLoss), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), trial_balance: T.nilable(Models::Shared::PropertyAccountingReportTrialBalance), type: T.nilable(Models::Shared::AccountingReportType), updated_at: T.nilable(::DateTime)).void }
+        def initialize(balance_sheet: nil, created_at: nil, currency: nil, end_at: nil, id: nil, name: nil, profit_and_loss: nil, raw: nil, start_at: nil, trial_balance: nil, type: nil, updated_at: nil)
+          @balance_sheet = balance_sheet
           @created_at = created_at
-          @group = group
+          @currency = currency
+          @end_at = end_at
           @id = id
+          @name = name
+          @profit_and_loss = profit_and_loss
           @raw = raw
-          @subgroup = subgroup
+          @start_at = start_at
+          @trial_balance = trial_balance
           @type = type
           @updated_at = updated_at
         end
 
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @account_id == other.account_id
-          return false unless @amount == other.amount
-          return false unless @contact_id == other.contact_id
+          return false unless @balance_sheet == other.balance_sheet
           return false unless @created_at == other.created_at
-          return false unless @group == other.group
+          return false unless @currency == other.currency
+          return false unless @end_at == other.end_at
           return false unless @id == other.id
+          return false unless @name == other.name
+          return false unless @profit_and_loss == other.profit_and_loss
           return false unless @raw == other.raw
-          return false unless @subgroup == other.subgroup
+          return false unless @start_at == other.start_at
+          return false unless @trial_balance == other.trial_balance
           return false unless @type == other.type
           return false unless @updated_at == other.updated_at
           true

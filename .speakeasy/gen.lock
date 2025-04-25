@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 8813ee1f8602d4e03a2488861b978482
+  docChecksum: 3cc7cb33432bf3a1c948159a8589fc49
   docVersion: "1.0"
   speakeasyVersion: 1.533.0
   generationVersion: 2.578.0
-  releaseVersion: 0.11.1
-  configChecksum: d36fd9f5c56b5f210909e32c9956ce3a
+  releaseVersion: 0.12.1
+  configChecksum: bcc02a4ce2cee69158b16c137fda2019
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -869,6 +869,7 @@ generatedFiles:
   - docs/models/shared/accountingaccount.md
   - docs/models/shared/accountingassociatedcontact.md
   - docs/models/shared/accountingattachment.md
+  - docs/models/shared/accountingbalancesheetitem.md
   - docs/models/shared/accountingcontact.md
   - docs/models/shared/accountingcontactpaymentmethod.md
   - docs/models/shared/accountingcontactpaymentmethodtype.md
@@ -884,6 +885,8 @@ generatedFiles:
   - docs/models/shared/accountingorderstatus.md
   - docs/models/shared/accountingordertype.md
   - docs/models/shared/accountingorganization.md
+  - docs/models/shared/accountingprofitandlosscategory.md
+  - docs/models/shared/accountingprofitandlosssubcategory.md
   - docs/models/shared/accountingreport.md
   - docs/models/shared/accountingreporttype.md
   - docs/models/shared/accountingtaxrate.md
@@ -892,6 +895,7 @@ generatedFiles:
   - docs/models/shared/accountingtransaction.md
   - docs/models/shared/accountingtransactioncontact.md
   - docs/models/shared/accountingtransactionlineitem.md
+  - docs/models/shared/accountingtrialbalancesubitem.md
   - docs/models/shared/apicall.md
   - docs/models/shared/apicalltype.md
   - docs/models/shared/atsactivity.md
@@ -1110,11 +1114,15 @@ generatedFiles:
   - docs/models/shared/paymentsubscriptionstatus.md
   - docs/models/shared/paymenttype.md
   - docs/models/shared/priority.md
+  - docs/models/shared/propertyaccountingbalancesheetitemsubitems.md
   - docs/models/shared/propertyaccountingcontactbillingaddress.md
   - docs/models/shared/propertyaccountingcontactshippingaddress.md
   - docs/models/shared/propertyaccountingorderbillingaddress.md
   - docs/models/shared/propertyaccountingordershippingaddress.md
   - docs/models/shared/propertyaccountingorganizationaddress.md
+  - docs/models/shared/propertyaccountingreportbalancesheet.md
+  - docs/models/shared/propertyaccountingreportprofitandloss.md
+  - docs/models/shared/propertyaccountingreporttrialbalance.md
   - docs/models/shared/propertyatsactivityfrom.md
   - docs/models/shared/propertyatsactivityfromtype.md
   - docs/models/shared/propertyatscandidateaddress.md
@@ -2249,6 +2257,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingaccount.rb
   - lib/unified_ruby_sdk/models/shared/accountingassociatedcontact.rb
   - lib/unified_ruby_sdk/models/shared/accountingattachment.rb
+  - lib/unified_ruby_sdk/models/shared/accountingbalancesheetitem.rb
   - lib/unified_ruby_sdk/models/shared/accountingcontact.rb
   - lib/unified_ruby_sdk/models/shared/accountingcontactpaymentmethod.rb
   - lib/unified_ruby_sdk/models/shared/accountingcontactpaymentmethod_type.rb
@@ -2264,6 +2273,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingorder_status.rb
   - lib/unified_ruby_sdk/models/shared/accountingorder_type.rb
   - lib/unified_ruby_sdk/models/shared/accountingorganization.rb
+  - lib/unified_ruby_sdk/models/shared/accountingprofitandlosscategory.rb
+  - lib/unified_ruby_sdk/models/shared/accountingprofitandlosssubcategory.rb
   - lib/unified_ruby_sdk/models/shared/accountingreport.rb
   - lib/unified_ruby_sdk/models/shared/accountingreport_type.rb
   - lib/unified_ruby_sdk/models/shared/accountingtaxrate.rb
@@ -2272,6 +2283,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingtransaction.rb
   - lib/unified_ruby_sdk/models/shared/accountingtransactioncontact.rb
   - lib/unified_ruby_sdk/models/shared/accountingtransactionlineitem.rb
+  - lib/unified_ruby_sdk/models/shared/accountingtrialbalancesubitem.rb
   - lib/unified_ruby_sdk/models/shared/apicall.rb
   - lib/unified_ruby_sdk/models/shared/apicall_type.rb
   - lib/unified_ruby_sdk/models/shared/atsactivity.rb
@@ -2490,11 +2502,15 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/paymentsubscription.rb
   - lib/unified_ruby_sdk/models/shared/paymentsubscription_status.rb
   - lib/unified_ruby_sdk/models/shared/priority.rb
+  - lib/unified_ruby_sdk/models/shared/property_accountingbalancesheetitem_sub_items.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingcontact_billing_address.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingcontact_shipping_address.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingorder_billing_address.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingorder_shipping_address.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingorganization_address.rb
+  - lib/unified_ruby_sdk/models/shared/property_accountingreport_balance_sheet.rb
+  - lib/unified_ruby_sdk/models/shared/property_accountingreport_profit_and_loss.rb
+  - lib/unified_ruby_sdk/models/shared/property_accountingreport_trial_balance.rb
   - lib/unified_ruby_sdk/models/shared/property_atsactivity_from.rb
   - lib/unified_ruby_sdk/models/shared/property_atsactivity_from_type.rb
   - lib/unified_ruby_sdk/models/shared/property_atscandidate_address.rb
