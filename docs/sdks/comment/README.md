@@ -7,16 +7,22 @@
 
 * [create_kms_comment](#create_kms_comment) - Create a comment
 * [create_task_comment](#create_task_comment) - Create a comment
+* [create_uc_comment](#create_uc_comment) - Create a comment
 * [get_kms_comment](#get_kms_comment) - Retrieve a comment
 * [get_task_comment](#get_task_comment) - Retrieve a comment
+* [get_uc_comment](#get_uc_comment) - Retrieve a comment
 * [list_kms_comments](#list_kms_comments) - List all comments
 * [list_task_comments](#list_task_comments) - List all comments
+* [list_uc_comments](#list_uc_comments) - List all comments
 * [patch_kms_comment](#patch_kms_comment) - Update a comment
 * [patch_task_comment](#patch_task_comment) - Update a comment
+* [patch_uc_comment](#patch_uc_comment) - Update a comment
 * [remove_kms_comment](#remove_kms_comment) - Remove a comment
 * [remove_task_comment](#remove_task_comment) - Remove a comment
+* [remove_uc_comment](#remove_uc_comment) - Remove a comment
 * [update_kms_comment](#update_kms_comment) - Update a comment
 * [update_task_comment](#update_task_comment) - Update a comment
+* [update_uc_comment](#update_uc_comment) - Update a comment
 
 ## create_kms_comment
 
@@ -101,6 +107,47 @@ end
 
 
 
+## create_uc_comment
+
+Create a comment
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
+
+res = s.comment.create_uc_comment(uc_comment=Models::Shared::UcComment.new(
+  content: "<value>",
+), connection_id="<id>", fields_=[
+  "<value>",
+])
+
+if ! res.uc_comment.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                     | Type                                                          | Required                                                      | Description                                                   |
+| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| `uc_comment`                                                  | [Models::Shared::UcComment](../../models/shared/uccomment.md) | :heavy_check_mark:                                            | N/A                                                           |
+| `connection_id`                                               | *::String*                                                    | :heavy_check_mark:                                            | ID of the connection                                          |
+| `fields_`                                                     | T::Array<*::String*>                                          | :heavy_minus_sign:                                            | Comma-delimited fields to return                              |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateUcCommentResponse)](../../models/operations/createuccommentresponse.md)**
+
+
+
 ## get_kms_comment
 
 Retrieve a comment
@@ -179,6 +226,45 @@ end
 
 
 
+## get_uc_comment
+
+Retrieve a comment
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
+
+res = s.comment.get_uc_comment(connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
+
+if ! res.uc_comment.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                        | Type                             | Required                         | Description                      |
+| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
+| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
+| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Comment                |
+| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+
+### Response
+
+**[T.nilable(Models::Operations::GetUcCommentResponse)](../../models/operations/getuccommentresponse.md)**
+
+
+
 ## list_kms_comments
 
 List all comments
@@ -254,6 +340,45 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::ListTaskCommentsResponse)](../../models/operations/listtaskcommentsresponse.md)**
+
+
+
+## list_uc_comments
+
+List all comments
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
+
+req = Models::Operations::ListUcCommentsRequest.new(
+  connection_id: "<id>",
+)
+
+res = s.comment.list_uc_comments(req)
+
+if ! res.uc_comments.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [Models::Operations::ListUcCommentsRequest](../../models/operations/listuccommentsrequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[T.nilable(Models::Operations::ListUcCommentsResponse)](../../models/operations/listuccommentsresponse.md)**
 
 
 
@@ -342,6 +467,48 @@ end
 
 
 
+## patch_uc_comment
+
+Update a comment
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
+
+res = s.comment.patch_uc_comment(uc_comment=Models::Shared::UcComment.new(
+  content: "<value>",
+), connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
+
+if ! res.uc_comment.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                     | Type                                                          | Required                                                      | Description                                                   |
+| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| `uc_comment`                                                  | [Models::Shared::UcComment](../../models/shared/uccomment.md) | :heavy_check_mark:                                            | N/A                                                           |
+| `connection_id`                                               | *::String*                                                    | :heavy_check_mark:                                            | ID of the connection                                          |
+| `id`                                                          | *::String*                                                    | :heavy_check_mark:                                            | ID of the Comment                                             |
+| `fields_`                                                     | T::Array<*::String*>                                          | :heavy_minus_sign:                                            | Comma-delimited fields to return                              |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchUcCommentResponse)](../../models/operations/patchuccommentresponse.md)**
+
+
+
 ## remove_kms_comment
 
 Remove a comment
@@ -411,6 +578,42 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::RemoveTaskCommentResponse)](../../models/operations/removetaskcommentresponse.md)**
+
+
+
+## remove_uc_comment
+
+Remove a comment
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
+
+res = s.comment.remove_uc_comment(connection_id="<id>", id="<id>")
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Comment    |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveUcCommentResponse)](../../models/operations/removeuccommentresponse.md)**
 
 
 
@@ -496,4 +699,46 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::UpdateTaskCommentResponse)](../../models/operations/updatetaskcommentresponse.md)**
+
+
+
+## update_uc_comment
+
+Update a comment
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
+
+res = s.comment.update_uc_comment(uc_comment=Models::Shared::UcComment.new(
+  content: "<value>",
+), connection_id="<id>", id="<id>", fields_=[
+  "<value>",
+])
+
+if ! res.uc_comment.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                     | Type                                                          | Required                                                      | Description                                                   |
+| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| `uc_comment`                                                  | [Models::Shared::UcComment](../../models/shared/uccomment.md) | :heavy_check_mark:                                            | N/A                                                           |
+| `connection_id`                                               | *::String*                                                    | :heavy_check_mark:                                            | ID of the connection                                          |
+| `id`                                                          | *::String*                                                    | :heavy_check_mark:                                            | ID of the Comment                                             |
+| `fields_`                                                     | T::Array<*::String*>                                          | :heavy_minus_sign:                                            | Comma-delimited fields to return                              |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateUcCommentResponse)](../../models/operations/updateuccommentresponse.md)**
 

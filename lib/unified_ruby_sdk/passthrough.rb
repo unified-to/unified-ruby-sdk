@@ -22,14 +22,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePassthroughJsonResponse) }
-    def create_passthrough_json(connection_id:, path:, request_body: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePassthroughJsonResponse) }
+    def create_passthrough_json(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil)
       # create_passthrough_json - Passthrough POST
       request = Models::Operations::CreatePassthroughJsonRequest.new(
         
         connection_id: connection_id,
         path: path,
-        request_body: request_body
+        request_body: request_body,
+        query: query
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -50,6 +51,7 @@ module UnifiedRubySDK
       else
         body = data
       end
+      query_params = Utils.get_query_params(Models::Operations::CreatePassthroughJsonRequest, request)
       headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -76,6 +78,7 @@ module UnifiedRubySDK
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
           Utils.configure_request_security(req, security)
 
           @sdk_configuration.hooks.before_request(
@@ -229,14 +232,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePassthroughRawResponse) }
-    def create_passthrough_raw(connection_id:, path:, request_body: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePassthroughRawResponse) }
+    def create_passthrough_raw(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil)
       # create_passthrough_raw - Passthrough POST
       request = Models::Operations::CreatePassthroughRawRequest.new(
         
         connection_id: connection_id,
         path: path,
-        request_body: request_body
+        request_body: request_body,
+        query: query
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -257,6 +261,7 @@ module UnifiedRubySDK
       else
         body = data
       end
+      query_params = Utils.get_query_params(Models::Operations::CreatePassthroughRawRequest, request)
       headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -283,6 +288,7 @@ module UnifiedRubySDK
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
           Utils.configure_request_security(req, security)
 
           @sdk_configuration.hooks.before_request(
@@ -436,13 +442,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPassthroughsResponse) }
-    def list_passthroughs(connection_id:, path:, timeout_ms: nil)
+    sig { params(connection_id: ::String, path: ::String, query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPassthroughsResponse) }
+    def list_passthroughs(connection_id:, path:, query: nil, timeout_ms: nil)
       # list_passthroughs - Passthrough GET
       request = Models::Operations::ListPassthroughsRequest.new(
         
         connection_id: connection_id,
-        path: path
+        path: path,
+        query: query
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -453,6 +460,7 @@ module UnifiedRubySDK
         request
       )
       headers = {}
+      query_params = Utils.get_query_params(Models::Operations::ListPassthroughsRequest, request)
       headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -478,6 +486,7 @@ module UnifiedRubySDK
         http_response = connection.get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
           Utils.configure_request_security(req, security)
 
           @sdk_configuration.hooks.before_request(
@@ -631,14 +640,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPassthroughJsonResponse) }
-    def patch_passthrough_json(connection_id:, path:, request_body: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPassthroughJsonResponse) }
+    def patch_passthrough_json(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil)
       # patch_passthrough_json - Passthrough PUT
       request = Models::Operations::PatchPassthroughJsonRequest.new(
         
         connection_id: connection_id,
         path: path,
-        request_body: request_body
+        request_body: request_body,
+        query: query
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -659,6 +669,7 @@ module UnifiedRubySDK
       else
         body = data
       end
+      query_params = Utils.get_query_params(Models::Operations::PatchPassthroughJsonRequest, request)
       headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -685,6 +696,7 @@ module UnifiedRubySDK
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
           Utils.configure_request_security(req, security)
 
           @sdk_configuration.hooks.before_request(
@@ -838,14 +850,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPassthroughRawResponse) }
-    def patch_passthrough_raw(connection_id:, path:, request_body: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPassthroughRawResponse) }
+    def patch_passthrough_raw(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil)
       # patch_passthrough_raw - Passthrough PUT
       request = Models::Operations::PatchPassthroughRawRequest.new(
         
         connection_id: connection_id,
         path: path,
-        request_body: request_body
+        request_body: request_body,
+        query: query
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -866,6 +879,7 @@ module UnifiedRubySDK
       else
         body = data
       end
+      query_params = Utils.get_query_params(Models::Operations::PatchPassthroughRawRequest, request)
       headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -892,6 +906,7 @@ module UnifiedRubySDK
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
           Utils.configure_request_security(req, security)
 
           @sdk_configuration.hooks.before_request(
@@ -1045,13 +1060,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemovePassthroughResponse) }
-    def remove_passthrough(connection_id:, path:, timeout_ms: nil)
+    sig { params(connection_id: ::String, path: ::String, query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemovePassthroughResponse) }
+    def remove_passthrough(connection_id:, path:, query: nil, timeout_ms: nil)
       # remove_passthrough - Passthrough DELETE
       request = Models::Operations::RemovePassthroughRequest.new(
         
         connection_id: connection_id,
-        path: path
+        path: path,
+        query: query
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1062,6 +1078,7 @@ module UnifiedRubySDK
         request
       )
       headers = {}
+      query_params = Utils.get_query_params(Models::Operations::RemovePassthroughRequest, request)
       headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1087,6 +1104,7 @@ module UnifiedRubySDK
         http_response = connection.delete(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
           Utils.configure_request_security(req, security)
 
           @sdk_configuration.hooks.before_request(
@@ -1240,14 +1258,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePassthroughJsonResponse) }
-    def update_passthrough_json(connection_id:, path:, request_body: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePassthroughJsonResponse) }
+    def update_passthrough_json(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil)
       # update_passthrough_json - Passthrough PUT
       request = Models::Operations::UpdatePassthroughJsonRequest.new(
         
         connection_id: connection_id,
         path: path,
-        request_body: request_body
+        request_body: request_body,
+        query: query
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1268,6 +1287,7 @@ module UnifiedRubySDK
       else
         body = data
       end
+      query_params = Utils.get_query_params(Models::Operations::UpdatePassthroughJsonRequest, request)
       headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1294,6 +1314,7 @@ module UnifiedRubySDK
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
           Utils.configure_request_security(req, security)
 
           @sdk_configuration.hooks.before_request(
@@ -1447,14 +1468,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePassthroughRawResponse) }
-    def update_passthrough_raw(connection_id:, path:, request_body: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePassthroughRawResponse) }
+    def update_passthrough_raw(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil)
       # update_passthrough_raw - Passthrough PUT
       request = Models::Operations::UpdatePassthroughRawRequest.new(
         
         connection_id: connection_id,
         path: path,
-        request_body: request_body
+        request_body: request_body,
+        query: query
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1475,6 +1497,7 @@ module UnifiedRubySDK
       else
         body = data
       end
+      query_params = Utils.get_query_params(Models::Operations::UpdatePassthroughRawRequest, request)
       headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1501,6 +1524,7 @@ module UnifiedRubySDK
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
           Utils.configure_request_security(req, security)
 
           @sdk_configuration.hooks.before_request(

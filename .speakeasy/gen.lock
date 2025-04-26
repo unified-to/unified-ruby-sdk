@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 3cc7cb33432bf3a1c948159a8589fc49
+  docChecksum: e254ae145e90e83e726dc49d774763d7
   docVersion: "1.0"
   speakeasyVersion: 1.533.0
   generationVersion: 2.578.0
-  releaseVersion: 0.12.1
-  configChecksum: bcc02a4ce2cee69158b16c137fda2019
+  releaseVersion: 0.13.1
+  configChecksum: 3c2332c159a1da783a70efc2d264c104
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -151,8 +151,12 @@ generatedFiles:
   - docs/models/operations/createticketingnoteresponse.md
   - docs/models/operations/createticketingticketrequest.md
   - docs/models/operations/createticketingticketresponse.md
+  - docs/models/operations/createuccommentrequest.md
+  - docs/models/operations/createuccommentresponse.md
   - docs/models/operations/createuccontactrequest.md
   - docs/models/operations/createuccontactresponse.md
+  - docs/models/operations/createucrecordingrequest.md
+  - docs/models/operations/createucrecordingresponse.md
   - docs/models/operations/createunifiedconnectionresponse.md
   - docs/models/operations/createunifiedwebhookrequest.md
   - docs/models/operations/createunifiedwebhookresponse.md
@@ -294,8 +298,12 @@ generatedFiles:
   - docs/models/operations/getticketingnoteresponse.md
   - docs/models/operations/getticketingticketrequest.md
   - docs/models/operations/getticketingticketresponse.md
+  - docs/models/operations/getuccommentrequest.md
+  - docs/models/operations/getuccommentresponse.md
   - docs/models/operations/getuccontactrequest.md
   - docs/models/operations/getuccontactresponse.md
+  - docs/models/operations/getucrecordingrequest.md
+  - docs/models/operations/getucrecordingresponse.md
   - docs/models/operations/getunifiedapicallrequest.md
   - docs/models/operations/getunifiedapicallresponse.md
   - docs/models/operations/getunifiedconnectionrequest.md
@@ -458,8 +466,12 @@ generatedFiles:
   - docs/models/operations/listticketingticketsresponse.md
   - docs/models/operations/listuccallsrequest.md
   - docs/models/operations/listuccallsresponse.md
+  - docs/models/operations/listuccommentsrequest.md
+  - docs/models/operations/listuccommentsresponse.md
   - docs/models/operations/listuccontactsrequest.md
   - docs/models/operations/listuccontactsresponse.md
+  - docs/models/operations/listucrecordingsrequest.md
+  - docs/models/operations/listucrecordingsresponse.md
   - docs/models/operations/listunifiedapicallsrequest.md
   - docs/models/operations/listunifiedapicallsresponse.md
   - docs/models/operations/listunifiedconnectionsrequest.md
@@ -597,8 +609,12 @@ generatedFiles:
   - docs/models/operations/patchticketingnoteresponse.md
   - docs/models/operations/patchticketingticketrequest.md
   - docs/models/operations/patchticketingticketresponse.md
+  - docs/models/operations/patchuccommentrequest.md
+  - docs/models/operations/patchuccommentresponse.md
   - docs/models/operations/patchuccontactrequest.md
   - docs/models/operations/patchuccontactresponse.md
+  - docs/models/operations/patchucrecordingrequest.md
+  - docs/models/operations/patchucrecordingresponse.md
   - docs/models/operations/patchunifiedconnectionrequest.md
   - docs/models/operations/patchunifiedconnectionresponse.md
   - docs/models/operations/patchunifiedwebhookrequest.md
@@ -728,8 +744,12 @@ generatedFiles:
   - docs/models/operations/removeticketingnoteresponse.md
   - docs/models/operations/removeticketingticketrequest.md
   - docs/models/operations/removeticketingticketresponse.md
+  - docs/models/operations/removeuccommentrequest.md
+  - docs/models/operations/removeuccommentresponse.md
   - docs/models/operations/removeuccontactrequest.md
   - docs/models/operations/removeuccontactresponse.md
+  - docs/models/operations/removeucrecordingrequest.md
+  - docs/models/operations/removeucrecordingresponse.md
   - docs/models/operations/removeunifiedconnectionrequest.md
   - docs/models/operations/removeunifiedconnectionresponse.md
   - docs/models/operations/removeunifiedwebhookrequest.md
@@ -858,8 +878,12 @@ generatedFiles:
   - docs/models/operations/updateticketingnoteresponse.md
   - docs/models/operations/updateticketingticketrequest.md
   - docs/models/operations/updateticketingticketresponse.md
+  - docs/models/operations/updateuccommentrequest.md
+  - docs/models/operations/updateuccommentresponse.md
   - docs/models/operations/updateuccontactrequest.md
   - docs/models/operations/updateuccontactresponse.md
+  - docs/models/operations/updateucrecordingrequest.md
+  - docs/models/operations/updateucrecordingresponse.md
   - docs/models/operations/updateunifiedconnectionrequest.md
   - docs/models/operations/updateunifiedconnectionresponse.md
   - docs/models/operations/updateunifiedwebhookrequest.md
@@ -1035,6 +1059,7 @@ generatedFiles:
   - docs/models/shared/listaccountid.md
   - docs/models/shared/listapplicationid.md
   - docs/models/shared/listcalendarid.md
+  - docs/models/shared/listcallid.md
   - docs/models/shared/listcandidateid.md
   - docs/models/shared/listchannelid.md
   - docs/models/shared/listclassid.md
@@ -1234,9 +1259,13 @@ generatedFiles:
   - docs/models/shared/ticketingticketstatus.md
   - docs/models/shared/type.md
   - docs/models/shared/uccall.md
+  - docs/models/shared/uccomment.md
   - docs/models/shared/uccontact.md
   - docs/models/shared/ucemail.md
   - docs/models/shared/ucemailtype.md
+  - docs/models/shared/ucrecording.md
+  - docs/models/shared/ucrecordingmedia.md
+  - docs/models/shared/ucrecordingtranscript.md
   - docs/models/shared/uctelephone.md
   - docs/models/shared/uctelephonetype.md
   - docs/models/shared/value.md
@@ -1538,8 +1567,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createticketingnote_response.rb
   - lib/unified_ruby_sdk/models/operations/createticketingticket_request.rb
   - lib/unified_ruby_sdk/models/operations/createticketingticket_response.rb
+  - lib/unified_ruby_sdk/models/operations/createuccomment_request.rb
+  - lib/unified_ruby_sdk/models/operations/createuccomment_response.rb
   - lib/unified_ruby_sdk/models/operations/createuccontact_request.rb
   - lib/unified_ruby_sdk/models/operations/createuccontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/createucrecording_request.rb
+  - lib/unified_ruby_sdk/models/operations/createucrecording_response.rb
   - lib/unified_ruby_sdk/models/operations/createunifiedconnection_response.rb
   - lib/unified_ruby_sdk/models/operations/createunifiedwebhook_request.rb
   - lib/unified_ruby_sdk/models/operations/createunifiedwebhook_response.rb
@@ -1681,8 +1714,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getticketingnote_response.rb
   - lib/unified_ruby_sdk/models/operations/getticketingticket_request.rb
   - lib/unified_ruby_sdk/models/operations/getticketingticket_response.rb
+  - lib/unified_ruby_sdk/models/operations/getuccomment_request.rb
+  - lib/unified_ruby_sdk/models/operations/getuccomment_response.rb
   - lib/unified_ruby_sdk/models/operations/getuccontact_request.rb
   - lib/unified_ruby_sdk/models/operations/getuccontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/getucrecording_request.rb
+  - lib/unified_ruby_sdk/models/operations/getucrecording_response.rb
   - lib/unified_ruby_sdk/models/operations/getunifiedapicall_request.rb
   - lib/unified_ruby_sdk/models/operations/getunifiedapicall_response.rb
   - lib/unified_ruby_sdk/models/operations/getunifiedconnection_request.rb
@@ -1845,8 +1882,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listticketingtickets_response.rb
   - lib/unified_ruby_sdk/models/operations/listuccalls_request.rb
   - lib/unified_ruby_sdk/models/operations/listuccalls_response.rb
+  - lib/unified_ruby_sdk/models/operations/listuccomments_request.rb
+  - lib/unified_ruby_sdk/models/operations/listuccomments_response.rb
   - lib/unified_ruby_sdk/models/operations/listuccontacts_request.rb
   - lib/unified_ruby_sdk/models/operations/listuccontacts_response.rb
+  - lib/unified_ruby_sdk/models/operations/listucrecordings_request.rb
+  - lib/unified_ruby_sdk/models/operations/listucrecordings_response.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedapicalls_request.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedapicalls_response.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedconnections_request.rb
@@ -1984,8 +2025,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchticketingnote_response.rb
   - lib/unified_ruby_sdk/models/operations/patchticketingticket_request.rb
   - lib/unified_ruby_sdk/models/operations/patchticketingticket_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchuccomment_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchuccomment_response.rb
   - lib/unified_ruby_sdk/models/operations/patchuccontact_request.rb
   - lib/unified_ruby_sdk/models/operations/patchuccontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchucrecording_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchucrecording_response.rb
   - lib/unified_ruby_sdk/models/operations/patchunifiedconnection_request.rb
   - lib/unified_ruby_sdk/models/operations/patchunifiedconnection_response.rb
   - lib/unified_ruby_sdk/models/operations/patchunifiedwebhook_request.rb
@@ -2115,8 +2160,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removeticketingnote_response.rb
   - lib/unified_ruby_sdk/models/operations/removeticketingticket_request.rb
   - lib/unified_ruby_sdk/models/operations/removeticketingticket_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeuccomment_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeuccomment_response.rb
   - lib/unified_ruby_sdk/models/operations/removeuccontact_request.rb
   - lib/unified_ruby_sdk/models/operations/removeuccontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeucrecording_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeucrecording_response.rb
   - lib/unified_ruby_sdk/models/operations/removeunifiedconnection_request.rb
   - lib/unified_ruby_sdk/models/operations/removeunifiedconnection_response.rb
   - lib/unified_ruby_sdk/models/operations/removeunifiedwebhook_request.rb
@@ -2245,8 +2294,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updateticketingnote_response.rb
   - lib/unified_ruby_sdk/models/operations/updateticketingticket_request.rb
   - lib/unified_ruby_sdk/models/operations/updateticketingticket_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateuccomment_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateuccomment_response.rb
   - lib/unified_ruby_sdk/models/operations/updateuccontact_request.rb
   - lib/unified_ruby_sdk/models/operations/updateuccontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateucrecording_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateucrecording_response.rb
   - lib/unified_ruby_sdk/models/operations/updateunifiedconnection_request.rb
   - lib/unified_ruby_sdk/models/operations/updateunifiedconnection_response.rb
   - lib/unified_ruby_sdk/models/operations/updateunifiedwebhook_request.rb
@@ -2423,6 +2476,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_account_id.rb
   - lib/unified_ruby_sdk/models/shared/list_application_id.rb
   - lib/unified_ruby_sdk/models/shared/list_calendar_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_call_id.rb
   - lib/unified_ruby_sdk/models/shared/list_candidate_id.rb
   - lib/unified_ruby_sdk/models/shared/list_channel_id.rb
   - lib/unified_ruby_sdk/models/shared/list_class_id.rb
@@ -2622,9 +2676,13 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/ticketingticket_status.rb
   - lib/unified_ruby_sdk/models/shared/type.rb
   - lib/unified_ruby_sdk/models/shared/uccall.rb
+  - lib/unified_ruby_sdk/models/shared/uccomment.rb
   - lib/unified_ruby_sdk/models/shared/uccontact.rb
   - lib/unified_ruby_sdk/models/shared/ucemail.rb
   - lib/unified_ruby_sdk/models/shared/ucemail_type.rb
+  - lib/unified_ruby_sdk/models/shared/ucrecording.rb
+  - lib/unified_ruby_sdk/models/shared/ucrecordingmedia.rb
+  - lib/unified_ruby_sdk/models/shared/ucrecordingtranscript.rb
   - lib/unified_ruby_sdk/models/shared/uctelephone.rb
   - lib/unified_ruby_sdk/models/shared/uctelephone_type.rb
   - lib/unified_ruby_sdk/models/shared/value.rb
@@ -5736,6 +5794,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/opt/lib"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5748,6 +5807,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/etc/namedb"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5761,6 +5821,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/selinux"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5774,6 +5835,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/home/user"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5786,6 +5848,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/etc/mail"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5799,6 +5862,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/Applications"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5812,6 +5876,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/etc/namedb"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5824,6 +5889,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/System"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -6867,5 +6933,125 @@ examples:
       responses:
         "200":
           application/json: {"name": "<value>"}
+  createUcRecording:
+    speakeasy-default-create-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getUcRecording:
+    speakeasy-default-get-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  listUcRecordings:
+    speakeasy-default-list-uc-recordings:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}]
+  patchUcRecording:
+    speakeasy-default-patch-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeUcRecording:
+    speakeasy-default-remove-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateUcRecording:
+    speakeasy-default-update-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createUcComment:
+    speakeasy-default-create-uc-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"content": "<value>"}
+      responses:
+        "200":
+          application/json: {"content": "<value>"}
+  getUcComment:
+    speakeasy-default-get-uc-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"content": "<value>"}
+  listUcComments:
+    speakeasy-default-list-uc-comments:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"content": "<value>"}, {"content": "<value>"}]
+  patchUcComment:
+    speakeasy-default-patch-uc-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"content": "<value>"}
+      responses:
+        "200":
+          application/json: {"content": "<value>"}
+  removeUcComment:
+    speakeasy-default-remove-uc-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateUcComment:
+    speakeasy-default-update-uc-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"content": "<value>"}
+      responses:
+        "200":
+          application/json: {"content": "<value>"}
 examplesVersion: 1.0.1
 generatedTests: {}

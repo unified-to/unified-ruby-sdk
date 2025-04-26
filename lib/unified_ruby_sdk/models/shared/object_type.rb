@@ -59,6 +59,8 @@ module UnifiedRubySDK
           TICKETING_CUSTOMER = new('ticketing_customer')
           UC_CONTACT = new('uc_contact')
           UC_CALL = new('uc_call')
+          UC_COMMENT = new('uc_comment')
+          UC_RECORDING = new('uc_recording')
           ENRICH_PERSON = new('enrich_person')
           ENRICH_COMPANY = new('enrich_company')
           STORAGE_FILE = new('storage_file')

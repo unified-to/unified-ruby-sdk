@@ -47,7 +47,7 @@ req = Models::Shared::Connection.new(
   ],
   integration_type: "<value>",
   permissions: [
-    Models::Shared::PropertyConnectionPermissions::MARTECH_LIST_READ,
+    Models::Shared::PropertyConnectionPermissions::MARTECH_MEMBER_READ,
   ],
 )
 
@@ -89,7 +89,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.unified.create_unified_webhook(webhook=Models::Shared::Webhook.new(
   connection_id: "<id>",
   event: Models::Shared::Event::CREATED,
-  object_type: Models::Shared::ObjectType::HRIS_PAYSLIP,
+  object_type: Models::Shared::ObjectType::HRIS_TIMEOFF,
 ), include_all=false)
 
 if ! res.webhook.nil?
@@ -542,7 +542,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.unified.patch_unified_webhook(webhook=Models::Shared::Webhook.new(
   connection_id: "<id>",
   event: Models::Shared::Event::DELETED,
-  object_type: Models::Shared::ObjectType::CRM_LEAD,
+  object_type: Models::Shared::ObjectType::CRM_PIPELINE,
 ), id="<id>")
 
 if ! res.webhook.nil?
@@ -731,7 +731,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.unified.update_unified_webhook(webhook=Models::Shared::Webhook.new(
   connection_id: "<id>",
   event: Models::Shared::Event::CREATED,
-  object_type: Models::Shared::ObjectType::PAYMENT_LINK,
+  object_type: Models::Shared::ObjectType::PAYMENT_PAYOUT,
 ), id="<id>")
 
 if ! res.webhook.nil?

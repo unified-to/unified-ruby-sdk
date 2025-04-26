@@ -29,7 +29,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.passthrough.create_passthrough_json(connection_id="<id>", path="/opt/lib", request_body="<value>")
+res = s.passthrough.create_passthrough_json(connection_id="<id>", path="/opt/lib", request_body="<value>", query={
+  "key": "<value>",
+})
 
 if res.status_code == 200
   # handle response
@@ -44,6 +46,7 @@ end
 | `connection_id`              | *::String*                   | :heavy_check_mark:           | ID of the connection         |
 | `path`                       | *::String*                   | :heavy_check_mark:           | N/A                          |
 | `request_body`               | *T.nilable(::Object)*        | :heavy_minus_sign:           | integration-specific payload |
+| `query`                      | T::Hash[Symbol, *::Object*]  | :heavy_minus_sign:           | N/A                          |
 
 ### Response
 
@@ -66,7 +69,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.passthrough.create_passthrough_raw(connection_id="<id>", path="/etc/namedb", request_body="0x4B93D6214f".encode())
+res = s.passthrough.create_passthrough_raw(connection_id="<id>", path="/etc/namedb", request_body="0x4B93D6214f".encode(), query={
+  "key": "<value>",
+})
 
 if res.status_code == 200
   # handle response
@@ -81,6 +86,7 @@ end
 | `connection_id`              | *::String*                   | :heavy_check_mark:           | ID of the connection         |
 | `path`                       | *::String*                   | :heavy_check_mark:           | N/A                          |
 | `request_body`               | *T.nilable(::String)*        | :heavy_minus_sign:           | integration-specific payload |
+| `query`                      | T::Hash[Symbol, *::Object*]  | :heavy_minus_sign:           | N/A                          |
 
 ### Response
 
@@ -103,7 +109,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.passthrough.list_passthroughs(connection_id="<id>", path="/selinux")
+res = s.passthrough.list_passthroughs(connection_id="<id>", path="/selinux", query={
+  "key": "<value>",
+})
 
 if res.status_code == 200
   # handle response
@@ -113,10 +121,11 @@ end
 
 ### Parameters
 
-| Parameter            | Type                 | Required             | Description          |
-| -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
-| `path`               | *::String*           | :heavy_check_mark:   | N/A                  |
+| Parameter                   | Type                        | Required                    | Description                 |
+| --------------------------- | --------------------------- | --------------------------- | --------------------------- |
+| `connection_id`             | *::String*                  | :heavy_check_mark:          | ID of the connection        |
+| `path`                      | *::String*                  | :heavy_check_mark:          | N/A                         |
+| `query`                     | T::Hash[Symbol, *::Object*] | :heavy_minus_sign:          | N/A                         |
 
 ### Response
 
@@ -139,7 +148,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.passthrough.patch_passthrough_json(connection_id="<id>", path="/home/user", request_body="<value>")
+res = s.passthrough.patch_passthrough_json(connection_id="<id>", path="/home/user", request_body="<value>", query={
+  "key": "<value>",
+})
 
 if res.status_code == 200
   # handle response
@@ -154,6 +165,7 @@ end
 | `connection_id`              | *::String*                   | :heavy_check_mark:           | ID of the connection         |
 | `path`                       | *::String*                   | :heavy_check_mark:           | N/A                          |
 | `request_body`               | *T.nilable(::Object)*        | :heavy_minus_sign:           | integration-specific payload |
+| `query`                      | T::Hash[Symbol, *::Object*]  | :heavy_minus_sign:           | N/A                          |
 
 ### Response
 
@@ -176,7 +188,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.passthrough.patch_passthrough_raw(connection_id="<id>", path="/etc/mail", request_body="0xCbf5667DBd".encode())
+res = s.passthrough.patch_passthrough_raw(connection_id="<id>", path="/etc/mail", request_body="0xCbf5667DBd".encode(), query={
+  "key": "<value>",
+})
 
 if res.status_code == 200
   # handle response
@@ -191,6 +205,7 @@ end
 | `connection_id`              | *::String*                   | :heavy_check_mark:           | ID of the connection         |
 | `path`                       | *::String*                   | :heavy_check_mark:           | N/A                          |
 | `request_body`               | *T.nilable(::String)*        | :heavy_minus_sign:           | integration-specific payload |
+| `query`                      | T::Hash[Symbol, *::Object*]  | :heavy_minus_sign:           | N/A                          |
 
 ### Response
 
@@ -213,7 +228,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.passthrough.remove_passthrough(connection_id="<id>", path="/Applications")
+res = s.passthrough.remove_passthrough(connection_id="<id>", path="/Applications", query={
+  "key": "<value>",
+})
 
 if res.status_code == 200
   # handle response
@@ -223,10 +240,11 @@ end
 
 ### Parameters
 
-| Parameter            | Type                 | Required             | Description          |
-| -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
-| `path`               | *::String*           | :heavy_check_mark:   | N/A                  |
+| Parameter                   | Type                        | Required                    | Description                 |
+| --------------------------- | --------------------------- | --------------------------- | --------------------------- |
+| `connection_id`             | *::String*                  | :heavy_check_mark:          | ID of the connection        |
+| `path`                      | *::String*                  | :heavy_check_mark:          | N/A                         |
+| `query`                     | T::Hash[Symbol, *::Object*] | :heavy_minus_sign:          | N/A                         |
 
 ### Response
 
@@ -249,7 +267,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.passthrough.update_passthrough_json(connection_id="<id>", path="/etc/namedb", request_body="<value>")
+res = s.passthrough.update_passthrough_json(connection_id="<id>", path="/etc/namedb", request_body="<value>", query={
+  "key": "<value>",
+})
 
 if res.status_code == 200
   # handle response
@@ -264,6 +284,7 @@ end
 | `connection_id`              | *::String*                   | :heavy_check_mark:           | ID of the connection         |
 | `path`                       | *::String*                   | :heavy_check_mark:           | N/A                          |
 | `request_body`               | *T.nilable(::Object)*        | :heavy_minus_sign:           | integration-specific payload |
+| `query`                      | T::Hash[Symbol, *::Object*]  | :heavy_minus_sign:           | N/A                          |
 
 ### Response
 
@@ -286,7 +307,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.passthrough.update_passthrough_raw(connection_id="<id>", path="/System", request_body="0x5739830F8E".encode())
+res = s.passthrough.update_passthrough_raw(connection_id="<id>", path="/System", request_body="0x5739830F8E".encode(), query={
+  "key": "<value>",
+})
 
 if res.status_code == 200
   # handle response
@@ -301,6 +324,7 @@ end
 | `connection_id`              | *::String*                   | :heavy_check_mark:           | ID of the connection         |
 | `path`                       | *::String*                   | :heavy_check_mark:           | N/A                          |
 | `request_body`               | *T.nilable(::String)*        | :heavy_minus_sign:           | integration-specific payload |
+| `query`                      | T::Hash[Symbol, *::Object*]  | :heavy_minus_sign:           | N/A                          |
 
 ### Response
 

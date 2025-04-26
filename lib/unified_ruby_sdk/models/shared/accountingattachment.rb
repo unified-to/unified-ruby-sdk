@@ -14,29 +14,29 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :download_url, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('download_url') } }
+        field :download_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('download_url') } }
 
-        field :id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
-        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :mime_type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mime_type') } }
 
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        sig { params(download_url: ::String, id: ::String, name: ::String, mime_type: T.nilable(::String)).void }
-        def initialize(download_url: nil, id: nil, name: nil, mime_type: nil)
+
+        sig { params(download_url: T.nilable(::String), id: T.nilable(::String), mime_type: T.nilable(::String), name: T.nilable(::String)).void }
+        def initialize(download_url: nil, id: nil, mime_type: nil, name: nil)
           @download_url = download_url
           @id = id
-          @name = name
           @mime_type = mime_type
+          @name = name
         end
 
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @download_url == other.download_url
           return false unless @id == other.id
-          return false unless @name == other.name
           return false unless @mime_type == other.mime_type
+          return false unless @name == other.name
           true
         end
       end

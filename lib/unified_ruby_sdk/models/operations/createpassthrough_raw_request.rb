@@ -17,14 +17,17 @@ module UnifiedRubySDK
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
 
         field :path, ::String, { 'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': false } }
+
+        field :query, T.nilable(T::Hash[Symbol, ::Object]), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
         # integration-specific payload
         field :request_body, T.nilable(::String), { 'request': { 'media_type': 'text/plain' } }
 
 
-        sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String)).void }
-        def initialize(connection_id: nil, path: nil, request_body: nil)
+        sig { params(connection_id: ::String, path: ::String, query: T.nilable(T::Hash[Symbol, ::Object]), request_body: T.nilable(::String)).void }
+        def initialize(connection_id: nil, path: nil, query: nil, request_body: nil)
           @connection_id = connection_id
           @path = path
+          @query = query
           @request_body = request_body
         end
 
@@ -32,6 +35,7 @@ module UnifiedRubySDK
           return false unless other.is_a? self.class
           return false unless @connection_id == other.connection_id
           return false unless @path == other.path
+          return false unless @query == other.query
           return false unless @request_body == other.request_body
           true
         end
