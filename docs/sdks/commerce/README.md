@@ -49,7 +49,7 @@ res = s.commerce.create_commerce_collection(commerce_collection=Models::Shared::
   name: "<value>",
 ), connection_id="<id>", fields_=[
   "<value>",
-])
+], raw="<value>")
 
 if ! res.commerce_collection.nil?
   # handle response
@@ -59,11 +59,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `commerce_collection`                                                           | [Models::Shared::CommerceCollection](../../models/shared/commercecollection.md) | :heavy_check_mark:                                                              | A collection of items/products/services                                         |
-| `connection_id`                                                                 | *::String*                                                                      | :heavy_check_mark:                                                              | ID of the connection                                                            |
-| `fields_`                                                                       | T::Array<*::String*>                                                            | :heavy_minus_sign:                                                              | Comma-delimited fields to return                                                |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `commerce_collection`                                                                                                                            | [Models::Shared::CommerceCollection](../../models/shared/commercecollection.md)                                                                  | :heavy_check_mark:                                                                                                                               | A collection of items/products/services                                                                                                          |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<*::String*>                                                                                                                             | :heavy_minus_sign:                                                                                                                               | Comma-delimited fields to return                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
@@ -90,7 +91,7 @@ res = s.commerce.create_commerce_inventory(commerce_inventory=Models::Shared::Co
   available: 5165.08,
 ), connection_id="<id>", fields_=[
   "<value>",
-])
+], raw="<value>")
 
 if ! res.commerce_inventory.nil?
   # handle response
@@ -100,11 +101,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `commerce_inventory`                                                          | [Models::Shared::CommerceInventory](../../models/shared/commerceinventory.md) | :heavy_check_mark:                                                            | N/A                                                                           |
-| `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
-| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `commerce_inventory`                                                                                                                             | [Models::Shared::CommerceInventory](../../models/shared/commerceinventory.md)                                                                    | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<*::String*>                                                                                                                             | :heavy_minus_sign:                                                                                                                               | Comma-delimited fields to return                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
@@ -129,7 +131,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.commerce.create_commerce_item(commerce_item=Models::Shared::CommerceItem.new(), connection_id="<id>", fields_=[
   "<value>",
-])
+], raw="<value>")
 
 if ! res.commerce_item.nil?
   # handle response
@@ -139,11 +141,12 @@ end
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `commerce_item`                                                     | [Models::Shared::CommerceItem](../../models/shared/commerceitem.md) | :heavy_check_mark:                                                  | N/A                                                                 |
-| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
-| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `commerce_item`                                                                                                                                  | [Models::Shared::CommerceItem](../../models/shared/commerceitem.md)                                                                              | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<*::String*>                                                                                                                             | :heavy_minus_sign:                                                                                                                               | Comma-delimited fields to return                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
@@ -170,7 +173,7 @@ res = s.commerce.create_commerce_location(commerce_location=Models::Shared::Comm
   name: "<value>",
 ), connection_id="<id>", fields_=[
   "<value>",
-])
+], raw="<value>")
 
 if ! res.commerce_location.nil?
   # handle response
@@ -180,11 +183,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `commerce_location`                                                         | [Models::Shared::CommerceLocation](../../models/shared/commercelocation.md) | :heavy_check_mark:                                                          | N/A                                                                         |
-| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
-| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `commerce_location`                                                                                                                              | [Models::Shared::CommerceLocation](../../models/shared/commercelocation.md)                                                                      | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<*::String*>                                                                                                                             | :heavy_minus_sign:                                                                                                                               | Comma-delimited fields to return                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
@@ -209,7 +213,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.commerce.get_commerce_collection(connection_id="<id>", id="<id>", fields_=[
   "<value>",
-])
+], raw="<value>")
 
 if ! res.commerce_collection.nil?
   # handle response
@@ -219,11 +223,12 @@ end
 
 ### Parameters
 
-| Parameter                        | Type                             | Required                         | Description                      |
-| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Collection             |
-| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Collection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<*::String*>                                                                                                                             | :heavy_minus_sign:                                                                                                                               | Comma-delimited fields to return                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
@@ -248,7 +253,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.commerce.get_commerce_inventory(connection_id="<id>", id="<id>", fields_=[
   "<value>",
-])
+], raw="<value>")
 
 if ! res.commerce_inventory.nil?
   # handle response
@@ -258,11 +263,12 @@ end
 
 ### Parameters
 
-| Parameter                        | Type                             | Required                         | Description                      |
-| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Inventory              |
-| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Inventory                                                                                                                              |
+| `fields_`                                                                                                                                        | T::Array<*::String*>                                                                                                                             | :heavy_minus_sign:                                                                                                                               | Comma-delimited fields to return                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
@@ -287,7 +293,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.commerce.get_commerce_item(connection_id="<id>", id="<id>", fields_=[
   "<value>",
-])
+], raw="<value>")
 
 if ! res.commerce_item.nil?
   # handle response
@@ -297,11 +303,12 @@ end
 
 ### Parameters
 
-| Parameter                        | Type                             | Required                         | Description                      |
-| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Item                   |
-| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Item                                                                                                                                   |
+| `fields_`                                                                                                                                        | T::Array<*::String*>                                                                                                                             | :heavy_minus_sign:                                                                                                                               | Comma-delimited fields to return                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
@@ -326,7 +333,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.commerce.get_commerce_location(connection_id="<id>", id="<id>", fields_=[
   "<value>",
-])
+], raw="<value>")
 
 if ! res.commerce_location.nil?
   # handle response
@@ -336,11 +343,12 @@ end
 
 ### Parameters
 
-| Parameter                        | Type                             | Required                         | Description                      |
-| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Location               |
-| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Location                                                                                                                               |
+| `fields_`                                                                                                                                        | T::Array<*::String*>                                                                                                                             | :heavy_minus_sign:                                                                                                                               | Comma-delimited fields to return                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
@@ -519,11 +527,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.patch_commerce_collection(commerce_collection=Models::Shared::CommerceCollection.new(
-  name: "<value>",
-), connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-])
+req = Models::Operations::PatchCommerceCollectionRequest.new(
+  commerce_collection: Models::Shared::CommerceCollection.new(
+    name: "<value>",
+  ),
+  connection_id: "<id>",
+  id: "<id>",
+)
+
+res = s.commerce.patch_commerce_collection(req)
 
 if ! res.commerce_collection.nil?
   # handle response
@@ -533,12 +545,9 @@ end
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `commerce_collection`                                                           | [Models::Shared::CommerceCollection](../../models/shared/commercecollection.md) | :heavy_check_mark:                                                              | A collection of items/products/services                                         |
-| `connection_id`                                                                 | *::String*                                                                      | :heavy_check_mark:                                                              | ID of the connection                                                            |
-| `id`                                                                            | *::String*                                                                      | :heavy_check_mark:                                                              | ID of the Collection                                                            |
-| `fields_`                                                                       | T::Array<*::String*>                                                            | :heavy_minus_sign:                                                              | Comma-delimited fields to return                                                |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [Models::Operations::PatchCommerceCollectionRequest](../../models/operations/patchcommercecollectionrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 ### Response
 
@@ -561,11 +570,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.patch_commerce_inventory(commerce_inventory=Models::Shared::CommerceInventory.new(
-  available: 615.23,
-), connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-])
+req = Models::Operations::PatchCommerceInventoryRequest.new(
+  commerce_inventory: Models::Shared::CommerceInventory.new(
+    available: 615.23,
+  ),
+  connection_id: "<id>",
+  id: "<id>",
+)
+
+res = s.commerce.patch_commerce_inventory(req)
 
 if ! res.commerce_inventory.nil?
   # handle response
@@ -575,12 +588,9 @@ end
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `commerce_inventory`                                                          | [Models::Shared::CommerceInventory](../../models/shared/commerceinventory.md) | :heavy_check_mark:                                                            | N/A                                                                           |
-| `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
-| `id`                                                                          | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the Inventory                                                           |
-| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [Models::Operations::PatchCommerceInventoryRequest](../../models/operations/patchcommerceinventoryrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
 
 ### Response
 
@@ -603,9 +613,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.patch_commerce_item(commerce_item=Models::Shared::CommerceItem.new(), connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-])
+req = Models::Operations::PatchCommerceItemRequest.new(
+  commerce_item: Models::Shared::CommerceItem.new(),
+  connection_id: "<id>",
+  id: "<id>",
+)
+
+res = s.commerce.patch_commerce_item(req)
 
 if ! res.commerce_item.nil?
   # handle response
@@ -615,12 +629,9 @@ end
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `commerce_item`                                                     | [Models::Shared::CommerceItem](../../models/shared/commerceitem.md) | :heavy_check_mark:                                                  | N/A                                                                 |
-| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
-| `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Item                                                      |
-| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::PatchCommerceItemRequest](../../models/operations/patchcommerceitemrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
@@ -643,11 +654,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.patch_commerce_location(commerce_location=Models::Shared::CommerceLocation.new(
-  name: "<value>",
-), connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-])
+req = Models::Operations::PatchCommerceLocationRequest.new(
+  commerce_location: Models::Shared::CommerceLocation.new(
+    name: "<value>",
+  ),
+  connection_id: "<id>",
+  id: "<id>",
+)
+
+res = s.commerce.patch_commerce_location(req)
 
 if ! res.commerce_location.nil?
   # handle response
@@ -657,12 +672,9 @@ end
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `commerce_location`                                                         | [Models::Shared::CommerceLocation](../../models/shared/commercelocation.md) | :heavy_check_mark:                                                          | N/A                                                                         |
-| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
-| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Location                                                          |
-| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [Models::Operations::PatchCommerceLocationRequest](../../models/operations/patchcommercelocationrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
 
 ### Response
 
@@ -829,11 +841,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.update_commerce_collection(commerce_collection=Models::Shared::CommerceCollection.new(
-  name: "<value>",
-), connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-])
+req = Models::Operations::UpdateCommerceCollectionRequest.new(
+  commerce_collection: Models::Shared::CommerceCollection.new(
+    name: "<value>",
+  ),
+  connection_id: "<id>",
+  id: "<id>",
+)
+
+res = s.commerce.update_commerce_collection(req)
 
 if ! res.commerce_collection.nil?
   # handle response
@@ -843,12 +859,9 @@ end
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `commerce_collection`                                                           | [Models::Shared::CommerceCollection](../../models/shared/commercecollection.md) | :heavy_check_mark:                                                              | A collection of items/products/services                                         |
-| `connection_id`                                                                 | *::String*                                                                      | :heavy_check_mark:                                                              | ID of the connection                                                            |
-| `id`                                                                            | *::String*                                                                      | :heavy_check_mark:                                                              | ID of the Collection                                                            |
-| `fields_`                                                                       | T::Array<*::String*>                                                            | :heavy_minus_sign:                                                              | Comma-delimited fields to return                                                |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                         | [Models::Operations::UpdateCommerceCollectionRequest](../../models/operations/updatecommercecollectionrequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 ### Response
 
@@ -871,11 +884,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.update_commerce_inventory(commerce_inventory=Models::Shared::CommerceInventory.new(
-  available: 9360.02,
-), connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-])
+req = Models::Operations::UpdateCommerceInventoryRequest.new(
+  commerce_inventory: Models::Shared::CommerceInventory.new(
+    available: 9360.02,
+  ),
+  connection_id: "<id>",
+  id: "<id>",
+)
+
+res = s.commerce.update_commerce_inventory(req)
 
 if ! res.commerce_inventory.nil?
   # handle response
@@ -885,12 +902,9 @@ end
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `commerce_inventory`                                                          | [Models::Shared::CommerceInventory](../../models/shared/commerceinventory.md) | :heavy_check_mark:                                                            | N/A                                                                           |
-| `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
-| `id`                                                                          | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the Inventory                                                           |
-| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [Models::Operations::UpdateCommerceInventoryRequest](../../models/operations/updatecommerceinventoryrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 ### Response
 
@@ -913,9 +927,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.update_commerce_item(commerce_item=Models::Shared::CommerceItem.new(), connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-])
+req = Models::Operations::UpdateCommerceItemRequest.new(
+  commerce_item: Models::Shared::CommerceItem.new(),
+  connection_id: "<id>",
+  id: "<id>",
+)
+
+res = s.commerce.update_commerce_item(req)
 
 if ! res.commerce_item.nil?
   # handle response
@@ -925,12 +943,9 @@ end
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `commerce_item`                                                     | [Models::Shared::CommerceItem](../../models/shared/commerceitem.md) | :heavy_check_mark:                                                  | N/A                                                                 |
-| `connection_id`                                                     | *::String*                                                          | :heavy_check_mark:                                                  | ID of the connection                                                |
-| `id`                                                                | *::String*                                                          | :heavy_check_mark:                                                  | ID of the Item                                                      |
-| `fields_`                                                           | T::Array<*::String*>                                                | :heavy_minus_sign:                                                  | Comma-delimited fields to return                                    |
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::UpdateCommerceItemRequest](../../models/operations/updatecommerceitemrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
 
 ### Response
 
@@ -953,11 +968,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.update_commerce_location(commerce_location=Models::Shared::CommerceLocation.new(
-  name: "<value>",
-), connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-])
+req = Models::Operations::UpdateCommerceLocationRequest.new(
+  commerce_location: Models::Shared::CommerceLocation.new(
+    name: "<value>",
+  ),
+  connection_id: "<id>",
+  id: "<id>",
+)
+
+res = s.commerce.update_commerce_location(req)
 
 if ! res.commerce_location.nil?
   # handle response
@@ -967,12 +986,9 @@ end
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `commerce_location`                                                         | [Models::Shared::CommerceLocation](../../models/shared/commercelocation.md) | :heavy_check_mark:                                                          | N/A                                                                         |
-| `connection_id`                                                             | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the connection                                                        |
-| `id`                                                                        | *::String*                                                                  | :heavy_check_mark:                                                          | ID of the Location                                                          |
-| `fields_`                                                                   | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | Comma-delimited fields to return                                            |
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [Models::Operations::UpdateCommerceLocationRequest](../../models/operations/updatecommercelocationrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
 
 ### Response
 

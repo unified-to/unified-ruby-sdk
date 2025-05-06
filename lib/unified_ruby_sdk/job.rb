@@ -22,14 +22,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ats_job: Models::Shared::AtsJob, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsJobResponse) }
-    def create_ats_job(ats_job:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(ats_job: Models::Shared::AtsJob, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsJobResponse) }
+    def create_ats_job(ats_job:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_job - Create a job
       request = Models::Operations::CreateAtsJobRequest.new(
         
         ats_job: ats_job,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -146,14 +147,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsJobResponse) }
-    def get_ats_job(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsJobResponse) }
+    def get_ats_job(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_job - Retrieve a job
       request = Models::Operations::GetAtsJobRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -364,16 +366,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ats_job: Models::Shared::AtsJob, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsJobResponse) }
-    def patch_ats_job(ats_job:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchAtsJobRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsJobResponse) }
+    def patch_ats_job(request:, timeout_ms: nil)
       # patch_ats_job - Update a job
-      request = Models::Operations::PatchAtsJobRequest.new(
-        
-        ats_job: ats_job,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -599,16 +594,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ats_job: Models::Shared::AtsJob, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsJobResponse) }
-    def update_ats_job(ats_job:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateAtsJobRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsJobResponse) }
+    def update_ats_job(request:, timeout_ms: nil)
       # update_ats_job - Update a job
-      request = Models::Operations::UpdateAtsJobRequest.new(
-        
-        ats_job: ats_job,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

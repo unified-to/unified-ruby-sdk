@@ -22,14 +22,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(kms_page: Models::Shared::KmsPage, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateKmsPageResponse) }
-    def create_kms_page(kms_page:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(kms_page: Models::Shared::KmsPage, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateKmsPageResponse) }
+    def create_kms_page(kms_page:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_kms_page - Create a page
       request = Models::Operations::CreateKmsPageRequest.new(
         
         kms_page: kms_page,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -146,14 +147,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetKmsPageResponse) }
-    def get_kms_page(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetKmsPageResponse) }
+    def get_kms_page(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_kms_page - Retrieve a page
       request = Models::Operations::GetKmsPageRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -364,16 +366,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(kms_page: Models::Shared::KmsPage, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchKmsPageResponse) }
-    def patch_kms_page(kms_page:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchKmsPageRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchKmsPageResponse) }
+    def patch_kms_page(request:, timeout_ms: nil)
       # patch_kms_page - Update a page
-      request = Models::Operations::PatchKmsPageRequest.new(
-        
-        kms_page: kms_page,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -599,16 +594,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(kms_page: Models::Shared::KmsPage, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateKmsPageResponse) }
-    def update_kms_page(kms_page:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateKmsPageRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateKmsPageResponse) }
+    def update_kms_page(request:, timeout_ms: nil)
       # update_kms_page - Update a page
-      request = Models::Operations::UpdateKmsPageRequest.new(
-        
-        kms_page: kms_page,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

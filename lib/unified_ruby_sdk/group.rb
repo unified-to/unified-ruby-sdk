@@ -22,14 +22,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_group: Models::Shared::HrisGroup, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisGroupResponse) }
-    def create_hris_group(hris_group:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(hris_group: Models::Shared::HrisGroup, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisGroupResponse) }
+    def create_hris_group(hris_group:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_group - Create a group
       request = Models::Operations::CreateHrisGroupRequest.new(
         
         hris_group: hris_group,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -267,14 +268,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisGroupResponse) }
-    def get_hris_group(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisGroupResponse) }
+    def get_hris_group(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_group - Retrieve a group
       request = Models::Operations::GetHrisGroupRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -700,16 +702,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_group: Models::Shared::HrisGroup, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisGroupResponse) }
-    def patch_hris_group(hris_group:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchHrisGroupRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisGroupResponse) }
+    def patch_hris_group(request:, timeout_ms: nil)
       # patch_hris_group - Update a group
-      request = Models::Operations::PatchHrisGroupRequest.new(
-        
-        hris_group: hris_group,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1167,16 +1162,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_group: Models::Shared::HrisGroup, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisGroupResponse) }
-    def update_hris_group(hris_group:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateHrisGroupRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisGroupResponse) }
+    def update_hris_group(request:, timeout_ms: nil)
       # update_hris_group - Update a group
-      request = Models::Operations::UpdateHrisGroupRequest.new(
-        
-        hris_group: hris_group,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

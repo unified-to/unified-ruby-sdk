@@ -22,14 +22,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_branch: Models::Shared::RepoBranch, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoBranchResponse) }
-    def create_repo_branch(repo_branch:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(repo_branch: Models::Shared::RepoBranch, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoBranchResponse) }
+    def create_repo_branch(repo_branch:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_repo_branch - Create a branch
       request = Models::Operations::CreateRepoBranchRequest.new(
         
         repo_branch: repo_branch,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -146,14 +147,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_commit: Models::Shared::RepoCommit, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoCommitResponse) }
-    def create_repo_commit(repo_commit:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(repo_commit: Models::Shared::RepoCommit, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoCommitResponse) }
+    def create_repo_commit(repo_commit:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_repo_commit - Create a commit
       request = Models::Operations::CreateRepoCommitRequest.new(
         
         repo_commit: repo_commit,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -270,14 +272,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_organization: Models::Shared::RepoOrganization, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoOrganizationResponse) }
-    def create_repo_organization(repo_organization:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(repo_organization: Models::Shared::RepoOrganization, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoOrganizationResponse) }
+    def create_repo_organization(repo_organization:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_repo_organization - Create an organization
       request = Models::Operations::CreateRepoOrganizationRequest.new(
         
         repo_organization: repo_organization,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -394,14 +397,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_pullrequest: Models::Shared::RepoPullrequest, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoPullrequestResponse) }
-    def create_repo_pullrequest(repo_pullrequest:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(repo_pullrequest: Models::Shared::RepoPullrequest, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoPullrequestResponse) }
+    def create_repo_pullrequest(repo_pullrequest:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_repo_pullrequest - Create a pullrequest
       request = Models::Operations::CreateRepoPullrequestRequest.new(
         
         repo_pullrequest: repo_pullrequest,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -518,14 +522,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_repository: Models::Shared::RepoRepository, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoRepositoryResponse) }
-    def create_repo_repository(repo_repository:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(repo_repository: Models::Shared::RepoRepository, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoRepositoryResponse) }
+    def create_repo_repository(repo_repository:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_repo_repository - Create a repository
       request = Models::Operations::CreateRepoRepositoryRequest.new(
         
         repo_repository: repo_repository,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -642,14 +647,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoBranchResponse) }
-    def get_repo_branch(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoBranchResponse) }
+    def get_repo_branch(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_repo_branch - Retrieve a branch
       request = Models::Operations::GetRepoBranchRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -754,14 +760,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoCommitResponse) }
-    def get_repo_commit(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoCommitResponse) }
+    def get_repo_commit(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_repo_commit - Retrieve a commit
       request = Models::Operations::GetRepoCommitRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -866,14 +873,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoOrganizationResponse) }
-    def get_repo_organization(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoOrganizationResponse) }
+    def get_repo_organization(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_repo_organization - Retrieve an organization
       request = Models::Operations::GetRepoOrganizationRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -978,14 +986,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoPullrequestResponse) }
-    def get_repo_pullrequest(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoPullrequestResponse) }
+    def get_repo_pullrequest(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_repo_pullrequest - Retrieve a pullrequest
       request = Models::Operations::GetRepoPullrequestRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1090,14 +1099,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoRepositoryResponse) }
-    def get_repo_repository(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoRepositoryResponse) }
+    def get_repo_repository(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_repo_repository - Retrieve a repository
       request = Models::Operations::GetRepoRepositoryRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1732,16 +1742,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_branch: Models::Shared::RepoBranch, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoBranchResponse) }
-    def patch_repo_branch(repo_branch:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchRepoBranchRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoBranchResponse) }
+    def patch_repo_branch(request:, timeout_ms: nil)
       # patch_repo_branch - Update a branch
-      request = Models::Operations::PatchRepoBranchRequest.new(
-        
-        repo_branch: repo_branch,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1857,16 +1860,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_commit: Models::Shared::RepoCommit, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoCommitResponse) }
-    def patch_repo_commit(repo_commit:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchRepoCommitRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoCommitResponse) }
+    def patch_repo_commit(request:, timeout_ms: nil)
       # patch_repo_commit - Update a commit
-      request = Models::Operations::PatchRepoCommitRequest.new(
-        
-        repo_commit: repo_commit,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1982,16 +1978,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_organization: Models::Shared::RepoOrganization, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoOrganizationResponse) }
-    def patch_repo_organization(repo_organization:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchRepoOrganizationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoOrganizationResponse) }
+    def patch_repo_organization(request:, timeout_ms: nil)
       # patch_repo_organization - Update an organization
-      request = Models::Operations::PatchRepoOrganizationRequest.new(
-        
-        repo_organization: repo_organization,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2107,16 +2096,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_pullrequest: Models::Shared::RepoPullrequest, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoPullrequestResponse) }
-    def patch_repo_pullrequest(repo_pullrequest:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchRepoPullrequestRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoPullrequestResponse) }
+    def patch_repo_pullrequest(request:, timeout_ms: nil)
       # patch_repo_pullrequest - Update a pullrequest
-      request = Models::Operations::PatchRepoPullrequestRequest.new(
-        
-        repo_pullrequest: repo_pullrequest,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2232,16 +2214,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_repository: Models::Shared::RepoRepository, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoRepositoryResponse) }
-    def patch_repo_repository(repo_repository:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchRepoRepositoryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoRepositoryResponse) }
+    def patch_repo_repository(request:, timeout_ms: nil)
       # patch_repo_repository - Update a repository
-      request = Models::Operations::PatchRepoRepositoryRequest.new(
-        
-        repo_repository: repo_repository,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2907,16 +2882,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_branch: Models::Shared::RepoBranch, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoBranchResponse) }
-    def update_repo_branch(repo_branch:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateRepoBranchRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoBranchResponse) }
+    def update_repo_branch(request:, timeout_ms: nil)
       # update_repo_branch - Update a branch
-      request = Models::Operations::UpdateRepoBranchRequest.new(
-        
-        repo_branch: repo_branch,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3032,16 +3000,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_commit: Models::Shared::RepoCommit, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoCommitResponse) }
-    def update_repo_commit(repo_commit:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateRepoCommitRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoCommitResponse) }
+    def update_repo_commit(request:, timeout_ms: nil)
       # update_repo_commit - Update a commit
-      request = Models::Operations::UpdateRepoCommitRequest.new(
-        
-        repo_commit: repo_commit,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3157,16 +3118,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_organization: Models::Shared::RepoOrganization, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoOrganizationResponse) }
-    def update_repo_organization(repo_organization:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateRepoOrganizationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoOrganizationResponse) }
+    def update_repo_organization(request:, timeout_ms: nil)
       # update_repo_organization - Update an organization
-      request = Models::Operations::UpdateRepoOrganizationRequest.new(
-        
-        repo_organization: repo_organization,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3282,16 +3236,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_pullrequest: Models::Shared::RepoPullrequest, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoPullrequestResponse) }
-    def update_repo_pullrequest(repo_pullrequest:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateRepoPullrequestRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoPullrequestResponse) }
+    def update_repo_pullrequest(request:, timeout_ms: nil)
       # update_repo_pullrequest - Update a pullrequest
-      request = Models::Operations::UpdateRepoPullrequestRequest.new(
-        
-        repo_pullrequest: repo_pullrequest,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3407,16 +3354,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_repository: Models::Shared::RepoRepository, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoRepositoryResponse) }
-    def update_repo_repository(repo_repository:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateRepoRepositoryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoRepositoryResponse) }
+    def update_repo_repository(request:, timeout_ms: nil)
       # update_repo_repository - Update a repository
-      request = Models::Operations::UpdateRepoRepositoryRequest.new(
-        
-        repo_repository: repo_repository,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

@@ -22,14 +22,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(messaging_message: Models::Shared::MessagingMessage, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMessagingMessageResponse) }
-    def create_messaging_message(messaging_message:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(messaging_message: Models::Shared::MessagingMessage, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMessagingMessageResponse) }
+    def create_messaging_message(messaging_message:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_messaging_message - Create a message
       request = Models::Operations::CreateMessagingMessageRequest.new(
         
         messaging_message: messaging_message,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -146,14 +147,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMessagingChannelResponse) }
-    def get_messaging_channel(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMessagingChannelResponse) }
+    def get_messaging_channel(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_messaging_channel - Retrieve a channel
       request = Models::Operations::GetMessagingChannelRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -258,14 +260,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMessagingMessageResponse) }
-    def get_messaging_message(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMessagingMessageResponse) }
+    def get_messaging_message(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_messaging_message - Retrieve a message
       request = Models::Operations::GetMessagingMessageRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -582,16 +585,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(messaging_message: Models::Shared::MessagingMessage, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMessagingMessageResponse) }
-    def patch_messaging_message(messaging_message:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchMessagingMessageRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMessagingMessageResponse) }
+    def patch_messaging_message(request:, timeout_ms: nil)
       # patch_messaging_message - Update a message
-      request = Models::Operations::PatchMessagingMessageRequest.new(
-        
-        messaging_message: messaging_message,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -817,16 +813,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(messaging_message: Models::Shared::MessagingMessage, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMessagingMessageResponse) }
-    def update_messaging_message(messaging_message:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateMessagingMessageRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMessagingMessageResponse) }
+    def update_messaging_message(request:, timeout_ms: nil)
       # update_messaging_message - Update a message
-      request = Models::Operations::UpdateMessagingMessageRequest.new(
-        
-        messaging_message: messaging_message,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

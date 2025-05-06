@@ -31,7 +31,7 @@ res = s.repository.create_repo_repository(repo_repository=Models::Shared::RepoRe
   name: "<value>",
 ), connection_id="<id>", fields_=[
   "<value>",
-])
+], raw="<value>")
 
 if ! res.repo_repository.nil?
   # handle response
@@ -41,11 +41,12 @@ end
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `repo_repository`                                                       | [Models::Shared::RepoRepository](../../models/shared/reporepository.md) | :heavy_check_mark:                                                      | N/A                                                                     |
-| `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
-| `fields_`                                                               | T::Array<*::String*>                                                    | :heavy_minus_sign:                                                      | Comma-delimited fields to return                                        |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `repo_repository`                                                                                                                                | [Models::Shared::RepoRepository](../../models/shared/reporepository.md)                                                                          | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<*::String*>                                                                                                                             | :heavy_minus_sign:                                                                                                                               | Comma-delimited fields to return                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
@@ -70,7 +71,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.repository.get_repo_repository(connection_id="<id>", id="<id>", fields_=[
   "<value>",
-])
+], raw="<value>")
 
 if ! res.repo_repository.nil?
   # handle response
@@ -80,11 +81,12 @@ end
 
 ### Parameters
 
-| Parameter                        | Type                             | Required                         | Description                      |
-| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Repository             |
-| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Repository                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<*::String*>                                                                                                                             | :heavy_minus_sign:                                                                                                                               | Comma-delimited fields to return                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
@@ -146,11 +148,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.repository.patch_repo_repository(repo_repository=Models::Shared::RepoRepository.new(
-  name: "<value>",
-), connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-])
+req = Models::Operations::PatchRepoRepositoryRequest.new(
+  repo_repository: Models::Shared::RepoRepository.new(
+    name: "<value>",
+  ),
+  connection_id: "<id>",
+  id: "<id>",
+)
+
+res = s.repository.patch_repo_repository(req)
 
 if ! res.repo_repository.nil?
   # handle response
@@ -160,12 +166,9 @@ end
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `repo_repository`                                                       | [Models::Shared::RepoRepository](../../models/shared/reporepository.md) | :heavy_check_mark:                                                      | N/A                                                                     |
-| `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
-| `id`                                                                    | *::String*                                                              | :heavy_check_mark:                                                      | ID of the Repository                                                    |
-| `fields_`                                                               | T::Array<*::String*>                                                    | :heavy_minus_sign:                                                      | Comma-delimited fields to return                                        |
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [Models::Operations::PatchRepoRepositoryRequest](../../models/operations/patchreporepositoryrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
 
 ### Response
 
@@ -224,11 +227,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.repository.update_repo_repository(repo_repository=Models::Shared::RepoRepository.new(
-  name: "<value>",
-), connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-])
+req = Models::Operations::UpdateRepoRepositoryRequest.new(
+  repo_repository: Models::Shared::RepoRepository.new(
+    name: "<value>",
+  ),
+  connection_id: "<id>",
+  id: "<id>",
+)
+
+res = s.repository.update_repo_repository(req)
 
 if ! res.repo_repository.nil?
   # handle response
@@ -238,12 +245,9 @@ end
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `repo_repository`                                                       | [Models::Shared::RepoRepository](../../models/shared/reporepository.md) | :heavy_check_mark:                                                      | N/A                                                                     |
-| `connection_id`                                                         | *::String*                                                              | :heavy_check_mark:                                                      | ID of the connection                                                    |
-| `id`                                                                    | *::String*                                                              | :heavy_check_mark:                                                      | ID of the Repository                                                    |
-| `fields_`                                                               | T::Array<*::String*>                                                    | :heavy_minus_sign:                                                      | Comma-delimited fields to return                                        |
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [Models::Operations::UpdateRepoRepositoryRequest](../../models/operations/updatereporepositoryrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
 
 ### Response
 

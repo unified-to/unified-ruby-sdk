@@ -29,7 +29,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.account.create_accounting_account(accounting_account=Models::Shared::AccountingAccount.new(), connection_id="<id>", fields_=[
   "<value>",
-])
+], raw="<value>")
 
 if ! res.accounting_account.nil?
   # handle response
@@ -39,11 +39,12 @@ end
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `accounting_account`                                                          | [Models::Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_check_mark:                                                            | Chart of accounts                                                             |
-| `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
-| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `accounting_account`                                                                                                                             | [Models::Shared::AccountingAccount](../../models/shared/accountingaccount.md)                                                                    | :heavy_check_mark:                                                                                                                               | Chart of accounts                                                                                                                                |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<*::String*>                                                                                                                             | :heavy_minus_sign:                                                                                                                               | Comma-delimited fields to return                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
@@ -68,7 +69,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.account.get_accounting_account(connection_id="<id>", id="<id>", fields_=[
   "<value>",
-])
+], raw="<value>")
 
 if ! res.accounting_account.nil?
   # handle response
@@ -78,11 +79,12 @@ end
 
 ### Parameters
 
-| Parameter                        | Type                             | Required                         | Description                      |
-| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Account                |
-| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Account                                                                                                                                |
+| `fields_`                                                                                                                                        | T::Array<*::String*>                                                                                                                             | :heavy_minus_sign:                                                                                                                               | Comma-delimited fields to return                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
@@ -144,9 +146,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.account.patch_accounting_account(accounting_account=Models::Shared::AccountingAccount.new(), connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-])
+req = Models::Operations::PatchAccountingAccountRequest.new(
+  accounting_account: Models::Shared::AccountingAccount.new(),
+  connection_id: "<id>",
+  id: "<id>",
+)
+
+res = s.account.patch_accounting_account(req)
 
 if ! res.accounting_account.nil?
   # handle response
@@ -156,12 +162,9 @@ end
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `accounting_account`                                                          | [Models::Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_check_mark:                                                            | Chart of accounts                                                             |
-| `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
-| `id`                                                                          | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the Account                                                             |
-| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [Models::Operations::PatchAccountingAccountRequest](../../models/operations/patchaccountingaccountrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
 
 ### Response
 
@@ -220,9 +223,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.account.update_accounting_account(accounting_account=Models::Shared::AccountingAccount.new(), connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-])
+req = Models::Operations::UpdateAccountingAccountRequest.new(
+  accounting_account: Models::Shared::AccountingAccount.new(),
+  connection_id: "<id>",
+  id: "<id>",
+)
+
+res = s.account.update_accounting_account(req)
 
 if ! res.accounting_account.nil?
   # handle response
@@ -232,12 +239,9 @@ end
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `accounting_account`                                                          | [Models::Shared::AccountingAccount](../../models/shared/accountingaccount.md) | :heavy_check_mark:                                                            | Chart of accounts                                                             |
-| `connection_id`                                                               | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the connection                                                          |
-| `id`                                                                          | *::String*                                                                    | :heavy_check_mark:                                                            | ID of the Account                                                             |
-| `fields_`                                                                     | T::Array<*::String*>                                                          | :heavy_minus_sign:                                                            | Comma-delimited fields to return                                              |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [Models::Operations::UpdateAccountingAccountRequest](../../models/operations/updateaccountingaccountrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 ### Response
 

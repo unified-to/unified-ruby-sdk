@@ -22,14 +22,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_transaction: Models::Shared::AccountingTransaction, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingTransactionResponse) }
-    def create_accounting_transaction(accounting_transaction:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(accounting_transaction: Models::Shared::AccountingTransaction, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingTransactionResponse) }
+    def create_accounting_transaction(accounting_transaction:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_transaction - Create a transaction
       request = Models::Operations::CreateAccountingTransactionRequest.new(
         
         accounting_transaction: accounting_transaction,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -146,14 +147,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingTransactionResponse) }
-    def get_accounting_transaction(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingTransactionResponse) }
+    def get_accounting_transaction(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_transaction - Retrieve a transaction
       request = Models::Operations::GetAccountingTransactionRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -364,16 +366,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_transaction: Models::Shared::AccountingTransaction, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingTransactionResponse) }
-    def patch_accounting_transaction(accounting_transaction:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchAccountingTransactionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingTransactionResponse) }
+    def patch_accounting_transaction(request:, timeout_ms: nil)
       # patch_accounting_transaction - Update a transaction
-      request = Models::Operations::PatchAccountingTransactionRequest.new(
-        
-        accounting_transaction: accounting_transaction,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -599,16 +594,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_transaction: Models::Shared::AccountingTransaction, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingTransactionResponse) }
-    def update_accounting_transaction(accounting_transaction:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateAccountingTransactionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingTransactionResponse) }
+    def update_accounting_transaction(request:, timeout_ms: nil)
       # update_accounting_transaction - Update a transaction
-      request = Models::Operations::UpdateAccountingTransactionRequest.new(
-        
-        accounting_transaction: accounting_transaction,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

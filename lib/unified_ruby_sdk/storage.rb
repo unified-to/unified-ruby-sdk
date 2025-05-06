@@ -22,14 +22,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(storage_file: Models::Shared::StorageFile, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateStorageFileResponse) }
-    def create_storage_file(storage_file:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(storage_file: Models::Shared::StorageFile, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateStorageFileResponse) }
+    def create_storage_file(storage_file:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_storage_file - Create a file
       request = Models::Operations::CreateStorageFileRequest.new(
         
         storage_file: storage_file,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -146,14 +147,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetStorageFileResponse) }
-    def get_storage_file(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetStorageFileResponse) }
+    def get_storage_file(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_storage_file - Retrieve a file
       request = Models::Operations::GetStorageFileRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -364,16 +366,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(storage_file: Models::Shared::StorageFile, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchStorageFileResponse) }
-    def patch_storage_file(storage_file:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchStorageFileRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchStorageFileResponse) }
+    def patch_storage_file(request:, timeout_ms: nil)
       # patch_storage_file - Update a file
-      request = Models::Operations::PatchStorageFileRequest.new(
-        
-        storage_file: storage_file,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -599,16 +594,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(storage_file: Models::Shared::StorageFile, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateStorageFileResponse) }
-    def update_storage_file(storage_file:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateStorageFileRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateStorageFileResponse) }
+    def update_storage_file(request:, timeout_ms: nil)
       # update_storage_file - Update a file
-      request = Models::Operations::UpdateStorageFileRequest.new(
-        
-        storage_file: storage_file,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

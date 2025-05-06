@@ -22,14 +22,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_class: Models::Shared::LmsClass, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsClassResponse) }
-    def create_lms_class(lms_class:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(lms_class: Models::Shared::LmsClass, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsClassResponse) }
+    def create_lms_class(lms_class:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_lms_class - Create a class
       request = Models::Operations::CreateLmsClassRequest.new(
         
         lms_class: lms_class,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -146,14 +147,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_course: Models::Shared::LmsCourse, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsCourseResponse) }
-    def create_lms_course(lms_course:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(lms_course: Models::Shared::LmsCourse, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsCourseResponse) }
+    def create_lms_course(lms_course:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_lms_course - Create a course
       request = Models::Operations::CreateLmsCourseRequest.new(
         
         lms_course: lms_course,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -270,14 +272,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_instructor: Models::Shared::LmsInstructor, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsInstructorResponse) }
-    def create_lms_instructor(lms_instructor:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(lms_instructor: Models::Shared::LmsInstructor, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsInstructorResponse) }
+    def create_lms_instructor(lms_instructor:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_lms_instructor - Create an instructor
       request = Models::Operations::CreateLmsInstructorRequest.new(
         
         lms_instructor: lms_instructor,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -394,14 +397,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_student: Models::Shared::LmsStudent, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsStudentResponse) }
-    def create_lms_student(lms_student:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(lms_student: Models::Shared::LmsStudent, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsStudentResponse) }
+    def create_lms_student(lms_student:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_lms_student - Create a student
       request = Models::Operations::CreateLmsStudentRequest.new(
         
         lms_student: lms_student,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -518,14 +522,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsClassResponse) }
-    def get_lms_class(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsClassResponse) }
+    def get_lms_class(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_lms_class - Retrieve a class
       request = Models::Operations::GetLmsClassRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -630,14 +635,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsCourseResponse) }
-    def get_lms_course(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsCourseResponse) }
+    def get_lms_course(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_lms_course - Retrieve a course
       request = Models::Operations::GetLmsCourseRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -742,14 +748,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsInstructorResponse) }
-    def get_lms_instructor(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsInstructorResponse) }
+    def get_lms_instructor(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_lms_instructor - Retrieve an instructor
       request = Models::Operations::GetLmsInstructorRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -854,14 +861,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsStudentResponse) }
-    def get_lms_student(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsStudentResponse) }
+    def get_lms_student(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_lms_student - Retrieve a student
       request = Models::Operations::GetLmsStudentRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1390,16 +1398,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_class: Models::Shared::LmsClass, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLmsClassResponse) }
-    def patch_lms_class(lms_class:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchLmsClassRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLmsClassResponse) }
+    def patch_lms_class(request:, timeout_ms: nil)
       # patch_lms_class - Update a class
-      request = Models::Operations::PatchLmsClassRequest.new(
-        
-        lms_class: lms_class,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1515,16 +1516,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_course: Models::Shared::LmsCourse, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLmsCourseResponse) }
-    def patch_lms_course(lms_course:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchLmsCourseRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLmsCourseResponse) }
+    def patch_lms_course(request:, timeout_ms: nil)
       # patch_lms_course - Update a course
-      request = Models::Operations::PatchLmsCourseRequest.new(
-        
-        lms_course: lms_course,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1640,16 +1634,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_instructor: Models::Shared::LmsInstructor, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLmsInstructorResponse) }
-    def patch_lms_instructor(lms_instructor:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchLmsInstructorRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLmsInstructorResponse) }
+    def patch_lms_instructor(request:, timeout_ms: nil)
       # patch_lms_instructor - Update an instructor
-      request = Models::Operations::PatchLmsInstructorRequest.new(
-        
-        lms_instructor: lms_instructor,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1765,16 +1752,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_student: Models::Shared::LmsStudent, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLmsStudentResponse) }
-    def patch_lms_student(lms_student:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchLmsStudentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLmsStudentResponse) }
+    def patch_lms_student(request:, timeout_ms: nil)
       # patch_lms_student - Update a student
-      request = Models::Operations::PatchLmsStudentRequest.new(
-        
-        lms_student: lms_student,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2330,16 +2310,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_class: Models::Shared::LmsClass, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLmsClassResponse) }
-    def update_lms_class(lms_class:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateLmsClassRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLmsClassResponse) }
+    def update_lms_class(request:, timeout_ms: nil)
       # update_lms_class - Update a class
-      request = Models::Operations::UpdateLmsClassRequest.new(
-        
-        lms_class: lms_class,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2455,16 +2428,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_course: Models::Shared::LmsCourse, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLmsCourseResponse) }
-    def update_lms_course(lms_course:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateLmsCourseRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLmsCourseResponse) }
+    def update_lms_course(request:, timeout_ms: nil)
       # update_lms_course - Update a course
-      request = Models::Operations::UpdateLmsCourseRequest.new(
-        
-        lms_course: lms_course,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2580,16 +2546,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_instructor: Models::Shared::LmsInstructor, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLmsInstructorResponse) }
-    def update_lms_instructor(lms_instructor:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateLmsInstructorRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLmsInstructorResponse) }
+    def update_lms_instructor(request:, timeout_ms: nil)
       # update_lms_instructor - Update an instructor
-      request = Models::Operations::UpdateLmsInstructorRequest.new(
-        
-        lms_instructor: lms_instructor,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2705,16 +2664,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_student: Models::Shared::LmsStudent, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLmsStudentResponse) }
-    def update_lms_student(lms_student:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateLmsStudentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLmsStudentResponse) }
+    def update_lms_student(request:, timeout_ms: nil)
       # update_lms_student - Update a student
-      request = Models::Operations::UpdateLmsStudentRequest.new(
-        
-        lms_student: lms_student,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

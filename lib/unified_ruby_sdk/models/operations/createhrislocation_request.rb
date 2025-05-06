@@ -19,13 +19,16 @@ module UnifiedRubySDK
         field :hris_location, Models::Shared::HrisLocation, { 'request': { 'media_type': 'application/json' } }
         # Comma-delimited fields to return
         field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        # Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
+        field :raw, T.nilable(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
 
-        sig { params(connection_id: ::String, hris_location: Models::Shared::HrisLocation, fields_: T.nilable(T::Array[::String])).void }
-        def initialize(connection_id: nil, hris_location: nil, fields_: nil)
+        sig { params(connection_id: ::String, hris_location: Models::Shared::HrisLocation, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String)).void }
+        def initialize(connection_id: nil, hris_location: nil, fields_: nil, raw: nil)
           @connection_id = connection_id
           @hris_location = hris_location
           @fields_ = fields_
+          @raw = raw
         end
 
         def ==(other)
@@ -33,6 +36,7 @@ module UnifiedRubySDK
           return false unless @connection_id == other.connection_id
           return false unless @hris_location == other.hris_location
           return false unless @fields_ == other.fields_
+          return false unless @raw == other.raw
           true
         end
       end

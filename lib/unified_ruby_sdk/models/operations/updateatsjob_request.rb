@@ -21,14 +21,17 @@ module UnifiedRubySDK
         field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
         # Comma-delimited fields to return
         field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        # Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
+        field :raw, T.nilable(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
 
-        sig { params(ats_job: Models::Shared::AtsJob, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String])).void }
-        def initialize(ats_job: nil, connection_id: nil, id: nil, fields_: nil)
+        sig { params(ats_job: Models::Shared::AtsJob, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String)).void }
+        def initialize(ats_job: nil, connection_id: nil, id: nil, fields_: nil, raw: nil)
           @ats_job = ats_job
           @connection_id = connection_id
           @id = id
           @fields_ = fields_
+          @raw = raw
         end
 
         def ==(other)
@@ -37,6 +40,7 @@ module UnifiedRubySDK
           return false unless @connection_id == other.connection_id
           return false unless @id == other.id
           return false unless @fields_ == other.fields_
+          return false unless @raw == other.raw
           true
         end
       end

@@ -22,14 +22,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(task_project: Models::Shared::TaskProject, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskProjectResponse) }
-    def create_task_project(task_project:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(task_project: Models::Shared::TaskProject, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskProjectResponse) }
+    def create_task_project(task_project:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_task_project - Create a project
       request = Models::Operations::CreateTaskProjectRequest.new(
         
         task_project: task_project,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -146,14 +147,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskProjectResponse) }
-    def get_task_project(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskProjectResponse) }
+    def get_task_project(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_task_project - Retrieve a project
       request = Models::Operations::GetTaskProjectRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -364,16 +366,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(task_project: Models::Shared::TaskProject, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTaskProjectResponse) }
-    def patch_task_project(task_project:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchTaskProjectRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTaskProjectResponse) }
+    def patch_task_project(request:, timeout_ms: nil)
       # patch_task_project - Update a project
-      request = Models::Operations::PatchTaskProjectRequest.new(
-        
-        task_project: task_project,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -599,16 +594,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(task_project: Models::Shared::TaskProject, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTaskProjectResponse) }
-    def update_task_project(task_project:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateTaskProjectRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTaskProjectResponse) }
+    def update_task_project(request:, timeout_ms: nil)
       # update_task_project - Update a project
-      request = Models::Operations::UpdateTaskProjectRequest.new(
-        
-        task_project: task_project,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

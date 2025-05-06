@@ -22,14 +22,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(metadata_metadata: Models::Shared::MetadataMetadata, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMetadataMetadataResponse) }
-    def create_metadata_metadata(metadata_metadata:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(metadata_metadata: Models::Shared::MetadataMetadata, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMetadataMetadataResponse) }
+    def create_metadata_metadata(metadata_metadata:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_metadata_metadata - Create a metadata
       request = Models::Operations::CreateMetadataMetadataRequest.new(
         
         metadata_metadata: metadata_metadata,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -146,14 +147,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMetadataMetadataResponse) }
-    def get_metadata_metadata(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMetadataMetadataResponse) }
+    def get_metadata_metadata(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_metadata_metadata - Retrieve a metadata
       request = Models::Operations::GetMetadataMetadataRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -364,16 +366,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(metadata_metadata: Models::Shared::MetadataMetadata, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMetadataMetadataResponse) }
-    def patch_metadata_metadata(metadata_metadata:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchMetadataMetadataRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMetadataMetadataResponse) }
+    def patch_metadata_metadata(request:, timeout_ms: nil)
       # patch_metadata_metadata - Update a metadata
-      request = Models::Operations::PatchMetadataMetadataRequest.new(
-        
-        metadata_metadata: metadata_metadata,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -599,16 +594,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(metadata_metadata: Models::Shared::MetadataMetadata, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMetadataMetadataResponse) }
-    def update_metadata_metadata(metadata_metadata:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateMetadataMetadataRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMetadataMetadataResponse) }
+    def update_metadata_metadata(request:, timeout_ms: nil)
       # update_metadata_metadata - Update a metadata
-      request = Models::Operations::UpdateMetadataMetadataRequest.new(
-        
-        metadata_metadata: metadata_metadata,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

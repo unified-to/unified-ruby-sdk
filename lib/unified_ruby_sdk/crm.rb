@@ -22,14 +22,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_company: Models::Shared::CrmCompany, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmCompanyResponse) }
-    def create_crm_company(crm_company:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(crm_company: Models::Shared::CrmCompany, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmCompanyResponse) }
+    def create_crm_company(crm_company:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_crm_company - Create a company
       request = Models::Operations::CreateCrmCompanyRequest.new(
         
         crm_company: crm_company,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -146,14 +147,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_contact: Models::Shared::CrmContact, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmContactResponse) }
-    def create_crm_contact(crm_contact:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(crm_contact: Models::Shared::CrmContact, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmContactResponse) }
+    def create_crm_contact(crm_contact:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_crm_contact - Create a contact
       request = Models::Operations::CreateCrmContactRequest.new(
         
         crm_contact: crm_contact,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -270,14 +272,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_deal: Models::Shared::CrmDeal, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmDealResponse) }
-    def create_crm_deal(crm_deal:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(crm_deal: Models::Shared::CrmDeal, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmDealResponse) }
+    def create_crm_deal(crm_deal:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_crm_deal - Create a deal
       request = Models::Operations::CreateCrmDealRequest.new(
         
         crm_deal: crm_deal,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -394,14 +397,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_event: Models::Shared::CrmEvent, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmEventResponse) }
-    def create_crm_event(crm_event:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(crm_event: Models::Shared::CrmEvent, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmEventResponse) }
+    def create_crm_event(crm_event:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_crm_event - Create an event
       request = Models::Operations::CreateCrmEventRequest.new(
         
         crm_event: crm_event,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -518,14 +522,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_lead: Models::Shared::CrmLead, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmLeadResponse) }
-    def create_crm_lead(crm_lead:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(crm_lead: Models::Shared::CrmLead, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmLeadResponse) }
+    def create_crm_lead(crm_lead:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_crm_lead - Create a lead
       request = Models::Operations::CreateCrmLeadRequest.new(
         
         crm_lead: crm_lead,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -642,14 +647,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_pipeline: Models::Shared::CrmPipeline, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmPipelineResponse) }
-    def create_crm_pipeline(crm_pipeline:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(crm_pipeline: Models::Shared::CrmPipeline, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmPipelineResponse) }
+    def create_crm_pipeline(crm_pipeline:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_crm_pipeline - Create a pipeline
       request = Models::Operations::CreateCrmPipelineRequest.new(
         
         crm_pipeline: crm_pipeline,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -766,14 +772,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmCompanyResponse) }
-    def get_crm_company(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmCompanyResponse) }
+    def get_crm_company(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_crm_company - Retrieve a company
       request = Models::Operations::GetCrmCompanyRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -878,14 +885,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmContactResponse) }
-    def get_crm_contact(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmContactResponse) }
+    def get_crm_contact(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_crm_contact - Retrieve a contact
       request = Models::Operations::GetCrmContactRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -990,14 +998,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmDealResponse) }
-    def get_crm_deal(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmDealResponse) }
+    def get_crm_deal(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_crm_deal - Retrieve a deal
       request = Models::Operations::GetCrmDealRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1102,14 +1111,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmEventResponse) }
-    def get_crm_event(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmEventResponse) }
+    def get_crm_event(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_crm_event - Retrieve an event
       request = Models::Operations::GetCrmEventRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1214,14 +1224,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmLeadResponse) }
-    def get_crm_lead(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmLeadResponse) }
+    def get_crm_lead(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_crm_lead - Retrieve a lead
       request = Models::Operations::GetCrmLeadRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1326,14 +1337,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmPipelineResponse) }
-    def get_crm_pipeline(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmPipelineResponse) }
+    def get_crm_pipeline(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_crm_pipeline - Retrieve a pipeline
       request = Models::Operations::GetCrmPipelineRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -2074,16 +2086,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_company: Models::Shared::CrmCompany, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmCompanyResponse) }
-    def patch_crm_company(crm_company:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchCrmCompanyRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmCompanyResponse) }
+    def patch_crm_company(request:, timeout_ms: nil)
       # patch_crm_company - Update a company
-      request = Models::Operations::PatchCrmCompanyRequest.new(
-        
-        crm_company: crm_company,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2199,16 +2204,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_contact: Models::Shared::CrmContact, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmContactResponse) }
-    def patch_crm_contact(crm_contact:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchCrmContactRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmContactResponse) }
+    def patch_crm_contact(request:, timeout_ms: nil)
       # patch_crm_contact - Update a contact
-      request = Models::Operations::PatchCrmContactRequest.new(
-        
-        crm_contact: crm_contact,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2324,16 +2322,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_deal: Models::Shared::CrmDeal, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmDealResponse) }
-    def patch_crm_deal(crm_deal:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchCrmDealRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmDealResponse) }
+    def patch_crm_deal(request:, timeout_ms: nil)
       # patch_crm_deal - Update a deal
-      request = Models::Operations::PatchCrmDealRequest.new(
-        
-        crm_deal: crm_deal,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2449,16 +2440,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_event: Models::Shared::CrmEvent, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmEventResponse) }
-    def patch_crm_event(crm_event:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchCrmEventRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmEventResponse) }
+    def patch_crm_event(request:, timeout_ms: nil)
       # patch_crm_event - Update an event
-      request = Models::Operations::PatchCrmEventRequest.new(
-        
-        crm_event: crm_event,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2574,16 +2558,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_lead: Models::Shared::CrmLead, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmLeadResponse) }
-    def patch_crm_lead(crm_lead:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchCrmLeadRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmLeadResponse) }
+    def patch_crm_lead(request:, timeout_ms: nil)
       # patch_crm_lead - Update a lead
-      request = Models::Operations::PatchCrmLeadRequest.new(
-        
-        crm_lead: crm_lead,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2699,16 +2676,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_pipeline: Models::Shared::CrmPipeline, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmPipelineResponse) }
-    def patch_crm_pipeline(crm_pipeline:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchCrmPipelineRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmPipelineResponse) }
+    def patch_crm_pipeline(request:, timeout_ms: nil)
       # patch_crm_pipeline - Update a pipeline
-      request = Models::Operations::PatchCrmPipelineRequest.new(
-        
-        crm_pipeline: crm_pipeline,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3484,16 +3454,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_company: Models::Shared::CrmCompany, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmCompanyResponse) }
-    def update_crm_company(crm_company:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateCrmCompanyRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmCompanyResponse) }
+    def update_crm_company(request:, timeout_ms: nil)
       # update_crm_company - Update a company
-      request = Models::Operations::UpdateCrmCompanyRequest.new(
-        
-        crm_company: crm_company,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3609,16 +3572,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_contact: Models::Shared::CrmContact, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmContactResponse) }
-    def update_crm_contact(crm_contact:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateCrmContactRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmContactResponse) }
+    def update_crm_contact(request:, timeout_ms: nil)
       # update_crm_contact - Update a contact
-      request = Models::Operations::UpdateCrmContactRequest.new(
-        
-        crm_contact: crm_contact,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3734,16 +3690,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_deal: Models::Shared::CrmDeal, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmDealResponse) }
-    def update_crm_deal(crm_deal:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateCrmDealRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmDealResponse) }
+    def update_crm_deal(request:, timeout_ms: nil)
       # update_crm_deal - Update a deal
-      request = Models::Operations::UpdateCrmDealRequest.new(
-        
-        crm_deal: crm_deal,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3859,16 +3808,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_event: Models::Shared::CrmEvent, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmEventResponse) }
-    def update_crm_event(crm_event:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateCrmEventRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmEventResponse) }
+    def update_crm_event(request:, timeout_ms: nil)
       # update_crm_event - Update an event
-      request = Models::Operations::UpdateCrmEventRequest.new(
-        
-        crm_event: crm_event,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3984,16 +3926,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_lead: Models::Shared::CrmLead, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmLeadResponse) }
-    def update_crm_lead(crm_lead:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateCrmLeadRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmLeadResponse) }
+    def update_crm_lead(request:, timeout_ms: nil)
       # update_crm_lead - Update a lead
-      request = Models::Operations::UpdateCrmLeadRequest.new(
-        
-        crm_lead: crm_lead,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -4109,16 +4044,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_pipeline: Models::Shared::CrmPipeline, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmPipelineResponse) }
-    def update_crm_pipeline(crm_pipeline:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateCrmPipelineRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmPipelineResponse) }
+    def update_crm_pipeline(request:, timeout_ms: nil)
       # update_crm_pipeline - Update a pipeline
-      request = Models::Operations::UpdateCrmPipelineRequest.new(
-        
-        crm_pipeline: crm_pipeline,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

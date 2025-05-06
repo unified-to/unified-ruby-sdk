@@ -29,6 +29,8 @@ module UnifiedRubySDK
         field :order, T.nilable(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
         # Query string to search. eg. email address or name
         field :query, T.nilable(::String), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
+        # Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
+        field :raw, T.nilable(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
         field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
 
@@ -37,8 +39,8 @@ module UnifiedRubySDK
         field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
 
-        sig { params(connection_id: ::String, end_le: T.nilable(::String), event_id: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
-        def initialize(connection_id: nil, end_le: nil, event_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, sort: nil, start_gte: nil, updated_gte: nil)
+        sig { params(connection_id: ::String, end_le: T.nilable(::String), event_id: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
+        def initialize(connection_id: nil, end_le: nil, event_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, start_gte: nil, updated_gte: nil)
           @connection_id = connection_id
           @end_le = end_le
           @event_id = event_id
@@ -47,6 +49,7 @@ module UnifiedRubySDK
           @offset = offset
           @order = order
           @query = query
+          @raw = raw
           @sort = sort
           @start_gte = start_gte
           @updated_gte = updated_gte
@@ -62,6 +65,7 @@ module UnifiedRubySDK
           return false unless @offset == other.offset
           return false unless @order == other.order
           return false unless @query == other.query
+          return false unless @raw == other.raw
           return false unless @sort == other.sort
           return false unless @start_gte == other.start_gte
           return false unless @updated_gte == other.updated_gte

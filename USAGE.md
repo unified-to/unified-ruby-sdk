@@ -10,7 +10,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.accounting.create_accounting_account(accounting_account=Models::Shared::AccountingAccount.new(), connection_id="<id>", fields_=[
   "<value>",
-])
+], raw="<value>")
 
 if ! res.accounting_account.nil?
   # handle response

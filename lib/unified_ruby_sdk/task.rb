@@ -22,14 +22,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(task_comment: Models::Shared::TaskComment, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskCommentResponse) }
-    def create_task_comment(task_comment:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(task_comment: Models::Shared::TaskComment, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskCommentResponse) }
+    def create_task_comment(task_comment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_task_comment - Create a comment
       request = Models::Operations::CreateTaskCommentRequest.new(
         
         task_comment: task_comment,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -146,14 +147,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(task_project: Models::Shared::TaskProject, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskProjectResponse) }
-    def create_task_project(task_project:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(task_project: Models::Shared::TaskProject, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskProjectResponse) }
+    def create_task_project(task_project:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_task_project - Create a project
       request = Models::Operations::CreateTaskProjectRequest.new(
         
         task_project: task_project,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -270,14 +272,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(task_task: Models::Shared::TaskTask, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskTaskResponse) }
-    def create_task_task(task_task:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(task_task: Models::Shared::TaskTask, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskTaskResponse) }
+    def create_task_task(task_task:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_task_task - Create a task
       request = Models::Operations::CreateTaskTaskRequest.new(
         
         task_task: task_task,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -394,14 +397,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskCommentResponse) }
-    def get_task_comment(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskCommentResponse) }
+    def get_task_comment(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_task_comment - Retrieve a comment
       request = Models::Operations::GetTaskCommentRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -506,14 +510,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskProjectResponse) }
-    def get_task_project(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskProjectResponse) }
+    def get_task_project(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_task_project - Retrieve a project
       request = Models::Operations::GetTaskProjectRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -618,14 +623,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskTaskResponse) }
-    def get_task_task(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskTaskResponse) }
+    def get_task_task(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_task_task - Retrieve a task
       request = Models::Operations::GetTaskTaskRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1048,16 +1054,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(task_comment: Models::Shared::TaskComment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTaskCommentResponse) }
-    def patch_task_comment(task_comment:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchTaskCommentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTaskCommentResponse) }
+    def patch_task_comment(request:, timeout_ms: nil)
       # patch_task_comment - Update a comment
-      request = Models::Operations::PatchTaskCommentRequest.new(
-        
-        task_comment: task_comment,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1173,16 +1172,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(task_project: Models::Shared::TaskProject, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTaskProjectResponse) }
-    def patch_task_project(task_project:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchTaskProjectRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTaskProjectResponse) }
+    def patch_task_project(request:, timeout_ms: nil)
       # patch_task_project - Update a project
-      request = Models::Operations::PatchTaskProjectRequest.new(
-        
-        task_project: task_project,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1298,16 +1290,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(task_task: Models::Shared::TaskTask, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTaskTaskResponse) }
-    def patch_task_task(task_task:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchTaskTaskRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTaskTaskResponse) }
+    def patch_task_task(request:, timeout_ms: nil)
       # patch_task_task - Update a task
-      request = Models::Operations::PatchTaskTaskRequest.new(
-        
-        task_task: task_task,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1753,16 +1738,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(task_comment: Models::Shared::TaskComment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTaskCommentResponse) }
-    def update_task_comment(task_comment:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateTaskCommentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTaskCommentResponse) }
+    def update_task_comment(request:, timeout_ms: nil)
       # update_task_comment - Update a comment
-      request = Models::Operations::UpdateTaskCommentRequest.new(
-        
-        task_comment: task_comment,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1878,16 +1856,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(task_project: Models::Shared::TaskProject, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTaskProjectResponse) }
-    def update_task_project(task_project:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateTaskProjectRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTaskProjectResponse) }
+    def update_task_project(request:, timeout_ms: nil)
       # update_task_project - Update a project
-      request = Models::Operations::UpdateTaskProjectRequest.new(
-        
-        task_project: task_project,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2003,16 +1974,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(task_task: Models::Shared::TaskTask, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTaskTaskResponse) }
-    def update_task_task(task_task:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdateTaskTaskRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTaskTaskResponse) }
+    def update_task_task(request:, timeout_ms: nil)
       # update_task_task - Update a task
-      request = Models::Operations::UpdateTaskTaskRequest.new(
-        
-        task_task: task_task,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

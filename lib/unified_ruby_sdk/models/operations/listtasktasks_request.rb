@@ -29,6 +29,8 @@ module UnifiedRubySDK
         field :project_id, T.nilable(::String), { 'query_param': { 'field_name': 'project_id', 'style': 'form', 'explode': true } }
         # Query string to search. eg. email address or name
         field :query, T.nilable(::String), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
+        # Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
+        field :raw, T.nilable(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
         field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
         # Return only results whose updated date is equal or greater to this value
@@ -37,8 +39,8 @@ module UnifiedRubySDK
         field :user_id, T.nilable(::String), { 'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': true } }
 
 
-        sig { params(connection_id: ::String, fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), parent_id: T.nilable(::String), project_id: T.nilable(::String), query: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(connection_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, parent_id: nil, project_id: nil, query: nil, sort: nil, updated_gte: nil, user_id: nil)
+        sig { params(connection_id: ::String, fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), parent_id: T.nilable(::String), project_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(connection_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, parent_id: nil, project_id: nil, query: nil, raw: nil, sort: nil, updated_gte: nil, user_id: nil)
           @connection_id = connection_id
           @fields_ = fields_
           @limit = limit
@@ -47,6 +49,7 @@ module UnifiedRubySDK
           @parent_id = parent_id
           @project_id = project_id
           @query = query
+          @raw = raw
           @sort = sort
           @updated_gte = updated_gte
           @user_id = user_id
@@ -62,6 +65,7 @@ module UnifiedRubySDK
           return false unless @parent_id == other.parent_id
           return false unless @project_id == other.project_id
           return false unless @query == other.query
+          return false unless @raw == other.raw
           return false unless @sort == other.sort
           return false unless @updated_gte == other.updated_gte
           return false unless @user_id == other.user_id

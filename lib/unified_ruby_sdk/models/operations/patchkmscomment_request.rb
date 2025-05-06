@@ -21,14 +21,17 @@ module UnifiedRubySDK
         field :kms_comment, Models::Shared::KmsComment, { 'request': { 'media_type': 'application/json' } }
         # Comma-delimited fields to return
         field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        # Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
+        field :raw, T.nilable(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
 
-        sig { params(connection_id: ::String, id: ::String, kms_comment: Models::Shared::KmsComment, fields_: T.nilable(T::Array[::String])).void }
-        def initialize(connection_id: nil, id: nil, kms_comment: nil, fields_: nil)
+        sig { params(connection_id: ::String, id: ::String, kms_comment: Models::Shared::KmsComment, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String)).void }
+        def initialize(connection_id: nil, id: nil, kms_comment: nil, fields_: nil, raw: nil)
           @connection_id = connection_id
           @id = id
           @kms_comment = kms_comment
           @fields_ = fields_
+          @raw = raw
         end
 
         def ==(other)
@@ -37,6 +40,7 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @kms_comment == other.kms_comment
           return false unless @fields_ == other.fields_
+          return false unless @raw == other.raw
           true
         end
       end

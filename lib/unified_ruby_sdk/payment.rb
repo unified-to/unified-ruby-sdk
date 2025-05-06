@@ -22,14 +22,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(payment_link: Models::Shared::PaymentLink, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePaymentLinkResponse) }
-    def create_payment_link(payment_link:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(payment_link: Models::Shared::PaymentLink, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePaymentLinkResponse) }
+    def create_payment_link(payment_link:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_payment_link - Create a link
       request = Models::Operations::CreatePaymentLinkRequest.new(
         
         payment_link: payment_link,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -146,14 +147,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(payment_payment: Models::Shared::PaymentPayment, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePaymentPaymentResponse) }
-    def create_payment_payment(payment_payment:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(payment_payment: Models::Shared::PaymentPayment, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePaymentPaymentResponse) }
+    def create_payment_payment(payment_payment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_payment_payment - Create a payment
       request = Models::Operations::CreatePaymentPaymentRequest.new(
         
         payment_payment: payment_payment,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -270,14 +272,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(payment_subscription: Models::Shared::PaymentSubscription, connection_id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePaymentSubscriptionResponse) }
-    def create_payment_subscription(payment_subscription:, connection_id:, fields_: nil, timeout_ms: nil)
+    sig { params(payment_subscription: Models::Shared::PaymentSubscription, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePaymentSubscriptionResponse) }
+    def create_payment_subscription(payment_subscription:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_payment_subscription - Create a subscription
       request = Models::Operations::CreatePaymentSubscriptionRequest.new(
         
         payment_subscription: payment_subscription,
         connection_id: connection_id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -394,14 +397,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentLinkResponse) }
-    def get_payment_link(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentLinkResponse) }
+    def get_payment_link(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_payment_link - Retrieve a link
       request = Models::Operations::GetPaymentLinkRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -506,14 +510,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentPaymentResponse) }
-    def get_payment_payment(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentPaymentResponse) }
+    def get_payment_payment(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_payment_payment - Retrieve a payment
       request = Models::Operations::GetPaymentPaymentRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -618,14 +623,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentPayoutResponse) }
-    def get_payment_payout(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentPayoutResponse) }
+    def get_payment_payout(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_payment_payout - Retrieve a payout
       request = Models::Operations::GetPaymentPayoutRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -730,14 +736,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentRefundResponse) }
-    def get_payment_refund(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentRefundResponse) }
+    def get_payment_refund(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_payment_refund - Retrieve a refund
       request = Models::Operations::GetPaymentRefundRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -842,14 +849,15 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentSubscriptionResponse) }
-    def get_payment_subscription(connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentSubscriptionResponse) }
+    def get_payment_subscription(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_payment_subscription - Retrieve a subscription
       request = Models::Operations::GetPaymentSubscriptionRequest.new(
         
         connection_id: connection_id,
         id: id,
-        fields_: fields_
+        fields_: fields_,
+        raw: raw
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
@@ -1484,16 +1492,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(payment_link: Models::Shared::PaymentLink, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPaymentLinkResponse) }
-    def patch_payment_link(payment_link:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchPaymentLinkRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPaymentLinkResponse) }
+    def patch_payment_link(request:, timeout_ms: nil)
       # patch_payment_link - Update a link
-      request = Models::Operations::PatchPaymentLinkRequest.new(
-        
-        payment_link: payment_link,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1609,16 +1610,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(payment_payment: Models::Shared::PaymentPayment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPaymentPaymentResponse) }
-    def patch_payment_payment(payment_payment:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchPaymentPaymentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPaymentPaymentResponse) }
+    def patch_payment_payment(request:, timeout_ms: nil)
       # patch_payment_payment - Update a payment
-      request = Models::Operations::PatchPaymentPaymentRequest.new(
-        
-        payment_payment: payment_payment,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1734,16 +1728,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(payment_subscription: Models::Shared::PaymentSubscription, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPaymentSubscriptionResponse) }
-    def patch_payment_subscription(payment_subscription:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::PatchPaymentSubscriptionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPaymentSubscriptionResponse) }
+    def patch_payment_subscription(request:, timeout_ms: nil)
       # patch_payment_subscription - Update a subscription
-      request = Models::Operations::PatchPaymentSubscriptionRequest.new(
-        
-        payment_subscription: payment_subscription,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2189,16 +2176,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(payment_link: Models::Shared::PaymentLink, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePaymentLinkResponse) }
-    def update_payment_link(payment_link:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdatePaymentLinkRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePaymentLinkResponse) }
+    def update_payment_link(request:, timeout_ms: nil)
       # update_payment_link - Update a link
-      request = Models::Operations::UpdatePaymentLinkRequest.new(
-        
-        payment_link: payment_link,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2314,16 +2294,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(payment_payment: Models::Shared::PaymentPayment, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePaymentPaymentResponse) }
-    def update_payment_payment(payment_payment:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdatePaymentPaymentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePaymentPaymentResponse) }
+    def update_payment_payment(request:, timeout_ms: nil)
       # update_payment_payment - Update a payment
-      request = Models::Operations::UpdatePaymentPaymentRequest.new(
-        
-        payment_payment: payment_payment,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2439,16 +2412,9 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(payment_subscription: Models::Shared::PaymentSubscription, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePaymentSubscriptionResponse) }
-    def update_payment_subscription(payment_subscription:, connection_id:, id:, fields_: nil, timeout_ms: nil)
+    sig { params(request: Models::Operations::UpdatePaymentSubscriptionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePaymentSubscriptionResponse) }
+    def update_payment_subscription(request:, timeout_ms: nil)
       # update_payment_subscription - Update a subscription
-      request = Models::Operations::UpdatePaymentSubscriptionRequest.new(
-        
-        payment_subscription: payment_subscription,
-        connection_id: connection_id,
-        id: id,
-        fields_: fields_
-      )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

@@ -32,7 +32,7 @@ res = s.page.create_kms_page(kms_page=Models::Shared::KmsPage.new(
   type: Models::Shared::KmsPageType::HTML,
 ), connection_id="<id>", fields_=[
   "<value>",
-])
+], raw="<value>")
 
 if ! res.kms_page.nil?
   # handle response
@@ -42,11 +42,12 @@ end
 
 ### Parameters
 
-| Parameter                                                 | Type                                                      | Required                                                  | Description                                               |
-| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
-| `kms_page`                                                | [Models::Shared::KmsPage](../../models/shared/kmspage.md) | :heavy_check_mark:                                        | N/A                                                       |
-| `connection_id`                                           | *::String*                                                | :heavy_check_mark:                                        | ID of the connection                                      |
-| `fields_`                                                 | T::Array<*::String*>                                      | :heavy_minus_sign:                                        | Comma-delimited fields to return                          |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `kms_page`                                                                                                                                       | [Models::Shared::KmsPage](../../models/shared/kmspage.md)                                                                                        | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<*::String*>                                                                                                                             | :heavy_minus_sign:                                                                                                                               | Comma-delimited fields to return                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
@@ -71,7 +72,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.page.get_kms_page(connection_id="<id>", id="<id>", fields_=[
   "<value>",
-])
+], raw="<value>")
 
 if ! res.kms_page.nil?
   # handle response
@@ -81,11 +82,12 @@ end
 
 ### Parameters
 
-| Parameter                        | Type                             | Required                         | Description                      |
-| -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `connection_id`                  | *::String*                       | :heavy_check_mark:               | ID of the connection             |
-| `id`                             | *::String*                       | :heavy_check_mark:               | ID of the Page                   |
-| `fields_`                        | T::Array<*::String*>             | :heavy_minus_sign:               | Comma-delimited fields to return |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Page                                                                                                                                   |
+| `fields_`                                                                                                                                        | T::Array<*::String*>                                                                                                                             | :heavy_minus_sign:                                                                                                                               | Comma-delimited fields to return                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
@@ -147,12 +149,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.page.patch_kms_page(kms_page=Models::Shared::KmsPage.new(
-  title: "<value>",
-  type: Models::Shared::KmsPageType::TEXT,
-), connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-])
+req = Models::Operations::PatchKmsPageRequest.new(
+  kms_page: Models::Shared::KmsPage.new(
+    title: "<value>",
+    type: Models::Shared::KmsPageType::TEXT,
+  ),
+  connection_id: "<id>",
+  id: "<id>",
+)
+
+res = s.page.patch_kms_page(req)
 
 if ! res.kms_page.nil?
   # handle response
@@ -162,12 +168,9 @@ end
 
 ### Parameters
 
-| Parameter                                                 | Type                                                      | Required                                                  | Description                                               |
-| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
-| `kms_page`                                                | [Models::Shared::KmsPage](../../models/shared/kmspage.md) | :heavy_check_mark:                                        | N/A                                                       |
-| `connection_id`                                           | *::String*                                                | :heavy_check_mark:                                        | ID of the connection                                      |
-| `id`                                                      | *::String*                                                | :heavy_check_mark:                                        | ID of the Page                                            |
-| `fields_`                                                 | T::Array<*::String*>                                      | :heavy_minus_sign:                                        | Comma-delimited fields to return                          |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [Models::Operations::PatchKmsPageRequest](../../models/operations/patchkmspagerequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
@@ -226,12 +229,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.page.update_kms_page(kms_page=Models::Shared::KmsPage.new(
-  title: "<value>",
-  type: Models::Shared::KmsPageType::OTHER,
-), connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-])
+req = Models::Operations::UpdateKmsPageRequest.new(
+  kms_page: Models::Shared::KmsPage.new(
+    title: "<value>",
+    type: Models::Shared::KmsPageType::OTHER,
+  ),
+  connection_id: "<id>",
+  id: "<id>",
+)
+
+res = s.page.update_kms_page(req)
 
 if ! res.kms_page.nil?
   # handle response
@@ -241,12 +248,9 @@ end
 
 ### Parameters
 
-| Parameter                                                 | Type                                                      | Required                                                  | Description                                               |
-| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
-| `kms_page`                                                | [Models::Shared::KmsPage](../../models/shared/kmspage.md) | :heavy_check_mark:                                        | N/A                                                       |
-| `connection_id`                                           | *::String*                                                | :heavy_check_mark:                                        | ID of the connection                                      |
-| `id`                                                      | *::String*                                                | :heavy_check_mark:                                        | ID of the Page                                            |
-| `fields_`                                                 | T::Array<*::String*>                                      | :heavy_minus_sign:                                        | Comma-delimited fields to return                          |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [Models::Operations::UpdateKmsPageRequest](../../models/operations/updatekmspagerequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 

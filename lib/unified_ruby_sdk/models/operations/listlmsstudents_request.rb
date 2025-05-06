@@ -31,6 +31,8 @@ module UnifiedRubySDK
         field :order, T.nilable(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
         # Query string to search. eg. email address or name
         field :query, T.nilable(::String), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
+        # Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
+        field :raw, T.nilable(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
         field :session_id, T.nilable(::String), { 'query_param': { 'field_name': 'session_id', 'style': 'form', 'explode': true } }
 
@@ -39,8 +41,8 @@ module UnifiedRubySDK
         field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
 
-        sig { params(connection_id: ::String, class_id: T.nilable(::String), course_id: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), location_id: T.nilable(::String), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), session_id: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
-        def initialize(connection_id: nil, class_id: nil, course_id: nil, fields_: nil, limit: nil, location_id: nil, offset: nil, order: nil, query: nil, session_id: nil, sort: nil, updated_gte: nil)
+        sig { params(connection_id: ::String, class_id: T.nilable(::String), course_id: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), location_id: T.nilable(::String), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), session_id: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
+        def initialize(connection_id: nil, class_id: nil, course_id: nil, fields_: nil, limit: nil, location_id: nil, offset: nil, order: nil, query: nil, raw: nil, session_id: nil, sort: nil, updated_gte: nil)
           @connection_id = connection_id
           @class_id = class_id
           @course_id = course_id
@@ -50,6 +52,7 @@ module UnifiedRubySDK
           @offset = offset
           @order = order
           @query = query
+          @raw = raw
           @session_id = session_id
           @sort = sort
           @updated_gte = updated_gte
@@ -66,6 +69,7 @@ module UnifiedRubySDK
           return false unless @offset == other.offset
           return false unless @order == other.order
           return false unless @query == other.query
+          return false unless @raw == other.raw
           return false unless @session_id == other.session_id
           return false unless @sort == other.sort
           return false unless @updated_gte == other.updated_gte
