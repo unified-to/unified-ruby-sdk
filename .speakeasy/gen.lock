@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: f032e2d929e6463e2d345fa322684244
+  docChecksum: 2625a6ddd69ded1a0dfa97e04747a5af
   docVersion: "1.0"
   speakeasyVersion: 1.533.0
   generationVersion: 2.578.0
-  releaseVersion: 0.15.1
-  configChecksum: 09e86dd9f86bb2c1a9af05bc1e3e6a7c
+  releaseVersion: 0.16.1
+  configChecksum: 2149cc796ba304c325961c5b7bfbe846
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -17,6 +17,7 @@ features:
     globalSecurity: 2.81.8
     globalServerURLs: 2.82.3
     responseFormat: 0.1.0
+    unions: 0.1.0
 generatedFiles:
   - .gitattributes
   - .rubocop.yml
@@ -950,6 +951,19 @@ generatedFiles:
   - docs/models/shared/atsjobquestiontype.md
   - docs/models/shared/atsjobstatus.md
   - docs/models/shared/atsmetadata.md
+  - docs/models/shared/atsmetadata1.md
+  - docs/models/shared/atsmetadata2.md
+  - docs/models/shared/atsmetadata3.md
+  - docs/models/shared/atsmetadata4.md
+  - docs/models/shared/atsmetadata5.md
+  - docs/models/shared/atsmetadataschemas2.md
+  - docs/models/shared/atsmetadataschemasextradata2.md
+  - docs/models/shared/atsmetadataschemasextradata22.md
+  - docs/models/shared/atsmetadataschemasextradata32.md
+  - docs/models/shared/atsmetadataschemasvalue2.md
+  - docs/models/shared/atsmetadataschemasvalue32.md
+  - docs/models/shared/atsmetadataschemasvalue42.md
+  - docs/models/shared/atsmetadataschemasvalue52.md
   - docs/models/shared/atsoffer.md
   - docs/models/shared/atsofferstatus.md
   - docs/models/shared/atsscorecard.md
@@ -979,7 +993,25 @@ generatedFiles:
   - docs/models/shared/commerceitemvariant.md
   - docs/models/shared/commercelocation.md
   - docs/models/shared/commercemetadata.md
+  - docs/models/shared/commercemetadata1.md
+  - docs/models/shared/commercemetadata2.md
+  - docs/models/shared/commercemetadata3.md
+  - docs/models/shared/commercemetadata4.md
+  - docs/models/shared/commercemetadata5.md
   - docs/models/shared/commercemetadataextradata.md
+  - docs/models/shared/commercemetadataschemas1.md
+  - docs/models/shared/commercemetadataschemas2.md
+  - docs/models/shared/commercemetadataschemas3.md
+  - docs/models/shared/commercemetadataschemas4.md
+  - docs/models/shared/commercemetadataschemas5.md
+  - docs/models/shared/commercemetadataschemasextradata2.md
+  - docs/models/shared/commercemetadataschemasextradata22.md
+  - docs/models/shared/commercemetadataschemasextradata32.md
+  - docs/models/shared/commercemetadataschemasextradata52.md
+  - docs/models/shared/commercemetadataschemasvalue2.md
+  - docs/models/shared/commercemetadataschemasvalue32.md
+  - docs/models/shared/commercemetadataschemasvalue42.md
+  - docs/models/shared/commercemetadataschemasvalue52.md
   - docs/models/shared/commercemetadatavalue.md
   - docs/models/shared/connection.md
   - docs/models/shared/contenttype.md
@@ -995,7 +1027,25 @@ generatedFiles:
   - docs/models/shared/crmeventtype.md
   - docs/models/shared/crmlead.md
   - docs/models/shared/crmmetadata.md
+  - docs/models/shared/crmmetadata1.md
+  - docs/models/shared/crmmetadata2.md
+  - docs/models/shared/crmmetadata3.md
+  - docs/models/shared/crmmetadata4.md
+  - docs/models/shared/crmmetadata5.md
   - docs/models/shared/crmmetadataextradata.md
+  - docs/models/shared/crmmetadataschemas1.md
+  - docs/models/shared/crmmetadataschemas2.md
+  - docs/models/shared/crmmetadataschemas3.md
+  - docs/models/shared/crmmetadataschemas4.md
+  - docs/models/shared/crmmetadataschemas5.md
+  - docs/models/shared/crmmetadataschemasextradata2.md
+  - docs/models/shared/crmmetadataschemasextradata22.md
+  - docs/models/shared/crmmetadataschemasextradata32.md
+  - docs/models/shared/crmmetadataschemasextradata52.md
+  - docs/models/shared/crmmetadataschemasvalue2.md
+  - docs/models/shared/crmmetadataschemasvalue32.md
+  - docs/models/shared/crmmetadataschemasvalue42.md
+  - docs/models/shared/crmmetadataschemasvalue52.md
   - docs/models/shared/crmmetadatavalue.md
   - docs/models/shared/crmpipeline.md
   - docs/models/shared/crmstage.md
@@ -1014,7 +1064,9 @@ generatedFiles:
   - docs/models/shared/ethnicity.md
   - docs/models/shared/event.md
   - docs/models/shared/extradata.md
+  - docs/models/shared/five.md
   - docs/models/shared/format.md
+  - docs/models/shared/four.md
   - docs/models/shared/frequency.md
   - docs/models/shared/fromwebhook.md
   - docs/models/shared/genaicontent.md
@@ -1035,7 +1087,25 @@ generatedFiles:
   - docs/models/shared/hrisgrouptype.md
   - docs/models/shared/hrislocation.md
   - docs/models/shared/hrismetadata.md
+  - docs/models/shared/hrismetadata1.md
+  - docs/models/shared/hrismetadata2.md
+  - docs/models/shared/hrismetadata3.md
+  - docs/models/shared/hrismetadata4.md
+  - docs/models/shared/hrismetadata5.md
   - docs/models/shared/hrismetadataextradata.md
+  - docs/models/shared/hrismetadataschemas1.md
+  - docs/models/shared/hrismetadataschemas2.md
+  - docs/models/shared/hrismetadataschemas3.md
+  - docs/models/shared/hrismetadataschemas4.md
+  - docs/models/shared/hrismetadataschemas5.md
+  - docs/models/shared/hrismetadataschemasextradata2.md
+  - docs/models/shared/hrismetadataschemasextradata22.md
+  - docs/models/shared/hrismetadataschemasextradata32.md
+  - docs/models/shared/hrismetadataschemasextradata52.md
+  - docs/models/shared/hrismetadataschemasvalue2.md
+  - docs/models/shared/hrismetadataschemasvalue32.md
+  - docs/models/shared/hrismetadataschemasvalue42.md
+  - docs/models/shared/hrismetadataschemasvalue52.md
   - docs/models/shared/hrismetadatavalue.md
   - docs/models/shared/hrispayslip.md
   - docs/models/shared/hrispayslipdetail.md
@@ -1125,6 +1195,7 @@ generatedFiles:
   - docs/models/shared/nativewebhookparentid.md
   - docs/models/shared/nativewebhookprojectid.md
   - docs/models/shared/objecttype.md
+  - docs/models/shared/one.md
   - docs/models/shared/operation.md
   - docs/models/shared/origin.md
   - docs/models/shared/paymentcollectionmethod.md
@@ -1249,6 +1320,7 @@ generatedFiles:
   - docs/models/shared/tasktask.md
   - docs/models/shared/tasktaskstatus.md
   - docs/models/shared/taxexemption.md
+  - docs/models/shared/three.md
   - docs/models/shared/ticketingcustomer.md
   - docs/models/shared/ticketingemail.md
   - docs/models/shared/ticketingemailtype.md
@@ -1257,6 +1329,7 @@ generatedFiles:
   - docs/models/shared/ticketingtelephonetype.md
   - docs/models/shared/ticketingticket.md
   - docs/models/shared/ticketingticketstatus.md
+  - docs/models/shared/two.md
   - docs/models/shared/type.md
   - docs/models/shared/uccall.md
   - docs/models/shared/uccomment.md
@@ -2367,6 +2440,19 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/atsjobquestion.rb
   - lib/unified_ruby_sdk/models/shared/atsjobquestion_type.rb
   - lib/unified_ruby_sdk/models/shared/atsmetadata.rb
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_1.rb
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_2.rb
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_3.rb
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_4.rb
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_5.rb
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_schemas_2.rb
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_schemas_extra_data_2.rb
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_schemas_extra_data_2_2.rb
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_schemas_extra_data_3_2.rb
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_schemas_value_2.rb
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_schemas_value_3_2.rb
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_schemas_value_4_2.rb
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_schemas_value_5_2.rb
   - lib/unified_ruby_sdk/models/shared/atsoffer.rb
   - lib/unified_ruby_sdk/models/shared/atsoffer_status.rb
   - lib/unified_ruby_sdk/models/shared/atsscorecard.rb
@@ -2396,7 +2482,25 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/commerceitemvariant.rb
   - lib/unified_ruby_sdk/models/shared/commercelocation.rb
   - lib/unified_ruby_sdk/models/shared/commercemetadata.rb
+  - lib/unified_ruby_sdk/models/shared/commercemetadata_1.rb
+  - lib/unified_ruby_sdk/models/shared/commercemetadata_2.rb
+  - lib/unified_ruby_sdk/models/shared/commercemetadata_3.rb
+  - lib/unified_ruby_sdk/models/shared/commercemetadata_4.rb
+  - lib/unified_ruby_sdk/models/shared/commercemetadata_5.rb
   - lib/unified_ruby_sdk/models/shared/commercemetadata_extra_data.rb
+  - lib/unified_ruby_sdk/models/shared/commercemetadata_schemas_1.rb
+  - lib/unified_ruby_sdk/models/shared/commercemetadata_schemas_2.rb
+  - lib/unified_ruby_sdk/models/shared/commercemetadata_schemas_3.rb
+  - lib/unified_ruby_sdk/models/shared/commercemetadata_schemas_4.rb
+  - lib/unified_ruby_sdk/models/shared/commercemetadata_schemas_5.rb
+  - lib/unified_ruby_sdk/models/shared/commercemetadata_schemas_extra_data_2.rb
+  - lib/unified_ruby_sdk/models/shared/commercemetadata_schemas_extra_data_2_2.rb
+  - lib/unified_ruby_sdk/models/shared/commercemetadata_schemas_extra_data_3_2.rb
+  - lib/unified_ruby_sdk/models/shared/commercemetadata_schemas_extra_data_5_2.rb
+  - lib/unified_ruby_sdk/models/shared/commercemetadata_schemas_value_2.rb
+  - lib/unified_ruby_sdk/models/shared/commercemetadata_schemas_value_3_2.rb
+  - lib/unified_ruby_sdk/models/shared/commercemetadata_schemas_value_4_2.rb
+  - lib/unified_ruby_sdk/models/shared/commercemetadata_schemas_value_5_2.rb
   - lib/unified_ruby_sdk/models/shared/commercemetadata_value.rb
   - lib/unified_ruby_sdk/models/shared/connection.rb
   - lib/unified_ruby_sdk/models/shared/content_type.rb
@@ -2412,7 +2516,25 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/crmeventformoption.rb
   - lib/unified_ruby_sdk/models/shared/crmlead.rb
   - lib/unified_ruby_sdk/models/shared/crmmetadata.rb
+  - lib/unified_ruby_sdk/models/shared/crmmetadata_1.rb
+  - lib/unified_ruby_sdk/models/shared/crmmetadata_2.rb
+  - lib/unified_ruby_sdk/models/shared/crmmetadata_3.rb
+  - lib/unified_ruby_sdk/models/shared/crmmetadata_4.rb
+  - lib/unified_ruby_sdk/models/shared/crmmetadata_5.rb
   - lib/unified_ruby_sdk/models/shared/crmmetadata_extra_data.rb
+  - lib/unified_ruby_sdk/models/shared/crmmetadata_schemas_1.rb
+  - lib/unified_ruby_sdk/models/shared/crmmetadata_schemas_2.rb
+  - lib/unified_ruby_sdk/models/shared/crmmetadata_schemas_3.rb
+  - lib/unified_ruby_sdk/models/shared/crmmetadata_schemas_4.rb
+  - lib/unified_ruby_sdk/models/shared/crmmetadata_schemas_5.rb
+  - lib/unified_ruby_sdk/models/shared/crmmetadata_schemas_extra_data_2.rb
+  - lib/unified_ruby_sdk/models/shared/crmmetadata_schemas_extra_data_2_2.rb
+  - lib/unified_ruby_sdk/models/shared/crmmetadata_schemas_extra_data_3_2.rb
+  - lib/unified_ruby_sdk/models/shared/crmmetadata_schemas_extra_data_5_2.rb
+  - lib/unified_ruby_sdk/models/shared/crmmetadata_schemas_value_2.rb
+  - lib/unified_ruby_sdk/models/shared/crmmetadata_schemas_value_3_2.rb
+  - lib/unified_ruby_sdk/models/shared/crmmetadata_schemas_value_4_2.rb
+  - lib/unified_ruby_sdk/models/shared/crmmetadata_schemas_value_5_2.rb
   - lib/unified_ruby_sdk/models/shared/crmmetadata_value.rb
   - lib/unified_ruby_sdk/models/shared/crmpipeline.rb
   - lib/unified_ruby_sdk/models/shared/crmstage.rb
@@ -2431,7 +2553,9 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/ethnicity.rb
   - lib/unified_ruby_sdk/models/shared/event.rb
   - lib/unified_ruby_sdk/models/shared/extra_data.rb
+  - lib/unified_ruby_sdk/models/shared/five.rb
   - lib/unified_ruby_sdk/models/shared/format.rb
+  - lib/unified_ruby_sdk/models/shared/four.rb
   - lib/unified_ruby_sdk/models/shared/frequency.rb
   - lib/unified_ruby_sdk/models/shared/from_webhook.rb
   - lib/unified_ruby_sdk/models/shared/genaicontent.rb
@@ -2452,7 +2576,25 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/hrisgroup_type.rb
   - lib/unified_ruby_sdk/models/shared/hrislocation.rb
   - lib/unified_ruby_sdk/models/shared/hrismetadata.rb
+  - lib/unified_ruby_sdk/models/shared/hrismetadata_1.rb
+  - lib/unified_ruby_sdk/models/shared/hrismetadata_2.rb
+  - lib/unified_ruby_sdk/models/shared/hrismetadata_3.rb
+  - lib/unified_ruby_sdk/models/shared/hrismetadata_4.rb
+  - lib/unified_ruby_sdk/models/shared/hrismetadata_5.rb
   - lib/unified_ruby_sdk/models/shared/hrismetadata_extra_data.rb
+  - lib/unified_ruby_sdk/models/shared/hrismetadata_schemas_1.rb
+  - lib/unified_ruby_sdk/models/shared/hrismetadata_schemas_2.rb
+  - lib/unified_ruby_sdk/models/shared/hrismetadata_schemas_3.rb
+  - lib/unified_ruby_sdk/models/shared/hrismetadata_schemas_4.rb
+  - lib/unified_ruby_sdk/models/shared/hrismetadata_schemas_5.rb
+  - lib/unified_ruby_sdk/models/shared/hrismetadata_schemas_extra_data_2.rb
+  - lib/unified_ruby_sdk/models/shared/hrismetadata_schemas_extra_data_2_2.rb
+  - lib/unified_ruby_sdk/models/shared/hrismetadata_schemas_extra_data_3_2.rb
+  - lib/unified_ruby_sdk/models/shared/hrismetadata_schemas_extra_data_5_2.rb
+  - lib/unified_ruby_sdk/models/shared/hrismetadata_schemas_value_2.rb
+  - lib/unified_ruby_sdk/models/shared/hrismetadata_schemas_value_3_2.rb
+  - lib/unified_ruby_sdk/models/shared/hrismetadata_schemas_value_4_2.rb
+  - lib/unified_ruby_sdk/models/shared/hrismetadata_schemas_value_5_2.rb
   - lib/unified_ruby_sdk/models/shared/hrismetadata_value.rb
   - lib/unified_ruby_sdk/models/shared/hrispayslip.rb
   - lib/unified_ruby_sdk/models/shared/hrispayslipdetail.rb
@@ -2542,6 +2684,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/native_webhook_parent_id.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_project_id.rb
   - lib/unified_ruby_sdk/models/shared/object_type.rb
+  - lib/unified_ruby_sdk/models/shared/one.rb
   - lib/unified_ruby_sdk/models/shared/operation.rb
   - lib/unified_ruby_sdk/models/shared/origin.rb
   - lib/unified_ruby_sdk/models/shared/payment_collection_method.rb
@@ -2666,6 +2809,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/tasktask.rb
   - lib/unified_ruby_sdk/models/shared/tasktask_status.rb
   - lib/unified_ruby_sdk/models/shared/tax_exemption.rb
+  - lib/unified_ruby_sdk/models/shared/three.rb
   - lib/unified_ruby_sdk/models/shared/ticketingcustomer.rb
   - lib/unified_ruby_sdk/models/shared/ticketingemail.rb
   - lib/unified_ruby_sdk/models/shared/ticketingemail_type.rb
@@ -2674,6 +2818,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/ticketingtelephone_type.rb
   - lib/unified_ruby_sdk/models/shared/ticketingticket.rb
   - lib/unified_ruby_sdk/models/shared/ticketingticket_status.rb
+  - lib/unified_ruby_sdk/models/shared/two.rb
   - lib/unified_ruby_sdk/models/shared/type.rb
   - lib/unified_ruby_sdk/models/shared/uccall.rb
   - lib/unified_ruby_sdk/models/shared/uccomment.rb

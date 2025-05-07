@@ -14,7 +14,7 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :extra_data, T.nilable(Models::Shared::CrmMetadataExtraData), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('extra_data') } }
+        field :extra_data, T.nilable(T.any(Models::Shared::CrmMetadata1, T.any(::String, Models::Shared::CrmMetadataSchemasExtraData22), T.any(::Float, Models::Shared::CrmMetadataSchemasExtraData32), T.any(T::Boolean, Models::Shared::CrmMetadataSchemasExtraData2), T.any(T::Array[::Object], Models::Shared::CrmMetadataSchemasExtraData52))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('extra_data') } }
 
         field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
@@ -26,10 +26,10 @@ module UnifiedRubySDK
 
         field :type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
 
-        field :value, T.nilable(Models::Shared::CrmMetadataValue), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
+        field :value, T.nilable(T.any(Models::Shared::CrmMetadataSchemas1, T.any(::String, Models::Shared::CrmMetadataSchemasValue2), T.any(::Float, Models::Shared::CrmMetadataSchemasValue32), T.any(T::Boolean, Models::Shared::CrmMetadataSchemasValue42), T.any(T::Array[::Object], Models::Shared::CrmMetadataSchemasValue52))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 
 
-        sig { params(extra_data: T.nilable(Models::Shared::CrmMetadataExtraData), id: T.nilable(::String), key: T.nilable(::String), namespace: T.nilable(::String), slug: T.nilable(::String), type: T.nilable(::String), value: T.nilable(Models::Shared::CrmMetadataValue)).void }
+        sig { params(extra_data: T.nilable(T.any(Models::Shared::CrmMetadata1, T.any(::String, Models::Shared::CrmMetadataSchemasExtraData22), T.any(::Float, Models::Shared::CrmMetadataSchemasExtraData32), T.any(T::Boolean, Models::Shared::CrmMetadataSchemasExtraData2), T.any(T::Array[::Object], Models::Shared::CrmMetadataSchemasExtraData52))), id: T.nilable(::String), key: T.nilable(::String), namespace: T.nilable(::String), slug: T.nilable(::String), type: T.nilable(::String), value: T.nilable(T.any(Models::Shared::CrmMetadataSchemas1, T.any(::String, Models::Shared::CrmMetadataSchemasValue2), T.any(::Float, Models::Shared::CrmMetadataSchemasValue32), T.any(T::Boolean, Models::Shared::CrmMetadataSchemasValue42), T.any(T::Array[::Object], Models::Shared::CrmMetadataSchemasValue52)))).void }
         def initialize(extra_data: nil, id: nil, key: nil, namespace: nil, slug: nil, type: nil, value: nil)
           @extra_data = extra_data
           @id = id

@@ -14,7 +14,7 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :extra_data, T.nilable(Models::Shared::HrisMetadataExtraData), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('extra_data') } }
+        field :extra_data, T.nilable(T.any(Models::Shared::HrisMetadata1, T.any(::String, Models::Shared::HrisMetadataSchemasExtraData22), T.any(::Float, Models::Shared::HrisMetadataSchemasExtraData32), T.any(T::Boolean, Models::Shared::HrisMetadataSchemasExtraData2), T.any(T::Array[::Object], Models::Shared::HrisMetadataSchemasExtraData52))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('extra_data') } }
 
         field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
@@ -26,10 +26,10 @@ module UnifiedRubySDK
 
         field :type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
 
-        field :value, T.nilable(Models::Shared::HrisMetadataValue), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
+        field :value, T.nilable(T.any(Models::Shared::HrisMetadataSchemas1, T.any(::String, Models::Shared::HrisMetadataSchemasValue2), T.any(::Float, Models::Shared::HrisMetadataSchemasValue32), T.any(T::Boolean, Models::Shared::HrisMetadataSchemasValue42), T.any(T::Array[::Object], Models::Shared::HrisMetadataSchemasValue52))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 
 
-        sig { params(extra_data: T.nilable(Models::Shared::HrisMetadataExtraData), id: T.nilable(::String), key: T.nilable(::String), namespace: T.nilable(::String), slug: T.nilable(::String), type: T.nilable(::String), value: T.nilable(Models::Shared::HrisMetadataValue)).void }
+        sig { params(extra_data: T.nilable(T.any(Models::Shared::HrisMetadata1, T.any(::String, Models::Shared::HrisMetadataSchemasExtraData22), T.any(::Float, Models::Shared::HrisMetadataSchemasExtraData32), T.any(T::Boolean, Models::Shared::HrisMetadataSchemasExtraData2), T.any(T::Array[::Object], Models::Shared::HrisMetadataSchemasExtraData52))), id: T.nilable(::String), key: T.nilable(::String), namespace: T.nilable(::String), slug: T.nilable(::String), type: T.nilable(::String), value: T.nilable(T.any(Models::Shared::HrisMetadataSchemas1, T.any(::String, Models::Shared::HrisMetadataSchemasValue2), T.any(::Float, Models::Shared::HrisMetadataSchemasValue32), T.any(T::Boolean, Models::Shared::HrisMetadataSchemasValue42), T.any(T::Array[::Object], Models::Shared::HrisMetadataSchemasValue52)))).void }
         def initialize(extra_data: nil, id: nil, key: nil, namespace: nil, slug: nil, type: nil, value: nil)
           @extra_data = extra_data
           @id = id

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    unified_ruby_sdk (0.15.1)
+    unified_ruby_sdk (0.16.1)
       faraday
       faraday-multipart
       faraday-retry (~> 2.2.1)
