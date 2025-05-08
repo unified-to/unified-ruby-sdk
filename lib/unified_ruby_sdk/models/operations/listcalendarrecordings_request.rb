@@ -15,9 +15,9 @@ module UnifiedRubySDK
 
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-
+        # The end date to filter by
         field :end_le, T.nilable(::String), { 'query_param': { 'field_name': 'end_le', 'style': 'form', 'explode': true } }
-
+        # The event ID to filter by
         field :event_id, T.nilable(::String), { 'query_param': { 'field_name': 'event_id', 'style': 'form', 'explode': true } }
         # Comma-delimited fields to return
         field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
@@ -33,7 +33,7 @@ module UnifiedRubySDK
         field :raw, T.nilable(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
         field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
-
+        # The start date to filter by
         field :start_gte, T.nilable(::String), { 'query_param': { 'field_name': 'start_gte', 'style': 'form', 'explode': true } }
         # Return only results whose updated date is equal or greater to this value
         field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }

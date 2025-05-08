@@ -15,15 +15,15 @@ module UnifiedRubySDK
 
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-
+        # The company ID to filter by
         field :company_id, T.nilable(::String), { 'query_param': { 'field_name': 'company_id', 'style': 'form', 'explode': true } }
-
+        # The contact ID to filter by
         field :contact_id, T.nilable(::String), { 'query_param': { 'field_name': 'contact_id', 'style': 'form', 'explode': true } }
-
+        # The deal ID to filter by
         field :deal_id, T.nilable(::String), { 'query_param': { 'field_name': 'deal_id', 'style': 'form', 'explode': true } }
         # Comma-delimited fields to return
         field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
-
+        # The CRM lead ID to filter by
         field :lead_id, T.nilable(::String), { 'query_param': { 'field_name': 'lead_id', 'style': 'form', 'explode': true } }
 
         field :limit, T.nilable(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
@@ -41,7 +41,7 @@ module UnifiedRubySDK
         field :type, T.nilable(::String), { 'query_param': { 'field_name': 'type', 'style': 'form', 'explode': true } }
         # Return only results whose updated date is equal or greater to this value
         field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
-
+        # The user/employee ID to filter by
         field :user_id, T.nilable(::String), { 'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': true } }
 
 

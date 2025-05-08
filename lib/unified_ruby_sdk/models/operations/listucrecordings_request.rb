@@ -15,9 +15,11 @@ module UnifiedRubySDK
 
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-
+        # The call ID to filter by
         field :call_id, T.nilable(::String), { 'query_param': { 'field_name': 'call_id', 'style': 'form', 'explode': true } }
-
+        # The contact ID to filter by
+        field :contact_id, T.nilable(::String), { 'query_param': { 'field_name': 'contact_id', 'style': 'form', 'explode': true } }
+        # The end date to filter by
         field :end_le, T.nilable(::String), { 'query_param': { 'field_name': 'end_le', 'style': 'form', 'explode': true } }
         # Comma-delimited fields to return
         field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
@@ -33,18 +35,19 @@ module UnifiedRubySDK
         field :raw, T.nilable(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
         field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
-
+        # The start date to filter by
         field :start_gte, T.nilable(::String), { 'query_param': { 'field_name': 'start_gte', 'style': 'form', 'explode': true } }
         # Return only results whose updated date is equal or greater to this value
         field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
-
+        # The user/employee ID to filter by
         field :user_id, T.nilable(::String), { 'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': true } }
 
 
-        sig { params(connection_id: ::String, call_id: T.nilable(::String), end_le: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(connection_id: nil, call_id: nil, end_le: nil, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, start_gte: nil, updated_gte: nil, user_id: nil)
+        sig { params(connection_id: ::String, call_id: T.nilable(::String), contact_id: T.nilable(::String), end_le: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(connection_id: nil, call_id: nil, contact_id: nil, end_le: nil, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, start_gte: nil, updated_gte: nil, user_id: nil)
           @connection_id = connection_id
           @call_id = call_id
+          @contact_id = contact_id
           @end_le = end_le
           @fields_ = fields_
           @limit = limit
@@ -62,6 +65,7 @@ module UnifiedRubySDK
           return false unless other.is_a? self.class
           return false unless @connection_id == other.connection_id
           return false unless @call_id == other.call_id
+          return false unless @contact_id == other.contact_id
           return false unless @end_le == other.end_le
           return false unless @fields_ == other.fields_
           return false unless @limit == other.limit

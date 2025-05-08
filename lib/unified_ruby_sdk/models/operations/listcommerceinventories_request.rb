@@ -17,11 +17,11 @@ module UnifiedRubySDK
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
         # Comma-delimited fields to return
         field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
-
+        # The item variant ID to filter by
         field :item_variant_id, T.nilable(::String), { 'query_param': { 'field_name': 'item_variant_id', 'style': 'form', 'explode': true } }
 
         field :limit, T.nilable(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
-
+        # The location ID to filter by
         field :location_id, T.nilable(::String), { 'query_param': { 'field_name': 'location_id', 'style': 'form', 'explode': true } }
 
         field :offset, T.nilable(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }

@@ -15,11 +15,11 @@ module UnifiedRubySDK
 
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-
+        # The class ID to filter by
         field :class_id, T.nilable(::String), { 'query_param': { 'field_name': 'class_id', 'style': 'form', 'explode': true } }
-
+        # The company ID to filter by
         field :company_id, T.nilable(::String), { 'query_param': { 'field_name': 'company_id', 'style': 'form', 'explode': true } }
-
+        # The course ID to filter by
         field :course_id, T.nilable(::String), { 'query_param': { 'field_name': 'course_id', 'style': 'form', 'explode': true } }
         # Comma-delimited fields to return
         field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
