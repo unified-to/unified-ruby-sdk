@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 1cbf51aa4a732ad7a3160606fa7ef127
+  docChecksum: 384d22984f53ba58e35d8b7c45507e05
   docVersion: "1.0"
   speakeasyVersion: 1.533.0
   generationVersion: 2.578.0
-  releaseVersion: 0.17.1
-  configChecksum: 824656d6da82c82415892cf2cfa32bba
+  releaseVersion: 0.18.1
+  configChecksum: a1137a1e924f537ffbfb1bb8491aeeb0
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -933,6 +933,7 @@ generatedFiles:
   - docs/models/shared/accountingtransactioncontact.md
   - docs/models/shared/accountingtransactionlineitem.md
   - docs/models/shared/accountingtrialbalancesubitem.md
+  - docs/models/shared/api.md
   - docs/models/shared/apicall.md
   - docs/models/shared/apicalltype.md
   - docs/models/shared/atsactivity.md
@@ -1084,7 +1085,6 @@ generatedFiles:
   - docs/models/shared/format.md
   - docs/models/shared/four.md
   - docs/models/shared/frequency.md
-  - docs/models/shared/fromwebhook.md
   - docs/models/shared/genaicontent.md
   - docs/models/shared/genaimodel.md
   - docs/models/shared/genaiprompt.md
@@ -1132,7 +1132,33 @@ generatedFiles:
   - docs/models/shared/hristimeoffstatus.md
   - docs/models/shared/hristimeofftype.md
   - docs/models/shared/integration.md
-  - docs/models/shared/integrationsupport.md
+  - docs/models/shared/integration1.md
+  - docs/models/shared/integration2.md
+  - docs/models/shared/integration3.md
+  - docs/models/shared/integration4.md
+  - docs/models/shared/integration5.md
+  - docs/models/shared/integrationschemas1.md
+  - docs/models/shared/integrationschemas2.md
+  - docs/models/shared/integrationschemas3.md
+  - docs/models/shared/integrationschemas4.md
+  - docs/models/shared/integrationschemas5.md
+  - docs/models/shared/integrationschemasapi2.md
+  - docs/models/shared/integrationschemasapi22.md
+  - docs/models/shared/integrationschemasapi32.md
+  - docs/models/shared/integrationschemasapi52.md
+  - docs/models/shared/integrationschemaspartnership2.md
+  - docs/models/shared/integrationschemaspartnership32.md
+  - docs/models/shared/integrationschemaspartnership42.md
+  - docs/models/shared/integrationschemaspartnership52.md
+  - docs/models/shared/integrationschemassandbox1.md
+  - docs/models/shared/integrationschemassandbox2.md
+  - docs/models/shared/integrationschemassandbox22.md
+  - docs/models/shared/integrationschemassandbox3.md
+  - docs/models/shared/integrationschemassandbox32.md
+  - docs/models/shared/integrationschemassandbox4.md
+  - docs/models/shared/integrationschemassandbox42.md
+  - docs/models/shared/integrationschemassandbox5.md
+  - docs/models/shared/integrationschemassandbox52.md
   - docs/models/shared/intervalunit.md
   - docs/models/shared/issue.md
   - docs/models/shared/issuestatus.md
@@ -1142,53 +1168,6 @@ generatedFiles:
   - docs/models/shared/kmspagemetadata.md
   - docs/models/shared/kmspagetype.md
   - docs/models/shared/kmsspace.md
-  - docs/models/shared/listaccountid.md
-  - docs/models/shared/listapplicationid.md
-  - docs/models/shared/listcalendarid.md
-  - docs/models/shared/listcallid.md
-  - docs/models/shared/listcandidateid.md
-  - docs/models/shared/listchannelid.md
-  - docs/models/shared/listclassid.md
-  - docs/models/shared/listcollectionid.md
-  - docs/models/shared/listcompanyid.md
-  - docs/models/shared/listcontactid.md
-  - docs/models/shared/listcourseid.md
-  - docs/models/shared/listcustomerid.md
-  - docs/models/shared/listdealid.md
-  - docs/models/shared/listendle.md
-  - docs/models/shared/listeventid.md
-  - docs/models/shared/listinstructorid.md
-  - docs/models/shared/listinterviewid.md
-  - docs/models/shared/listinvoiceid.md
-  - docs/models/shared/listitemid.md
-  - docs/models/shared/listitemvariantid.md
-  - docs/models/shared/listjobid.md
-  - docs/models/shared/listleadid.md
-  - docs/models/shared/listlimit.md
-  - docs/models/shared/listlinkid.md
-  - docs/models/shared/listlistid.md
-  - docs/models/shared/listlocationid.md
-  - docs/models/shared/listoffset.md
-  - docs/models/shared/listorder.md
-  - docs/models/shared/listorgid.md
-  - docs/models/shared/listpageid.md
-  - docs/models/shared/listparentid.md
-  - docs/models/shared/listprojectid.md
-  - docs/models/shared/listquery.md
-  - docs/models/shared/listrawfields.md
-  - docs/models/shared/listrepoid.md
-  - docs/models/shared/listrootid.md
-  - docs/models/shared/listsortbycreatedat.md
-  - docs/models/shared/listsortbyname.md
-  - docs/models/shared/listsortbyupdatedat.md
-  - docs/models/shared/listspaceid.md
-  - docs/models/shared/liststartgte.md
-  - docs/models/shared/liststudentid.md
-  - docs/models/shared/listtaskid.md
-  - docs/models/shared/listticketid.md
-  - docs/models/shared/listtype.md
-  - docs/models/shared/listupdatedgte.md
-  - docs/models/shared/listuserid.md
   - docs/models/shared/lmsclass.md
   - docs/models/shared/lmscourse.md
   - docs/models/shared/lmsemail.md
@@ -1208,12 +1187,11 @@ generatedFiles:
   - docs/models/shared/messagingmember.md
   - docs/models/shared/messagingmessage.md
   - docs/models/shared/metadatametadata.md
-  - docs/models/shared/nativewebhookparentid.md
-  - docs/models/shared/nativewebhookprojectid.md
   - docs/models/shared/objecttype.md
   - docs/models/shared/one.md
   - docs/models/shared/operation.md
   - docs/models/shared/origin.md
+  - docs/models/shared/partnership.md
   - docs/models/shared/paymentcollectionmethod.md
   - docs/models/shared/paymentlineitem.md
   - docs/models/shared/paymentlink.md
@@ -1267,10 +1245,6 @@ generatedFiles:
   - docs/models/shared/propertyhrisemployeeemployeeroles.md
   - docs/models/shared/propertyhrislocationaddress.md
   - docs/models/shared/propertyintegrationcategories.md
-  - docs/models/shared/propertyintegrationsupportwebhookevents.md
-  - docs/models/shared/propertyintegrationsupportwebhookeventscreated.md
-  - docs/models/shared/propertyintegrationsupportwebhookeventsdeleted.md
-  - docs/models/shared/propertyintegrationsupportwebhookeventsupdated.md
   - docs/models/shared/propertylmsstudentaddress.md
   - docs/models/shared/propertymessagingmessageauthormember.md
   - docs/models/shared/propertyscimgroupmeta.md
@@ -1299,6 +1273,7 @@ generatedFiles:
   - docs/models/shared/reporepository.md
   - docs/models/shared/resourcetype.md
   - docs/models/shared/role.md
+  - docs/models/shared/sandbox.md
   - docs/models/shared/scimaddress.md
   - docs/models/shared/scimaddresstype.md
   - docs/models/shared/scimemail.md
@@ -1319,11 +1294,6 @@ generatedFiles:
   - docs/models/shared/scimuser.md
   - docs/models/shared/scimusergroups.md
   - docs/models/shared/scimusergroupstype.md
-  - docs/models/shared/searchdomain.md
-  - docs/models/shared/searchemail.md
-  - docs/models/shared/searchlinkedinurl.md
-  - docs/models/shared/searchname.md
-  - docs/models/shared/searchtwitter.md
   - docs/models/shared/security.md
   - docs/models/shared/sexualorientation.md
   - docs/models/shared/sizeunit.md
@@ -1358,17 +1328,6 @@ generatedFiles:
   - docs/models/shared/uctelephone.md
   - docs/models/shared/uctelephonetype.md
   - docs/models/shared/value.md
-  - docs/models/shared/virtualwebhookchannelid.md
-  - docs/models/shared/virtualwebhookcompanyid.md
-  - docs/models/shared/virtualwebhookcontactid.md
-  - docs/models/shared/virtualwebhookdealid.md
-  - docs/models/shared/virtualwebhookjobid.md
-  - docs/models/shared/virtualwebhooklimit.md
-  - docs/models/shared/virtualwebhookparentid.md
-  - docs/models/shared/virtualwebhookticketid.md
-  - docs/models/shared/virtualwebhooktype.md
-  - docs/models/shared/virtualwebhookupdatedgte.md
-  - docs/models/shared/virtualwebhookuserid.md
   - docs/models/shared/webhook.md
   - docs/models/shared/webhooktype.md
   - docs/models/shared/weightunit.md
@@ -2439,6 +2398,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingtransactioncontact.rb
   - lib/unified_ruby_sdk/models/shared/accountingtransactionlineitem.rb
   - lib/unified_ruby_sdk/models/shared/accountingtrialbalancesubitem.rb
+  - lib/unified_ruby_sdk/models/shared/api.rb
   - lib/unified_ruby_sdk/models/shared/apicall.rb
   - lib/unified_ruby_sdk/models/shared/apicall_type.rb
   - lib/unified_ruby_sdk/models/shared/atsactivity.rb
@@ -2590,7 +2550,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/format.rb
   - lib/unified_ruby_sdk/models/shared/four.rb
   - lib/unified_ruby_sdk/models/shared/frequency.rb
-  - lib/unified_ruby_sdk/models/shared/from_webhook.rb
   - lib/unified_ruby_sdk/models/shared/genaicontent.rb
   - lib/unified_ruby_sdk/models/shared/genaimodel.rb
   - lib/unified_ruby_sdk/models/shared/genaiprompt.rb
@@ -2638,7 +2597,33 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/hristimeoff_status.rb
   - lib/unified_ruby_sdk/models/shared/hristimeoff_type.rb
   - lib/unified_ruby_sdk/models/shared/integration.rb
-  - lib/unified_ruby_sdk/models/shared/integrationsupport.rb
+  - lib/unified_ruby_sdk/models/shared/integration_1.rb
+  - lib/unified_ruby_sdk/models/shared/integration_2.rb
+  - lib/unified_ruby_sdk/models/shared/integration_3.rb
+  - lib/unified_ruby_sdk/models/shared/integration_4.rb
+  - lib/unified_ruby_sdk/models/shared/integration_5.rb
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_1.rb
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_2.rb
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_3.rb
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_4.rb
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_5.rb
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_api_2.rb
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_api_2_2.rb
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_api_3_2.rb
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_api_5_2.rb
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_partnership_2.rb
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_partnership_3_2.rb
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_partnership_4_2.rb
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_partnership_5_2.rb
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_sandbox_1.rb
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_sandbox_2.rb
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_sandbox_2_2.rb
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_sandbox_3.rb
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_sandbox_3_2.rb
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_sandbox_4.rb
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_sandbox_4_2.rb
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_sandbox_5.rb
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_sandbox_5_2.rb
   - lib/unified_ruby_sdk/models/shared/interval_unit.rb
   - lib/unified_ruby_sdk/models/shared/issue.rb
   - lib/unified_ruby_sdk/models/shared/issue_status.rb
@@ -2648,53 +2633,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/kmspage_type.rb
   - lib/unified_ruby_sdk/models/shared/kmspagemetadata.rb
   - lib/unified_ruby_sdk/models/shared/kmsspace.rb
-  - lib/unified_ruby_sdk/models/shared/list_account_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_application_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_calendar_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_call_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_candidate_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_channel_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_class_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_collection_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_company_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_contact_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_course_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_customer_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_deal_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_end_le.rb
-  - lib/unified_ruby_sdk/models/shared/list_event_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_instructor_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_interview_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_invoice_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_item_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_item_variant_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_job_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_lead_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_limit.rb
-  - lib/unified_ruby_sdk/models/shared/list_link_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_list_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_location_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_offset.rb
-  - lib/unified_ruby_sdk/models/shared/list_order.rb
-  - lib/unified_ruby_sdk/models/shared/list_org_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_page_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_parent_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_project_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_query.rb
-  - lib/unified_ruby_sdk/models/shared/list_raw_fields.rb
-  - lib/unified_ruby_sdk/models/shared/list_repo_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_root_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_sort_by_created_at.rb
-  - lib/unified_ruby_sdk/models/shared/list_sort_by_name.rb
-  - lib/unified_ruby_sdk/models/shared/list_sort_by_updated_at.rb
-  - lib/unified_ruby_sdk/models/shared/list_space_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_start_gte.rb
-  - lib/unified_ruby_sdk/models/shared/list_student_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_task_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_ticket_id.rb
-  - lib/unified_ruby_sdk/models/shared/list_type.rb
-  - lib/unified_ruby_sdk/models/shared/list_updated_gte.rb
-  - lib/unified_ruby_sdk/models/shared/list_user_id.rb
   - lib/unified_ruby_sdk/models/shared/lmsclass.rb
   - lib/unified_ruby_sdk/models/shared/lmscourse.rb
   - lib/unified_ruby_sdk/models/shared/lmsemail.rb
@@ -2714,12 +2652,11 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/messagingmember.rb
   - lib/unified_ruby_sdk/models/shared/messagingmessage.rb
   - lib/unified_ruby_sdk/models/shared/metadatametadata.rb
-  - lib/unified_ruby_sdk/models/shared/native_webhook_parent_id.rb
-  - lib/unified_ruby_sdk/models/shared/native_webhook_project_id.rb
   - lib/unified_ruby_sdk/models/shared/object_type.rb
   - lib/unified_ruby_sdk/models/shared/one.rb
   - lib/unified_ruby_sdk/models/shared/operation.rb
   - lib/unified_ruby_sdk/models/shared/origin.rb
+  - lib/unified_ruby_sdk/models/shared/partnership.rb
   - lib/unified_ruby_sdk/models/shared/payment_collection_method.rb
   - lib/unified_ruby_sdk/models/shared/payment_type.rb
   - lib/unified_ruby_sdk/models/shared/paymentlineitem.rb
@@ -2773,10 +2710,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_hrisemployee_employee_roles.rb
   - lib/unified_ruby_sdk/models/shared/property_hrislocation_address.rb
   - lib/unified_ruby_sdk/models/shared/property_integration_categories.rb
-  - lib/unified_ruby_sdk/models/shared/property_integrationsupport_webhook_events.rb
-  - lib/unified_ruby_sdk/models/shared/property_integrationsupport_webhook_events_created.rb
-  - lib/unified_ruby_sdk/models/shared/property_integrationsupport_webhook_events_deleted.rb
-  - lib/unified_ruby_sdk/models/shared/property_integrationsupport_webhook_events_updated.rb
   - lib/unified_ruby_sdk/models/shared/property_lmsstudent_address.rb
   - lib/unified_ruby_sdk/models/shared/property_messagingmessage_author_member.rb
   - lib/unified_ruby_sdk/models/shared/property_scimgroup_meta.rb
@@ -2805,6 +2738,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/reporepository.rb
   - lib/unified_ruby_sdk/models/shared/resourcetype.rb
   - lib/unified_ruby_sdk/models/shared/role.rb
+  - lib/unified_ruby_sdk/models/shared/sandbox.rb
   - lib/unified_ruby_sdk/models/shared/scimaddress.rb
   - lib/unified_ruby_sdk/models/shared/scimaddress_type.rb
   - lib/unified_ruby_sdk/models/shared/scimemail.rb
@@ -2825,11 +2759,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/scimuser.rb
   - lib/unified_ruby_sdk/models/shared/scimusergroups.rb
   - lib/unified_ruby_sdk/models/shared/scimusergroups_type.rb
-  - lib/unified_ruby_sdk/models/shared/search_domain.rb
-  - lib/unified_ruby_sdk/models/shared/search_email.rb
-  - lib/unified_ruby_sdk/models/shared/search_linkedinurl.rb
-  - lib/unified_ruby_sdk/models/shared/search_name.rb
-  - lib/unified_ruby_sdk/models/shared/search_twitter.rb
   - lib/unified_ruby_sdk/models/shared/security.rb
   - lib/unified_ruby_sdk/models/shared/sexualorientation.rb
   - lib/unified_ruby_sdk/models/shared/size_unit.rb
@@ -2864,17 +2793,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/uctelephone.rb
   - lib/unified_ruby_sdk/models/shared/uctelephone_type.rb
   - lib/unified_ruby_sdk/models/shared/value.rb
-  - lib/unified_ruby_sdk/models/shared/virtual_webhook_channel_id.rb
-  - lib/unified_ruby_sdk/models/shared/virtual_webhook_company_id.rb
-  - lib/unified_ruby_sdk/models/shared/virtual_webhook_contact_id.rb
-  - lib/unified_ruby_sdk/models/shared/virtual_webhook_deal_id.rb
-  - lib/unified_ruby_sdk/models/shared/virtual_webhook_job_id.rb
-  - lib/unified_ruby_sdk/models/shared/virtual_webhook_limit.rb
-  - lib/unified_ruby_sdk/models/shared/virtual_webhook_parent_id.rb
-  - lib/unified_ruby_sdk/models/shared/virtual_webhook_ticket_id.rb
-  - lib/unified_ruby_sdk/models/shared/virtual_webhook_type.rb
-  - lib/unified_ruby_sdk/models/shared/virtual_webhook_updated_gte.rb
-  - lib/unified_ruby_sdk/models/shared/virtual_webhook_user_id.rb
   - lib/unified_ruby_sdk/models/shared/webhook.rb
   - lib/unified_ruby_sdk/models/shared/webhook_type.rb
   - lib/unified_ruby_sdk/models/shared/weight_unit.rb

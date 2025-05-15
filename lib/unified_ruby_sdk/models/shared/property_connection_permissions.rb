@@ -45,6 +45,8 @@ module UnifiedRubySDK
           COMMERCE_INVENTORY_WRITE = new('commerce_inventory_write')
           COMMERCE_LOCATION_READ = new('commerce_location_read')
           COMMERCE_LOCATION_WRITE = new('commerce_location_write')
+          COMMERCE_REVIEW_READ = new('commerce_review_read')
+          COMMERCE_REVIEW_WRITE = new('commerce_review_write')
           ATS_ACTIVITY_READ = new('ats_activity_read')
           ATS_ACTIVITY_WRITE = new('ats_activity_write')
           ATS_APPLICATION_READ = new('ats_application_read')

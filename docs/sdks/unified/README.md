@@ -47,7 +47,7 @@ req = Models::Shared::Connection.new(
   ],
   integration_type: "<value>",
   permissions: [
-    Models::Shared::PropertyConnectionPermissions::MARTECH_MEMBER_READ,
+    Models::Shared::PropertyConnectionPermissions::MARTECH_LIST_WRITE,
   ],
 )
 
@@ -542,7 +542,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.unified.patch_unified_webhook(webhook=Models::Shared::Webhook.new(
   connection_id: "<id>",
   event: Models::Shared::Event::DELETED,
-  object_type: Models::Shared::ObjectType::CRM_PIPELINE,
+  object_type: Models::Shared::ObjectType::CRM_LEAD,
 ), id="<id>")
 
 if ! res.webhook.nil?

@@ -29,6 +29,7 @@ module UnifiedRubySDK
           COMMERCE_COLLECTION = new('commerce_collection')
           COMMERCE_INVENTORY = new('commerce_inventory')
           COMMERCE_LOCATION = new('commerce_location')
+          COMMERCE_REVIEW = new('commerce_review')
           ATS_ACTIVITY = new('ats_activity')
           ATS_APPLICATION = new('ats_application')
           ATS_APPLICATIONSTATUS = new('ats_applicationstatus')
