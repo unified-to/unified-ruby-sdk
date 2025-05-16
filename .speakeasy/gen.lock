@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 384d22984f53ba58e35d8b7c45507e05
+  docChecksum: 896ad02cb1fe122b37a5db9ff432b9bf
   docVersion: "1.0"
   speakeasyVersion: 1.533.0
   generationVersion: 2.578.0
-  releaseVersion: 0.18.1
-  configChecksum: a1137a1e924f537ffbfb1bb8491aeeb0
+  releaseVersion: 0.19.1
+  configChecksum: 3eba43a3daa6c456e1569892bafdd954
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -1245,6 +1245,7 @@ generatedFiles:
   - docs/models/shared/propertyhrisemployeeemployeeroles.md
   - docs/models/shared/propertyhrislocationaddress.md
   - docs/models/shared/propertyintegrationcategories.md
+  - docs/models/shared/propertyintegrationtokeninstructions.md
   - docs/models/shared/propertylmsstudentaddress.md
   - docs/models/shared/propertymessagingmessageauthormember.md
   - docs/models/shared/propertyscimgroupmeta.md
@@ -2710,6 +2711,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_hrisemployee_employee_roles.rb
   - lib/unified_ruby_sdk/models/shared/property_hrislocation_address.rb
   - lib/unified_ruby_sdk/models/shared/property_integration_categories.rb
+  - lib/unified_ruby_sdk/models/shared/property_integration_token_instructions.rb
   - lib/unified_ruby_sdk/models/shared/property_lmsstudent_address.rb
   - lib/unified_ruby_sdk/models/shared/property_messagingmessage_author_member.rb
   - lib/unified_ruby_sdk/models/shared/property_scimgroup_meta.rb

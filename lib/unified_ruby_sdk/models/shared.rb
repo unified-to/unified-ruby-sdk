@@ -403,6 +403,7 @@ module UnifiedRubySDK
       autoload :PropertyHrisEmployeeEmployeeRoles, 'unified_ruby_sdk/models/shared/property_hrisemployee_employee_roles.rb'
       autoload :PropertyHrisLocationAddress, 'unified_ruby_sdk/models/shared/property_hrislocation_address.rb'
       autoload :PropertyIntegrationCategories, 'unified_ruby_sdk/models/shared/property_integration_categories.rb'
+      autoload :PropertyIntegrationTokenInstructions, 'unified_ruby_sdk/models/shared/property_integration_token_instructions.rb'
       autoload :PropertyLmsStudentAddress, 'unified_ruby_sdk/models/shared/property_lmsstudent_address.rb'
       autoload :PropertyMessagingMessageAuthorMember, 'unified_ruby_sdk/models/shared/property_messagingmessage_author_member.rb'
       autoload :PropertyScimGroupMeta, 'unified_ruby_sdk/models/shared/property_scimgroup_meta.rb'
