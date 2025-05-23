@@ -36,7 +36,7 @@ module UnifiedRubySDK
 
         field :image_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('image_url') } }
         # URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)
-        field :link_urls, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('link_urls') } }
+        field :link_urls, T.nilable(T::Array[Models::Shared::PropertyAtsCandidateLinkUrls]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('link_urls') } }
 
         field :metadata, T.nilable(T::Array[Models::Shared::AtsMetadata]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
@@ -46,11 +46,11 @@ module UnifiedRubySDK
 
         field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :skills, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('skills') } }
+        field :skills, T.nilable(T::Array[Models::Shared::PropertyAtsCandidateSkills]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('skills') } }
 
-        field :sources, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sources') } }
+        field :sources, T.nilable(T::Array[Models::Shared::PropertyAtsCandidateSources]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sources') } }
 
-        field :tags, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
+        field :tags, T.nilable(T::Array[Models::Shared::PropertyAtsCandidateTags]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
 
         field :telephones, T.nilable(T::Array[Models::Shared::AtsTelephone]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
 
@@ -63,7 +63,7 @@ module UnifiedRubySDK
         field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
 
-        sig { params(address: T.nilable(Models::Shared::PropertyAtsCandidateAddress), company_id: T.nilable(::String), company_name: T.nilable(::String), created_at: T.nilable(::DateTime), date_of_birth: T.nilable(::DateTime), education: T.nilable(T::Array[Models::Shared::AtsCandidateEducation]), emails: T.nilable(T::Array[Models::Shared::AtsEmail]), experiences: T.nilable(T::Array[Models::Shared::AtsCandidateExperience]), external_identifier: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), link_urls: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), name: T.nilable(::String), origin: T.nilable(Models::Shared::Origin), raw: T.nilable(T::Hash[Symbol, ::Object]), skills: T.nilable(T::Array[::String]), sources: T.nilable(T::Array[::String]), tags: T.nilable(T::Array[::String]), telephones: T.nilable(T::Array[Models::Shared::AtsTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), web_url: T.nilable(::String)).void }
+        sig { params(address: T.nilable(Models::Shared::PropertyAtsCandidateAddress), company_id: T.nilable(::String), company_name: T.nilable(::String), created_at: T.nilable(::DateTime), date_of_birth: T.nilable(::DateTime), education: T.nilable(T::Array[Models::Shared::AtsCandidateEducation]), emails: T.nilable(T::Array[Models::Shared::AtsEmail]), experiences: T.nilable(T::Array[Models::Shared::AtsCandidateExperience]), external_identifier: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), link_urls: T.nilable(T::Array[Models::Shared::PropertyAtsCandidateLinkUrls]), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), name: T.nilable(::String), origin: T.nilable(Models::Shared::Origin), raw: T.nilable(T::Hash[Symbol, ::Object]), skills: T.nilable(T::Array[Models::Shared::PropertyAtsCandidateSkills]), sources: T.nilable(T::Array[Models::Shared::PropertyAtsCandidateSources]), tags: T.nilable(T::Array[Models::Shared::PropertyAtsCandidateTags]), telephones: T.nilable(T::Array[Models::Shared::AtsTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), web_url: T.nilable(::String)).void }
         def initialize(address: nil, company_id: nil, company_name: nil, created_at: nil, date_of_birth: nil, education: nil, emails: nil, experiences: nil, external_identifier: nil, id: nil, image_url: nil, link_urls: nil, metadata: nil, name: nil, origin: nil, raw: nil, skills: nil, sources: nil, tags: nil, telephones: nil, title: nil, updated_at: nil, user_id: nil, web_url: nil)
           @address = address
           @company_id = company_id

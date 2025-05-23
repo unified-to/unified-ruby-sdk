@@ -34,12 +34,12 @@ module UnifiedRubySDK
 
         field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
         # Return only results whose updated date is equal or greater to this value
-        field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
+        field :updated_gte, T.nilable(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
         # The user/employee ID to filter by
         field :user_id, T.nilable(::String), { 'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': true } }
 
 
-        sig { params(connection_id: ::String, company_id: T.nilable(::String), contact_id: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        sig { params(connection_id: ::String, company_id: T.nilable(::String), contact_id: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
         def initialize(connection_id: nil, company_id: nil, contact_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, updated_gte: nil, user_id: nil)
           @connection_id = connection_id
           @company_id = company_id

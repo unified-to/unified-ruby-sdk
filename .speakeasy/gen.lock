@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 896ad02cb1fe122b37a5db9ff432b9bf
+  docChecksum: 0410d1777305583960db5f8722b2f00f
   docVersion: "1.0"
   speakeasyVersion: 1.533.0
   generationVersion: 2.578.0
-  releaseVersion: 0.19.1
-  configChecksum: 3eba43a3daa6c456e1569892bafdd954
+  releaseVersion: 0.20.1
+  configChecksum: d2163ce50dac5ae7b6dc25fe391a5a45
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -990,6 +990,8 @@ generatedFiles:
   - docs/models/shared/calendarbusy.md
   - docs/models/shared/calendarcalendar.md
   - docs/models/shared/calendarevent.md
+  - docs/models/shared/calendareventrecurrence.md
+  - docs/models/shared/calendareventrecurrencefrequency.md
   - docs/models/shared/calendareventstatus.md
   - docs/models/shared/calendarlink.md
   - docs/models/shared/calendarrecording.md
@@ -1012,6 +1014,7 @@ generatedFiles:
   - docs/models/shared/commercemetadata4.md
   - docs/models/shared/commercemetadata5.md
   - docs/models/shared/commercemetadataextradata.md
+  - docs/models/shared/commercemetadataformat.md
   - docs/models/shared/commercemetadataschemas1.md
   - docs/models/shared/commercemetadataschemas2.md
   - docs/models/shared/commercemetadataschemas3.md
@@ -1109,6 +1112,7 @@ generatedFiles:
   - docs/models/shared/hrismetadata4.md
   - docs/models/shared/hrismetadata5.md
   - docs/models/shared/hrismetadataextradata.md
+  - docs/models/shared/hrismetadataformat.md
   - docs/models/shared/hrismetadataschemas1.md
   - docs/models/shared/hrismetadataschemas2.md
   - docs/models/shared/hrismetadataschemas3.md
@@ -1166,6 +1170,27 @@ generatedFiles:
   - docs/models/shared/kmscommenttype.md
   - docs/models/shared/kmspage.md
   - docs/models/shared/kmspagemetadata.md
+  - docs/models/shared/kmspagemetadata1.md
+  - docs/models/shared/kmspagemetadata2.md
+  - docs/models/shared/kmspagemetadata3.md
+  - docs/models/shared/kmspagemetadata4.md
+  - docs/models/shared/kmspagemetadata5.md
+  - docs/models/shared/kmspagemetadataextradata.md
+  - docs/models/shared/kmspagemetadataformat.md
+  - docs/models/shared/kmspagemetadataschemas1.md
+  - docs/models/shared/kmspagemetadataschemas2.md
+  - docs/models/shared/kmspagemetadataschemas3.md
+  - docs/models/shared/kmspagemetadataschemas4.md
+  - docs/models/shared/kmspagemetadataschemas5.md
+  - docs/models/shared/kmspagemetadataschemasextradata2.md
+  - docs/models/shared/kmspagemetadataschemasextradata22.md
+  - docs/models/shared/kmspagemetadataschemasextradata32.md
+  - docs/models/shared/kmspagemetadataschemasextradata52.md
+  - docs/models/shared/kmspagemetadataschemasvalue2.md
+  - docs/models/shared/kmspagemetadataschemasvalue32.md
+  - docs/models/shared/kmspagemetadataschemasvalue42.md
+  - docs/models/shared/kmspagemetadataschemasvalue52.md
+  - docs/models/shared/kmspagemetadatavalue.md
   - docs/models/shared/kmspagetype.md
   - docs/models/shared/kmsspace.md
   - docs/models/shared/lmsclass.md
@@ -1187,6 +1212,7 @@ generatedFiles:
   - docs/models/shared/messagingmember.md
   - docs/models/shared/messagingmessage.md
   - docs/models/shared/metadatametadata.md
+  - docs/models/shared/metadatametadataformat.md
   - docs/models/shared/objecttype.md
   - docs/models/shared/one.md
   - docs/models/shared/operation.md
@@ -1215,13 +1241,26 @@ generatedFiles:
   - docs/models/shared/propertyaccountingreporttrialbalance.md
   - docs/models/shared/propertyatsactivityfrom.md
   - docs/models/shared/propertyatsactivityfromtype.md
+  - docs/models/shared/propertyatsapplicationansweranswers.md
   - docs/models/shared/propertyatscandidateaddress.md
+  - docs/models/shared/propertyatscandidatelinkurls.md
+  - docs/models/shared/propertyatscandidateskills.md
+  - docs/models/shared/propertyatscandidatesources.md
+  - docs/models/shared/propertyatscandidatetags.md
   - docs/models/shared/propertyatscompanyaddress.md
+  - docs/models/shared/propertyatsjobdepartments.md
   - docs/models/shared/propertyatsjobpostingaddress.md
+  - docs/models/shared/propertyatsjobpublicjoburls.md
+  - docs/models/shared/propertyatsjobquestionoptions.md
   - docs/models/shared/propertycalendareventorganizer.md
   - docs/models/shared/propertycalendareventorganizerstatus.md
+  - docs/models/shared/propertycalendareventrecurrenceondays.md
   - docs/models/shared/propertycalendarrecordingtranscriptattendee.md
   - docs/models/shared/propertycalendarrecordingtranscriptattendeestatus.md
+  - docs/models/shared/propertycommercecollectiontags.md
+  - docs/models/shared/propertycommerceitemoptionvalues.md
+  - docs/models/shared/propertycommerceitemtags.md
+  - docs/models/shared/propertycommerceitemvarianttags.md
   - docs/models/shared/propertycommercelocationaddress.md
   - docs/models/shared/propertyconnectionauth.md
   - docs/models/shared/propertyconnectioncategories.md
@@ -1248,6 +1287,7 @@ generatedFiles:
   - docs/models/shared/propertyintegrationtokeninstructions.md
   - docs/models/shared/propertylmsstudentaddress.md
   - docs/models/shared/propertymessagingmessageauthormember.md
+  - docs/models/shared/propertymetadatametadataoptions.md
   - docs/models/shared/propertyscimgroupmeta.md
   - docs/models/shared/propertyscimgroupschemas.md
   - docs/models/shared/propertyscimusermeta.md
@@ -2457,6 +2497,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/calendarcalendar.rb
   - lib/unified_ruby_sdk/models/shared/calendarevent.rb
   - lib/unified_ruby_sdk/models/shared/calendarevent_status.rb
+  - lib/unified_ruby_sdk/models/shared/calendareventrecurrence.rb
+  - lib/unified_ruby_sdk/models/shared/calendareventrecurrence_frequency.rb
   - lib/unified_ruby_sdk/models/shared/calendarlink.rb
   - lib/unified_ruby_sdk/models/shared/calendarrecording.rb
   - lib/unified_ruby_sdk/models/shared/calendarrecordingmedia.rb
@@ -2478,6 +2520,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/commercemetadata_4.rb
   - lib/unified_ruby_sdk/models/shared/commercemetadata_5.rb
   - lib/unified_ruby_sdk/models/shared/commercemetadata_extra_data.rb
+  - lib/unified_ruby_sdk/models/shared/commercemetadata_format.rb
   - lib/unified_ruby_sdk/models/shared/commercemetadata_schemas_1.rb
   - lib/unified_ruby_sdk/models/shared/commercemetadata_schemas_2.rb
   - lib/unified_ruby_sdk/models/shared/commercemetadata_schemas_3.rb
@@ -2575,6 +2618,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/hrismetadata_4.rb
   - lib/unified_ruby_sdk/models/shared/hrismetadata_5.rb
   - lib/unified_ruby_sdk/models/shared/hrismetadata_extra_data.rb
+  - lib/unified_ruby_sdk/models/shared/hrismetadata_format.rb
   - lib/unified_ruby_sdk/models/shared/hrismetadata_schemas_1.rb
   - lib/unified_ruby_sdk/models/shared/hrismetadata_schemas_2.rb
   - lib/unified_ruby_sdk/models/shared/hrismetadata_schemas_3.rb
@@ -2633,6 +2677,27 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/kmspage.rb
   - lib/unified_ruby_sdk/models/shared/kmspage_type.rb
   - lib/unified_ruby_sdk/models/shared/kmspagemetadata.rb
+  - lib/unified_ruby_sdk/models/shared/kmspagemetadata_1.rb
+  - lib/unified_ruby_sdk/models/shared/kmspagemetadata_2.rb
+  - lib/unified_ruby_sdk/models/shared/kmspagemetadata_3.rb
+  - lib/unified_ruby_sdk/models/shared/kmspagemetadata_4.rb
+  - lib/unified_ruby_sdk/models/shared/kmspagemetadata_5.rb
+  - lib/unified_ruby_sdk/models/shared/kmspagemetadata_extra_data.rb
+  - lib/unified_ruby_sdk/models/shared/kmspagemetadata_format.rb
+  - lib/unified_ruby_sdk/models/shared/kmspagemetadata_schemas_1.rb
+  - lib/unified_ruby_sdk/models/shared/kmspagemetadata_schemas_2.rb
+  - lib/unified_ruby_sdk/models/shared/kmspagemetadata_schemas_3.rb
+  - lib/unified_ruby_sdk/models/shared/kmspagemetadata_schemas_4.rb
+  - lib/unified_ruby_sdk/models/shared/kmspagemetadata_schemas_5.rb
+  - lib/unified_ruby_sdk/models/shared/kmspagemetadata_schemas_extra_data_2.rb
+  - lib/unified_ruby_sdk/models/shared/kmspagemetadata_schemas_extra_data_2_2.rb
+  - lib/unified_ruby_sdk/models/shared/kmspagemetadata_schemas_extra_data_3_2.rb
+  - lib/unified_ruby_sdk/models/shared/kmspagemetadata_schemas_extra_data_5_2.rb
+  - lib/unified_ruby_sdk/models/shared/kmspagemetadata_schemas_value_2.rb
+  - lib/unified_ruby_sdk/models/shared/kmspagemetadata_schemas_value_3_2.rb
+  - lib/unified_ruby_sdk/models/shared/kmspagemetadata_schemas_value_4_2.rb
+  - lib/unified_ruby_sdk/models/shared/kmspagemetadata_schemas_value_5_2.rb
+  - lib/unified_ruby_sdk/models/shared/kmspagemetadata_value.rb
   - lib/unified_ruby_sdk/models/shared/kmsspace.rb
   - lib/unified_ruby_sdk/models/shared/lmsclass.rb
   - lib/unified_ruby_sdk/models/shared/lmscourse.rb
@@ -2653,6 +2718,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/messagingmember.rb
   - lib/unified_ruby_sdk/models/shared/messagingmessage.rb
   - lib/unified_ruby_sdk/models/shared/metadatametadata.rb
+  - lib/unified_ruby_sdk/models/shared/metadatametadata_format.rb
   - lib/unified_ruby_sdk/models/shared/object_type.rb
   - lib/unified_ruby_sdk/models/shared/one.rb
   - lib/unified_ruby_sdk/models/shared/operation.rb
@@ -2681,13 +2747,26 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_accountingreport_trial_balance.rb
   - lib/unified_ruby_sdk/models/shared/property_atsactivity_from.rb
   - lib/unified_ruby_sdk/models/shared/property_atsactivity_from_type.rb
+  - lib/unified_ruby_sdk/models/shared/property_atsapplicationanswer_answers.rb
   - lib/unified_ruby_sdk/models/shared/property_atscandidate_address.rb
+  - lib/unified_ruby_sdk/models/shared/property_atscandidate_link_urls.rb
+  - lib/unified_ruby_sdk/models/shared/property_atscandidate_skills.rb
+  - lib/unified_ruby_sdk/models/shared/property_atscandidate_sources.rb
+  - lib/unified_ruby_sdk/models/shared/property_atscandidate_tags.rb
   - lib/unified_ruby_sdk/models/shared/property_atscompany_address.rb
+  - lib/unified_ruby_sdk/models/shared/property_atsjob_departments.rb
+  - lib/unified_ruby_sdk/models/shared/property_atsjob_public_job_urls.rb
   - lib/unified_ruby_sdk/models/shared/property_atsjobposting_address.rb
+  - lib/unified_ruby_sdk/models/shared/property_atsjobquestion_options.rb
   - lib/unified_ruby_sdk/models/shared/property_calendarevent_organizer.rb
   - lib/unified_ruby_sdk/models/shared/property_calendarevent_organizer_status.rb
+  - lib/unified_ruby_sdk/models/shared/property_calendareventrecurrence_on_days.rb
   - lib/unified_ruby_sdk/models/shared/property_calendarrecordingtranscript_attendee.rb
   - lib/unified_ruby_sdk/models/shared/property_calendarrecordingtranscript_attendee_status.rb
+  - lib/unified_ruby_sdk/models/shared/property_commercecollection_tags.rb
+  - lib/unified_ruby_sdk/models/shared/property_commerceitem_tags.rb
+  - lib/unified_ruby_sdk/models/shared/property_commerceitemoption_values.rb
+  - lib/unified_ruby_sdk/models/shared/property_commerceitemvariant_tags.rb
   - lib/unified_ruby_sdk/models/shared/property_commercelocation_address.rb
   - lib/unified_ruby_sdk/models/shared/property_connection_auth.rb
   - lib/unified_ruby_sdk/models/shared/property_connection_categories.rb
@@ -2714,6 +2793,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_integration_token_instructions.rb
   - lib/unified_ruby_sdk/models/shared/property_lmsstudent_address.rb
   - lib/unified_ruby_sdk/models/shared/property_messagingmessage_author_member.rb
+  - lib/unified_ruby_sdk/models/shared/property_metadatametadata_options.rb
   - lib/unified_ruby_sdk/models/shared/property_scimgroup_meta.rb
   - lib/unified_ruby_sdk/models/shared/property_scimgroup_schemas.rb
   - lib/unified_ruby_sdk/models/shared/property_scimuser_meta.rb
@@ -4425,6 +4505,66 @@ examples:
       responses:
         "200":
           application/json: {}
+  createUcRecording:
+    speakeasy-default-create-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getUcRecording:
+    speakeasy-default-get-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  listUcRecordings:
+    speakeasy-default-list-uc-recordings:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}]
+  patchUcRecording:
+    speakeasy-default-patch-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeUcRecording:
+    speakeasy-default-remove-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateUcRecording:
+    speakeasy-default-update-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
   createCommerceCollection:
     speakeasy-default-create-commerce-collection:
       parameters:
@@ -4469,6 +4609,17 @@ examples:
       responses:
         "200":
           application/json: {"name": "<value>"}
+  createCommerceReview:
+    speakeasy-default-create-commerce-review:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"item_id": "<id>"}
+      responses:
+        "200":
+          application/json: {"item_id": "<id>"}
   getCommerceCollection:
     speakeasy-default-get-commerce-collection:
       parameters:
@@ -4509,6 +4660,16 @@ examples:
       responses:
         "200":
           application/json: {"name": "<value>"}
+  getCommerceReview:
+    speakeasy-default-get-commerce-review:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"item_id": "<id>"}
   listCommerceCollections:
     speakeasy-default-list-commerce-collections:
       parameters:
@@ -4545,6 +4706,15 @@ examples:
       responses:
         "200":
           application/json: [{"name": "<value>"}]
+  listCommerceReviews:
+    speakeasy-default-list-commerce-reviews:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"item_id": "<id>"}, {"item_id": "<id>"}, {"item_id": "<id>"}]
   patchCommerceCollection:
     speakeasy-default-patch-commerce-collection:
       parameters:
@@ -4593,6 +4763,18 @@ examples:
       responses:
         "200":
           application/json: {"name": "<value>"}
+  patchCommerceReview:
+    speakeasy-default-patch-commerce-review:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"item_id": "<id>"}
+      responses:
+        "200":
+          application/json: {"item_id": "<id>"}
   removeCommerceCollection:
     speakeasy-default-remove-commerce-collection:
       parameters:
@@ -4613,6 +4795,12 @@ examples:
           id: "<id>"
   removeCommerceLocation:
     speakeasy-default-remove-commerce-location:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeCommerceReview:
+    speakeasy-default-remove-commerce-review:
       parameters:
         path:
           connection_id: "<id>"
@@ -4665,6 +4853,18 @@ examples:
       responses:
         "200":
           application/json: {"name": "<value>"}
+  updateCommerceReview:
+    speakeasy-default-update-commerce-review:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"item_id": "<id>"}
+      responses:
+        "200":
+          application/json: {"item_id": "<id>"}
   createHrisLocation:
     speakeasy-default-create-hris-location:
       parameters:
@@ -4934,6 +5134,17 @@ examples:
       responses:
         "200":
           application/json: [{}, {}, {}]
+  createHrisDevice:
+    speakeasy-default-create-hris-device:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
   createHrisEmployee:
     speakeasy-default-create-hris-employee:
       parameters:
@@ -4956,6 +5167,16 @@ examples:
       responses:
         "200":
           application/json: {}
+  getHrisDevice:
+    speakeasy-default-get-hris-device:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
   getHrisEmployee:
     speakeasy-default-get-hris-employee:
       parameters:
@@ -4996,6 +5217,15 @@ examples:
       responses:
         "200":
           application/json: {"start_at": "2024-07-19T21:47:06.045Z"}
+  listHrisDevices:
+    speakeasy-default-list-hris-devices:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"name": "<value>"}, {"name": "<value>"}]
   listHrisEmployees:
     speakeasy-default-list-hris-employees:
       parameters:
@@ -5032,6 +5262,18 @@ examples:
       responses:
         "200":
           application/json: [{"start_at": "2025-11-20T05:14:17.036Z"}]
+  patchHrisDevice:
+    speakeasy-default-patch-hris-device:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
   patchHrisEmployee:
     speakeasy-default-patch-hris-employee:
       parameters:
@@ -5056,6 +5298,12 @@ examples:
       responses:
         "200":
           application/json: {}
+  removeHrisDevice:
+    speakeasy-default-remove-hris-device:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
   removeHrisEmployee:
     speakeasy-default-remove-hris-employee:
       parameters:
@@ -5068,6 +5316,18 @@ examples:
         path:
           connection_id: "<id>"
           id: "<id>"
+  updateHrisDevice:
+    speakeasy-default-update-hris-device:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
   updateHrisEmployee:
     speakeasy-default-update-hris-employee:
       parameters:
@@ -5339,6 +5599,17 @@ examples:
       responses:
         "200":
           application/json: {"task_id": "<id>", "text": "<value>"}
+  createUcComment:
+    speakeasy-default-create-uc-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"content": "<value>"}
+      responses:
+        "200":
+          application/json: {"content": "<value>"}
   getTaskComment:
     speakeasy-default-get-task-comment:
       parameters:
@@ -5349,6 +5620,16 @@ examples:
       responses:
         "200":
           application/json: {"task_id": "<id>", "text": "<value>"}
+  getUcComment:
+    speakeasy-default-get-uc-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"content": "<value>"}
   listTaskComments:
     speakeasy-default-list-task-comments:
       parameters:
@@ -5358,6 +5639,15 @@ examples:
       responses:
         "200":
           application/json: [{"task_id": "<id>", "text": "<value>"}]
+  listUcComments:
+    speakeasy-default-list-uc-comments:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"content": "<value>"}, {"content": "<value>"}]
   patchTaskComment:
     speakeasy-default-patch-task-comment:
       parameters:
@@ -5370,8 +5660,26 @@ examples:
       responses:
         "200":
           application/json: {"task_id": "<id>", "text": "<value>"}
+  patchUcComment:
+    speakeasy-default-patch-uc-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"content": "<value>"}
+      responses:
+        "200":
+          application/json: {"content": "<value>"}
   removeTaskComment:
     speakeasy-default-remove-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeUcComment:
+    speakeasy-default-remove-uc-comment:
       parameters:
         path:
           connection_id: "<id>"
@@ -5388,6 +5696,18 @@ examples:
       responses:
         "200":
           application/json: {"task_id": "<id>", "text": "<value>"}
+  updateUcComment:
+    speakeasy-default-update-uc-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"content": "<value>"}
+      responses:
+        "200":
+          application/json: {"content": "<value>"}
   createLmsClass:
     speakeasy-default-create-lms-class:
       parameters:
@@ -6823,17 +7143,17 @@ examples:
   createUnifiedConnection:
     speakeasy-default-create-unified-connection:
       requestBody:
-        application/json: {"categories": ["accounting", "martech", "martech"], "integration_type": "<value>", "permissions": ["repo_repository_read", "lms_student_write"]}
+        application/json: {"categories": ["accounting", "martech", "martech"], "integration_type": "<value>", "permissions": ["repo_organization_write", "lms_student_read"]}
       responses:
         "200":
-          application/json: {"categories": ["accounting"], "integration_type": "<value>", "permissions": ["webhook"]}
+          application/json: {"categories": ["accounting"], "integration_type": "<value>", "permissions": ["uc_recording_read"]}
   createUnifiedWebhook:
     speakeasy-default-create-unified-webhook:
       requestBody:
-        application/json: {"connection_id": "<id>", "event": "created", "object_type": "hris_payslip"}
+        application/json: {"connection_id": "<id>", "event": "created", "object_type": "hris_timeoff"}
       responses:
         "200":
-          application/json: {"connection_id": "<id>", "event": "updated", "object_type": "messaging_message"}
+          application/json: {"connection_id": "<id>", "event": "updated", "object_type": "genai_prompt"}
   getUnifiedApicall:
     speakeasy-default-get-unified-apicall:
       parameters:
@@ -6849,7 +7169,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"categories": ["commerce"], "integration_type": "<value>", "permissions": ["task_comment_write"]}
+          application/json: {"categories": ["commerce"], "integration_type": "<value>", "permissions": ["task_task_write"]}
   getUnifiedIntegrationAuth:
     speakeasy-default-get-unified-integration-auth:
       parameters:
@@ -6867,7 +7187,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"connection_id": "<id>", "event": "deleted", "object_type": "storage_file"}
+          application/json: {"connection_id": "<id>", "event": "deleted", "object_type": "enrich_company"}
   listUnifiedApicalls:
     speakeasy-default-list-unified-apicalls:
       responses:
@@ -6877,7 +7197,7 @@ examples:
     speakeasy-default-list-unified-connections:
       responses:
         "200":
-          application/json: [{"categories": [], "integration_type": "<value>", "permissions": ["scim_users_write", "task_task_read"]}, {"categories": ["auth"], "integration_type": "<value>", "permissions": ["crm_lead_write", "ats_job_read", "calendar_link_write"]}]
+          application/json: [{"categories": [], "integration_type": "<value>", "permissions": ["scim_users_read", "task_project_read"]}, {"categories": ["auth"], "integration_type": "<value>", "permissions": ["crm_pipeline_read", "ats_job_read", "calendar_link_write"]}]
   listUnifiedIntegrationWorkspaces:
     speakeasy-default-list-unified-integration-workspaces:
       parameters:
@@ -6901,7 +7221,7 @@ examples:
     speakeasy-default-list-unified-webhooks:
       responses:
         "200":
-          application/json: [{"connection_id": "<id>", "event": "updated", "object_type": "hris_location"}]
+          application/json: [{"connection_id": "<id>", "event": "updated", "object_type": "hris_device"}]
   patchUnifiedConnection:
     speakeasy-default-patch-unified-connection:
       parameters:
@@ -6911,7 +7231,7 @@ examples:
         application/json: {"categories": ["calendar", "enrich"], "integration_type": "<value>", "permissions": []}
       responses:
         "200":
-          application/json: {"categories": ["task"], "integration_type": "<value>", "permissions": ["commerce_collection_read"]}
+          application/json: {"categories": ["task"], "integration_type": "<value>", "permissions": ["commerce_inventory_read"]}
   patchUnifiedWebhook:
     speakeasy-default-patch-unified-webhook:
       parameters:
@@ -6946,17 +7266,17 @@ examples:
         application/json: {"categories": ["calendar", "storage", "calendar"], "integration_type": "<value>", "permissions": []}
       responses:
         "200":
-          application/json: {"categories": ["calendar"], "integration_type": "<value>", "permissions": ["repo_repository_read"]}
+          application/json: {"categories": ["calendar"], "integration_type": "<value>", "permissions": ["repo_organization_read"]}
   updateUnifiedWebhook:
     speakeasy-default-update-unified-webhook:
       parameters:
         path:
           id: "<id>"
       requestBody:
-        application/json: {"connection_id": "<id>", "event": "created", "object_type": "payment_link"}
+        application/json: {"connection_id": "<id>", "event": "created", "object_type": "payment_payout"}
       responses:
         "200":
-          application/json: {"connection_id": "<id>", "event": "updated", "object_type": "messaging_channel"}
+          application/json: {"connection_id": "<id>", "event": "updated", "object_type": "messaging_message"}
   updateUnifiedWebhookTrigger:
     speakeasy-default-update-unified-webhook-trigger:
       parameters:
@@ -6972,245 +7292,5 @@ examples:
       responses:
         "200":
           text/plain: "<value>"
-  createHrisDevice:
-    speakeasy-default-create-hris-device:
-      parameters:
-        path:
-          connection_id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {"name": "<value>"}
-      responses:
-        "200":
-          application/json: {"name": "<value>"}
-  getHrisDevice:
-    speakeasy-default-get-hris-device:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      responses:
-        "200":
-          application/json: {"name": "<value>"}
-  listHrisDevices:
-    speakeasy-default-list-hris-devices:
-      parameters:
-        path:
-          connection_id: "<id>"
-        query: {}
-      responses:
-        "200":
-          application/json: [{"name": "<value>"}, {"name": "<value>"}]
-  patchHrisDevice:
-    speakeasy-default-patch-hris-device:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {"name": "<value>"}
-      responses:
-        "200":
-          application/json: {"name": "<value>"}
-  removeHrisDevice:
-    speakeasy-default-remove-hris-device:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-  updateHrisDevice:
-    speakeasy-default-update-hris-device:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {"name": "<value>"}
-      responses:
-        "200":
-          application/json: {"name": "<value>"}
-  createUcRecording:
-    speakeasy-default-create-uc-recording:
-      parameters:
-        path:
-          connection_id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {}
-      responses:
-        "200":
-          application/json: {}
-  getUcRecording:
-    speakeasy-default-get-uc-recording:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      responses:
-        "200":
-          application/json: {}
-  listUcRecordings:
-    speakeasy-default-list-uc-recordings:
-      parameters:
-        path:
-          connection_id: "<id>"
-        query: {}
-      responses:
-        "200":
-          application/json: [{}]
-  patchUcRecording:
-    speakeasy-default-patch-uc-recording:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {}
-      responses:
-        "200":
-          application/json: {}
-  removeUcRecording:
-    speakeasy-default-remove-uc-recording:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-  updateUcRecording:
-    speakeasy-default-update-uc-recording:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {}
-      responses:
-        "200":
-          application/json: {}
-  createUcComment:
-    speakeasy-default-create-uc-comment:
-      parameters:
-        path:
-          connection_id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {"content": "<value>"}
-      responses:
-        "200":
-          application/json: {"content": "<value>"}
-  getUcComment:
-    speakeasy-default-get-uc-comment:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      responses:
-        "200":
-          application/json: {"content": "<value>"}
-  listUcComments:
-    speakeasy-default-list-uc-comments:
-      parameters:
-        path:
-          connection_id: "<id>"
-        query: {}
-      responses:
-        "200":
-          application/json: [{"content": "<value>"}, {"content": "<value>"}]
-  patchUcComment:
-    speakeasy-default-patch-uc-comment:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {"content": "<value>"}
-      responses:
-        "200":
-          application/json: {"content": "<value>"}
-  removeUcComment:
-    speakeasy-default-remove-uc-comment:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-  updateUcComment:
-    speakeasy-default-update-uc-comment:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {"content": "<value>"}
-      responses:
-        "200":
-          application/json: {"content": "<value>"}
-  createCommerceReview:
-    speakeasy-default-create-commerce-review:
-      parameters:
-        path:
-          connection_id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {"item_id": "<id>"}
-      responses:
-        "200":
-          application/json: {"item_id": "<id>"}
-  getCommerceReview:
-    speakeasy-default-get-commerce-review:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      responses:
-        "200":
-          application/json: {"item_id": "<id>"}
-  listCommerceReviews:
-    speakeasy-default-list-commerce-reviews:
-      parameters:
-        path:
-          connection_id: "<id>"
-        query: {}
-      responses:
-        "200":
-          application/json: [{"item_id": "<id>"}, {"item_id": "<id>"}, {"item_id": "<id>"}]
-  patchCommerceReview:
-    speakeasy-default-patch-commerce-review:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {"item_id": "<id>"}
-      responses:
-        "200":
-          application/json: {"item_id": "<id>"}
-  removeCommerceReview:
-    speakeasy-default-remove-commerce-review:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-  updateCommerceReview:
-    speakeasy-default-update-commerce-review:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {"item_id": "<id>"}
-      responses:
-        "200":
-          application/json: {"item_id": "<id>"}
 examplesVersion: 1.0.1
 generatedTests: {}

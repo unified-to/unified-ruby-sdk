@@ -28,10 +28,10 @@ module UnifiedRubySDK
 
         field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
         # Return only results whose updated date is equal or greater to this value
-        field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
+        field :updated_gte, T.nilable(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
 
-        sig { params(categories: T.nilable(T::Array[Models::Operations::Categories]), env: T.nilable(::String), external_xref: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
+        sig { params(categories: T.nilable(T::Array[Models::Operations::Categories]), env: T.nilable(::String), external_xref: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String)).void }
         def initialize(categories: nil, env: nil, external_xref: nil, limit: nil, offset: nil, order: nil, sort: nil, updated_gte: nil)
           @categories = categories
           @env = env

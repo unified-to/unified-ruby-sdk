@@ -39,14 +39,16 @@ module UnifiedRubySDK
         field :raw, T.nilable(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
         field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
+        # The type to filter by
+        field :type, T.nilable(::String), { 'query_param': { 'field_name': 'type', 'style': 'form', 'explode': true } }
         # Return only results whose updated date is equal or greater to this value
-        field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
+        field :updated_gte, T.nilable(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
         # The user/employee ID to filter by
         field :user_id, T.nilable(::String), { 'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': true } }
 
 
-        sig { params(connection_id: ::String, application_id: T.nilable(::String), candidate_id: T.nilable(::String), document_id: T.nilable(::String), fields_: T.nilable(T::Array[::String]), interview_id: T.nilable(::String), job_id: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(connection_id: nil, application_id: nil, candidate_id: nil, document_id: nil, fields_: nil, interview_id: nil, job_id: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, updated_gte: nil, user_id: nil)
+        sig { params(connection_id: ::String, application_id: T.nilable(::String), candidate_id: T.nilable(::String), document_id: T.nilable(::String), fields_: T.nilable(T::Array[::String]), interview_id: T.nilable(::String), job_id: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), type: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
+        def initialize(connection_id: nil, application_id: nil, candidate_id: nil, document_id: nil, fields_: nil, interview_id: nil, job_id: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, type: nil, updated_gte: nil, user_id: nil)
           @connection_id = connection_id
           @application_id = application_id
           @candidate_id = candidate_id
@@ -60,6 +62,7 @@ module UnifiedRubySDK
           @query = query
           @raw = raw
           @sort = sort
+          @type = type
           @updated_gte = updated_gte
           @user_id = user_id
         end
@@ -79,6 +82,7 @@ module UnifiedRubySDK
           return false unless @query == other.query
           return false unless @raw == other.raw
           return false unless @sort == other.sort
+          return false unless @type == other.type
           return false unless @updated_gte == other.updated_gte
           return false unless @user_id == other.user_id
           true

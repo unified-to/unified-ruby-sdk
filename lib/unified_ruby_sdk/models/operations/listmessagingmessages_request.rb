@@ -38,10 +38,10 @@ module UnifiedRubySDK
         # The start date to filter by
         field :start_gte, T.nilable(::String), { 'query_param': { 'field_name': 'start_gte', 'style': 'form', 'explode': true } }
         # Return only results whose updated date is equal or greater to this value
-        field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
+        field :updated_gte, T.nilable(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
 
-        sig { params(connection_id: ::String, channel_id: T.nilable(::String), end_le: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
+        sig { params(connection_id: ::String, channel_id: T.nilable(::String), end_le: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::String)).void }
         def initialize(connection_id: nil, channel_id: nil, end_le: nil, fields_: nil, limit: nil, offset: nil, order: nil, parent_id: nil, query: nil, raw: nil, sort: nil, start_gte: nil, updated_gte: nil)
           @connection_id = connection_id
           @channel_id = channel_id

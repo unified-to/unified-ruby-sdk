@@ -34,10 +34,10 @@ module UnifiedRubySDK
         # The ticket ID to filter by
         field :ticket_id, T.nilable(::String), { 'query_param': { 'field_name': 'ticket_id', 'style': 'form', 'explode': true } }
         # Return only results whose updated date is equal or greater to this value
-        field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
+        field :updated_gte, T.nilable(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
 
-        sig { params(connection_id: ::String, customer_id: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), ticket_id: T.nilable(::String), updated_gte: T.nilable(::DateTime)).void }
+        sig { params(connection_id: ::String, customer_id: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), ticket_id: T.nilable(::String), updated_gte: T.nilable(::String)).void }
         def initialize(connection_id: nil, customer_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, ticket_id: nil, updated_gte: nil)
           @connection_id = connection_id
           @customer_id = customer_id

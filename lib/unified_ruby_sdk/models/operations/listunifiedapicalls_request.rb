@@ -36,12 +36,12 @@ module UnifiedRubySDK
         # Filter the results to just this type
         field :type, T.nilable(::String), { 'query_param': { 'field_name': 'type', 'style': 'form', 'explode': true } }
         # Return only results whose updated date is equal or greater to this value
-        field :updated_gte, T.nilable(::DateTime), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
+        field :updated_gte, T.nilable(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
         # Filter the results to just this webhook
         field :webhook_id, T.nilable(::String), { 'query_param': { 'field_name': 'webhook_id', 'style': 'form', 'explode': true } }
 
 
-        sig { params(connection_id: T.nilable(::String), env: T.nilable(::String), error: T.nilable(T::Boolean), external_xref: T.nilable(::String), integration_type: T.nilable(::String), is_billable: T.nilable(T::Boolean), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), sort: T.nilable(::String), type: T.nilable(::String), updated_gte: T.nilable(::DateTime), webhook_id: T.nilable(::String)).void }
+        sig { params(connection_id: T.nilable(::String), env: T.nilable(::String), error: T.nilable(T::Boolean), external_xref: T.nilable(::String), integration_type: T.nilable(::String), is_billable: T.nilable(T::Boolean), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), sort: T.nilable(::String), type: T.nilable(::String), updated_gte: T.nilable(::String), webhook_id: T.nilable(::String)).void }
         def initialize(connection_id: nil, env: nil, error: nil, external_xref: nil, integration_type: nil, is_billable: nil, limit: nil, offset: nil, order: nil, sort: nil, type: nil, updated_gte: nil, webhook_id: nil)
           @connection_id = connection_id
           @env = env

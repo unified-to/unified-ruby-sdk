@@ -14,12 +14,12 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :answers, T::Array[::String], { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('answers') } }
+        field :answers, T::Array[Models::Shared::PropertyAtsApplicationAnswerAnswers], { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('answers') } }
 
         field :question_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('question_id') } }
 
 
-        sig { params(answers: T::Array[::String], question_id: ::String).void }
+        sig { params(answers: T::Array[Models::Shared::PropertyAtsApplicationAnswerAnswers], question_id: ::String).void }
         def initialize(answers: nil, question_id: nil)
           @answers = answers
           @question_id = question_id

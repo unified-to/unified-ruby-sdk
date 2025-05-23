@@ -20,13 +20,13 @@ module UnifiedRubySDK
 
         field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :format, T.nilable(Models::Shared::Format), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('format'), 'decoder': Utils.enum_from_string(Models::Shared::Format, true) } }
+        field :format, T.nilable(Models::Shared::MetadataMetadataFormat), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('format'), 'decoder': Utils.enum_from_string(Models::Shared::MetadataMetadataFormat, true) } }
 
         field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :objects, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('objects') } }
 
-        field :options, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
+        field :options, T.nilable(T::Array[Models::Shared::PropertyMetadataMetadataOptions]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
 
         field :original_format, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('original_format') } }
 
@@ -37,7 +37,7 @@ module UnifiedRubySDK
         field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-        sig { params(name: ::String, object_type: ::String, created_at: T.nilable(::DateTime), format: T.nilable(Models::Shared::Format), id: T.nilable(::String), objects: T.nilable(T::Hash[Symbol, ::Object]), options: T.nilable(T::Array[::String]), original_format: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), slug: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        sig { params(name: ::String, object_type: ::String, created_at: T.nilable(::DateTime), format: T.nilable(Models::Shared::MetadataMetadataFormat), id: T.nilable(::String), objects: T.nilable(T::Hash[Symbol, ::Object]), options: T.nilable(T::Array[Models::Shared::PropertyMetadataMetadataOptions]), original_format: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), slug: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
         def initialize(name: nil, object_type: nil, created_at: nil, format: nil, id: nil, objects: nil, options: nil, original_format: nil, raw: nil, slug: nil, updated_at: nil)
           @name = name
           @object_type = object_type

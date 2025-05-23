@@ -42,7 +42,7 @@ module UnifiedRubySDK
 
         field :slug, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('slug') } }
 
-        field :tags, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
+        field :tags, T.nilable(T::Array[Models::Shared::PropertyCommerceItemTags]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
 
         field :type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
 
@@ -53,7 +53,7 @@ module UnifiedRubySDK
         field :vendor_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('vendor_name') } }
 
 
-        sig { params(account_id: T.nilable(::String), collection_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_taxable: T.nilable(T::Boolean), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), name: T.nilable(::String), public_description: T.nilable(::String), public_name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), slug: T.nilable(::String), tags: T.nilable(T::Array[::String]), type: T.nilable(::String), updated_at: T.nilable(::DateTime), variants: T.nilable(T::Array[Models::Shared::CommerceItemVariant]), vendor_name: T.nilable(::String)).void }
+        sig { params(account_id: T.nilable(::String), collection_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_taxable: T.nilable(T::Boolean), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), name: T.nilable(::String), public_description: T.nilable(::String), public_name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), slug: T.nilable(::String), tags: T.nilable(T::Array[Models::Shared::PropertyCommerceItemTags]), type: T.nilable(::String), updated_at: T.nilable(::DateTime), variants: T.nilable(T::Array[Models::Shared::CommerceItemVariant]), vendor_name: T.nilable(::String)).void }
         def initialize(account_id: nil, collection_ids: nil, created_at: nil, description: nil, id: nil, is_active: nil, is_taxable: nil, media: nil, metadata: nil, name: nil, public_description: nil, public_name: nil, raw: nil, slug: nil, tags: nil, type: nil, updated_at: nil, variants: nil, vendor_name: nil)
           @account_id = account_id
           @collection_ids = collection_ids

@@ -42,6 +42,10 @@ module UnifiedRubySDK
 
         field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
+        field :recurrence, T.nilable(T::Array[Models::Shared::CalendarEventRecurrence]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recurrence') } }
+
+        field :recurring_event_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recurring_event_id') } }
+
         field :status, T.nilable(Models::Shared::CalendarEventStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::CalendarEventStatus, true) } }
 
         field :timezone, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
@@ -51,8 +55,8 @@ module UnifiedRubySDK
         field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
 
-        sig { params(end_at: ::String, start_at: ::String, subject: ::String, attendees: T.nilable(T::Array[Models::Shared::CalendarAttendee]), calendar_id: T.nilable(::String), created_at: T.nilable(::String), id: T.nilable(::String), is_all_day: T.nilable(T::Boolean), is_free: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), location: T.nilable(::String), notes: T.nilable(::String), organizer: T.nilable(Models::Shared::PropertyCalendarEventOrganizer), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::CalendarEventStatus), timezone: T.nilable(::String), updated_at: T.nilable(::String), web_url: T.nilable(::String)).void }
-        def initialize(end_at: nil, start_at: nil, subject: nil, attendees: nil, calendar_id: nil, created_at: nil, id: nil, is_all_day: nil, is_free: nil, is_private: nil, location: nil, notes: nil, organizer: nil, raw: nil, status: nil, timezone: nil, updated_at: nil, web_url: nil)
+        sig { params(end_at: ::String, start_at: ::String, subject: ::String, attendees: T.nilable(T::Array[Models::Shared::CalendarAttendee]), calendar_id: T.nilable(::String), created_at: T.nilable(::String), id: T.nilable(::String), is_all_day: T.nilable(T::Boolean), is_free: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), location: T.nilable(::String), notes: T.nilable(::String), organizer: T.nilable(Models::Shared::PropertyCalendarEventOrganizer), raw: T.nilable(T::Hash[Symbol, ::Object]), recurrence: T.nilable(T::Array[Models::Shared::CalendarEventRecurrence]), recurring_event_id: T.nilable(::String), status: T.nilable(Models::Shared::CalendarEventStatus), timezone: T.nilable(::String), updated_at: T.nilable(::String), web_url: T.nilable(::String)).void }
+        def initialize(end_at: nil, start_at: nil, subject: nil, attendees: nil, calendar_id: nil, created_at: nil, id: nil, is_all_day: nil, is_free: nil, is_private: nil, location: nil, notes: nil, organizer: nil, raw: nil, recurrence: nil, recurring_event_id: nil, status: nil, timezone: nil, updated_at: nil, web_url: nil)
           @end_at = end_at
           @start_at = start_at
           @subject = subject
@@ -67,6 +71,8 @@ module UnifiedRubySDK
           @notes = notes
           @organizer = organizer
           @raw = raw
+          @recurrence = recurrence
+          @recurring_event_id = recurring_event_id
           @status = status
           @timezone = timezone
           @updated_at = updated_at
@@ -89,6 +95,8 @@ module UnifiedRubySDK
           return false unless @notes == other.notes
           return false unless @organizer == other.organizer
           return false unless @raw == other.raw
+          return false unless @recurrence == other.recurrence
+          return false unless @recurring_event_id == other.recurring_event_id
           return false unless @status == other.status
           return false unless @timezone == other.timezone
           return false unless @updated_at == other.updated_at
