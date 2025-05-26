@@ -9,7 +9,7 @@ module UnifiedRubySDK
     module Operations
     
 
-      class ListHrisTimeoffsRequest
+      class ListHrisTimeshiftsRequest
         extend T::Sig
         include Crystalline::MetadataFields
 
@@ -23,6 +23,8 @@ module UnifiedRubySDK
         field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
         field :limit, T.nilable(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
+        # The location ID to filter by
+        field :location_id, T.nilable(::String), { 'query_param': { 'field_name': 'location_id', 'style': 'form', 'explode': true } }
 
         field :offset, T.nilable(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
 
@@ -41,13 +43,14 @@ module UnifiedRubySDK
         field :user_id, T.nilable(::String), { 'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': true } }
 
 
-        sig { params(connection_id: ::String, company_id: T.nilable(::String), end_le: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
-        def initialize(connection_id: nil, company_id: nil, end_le: nil, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, start_gte: nil, updated_gte: nil, user_id: nil)
+        sig { params(connection_id: ::String, company_id: T.nilable(::String), end_le: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), location_id: T.nilable(::String), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
+        def initialize(connection_id: nil, company_id: nil, end_le: nil, fields_: nil, limit: nil, location_id: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, start_gte: nil, updated_gte: nil, user_id: nil)
           @connection_id = connection_id
           @company_id = company_id
           @end_le = end_le
           @fields_ = fields_
           @limit = limit
+          @location_id = location_id
           @offset = offset
           @order = order
           @query = query
@@ -65,6 +68,7 @@ module UnifiedRubySDK
           return false unless @end_le == other.end_le
           return false unless @fields_ == other.fields_
           return false unless @limit == other.limit
+          return false unless @location_id == other.location_id
           return false unless @offset == other.offset
           return false unless @order == other.order
           return false unless @query == other.query

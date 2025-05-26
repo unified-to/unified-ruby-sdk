@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 0410d1777305583960db5f8722b2f00f
+  docChecksum: 22dac4e470df3ae38d82ad39b894304a
   docVersion: "1.0"
   speakeasyVersion: 1.533.0
   generationVersion: 2.578.0
-  releaseVersion: 0.20.1
-  configChecksum: d2163ce50dac5ae7b6dc25fe391a5a45
+  releaseVersion: 0.21.1
+  configChecksum: daa9e65a6661a5dedb4396847b5abb92
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -94,6 +94,8 @@ generatedFiles:
   - docs/models/operations/createhrisgroupresponse.md
   - docs/models/operations/createhrislocationrequest.md
   - docs/models/operations/createhrislocationresponse.md
+  - docs/models/operations/createhristimeshiftrequest.md
+  - docs/models/operations/createhristimeshiftresponse.md
   - docs/models/operations/createkmscommentrequest.md
   - docs/models/operations/createkmscommentresponse.md
   - docs/models/operations/createkmspagerequest.md
@@ -241,6 +243,8 @@ generatedFiles:
   - docs/models/operations/gethrispayslipresponse.md
   - docs/models/operations/gethristimeoffrequest.md
   - docs/models/operations/gethristimeoffresponse.md
+  - docs/models/operations/gethristimeshiftrequest.md
+  - docs/models/operations/gethristimeshiftresponse.md
   - docs/models/operations/getkmscommentrequest.md
   - docs/models/operations/getkmscommentresponse.md
   - docs/models/operations/getkmspagerequest.md
@@ -407,6 +411,8 @@ generatedFiles:
   - docs/models/operations/listhrispayslipsresponse.md
   - docs/models/operations/listhristimeoffsrequest.md
   - docs/models/operations/listhristimeoffsresponse.md
+  - docs/models/operations/listhristimeshiftsrequest.md
+  - docs/models/operations/listhristimeshiftsresponse.md
   - docs/models/operations/listkmscommentsrequest.md
   - docs/models/operations/listkmscommentsresponse.md
   - docs/models/operations/listkmspagesrequest.md
@@ -558,6 +564,8 @@ generatedFiles:
   - docs/models/operations/patchhrisgroupresponse.md
   - docs/models/operations/patchhrislocationrequest.md
   - docs/models/operations/patchhrislocationresponse.md
+  - docs/models/operations/patchhristimeshiftrequest.md
+  - docs/models/operations/patchhristimeshiftresponse.md
   - docs/models/operations/patchkmscommentrequest.md
   - docs/models/operations/patchkmscommentresponse.md
   - docs/models/operations/patchkmspagerequest.md
@@ -697,6 +705,8 @@ generatedFiles:
   - docs/models/operations/removehrisgroupresponse.md
   - docs/models/operations/removehrislocationrequest.md
   - docs/models/operations/removehrislocationresponse.md
+  - docs/models/operations/removehristimeshiftrequest.md
+  - docs/models/operations/removehristimeshiftresponse.md
   - docs/models/operations/removekmscommentrequest.md
   - docs/models/operations/removekmscommentresponse.md
   - docs/models/operations/removekmspagerequest.md
@@ -831,6 +841,8 @@ generatedFiles:
   - docs/models/operations/updatehrisgroupresponse.md
   - docs/models/operations/updatehrislocationrequest.md
   - docs/models/operations/updatehrislocationresponse.md
+  - docs/models/operations/updatehristimeshiftrequest.md
+  - docs/models/operations/updatehristimeshiftresponse.md
   - docs/models/operations/updatekmscommentrequest.md
   - docs/models/operations/updatekmscommentresponse.md
   - docs/models/operations/updatekmspagerequest.md
@@ -1135,6 +1147,7 @@ generatedFiles:
   - docs/models/shared/hristimeoff.md
   - docs/models/shared/hristimeoffstatus.md
   - docs/models/shared/hristimeofftype.md
+  - docs/models/shared/hristimeshift.md
   - docs/models/shared/integration.md
   - docs/models/shared/integration1.md
   - docs/models/shared/integration2.md
@@ -1459,6 +1472,7 @@ generatedFiles:
   - docs/sdks/ticket/README.md
   - docs/sdks/ticketing/README.md
   - docs/sdks/timeoff/README.md
+  - docs/sdks/timeshift/README.md
   - docs/sdks/transaction/README.md
   - docs/sdks/uc/README.md
   - docs/sdks/unified/README.md
@@ -1599,6 +1613,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createhrisgroup_response.rb
   - lib/unified_ruby_sdk/models/operations/createhrislocation_request.rb
   - lib/unified_ruby_sdk/models/operations/createhrislocation_response.rb
+  - lib/unified_ruby_sdk/models/operations/createhristimeshift_request.rb
+  - lib/unified_ruby_sdk/models/operations/createhristimeshift_response.rb
   - lib/unified_ruby_sdk/models/operations/createkmscomment_request.rb
   - lib/unified_ruby_sdk/models/operations/createkmscomment_response.rb
   - lib/unified_ruby_sdk/models/operations/createkmspage_request.rb
@@ -1746,6 +1762,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/gethrispayslip_response.rb
   - lib/unified_ruby_sdk/models/operations/gethristimeoff_request.rb
   - lib/unified_ruby_sdk/models/operations/gethristimeoff_response.rb
+  - lib/unified_ruby_sdk/models/operations/gethristimeshift_request.rb
+  - lib/unified_ruby_sdk/models/operations/gethristimeshift_response.rb
   - lib/unified_ruby_sdk/models/operations/getkmscomment_request.rb
   - lib/unified_ruby_sdk/models/operations/getkmscomment_response.rb
   - lib/unified_ruby_sdk/models/operations/getkmspage_request.rb
@@ -1912,6 +1930,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listhrispayslips_response.rb
   - lib/unified_ruby_sdk/models/operations/listhristimeoffs_request.rb
   - lib/unified_ruby_sdk/models/operations/listhristimeoffs_response.rb
+  - lib/unified_ruby_sdk/models/operations/listhristimeshifts_request.rb
+  - lib/unified_ruby_sdk/models/operations/listhristimeshifts_response.rb
   - lib/unified_ruby_sdk/models/operations/listkmscomments_request.rb
   - lib/unified_ruby_sdk/models/operations/listkmscomments_response.rb
   - lib/unified_ruby_sdk/models/operations/listkmspages_request.rb
@@ -2063,6 +2083,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchhrisgroup_response.rb
   - lib/unified_ruby_sdk/models/operations/patchhrislocation_request.rb
   - lib/unified_ruby_sdk/models/operations/patchhrislocation_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchhristimeshift_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchhristimeshift_response.rb
   - lib/unified_ruby_sdk/models/operations/patchkmscomment_request.rb
   - lib/unified_ruby_sdk/models/operations/patchkmscomment_response.rb
   - lib/unified_ruby_sdk/models/operations/patchkmspage_request.rb
@@ -2202,6 +2224,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removehrisgroup_response.rb
   - lib/unified_ruby_sdk/models/operations/removehrislocation_request.rb
   - lib/unified_ruby_sdk/models/operations/removehrislocation_response.rb
+  - lib/unified_ruby_sdk/models/operations/removehristimeshift_request.rb
+  - lib/unified_ruby_sdk/models/operations/removehristimeshift_response.rb
   - lib/unified_ruby_sdk/models/operations/removekmscomment_request.rb
   - lib/unified_ruby_sdk/models/operations/removekmscomment_response.rb
   - lib/unified_ruby_sdk/models/operations/removekmspage_request.rb
@@ -2336,6 +2360,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatehrisgroup_response.rb
   - lib/unified_ruby_sdk/models/operations/updatehrislocation_request.rb
   - lib/unified_ruby_sdk/models/operations/updatehrislocation_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatehristimeshift_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatehristimeshift_response.rb
   - lib/unified_ruby_sdk/models/operations/updatekmscomment_request.rb
   - lib/unified_ruby_sdk/models/operations/updatekmscomment_response.rb
   - lib/unified_ruby_sdk/models/operations/updatekmspage_request.rb
@@ -2641,6 +2667,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/hristimeoff.rb
   - lib/unified_ruby_sdk/models/shared/hristimeoff_status.rb
   - lib/unified_ruby_sdk/models/shared/hristimeoff_type.rb
+  - lib/unified_ruby_sdk/models/shared/hristimeshift.rb
   - lib/unified_ruby_sdk/models/shared/integration.rb
   - lib/unified_ruby_sdk/models/shared/integration_1.rb
   - lib/unified_ruby_sdk/models/shared/integration_2.rb
@@ -2911,6 +2938,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/ticket.rb
   - lib/unified_ruby_sdk/ticketing.rb
   - lib/unified_ruby_sdk/timeoff.rb
+  - lib/unified_ruby_sdk/timeshift.rb
   - lib/unified_ruby_sdk/transaction.rb
   - lib/unified_ruby_sdk/uc.rb
   - lib/unified_ruby_sdk/unified.rb
@@ -5167,6 +5195,17 @@ examples:
       responses:
         "200":
           application/json: {}
+  createHrisTimeshift:
+    speakeasy-default-create-hris-timeshift:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
   getHrisDevice:
     speakeasy-default-get-hris-device:
       parameters:
@@ -5217,6 +5256,16 @@ examples:
       responses:
         "200":
           application/json: {"start_at": "2024-07-19T21:47:06.045Z"}
+  getHrisTimeshift:
+    speakeasy-default-get-hris-timeshift:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
   listHrisDevices:
     speakeasy-default-list-hris-devices:
       parameters:
@@ -5262,6 +5311,15 @@ examples:
       responses:
         "200":
           application/json: [{"start_at": "2025-11-20T05:14:17.036Z"}]
+  listHrisTimeshifts:
+    speakeasy-default-list-hris-timeshifts:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}]
   patchHrisDevice:
     speakeasy-default-patch-hris-device:
       parameters:
@@ -5298,6 +5356,18 @@ examples:
       responses:
         "200":
           application/json: {}
+  patchHrisTimeshift:
+    speakeasy-default-patch-hris-timeshift:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
   removeHrisDevice:
     speakeasy-default-remove-hris-device:
       parameters:
@@ -5312,6 +5382,12 @@ examples:
           id: "<id>"
   removeHrisGroup:
     speakeasy-default-remove-hris-group:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeHrisTimeshift:
+    speakeasy-default-remove-hris-timeshift:
       parameters:
         path:
           connection_id: "<id>"
@@ -5342,6 +5418,18 @@ examples:
           application/json: {}
   updateHrisGroup:
     speakeasy-default-update-hris-group:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateHrisTimeshift:
+    speakeasy-default-update-hris-timeshift:
       parameters:
         path:
           connection_id: "<id>"

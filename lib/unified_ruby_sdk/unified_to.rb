@@ -16,7 +16,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :contact, :invoice, :journal, :order, :organization, :report, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :event, :link, :recording, :commerce, :collection, :inventory, :item, :location, :review, :crm, :deal, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :device, :employee, :group, :payslip, :timeoff, :kms, :comment, :page, :space, :lms, :class_, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :storage, :file, :task, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
+    attr_accessor :accounting, :account, :contact, :invoice, :journal, :order, :organization, :report, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :event, :link, :recording, :commerce, :collection, :inventory, :item, :location, :review, :crm, :deal, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :device, :employee, :group, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :lms, :class_, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :storage, :file, :task, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
 
     sig do
       params(
@@ -127,6 +127,7 @@ module UnifiedRubySDK
       @group = Group.new(@sdk_configuration)
       @payslip = Payslip.new(@sdk_configuration)
       @timeoff = Timeoff.new(@sdk_configuration)
+      @timeshift = Timeshift.new(@sdk_configuration)
       @kms = Kms.new(@sdk_configuration)
       @comment = Comment.new(@sdk_configuration)
       @page = Page.new(@sdk_configuration)

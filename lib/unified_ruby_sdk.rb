@@ -51,6 +51,7 @@ module UnifiedRubySDK
   autoload :Group, 'unified_ruby_sdk/group'
   autoload :Payslip, 'unified_ruby_sdk/payslip'
   autoload :Timeoff, 'unified_ruby_sdk/timeoff'
+  autoload :Timeshift, 'unified_ruby_sdk/timeshift'
   autoload :Kms, 'unified_ruby_sdk/kms'
   autoload :Comment, 'unified_ruby_sdk/comment'
   autoload :Page, 'unified_ruby_sdk/page'
