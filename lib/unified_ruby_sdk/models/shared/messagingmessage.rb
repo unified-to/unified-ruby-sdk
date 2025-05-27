@@ -26,6 +26,8 @@ module UnifiedRubySDK
 
         field :destination_members, T.nilable(T::Array[Models::Shared::MessagingMember]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('destination_members') } }
 
+        field :has_children, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_children') } }
+
         field :hidden_members, T.nilable(T::Array[Models::Shared::MessagingMember]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('hidden_members') } }
 
         field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
@@ -51,14 +53,15 @@ module UnifiedRubySDK
         field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
 
-        sig { params(attachments: T.nilable(T::Array[Models::Shared::MessagingAttachment]), author_member: T.nilable(Models::Shared::PropertyMessagingMessageAuthorMember), channel_id: T.nilable(::String), channel_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), destination_members: T.nilable(T::Array[Models::Shared::MessagingMember]), hidden_members: T.nilable(T::Array[Models::Shared::MessagingMember]), id: T.nilable(::String), mentioned_members: T.nilable(T::Array[Models::Shared::MessagingMember]), message: T.nilable(::String), message_html: T.nilable(::String), parent_message_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), root_message_id: T.nilable(::String), subject: T.nilable(::String), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
-        def initialize(attachments: nil, author_member: nil, channel_id: nil, channel_ids: nil, created_at: nil, destination_members: nil, hidden_members: nil, id: nil, mentioned_members: nil, message: nil, message_html: nil, parent_message_id: nil, raw: nil, reference: nil, root_message_id: nil, subject: nil, updated_at: nil, web_url: nil)
+        sig { params(attachments: T.nilable(T::Array[Models::Shared::MessagingAttachment]), author_member: T.nilable(Models::Shared::PropertyMessagingMessageAuthorMember), channel_id: T.nilable(::String), channel_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), destination_members: T.nilable(T::Array[Models::Shared::MessagingMember]), has_children: T.nilable(T::Boolean), hidden_members: T.nilable(T::Array[Models::Shared::MessagingMember]), id: T.nilable(::String), mentioned_members: T.nilable(T::Array[Models::Shared::MessagingMember]), message: T.nilable(::String), message_html: T.nilable(::String), parent_message_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), root_message_id: T.nilable(::String), subject: T.nilable(::String), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
+        def initialize(attachments: nil, author_member: nil, channel_id: nil, channel_ids: nil, created_at: nil, destination_members: nil, has_children: nil, hidden_members: nil, id: nil, mentioned_members: nil, message: nil, message_html: nil, parent_message_id: nil, raw: nil, reference: nil, root_message_id: nil, subject: nil, updated_at: nil, web_url: nil)
           @attachments = attachments
           @author_member = author_member
           @channel_id = channel_id
           @channel_ids = channel_ids
           @created_at = created_at
           @destination_members = destination_members
+          @has_children = has_children
           @hidden_members = hidden_members
           @id = id
           @mentioned_members = mentioned_members
@@ -81,6 +84,7 @@ module UnifiedRubySDK
           return false unless @channel_ids == other.channel_ids
           return false unless @created_at == other.created_at
           return false unless @destination_members == other.destination_members
+          return false unless @has_children == other.has_children
           return false unless @hidden_members == other.hidden_members
           return false unless @id == other.id
           return false unless @mentioned_members == other.mentioned_members

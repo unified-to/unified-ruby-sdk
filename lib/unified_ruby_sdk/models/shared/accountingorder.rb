@@ -28,6 +28,8 @@ module UnifiedRubySDK
 
         field :lineitems, T.nilable(T::Array[Models::Shared::AccountingLineitem]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lineitems') } }
 
+        field :posted_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('posted_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
         field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :shipping_address, T.nilable(Models::Shared::PropertyAccountingOrderShippingAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('shipping_address') } }
@@ -41,8 +43,8 @@ module UnifiedRubySDK
         field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-        sig { params(account_id: T.nilable(::String), billing_address: T.nilable(Models::Shared::PropertyAccountingOrderBillingAddress), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), raw: T.nilable(T::Hash[Symbol, ::Object]), shipping_address: T.nilable(Models::Shared::PropertyAccountingOrderShippingAddress), status: T.nilable(Models::Shared::AccountingOrderStatus), total_amount: T.nilable(::Float), type: T.nilable(Models::Shared::AccountingOrderType), updated_at: T.nilable(::DateTime)).void }
-        def initialize(account_id: nil, billing_address: nil, contact_id: nil, created_at: nil, currency: nil, id: nil, lineitems: nil, raw: nil, shipping_address: nil, status: nil, total_amount: nil, type: nil, updated_at: nil)
+        sig { params(account_id: T.nilable(::String), billing_address: T.nilable(Models::Shared::PropertyAccountingOrderBillingAddress), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), shipping_address: T.nilable(Models::Shared::PropertyAccountingOrderShippingAddress), status: T.nilable(Models::Shared::AccountingOrderStatus), total_amount: T.nilable(::Float), type: T.nilable(Models::Shared::AccountingOrderType), updated_at: T.nilable(::DateTime)).void }
+        def initialize(account_id: nil, billing_address: nil, contact_id: nil, created_at: nil, currency: nil, id: nil, lineitems: nil, posted_at: nil, raw: nil, shipping_address: nil, status: nil, total_amount: nil, type: nil, updated_at: nil)
           @account_id = account_id
           @billing_address = billing_address
           @contact_id = contact_id
@@ -50,6 +52,7 @@ module UnifiedRubySDK
           @currency = currency
           @id = id
           @lineitems = lineitems
+          @posted_at = posted_at
           @raw = raw
           @shipping_address = shipping_address
           @status = status
@@ -67,6 +70,7 @@ module UnifiedRubySDK
           return false unless @currency == other.currency
           return false unless @id == other.id
           return false unless @lineitems == other.lineitems
+          return false unless @posted_at == other.posted_at
           return false unless @raw == other.raw
           return false unless @shipping_address == other.shipping_address
           return false unless @status == other.status
