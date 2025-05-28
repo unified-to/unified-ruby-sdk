@@ -22,14 +22,14 @@ module UnifiedRubySDK
 
         field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :options, T.nilable(T::Array[Models::Shared::PropertyAtsJobQuestionOptions]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
+        field :options, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
 
         field :prompt, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('prompt') } }
 
         field :required, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('required') } }
 
 
-        sig { params(question: ::String, type: Models::Shared::AtsJobQuestionType, description: T.nilable(::String), id: T.nilable(::String), options: T.nilable(T::Array[Models::Shared::PropertyAtsJobQuestionOptions]), prompt: T.nilable(::String), required: T.nilable(T::Boolean)).void }
+        sig { params(question: ::String, type: Models::Shared::AtsJobQuestionType, description: T.nilable(::String), id: T.nilable(::String), options: T.nilable(T::Array[::String]), prompt: T.nilable(::String), required: T.nilable(T::Boolean)).void }
         def initialize(question: nil, type: nil, description: nil, id: nil, options: nil, prompt: nil, required: nil)
           @question = question
           @type = type

@@ -84,11 +84,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.calendar.create_calendar_event(calendar_event=Models::Shared::CalendarEvent.new(
-  end_at: "<value>",
-  start_at: "<value>",
-  subject: "<value>",
-), connection_id="<id>", fields_=[
+res = s.calendar.create_calendar_event(calendar_event=Models::Shared::CalendarEvent.new(), connection_id="<id>", fields_=[
   "<value>",
 ], raw="<value>")
 
@@ -569,11 +565,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchCalendarEventRequest.new(
-  calendar_event: Models::Shared::CalendarEvent.new(
-    end_at: "<value>",
-    start_at: "<value>",
-    subject: "<value>",
-  ),
+  calendar_event: Models::Shared::CalendarEvent.new(),
   connection_id: "<id>",
   id: "<id>",
 )
@@ -808,11 +800,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateCalendarEventRequest.new(
-  calendar_event: Models::Shared::CalendarEvent.new(
-    end_at: "<value>",
-    start_at: "<value>",
-    subject: "<value>",
-  ),
+  calendar_event: Models::Shared::CalendarEvent.new(),
   connection_id: "<id>",
   id: "<id>",
 )

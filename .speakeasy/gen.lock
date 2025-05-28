@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 5d7224eae5351ceaef9292fed7b8c35a
+  docChecksum: d14d19d0a1732100e72235d3371aa316
   docVersion: "1.0"
   speakeasyVersion: 1.533.0
   generationVersion: 2.578.0
-  releaseVersion: 0.22.1
-  configChecksum: 8a32ab4ec798c6912265d82d98300f53
+  releaseVersion: 0.23.1
+  configChecksum: 698a301509e32ceb705e9d125826f264
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -1254,26 +1254,14 @@ generatedFiles:
   - docs/models/shared/propertyaccountingreporttrialbalance.md
   - docs/models/shared/propertyatsactivityfrom.md
   - docs/models/shared/propertyatsactivityfromtype.md
-  - docs/models/shared/propertyatsapplicationansweranswers.md
   - docs/models/shared/propertyatscandidateaddress.md
-  - docs/models/shared/propertyatscandidatelinkurls.md
-  - docs/models/shared/propertyatscandidateskills.md
-  - docs/models/shared/propertyatscandidatesources.md
-  - docs/models/shared/propertyatscandidatetags.md
   - docs/models/shared/propertyatscompanyaddress.md
-  - docs/models/shared/propertyatsjobdepartments.md
   - docs/models/shared/propertyatsjobpostingaddress.md
-  - docs/models/shared/propertyatsjobpublicjoburls.md
-  - docs/models/shared/propertyatsjobquestionoptions.md
   - docs/models/shared/propertycalendareventorganizer.md
   - docs/models/shared/propertycalendareventorganizerstatus.md
   - docs/models/shared/propertycalendareventrecurrenceondays.md
   - docs/models/shared/propertycalendarrecordingtranscriptattendee.md
   - docs/models/shared/propertycalendarrecordingtranscriptattendeestatus.md
-  - docs/models/shared/propertycommercecollectiontags.md
-  - docs/models/shared/propertycommerceitemoptionvalues.md
-  - docs/models/shared/propertycommerceitemtags.md
-  - docs/models/shared/propertycommerceitemvarianttags.md
   - docs/models/shared/propertycommercelocationaddress.md
   - docs/models/shared/propertyconnectionauth.md
   - docs/models/shared/propertyconnectioncategories.md
@@ -1297,10 +1285,8 @@ generatedFiles:
   - docs/models/shared/propertyhrisemployeeemployeeroles.md
   - docs/models/shared/propertyhrislocationaddress.md
   - docs/models/shared/propertyintegrationcategories.md
-  - docs/models/shared/propertyintegrationtokeninstructions.md
   - docs/models/shared/propertylmsstudentaddress.md
   - docs/models/shared/propertymessagingmessageauthormember.md
-  - docs/models/shared/propertymetadatametadataoptions.md
   - docs/models/shared/propertyscimgroupmeta.md
   - docs/models/shared/propertyscimgroupschemas.md
   - docs/models/shared/propertyscimusermeta.md
@@ -2774,26 +2760,14 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_accountingreport_trial_balance.rb
   - lib/unified_ruby_sdk/models/shared/property_atsactivity_from.rb
   - lib/unified_ruby_sdk/models/shared/property_atsactivity_from_type.rb
-  - lib/unified_ruby_sdk/models/shared/property_atsapplicationanswer_answers.rb
   - lib/unified_ruby_sdk/models/shared/property_atscandidate_address.rb
-  - lib/unified_ruby_sdk/models/shared/property_atscandidate_link_urls.rb
-  - lib/unified_ruby_sdk/models/shared/property_atscandidate_skills.rb
-  - lib/unified_ruby_sdk/models/shared/property_atscandidate_sources.rb
-  - lib/unified_ruby_sdk/models/shared/property_atscandidate_tags.rb
   - lib/unified_ruby_sdk/models/shared/property_atscompany_address.rb
-  - lib/unified_ruby_sdk/models/shared/property_atsjob_departments.rb
-  - lib/unified_ruby_sdk/models/shared/property_atsjob_public_job_urls.rb
   - lib/unified_ruby_sdk/models/shared/property_atsjobposting_address.rb
-  - lib/unified_ruby_sdk/models/shared/property_atsjobquestion_options.rb
   - lib/unified_ruby_sdk/models/shared/property_calendarevent_organizer.rb
   - lib/unified_ruby_sdk/models/shared/property_calendarevent_organizer_status.rb
   - lib/unified_ruby_sdk/models/shared/property_calendareventrecurrence_on_days.rb
   - lib/unified_ruby_sdk/models/shared/property_calendarrecordingtranscript_attendee.rb
   - lib/unified_ruby_sdk/models/shared/property_calendarrecordingtranscript_attendee_status.rb
-  - lib/unified_ruby_sdk/models/shared/property_commercecollection_tags.rb
-  - lib/unified_ruby_sdk/models/shared/property_commerceitem_tags.rb
-  - lib/unified_ruby_sdk/models/shared/property_commerceitemoption_values.rb
-  - lib/unified_ruby_sdk/models/shared/property_commerceitemvariant_tags.rb
   - lib/unified_ruby_sdk/models/shared/property_commercelocation_address.rb
   - lib/unified_ruby_sdk/models/shared/property_connection_auth.rb
   - lib/unified_ruby_sdk/models/shared/property_connection_categories.rb
@@ -2817,10 +2791,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_hrisemployee_employee_roles.rb
   - lib/unified_ruby_sdk/models/shared/property_hrislocation_address.rb
   - lib/unified_ruby_sdk/models/shared/property_integration_categories.rb
-  - lib/unified_ruby_sdk/models/shared/property_integration_token_instructions.rb
   - lib/unified_ruby_sdk/models/shared/property_lmsstudent_address.rb
   - lib/unified_ruby_sdk/models/shared/property_messagingmessage_author_member.rb
-  - lib/unified_ruby_sdk/models/shared/property_metadatametadata_options.rb
   - lib/unified_ruby_sdk/models/shared/property_scimgroup_meta.rb
   - lib/unified_ruby_sdk/models/shared/property_scimgroup_schemas.rb
   - lib/unified_ruby_sdk/models/shared/property_scimuser_meta.rb
@@ -4223,10 +4195,10 @@ examples:
           connection_id: "<id>"
         query: {}
       requestBody:
-        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+          application/json: {}
   createCalendarLink:
     speakeasy-default-create-calendar-link:
       parameters:
@@ -4257,7 +4229,7 @@ examples:
         query: {}
       responses:
         "200":
-          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+          application/json: {}
   getCalendarLink:
     speakeasy-default-get-calendar-link:
       parameters:
@@ -4304,7 +4276,7 @@ examples:
         query: {}
       responses:
         "200":
-          application/json: [{"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}, {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}, {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}]
+          application/json: [{}, {}, {}]
   listCalendarLinks:
     speakeasy-default-list-calendar-links:
       parameters:
@@ -4343,10 +4315,10 @@ examples:
           id: "<id>"
         query: {}
       requestBody:
-        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+          application/json: {}
   patchCalendarLink:
     speakeasy-default-patch-calendar-link:
       parameters:
@@ -4397,10 +4369,10 @@ examples:
           id: "<id>"
         query: {}
       requestBody:
-        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+          application/json: {}
   updateCalendarLink:
     speakeasy-default-update-calendar-link:
       parameters:

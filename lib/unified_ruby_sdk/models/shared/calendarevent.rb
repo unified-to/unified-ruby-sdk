@@ -14,17 +14,13 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :end_at, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at') } }
-
-        field :start_at, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at') } }
-
-        field :subject, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subject') } }
-
         field :attendees, T.nilable(T::Array[Models::Shared::CalendarAttendee]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attendees') } }
 
         field :calendar_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('calendar_id') } }
 
         field :created_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
+
+        field :end_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at') } }
 
         field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
@@ -46,7 +42,11 @@ module UnifiedRubySDK
 
         field :recurring_event_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recurring_event_id') } }
 
+        field :start_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at') } }
+
         field :status, T.nilable(Models::Shared::CalendarEventStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::CalendarEventStatus, true) } }
+
+        field :subject, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subject') } }
 
         field :timezone, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
 
@@ -55,14 +55,12 @@ module UnifiedRubySDK
         field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
 
-        sig { params(end_at: ::String, start_at: ::String, subject: ::String, attendees: T.nilable(T::Array[Models::Shared::CalendarAttendee]), calendar_id: T.nilable(::String), created_at: T.nilable(::String), id: T.nilable(::String), is_all_day: T.nilable(T::Boolean), is_free: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), location: T.nilable(::String), notes: T.nilable(::String), organizer: T.nilable(Models::Shared::PropertyCalendarEventOrganizer), raw: T.nilable(T::Hash[Symbol, ::Object]), recurrence: T.nilable(T::Array[Models::Shared::CalendarEventRecurrence]), recurring_event_id: T.nilable(::String), status: T.nilable(Models::Shared::CalendarEventStatus), timezone: T.nilable(::String), updated_at: T.nilable(::String), web_url: T.nilable(::String)).void }
-        def initialize(end_at: nil, start_at: nil, subject: nil, attendees: nil, calendar_id: nil, created_at: nil, id: nil, is_all_day: nil, is_free: nil, is_private: nil, location: nil, notes: nil, organizer: nil, raw: nil, recurrence: nil, recurring_event_id: nil, status: nil, timezone: nil, updated_at: nil, web_url: nil)
-          @end_at = end_at
-          @start_at = start_at
-          @subject = subject
+        sig { params(attendees: T.nilable(T::Array[Models::Shared::CalendarAttendee]), calendar_id: T.nilable(::String), created_at: T.nilable(::String), end_at: T.nilable(::String), id: T.nilable(::String), is_all_day: T.nilable(T::Boolean), is_free: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), location: T.nilable(::String), notes: T.nilable(::String), organizer: T.nilable(Models::Shared::PropertyCalendarEventOrganizer), raw: T.nilable(T::Hash[Symbol, ::Object]), recurrence: T.nilable(T::Array[Models::Shared::CalendarEventRecurrence]), recurring_event_id: T.nilable(::String), start_at: T.nilable(::String), status: T.nilable(Models::Shared::CalendarEventStatus), subject: T.nilable(::String), timezone: T.nilable(::String), updated_at: T.nilable(::String), web_url: T.nilable(::String)).void }
+        def initialize(attendees: nil, calendar_id: nil, created_at: nil, end_at: nil, id: nil, is_all_day: nil, is_free: nil, is_private: nil, location: nil, notes: nil, organizer: nil, raw: nil, recurrence: nil, recurring_event_id: nil, start_at: nil, status: nil, subject: nil, timezone: nil, updated_at: nil, web_url: nil)
           @attendees = attendees
           @calendar_id = calendar_id
           @created_at = created_at
+          @end_at = end_at
           @id = id
           @is_all_day = is_all_day
           @is_free = is_free
@@ -73,7 +71,9 @@ module UnifiedRubySDK
           @raw = raw
           @recurrence = recurrence
           @recurring_event_id = recurring_event_id
+          @start_at = start_at
           @status = status
+          @subject = subject
           @timezone = timezone
           @updated_at = updated_at
           @web_url = web_url
@@ -81,12 +81,10 @@ module UnifiedRubySDK
 
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @end_at == other.end_at
-          return false unless @start_at == other.start_at
-          return false unless @subject == other.subject
           return false unless @attendees == other.attendees
           return false unless @calendar_id == other.calendar_id
           return false unless @created_at == other.created_at
+          return false unless @end_at == other.end_at
           return false unless @id == other.id
           return false unless @is_all_day == other.is_all_day
           return false unless @is_free == other.is_free
@@ -97,7 +95,9 @@ module UnifiedRubySDK
           return false unless @raw == other.raw
           return false unless @recurrence == other.recurrence
           return false unless @recurring_event_id == other.recurring_event_id
+          return false unless @start_at == other.start_at
           return false unless @status == other.status
+          return false unless @subject == other.subject
           return false unless @timezone == other.timezone
           return false unless @updated_at == other.updated_at
           return false unless @web_url == other.web_url
