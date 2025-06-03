@@ -1263,14 +1263,14 @@ require 'unified_ruby_sdk'
 
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 begin
-    res = s.accounting.create_accounting_account(accounting_account=Models::Shared::AccountingAccount.new(), connection_id="<id>", fields_=[
-      "<value>",
-    ], raw="<value>")
+    res = s.accounting.create_accounting_account(accounting_account=Models::Shared::AccountingAccount.new(), connection_id='<id>', fields_=[
+      '<value>',
+    ], raw='<value>')
 
     if ! res.accounting_account.nil?
       # handle response

@@ -3,6 +3,7 @@ generation:
   sdkClassName: Unified-to
   usageSnippets:
     optionalPropertyRendering: withExample
+    sdkInitStyle: constructor
   useClassNamesForArrayFields: true
   fixes:
     nameResolutionFeb2025: false
@@ -17,7 +18,7 @@ generation:
   flattenGlobalSecurity: true
   telemetryEnabled: false
 ruby:
-  version: 0.23.1
+  version: 0.25.0
   additionalDependencies:
     development: {}
     runtime: {}

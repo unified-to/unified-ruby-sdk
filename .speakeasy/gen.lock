@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: d14d19d0a1732100e72235d3371aa316
+  docChecksum: f9bc57192bd992fcccfe33378ff85c27
   docVersion: "1.0"
   speakeasyVersion: 1.533.0
   generationVersion: 2.578.0
-  releaseVersion: 0.23.1
-  configChecksum: 698a301509e32ceb705e9d125826f264
+  releaseVersion: 0.25.0
+  configChecksum: 20b6778d3c5091913e3bdcb24ebec37e
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -7203,10 +7203,10 @@ examples:
   createUnifiedConnection:
     speakeasy-default-create-unified-connection:
       requestBody:
-        application/json: {"categories": ["accounting", "martech", "martech"], "integration_type": "<value>", "permissions": ["repo_organization_write", "lms_student_read"]}
+        application/json: {"categories": ["accounting", "martech", "martech"], "integration_type": "<value>", "permissions": ["repo_organization_read", "lms_class_read"]}
       responses:
         "200":
-          application/json: {"categories": ["accounting"], "integration_type": "<value>", "permissions": ["uc_recording_read"]}
+          application/json: {"categories": ["accounting"], "integration_type": "<value>", "permissions": ["uc_comment_write"]}
   createUnifiedWebhook:
     speakeasy-default-create-unified-webhook:
       requestBody:
@@ -7229,7 +7229,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"categories": ["commerce"], "integration_type": "<value>", "permissions": ["task_task_write"]}
+          application/json: {"categories": ["commerce"], "integration_type": "<value>", "permissions": ["task_task_read"]}
   getUnifiedIntegrationAuth:
     speakeasy-default-get-unified-integration-auth:
       parameters:
@@ -7257,7 +7257,7 @@ examples:
     speakeasy-default-list-unified-connections:
       responses:
         "200":
-          application/json: [{"categories": [], "integration_type": "<value>", "permissions": ["scim_users_read", "task_project_read"]}, {"categories": ["auth"], "integration_type": "<value>", "permissions": ["crm_pipeline_read", "ats_job_read", "calendar_link_write"]}]
+          application/json: [{"categories": [], "integration_type": "<value>", "permissions": ["task_comment_read", "kms_comment_read"]}, {"categories": ["auth"], "integration_type": "<value>", "permissions": ["crm_pipeline_read", "ats_job_write", "calendar_link_write"]}]
   listUnifiedIntegrationWorkspaces:
     speakeasy-default-list-unified-integration-workspaces:
       parameters:
@@ -7326,7 +7326,7 @@ examples:
         application/json: {"categories": ["calendar", "storage", "calendar"], "integration_type": "<value>", "permissions": []}
       responses:
         "200":
-          application/json: {"categories": ["calendar"], "integration_type": "<value>", "permissions": ["repo_organization_read"]}
+          application/json: {"categories": ["calendar"], "integration_type": "<value>", "permissions": ["lms_instructor_write"]}
   updateUnifiedWebhook:
     speakeasy-default-update-unified-webhook:
       parameters:
