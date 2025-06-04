@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: f9bc57192bd992fcccfe33378ff85c27
+  docChecksum: 81aba978c148afb4a66ad91cafd22e8f
   docVersion: "1.0"
   speakeasyVersion: 1.533.0
   generationVersion: 2.578.0
-  releaseVersion: 0.25.0
-  configChecksum: 20b6778d3c5091913e3bdcb24ebec37e
+  releaseVersion: 0.27.0
+  configChecksum: e8e14ef3136d44fb17c35f667c973f90
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -7213,7 +7213,7 @@ examples:
         application/json: {"connection_id": "<id>", "event": "created", "object_type": "hris_timeoff"}
       responses:
         "200":
-          application/json: {"connection_id": "<id>", "event": "updated", "object_type": "genai_prompt"}
+          application/json: {"connection_id": "<id>", "event": "updated", "object_type": "genai_model"}
   getUnifiedApicall:
     speakeasy-default-get-unified-apicall:
       parameters:
@@ -7281,7 +7281,7 @@ examples:
     speakeasy-default-list-unified-webhooks:
       responses:
         "200":
-          application/json: [{"connection_id": "<id>", "event": "updated", "object_type": "hris_device"}]
+          application/json: [{"connection_id": "<id>", "event": "updated", "object_type": "hris_timeshift"}]
   patchUnifiedConnection:
     speakeasy-default-patch-unified-connection:
       parameters:
@@ -7298,10 +7298,10 @@ examples:
         path:
           id: "<id>"
       requestBody:
-        application/json: {"connection_id": "<id>", "event": "deleted", "object_type": "crm_lead"}
+        application/json: {"connection_id": "<id>", "event": "deleted", "object_type": "crm_pipeline"}
       responses:
         "200":
-          application/json: {"connection_id": "<id>", "event": "updated", "object_type": "crm_lead"}
+          application/json: {"connection_id": "<id>", "event": "updated", "object_type": "crm_pipeline"}
   patchUnifiedWebhookTrigger:
     speakeasy-default-patch-unified-webhook-trigger:
       parameters:

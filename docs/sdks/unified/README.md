@@ -542,7 +542,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.unified.patch_unified_webhook(webhook=Models::Shared::Webhook.new(
   connection_id: "<id>",
   event: Models::Shared::Event::DELETED,
-  object_type: Models::Shared::ObjectType::CRM_LEAD,
+  object_type: Models::Shared::ObjectType::CRM_PIPELINE,
 ), id="<id>")
 
 if ! res.webhook.nil?

@@ -52,6 +52,7 @@ module UnifiedRubySDK
           HRIS_COMPANY = new('hris_company')
           HRIS_LOCATION = new('hris_location')
           HRIS_DEVICE = new('hris_device')
+          HRIS_TIMESHIFT = new('hris_timeshift')
           MARTECH_LIST = new('martech_list')
           MARTECH_MEMBER = new('martech_member')
           PASSTHROUGH = new('passthrough')

@@ -20,25 +20,34 @@ module UnifiedRubySDK
 
         field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+        field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+
         field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
         field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
+        field :language_locale, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language_locale') } }
+
+        field :parent_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
+
         field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
 
-        sig { params(name: ::String, address: T.nilable(Models::Shared::PropertyCommerceLocationAddress), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
-        def initialize(name: nil, address: nil, created_at: nil, description: nil, id: nil, is_active: nil, raw: nil, updated_at: nil)
+        sig { params(name: ::String, address: T.nilable(Models::Shared::PropertyCommerceLocationAddress), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), language_locale: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(name: nil, address: nil, created_at: nil, currency: nil, description: nil, id: nil, is_active: nil, language_locale: nil, parent_id: nil, raw: nil, updated_at: nil)
           @name = name
           @address = address
           @created_at = created_at
+          @currency = currency
           @description = description
           @id = id
           @is_active = is_active
+          @language_locale = language_locale
+          @parent_id = parent_id
           @raw = raw
           @updated_at = updated_at
         end
@@ -48,9 +57,12 @@ module UnifiedRubySDK
           return false unless @name == other.name
           return false unless @address == other.address
           return false unless @created_at == other.created_at
+          return false unless @currency == other.currency
           return false unless @description == other.description
           return false unless @id == other.id
           return false unless @is_active == other.is_active
+          return false unless @language_locale == other.language_locale
+          return false unless @parent_id == other.parent_id
           return false unless @raw == other.raw
           return false unless @updated_at == other.updated_at
           true
