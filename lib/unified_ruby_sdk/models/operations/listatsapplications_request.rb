@@ -17,6 +17,8 @@ module UnifiedRubySDK
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
         # The candidate ID to filter by
         field :candidate_id, T.nilable(::String), { 'query_param': { 'field_name': 'candidate_id', 'style': 'form', 'explode': true } }
+        # The company ID to filter by
+        field :company_id, T.nilable(::String), { 'query_param': { 'field_name': 'company_id', 'style': 'form', 'explode': true } }
         # Comma-delimited fields to return
         field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
         # The job ID to filter by
@@ -37,10 +39,11 @@ module UnifiedRubySDK
         field :updated_gte, T.nilable(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
 
-        sig { params(connection_id: ::String, candidate_id: T.nilable(::String), fields_: T.nilable(T::Array[::String]), job_id: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String)).void }
-        def initialize(connection_id: nil, candidate_id: nil, fields_: nil, job_id: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, updated_gte: nil)
+        sig { params(connection_id: ::String, candidate_id: T.nilable(::String), company_id: T.nilable(::String), fields_: T.nilable(T::Array[::String]), job_id: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String)).void }
+        def initialize(connection_id: nil, candidate_id: nil, company_id: nil, fields_: nil, job_id: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, updated_gte: nil)
           @connection_id = connection_id
           @candidate_id = candidate_id
+          @company_id = company_id
           @fields_ = fields_
           @job_id = job_id
           @limit = limit
@@ -56,6 +59,7 @@ module UnifiedRubySDK
           return false unless other.is_a? self.class
           return false unless @connection_id == other.connection_id
           return false unless @candidate_id == other.candidate_id
+          return false unless @company_id == other.company_id
           return false unless @fields_ == other.fields_
           return false unless @job_id == other.job_id
           return false unless @limit == other.limit

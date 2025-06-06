@@ -37,10 +37,12 @@ module UnifiedRubySDK
         field :start_gte, T.nilable(::String), { 'query_param': { 'field_name': 'start_gte', 'style': 'form', 'explode': true } }
         # Return only results whose updated date is equal or greater to this value
         field :updated_gte, T.nilable(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
+        # The user/employee ID to filter by
+        field :user_id, T.nilable(::String), { 'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': true } }
 
 
-        sig { params(connection_id: ::String, calendar_id: T.nilable(::String), end_le: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::String)).void }
-        def initialize(connection_id: nil, calendar_id: nil, end_le: nil, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, start_gte: nil, updated_gte: nil)
+        sig { params(connection_id: ::String, calendar_id: T.nilable(::String), end_le: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
+        def initialize(connection_id: nil, calendar_id: nil, end_le: nil, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, start_gte: nil, updated_gte: nil, user_id: nil)
           @connection_id = connection_id
           @calendar_id = calendar_id
           @end_le = end_le
@@ -53,6 +55,7 @@ module UnifiedRubySDK
           @sort = sort
           @start_gte = start_gte
           @updated_gte = updated_gte
+          @user_id = user_id
         end
 
         def ==(other)
@@ -69,6 +72,7 @@ module UnifiedRubySDK
           return false unless @sort == other.sort
           return false unless @start_gte == other.start_gte
           return false unless @updated_gte == other.updated_gte
+          return false unless @user_id == other.user_id
           true
         end
       end
