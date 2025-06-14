@@ -27,6 +27,8 @@ module UnifiedRubySDK
         field :offset, T.nilable(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
 
         field :order, T.nilable(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
+        # The pipeline ID to filter by
+        field :pipeline_id, T.nilable(::String), { 'query_param': { 'field_name': 'pipeline_id', 'style': 'form', 'explode': true } }
         # Query string to search. eg. email address or name
         field :query, T.nilable(::String), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
         # Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -39,8 +41,8 @@ module UnifiedRubySDK
         field :user_id, T.nilable(::String), { 'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': true } }
 
 
-        sig { params(connection_id: ::String, company_id: T.nilable(::String), contact_id: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
-        def initialize(connection_id: nil, company_id: nil, contact_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, updated_gte: nil, user_id: nil)
+        sig { params(connection_id: ::String, company_id: T.nilable(::String), contact_id: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), pipeline_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
+        def initialize(connection_id: nil, company_id: nil, contact_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, pipeline_id: nil, query: nil, raw: nil, sort: nil, updated_gte: nil, user_id: nil)
           @connection_id = connection_id
           @company_id = company_id
           @contact_id = contact_id
@@ -48,6 +50,7 @@ module UnifiedRubySDK
           @limit = limit
           @offset = offset
           @order = order
+          @pipeline_id = pipeline_id
           @query = query
           @raw = raw
           @sort = sort
@@ -64,6 +67,7 @@ module UnifiedRubySDK
           return false unless @limit == other.limit
           return false unless @offset == other.offset
           return false unless @order == other.order
+          return false unless @pipeline_id == other.pipeline_id
           return false unless @query == other.query
           return false unless @raw == other.raw
           return false unless @sort == other.sort

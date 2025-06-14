@@ -20,6 +20,8 @@ module UnifiedRubySDK
 
         field :group_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_ids') } }
 
+        field :has_children, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_children') } }
+
         field :has_tasks, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_tasks') } }
 
         field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
@@ -35,11 +37,12 @@ module UnifiedRubySDK
         field :user_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
 
 
-        sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), group_ids: T.nilable(T::Array[::String]), has_tasks: T.nilable(T::Boolean), id: T.nilable(::String), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
-        def initialize(created_at: nil, description: nil, group_ids: nil, has_tasks: nil, id: nil, name: nil, parent_id: nil, raw: nil, updated_at: nil, user_ids: nil)
+        sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), group_ids: T.nilable(T::Array[::String]), has_children: T.nilable(T::Boolean), has_tasks: T.nilable(T::Boolean), id: T.nilable(::String), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
+        def initialize(created_at: nil, description: nil, group_ids: nil, has_children: nil, has_tasks: nil, id: nil, name: nil, parent_id: nil, raw: nil, updated_at: nil, user_ids: nil)
           @created_at = created_at
           @description = description
           @group_ids = group_ids
+          @has_children = has_children
           @has_tasks = has_tasks
           @id = id
           @name = name
@@ -54,6 +57,7 @@ module UnifiedRubySDK
           return false unless @created_at == other.created_at
           return false unless @description == other.description
           return false unless @group_ids == other.group_ids
+          return false unless @has_children == other.has_children
           return false unless @has_tasks == other.has_tasks
           return false unless @id == other.id
           return false unless @name == other.name
