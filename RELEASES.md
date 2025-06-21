@@ -1871,3 +1871,11 @@ Based on:
 - Speakeasy CLI 1.533.0 (2.578.0) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [ruby v0.35.0] .
+
+## 2025-06-21 00:19:21
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.533.0 (2.578.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [ruby v0.37.0] .

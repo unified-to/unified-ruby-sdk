@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: ee3cd61f0397ce8487b98d4e43c4a292
+  docChecksum: 9c22bf145f46a0257497cabc87445f51
   docVersion: "1.0"
   speakeasyVersion: 1.533.0
   generationVersion: 2.578.0
-  releaseVersion: 0.35.0
-  configChecksum: 1f785bf605557d0286e798c4225e4d11
+  releaseVersion: 0.37.0
+  configChecksum: 2bd1d21ec8917eb38c302f60a6447617
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -997,10 +997,12 @@ generatedFiles:
   - docs/models/shared/atsstatusstatus.md
   - docs/models/shared/atstelephone.md
   - docs/models/shared/atstelephonetype.md
+  - docs/models/shared/calendarattachment.md
   - docs/models/shared/calendarattendee.md
   - docs/models/shared/calendarattendeestatus.md
   - docs/models/shared/calendarbusy.md
   - docs/models/shared/calendarcalendar.md
+  - docs/models/shared/calendarconference.md
   - docs/models/shared/calendarevent.md
   - docs/models/shared/calendareventrecurrence.md
   - docs/models/shared/calendareventrecurrencefrequency.md
@@ -2503,10 +2505,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/atsstatus_status.rb
   - lib/unified_ruby_sdk/models/shared/atstelephone.rb
   - lib/unified_ruby_sdk/models/shared/atstelephone_type.rb
+  - lib/unified_ruby_sdk/models/shared/calendarattachment.rb
   - lib/unified_ruby_sdk/models/shared/calendarattendee.rb
   - lib/unified_ruby_sdk/models/shared/calendarattendee_status.rb
   - lib/unified_ruby_sdk/models/shared/calendarbusy.rb
   - lib/unified_ruby_sdk/models/shared/calendarcalendar.rb
+  - lib/unified_ruby_sdk/models/shared/calendarconference.rb
   - lib/unified_ruby_sdk/models/shared/calendarevent.rb
   - lib/unified_ruby_sdk/models/shared/calendarevent_status.rb
   - lib/unified_ruby_sdk/models/shared/calendareventrecurrence.rb
