@@ -32,6 +32,8 @@ module UnifiedRubySDK
 
         field :parent_channel_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_channel_id') } }
 
+        field :parent_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
+
         field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -39,8 +41,8 @@ module UnifiedRubySDK
         field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
 
-        sig { params(name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), has_subchannels: T.nilable(T::Boolean), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), members: T.nilable(T::Array[Models::Shared::MessagingMember]), parent_channel_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
-        def initialize(name: nil, created_at: nil, description: nil, has_subchannels: nil, id: nil, is_active: nil, is_private: nil, members: nil, parent_channel_id: nil, raw: nil, updated_at: nil, web_url: nil)
+        sig { params(name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), has_subchannels: T.nilable(T::Boolean), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), members: T.nilable(T::Array[Models::Shared::MessagingMember]), parent_channel_id: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
+        def initialize(name: nil, created_at: nil, description: nil, has_subchannels: nil, id: nil, is_active: nil, is_private: nil, members: nil, parent_channel_id: nil, parent_id: nil, raw: nil, updated_at: nil, web_url: nil)
           @name = name
           @created_at = created_at
           @description = description
@@ -50,6 +52,7 @@ module UnifiedRubySDK
           @is_private = is_private
           @members = members
           @parent_channel_id = parent_channel_id
+          @parent_id = parent_id
           @raw = raw
           @updated_at = updated_at
           @web_url = web_url
@@ -66,6 +69,7 @@ module UnifiedRubySDK
           return false unless @is_private == other.is_private
           return false unless @members == other.members
           return false unless @parent_channel_id == other.parent_channel_id
+          return false unless @parent_id == other.parent_id
           return false unless @raw == other.raw
           return false unless @updated_at == other.updated_at
           return false unless @web_url == other.web_url
