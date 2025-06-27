@@ -32,6 +32,8 @@ module UnifiedRubySDK
 
         field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :metadata, T.nilable(T::Array[Models::Shared::TaskMetadata]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :notes, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
@@ -53,8 +55,8 @@ module UnifiedRubySDK
         field :url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
 
-        sig { params(assigned_user_ids: T.nilable(T::Array[::String]), attachment_ids: T.nilable(T::Array[::String]), completed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), creator_user_id: T.nilable(::String), due_at: T.nilable(::DateTime), follower_user_ids: T.nilable(T::Array[::String]), group_ids: T.nilable(T::Array[::String]), id: T.nilable(::String), name: T.nilable(::String), notes: T.nilable(::String), parent_id: T.nilable(::String), priority: T.nilable(::String), project_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::TaskTaskStatus), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
-        def initialize(assigned_user_ids: nil, attachment_ids: nil, completed_at: nil, created_at: nil, creator_user_id: nil, due_at: nil, follower_user_ids: nil, group_ids: nil, id: nil, name: nil, notes: nil, parent_id: nil, priority: nil, project_id: nil, raw: nil, status: nil, tags: nil, updated_at: nil, url: nil)
+        sig { params(assigned_user_ids: T.nilable(T::Array[::String]), attachment_ids: T.nilable(T::Array[::String]), completed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), creator_user_id: T.nilable(::String), due_at: T.nilable(::DateTime), follower_user_ids: T.nilable(T::Array[::String]), group_ids: T.nilable(T::Array[::String]), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::TaskMetadata]), name: T.nilable(::String), notes: T.nilable(::String), parent_id: T.nilable(::String), priority: T.nilable(::String), project_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::TaskTaskStatus), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
+        def initialize(assigned_user_ids: nil, attachment_ids: nil, completed_at: nil, created_at: nil, creator_user_id: nil, due_at: nil, follower_user_ids: nil, group_ids: nil, id: nil, metadata: nil, name: nil, notes: nil, parent_id: nil, priority: nil, project_id: nil, raw: nil, status: nil, tags: nil, updated_at: nil, url: nil)
           @assigned_user_ids = assigned_user_ids
           @attachment_ids = attachment_ids
           @completed_at = completed_at
@@ -64,6 +66,7 @@ module UnifiedRubySDK
           @follower_user_ids = follower_user_ids
           @group_ids = group_ids
           @id = id
+          @metadata = metadata
           @name = name
           @notes = notes
           @parent_id = parent_id
@@ -87,6 +90,7 @@ module UnifiedRubySDK
           return false unless @follower_user_ids == other.follower_user_ids
           return false unless @group_ids == other.group_ids
           return false unless @id == other.id
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @notes == other.notes
           return false unless @parent_id == other.parent_id
