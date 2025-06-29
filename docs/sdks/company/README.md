@@ -5,6 +5,7 @@
 
 ### Available Operations
 
+* [create_ats_company](#create_ats_company) - Create a company
 * [create_crm_company](#create_crm_company) - Create a company
 * [create_hris_company](#create_hris_company) - Create a company
 * [get_ats_company](#get_ats_company) - Retrieve a company
@@ -14,12 +15,57 @@
 * [list_crm_companies](#list_crm_companies) - List all companies
 * [list_enrich_companies](#list_enrich_companies) - Retrieve enrichment information for a company
 * [list_hris_companies](#list_hris_companies) - List all companies
+* [patch_ats_company](#patch_ats_company) - Update a company
 * [patch_crm_company](#patch_crm_company) - Update a company
 * [patch_hris_company](#patch_hris_company) - Update a company
+* [remove_ats_company](#remove_ats_company) - Remove a company
 * [remove_crm_company](#remove_crm_company) - Remove a company
 * [remove_hris_company](#remove_hris_company) - Remove a company
+* [update_ats_company](#update_ats_company) - Update a company
 * [update_crm_company](#update_crm_company) - Update a company
 * [update_hris_company](#update_hris_company) - Update a company
+
+## create_ats_company
+
+Create a company
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
+
+res = s.company.create_ats_company(ats_company=Models::Shared::AtsCompany.new(
+  name: "<value>",
+), connection_id="<id>", fields_=[
+  "<value>",
+], raw="<value>")
+
+if ! res.ats_company.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `ats_company`                                                                                                                                    | [Models::Shared::AtsCompany](../../models/shared/atscompany.md)                                                                                  | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<*::String*>                                                                                                                             | :heavy_minus_sign:                                                                                                                               | Comma-delimited fields to return                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateAtsCompanyResponse)](../../models/operations/createatscompanyresponse.md)**
+
+
 
 ## create_crm_company
 
@@ -375,6 +421,49 @@ end
 
 
 
+## patch_ats_company
+
+Update a company
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
+
+req = Models::Operations::PatchAtsCompanyRequest.new(
+  ats_company: Models::Shared::AtsCompany.new(
+    name: "<value>",
+  ),
+  connection_id: "<id>",
+  id: "<id>",
+)
+
+res = s.company.patch_ats_company(req)
+
+if ! res.ats_company.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [Models::Operations::PatchAtsCompanyRequest](../../models/operations/patchatscompanyrequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchAtsCompanyResponse)](../../models/operations/patchatscompanyresponse.md)**
+
+
+
 ## patch_crm_company
 
 Update a company
@@ -457,6 +546,42 @@ end
 
 
 
+## remove_ats_company
+
+Remove a company
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
+
+res = s.company.remove_ats_company(connection_id="<id>", id="<id>")
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Company    |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveAtsCompanyResponse)](../../models/operations/removeatscompanyresponse.md)**
+
+
+
 ## remove_crm_company
 
 Remove a company
@@ -526,6 +651,49 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::RemoveHrisCompanyResponse)](../../models/operations/removehriscompanyresponse.md)**
+
+
+
+## update_ats_company
+
+Update a company
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
+
+req = Models::Operations::UpdateAtsCompanyRequest.new(
+  ats_company: Models::Shared::AtsCompany.new(
+    name: "<value>",
+  ),
+  connection_id: "<id>",
+  id: "<id>",
+)
+
+res = s.company.update_ats_company(req)
+
+if ! res.ats_company.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::UpdateAtsCompanyRequest](../../models/operations/updateatscompanyrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateAtsCompanyResponse)](../../models/operations/updateatscompanyresponse.md)**
 
 
 

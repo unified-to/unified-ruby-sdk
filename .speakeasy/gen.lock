@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 1ed136fdd156254f45506d66d75335d4
+  docChecksum: 30f30cd0f1e19f64975bb2a6da82b7fc
   docVersion: "1.0"
   speakeasyVersion: 1.533.0
   generationVersion: 2.578.0
-  releaseVersion: 0.41.0
-  configChecksum: d666fb094a5e7452314147a40cfae736
+  releaseVersion: 0.43.0
+  configChecksum: 0b24f08ad5fc564ec05a00259346cd06
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -46,6 +46,8 @@ generatedFiles:
   - docs/models/operations/createatsapplicationresponse.md
   - docs/models/operations/createatscandidaterequest.md
   - docs/models/operations/createatscandidateresponse.md
+  - docs/models/operations/createatscompanyrequest.md
+  - docs/models/operations/createatscompanyresponse.md
   - docs/models/operations/createatsdocumentrequest.md
   - docs/models/operations/createatsdocumentresponse.md
   - docs/models/operations/createatsinterviewrequest.md
@@ -518,6 +520,8 @@ generatedFiles:
   - docs/models/operations/patchatsapplicationresponse.md
   - docs/models/operations/patchatscandidaterequest.md
   - docs/models/operations/patchatscandidateresponse.md
+  - docs/models/operations/patchatscompanyrequest.md
+  - docs/models/operations/patchatscompanyresponse.md
   - docs/models/operations/patchatsdocumentrequest.md
   - docs/models/operations/patchatsdocumentresponse.md
   - docs/models/operations/patchatsinterviewrequest.md
@@ -659,6 +663,8 @@ generatedFiles:
   - docs/models/operations/removeatsapplicationresponse.md
   - docs/models/operations/removeatscandidaterequest.md
   - docs/models/operations/removeatscandidateresponse.md
+  - docs/models/operations/removeatscompanyrequest.md
+  - docs/models/operations/removeatscompanyresponse.md
   - docs/models/operations/removeatsdocumentrequest.md
   - docs/models/operations/removeatsdocumentresponse.md
   - docs/models/operations/removeatsinterviewrequest.md
@@ -795,6 +801,8 @@ generatedFiles:
   - docs/models/operations/updateatsapplicationresponse.md
   - docs/models/operations/updateatscandidaterequest.md
   - docs/models/operations/updateatscandidateresponse.md
+  - docs/models/operations/updateatscompanyrequest.md
+  - docs/models/operations/updateatscompanyresponse.md
   - docs/models/operations/updateatsdocumentrequest.md
   - docs/models/operations/updateatsdocumentresponse.md
   - docs/models/operations/updateatsinterviewrequest.md
@@ -1575,6 +1583,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createatsapplication_response.rb
   - lib/unified_ruby_sdk/models/operations/createatscandidate_request.rb
   - lib/unified_ruby_sdk/models/operations/createatscandidate_response.rb
+  - lib/unified_ruby_sdk/models/operations/createatscompany_request.rb
+  - lib/unified_ruby_sdk/models/operations/createatscompany_response.rb
   - lib/unified_ruby_sdk/models/operations/createatsdocument_request.rb
   - lib/unified_ruby_sdk/models/operations/createatsdocument_response.rb
   - lib/unified_ruby_sdk/models/operations/createatsinterview_request.rb
@@ -2047,6 +2057,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchatsapplication_response.rb
   - lib/unified_ruby_sdk/models/operations/patchatscandidate_request.rb
   - lib/unified_ruby_sdk/models/operations/patchatscandidate_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchatscompany_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchatscompany_response.rb
   - lib/unified_ruby_sdk/models/operations/patchatsdocument_request.rb
   - lib/unified_ruby_sdk/models/operations/patchatsdocument_response.rb
   - lib/unified_ruby_sdk/models/operations/patchatsinterview_request.rb
@@ -2188,6 +2200,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removeatsapplication_response.rb
   - lib/unified_ruby_sdk/models/operations/removeatscandidate_request.rb
   - lib/unified_ruby_sdk/models/operations/removeatscandidate_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeatscompany_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeatscompany_response.rb
   - lib/unified_ruby_sdk/models/operations/removeatsdocument_request.rb
   - lib/unified_ruby_sdk/models/operations/removeatsdocument_response.rb
   - lib/unified_ruby_sdk/models/operations/removeatsinterview_request.rb
@@ -2324,6 +2338,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updateatsapplication_response.rb
   - lib/unified_ruby_sdk/models/operations/updateatscandidate_request.rb
   - lib/unified_ruby_sdk/models/operations/updateatscandidate_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateatscompany_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateatscompany_response.rb
   - lib/unified_ruby_sdk/models/operations/updateatsdocument_request.rb
   - lib/unified_ruby_sdk/models/operations/updateatsdocument_response.rb
   - lib/unified_ruby_sdk/models/operations/updateatsinterview_request.rb
@@ -3681,6 +3697,17 @@ examples:
       responses:
         "200":
           application/json: {}
+  createAtsCompany:
+    speakeasy-default-create-ats-company:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
   createAtsDocument:
     speakeasy-default-create-ats-document:
       parameters:
@@ -3922,6 +3949,18 @@ examples:
       responses:
         "200":
           application/json: {}
+  patchAtsCompany:
+    speakeasy-default-patch-ats-company:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
   patchAtsDocument:
     speakeasy-default-patch-ats-document:
       parameters:
@@ -3988,6 +4027,12 @@ examples:
         path:
           connection_id: "<id>"
           id: "<id>"
+  removeAtsCompany:
+    speakeasy-default-remove-ats-company:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
   removeAtsDocument:
     speakeasy-default-remove-ats-document:
       parameters:
@@ -4048,6 +4093,18 @@ examples:
       responses:
         "200":
           application/json: {}
+  updateAtsCompany:
+    speakeasy-default-update-ats-company:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
   updateAtsDocument:
     speakeasy-default-update-ats-document:
       parameters:

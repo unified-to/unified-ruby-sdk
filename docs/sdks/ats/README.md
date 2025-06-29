@@ -8,6 +8,7 @@
 * [create_ats_activity](#create_ats_activity) - Create an activity
 * [create_ats_application](#create_ats_application) - Create an application
 * [create_ats_candidate](#create_ats_candidate) - Create a candidate
+* [create_ats_company](#create_ats_company) - Create a company
 * [create_ats_document](#create_ats_document) - Create a document
 * [create_ats_interview](#create_ats_interview) - Create an interview
 * [create_ats_job](#create_ats_job) - Create a job
@@ -32,6 +33,7 @@
 * [patch_ats_activity](#patch_ats_activity) - Update an activity
 * [patch_ats_application](#patch_ats_application) - Update an application
 * [patch_ats_candidate](#patch_ats_candidate) - Update a candidate
+* [patch_ats_company](#patch_ats_company) - Update a company
 * [patch_ats_document](#patch_ats_document) - Update a document
 * [patch_ats_interview](#patch_ats_interview) - Update an interview
 * [patch_ats_job](#patch_ats_job) - Update a job
@@ -39,6 +41,7 @@
 * [remove_ats_activity](#remove_ats_activity) - Remove an activity
 * [remove_ats_application](#remove_ats_application) - Remove an application
 * [remove_ats_candidate](#remove_ats_candidate) - Remove a candidate
+* [remove_ats_company](#remove_ats_company) - Remove a company
 * [remove_ats_document](#remove_ats_document) - Remove a document
 * [remove_ats_interview](#remove_ats_interview) - Remove an interview
 * [remove_ats_job](#remove_ats_job) - Remove a job
@@ -46,6 +49,7 @@
 * [update_ats_activity](#update_ats_activity) - Update an activity
 * [update_ats_application](#update_ats_application) - Update an application
 * [update_ats_candidate](#update_ats_candidate) - Update a candidate
+* [update_ats_company](#update_ats_company) - Update a company
 * [update_ats_document](#update_ats_document) - Update a document
 * [update_ats_interview](#update_ats_interview) - Update an interview
 * [update_ats_job](#update_ats_job) - Update a job
@@ -168,6 +172,48 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateAtsCandidateResponse)](../../models/operations/createatscandidateresponse.md)**
+
+
+
+## create_ats_company
+
+Create a company
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
+
+res = s.ats.create_ats_company(ats_company=Models::Shared::AtsCompany.new(
+  name: "<value>",
+), connection_id="<id>", fields_=[
+  "<value>",
+], raw="<value>")
+
+if ! res.ats_company.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `ats_company`                                                                                                                                    | [Models::Shared::AtsCompany](../../models/shared/atscompany.md)                                                                                  | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<*::String*>                                                                                                                             | :heavy_minus_sign:                                                                                                                               | Comma-delimited fields to return                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateAtsCompanyResponse)](../../models/operations/createatscompanyresponse.md)**
 
 
 
@@ -1125,6 +1171,49 @@ end
 
 
 
+## patch_ats_company
+
+Update a company
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
+
+req = Models::Operations::PatchAtsCompanyRequest.new(
+  ats_company: Models::Shared::AtsCompany.new(
+    name: "<value>",
+  ),
+  connection_id: "<id>",
+  id: "<id>",
+)
+
+res = s.ats.patch_ats_company(req)
+
+if ! res.ats_company.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [Models::Operations::PatchAtsCompanyRequest](../../models/operations/patchatscompanyrequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchAtsCompanyResponse)](../../models/operations/patchatscompanyresponse.md)**
+
+
+
 ## patch_ats_document
 
 Update a document
@@ -1397,6 +1486,42 @@ end
 
 
 
+## remove_ats_company
+
+Remove a company
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
+
+res = s.ats.remove_ats_company(connection_id="<id>", id="<id>")
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Company    |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveAtsCompanyResponse)](../../models/operations/removeatscompanyresponse.md)**
+
+
+
 ## remove_ats_document
 
 Remove a document
@@ -1661,6 +1786,49 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::UpdateAtsCandidateResponse)](../../models/operations/updateatscandidateresponse.md)**
+
+
+
+## update_ats_company
+
+Update a company
+
+### Example Usage
+
+```ruby
+require 'unified_ruby_sdk'
+
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: "<YOUR_API_KEY_HERE>",
+      ),
+    )
+
+req = Models::Operations::UpdateAtsCompanyRequest.new(
+  ats_company: Models::Shared::AtsCompany.new(
+    name: "<value>",
+  ),
+  connection_id: "<id>",
+  id: "<id>",
+)
+
+res = s.ats.update_ats_company(req)
+
+if ! res.ats_company.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::UpdateAtsCompanyRequest](../../models/operations/updateatscompanyrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateAtsCompanyResponse)](../../models/operations/updateatscompanyresponse.md)**
 
 
 

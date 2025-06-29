@@ -186,6 +186,7 @@ end
 * [create_ats_activity](docs/sdks/ats/README.md#create_ats_activity) - Create an activity
 * [create_ats_application](docs/sdks/ats/README.md#create_ats_application) - Create an application
 * [create_ats_candidate](docs/sdks/ats/README.md#create_ats_candidate) - Create a candidate
+* [create_ats_company](docs/sdks/ats/README.md#create_ats_company) - Create a company
 * [create_ats_document](docs/sdks/ats/README.md#create_ats_document) - Create a document
 * [create_ats_interview](docs/sdks/ats/README.md#create_ats_interview) - Create an interview
 * [create_ats_job](docs/sdks/ats/README.md#create_ats_job) - Create a job
@@ -210,6 +211,7 @@ end
 * [patch_ats_activity](docs/sdks/ats/README.md#patch_ats_activity) - Update an activity
 * [patch_ats_application](docs/sdks/ats/README.md#patch_ats_application) - Update an application
 * [patch_ats_candidate](docs/sdks/ats/README.md#patch_ats_candidate) - Update a candidate
+* [patch_ats_company](docs/sdks/ats/README.md#patch_ats_company) - Update a company
 * [patch_ats_document](docs/sdks/ats/README.md#patch_ats_document) - Update a document
 * [patch_ats_interview](docs/sdks/ats/README.md#patch_ats_interview) - Update an interview
 * [patch_ats_job](docs/sdks/ats/README.md#patch_ats_job) - Update a job
@@ -217,6 +219,7 @@ end
 * [remove_ats_activity](docs/sdks/ats/README.md#remove_ats_activity) - Remove an activity
 * [remove_ats_application](docs/sdks/ats/README.md#remove_ats_application) - Remove an application
 * [remove_ats_candidate](docs/sdks/ats/README.md#remove_ats_candidate) - Remove a candidate
+* [remove_ats_company](docs/sdks/ats/README.md#remove_ats_company) - Remove a company
 * [remove_ats_document](docs/sdks/ats/README.md#remove_ats_document) - Remove a document
 * [remove_ats_interview](docs/sdks/ats/README.md#remove_ats_interview) - Remove an interview
 * [remove_ats_job](docs/sdks/ats/README.md#remove_ats_job) - Remove a job
@@ -224,6 +227,7 @@ end
 * [update_ats_activity](docs/sdks/ats/README.md#update_ats_activity) - Update an activity
 * [update_ats_application](docs/sdks/ats/README.md#update_ats_application) - Update an application
 * [update_ats_candidate](docs/sdks/ats/README.md#update_ats_candidate) - Update a candidate
+* [update_ats_company](docs/sdks/ats/README.md#update_ats_company) - Update a company
 * [update_ats_document](docs/sdks/ats/README.md#update_ats_document) - Update a document
 * [update_ats_interview](docs/sdks/ats/README.md#update_ats_interview) - Update an interview
 * [update_ats_job](docs/sdks/ats/README.md#update_ats_job) - Update a job
@@ -372,6 +376,7 @@ end
 
 ### [company](docs/sdks/company/README.md)
 
+* [create_ats_company](docs/sdks/company/README.md#create_ats_company) - Create a company
 * [create_crm_company](docs/sdks/company/README.md#create_crm_company) - Create a company
 * [create_hris_company](docs/sdks/company/README.md#create_hris_company) - Create a company
 * [get_ats_company](docs/sdks/company/README.md#get_ats_company) - Retrieve a company
@@ -381,10 +386,13 @@ end
 * [list_crm_companies](docs/sdks/company/README.md#list_crm_companies) - List all companies
 * [list_enrich_companies](docs/sdks/company/README.md#list_enrich_companies) - Retrieve enrichment information for a company
 * [list_hris_companies](docs/sdks/company/README.md#list_hris_companies) - List all companies
+* [patch_ats_company](docs/sdks/company/README.md#patch_ats_company) - Update a company
 * [patch_crm_company](docs/sdks/company/README.md#patch_crm_company) - Update a company
 * [patch_hris_company](docs/sdks/company/README.md#patch_hris_company) - Update a company
+* [remove_ats_company](docs/sdks/company/README.md#remove_ats_company) - Remove a company
 * [remove_crm_company](docs/sdks/company/README.md#remove_crm_company) - Remove a company
 * [remove_hris_company](docs/sdks/company/README.md#remove_hris_company) - Remove a company
+* [update_ats_company](docs/sdks/company/README.md#update_ats_company) - Update a company
 * [update_crm_company](docs/sdks/company/README.md#update_crm_company) - Update a company
 * [update_hris_company](docs/sdks/company/README.md#update_hris_company) - Update a company
 
