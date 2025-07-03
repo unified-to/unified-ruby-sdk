@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 30f30cd0f1e19f64975bb2a6da82b7fc
+  docChecksum: b9a9d44d0d49d0a08964e6f3ef075270
   docVersion: "1.0"
   speakeasyVersion: 1.533.0
   generationVersion: 2.578.0
-  releaseVersion: 0.43.0
-  configChecksum: 0b24f08ad5fc564ec05a00259346cd06
+  releaseVersion: 0.45.0
+  configChecksum: 64820ab8e506310eedb39f447d795283
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -1234,6 +1234,7 @@ generatedFiles:
   - docs/models/shared/messagingchannel.md
   - docs/models/shared/messagingmember.md
   - docs/models/shared/messagingmessage.md
+  - docs/models/shared/messagingreaction.md
   - docs/models/shared/metadatametadata.md
   - docs/models/shared/metadatametadataformat.md
   - docs/models/shared/objecttype.md
@@ -1297,6 +1298,7 @@ generatedFiles:
   - docs/models/shared/propertyintegrationcategories.md
   - docs/models/shared/propertylmsstudentaddress.md
   - docs/models/shared/propertymessagingmessageauthormember.md
+  - docs/models/shared/propertymessagingreactionmember.md
   - docs/models/shared/propertyscimgroupmeta.md
   - docs/models/shared/propertyscimgroupschemas.md
   - docs/models/shared/propertyscimusermeta.md
@@ -2772,6 +2774,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/messagingchannel.rb
   - lib/unified_ruby_sdk/models/shared/messagingmember.rb
   - lib/unified_ruby_sdk/models/shared/messagingmessage.rb
+  - lib/unified_ruby_sdk/models/shared/messagingreaction.rb
   - lib/unified_ruby_sdk/models/shared/metadatametadata.rb
   - lib/unified_ruby_sdk/models/shared/metadatametadata_format.rb
   - lib/unified_ruby_sdk/models/shared/object_type.rb
@@ -2835,6 +2838,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_integration_categories.rb
   - lib/unified_ruby_sdk/models/shared/property_lmsstudent_address.rb
   - lib/unified_ruby_sdk/models/shared/property_messagingmessage_author_member.rb
+  - lib/unified_ruby_sdk/models/shared/property_messagingreaction_member.rb
   - lib/unified_ruby_sdk/models/shared/property_scimgroup_meta.rb
   - lib/unified_ruby_sdk/models/shared/property_scimgroup_schemas.rb
   - lib/unified_ruby_sdk/models/shared/property_scimuser_meta.rb
