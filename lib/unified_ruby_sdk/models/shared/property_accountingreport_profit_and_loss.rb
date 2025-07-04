@@ -13,33 +13,61 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # @deprecated
         field :cost_of_goods_sold, T.nilable(T::Array[Models::Shared::AccountingProfitAndLossCategory]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cost_of_goods_sold') } }
 
+        field :cost_of_goods_sold_sections, T.nilable(T::Array[Models::Shared::AccountingProfitAndLossSection]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cost_of_goods_sold_sections') } }
+
+        field :cost_of_goods_sold_total_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cost_of_goods_sold_total_amount') } }
+        # @deprecated
         field :expenses, T.nilable(T::Array[Models::Shared::AccountingProfitAndLossCategory]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expenses') } }
 
-        field :gross_profit_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gross_profit_amount') } }
+        field :expenses_sections, T.nilable(T::Array[Models::Shared::AccountingProfitAndLossSection]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expenses_sections') } }
 
+        field :expenses_total_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expenses_total_amount') } }
+
+        field :gross_profit_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gross_profit_amount') } }
+        # @deprecated
         field :income, T.nilable(T::Array[Models::Shared::AccountingProfitAndLossCategory]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('income') } }
+
+        field :income_sections, T.nilable(T::Array[Models::Shared::AccountingProfitAndLossSection]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('income_sections') } }
+
+        field :income_total_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('income_total_amount') } }
+
+        field :net_income_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('net_income_amount') } }
 
         field :net_profit_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('net_profit_amount') } }
 
 
-        sig { params(cost_of_goods_sold: T.nilable(T::Array[Models::Shared::AccountingProfitAndLossCategory]), expenses: T.nilable(T::Array[Models::Shared::AccountingProfitAndLossCategory]), gross_profit_amount: T.nilable(::Float), income: T.nilable(T::Array[Models::Shared::AccountingProfitAndLossCategory]), net_profit_amount: T.nilable(::Float)).void }
-        def initialize(cost_of_goods_sold: nil, expenses: nil, gross_profit_amount: nil, income: nil, net_profit_amount: nil)
+        sig { params(cost_of_goods_sold: T.nilable(T::Array[Models::Shared::AccountingProfitAndLossCategory]), cost_of_goods_sold_sections: T.nilable(T::Array[Models::Shared::AccountingProfitAndLossSection]), cost_of_goods_sold_total_amount: T.nilable(::Float), expenses: T.nilable(T::Array[Models::Shared::AccountingProfitAndLossCategory]), expenses_sections: T.nilable(T::Array[Models::Shared::AccountingProfitAndLossSection]), expenses_total_amount: T.nilable(::Float), gross_profit_amount: T.nilable(::Float), income: T.nilable(T::Array[Models::Shared::AccountingProfitAndLossCategory]), income_sections: T.nilable(T::Array[Models::Shared::AccountingProfitAndLossSection]), income_total_amount: T.nilable(::Float), net_income_amount: T.nilable(::Float), net_profit_amount: T.nilable(::Float)).void }
+        def initialize(cost_of_goods_sold: nil, cost_of_goods_sold_sections: nil, cost_of_goods_sold_total_amount: nil, expenses: nil, expenses_sections: nil, expenses_total_amount: nil, gross_profit_amount: nil, income: nil, income_sections: nil, income_total_amount: nil, net_income_amount: nil, net_profit_amount: nil)
           @cost_of_goods_sold = cost_of_goods_sold
+          @cost_of_goods_sold_sections = cost_of_goods_sold_sections
+          @cost_of_goods_sold_total_amount = cost_of_goods_sold_total_amount
           @expenses = expenses
+          @expenses_sections = expenses_sections
+          @expenses_total_amount = expenses_total_amount
           @gross_profit_amount = gross_profit_amount
           @income = income
+          @income_sections = income_sections
+          @income_total_amount = income_total_amount
+          @net_income_amount = net_income_amount
           @net_profit_amount = net_profit_amount
         end
 
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @cost_of_goods_sold == other.cost_of_goods_sold
+          return false unless @cost_of_goods_sold_sections == other.cost_of_goods_sold_sections
+          return false unless @cost_of_goods_sold_total_amount == other.cost_of_goods_sold_total_amount
           return false unless @expenses == other.expenses
+          return false unless @expenses_sections == other.expenses_sections
+          return false unless @expenses_total_amount == other.expenses_total_amount
           return false unless @gross_profit_amount == other.gross_profit_amount
           return false unless @income == other.income
+          return false unless @income_sections == other.income_sections
+          return false unless @income_total_amount == other.income_total_amount
+          return false unless @net_income_amount == other.net_income_amount
           return false unless @net_profit_amount == other.net_profit_amount
           true
         end

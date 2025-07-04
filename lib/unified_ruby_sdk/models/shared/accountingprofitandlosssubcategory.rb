@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # @deprecated
       class AccountingProfitAndLossSubcategory
         extend T::Sig
         include Crystalline::MetadataFields
