@@ -14,29 +14,61 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :assets, T.nilable(T::Array[Models::Shared::AccountingBalanceSheetItem]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('assets') } }
+        field :assets, T.nilable(T::Array[Models::Shared::AccountingBalancesheetItem]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('assets') } }
 
-        field :equity, T.nilable(T::Array[Models::Shared::AccountingBalanceSheetItem]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('equity') } }
+        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :liabilities, T.nilable(T::Array[Models::Shared::AccountingBalanceSheetItem]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('liabilities') } }
+        field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+
+        field :end_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :equity, T.nilable(T::Array[Models::Shared::AccountingBalancesheetItem]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('equity') } }
+
+        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :liabilities, T.nilable(T::Array[Models::Shared::AccountingBalancesheetItem]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('liabilities') } }
+
+        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :net_assets_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('net_assets_amount') } }
 
+        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        sig { params(assets: T.nilable(T::Array[Models::Shared::AccountingBalanceSheetItem]), equity: T.nilable(T::Array[Models::Shared::AccountingBalanceSheetItem]), liabilities: T.nilable(T::Array[Models::Shared::AccountingBalanceSheetItem]), net_assets_amount: T.nilable(::Float)).void }
-        def initialize(assets: nil, equity: nil, liabilities: nil, net_assets_amount: nil)
+        field :start_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+
+        sig { params(assets: T.nilable(T::Array[Models::Shared::AccountingBalancesheetItem]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), end_at: T.nilable(::DateTime), equity: T.nilable(T::Array[Models::Shared::AccountingBalancesheetItem]), id: T.nilable(::String), liabilities: T.nilable(T::Array[Models::Shared::AccountingBalancesheetItem]), name: T.nilable(::String), net_assets_amount: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime)).void }
+        def initialize(assets: nil, created_at: nil, currency: nil, end_at: nil, equity: nil, id: nil, liabilities: nil, name: nil, net_assets_amount: nil, raw: nil, start_at: nil, updated_at: nil)
           @assets = assets
+          @created_at = created_at
+          @currency = currency
+          @end_at = end_at
           @equity = equity
+          @id = id
           @liabilities = liabilities
+          @name = name
           @net_assets_amount = net_assets_amount
+          @raw = raw
+          @start_at = start_at
+          @updated_at = updated_at
         end
 
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @assets == other.assets
+          return false unless @created_at == other.created_at
+          return false unless @currency == other.currency
+          return false unless @end_at == other.end_at
           return false unless @equity == other.equity
+          return false unless @id == other.id
           return false unless @liabilities == other.liabilities
+          return false unless @name == other.name
           return false unless @net_assets_amount == other.net_assets_amount
+          return false unless @raw == other.raw
+          return false unless @start_at == other.start_at
+          return false unless @updated_at == other.updated_at
           true
         end
       end

@@ -9,7 +9,7 @@ module UnifiedRubySDK
     module Shared
     
 
-      class AccountingBalanceSheetItem
+      class AccountingBalancesheetItem
         extend T::Sig
         include Crystalline::MetadataFields
 
@@ -20,10 +20,10 @@ module UnifiedRubySDK
 
         field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :sub_items, T.nilable(T::Array[Models::Shared::PropertyAccountingBalanceSheetItemSubItems]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sub_items') } }
+        field :sub_items, T.nilable(T::Array[Models::Shared::PropertyAccountingBalancesheetItemSubItems]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sub_items') } }
 
 
-        sig { params(account_id: T.nilable(::String), amount: T.nilable(::Float), name: T.nilable(::String), sub_items: T.nilable(T::Array[Models::Shared::PropertyAccountingBalanceSheetItemSubItems])).void }
+        sig { params(account_id: T.nilable(::String), amount: T.nilable(::Float), name: T.nilable(::String), sub_items: T.nilable(T::Array[Models::Shared::PropertyAccountingBalancesheetItemSubItems])).void }
         def initialize(account_id: nil, amount: nil, name: nil, sub_items: nil)
           @account_id = account_id
           @amount = amount

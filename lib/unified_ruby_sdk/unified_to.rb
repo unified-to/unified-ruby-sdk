@@ -16,7 +16,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :contact, :invoice, :journal, :order, :organization, :report, :taxrate, :transaction, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :event, :link, :recording, :commerce, :collection, :inventory, :item, :location, :review, :crm, :deal, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :device, :employee, :group, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :lms, :class_, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :storage, :file, :task, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
+    attr_accessor :accounting, :account, :balancesheet, :bill, :contact, :creditmemo, :invoice, :journal, :order, :organization, :profitloss, :purchaseorder, :report, :salesorder, :taxrate, :transaction, :trialbalance, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :event, :link, :recording, :commerce, :collection, :inventory, :item, :location, :review, :crm, :deal, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :device, :employee, :group, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :lms, :class_, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :storage, :file, :task, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
 
     sig do
       params(
@@ -83,14 +83,21 @@ module UnifiedRubySDK
     def init_sdks
       @accounting = Accounting.new(@sdk_configuration)
       @account = Account.new(@sdk_configuration)
+      @balancesheet = Balancesheet.new(@sdk_configuration)
+      @bill = Bill.new(@sdk_configuration)
       @contact = Contact.new(@sdk_configuration)
+      @creditmemo = Creditmemo.new(@sdk_configuration)
       @invoice = Invoice.new(@sdk_configuration)
       @journal = Journal.new(@sdk_configuration)
       @order = Order.new(@sdk_configuration)
       @organization = Organization.new(@sdk_configuration)
+      @profitloss = Profitloss.new(@sdk_configuration)
+      @purchaseorder = Purchaseorder.new(@sdk_configuration)
       @report = Report.new(@sdk_configuration)
+      @salesorder = Salesorder.new(@sdk_configuration)
       @taxrate = Taxrate.new(@sdk_configuration)
       @transaction = Transaction.new(@sdk_configuration)
+      @trialbalance = Trialbalance.new(@sdk_configuration)
       @ats = Ats.new(@sdk_configuration)
       @activity = Activity.new(@sdk_configuration)
       @application = Application.new(@sdk_configuration)

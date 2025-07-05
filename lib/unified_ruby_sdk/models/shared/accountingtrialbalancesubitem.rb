@@ -9,7 +9,7 @@ module UnifiedRubySDK
     module Shared
     
 
-      class AccountingTrialBalanceSubItem
+      class AccountingTrialbalanceSubItem
         extend T::Sig
         include Crystalline::MetadataFields
 

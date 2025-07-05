@@ -9,7 +9,7 @@ module UnifiedRubySDK
     module Shared
     
 
-      class PropertyAccountingBalanceSheetItemSubItems
+      class PropertyAccountingBalancesheetItemSubItems
         extend T::Sig
         include Crystalline::MetadataFields
 

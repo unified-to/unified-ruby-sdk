@@ -1,0 +1,12 @@
+# AccountingProfitlossCategory
+
+@deprecated
+
+
+## Fields
+
+| Field                                                                                                               | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `amount`                                                                                                            | *T.nilable(::Float)*                                                                                                | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
+| `name`                                                                                                              | *T.nilable(::String)*                                                                                               | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
+| `sub_items`                                                                                                         | T::Array<[Models::Shared::AccountingProfitlossSubcategory](../../models/shared/accountingprofitlosssubcategory.md)> | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |

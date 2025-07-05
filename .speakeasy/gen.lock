@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: cfcf5e019d822f732c2d765252728b21
+  docChecksum: df14941bc85aac484869c35ad39aa806
   docVersion: "1.0"
   speakeasyVersion: 1.533.0
   generationVersion: 2.578.0
-  releaseVersion: 0.47.0
-  configChecksum: 020d148bab57bc46b748955cdcbd1720
+  releaseVersion: 0.49.0
+  configChecksum: fcc50c48973447beb8526a17693da474
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -28,14 +28,22 @@ generatedFiles:
   - docs/models/operations/categories.md
   - docs/models/operations/createaccountingaccountrequest.md
   - docs/models/operations/createaccountingaccountresponse.md
+  - docs/models/operations/createaccountingbillrequest.md
+  - docs/models/operations/createaccountingbillresponse.md
   - docs/models/operations/createaccountingcontactrequest.md
   - docs/models/operations/createaccountingcontactresponse.md
+  - docs/models/operations/createaccountingcreditmemorequest.md
+  - docs/models/operations/createaccountingcreditmemoresponse.md
   - docs/models/operations/createaccountinginvoicerequest.md
   - docs/models/operations/createaccountinginvoiceresponse.md
   - docs/models/operations/createaccountingjournalrequest.md
   - docs/models/operations/createaccountingjournalresponse.md
   - docs/models/operations/createaccountingorderrequest.md
   - docs/models/operations/createaccountingorderresponse.md
+  - docs/models/operations/createaccountingpurchaseorderrequest.md
+  - docs/models/operations/createaccountingpurchaseorderresponse.md
+  - docs/models/operations/createaccountingsalesorderrequest.md
+  - docs/models/operations/createaccountingsalesorderresponse.md
   - docs/models/operations/createaccountingtaxraterequest.md
   - docs/models/operations/createaccountingtaxrateresponse.md
   - docs/models/operations/createaccountingtransactionrequest.md
@@ -169,8 +177,14 @@ generatedFiles:
   - docs/models/operations/createunifiedwebhookresponse.md
   - docs/models/operations/getaccountingaccountrequest.md
   - docs/models/operations/getaccountingaccountresponse.md
+  - docs/models/operations/getaccountingbalancesheetrequest.md
+  - docs/models/operations/getaccountingbalancesheetresponse.md
+  - docs/models/operations/getaccountingbillrequest.md
+  - docs/models/operations/getaccountingbillresponse.md
   - docs/models/operations/getaccountingcontactrequest.md
   - docs/models/operations/getaccountingcontactresponse.md
+  - docs/models/operations/getaccountingcreditmemorequest.md
+  - docs/models/operations/getaccountingcreditmemoresponse.md
   - docs/models/operations/getaccountinginvoicerequest.md
   - docs/models/operations/getaccountinginvoiceresponse.md
   - docs/models/operations/getaccountingjournalrequest.md
@@ -179,12 +193,20 @@ generatedFiles:
   - docs/models/operations/getaccountingorderresponse.md
   - docs/models/operations/getaccountingorganizationrequest.md
   - docs/models/operations/getaccountingorganizationresponse.md
+  - docs/models/operations/getaccountingprofitlossrequest.md
+  - docs/models/operations/getaccountingprofitlossresponse.md
+  - docs/models/operations/getaccountingpurchaseorderrequest.md
+  - docs/models/operations/getaccountingpurchaseorderresponse.md
   - docs/models/operations/getaccountingreportrequest.md
   - docs/models/operations/getaccountingreportresponse.md
+  - docs/models/operations/getaccountingsalesorderrequest.md
+  - docs/models/operations/getaccountingsalesorderresponse.md
   - docs/models/operations/getaccountingtaxraterequest.md
   - docs/models/operations/getaccountingtaxrateresponse.md
   - docs/models/operations/getaccountingtransactionrequest.md
   - docs/models/operations/getaccountingtransactionresponse.md
+  - docs/models/operations/getaccountingtrialbalancerequest.md
+  - docs/models/operations/getaccountingtrialbalanceresponse.md
   - docs/models/operations/getatsactivityrequest.md
   - docs/models/operations/getatsactivityresponse.md
   - docs/models/operations/getatsapplicationrequest.md
@@ -327,8 +349,14 @@ generatedFiles:
   - docs/models/operations/getunifiedwebhookresponse.md
   - docs/models/operations/listaccountingaccountsrequest.md
   - docs/models/operations/listaccountingaccountsresponse.md
+  - docs/models/operations/listaccountingbalancesheetsrequest.md
+  - docs/models/operations/listaccountingbalancesheetsresponse.md
+  - docs/models/operations/listaccountingbillsrequest.md
+  - docs/models/operations/listaccountingbillsresponse.md
   - docs/models/operations/listaccountingcontactsrequest.md
   - docs/models/operations/listaccountingcontactsresponse.md
+  - docs/models/operations/listaccountingcreditmemoesrequest.md
+  - docs/models/operations/listaccountingcreditmemoesresponse.md
   - docs/models/operations/listaccountinginvoicesrequest.md
   - docs/models/operations/listaccountinginvoicesresponse.md
   - docs/models/operations/listaccountingjournalsrequest.md
@@ -337,12 +365,20 @@ generatedFiles:
   - docs/models/operations/listaccountingordersresponse.md
   - docs/models/operations/listaccountingorganizationsrequest.md
   - docs/models/operations/listaccountingorganizationsresponse.md
+  - docs/models/operations/listaccountingprofitlossesrequest.md
+  - docs/models/operations/listaccountingprofitlossesresponse.md
+  - docs/models/operations/listaccountingpurchaseordersrequest.md
+  - docs/models/operations/listaccountingpurchaseordersresponse.md
   - docs/models/operations/listaccountingreportsrequest.md
   - docs/models/operations/listaccountingreportsresponse.md
+  - docs/models/operations/listaccountingsalesordersrequest.md
+  - docs/models/operations/listaccountingsalesordersresponse.md
   - docs/models/operations/listaccountingtaxratesrequest.md
   - docs/models/operations/listaccountingtaxratesresponse.md
   - docs/models/operations/listaccountingtransactionsrequest.md
   - docs/models/operations/listaccountingtransactionsresponse.md
+  - docs/models/operations/listaccountingtrialbalancesrequest.md
+  - docs/models/operations/listaccountingtrialbalancesresponse.md
   - docs/models/operations/listatsactivitiesrequest.md
   - docs/models/operations/listatsactivitiesresponse.md
   - docs/models/operations/listatsapplicationsrequest.md
@@ -502,14 +538,22 @@ generatedFiles:
   - docs/models/operations/listunifiedwebhooksresponse.md
   - docs/models/operations/patchaccountingaccountrequest.md
   - docs/models/operations/patchaccountingaccountresponse.md
+  - docs/models/operations/patchaccountingbillrequest.md
+  - docs/models/operations/patchaccountingbillresponse.md
   - docs/models/operations/patchaccountingcontactrequest.md
   - docs/models/operations/patchaccountingcontactresponse.md
+  - docs/models/operations/patchaccountingcreditmemorequest.md
+  - docs/models/operations/patchaccountingcreditmemoresponse.md
   - docs/models/operations/patchaccountinginvoicerequest.md
   - docs/models/operations/patchaccountinginvoiceresponse.md
   - docs/models/operations/patchaccountingjournalrequest.md
   - docs/models/operations/patchaccountingjournalresponse.md
   - docs/models/operations/patchaccountingorderrequest.md
   - docs/models/operations/patchaccountingorderresponse.md
+  - docs/models/operations/patchaccountingpurchaseorderrequest.md
+  - docs/models/operations/patchaccountingpurchaseorderresponse.md
+  - docs/models/operations/patchaccountingsalesorderrequest.md
+  - docs/models/operations/patchaccountingsalesorderresponse.md
   - docs/models/operations/patchaccountingtaxraterequest.md
   - docs/models/operations/patchaccountingtaxrateresponse.md
   - docs/models/operations/patchaccountingtransactionrequest.md
@@ -645,14 +689,22 @@ generatedFiles:
   - docs/models/operations/queryparamcategories.md
   - docs/models/operations/removeaccountingaccountrequest.md
   - docs/models/operations/removeaccountingaccountresponse.md
+  - docs/models/operations/removeaccountingbillrequest.md
+  - docs/models/operations/removeaccountingbillresponse.md
   - docs/models/operations/removeaccountingcontactrequest.md
   - docs/models/operations/removeaccountingcontactresponse.md
+  - docs/models/operations/removeaccountingcreditmemorequest.md
+  - docs/models/operations/removeaccountingcreditmemoresponse.md
   - docs/models/operations/removeaccountinginvoicerequest.md
   - docs/models/operations/removeaccountinginvoiceresponse.md
   - docs/models/operations/removeaccountingjournalrequest.md
   - docs/models/operations/removeaccountingjournalresponse.md
   - docs/models/operations/removeaccountingorderrequest.md
   - docs/models/operations/removeaccountingorderresponse.md
+  - docs/models/operations/removeaccountingpurchaseorderrequest.md
+  - docs/models/operations/removeaccountingpurchaseorderresponse.md
+  - docs/models/operations/removeaccountingsalesorderrequest.md
+  - docs/models/operations/removeaccountingsalesorderresponse.md
   - docs/models/operations/removeaccountingtaxraterequest.md
   - docs/models/operations/removeaccountingtaxrateresponse.md
   - docs/models/operations/removeaccountingtransactionrequest.md
@@ -783,14 +835,22 @@ generatedFiles:
   - docs/models/operations/removeunifiedwebhookresponse.md
   - docs/models/operations/updateaccountingaccountrequest.md
   - docs/models/operations/updateaccountingaccountresponse.md
+  - docs/models/operations/updateaccountingbillrequest.md
+  - docs/models/operations/updateaccountingbillresponse.md
   - docs/models/operations/updateaccountingcontactrequest.md
   - docs/models/operations/updateaccountingcontactresponse.md
+  - docs/models/operations/updateaccountingcreditmemorequest.md
+  - docs/models/operations/updateaccountingcreditmemoresponse.md
   - docs/models/operations/updateaccountinginvoicerequest.md
   - docs/models/operations/updateaccountinginvoiceresponse.md
   - docs/models/operations/updateaccountingjournalrequest.md
   - docs/models/operations/updateaccountingjournalresponse.md
   - docs/models/operations/updateaccountingorderrequest.md
   - docs/models/operations/updateaccountingorderresponse.md
+  - docs/models/operations/updateaccountingpurchaseorderrequest.md
+  - docs/models/operations/updateaccountingpurchaseorderresponse.md
+  - docs/models/operations/updateaccountingsalesorderrequest.md
+  - docs/models/operations/updateaccountingsalesorderresponse.md
   - docs/models/operations/updateaccountingtaxraterequest.md
   - docs/models/operations/updateaccountingtaxrateresponse.md
   - docs/models/operations/updateaccountingtransactionrequest.md
@@ -926,13 +986,20 @@ generatedFiles:
   - docs/models/shared/accountingaccount.md
   - docs/models/shared/accountingassociatedcontact.md
   - docs/models/shared/accountingattachment.md
+  - docs/models/shared/accountingbalancesheet.md
   - docs/models/shared/accountingbalancesheetitem.md
+  - docs/models/shared/accountingbill.md
+  - docs/models/shared/accountingbillstatus.md
   - docs/models/shared/accountingcontact.md
   - docs/models/shared/accountingcontactpaymentmethod.md
   - docs/models/shared/accountingcontactpaymentmethodtype.md
+  - docs/models/shared/accountingcreditmemo.md
+  - docs/models/shared/accountingcreditmemopaymentcollectionmethod.md
+  - docs/models/shared/accountingcreditmemostatus.md
   - docs/models/shared/accountingemail.md
   - docs/models/shared/accountingemailtype.md
   - docs/models/shared/accountinginvoice.md
+  - docs/models/shared/accountinginvoicepaymentcollectionmethod.md
   - docs/models/shared/accountinginvoicestatus.md
   - docs/models/shared/accountinginvoicetype.md
   - docs/models/shared/accountingjournal.md
@@ -942,18 +1009,24 @@ generatedFiles:
   - docs/models/shared/accountingorderstatus.md
   - docs/models/shared/accountingordertype.md
   - docs/models/shared/accountingorganization.md
-  - docs/models/shared/accountingprofitandlossaccount.md
-  - docs/models/shared/accountingprofitandlosscategory.md
-  - docs/models/shared/accountingprofitandlosssection.md
-  - docs/models/shared/accountingprofitandlosssubcategory.md
+  - docs/models/shared/accountingprofitloss.md
+  - docs/models/shared/accountingprofitlossaccount.md
+  - docs/models/shared/accountingprofitlosscategory.md
+  - docs/models/shared/accountingprofitlosssection.md
+  - docs/models/shared/accountingprofitlosssubcategory.md
+  - docs/models/shared/accountingpurchaseorder.md
+  - docs/models/shared/accountingpurchaseorderstatus.md
   - docs/models/shared/accountingreport.md
   - docs/models/shared/accountingreporttype.md
+  - docs/models/shared/accountingsalesorder.md
+  - docs/models/shared/accountingsalesorderstatus.md
   - docs/models/shared/accountingtaxrate.md
   - docs/models/shared/accountingtelephone.md
   - docs/models/shared/accountingtelephonetype.md
   - docs/models/shared/accountingtransaction.md
   - docs/models/shared/accountingtransactioncontact.md
   - docs/models/shared/accountingtransactionlineitem.md
+  - docs/models/shared/accountingtrialbalance.md
   - docs/models/shared/accountingtrialbalancesubitem.md
   - docs/models/shared/api.md
   - docs/models/shared/apicall.md
@@ -1262,9 +1335,13 @@ generatedFiles:
   - docs/models/shared/propertyaccountingorderbillingaddress.md
   - docs/models/shared/propertyaccountingordershippingaddress.md
   - docs/models/shared/propertyaccountingorganizationaddress.md
+  - docs/models/shared/propertyaccountingpurchaseorderbillingaddress.md
+  - docs/models/shared/propertyaccountingpurchaseordershippingaddress.md
   - docs/models/shared/propertyaccountingreportbalancesheet.md
   - docs/models/shared/propertyaccountingreportprofitandloss.md
   - docs/models/shared/propertyaccountingreporttrialbalance.md
+  - docs/models/shared/propertyaccountingsalesorderbillingaddress.md
+  - docs/models/shared/propertyaccountingsalesordershippingaddress.md
   - docs/models/shared/propertyatsactivityfrom.md
   - docs/models/shared/propertyatsactivityfromtype.md
   - docs/models/shared/propertyatscandidateaddress.md
@@ -1415,6 +1492,8 @@ generatedFiles:
   - docs/sdks/applicationstatus/README.md
   - docs/sdks/ats/README.md
   - docs/sdks/auth/README.md
+  - docs/sdks/balancesheet/README.md
+  - docs/sdks/bill/README.md
   - docs/sdks/branch/README.md
   - docs/sdks/busy/README.md
   - docs/sdks/calendar/README.md
@@ -1430,6 +1509,7 @@ generatedFiles:
   - docs/sdks/connection/README.md
   - docs/sdks/contact/README.md
   - docs/sdks/course/README.md
+  - docs/sdks/creditmemo/README.md
   - docs/sdks/crm/README.md
   - docs/sdks/customer/README.md
   - docs/sdks/deal/README.md
@@ -1474,15 +1554,18 @@ generatedFiles:
   - docs/sdks/payslip/README.md
   - docs/sdks/person/README.md
   - docs/sdks/pipeline/README.md
+  - docs/sdks/profitloss/README.md
   - docs/sdks/project/README.md
   - docs/sdks/prompt/README.md
   - docs/sdks/pullrequest/README.md
+  - docs/sdks/purchaseorder/README.md
   - docs/sdks/recording/README.md
   - docs/sdks/refund/README.md
   - docs/sdks/repo/README.md
   - docs/sdks/report/README.md
   - docs/sdks/repository/README.md
   - docs/sdks/review/README.md
+  - docs/sdks/salesorder/README.md
   - docs/sdks/scim/README.md
   - docs/sdks/scorecard/README.md
   - docs/sdks/space/README.md
@@ -1496,6 +1579,7 @@ generatedFiles:
   - docs/sdks/timeoff/README.md
   - docs/sdks/timeshift/README.md
   - docs/sdks/transaction/README.md
+  - docs/sdks/trialbalance/README.md
   - docs/sdks/uc/README.md
   - docs/sdks/unified/README.md
   - docs/sdks/unifiedto/README.md
@@ -1514,6 +1598,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/applicationstatus.rb
   - lib/unified_ruby_sdk/ats.rb
   - lib/unified_ruby_sdk/auth.rb
+  - lib/unified_ruby_sdk/balancesheet.rb
+  - lib/unified_ruby_sdk/bill.rb
   - lib/unified_ruby_sdk/branch.rb
   - lib/unified_ruby_sdk/busy.rb
   - lib/unified_ruby_sdk/calendar.rb
@@ -1529,6 +1615,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/connection.rb
   - lib/unified_ruby_sdk/contact.rb
   - lib/unified_ruby_sdk/course.rb
+  - lib/unified_ruby_sdk/creditmemo.rb
   - lib/unified_ruby_sdk/crm.rb
   - lib/unified_ruby_sdk/customer.rb
   - lib/unified_ruby_sdk/deal.rb
@@ -1569,14 +1656,22 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/categories.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingaccount_request.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingbill_request.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingbill_response.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingcontact_request.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingcreditmemo_request.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingcreditmemo_response.rb
   - lib/unified_ruby_sdk/models/operations/createaccountinginvoice_request.rb
   - lib/unified_ruby_sdk/models/operations/createaccountinginvoice_response.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingjournal_request.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingjournal_response.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingorder_request.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingorder_response.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingpurchaseorder_request.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingpurchaseorder_response.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingsalesorder_request.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingsalesorder_response.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingtaxrate_request.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingtaxrate_response.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingtransaction_request.rb
@@ -1710,8 +1805,14 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createunifiedwebhook_response.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingaccount_request.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingbalancesheet_request.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingbalancesheet_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingbill_request.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingbill_response.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingcontact_request.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingcreditmemo_request.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingcreditmemo_response.rb
   - lib/unified_ruby_sdk/models/operations/getaccountinginvoice_request.rb
   - lib/unified_ruby_sdk/models/operations/getaccountinginvoice_response.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingjournal_request.rb
@@ -1720,12 +1821,20 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getaccountingorder_response.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingorganization_request.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingorganization_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingprofitloss_request.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingprofitloss_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingpurchaseorder_request.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingpurchaseorder_response.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingreport_request.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingreport_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingsalesorder_request.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingsalesorder_response.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingtaxrate_request.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingtaxrate_response.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingtransaction_request.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingtransaction_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingtrialbalance_request.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingtrialbalance_response.rb
   - lib/unified_ruby_sdk/models/operations/getatsactivity_request.rb
   - lib/unified_ruby_sdk/models/operations/getatsactivity_response.rb
   - lib/unified_ruby_sdk/models/operations/getatsapplication_request.rb
@@ -1868,8 +1977,14 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getunifiedwebhook_response.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingaccounts_request.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingaccounts_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingbalancesheets_request.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingbalancesheets_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingbills_request.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingbills_response.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingcontacts_request.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingcontacts_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingcreditmemoes_request.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingcreditmemoes_response.rb
   - lib/unified_ruby_sdk/models/operations/listaccountinginvoices_request.rb
   - lib/unified_ruby_sdk/models/operations/listaccountinginvoices_response.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingjournals_request.rb
@@ -1878,12 +1993,20 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listaccountingorders_response.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingorganizations_request.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingorganizations_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingprofitlosses_request.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingprofitlosses_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingpurchaseorders_request.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingpurchaseorders_response.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingreports_request.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingreports_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingsalesorders_request.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingsalesorders_response.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingtaxrates_request.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingtaxrates_response.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingtransactions_request.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingtransactions_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingtrialbalances_request.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingtrialbalances_response.rb
   - lib/unified_ruby_sdk/models/operations/listatsactivities_request.rb
   - lib/unified_ruby_sdk/models/operations/listatsactivities_response.rb
   - lib/unified_ruby_sdk/models/operations/listatsapplications_request.rb
@@ -2043,14 +2166,22 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listunifiedwebhooks_response.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingaccount_request.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingbill_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingbill_response.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingcontact_request.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingcreditmemo_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingcreditmemo_response.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountinginvoice_request.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountinginvoice_response.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingjournal_request.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingjournal_response.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingorder_request.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingorder_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingpurchaseorder_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingpurchaseorder_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingsalesorder_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingsalesorder_response.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingtaxrate_request.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingtaxrate_response.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingtransaction_request.rb
@@ -2186,14 +2317,22 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/queryparam_categories.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingaccount_request.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingbill_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingbill_response.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingcontact_request.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingcreditmemo_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingcreditmemo_response.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountinginvoice_request.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountinginvoice_response.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingjournal_request.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingjournal_response.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingorder_request.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingorder_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingpurchaseorder_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingpurchaseorder_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingsalesorder_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingsalesorder_response.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingtaxrate_request.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingtaxrate_response.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingtransaction_request.rb
@@ -2324,14 +2463,22 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removeunifiedwebhook_response.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingaccount_request.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingbill_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingbill_response.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingcontact_request.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingcontact_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingcreditmemo_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingcreditmemo_response.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountinginvoice_request.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountinginvoice_response.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingjournal_request.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingjournal_response.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingorder_request.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingorder_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingpurchaseorder_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingpurchaseorder_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingsalesorder_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingsalesorder_response.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingtaxrate_request.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingtaxrate_response.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingtransaction_request.rb
@@ -2468,13 +2615,20 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingaccount.rb
   - lib/unified_ruby_sdk/models/shared/accountingassociatedcontact.rb
   - lib/unified_ruby_sdk/models/shared/accountingattachment.rb
+  - lib/unified_ruby_sdk/models/shared/accountingbalancesheet.rb
   - lib/unified_ruby_sdk/models/shared/accountingbalancesheetitem.rb
+  - lib/unified_ruby_sdk/models/shared/accountingbill.rb
+  - lib/unified_ruby_sdk/models/shared/accountingbill_status.rb
   - lib/unified_ruby_sdk/models/shared/accountingcontact.rb
   - lib/unified_ruby_sdk/models/shared/accountingcontactpaymentmethod.rb
   - lib/unified_ruby_sdk/models/shared/accountingcontactpaymentmethod_type.rb
+  - lib/unified_ruby_sdk/models/shared/accountingcreditmemo.rb
+  - lib/unified_ruby_sdk/models/shared/accountingcreditmemo_payment_collection_method.rb
+  - lib/unified_ruby_sdk/models/shared/accountingcreditmemo_status.rb
   - lib/unified_ruby_sdk/models/shared/accountingemail.rb
   - lib/unified_ruby_sdk/models/shared/accountingemail_type.rb
   - lib/unified_ruby_sdk/models/shared/accountinginvoice.rb
+  - lib/unified_ruby_sdk/models/shared/accountinginvoice_payment_collection_method.rb
   - lib/unified_ruby_sdk/models/shared/accountinginvoice_status.rb
   - lib/unified_ruby_sdk/models/shared/accountinginvoice_type.rb
   - lib/unified_ruby_sdk/models/shared/accountingjournal.rb
@@ -2484,18 +2638,24 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingorder_status.rb
   - lib/unified_ruby_sdk/models/shared/accountingorder_type.rb
   - lib/unified_ruby_sdk/models/shared/accountingorganization.rb
-  - lib/unified_ruby_sdk/models/shared/accountingprofitandlossaccount.rb
-  - lib/unified_ruby_sdk/models/shared/accountingprofitandlosscategory.rb
-  - lib/unified_ruby_sdk/models/shared/accountingprofitandlosssection.rb
-  - lib/unified_ruby_sdk/models/shared/accountingprofitandlosssubcategory.rb
+  - lib/unified_ruby_sdk/models/shared/accountingprofitloss.rb
+  - lib/unified_ruby_sdk/models/shared/accountingprofitlossaccount.rb
+  - lib/unified_ruby_sdk/models/shared/accountingprofitlosscategory.rb
+  - lib/unified_ruby_sdk/models/shared/accountingprofitlosssection.rb
+  - lib/unified_ruby_sdk/models/shared/accountingprofitlosssubcategory.rb
+  - lib/unified_ruby_sdk/models/shared/accountingpurchaseorder.rb
+  - lib/unified_ruby_sdk/models/shared/accountingpurchaseorder_status.rb
   - lib/unified_ruby_sdk/models/shared/accountingreport.rb
   - lib/unified_ruby_sdk/models/shared/accountingreport_type.rb
+  - lib/unified_ruby_sdk/models/shared/accountingsalesorder.rb
+  - lib/unified_ruby_sdk/models/shared/accountingsalesorder_status.rb
   - lib/unified_ruby_sdk/models/shared/accountingtaxrate.rb
   - lib/unified_ruby_sdk/models/shared/accountingtelephone.rb
   - lib/unified_ruby_sdk/models/shared/accountingtelephone_type.rb
   - lib/unified_ruby_sdk/models/shared/accountingtransaction.rb
   - lib/unified_ruby_sdk/models/shared/accountingtransactioncontact.rb
   - lib/unified_ruby_sdk/models/shared/accountingtransactionlineitem.rb
+  - lib/unified_ruby_sdk/models/shared/accountingtrialbalance.rb
   - lib/unified_ruby_sdk/models/shared/accountingtrialbalancesubitem.rb
   - lib/unified_ruby_sdk/models/shared/api.rb
   - lib/unified_ruby_sdk/models/shared/apicall.rb
@@ -2804,9 +2964,13 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_accountingorder_billing_address.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingorder_shipping_address.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingorganization_address.rb
+  - lib/unified_ruby_sdk/models/shared/property_accountingpurchaseorder_billing_address.rb
+  - lib/unified_ruby_sdk/models/shared/property_accountingpurchaseorder_shipping_address.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingreport_balance_sheet.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingreport_profit_and_loss.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingreport_trial_balance.rb
+  - lib/unified_ruby_sdk/models/shared/property_accountingsalesorder_billing_address.rb
+  - lib/unified_ruby_sdk/models/shared/property_accountingsalesorder_shipping_address.rb
   - lib/unified_ruby_sdk/models/shared/property_atsactivity_from.rb
   - lib/unified_ruby_sdk/models/shared/property_atsactivity_from_type.rb
   - lib/unified_ruby_sdk/models/shared/property_atscandidate_address.rb
@@ -2959,15 +3123,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/payslip.rb
   - lib/unified_ruby_sdk/person.rb
   - lib/unified_ruby_sdk/pipeline.rb
+  - lib/unified_ruby_sdk/profitloss.rb
   - lib/unified_ruby_sdk/project.rb
   - lib/unified_ruby_sdk/prompt.rb
   - lib/unified_ruby_sdk/pullrequest.rb
+  - lib/unified_ruby_sdk/purchaseorder.rb
   - lib/unified_ruby_sdk/recording.rb
   - lib/unified_ruby_sdk/refund.rb
   - lib/unified_ruby_sdk/repo.rb
   - lib/unified_ruby_sdk/report.rb
   - lib/unified_ruby_sdk/repository.rb
   - lib/unified_ruby_sdk/review.rb
+  - lib/unified_ruby_sdk/salesorder.rb
   - lib/unified_ruby_sdk/scim.rb
   - lib/unified_ruby_sdk/scorecard.rb
   - lib/unified_ruby_sdk/sdk_hooks/hooks.rb
@@ -2984,6 +3151,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/timeoff.rb
   - lib/unified_ruby_sdk/timeshift.rb
   - lib/unified_ruby_sdk/transaction.rb
+  - lib/unified_ruby_sdk/trialbalance.rb
   - lib/unified_ruby_sdk/uc.rb
   - lib/unified_ruby_sdk/unified.rb
   - lib/unified_ruby_sdk/unified_to.rb
@@ -3045,8 +3213,30 @@ examples:
       responses:
         "200":
           application/json: {}
+  createAccountingBill:
+    speakeasy-default-create-accounting-bill:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
   createAccountingContact:
     speakeasy-default-create-accounting-contact:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createAccountingCreditmemo:
+    speakeasy-default-create-accounting-creditmemo:
       parameters:
         path:
           connection_id: "<id>"
@@ -3089,6 +3279,28 @@ examples:
       responses:
         "200":
           application/json: {}
+  createAccountingPurchaseorder:
+    speakeasy-default-create-accounting-purchaseorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createAccountingSalesorder:
+    speakeasy-default-create-accounting-salesorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
   createAccountingTaxrate:
     speakeasy-default-create-accounting-taxrate:
       parameters:
@@ -3121,8 +3333,38 @@ examples:
       responses:
         "200":
           application/json: {}
+  getAccountingBalancesheet:
+    speakeasy-default-get-accounting-balancesheet:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  getAccountingBill:
+    speakeasy-default-get-accounting-bill:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
   getAccountingContact:
     speakeasy-default-get-accounting-contact:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  getAccountingCreditmemo:
+    speakeasy-default-get-accounting-creditmemo:
       parameters:
         path:
           connection_id: "<id>"
@@ -3171,8 +3413,38 @@ examples:
       responses:
         "200":
           application/json: {"name": "<value>"}
+  getAccountingProfitloss:
+    speakeasy-default-get-accounting-profitloss:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  getAccountingPurchaseorder:
+    speakeasy-default-get-accounting-purchaseorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
   getAccountingReport:
     speakeasy-default-get-accounting-report:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  getAccountingSalesorder:
+    speakeasy-default-get-accounting-salesorder:
       parameters:
         path:
           connection_id: "<id>"
@@ -3201,6 +3473,16 @@ examples:
       responses:
         "200":
           application/json: {}
+  getAccountingTrialbalance:
+    speakeasy-default-get-accounting-trialbalance:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
   listAccountingAccounts:
     speakeasy-default-list-accounting-accounts:
       parameters:
@@ -3210,6 +3492,24 @@ examples:
       responses:
         "200":
           application/json: [{}, {}, {}]
+  listAccountingBalancesheets:
+    speakeasy-default-list-accounting-balancesheets:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}]
+  listAccountingBills:
+    speakeasy-default-list-accounting-bills:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}, {}]
   listAccountingContacts:
     speakeasy-default-list-accounting-contacts:
       parameters:
@@ -3219,6 +3519,15 @@ examples:
       responses:
         "200":
           application/json: [{}, {}]
+  listAccountingCreditmemoes:
+    speakeasy-default-list-accounting-creditmemoes:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}, {}, {}]
   listAccountingInvoices:
     speakeasy-default-list-accounting-invoices:
       parameters:
@@ -3255,8 +3564,35 @@ examples:
       responses:
         "200":
           application/json: [{"name": "<value>"}, {"name": "<value>"}]
+  listAccountingProfitlosses:
+    speakeasy-default-list-accounting-profitlosses:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}]
+  listAccountingPurchaseorders:
+    speakeasy-default-list-accounting-purchaseorders:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}]
   listAccountingReports:
     speakeasy-default-list-accounting-reports:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}, {}, {}]
+  listAccountingSalesorders:
+    speakeasy-default-list-accounting-salesorders:
       parameters:
         path:
           connection_id: "<id>"
@@ -3282,6 +3618,15 @@ examples:
       responses:
         "200":
           application/json: [{}, {}, {}]
+  listAccountingTrialbalances:
+    speakeasy-default-list-accounting-trialbalances:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}, {}]
   patchAccountingAccount:
     speakeasy-default-patch-accounting-account:
       parameters:
@@ -3294,8 +3639,32 @@ examples:
       responses:
         "200":
           application/json: {}
+  patchAccountingBill:
+    speakeasy-default-patch-accounting-bill:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
   patchAccountingContact:
     speakeasy-default-patch-accounting-contact:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchAccountingCreditmemo:
+    speakeasy-default-patch-accounting-creditmemo:
       parameters:
         path:
           connection_id: "<id>"
@@ -3342,6 +3711,30 @@ examples:
       responses:
         "200":
           application/json: {}
+  patchAccountingPurchaseorder:
+    speakeasy-default-patch-accounting-purchaseorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchAccountingSalesorder:
+    speakeasy-default-patch-accounting-salesorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
   patchAccountingTaxrate:
     speakeasy-default-patch-accounting-taxrate:
       parameters:
@@ -3372,8 +3765,20 @@ examples:
         path:
           connection_id: "<id>"
           id: "<id>"
+  removeAccountingBill:
+    speakeasy-default-remove-accounting-bill:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
   removeAccountingContact:
     speakeasy-default-remove-accounting-contact:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeAccountingCreditmemo:
+    speakeasy-default-remove-accounting-creditmemo:
       parameters:
         path:
           connection_id: "<id>"
@@ -3392,6 +3797,18 @@ examples:
           id: "<id>"
   removeAccountingOrder:
     speakeasy-default-remove-accounting-order:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeAccountingPurchaseorder:
+    speakeasy-default-remove-accounting-purchaseorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeAccountingSalesorder:
+    speakeasy-default-remove-accounting-salesorder:
       parameters:
         path:
           connection_id: "<id>"
@@ -3420,8 +3837,32 @@ examples:
       responses:
         "200":
           application/json: {}
+  updateAccountingBill:
+    speakeasy-default-update-accounting-bill:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
   updateAccountingContact:
     speakeasy-default-update-accounting-contact:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateAccountingCreditmemo:
+    speakeasy-default-update-accounting-creditmemo:
       parameters:
         path:
           connection_id: "<id>"
@@ -3458,6 +3899,30 @@ examples:
           application/json: {}
   updateAccountingOrder:
     speakeasy-default-update-accounting-order:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateAccountingPurchaseorder:
+    speakeasy-default-update-accounting-purchaseorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateAccountingSalesorder:
+    speakeasy-default-update-accounting-salesorder:
       parameters:
         path:
           connection_id: "<id>"
