@@ -18,13 +18,14 @@ generation:
   flattenGlobalSecurity: true
   telemetryEnabled: false
 ruby:
-  version: 0.49.0
+  version: 0.51.0
   additionalDependencies:
     development: {}
     runtime: {}
   author: Unified
   baseErrorName: UnifiedToError
   clientServerStatusCodesAsErrors: true
+  constFieldsAlwaysOptional: false
   defaultErrorName: APIError
   description: Ruby Client SDK for Unified.to
   flattenGlobalSecurity: false

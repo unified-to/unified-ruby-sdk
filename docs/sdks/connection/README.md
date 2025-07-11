@@ -33,7 +33,7 @@ req = Models::Shared::Connection.new(
   ],
   integration_type: "<value>",
   permissions: [
-    Models::Shared::PropertyConnectionPermissions::MARTECH_LIST_WRITE,
+    Models::Shared::PropertyConnectionPermissions::CRM_DEAL_WRITE,
   ],
 )
 

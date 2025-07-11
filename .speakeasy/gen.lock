@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: df14941bc85aac484869c35ad39aa806
+  docChecksum: dc8b8b9132e8749ec8c7686b6384177f
   docVersion: "1.0"
   speakeasyVersion: 1.533.0
   generationVersion: 2.578.0
-  releaseVersion: 0.49.0
-  configChecksum: fcc50c48973447beb8526a17693da474
+  releaseVersion: 0.51.0
+  configChecksum: fc3f79e2c040b31027a0929bb1a5322d
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -7781,17 +7781,17 @@ examples:
   createUnifiedConnection:
     speakeasy-default-create-unified-connection:
       requestBody:
-        application/json: {"categories": ["accounting", "martech", "martech"], "integration_type": "<value>", "permissions": ["repo_organization_read", "lms_class_read"]}
+        application/json: {"categories": ["accounting", "martech", "martech"], "integration_type": "<value>", "permissions": ["lms_instructor_read", "lms_course_read"]}
       responses:
         "200":
-          application/json: {"categories": ["accounting"], "integration_type": "<value>", "permissions": ["uc_comment_write"]}
+          application/json: {"categories": ["accounting"], "integration_type": "<value>", "permissions": ["hris_device_write"]}
   createUnifiedWebhook:
     speakeasy-default-create-unified-webhook:
       requestBody:
-        application/json: {"connection_id": "<id>", "event": "created", "object_type": "hris_timeoff"}
+        application/json: {"connection_id": "<id>", "event": "created", "object_type": "crm_pipeline"}
       responses:
         "200":
-          application/json: {"connection_id": "<id>", "event": "updated", "object_type": "genai_model"}
+          application/json: {"connection_id": "<id>", "event": "updated", "object_type": "enrich_company"}
   getUnifiedApicall:
     speakeasy-default-get-unified-apicall:
       parameters:
@@ -7807,7 +7807,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"categories": ["commerce"], "integration_type": "<value>", "permissions": ["task_task_read"]}
+          application/json: {"categories": ["commerce"], "integration_type": "<value>", "permissions": ["kms_comment_read"]}
   getUnifiedIntegrationAuth:
     speakeasy-default-get-unified-integration-auth:
       parameters:
@@ -7825,7 +7825,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"connection_id": "<id>", "event": "deleted", "object_type": "enrich_company"}
+          application/json: {"connection_id": "<id>", "event": "deleted", "object_type": "uc_comment"}
   listUnifiedApicalls:
     speakeasy-default-list-unified-apicalls:
       responses:
@@ -7835,7 +7835,7 @@ examples:
     speakeasy-default-list-unified-connections:
       responses:
         "200":
-          application/json: [{"categories": [], "integration_type": "<value>", "permissions": ["task_comment_read", "kms_comment_read"]}, {"categories": ["auth"], "integration_type": "<value>", "permissions": ["crm_pipeline_read", "ats_job_write", "calendar_link_write"]}]
+          application/json: [{"categories": [], "integration_type": "<value>", "permissions": ["task_project_write", "kms_space_write"]}, {"categories": ["auth"], "integration_type": "<value>", "permissions": ["crm_contact_read", "ats_activity_read", "calendar_link_read"]}]
   listUnifiedIntegrationWorkspaces:
     speakeasy-default-list-unified-integration-workspaces:
       parameters:
@@ -7859,7 +7859,7 @@ examples:
     speakeasy-default-list-unified-webhooks:
       responses:
         "200":
-          application/json: [{"connection_id": "<id>", "event": "updated", "object_type": "hris_timeshift"}]
+          application/json: [{"connection_id": "<id>", "event": "updated", "object_type": "hris_timeoff"}]
   patchUnifiedConnection:
     speakeasy-default-patch-unified-connection:
       parameters:
@@ -7869,17 +7869,17 @@ examples:
         application/json: {"categories": ["calendar", "enrich"], "integration_type": "<value>", "permissions": []}
       responses:
         "200":
-          application/json: {"categories": ["task"], "integration_type": "<value>", "permissions": ["commerce_inventory_read"]}
+          application/json: {"categories": ["task"], "integration_type": "<value>", "permissions": ["payment_payment_write"]}
   patchUnifiedWebhook:
     speakeasy-default-patch-unified-webhook:
       parameters:
         path:
           id: "<id>"
       requestBody:
-        application/json: {"connection_id": "<id>", "event": "deleted", "object_type": "crm_pipeline"}
+        application/json: {"connection_id": "<id>", "event": "deleted", "object_type": "crm_contact"}
       responses:
         "200":
-          application/json: {"connection_id": "<id>", "event": "updated", "object_type": "crm_pipeline"}
+          application/json: {"connection_id": "<id>", "event": "updated", "object_type": "crm_company"}
   patchUnifiedWebhookTrigger:
     speakeasy-default-patch-unified-webhook-trigger:
       parameters:
@@ -7904,17 +7904,17 @@ examples:
         application/json: {"categories": ["calendar", "storage", "calendar"], "integration_type": "<value>", "permissions": []}
       responses:
         "200":
-          application/json: {"categories": ["calendar"], "integration_type": "<value>", "permissions": ["lms_instructor_write"]}
+          application/json: {"categories": ["calendar"], "integration_type": "<value>", "permissions": ["lms_student_write"]}
   updateUnifiedWebhook:
     speakeasy-default-update-unified-webhook:
       parameters:
         path:
           id: "<id>"
       requestBody:
-        application/json: {"connection_id": "<id>", "event": "created", "object_type": "payment_payout"}
+        application/json: {"connection_id": "<id>", "event": "created", "object_type": "accounting_report"}
       responses:
         "200":
-          application/json: {"connection_id": "<id>", "event": "updated", "object_type": "messaging_message"}
+          application/json: {"connection_id": "<id>", "event": "updated", "object_type": "genai_model"}
   updateUnifiedWebhookTrigger:
     speakeasy-default-update-unified-webhook-trigger:
       parameters:
