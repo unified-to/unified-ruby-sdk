@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: dc8b8b9132e8749ec8c7686b6384177f
+  docChecksum: a8fe650f09e411054ff20cdef36cc669
   docVersion: "1.0"
   speakeasyVersion: 1.533.0
   generationVersion: 2.578.0
-  releaseVersion: 0.51.0
-  configChecksum: fc3f79e2c040b31027a0929bb1a5322d
+  releaseVersion: 0.53.0
+  configChecksum: 78f46ae0a4c769301c63e96a397b09ff
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -7854,7 +7854,7 @@ examples:
     speakeasy-default-list-unified-issues:
       responses:
         "200":
-          application/json: [{"status": "COMPLETED", "ticket_ref": "<value>", "title": "<value>", "workspace_id": "<id>"}, {"status": "UP_NEXT", "ticket_ref": "<value>", "title": "<value>", "workspace_id": "<id>"}, {"status": "COMPLETED", "ticket_ref": "<value>", "title": "<value>", "workspace_id": "<id>"}]
+          application/json: [{"status": "COMPLETED", "ticket_ref": "<value>", "title": "<value>", "workspace_id": "<id>"}, {"status": "REJECTED", "ticket_ref": "<value>", "title": "<value>", "workspace_id": "<id>"}, {"status": "COMPLETED", "ticket_ref": "<value>", "title": "<value>", "workspace_id": "<id>"}]
   listUnifiedWebhooks:
     speakeasy-default-list-unified-webhooks:
       responses:

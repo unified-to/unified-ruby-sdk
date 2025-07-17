@@ -18,7 +18,6 @@ module UnifiedRubySDK
           ON_HOLD = new('ON_HOLD')
           VALIDATING = new('VALIDATING')
           REJECTED = new('REJECTED')
-          UP_NEXT = new('UP_NEXT')
         end
       end
     end
