@@ -29,10 +29,18 @@ module UnifiedRubySDK
         field :on_month_days, T.nilable(T::Array[::Float]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('on_month_days') } }
         # months of the year to repeat on, defaults to undefined (every month), only used if frequency is YEARLY, January is 1
         field :on_months, T.nilable(T::Array[::Float]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('on_months') } }
+        # week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only used with on_days. 0 is used for days without week ordinals.
+        field :on_weeks, T.nilable(T::Array[::Float]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('on_weeks') } }
+        # days of the year to repeat on, defaults to undefined (every day), only used if frequency is YEARLY
+        field :on_year_days, T.nilable(T::Array[::Float]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('on_year_days') } }
+
+        field :timezone, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
+
+        field :week_start, T.nilable(Models::Shared::WeekStart), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('week_start'), 'decoder': Utils.enum_from_string(Models::Shared::WeekStart, true) } }
 
 
-        sig { params(frequency: Models::Shared::CalendarEventRecurrenceFrequency, count: T.nilable(::Float), end_at: T.nilable(::DateTime), excluded_dates: T.nilable(T::Array[::String]), interval: T.nilable(::Float), on_days: T.nilable(T::Array[Models::Shared::PropertyCalendarEventRecurrenceOnDays]), on_month_days: T.nilable(T::Array[::Float]), on_months: T.nilable(T::Array[::Float])).void }
-        def initialize(frequency: nil, count: nil, end_at: nil, excluded_dates: nil, interval: nil, on_days: nil, on_month_days: nil, on_months: nil)
+        sig { params(frequency: Models::Shared::CalendarEventRecurrenceFrequency, count: T.nilable(::Float), end_at: T.nilable(::DateTime), excluded_dates: T.nilable(T::Array[::String]), interval: T.nilable(::Float), on_days: T.nilable(T::Array[Models::Shared::PropertyCalendarEventRecurrenceOnDays]), on_month_days: T.nilable(T::Array[::Float]), on_months: T.nilable(T::Array[::Float]), on_weeks: T.nilable(T::Array[::Float]), on_year_days: T.nilable(T::Array[::Float]), timezone: T.nilable(::String), week_start: T.nilable(Models::Shared::WeekStart)).void }
+        def initialize(frequency: nil, count: nil, end_at: nil, excluded_dates: nil, interval: nil, on_days: nil, on_month_days: nil, on_months: nil, on_weeks: nil, on_year_days: nil, timezone: nil, week_start: nil)
           @frequency = frequency
           @count = count
           @end_at = end_at
@@ -41,6 +49,10 @@ module UnifiedRubySDK
           @on_days = on_days
           @on_month_days = on_month_days
           @on_months = on_months
+          @on_weeks = on_weeks
+          @on_year_days = on_year_days
+          @timezone = timezone
+          @week_start = week_start
         end
 
         def ==(other)
@@ -53,6 +65,10 @@ module UnifiedRubySDK
           return false unless @on_days == other.on_days
           return false unless @on_month_days == other.on_month_days
           return false unless @on_months == other.on_months
+          return false unless @on_weeks == other.on_weeks
+          return false unless @on_year_days == other.on_year_days
+          return false unless @timezone == other.timezone
+          return false unless @week_start == other.week_start
           true
         end
       end

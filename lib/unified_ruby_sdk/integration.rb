@@ -24,7 +24,7 @@ module UnifiedRubySDK
 
     sig { params(request: Models::Operations::GetUnifiedIntegrationAuthRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUnifiedIntegrationAuthResponse) }
     def get_unified_integration_auth(request:, timeout_ms: nil)
-      # get_unified_integration_auth - Create connection indirectly
+      # get_unified_integration_auth - Authorize new connection
       # Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)

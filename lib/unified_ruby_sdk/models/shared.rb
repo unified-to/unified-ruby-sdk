@@ -506,6 +506,7 @@ module UnifiedRubySDK
       autoload :Type, 'unified_ruby_sdk/models/shared/type.rb'
       autoload :Value, 'unified_ruby_sdk/models/shared/value.rb'
       autoload :WebhookType, 'unified_ruby_sdk/models/shared/webhook_type.rb'
+      autoload :WeekStart, 'unified_ruby_sdk/models/shared/week_start.rb'
       autoload :WeightUnit, 'unified_ruby_sdk/models/shared/weight_unit.rb'
     end
   end

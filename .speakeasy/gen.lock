@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: a8fe650f09e411054ff20cdef36cc669
+  docChecksum: 34e9b060cccb99df9d62ad47f96d358d
   docVersion: "1.0"
   speakeasyVersion: 1.533.0
   generationVersion: 2.578.0
-  releaseVersion: 0.53.0
-  configChecksum: 78f46ae0a4c769301c63e96a397b09ff
+  releaseVersion: 0.55.0
+  configChecksum: 550c3d35eaacdcfc090790edd8ca5cbe
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -1483,6 +1483,7 @@ generatedFiles:
   - docs/models/shared/value.md
   - docs/models/shared/webhook.md
   - docs/models/shared/webhooktype.md
+  - docs/models/shared/weekstart.md
   - docs/models/shared/weightunit.md
   - docs/sdks/account/README.md
   - docs/sdks/accounting/README.md
@@ -3112,6 +3113,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/value.rb
   - lib/unified_ruby_sdk/models/shared/webhook.rb
   - lib/unified_ruby_sdk/models/shared/webhook_type.rb
+  - lib/unified_ruby_sdk/models/shared/week_start.rb
   - lib/unified_ruby_sdk/models/shared/weight_unit.rb
   - lib/unified_ruby_sdk/note.rb
   - lib/unified_ruby_sdk/order.rb
