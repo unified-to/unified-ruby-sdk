@@ -18,6 +18,7 @@ module UnifiedRubySDK
       autoload :AccountingBalancesheetItem, 'unified_ruby_sdk/models/shared/accountingbalancesheetitem.rb'
       autoload :AccountingBill, 'unified_ruby_sdk/models/shared/accountingbill.rb'
       autoload :AccountingBillStatus, 'unified_ruby_sdk/models/shared/accountingbill_status.rb'
+      autoload :AccountingCategory, 'unified_ruby_sdk/models/shared/accountingcategory.rb'
       autoload :AccountingContact, 'unified_ruby_sdk/models/shared/accountingcontact.rb'
       autoload :AccountingContactPaymentMethod, 'unified_ruby_sdk/models/shared/accountingcontactpaymentmethod.rb'
       autoload :AccountingContactPaymentMethodType, 'unified_ruby_sdk/models/shared/accountingcontactpaymentmethod_type.rb'

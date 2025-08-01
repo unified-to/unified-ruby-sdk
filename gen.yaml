@@ -18,7 +18,7 @@ generation:
   flattenGlobalSecurity: true
   telemetryEnabled: false
 ruby:
-  version: 0.55.0
+  version: 0.57.0
   additionalDependencies:
     development: {}
     runtime: {}
@@ -42,3 +42,4 @@ ruby:
   module: UnifiedRubySDK
   outputModelSuffix: output
   packageName: unified_ruby_sdk
+  typingStrategy: sorbet
