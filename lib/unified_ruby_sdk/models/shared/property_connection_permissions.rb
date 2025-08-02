@@ -43,6 +43,8 @@ module UnifiedRubySDK
           ACCOUNTING_PROFITLOSS_WRITE = new('accounting_profitloss_write')
           ACCOUNTING_BALANCESHEET_READ = new('accounting_balancesheet_read')
           ACCOUNTING_BALANCESHEET_WRITE = new('accounting_balancesheet_write')
+          ACCOUNTING_CATEGORY_READ = new('accounting_category_read')
+          ACCOUNTING_CATEGORY_WRITE = new('accounting_category_write')
           PAYMENT_PAYMENT_READ = new('payment_payment_read')
           PAYMENT_PAYMENT_WRITE = new('payment_payment_write')
           PAYMENT_PAYOUT_READ = new('payment_payout_read')

@@ -13,7 +13,7 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-        # @deprecated
+        # @deprecated – use cost_of_goods_sold_sections instead
         field :cost_of_goods_sold, T.nilable(T::Array[Models::Shared::AccountingProfitlossCategory]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cost_of_goods_sold') } }
 
         field :cost_of_goods_sold_sections, T.nilable(T::Array[Models::Shared::AccountingProfitlossSection]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cost_of_goods_sold_sections') } }
@@ -25,7 +25,7 @@ module UnifiedRubySDK
         field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
         field :end_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-        # @deprecated
+        # @deprecated – use expenses_sections instead
         field :expenses, T.nilable(T::Array[Models::Shared::AccountingProfitlossCategory]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expenses') } }
 
         field :expenses_sections, T.nilable(T::Array[Models::Shared::AccountingProfitlossSection]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expenses_sections') } }
@@ -35,7 +35,7 @@ module UnifiedRubySDK
         field :gross_profit_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gross_profit_amount') } }
 
         field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-        # @deprecated
+        # @deprecated – use income_sections instead
         field :income, T.nilable(T::Array[Models::Shared::AccountingProfitlossCategory]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('income') } }
 
         field :income_sections, T.nilable(T::Array[Models::Shared::AccountingProfitlossSection]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('income_sections') } }
