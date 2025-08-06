@@ -14,7 +14,7 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :extra_data, T.nilable(T.any(Models::Shared::One, T.any(::String, Models::Shared::AtsMetadataSchemasExtraData22), T.any(::Float, Models::Shared::AtsMetadataSchemasExtraData32), T.any(T::Boolean, Models::Shared::AtsMetadataSchemas2), T.any(T::Array[::Object], Models::Shared::AtsMetadataSchemasExtraData2))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('extra_data') } }
+        field :extra_data, T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::One, ::String, ::Float, T::Boolean)])), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('extra_data') } }
 
         field :format, T.nilable(Models::Shared::Format), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('format'), 'decoder': Utils.enum_from_string(Models::Shared::Format, true) } }
 
@@ -28,10 +28,10 @@ module UnifiedRubySDK
 
         field :type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
 
-        field :value, T.nilable(T.any(Models::Shared::AtsMetadata1, T.any(::String, Models::Shared::AtsMetadataSchemasValue2), T.any(::Float, Models::Shared::AtsMetadataSchemasValue32), T.any(T::Boolean, Models::Shared::AtsMetadataSchemasValue42), T.any(T::Array[::Object], Models::Shared::AtsMetadataSchemasValue52))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
+        field :value, T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::AtsMetadata1, ::String, ::Float, T::Boolean)])), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 
 
-        sig { params(extra_data: T.nilable(T.any(Models::Shared::One, T.any(::String, Models::Shared::AtsMetadataSchemasExtraData22), T.any(::Float, Models::Shared::AtsMetadataSchemasExtraData32), T.any(T::Boolean, Models::Shared::AtsMetadataSchemas2), T.any(T::Array[::Object], Models::Shared::AtsMetadataSchemasExtraData2))), format: T.nilable(Models::Shared::Format), id: T.nilable(::String), key: T.nilable(::String), namespace: T.nilable(::String), slug: T.nilable(::String), type: T.nilable(::String), value: T.nilable(T.any(Models::Shared::AtsMetadata1, T.any(::String, Models::Shared::AtsMetadataSchemasValue2), T.any(::Float, Models::Shared::AtsMetadataSchemasValue32), T.any(T::Boolean, Models::Shared::AtsMetadataSchemasValue42), T.any(T::Array[::Object], Models::Shared::AtsMetadataSchemasValue52)))).void }
+        sig { params(extra_data: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::One, ::String, ::Float, T::Boolean)])), format: T.nilable(Models::Shared::Format), id: T.nilable(::String), key: T.nilable(::String), namespace: T.nilable(::String), slug: T.nilable(::String), type: T.nilable(::String), value: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::AtsMetadata1, ::String, ::Float, T::Boolean)]))).void }
         def initialize(extra_data: nil, format: nil, id: nil, key: nil, namespace: nil, slug: nil, type: nil, value: nil)
           @extra_data = extra_data
           @format = format

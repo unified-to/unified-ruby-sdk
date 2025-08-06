@@ -1,2 +1,0 @@
-# IntegrationSchemas3
-

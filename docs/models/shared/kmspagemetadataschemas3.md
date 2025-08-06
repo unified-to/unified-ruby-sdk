@@ -1,2 +1,0 @@
-# KmsPageMetadataSchemas3
-

@@ -1,2 +1,0 @@
-# CommerceMetadataSchemas4
-
