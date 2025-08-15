@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 585a933222a93cac4e23b48d062c4a0c
+  docChecksum: 3a5734f3a7c4cfbbb830e6e58476de9b
   docVersion: "1.0"
   speakeasyVersion: 1.533.0
   generationVersion: 2.578.0
-  releaseVersion: 0.63.0
-  configChecksum: 0f83992acea5d8250ab137232b10d850
+  releaseVersion: 0.65.0
+  configChecksum: 02da4b40f1d83c099d4758327195f289
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -7661,7 +7661,7 @@ examples:
   createUnifiedConnection:
     speakeasy-default-create-unified-connection:
       requestBody:
-        application/json: {"categories": ["accounting", "martech", "martech"], "integration_type": "<value>", "permissions": ["lms_student_write", "lms_course_read"]}
+        application/json: {"categories": ["accounting", "martech", "martech"], "integration_type": "<value>", "permissions": ["lms_instructor_read", "lms_course_read"]}
       responses:
         "200":
           application/json: {"categories": ["accounting"], "integration_type": "<value>", "permissions": ["hris_device_read"]}
@@ -7715,7 +7715,7 @@ examples:
     speakeasy-default-list-unified-connections:
       responses:
         "200":
-          application/json: [{"categories": [], "integration_type": "<value>", "permissions": ["task_project_read", "kms_space_read"]}, {"categories": ["auth"], "integration_type": "<value>", "permissions": ["crm_company_write", "commerce_review_write", "calendar_link_read"]}]
+          application/json: [{"categories": [], "integration_type": "<value>", "permissions": ["task_project_write", "kms_space_read"]}, {"categories": ["auth"], "integration_type": "<value>", "permissions": ["crm_company_write", "commerce_review_write", "calendar_link_read"]}]
   listUnifiedIntegrationWorkspaces:
     speakeasy-default-list-unified-integration-workspaces:
       parameters:
@@ -7749,7 +7749,7 @@ examples:
         application/json: {"categories": ["calendar", "enrich"], "integration_type": "<value>", "permissions": []}
       responses:
         "200":
-          application/json: {"categories": ["task"], "integration_type": "<value>", "permissions": ["accounting_category_write"]}
+          application/json: {"categories": ["task"], "integration_type": "<value>", "permissions": ["payment_payment_read"]}
   patchUnifiedWebhook:
     speakeasy-default-patch-unified-webhook:
       parameters:

@@ -11,7 +11,6 @@ module UnifiedRubySDK
 
       class PropertyConnectionPermissions < T::Enum
         enums do
-          AUTH_LOGIN = new('auth_login')
           ACCOUNTING_ACCOUNT_READ = new('accounting_account_read')
           ACCOUNTING_ACCOUNT_WRITE = new('accounting_account_write')
           ACCOUNTING_TRANSACTION_READ = new('accounting_transaction_read')
