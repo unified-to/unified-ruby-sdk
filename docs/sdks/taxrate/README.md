@@ -18,20 +18,20 @@ Create a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.taxrate.create_accounting_taxrate(accounting_taxrate=Models::Shared::AccountingTaxrate.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.taxrate.create_accounting_taxrate(accounting_taxrate: Models::Shared::AccountingTaxrate.new(), connection_id: '<id>')
 
-if ! res.accounting_taxrate.nil?
+unless res.accounting_taxrate.nil?
   # handle response
 end
 
@@ -50,7 +50,11 @@ end
 
 **[T.nilable(Models::Operations::CreateAccountingTaxrateResponse)](../../models/operations/createaccountingtaxrateresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_accounting_taxrate
 
@@ -58,20 +62,20 @@ Retrieve a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAccountingTaxrate" method="get" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.taxrate.get_accounting_taxrate(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.taxrate.get_accounting_taxrate(connection_id: '<id>', id: '<id>')
 
-if ! res.accounting_taxrate.nil?
+unless res.accounting_taxrate.nil?
   # handle response
 end
 
@@ -90,7 +94,11 @@ end
 
 **[T.nilable(Models::Operations::GetAccountingTaxrateResponse)](../../models/operations/getaccountingtaxrateresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_accounting_taxrates
 
@@ -98,22 +106,24 @@ List all taxrates
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAccountingTaxrates" method="get" path="/accounting/{connection_id}/taxrate" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAccountingTaxratesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.taxrate.list_accounting_taxrates(req)
+res = s.taxrate.list_accounting_taxrates(request: req)
 
-if ! res.accounting_taxrates.nil?
+unless res.accounting_taxrates.nil?
   # handle response
 end
 
@@ -129,7 +139,11 @@ end
 
 **[T.nilable(Models::Operations::ListAccountingTaxratesResponse)](../../models/operations/listaccountingtaxratesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_accounting_taxrate
 
@@ -137,24 +151,26 @@ Update a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchAccountingTaxrateRequest.new(
   accounting_taxrate: Models::Shared::AccountingTaxrate.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.taxrate.patch_accounting_taxrate(req)
+res = s.taxrate.patch_accounting_taxrate(request: req)
 
-if ! res.accounting_taxrate.nil?
+unless res.accounting_taxrate.nil?
   # handle response
 end
 
@@ -170,7 +186,11 @@ end
 
 **[T.nilable(Models::Operations::PatchAccountingTaxrateResponse)](../../models/operations/patchaccountingtaxrateresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_accounting_taxrate
 
@@ -178,16 +198,18 @@ Remove a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeAccountingTaxrate" method="delete" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.taxrate.remove_accounting_taxrate(connection_id="<id>", id="<id>")
+res = s.taxrate.remove_accounting_taxrate(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -206,7 +228,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveAccountingTaxrateResponse)](../../models/operations/removeaccountingtaxrateresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_accounting_taxrate
 
@@ -214,24 +240,26 @@ Update a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateAccountingTaxrateRequest.new(
   accounting_taxrate: Models::Shared::AccountingTaxrate.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.taxrate.update_accounting_taxrate(req)
+res = s.taxrate.update_accounting_taxrate(request: req)
 
-if ! res.accounting_taxrate.nil?
+unless res.accounting_taxrate.nil?
   # handle response
 end
 
@@ -247,3 +275,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateAccountingTaxrateResponse)](../../models/operations/updateaccountingtaxrateresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

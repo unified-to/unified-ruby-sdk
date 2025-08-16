@@ -14,14 +14,13 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :accounts, T.nilable(T::Array[Models::Shared::AccountingProfitlossAccount]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('accounts') } }
+        field :accounts, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingProfitlossAccount)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('accounts') } }
 
-        field :section_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('section_name') } }
+        field :section_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('section_name') } }
 
-        field :section_type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('section_type') } }
+        field :section_type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('section_type') } }
 
-        field :total_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
-
+        field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
 
         sig { params(accounts: T.nilable(T::Array[Models::Shared::AccountingProfitlossAccount]), section_name: T.nilable(::String), section_type: T.nilable(::String), total_amount: T.nilable(::Float)).void }
         def initialize(accounts: nil, section_name: nil, section_type: nil, total_amount: nil)
@@ -31,6 +30,7 @@ module UnifiedRubySDK
           @total_amount = total_amount
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @accounts == other.accounts

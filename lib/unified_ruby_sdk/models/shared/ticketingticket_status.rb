@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class TicketingTicketStatus < T::Enum
+
+
         enums do
           ACTIVE = new('ACTIVE')
           CLOSED = new('CLOSED')

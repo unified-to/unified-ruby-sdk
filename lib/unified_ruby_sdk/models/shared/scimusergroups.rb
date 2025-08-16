@@ -14,23 +14,23 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :value, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
+        field :value, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value'), required: true } }
 
-        field :dollar_ref, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('$ref') } }
+        field :dollar_ref, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('$ref') } }
 
-        field :display, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('display') } }
+        field :display, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('display') } }
 
-        field :type, T.nilable(Models::Shared::ScimUserGroupsType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ScimUserGroupsType, true) } }
-
+        field :type, Crystalline::Nilable.new(Models::Shared::ScimUserGroupsType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ScimUserGroupsType, true) } }
 
         sig { params(value: ::String, dollar_ref: T.nilable(::String), display: T.nilable(::String), type: T.nilable(Models::Shared::ScimUserGroupsType)).void }
-        def initialize(value: nil, dollar_ref: nil, display: nil, type: nil)
+        def initialize(value:, dollar_ref: nil, display: nil, type: nil)
           @value = value
           @dollar_ref = dollar_ref
           @display = display
           @type = type
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @value == other.value

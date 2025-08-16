@@ -18,20 +18,20 @@ Create an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createCommerceItem" method="post" path="/commerce/{connection_id}/item" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.item.create_commerce_item(commerce_item=Models::Shared::CommerceItem.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.item.create_commerce_item(commerce_item: Models::Shared::CommerceItem.new(), connection_id: '<id>')
 
-if ! res.commerce_item.nil?
+unless res.commerce_item.nil?
   # handle response
 end
 
@@ -50,7 +50,11 @@ end
 
 **[T.nilable(Models::Operations::CreateCommerceItemResponse)](../../models/operations/createcommerceitemresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_commerce_item
 
@@ -58,20 +62,20 @@ Retrieve an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getCommerceItem" method="get" path="/commerce/{connection_id}/item/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.item.get_commerce_item(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.item.get_commerce_item(connection_id: '<id>', id: '<id>')
 
-if ! res.commerce_item.nil?
+unless res.commerce_item.nil?
   # handle response
 end
 
@@ -90,7 +94,11 @@ end
 
 **[T.nilable(Models::Operations::GetCommerceItemResponse)](../../models/operations/getcommerceitemresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_commerce_items
 
@@ -98,22 +106,24 @@ List all items
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listCommerceItems" method="get" path="/commerce/{connection_id}/item" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListCommerceItemsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.item.list_commerce_items(req)
+res = s.item.list_commerce_items(request: req)
 
-if ! res.commerce_items.nil?
+unless res.commerce_items.nil?
   # handle response
 end
 
@@ -129,7 +139,11 @@ end
 
 **[T.nilable(Models::Operations::ListCommerceItemsResponse)](../../models/operations/listcommerceitemsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_commerce_item
 
@@ -137,24 +151,26 @@ Update an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchCommerceItem" method="patch" path="/commerce/{connection_id}/item/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchCommerceItemRequest.new(
   commerce_item: Models::Shared::CommerceItem.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.item.patch_commerce_item(req)
+res = s.item.patch_commerce_item(request: req)
 
-if ! res.commerce_item.nil?
+unless res.commerce_item.nil?
   # handle response
 end
 
@@ -170,7 +186,11 @@ end
 
 **[T.nilable(Models::Operations::PatchCommerceItemResponse)](../../models/operations/patchcommerceitemresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_commerce_item
 
@@ -178,16 +198,18 @@ Remove an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeCommerceItem" method="delete" path="/commerce/{connection_id}/item/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.item.remove_commerce_item(connection_id="<id>", id="<id>")
+res = s.item.remove_commerce_item(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -206,7 +228,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveCommerceItemResponse)](../../models/operations/removecommerceitemresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_commerce_item
 
@@ -214,24 +240,26 @@ Update an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateCommerceItem" method="put" path="/commerce/{connection_id}/item/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateCommerceItemRequest.new(
   commerce_item: Models::Shared::CommerceItem.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.item.update_commerce_item(req)
+res = s.item.update_commerce_item(request: req)
 
-if ! res.commerce_item.nil?
+unless res.commerce_item.nil?
   # handle response
 end
 
@@ -247,3 +275,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateCommerceItemResponse)](../../models/operations/updatecommerceitemresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

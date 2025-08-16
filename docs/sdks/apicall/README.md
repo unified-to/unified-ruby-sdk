@@ -14,18 +14,20 @@ Retrieve specific API Call by its ID
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getUnifiedApicall" method="get" path="/unified/apicall/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.apicall.get_unified_apicall(id="<id>")
+res = s.apicall.get_unified_apicall(id: '<id>')
 
-if ! res.api_call.nil?
+unless res.api_call.nil?
   # handle response
 end
 
@@ -41,7 +43,11 @@ end
 
 **[T.nilable(Models::Operations::GetUnifiedApicallResponse)](../../models/operations/getunifiedapicallresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_unified_apicalls
 
@@ -49,20 +55,22 @@ Returns API Calls
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listUnifiedApicalls" method="get" path="/unified/apicall" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListUnifiedApicallsRequest.new()
 
-res = s.apicall.list_unified_apicalls(req)
+res = s.apicall.list_unified_apicalls(request: req)
 
-if ! res.api_calls.nil?
+unless res.api_calls.nil?
   # handle response
 end
 
@@ -78,3 +86,8 @@ end
 
 **[T.nilable(Models::Operations::ListUnifiedApicallsResponse)](../../models/operations/listunifiedapicallsresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

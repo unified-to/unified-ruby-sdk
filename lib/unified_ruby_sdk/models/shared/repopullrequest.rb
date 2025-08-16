@@ -14,26 +14,25 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :closed_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :closed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :commit_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('commit_ids') } }
+        field :commit_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('commit_ids') } }
 
-        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :labels, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('labels') } }
+        field :labels, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('labels') } }
 
-        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :repo_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('repo_id') } }
+        field :repo_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('repo_id') } }
 
-        field :status, T.nilable(Models::Shared::RepoPullrequestStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::RepoPullrequestStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::RepoPullrequestStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::RepoPullrequestStatus, true) } }
 
-        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :user_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
-
+        field :user_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
 
         sig { params(closed_at: T.nilable(::DateTime), commit_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), id: T.nilable(::String), labels: T.nilable(T::Array[::String]), raw: T.nilable(T::Hash[Symbol, ::Object]), repo_id: T.nilable(::String), status: T.nilable(Models::Shared::RepoPullrequestStatus), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
         def initialize(closed_at: nil, commit_ids: nil, created_at: nil, id: nil, labels: nil, raw: nil, repo_id: nil, status: nil, updated_at: nil, user_ids: nil)
@@ -49,6 +48,7 @@ module UnifiedRubySDK
           @user_ids = user_ids
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @closed_at == other.closed_at

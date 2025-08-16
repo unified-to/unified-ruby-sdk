@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class HrisGroupType < T::Enum
+
+
         enums do
           TEAM = new('TEAM')
           GROUP = new('GROUP')

@@ -14,14 +14,13 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :account_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_id') } }
+        field :account_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_id') } }
 
-        field :amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
+        field :amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
 
-        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :sub_items, T.nilable(T::Array[Models::Shared::PropertyAccountingBalancesheetItemSubItems]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sub_items') } }
-
+        field :sub_items, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PropertyAccountingBalancesheetItemSubItems)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sub_items') } }
 
         sig { params(account_id: T.nilable(::String), amount: T.nilable(::Float), name: T.nilable(::String), sub_items: T.nilable(T::Array[Models::Shared::PropertyAccountingBalancesheetItemSubItems])).void }
         def initialize(account_id: nil, amount: nil, name: nil, sub_items: nil)
@@ -31,6 +30,7 @@ module UnifiedRubySDK
           @sub_items = sub_items
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @account_id == other.account_id

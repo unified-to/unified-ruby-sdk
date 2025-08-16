@@ -14,11 +14,28 @@ module UnifiedRubySDK
   extend T::Sig
   class Connection
     extend T::Sig
+    
 
 
     sig { params(sdk_config: SDKConfiguration).void }
     def initialize(sdk_config)
       @sdk_configuration = sdk_config
+      
+    end
+
+    sig { params(base_url: String, url_variables: T.nilable(T::Hash[Symbol, T.any(String, T::Enum)])).returns(String) }
+    def get_url(base_url:, url_variables: nil)
+      sd_base_url, sd_options = @sdk_configuration.get_server_details
+
+      if base_url.nil?
+        base_url = sd_base_url
+      end
+
+      if url_variables.nil?
+        url_variables = sd_options
+      end
+
+      return Utils.template_url base_url, url_variables
     end
 
 
@@ -30,28 +47,31 @@ module UnifiedRubySDK
       base_url = Utils.template_url(url, params)
       url = "#{base_url}/unified/connection"
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :request, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :request, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'createUnifiedConnection',
@@ -63,7 +83,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.post(url) do |req|
+        http_response = T.must(connection).post(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -111,12 +131,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::Connection)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::Connection)
           response = Models::Operations::CreateUnifiedConnectionResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            connection: obj
+            connection: T.unsafe(obj)
           )
 
           return response
@@ -138,7 +159,6 @@ module UnifiedRubySDK
     def get_unified_connection(id:, timeout_ms: nil)
       # get_unified_connection - Retrieve connection
       request = Models::Operations::GetUnifiedConnectionRequest.new(
-        
         id: id
       )
       url, params = @sdk_configuration.get_server_details
@@ -150,17 +170,20 @@ module UnifiedRubySDK
         request
       )
       headers = {}
+      headers = T.cast(headers, T::Hash[String, String])
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'getUnifiedConnection',
@@ -172,7 +195,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           Utils.configure_request_security(req, security)
@@ -219,12 +242,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::Connection)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::Connection)
           response = Models::Operations::GetUnifiedConnectionResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            connection: obj
+            connection: T.unsafe(obj)
           )
 
           return response
@@ -249,18 +273,21 @@ module UnifiedRubySDK
       base_url = Utils.template_url(url, params)
       url = "#{base_url}/unified/connection"
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::ListUnifiedConnectionsRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::ListUnifiedConnectionsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'listUnifiedConnections',
@@ -272,7 +299,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -320,12 +347,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), T::Array[Models::Shared::Connection])
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::Connection))
           response = Models::Operations::ListUnifiedConnectionsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            connections: obj
+            connections: T.unsafe(obj)
           )
 
           return response
@@ -347,7 +375,6 @@ module UnifiedRubySDK
     def patch_unified_connection(connection:, id:, timeout_ms: nil)
       # patch_unified_connection - Update connection
       request = Models::Operations::PatchUnifiedConnectionRequest.new(
-        
         connection: connection,
         id: id
       )
@@ -360,28 +387,31 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :connection, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :connection, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'patchUnifiedConnection',
@@ -393,7 +423,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.patch(url) do |req|
+        http_response = T.must(connection).patch(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -441,12 +471,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::Connection)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::Connection)
           response = Models::Operations::PatchUnifiedConnectionResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            connection: obj
+            connection: T.unsafe(obj)
           )
 
           return response
@@ -468,7 +499,6 @@ module UnifiedRubySDK
     def remove_unified_connection(id:, timeout_ms: nil)
       # remove_unified_connection - Remove connection
       request = Models::Operations::RemoveUnifiedConnectionRequest.new(
-        
         id: id
       )
       url, params = @sdk_configuration.get_server_details
@@ -480,17 +510,20 @@ module UnifiedRubySDK
         request
       )
       headers = {}
+      headers = T.cast(headers, T::Hash[String, String])
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'removeUnifiedConnection',
@@ -502,7 +535,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.delete(url) do |req|
+        http_response = T.must(connection).delete(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           Utils.configure_request_security(req, security)
@@ -551,7 +584,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveUnifiedConnectionResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       elsif Utils.match_status_code(http_response.status, ['4XX'])
         raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
@@ -567,7 +601,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveUnifiedConnectionResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       end
     end
@@ -577,7 +612,6 @@ module UnifiedRubySDK
     def update_unified_connection(connection:, id:, timeout_ms: nil)
       # update_unified_connection - Update connection
       request = Models::Operations::UpdateUnifiedConnectionRequest.new(
-        
         connection: connection,
         id: id
       )
@@ -590,28 +624,31 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :connection, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :connection, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'updateUnifiedConnection',
@@ -623,7 +660,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.put(url) do |req|
+        http_response = T.must(connection).put(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -671,12 +708,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::Connection)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::Connection)
           response = Models::Operations::UpdateUnifiedConnectionResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            connection: obj
+            connection: T.unsafe(obj)
           )
 
           return response

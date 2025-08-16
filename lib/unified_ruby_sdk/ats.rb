@@ -14,11 +14,28 @@ module UnifiedRubySDK
   extend T::Sig
   class Ats
     extend T::Sig
+    
 
 
     sig { params(sdk_config: SDKConfiguration).void }
     def initialize(sdk_config)
       @sdk_configuration = sdk_config
+      
+    end
+
+    sig { params(base_url: String, url_variables: T.nilable(T::Hash[Symbol, T.any(String, T::Enum)])).returns(String) }
+    def get_url(base_url:, url_variables: nil)
+      sd_base_url, sd_options = @sdk_configuration.get_server_details
+
+      if base_url.nil?
+        base_url = sd_base_url
+      end
+
+      if url_variables.nil?
+        url_variables = sd_options
+      end
+
+      return Utils.template_url base_url, url_variables
     end
 
 
@@ -26,7 +43,6 @@ module UnifiedRubySDK
     def create_ats_activity(ats_activity:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_activity - Create an activity
       request = Models::Operations::CreateAtsActivityRequest.new(
-        
         ats_activity: ats_activity,
         connection_id: connection_id,
         fields_: fields_,
@@ -41,29 +57,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :ats_activity, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :ats_activity, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateAtsActivityRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::CreateAtsActivityRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'createAtsActivity',
@@ -75,7 +94,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.post(url) do |req|
+        http_response = T.must(connection).post(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -124,12 +143,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsActivity)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsActivity)
           response = Models::Operations::CreateAtsActivityResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_activity: obj
+            ats_activity: T.unsafe(obj)
           )
 
           return response
@@ -151,7 +171,6 @@ module UnifiedRubySDK
     def create_ats_application(ats_application:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_application - Create an application
       request = Models::Operations::CreateAtsApplicationRequest.new(
-        
         ats_application: ats_application,
         connection_id: connection_id,
         fields_: fields_,
@@ -166,29 +185,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :ats_application, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :ats_application, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateAtsApplicationRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::CreateAtsApplicationRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'createAtsApplication',
@@ -200,7 +222,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.post(url) do |req|
+        http_response = T.must(connection).post(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -249,12 +271,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsApplication)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsApplication)
           response = Models::Operations::CreateAtsApplicationResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_application: obj
+            ats_application: T.unsafe(obj)
           )
 
           return response
@@ -276,7 +299,6 @@ module UnifiedRubySDK
     def create_ats_candidate(ats_candidate:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_candidate - Create a candidate
       request = Models::Operations::CreateAtsCandidateRequest.new(
-        
         ats_candidate: ats_candidate,
         connection_id: connection_id,
         fields_: fields_,
@@ -291,29 +313,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :ats_candidate, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :ats_candidate, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateAtsCandidateRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::CreateAtsCandidateRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'createAtsCandidate',
@@ -325,7 +350,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.post(url) do |req|
+        http_response = T.must(connection).post(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -374,12 +399,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsCandidate)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsCandidate)
           response = Models::Operations::CreateAtsCandidateResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_candidate: obj
+            ats_candidate: T.unsafe(obj)
           )
 
           return response
@@ -401,7 +427,6 @@ module UnifiedRubySDK
     def create_ats_company(ats_company:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_company - Create a company
       request = Models::Operations::CreateAtsCompanyRequest.new(
-        
         ats_company: ats_company,
         connection_id: connection_id,
         fields_: fields_,
@@ -416,29 +441,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :ats_company, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :ats_company, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateAtsCompanyRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::CreateAtsCompanyRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'createAtsCompany',
@@ -450,7 +478,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.post(url) do |req|
+        http_response = T.must(connection).post(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -499,12 +527,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsCompany)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsCompany)
           response = Models::Operations::CreateAtsCompanyResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_company: obj
+            ats_company: T.unsafe(obj)
           )
 
           return response
@@ -526,7 +555,6 @@ module UnifiedRubySDK
     def create_ats_document(ats_document:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_document - Create a document
       request = Models::Operations::CreateAtsDocumentRequest.new(
-        
         ats_document: ats_document,
         connection_id: connection_id,
         fields_: fields_,
@@ -541,29 +569,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :ats_document, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :ats_document, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateAtsDocumentRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::CreateAtsDocumentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'createAtsDocument',
@@ -575,7 +606,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.post(url) do |req|
+        http_response = T.must(connection).post(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -624,12 +655,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsDocument)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsDocument)
           response = Models::Operations::CreateAtsDocumentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_document: obj
+            ats_document: T.unsafe(obj)
           )
 
           return response
@@ -651,7 +683,6 @@ module UnifiedRubySDK
     def create_ats_interview(ats_interview:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_interview - Create an interview
       request = Models::Operations::CreateAtsInterviewRequest.new(
-        
         ats_interview: ats_interview,
         connection_id: connection_id,
         fields_: fields_,
@@ -666,29 +697,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :ats_interview, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :ats_interview, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateAtsInterviewRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::CreateAtsInterviewRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'createAtsInterview',
@@ -700,7 +734,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.post(url) do |req|
+        http_response = T.must(connection).post(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -749,12 +783,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsInterview)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsInterview)
           response = Models::Operations::CreateAtsInterviewResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_interview: obj
+            ats_interview: T.unsafe(obj)
           )
 
           return response
@@ -776,7 +811,6 @@ module UnifiedRubySDK
     def create_ats_job(ats_job:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_job - Create a job
       request = Models::Operations::CreateAtsJobRequest.new(
-        
         ats_job: ats_job,
         connection_id: connection_id,
         fields_: fields_,
@@ -791,29 +825,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :ats_job, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :ats_job, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateAtsJobRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::CreateAtsJobRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'createAtsJob',
@@ -825,7 +862,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.post(url) do |req|
+        http_response = T.must(connection).post(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -874,12 +911,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsJob)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsJob)
           response = Models::Operations::CreateAtsJobResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_job: obj
+            ats_job: T.unsafe(obj)
           )
 
           return response
@@ -901,7 +939,6 @@ module UnifiedRubySDK
     def create_ats_scorecard(ats_scorecard:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_scorecard - Create a scorecard
       request = Models::Operations::CreateAtsScorecardRequest.new(
-        
         ats_scorecard: ats_scorecard,
         connection_id: connection_id,
         fields_: fields_,
@@ -916,29 +953,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :ats_scorecard, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :ats_scorecard, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateAtsScorecardRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::CreateAtsScorecardRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'createAtsScorecard',
@@ -950,7 +990,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.post(url) do |req|
+        http_response = T.must(connection).post(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -999,12 +1039,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsScorecard)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsScorecard)
           response = Models::Operations::CreateAtsScorecardResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_scorecard: obj
+            ats_scorecard: T.unsafe(obj)
           )
 
           return response
@@ -1026,7 +1067,6 @@ module UnifiedRubySDK
     def get_ats_activity(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_activity - Retrieve an activity
       request = Models::Operations::GetAtsActivityRequest.new(
-        
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -1041,18 +1081,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::GetAtsActivityRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::GetAtsActivityRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'getAtsActivity',
@@ -1064,7 +1107,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -1112,12 +1155,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsActivity)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsActivity)
           response = Models::Operations::GetAtsActivityResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_activity: obj
+            ats_activity: T.unsafe(obj)
           )
 
           return response
@@ -1139,7 +1183,6 @@ module UnifiedRubySDK
     def get_ats_application(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_application - Retrieve an application
       request = Models::Operations::GetAtsApplicationRequest.new(
-        
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -1154,18 +1197,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::GetAtsApplicationRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::GetAtsApplicationRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'getAtsApplication',
@@ -1177,7 +1223,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -1225,12 +1271,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsApplication)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsApplication)
           response = Models::Operations::GetAtsApplicationResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_application: obj
+            ats_application: T.unsafe(obj)
           )
 
           return response
@@ -1252,7 +1299,6 @@ module UnifiedRubySDK
     def get_ats_candidate(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_candidate - Retrieve a candidate
       request = Models::Operations::GetAtsCandidateRequest.new(
-        
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -1267,18 +1313,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::GetAtsCandidateRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::GetAtsCandidateRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'getAtsCandidate',
@@ -1290,7 +1339,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -1338,12 +1387,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsCandidate)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsCandidate)
           response = Models::Operations::GetAtsCandidateResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_candidate: obj
+            ats_candidate: T.unsafe(obj)
           )
 
           return response
@@ -1365,7 +1415,6 @@ module UnifiedRubySDK
     def get_ats_company(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_company - Retrieve a company
       request = Models::Operations::GetAtsCompanyRequest.new(
-        
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -1380,18 +1429,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::GetAtsCompanyRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::GetAtsCompanyRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'getAtsCompany',
@@ -1403,7 +1455,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -1451,12 +1503,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsCompany)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsCompany)
           response = Models::Operations::GetAtsCompanyResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_company: obj
+            ats_company: T.unsafe(obj)
           )
 
           return response
@@ -1478,7 +1531,6 @@ module UnifiedRubySDK
     def get_ats_document(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_document - Retrieve a document
       request = Models::Operations::GetAtsDocumentRequest.new(
-        
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -1493,18 +1545,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::GetAtsDocumentRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::GetAtsDocumentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'getAtsDocument',
@@ -1516,7 +1571,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -1564,12 +1619,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsDocument)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsDocument)
           response = Models::Operations::GetAtsDocumentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_document: obj
+            ats_document: T.unsafe(obj)
           )
 
           return response
@@ -1591,7 +1647,6 @@ module UnifiedRubySDK
     def get_ats_interview(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_interview - Retrieve an interview
       request = Models::Operations::GetAtsInterviewRequest.new(
-        
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -1606,18 +1661,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::GetAtsInterviewRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::GetAtsInterviewRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'getAtsInterview',
@@ -1629,7 +1687,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -1677,12 +1735,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsInterview)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsInterview)
           response = Models::Operations::GetAtsInterviewResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_interview: obj
+            ats_interview: T.unsafe(obj)
           )
 
           return response
@@ -1704,7 +1763,6 @@ module UnifiedRubySDK
     def get_ats_job(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_job - Retrieve a job
       request = Models::Operations::GetAtsJobRequest.new(
-        
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -1719,18 +1777,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::GetAtsJobRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::GetAtsJobRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'getAtsJob',
@@ -1742,7 +1803,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -1790,12 +1851,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsJob)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsJob)
           response = Models::Operations::GetAtsJobResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_job: obj
+            ats_job: T.unsafe(obj)
           )
 
           return response
@@ -1817,7 +1879,6 @@ module UnifiedRubySDK
     def get_ats_scorecard(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_scorecard - Retrieve a scorecard
       request = Models::Operations::GetAtsScorecardRequest.new(
-        
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -1832,18 +1893,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::GetAtsScorecardRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::GetAtsScorecardRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'getAtsScorecard',
@@ -1855,7 +1919,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -1903,12 +1967,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsScorecard)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsScorecard)
           response = Models::Operations::GetAtsScorecardResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_scorecard: obj
+            ats_scorecard: T.unsafe(obj)
           )
 
           return response
@@ -1938,18 +2003,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::ListAtsActivitiesRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::ListAtsActivitiesRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'listAtsActivities',
@@ -1961,7 +2029,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -2009,12 +2077,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), T::Array[Models::Shared::AtsActivity])
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AtsActivity))
           response = Models::Operations::ListAtsActivitiesResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_activities: obj
+            ats_activities: T.unsafe(obj)
           )
 
           return response
@@ -2044,18 +2113,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::ListAtsApplicationsRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::ListAtsApplicationsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'listAtsApplications',
@@ -2067,7 +2139,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -2115,12 +2187,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), T::Array[Models::Shared::AtsApplication])
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AtsApplication))
           response = Models::Operations::ListAtsApplicationsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_applications: obj
+            ats_applications: T.unsafe(obj)
           )
 
           return response
@@ -2150,18 +2223,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::ListAtsApplicationstatusesRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::ListAtsApplicationstatusesRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'listAtsApplicationstatuses',
@@ -2173,7 +2249,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -2221,12 +2297,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), T::Array[Models::Shared::AtsStatus])
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AtsStatus))
           response = Models::Operations::ListAtsApplicationstatusesResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_statuses: obj
+            ats_statuses: T.unsafe(obj)
           )
 
           return response
@@ -2256,18 +2333,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::ListAtsCandidatesRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::ListAtsCandidatesRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'listAtsCandidates',
@@ -2279,7 +2359,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -2327,12 +2407,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), T::Array[Models::Shared::AtsCandidate])
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AtsCandidate))
           response = Models::Operations::ListAtsCandidatesResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_candidates: obj
+            ats_candidates: T.unsafe(obj)
           )
 
           return response
@@ -2362,18 +2443,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::ListAtsCompaniesRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::ListAtsCompaniesRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'listAtsCompanies',
@@ -2385,7 +2469,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -2433,12 +2517,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), T::Array[Models::Shared::AtsCompany])
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AtsCompany))
           response = Models::Operations::ListAtsCompaniesResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_companies: obj
+            ats_companies: T.unsafe(obj)
           )
 
           return response
@@ -2468,18 +2553,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::ListAtsDocumentsRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::ListAtsDocumentsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'listAtsDocuments',
@@ -2491,7 +2579,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -2539,12 +2627,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), T::Array[Models::Shared::AtsDocument])
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AtsDocument))
           response = Models::Operations::ListAtsDocumentsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_documents: obj
+            ats_documents: T.unsafe(obj)
           )
 
           return response
@@ -2574,18 +2663,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::ListAtsInterviewsRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::ListAtsInterviewsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'listAtsInterviews',
@@ -2597,7 +2689,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -2645,12 +2737,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), T::Array[Models::Shared::AtsInterview])
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AtsInterview))
           response = Models::Operations::ListAtsInterviewsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_interviews: obj
+            ats_interviews: T.unsafe(obj)
           )
 
           return response
@@ -2680,18 +2773,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::ListAtsJobsRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::ListAtsJobsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'listAtsJobs',
@@ -2703,7 +2799,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -2751,12 +2847,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), T::Array[Models::Shared::AtsJob])
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AtsJob))
           response = Models::Operations::ListAtsJobsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_jobs: obj
+            ats_jobs: T.unsafe(obj)
           )
 
           return response
@@ -2786,18 +2883,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::ListAtsScorecardsRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::ListAtsScorecardsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'listAtsScorecards',
@@ -2809,7 +2909,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -2857,12 +2957,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), T::Array[Models::Shared::AtsScorecard])
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AtsScorecard))
           response = Models::Operations::ListAtsScorecardsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_scorecards: obj
+            ats_scorecards: T.unsafe(obj)
           )
 
           return response
@@ -2892,29 +2993,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :ats_activity, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :ats_activity, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchAtsActivityRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::PatchAtsActivityRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'patchAtsActivity',
@@ -2926,7 +3030,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.patch(url) do |req|
+        http_response = T.must(connection).patch(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -2975,12 +3079,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsActivity)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsActivity)
           response = Models::Operations::PatchAtsActivityResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_activity: obj
+            ats_activity: T.unsafe(obj)
           )
 
           return response
@@ -3010,29 +3115,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :ats_application, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :ats_application, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchAtsApplicationRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::PatchAtsApplicationRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'patchAtsApplication',
@@ -3044,7 +3152,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.patch(url) do |req|
+        http_response = T.must(connection).patch(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -3093,12 +3201,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsApplication)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsApplication)
           response = Models::Operations::PatchAtsApplicationResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_application: obj
+            ats_application: T.unsafe(obj)
           )
 
           return response
@@ -3128,29 +3237,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :ats_candidate, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :ats_candidate, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchAtsCandidateRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::PatchAtsCandidateRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'patchAtsCandidate',
@@ -3162,7 +3274,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.patch(url) do |req|
+        http_response = T.must(connection).patch(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -3211,12 +3323,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsCandidate)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsCandidate)
           response = Models::Operations::PatchAtsCandidateResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_candidate: obj
+            ats_candidate: T.unsafe(obj)
           )
 
           return response
@@ -3246,29 +3359,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :ats_company, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :ats_company, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchAtsCompanyRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::PatchAtsCompanyRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'patchAtsCompany',
@@ -3280,7 +3396,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.patch(url) do |req|
+        http_response = T.must(connection).patch(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -3329,12 +3445,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsCompany)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsCompany)
           response = Models::Operations::PatchAtsCompanyResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_company: obj
+            ats_company: T.unsafe(obj)
           )
 
           return response
@@ -3364,29 +3481,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :ats_document, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :ats_document, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchAtsDocumentRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::PatchAtsDocumentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'patchAtsDocument',
@@ -3398,7 +3518,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.patch(url) do |req|
+        http_response = T.must(connection).patch(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -3447,12 +3567,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsDocument)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsDocument)
           response = Models::Operations::PatchAtsDocumentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_document: obj
+            ats_document: T.unsafe(obj)
           )
 
           return response
@@ -3482,29 +3603,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :ats_interview, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :ats_interview, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchAtsInterviewRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::PatchAtsInterviewRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'patchAtsInterview',
@@ -3516,7 +3640,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.patch(url) do |req|
+        http_response = T.must(connection).patch(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -3565,12 +3689,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsInterview)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsInterview)
           response = Models::Operations::PatchAtsInterviewResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_interview: obj
+            ats_interview: T.unsafe(obj)
           )
 
           return response
@@ -3600,29 +3725,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :ats_job, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :ats_job, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchAtsJobRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::PatchAtsJobRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'patchAtsJob',
@@ -3634,7 +3762,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.patch(url) do |req|
+        http_response = T.must(connection).patch(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -3683,12 +3811,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsJob)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsJob)
           response = Models::Operations::PatchAtsJobResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_job: obj
+            ats_job: T.unsafe(obj)
           )
 
           return response
@@ -3718,29 +3847,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :ats_scorecard, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :ats_scorecard, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchAtsScorecardRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::PatchAtsScorecardRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'patchAtsScorecard',
@@ -3752,7 +3884,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.patch(url) do |req|
+        http_response = T.must(connection).patch(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -3801,12 +3933,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsScorecard)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsScorecard)
           response = Models::Operations::PatchAtsScorecardResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_scorecard: obj
+            ats_scorecard: T.unsafe(obj)
           )
 
           return response
@@ -3828,7 +3961,6 @@ module UnifiedRubySDK
     def remove_ats_activity(connection_id:, id:, timeout_ms: nil)
       # remove_ats_activity - Remove an activity
       request = Models::Operations::RemoveAtsActivityRequest.new(
-        
         connection_id: connection_id,
         id: id
       )
@@ -3841,17 +3973,20 @@ module UnifiedRubySDK
         request
       )
       headers = {}
+      headers = T.cast(headers, T::Hash[String, String])
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'removeAtsActivity',
@@ -3863,7 +3998,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.delete(url) do |req|
+        http_response = T.must(connection).delete(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           Utils.configure_request_security(req, security)
@@ -3912,7 +4047,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveAtsActivityResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       elsif Utils.match_status_code(http_response.status, ['4XX'])
         raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
@@ -3928,7 +4064,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveAtsActivityResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       end
     end
@@ -3938,7 +4075,6 @@ module UnifiedRubySDK
     def remove_ats_application(connection_id:, id:, timeout_ms: nil)
       # remove_ats_application - Remove an application
       request = Models::Operations::RemoveAtsApplicationRequest.new(
-        
         connection_id: connection_id,
         id: id
       )
@@ -3951,17 +4087,20 @@ module UnifiedRubySDK
         request
       )
       headers = {}
+      headers = T.cast(headers, T::Hash[String, String])
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'removeAtsApplication',
@@ -3973,7 +4112,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.delete(url) do |req|
+        http_response = T.must(connection).delete(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           Utils.configure_request_security(req, security)
@@ -4022,7 +4161,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveAtsApplicationResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       elsif Utils.match_status_code(http_response.status, ['4XX'])
         raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
@@ -4038,7 +4178,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveAtsApplicationResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       end
     end
@@ -4048,7 +4189,6 @@ module UnifiedRubySDK
     def remove_ats_candidate(connection_id:, id:, timeout_ms: nil)
       # remove_ats_candidate - Remove a candidate
       request = Models::Operations::RemoveAtsCandidateRequest.new(
-        
         connection_id: connection_id,
         id: id
       )
@@ -4061,17 +4201,20 @@ module UnifiedRubySDK
         request
       )
       headers = {}
+      headers = T.cast(headers, T::Hash[String, String])
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'removeAtsCandidate',
@@ -4083,7 +4226,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.delete(url) do |req|
+        http_response = T.must(connection).delete(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           Utils.configure_request_security(req, security)
@@ -4132,7 +4275,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveAtsCandidateResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       elsif Utils.match_status_code(http_response.status, ['4XX'])
         raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
@@ -4148,7 +4292,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveAtsCandidateResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       end
     end
@@ -4158,7 +4303,6 @@ module UnifiedRubySDK
     def remove_ats_company(connection_id:, id:, timeout_ms: nil)
       # remove_ats_company - Remove a company
       request = Models::Operations::RemoveAtsCompanyRequest.new(
-        
         connection_id: connection_id,
         id: id
       )
@@ -4171,17 +4315,20 @@ module UnifiedRubySDK
         request
       )
       headers = {}
+      headers = T.cast(headers, T::Hash[String, String])
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'removeAtsCompany',
@@ -4193,7 +4340,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.delete(url) do |req|
+        http_response = T.must(connection).delete(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           Utils.configure_request_security(req, security)
@@ -4242,7 +4389,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveAtsCompanyResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       elsif Utils.match_status_code(http_response.status, ['4XX'])
         raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
@@ -4258,7 +4406,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveAtsCompanyResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       end
     end
@@ -4268,7 +4417,6 @@ module UnifiedRubySDK
     def remove_ats_document(connection_id:, id:, timeout_ms: nil)
       # remove_ats_document - Remove a document
       request = Models::Operations::RemoveAtsDocumentRequest.new(
-        
         connection_id: connection_id,
         id: id
       )
@@ -4281,17 +4429,20 @@ module UnifiedRubySDK
         request
       )
       headers = {}
+      headers = T.cast(headers, T::Hash[String, String])
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'removeAtsDocument',
@@ -4303,7 +4454,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.delete(url) do |req|
+        http_response = T.must(connection).delete(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           Utils.configure_request_security(req, security)
@@ -4352,7 +4503,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveAtsDocumentResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       elsif Utils.match_status_code(http_response.status, ['4XX'])
         raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
@@ -4368,7 +4520,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveAtsDocumentResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       end
     end
@@ -4378,7 +4531,6 @@ module UnifiedRubySDK
     def remove_ats_interview(connection_id:, id:, timeout_ms: nil)
       # remove_ats_interview - Remove an interview
       request = Models::Operations::RemoveAtsInterviewRequest.new(
-        
         connection_id: connection_id,
         id: id
       )
@@ -4391,17 +4543,20 @@ module UnifiedRubySDK
         request
       )
       headers = {}
+      headers = T.cast(headers, T::Hash[String, String])
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'removeAtsInterview',
@@ -4413,7 +4568,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.delete(url) do |req|
+        http_response = T.must(connection).delete(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           Utils.configure_request_security(req, security)
@@ -4462,7 +4617,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveAtsInterviewResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       elsif Utils.match_status_code(http_response.status, ['4XX'])
         raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
@@ -4478,7 +4634,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveAtsInterviewResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       end
     end
@@ -4488,7 +4645,6 @@ module UnifiedRubySDK
     def remove_ats_job(connection_id:, id:, timeout_ms: nil)
       # remove_ats_job - Remove a job
       request = Models::Operations::RemoveAtsJobRequest.new(
-        
         connection_id: connection_id,
         id: id
       )
@@ -4501,17 +4657,20 @@ module UnifiedRubySDK
         request
       )
       headers = {}
+      headers = T.cast(headers, T::Hash[String, String])
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'removeAtsJob',
@@ -4523,7 +4682,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.delete(url) do |req|
+        http_response = T.must(connection).delete(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           Utils.configure_request_security(req, security)
@@ -4572,7 +4731,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveAtsJobResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       elsif Utils.match_status_code(http_response.status, ['4XX'])
         raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
@@ -4588,7 +4748,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveAtsJobResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       end
     end
@@ -4598,7 +4759,6 @@ module UnifiedRubySDK
     def remove_ats_scorecard(connection_id:, id:, timeout_ms: nil)
       # remove_ats_scorecard - Remove a scorecard
       request = Models::Operations::RemoveAtsScorecardRequest.new(
-        
         connection_id: connection_id,
         id: id
       )
@@ -4611,17 +4771,20 @@ module UnifiedRubySDK
         request
       )
       headers = {}
+      headers = T.cast(headers, T::Hash[String, String])
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'removeAtsScorecard',
@@ -4633,7 +4796,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.delete(url) do |req|
+        http_response = T.must(connection).delete(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           Utils.configure_request_security(req, security)
@@ -4682,7 +4845,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveAtsScorecardResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       elsif Utils.match_status_code(http_response.status, ['4XX'])
         raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
@@ -4698,7 +4862,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveAtsScorecardResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       end
     end
@@ -4716,29 +4881,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :ats_activity, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :ats_activity, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateAtsActivityRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::UpdateAtsActivityRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'updateAtsActivity',
@@ -4750,7 +4918,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.put(url) do |req|
+        http_response = T.must(connection).put(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -4799,12 +4967,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsActivity)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsActivity)
           response = Models::Operations::UpdateAtsActivityResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_activity: obj
+            ats_activity: T.unsafe(obj)
           )
 
           return response
@@ -4834,29 +5003,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :ats_application, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :ats_application, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateAtsApplicationRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::UpdateAtsApplicationRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'updateAtsApplication',
@@ -4868,7 +5040,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.put(url) do |req|
+        http_response = T.must(connection).put(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -4917,12 +5089,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsApplication)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsApplication)
           response = Models::Operations::UpdateAtsApplicationResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_application: obj
+            ats_application: T.unsafe(obj)
           )
 
           return response
@@ -4952,29 +5125,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :ats_candidate, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :ats_candidate, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateAtsCandidateRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::UpdateAtsCandidateRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'updateAtsCandidate',
@@ -4986,7 +5162,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.put(url) do |req|
+        http_response = T.must(connection).put(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -5035,12 +5211,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsCandidate)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsCandidate)
           response = Models::Operations::UpdateAtsCandidateResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_candidate: obj
+            ats_candidate: T.unsafe(obj)
           )
 
           return response
@@ -5070,29 +5247,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :ats_company, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :ats_company, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateAtsCompanyRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::UpdateAtsCompanyRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'updateAtsCompany',
@@ -5104,7 +5284,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.put(url) do |req|
+        http_response = T.must(connection).put(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -5153,12 +5333,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsCompany)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsCompany)
           response = Models::Operations::UpdateAtsCompanyResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_company: obj
+            ats_company: T.unsafe(obj)
           )
 
           return response
@@ -5188,29 +5369,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :ats_document, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :ats_document, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateAtsDocumentRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::UpdateAtsDocumentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'updateAtsDocument',
@@ -5222,7 +5406,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.put(url) do |req|
+        http_response = T.must(connection).put(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -5271,12 +5455,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsDocument)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsDocument)
           response = Models::Operations::UpdateAtsDocumentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_document: obj
+            ats_document: T.unsafe(obj)
           )
 
           return response
@@ -5306,29 +5491,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :ats_interview, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :ats_interview, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateAtsInterviewRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::UpdateAtsInterviewRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'updateAtsInterview',
@@ -5340,7 +5528,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.put(url) do |req|
+        http_response = T.must(connection).put(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -5389,12 +5577,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsInterview)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsInterview)
           response = Models::Operations::UpdateAtsInterviewResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_interview: obj
+            ats_interview: T.unsafe(obj)
           )
 
           return response
@@ -5424,29 +5613,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :ats_job, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :ats_job, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateAtsJobRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::UpdateAtsJobRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'updateAtsJob',
@@ -5458,7 +5650,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.put(url) do |req|
+        http_response = T.must(connection).put(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -5507,12 +5699,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsJob)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsJob)
           response = Models::Operations::UpdateAtsJobResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_job: obj
+            ats_job: T.unsafe(obj)
           )
 
           return response
@@ -5542,29 +5735,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :ats_scorecard, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :ats_scorecard, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateAtsScorecardRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::UpdateAtsScorecardRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'updateAtsScorecard',
@@ -5576,7 +5772,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.put(url) do |req|
+        http_response = T.must(connection).put(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -5625,12 +5821,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::AtsScorecard)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsScorecard)
           response = Models::Operations::UpdateAtsScorecardResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ats_scorecard: obj
+            ats_scorecard: T.unsafe(obj)
           )
 
           return response

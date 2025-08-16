@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class AccountingTelephoneType < T::Enum
+
+
         enums do
           WORK = new('WORK')
           HOME = new('HOME')

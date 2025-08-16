@@ -16,15 +16,15 @@ module UnifiedRubySDK
         # A webhook is used to POST new/updated information to your server.
         field :webhook, Models::Shared::Webhook, { 'request': { 'media_type': 'application/json' } }
         # When set, all of the existing data will sent back to your server.
-        field :include_all, T.nilable(T::Boolean), { 'query_param': { 'field_name': 'include_all', 'style': 'form', 'explode': true } }
-
+        field :include_all, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'query_param': { 'field_name': 'include_all', 'style': 'form', 'explode': true } }
 
         sig { params(webhook: Models::Shared::Webhook, include_all: T.nilable(T::Boolean)).void }
-        def initialize(webhook: nil, include_all: nil)
+        def initialize(webhook:, include_all: nil)
           @webhook = webhook
           @include_all = include_all
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @webhook == other.webhook

@@ -14,11 +14,28 @@ module UnifiedRubySDK
   extend T::Sig
   class Lms
     extend T::Sig
+    
 
 
     sig { params(sdk_config: SDKConfiguration).void }
     def initialize(sdk_config)
       @sdk_configuration = sdk_config
+      
+    end
+
+    sig { params(base_url: String, url_variables: T.nilable(T::Hash[Symbol, T.any(String, T::Enum)])).returns(String) }
+    def get_url(base_url:, url_variables: nil)
+      sd_base_url, sd_options = @sdk_configuration.get_server_details
+
+      if base_url.nil?
+        base_url = sd_base_url
+      end
+
+      if url_variables.nil?
+        url_variables = sd_options
+      end
+
+      return Utils.template_url base_url, url_variables
     end
 
 
@@ -26,7 +43,6 @@ module UnifiedRubySDK
     def create_lms_class(lms_class:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_lms_class - Create a class
       request = Models::Operations::CreateLmsClassRequest.new(
-        
         lms_class: lms_class,
         connection_id: connection_id,
         fields_: fields_,
@@ -41,29 +57,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :lms_class, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :lms_class, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateLmsClassRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::CreateLmsClassRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'createLmsClass',
@@ -75,7 +94,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.post(url) do |req|
+        http_response = T.must(connection).post(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -124,12 +143,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::LmsClass)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsClass)
           response = Models::Operations::CreateLmsClassResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            lms_class: obj
+            lms_class: T.unsafe(obj)
           )
 
           return response
@@ -151,7 +171,6 @@ module UnifiedRubySDK
     def create_lms_course(lms_course:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_lms_course - Create a course
       request = Models::Operations::CreateLmsCourseRequest.new(
-        
         lms_course: lms_course,
         connection_id: connection_id,
         fields_: fields_,
@@ -166,29 +185,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :lms_course, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :lms_course, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateLmsCourseRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::CreateLmsCourseRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'createLmsCourse',
@@ -200,7 +222,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.post(url) do |req|
+        http_response = T.must(connection).post(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -249,12 +271,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::LmsCourse)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsCourse)
           response = Models::Operations::CreateLmsCourseResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            lms_course: obj
+            lms_course: T.unsafe(obj)
           )
 
           return response
@@ -276,7 +299,6 @@ module UnifiedRubySDK
     def create_lms_instructor(lms_instructor:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_lms_instructor - Create an instructor
       request = Models::Operations::CreateLmsInstructorRequest.new(
-        
         lms_instructor: lms_instructor,
         connection_id: connection_id,
         fields_: fields_,
@@ -291,29 +313,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :lms_instructor, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :lms_instructor, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateLmsInstructorRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::CreateLmsInstructorRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'createLmsInstructor',
@@ -325,7 +350,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.post(url) do |req|
+        http_response = T.must(connection).post(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -374,12 +399,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::LmsInstructor)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsInstructor)
           response = Models::Operations::CreateLmsInstructorResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            lms_instructor: obj
+            lms_instructor: T.unsafe(obj)
           )
 
           return response
@@ -401,7 +427,6 @@ module UnifiedRubySDK
     def create_lms_student(lms_student:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_lms_student - Create a student
       request = Models::Operations::CreateLmsStudentRequest.new(
-        
         lms_student: lms_student,
         connection_id: connection_id,
         fields_: fields_,
@@ -416,29 +441,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :lms_student, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :lms_student, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateLmsStudentRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::CreateLmsStudentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'createLmsStudent',
@@ -450,7 +478,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.post(url) do |req|
+        http_response = T.must(connection).post(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -499,12 +527,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::LmsStudent)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsStudent)
           response = Models::Operations::CreateLmsStudentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            lms_student: obj
+            lms_student: T.unsafe(obj)
           )
 
           return response
@@ -526,7 +555,6 @@ module UnifiedRubySDK
     def get_lms_class(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_lms_class - Retrieve a class
       request = Models::Operations::GetLmsClassRequest.new(
-        
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -541,18 +569,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::GetLmsClassRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::GetLmsClassRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'getLmsClass',
@@ -564,7 +595,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -612,12 +643,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::LmsClass)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsClass)
           response = Models::Operations::GetLmsClassResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            lms_class: obj
+            lms_class: T.unsafe(obj)
           )
 
           return response
@@ -639,7 +671,6 @@ module UnifiedRubySDK
     def get_lms_course(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_lms_course - Retrieve a course
       request = Models::Operations::GetLmsCourseRequest.new(
-        
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -654,18 +685,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::GetLmsCourseRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::GetLmsCourseRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'getLmsCourse',
@@ -677,7 +711,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -725,12 +759,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::LmsCourse)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsCourse)
           response = Models::Operations::GetLmsCourseResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            lms_course: obj
+            lms_course: T.unsafe(obj)
           )
 
           return response
@@ -752,7 +787,6 @@ module UnifiedRubySDK
     def get_lms_instructor(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_lms_instructor - Retrieve an instructor
       request = Models::Operations::GetLmsInstructorRequest.new(
-        
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -767,18 +801,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::GetLmsInstructorRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::GetLmsInstructorRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'getLmsInstructor',
@@ -790,7 +827,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -838,12 +875,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::LmsInstructor)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsInstructor)
           response = Models::Operations::GetLmsInstructorResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            lms_instructor: obj
+            lms_instructor: T.unsafe(obj)
           )
 
           return response
@@ -865,7 +903,6 @@ module UnifiedRubySDK
     def get_lms_student(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_lms_student - Retrieve a student
       request = Models::Operations::GetLmsStudentRequest.new(
-        
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -880,18 +917,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::GetLmsStudentRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::GetLmsStudentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'getLmsStudent',
@@ -903,7 +943,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -951,12 +991,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::LmsStudent)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsStudent)
           response = Models::Operations::GetLmsStudentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            lms_student: obj
+            lms_student: T.unsafe(obj)
           )
 
           return response
@@ -986,18 +1027,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::ListLmsClassesRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::ListLmsClassesRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'listLmsClasses',
@@ -1009,7 +1053,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -1057,12 +1101,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), T::Array[Models::Shared::LmsClass])
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::LmsClass))
           response = Models::Operations::ListLmsClassesResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            lms_classes: obj
+            lms_classes: T.unsafe(obj)
           )
 
           return response
@@ -1092,18 +1137,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::ListLmsCoursesRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::ListLmsCoursesRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'listLmsCourses',
@@ -1115,7 +1163,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -1163,12 +1211,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), T::Array[Models::Shared::LmsCourse])
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::LmsCourse))
           response = Models::Operations::ListLmsCoursesResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            lms_courses: obj
+            lms_courses: T.unsafe(obj)
           )
 
           return response
@@ -1198,18 +1247,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::ListLmsInstructorsRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::ListLmsInstructorsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'listLmsInstructors',
@@ -1221,7 +1273,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -1269,12 +1321,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), T::Array[Models::Shared::LmsInstructor])
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::LmsInstructor))
           response = Models::Operations::ListLmsInstructorsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            lms_instructors: obj
+            lms_instructors: T.unsafe(obj)
           )
 
           return response
@@ -1304,18 +1357,21 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      query_params = Utils.get_query_params(Models::Operations::ListLmsStudentsRequest, request)
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::ListLmsStudentsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'listLmsStudents',
@@ -1327,7 +1383,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.get(url) do |req|
+        http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
@@ -1375,12 +1431,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), T::Array[Models::Shared::LmsStudent])
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::LmsStudent))
           response = Models::Operations::ListLmsStudentsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            lms_students: obj
+            lms_students: T.unsafe(obj)
           )
 
           return response
@@ -1410,29 +1467,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :lms_class, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :lms_class, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchLmsClassRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::PatchLmsClassRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'patchLmsClass',
@@ -1444,7 +1504,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.patch(url) do |req|
+        http_response = T.must(connection).patch(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -1493,12 +1553,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::LmsClass)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsClass)
           response = Models::Operations::PatchLmsClassResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            lms_class: obj
+            lms_class: T.unsafe(obj)
           )
 
           return response
@@ -1528,29 +1589,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :lms_course, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :lms_course, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchLmsCourseRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::PatchLmsCourseRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'patchLmsCourse',
@@ -1562,7 +1626,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.patch(url) do |req|
+        http_response = T.must(connection).patch(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -1611,12 +1675,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::LmsCourse)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsCourse)
           response = Models::Operations::PatchLmsCourseResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            lms_course: obj
+            lms_course: T.unsafe(obj)
           )
 
           return response
@@ -1646,29 +1711,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :lms_instructor, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :lms_instructor, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchLmsInstructorRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::PatchLmsInstructorRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'patchLmsInstructor',
@@ -1680,7 +1748,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.patch(url) do |req|
+        http_response = T.must(connection).patch(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -1729,12 +1797,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::LmsInstructor)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsInstructor)
           response = Models::Operations::PatchLmsInstructorResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            lms_instructor: obj
+            lms_instructor: T.unsafe(obj)
           )
 
           return response
@@ -1764,29 +1833,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :lms_student, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :lms_student, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchLmsStudentRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::PatchLmsStudentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'patchLmsStudent',
@@ -1798,7 +1870,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.patch(url) do |req|
+        http_response = T.must(connection).patch(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -1847,12 +1919,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::LmsStudent)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsStudent)
           response = Models::Operations::PatchLmsStudentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            lms_student: obj
+            lms_student: T.unsafe(obj)
           )
 
           return response
@@ -1874,7 +1947,6 @@ module UnifiedRubySDK
     def remove_lms_class(connection_id:, id:, timeout_ms: nil)
       # remove_lms_class - Remove a class
       request = Models::Operations::RemoveLmsClassRequest.new(
-        
         connection_id: connection_id,
         id: id
       )
@@ -1887,17 +1959,20 @@ module UnifiedRubySDK
         request
       )
       headers = {}
+      headers = T.cast(headers, T::Hash[String, String])
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'removeLmsClass',
@@ -1909,7 +1984,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.delete(url) do |req|
+        http_response = T.must(connection).delete(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           Utils.configure_request_security(req, security)
@@ -1958,7 +2033,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveLmsClassResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       elsif Utils.match_status_code(http_response.status, ['4XX'])
         raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
@@ -1974,7 +2050,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveLmsClassResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       end
     end
@@ -1984,7 +2061,6 @@ module UnifiedRubySDK
     def remove_lms_course(connection_id:, id:, timeout_ms: nil)
       # remove_lms_course - Remove a course
       request = Models::Operations::RemoveLmsCourseRequest.new(
-        
         connection_id: connection_id,
         id: id
       )
@@ -1997,17 +2073,20 @@ module UnifiedRubySDK
         request
       )
       headers = {}
+      headers = T.cast(headers, T::Hash[String, String])
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'removeLmsCourse',
@@ -2019,7 +2098,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.delete(url) do |req|
+        http_response = T.must(connection).delete(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           Utils.configure_request_security(req, security)
@@ -2068,7 +2147,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveLmsCourseResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       elsif Utils.match_status_code(http_response.status, ['4XX'])
         raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
@@ -2084,7 +2164,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveLmsCourseResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       end
     end
@@ -2094,7 +2175,6 @@ module UnifiedRubySDK
     def remove_lms_instructor(connection_id:, id:, timeout_ms: nil)
       # remove_lms_instructor - Remove an instructor
       request = Models::Operations::RemoveLmsInstructorRequest.new(
-        
         connection_id: connection_id,
         id: id
       )
@@ -2107,17 +2187,20 @@ module UnifiedRubySDK
         request
       )
       headers = {}
+      headers = T.cast(headers, T::Hash[String, String])
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'removeLmsInstructor',
@@ -2129,7 +2212,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.delete(url) do |req|
+        http_response = T.must(connection).delete(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           Utils.configure_request_security(req, security)
@@ -2178,7 +2261,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveLmsInstructorResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       elsif Utils.match_status_code(http_response.status, ['4XX'])
         raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
@@ -2194,7 +2278,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveLmsInstructorResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       end
     end
@@ -2204,7 +2289,6 @@ module UnifiedRubySDK
     def remove_lms_student(connection_id:, id:, timeout_ms: nil)
       # remove_lms_student - Remove a student
       request = Models::Operations::RemoveLmsStudentRequest.new(
-        
         connection_id: connection_id,
         id: id
       )
@@ -2217,17 +2301,20 @@ module UnifiedRubySDK
         request
       )
       headers = {}
+      headers = T.cast(headers, T::Hash[String, String])
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'removeLmsStudent',
@@ -2239,7 +2326,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.delete(url) do |req|
+        http_response = T.must(connection).delete(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           Utils.configure_request_security(req, security)
@@ -2288,7 +2375,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveLmsStudentResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       elsif Utils.match_status_code(http_response.status, ['4XX'])
         raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
@@ -2304,7 +2392,8 @@ module UnifiedRubySDK
         return Models::Operations::RemoveLmsStudentResponse.new(
           status_code: http_response.status,
           content_type: content_type,
-          raw_response: http_response
+          raw_response: http_response,
+          headers: {}
         )
       end
     end
@@ -2322,29 +2411,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :lms_class, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :lms_class, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateLmsClassRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::UpdateLmsClassRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'updateLmsClass',
@@ -2356,7 +2448,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.put(url) do |req|
+        http_response = T.must(connection).put(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -2405,12 +2497,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::LmsClass)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsClass)
           response = Models::Operations::UpdateLmsClassResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            lms_class: obj
+            lms_class: T.unsafe(obj)
           )
 
           return response
@@ -2440,29 +2533,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :lms_course, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :lms_course, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateLmsCourseRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::UpdateLmsCourseRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'updateLmsCourse',
@@ -2474,7 +2570,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.put(url) do |req|
+        http_response = T.must(connection).put(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -2523,12 +2619,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::LmsCourse)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsCourse)
           response = Models::Operations::UpdateLmsCourseResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            lms_course: obj
+            lms_course: T.unsafe(obj)
           )
 
           return response
@@ -2558,29 +2655,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :lms_instructor, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :lms_instructor, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateLmsInstructorRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::UpdateLmsInstructorRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'updateLmsInstructor',
@@ -2592,7 +2692,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.put(url) do |req|
+        http_response = T.must(connection).put(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -2641,12 +2741,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::LmsInstructor)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsInstructor)
           response = Models::Operations::UpdateLmsInstructorResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            lms_instructor: obj
+            lms_instructor: T.unsafe(obj)
           )
 
           return response
@@ -2676,29 +2777,32 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      req_content_type, data, form = Utils.serialize_request_body(request, :lms_student, :json)
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :lms_student, :json)
       headers['content-type'] = req_content_type
       raise StandardError, 'request body is required' if data.nil? && form.nil?
 
       if form
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(data)
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateLmsStudentRequest, request)
+      query_params = Utils.get_query_params(Models::Operations::UpdateLmsStudentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
-      security = !@sdk_configuration.nil? && !@sdk_configuration.security_source.nil? ? @sdk_configuration.security_source.call : nil
+      security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
+      
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
         operation_id: 'updateLmsStudent',
@@ -2710,7 +2814,7 @@ module UnifiedRubySDK
       
       
       begin
-        http_response = connection.put(url) do |req|
+        http_response = T.must(connection).put(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
@@ -2759,12 +2863,13 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = Crystalline.unmarshal_json(JSON.parse(http_response.env.response_body), Models::Shared::LmsStudent)
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsStudent)
           response = Models::Operations::UpdateLmsStudentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            lms_student: obj
+            lms_student: T.unsafe(obj)
           )
 
           return response

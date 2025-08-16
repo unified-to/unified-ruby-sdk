@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class KmsPageMetadataFormat < T::Enum
+
+
         enums do
           TEXT = new('TEXT')
           NUMBER = new('NUMBER')

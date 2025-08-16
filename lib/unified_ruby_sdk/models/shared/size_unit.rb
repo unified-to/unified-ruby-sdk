@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class SizeUnit < T::Enum
+
+
         enums do
           CM = new('cm')
           INCH = new('inch')

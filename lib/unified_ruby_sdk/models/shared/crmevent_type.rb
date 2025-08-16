@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class CrmEventType < T::Enum
+
+
         enums do
           NOTE = new('NOTE')
           EMAIL = new('EMAIL')

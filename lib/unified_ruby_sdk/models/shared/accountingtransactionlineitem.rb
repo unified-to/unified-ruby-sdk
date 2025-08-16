@@ -14,22 +14,21 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :account_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_id') } }
+        field :account_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_id') } }
 
-        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+        field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :object_type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_type') } }
+        field :object_type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_type') } }
 
-        field :total_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
+        field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
 
-        field :unit_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unit_amount') } }
+        field :unit_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unit_amount') } }
 
-        field :unit_quantity, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unit_quantity') } }
-
+        field :unit_quantity, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unit_quantity') } }
 
         sig { params(account_id: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), name: T.nilable(::String), object_type: T.nilable(::String), total_amount: T.nilable(::Float), unit_amount: T.nilable(::Float), unit_quantity: T.nilable(::Float)).void }
         def initialize(account_id: nil, description: nil, id: nil, name: nil, object_type: nil, total_amount: nil, unit_amount: nil, unit_quantity: nil)
@@ -43,6 +42,7 @@ module UnifiedRubySDK
           @unit_quantity = unit_quantity
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @account_id == other.account_id

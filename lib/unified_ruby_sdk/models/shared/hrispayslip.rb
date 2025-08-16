@@ -14,37 +14,36 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :raw, T::Hash[Symbol, ::Object], { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Hash.new(Symbol, ::Object), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw'), required: true } }
 
-        field :company_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
+        field :company_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
 
-        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+        field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-        field :details, T.nilable(T::Array[Models::Shared::HrisPayslipDetail]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('details') } }
+        field :details, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisPayslipDetail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('details') } }
 
-        field :end_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :gross_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gross_amount') } }
+        field :gross_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gross_amount') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :net_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('net_amount') } }
+        field :net_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('net_amount') } }
 
-        field :paid_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paid_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :paid_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paid_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :payment_type, T.nilable(Models::Shared::PaymentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_type'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentType, true) } }
+        field :payment_type, Crystalline::Nilable.new(Models::Shared::PaymentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_type'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentType, true) } }
 
-        field :start_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
-
+        field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
         sig { params(raw: T::Hash[Symbol, ::Object], company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), details: T.nilable(T::Array[Models::Shared::HrisPayslipDetail]), end_at: T.nilable(::DateTime), gross_amount: T.nilable(::Float), id: T.nilable(::String), net_amount: T.nilable(::Float), paid_at: T.nilable(::DateTime), payment_type: T.nilable(Models::Shared::PaymentType), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(raw: nil, company_id: nil, created_at: nil, currency: nil, details: nil, end_at: nil, gross_amount: nil, id: nil, net_amount: nil, paid_at: nil, payment_type: nil, start_at: nil, updated_at: nil, user_id: nil)
+        def initialize(raw:, company_id: nil, created_at: nil, currency: nil, details: nil, end_at: nil, gross_amount: nil, id: nil, net_amount: nil, paid_at: nil, payment_type: nil, start_at: nil, updated_at: nil, user_id: nil)
           @raw = raw
           @company_id = company_id
           @created_at = created_at
@@ -61,6 +60,7 @@ module UnifiedRubySDK
           @user_id = user_id
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @raw == other.raw

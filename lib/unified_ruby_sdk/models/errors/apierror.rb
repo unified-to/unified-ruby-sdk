@@ -12,9 +12,9 @@ module UnifiedRubySDK
         extend T::Sig
 
         
-        field :body, T.nilable(::String), { 'format_json': { 'letter_case': ::OpenApiSDK::Utils.field_name('body') } }
+        field :body, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('body') } }
         field :raw_response, T.nilable(Faraday::Response), {}
-        field :status_code, T.nilable(::Integer), { 'format_json': { 'letter_case': ::OpenApiSDK::Utils.field_name('status_code') } }
+        field :status_code, T.nilable(::Integer), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status_code') } }
 
         
         sig { params(status_code: ::Integer, body: ::String, raw_response: Faraday::Response).void }
@@ -26,7 +26,6 @@ module UnifiedRubySDK
 
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @msg == other.msg
           return false unless @status_code == other.status_code
           return false unless @body == other.body
           return false unless @raw_response == other.raw_response

@@ -14,17 +14,17 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :answers, T::Array[::String], { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('answers') } }
+        field :answers, Crystalline::Array.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('answers'), required: true } }
 
-        field :question_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('question_id') } }
-
+        field :question_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('question_id'), required: true } }
 
         sig { params(answers: T::Array[::String], question_id: ::String).void }
-        def initialize(answers: nil, question_id: nil)
+        def initialize(answers:, question_id:)
           @answers = answers
           @question_id = question_id
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @answers == other.answers

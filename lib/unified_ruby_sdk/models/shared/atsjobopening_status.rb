@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class AtsJobOpeningStatus < T::Enum
+
+
         enums do
           OPEN = new('OPEN')
           CLOSED = new('CLOSED')

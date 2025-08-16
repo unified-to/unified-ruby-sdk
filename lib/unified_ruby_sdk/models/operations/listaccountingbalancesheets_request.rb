@@ -16,29 +16,28 @@ module UnifiedRubySDK
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
         # The end date to filter by
-        field :end_le, T.nilable(::String), { 'query_param': { 'field_name': 'end_le', 'style': 'form', 'explode': true } }
+        field :end_le, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'end_le', 'style': 'form', 'explode': true } }
         # Comma-delimited fields to return
-        field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
-        field :limit, T.nilable(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
+        field :limit, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
 
-        field :offset, T.nilable(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
+        field :offset, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
 
-        field :order, T.nilable(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
+        field :order, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
         # Query string to search. eg. email address or name
-        field :query, T.nilable(::String), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
+        field :query, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
         # Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
-        field :raw, T.nilable(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
+        field :raw, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
-        field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
+        field :sort, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
         # The start date to filter by
-        field :start_gte, T.nilable(::String), { 'query_param': { 'field_name': 'start_gte', 'style': 'form', 'explode': true } }
+        field :start_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'start_gte', 'style': 'form', 'explode': true } }
         # Return only results whose updated date is equal or greater to this value
-        field :updated_gte, T.nilable(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
-
+        field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
         sig { params(connection_id: ::String, end_le: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::String)).void }
-        def initialize(connection_id: nil, end_le: nil, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, start_gte: nil, updated_gte: nil)
+        def initialize(connection_id:, end_le: nil, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, start_gte: nil, updated_gte: nil)
           @connection_id = connection_id
           @end_le = end_le
           @fields_ = fields_
@@ -52,6 +51,7 @@ module UnifiedRubySDK
           @updated_gte = updated_gte
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @connection_id == other.connection_id

@@ -14,25 +14,24 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :url, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
+        field :url, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url'), required: true } }
 
-        field :alt, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('alt') } }
+        field :alt, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('alt') } }
 
-        field :height, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('height') } }
+        field :height, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('height') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :metadata, T.nilable(T::Array[Models::Shared::CommerceMetadata]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
-        field :position, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('position') } }
+        field :position, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('position') } }
 
-        field :type, T.nilable(Models::Shared::CommerceItemMediaType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::CommerceItemMediaType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::CommerceItemMediaType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::CommerceItemMediaType, true) } }
 
-        field :width, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('width') } }
-
+        field :width, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('width') } }
 
         sig { params(url: ::String, alt: T.nilable(::String), height: T.nilable(::Float), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), position: T.nilable(::Float), type: T.nilable(Models::Shared::CommerceItemMediaType), width: T.nilable(::Float)).void }
-        def initialize(url: nil, alt: nil, height: nil, id: nil, metadata: nil, position: nil, type: nil, width: nil)
+        def initialize(url:, alt: nil, height: nil, id: nil, metadata: nil, position: nil, type: nil, width: nil)
           @url = url
           @alt = alt
           @height = height
@@ -43,6 +42,7 @@ module UnifiedRubySDK
           @width = width
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @url == other.url

@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class PropertyScimUserSchemas < T::Enum
+
+
         enums do
           URN_IETF_PARAMS_SCIM_SCHEMAS_CORE_2_0_USER = new('urn:ietf:params:scim:schemas:core:2.0:User')
           URN_IETF_PARAMS_SCIM_SCHEMAS_EXTENSION_ENTERPRISE_2_0_USER = new('urn:ietf:params:scim:schemas:extension:enterprise:2.0:User')

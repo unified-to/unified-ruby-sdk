@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class AtsInterviewStatus < T::Enum
+
+
         enums do
           SCHEDULED = new('SCHEDULED')
           AWAITING_FEEDBACK = new('AWAITING_FEEDBACK')

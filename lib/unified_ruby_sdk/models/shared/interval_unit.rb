@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class IntervalUnit < T::Enum
+
+
         enums do
           YEAR = new('YEAR')
           MONTH = new('MONTH')

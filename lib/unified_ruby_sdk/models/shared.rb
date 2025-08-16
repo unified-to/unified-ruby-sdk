@@ -274,6 +274,8 @@ module UnifiedRubySDK
       autoload :StorageFile, 'unified_ruby_sdk/models/shared/storagefile.rb'
       autoload :StorageFileType, 'unified_ruby_sdk/models/shared/storagefile_type.rb'
       autoload :StoragePermission, 'unified_ruby_sdk/models/shared/storagepermission.rb'
+      autoload :TaskChange, 'unified_ruby_sdk/models/shared/taskchange.rb'
+      autoload :TaskChangeItem, 'unified_ruby_sdk/models/shared/taskchangeitem.rb'
       autoload :TaskComment, 'unified_ruby_sdk/models/shared/taskcomment.rb'
       autoload :TaskMetadata, 'unified_ruby_sdk/models/shared/taskmetadata.rb'
       autoload :TaskMetadata1, 'unified_ruby_sdk/models/shared/taskmetadata_1.rb'

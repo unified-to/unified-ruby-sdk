@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class PropertyCalendarEventRecurrenceOnDays < T::Enum
+
+
         enums do
           SU = new('SU')
           MO = new('MO')

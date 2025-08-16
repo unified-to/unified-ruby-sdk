@@ -14,20 +14,19 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :extra_data, T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::CrmMetadata1, ::String, ::Float, T::Boolean)])), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('extra_data') } }
+        field :extra_data, Crystalline::Nilable.new(Crystalline::Union.new(Crystalline::Hash.new(Symbol, ::Object), ::String, ::Float, Crystalline::Boolean.new, Crystalline::Array.new(Crystalline::Union.new(Models::Shared::CrmMetadata1, ::String, ::Float, Crystalline::Boolean.new)))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('extra_data') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :key, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('key') } }
+        field :key, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('key') } }
 
-        field :namespace, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('namespace') } }
+        field :namespace, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('namespace') } }
 
-        field :slug, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('slug') } }
+        field :slug, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('slug') } }
 
-        field :type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
+        field :type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
 
-        field :value, T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::CrmMetadataSchemas1, ::String, ::Float, T::Boolean)])), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
-
+        field :value, Crystalline::Nilable.new(Crystalline::Union.new(Crystalline::Hash.new(Symbol, ::Object), ::String, ::Float, Crystalline::Boolean.new, Crystalline::Array.new(Crystalline::Union.new(Models::Shared::CrmMetadataSchemas1, ::String, ::Float, Crystalline::Boolean.new)))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 
         sig { params(extra_data: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::CrmMetadata1, ::String, ::Float, T::Boolean)])), id: T.nilable(::String), key: T.nilable(::String), namespace: T.nilable(::String), slug: T.nilable(::String), type: T.nilable(::String), value: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::CrmMetadataSchemas1, ::String, ::Float, T::Boolean)]))).void }
         def initialize(extra_data: nil, id: nil, key: nil, namespace: nil, slug: nil, type: nil, value: nil)
@@ -40,6 +39,7 @@ module UnifiedRubySDK
           @value = value
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @extra_data == other.extra_data

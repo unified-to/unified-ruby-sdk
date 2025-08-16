@@ -14,12 +14,11 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
+        field :amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
 
-        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :transaction_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('transaction_ids') } }
-
+        field :transaction_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('transaction_ids') } }
 
         sig { params(amount: T.nilable(::Float), name: T.nilable(::String), transaction_ids: T.nilable(T::Array[::String])).void }
         def initialize(amount: nil, name: nil, transaction_ids: nil)
@@ -28,6 +27,7 @@ module UnifiedRubySDK
           @transaction_ids = transaction_ids
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @amount == other.amount

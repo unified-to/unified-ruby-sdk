@@ -15,27 +15,27 @@ module UnifiedRubySDK
 
         # HTTP response content type for this operation
         field :content_type, ::String
-        # Raw HTTP response; suitable for custom response parsing
-        field :raw_response, ::Faraday::Response
         # HTTP response status code for this operation
         field :status_code, ::Integer
+        # Raw HTTP response; suitable for custom response parsing
+        field :raw_response, ::Faraday::Response
         # Successful
-        field :enrich_company, T.nilable(Models::Shared::EnrichCompany)
+        field :enrich_company, Crystalline::Nilable.new(Models::Shared::EnrichCompany)
 
-
-        sig { params(content_type: ::String, raw_response: ::Faraday::Response, status_code: ::Integer, enrich_company: T.nilable(Models::Shared::EnrichCompany)).void }
-        def initialize(content_type: nil, raw_response: nil, status_code: nil, enrich_company: nil)
+        sig { params(content_type: ::String, status_code: ::Integer, raw_response: ::Faraday::Response, enrich_company: T.nilable(Models::Shared::EnrichCompany)).void }
+        def initialize(content_type:, status_code:, raw_response:, enrich_company: nil)
           @content_type = content_type
-          @raw_response = raw_response
           @status_code = status_code
+          @raw_response = raw_response
           @enrich_company = enrich_company
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @content_type == other.content_type
-          return false unless @raw_response == other.raw_response
           return false unless @status_code == other.status_code
+          return false unless @raw_response == other.raw_response
           return false unless @enrich_company == other.enrich_company
           true
         end

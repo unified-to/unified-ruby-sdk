@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class Type < T::Enum
+
+
         enums do
           ACCOUNTS_PAYABLE = new('ACCOUNTS_PAYABLE')
           ACCOUNTS_RECEIVABLE = new('ACCOUNTS_RECEIVABLE')

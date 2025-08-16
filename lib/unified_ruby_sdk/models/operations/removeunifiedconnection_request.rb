@@ -16,12 +16,12 @@ module UnifiedRubySDK
         # ID of the Connection
         field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
 
-
         sig { params(id: ::String).void }
-        def initialize(id: nil)
+        def initialize(id:)
           @id = id
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @id == other.id

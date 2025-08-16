@@ -14,12 +14,11 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :email, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
+        field :email, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
 
-        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
-
+        field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
         sig { params(email: T.nilable(::String), name: T.nilable(::String), user_id: T.nilable(::String)).void }
         def initialize(email: nil, name: nil, user_id: nil)
@@ -28,6 +27,7 @@ module UnifiedRubySDK
           @user_id = user_id
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @email == other.email

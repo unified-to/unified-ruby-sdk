@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class AccountingSalesorderStatus < T::Enum
+
+
         enums do
           DRAFT = new('DRAFT')
           VOIDED = new('VOIDED')

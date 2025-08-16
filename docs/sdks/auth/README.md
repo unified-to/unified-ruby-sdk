@@ -14,23 +14,25 @@ Returns an authorization URL for the specified integration.  Once a successful a
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getUnifiedIntegrationAuth" method="get" path="/unified/integration/auth/{workspace_id}/{integration_type}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::GetUnifiedIntegrationAuthRequest.new(
-  integration_type: "<value>",
-  workspace_id: "<id>",
+  integration_type: '<value>',
+  workspace_id: '<id>',
 )
 
-res = s.auth.get_unified_integration_auth(req)
+res = s.auth.get_unified_integration_auth(request: req)
 
-if ! res.res.nil?
+unless res.res.nil?
   # handle response
 end
 
@@ -46,7 +48,11 @@ end
 
 **[T.nilable(Models::Operations::GetUnifiedIntegrationAuthResponse)](../../models/operations/getunifiedintegrationauthresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_unified_integration_login
 
@@ -54,23 +60,25 @@ Returns an authentication URL for the specified integration.  Once a successful 
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getUnifiedIntegrationLogin" method="get" path="/unified/integration/login/{workspace_id}/{integration_type}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::GetUnifiedIntegrationLoginRequest.new(
-  integration_type: "<value>",
-  workspace_id: "<id>",
+  integration_type: '<value>',
+  workspace_id: '<id>',
 )
 
-res = s.auth.get_unified_integration_login(req)
+res = s.auth.get_unified_integration_login(request: req)
 
-if ! res.res.nil?
+unless res.res.nil?
   # handle response
 end
 
@@ -86,3 +94,8 @@ end
 
 **[T.nilable(Models::Operations::GetUnifiedIntegrationLoginResponse)](../../models/operations/getunifiedintegrationloginresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

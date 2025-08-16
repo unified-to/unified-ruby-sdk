@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class PaymentType < T::Enum
+
+
         enums do
           DIRECT = new('DIRECT')
           CHEQUE = new('CHEQUE')

@@ -18,20 +18,20 @@ Create a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.creditmemo.create_accounting_creditmemo(accounting_creditmemo=Models::Shared::AccountingCreditmemo.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.creditmemo.create_accounting_creditmemo(accounting_creditmemo: Models::Shared::AccountingCreditmemo.new(), connection_id: '<id>')
 
-if ! res.accounting_creditmemo.nil?
+unless res.accounting_creditmemo.nil?
   # handle response
 end
 
@@ -50,7 +50,11 @@ end
 
 **[T.nilable(Models::Operations::CreateAccountingCreditmemoResponse)](../../models/operations/createaccountingcreditmemoresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_accounting_creditmemo
 
@@ -58,20 +62,20 @@ Retrieve a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAccountingCreditmemo" method="get" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.creditmemo.get_accounting_creditmemo(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.creditmemo.get_accounting_creditmemo(connection_id: '<id>', id: '<id>')
 
-if ! res.accounting_creditmemo.nil?
+unless res.accounting_creditmemo.nil?
   # handle response
 end
 
@@ -90,7 +94,11 @@ end
 
 **[T.nilable(Models::Operations::GetAccountingCreditmemoResponse)](../../models/operations/getaccountingcreditmemoresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_accounting_creditmemoes
 
@@ -98,22 +106,24 @@ List all creditmemoes
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAccountingCreditmemoes" method="get" path="/accounting/{connection_id}/creditmemo" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAccountingCreditmemoesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.creditmemo.list_accounting_creditmemoes(req)
+res = s.creditmemo.list_accounting_creditmemoes(request: req)
 
-if ! res.accounting_creditmemoes.nil?
+unless res.accounting_creditmemoes.nil?
   # handle response
 end
 
@@ -129,7 +139,11 @@ end
 
 **[T.nilable(Models::Operations::ListAccountingCreditmemoesResponse)](../../models/operations/listaccountingcreditmemoesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_accounting_creditmemo
 
@@ -137,24 +151,26 @@ Update a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchAccountingCreditmemoRequest.new(
   accounting_creditmemo: Models::Shared::AccountingCreditmemo.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.creditmemo.patch_accounting_creditmemo(req)
+res = s.creditmemo.patch_accounting_creditmemo(request: req)
 
-if ! res.accounting_creditmemo.nil?
+unless res.accounting_creditmemo.nil?
   # handle response
 end
 
@@ -170,7 +186,11 @@ end
 
 **[T.nilable(Models::Operations::PatchAccountingCreditmemoResponse)](../../models/operations/patchaccountingcreditmemoresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_accounting_creditmemo
 
@@ -178,16 +198,18 @@ Remove a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeAccountingCreditmemo" method="delete" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.creditmemo.remove_accounting_creditmemo(connection_id="<id>", id="<id>")
+res = s.creditmemo.remove_accounting_creditmemo(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -206,7 +228,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveAccountingCreditmemoResponse)](../../models/operations/removeaccountingcreditmemoresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_accounting_creditmemo
 
@@ -214,24 +240,26 @@ Update a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateAccountingCreditmemoRequest.new(
   accounting_creditmemo: Models::Shared::AccountingCreditmemo.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.creditmemo.update_accounting_creditmemo(req)
+res = s.creditmemo.update_accounting_creditmemo(request: req)
 
-if ! res.accounting_creditmemo.nil?
+unless res.accounting_creditmemo.nil?
   # handle response
 end
 
@@ -247,3 +275,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateAccountingCreditmemoResponse)](../../models/operations/updateaccountingcreditmemoresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

@@ -18,20 +18,20 @@ Create a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createCrmDeal" method="post" path="/crm/{connection_id}/deal" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.deal.create_crm_deal(crm_deal=Models::Shared::CrmDeal.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.deal.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(), connection_id: '<id>')
 
-if ! res.crm_deal.nil?
+unless res.crm_deal.nil?
   # handle response
 end
 
@@ -50,7 +50,11 @@ end
 
 **[T.nilable(Models::Operations::CreateCrmDealResponse)](../../models/operations/createcrmdealresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_crm_deal
 
@@ -58,20 +62,20 @@ Retrieve a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getCrmDeal" method="get" path="/crm/{connection_id}/deal/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.deal.get_crm_deal(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.deal.get_crm_deal(connection_id: '<id>', id: '<id>')
 
-if ! res.crm_deal.nil?
+unless res.crm_deal.nil?
   # handle response
 end
 
@@ -90,7 +94,11 @@ end
 
 **[T.nilable(Models::Operations::GetCrmDealResponse)](../../models/operations/getcrmdealresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_crm_deals
 
@@ -98,22 +106,24 @@ List all deals
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listCrmDeals" method="get" path="/crm/{connection_id}/deal" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListCrmDealsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.deal.list_crm_deals(req)
+res = s.deal.list_crm_deals(request: req)
 
-if ! res.crm_deals.nil?
+unless res.crm_deals.nil?
   # handle response
 end
 
@@ -129,7 +139,11 @@ end
 
 **[T.nilable(Models::Operations::ListCrmDealsResponse)](../../models/operations/listcrmdealsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_crm_deal
 
@@ -137,24 +151,26 @@ Update a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchCrmDeal" method="patch" path="/crm/{connection_id}/deal/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchCrmDealRequest.new(
   crm_deal: Models::Shared::CrmDeal.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.deal.patch_crm_deal(req)
+res = s.deal.patch_crm_deal(request: req)
 
-if ! res.crm_deal.nil?
+unless res.crm_deal.nil?
   # handle response
 end
 
@@ -170,7 +186,11 @@ end
 
 **[T.nilable(Models::Operations::PatchCrmDealResponse)](../../models/operations/patchcrmdealresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_crm_deal
 
@@ -178,16 +198,18 @@ Remove a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeCrmDeal" method="delete" path="/crm/{connection_id}/deal/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.deal.remove_crm_deal(connection_id="<id>", id="<id>")
+res = s.deal.remove_crm_deal(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -206,7 +228,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveCrmDealResponse)](../../models/operations/removecrmdealresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_crm_deal
 
@@ -214,24 +240,26 @@ Update a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateCrmDeal" method="put" path="/crm/{connection_id}/deal/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateCrmDealRequest.new(
   crm_deal: Models::Shared::CrmDeal.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.deal.update_crm_deal(req)
+res = s.deal.update_crm_deal(request: req)
 
-if ! res.crm_deal.nil?
+unless res.crm_deal.nil?
   # handle response
 end
 
@@ -247,3 +275,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateCrmDealResponse)](../../models/operations/updatecrmdealresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

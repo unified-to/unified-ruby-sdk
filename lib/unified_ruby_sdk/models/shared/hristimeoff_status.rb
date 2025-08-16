@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class HrisTimeoffStatus < T::Enum
+
+
         enums do
           APPROVED = new('APPROVED')
           PENDING = new('PENDING')

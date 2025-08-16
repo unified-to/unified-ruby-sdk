@@ -18,20 +18,20 @@ Create a category
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.category.create_accounting_category(accounting_category=Models::Shared::AccountingCategory.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.category.create_accounting_category(accounting_category: Models::Shared::AccountingCategory.new(), connection_id: '<id>')
 
-if ! res.accounting_category.nil?
+unless res.accounting_category.nil?
   # handle response
 end
 
@@ -50,7 +50,11 @@ end
 
 **[T.nilable(Models::Operations::CreateAccountingCategoryResponse)](../../models/operations/createaccountingcategoryresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_accounting_category
 
@@ -58,20 +62,20 @@ Retrieve a category
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAccountingCategory" method="get" path="/accounting/{connection_id}/category/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.category.get_accounting_category(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.category.get_accounting_category(connection_id: '<id>', id: '<id>')
 
-if ! res.accounting_category.nil?
+unless res.accounting_category.nil?
   # handle response
 end
 
@@ -90,7 +94,11 @@ end
 
 **[T.nilable(Models::Operations::GetAccountingCategoryResponse)](../../models/operations/getaccountingcategoryresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_accounting_categories
 
@@ -98,22 +106,24 @@ List all categories
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAccountingCategories" method="get" path="/accounting/{connection_id}/category" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAccountingCategoriesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.category.list_accounting_categories(req)
+res = s.category.list_accounting_categories(request: req)
 
-if ! res.accounting_categories.nil?
+unless res.accounting_categories.nil?
   # handle response
 end
 
@@ -129,7 +139,11 @@ end
 
 **[T.nilable(Models::Operations::ListAccountingCategoriesResponse)](../../models/operations/listaccountingcategoriesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_accounting_category
 
@@ -137,24 +151,26 @@ Update a category
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchAccountingCategoryRequest.new(
   accounting_category: Models::Shared::AccountingCategory.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.category.patch_accounting_category(req)
+res = s.category.patch_accounting_category(request: req)
 
-if ! res.accounting_category.nil?
+unless res.accounting_category.nil?
   # handle response
 end
 
@@ -170,7 +186,11 @@ end
 
 **[T.nilable(Models::Operations::PatchAccountingCategoryResponse)](../../models/operations/patchaccountingcategoryresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_accounting_category
 
@@ -178,16 +198,18 @@ Remove a category
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeAccountingCategory" method="delete" path="/accounting/{connection_id}/category/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.category.remove_accounting_category(connection_id="<id>", id="<id>")
+res = s.category.remove_accounting_category(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -206,7 +228,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveAccountingCategoryResponse)](../../models/operations/removeaccountingcategoryresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_accounting_category
 
@@ -214,24 +240,26 @@ Update a category
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateAccountingCategoryRequest.new(
   accounting_category: Models::Shared::AccountingCategory.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.category.update_accounting_category(req)
+res = s.category.update_accounting_category(request: req)
 
-if ! res.accounting_category.nil?
+unless res.accounting_category.nil?
   # handle response
 end
 
@@ -247,3 +275,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateAccountingCategoryResponse)](../../models/operations/updateaccountingcategoryresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

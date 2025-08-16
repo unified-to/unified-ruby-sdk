@@ -14,55 +14,54 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :item_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('item_id') } }
+        field :item_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('item_id'), required: true } }
 
-        field :author_avatar_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_avatar_url') } }
+        field :author_avatar_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_avatar_url') } }
 
-        field :author_email, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_email') } }
+        field :author_email, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_email') } }
 
-        field :author_location, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_location') } }
+        field :author_location, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_location') } }
 
-        field :author_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_name') } }
+        field :author_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_name') } }
 
-        field :comments, T.nilable(T::Array[Models::Shared::CommerceReviewComment]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('comments') } }
+        field :comments, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceReviewComment)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('comments') } }
 
-        field :content, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
+        field :content, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
 
-        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :helpful_votes, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('helpful_votes') } }
+        field :helpful_votes, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('helpful_votes') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :is_featured, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_featured') } }
+        field :is_featured, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_featured') } }
 
-        field :is_public, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_public') } }
+        field :is_public, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_public') } }
 
-        field :is_verified, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_verified') } }
+        field :is_verified, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_verified') } }
 
-        field :item_variant_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('item_variant_id') } }
+        field :item_variant_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('item_variant_id') } }
         # Photosvideos attached to the review
-        field :media, T.nilable(T::Array[Models::Shared::CommerceItemMedia]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
+        field :media, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceItemMedia)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
 
-        field :metadata, T.nilable(T::Array[Models::Shared::CommerceMetadata]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
-        field :rating, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rating') } }
+        field :rating, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rating') } }
 
-        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :status, T.nilable(Models::Shared::CommerceReviewStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::CommerceReviewStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::CommerceReviewStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::CommerceReviewStatus, true) } }
 
-        field :title, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
+        field :title, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
 
-        field :unhelpful_votes, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unhelpful_votes') } }
+        field :unhelpful_votes, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unhelpful_votes') } }
 
-        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :verified_purchase, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('verified_purchase') } }
-
+        field :verified_purchase, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('verified_purchase') } }
 
         sig { params(item_id: ::String, author_avatar_url: T.nilable(::String), author_email: T.nilable(::String), author_location: T.nilable(::String), author_name: T.nilable(::String), comments: T.nilable(T::Array[Models::Shared::CommerceReviewComment]), content: T.nilable(::String), created_at: T.nilable(::DateTime), helpful_votes: T.nilable(::Float), id: T.nilable(::String), is_featured: T.nilable(T::Boolean), is_public: T.nilable(T::Boolean), is_verified: T.nilable(T::Boolean), item_variant_id: T.nilable(::String), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), rating: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::CommerceReviewStatus), title: T.nilable(::String), unhelpful_votes: T.nilable(::Float), updated_at: T.nilable(::DateTime), verified_purchase: T.nilable(T::Boolean)).void }
-        def initialize(item_id: nil, author_avatar_url: nil, author_email: nil, author_location: nil, author_name: nil, comments: nil, content: nil, created_at: nil, helpful_votes: nil, id: nil, is_featured: nil, is_public: nil, is_verified: nil, item_variant_id: nil, media: nil, metadata: nil, rating: nil, raw: nil, status: nil, title: nil, unhelpful_votes: nil, updated_at: nil, verified_purchase: nil)
+        def initialize(item_id:, author_avatar_url: nil, author_email: nil, author_location: nil, author_name: nil, comments: nil, content: nil, created_at: nil, helpful_votes: nil, id: nil, is_featured: nil, is_public: nil, is_verified: nil, item_variant_id: nil, media: nil, metadata: nil, rating: nil, raw: nil, status: nil, title: nil, unhelpful_votes: nil, updated_at: nil, verified_purchase: nil)
           @item_id = item_id
           @author_avatar_url = author_avatar_url
           @author_email = author_email
@@ -88,6 +87,7 @@ module UnifiedRubySDK
           @verified_purchase = verified_purchase
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @item_id == other.item_id

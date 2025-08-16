@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class PropertyHrisEmployeeEmployeeRoles < T::Enum
+
+
         enums do
           ADMIN = new('ADMIN')
           MANAGER = new('MANAGER')

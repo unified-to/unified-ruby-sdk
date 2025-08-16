@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class AtsOfferStatus < T::Enum
+
+
         enums do
           CREATED = new('CREATED')
           SENT = new('SENT')

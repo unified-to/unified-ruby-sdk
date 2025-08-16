@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class Priority < T::Enum
+
+
         enums do
           HIGH = new('HIGH')
           MEDIUM = new('MEDIUM')

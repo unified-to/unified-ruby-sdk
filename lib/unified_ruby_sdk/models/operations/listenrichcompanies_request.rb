@@ -16,18 +16,18 @@ module UnifiedRubySDK
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
         # The domain of the company to search
-        field :domain, T.nilable(::String), { 'query_param': { 'field_name': 'domain', 'style': 'form', 'explode': true } }
+        field :domain, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'domain', 'style': 'form', 'explode': true } }
         # The name of the company to search
-        field :name, T.nilable(::String), { 'query_param': { 'field_name': 'name', 'style': 'form', 'explode': true } }
-
+        field :name, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'name', 'style': 'form', 'explode': true } }
 
         sig { params(connection_id: ::String, domain: T.nilable(::String), name: T.nilable(::String)).void }
-        def initialize(connection_id: nil, domain: nil, name: nil)
+        def initialize(connection_id:, domain: nil, name: nil)
           @connection_id = connection_id
           @domain = domain
           @name = name
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @connection_id == other.connection_id

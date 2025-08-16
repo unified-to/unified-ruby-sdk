@@ -14,48 +14,47 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :assigned_user_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('assigned_user_ids') } }
+        field :assigned_user_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('assigned_user_ids') } }
         # Array of attachment IDs retrieved from StorageFile.Get endpoint
-        field :attachment_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attachment_ids') } }
+        field :attachment_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attachment_ids') } }
 
-        field :completed_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('completed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :completed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('completed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :creator_user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('creator_user_id') } }
+        field :creator_user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('creator_user_id') } }
 
-        field :due_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('due_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :due_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('due_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :follower_user_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('follower_user_ids') } }
+        field :follower_user_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('follower_user_ids') } }
 
-        field :group_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_ids') } }
+        field :group_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_ids') } }
 
-        field :has_children, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_children') } }
+        field :has_children, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_children') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :metadata, T.nilable(T::Array[Models::Shared::TaskMetadata]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TaskMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
-        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :notes, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
+        field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
 
-        field :parent_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
+        field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
-        field :priority, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('priority') } }
+        field :priority, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('priority') } }
 
-        field :project_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('project_id') } }
+        field :project_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('project_id') } }
 
-        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :status, T.nilable(Models::Shared::TaskTaskStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::TaskTaskStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::TaskTaskStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::TaskTaskStatus, true) } }
 
-        field :tags, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
+        field :tags, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
 
-        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
-
+        field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
         sig { params(assigned_user_ids: T.nilable(T::Array[::String]), attachment_ids: T.nilable(T::Array[::String]), completed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), creator_user_id: T.nilable(::String), due_at: T.nilable(::DateTime), follower_user_ids: T.nilable(T::Array[::String]), group_ids: T.nilable(T::Array[::String]), has_children: T.nilable(T::Boolean), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::TaskMetadata]), name: T.nilable(::String), notes: T.nilable(::String), parent_id: T.nilable(::String), priority: T.nilable(::String), project_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::TaskTaskStatus), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
         def initialize(assigned_user_ids: nil, attachment_ids: nil, completed_at: nil, created_at: nil, creator_user_id: nil, due_at: nil, follower_user_ids: nil, group_ids: nil, has_children: nil, id: nil, metadata: nil, name: nil, notes: nil, parent_id: nil, priority: nil, project_id: nil, raw: nil, status: nil, tags: nil, updated_at: nil, url: nil)
@@ -82,6 +81,7 @@ module UnifiedRubySDK
           @url = url
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @assigned_user_ids == other.assigned_user_ids

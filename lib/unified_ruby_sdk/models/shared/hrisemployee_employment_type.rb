@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class HrisEmployeeEmploymentType < T::Enum
+
+
         enums do
           FULL_TIME = new('FULL_TIME')
           PART_TIME = new('PART_TIME')

@@ -14,20 +14,20 @@ Retrieve a refund
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getPaymentRefund" method="get" path="/payment/{connection_id}/refund/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.refund.get_payment_refund(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.refund.get_payment_refund(connection_id: '<id>', id: '<id>')
 
-if ! res.payment_refund.nil?
+unless res.payment_refund.nil?
   # handle response
 end
 
@@ -46,7 +46,11 @@ end
 
 **[T.nilable(Models::Operations::GetPaymentRefundResponse)](../../models/operations/getpaymentrefundresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_payment_refunds
 
@@ -54,22 +58,24 @@ List all refunds
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listPaymentRefunds" method="get" path="/payment/{connection_id}/refund" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListPaymentRefundsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.refund.list_payment_refunds(req)
+res = s.refund.list_payment_refunds(request: req)
 
-if ! res.payment_refunds.nil?
+unless res.payment_refunds.nil?
   # handle response
 end
 
@@ -85,3 +91,8 @@ end
 
 **[T.nilable(Models::Operations::ListPaymentRefundsResponse)](../../models/operations/listpaymentrefundsresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

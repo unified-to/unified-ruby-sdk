@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class WeekStart < T::Enum
+
+
         enums do
           SU = new('SU')
           MO = new('MO')

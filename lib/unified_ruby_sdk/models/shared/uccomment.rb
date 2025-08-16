@@ -14,21 +14,20 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :content, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
+        field :content, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content'), required: true } }
 
-        field :created_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
+        field :created_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :updated_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
+        field :updated_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
 
-        field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
-
+        field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
         sig { params(content: ::String, created_at: T.nilable(::String), id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::String), user_id: T.nilable(::String)).void }
-        def initialize(content: nil, created_at: nil, id: nil, raw: nil, updated_at: nil, user_id: nil)
+        def initialize(content:, created_at: nil, id: nil, raw: nil, updated_at: nil, user_id: nil)
           @content = content
           @created_at = created_at
           @id = id
@@ -37,6 +36,7 @@ module UnifiedRubySDK
           @user_id = user_id
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @content == other.content

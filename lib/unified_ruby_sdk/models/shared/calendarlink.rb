@@ -14,31 +14,30 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :url, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
+        field :url, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url'), required: true } }
 
-        field :created_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
+        field :created_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
 
-        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+        field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-        field :duration, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('duration') } }
+        field :duration, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('duration') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
+        field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
-        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :price_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price_amount') } }
+        field :price_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price_amount') } }
 
-        field :price_currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price_currency') } }
+        field :price_currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price_currency') } }
 
-        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :updated_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
-
+        field :updated_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
 
         sig { params(url: ::String, created_at: T.nilable(::String), description: T.nilable(::String), duration: T.nilable(::Float), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), price_amount: T.nilable(::Float), price_currency: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::String)).void }
-        def initialize(url: nil, created_at: nil, description: nil, duration: nil, id: nil, is_active: nil, name: nil, price_amount: nil, price_currency: nil, raw: nil, updated_at: nil)
+        def initialize(url:, created_at: nil, description: nil, duration: nil, id: nil, is_active: nil, name: nil, price_amount: nil, price_currency: nil, raw: nil, updated_at: nil)
           @url = url
           @created_at = created_at
           @description = description
@@ -52,6 +51,7 @@ module UnifiedRubySDK
           @updated_at = updated_at
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @url == other.url

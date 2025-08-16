@@ -33,22 +33,22 @@ Create a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createCalendarCalendar" method="post" path="/calendar/{connection_id}/calendar" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.calendar.create_calendar_calendar(calendar_calendar=Models::Shared::CalendarCalendar.new(
-  name: "<value>",
-), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.calendar.create_calendar_calendar(calendar_calendar: Models::Shared::CalendarCalendar.new(
+  name: '<value>',
+), connection_id: '<id>')
 
-if ! res.calendar_calendar.nil?
+unless res.calendar_calendar.nil?
   # handle response
 end
 
@@ -67,7 +67,11 @@ end
 
 **[T.nilable(Models::Operations::CreateCalendarCalendarResponse)](../../models/operations/createcalendarcalendarresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_calendar_event
 
@@ -75,20 +79,20 @@ Create an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createCalendarEvent" method="post" path="/calendar/{connection_id}/event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.calendar.create_calendar_event(calendar_event=Models::Shared::CalendarEvent.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.calendar.create_calendar_event(calendar_event: Models::Shared::CalendarEvent.new(), connection_id: '<id>')
 
-if ! res.calendar_event.nil?
+unless res.calendar_event.nil?
   # handle response
 end
 
@@ -107,7 +111,11 @@ end
 
 **[T.nilable(Models::Operations::CreateCalendarEventResponse)](../../models/operations/createcalendareventresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_calendar_link
 
@@ -115,22 +123,22 @@ Create a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createCalendarLink" method="post" path="/calendar/{connection_id}/link" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.calendar.create_calendar_link(calendar_link=Models::Shared::CalendarLink.new(
-  url: "https://sturdy-begonia.biz/",
-), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.calendar.create_calendar_link(calendar_link: Models::Shared::CalendarLink.new(
+  url: 'https://misguided-thongs.info',
+), connection_id: '<id>')
 
-if ! res.calendar_link.nil?
+unless res.calendar_link.nil?
   # handle response
 end
 
@@ -149,7 +157,11 @@ end
 
 **[T.nilable(Models::Operations::CreateCalendarLinkResponse)](../../models/operations/createcalendarlinkresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_calendar_calendar
 
@@ -157,20 +169,20 @@ Retrieve a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getCalendarCalendar" method="get" path="/calendar/{connection_id}/calendar/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.calendar.get_calendar_calendar(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.calendar.get_calendar_calendar(connection_id: '<id>', id: '<id>')
 
-if ! res.calendar_calendar.nil?
+unless res.calendar_calendar.nil?
   # handle response
 end
 
@@ -189,7 +201,11 @@ end
 
 **[T.nilable(Models::Operations::GetCalendarCalendarResponse)](../../models/operations/getcalendarcalendarresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_calendar_event
 
@@ -197,20 +213,20 @@ Retrieve an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getCalendarEvent" method="get" path="/calendar/{connection_id}/event/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.calendar.get_calendar_event(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.calendar.get_calendar_event(connection_id: '<id>', id: '<id>')
 
-if ! res.calendar_event.nil?
+unless res.calendar_event.nil?
   # handle response
 end
 
@@ -229,7 +245,11 @@ end
 
 **[T.nilable(Models::Operations::GetCalendarEventResponse)](../../models/operations/getcalendareventresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_calendar_link
 
@@ -237,20 +257,20 @@ Retrieve a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getCalendarLink" method="get" path="/calendar/{connection_id}/link/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.calendar.get_calendar_link(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.calendar.get_calendar_link(connection_id: '<id>', id: '<id>')
 
-if ! res.calendar_link.nil?
+unless res.calendar_link.nil?
   # handle response
 end
 
@@ -269,7 +289,11 @@ end
 
 **[T.nilable(Models::Operations::GetCalendarLinkResponse)](../../models/operations/getcalendarlinkresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_calendar_recording
 
@@ -277,20 +301,20 @@ Retrieve a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getCalendarRecording" method="get" path="/calendar/{connection_id}/recording/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.calendar.get_calendar_recording(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.calendar.get_calendar_recording(connection_id: '<id>', id: '<id>')
 
-if ! res.calendar_recording.nil?
+unless res.calendar_recording.nil?
   # handle response
 end
 
@@ -309,7 +333,11 @@ end
 
 **[T.nilable(Models::Operations::GetCalendarRecordingResponse)](../../models/operations/getcalendarrecordingresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_calendar_busies
 
@@ -317,22 +345,24 @@ List all busies
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listCalendarBusies" method="get" path="/calendar/{connection_id}/busy" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListCalendarBusiesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.calendar.list_calendar_busies(req)
+res = s.calendar.list_calendar_busies(request: req)
 
-if ! res.calendar_busies.nil?
+unless res.calendar_busies.nil?
   # handle response
 end
 
@@ -348,7 +378,11 @@ end
 
 **[T.nilable(Models::Operations::ListCalendarBusiesResponse)](../../models/operations/listcalendarbusiesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_calendar_calendars
 
@@ -356,22 +390,24 @@ List all calendars
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listCalendarCalendars" method="get" path="/calendar/{connection_id}/calendar" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListCalendarCalendarsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.calendar.list_calendar_calendars(req)
+res = s.calendar.list_calendar_calendars(request: req)
 
-if ! res.calendar_calendars.nil?
+unless res.calendar_calendars.nil?
   # handle response
 end
 
@@ -387,7 +423,11 @@ end
 
 **[T.nilable(Models::Operations::ListCalendarCalendarsResponse)](../../models/operations/listcalendarcalendarsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_calendar_events
 
@@ -395,22 +435,24 @@ List all events
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listCalendarEvents" method="get" path="/calendar/{connection_id}/event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListCalendarEventsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.calendar.list_calendar_events(req)
+res = s.calendar.list_calendar_events(request: req)
 
-if ! res.calendar_events.nil?
+unless res.calendar_events.nil?
   # handle response
 end
 
@@ -426,7 +468,11 @@ end
 
 **[T.nilable(Models::Operations::ListCalendarEventsResponse)](../../models/operations/listcalendareventsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_calendar_links
 
@@ -434,22 +480,24 @@ List all links
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listCalendarLinks" method="get" path="/calendar/{connection_id}/link" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListCalendarLinksRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.calendar.list_calendar_links(req)
+res = s.calendar.list_calendar_links(request: req)
 
-if ! res.calendar_links.nil?
+unless res.calendar_links.nil?
   # handle response
 end
 
@@ -465,7 +513,11 @@ end
 
 **[T.nilable(Models::Operations::ListCalendarLinksResponse)](../../models/operations/listcalendarlinksresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_calendar_recordings
 
@@ -473,22 +525,24 @@ List all recordings
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listCalendarRecordings" method="get" path="/calendar/{connection_id}/recording" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListCalendarRecordingsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.calendar.list_calendar_recordings(req)
+res = s.calendar.list_calendar_recordings(request: req)
 
-if ! res.calendar_recordings.nil?
+unless res.calendar_recordings.nil?
   # handle response
 end
 
@@ -504,7 +558,11 @@ end
 
 **[T.nilable(Models::Operations::ListCalendarRecordingsResponse)](../../models/operations/listcalendarrecordingsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_calendar_calendar
 
@@ -512,26 +570,28 @@ Update a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchCalendarCalendar" method="patch" path="/calendar/{connection_id}/calendar/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchCalendarCalendarRequest.new(
   calendar_calendar: Models::Shared::CalendarCalendar.new(
-    name: "<value>",
+    name: '<value>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.calendar.patch_calendar_calendar(req)
+res = s.calendar.patch_calendar_calendar(request: req)
 
-if ! res.calendar_calendar.nil?
+unless res.calendar_calendar.nil?
   # handle response
 end
 
@@ -547,7 +607,11 @@ end
 
 **[T.nilable(Models::Operations::PatchCalendarCalendarResponse)](../../models/operations/patchcalendarcalendarresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_calendar_event
 
@@ -555,24 +619,26 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchCalendarEvent" method="patch" path="/calendar/{connection_id}/event/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchCalendarEventRequest.new(
   calendar_event: Models::Shared::CalendarEvent.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.calendar.patch_calendar_event(req)
+res = s.calendar.patch_calendar_event(request: req)
 
-if ! res.calendar_event.nil?
+unless res.calendar_event.nil?
   # handle response
 end
 
@@ -588,7 +654,11 @@ end
 
 **[T.nilable(Models::Operations::PatchCalendarEventResponse)](../../models/operations/patchcalendareventresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_calendar_link
 
@@ -596,26 +666,28 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchCalendarLink" method="patch" path="/calendar/{connection_id}/link/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchCalendarLinkRequest.new(
   calendar_link: Models::Shared::CalendarLink.new(
-    url: "https://curly-skyline.biz/",
+    url: 'https://warm-hexagon.name/',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.calendar.patch_calendar_link(req)
+res = s.calendar.patch_calendar_link(request: req)
 
-if ! res.calendar_link.nil?
+unless res.calendar_link.nil?
   # handle response
 end
 
@@ -631,7 +703,11 @@ end
 
 **[T.nilable(Models::Operations::PatchCalendarLinkResponse)](../../models/operations/patchcalendarlinkresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_calendar_calendar
 
@@ -639,16 +715,18 @@ Remove a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeCalendarCalendar" method="delete" path="/calendar/{connection_id}/calendar/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.calendar.remove_calendar_calendar(connection_id="<id>", id="<id>")
+res = s.calendar.remove_calendar_calendar(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -667,7 +745,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveCalendarCalendarResponse)](../../models/operations/removecalendarcalendarresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_calendar_event
 
@@ -675,16 +757,18 @@ Remove an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeCalendarEvent" method="delete" path="/calendar/{connection_id}/event/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.calendar.remove_calendar_event(connection_id="<id>", id="<id>")
+res = s.calendar.remove_calendar_event(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -703,7 +787,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveCalendarEventResponse)](../../models/operations/removecalendareventresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_calendar_link
 
@@ -711,16 +799,18 @@ Remove a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeCalendarLink" method="delete" path="/calendar/{connection_id}/link/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.calendar.remove_calendar_link(connection_id="<id>", id="<id>")
+res = s.calendar.remove_calendar_link(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -739,7 +829,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveCalendarLinkResponse)](../../models/operations/removecalendarlinkresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_calendar_calendar
 
@@ -747,26 +841,28 @@ Update a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateCalendarCalendar" method="put" path="/calendar/{connection_id}/calendar/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateCalendarCalendarRequest.new(
   calendar_calendar: Models::Shared::CalendarCalendar.new(
-    name: "<value>",
+    name: '<value>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.calendar.update_calendar_calendar(req)
+res = s.calendar.update_calendar_calendar(request: req)
 
-if ! res.calendar_calendar.nil?
+unless res.calendar_calendar.nil?
   # handle response
 end
 
@@ -782,7 +878,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateCalendarCalendarResponse)](../../models/operations/updatecalendarcalendarresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_calendar_event
 
@@ -790,24 +890,26 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateCalendarEvent" method="put" path="/calendar/{connection_id}/event/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateCalendarEventRequest.new(
   calendar_event: Models::Shared::CalendarEvent.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.calendar.update_calendar_event(req)
+res = s.calendar.update_calendar_event(request: req)
 
-if ! res.calendar_event.nil?
+unless res.calendar_event.nil?
   # handle response
 end
 
@@ -823,7 +925,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateCalendarEventResponse)](../../models/operations/updatecalendareventresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_calendar_link
 
@@ -831,26 +937,28 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateCalendarLink" method="put" path="/calendar/{connection_id}/link/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateCalendarLinkRequest.new(
   calendar_link: Models::Shared::CalendarLink.new(
-    url: "https://quiet-coordination.name",
+    url: 'https://partial-hydrocarbon.info',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.calendar.update_calendar_link(req)
+res = s.calendar.update_calendar_link(request: req)
 
-if ! res.calendar_link.nil?
+unless res.calendar_link.nil?
   # handle response
 end
 
@@ -866,3 +974,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateCalendarLinkResponse)](../../models/operations/updatecalendarlinkresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

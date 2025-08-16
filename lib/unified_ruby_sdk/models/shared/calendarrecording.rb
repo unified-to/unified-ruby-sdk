@@ -14,26 +14,25 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :end_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :event_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('event_id') } }
+        field :event_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('event_id') } }
 
-        field :expires_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :expires_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :media, T.nilable(T::Array[Models::Shared::CalendarRecordingMedia]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
+        field :media, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CalendarRecordingMedia)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
 
-        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :start_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
-
+        field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
         sig { params(created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), event_id: T.nilable(::String), expires_at: T.nilable(::DateTime), id: T.nilable(::String), media: T.nilable(T::Array[Models::Shared::CalendarRecordingMedia]), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
         def initialize(created_at: nil, end_at: nil, event_id: nil, expires_at: nil, id: nil, media: nil, raw: nil, start_at: nil, updated_at: nil, web_url: nil)
@@ -49,6 +48,7 @@ module UnifiedRubySDK
           @web_url = web_url
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @created_at == other.created_at

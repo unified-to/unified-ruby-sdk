@@ -14,20 +14,20 @@ Retrieve a timeoff
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getHrisTimeoff" method="get" path="/hris/{connection_id}/timeoff/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.timeoff.get_hris_timeoff(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.timeoff.get_hris_timeoff(connection_id: '<id>', id: '<id>')
 
-if ! res.hris_timeoff.nil?
+unless res.hris_timeoff.nil?
   # handle response
 end
 
@@ -46,7 +46,11 @@ end
 
 **[T.nilable(Models::Operations::GetHrisTimeoffResponse)](../../models/operations/gethristimeoffresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_hris_timeoffs
 
@@ -54,22 +58,24 @@ List all timeoffs
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listHrisTimeoffs" method="get" path="/hris/{connection_id}/timeoff" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListHrisTimeoffsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.timeoff.list_hris_timeoffs(req)
+res = s.timeoff.list_hris_timeoffs(request: req)
 
-if ! res.hris_timeoffs.nil?
+unless res.hris_timeoffs.nil?
   # handle response
 end
 
@@ -85,3 +91,8 @@ end
 
 **[T.nilable(Models::Operations::ListHrisTimeoffsResponse)](../../models/operations/listhristimeoffsresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

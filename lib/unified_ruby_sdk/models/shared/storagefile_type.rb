@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class StorageFileType < T::Enum
+
+
         enums do
           FILE = new('FILE')
           FOLDER = new('FOLDER')

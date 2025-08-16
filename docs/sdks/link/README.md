@@ -24,22 +24,22 @@ Create a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createCalendarLink" method="post" path="/calendar/{connection_id}/link" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.link.create_calendar_link(calendar_link=Models::Shared::CalendarLink.new(
-  url: "https://sturdy-begonia.biz/",
-), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.link.create_calendar_link(calendar_link: Models::Shared::CalendarLink.new(
+  url: 'https://misguided-thongs.info',
+), connection_id: '<id>')
 
-if ! res.calendar_link.nil?
+unless res.calendar_link.nil?
   # handle response
 end
 
@@ -58,7 +58,11 @@ end
 
 **[T.nilable(Models::Operations::CreateCalendarLinkResponse)](../../models/operations/createcalendarlinkresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_payment_link
 
@@ -66,20 +70,20 @@ Create a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createPaymentLink" method="post" path="/payment/{connection_id}/link" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.link.create_payment_link(payment_link=Models::Shared::PaymentLink.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.link.create_payment_link(payment_link: Models::Shared::PaymentLink.new(), connection_id: '<id>')
 
-if ! res.payment_link.nil?
+unless res.payment_link.nil?
   # handle response
 end
 
@@ -98,7 +102,11 @@ end
 
 **[T.nilable(Models::Operations::CreatePaymentLinkResponse)](../../models/operations/createpaymentlinkresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_calendar_link
 
@@ -106,20 +114,20 @@ Retrieve a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getCalendarLink" method="get" path="/calendar/{connection_id}/link/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.link.get_calendar_link(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.link.get_calendar_link(connection_id: '<id>', id: '<id>')
 
-if ! res.calendar_link.nil?
+unless res.calendar_link.nil?
   # handle response
 end
 
@@ -138,7 +146,11 @@ end
 
 **[T.nilable(Models::Operations::GetCalendarLinkResponse)](../../models/operations/getcalendarlinkresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_payment_link
 
@@ -146,20 +158,20 @@ Retrieve a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getPaymentLink" method="get" path="/payment/{connection_id}/link/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.link.get_payment_link(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.link.get_payment_link(connection_id: '<id>', id: '<id>')
 
-if ! res.payment_link.nil?
+unless res.payment_link.nil?
   # handle response
 end
 
@@ -178,7 +190,11 @@ end
 
 **[T.nilable(Models::Operations::GetPaymentLinkResponse)](../../models/operations/getpaymentlinkresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_calendar_links
 
@@ -186,22 +202,24 @@ List all links
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listCalendarLinks" method="get" path="/calendar/{connection_id}/link" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListCalendarLinksRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.link.list_calendar_links(req)
+res = s.link.list_calendar_links(request: req)
 
-if ! res.calendar_links.nil?
+unless res.calendar_links.nil?
   # handle response
 end
 
@@ -217,7 +235,11 @@ end
 
 **[T.nilable(Models::Operations::ListCalendarLinksResponse)](../../models/operations/listcalendarlinksresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_payment_links
 
@@ -225,22 +247,24 @@ List all links
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listPaymentLinks" method="get" path="/payment/{connection_id}/link" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListPaymentLinksRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.link.list_payment_links(req)
+res = s.link.list_payment_links(request: req)
 
-if ! res.payment_links.nil?
+unless res.payment_links.nil?
   # handle response
 end
 
@@ -256,7 +280,11 @@ end
 
 **[T.nilable(Models::Operations::ListPaymentLinksResponse)](../../models/operations/listpaymentlinksresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_calendar_link
 
@@ -264,26 +292,28 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchCalendarLink" method="patch" path="/calendar/{connection_id}/link/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchCalendarLinkRequest.new(
   calendar_link: Models::Shared::CalendarLink.new(
-    url: "https://curly-skyline.biz/",
+    url: 'https://warm-hexagon.name/',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.link.patch_calendar_link(req)
+res = s.link.patch_calendar_link(request: req)
 
-if ! res.calendar_link.nil?
+unless res.calendar_link.nil?
   # handle response
 end
 
@@ -299,7 +329,11 @@ end
 
 **[T.nilable(Models::Operations::PatchCalendarLinkResponse)](../../models/operations/patchcalendarlinkresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_payment_link
 
@@ -307,24 +341,26 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchPaymentLink" method="patch" path="/payment/{connection_id}/link/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchPaymentLinkRequest.new(
   payment_link: Models::Shared::PaymentLink.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.link.patch_payment_link(req)
+res = s.link.patch_payment_link(request: req)
 
-if ! res.payment_link.nil?
+unless res.payment_link.nil?
   # handle response
 end
 
@@ -340,7 +376,11 @@ end
 
 **[T.nilable(Models::Operations::PatchPaymentLinkResponse)](../../models/operations/patchpaymentlinkresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_calendar_link
 
@@ -348,16 +388,18 @@ Remove a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeCalendarLink" method="delete" path="/calendar/{connection_id}/link/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.link.remove_calendar_link(connection_id="<id>", id="<id>")
+res = s.link.remove_calendar_link(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -376,7 +418,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveCalendarLinkResponse)](../../models/operations/removecalendarlinkresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_payment_link
 
@@ -384,16 +430,18 @@ Remove a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removePaymentLink" method="delete" path="/payment/{connection_id}/link/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.link.remove_payment_link(connection_id="<id>", id="<id>")
+res = s.link.remove_payment_link(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -412,7 +460,11 @@ end
 
 **[T.nilable(Models::Operations::RemovePaymentLinkResponse)](../../models/operations/removepaymentlinkresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_calendar_link
 
@@ -420,26 +472,28 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateCalendarLink" method="put" path="/calendar/{connection_id}/link/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateCalendarLinkRequest.new(
   calendar_link: Models::Shared::CalendarLink.new(
-    url: "https://quiet-coordination.name",
+    url: 'https://partial-hydrocarbon.info',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.link.update_calendar_link(req)
+res = s.link.update_calendar_link(request: req)
 
-if ! res.calendar_link.nil?
+unless res.calendar_link.nil?
   # handle response
 end
 
@@ -455,7 +509,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateCalendarLinkResponse)](../../models/operations/updatecalendarlinkresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_payment_link
 
@@ -463,24 +521,26 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updatePaymentLink" method="put" path="/payment/{connection_id}/link/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdatePaymentLinkRequest.new(
   payment_link: Models::Shared::PaymentLink.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.link.update_payment_link(req)
+res = s.link.update_payment_link(request: req)
 
-if ! res.payment_link.nil?
+unless res.payment_link.nil?
   # handle response
 end
 
@@ -496,3 +556,8 @@ end
 
 **[T.nilable(Models::Operations::UpdatePaymentLinkResponse)](../../models/operations/updatepaymentlinkresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

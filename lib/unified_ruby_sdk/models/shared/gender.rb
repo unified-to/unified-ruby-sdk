@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class Gender < T::Enum
+
+
         enums do
           MALE = new('MALE')
           FEMALE = new('FEMALE')

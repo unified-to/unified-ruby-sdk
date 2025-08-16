@@ -94,20 +94,20 @@ Create an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.create_accounting_account(accounting_account=Models::Shared::AccountingAccount.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.create_accounting_account(accounting_account: Models::Shared::AccountingAccount.new(), connection_id: '<id>')
 
-if ! res.accounting_account.nil?
+unless res.accounting_account.nil?
   # handle response
 end
 
@@ -126,7 +126,11 @@ end
 
 **[T.nilable(Models::Operations::CreateAccountingAccountResponse)](../../models/operations/createaccountingaccountresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_accounting_bill
 
@@ -134,20 +138,20 @@ Create a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.create_accounting_bill(accounting_bill=Models::Shared::AccountingBill.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.create_accounting_bill(accounting_bill: Models::Shared::AccountingBill.new(), connection_id: '<id>')
 
-if ! res.accounting_bill.nil?
+unless res.accounting_bill.nil?
   # handle response
 end
 
@@ -166,7 +170,11 @@ end
 
 **[T.nilable(Models::Operations::CreateAccountingBillResponse)](../../models/operations/createaccountingbillresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_accounting_category
 
@@ -174,20 +182,20 @@ Create a category
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.create_accounting_category(accounting_category=Models::Shared::AccountingCategory.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.create_accounting_category(accounting_category: Models::Shared::AccountingCategory.new(), connection_id: '<id>')
 
-if ! res.accounting_category.nil?
+unless res.accounting_category.nil?
   # handle response
 end
 
@@ -206,7 +214,11 @@ end
 
 **[T.nilable(Models::Operations::CreateAccountingCategoryResponse)](../../models/operations/createaccountingcategoryresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_accounting_contact
 
@@ -214,20 +226,20 @@ Create a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.create_accounting_contact(accounting_contact=Models::Shared::AccountingContact.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.create_accounting_contact(accounting_contact: Models::Shared::AccountingContact.new(), connection_id: '<id>')
 
-if ! res.accounting_contact.nil?
+unless res.accounting_contact.nil?
   # handle response
 end
 
@@ -246,7 +258,11 @@ end
 
 **[T.nilable(Models::Operations::CreateAccountingContactResponse)](../../models/operations/createaccountingcontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_accounting_creditmemo
 
@@ -254,20 +270,20 @@ Create a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.create_accounting_creditmemo(accounting_creditmemo=Models::Shared::AccountingCreditmemo.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.create_accounting_creditmemo(accounting_creditmemo: Models::Shared::AccountingCreditmemo.new(), connection_id: '<id>')
 
-if ! res.accounting_creditmemo.nil?
+unless res.accounting_creditmemo.nil?
   # handle response
 end
 
@@ -286,7 +302,11 @@ end
 
 **[T.nilable(Models::Operations::CreateAccountingCreditmemoResponse)](../../models/operations/createaccountingcreditmemoresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_accounting_invoice
 
@@ -294,20 +314,20 @@ Create an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.create_accounting_invoice(accounting_invoice=Models::Shared::AccountingInvoice.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.create_accounting_invoice(accounting_invoice: Models::Shared::AccountingInvoice.new(), connection_id: '<id>')
 
-if ! res.accounting_invoice.nil?
+unless res.accounting_invoice.nil?
   # handle response
 end
 
@@ -326,7 +346,11 @@ end
 
 **[T.nilable(Models::Operations::CreateAccountingInvoiceResponse)](../../models/operations/createaccountinginvoiceresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_accounting_journal
 
@@ -334,20 +358,20 @@ Create a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.create_accounting_journal(accounting_journal=Models::Shared::AccountingJournal.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.create_accounting_journal(accounting_journal: Models::Shared::AccountingJournal.new(), connection_id: '<id>')
 
-if ! res.accounting_journal.nil?
+unless res.accounting_journal.nil?
   # handle response
 end
 
@@ -366,7 +390,11 @@ end
 
 **[T.nilable(Models::Operations::CreateAccountingJournalResponse)](../../models/operations/createaccountingjournalresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_accounting_order
 
@@ -374,20 +402,20 @@ Create an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.create_accounting_order(accounting_order=Models::Shared::AccountingOrder.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.create_accounting_order(accounting_order: Models::Shared::AccountingOrder.new(), connection_id: '<id>')
 
-if ! res.accounting_order.nil?
+unless res.accounting_order.nil?
   # handle response
 end
 
@@ -406,7 +434,11 @@ end
 
 **[T.nilable(Models::Operations::CreateAccountingOrderResponse)](../../models/operations/createaccountingorderresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_accounting_purchaseorder
 
@@ -414,20 +446,20 @@ Create a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.create_accounting_purchaseorder(accounting_purchaseorder=Models::Shared::AccountingPurchaseorder.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.create_accounting_purchaseorder(accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(), connection_id: '<id>')
 
-if ! res.accounting_purchaseorder.nil?
+unless res.accounting_purchaseorder.nil?
   # handle response
 end
 
@@ -446,7 +478,11 @@ end
 
 **[T.nilable(Models::Operations::CreateAccountingPurchaseorderResponse)](../../models/operations/createaccountingpurchaseorderresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_accounting_salesorder
 
@@ -454,20 +490,20 @@ Create a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.create_accounting_salesorder(accounting_salesorder=Models::Shared::AccountingSalesorder.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.create_accounting_salesorder(accounting_salesorder: Models::Shared::AccountingSalesorder.new(), connection_id: '<id>')
 
-if ! res.accounting_salesorder.nil?
+unless res.accounting_salesorder.nil?
   # handle response
 end
 
@@ -486,7 +522,11 @@ end
 
 **[T.nilable(Models::Operations::CreateAccountingSalesorderResponse)](../../models/operations/createaccountingsalesorderresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_accounting_taxrate
 
@@ -494,20 +534,20 @@ Create a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.create_accounting_taxrate(accounting_taxrate=Models::Shared::AccountingTaxrate.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.create_accounting_taxrate(accounting_taxrate: Models::Shared::AccountingTaxrate.new(), connection_id: '<id>')
 
-if ! res.accounting_taxrate.nil?
+unless res.accounting_taxrate.nil?
   # handle response
 end
 
@@ -526,7 +566,11 @@ end
 
 **[T.nilable(Models::Operations::CreateAccountingTaxrateResponse)](../../models/operations/createaccountingtaxrateresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_accounting_transaction
 
@@ -534,20 +578,20 @@ Create a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.create_accounting_transaction(accounting_transaction=Models::Shared::AccountingTransaction.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.create_accounting_transaction(accounting_transaction: Models::Shared::AccountingTransaction.new(), connection_id: '<id>')
 
-if ! res.accounting_transaction.nil?
+unless res.accounting_transaction.nil?
   # handle response
 end
 
@@ -566,7 +610,11 @@ end
 
 **[T.nilable(Models::Operations::CreateAccountingTransactionResponse)](../../models/operations/createaccountingtransactionresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_accounting_account
 
@@ -574,20 +622,20 @@ Retrieve an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAccountingAccount" method="get" path="/accounting/{connection_id}/account/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.get_accounting_account(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.get_accounting_account(connection_id: '<id>', id: '<id>')
 
-if ! res.accounting_account.nil?
+unless res.accounting_account.nil?
   # handle response
 end
 
@@ -606,7 +654,11 @@ end
 
 **[T.nilable(Models::Operations::GetAccountingAccountResponse)](../../models/operations/getaccountingaccountresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_accounting_balancesheet
 
@@ -614,20 +666,20 @@ Retrieve a balancesheet
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAccountingBalancesheet" method="get" path="/accounting/{connection_id}/balancesheet/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.get_accounting_balancesheet(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.get_accounting_balancesheet(connection_id: '<id>', id: '<id>')
 
-if ! res.accounting_balancesheet.nil?
+unless res.accounting_balancesheet.nil?
   # handle response
 end
 
@@ -646,7 +698,11 @@ end
 
 **[T.nilable(Models::Operations::GetAccountingBalancesheetResponse)](../../models/operations/getaccountingbalancesheetresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_accounting_bill
 
@@ -654,20 +710,20 @@ Retrieve a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAccountingBill" method="get" path="/accounting/{connection_id}/bill/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.get_accounting_bill(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.get_accounting_bill(connection_id: '<id>', id: '<id>')
 
-if ! res.accounting_bill.nil?
+unless res.accounting_bill.nil?
   # handle response
 end
 
@@ -686,7 +742,11 @@ end
 
 **[T.nilable(Models::Operations::GetAccountingBillResponse)](../../models/operations/getaccountingbillresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_accounting_category
 
@@ -694,20 +754,20 @@ Retrieve a category
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAccountingCategory" method="get" path="/accounting/{connection_id}/category/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.get_accounting_category(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.get_accounting_category(connection_id: '<id>', id: '<id>')
 
-if ! res.accounting_category.nil?
+unless res.accounting_category.nil?
   # handle response
 end
 
@@ -726,7 +786,11 @@ end
 
 **[T.nilable(Models::Operations::GetAccountingCategoryResponse)](../../models/operations/getaccountingcategoryresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_accounting_contact
 
@@ -734,20 +798,20 @@ Retrieve a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAccountingContact" method="get" path="/accounting/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.get_accounting_contact(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.get_accounting_contact(connection_id: '<id>', id: '<id>')
 
-if ! res.accounting_contact.nil?
+unless res.accounting_contact.nil?
   # handle response
 end
 
@@ -766,7 +830,11 @@ end
 
 **[T.nilable(Models::Operations::GetAccountingContactResponse)](../../models/operations/getaccountingcontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_accounting_creditmemo
 
@@ -774,20 +842,20 @@ Retrieve a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAccountingCreditmemo" method="get" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.get_accounting_creditmemo(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.get_accounting_creditmemo(connection_id: '<id>', id: '<id>')
 
-if ! res.accounting_creditmemo.nil?
+unless res.accounting_creditmemo.nil?
   # handle response
 end
 
@@ -806,7 +874,11 @@ end
 
 **[T.nilable(Models::Operations::GetAccountingCreditmemoResponse)](../../models/operations/getaccountingcreditmemoresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_accounting_invoice
 
@@ -814,20 +886,20 @@ Retrieve an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAccountingInvoice" method="get" path="/accounting/{connection_id}/invoice/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.get_accounting_invoice(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.get_accounting_invoice(connection_id: '<id>', id: '<id>')
 
-if ! res.accounting_invoice.nil?
+unless res.accounting_invoice.nil?
   # handle response
 end
 
@@ -846,7 +918,11 @@ end
 
 **[T.nilable(Models::Operations::GetAccountingInvoiceResponse)](../../models/operations/getaccountinginvoiceresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_accounting_journal
 
@@ -854,20 +930,20 @@ Retrieve a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAccountingJournal" method="get" path="/accounting/{connection_id}/journal/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.get_accounting_journal(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.get_accounting_journal(connection_id: '<id>', id: '<id>')
 
-if ! res.accounting_journal.nil?
+unless res.accounting_journal.nil?
   # handle response
 end
 
@@ -886,7 +962,11 @@ end
 
 **[T.nilable(Models::Operations::GetAccountingJournalResponse)](../../models/operations/getaccountingjournalresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_accounting_order
 
@@ -894,20 +974,20 @@ Retrieve an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAccountingOrder" method="get" path="/accounting/{connection_id}/order/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.get_accounting_order(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.get_accounting_order(connection_id: '<id>', id: '<id>')
 
-if ! res.accounting_order.nil?
+unless res.accounting_order.nil?
   # handle response
 end
 
@@ -926,7 +1006,11 @@ end
 
 **[T.nilable(Models::Operations::GetAccountingOrderResponse)](../../models/operations/getaccountingorderresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_accounting_organization
 
@@ -934,20 +1018,20 @@ Retrieve an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAccountingOrganization" method="get" path="/accounting/{connection_id}/organization/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.get_accounting_organization(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.get_accounting_organization(connection_id: '<id>', id: '<id>')
 
-if ! res.accounting_organization.nil?
+unless res.accounting_organization.nil?
   # handle response
 end
 
@@ -966,7 +1050,11 @@ end
 
 **[T.nilable(Models::Operations::GetAccountingOrganizationResponse)](../../models/operations/getaccountingorganizationresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_accounting_profitloss
 
@@ -974,20 +1062,20 @@ Retrieve a profitloss
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAccountingProfitloss" method="get" path="/accounting/{connection_id}/profitloss/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.get_accounting_profitloss(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.get_accounting_profitloss(connection_id: '<id>', id: '<id>')
 
-if ! res.accounting_profitloss.nil?
+unless res.accounting_profitloss.nil?
   # handle response
 end
 
@@ -1006,7 +1094,11 @@ end
 
 **[T.nilable(Models::Operations::GetAccountingProfitlossResponse)](../../models/operations/getaccountingprofitlossresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_accounting_purchaseorder
 
@@ -1014,20 +1106,20 @@ Retrieve a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAccountingPurchaseorder" method="get" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.get_accounting_purchaseorder(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.get_accounting_purchaseorder(connection_id: '<id>', id: '<id>')
 
-if ! res.accounting_purchaseorder.nil?
+unless res.accounting_purchaseorder.nil?
   # handle response
 end
 
@@ -1046,7 +1138,11 @@ end
 
 **[T.nilable(Models::Operations::GetAccountingPurchaseorderResponse)](../../models/operations/getaccountingpurchaseorderresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_accounting_report
 
@@ -1054,20 +1150,20 @@ Retrieve a report
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAccountingReport" method="get" path="/accounting/{connection_id}/report/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.get_accounting_report(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.get_accounting_report(connection_id: '<id>', id: '<id>')
 
-if ! res.accounting_report.nil?
+unless res.accounting_report.nil?
   # handle response
 end
 
@@ -1086,7 +1182,11 @@ end
 
 **[T.nilable(Models::Operations::GetAccountingReportResponse)](../../models/operations/getaccountingreportresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_accounting_salesorder
 
@@ -1094,20 +1194,20 @@ Retrieve a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAccountingSalesorder" method="get" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.get_accounting_salesorder(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.get_accounting_salesorder(connection_id: '<id>', id: '<id>')
 
-if ! res.accounting_salesorder.nil?
+unless res.accounting_salesorder.nil?
   # handle response
 end
 
@@ -1126,7 +1226,11 @@ end
 
 **[T.nilable(Models::Operations::GetAccountingSalesorderResponse)](../../models/operations/getaccountingsalesorderresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_accounting_taxrate
 
@@ -1134,20 +1238,20 @@ Retrieve a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAccountingTaxrate" method="get" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.get_accounting_taxrate(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.get_accounting_taxrate(connection_id: '<id>', id: '<id>')
 
-if ! res.accounting_taxrate.nil?
+unless res.accounting_taxrate.nil?
   # handle response
 end
 
@@ -1166,7 +1270,11 @@ end
 
 **[T.nilable(Models::Operations::GetAccountingTaxrateResponse)](../../models/operations/getaccountingtaxrateresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_accounting_transaction
 
@@ -1174,20 +1282,20 @@ Retrieve a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAccountingTransaction" method="get" path="/accounting/{connection_id}/transaction/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.get_accounting_transaction(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.get_accounting_transaction(connection_id: '<id>', id: '<id>')
 
-if ! res.accounting_transaction.nil?
+unless res.accounting_transaction.nil?
   # handle response
 end
 
@@ -1206,7 +1314,11 @@ end
 
 **[T.nilable(Models::Operations::GetAccountingTransactionResponse)](../../models/operations/getaccountingtransactionresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_accounting_trialbalance
 
@@ -1214,20 +1326,20 @@ Retrieve a trialbalance
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAccountingTrialbalance" method="get" path="/accounting/{connection_id}/trialbalance/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.get_accounting_trialbalance(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.get_accounting_trialbalance(connection_id: '<id>', id: '<id>')
 
-if ! res.accounting_trialbalance.nil?
+unless res.accounting_trialbalance.nil?
   # handle response
 end
 
@@ -1246,7 +1358,11 @@ end
 
 **[T.nilable(Models::Operations::GetAccountingTrialbalanceResponse)](../../models/operations/getaccountingtrialbalanceresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_accounting_accounts
 
@@ -1254,22 +1370,24 @@ List all accounts
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAccountingAccounts" method="get" path="/accounting/{connection_id}/account" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAccountingAccountsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.accounting.list_accounting_accounts(req)
+res = s.accounting.list_accounting_accounts(request: req)
 
-if ! res.accounting_accounts.nil?
+unless res.accounting_accounts.nil?
   # handle response
 end
 
@@ -1285,7 +1403,11 @@ end
 
 **[T.nilable(Models::Operations::ListAccountingAccountsResponse)](../../models/operations/listaccountingaccountsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_accounting_balancesheets
 
@@ -1293,22 +1415,24 @@ List all balancesheets
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAccountingBalancesheets" method="get" path="/accounting/{connection_id}/balancesheet" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAccountingBalancesheetsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.accounting.list_accounting_balancesheets(req)
+res = s.accounting.list_accounting_balancesheets(request: req)
 
-if ! res.accounting_balancesheets.nil?
+unless res.accounting_balancesheets.nil?
   # handle response
 end
 
@@ -1324,7 +1448,11 @@ end
 
 **[T.nilable(Models::Operations::ListAccountingBalancesheetsResponse)](../../models/operations/listaccountingbalancesheetsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_accounting_bills
 
@@ -1332,22 +1460,24 @@ List all bills
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAccountingBills" method="get" path="/accounting/{connection_id}/bill" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAccountingBillsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.accounting.list_accounting_bills(req)
+res = s.accounting.list_accounting_bills(request: req)
 
-if ! res.accounting_bills.nil?
+unless res.accounting_bills.nil?
   # handle response
 end
 
@@ -1363,7 +1493,11 @@ end
 
 **[T.nilable(Models::Operations::ListAccountingBillsResponse)](../../models/operations/listaccountingbillsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_accounting_categories
 
@@ -1371,22 +1505,24 @@ List all categories
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAccountingCategories" method="get" path="/accounting/{connection_id}/category" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAccountingCategoriesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.accounting.list_accounting_categories(req)
+res = s.accounting.list_accounting_categories(request: req)
 
-if ! res.accounting_categories.nil?
+unless res.accounting_categories.nil?
   # handle response
 end
 
@@ -1402,7 +1538,11 @@ end
 
 **[T.nilable(Models::Operations::ListAccountingCategoriesResponse)](../../models/operations/listaccountingcategoriesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_accounting_contacts
 
@@ -1410,22 +1550,24 @@ List all contacts
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAccountingContacts" method="get" path="/accounting/{connection_id}/contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAccountingContactsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.accounting.list_accounting_contacts(req)
+res = s.accounting.list_accounting_contacts(request: req)
 
-if ! res.accounting_contacts.nil?
+unless res.accounting_contacts.nil?
   # handle response
 end
 
@@ -1441,7 +1583,11 @@ end
 
 **[T.nilable(Models::Operations::ListAccountingContactsResponse)](../../models/operations/listaccountingcontactsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_accounting_creditmemoes
 
@@ -1449,22 +1595,24 @@ List all creditmemoes
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAccountingCreditmemoes" method="get" path="/accounting/{connection_id}/creditmemo" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAccountingCreditmemoesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.accounting.list_accounting_creditmemoes(req)
+res = s.accounting.list_accounting_creditmemoes(request: req)
 
-if ! res.accounting_creditmemoes.nil?
+unless res.accounting_creditmemoes.nil?
   # handle response
 end
 
@@ -1480,7 +1628,11 @@ end
 
 **[T.nilable(Models::Operations::ListAccountingCreditmemoesResponse)](../../models/operations/listaccountingcreditmemoesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_accounting_invoices
 
@@ -1488,22 +1640,24 @@ List all invoices
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAccountingInvoices" method="get" path="/accounting/{connection_id}/invoice" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAccountingInvoicesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.accounting.list_accounting_invoices(req)
+res = s.accounting.list_accounting_invoices(request: req)
 
-if ! res.accounting_invoices.nil?
+unless res.accounting_invoices.nil?
   # handle response
 end
 
@@ -1519,7 +1673,11 @@ end
 
 **[T.nilable(Models::Operations::ListAccountingInvoicesResponse)](../../models/operations/listaccountinginvoicesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_accounting_journals
 
@@ -1527,22 +1685,24 @@ List all journals
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAccountingJournals" method="get" path="/accounting/{connection_id}/journal" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAccountingJournalsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.accounting.list_accounting_journals(req)
+res = s.accounting.list_accounting_journals(request: req)
 
-if ! res.accounting_journals.nil?
+unless res.accounting_journals.nil?
   # handle response
 end
 
@@ -1558,7 +1718,11 @@ end
 
 **[T.nilable(Models::Operations::ListAccountingJournalsResponse)](../../models/operations/listaccountingjournalsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_accounting_orders
 
@@ -1566,22 +1730,24 @@ List all orders
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAccountingOrders" method="get" path="/accounting/{connection_id}/order" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAccountingOrdersRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.accounting.list_accounting_orders(req)
+res = s.accounting.list_accounting_orders(request: req)
 
-if ! res.accounting_orders.nil?
+unless res.accounting_orders.nil?
   # handle response
 end
 
@@ -1597,7 +1763,11 @@ end
 
 **[T.nilable(Models::Operations::ListAccountingOrdersResponse)](../../models/operations/listaccountingordersresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_accounting_organizations
 
@@ -1605,22 +1775,24 @@ List all organizations
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAccountingOrganizations" method="get" path="/accounting/{connection_id}/organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAccountingOrganizationsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.accounting.list_accounting_organizations(req)
+res = s.accounting.list_accounting_organizations(request: req)
 
-if ! res.accounting_organizations.nil?
+unless res.accounting_organizations.nil?
   # handle response
 end
 
@@ -1636,7 +1808,11 @@ end
 
 **[T.nilable(Models::Operations::ListAccountingOrganizationsResponse)](../../models/operations/listaccountingorganizationsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_accounting_profitlosses
 
@@ -1644,22 +1820,24 @@ List all profitlosses
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAccountingProfitlosses" method="get" path="/accounting/{connection_id}/profitloss" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAccountingProfitlossesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.accounting.list_accounting_profitlosses(req)
+res = s.accounting.list_accounting_profitlosses(request: req)
 
-if ! res.accounting_profitlosses.nil?
+unless res.accounting_profitlosses.nil?
   # handle response
 end
 
@@ -1675,7 +1853,11 @@ end
 
 **[T.nilable(Models::Operations::ListAccountingProfitlossesResponse)](../../models/operations/listaccountingprofitlossesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_accounting_purchaseorders
 
@@ -1683,22 +1865,24 @@ List all purchaseorders
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAccountingPurchaseorders" method="get" path="/accounting/{connection_id}/purchaseorder" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAccountingPurchaseordersRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.accounting.list_accounting_purchaseorders(req)
+res = s.accounting.list_accounting_purchaseorders(request: req)
 
-if ! res.accounting_purchaseorders.nil?
+unless res.accounting_purchaseorders.nil?
   # handle response
 end
 
@@ -1714,7 +1898,11 @@ end
 
 **[T.nilable(Models::Operations::ListAccountingPurchaseordersResponse)](../../models/operations/listaccountingpurchaseordersresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_accounting_reports
 
@@ -1722,22 +1910,24 @@ List all reports
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAccountingReports" method="get" path="/accounting/{connection_id}/report" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAccountingReportsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.accounting.list_accounting_reports(req)
+res = s.accounting.list_accounting_reports(request: req)
 
-if ! res.accounting_reports.nil?
+unless res.accounting_reports.nil?
   # handle response
 end
 
@@ -1753,7 +1943,11 @@ end
 
 **[T.nilable(Models::Operations::ListAccountingReportsResponse)](../../models/operations/listaccountingreportsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_accounting_salesorders
 
@@ -1761,22 +1955,24 @@ List all salesorders
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAccountingSalesorders" method="get" path="/accounting/{connection_id}/salesorder" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAccountingSalesordersRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.accounting.list_accounting_salesorders(req)
+res = s.accounting.list_accounting_salesorders(request: req)
 
-if ! res.accounting_salesorders.nil?
+unless res.accounting_salesorders.nil?
   # handle response
 end
 
@@ -1792,7 +1988,11 @@ end
 
 **[T.nilable(Models::Operations::ListAccountingSalesordersResponse)](../../models/operations/listaccountingsalesordersresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_accounting_taxrates
 
@@ -1800,22 +2000,24 @@ List all taxrates
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAccountingTaxrates" method="get" path="/accounting/{connection_id}/taxrate" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAccountingTaxratesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.accounting.list_accounting_taxrates(req)
+res = s.accounting.list_accounting_taxrates(request: req)
 
-if ! res.accounting_taxrates.nil?
+unless res.accounting_taxrates.nil?
   # handle response
 end
 
@@ -1831,7 +2033,11 @@ end
 
 **[T.nilable(Models::Operations::ListAccountingTaxratesResponse)](../../models/operations/listaccountingtaxratesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_accounting_transactions
 
@@ -1839,22 +2045,24 @@ List all transactions
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAccountingTransactions" method="get" path="/accounting/{connection_id}/transaction" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAccountingTransactionsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.accounting.list_accounting_transactions(req)
+res = s.accounting.list_accounting_transactions(request: req)
 
-if ! res.accounting_transactions.nil?
+unless res.accounting_transactions.nil?
   # handle response
 end
 
@@ -1870,7 +2078,11 @@ end
 
 **[T.nilable(Models::Operations::ListAccountingTransactionsResponse)](../../models/operations/listaccountingtransactionsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_accounting_trialbalances
 
@@ -1878,22 +2090,24 @@ List all trialbalances
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAccountingTrialbalances" method="get" path="/accounting/{connection_id}/trialbalance" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAccountingTrialbalancesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.accounting.list_accounting_trialbalances(req)
+res = s.accounting.list_accounting_trialbalances(request: req)
 
-if ! res.accounting_trialbalances.nil?
+unless res.accounting_trialbalances.nil?
   # handle response
 end
 
@@ -1909,7 +2123,11 @@ end
 
 **[T.nilable(Models::Operations::ListAccountingTrialbalancesResponse)](../../models/operations/listaccountingtrialbalancesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_accounting_account
 
@@ -1917,24 +2135,26 @@ Update an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchAccountingAccountRequest.new(
   accounting_account: Models::Shared::AccountingAccount.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.accounting.patch_accounting_account(req)
+res = s.accounting.patch_accounting_account(request: req)
 
-if ! res.accounting_account.nil?
+unless res.accounting_account.nil?
   # handle response
 end
 
@@ -1950,7 +2170,11 @@ end
 
 **[T.nilable(Models::Operations::PatchAccountingAccountResponse)](../../models/operations/patchaccountingaccountresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_accounting_bill
 
@@ -1958,24 +2182,26 @@ Update a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchAccountingBillRequest.new(
   accounting_bill: Models::Shared::AccountingBill.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.accounting.patch_accounting_bill(req)
+res = s.accounting.patch_accounting_bill(request: req)
 
-if ! res.accounting_bill.nil?
+unless res.accounting_bill.nil?
   # handle response
 end
 
@@ -1991,7 +2217,11 @@ end
 
 **[T.nilable(Models::Operations::PatchAccountingBillResponse)](../../models/operations/patchaccountingbillresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_accounting_category
 
@@ -1999,24 +2229,26 @@ Update a category
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchAccountingCategoryRequest.new(
   accounting_category: Models::Shared::AccountingCategory.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.accounting.patch_accounting_category(req)
+res = s.accounting.patch_accounting_category(request: req)
 
-if ! res.accounting_category.nil?
+unless res.accounting_category.nil?
   # handle response
 end
 
@@ -2032,7 +2264,11 @@ end
 
 **[T.nilable(Models::Operations::PatchAccountingCategoryResponse)](../../models/operations/patchaccountingcategoryresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_accounting_contact
 
@@ -2040,24 +2276,26 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchAccountingContactRequest.new(
   accounting_contact: Models::Shared::AccountingContact.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.accounting.patch_accounting_contact(req)
+res = s.accounting.patch_accounting_contact(request: req)
 
-if ! res.accounting_contact.nil?
+unless res.accounting_contact.nil?
   # handle response
 end
 
@@ -2073,7 +2311,11 @@ end
 
 **[T.nilable(Models::Operations::PatchAccountingContactResponse)](../../models/operations/patchaccountingcontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_accounting_creditmemo
 
@@ -2081,24 +2323,26 @@ Update a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchAccountingCreditmemoRequest.new(
   accounting_creditmemo: Models::Shared::AccountingCreditmemo.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.accounting.patch_accounting_creditmemo(req)
+res = s.accounting.patch_accounting_creditmemo(request: req)
 
-if ! res.accounting_creditmemo.nil?
+unless res.accounting_creditmemo.nil?
   # handle response
 end
 
@@ -2114,7 +2358,11 @@ end
 
 **[T.nilable(Models::Operations::PatchAccountingCreditmemoResponse)](../../models/operations/patchaccountingcreditmemoresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_accounting_invoice
 
@@ -2122,24 +2370,26 @@ Update an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchAccountingInvoiceRequest.new(
   accounting_invoice: Models::Shared::AccountingInvoice.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.accounting.patch_accounting_invoice(req)
+res = s.accounting.patch_accounting_invoice(request: req)
 
-if ! res.accounting_invoice.nil?
+unless res.accounting_invoice.nil?
   # handle response
 end
 
@@ -2155,7 +2405,11 @@ end
 
 **[T.nilable(Models::Operations::PatchAccountingInvoiceResponse)](../../models/operations/patchaccountinginvoiceresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_accounting_journal
 
@@ -2163,24 +2417,26 @@ Update a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchAccountingJournalRequest.new(
   accounting_journal: Models::Shared::AccountingJournal.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.accounting.patch_accounting_journal(req)
+res = s.accounting.patch_accounting_journal(request: req)
 
-if ! res.accounting_journal.nil?
+unless res.accounting_journal.nil?
   # handle response
 end
 
@@ -2196,7 +2452,11 @@ end
 
 **[T.nilable(Models::Operations::PatchAccountingJournalResponse)](../../models/operations/patchaccountingjournalresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_accounting_order
 
@@ -2204,24 +2464,26 @@ Update an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchAccountingOrderRequest.new(
   accounting_order: Models::Shared::AccountingOrder.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.accounting.patch_accounting_order(req)
+res = s.accounting.patch_accounting_order(request: req)
 
-if ! res.accounting_order.nil?
+unless res.accounting_order.nil?
   # handle response
 end
 
@@ -2237,7 +2499,11 @@ end
 
 **[T.nilable(Models::Operations::PatchAccountingOrderResponse)](../../models/operations/patchaccountingorderresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_accounting_purchaseorder
 
@@ -2245,24 +2511,26 @@ Update a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchAccountingPurchaseorderRequest.new(
   accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.accounting.patch_accounting_purchaseorder(req)
+res = s.accounting.patch_accounting_purchaseorder(request: req)
 
-if ! res.accounting_purchaseorder.nil?
+unless res.accounting_purchaseorder.nil?
   # handle response
 end
 
@@ -2278,7 +2546,11 @@ end
 
 **[T.nilable(Models::Operations::PatchAccountingPurchaseorderResponse)](../../models/operations/patchaccountingpurchaseorderresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_accounting_salesorder
 
@@ -2286,24 +2558,26 @@ Update a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchAccountingSalesorderRequest.new(
   accounting_salesorder: Models::Shared::AccountingSalesorder.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.accounting.patch_accounting_salesorder(req)
+res = s.accounting.patch_accounting_salesorder(request: req)
 
-if ! res.accounting_salesorder.nil?
+unless res.accounting_salesorder.nil?
   # handle response
 end
 
@@ -2319,7 +2593,11 @@ end
 
 **[T.nilable(Models::Operations::PatchAccountingSalesorderResponse)](../../models/operations/patchaccountingsalesorderresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_accounting_taxrate
 
@@ -2327,24 +2605,26 @@ Update a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchAccountingTaxrateRequest.new(
   accounting_taxrate: Models::Shared::AccountingTaxrate.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.accounting.patch_accounting_taxrate(req)
+res = s.accounting.patch_accounting_taxrate(request: req)
 
-if ! res.accounting_taxrate.nil?
+unless res.accounting_taxrate.nil?
   # handle response
 end
 
@@ -2360,7 +2640,11 @@ end
 
 **[T.nilable(Models::Operations::PatchAccountingTaxrateResponse)](../../models/operations/patchaccountingtaxrateresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_accounting_transaction
 
@@ -2368,24 +2652,26 @@ Update a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchAccountingTransactionRequest.new(
   accounting_transaction: Models::Shared::AccountingTransaction.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.accounting.patch_accounting_transaction(req)
+res = s.accounting.patch_accounting_transaction(request: req)
 
-if ! res.accounting_transaction.nil?
+unless res.accounting_transaction.nil?
   # handle response
 end
 
@@ -2401,7 +2687,11 @@ end
 
 **[T.nilable(Models::Operations::PatchAccountingTransactionResponse)](../../models/operations/patchaccountingtransactionresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_accounting_account
 
@@ -2409,16 +2699,18 @@ Remove an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeAccountingAccount" method="delete" path="/accounting/{connection_id}/account/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.remove_accounting_account(connection_id="<id>", id="<id>")
+res = s.accounting.remove_accounting_account(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -2437,7 +2729,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveAccountingAccountResponse)](../../models/operations/removeaccountingaccountresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_accounting_bill
 
@@ -2445,16 +2741,18 @@ Remove a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeAccountingBill" method="delete" path="/accounting/{connection_id}/bill/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.remove_accounting_bill(connection_id="<id>", id="<id>")
+res = s.accounting.remove_accounting_bill(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -2473,7 +2771,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveAccountingBillResponse)](../../models/operations/removeaccountingbillresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_accounting_category
 
@@ -2481,16 +2783,18 @@ Remove a category
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeAccountingCategory" method="delete" path="/accounting/{connection_id}/category/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.remove_accounting_category(connection_id="<id>", id="<id>")
+res = s.accounting.remove_accounting_category(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -2509,7 +2813,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveAccountingCategoryResponse)](../../models/operations/removeaccountingcategoryresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_accounting_contact
 
@@ -2517,16 +2825,18 @@ Remove a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeAccountingContact" method="delete" path="/accounting/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.remove_accounting_contact(connection_id="<id>", id="<id>")
+res = s.accounting.remove_accounting_contact(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -2545,7 +2855,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveAccountingContactResponse)](../../models/operations/removeaccountingcontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_accounting_creditmemo
 
@@ -2553,16 +2867,18 @@ Remove a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeAccountingCreditmemo" method="delete" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.remove_accounting_creditmemo(connection_id="<id>", id="<id>")
+res = s.accounting.remove_accounting_creditmemo(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -2581,7 +2897,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveAccountingCreditmemoResponse)](../../models/operations/removeaccountingcreditmemoresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_accounting_invoice
 
@@ -2589,16 +2909,18 @@ Remove an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeAccountingInvoice" method="delete" path="/accounting/{connection_id}/invoice/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.remove_accounting_invoice(connection_id="<id>", id="<id>")
+res = s.accounting.remove_accounting_invoice(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -2617,7 +2939,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveAccountingInvoiceResponse)](../../models/operations/removeaccountinginvoiceresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_accounting_journal
 
@@ -2625,16 +2951,18 @@ Remove a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeAccountingJournal" method="delete" path="/accounting/{connection_id}/journal/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.remove_accounting_journal(connection_id="<id>", id="<id>")
+res = s.accounting.remove_accounting_journal(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -2653,7 +2981,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveAccountingJournalResponse)](../../models/operations/removeaccountingjournalresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_accounting_order
 
@@ -2661,16 +2993,18 @@ Remove an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeAccountingOrder" method="delete" path="/accounting/{connection_id}/order/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.remove_accounting_order(connection_id="<id>", id="<id>")
+res = s.accounting.remove_accounting_order(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -2689,7 +3023,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveAccountingOrderResponse)](../../models/operations/removeaccountingorderresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_accounting_purchaseorder
 
@@ -2697,16 +3035,18 @@ Remove a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeAccountingPurchaseorder" method="delete" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.remove_accounting_purchaseorder(connection_id="<id>", id="<id>")
+res = s.accounting.remove_accounting_purchaseorder(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -2725,7 +3065,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveAccountingPurchaseorderResponse)](../../models/operations/removeaccountingpurchaseorderresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_accounting_salesorder
 
@@ -2733,16 +3077,18 @@ Remove a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeAccountingSalesorder" method="delete" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.remove_accounting_salesorder(connection_id="<id>", id="<id>")
+res = s.accounting.remove_accounting_salesorder(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -2761,7 +3107,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveAccountingSalesorderResponse)](../../models/operations/removeaccountingsalesorderresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_accounting_taxrate
 
@@ -2769,16 +3119,18 @@ Remove a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeAccountingTaxrate" method="delete" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.remove_accounting_taxrate(connection_id="<id>", id="<id>")
+res = s.accounting.remove_accounting_taxrate(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -2797,7 +3149,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveAccountingTaxrateResponse)](../../models/operations/removeaccountingtaxrateresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_accounting_transaction
 
@@ -2805,16 +3161,18 @@ Remove a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeAccountingTransaction" method="delete" path="/accounting/{connection_id}/transaction/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.remove_accounting_transaction(connection_id="<id>", id="<id>")
+res = s.accounting.remove_accounting_transaction(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -2833,7 +3191,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveAccountingTransactionResponse)](../../models/operations/removeaccountingtransactionresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_accounting_account
 
@@ -2841,24 +3203,26 @@ Update an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateAccountingAccountRequest.new(
   accounting_account: Models::Shared::AccountingAccount.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.accounting.update_accounting_account(req)
+res = s.accounting.update_accounting_account(request: req)
 
-if ! res.accounting_account.nil?
+unless res.accounting_account.nil?
   # handle response
 end
 
@@ -2874,7 +3238,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateAccountingAccountResponse)](../../models/operations/updateaccountingaccountresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_accounting_bill
 
@@ -2882,24 +3250,26 @@ Update a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateAccountingBillRequest.new(
   accounting_bill: Models::Shared::AccountingBill.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.accounting.update_accounting_bill(req)
+res = s.accounting.update_accounting_bill(request: req)
 
-if ! res.accounting_bill.nil?
+unless res.accounting_bill.nil?
   # handle response
 end
 
@@ -2915,7 +3285,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateAccountingBillResponse)](../../models/operations/updateaccountingbillresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_accounting_category
 
@@ -2923,24 +3297,26 @@ Update a category
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateAccountingCategoryRequest.new(
   accounting_category: Models::Shared::AccountingCategory.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.accounting.update_accounting_category(req)
+res = s.accounting.update_accounting_category(request: req)
 
-if ! res.accounting_category.nil?
+unless res.accounting_category.nil?
   # handle response
 end
 
@@ -2956,7 +3332,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateAccountingCategoryResponse)](../../models/operations/updateaccountingcategoryresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_accounting_contact
 
@@ -2964,24 +3344,26 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateAccountingContactRequest.new(
   accounting_contact: Models::Shared::AccountingContact.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.accounting.update_accounting_contact(req)
+res = s.accounting.update_accounting_contact(request: req)
 
-if ! res.accounting_contact.nil?
+unless res.accounting_contact.nil?
   # handle response
 end
 
@@ -2997,7 +3379,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateAccountingContactResponse)](../../models/operations/updateaccountingcontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_accounting_creditmemo
 
@@ -3005,24 +3391,26 @@ Update a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateAccountingCreditmemoRequest.new(
   accounting_creditmemo: Models::Shared::AccountingCreditmemo.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.accounting.update_accounting_creditmemo(req)
+res = s.accounting.update_accounting_creditmemo(request: req)
 
-if ! res.accounting_creditmemo.nil?
+unless res.accounting_creditmemo.nil?
   # handle response
 end
 
@@ -3038,7 +3426,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateAccountingCreditmemoResponse)](../../models/operations/updateaccountingcreditmemoresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_accounting_invoice
 
@@ -3046,24 +3438,26 @@ Update an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateAccountingInvoiceRequest.new(
   accounting_invoice: Models::Shared::AccountingInvoice.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.accounting.update_accounting_invoice(req)
+res = s.accounting.update_accounting_invoice(request: req)
 
-if ! res.accounting_invoice.nil?
+unless res.accounting_invoice.nil?
   # handle response
 end
 
@@ -3079,7 +3473,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateAccountingInvoiceResponse)](../../models/operations/updateaccountinginvoiceresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_accounting_journal
 
@@ -3087,24 +3485,26 @@ Update a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateAccountingJournalRequest.new(
   accounting_journal: Models::Shared::AccountingJournal.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.accounting.update_accounting_journal(req)
+res = s.accounting.update_accounting_journal(request: req)
 
-if ! res.accounting_journal.nil?
+unless res.accounting_journal.nil?
   # handle response
 end
 
@@ -3120,7 +3520,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateAccountingJournalResponse)](../../models/operations/updateaccountingjournalresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_accounting_order
 
@@ -3128,24 +3532,26 @@ Update an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateAccountingOrderRequest.new(
   accounting_order: Models::Shared::AccountingOrder.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.accounting.update_accounting_order(req)
+res = s.accounting.update_accounting_order(request: req)
 
-if ! res.accounting_order.nil?
+unless res.accounting_order.nil?
   # handle response
 end
 
@@ -3161,7 +3567,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateAccountingOrderResponse)](../../models/operations/updateaccountingorderresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_accounting_purchaseorder
 
@@ -3169,24 +3579,26 @@ Update a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateAccountingPurchaseorderRequest.new(
   accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.accounting.update_accounting_purchaseorder(req)
+res = s.accounting.update_accounting_purchaseorder(request: req)
 
-if ! res.accounting_purchaseorder.nil?
+unless res.accounting_purchaseorder.nil?
   # handle response
 end
 
@@ -3202,7 +3614,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateAccountingPurchaseorderResponse)](../../models/operations/updateaccountingpurchaseorderresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_accounting_salesorder
 
@@ -3210,24 +3626,26 @@ Update a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateAccountingSalesorderRequest.new(
   accounting_salesorder: Models::Shared::AccountingSalesorder.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.accounting.update_accounting_salesorder(req)
+res = s.accounting.update_accounting_salesorder(request: req)
 
-if ! res.accounting_salesorder.nil?
+unless res.accounting_salesorder.nil?
   # handle response
 end
 
@@ -3243,7 +3661,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateAccountingSalesorderResponse)](../../models/operations/updateaccountingsalesorderresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_accounting_taxrate
 
@@ -3251,24 +3673,26 @@ Update a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateAccountingTaxrateRequest.new(
   accounting_taxrate: Models::Shared::AccountingTaxrate.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.accounting.update_accounting_taxrate(req)
+res = s.accounting.update_accounting_taxrate(request: req)
 
-if ! res.accounting_taxrate.nil?
+unless res.accounting_taxrate.nil?
   # handle response
 end
 
@@ -3284,7 +3708,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateAccountingTaxrateResponse)](../../models/operations/updateaccountingtaxrateresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_accounting_transaction
 
@@ -3292,24 +3720,26 @@ Update a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateAccountingTransactionRequest.new(
   accounting_transaction: Models::Shared::AccountingTransaction.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.accounting.update_accounting_transaction(req)
+res = s.accounting.update_accounting_transaction(request: req)
 
-if ! res.accounting_transaction.nil?
+unless res.accounting_transaction.nil?
   # handle response
 end
 
@@ -3325,3 +3755,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateAccountingTransactionResponse)](../../models/operations/updateaccountingtransactionresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

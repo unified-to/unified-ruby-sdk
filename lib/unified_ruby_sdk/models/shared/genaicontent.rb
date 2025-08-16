@@ -14,17 +14,17 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :content, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
+        field :content, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content'), required: true } }
 
-        field :role, T.nilable(Models::Shared::Role), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('role'), 'decoder': Utils.enum_from_string(Models::Shared::Role, true) } }
-
+        field :role, Crystalline::Nilable.new(Models::Shared::Role), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('role'), 'decoder': Utils.enum_from_string(Models::Shared::Role, true) } }
 
         sig { params(content: ::String, role: T.nilable(Models::Shared::Role)).void }
-        def initialize(content: nil, role: nil)
+        def initialize(content:, role: nil)
           @content = content
           @role = role
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @content == other.content

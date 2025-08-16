@@ -18,13 +18,13 @@ module UnifiedRubySDK
         # ID of the Link
         field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
 
-
         sig { params(connection_id: ::String, id: ::String).void }
-        def initialize(connection_id: nil, id: nil)
+        def initialize(connection_id:, id:)
           @connection_id = connection_id
           @id = id
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @connection_id == other.connection_id

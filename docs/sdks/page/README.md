@@ -18,23 +18,23 @@ Create a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.page.create_kms_page(kms_page=Models::Shared::KmsPage.new(
-  title: "<value>",
-  type: Models::Shared::KmsPageType::HTML,
-), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.page.create_kms_page(kms_page: Models::Shared::KmsPage.new(
+  title: '<value>',
+  type: Models::Shared::KmsPageType::TEXT,
+), connection_id: '<id>')
 
-if ! res.kms_page.nil?
+unless res.kms_page.nil?
   # handle response
 end
 
@@ -53,7 +53,11 @@ end
 
 **[T.nilable(Models::Operations::CreateKmsPageResponse)](../../models/operations/createkmspageresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_kms_page
 
@@ -61,20 +65,20 @@ Retrieve a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getKmsPage" method="get" path="/kms/{connection_id}/page/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.page.get_kms_page(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.page.get_kms_page(connection_id: '<id>', id: '<id>')
 
-if ! res.kms_page.nil?
+unless res.kms_page.nil?
   # handle response
 end
 
@@ -93,7 +97,11 @@ end
 
 **[T.nilable(Models::Operations::GetKmsPageResponse)](../../models/operations/getkmspageresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_kms_pages
 
@@ -101,22 +109,24 @@ List all pages
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listKmsPages" method="get" path="/kms/{connection_id}/page" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListKmsPagesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.page.list_kms_pages(req)
+res = s.page.list_kms_pages(request: req)
 
-if ! res.kms_pages.nil?
+unless res.kms_pages.nil?
   # handle response
 end
 
@@ -132,7 +142,11 @@ end
 
 **[T.nilable(Models::Operations::ListKmsPagesResponse)](../../models/operations/listkmspagesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_kms_page
 
@@ -140,27 +154,29 @@ Update a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchKmsPageRequest.new(
   kms_page: Models::Shared::KmsPage.new(
-    title: "<value>",
-    type: Models::Shared::KmsPageType::TEXT,
+    title: '<value>',
+    type: Models::Shared::KmsPageType::OTHER,
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.page.patch_kms_page(req)
+res = s.page.patch_kms_page(request: req)
 
-if ! res.kms_page.nil?
+unless res.kms_page.nil?
   # handle response
 end
 
@@ -176,7 +192,11 @@ end
 
 **[T.nilable(Models::Operations::PatchKmsPageResponse)](../../models/operations/patchkmspageresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_kms_page
 
@@ -184,16 +204,18 @@ Remove a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeKmsPage" method="delete" path="/kms/{connection_id}/page/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.page.remove_kms_page(connection_id="<id>", id="<id>")
+res = s.page.remove_kms_page(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -212,7 +234,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveKmsPageResponse)](../../models/operations/removekmspageresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_kms_page
 
@@ -220,27 +246,29 @@ Update a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateKmsPageRequest.new(
   kms_page: Models::Shared::KmsPage.new(
-    title: "<value>",
+    title: '<value>',
     type: Models::Shared::KmsPageType::OTHER,
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.page.update_kms_page(req)
+res = s.page.update_kms_page(request: req)
 
-if ! res.kms_page.nil?
+unless res.kms_page.nil?
   # handle response
 end
 
@@ -256,3 +284,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateKmsPageResponse)](../../models/operations/updatekmspageresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

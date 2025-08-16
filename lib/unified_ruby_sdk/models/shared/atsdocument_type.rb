@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class AtsDocumentType < T::Enum
+
+
         enums do
           RESUME = new('RESUME')
           COVER_LETTER = new('COVER_LETTER')

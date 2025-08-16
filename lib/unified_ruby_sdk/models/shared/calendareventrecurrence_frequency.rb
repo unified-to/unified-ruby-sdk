@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class CalendarEventRecurrenceFrequency < T::Enum
+
+
         enums do
           DAILY = new('DAILY')
           WEEKLY = new('WEEKLY')

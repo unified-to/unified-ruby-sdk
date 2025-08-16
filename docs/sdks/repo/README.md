@@ -42,23 +42,23 @@ Create a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.repo.create_repo_branch(repo_branch=Models::Shared::RepoBranch.new(
-  name: "<value>",
-  repo_id: "<id>",
-), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.repo.create_repo_branch(repo_branch: Models::Shared::RepoBranch.new(
+  name: '<value>',
+  repo_id: '<id>',
+), connection_id: '<id>')
 
-if ! res.repo_branch.nil?
+unless res.repo_branch.nil?
   # handle response
 end
 
@@ -77,7 +77,11 @@ end
 
 **[T.nilable(Models::Operations::CreateRepoBranchResponse)](../../models/operations/createrepobranchresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_repo_commit
 
@@ -85,23 +89,23 @@ Create a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.repo.create_repo_commit(repo_commit=Models::Shared::RepoCommit.new(
-  repo_id: "<id>",
-  user_id: "<id>",
-), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.repo.create_repo_commit(repo_commit: Models::Shared::RepoCommit.new(
+  repo_id: '<id>',
+  user_id: '<id>',
+), connection_id: '<id>')
 
-if ! res.repo_commit.nil?
+unless res.repo_commit.nil?
   # handle response
 end
 
@@ -120,7 +124,11 @@ end
 
 **[T.nilable(Models::Operations::CreateRepoCommitResponse)](../../models/operations/createrepocommitresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_repo_organization
 
@@ -128,20 +136,20 @@ Create an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.repo.create_repo_organization(repo_organization=Models::Shared::RepoOrganization.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.repo.create_repo_organization(repo_organization: Models::Shared::RepoOrganization.new(), connection_id: '<id>')
 
-if ! res.repo_organization.nil?
+unless res.repo_organization.nil?
   # handle response
 end
 
@@ -160,7 +168,11 @@ end
 
 **[T.nilable(Models::Operations::CreateRepoOrganizationResponse)](../../models/operations/createrepoorganizationresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_repo_pullrequest
 
@@ -168,20 +180,20 @@ Create a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.repo.create_repo_pullrequest(repo_pullrequest=Models::Shared::RepoPullrequest.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.repo.create_repo_pullrequest(repo_pullrequest: Models::Shared::RepoPullrequest.new(), connection_id: '<id>')
 
-if ! res.repo_pullrequest.nil?
+unless res.repo_pullrequest.nil?
   # handle response
 end
 
@@ -200,7 +212,11 @@ end
 
 **[T.nilable(Models::Operations::CreateRepoPullrequestResponse)](../../models/operations/createrepopullrequestresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_repo_repository
 
@@ -208,22 +224,22 @@ Create a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.repo.create_repo_repository(repo_repository=Models::Shared::RepoRepository.new(
-  name: "<value>",
-), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.repo.create_repo_repository(repo_repository: Models::Shared::RepoRepository.new(
+  name: '<value>',
+), connection_id: '<id>')
 
-if ! res.repo_repository.nil?
+unless res.repo_repository.nil?
   # handle response
 end
 
@@ -242,7 +258,11 @@ end
 
 **[T.nilable(Models::Operations::CreateRepoRepositoryResponse)](../../models/operations/createreporepositoryresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_repo_branch
 
@@ -250,20 +270,20 @@ Retrieve a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getRepoBranch" method="get" path="/repo/{connection_id}/branch/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.repo.get_repo_branch(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.repo.get_repo_branch(connection_id: '<id>', id: '<id>')
 
-if ! res.repo_branch.nil?
+unless res.repo_branch.nil?
   # handle response
 end
 
@@ -282,7 +302,11 @@ end
 
 **[T.nilable(Models::Operations::GetRepoBranchResponse)](../../models/operations/getrepobranchresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_repo_commit
 
@@ -290,20 +314,20 @@ Retrieve a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getRepoCommit" method="get" path="/repo/{connection_id}/commit/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.repo.get_repo_commit(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.repo.get_repo_commit(connection_id: '<id>', id: '<id>')
 
-if ! res.repo_commit.nil?
+unless res.repo_commit.nil?
   # handle response
 end
 
@@ -322,7 +346,11 @@ end
 
 **[T.nilable(Models::Operations::GetRepoCommitResponse)](../../models/operations/getrepocommitresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_repo_organization
 
@@ -330,20 +358,20 @@ Retrieve an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getRepoOrganization" method="get" path="/repo/{connection_id}/organization/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.repo.get_repo_organization(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.repo.get_repo_organization(connection_id: '<id>', id: '<id>')
 
-if ! res.repo_organization.nil?
+unless res.repo_organization.nil?
   # handle response
 end
 
@@ -362,7 +390,11 @@ end
 
 **[T.nilable(Models::Operations::GetRepoOrganizationResponse)](../../models/operations/getrepoorganizationresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_repo_pullrequest
 
@@ -370,20 +402,20 @@ Retrieve a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getRepoPullrequest" method="get" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.repo.get_repo_pullrequest(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.repo.get_repo_pullrequest(connection_id: '<id>', id: '<id>')
 
-if ! res.repo_pullrequest.nil?
+unless res.repo_pullrequest.nil?
   # handle response
 end
 
@@ -402,7 +434,11 @@ end
 
 **[T.nilable(Models::Operations::GetRepoPullrequestResponse)](../../models/operations/getrepopullrequestresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_repo_repository
 
@@ -410,20 +446,20 @@ Retrieve a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getRepoRepository" method="get" path="/repo/{connection_id}/repository/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.repo.get_repo_repository(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.repo.get_repo_repository(connection_id: '<id>', id: '<id>')
 
-if ! res.repo_repository.nil?
+unless res.repo_repository.nil?
   # handle response
 end
 
@@ -442,7 +478,11 @@ end
 
 **[T.nilable(Models::Operations::GetRepoRepositoryResponse)](../../models/operations/getreporepositoryresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_repo_branches
 
@@ -450,22 +490,24 @@ List all branches
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listRepoBranches" method="get" path="/repo/{connection_id}/branch" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListRepoBranchesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.repo.list_repo_branches(req)
+res = s.repo.list_repo_branches(request: req)
 
-if ! res.repo_branches.nil?
+unless res.repo_branches.nil?
   # handle response
 end
 
@@ -481,7 +523,11 @@ end
 
 **[T.nilable(Models::Operations::ListRepoBranchesResponse)](../../models/operations/listrepobranchesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_repo_commits
 
@@ -489,22 +535,24 @@ List all commits
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listRepoCommits" method="get" path="/repo/{connection_id}/commit" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListRepoCommitsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.repo.list_repo_commits(req)
+res = s.repo.list_repo_commits(request: req)
 
-if ! res.repo_commits.nil?
+unless res.repo_commits.nil?
   # handle response
 end
 
@@ -520,7 +568,11 @@ end
 
 **[T.nilable(Models::Operations::ListRepoCommitsResponse)](../../models/operations/listrepocommitsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_repo_organizations
 
@@ -528,22 +580,24 @@ List all organizations
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listRepoOrganizations" method="get" path="/repo/{connection_id}/organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListRepoOrganizationsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.repo.list_repo_organizations(req)
+res = s.repo.list_repo_organizations(request: req)
 
-if ! res.repo_organizations.nil?
+unless res.repo_organizations.nil?
   # handle response
 end
 
@@ -559,7 +613,11 @@ end
 
 **[T.nilable(Models::Operations::ListRepoOrganizationsResponse)](../../models/operations/listrepoorganizationsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_repo_pullrequests
 
@@ -567,22 +625,24 @@ List all pullrequests
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listRepoPullrequests" method="get" path="/repo/{connection_id}/pullrequest" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListRepoPullrequestsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.repo.list_repo_pullrequests(req)
+res = s.repo.list_repo_pullrequests(request: req)
 
-if ! res.repo_pullrequests.nil?
+unless res.repo_pullrequests.nil?
   # handle response
 end
 
@@ -598,7 +658,11 @@ end
 
 **[T.nilable(Models::Operations::ListRepoPullrequestsResponse)](../../models/operations/listrepopullrequestsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_repo_repositories
 
@@ -606,22 +670,24 @@ List all repositories
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listRepoRepositories" method="get" path="/repo/{connection_id}/repository" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListRepoRepositoriesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.repo.list_repo_repositories(req)
+res = s.repo.list_repo_repositories(request: req)
 
-if ! res.repo_repositories.nil?
+unless res.repo_repositories.nil?
   # handle response
 end
 
@@ -637,7 +703,11 @@ end
 
 **[T.nilable(Models::Operations::ListRepoRepositoriesResponse)](../../models/operations/listreporepositoriesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_repo_branch
 
@@ -645,27 +715,29 @@ Update a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchRepoBranchRequest.new(
   repo_branch: Models::Shared::RepoBranch.new(
-    name: "<value>",
-    repo_id: "<id>",
+    name: '<value>',
+    repo_id: '<id>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.repo.patch_repo_branch(req)
+res = s.repo.patch_repo_branch(request: req)
 
-if ! res.repo_branch.nil?
+unless res.repo_branch.nil?
   # handle response
 end
 
@@ -681,7 +753,11 @@ end
 
 **[T.nilable(Models::Operations::PatchRepoBranchResponse)](../../models/operations/patchrepobranchresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_repo_commit
 
@@ -689,27 +765,29 @@ Update a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchRepoCommitRequest.new(
   repo_commit: Models::Shared::RepoCommit.new(
-    repo_id: "<id>",
-    user_id: "<id>",
+    repo_id: '<id>',
+    user_id: '<id>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.repo.patch_repo_commit(req)
+res = s.repo.patch_repo_commit(request: req)
 
-if ! res.repo_commit.nil?
+unless res.repo_commit.nil?
   # handle response
 end
 
@@ -725,7 +803,11 @@ end
 
 **[T.nilable(Models::Operations::PatchRepoCommitResponse)](../../models/operations/patchrepocommitresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_repo_organization
 
@@ -733,24 +815,26 @@ Update an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchRepoOrganizationRequest.new(
   repo_organization: Models::Shared::RepoOrganization.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.repo.patch_repo_organization(req)
+res = s.repo.patch_repo_organization(request: req)
 
-if ! res.repo_organization.nil?
+unless res.repo_organization.nil?
   # handle response
 end
 
@@ -766,7 +850,11 @@ end
 
 **[T.nilable(Models::Operations::PatchRepoOrganizationResponse)](../../models/operations/patchrepoorganizationresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_repo_pullrequest
 
@@ -774,24 +862,26 @@ Update a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchRepoPullrequestRequest.new(
   repo_pullrequest: Models::Shared::RepoPullrequest.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.repo.patch_repo_pullrequest(req)
+res = s.repo.patch_repo_pullrequest(request: req)
 
-if ! res.repo_pullrequest.nil?
+unless res.repo_pullrequest.nil?
   # handle response
 end
 
@@ -807,7 +897,11 @@ end
 
 **[T.nilable(Models::Operations::PatchRepoPullrequestResponse)](../../models/operations/patchrepopullrequestresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_repo_repository
 
@@ -815,26 +909,28 @@ Update a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchRepoRepositoryRequest.new(
   repo_repository: Models::Shared::RepoRepository.new(
-    name: "<value>",
+    name: '<value>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.repo.patch_repo_repository(req)
+res = s.repo.patch_repo_repository(request: req)
 
-if ! res.repo_repository.nil?
+unless res.repo_repository.nil?
   # handle response
 end
 
@@ -850,7 +946,11 @@ end
 
 **[T.nilable(Models::Operations::PatchRepoRepositoryResponse)](../../models/operations/patchreporepositoryresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_repo_branch
 
@@ -858,16 +958,18 @@ Remove a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeRepoBranch" method="delete" path="/repo/{connection_id}/branch/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.repo.remove_repo_branch(connection_id="<id>", id="<id>")
+res = s.repo.remove_repo_branch(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -886,7 +988,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveRepoBranchResponse)](../../models/operations/removerepobranchresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_repo_commit
 
@@ -894,16 +1000,18 @@ Remove a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeRepoCommit" method="delete" path="/repo/{connection_id}/commit/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.repo.remove_repo_commit(connection_id="<id>", id="<id>")
+res = s.repo.remove_repo_commit(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -922,7 +1030,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveRepoCommitResponse)](../../models/operations/removerepocommitresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_repo_organization
 
@@ -930,16 +1042,18 @@ Remove an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeRepoOrganization" method="delete" path="/repo/{connection_id}/organization/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.repo.remove_repo_organization(connection_id="<id>", id="<id>")
+res = s.repo.remove_repo_organization(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -958,7 +1072,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveRepoOrganizationResponse)](../../models/operations/removerepoorganizationresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_repo_pullrequest
 
@@ -966,16 +1084,18 @@ Remove a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeRepoPullrequest" method="delete" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.repo.remove_repo_pullrequest(connection_id="<id>", id="<id>")
+res = s.repo.remove_repo_pullrequest(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -994,7 +1114,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveRepoPullrequestResponse)](../../models/operations/removerepopullrequestresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_repo_repository
 
@@ -1002,16 +1126,18 @@ Remove a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeRepoRepository" method="delete" path="/repo/{connection_id}/repository/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.repo.remove_repo_repository(connection_id="<id>", id="<id>")
+res = s.repo.remove_repo_repository(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -1030,7 +1156,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveRepoRepositoryResponse)](../../models/operations/removereporepositoryresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_repo_branch
 
@@ -1038,27 +1168,29 @@ Update a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateRepoBranchRequest.new(
   repo_branch: Models::Shared::RepoBranch.new(
-    name: "<value>",
-    repo_id: "<id>",
+    name: '<value>',
+    repo_id: '<id>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.repo.update_repo_branch(req)
+res = s.repo.update_repo_branch(request: req)
 
-if ! res.repo_branch.nil?
+unless res.repo_branch.nil?
   # handle response
 end
 
@@ -1074,7 +1206,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateRepoBranchResponse)](../../models/operations/updaterepobranchresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_repo_commit
 
@@ -1082,27 +1218,29 @@ Update a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateRepoCommitRequest.new(
   repo_commit: Models::Shared::RepoCommit.new(
-    repo_id: "<id>",
-    user_id: "<id>",
+    repo_id: '<id>',
+    user_id: '<id>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.repo.update_repo_commit(req)
+res = s.repo.update_repo_commit(request: req)
 
-if ! res.repo_commit.nil?
+unless res.repo_commit.nil?
   # handle response
 end
 
@@ -1118,7 +1256,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateRepoCommitResponse)](../../models/operations/updaterepocommitresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_repo_organization
 
@@ -1126,24 +1268,26 @@ Update an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateRepoOrganizationRequest.new(
   repo_organization: Models::Shared::RepoOrganization.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.repo.update_repo_organization(req)
+res = s.repo.update_repo_organization(request: req)
 
-if ! res.repo_organization.nil?
+unless res.repo_organization.nil?
   # handle response
 end
 
@@ -1159,7 +1303,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateRepoOrganizationResponse)](../../models/operations/updaterepoorganizationresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_repo_pullrequest
 
@@ -1167,24 +1315,26 @@ Update a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateRepoPullrequestRequest.new(
   repo_pullrequest: Models::Shared::RepoPullrequest.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.repo.update_repo_pullrequest(req)
+res = s.repo.update_repo_pullrequest(request: req)
 
-if ! res.repo_pullrequest.nil?
+unless res.repo_pullrequest.nil?
   # handle response
 end
 
@@ -1200,7 +1350,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateRepoPullrequestResponse)](../../models/operations/updaterepopullrequestresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_repo_repository
 
@@ -1208,26 +1362,28 @@ Update a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateRepoRepositoryRequest.new(
   repo_repository: Models::Shared::RepoRepository.new(
-    name: "<value>",
+    name: '<value>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.repo.update_repo_repository(req)
+res = s.repo.update_repo_repository(request: req)
 
-if ! res.repo_repository.nil?
+unless res.repo_repository.nil?
   # handle response
 end
 
@@ -1243,3 +1399,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateRepoRepositoryResponse)](../../models/operations/updatereporepositoryresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

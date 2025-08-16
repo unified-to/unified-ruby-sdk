@@ -14,20 +14,19 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :max_tokens, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_tokens') } }
+        field :max_tokens, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_tokens') } }
 
-        field :messages, T.nilable(T::Array[Models::Shared::GenaiContent]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('messages') } }
+        field :messages, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::GenaiContent)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('messages') } }
 
-        field :model_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('model_id') } }
+        field :model_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('model_id') } }
 
-        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :responses, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('responses') } }
+        field :responses, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('responses') } }
 
-        field :temperature, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('temperature') } }
+        field :temperature, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('temperature') } }
 
-        field :tokens_used, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tokens_used') } }
-
+        field :tokens_used, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tokens_used') } }
 
         sig { params(max_tokens: T.nilable(::Float), messages: T.nilable(T::Array[Models::Shared::GenaiContent]), model_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), responses: T.nilable(T::Array[::String]), temperature: T.nilable(::Float), tokens_used: T.nilable(::Float)).void }
         def initialize(max_tokens: nil, messages: nil, model_id: nil, raw: nil, responses: nil, temperature: nil, tokens_used: nil)
@@ -40,6 +39,7 @@ module UnifiedRubySDK
           @tokens_used = tokens_used
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @max_tokens == other.max_tokens

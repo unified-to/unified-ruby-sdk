@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class DbType < T::Enum
+
+
         enums do
           MONGODB = new('mongodb')
           MYSQL = new('mysql')

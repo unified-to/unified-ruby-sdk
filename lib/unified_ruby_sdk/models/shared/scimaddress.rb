@@ -14,20 +14,19 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :country, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('country') } }
+        field :country, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('country') } }
 
-        field :formatted, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('formatted') } }
+        field :formatted, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('formatted') } }
 
-        field :locality, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('locality') } }
+        field :locality, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('locality') } }
 
-        field :postal_code, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('postalCode') } }
+        field :postal_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('postalCode') } }
 
-        field :region, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('region') } }
+        field :region, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('region') } }
 
-        field :street_address, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('streetAddress') } }
+        field :street_address, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('streetAddress') } }
 
-        field :type, T.nilable(Models::Shared::ScimAddressType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ScimAddressType, true) } }
-
+        field :type, Crystalline::Nilable.new(Models::Shared::ScimAddressType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ScimAddressType, true) } }
 
         sig { params(country: T.nilable(::String), formatted: T.nilable(::String), locality: T.nilable(::String), postal_code: T.nilable(::String), region: T.nilable(::String), street_address: T.nilable(::String), type: T.nilable(Models::Shared::ScimAddressType)).void }
         def initialize(country: nil, formatted: nil, locality: nil, postal_code: nil, region: nil, street_address: nil, type: nil)
@@ -40,6 +39,7 @@ module UnifiedRubySDK
           @type = type
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @country == other.country

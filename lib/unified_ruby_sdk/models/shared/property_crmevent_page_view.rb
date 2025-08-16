@@ -14,12 +14,11 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :average, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('average') } }
+        field :average, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('average') } }
 
-        field :count, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('count') } }
+        field :count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('count') } }
 
-        field :url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
-
+        field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
         sig { params(average: T.nilable(::Float), count: T.nilable(::Float), url: T.nilable(::String)).void }
         def initialize(average: nil, count: nil, url: nil)
@@ -28,6 +27,7 @@ module UnifiedRubySDK
           @url = url
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @average == other.average

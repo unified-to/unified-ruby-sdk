@@ -14,21 +14,20 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :end_at, ::DateTime, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(false) } }
+        field :end_at, ::DateTime, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), required: true, 'decoder': Utils.datetime_from_iso_format(false) } }
 
-        field :start_at, ::DateTime, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(false) } }
+        field :start_at, ::DateTime, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), required: true, 'decoder': Utils.datetime_from_iso_format(false) } }
 
-        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+        field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :timezone, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
-
+        field :timezone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
 
         sig { params(end_at: ::DateTime, start_at: ::DateTime, description: T.nilable(::String), id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), timezone: T.nilable(::String)).void }
-        def initialize(end_at: nil, start_at: nil, description: nil, id: nil, raw: nil, timezone: nil)
+        def initialize(end_at:, start_at:, description: nil, id: nil, raw: nil, timezone: nil)
           @end_at = end_at
           @start_at = start_at
           @description = description
@@ -37,6 +36,7 @@ module UnifiedRubySDK
           @timezone = timezone
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @end_at == other.end_at

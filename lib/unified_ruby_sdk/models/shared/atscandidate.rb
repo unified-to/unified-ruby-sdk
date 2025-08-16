@@ -14,54 +14,53 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :address, T.nilable(Models::Shared::PropertyAtsCandidateAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
+        field :address, Crystalline::Nilable.new(Models::Shared::PropertyAtsCandidateAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
 
-        field :company_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
+        field :company_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
 
-        field :company_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_name') } }
+        field :company_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_name') } }
 
-        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :date_of_birth, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('date_of_birth'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :date_of_birth, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('date_of_birth'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :education, T.nilable(T::Array[Models::Shared::AtsCandidateEducation]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('education') } }
+        field :education, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsCandidateEducation)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('education') } }
 
-        field :emails, T.nilable(T::Array[Models::Shared::AtsEmail]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
+        field :emails, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
 
-        field :experiences, T.nilable(T::Array[Models::Shared::AtsCandidateExperience]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('experiences') } }
+        field :experiences, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsCandidateExperience)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('experiences') } }
 
-        field :external_identifier, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_identifier') } }
+        field :external_identifier, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_identifier') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :image_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('image_url') } }
+        field :image_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('image_url') } }
         # URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)
-        field :link_urls, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('link_urls') } }
+        field :link_urls, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('link_urls') } }
 
-        field :metadata, T.nilable(T::Array[Models::Shared::AtsMetadata]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
-        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :origin, T.nilable(Models::Shared::Origin), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('origin'), 'decoder': Utils.enum_from_string(Models::Shared::Origin, true) } }
+        field :origin, Crystalline::Nilable.new(Models::Shared::Origin), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('origin'), 'decoder': Utils.enum_from_string(Models::Shared::Origin, true) } }
 
-        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :skills, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('skills') } }
+        field :skills, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('skills') } }
 
-        field :sources, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sources') } }
+        field :sources, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sources') } }
 
-        field :tags, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
+        field :tags, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
 
-        field :telephones, T.nilable(T::Array[Models::Shared::AtsTelephone]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
+        field :telephones, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsTelephone)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
 
-        field :title, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
+        field :title, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
 
-        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
+        field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
-
+        field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
         sig { params(address: T.nilable(Models::Shared::PropertyAtsCandidateAddress), company_id: T.nilable(::String), company_name: T.nilable(::String), created_at: T.nilable(::DateTime), date_of_birth: T.nilable(::DateTime), education: T.nilable(T::Array[Models::Shared::AtsCandidateEducation]), emails: T.nilable(T::Array[Models::Shared::AtsEmail]), experiences: T.nilable(T::Array[Models::Shared::AtsCandidateExperience]), external_identifier: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), link_urls: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), name: T.nilable(::String), origin: T.nilable(Models::Shared::Origin), raw: T.nilable(T::Hash[Symbol, ::Object]), skills: T.nilable(T::Array[::String]), sources: T.nilable(T::Array[::String]), tags: T.nilable(T::Array[::String]), telephones: T.nilable(T::Array[Models::Shared::AtsTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), web_url: T.nilable(::String)).void }
         def initialize(address: nil, company_id: nil, company_name: nil, created_at: nil, date_of_birth: nil, education: nil, emails: nil, experiences: nil, external_identifier: nil, id: nil, image_url: nil, link_urls: nil, metadata: nil, name: nil, origin: nil, raw: nil, skills: nil, sources: nil, tags: nil, telephones: nil, title: nil, updated_at: nil, user_id: nil, web_url: nil)
@@ -91,6 +90,7 @@ module UnifiedRubySDK
           @web_url = web_url
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @address == other.address

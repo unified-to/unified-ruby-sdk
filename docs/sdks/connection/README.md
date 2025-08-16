@@ -18,28 +18,26 @@ Used only to import existing customer credentials; use "Authorize new connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createUnifiedConnection" method="post" path="/unified/connection" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Shared::Connection.new(
-  categories: [
-    Models::Shared::PropertyConnectionCategories::METADATA,
-  ],
-  integration_type: "<value>",
-  permissions: [
-    Models::Shared::PropertyConnectionPermissions::CRM_DEAL_READ,
-  ],
+  categories: [],
+  integration_type: '<value>',
+  permissions: [],
 )
 
-res = s.connection.create_unified_connection(req)
+res = s.connection.create_unified_connection(request: req)
 
-if ! res.connection.nil?
+unless res.connection.nil?
   # handle response
 end
 
@@ -55,7 +53,11 @@ end
 
 **[T.nilable(Models::Operations::CreateUnifiedConnectionResponse)](../../models/operations/createunifiedconnectionresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_unified_connection
 
@@ -63,18 +65,20 @@ Retrieve connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getUnifiedConnection" method="get" path="/unified/connection/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.connection.get_unified_connection(id="<id>")
+res = s.connection.get_unified_connection(id: '<id>')
 
-if ! res.connection.nil?
+unless res.connection.nil?
   # handle response
 end
 
@@ -90,7 +94,11 @@ end
 
 **[T.nilable(Models::Operations::GetUnifiedConnectionResponse)](../../models/operations/getunifiedconnectionresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_unified_connections
 
@@ -98,20 +106,22 @@ List all connections
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listUnifiedConnections" method="get" path="/unified/connection" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListUnifiedConnectionsRequest.new()
 
-res = s.connection.list_unified_connections(req)
+res = s.connection.list_unified_connections(request: req)
 
-if ! res.connections.nil?
+unless res.connections.nil?
   # handle response
 end
 
@@ -127,7 +137,11 @@ end
 
 **[T.nilable(Models::Operations::ListUnifiedConnectionsResponse)](../../models/operations/listunifiedconnectionsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_unified_connection
 
@@ -135,26 +149,24 @@ Update connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchUnifiedConnection" method="patch" path="/unified/connection/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.connection.patch_unified_connection(connection=Models::Shared::Connection.new(
-  categories: [
-    Models::Shared::PropertyConnectionCategories::MESSAGING,
-  ],
-  integration_type: "<value>",
-  permissions: [
-    Models::Shared::PropertyConnectionPermissions::ENRICH_COMPANY_READ,
-  ],
-), id="<id>")
+res = s.connection.patch_unified_connection(connection: Models::Shared::Connection.new(
+  categories: [],
+  integration_type: '<value>',
+  permissions: [],
+), id: '<id>')
 
-if ! res.connection.nil?
+unless res.connection.nil?
   # handle response
 end
 
@@ -171,7 +183,11 @@ end
 
 **[T.nilable(Models::Operations::PatchUnifiedConnectionResponse)](../../models/operations/patchunifiedconnectionresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_unified_connection
 
@@ -179,16 +195,18 @@ Remove connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeUnifiedConnection" method="delete" path="/unified/connection/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.connection.remove_unified_connection(id="<id>")
+res = s.connection.remove_unified_connection(id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -206,7 +224,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveUnifiedConnectionResponse)](../../models/operations/removeunifiedconnectionresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_unified_connection
 
@@ -214,26 +236,26 @@ Update connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateUnifiedConnection" method="put" path="/unified/connection/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.connection.update_unified_connection(connection=Models::Shared::Connection.new(
-  categories: [
-    Models::Shared::PropertyConnectionCategories::SCIM,
-  ],
-  integration_type: "<value>",
+res = s.connection.update_unified_connection(connection: Models::Shared::Connection.new(
+  categories: [],
+  integration_type: '<value>',
   permissions: [
-    Models::Shared::PropertyConnectionPermissions::CALENDAR_RECORDING_WRITE,
+    Models::Shared::PropertyConnectionPermissions::PAYMENT_LINK_WRITE,
   ],
-), id="<id>")
+), id: '<id>')
 
-if ! res.connection.nil?
+unless res.connection.nil?
   # handle response
 end
 
@@ -250,3 +272,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateUnifiedConnectionResponse)](../../models/operations/updateunifiedconnectionresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

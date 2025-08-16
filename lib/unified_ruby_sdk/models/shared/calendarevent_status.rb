@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class CalendarEventStatus < T::Enum
+
+
         enums do
           CANCELED = new('CANCELED')
           CONFIRMED = new('CONFIRMED')

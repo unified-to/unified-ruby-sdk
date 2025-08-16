@@ -14,18 +14,17 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :content_identifier, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content_identifier') } }
+        field :content_identifier, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content_identifier') } }
 
-        field :content_type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content_type') } }
+        field :content_type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content_type') } }
 
-        field :download_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('download_url') } }
+        field :download_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('download_url') } }
 
-        field :filename, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('filename') } }
+        field :filename, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('filename') } }
 
-        field :message_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message_id') } }
+        field :message_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message_id') } }
 
-        field :size, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
-
+        field :size, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
 
         sig { params(content_identifier: T.nilable(::String), content_type: T.nilable(::String), download_url: T.nilable(::String), filename: T.nilable(::String), message_id: T.nilable(::String), size: T.nilable(::Float)).void }
         def initialize(content_identifier: nil, content_type: nil, download_url: nil, filename: nil, message_id: nil, size: nil)
@@ -37,6 +36,7 @@ module UnifiedRubySDK
           @size = size
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @content_identifier == other.content_identifier

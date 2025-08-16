@@ -15,27 +15,27 @@ module UnifiedRubySDK
 
         # HTTP response content type for this operation
         field :content_type, ::String
-        # Raw HTTP response; suitable for custom response parsing
-        field :raw_response, ::Faraday::Response
         # HTTP response status code for this operation
         field :status_code, ::Integer
+        # Raw HTTP response; suitable for custom response parsing
+        field :raw_response, ::Faraday::Response
         # Successful
-        field :kms_comments, T.nilable(T::Array[Models::Shared::KmsComment])
+        field :kms_comments, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::KmsComment))
 
-
-        sig { params(content_type: ::String, raw_response: ::Faraday::Response, status_code: ::Integer, kms_comments: T.nilable(T::Array[Models::Shared::KmsComment])).void }
-        def initialize(content_type: nil, raw_response: nil, status_code: nil, kms_comments: nil)
+        sig { params(content_type: ::String, status_code: ::Integer, raw_response: ::Faraday::Response, kms_comments: T.nilable(T::Array[Models::Shared::KmsComment])).void }
+        def initialize(content_type:, status_code:, raw_response:, kms_comments: nil)
           @content_type = content_type
-          @raw_response = raw_response
           @status_code = status_code
+          @raw_response = raw_response
           @kms_comments = kms_comments
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @content_type == other.content_type
-          return false unless @raw_response == other.raw_response
           return false unless @status_code == other.status_code
+          return false unless @raw_response == other.raw_response
           return false unless @kms_comments == other.kms_comments
           true
         end

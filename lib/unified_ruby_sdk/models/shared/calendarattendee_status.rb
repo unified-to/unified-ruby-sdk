@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class CalendarAttendeeStatus < T::Enum
+
+
         enums do
           ACCEPTED = new('ACCEPTED')
           REJECTED = new('REJECTED')

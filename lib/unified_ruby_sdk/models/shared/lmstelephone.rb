@@ -14,17 +14,17 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :telephone, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephone') } }
+        field :telephone, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephone'), required: true } }
 
-        field :type, T.nilable(Models::Shared::LmsTelephoneType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::LmsTelephoneType, true) } }
-
+        field :type, Crystalline::Nilable.new(Models::Shared::LmsTelephoneType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::LmsTelephoneType, true) } }
 
         sig { params(telephone: ::String, type: T.nilable(Models::Shared::LmsTelephoneType)).void }
-        def initialize(telephone: nil, type: nil)
+        def initialize(telephone:, type: nil)
           @telephone = telephone
           @type = type
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @telephone == other.telephone

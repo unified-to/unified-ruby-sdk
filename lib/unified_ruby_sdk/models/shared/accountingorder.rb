@@ -14,34 +14,33 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :account_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_id') } }
+        field :account_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_id') } }
 
-        field :billing_address, T.nilable(Models::Shared::PropertyAccountingOrderBillingAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('billing_address') } }
+        field :billing_address, Crystalline::Nilable.new(Models::Shared::PropertyAccountingOrderBillingAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('billing_address') } }
 
-        field :contact_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
+        field :contact_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
 
-        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+        field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :lineitems, T.nilable(T::Array[Models::Shared::AccountingLineitem]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lineitems') } }
+        field :lineitems, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingLineitem)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lineitems') } }
 
-        field :posted_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('posted_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :posted_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('posted_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :shipping_address, T.nilable(Models::Shared::PropertyAccountingOrderShippingAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('shipping_address') } }
+        field :shipping_address, Crystalline::Nilable.new(Models::Shared::PropertyAccountingOrderShippingAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('shipping_address') } }
 
-        field :status, T.nilable(Models::Shared::AccountingOrderStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingOrderStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::AccountingOrderStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingOrderStatus, true) } }
 
-        field :total_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
+        field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
 
-        field :type, T.nilable(Models::Shared::AccountingOrderType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingOrderType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::AccountingOrderType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingOrderType, true) } }
 
-        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(account_id: T.nilable(::String), billing_address: T.nilable(Models::Shared::PropertyAccountingOrderBillingAddress), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), shipping_address: T.nilable(Models::Shared::PropertyAccountingOrderShippingAddress), status: T.nilable(Models::Shared::AccountingOrderStatus), total_amount: T.nilable(::Float), type: T.nilable(Models::Shared::AccountingOrderType), updated_at: T.nilable(::DateTime)).void }
         def initialize(account_id: nil, billing_address: nil, contact_id: nil, created_at: nil, currency: nil, id: nil, lineitems: nil, posted_at: nil, raw: nil, shipping_address: nil, status: nil, total_amount: nil, type: nil, updated_at: nil)
@@ -61,6 +60,7 @@ module UnifiedRubySDK
           @updated_at = updated_at
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @account_id == other.account_id

@@ -14,20 +14,20 @@ Retrieve a report
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAccountingReport" method="get" path="/accounting/{connection_id}/report/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.report.get_accounting_report(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.report.get_accounting_report(connection_id: '<id>', id: '<id>')
 
-if ! res.accounting_report.nil?
+unless res.accounting_report.nil?
   # handle response
 end
 
@@ -46,7 +46,11 @@ end
 
 **[T.nilable(Models::Operations::GetAccountingReportResponse)](../../models/operations/getaccountingreportresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_accounting_reports
 
@@ -54,22 +58,24 @@ List all reports
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAccountingReports" method="get" path="/accounting/{connection_id}/report" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAccountingReportsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.report.list_accounting_reports(req)
+res = s.report.list_accounting_reports(request: req)
 
-if ! res.accounting_reports.nil?
+unless res.accounting_reports.nil?
   # handle response
 end
 
@@ -85,3 +91,8 @@ end
 
 **[T.nilable(Models::Operations::ListAccountingReportsResponse)](../../models/operations/listaccountingreportsresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

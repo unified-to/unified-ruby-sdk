@@ -14,48 +14,47 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :attachments, T.nilable(T::Array[Models::Shared::MessagingAttachment]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attachments') } }
+        field :attachments, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MessagingAttachment)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attachments') } }
 
-        field :author_member, T.nilable(Models::Shared::PropertyMessagingMessageAuthorMember), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_member') } }
+        field :author_member, Crystalline::Nilable.new(Models::Shared::PropertyMessagingMessageAuthorMember), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_member') } }
 
-        field :channel_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('channel_id') } }
+        field :channel_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('channel_id') } }
         # Represents the IDs of all channels to which the message is sent. Identifies the channels where the message is posted.
-        field :channel_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('channel_ids') } }
+        field :channel_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('channel_ids') } }
 
-        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :destination_members, T.nilable(T::Array[Models::Shared::MessagingMember]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('destination_members') } }
+        field :destination_members, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MessagingMember)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('destination_members') } }
 
-        field :has_children, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_children') } }
+        field :has_children, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_children') } }
 
-        field :hidden_members, T.nilable(T::Array[Models::Shared::MessagingMember]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('hidden_members') } }
+        field :hidden_members, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MessagingMember)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('hidden_members') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :mentioned_members, T.nilable(T::Array[Models::Shared::MessagingMember]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mentioned_members') } }
+        field :mentioned_members, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MessagingMember)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mentioned_members') } }
 
-        field :message, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message') } }
+        field :message, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message') } }
 
-        field :message_html, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message_html') } }
+        field :message_html, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message_html') } }
 
-        field :message_markdown, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message_markdown') } }
+        field :message_markdown, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message_markdown') } }
 
-        field :parent_message_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_message_id') } }
+        field :parent_message_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_message_id') } }
 
-        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :reactions, T.nilable(T::Array[Models::Shared::MessagingReaction]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reactions') } }
+        field :reactions, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MessagingReaction)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reactions') } }
 
-        field :reference, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference') } }
+        field :reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference') } }
 
-        field :root_message_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('root_message_id') } }
+        field :root_message_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('root_message_id') } }
 
-        field :subject, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subject') } }
+        field :subject, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subject') } }
 
-        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
-
+        field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
         sig { params(attachments: T.nilable(T::Array[Models::Shared::MessagingAttachment]), author_member: T.nilable(Models::Shared::PropertyMessagingMessageAuthorMember), channel_id: T.nilable(::String), channel_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), destination_members: T.nilable(T::Array[Models::Shared::MessagingMember]), has_children: T.nilable(T::Boolean), hidden_members: T.nilable(T::Array[Models::Shared::MessagingMember]), id: T.nilable(::String), mentioned_members: T.nilable(T::Array[Models::Shared::MessagingMember]), message: T.nilable(::String), message_html: T.nilable(::String), message_markdown: T.nilable(::String), parent_message_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reactions: T.nilable(T::Array[Models::Shared::MessagingReaction]), reference: T.nilable(::String), root_message_id: T.nilable(::String), subject: T.nilable(::String), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
         def initialize(attachments: nil, author_member: nil, channel_id: nil, channel_ids: nil, created_at: nil, destination_members: nil, has_children: nil, hidden_members: nil, id: nil, mentioned_members: nil, message: nil, message_html: nil, message_markdown: nil, parent_message_id: nil, raw: nil, reactions: nil, reference: nil, root_message_id: nil, subject: nil, updated_at: nil, web_url: nil)
@@ -82,6 +81,7 @@ module UnifiedRubySDK
           @web_url = web_url
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @attachments == other.attachments

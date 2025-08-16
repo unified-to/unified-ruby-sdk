@@ -14,19 +14,18 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :url, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
+        field :url, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url'), required: true } }
 
-        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+        field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :thumbnail_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('thumbnail_url') } }
+        field :thumbnail_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('thumbnail_url') } }
 
-        field :type, T.nilable(Models::Shared::LmsMediaType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::LmsMediaType, true) } }
-
+        field :type, Crystalline::Nilable.new(Models::Shared::LmsMediaType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::LmsMediaType, true) } }
 
         sig { params(url: ::String, description: T.nilable(::String), name: T.nilable(::String), thumbnail_url: T.nilable(::String), type: T.nilable(Models::Shared::LmsMediaType)).void }
-        def initialize(url: nil, description: nil, name: nil, thumbnail_url: nil, type: nil)
+        def initialize(url:, description: nil, name: nil, thumbnail_url: nil, type: nil)
           @url = url
           @description = description
           @name = name
@@ -34,6 +33,7 @@ module UnifiedRubySDK
           @type = type
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @url == other.url

@@ -18,13 +18,13 @@ module UnifiedRubySDK
         # ID of the Connection
         field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
 
-
         sig { params(connection: Models::Shared::Connection, id: ::String).void }
-        def initialize(connection: nil, id: nil)
+        def initialize(connection:, id:)
           @connection = connection
           @id = id
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @connection == other.connection

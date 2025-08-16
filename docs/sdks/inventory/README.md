@@ -18,22 +18,22 @@ Create an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.inventory.create_commerce_inventory(commerce_inventory=Models::Shared::CommerceInventory.new(
-  available: 5165.08,
-), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.inventory.create_commerce_inventory(commerce_inventory: Models::Shared::CommerceInventory.new(
+  available: 7_463.62,
+), connection_id: '<id>')
 
-if ! res.commerce_inventory.nil?
+unless res.commerce_inventory.nil?
   # handle response
 end
 
@@ -52,7 +52,11 @@ end
 
 **[T.nilable(Models::Operations::CreateCommerceInventoryResponse)](../../models/operations/createcommerceinventoryresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_commerce_inventory
 
@@ -60,20 +64,20 @@ Retrieve an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getCommerceInventory" method="get" path="/commerce/{connection_id}/inventory/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.inventory.get_commerce_inventory(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.inventory.get_commerce_inventory(connection_id: '<id>', id: '<id>')
 
-if ! res.commerce_inventory.nil?
+unless res.commerce_inventory.nil?
   # handle response
 end
 
@@ -92,7 +96,11 @@ end
 
 **[T.nilable(Models::Operations::GetCommerceInventoryResponse)](../../models/operations/getcommerceinventoryresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_commerce_inventories
 
@@ -100,22 +108,24 @@ List all inventories
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listCommerceInventories" method="get" path="/commerce/{connection_id}/inventory" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListCommerceInventoriesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.inventory.list_commerce_inventories(req)
+res = s.inventory.list_commerce_inventories(request: req)
 
-if ! res.commerce_inventories.nil?
+unless res.commerce_inventories.nil?
   # handle response
 end
 
@@ -131,7 +141,11 @@ end
 
 **[T.nilable(Models::Operations::ListCommerceInventoriesResponse)](../../models/operations/listcommerceinventoriesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_commerce_inventory
 
@@ -139,26 +153,28 @@ Update an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchCommerceInventoryRequest.new(
   commerce_inventory: Models::Shared::CommerceInventory.new(
-    available: 615.23,
+    available: 7_859.84,
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.inventory.patch_commerce_inventory(req)
+res = s.inventory.patch_commerce_inventory(request: req)
 
-if ! res.commerce_inventory.nil?
+unless res.commerce_inventory.nil?
   # handle response
 end
 
@@ -174,7 +190,11 @@ end
 
 **[T.nilable(Models::Operations::PatchCommerceInventoryResponse)](../../models/operations/patchcommerceinventoryresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_commerce_inventory
 
@@ -182,16 +202,18 @@ Remove an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeCommerceInventory" method="delete" path="/commerce/{connection_id}/inventory/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.inventory.remove_commerce_inventory(connection_id="<id>", id="<id>")
+res = s.inventory.remove_commerce_inventory(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -210,7 +232,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveCommerceInventoryResponse)](../../models/operations/removecommerceinventoryresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_commerce_inventory
 
@@ -218,26 +244,28 @@ Update an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateCommerceInventoryRequest.new(
   commerce_inventory: Models::Shared::CommerceInventory.new(
-    available: 9360.02,
+    available: 4_497.29,
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.inventory.update_commerce_inventory(req)
+res = s.inventory.update_commerce_inventory(request: req)
 
-if ! res.commerce_inventory.nil?
+unless res.commerce_inventory.nil?
   # handle response
 end
 
@@ -253,3 +281,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateCommerceInventoryResponse)](../../models/operations/updatecommerceinventoryresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class PaymentPayoutStatus < T::Enum
+
+
         enums do
           SUCCEEDED = new('SUCCEEDED')
           PENDING = new('PENDING')

@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class Operation < T::Enum
+
+
         enums do
           ADD = new('add')
           DELETE = new('delete')

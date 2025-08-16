@@ -14,19 +14,18 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :text, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('text') } }
+        field :text, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('text'), required: true } }
 
-        field :attendee, T.nilable(Models::Shared::PropertyCalendarRecordingTranscriptAttendee), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attendee') } }
+        field :attendee, Crystalline::Nilable.new(Models::Shared::PropertyCalendarRecordingTranscriptAttendee), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attendee') } }
 
-        field :end_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :language, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language') } }
+        field :language, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language') } }
 
-        field :start_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(text: ::String, attendee: T.nilable(Models::Shared::PropertyCalendarRecordingTranscriptAttendee), end_at: T.nilable(::DateTime), language: T.nilable(::String), start_at: T.nilable(::DateTime)).void }
-        def initialize(text: nil, attendee: nil, end_at: nil, language: nil, start_at: nil)
+        def initialize(text:, attendee: nil, end_at: nil, language: nil, start_at: nil)
           @text = text
           @attendee = attendee
           @end_at = end_at
@@ -34,6 +33,7 @@ module UnifiedRubySDK
           @start_at = start_at
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @text == other.text

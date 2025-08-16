@@ -18,22 +18,22 @@ Create a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createLmsCourse" method="post" path="/lms/{connection_id}/course" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.course.create_lms_course(lms_course=Models::Shared::LmsCourse.new(
-  name: "<value>",
-), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.course.create_lms_course(lms_course: Models::Shared::LmsCourse.new(
+  name: '<value>',
+), connection_id: '<id>')
 
-if ! res.lms_course.nil?
+unless res.lms_course.nil?
   # handle response
 end
 
@@ -52,7 +52,11 @@ end
 
 **[T.nilable(Models::Operations::CreateLmsCourseResponse)](../../models/operations/createlmscourseresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_lms_course
 
@@ -60,20 +64,20 @@ Retrieve a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getLmsCourse" method="get" path="/lms/{connection_id}/course/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.course.get_lms_course(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.course.get_lms_course(connection_id: '<id>', id: '<id>')
 
-if ! res.lms_course.nil?
+unless res.lms_course.nil?
   # handle response
 end
 
@@ -92,7 +96,11 @@ end
 
 **[T.nilable(Models::Operations::GetLmsCourseResponse)](../../models/operations/getlmscourseresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_lms_courses
 
@@ -100,22 +108,24 @@ List all courses
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listLmsCourses" method="get" path="/lms/{connection_id}/course" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListLmsCoursesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.course.list_lms_courses(req)
+res = s.course.list_lms_courses(request: req)
 
-if ! res.lms_courses.nil?
+unless res.lms_courses.nil?
   # handle response
 end
 
@@ -131,7 +141,11 @@ end
 
 **[T.nilable(Models::Operations::ListLmsCoursesResponse)](../../models/operations/listlmscoursesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_lms_course
 
@@ -139,26 +153,28 @@ Update a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchLmsCourse" method="patch" path="/lms/{connection_id}/course/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchLmsCourseRequest.new(
   lms_course: Models::Shared::LmsCourse.new(
-    name: "<value>",
+    name: '<value>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.course.patch_lms_course(req)
+res = s.course.patch_lms_course(request: req)
 
-if ! res.lms_course.nil?
+unless res.lms_course.nil?
   # handle response
 end
 
@@ -174,7 +190,11 @@ end
 
 **[T.nilable(Models::Operations::PatchLmsCourseResponse)](../../models/operations/patchlmscourseresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_lms_course
 
@@ -182,16 +202,18 @@ Remove a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeLmsCourse" method="delete" path="/lms/{connection_id}/course/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.course.remove_lms_course(connection_id="<id>", id="<id>")
+res = s.course.remove_lms_course(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -210,7 +232,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveLmsCourseResponse)](../../models/operations/removelmscourseresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_lms_course
 
@@ -218,26 +244,28 @@ Update a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateLmsCourse" method="put" path="/lms/{connection_id}/course/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateLmsCourseRequest.new(
   lms_course: Models::Shared::LmsCourse.new(
-    name: "<value>",
+    name: '<value>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.course.update_lms_course(req)
+res = s.course.update_lms_course(request: req)
 
-if ! res.lms_course.nil?
+unless res.lms_course.nil?
   # handle response
 end
 
@@ -253,3 +281,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateLmsCourseResponse)](../../models/operations/updatelmscourseresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

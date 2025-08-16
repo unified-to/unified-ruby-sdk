@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class ObjectType < T::Enum
+
+
         enums do
           ACCOUNTING_ACCOUNT = new('accounting_account')
           ACCOUNTING_TRANSACTION = new('accounting_transaction')
@@ -84,6 +86,7 @@ module UnifiedRubySDK
           TASK_PROJECT = new('task_project')
           TASK_TASK = new('task_task')
           TASK_COMMENT = new('task_comment')
+          TASK_CHANGE = new('task_change')
           SCIM_USERS = new('scim_users')
           SCIM_GROUPS = new('scim_groups')
           LMS_COURSE = new('lms_course')

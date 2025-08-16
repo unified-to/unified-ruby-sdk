@@ -14,12 +14,11 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
+        field :amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
 
-        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :sub_items, T.nilable(T::Array[Models::Shared::AccountingProfitlossSubcategory]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sub_items') } }
-
+        field :sub_items, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingProfitlossSubcategory)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sub_items') } }
 
         sig { params(amount: T.nilable(::Float), name: T.nilable(::String), sub_items: T.nilable(T::Array[Models::Shared::AccountingProfitlossSubcategory])).void }
         def initialize(amount: nil, name: nil, sub_items: nil)
@@ -28,6 +27,7 @@ module UnifiedRubySDK
           @sub_items = sub_items
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @amount == other.amount

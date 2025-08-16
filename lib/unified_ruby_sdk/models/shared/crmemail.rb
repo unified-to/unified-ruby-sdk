@@ -14,10 +14,9 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :email, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
+        field :email, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
 
-        field :type, T.nilable(Models::Shared::CrmEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::CrmEmailType, true) } }
-
+        field :type, Crystalline::Nilable.new(Models::Shared::CrmEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::CrmEmailType, true) } }
 
         sig { params(email: T.nilable(::String), type: T.nilable(Models::Shared::CrmEmailType)).void }
         def initialize(email: nil, type: nil)
@@ -25,6 +24,7 @@ module UnifiedRubySDK
           @type = type
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @email == other.email

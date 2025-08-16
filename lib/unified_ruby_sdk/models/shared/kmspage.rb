@@ -14,37 +14,36 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :title, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
+        field :title, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title'), required: true } }
 
-        field :type, Models::Shared::KmsPageType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::KmsPageType, false) } }
+        field :type, Models::Shared::KmsPageType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::KmsPageType, false) } }
 
-        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :download_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('download_url') } }
+        field :download_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('download_url') } }
 
-        field :has_children, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_children') } }
+        field :has_children, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_children') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
+        field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
-        field :metadata, T.nilable(T::Array[Models::Shared::KmsPageMetadata]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::KmsPageMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
-        field :parent_page_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_page_id') } }
+        field :parent_page_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_page_id') } }
 
-        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :space_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('space_id') } }
+        field :space_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('space_id') } }
 
-        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
+        field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
-
+        field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
         sig { params(title: ::String, type: Models::Shared::KmsPageType, created_at: T.nilable(::DateTime), download_url: T.nilable(::String), has_children: T.nilable(T::Boolean), id: T.nilable(::String), is_active: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::KmsPageMetadata]), parent_page_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), space_id: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), web_url: T.nilable(::String)).void }
-        def initialize(title: nil, type: nil, created_at: nil, download_url: nil, has_children: nil, id: nil, is_active: nil, metadata: nil, parent_page_id: nil, raw: nil, space_id: nil, updated_at: nil, user_id: nil, web_url: nil)
+        def initialize(title:, type:, created_at: nil, download_url: nil, has_children: nil, id: nil, is_active: nil, metadata: nil, parent_page_id: nil, raw: nil, space_id: nil, updated_at: nil, user_id: nil, web_url: nil)
           @title = title
           @type = type
           @created_at = created_at
@@ -61,6 +60,7 @@ module UnifiedRubySDK
           @web_url = web_url
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @title == other.title

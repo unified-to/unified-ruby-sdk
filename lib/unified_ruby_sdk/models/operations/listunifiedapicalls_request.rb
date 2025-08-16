@@ -14,32 +14,31 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
         # Filter the results to just this integration
-        field :connection_id, T.nilable(::String), { 'query_param': { 'field_name': 'connection_id', 'style': 'form', 'explode': true } }
+        field :connection_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'connection_id', 'style': 'form', 'explode': true } }
 
-        field :env, T.nilable(::String), { 'query_param': { 'field_name': 'env', 'style': 'form', 'explode': true } }
+        field :env, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'env', 'style': 'form', 'explode': true } }
         # Filter the results for API Calls with errors
-        field :error, T.nilable(T::Boolean), { 'query_param': { 'field_name': 'error', 'style': 'form', 'explode': true } }
+        field :error, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'query_param': { 'field_name': 'error', 'style': 'form', 'explode': true } }
         # Filter the results to only those integrations for your user referenced by this value
-        field :external_xref, T.nilable(::String), { 'query_param': { 'field_name': 'external_xref', 'style': 'form', 'explode': true } }
+        field :external_xref, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'external_xref', 'style': 'form', 'explode': true } }
         # Filter the results to just this integration
-        field :integration_type, T.nilable(::String), { 'query_param': { 'field_name': 'integration_type', 'style': 'form', 'explode': true } }
+        field :integration_type, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'integration_type', 'style': 'form', 'explode': true } }
         # Filter the results for only billable API Calls
-        field :is_billable, T.nilable(T::Boolean), { 'query_param': { 'field_name': 'is_billable', 'style': 'form', 'explode': true } }
+        field :is_billable, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'query_param': { 'field_name': 'is_billable', 'style': 'form', 'explode': true } }
 
-        field :limit, T.nilable(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
+        field :limit, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
 
-        field :offset, T.nilable(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
+        field :offset, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
 
-        field :order, T.nilable(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
+        field :order, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
 
-        field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
+        field :sort, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
         # Filter the results to just this type
-        field :type, T.nilable(::String), { 'query_param': { 'field_name': 'type', 'style': 'form', 'explode': true } }
+        field :type, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'type', 'style': 'form', 'explode': true } }
         # Return only results whose updated date is equal or greater to this value
-        field :updated_gte, T.nilable(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
+        field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
         # Filter the results to just this webhook
-        field :webhook_id, T.nilable(::String), { 'query_param': { 'field_name': 'webhook_id', 'style': 'form', 'explode': true } }
-
+        field :webhook_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'webhook_id', 'style': 'form', 'explode': true } }
 
         sig { params(connection_id: T.nilable(::String), env: T.nilable(::String), error: T.nilable(T::Boolean), external_xref: T.nilable(::String), integration_type: T.nilable(::String), is_billable: T.nilable(T::Boolean), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), sort: T.nilable(::String), type: T.nilable(::String), updated_gte: T.nilable(::String), webhook_id: T.nilable(::String)).void }
         def initialize(connection_id: nil, env: nil, error: nil, external_xref: nil, integration_type: nil, is_billable: nil, limit: nil, offset: nil, order: nil, sort: nil, type: nil, updated_gte: nil, webhook_id: nil)
@@ -58,6 +57,7 @@ module UnifiedRubySDK
           @webhook_id = webhook_id
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @connection_id == other.connection_id

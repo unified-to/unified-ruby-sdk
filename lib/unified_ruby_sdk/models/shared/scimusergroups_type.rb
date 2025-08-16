@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class ScimUserGroupsType < T::Enum
+
+
         enums do
           DIRECT = new('direct')
           INDIRECT = new('indirect')

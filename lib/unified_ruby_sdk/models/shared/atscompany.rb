@@ -14,31 +14,30 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name'), required: true } }
 
-        field :address, T.nilable(Models::Shared::PropertyAtsCompanyAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
+        field :address, Crystalline::Nilable.new(Models::Shared::PropertyAtsCompanyAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
 
-        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :metadata, T.nilable(T::Array[Models::Shared::AtsMetadata]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
-        field :parent_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
+        field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
-        field :phone, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('phone') } }
+        field :phone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('phone') } }
 
-        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :recruiter_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recruiter_ids') } }
+        field :recruiter_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recruiter_ids') } }
 
-        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :website_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('website_url') } }
-
+        field :website_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('website_url') } }
 
         sig { params(name: ::String, address: T.nilable(Models::Shared::PropertyAtsCompanyAddress), created_at: T.nilable(::DateTime), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), parent_id: T.nilable(::String), phone: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), recruiter_ids: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), website_url: T.nilable(::String)).void }
-        def initialize(name: nil, address: nil, created_at: nil, id: nil, metadata: nil, parent_id: nil, phone: nil, raw: nil, recruiter_ids: nil, updated_at: nil, website_url: nil)
+        def initialize(name:, address: nil, created_at: nil, id: nil, metadata: nil, parent_id: nil, phone: nil, raw: nil, recruiter_ids: nil, updated_at: nil, website_url: nil)
           @name = name
           @address = address
           @created_at = created_at
@@ -52,6 +51,7 @@ module UnifiedRubySDK
           @website_url = website_url
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @name == other.name

@@ -91,6 +91,7 @@ module UnifiedRubySDK
   autoload :Storage, 'unified_ruby_sdk/storage'
   autoload :File, 'unified_ruby_sdk/file'
   autoload :Task, 'unified_ruby_sdk/task'
+  autoload :Change, 'unified_ruby_sdk/change'
   autoload :Project, 'unified_ruby_sdk/project'
   autoload :Ticketing, 'unified_ruby_sdk/ticketing'
   autoload :Customer, 'unified_ruby_sdk/customer'
@@ -110,9 +111,16 @@ module UnifiedRubySDK
     autoload :Shared, 'unified_ruby_sdk/models/shared'
     autoload :Operations, 'unified_ruby_sdk/models/operations'
     autoload :Errors, 'unified_ruby_sdk/models/errors'
+    autoload :Callbacks, 'unified_ruby_sdk/models/callbacks'
   end
 end
 
 require_relative 'unified_ruby_sdk/utils/utils'
+require_relative 'unified_ruby_sdk/utils/request_bodies'
+require_relative 'unified_ruby_sdk/utils/query_params'
+require_relative 'unified_ruby_sdk/utils/forms'
+require_relative 'unified_ruby_sdk/utils/headers'
+require_relative 'unified_ruby_sdk/utils/url'
+require_relative 'unified_ruby_sdk/utils/security'
 require_relative 'crystalline'
 require_relative 'unified_ruby_sdk/sdkconfiguration'

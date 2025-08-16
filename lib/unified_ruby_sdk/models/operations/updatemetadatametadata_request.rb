@@ -13,32 +13,32 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
+
+        field :metadata_metadata, Models::Shared::MetadataMetadata, { 'request': { 'media_type': 'application/json' } }
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
         # ID of the Metadata
         field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
-
-        field :metadata_metadata, Models::Shared::MetadataMetadata, { 'request': { 'media_type': 'application/json' } }
         # Comma-delimited fields to return
-        field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
         # Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
-        field :raw, T.nilable(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
+        field :raw, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
-
-        sig { params(connection_id: ::String, id: ::String, metadata_metadata: Models::Shared::MetadataMetadata, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String)).void }
-        def initialize(connection_id: nil, id: nil, metadata_metadata: nil, fields_: nil, raw: nil)
+        sig { params(metadata_metadata: Models::Shared::MetadataMetadata, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String)).void }
+        def initialize(metadata_metadata:, connection_id:, id:, fields_: nil, raw: nil)
+          @metadata_metadata = metadata_metadata
           @connection_id = connection_id
           @id = id
-          @metadata_metadata = metadata_metadata
           @fields_ = fields_
           @raw = raw
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
+          return false unless @metadata_metadata == other.metadata_metadata
           return false unless @connection_id == other.connection_id
           return false unless @id == other.id
-          return false unless @metadata_metadata == other.metadata_metadata
           return false unless @fields_ == other.fields_
           return false unless @raw == other.raw
           true

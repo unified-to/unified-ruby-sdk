@@ -13,22 +13,24 @@ List all calls
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listUcCalls" method="get" path="/uc/{connection_id}/call" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListUcCallsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.call.list_uc_calls(req)
+res = s.call.list_uc_calls(request: req)
 
-if ! res.uc_calls.nil?
+unless res.uc_calls.nil?
   # handle response
 end
 
@@ -44,3 +46,8 @@ end
 
 **[T.nilable(Models::Operations::ListUcCallsResponse)](../../models/operations/listuccallsresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

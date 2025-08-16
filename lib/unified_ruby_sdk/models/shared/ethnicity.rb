@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class Ethnicity < T::Enum
+
+
         enums do
           CAUCASIAN = new('Caucasian')
           EAST_ASIAN = new('East Asian')

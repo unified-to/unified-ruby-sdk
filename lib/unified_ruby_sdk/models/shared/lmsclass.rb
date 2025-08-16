@@ -14,31 +14,30 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :course_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('course_id') } }
+        field :course_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('course_id'), required: true } }
 
-        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name'), required: true } }
 
-        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+        field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :instructor_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('instructor_ids') } }
+        field :instructor_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('instructor_ids') } }
 
-        field :languages, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('languages') } }
+        field :languages, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('languages') } }
 
-        field :media, T.nilable(T::Array[Models::Shared::LmsMedia]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
+        field :media, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LmsMedia)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
 
-        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :student_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('student_ids') } }
+        field :student_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('student_ids') } }
 
-        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(course_id: ::String, name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), instructor_ids: T.nilable(T::Array[::String]), languages: T.nilable(T::Array[::String]), media: T.nilable(T::Array[Models::Shared::LmsMedia]), raw: T.nilable(T::Hash[Symbol, ::Object]), student_ids: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime)).void }
-        def initialize(course_id: nil, name: nil, created_at: nil, description: nil, id: nil, instructor_ids: nil, languages: nil, media: nil, raw: nil, student_ids: nil, updated_at: nil)
+        def initialize(course_id:, name:, created_at: nil, description: nil, id: nil, instructor_ids: nil, languages: nil, media: nil, raw: nil, student_ids: nil, updated_at: nil)
           @course_id = course_id
           @name = name
           @created_at = created_at
@@ -52,6 +51,7 @@ module UnifiedRubySDK
           @updated_at = updated_at
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @course_id == other.course_id

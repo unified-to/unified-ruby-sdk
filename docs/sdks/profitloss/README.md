@@ -14,20 +14,20 @@ Retrieve a profitloss
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAccountingProfitloss" method="get" path="/accounting/{connection_id}/profitloss/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.profitloss.get_accounting_profitloss(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.profitloss.get_accounting_profitloss(connection_id: '<id>', id: '<id>')
 
-if ! res.accounting_profitloss.nil?
+unless res.accounting_profitloss.nil?
   # handle response
 end
 
@@ -46,7 +46,11 @@ end
 
 **[T.nilable(Models::Operations::GetAccountingProfitlossResponse)](../../models/operations/getaccountingprofitlossresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_accounting_profitlosses
 
@@ -54,22 +58,24 @@ List all profitlosses
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAccountingProfitlosses" method="get" path="/accounting/{connection_id}/profitloss" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAccountingProfitlossesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.profitloss.list_accounting_profitlosses(req)
+res = s.profitloss.list_accounting_profitlosses(request: req)
 
-if ! res.accounting_profitlosses.nil?
+unless res.accounting_profitlosses.nil?
   # handle response
 end
 
@@ -85,3 +91,8 @@ end
 
 **[T.nilable(Models::Operations::ListAccountingProfitlossesResponse)](../../models/operations/listaccountingprofitlossesresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

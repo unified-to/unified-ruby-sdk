@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class AtsCompensationType < T::Enum
+
+
         enums do
           SALARY = new('SALARY')
           BONUS = new('BONUS')

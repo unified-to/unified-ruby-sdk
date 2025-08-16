@@ -30,22 +30,22 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.comment.create_kms_comment(kms_comment=Models::Shared::KmsComment.new(
-  content: "<value>",
-), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.comment.create_kms_comment(kms_comment: Models::Shared::KmsComment.new(
+  content: '<value>',
+), connection_id: '<id>')
 
-if ! res.kms_comment.nil?
+unless res.kms_comment.nil?
   # handle response
 end
 
@@ -64,7 +64,11 @@ end
 
 **[T.nilable(Models::Operations::CreateKmsCommentResponse)](../../models/operations/createkmscommentresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_task_comment
 
@@ -72,23 +76,23 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.comment.create_task_comment(task_comment=Models::Shared::TaskComment.new(
-  task_id: "<id>",
-  text: "<value>",
-), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.comment.create_task_comment(task_comment: Models::Shared::TaskComment.new(
+  task_id: '<id>',
+  text: '<value>',
+), connection_id: '<id>')
 
-if ! res.task_comment.nil?
+unless res.task_comment.nil?
   # handle response
 end
 
@@ -107,7 +111,11 @@ end
 
 **[T.nilable(Models::Operations::CreateTaskCommentResponse)](../../models/operations/createtaskcommentresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_uc_comment
 
@@ -115,22 +123,22 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.comment.create_uc_comment(uc_comment=Models::Shared::UcComment.new(
-  content: "<value>",
-), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.comment.create_uc_comment(uc_comment: Models::Shared::UcComment.new(
+  content: '<value>',
+), connection_id: '<id>')
 
-if ! res.uc_comment.nil?
+unless res.uc_comment.nil?
   # handle response
 end
 
@@ -149,7 +157,11 @@ end
 
 **[T.nilable(Models::Operations::CreateUcCommentResponse)](../../models/operations/createuccommentresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_kms_comment
 
@@ -157,20 +169,20 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getKmsComment" method="get" path="/kms/{connection_id}/comment/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.comment.get_kms_comment(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.comment.get_kms_comment(connection_id: '<id>', id: '<id>')
 
-if ! res.kms_comment.nil?
+unless res.kms_comment.nil?
   # handle response
 end
 
@@ -189,7 +201,11 @@ end
 
 **[T.nilable(Models::Operations::GetKmsCommentResponse)](../../models/operations/getkmscommentresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_task_comment
 
@@ -197,20 +213,20 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getTaskComment" method="get" path="/task/{connection_id}/comment/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.comment.get_task_comment(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.comment.get_task_comment(connection_id: '<id>', id: '<id>')
 
-if ! res.task_comment.nil?
+unless res.task_comment.nil?
   # handle response
 end
 
@@ -229,7 +245,11 @@ end
 
 **[T.nilable(Models::Operations::GetTaskCommentResponse)](../../models/operations/gettaskcommentresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_uc_comment
 
@@ -237,20 +257,20 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getUcComment" method="get" path="/uc/{connection_id}/comment/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.comment.get_uc_comment(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.comment.get_uc_comment(connection_id: '<id>', id: '<id>')
 
-if ! res.uc_comment.nil?
+unless res.uc_comment.nil?
   # handle response
 end
 
@@ -269,7 +289,11 @@ end
 
 **[T.nilable(Models::Operations::GetUcCommentResponse)](../../models/operations/getuccommentresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_kms_comments
 
@@ -277,22 +301,24 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listKmsComments" method="get" path="/kms/{connection_id}/comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListKmsCommentsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.comment.list_kms_comments(req)
+res = s.comment.list_kms_comments(request: req)
 
-if ! res.kms_comments.nil?
+unless res.kms_comments.nil?
   # handle response
 end
 
@@ -308,7 +334,11 @@ end
 
 **[T.nilable(Models::Operations::ListKmsCommentsResponse)](../../models/operations/listkmscommentsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_task_comments
 
@@ -316,22 +346,24 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listTaskComments" method="get" path="/task/{connection_id}/comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListTaskCommentsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.comment.list_task_comments(req)
+res = s.comment.list_task_comments(request: req)
 
-if ! res.task_comments.nil?
+unless res.task_comments.nil?
   # handle response
 end
 
@@ -347,7 +379,11 @@ end
 
 **[T.nilable(Models::Operations::ListTaskCommentsResponse)](../../models/operations/listtaskcommentsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_uc_comments
 
@@ -355,22 +391,24 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listUcComments" method="get" path="/uc/{connection_id}/comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListUcCommentsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.comment.list_uc_comments(req)
+res = s.comment.list_uc_comments(request: req)
 
-if ! res.uc_comments.nil?
+unless res.uc_comments.nil?
   # handle response
 end
 
@@ -386,7 +424,11 @@ end
 
 **[T.nilable(Models::Operations::ListUcCommentsResponse)](../../models/operations/listuccommentsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_kms_comment
 
@@ -394,26 +436,28 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchKmsCommentRequest.new(
   kms_comment: Models::Shared::KmsComment.new(
-    content: "<value>",
+    content: '<value>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.comment.patch_kms_comment(req)
+res = s.comment.patch_kms_comment(request: req)
 
-if ! res.kms_comment.nil?
+unless res.kms_comment.nil?
   # handle response
 end
 
@@ -429,7 +473,11 @@ end
 
 **[T.nilable(Models::Operations::PatchKmsCommentResponse)](../../models/operations/patchkmscommentresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_task_comment
 
@@ -437,27 +485,29 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchTaskCommentRequest.new(
   task_comment: Models::Shared::TaskComment.new(
-    task_id: "<id>",
-    text: "<value>",
+    task_id: '<id>',
+    text: '<value>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.comment.patch_task_comment(req)
+res = s.comment.patch_task_comment(request: req)
 
-if ! res.task_comment.nil?
+unless res.task_comment.nil?
   # handle response
 end
 
@@ -473,7 +523,11 @@ end
 
 **[T.nilable(Models::Operations::PatchTaskCommentResponse)](../../models/operations/patchtaskcommentresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_uc_comment
 
@@ -481,26 +535,28 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchUcCommentRequest.new(
   uc_comment: Models::Shared::UcComment.new(
-    content: "<value>",
+    content: '<value>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.comment.patch_uc_comment(req)
+res = s.comment.patch_uc_comment(request: req)
 
-if ! res.uc_comment.nil?
+unless res.uc_comment.nil?
   # handle response
 end
 
@@ -516,7 +572,11 @@ end
 
 **[T.nilable(Models::Operations::PatchUcCommentResponse)](../../models/operations/patchuccommentresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_kms_comment
 
@@ -524,16 +584,18 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeKmsComment" method="delete" path="/kms/{connection_id}/comment/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.comment.remove_kms_comment(connection_id="<id>", id="<id>")
+res = s.comment.remove_kms_comment(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -552,7 +614,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveKmsCommentResponse)](../../models/operations/removekmscommentresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_task_comment
 
@@ -560,16 +626,18 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeTaskComment" method="delete" path="/task/{connection_id}/comment/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.comment.remove_task_comment(connection_id="<id>", id="<id>")
+res = s.comment.remove_task_comment(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -588,7 +656,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveTaskCommentResponse)](../../models/operations/removetaskcommentresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_uc_comment
 
@@ -596,16 +668,18 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeUcComment" method="delete" path="/uc/{connection_id}/comment/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.comment.remove_uc_comment(connection_id="<id>", id="<id>")
+res = s.comment.remove_uc_comment(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -624,7 +698,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveUcCommentResponse)](../../models/operations/removeuccommentresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_kms_comment
 
@@ -632,26 +710,28 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateKmsCommentRequest.new(
   kms_comment: Models::Shared::KmsComment.new(
-    content: "<value>",
+    content: '<value>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.comment.update_kms_comment(req)
+res = s.comment.update_kms_comment(request: req)
 
-if ! res.kms_comment.nil?
+unless res.kms_comment.nil?
   # handle response
 end
 
@@ -667,7 +747,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateKmsCommentResponse)](../../models/operations/updatekmscommentresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_task_comment
 
@@ -675,27 +759,29 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateTaskCommentRequest.new(
   task_comment: Models::Shared::TaskComment.new(
-    task_id: "<id>",
-    text: "<value>",
+    task_id: '<id>',
+    text: '<value>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.comment.update_task_comment(req)
+res = s.comment.update_task_comment(request: req)
 
-if ! res.task_comment.nil?
+unless res.task_comment.nil?
   # handle response
 end
 
@@ -711,7 +797,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateTaskCommentResponse)](../../models/operations/updatetaskcommentresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_uc_comment
 
@@ -719,26 +809,28 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateUcCommentRequest.new(
   uc_comment: Models::Shared::UcComment.new(
-    content: "<value>",
+    content: '<value>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.comment.update_uc_comment(req)
+res = s.comment.update_uc_comment(request: req)
 
-if ! res.uc_comment.nil?
+unless res.uc_comment.nil?
   # handle response
 end
 
@@ -754,3 +846,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateUcCommentResponse)](../../models/operations/updateuccommentresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

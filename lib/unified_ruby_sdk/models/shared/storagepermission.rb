@@ -14,19 +14,18 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :roles, T::Array[Models::Shared::PropertyStoragePermissionRoles], { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('roles') } }
+        field :roles, Crystalline::Array.new(Models::Shared::PropertyStoragePermissionRoles), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('roles'), required: true } }
 
-        field :group_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_id') } }
+        field :group_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_id') } }
 
-        field :is_hidden, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_hidden') } }
+        field :is_hidden, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_hidden') } }
 
-        field :is_public, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_public') } }
+        field :is_public, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_public') } }
 
-        field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
-
+        field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
         sig { params(roles: T::Array[Models::Shared::PropertyStoragePermissionRoles], group_id: T.nilable(::String), is_hidden: T.nilable(T::Boolean), is_public: T.nilable(T::Boolean), user_id: T.nilable(::String)).void }
-        def initialize(roles: nil, group_id: nil, is_hidden: nil, is_public: nil, user_id: nil)
+        def initialize(roles:, group_id: nil, is_hidden: nil, is_public: nil, user_id: nil)
           @roles = roles
           @group_id = group_id
           @is_hidden = is_hidden
@@ -34,6 +33,7 @@ module UnifiedRubySDK
           @user_id = user_id
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @roles == other.roles

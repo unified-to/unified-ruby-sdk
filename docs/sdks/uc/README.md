@@ -31,22 +31,22 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.uc.create_uc_comment(uc_comment=Models::Shared::UcComment.new(
-  content: "<value>",
-), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.uc.create_uc_comment(uc_comment: Models::Shared::UcComment.new(
+  content: '<value>',
+), connection_id: '<id>')
 
-if ! res.uc_comment.nil?
+unless res.uc_comment.nil?
   # handle response
 end
 
@@ -65,7 +65,11 @@ end
 
 **[T.nilable(Models::Operations::CreateUcCommentResponse)](../../models/operations/createuccommentresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_uc_contact
 
@@ -73,20 +77,20 @@ Create a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.uc.create_uc_contact(uc_contact=Models::Shared::UcContact.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.uc.create_uc_contact(uc_contact: Models::Shared::UcContact.new(), connection_id: '<id>')
 
-if ! res.uc_contact.nil?
+unless res.uc_contact.nil?
   # handle response
 end
 
@@ -105,7 +109,11 @@ end
 
 **[T.nilable(Models::Operations::CreateUcContactResponse)](../../models/operations/createuccontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_uc_recording
 
@@ -113,20 +121,20 @@ Create a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.uc.create_uc_recording(uc_recording=Models::Shared::UcRecording.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.uc.create_uc_recording(uc_recording: Models::Shared::UcRecording.new(), connection_id: '<id>')
 
-if ! res.uc_recording.nil?
+unless res.uc_recording.nil?
   # handle response
 end
 
@@ -145,7 +153,11 @@ end
 
 **[T.nilable(Models::Operations::CreateUcRecordingResponse)](../../models/operations/createucrecordingresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_uc_comment
 
@@ -153,20 +165,20 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getUcComment" method="get" path="/uc/{connection_id}/comment/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.uc.get_uc_comment(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.uc.get_uc_comment(connection_id: '<id>', id: '<id>')
 
-if ! res.uc_comment.nil?
+unless res.uc_comment.nil?
   # handle response
 end
 
@@ -185,7 +197,11 @@ end
 
 **[T.nilable(Models::Operations::GetUcCommentResponse)](../../models/operations/getuccommentresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_uc_contact
 
@@ -193,20 +209,20 @@ Retrieve a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getUcContact" method="get" path="/uc/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.uc.get_uc_contact(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.uc.get_uc_contact(connection_id: '<id>', id: '<id>')
 
-if ! res.uc_contact.nil?
+unless res.uc_contact.nil?
   # handle response
 end
 
@@ -225,7 +241,11 @@ end
 
 **[T.nilable(Models::Operations::GetUcContactResponse)](../../models/operations/getuccontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_uc_recording
 
@@ -233,20 +253,20 @@ Retrieve a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getUcRecording" method="get" path="/uc/{connection_id}/recording/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.uc.get_uc_recording(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.uc.get_uc_recording(connection_id: '<id>', id: '<id>')
 
-if ! res.uc_recording.nil?
+unless res.uc_recording.nil?
   # handle response
 end
 
@@ -265,7 +285,11 @@ end
 
 **[T.nilable(Models::Operations::GetUcRecordingResponse)](../../models/operations/getucrecordingresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_uc_calls
 
@@ -273,22 +297,24 @@ List all calls
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listUcCalls" method="get" path="/uc/{connection_id}/call" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListUcCallsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.uc.list_uc_calls(req)
+res = s.uc.list_uc_calls(request: req)
 
-if ! res.uc_calls.nil?
+unless res.uc_calls.nil?
   # handle response
 end
 
@@ -304,7 +330,11 @@ end
 
 **[T.nilable(Models::Operations::ListUcCallsResponse)](../../models/operations/listuccallsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_uc_comments
 
@@ -312,22 +342,24 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listUcComments" method="get" path="/uc/{connection_id}/comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListUcCommentsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.uc.list_uc_comments(req)
+res = s.uc.list_uc_comments(request: req)
 
-if ! res.uc_comments.nil?
+unless res.uc_comments.nil?
   # handle response
 end
 
@@ -343,7 +375,11 @@ end
 
 **[T.nilable(Models::Operations::ListUcCommentsResponse)](../../models/operations/listuccommentsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_uc_contacts
 
@@ -351,22 +387,24 @@ List all contacts
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listUcContacts" method="get" path="/uc/{connection_id}/contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListUcContactsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.uc.list_uc_contacts(req)
+res = s.uc.list_uc_contacts(request: req)
 
-if ! res.uc_contacts.nil?
+unless res.uc_contacts.nil?
   # handle response
 end
 
@@ -382,7 +420,11 @@ end
 
 **[T.nilable(Models::Operations::ListUcContactsResponse)](../../models/operations/listuccontactsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_uc_recordings
 
@@ -390,22 +432,24 @@ List all recordings
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listUcRecordings" method="get" path="/uc/{connection_id}/recording" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListUcRecordingsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.uc.list_uc_recordings(req)
+res = s.uc.list_uc_recordings(request: req)
 
-if ! res.uc_recordings.nil?
+unless res.uc_recordings.nil?
   # handle response
 end
 
@@ -421,7 +465,11 @@ end
 
 **[T.nilable(Models::Operations::ListUcRecordingsResponse)](../../models/operations/listucrecordingsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_uc_comment
 
@@ -429,26 +477,28 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchUcCommentRequest.new(
   uc_comment: Models::Shared::UcComment.new(
-    content: "<value>",
+    content: '<value>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.uc.patch_uc_comment(req)
+res = s.uc.patch_uc_comment(request: req)
 
-if ! res.uc_comment.nil?
+unless res.uc_comment.nil?
   # handle response
 end
 
@@ -464,7 +514,11 @@ end
 
 **[T.nilable(Models::Operations::PatchUcCommentResponse)](../../models/operations/patchuccommentresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_uc_contact
 
@@ -472,24 +526,26 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchUcContactRequest.new(
   uc_contact: Models::Shared::UcContact.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.uc.patch_uc_contact(req)
+res = s.uc.patch_uc_contact(request: req)
 
-if ! res.uc_contact.nil?
+unless res.uc_contact.nil?
   # handle response
 end
 
@@ -505,7 +561,11 @@ end
 
 **[T.nilable(Models::Operations::PatchUcContactResponse)](../../models/operations/patchuccontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_uc_recording
 
@@ -513,24 +573,26 @@ Update a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchUcRecordingRequest.new(
   uc_recording: Models::Shared::UcRecording.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.uc.patch_uc_recording(req)
+res = s.uc.patch_uc_recording(request: req)
 
-if ! res.uc_recording.nil?
+unless res.uc_recording.nil?
   # handle response
 end
 
@@ -546,7 +608,11 @@ end
 
 **[T.nilable(Models::Operations::PatchUcRecordingResponse)](../../models/operations/patchucrecordingresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_uc_comment
 
@@ -554,16 +620,18 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeUcComment" method="delete" path="/uc/{connection_id}/comment/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.uc.remove_uc_comment(connection_id="<id>", id="<id>")
+res = s.uc.remove_uc_comment(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -582,7 +650,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveUcCommentResponse)](../../models/operations/removeuccommentresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_uc_contact
 
@@ -590,16 +662,18 @@ Remove a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeUcContact" method="delete" path="/uc/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.uc.remove_uc_contact(connection_id="<id>", id="<id>")
+res = s.uc.remove_uc_contact(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -618,7 +692,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveUcContactResponse)](../../models/operations/removeuccontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_uc_recording
 
@@ -626,16 +704,18 @@ Remove a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeUcRecording" method="delete" path="/uc/{connection_id}/recording/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.uc.remove_uc_recording(connection_id="<id>", id="<id>")
+res = s.uc.remove_uc_recording(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -654,7 +734,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveUcRecordingResponse)](../../models/operations/removeucrecordingresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_uc_comment
 
@@ -662,26 +746,28 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateUcCommentRequest.new(
   uc_comment: Models::Shared::UcComment.new(
-    content: "<value>",
+    content: '<value>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.uc.update_uc_comment(req)
+res = s.uc.update_uc_comment(request: req)
 
-if ! res.uc_comment.nil?
+unless res.uc_comment.nil?
   # handle response
 end
 
@@ -697,7 +783,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateUcCommentResponse)](../../models/operations/updateuccommentresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_uc_contact
 
@@ -705,24 +795,26 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateUcContactRequest.new(
   uc_contact: Models::Shared::UcContact.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.uc.update_uc_contact(req)
+res = s.uc.update_uc_contact(request: req)
 
-if ! res.uc_contact.nil?
+unless res.uc_contact.nil?
   # handle response
 end
 
@@ -738,7 +830,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateUcContactResponse)](../../models/operations/updateuccontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_uc_recording
 
@@ -746,24 +842,26 @@ Update a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateUcRecordingRequest.new(
   uc_recording: Models::Shared::UcRecording.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.uc.update_uc_recording(req)
+res = s.uc.update_uc_recording(request: req)
 
-if ! res.uc_recording.nil?
+unless res.uc_recording.nil?
   # handle response
 end
 
@@ -779,3 +877,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateUcRecordingResponse)](../../models/operations/updateucrecordingresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

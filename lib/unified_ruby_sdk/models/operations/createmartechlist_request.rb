@@ -13,28 +13,28 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-        # ID of the connection
-        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
         # Mailing List
         field :marketing_list, Models::Shared::MarketingList, { 'request': { 'media_type': 'application/json' } }
+        # ID of the connection
+        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
         # Comma-delimited fields to return
-        field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
         # Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
-        field :raw, T.nilable(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
+        field :raw, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
-
-        sig { params(connection_id: ::String, marketing_list: Models::Shared::MarketingList, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String)).void }
-        def initialize(connection_id: nil, marketing_list: nil, fields_: nil, raw: nil)
-          @connection_id = connection_id
+        sig { params(marketing_list: Models::Shared::MarketingList, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String)).void }
+        def initialize(marketing_list:, connection_id:, fields_: nil, raw: nil)
           @marketing_list = marketing_list
+          @connection_id = connection_id
           @fields_ = fields_
           @raw = raw
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @connection_id == other.connection_id
           return false unless @marketing_list == other.marketing_list
+          return false unless @connection_id == other.connection_id
           return false unless @fields_ == other.fields_
           return false unless @raw == other.raw
           true

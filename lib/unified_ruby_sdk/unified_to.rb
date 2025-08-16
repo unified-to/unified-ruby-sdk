@@ -16,7 +16,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :balancesheet, :bill, :category, :contact, :creditmemo, :invoice, :journal, :order, :organization, :profitloss, :purchaseorder, :report, :salesorder, :taxrate, :transaction, :trialbalance, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :event, :link, :recording, :commerce, :collection, :inventory, :item, :location, :review, :crm, :deal, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :device, :employee, :group, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :lms, :class_, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :storage, :file, :task, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
+    attr_accessor :accounting, :account, :balancesheet, :bill, :category, :contact, :creditmemo, :invoice, :journal, :order, :organization, :profitloss, :purchaseorder, :report, :salesorder, :taxrate, :transaction, :trialbalance, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :event, :link, :recording, :commerce, :collection, :inventory, :item, :location, :review, :crm, :deal, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :device, :employee, :group, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :lms, :class_, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :storage, :file, :task, :change, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
 
     sig do
       params(
@@ -52,7 +52,7 @@ module UnifiedRubySDK
         f.request :multipart, {}
         # f.response :logger, nil, { headers: true, bodies: true, errors: true }
       end
-
+      
       if !server_url.nil?
         if !url_params.nil?
           server_url = Utils.template_url(server_url, url_params)
@@ -71,11 +71,7 @@ module UnifiedRubySDK
         server_url,
         server_idx
       )
-
-      original_server_url = @sdk_configuration.get_server_details.first
-      new_server_url, @sdk_configuration.client = hooks.sdk_init(base_url: original_server_url, client: client)
-      @sdk_configuration.server_url = new_server_url if new_server_url != original_server_url
-
+      @sdk_configuration = hooks.sdk_init(config: @sdk_configuration)
       init_sdks
     end
 
@@ -167,6 +163,7 @@ module UnifiedRubySDK
       @storage = Storage.new(@sdk_configuration)
       @file = File.new(@sdk_configuration)
       @task = Task.new(@sdk_configuration)
+      @change = Change.new(@sdk_configuration)
       @project = Project.new(@sdk_configuration)
       @ticketing = Ticketing.new(@sdk_configuration)
       @customer = Customer.new(@sdk_configuration)
@@ -182,6 +179,21 @@ module UnifiedRubySDK
       @login = Login.new(@sdk_configuration)
       @issue = Issue.new(@sdk_configuration)
       @webhook = Webhook.new(@sdk_configuration)
+    end
+
+    sig { params(base_url: String, url_variables: T.nilable(T::Hash[Symbol, T.any(String, T::Enum)])).returns(String) }
+    def get_url(base_url:, url_variables: nil)
+      sd_base_url, sd_options = @sdk_configuration.get_server_details
+
+      if base_url.nil?
+        base_url = sd_base_url
+      end
+
+      if url_variables.nil?
+        url_variables = sd_options
+      end
+
+      return Utils.template_url base_url, url_variables
     end
   end
 end

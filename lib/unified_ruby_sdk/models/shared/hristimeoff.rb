@@ -14,35 +14,34 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :start_at, ::DateTime, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(false) } }
+        field :start_at, ::DateTime, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), required: true, 'decoder': Utils.datetime_from_iso_format(false) } }
 
-        field :approved_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('approved_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :approved_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('approved_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :approver_user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('approver_user_id') } }
+        field :approver_user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('approver_user_id') } }
 
-        field :comments, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('comments') } }
+        field :comments, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('comments') } }
 
-        field :company_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
+        field :company_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
 
-        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :end_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :status, T.nilable(Models::Shared::HrisTimeoffStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::HrisTimeoffStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::HrisTimeoffStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::HrisTimeoffStatus, true) } }
 
-        field :type, T.nilable(Models::Shared::HrisTimeoffType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisTimeoffType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::HrisTimeoffType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisTimeoffType, true) } }
 
-        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
-
+        field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
         sig { params(start_at: ::DateTime, approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), comments: T.nilable(::String), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::HrisTimeoffStatus), type: T.nilable(Models::Shared::HrisTimeoffType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(start_at: nil, approved_at: nil, approver_user_id: nil, comments: nil, company_id: nil, created_at: nil, end_at: nil, id: nil, raw: nil, status: nil, type: nil, updated_at: nil, user_id: nil)
+        def initialize(start_at:, approved_at: nil, approver_user_id: nil, comments: nil, company_id: nil, created_at: nil, end_at: nil, id: nil, raw: nil, status: nil, type: nil, updated_at: nil, user_id: nil)
           @start_at = start_at
           @approved_at = approved_at
           @approver_user_id = approver_user_id
@@ -58,6 +57,7 @@ module UnifiedRubySDK
           @user_id = user_id
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @start_at == other.start_at

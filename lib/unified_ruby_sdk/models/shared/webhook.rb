@@ -14,55 +14,54 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :connection_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('connection_id') } }
+        field :connection_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('connection_id'), required: true } }
 
-        field :event, Models::Shared::Event, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('event'), 'decoder': Utils.enum_from_string(Models::Shared::Event, false) } }
+        field :event, Models::Shared::Event, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('event'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::Event, false) } }
 
-        field :object_type, Models::Shared::ObjectType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_type'), 'decoder': Utils.enum_from_string(Models::Shared::ObjectType, false) } }
+        field :object_type, Models::Shared::ObjectType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::ObjectType, false) } }
 
-        field :checked_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('checked_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :checked_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('checked_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :db_name_prefix, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('db_name_prefix') } }
+        field :db_name_prefix, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('db_name_prefix') } }
 
-        field :db_type, T.nilable(Models::Shared::DbType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('db_type'), 'decoder': Utils.enum_from_string(Models::Shared::DbType, true) } }
+        field :db_type, Crystalline::Nilable.new(Models::Shared::DbType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('db_type'), 'decoder': Utils.enum_from_string(Models::Shared::DbType, true) } }
 
-        field :db_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('db_url') } }
+        field :db_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('db_url') } }
 
-        field :environment, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('environment') } }
+        field :fields_, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fields') } }
 
-        field :fields_, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fields') } }
+        field :filters, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('filters') } }
 
-        field :filters, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('filters') } }
+        field :hook_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('hook_url') } }
 
-        field :hook_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('hook_url') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :integration_type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('integration_type') } }
 
-        field :integration_type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('integration_type') } }
+        field :interval, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('interval') } }
 
-        field :interval, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('interval') } }
+        field :is_healthy, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_healthy') } }
 
-        field :is_healthy, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_healthy') } }
+        field :is_paused, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_paused') } }
 
-        field :is_paused, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_paused') } }
+        field :meta, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('meta') } }
 
-        field :meta, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('meta') } }
-
-        field :page_max_limit, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('page_max_limit') } }
+        field :page_max_limit, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('page_max_limit') } }
         # An array of the most revent virtual webhook runs
-        field :runs, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('runs') } }
+        field :runs, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('runs') } }
 
-        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :webhook_type, T.nilable(Models::Shared::WebhookType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('webhook_type'), 'decoder': Utils.enum_from_string(Models::Shared::WebhookType, true) } }
+        field :webhook_type, Crystalline::Nilable.new(Models::Shared::WebhookType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('webhook_type'), 'decoder': Utils.enum_from_string(Models::Shared::WebhookType, true) } }
 
-        field :workspace_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
+        field :workspace_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
 
+        field :environment, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('environment') } }
 
-        sig { params(connection_id: ::String, event: Models::Shared::Event, object_type: Models::Shared::ObjectType, checked_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), db_name_prefix: T.nilable(::String), db_type: T.nilable(Models::Shared::DbType), db_url: T.nilable(::String), environment: T.nilable(::String), fields_: T.nilable(::String), filters: T.nilable(T::Hash[Symbol, ::Object]), hook_url: T.nilable(::String), id: T.nilable(::String), integration_type: T.nilable(::String), interval: T.nilable(::Float), is_healthy: T.nilable(T::Boolean), is_paused: T.nilable(T::Boolean), meta: T.nilable(T::Hash[Symbol, ::Object]), page_max_limit: T.nilable(::Float), runs: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), webhook_type: T.nilable(Models::Shared::WebhookType), workspace_id: T.nilable(::String)).void }
-        def initialize(connection_id: nil, event: nil, object_type: nil, checked_at: nil, created_at: nil, db_name_prefix: nil, db_type: nil, db_url: nil, environment: nil, fields_: nil, filters: nil, hook_url: nil, id: nil, integration_type: nil, interval: nil, is_healthy: nil, is_paused: nil, meta: nil, page_max_limit: nil, runs: nil, updated_at: nil, webhook_type: nil, workspace_id: nil)
+        sig { params(connection_id: ::String, event: Models::Shared::Event, object_type: Models::Shared::ObjectType, checked_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), db_name_prefix: T.nilable(::String), db_type: T.nilable(Models::Shared::DbType), db_url: T.nilable(::String), fields_: T.nilable(::String), filters: T.nilable(T::Hash[Symbol, ::Object]), hook_url: T.nilable(::String), id: T.nilable(::String), integration_type: T.nilable(::String), interval: T.nilable(::Float), is_healthy: T.nilable(T::Boolean), is_paused: T.nilable(T::Boolean), meta: T.nilable(T::Hash[Symbol, ::Object]), page_max_limit: T.nilable(::Float), runs: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), webhook_type: T.nilable(Models::Shared::WebhookType), workspace_id: T.nilable(::String), environment: T.nilable(::String)).void }
+        def initialize(connection_id:, event:, object_type:, checked_at: nil, created_at: nil, db_name_prefix: nil, db_type: nil, db_url: nil, fields_: nil, filters: nil, hook_url: nil, id: nil, integration_type: nil, interval: nil, is_healthy: nil, is_paused: nil, meta: nil, page_max_limit: nil, runs: nil, updated_at: nil, webhook_type: nil, workspace_id: nil, environment: 'Production')
           @connection_id = connection_id
           @event = event
           @object_type = object_type
@@ -71,7 +70,6 @@ module UnifiedRubySDK
           @db_name_prefix = db_name_prefix
           @db_type = db_type
           @db_url = db_url
-          @environment = environment
           @fields_ = fields_
           @filters = filters
           @hook_url = hook_url
@@ -86,8 +84,10 @@ module UnifiedRubySDK
           @updated_at = updated_at
           @webhook_type = webhook_type
           @workspace_id = workspace_id
+          @environment = environment
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @connection_id == other.connection_id
@@ -98,7 +98,6 @@ module UnifiedRubySDK
           return false unless @db_name_prefix == other.db_name_prefix
           return false unless @db_type == other.db_type
           return false unless @db_url == other.db_url
-          return false unless @environment == other.environment
           return false unless @fields_ == other.fields_
           return false unless @filters == other.filters
           return false unless @hook_url == other.hook_url
@@ -113,6 +112,7 @@ module UnifiedRubySDK
           return false unless @updated_at == other.updated_at
           return false unless @webhook_type == other.webhook_type
           return false unless @workspace_id == other.workspace_id
+          return false unless @environment == other.environment
           true
         end
       end

@@ -30,20 +30,20 @@ Create a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.contact.create_accounting_contact(accounting_contact=Models::Shared::AccountingContact.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.contact.create_accounting_contact(accounting_contact: Models::Shared::AccountingContact.new(), connection_id: '<id>')
 
-if ! res.accounting_contact.nil?
+unless res.accounting_contact.nil?
   # handle response
 end
 
@@ -62,7 +62,11 @@ end
 
 **[T.nilable(Models::Operations::CreateAccountingContactResponse)](../../models/operations/createaccountingcontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_crm_contact
 
@@ -70,20 +74,20 @@ Create a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createCrmContact" method="post" path="/crm/{connection_id}/contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.contact.create_crm_contact(crm_contact=Models::Shared::CrmContact.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.contact.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(), connection_id: '<id>')
 
-if ! res.crm_contact.nil?
+unless res.crm_contact.nil?
   # handle response
 end
 
@@ -102,7 +106,11 @@ end
 
 **[T.nilable(Models::Operations::CreateCrmContactResponse)](../../models/operations/createcrmcontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_uc_contact
 
@@ -110,20 +118,20 @@ Create a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.contact.create_uc_contact(uc_contact=Models::Shared::UcContact.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.contact.create_uc_contact(uc_contact: Models::Shared::UcContact.new(), connection_id: '<id>')
 
-if ! res.uc_contact.nil?
+unless res.uc_contact.nil?
   # handle response
 end
 
@@ -142,7 +150,11 @@ end
 
 **[T.nilable(Models::Operations::CreateUcContactResponse)](../../models/operations/createuccontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_accounting_contact
 
@@ -150,20 +162,20 @@ Retrieve a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAccountingContact" method="get" path="/accounting/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.contact.get_accounting_contact(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.contact.get_accounting_contact(connection_id: '<id>', id: '<id>')
 
-if ! res.accounting_contact.nil?
+unless res.accounting_contact.nil?
   # handle response
 end
 
@@ -182,7 +194,11 @@ end
 
 **[T.nilable(Models::Operations::GetAccountingContactResponse)](../../models/operations/getaccountingcontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_crm_contact
 
@@ -190,20 +206,20 @@ Retrieve a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getCrmContact" method="get" path="/crm/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.contact.get_crm_contact(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.contact.get_crm_contact(connection_id: '<id>', id: '<id>')
 
-if ! res.crm_contact.nil?
+unless res.crm_contact.nil?
   # handle response
 end
 
@@ -222,7 +238,11 @@ end
 
 **[T.nilable(Models::Operations::GetCrmContactResponse)](../../models/operations/getcrmcontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_uc_contact
 
@@ -230,20 +250,20 @@ Retrieve a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getUcContact" method="get" path="/uc/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.contact.get_uc_contact(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.contact.get_uc_contact(connection_id: '<id>', id: '<id>')
 
-if ! res.uc_contact.nil?
+unless res.uc_contact.nil?
   # handle response
 end
 
@@ -262,7 +282,11 @@ end
 
 **[T.nilable(Models::Operations::GetUcContactResponse)](../../models/operations/getuccontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_accounting_contacts
 
@@ -270,22 +294,24 @@ List all contacts
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAccountingContacts" method="get" path="/accounting/{connection_id}/contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAccountingContactsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.contact.list_accounting_contacts(req)
+res = s.contact.list_accounting_contacts(request: req)
 
-if ! res.accounting_contacts.nil?
+unless res.accounting_contacts.nil?
   # handle response
 end
 
@@ -301,7 +327,11 @@ end
 
 **[T.nilable(Models::Operations::ListAccountingContactsResponse)](../../models/operations/listaccountingcontactsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_crm_contacts
 
@@ -309,22 +339,24 @@ List all contacts
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listCrmContacts" method="get" path="/crm/{connection_id}/contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListCrmContactsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.contact.list_crm_contacts(req)
+res = s.contact.list_crm_contacts(request: req)
 
-if ! res.crm_contacts.nil?
+unless res.crm_contacts.nil?
   # handle response
 end
 
@@ -340,7 +372,11 @@ end
 
 **[T.nilable(Models::Operations::ListCrmContactsResponse)](../../models/operations/listcrmcontactsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_uc_contacts
 
@@ -348,22 +384,24 @@ List all contacts
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listUcContacts" method="get" path="/uc/{connection_id}/contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListUcContactsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.contact.list_uc_contacts(req)
+res = s.contact.list_uc_contacts(request: req)
 
-if ! res.uc_contacts.nil?
+unless res.uc_contacts.nil?
   # handle response
 end
 
@@ -379,7 +417,11 @@ end
 
 **[T.nilable(Models::Operations::ListUcContactsResponse)](../../models/operations/listuccontactsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_accounting_contact
 
@@ -387,24 +429,26 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchAccountingContactRequest.new(
   accounting_contact: Models::Shared::AccountingContact.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.contact.patch_accounting_contact(req)
+res = s.contact.patch_accounting_contact(request: req)
 
-if ! res.accounting_contact.nil?
+unless res.accounting_contact.nil?
   # handle response
 end
 
@@ -420,7 +464,11 @@ end
 
 **[T.nilable(Models::Operations::PatchAccountingContactResponse)](../../models/operations/patchaccountingcontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_crm_contact
 
@@ -428,24 +476,26 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchCrmContact" method="patch" path="/crm/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchCrmContactRequest.new(
   crm_contact: Models::Shared::CrmContact.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.contact.patch_crm_contact(req)
+res = s.contact.patch_crm_contact(request: req)
 
-if ! res.crm_contact.nil?
+unless res.crm_contact.nil?
   # handle response
 end
 
@@ -461,7 +511,11 @@ end
 
 **[T.nilable(Models::Operations::PatchCrmContactResponse)](../../models/operations/patchcrmcontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_uc_contact
 
@@ -469,24 +523,26 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchUcContactRequest.new(
   uc_contact: Models::Shared::UcContact.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.contact.patch_uc_contact(req)
+res = s.contact.patch_uc_contact(request: req)
 
-if ! res.uc_contact.nil?
+unless res.uc_contact.nil?
   # handle response
 end
 
@@ -502,7 +558,11 @@ end
 
 **[T.nilable(Models::Operations::PatchUcContactResponse)](../../models/operations/patchuccontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_accounting_contact
 
@@ -510,16 +570,18 @@ Remove a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeAccountingContact" method="delete" path="/accounting/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.contact.remove_accounting_contact(connection_id="<id>", id="<id>")
+res = s.contact.remove_accounting_contact(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -538,7 +600,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveAccountingContactResponse)](../../models/operations/removeaccountingcontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_crm_contact
 
@@ -546,16 +612,18 @@ Remove a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeCrmContact" method="delete" path="/crm/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.contact.remove_crm_contact(connection_id="<id>", id="<id>")
+res = s.contact.remove_crm_contact(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -574,7 +642,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveCrmContactResponse)](../../models/operations/removecrmcontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_uc_contact
 
@@ -582,16 +654,18 @@ Remove a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeUcContact" method="delete" path="/uc/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.contact.remove_uc_contact(connection_id="<id>", id="<id>")
+res = s.contact.remove_uc_contact(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -610,7 +684,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveUcContactResponse)](../../models/operations/removeuccontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_accounting_contact
 
@@ -618,24 +696,26 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateAccountingContactRequest.new(
   accounting_contact: Models::Shared::AccountingContact.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.contact.update_accounting_contact(req)
+res = s.contact.update_accounting_contact(request: req)
 
-if ! res.accounting_contact.nil?
+unless res.accounting_contact.nil?
   # handle response
 end
 
@@ -651,7 +731,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateAccountingContactResponse)](../../models/operations/updateaccountingcontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_crm_contact
 
@@ -659,24 +743,26 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateCrmContact" method="put" path="/crm/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateCrmContactRequest.new(
   crm_contact: Models::Shared::CrmContact.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.contact.update_crm_contact(req)
+res = s.contact.update_crm_contact(request: req)
 
-if ! res.crm_contact.nil?
+unless res.crm_contact.nil?
   # handle response
 end
 
@@ -692,7 +778,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateCrmContactResponse)](../../models/operations/updatecrmcontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_uc_contact
 
@@ -700,24 +790,26 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateUcContactRequest.new(
   uc_contact: Models::Shared::UcContact.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.contact.update_uc_contact(req)
+res = s.contact.update_uc_contact(request: req)
 
-if ! res.uc_contact.nil?
+unless res.uc_contact.nil?
   # handle response
 end
 
@@ -733,3 +825,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateUcContactResponse)](../../models/operations/updateuccontactresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

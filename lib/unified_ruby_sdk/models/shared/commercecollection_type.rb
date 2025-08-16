@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class CommerceCollectionType < T::Enum
+
+
         enums do
           COLLECTION = new('COLLECTION')
           SAVED_SEARCH = new('SAVED_SEARCH')

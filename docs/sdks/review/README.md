@@ -18,22 +18,22 @@ Create a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createCommerceReview" method="post" path="/commerce/{connection_id}/review" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.review.create_commerce_review(commerce_review=Models::Shared::CommerceReview.new(
-  item_id: "<id>",
-), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceReview.new(
+  item_id: '<id>',
+), connection_id: '<id>')
 
-if ! res.commerce_review.nil?
+unless res.commerce_review.nil?
   # handle response
 end
 
@@ -52,7 +52,11 @@ end
 
 **[T.nilable(Models::Operations::CreateCommerceReviewResponse)](../../models/operations/createcommercereviewresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_commerce_review
 
@@ -60,20 +64,20 @@ Retrieve a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getCommerceReview" method="get" path="/commerce/{connection_id}/review/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.review.get_commerce_review(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.review.get_commerce_review(connection_id: '<id>', id: '<id>')
 
-if ! res.commerce_review.nil?
+unless res.commerce_review.nil?
   # handle response
 end
 
@@ -92,7 +96,11 @@ end
 
 **[T.nilable(Models::Operations::GetCommerceReviewResponse)](../../models/operations/getcommercereviewresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_commerce_reviews
 
@@ -100,22 +108,24 @@ List all reviews
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listCommerceReviews" method="get" path="/commerce/{connection_id}/review" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListCommerceReviewsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.review.list_commerce_reviews(req)
+res = s.review.list_commerce_reviews(request: req)
 
-if ! res.commerce_reviews.nil?
+unless res.commerce_reviews.nil?
   # handle response
 end
 
@@ -131,7 +141,11 @@ end
 
 **[T.nilable(Models::Operations::ListCommerceReviewsResponse)](../../models/operations/listcommercereviewsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_commerce_review
 
@@ -139,26 +153,28 @@ Update a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchCommerceReview" method="patch" path="/commerce/{connection_id}/review/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchCommerceReviewRequest.new(
   commerce_review: Models::Shared::CommerceReview.new(
-    item_id: "<id>",
+    item_id: '<id>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.review.patch_commerce_review(req)
+res = s.review.patch_commerce_review(request: req)
 
-if ! res.commerce_review.nil?
+unless res.commerce_review.nil?
   # handle response
 end
 
@@ -174,7 +190,11 @@ end
 
 **[T.nilable(Models::Operations::PatchCommerceReviewResponse)](../../models/operations/patchcommercereviewresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_commerce_review
 
@@ -182,16 +202,18 @@ Remove a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeCommerceReview" method="delete" path="/commerce/{connection_id}/review/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.review.remove_commerce_review(connection_id="<id>", id="<id>")
+res = s.review.remove_commerce_review(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -210,7 +232,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveCommerceReviewResponse)](../../models/operations/removecommercereviewresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_commerce_review
 
@@ -218,26 +244,28 @@ Update a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateCommerceReview" method="put" path="/commerce/{connection_id}/review/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateCommerceReviewRequest.new(
   commerce_review: Models::Shared::CommerceReview.new(
-    item_id: "<id>",
+    item_id: '<id>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.review.update_commerce_review(req)
+res = s.review.update_commerce_review(request: req)
 
-if ! res.commerce_review.nil?
+unless res.commerce_review.nil?
   # handle response
 end
 
@@ -253,3 +281,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateCommerceReviewResponse)](../../models/operations/updatecommercereviewresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

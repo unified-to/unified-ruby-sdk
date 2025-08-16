@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class WeightUnit < T::Enum
+
+
         enums do
           G = new('g')
           KG = new('kg')

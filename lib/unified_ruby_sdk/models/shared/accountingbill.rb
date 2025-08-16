@@ -14,58 +14,57 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :attachments, T.nilable(T::Array[Models::Shared::AccountingAttachment]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attachments') } }
+        field :attachments, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingAttachment)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attachments') } }
 
-        field :balance_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('balance_amount') } }
+        field :balance_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('balance_amount') } }
 
-        field :bill_number, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('bill_number') } }
+        field :bill_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('bill_number') } }
 
-        field :cancelled_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cancelled_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :cancelled_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cancelled_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :contact_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
+        field :contact_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
 
-        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+        field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-        field :discount_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('discount_amount') } }
+        field :discount_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('discount_amount') } }
 
-        field :due_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('due_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :due_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('due_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :lineitems, T.nilable(T::Array[Models::Shared::AccountingLineitem]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lineitems') } }
+        field :lineitems, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingLineitem)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lineitems') } }
 
-        field :notes, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
+        field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
 
-        field :paid_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paid_amount') } }
+        field :paid_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paid_amount') } }
 
-        field :paid_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paid_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :paid_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paid_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :payment_collection_method, T.nilable(Models::Shared::PaymentCollectionMethod), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_collection_method'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentCollectionMethod, true) } }
+        field :payment_collection_method, Crystalline::Nilable.new(Models::Shared::PaymentCollectionMethod), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_collection_method'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentCollectionMethod, true) } }
 
-        field :posted_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('posted_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :posted_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('posted_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :refund_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refund_amount') } }
+        field :refund_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refund_amount') } }
 
-        field :refund_reason, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refund_reason') } }
+        field :refund_reason, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refund_reason') } }
 
-        field :refunded_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refunded_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :refunded_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refunded_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :send, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('send') } }
+        field :send, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('send') } }
 
-        field :status, T.nilable(Models::Shared::AccountingBillStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingBillStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::AccountingBillStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingBillStatus, true) } }
 
-        field :tax_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_amount') } }
+        field :tax_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_amount') } }
 
-        field :total_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
+        field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
 
-        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
-
+        field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
         sig { params(attachments: T.nilable(T::Array[Models::Shared::AccountingAttachment]), balance_amount: T.nilable(::Float), bill_number: T.nilable(::String), cancelled_at: T.nilable(::DateTime), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), discount_amount: T.nilable(::Float), due_at: T.nilable(::DateTime), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), notes: T.nilable(::String), paid_amount: T.nilable(::Float), paid_at: T.nilable(::DateTime), payment_collection_method: T.nilable(Models::Shared::PaymentCollectionMethod), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), refund_amount: T.nilable(::Float), refund_reason: T.nilable(::String), refunded_at: T.nilable(::DateTime), send: T.nilable(T::Boolean), status: T.nilable(Models::Shared::AccountingBillStatus), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
         def initialize(attachments: nil, balance_amount: nil, bill_number: nil, cancelled_at: nil, contact_id: nil, created_at: nil, currency: nil, discount_amount: nil, due_at: nil, id: nil, lineitems: nil, notes: nil, paid_amount: nil, paid_at: nil, payment_collection_method: nil, posted_at: nil, raw: nil, refund_amount: nil, refund_reason: nil, refunded_at: nil, send: nil, status: nil, tax_amount: nil, total_amount: nil, updated_at: nil, url: nil)
@@ -97,6 +96,7 @@ module UnifiedRubySDK
           @url = url
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @attachments == other.attachments

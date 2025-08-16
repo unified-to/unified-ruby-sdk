@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class ScimAddressType < T::Enum
+
+
         enums do
           WORK = new('work')
           HOME = new('home')

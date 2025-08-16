@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class LmsMediaType < T::Enum
+
+
         enums do
           IMAGE = new('IMAGE')
           HEADSHOT = new('HEADSHOT')

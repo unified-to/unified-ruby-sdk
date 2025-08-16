@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class PaymentCollectionMethod < T::Enum
+
+
         enums do
           SEND_INVOICE = new('send_invoice')
           CHARGE_AUTOMATICALLY = new('charge_automatically')

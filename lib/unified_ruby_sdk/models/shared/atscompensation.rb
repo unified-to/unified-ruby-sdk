@@ -14,16 +14,15 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+        field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-        field :frequency, T.nilable(Models::Shared::Frequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency'), 'decoder': Utils.enum_from_string(Models::Shared::Frequency, true) } }
+        field :frequency, Crystalline::Nilable.new(Models::Shared::Frequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency'), 'decoder': Utils.enum_from_string(Models::Shared::Frequency, true) } }
 
-        field :max, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max') } }
+        field :max, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max') } }
 
-        field :min, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('min') } }
+        field :min, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('min') } }
 
-        field :type, T.nilable(Models::Shared::AtsCompensationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AtsCompensationType, true) } }
-
+        field :type, Crystalline::Nilable.new(Models::Shared::AtsCompensationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AtsCompensationType, true) } }
 
         sig { params(currency: T.nilable(::String), frequency: T.nilable(Models::Shared::Frequency), max: T.nilable(::Float), min: T.nilable(::Float), type: T.nilable(Models::Shared::AtsCompensationType)).void }
         def initialize(currency: nil, frequency: nil, max: nil, min: nil, type: nil)
@@ -34,6 +33,7 @@ module UnifiedRubySDK
           @type = type
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @currency == other.currency

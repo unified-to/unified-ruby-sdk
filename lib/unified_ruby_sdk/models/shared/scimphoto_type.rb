@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class ScimPhotoType < T::Enum
+
+
         enums do
           PHOTO = new('photo')
           THUMBNAIL = new('thumbnail')

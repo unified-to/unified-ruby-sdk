@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class TaskMetadataFormat < T::Enum
+
+
         enums do
           TEXT = new('TEXT')
           NUMBER = new('NUMBER')

@@ -14,18 +14,20 @@ Retrieve enrichment information for a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listEnrichCompanies" method="get" path="/enrich/{connection_id}/company" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.enrich.list_enrich_companies(connection_id="<id>", domain="distinct-wheel.info", name="<value>")
+res = s.enrich.list_enrich_companies(connection_id: '<id>')
 
-if ! res.enrich_company.nil?
+unless res.enrich_company.nil?
   # handle response
 end
 
@@ -43,7 +45,11 @@ end
 
 **[T.nilable(Models::Operations::ListEnrichCompaniesResponse)](../../models/operations/listenrichcompaniesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_enrich_people
 
@@ -51,22 +57,24 @@ Retrieve enrichment information for a person
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listEnrichPeople" method="get" path="/enrich/{connection_id}/person" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListEnrichPeopleRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.enrich.list_enrich_people(req)
+res = s.enrich.list_enrich_people(request: req)
 
-if ! res.enrich_person.nil?
+unless res.enrich_person.nil?
   # handle response
 end
 
@@ -82,3 +90,8 @@ end
 
 **[T.nilable(Models::Operations::ListEnrichPeopleResponse)](../../models/operations/listenrichpeopleresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

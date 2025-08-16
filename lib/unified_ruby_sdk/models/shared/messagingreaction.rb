@@ -14,17 +14,17 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :member, Models::Shared::PropertyMessagingReactionMember, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('member') } }
+        field :member, Models::Shared::PropertyMessagingReactionMember, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('member'), required: true } }
 
-        field :reaction, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reaction') } }
-
+        field :reaction, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reaction'), required: true } }
 
         sig { params(member: Models::Shared::PropertyMessagingReactionMember, reaction: ::String).void }
-        def initialize(member: nil, reaction: nil)
+        def initialize(member:, reaction:)
           @member = member
           @reaction = reaction
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @member == other.member

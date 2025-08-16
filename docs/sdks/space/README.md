@@ -18,22 +18,22 @@ Create a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.space.create_kms_space(kms_space=Models::Shared::KmsSpace.new(
-  name: "<value>",
-), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.space.create_kms_space(kms_space: Models::Shared::KmsSpace.new(
+  name: '<value>',
+), connection_id: '<id>')
 
-if ! res.kms_space.nil?
+unless res.kms_space.nil?
   # handle response
 end
 
@@ -52,7 +52,11 @@ end
 
 **[T.nilable(Models::Operations::CreateKmsSpaceResponse)](../../models/operations/createkmsspaceresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_kms_space
 
@@ -60,20 +64,20 @@ Retrieve a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getKmsSpace" method="get" path="/kms/{connection_id}/space/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.space.get_kms_space(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.space.get_kms_space(connection_id: '<id>', id: '<id>')
 
-if ! res.kms_space.nil?
+unless res.kms_space.nil?
   # handle response
 end
 
@@ -92,7 +96,11 @@ end
 
 **[T.nilable(Models::Operations::GetKmsSpaceResponse)](../../models/operations/getkmsspaceresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_kms_spaces
 
@@ -100,22 +108,24 @@ List all spaces
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listKmsSpaces" method="get" path="/kms/{connection_id}/space" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListKmsSpacesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.space.list_kms_spaces(req)
+res = s.space.list_kms_spaces(request: req)
 
-if ! res.kms_spaces.nil?
+unless res.kms_spaces.nil?
   # handle response
 end
 
@@ -131,7 +141,11 @@ end
 
 **[T.nilable(Models::Operations::ListKmsSpacesResponse)](../../models/operations/listkmsspacesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_kms_space
 
@@ -139,26 +153,28 @@ Update a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchKmsSpaceRequest.new(
   kms_space: Models::Shared::KmsSpace.new(
-    name: "<value>",
+    name: '<value>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.space.patch_kms_space(req)
+res = s.space.patch_kms_space(request: req)
 
-if ! res.kms_space.nil?
+unless res.kms_space.nil?
   # handle response
 end
 
@@ -174,7 +190,11 @@ end
 
 **[T.nilable(Models::Operations::PatchKmsSpaceResponse)](../../models/operations/patchkmsspaceresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_kms_space
 
@@ -182,16 +202,18 @@ Remove a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeKmsSpace" method="delete" path="/kms/{connection_id}/space/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.space.remove_kms_space(connection_id="<id>", id="<id>")
+res = s.space.remove_kms_space(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -210,7 +232,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveKmsSpaceResponse)](../../models/operations/removekmsspaceresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_kms_space
 
@@ -218,26 +244,28 @@ Update a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateKmsSpaceRequest.new(
   kms_space: Models::Shared::KmsSpace.new(
-    name: "<value>",
+    name: '<value>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.space.update_kms_space(req)
+res = s.space.update_kms_space(request: req)
 
-if ! res.kms_space.nil?
+unless res.kms_space.nil?
   # handle response
 end
 
@@ -253,3 +281,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateKmsSpaceResponse)](../../models/operations/updatekmsspaceresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

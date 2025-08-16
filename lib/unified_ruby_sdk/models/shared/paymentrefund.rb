@@ -14,29 +14,28 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :payment_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_id') } }
+        field :payment_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_id'), required: true } }
 
-        field :total_amount, ::Float, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
+        field :total_amount, ::Float, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount'), required: true } }
 
-        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+        field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :notes, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
+        field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
 
-        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :reference, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference') } }
+        field :reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference') } }
 
-        field :status, T.nilable(Models::Shared::PaymentRefundStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentRefundStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::PaymentRefundStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentRefundStatus, true) } }
 
-        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(payment_id: ::String, total_amount: ::Float, created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), notes: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), status: T.nilable(Models::Shared::PaymentRefundStatus), updated_at: T.nilable(::DateTime)).void }
-        def initialize(payment_id: nil, total_amount: nil, created_at: nil, currency: nil, id: nil, notes: nil, raw: nil, reference: nil, status: nil, updated_at: nil)
+        def initialize(payment_id:, total_amount:, created_at: nil, currency: nil, id: nil, notes: nil, raw: nil, reference: nil, status: nil, updated_at: nil)
           @payment_id = payment_id
           @total_amount = total_amount
           @created_at = created_at
@@ -49,6 +48,7 @@ module UnifiedRubySDK
           @updated_at = updated_at
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @payment_id == other.payment_id

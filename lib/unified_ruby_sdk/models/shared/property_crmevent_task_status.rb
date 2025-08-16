@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class PropertyCrmEventTaskStatus < T::Enum
+
+
         enums do
           COMPLETED = new('COMPLETED')
           NOT_STARTED = new('NOT_STARTED')

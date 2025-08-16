@@ -14,16 +14,15 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :dollar_ref, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('$ref') } }
+        field :dollar_ref, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('$ref') } }
 
-        field :display_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('displayName') } }
+        field :display_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('displayName') } }
 
-        field :manager_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('managerId') } }
+        field :manager_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('managerId') } }
 
-        field :type, T.nilable(Models::Shared::ScimManagerType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ScimManagerType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::ScimManagerType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ScimManagerType, true) } }
 
-        field :value, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
-
+        field :value, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 
         sig { params(dollar_ref: T.nilable(::String), display_name: T.nilable(::String), manager_id: T.nilable(::String), type: T.nilable(Models::Shared::ScimManagerType), value: T.nilable(::String)).void }
         def initialize(dollar_ref: nil, display_name: nil, manager_id: nil, type: nil, value: nil)
@@ -34,6 +33,7 @@ module UnifiedRubySDK
           @value = value
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @dollar_ref == other.dollar_ref

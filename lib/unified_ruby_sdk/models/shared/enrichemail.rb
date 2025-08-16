@@ -14,20 +14,20 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :email, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
+        field :email, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email'), required: true } }
 
-        field :is_verified, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_verified') } }
+        field :is_verified, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_verified') } }
 
-        field :type, T.nilable(Models::Shared::EnrichEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::EnrichEmailType, true) } }
-
+        field :type, Crystalline::Nilable.new(Models::Shared::EnrichEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::EnrichEmailType, true) } }
 
         sig { params(email: ::String, is_verified: T.nilable(T::Boolean), type: T.nilable(Models::Shared::EnrichEmailType)).void }
-        def initialize(email: nil, is_verified: nil, type: nil)
+        def initialize(email:, is_verified: nil, type: nil)
           @email = email
           @is_verified = is_verified
           @type = type
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @email == other.email

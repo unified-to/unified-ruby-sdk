@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class PropertyCalendarEventOrganizerStatus < T::Enum
+
+
         enums do
           ACCEPTED = new('ACCEPTED')
           REJECTED = new('REJECTED')

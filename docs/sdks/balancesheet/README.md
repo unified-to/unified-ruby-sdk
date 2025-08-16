@@ -14,20 +14,20 @@ Retrieve a balancesheet
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAccountingBalancesheet" method="get" path="/accounting/{connection_id}/balancesheet/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.balancesheet.get_accounting_balancesheet(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.balancesheet.get_accounting_balancesheet(connection_id: '<id>', id: '<id>')
 
-if ! res.accounting_balancesheet.nil?
+unless res.accounting_balancesheet.nil?
   # handle response
 end
 
@@ -46,7 +46,11 @@ end
 
 **[T.nilable(Models::Operations::GetAccountingBalancesheetResponse)](../../models/operations/getaccountingbalancesheetresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_accounting_balancesheets
 
@@ -54,22 +58,24 @@ List all balancesheets
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAccountingBalancesheets" method="get" path="/accounting/{connection_id}/balancesheet" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAccountingBalancesheetsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.balancesheet.list_accounting_balancesheets(req)
+res = s.balancesheet.list_accounting_balancesheets(request: req)
 
-if ! res.accounting_balancesheets.nil?
+unless res.accounting_balancesheets.nil?
   # handle response
 end
 
@@ -85,3 +91,8 @@ end
 
 **[T.nilable(Models::Operations::ListAccountingBalancesheetsResponse)](../../models/operations/listaccountingbalancesheetsresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

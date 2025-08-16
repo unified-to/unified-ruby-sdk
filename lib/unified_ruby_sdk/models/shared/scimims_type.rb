@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class ScimImsType < T::Enum
+
+
         enums do
           AIM = new('aim')
           QTALK = new('qtalk')

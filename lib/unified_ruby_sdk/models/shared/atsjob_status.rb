@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class AtsJobStatus < T::Enum
+
+
         enums do
           ARCHIVED = new('ARCHIVED')
           PENDING = new('PENDING')

@@ -15,27 +15,27 @@ module UnifiedRubySDK
 
         # HTTP response content type for this operation
         field :content_type, ::String
-        # Raw HTTP response; suitable for custom response parsing
-        field :raw_response, ::Faraday::Response
         # HTTP response status code for this operation
         field :status_code, ::Integer
+        # Raw HTTP response; suitable for custom response parsing
+        field :raw_response, ::Faraday::Response
         # Successful
-        field :payment_payment, T.nilable(Models::Shared::PaymentPayment)
+        field :payment_payment, Crystalline::Nilable.new(Models::Shared::PaymentPayment)
 
-
-        sig { params(content_type: ::String, raw_response: ::Faraday::Response, status_code: ::Integer, payment_payment: T.nilable(Models::Shared::PaymentPayment)).void }
-        def initialize(content_type: nil, raw_response: nil, status_code: nil, payment_payment: nil)
+        sig { params(content_type: ::String, status_code: ::Integer, raw_response: ::Faraday::Response, payment_payment: T.nilable(Models::Shared::PaymentPayment)).void }
+        def initialize(content_type:, status_code:, raw_response:, payment_payment: nil)
           @content_type = content_type
-          @raw_response = raw_response
           @status_code = status_code
+          @raw_response = raw_response
           @payment_payment = payment_payment
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @content_type == other.content_type
-          return false unless @raw_response == other.raw_response
           return false unless @status_code == other.status_code
+          return false unless @raw_response == other.raw_response
           return false unless @payment_payment == other.payment_payment
           true
         end

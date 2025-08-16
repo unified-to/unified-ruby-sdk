@@ -20,20 +20,20 @@ Create a message
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createMessagingMessage" method="post" path="/messaging/{connection_id}/message" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.messaging.create_messaging_message(messaging_message=Models::Shared::MessagingMessage.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.messaging.create_messaging_message(messaging_message: Models::Shared::MessagingMessage.new(), connection_id: '<id>')
 
-if ! res.messaging_message.nil?
+unless res.messaging_message.nil?
   # handle response
 end
 
@@ -52,7 +52,11 @@ end
 
 **[T.nilable(Models::Operations::CreateMessagingMessageResponse)](../../models/operations/createmessagingmessageresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_messaging_channel
 
@@ -60,20 +64,20 @@ Retrieve a channel
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getMessagingChannel" method="get" path="/messaging/{connection_id}/channel/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.messaging.get_messaging_channel(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.messaging.get_messaging_channel(connection_id: '<id>', id: '<id>')
 
-if ! res.messaging_channel.nil?
+unless res.messaging_channel.nil?
   # handle response
 end
 
@@ -92,7 +96,11 @@ end
 
 **[T.nilable(Models::Operations::GetMessagingChannelResponse)](../../models/operations/getmessagingchannelresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_messaging_message
 
@@ -100,20 +108,20 @@ Retrieve a message
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getMessagingMessage" method="get" path="/messaging/{connection_id}/message/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.messaging.get_messaging_message(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.messaging.get_messaging_message(connection_id: '<id>', id: '<id>')
 
-if ! res.messaging_message.nil?
+unless res.messaging_message.nil?
   # handle response
 end
 
@@ -132,7 +140,11 @@ end
 
 **[T.nilable(Models::Operations::GetMessagingMessageResponse)](../../models/operations/getmessagingmessageresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_messaging_channels
 
@@ -140,22 +152,24 @@ List all channels
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listMessagingChannels" method="get" path="/messaging/{connection_id}/channel" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListMessagingChannelsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.messaging.list_messaging_channels(req)
+res = s.messaging.list_messaging_channels(request: req)
 
-if ! res.messaging_channels.nil?
+unless res.messaging_channels.nil?
   # handle response
 end
 
@@ -171,7 +185,11 @@ end
 
 **[T.nilable(Models::Operations::ListMessagingChannelsResponse)](../../models/operations/listmessagingchannelsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_messaging_messages
 
@@ -179,22 +197,24 @@ List all messages
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listMessagingMessages" method="get" path="/messaging/{connection_id}/message" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListMessagingMessagesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.messaging.list_messaging_messages(req)
+res = s.messaging.list_messaging_messages(request: req)
 
-if ! res.messaging_messages.nil?
+unless res.messaging_messages.nil?
   # handle response
 end
 
@@ -210,7 +230,11 @@ end
 
 **[T.nilable(Models::Operations::ListMessagingMessagesResponse)](../../models/operations/listmessagingmessagesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_messaging_message
 
@@ -218,24 +242,26 @@ Update a message
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchMessagingMessage" method="patch" path="/messaging/{connection_id}/message/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchMessagingMessageRequest.new(
   messaging_message: Models::Shared::MessagingMessage.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.messaging.patch_messaging_message(req)
+res = s.messaging.patch_messaging_message(request: req)
 
-if ! res.messaging_message.nil?
+unless res.messaging_message.nil?
   # handle response
 end
 
@@ -251,7 +277,11 @@ end
 
 **[T.nilable(Models::Operations::PatchMessagingMessageResponse)](../../models/operations/patchmessagingmessageresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_messaging_message
 
@@ -259,16 +289,18 @@ Remove a message
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeMessagingMessage" method="delete" path="/messaging/{connection_id}/message/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.messaging.remove_messaging_message(connection_id="<id>", id="<id>")
+res = s.messaging.remove_messaging_message(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -287,7 +319,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveMessagingMessageResponse)](../../models/operations/removemessagingmessageresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_messaging_message
 
@@ -295,24 +331,26 @@ Update a message
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateMessagingMessage" method="put" path="/messaging/{connection_id}/message/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateMessagingMessageRequest.new(
   messaging_message: Models::Shared::MessagingMessage.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.messaging.update_messaging_message(req)
+res = s.messaging.update_messaging_message(request: req)
 
-if ! res.messaging_message.nil?
+unless res.messaging_message.nil?
   # handle response
 end
 
@@ -328,3 +366,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateMessagingMessageResponse)](../../models/operations/updatemessagingmessageresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

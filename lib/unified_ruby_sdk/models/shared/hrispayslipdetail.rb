@@ -14,21 +14,20 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :amount, ::Float, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
+        field :amount, ::Float, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount'), required: true } }
 
-        field :company_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_amount') } }
+        field :company_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_amount') } }
 
-        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+        field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-        field :employee_amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employee_amount') } }
+        field :employee_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employee_amount') } }
 
-        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :type, T.nilable(Models::Shared::HrisPayslipDetailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisPayslipDetailType, true) } }
-
+        field :type, Crystalline::Nilable.new(Models::Shared::HrisPayslipDetailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisPayslipDetailType, true) } }
 
         sig { params(amount: ::Float, company_amount: T.nilable(::Float), description: T.nilable(::String), employee_amount: T.nilable(::Float), name: T.nilable(::String), type: T.nilable(Models::Shared::HrisPayslipDetailType)).void }
-        def initialize(amount: nil, company_amount: nil, description: nil, employee_amount: nil, name: nil, type: nil)
+        def initialize(amount:, company_amount: nil, description: nil, employee_amount: nil, name: nil, type: nil)
           @amount = amount
           @company_amount = company_amount
           @description = description
@@ -37,6 +36,7 @@ module UnifiedRubySDK
           @type = type
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @amount == other.amount

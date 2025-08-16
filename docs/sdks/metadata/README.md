@@ -18,23 +18,23 @@ Create a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createMetadataMetadata" method="post" path="/metadata/{connection_id}/metadata" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.metadata.create_metadata_metadata(metadata_metadata=Models::Shared::MetadataMetadata.new(
-  name: "<value>",
-  object_type: "<value>",
-), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.metadata.create_metadata_metadata(metadata_metadata: Models::Shared::MetadataMetadata.new(
+  name: '<value>',
+  object_type: '<value>',
+), connection_id: '<id>')
 
-if ! res.metadata_metadata.nil?
+unless res.metadata_metadata.nil?
   # handle response
 end
 
@@ -53,7 +53,11 @@ end
 
 **[T.nilable(Models::Operations::CreateMetadataMetadataResponse)](../../models/operations/createmetadatametadataresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_metadata_metadata
 
@@ -61,20 +65,20 @@ Retrieve a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getMetadataMetadata" method="get" path="/metadata/{connection_id}/metadata/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.metadata.get_metadata_metadata(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.metadata.get_metadata_metadata(connection_id: '<id>', id: '<id>')
 
-if ! res.metadata_metadata.nil?
+unless res.metadata_metadata.nil?
   # handle response
 end
 
@@ -93,7 +97,11 @@ end
 
 **[T.nilable(Models::Operations::GetMetadataMetadataResponse)](../../models/operations/getmetadatametadataresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_metadata_metadatas
 
@@ -101,22 +109,24 @@ List all metadatas
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listMetadataMetadatas" method="get" path="/metadata/{connection_id}/metadata" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListMetadataMetadatasRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.metadata.list_metadata_metadatas(req)
+res = s.metadata.list_metadata_metadatas(request: req)
 
-if ! res.metadata_metadatas.nil?
+unless res.metadata_metadatas.nil?
   # handle response
 end
 
@@ -132,7 +142,11 @@ end
 
 **[T.nilable(Models::Operations::ListMetadataMetadatasResponse)](../../models/operations/listmetadatametadatasresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_metadata_metadata
 
@@ -140,27 +154,29 @@ Update a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchMetadataMetadata" method="patch" path="/metadata/{connection_id}/metadata/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchMetadataMetadataRequest.new(
   metadata_metadata: Models::Shared::MetadataMetadata.new(
-    name: "<value>",
-    object_type: "<value>",
+    name: '<value>',
+    object_type: '<value>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.metadata.patch_metadata_metadata(req)
+res = s.metadata.patch_metadata_metadata(request: req)
 
-if ! res.metadata_metadata.nil?
+unless res.metadata_metadata.nil?
   # handle response
 end
 
@@ -176,7 +192,11 @@ end
 
 **[T.nilable(Models::Operations::PatchMetadataMetadataResponse)](../../models/operations/patchmetadatametadataresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_metadata_metadata
 
@@ -184,16 +204,18 @@ Remove a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeMetadataMetadata" method="delete" path="/metadata/{connection_id}/metadata/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.metadata.remove_metadata_metadata(connection_id="<id>", id="<id>")
+res = s.metadata.remove_metadata_metadata(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -212,7 +234,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveMetadataMetadataResponse)](../../models/operations/removemetadatametadataresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_metadata_metadata
 
@@ -220,27 +246,29 @@ Update a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateMetadataMetadata" method="put" path="/metadata/{connection_id}/metadata/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateMetadataMetadataRequest.new(
   metadata_metadata: Models::Shared::MetadataMetadata.new(
-    name: "<value>",
-    object_type: "<value>",
+    name: '<value>',
+    object_type: '<value>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.metadata.update_metadata_metadata(req)
+res = s.metadata.update_metadata_metadata(request: req)
 
-if ! res.metadata_metadata.nil?
+unless res.metadata_metadata.nil?
   # handle response
 end
 
@@ -256,3 +284,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateMetadataMetadataResponse)](../../models/operations/updatemetadatametadataresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

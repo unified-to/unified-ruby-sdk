@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class MaritalStatus < T::Enum
+
+
         enums do
           MARRIED = new('MARRIED')
           SINGLE = new('SINGLE')

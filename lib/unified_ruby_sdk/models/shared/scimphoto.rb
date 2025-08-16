@@ -14,14 +14,13 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :display, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('display') } }
+        field :display, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('display') } }
 
-        field :primary, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('primary') } }
+        field :primary, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('primary') } }
 
-        field :type, T.nilable(Models::Shared::ScimPhotoType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ScimPhotoType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::ScimPhotoType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ScimPhotoType, true) } }
 
-        field :value, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
-
+        field :value, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 
         sig { params(display: T.nilable(::String), primary: T.nilable(T::Boolean), type: T.nilable(Models::Shared::ScimPhotoType), value: T.nilable(::String)).void }
         def initialize(display: nil, primary: nil, type: nil, value: nil)
@@ -31,6 +30,7 @@ module UnifiedRubySDK
           @value = value
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @display == other.display

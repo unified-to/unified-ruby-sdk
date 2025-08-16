@@ -3,12 +3,15 @@
 # typed: true
 # frozen_string_literal: true
 
-require 'sorbet-runtime'
+require_relative '../sdkconfiguration'
 
 module UnifiedRubySDK
   module SDKHooks
     class HookContext
       extend T::Sig
+
+      sig { returns(SDKConfiguration) }
+      attr_accessor :config
 
       sig { returns(String) }
       attr_accessor :base_url
@@ -24,13 +27,15 @@ module UnifiedRubySDK
 
       sig do
         params(
+          config: SDKConfiguration,
           base_url: String,
           oauth2_scopes: T.nilable(T::Array[String]),
           operation_id: String,
           security_source: T.nilable(T.proc.returns(T.untyped))
         ).void
       end
-      def initialize(base_url:, oauth2_scopes:, operation_id:, security_source:)
+      def initialize(config:, base_url:, oauth2_scopes:, operation_id:, security_source:)
+        @config = T.let(config, SDKConfiguration)
         @base_url = T.let(base_url, String)
         @oauth2_scopes = T.let(oauth2_scopes, T.nilable(T::Array[String]))
         @operation_id = T.let(operation_id, String)
@@ -48,6 +53,7 @@ module UnifiedRubySDK
       end
       def initialize(hook_ctx:)
         super(
+          config: hook_ctx.config,
           base_url: hook_ctx.base_url,
           operation_id: hook_ctx.operation_id,
           oauth2_scopes: hook_ctx.oauth2_scopes,
@@ -66,6 +72,7 @@ module UnifiedRubySDK
       end
       def initialize(hook_ctx:)
         super(
+          config: hook_ctx.config,
           base_url: hook_ctx.base_url,
           operation_id: hook_ctx.operation_id,
           oauth2_scopes: hook_ctx.oauth2_scopes,
@@ -84,6 +91,7 @@ module UnifiedRubySDK
       end
       def initialize(hook_ctx:)
         super(
+          config: hook_ctx.config,
           base_url: hook_ctx.base_url,
           operation_id: hook_ctx.operation_id,
           oauth2_scopes: hook_ctx.oauth2_scopes,
@@ -97,13 +105,10 @@ module UnifiedRubySDK
       extend T::Helpers
       abstract!
 
-      sig do
-        abstract.params(
-          base_url: String,
-          client: Faraday::Connection
-        ).returns([String, Faraday::Connection])
+      sig { overridable.params(config: SDKConfiguration).returns(SDKConfiguration) }
+      def sdk_init(config:)
+        Kernel.raise NotImplementedError.new
       end
-      def sdk_init(base_url:, client:); end
     end
 
     module AbstractBeforeRequestHook
@@ -112,12 +117,14 @@ module UnifiedRubySDK
       abstract!
 
       sig do
-        abstract.params(
+        overridable.params(
           hook_ctx: BeforeRequestHookContext,
           request: Faraday::Request
         ).returns(Faraday::Request)
       end
-      def before_request(hook_ctx:, request:); end
+      def before_request(hook_ctx:, request:)
+        Kernel.raise NotImplementedError.new
+      end
     end
 
     module AbstractAfterSuccessHook
@@ -126,12 +133,14 @@ module UnifiedRubySDK
       abstract!
 
       sig do
-        abstract.params(
+        overridable.params(
           hook_ctx: AfterSuccessHookContext,
           response: Faraday::Response
         ).returns(Faraday::Response)
       end
-      def after_success(hook_ctx:, response:); end
+      def after_success(hook_ctx:, response:)
+        Kernel.raise NotImplementedError.new
+      end
     end
 
     module AbstractAfterErrorHook
@@ -140,13 +149,22 @@ module UnifiedRubySDK
       abstract!
 
       sig do
-        abstract.params(
+        overridable.params(
           error: T.nilable(StandardError),
           hook_ctx: AfterErrorHookContext,
           response: T.nilable(Faraday::Response)
         ).returns(T.nilable(Faraday::Response))
       end
-      def after_error(error:, hook_ctx:, response:); end
+      def after_error(error:, hook_ctx:, response:)
+        Kernel.raise NotImplementedError.new
+      end
+    end
+
+    class AbstractSDKHook
+      include AbstractSDKInitHook
+      include AbstractBeforeRequestHook
+      include AbstractAfterSuccessHook
+      include AbstractAfterErrorHook
     end
   end
 end

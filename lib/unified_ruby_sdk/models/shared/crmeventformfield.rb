@@ -14,14 +14,13 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :options, T.nilable(T::Array[Models::Shared::CrmEventFormOption]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
+        field :options, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CrmEventFormOption)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
 
-        field :required, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('required') } }
+        field :required, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('required') } }
 
-        field :type, T.nilable(Models::Shared::CrmEventFormFieldType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::CrmEventFormFieldType, true) } }
-
+        field :type, Crystalline::Nilable.new(Models::Shared::CrmEventFormFieldType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::CrmEventFormFieldType, true) } }
 
         sig { params(name: T.nilable(::String), options: T.nilable(T::Array[Models::Shared::CrmEventFormOption]), required: T.nilable(T::Boolean), type: T.nilable(Models::Shared::CrmEventFormFieldType)).void }
         def initialize(name: nil, options: nil, required: nil, type: nil)
@@ -31,6 +30,7 @@ module UnifiedRubySDK
           @type = type
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @name == other.name

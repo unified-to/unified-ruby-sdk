@@ -48,20 +48,20 @@ Create a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.crm.create_crm_company(crm_company=Models::Shared::CrmCompany.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.crm.create_crm_company(crm_company: Models::Shared::CrmCompany.new(), connection_id: '<id>')
 
-if ! res.crm_company.nil?
+unless res.crm_company.nil?
   # handle response
 end
 
@@ -80,7 +80,11 @@ end
 
 **[T.nilable(Models::Operations::CreateCrmCompanyResponse)](../../models/operations/createcrmcompanyresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_crm_contact
 
@@ -88,20 +92,20 @@ Create a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createCrmContact" method="post" path="/crm/{connection_id}/contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.crm.create_crm_contact(crm_contact=Models::Shared::CrmContact.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.crm.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(), connection_id: '<id>')
 
-if ! res.crm_contact.nil?
+unless res.crm_contact.nil?
   # handle response
 end
 
@@ -120,7 +124,11 @@ end
 
 **[T.nilable(Models::Operations::CreateCrmContactResponse)](../../models/operations/createcrmcontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_crm_deal
 
@@ -128,20 +136,20 @@ Create a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createCrmDeal" method="post" path="/crm/{connection_id}/deal" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.crm.create_crm_deal(crm_deal=Models::Shared::CrmDeal.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.crm.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(), connection_id: '<id>')
 
-if ! res.crm_deal.nil?
+unless res.crm_deal.nil?
   # handle response
 end
 
@@ -160,7 +168,11 @@ end
 
 **[T.nilable(Models::Operations::CreateCrmDealResponse)](../../models/operations/createcrmdealresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_crm_event
 
@@ -168,20 +180,20 @@ Create an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createCrmEvent" method="post" path="/crm/{connection_id}/event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.crm.create_crm_event(crm_event=Models::Shared::CrmEvent.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.crm.create_crm_event(crm_event: Models::Shared::CrmEvent.new(), connection_id: '<id>')
 
-if ! res.crm_event.nil?
+unless res.crm_event.nil?
   # handle response
 end
 
@@ -200,7 +212,11 @@ end
 
 **[T.nilable(Models::Operations::CreateCrmEventResponse)](../../models/operations/createcrmeventresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_crm_lead
 
@@ -208,20 +224,20 @@ Create a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createCrmLead" method="post" path="/crm/{connection_id}/lead" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.crm.create_crm_lead(crm_lead=Models::Shared::CrmLead.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.crm.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(), connection_id: '<id>')
 
-if ! res.crm_lead.nil?
+unless res.crm_lead.nil?
   # handle response
 end
 
@@ -240,7 +256,11 @@ end
 
 **[T.nilable(Models::Operations::CreateCrmLeadResponse)](../../models/operations/createcrmleadresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_crm_pipeline
 
@@ -248,20 +268,20 @@ Create a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.crm.create_crm_pipeline(crm_pipeline=Models::Shared::CrmPipeline.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.crm.create_crm_pipeline(crm_pipeline: Models::Shared::CrmPipeline.new(), connection_id: '<id>')
 
-if ! res.crm_pipeline.nil?
+unless res.crm_pipeline.nil?
   # handle response
 end
 
@@ -280,7 +300,11 @@ end
 
 **[T.nilable(Models::Operations::CreateCrmPipelineResponse)](../../models/operations/createcrmpipelineresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_crm_company
 
@@ -288,20 +312,20 @@ Retrieve a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getCrmCompany" method="get" path="/crm/{connection_id}/company/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.crm.get_crm_company(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.crm.get_crm_company(connection_id: '<id>', id: '<id>')
 
-if ! res.crm_company.nil?
+unless res.crm_company.nil?
   # handle response
 end
 
@@ -320,7 +344,11 @@ end
 
 **[T.nilable(Models::Operations::GetCrmCompanyResponse)](../../models/operations/getcrmcompanyresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_crm_contact
 
@@ -328,20 +356,20 @@ Retrieve a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getCrmContact" method="get" path="/crm/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.crm.get_crm_contact(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.crm.get_crm_contact(connection_id: '<id>', id: '<id>')
 
-if ! res.crm_contact.nil?
+unless res.crm_contact.nil?
   # handle response
 end
 
@@ -360,7 +388,11 @@ end
 
 **[T.nilable(Models::Operations::GetCrmContactResponse)](../../models/operations/getcrmcontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_crm_deal
 
@@ -368,20 +400,20 @@ Retrieve a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getCrmDeal" method="get" path="/crm/{connection_id}/deal/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.crm.get_crm_deal(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.crm.get_crm_deal(connection_id: '<id>', id: '<id>')
 
-if ! res.crm_deal.nil?
+unless res.crm_deal.nil?
   # handle response
 end
 
@@ -400,7 +432,11 @@ end
 
 **[T.nilable(Models::Operations::GetCrmDealResponse)](../../models/operations/getcrmdealresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_crm_event
 
@@ -408,20 +444,20 @@ Retrieve an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getCrmEvent" method="get" path="/crm/{connection_id}/event/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.crm.get_crm_event(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.crm.get_crm_event(connection_id: '<id>', id: '<id>')
 
-if ! res.crm_event.nil?
+unless res.crm_event.nil?
   # handle response
 end
 
@@ -440,7 +476,11 @@ end
 
 **[T.nilable(Models::Operations::GetCrmEventResponse)](../../models/operations/getcrmeventresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_crm_lead
 
@@ -448,20 +488,20 @@ Retrieve a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getCrmLead" method="get" path="/crm/{connection_id}/lead/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.crm.get_crm_lead(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.crm.get_crm_lead(connection_id: '<id>', id: '<id>')
 
-if ! res.crm_lead.nil?
+unless res.crm_lead.nil?
   # handle response
 end
 
@@ -480,7 +520,11 @@ end
 
 **[T.nilable(Models::Operations::GetCrmLeadResponse)](../../models/operations/getcrmleadresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_crm_pipeline
 
@@ -488,20 +532,20 @@ Retrieve a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getCrmPipeline" method="get" path="/crm/{connection_id}/pipeline/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.crm.get_crm_pipeline(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.crm.get_crm_pipeline(connection_id: '<id>', id: '<id>')
 
-if ! res.crm_pipeline.nil?
+unless res.crm_pipeline.nil?
   # handle response
 end
 
@@ -520,7 +564,11 @@ end
 
 **[T.nilable(Models::Operations::GetCrmPipelineResponse)](../../models/operations/getcrmpipelineresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_crm_companies
 
@@ -528,22 +576,24 @@ List all companies
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listCrmCompanies" method="get" path="/crm/{connection_id}/company" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListCrmCompaniesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.crm.list_crm_companies(req)
+res = s.crm.list_crm_companies(request: req)
 
-if ! res.crm_companies.nil?
+unless res.crm_companies.nil?
   # handle response
 end
 
@@ -559,7 +609,11 @@ end
 
 **[T.nilable(Models::Operations::ListCrmCompaniesResponse)](../../models/operations/listcrmcompaniesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_crm_contacts
 
@@ -567,22 +621,24 @@ List all contacts
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listCrmContacts" method="get" path="/crm/{connection_id}/contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListCrmContactsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.crm.list_crm_contacts(req)
+res = s.crm.list_crm_contacts(request: req)
 
-if ! res.crm_contacts.nil?
+unless res.crm_contacts.nil?
   # handle response
 end
 
@@ -598,7 +654,11 @@ end
 
 **[T.nilable(Models::Operations::ListCrmContactsResponse)](../../models/operations/listcrmcontactsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_crm_deals
 
@@ -606,22 +666,24 @@ List all deals
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listCrmDeals" method="get" path="/crm/{connection_id}/deal" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListCrmDealsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.crm.list_crm_deals(req)
+res = s.crm.list_crm_deals(request: req)
 
-if ! res.crm_deals.nil?
+unless res.crm_deals.nil?
   # handle response
 end
 
@@ -637,7 +699,11 @@ end
 
 **[T.nilable(Models::Operations::ListCrmDealsResponse)](../../models/operations/listcrmdealsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_crm_events
 
@@ -645,22 +711,24 @@ List all events
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listCrmEvents" method="get" path="/crm/{connection_id}/event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListCrmEventsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.crm.list_crm_events(req)
+res = s.crm.list_crm_events(request: req)
 
-if ! res.crm_events.nil?
+unless res.crm_events.nil?
   # handle response
 end
 
@@ -676,7 +744,11 @@ end
 
 **[T.nilable(Models::Operations::ListCrmEventsResponse)](../../models/operations/listcrmeventsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_crm_leads
 
@@ -684,22 +756,24 @@ List all leads
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listCrmLeads" method="get" path="/crm/{connection_id}/lead" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListCrmLeadsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.crm.list_crm_leads(req)
+res = s.crm.list_crm_leads(request: req)
 
-if ! res.crm_leads.nil?
+unless res.crm_leads.nil?
   # handle response
 end
 
@@ -715,7 +789,11 @@ end
 
 **[T.nilable(Models::Operations::ListCrmLeadsResponse)](../../models/operations/listcrmleadsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_crm_pipelines
 
@@ -723,22 +801,24 @@ List all pipelines
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listCrmPipelines" method="get" path="/crm/{connection_id}/pipeline" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListCrmPipelinesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.crm.list_crm_pipelines(req)
+res = s.crm.list_crm_pipelines(request: req)
 
-if ! res.crm_pipelines.nil?
+unless res.crm_pipelines.nil?
   # handle response
 end
 
@@ -754,7 +834,11 @@ end
 
 **[T.nilable(Models::Operations::ListCrmPipelinesResponse)](../../models/operations/listcrmpipelinesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_crm_company
 
@@ -762,24 +846,26 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchCrmCompanyRequest.new(
   crm_company: Models::Shared::CrmCompany.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.crm.patch_crm_company(req)
+res = s.crm.patch_crm_company(request: req)
 
-if ! res.crm_company.nil?
+unless res.crm_company.nil?
   # handle response
 end
 
@@ -795,7 +881,11 @@ end
 
 **[T.nilable(Models::Operations::PatchCrmCompanyResponse)](../../models/operations/patchcrmcompanyresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_crm_contact
 
@@ -803,24 +893,26 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchCrmContact" method="patch" path="/crm/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchCrmContactRequest.new(
   crm_contact: Models::Shared::CrmContact.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.crm.patch_crm_contact(req)
+res = s.crm.patch_crm_contact(request: req)
 
-if ! res.crm_contact.nil?
+unless res.crm_contact.nil?
   # handle response
 end
 
@@ -836,7 +928,11 @@ end
 
 **[T.nilable(Models::Operations::PatchCrmContactResponse)](../../models/operations/patchcrmcontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_crm_deal
 
@@ -844,24 +940,26 @@ Update a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchCrmDeal" method="patch" path="/crm/{connection_id}/deal/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchCrmDealRequest.new(
   crm_deal: Models::Shared::CrmDeal.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.crm.patch_crm_deal(req)
+res = s.crm.patch_crm_deal(request: req)
 
-if ! res.crm_deal.nil?
+unless res.crm_deal.nil?
   # handle response
 end
 
@@ -877,7 +975,11 @@ end
 
 **[T.nilable(Models::Operations::PatchCrmDealResponse)](../../models/operations/patchcrmdealresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_crm_event
 
@@ -885,24 +987,26 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchCrmEvent" method="patch" path="/crm/{connection_id}/event/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchCrmEventRequest.new(
   crm_event: Models::Shared::CrmEvent.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.crm.patch_crm_event(req)
+res = s.crm.patch_crm_event(request: req)
 
-if ! res.crm_event.nil?
+unless res.crm_event.nil?
   # handle response
 end
 
@@ -918,7 +1022,11 @@ end
 
 **[T.nilable(Models::Operations::PatchCrmEventResponse)](../../models/operations/patchcrmeventresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_crm_lead
 
@@ -926,24 +1034,26 @@ Update a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchCrmLead" method="patch" path="/crm/{connection_id}/lead/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchCrmLeadRequest.new(
   crm_lead: Models::Shared::CrmLead.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.crm.patch_crm_lead(req)
+res = s.crm.patch_crm_lead(request: req)
 
-if ! res.crm_lead.nil?
+unless res.crm_lead.nil?
   # handle response
 end
 
@@ -959,7 +1069,11 @@ end
 
 **[T.nilable(Models::Operations::PatchCrmLeadResponse)](../../models/operations/patchcrmleadresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_crm_pipeline
 
@@ -967,24 +1081,26 @@ Update a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchCrmPipelineRequest.new(
   crm_pipeline: Models::Shared::CrmPipeline.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.crm.patch_crm_pipeline(req)
+res = s.crm.patch_crm_pipeline(request: req)
 
-if ! res.crm_pipeline.nil?
+unless res.crm_pipeline.nil?
   # handle response
 end
 
@@ -1000,7 +1116,11 @@ end
 
 **[T.nilable(Models::Operations::PatchCrmPipelineResponse)](../../models/operations/patchcrmpipelineresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_crm_company
 
@@ -1008,16 +1128,18 @@ Remove a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeCrmCompany" method="delete" path="/crm/{connection_id}/company/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.crm.remove_crm_company(connection_id="<id>", id="<id>")
+res = s.crm.remove_crm_company(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -1036,7 +1158,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveCrmCompanyResponse)](../../models/operations/removecrmcompanyresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_crm_contact
 
@@ -1044,16 +1170,18 @@ Remove a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeCrmContact" method="delete" path="/crm/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.crm.remove_crm_contact(connection_id="<id>", id="<id>")
+res = s.crm.remove_crm_contact(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -1072,7 +1200,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveCrmContactResponse)](../../models/operations/removecrmcontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_crm_deal
 
@@ -1080,16 +1212,18 @@ Remove a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeCrmDeal" method="delete" path="/crm/{connection_id}/deal/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.crm.remove_crm_deal(connection_id="<id>", id="<id>")
+res = s.crm.remove_crm_deal(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -1108,7 +1242,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveCrmDealResponse)](../../models/operations/removecrmdealresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_crm_event
 
@@ -1116,16 +1254,18 @@ Remove an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeCrmEvent" method="delete" path="/crm/{connection_id}/event/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.crm.remove_crm_event(connection_id="<id>", id="<id>")
+res = s.crm.remove_crm_event(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -1144,7 +1284,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveCrmEventResponse)](../../models/operations/removecrmeventresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_crm_lead
 
@@ -1152,16 +1296,18 @@ Remove a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeCrmLead" method="delete" path="/crm/{connection_id}/lead/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.crm.remove_crm_lead(connection_id="<id>", id="<id>")
+res = s.crm.remove_crm_lead(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -1180,7 +1326,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveCrmLeadResponse)](../../models/operations/removecrmleadresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_crm_pipeline
 
@@ -1188,16 +1338,18 @@ Remove a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeCrmPipeline" method="delete" path="/crm/{connection_id}/pipeline/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.crm.remove_crm_pipeline(connection_id="<id>", id="<id>")
+res = s.crm.remove_crm_pipeline(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -1216,7 +1368,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveCrmPipelineResponse)](../../models/operations/removecrmpipelineresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_crm_company
 
@@ -1224,24 +1380,26 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateCrmCompanyRequest.new(
   crm_company: Models::Shared::CrmCompany.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.crm.update_crm_company(req)
+res = s.crm.update_crm_company(request: req)
 
-if ! res.crm_company.nil?
+unless res.crm_company.nil?
   # handle response
 end
 
@@ -1257,7 +1415,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateCrmCompanyResponse)](../../models/operations/updatecrmcompanyresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_crm_contact
 
@@ -1265,24 +1427,26 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateCrmContact" method="put" path="/crm/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateCrmContactRequest.new(
   crm_contact: Models::Shared::CrmContact.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.crm.update_crm_contact(req)
+res = s.crm.update_crm_contact(request: req)
 
-if ! res.crm_contact.nil?
+unless res.crm_contact.nil?
   # handle response
 end
 
@@ -1298,7 +1462,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateCrmContactResponse)](../../models/operations/updatecrmcontactresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_crm_deal
 
@@ -1306,24 +1474,26 @@ Update a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateCrmDeal" method="put" path="/crm/{connection_id}/deal/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateCrmDealRequest.new(
   crm_deal: Models::Shared::CrmDeal.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.crm.update_crm_deal(req)
+res = s.crm.update_crm_deal(request: req)
 
-if ! res.crm_deal.nil?
+unless res.crm_deal.nil?
   # handle response
 end
 
@@ -1339,7 +1509,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateCrmDealResponse)](../../models/operations/updatecrmdealresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_crm_event
 
@@ -1347,24 +1521,26 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateCrmEvent" method="put" path="/crm/{connection_id}/event/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateCrmEventRequest.new(
   crm_event: Models::Shared::CrmEvent.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.crm.update_crm_event(req)
+res = s.crm.update_crm_event(request: req)
 
-if ! res.crm_event.nil?
+unless res.crm_event.nil?
   # handle response
 end
 
@@ -1380,7 +1556,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateCrmEventResponse)](../../models/operations/updatecrmeventresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_crm_lead
 
@@ -1388,24 +1568,26 @@ Update a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateCrmLead" method="put" path="/crm/{connection_id}/lead/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateCrmLeadRequest.new(
   crm_lead: Models::Shared::CrmLead.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.crm.update_crm_lead(req)
+res = s.crm.update_crm_lead(request: req)
 
-if ! res.crm_lead.nil?
+unless res.crm_lead.nil?
   # handle response
 end
 
@@ -1421,7 +1603,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateCrmLeadResponse)](../../models/operations/updatecrmleadresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_crm_pipeline
 
@@ -1429,24 +1615,26 @@ Update a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateCrmPipelineRequest.new(
   crm_pipeline: Models::Shared::CrmPipeline.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.crm.update_crm_pipeline(req)
+res = s.crm.update_crm_pipeline(request: req)
 
-if ! res.crm_pipeline.nil?
+unless res.crm_pipeline.nil?
   # handle response
 end
 
@@ -1462,3 +1650,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateCrmPipelineResponse)](../../models/operations/updatecrmpipelineresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

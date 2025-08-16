@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class AccountingOrderType < T::Enum
+
+
         enums do
           SALES = new('SALES')
           PURCHASE = new('PURCHASE')

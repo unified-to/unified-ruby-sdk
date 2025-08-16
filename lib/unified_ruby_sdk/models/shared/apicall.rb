@@ -14,43 +14,42 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :integration_type, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('integration_type') } }
+        field :integration_type, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('integration_type'), required: true } }
 
-        field :method, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('method') } }
+        field :method, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('method'), required: true } }
 
-        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name'), required: true } }
 
-        field :path, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('path') } }
+        field :path, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('path'), required: true } }
 
-        field :status, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status') } }
+        field :status, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), required: true } }
 
-        field :type, Models::Shared::ApiCallType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ApiCallType, false) } }
+        field :type, Models::Shared::ApiCallType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::ApiCallType, false) } }
 
-        field :connection_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('connection_id') } }
+        field :connection_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('connection_id') } }
 
-        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :environment, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('environment') } }
+        field :error, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('error') } }
 
-        field :error, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('error') } }
+        field :external_xref, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_xref') } }
 
-        field :external_xref, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_xref') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :ip_address, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ip_address') } }
 
-        field :ip_address, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ip_address') } }
+        field :is_billable, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_billable') } }
 
-        field :is_billable, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_billable') } }
+        field :size, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
 
-        field :size, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
+        field :webhook_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('webhook_id') } }
 
-        field :webhook_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('webhook_id') } }
+        field :workspace_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
 
-        field :workspace_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
+        field :environment, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('environment') } }
 
-
-        sig { params(integration_type: ::String, method: ::String, name: ::String, path: ::String, status: ::String, type: Models::Shared::ApiCallType, connection_id: T.nilable(::String), created_at: T.nilable(::DateTime), environment: T.nilable(::String), error: T.nilable(::String), external_xref: T.nilable(::String), id: T.nilable(::String), ip_address: T.nilable(::String), is_billable: T.nilable(T::Boolean), size: T.nilable(::Float), webhook_id: T.nilable(::String), workspace_id: T.nilable(::String)).void }
-        def initialize(integration_type: nil, method: nil, name: nil, path: nil, status: nil, type: nil, connection_id: nil, created_at: nil, environment: nil, error: nil, external_xref: nil, id: nil, ip_address: nil, is_billable: nil, size: nil, webhook_id: nil, workspace_id: nil)
+        sig { params(integration_type: ::String, method: ::String, name: ::String, path: ::String, status: ::String, type: Models::Shared::ApiCallType, connection_id: T.nilable(::String), created_at: T.nilable(::DateTime), error: T.nilable(::String), external_xref: T.nilable(::String), id: T.nilable(::String), ip_address: T.nilable(::String), is_billable: T.nilable(T::Boolean), size: T.nilable(::Float), webhook_id: T.nilable(::String), workspace_id: T.nilable(::String), environment: T.nilable(::String)).void }
+        def initialize(integration_type:, method:, name:, path:, status:, type:, connection_id: nil, created_at: nil, error: nil, external_xref: nil, id: nil, ip_address: nil, is_billable: nil, size: nil, webhook_id: nil, workspace_id: nil, environment: 'Production')
           @integration_type = integration_type
           @method = method
           @name = name
@@ -59,7 +58,6 @@ module UnifiedRubySDK
           @type = type
           @connection_id = connection_id
           @created_at = created_at
-          @environment = environment
           @error = error
           @external_xref = external_xref
           @id = id
@@ -68,8 +66,10 @@ module UnifiedRubySDK
           @size = size
           @webhook_id = webhook_id
           @workspace_id = workspace_id
+          @environment = environment
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @integration_type == other.integration_type
@@ -80,7 +80,6 @@ module UnifiedRubySDK
           return false unless @type == other.type
           return false unless @connection_id == other.connection_id
           return false unless @created_at == other.created_at
-          return false unless @environment == other.environment
           return false unless @error == other.error
           return false unless @external_xref == other.external_xref
           return false unless @id == other.id
@@ -89,6 +88,7 @@ module UnifiedRubySDK
           return false unless @size == other.size
           return false unless @webhook_id == other.webhook_id
           return false unless @workspace_id == other.workspace_id
+          return false unless @environment == other.environment
           true
         end
       end

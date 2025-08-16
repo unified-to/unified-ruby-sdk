@@ -18,16 +18,16 @@ module UnifiedRubySDK
 
         field :path, ::String, { 'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': false } }
 
-        field :query, T.nilable(T::Hash[Symbol, ::Object]), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
-
+        field :query, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
 
         sig { params(connection_id: ::String, path: ::String, query: T.nilable(T::Hash[Symbol, ::Object])).void }
-        def initialize(connection_id: nil, path: nil, query: nil)
+        def initialize(connection_id:, path:, query: nil)
           @connection_id = connection_id
           @path = path
           @query = query
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @connection_id == other.connection_id

@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class PropertyStoragePermissionRoles < T::Enum
+
+
         enums do
           OWNER = new('OWNER')
           READ = new('READ')

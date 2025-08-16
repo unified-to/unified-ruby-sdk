@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class EmploymentStatus < T::Enum
+
+
         enums do
           ACTIVE = new('ACTIVE')
           INACTIVE = new('INACTIVE')

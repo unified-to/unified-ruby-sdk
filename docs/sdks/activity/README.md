@@ -18,20 +18,20 @@ Create an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.activity.create_ats_activity(ats_activity=Models::Shared::AtsActivity.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.activity.create_ats_activity(ats_activity: Models::Shared::AtsActivity.new(), connection_id: '<id>')
 
-if ! res.ats_activity.nil?
+unless res.ats_activity.nil?
   # handle response
 end
 
@@ -50,7 +50,11 @@ end
 
 **[T.nilable(Models::Operations::CreateAtsActivityResponse)](../../models/operations/createatsactivityresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_ats_activity
 
@@ -58,20 +62,20 @@ Retrieve an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAtsActivity" method="get" path="/ats/{connection_id}/activity/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.activity.get_ats_activity(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.activity.get_ats_activity(connection_id: '<id>', id: '<id>')
 
-if ! res.ats_activity.nil?
+unless res.ats_activity.nil?
   # handle response
 end
 
@@ -90,7 +94,11 @@ end
 
 **[T.nilable(Models::Operations::GetAtsActivityResponse)](../../models/operations/getatsactivityresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_ats_activities
 
@@ -98,22 +106,24 @@ List all activities
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAtsActivities" method="get" path="/ats/{connection_id}/activity" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAtsActivitiesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.activity.list_ats_activities(req)
+res = s.activity.list_ats_activities(request: req)
 
-if ! res.ats_activities.nil?
+unless res.ats_activities.nil?
   # handle response
 end
 
@@ -129,7 +139,11 @@ end
 
 **[T.nilable(Models::Operations::ListAtsActivitiesResponse)](../../models/operations/listatsactivitiesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_ats_activity
 
@@ -137,24 +151,26 @@ Update an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchAtsActivityRequest.new(
   ats_activity: Models::Shared::AtsActivity.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.activity.patch_ats_activity(req)
+res = s.activity.patch_ats_activity(request: req)
 
-if ! res.ats_activity.nil?
+unless res.ats_activity.nil?
   # handle response
 end
 
@@ -170,7 +186,11 @@ end
 
 **[T.nilable(Models::Operations::PatchAtsActivityResponse)](../../models/operations/patchatsactivityresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_ats_activity
 
@@ -178,16 +198,18 @@ Remove an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeAtsActivity" method="delete" path="/ats/{connection_id}/activity/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.activity.remove_ats_activity(connection_id="<id>", id="<id>")
+res = s.activity.remove_ats_activity(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -206,7 +228,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveAtsActivityResponse)](../../models/operations/removeatsactivityresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_ats_activity
 
@@ -214,24 +240,26 @@ Update an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateAtsActivityRequest.new(
   ats_activity: Models::Shared::AtsActivity.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.activity.update_ats_activity(req)
+res = s.activity.update_ats_activity(request: req)
 
-if ! res.ats_activity.nil?
+unless res.ats_activity.nil?
   # handle response
 end
 
@@ -247,3 +275,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateAtsActivityResponse)](../../models/operations/updateatsactivityresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

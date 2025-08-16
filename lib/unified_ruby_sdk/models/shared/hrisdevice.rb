@@ -14,49 +14,48 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name'), required: true } }
 
-        field :admin_user_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('admin_user_ids') } }
+        field :admin_user_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('admin_user_ids') } }
 
-        field :asset_tag, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('asset_tag') } }
+        field :asset_tag, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('asset_tag') } }
 
-        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :has_antivirus, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_antivirus') } }
+        field :has_antivirus, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_antivirus') } }
 
-        field :has_firewall, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_firewall') } }
+        field :has_firewall, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_firewall') } }
 
-        field :has_hd_encrypted, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_hd_encrypted') } }
+        field :has_hd_encrypted, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_hd_encrypted') } }
 
-        field :has_password_manager, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_password_manager') } }
+        field :has_password_manager, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_password_manager') } }
 
-        field :has_screenlock, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_screenlock') } }
+        field :has_screenlock, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_screenlock') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :is_missing, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_missing') } }
+        field :is_missing, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_missing') } }
 
-        field :location_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location_id') } }
+        field :location_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location_id') } }
 
-        field :manufacturer, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('manufacturer') } }
+        field :manufacturer, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('manufacturer') } }
 
-        field :model, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('model') } }
+        field :model, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('model') } }
 
-        field :os, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('os') } }
+        field :os, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('os') } }
 
-        field :os_version, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('os_version') } }
+        field :os_version, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('os_version') } }
 
-        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
         # users who have this device
-        field :user_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
+        field :user_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
 
-        field :version, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('version') } }
-
+        field :version, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('version') } }
 
         sig { params(name: ::String, admin_user_ids: T.nilable(T::Array[::String]), asset_tag: T.nilable(::String), created_at: T.nilable(::DateTime), has_antivirus: T.nilable(T::Boolean), has_firewall: T.nilable(T::Boolean), has_hd_encrypted: T.nilable(T::Boolean), has_password_manager: T.nilable(T::Boolean), has_screenlock: T.nilable(T::Boolean), id: T.nilable(::String), is_missing: T.nilable(T::Boolean), location_id: T.nilable(::String), manufacturer: T.nilable(::String), model: T.nilable(::String), os: T.nilable(::String), os_version: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String]), version: T.nilable(::String)).void }
-        def initialize(name: nil, admin_user_ids: nil, asset_tag: nil, created_at: nil, has_antivirus: nil, has_firewall: nil, has_hd_encrypted: nil, has_password_manager: nil, has_screenlock: nil, id: nil, is_missing: nil, location_id: nil, manufacturer: nil, model: nil, os: nil, os_version: nil, raw: nil, updated_at: nil, user_ids: nil, version: nil)
+        def initialize(name:, admin_user_ids: nil, asset_tag: nil, created_at: nil, has_antivirus: nil, has_firewall: nil, has_hd_encrypted: nil, has_password_manager: nil, has_screenlock: nil, id: nil, is_missing: nil, location_id: nil, manufacturer: nil, model: nil, os: nil, os_version: nil, raw: nil, updated_at: nil, user_ids: nil, version: nil)
           @name = name
           @admin_user_ids = admin_user_ids
           @asset_tag = asset_tag
@@ -79,6 +78,7 @@ module UnifiedRubySDK
           @version = version
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @name == other.name

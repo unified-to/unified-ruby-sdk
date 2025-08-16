@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class ScimManagerType < T::Enum
+
+
         enums do
           DIRECT = new('direct')
           INDIRECT = new('indirect')

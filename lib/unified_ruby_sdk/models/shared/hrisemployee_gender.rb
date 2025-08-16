@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class HrisEmployeeGender < T::Enum
+
+
         enums do
           MALE = new('MALE')
           FEMALE = new('FEMALE')

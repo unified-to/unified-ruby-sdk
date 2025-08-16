@@ -24,20 +24,20 @@ Create a list
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createMartechList" method="post" path="/martech/{connection_id}/list" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.martech.create_martech_list(marketing_list=Models::Shared::MarketingList.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.martech.create_martech_list(marketing_list: Models::Shared::MarketingList.new(), connection_id: '<id>')
 
-if ! res.marketing_list.nil?
+unless res.marketing_list.nil?
   # handle response
 end
 
@@ -56,7 +56,11 @@ end
 
 **[T.nilable(Models::Operations::CreateMartechListResponse)](../../models/operations/createmartechlistresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_martech_member
 
@@ -64,20 +68,20 @@ Create a member
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createMartechMember" method="post" path="/martech/{connection_id}/member" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.martech.create_martech_member(marketing_member=Models::Shared::MarketingMember.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.martech.create_martech_member(marketing_member: Models::Shared::MarketingMember.new(), connection_id: '<id>')
 
-if ! res.marketing_member.nil?
+unless res.marketing_member.nil?
   # handle response
 end
 
@@ -96,7 +100,11 @@ end
 
 **[T.nilable(Models::Operations::CreateMartechMemberResponse)](../../models/operations/createmartechmemberresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_martech_list
 
@@ -104,20 +112,20 @@ Retrieve a list
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getMartechList" method="get" path="/martech/{connection_id}/list/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.martech.get_martech_list(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.martech.get_martech_list(connection_id: '<id>', id: '<id>')
 
-if ! res.marketing_list.nil?
+unless res.marketing_list.nil?
   # handle response
 end
 
@@ -136,7 +144,11 @@ end
 
 **[T.nilable(Models::Operations::GetMartechListResponse)](../../models/operations/getmartechlistresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_martech_member
 
@@ -144,20 +156,20 @@ Retrieve a member
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getMartechMember" method="get" path="/martech/{connection_id}/member/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.martech.get_martech_member(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.martech.get_martech_member(connection_id: '<id>', id: '<id>')
 
-if ! res.marketing_member.nil?
+unless res.marketing_member.nil?
   # handle response
 end
 
@@ -176,7 +188,11 @@ end
 
 **[T.nilable(Models::Operations::GetMartechMemberResponse)](../../models/operations/getmartechmemberresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_martech_lists
 
@@ -184,22 +200,24 @@ List all lists
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listMartechLists" method="get" path="/martech/{connection_id}/list" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListMartechListsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.martech.list_martech_lists(req)
+res = s.martech.list_martech_lists(request: req)
 
-if ! res.marketing_lists.nil?
+unless res.marketing_lists.nil?
   # handle response
 end
 
@@ -215,7 +233,11 @@ end
 
 **[T.nilable(Models::Operations::ListMartechListsResponse)](../../models/operations/listmartechlistsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_martech_members
 
@@ -223,22 +245,24 @@ List all members
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listMartechMembers" method="get" path="/martech/{connection_id}/member" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListMartechMembersRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.martech.list_martech_members(req)
+res = s.martech.list_martech_members(request: req)
 
-if ! res.marketing_members.nil?
+unless res.marketing_members.nil?
   # handle response
 end
 
@@ -254,7 +278,11 @@ end
 
 **[T.nilable(Models::Operations::ListMartechMembersResponse)](../../models/operations/listmartechmembersresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_martech_list
 
@@ -262,24 +290,26 @@ Update a list
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchMartechList" method="patch" path="/martech/{connection_id}/list/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchMartechListRequest.new(
   marketing_list: Models::Shared::MarketingList.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.martech.patch_martech_list(req)
+res = s.martech.patch_martech_list(request: req)
 
-if ! res.marketing_list.nil?
+unless res.marketing_list.nil?
   # handle response
 end
 
@@ -295,7 +325,11 @@ end
 
 **[T.nilable(Models::Operations::PatchMartechListResponse)](../../models/operations/patchmartechlistresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_martech_member
 
@@ -303,24 +337,26 @@ Update a member
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchMartechMember" method="patch" path="/martech/{connection_id}/member/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchMartechMemberRequest.new(
   marketing_member: Models::Shared::MarketingMember.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.martech.patch_martech_member(req)
+res = s.martech.patch_martech_member(request: req)
 
-if ! res.marketing_member.nil?
+unless res.marketing_member.nil?
   # handle response
 end
 
@@ -336,7 +372,11 @@ end
 
 **[T.nilable(Models::Operations::PatchMartechMemberResponse)](../../models/operations/patchmartechmemberresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_martech_list
 
@@ -344,16 +384,18 @@ Remove a list
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeMartechList" method="delete" path="/martech/{connection_id}/list/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.martech.remove_martech_list(connection_id="<id>", id="<id>")
+res = s.martech.remove_martech_list(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -372,7 +414,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveMartechListResponse)](../../models/operations/removemartechlistresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_martech_member
 
@@ -380,16 +426,18 @@ Remove a member
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeMartechMember" method="delete" path="/martech/{connection_id}/member/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.martech.remove_martech_member(connection_id="<id>", id="<id>")
+res = s.martech.remove_martech_member(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -408,7 +456,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveMartechMemberResponse)](../../models/operations/removemartechmemberresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_martech_list
 
@@ -416,24 +468,26 @@ Update a list
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateMartechList" method="put" path="/martech/{connection_id}/list/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateMartechListRequest.new(
   marketing_list: Models::Shared::MarketingList.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.martech.update_martech_list(req)
+res = s.martech.update_martech_list(request: req)
 
-if ! res.marketing_list.nil?
+unless res.marketing_list.nil?
   # handle response
 end
 
@@ -449,7 +503,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateMartechListResponse)](../../models/operations/updatemartechlistresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_martech_member
 
@@ -457,24 +515,26 @@ Update a member
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateMartechMember" method="put" path="/martech/{connection_id}/member/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateMartechMemberRequest.new(
   marketing_member: Models::Shared::MarketingMember.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.martech.update_martech_member(req)
+res = s.martech.update_martech_member(request: req)
 
-if ! res.marketing_member.nil?
+unless res.marketing_member.nil?
   # handle response
 end
 
@@ -490,3 +550,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateMartechMemberResponse)](../../models/operations/updatemartechmemberresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

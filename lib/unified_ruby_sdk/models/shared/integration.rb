@@ -14,61 +14,60 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
         # The categories of support solutions that this integration has
-        field :categories, T::Array[Models::Shared::PropertyIntegrationCategories], { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('categories') } }
+        field :categories, Crystalline::Array.new(Models::Shared::PropertyIntegrationCategories), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('categories'), required: true } }
 
-        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name'), required: true } }
 
-        field :type, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
+        field :type, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true } }
 
-        field :active_healthy_connections, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('active_healthy_connections') } }
+        field :active_healthy_connections, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('active_healthy_connections') } }
 
-        field :api, T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::Integration1, ::String, ::Float, T::Boolean)])), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('api') } }
+        field :api, Crystalline::Nilable.new(Crystalline::Union.new(Crystalline::Hash.new(Symbol, ::Object), ::String, ::Float, Crystalline::Boolean.new, Crystalline::Array.new(Crystalline::Union.new(Models::Shared::Integration1, ::String, ::Float, Crystalline::Boolean.new)))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('api') } }
 
-        field :api_docs_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('api_docs_url') } }
+        field :api_docs_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('api_docs_url') } }
 
-        field :beta, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('beta') } }
+        field :beta, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('beta') } }
 
-        field :color, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('color') } }
+        field :color, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('color') } }
 
-        field :created_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
+        field :created_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
 
-        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+        field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-        field :fa_icon, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fa_icon') } }
+        field :fa_icon, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fa_icon') } }
 
-        field :featured, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('featured') } }
+        field :featured, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('featured') } }
 
-        field :in_progress, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('in_progress') } }
+        field :in_progress, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('in_progress') } }
 
-        field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
+        field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
-        field :logo_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('logo_url') } }
+        field :logo_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('logo_url') } }
 
-        field :partnership, T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::IntegrationSchemas1, ::String, ::Float, T::Boolean)])), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('partnership') } }
+        field :partnership, Crystalline::Nilable.new(Crystalline::Union.new(Crystalline::Hash.new(Symbol, ::Object), ::String, ::Float, Crystalline::Boolean.new, Crystalline::Array.new(Crystalline::Union.new(Models::Shared::IntegrationSchemas1, ::String, ::Float, Crystalline::Boolean.new)))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('partnership') } }
 
-        field :popularity, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('popularity') } }
+        field :popularity, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('popularity') } }
 
-        field :rate_limit_description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rate_limit_description') } }
+        field :rate_limit_description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rate_limit_description') } }
 
-        field :sandbox, T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::IntegrationSchemasSandbox1, ::String, ::Float, T::Boolean)])), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sandbox') } }
+        field :sandbox, Crystalline::Nilable.new(Crystalline::Union.new(Crystalline::Hash.new(Symbol, ::Object), ::String, ::Float, Crystalline::Boolean.new, Crystalline::Array.new(Crystalline::Union.new(Models::Shared::IntegrationSchemasSandbox1, ::String, ::Float, Crystalline::Boolean.new)))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sandbox') } }
 
-        field :support, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('support') } }
+        field :support, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('support') } }
 
-        field :tested_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tested_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :tested_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tested_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :text_color, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('text_color') } }
+        field :text_color, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('text_color') } }
         # instructions for the user on how to find the token/key
-        field :token_instructions, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('token_instructions') } }
+        field :token_instructions, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('token_instructions') } }
         # if auth_types = 'token'
-        field :token_names, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('token_names') } }
+        field :token_names, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('token_names') } }
 
-        field :updated_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
+        field :updated_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
 
-        field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
-
+        field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
         sig { params(categories: T::Array[Models::Shared::PropertyIntegrationCategories], name: ::String, type: ::String, active_healthy_connections: T.nilable(::Float), api: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::Integration1, ::String, ::Float, T::Boolean)])), api_docs_url: T.nilable(::String), beta: T.nilable(T::Boolean), color: T.nilable(::String), created_at: T.nilable(::String), description: T.nilable(::String), fa_icon: T.nilable(::String), featured: T.nilable(T::Boolean), in_progress: T.nilable(T::Boolean), is_active: T.nilable(T::Boolean), logo_url: T.nilable(::String), partnership: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::IntegrationSchemas1, ::String, ::Float, T::Boolean)])), popularity: T.nilable(::Float), rate_limit_description: T.nilable(::String), sandbox: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::IntegrationSchemasSandbox1, ::String, ::Float, T::Boolean)])), support: T.nilable(T::Hash[Symbol, ::Object]), tested_at: T.nilable(::DateTime), text_color: T.nilable(::String), token_instructions: T.nilable(T::Array[::String]), token_names: T.nilable(T::Array[::String]), updated_at: T.nilable(::String), web_url: T.nilable(::String)).void }
-        def initialize(categories: nil, name: nil, type: nil, active_healthy_connections: nil, api: nil, api_docs_url: nil, beta: nil, color: nil, created_at: nil, description: nil, fa_icon: nil, featured: nil, in_progress: nil, is_active: nil, logo_url: nil, partnership: nil, popularity: nil, rate_limit_description: nil, sandbox: nil, support: nil, tested_at: nil, text_color: nil, token_instructions: nil, token_names: nil, updated_at: nil, web_url: nil)
+        def initialize(categories:, name:, type:, active_healthy_connections: nil, api: nil, api_docs_url: nil, beta: nil, color: nil, created_at: nil, description: nil, fa_icon: nil, featured: nil, in_progress: nil, is_active: nil, logo_url: nil, partnership: nil, popularity: nil, rate_limit_description: nil, sandbox: nil, support: nil, tested_at: nil, text_color: nil, token_instructions: nil, token_names: nil, updated_at: nil, web_url: nil)
           @categories = categories
           @name = name
           @type = type
@@ -97,6 +96,7 @@ module UnifiedRubySDK
           @web_url = web_url
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @categories == other.categories

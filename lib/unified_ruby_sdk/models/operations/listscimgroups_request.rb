@@ -16,19 +16,18 @@ module UnifiedRubySDK
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
 
-        field :count, T.nilable(::Float), { 'query_param': { 'field_name': 'count', 'style': 'form', 'explode': true } }
+        field :count, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'count', 'style': 'form', 'explode': true } }
 
-        field :filter, T.nilable(::String), { 'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': true } }
+        field :filter, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': true } }
 
-        field :sort_by, T.nilable(::String), { 'query_param': { 'field_name': 'sortBy', 'style': 'form', 'explode': true } }
+        field :sort_by, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'sortBy', 'style': 'form', 'explode': true } }
 
-        field :sort_order, T.nilable(::String), { 'query_param': { 'field_name': 'sortOrder', 'style': 'form', 'explode': true } }
+        field :sort_order, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'sortOrder', 'style': 'form', 'explode': true } }
 
-        field :start_index, T.nilable(::Float), { 'query_param': { 'field_name': 'startIndex', 'style': 'form', 'explode': true } }
-
+        field :start_index, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'startIndex', 'style': 'form', 'explode': true } }
 
         sig { params(connection_id: ::String, count: T.nilable(::Float), filter: T.nilable(::String), sort_by: T.nilable(::String), sort_order: T.nilable(::String), start_index: T.nilable(::Float)).void }
-        def initialize(connection_id: nil, count: nil, filter: nil, sort_by: nil, sort_order: nil, start_index: nil)
+        def initialize(connection_id:, count: nil, filter: nil, sort_by: nil, sort_order: nil, start_index: nil)
           @connection_id = connection_id
           @count = count
           @filter = filter
@@ -37,6 +36,7 @@ module UnifiedRubySDK
           @start_index = start_index
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @connection_id == other.connection_id

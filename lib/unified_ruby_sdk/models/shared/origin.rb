@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class Origin < T::Enum
+
+
         enums do
           AGENCY = new('AGENCY')
           APPLIED = new('APPLIED')

@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class PropertyAtsActivityFromType < T::Enum
+
+
         enums do
           WORK = new('WORK')
           HOME = new('HOME')

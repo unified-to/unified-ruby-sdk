@@ -5,7 +5,6 @@
 
 require_relative './types'
 
-require 'sorbet-runtime'
 
 module UnifiedRubySDK
   module SDKHooks
@@ -14,44 +13,39 @@ module UnifiedRubySDK
 
       sig { void }
       def initialize
-        @sdk_init_hooks = T.let([], T::Array[AbstractSDKInitHook])
-        @before_request_hooks = T.let([], T::Array[AbstractBeforeRequestHook])
-        @after_success_hooks = T.let([], T::Array[AbstractAfterSuccessHook])
-        @after_error_hooks = T.let([], T::Array[AbstractAfterErrorHook])
+        @sdk_init_hooks = T.let([], T::Array[AbstractSDKHook])
+        @before_request_hooks = T.let([], T::Array[AbstractSDKHook])
+        @after_success_hooks = T.let([], T::Array[AbstractSDKHook])
+        @after_error_hooks = T.let([], T::Array[AbstractSDKHook])
       end
 
-      sig { params(hook: AbstractSDKInitHook).void }
+      sig { params(hook: AbstractSDKHook).void }
       def register_sdk_init_hook(hook)
         @sdk_init_hooks << hook
       end
 
-      sig { params(hook: AbstractBeforeRequestHook).void }
+      sig { params(hook: AbstractSDKHook).void }
       def register_before_request_hook(hook)
         @before_request_hooks << hook
       end
 
-      sig { params(hook: AbstractAfterSuccessHook).void }
+      sig { params(hook: AbstractSDKHook).void }
       def register_after_success_hook(hook)
         @after_success_hooks << hook
       end
 
-      sig { params(hook: AbstractAfterErrorHook).void }
+      sig { params(hook: AbstractSDKHook).void }
       def register_after_error_hook(hook)
         @after_error_hooks << hook
       end
 
-      sig do
-        params(
-          base_url: String,
-          client: Faraday::Connection
-        ).returns([String, Faraday::Connection])
-      end
-      def sdk_init(base_url:, client:)
+      sig { params(config: SDKConfiguration).returns(SDKConfiguration) }
+      def sdk_init(config:)
         @sdk_init_hooks.each do |hook|
-          base_url, client = hook.sdk_init(base_url: base_url, client: client)
+          config = hook.sdk_init(config: config)
         end
 
-        return base_url, client
+        return config
       end
 
       sig do

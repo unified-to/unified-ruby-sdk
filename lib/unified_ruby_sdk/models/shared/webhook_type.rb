@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class WebhookType < T::Enum
+
+
         enums do
           VIRTUAL = new('virtual')
           NATIVE = new('native')

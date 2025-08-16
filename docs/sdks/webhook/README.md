@@ -20,22 +20,24 @@ The data payload received by your server is described at https://docs.unified.to
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createUnifiedWebhook" method="post" path="/unified/webhook" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.webhook.create_unified_webhook(webhook=Models::Shared::Webhook.new(
-  connection_id: "<id>",
+res = s.webhook.create_unified_webhook(webhook: Models::Shared::Webhook.new(
+  connection_id: '<id>',
   event: Models::Shared::Event::CREATED,
-  object_type: Models::Shared::ObjectType::CRM_PIPELINE,
-), include_all=false)
+  object_type: Models::Shared::ObjectType::ATS_APPLICATIONSTATUS,
+))
 
-if ! res.webhook.nil?
+unless res.webhook.nil?
   # handle response
 end
 
@@ -52,7 +54,11 @@ end
 
 **[T.nilable(Models::Operations::CreateUnifiedWebhookResponse)](../../models/operations/createunifiedwebhookresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_unified_webhook
 
@@ -60,18 +66,20 @@ Retrieve webhook by its ID
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getUnifiedWebhook" method="get" path="/unified/webhook/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.webhook.get_unified_webhook(id="<id>")
+res = s.webhook.get_unified_webhook(id: '<id>')
 
-if ! res.webhook.nil?
+unless res.webhook.nil?
   # handle response
 end
 
@@ -87,7 +95,11 @@ end
 
 **[T.nilable(Models::Operations::GetUnifiedWebhookResponse)](../../models/operations/getunifiedwebhookresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_unified_webhooks
 
@@ -95,20 +107,22 @@ Returns all registered webhooks
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listUnifiedWebhooks" method="get" path="/unified/webhook" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListUnifiedWebhooksRequest.new()
 
-res = s.webhook.list_unified_webhooks(req)
+res = s.webhook.list_unified_webhooks(request: req)
 
-if ! res.webhooks.nil?
+unless res.webhooks.nil?
   # handle response
 end
 
@@ -124,7 +138,11 @@ end
 
 **[T.nilable(Models::Operations::ListUnifiedWebhooksResponse)](../../models/operations/listunifiedwebhooksresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_unified_webhook
 
@@ -132,22 +150,24 @@ Update webhook subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchUnifiedWebhook" method="patch" path="/unified/webhook/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.webhook.patch_unified_webhook(webhook=Models::Shared::Webhook.new(
-  connection_id: "<id>",
-  event: Models::Shared::Event::DELETED,
-  object_type: Models::Shared::ObjectType::CRM_COMPANY,
-), id="<id>")
+res = s.webhook.patch_unified_webhook(webhook: Models::Shared::Webhook.new(
+  connection_id: '<id>',
+  event: Models::Shared::Event::UPDATED,
+  object_type: Models::Shared::ObjectType::MARTECH_MEMBER,
+), id: '<id>')
 
-if ! res.webhook.nil?
+unless res.webhook.nil?
   # handle response
 end
 
@@ -164,7 +184,11 @@ end
 
 **[T.nilable(Models::Operations::PatchUnifiedWebhookResponse)](../../models/operations/patchunifiedwebhookresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_unified_webhook_trigger
 
@@ -172,16 +196,18 @@ Trigger webhook
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchUnifiedWebhookTrigger" method="patch" path="/unified/webhook/{id}/trigger" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.webhook.patch_unified_webhook_trigger(id="<id>")
+res = s.webhook.patch_unified_webhook_trigger(id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -199,7 +225,11 @@ end
 
 **[T.nilable(Models::Operations::PatchUnifiedWebhookTriggerResponse)](../../models/operations/patchunifiedwebhooktriggerresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_unified_webhook
 
@@ -207,16 +237,18 @@ Remove webhook subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeUnifiedWebhook" method="delete" path="/unified/webhook/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.webhook.remove_unified_webhook(id="<id>")
+res = s.webhook.remove_unified_webhook(id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -234,7 +266,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveUnifiedWebhookResponse)](../../models/operations/removeunifiedwebhookresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_unified_webhook
 
@@ -242,22 +278,24 @@ Update webhook subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateUnifiedWebhook" method="put" path="/unified/webhook/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.webhook.update_unified_webhook(webhook=Models::Shared::Webhook.new(
-  connection_id: "<id>",
-  event: Models::Shared::Event::CREATED,
-  object_type: Models::Shared::ObjectType::ACCOUNTING_REPORT,
-), id="<id>")
+res = s.webhook.update_unified_webhook(webhook: Models::Shared::Webhook.new(
+  connection_id: '<id>',
+  event: Models::Shared::Event::DELETED,
+  object_type: Models::Shared::ObjectType::GENAI_PROMPT,
+), id: '<id>')
 
-if ! res.webhook.nil?
+unless res.webhook.nil?
   # handle response
 end
 
@@ -274,7 +312,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateUnifiedWebhookResponse)](../../models/operations/updateunifiedwebhookresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_unified_webhook_trigger
 
@@ -282,16 +324,18 @@ Trigger webhook
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateUnifiedWebhookTrigger" method="put" path="/unified/webhook/{id}/trigger" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.webhook.update_unified_webhook_trigger(id="<id>")
+res = s.webhook.update_unified_webhook_trigger(id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -309,3 +353,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateUnifiedWebhookTriggerResponse)](../../models/operations/updateunifiedwebhooktriggerresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

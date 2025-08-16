@@ -14,14 +14,13 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :archived_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('archived_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :archived_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('archived_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :fields_, T.nilable(T::Array[Models::Shared::CrmEventFormField]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fields') } }
+        field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CrmEventFormField)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fields') } }
 
-        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :redirect_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('redirect_url') } }
-
+        field :redirect_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('redirect_url') } }
 
         sig { params(archived_at: T.nilable(::DateTime), fields_: T.nilable(T::Array[Models::Shared::CrmEventFormField]), name: T.nilable(::String), redirect_url: T.nilable(::String)).void }
         def initialize(archived_at: nil, fields_: nil, name: nil, redirect_url: nil)
@@ -31,6 +30,7 @@ module UnifiedRubySDK
           @redirect_url = redirect_url
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @archived_at == other.archived_at

@@ -16,12 +16,12 @@ module UnifiedRubySDK
 
         field :jwt, ::String, { 'security': { 'scheme': true, 'type': 'apiKey', 'sub_type': 'header', 'field_name': 'authorization' } }
 
-
         sig { params(jwt: ::String).void }
-        def initialize(jwt: nil)
+        def initialize(jwt:)
           @jwt = jwt
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @jwt == other.jwt

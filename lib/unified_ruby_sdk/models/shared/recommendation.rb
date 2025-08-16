@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class Recommendation < T::Enum
+
+
         enums do
           DEFINITELY_NO = new('DEFINITELY_NO')
           NO = new('NO')

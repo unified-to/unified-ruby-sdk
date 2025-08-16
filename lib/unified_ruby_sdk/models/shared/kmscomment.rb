@@ -14,29 +14,28 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :content, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
+        field :content, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content'), required: true } }
 
-        field :content_type, T.nilable(Models::Shared::ContentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content_type'), 'decoder': Utils.enum_from_string(Models::Shared::ContentType, true) } }
+        field :content_type, Crystalline::Nilable.new(Models::Shared::ContentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content_type'), 'decoder': Utils.enum_from_string(Models::Shared::ContentType, true) } }
 
-        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :page_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('page_id') } }
+        field :page_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('page_id') } }
 
-        field :parent_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
+        field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
-        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :type, T.nilable(Models::Shared::KmsCommentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::KmsCommentType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::KmsCommentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::KmsCommentType, true) } }
 
-        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
-
+        field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
         sig { params(content: ::String, content_type: T.nilable(Models::Shared::ContentType), created_at: T.nilable(::DateTime), id: T.nilable(::String), page_id: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::KmsCommentType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(content: nil, content_type: nil, created_at: nil, id: nil, page_id: nil, parent_id: nil, raw: nil, type: nil, updated_at: nil, user_id: nil)
+        def initialize(content:, content_type: nil, created_at: nil, id: nil, page_id: nil, parent_id: nil, raw: nil, type: nil, updated_at: nil, user_id: nil)
           @content = content
           @content_type = content_type
           @created_at = created_at
@@ -49,6 +48,7 @@ module UnifiedRubySDK
           @user_id = user_id
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @content == other.content

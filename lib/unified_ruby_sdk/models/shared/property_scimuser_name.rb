@@ -14,18 +14,17 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :family_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('familyName') } }
+        field :family_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('familyName') } }
 
-        field :formatted, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('formatted') } }
+        field :formatted, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('formatted') } }
 
-        field :given_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('givenName') } }
+        field :given_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('givenName') } }
 
-        field :honorific_prefix, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('honorificPrefix') } }
+        field :honorific_prefix, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('honorificPrefix') } }
 
-        field :honorific_suffix, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('honorificSuffix') } }
+        field :honorific_suffix, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('honorificSuffix') } }
 
-        field :middle_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('middleName') } }
-
+        field :middle_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('middleName') } }
 
         sig { params(family_name: T.nilable(::String), formatted: T.nilable(::String), given_name: T.nilable(::String), honorific_prefix: T.nilable(::String), honorific_suffix: T.nilable(::String), middle_name: T.nilable(::String)).void }
         def initialize(family_name: nil, formatted: nil, given_name: nil, honorific_prefix: nil, honorific_suffix: nil, middle_name: nil)
@@ -37,6 +36,7 @@ module UnifiedRubySDK
           @middle_name = middle_name
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @family_name == other.family_name

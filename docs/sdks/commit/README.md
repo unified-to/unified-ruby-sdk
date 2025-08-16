@@ -18,23 +18,23 @@ Create a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.commit.create_repo_commit(repo_commit=Models::Shared::RepoCommit.new(
-  repo_id: "<id>",
-  user_id: "<id>",
-), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.commit.create_repo_commit(repo_commit: Models::Shared::RepoCommit.new(
+  repo_id: '<id>',
+  user_id: '<id>',
+), connection_id: '<id>')
 
-if ! res.repo_commit.nil?
+unless res.repo_commit.nil?
   # handle response
 end
 
@@ -53,7 +53,11 @@ end
 
 **[T.nilable(Models::Operations::CreateRepoCommitResponse)](../../models/operations/createrepocommitresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_repo_commit
 
@@ -61,20 +65,20 @@ Retrieve a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getRepoCommit" method="get" path="/repo/{connection_id}/commit/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.commit.get_repo_commit(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.commit.get_repo_commit(connection_id: '<id>', id: '<id>')
 
-if ! res.repo_commit.nil?
+unless res.repo_commit.nil?
   # handle response
 end
 
@@ -93,7 +97,11 @@ end
 
 **[T.nilable(Models::Operations::GetRepoCommitResponse)](../../models/operations/getrepocommitresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_repo_commits
 
@@ -101,22 +109,24 @@ List all commits
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listRepoCommits" method="get" path="/repo/{connection_id}/commit" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListRepoCommitsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.commit.list_repo_commits(req)
+res = s.commit.list_repo_commits(request: req)
 
-if ! res.repo_commits.nil?
+unless res.repo_commits.nil?
   # handle response
 end
 
@@ -132,7 +142,11 @@ end
 
 **[T.nilable(Models::Operations::ListRepoCommitsResponse)](../../models/operations/listrepocommitsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_repo_commit
 
@@ -140,27 +154,29 @@ Update a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchRepoCommitRequest.new(
   repo_commit: Models::Shared::RepoCommit.new(
-    repo_id: "<id>",
-    user_id: "<id>",
+    repo_id: '<id>',
+    user_id: '<id>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.commit.patch_repo_commit(req)
+res = s.commit.patch_repo_commit(request: req)
 
-if ! res.repo_commit.nil?
+unless res.repo_commit.nil?
   # handle response
 end
 
@@ -176,7 +192,11 @@ end
 
 **[T.nilable(Models::Operations::PatchRepoCommitResponse)](../../models/operations/patchrepocommitresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_repo_commit
 
@@ -184,16 +204,18 @@ Remove a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeRepoCommit" method="delete" path="/repo/{connection_id}/commit/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.commit.remove_repo_commit(connection_id="<id>", id="<id>")
+res = s.commit.remove_repo_commit(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -212,7 +234,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveRepoCommitResponse)](../../models/operations/removerepocommitresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_repo_commit
 
@@ -220,27 +246,29 @@ Update a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateRepoCommitRequest.new(
   repo_commit: Models::Shared::RepoCommit.new(
-    repo_id: "<id>",
-    user_id: "<id>",
+    repo_id: '<id>',
+    user_id: '<id>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.commit.update_repo_commit(req)
+res = s.commit.update_repo_commit(request: req)
 
-if ! res.repo_commit.nil?
+unless res.repo_commit.nil?
   # handle response
 end
 
@@ -256,3 +284,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateRepoCommitResponse)](../../models/operations/updaterepocommitresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

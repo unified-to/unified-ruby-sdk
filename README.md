@@ -41,17 +41,16 @@ gem specific_install https://github.com/unified-to/unified-ruby-sdk
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.create_accounting_account(accounting_account=Models::Shared::AccountingAccount.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.create_accounting_account(accounting_account: Models::Shared::AccountingAccount.new(), connection_id: '<id>')
 
-if ! res.accounting_account.nil?
+unless res.accounting_account.nil?
   # handle response
 end
 
@@ -73,17 +72,16 @@ You can set the security parameters through the `security` optional parameter wh
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.create_accounting_account(accounting_account=Models::Shared::AccountingAccount.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.create_accounting_account(accounting_account: Models::Shared::AccountingAccount.new(), connection_id: '<id>')
 
-if ! res.accounting_account.nil?
+unless res.accounting_account.nil?
   # handle response
 end
 
@@ -346,6 +344,11 @@ end
 * [patch_accounting_category](docs/sdks/category/README.md#patch_accounting_category) - Update a category
 * [remove_accounting_category](docs/sdks/category/README.md#remove_accounting_category) - Remove a category
 * [update_accounting_category](docs/sdks/category/README.md#update_accounting_category) - Update a category
+
+### [change](docs/sdks/change/README.md)
+
+* [get_task_change](docs/sdks/change/README.md#get_task_change) - Retrieve a change
+* [list_task_changes](docs/sdks/change/README.md#list_task_changes) - List all changes
 
 ### [channel](docs/sdks/channel/README.md)
 
@@ -1188,9 +1191,11 @@ end
 * [create_task_comment](docs/sdks/task/README.md#create_task_comment) - Create a comment
 * [create_task_project](docs/sdks/task/README.md#create_task_project) - Create a project
 * [create_task_task](docs/sdks/task/README.md#create_task_task) - Create a task
+* [get_task_change](docs/sdks/task/README.md#get_task_change) - Retrieve a change
 * [get_task_comment](docs/sdks/task/README.md#get_task_comment) - Retrieve a comment
 * [get_task_project](docs/sdks/task/README.md#get_task_project) - Retrieve a project
 * [get_task_task](docs/sdks/task/README.md#get_task_task) - Retrieve a task
+* [list_task_changes](docs/sdks/task/README.md#list_task_changes) - List all changes
 * [list_task_comments](docs/sdks/task/README.md#list_task_comments) - List all comments
 * [list_task_projects](docs/sdks/task/README.md#list_task_projects) - List all projects
 * [list_task_tasks](docs/sdks/task/README.md#list_task_tasks) - List all tasks
@@ -1404,18 +1409,17 @@ You can override the default server globally by passing a server index to the `s
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       server_idx: 2,
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.create_accounting_account(accounting_account=Models::Shared::AccountingAccount.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.create_accounting_account(accounting_account: Models::Shared::AccountingAccount.new(), connection_id: '<id>')
 
-if ! res.accounting_account.nil?
+unless res.accounting_account.nil?
   # handle response
 end
 
@@ -1427,18 +1431,17 @@ The default server can also be overridden globally by passing a URL to the `serv
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      server_url: "https://api.unified.to",
+      server_url: 'https://api-au.unified.to',
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.accounting.create_accounting_account(accounting_account=Models::Shared::AccountingAccount.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.accounting.create_accounting_account(accounting_account: Models::Shared::AccountingAccount.new(), connection_id: '<id>')
 
-if ! res.accounting_account.nil?
+unless res.accounting_account.nil?
   # handle response
 end
 

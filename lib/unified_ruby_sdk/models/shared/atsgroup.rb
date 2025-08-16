@@ -14,12 +14,11 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :type, T.nilable(Models::Shared::AtsGroupType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AtsGroupType, true) } }
-
+        field :type, Crystalline::Nilable.new(Models::Shared::AtsGroupType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AtsGroupType, true) } }
 
         sig { params(id: T.nilable(::String), name: T.nilable(::String), type: T.nilable(Models::Shared::AtsGroupType)).void }
         def initialize(id: nil, name: nil, type: nil)
@@ -28,6 +27,7 @@ module UnifiedRubySDK
           @type = type
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @id == other.id

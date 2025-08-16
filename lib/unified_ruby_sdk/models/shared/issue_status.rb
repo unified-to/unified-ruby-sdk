@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class IssueStatus < T::Enum
+
+
         enums do
           COMPLETED = new('COMPLETED')
           NEW = new('NEW')

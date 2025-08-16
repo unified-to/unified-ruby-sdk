@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class PropertyConnectionCategories < T::Enum
+
+
         enums do
           PASSTHROUGH = new('passthrough')
           HRIS = new('hris')

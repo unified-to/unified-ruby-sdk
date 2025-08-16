@@ -18,23 +18,23 @@ Create a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.branch.create_repo_branch(repo_branch=Models::Shared::RepoBranch.new(
-  name: "<value>",
-  repo_id: "<id>",
-), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.branch.create_repo_branch(repo_branch: Models::Shared::RepoBranch.new(
+  name: '<value>',
+  repo_id: '<id>',
+), connection_id: '<id>')
 
-if ! res.repo_branch.nil?
+unless res.repo_branch.nil?
   # handle response
 end
 
@@ -53,7 +53,11 @@ end
 
 **[T.nilable(Models::Operations::CreateRepoBranchResponse)](../../models/operations/createrepobranchresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_repo_branch
 
@@ -61,20 +65,20 @@ Retrieve a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getRepoBranch" method="get" path="/repo/{connection_id}/branch/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.branch.get_repo_branch(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.branch.get_repo_branch(connection_id: '<id>', id: '<id>')
 
-if ! res.repo_branch.nil?
+unless res.repo_branch.nil?
   # handle response
 end
 
@@ -93,7 +97,11 @@ end
 
 **[T.nilable(Models::Operations::GetRepoBranchResponse)](../../models/operations/getrepobranchresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_repo_branches
 
@@ -101,22 +109,24 @@ List all branches
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listRepoBranches" method="get" path="/repo/{connection_id}/branch" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListRepoBranchesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.branch.list_repo_branches(req)
+res = s.branch.list_repo_branches(request: req)
 
-if ! res.repo_branches.nil?
+unless res.repo_branches.nil?
   # handle response
 end
 
@@ -132,7 +142,11 @@ end
 
 **[T.nilable(Models::Operations::ListRepoBranchesResponse)](../../models/operations/listrepobranchesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_repo_branch
 
@@ -140,27 +154,29 @@ Update a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchRepoBranchRequest.new(
   repo_branch: Models::Shared::RepoBranch.new(
-    name: "<value>",
-    repo_id: "<id>",
+    name: '<value>',
+    repo_id: '<id>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.branch.patch_repo_branch(req)
+res = s.branch.patch_repo_branch(request: req)
 
-if ! res.repo_branch.nil?
+unless res.repo_branch.nil?
   # handle response
 end
 
@@ -176,7 +192,11 @@ end
 
 **[T.nilable(Models::Operations::PatchRepoBranchResponse)](../../models/operations/patchrepobranchresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_repo_branch
 
@@ -184,16 +204,18 @@ Remove a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeRepoBranch" method="delete" path="/repo/{connection_id}/branch/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.branch.remove_repo_branch(connection_id="<id>", id="<id>")
+res = s.branch.remove_repo_branch(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -212,7 +234,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveRepoBranchResponse)](../../models/operations/removerepobranchresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_repo_branch
 
@@ -220,27 +246,29 @@ Update a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateRepoBranchRequest.new(
   repo_branch: Models::Shared::RepoBranch.new(
-    name: "<value>",
-    repo_id: "<id>",
+    name: '<value>',
+    repo_id: '<id>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.branch.update_repo_branch(req)
+res = s.branch.update_repo_branch(request: req)
 
-if ! res.repo_branch.nil?
+unless res.repo_branch.nil?
   # handle response
 end
 
@@ -256,3 +284,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateRepoBranchResponse)](../../models/operations/updaterepobranchresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

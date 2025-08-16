@@ -14,62 +14,61 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('active') } }
+        field :active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('active') } }
 
-        field :addresses, T.nilable(T::Array[Models::Shared::ScimAddress]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('addresses') } }
+        field :addresses, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ScimAddress)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('addresses') } }
 
-        field :display_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('displayName') } }
+        field :display_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('displayName') } }
 
-        field :emails, T.nilable(T::Array[Models::Shared::ScimEmail]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
+        field :emails, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ScimEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
 
-        field :entitlements, T.nilable(T::Array[Models::Shared::ScimEntitlement]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('entitlements') } }
+        field :entitlements, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ScimEntitlement)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('entitlements') } }
 
-        field :external_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('externalId') } }
+        field :external_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('externalId') } }
 
-        field :groups, T.nilable(T::Array[Models::Shared::ScimUserGroups]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('groups') } }
+        field :groups, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ScimUserGroups)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('groups') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :ims, T.nilable(T::Array[Models::Shared::ScimIms]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ims') } }
+        field :ims, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ScimIms)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ims') } }
 
-        field :locale, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('locale') } }
+        field :locale, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('locale') } }
 
-        field :meta, T.nilable(Models::Shared::PropertyScimUserMeta), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('meta') } }
+        field :meta, Crystalline::Nilable.new(Models::Shared::PropertyScimUserMeta), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('meta') } }
 
-        field :name, T.nilable(Models::Shared::PropertyScimUserName), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, Crystalline::Nilable.new(Models::Shared::PropertyScimUserName), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :nick_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('nickName') } }
+        field :nick_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('nickName') } }
 
-        field :password, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('password') } }
+        field :password, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('password') } }
 
-        field :phone_numbers, T.nilable(T::Array[Models::Shared::ScimPhoneNumber]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('phoneNumbers') } }
+        field :phone_numbers, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ScimPhoneNumber)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('phoneNumbers') } }
 
-        field :photos, T.nilable(T::Array[Models::Shared::ScimPhoto]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('photos') } }
+        field :photos, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ScimPhoto)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('photos') } }
 
-        field :preferred_language, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('preferredLanguage') } }
+        field :preferred_language, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('preferredLanguage') } }
 
-        field :profile_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profileUrl') } }
+        field :profile_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profileUrl') } }
         # Student, Faculty, ...
-        field :roles, T.nilable(T::Array[Models::Shared::ScimRole]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('roles') } }
+        field :roles, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ScimRole)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('roles') } }
 
-        field :schemas, T.nilable(T::Array[Models::Shared::PropertyScimUserSchemas]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('schemas') } }
+        field :schemas, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PropertyScimUserSchemas)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('schemas') } }
 
-        field :timezone, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
+        field :timezone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
 
-        field :title, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
+        field :title, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
         # an organization.
-        field :urn_ietf_params_scim_schemas_extension_enterprise_2_0_user, T.nilable(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('urn:ietf:params:scim:schemas:extension:enterprise:2.0:User') } }
+        field :urn_ietf_params_scim_schemas_extension_enterprise_2_0_user, Crystalline::Nilable.new(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('urn:ietf:params:scim:schemas:extension:enterprise:2.0:User') } }
 
-        field :urn_ietf_params_scim_schemas_extension_lattice_attributes_1_0_user, T.nilable(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('urn:ietf:params:scim:schemas:extension:lattice:attributes:1.0:User') } }
+        field :urn_ietf_params_scim_schemas_extension_lattice_attributes_1_0_user, Crystalline::Nilable.new(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('urn:ietf:params:scim:schemas:extension:lattice:attributes:1.0:User') } }
 
-        field :urn_ietf_params_scim_schemas_extension_peakon_2_0_user, T.nilable(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('urn:ietf:params:scim:schemas:extension:peakon:2.0:User') } }
+        field :urn_ietf_params_scim_schemas_extension_peakon_2_0_user, Crystalline::Nilable.new(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('urn:ietf:params:scim:schemas:extension:peakon:2.0:User') } }
 
-        field :user_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('userName') } }
+        field :user_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('userName') } }
 
-        field :user_type, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('userType') } }
+        field :user_type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('userType') } }
 
-        field :x509_certificates, T.nilable(T::Array[Models::Shared::ScimRole]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('x509Certificates') } }
-
+        field :x509_certificates, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ScimRole)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('x509Certificates') } }
 
         sig { params(active: T.nilable(T::Boolean), addresses: T.nilable(T::Array[Models::Shared::ScimAddress]), display_name: T.nilable(::String), emails: T.nilable(T::Array[Models::Shared::ScimEmail]), entitlements: T.nilable(T::Array[Models::Shared::ScimEntitlement]), external_id: T.nilable(::String), groups: T.nilable(T::Array[Models::Shared::ScimUserGroups]), id: T.nilable(::String), ims: T.nilable(T::Array[Models::Shared::ScimIms]), locale: T.nilable(::String), meta: T.nilable(Models::Shared::PropertyScimUserMeta), name: T.nilable(Models::Shared::PropertyScimUserName), nick_name: T.nilable(::String), password: T.nilable(::String), phone_numbers: T.nilable(T::Array[Models::Shared::ScimPhoneNumber]), photos: T.nilable(T::Array[Models::Shared::ScimPhoto]), preferred_language: T.nilable(::String), profile_url: T.nilable(::String), roles: T.nilable(T::Array[Models::Shared::ScimRole]), schemas: T.nilable(T::Array[Models::Shared::PropertyScimUserSchemas]), timezone: T.nilable(::String), title: T.nilable(::String), urn_ietf_params_scim_schemas_extension_enterprise_2_0_user: T.nilable(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User), urn_ietf_params_scim_schemas_extension_lattice_attributes_1_0_user: T.nilable(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User), urn_ietf_params_scim_schemas_extension_peakon_2_0_user: T.nilable(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User), user_name: T.nilable(::String), user_type: T.nilable(::String), x509_certificates: T.nilable(T::Array[Models::Shared::ScimRole])).void }
         def initialize(active: nil, addresses: nil, display_name: nil, emails: nil, entitlements: nil, external_id: nil, groups: nil, id: nil, ims: nil, locale: nil, meta: nil, name: nil, nick_name: nil, password: nil, phone_numbers: nil, photos: nil, preferred_language: nil, profile_url: nil, roles: nil, schemas: nil, timezone: nil, title: nil, urn_ietf_params_scim_schemas_extension_enterprise_2_0_user: nil, urn_ietf_params_scim_schemas_extension_lattice_attributes_1_0_user: nil, urn_ietf_params_scim_schemas_extension_peakon_2_0_user: nil, user_name: nil, user_type: nil, x509_certificates: nil)
@@ -103,6 +102,7 @@ module UnifiedRubySDK
           @x509_certificates = x509_certificates
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @active == other.active

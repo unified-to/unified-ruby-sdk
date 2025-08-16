@@ -13,26 +13,26 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
+
+        field :scim_group, Models::Shared::ScimGroup, { 'request': { 'media_type': 'application/json' } }
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
         # ID of the Group
         field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
 
-        field :scim_group, Models::Shared::ScimGroup, { 'request': { 'media_type': 'application/json' } }
-
-
-        sig { params(connection_id: ::String, id: ::String, scim_group: Models::Shared::ScimGroup).void }
-        def initialize(connection_id: nil, id: nil, scim_group: nil)
+        sig { params(scim_group: Models::Shared::ScimGroup, connection_id: ::String, id: ::String).void }
+        def initialize(scim_group:, connection_id:, id:)
+          @scim_group = scim_group
           @connection_id = connection_id
           @id = id
-          @scim_group = scim_group
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
+          return false unless @scim_group == other.scim_group
           return false unless @connection_id == other.connection_id
           return false unless @id == other.id
-          return false unless @scim_group == other.scim_group
           true
         end
       end

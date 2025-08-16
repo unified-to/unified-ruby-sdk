@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class UcEmailType < T::Enum
+
+
         enums do
           WORK = new('WORK')
           HOME = new('HOME')

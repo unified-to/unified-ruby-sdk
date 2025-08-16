@@ -14,52 +14,51 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :attachments, T.nilable(T::Array[Models::Shared::CalendarAttachment]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attachments') } }
+        field :attachments, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CalendarAttachment)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attachments') } }
 
-        field :attendees, T.nilable(T::Array[Models::Shared::CalendarAttendee]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attendees') } }
+        field :attendees, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CalendarAttendee)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attendees') } }
 
-        field :calendar_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('calendar_id') } }
+        field :calendar_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('calendar_id') } }
 
-        field :conference, T.nilable(T::Array[Models::Shared::CalendarConference]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('conference') } }
+        field :conference, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CalendarConference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('conference') } }
 
-        field :created_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
+        field :created_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
 
-        field :end_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at') } }
+        field :end_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at') } }
 
-        field :has_conference, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_conference') } }
+        field :has_conference, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_conference') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :is_all_day, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_all_day') } }
+        field :is_all_day, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_all_day') } }
 
-        field :is_free, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_free') } }
+        field :is_free, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_free') } }
 
-        field :is_private, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_private') } }
+        field :is_private, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_private') } }
 
-        field :location, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location') } }
+        field :location, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location') } }
 
-        field :notes, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
+        field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
 
-        field :organizer, T.nilable(Models::Shared::PropertyCalendarEventOrganizer), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organizer') } }
+        field :organizer, Crystalline::Nilable.new(Models::Shared::PropertyCalendarEventOrganizer), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organizer') } }
 
-        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :recurrence, T.nilable(T::Array[Models::Shared::CalendarEventRecurrence]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recurrence') } }
+        field :recurrence, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CalendarEventRecurrence)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recurrence') } }
 
-        field :recurring_event_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recurring_event_id') } }
+        field :recurring_event_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recurring_event_id') } }
 
-        field :start_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at') } }
+        field :start_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at') } }
 
-        field :status, T.nilable(Models::Shared::CalendarEventStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::CalendarEventStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::CalendarEventStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::CalendarEventStatus, true) } }
 
-        field :subject, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subject') } }
+        field :subject, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subject') } }
 
-        field :timezone, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
+        field :timezone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
 
-        field :updated_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
+        field :updated_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
 
-        field :web_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
-
+        field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
         sig { params(attachments: T.nilable(T::Array[Models::Shared::CalendarAttachment]), attendees: T.nilable(T::Array[Models::Shared::CalendarAttendee]), calendar_id: T.nilable(::String), conference: T.nilable(T::Array[Models::Shared::CalendarConference]), created_at: T.nilable(::String), end_at: T.nilable(::String), has_conference: T.nilable(T::Boolean), id: T.nilable(::String), is_all_day: T.nilable(T::Boolean), is_free: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), location: T.nilable(::String), notes: T.nilable(::String), organizer: T.nilable(Models::Shared::PropertyCalendarEventOrganizer), raw: T.nilable(T::Hash[Symbol, ::Object]), recurrence: T.nilable(T::Array[Models::Shared::CalendarEventRecurrence]), recurring_event_id: T.nilable(::String), start_at: T.nilable(::String), status: T.nilable(Models::Shared::CalendarEventStatus), subject: T.nilable(::String), timezone: T.nilable(::String), updated_at: T.nilable(::String), web_url: T.nilable(::String)).void }
         def initialize(attachments: nil, attendees: nil, calendar_id: nil, conference: nil, created_at: nil, end_at: nil, has_conference: nil, id: nil, is_all_day: nil, is_free: nil, is_private: nil, location: nil, notes: nil, organizer: nil, raw: nil, recurrence: nil, recurring_event_id: nil, start_at: nil, status: nil, subject: nil, timezone: nil, updated_at: nil, web_url: nil)
@@ -88,6 +87,7 @@ module UnifiedRubySDK
           @web_url = web_url
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @attachments == other.attachments

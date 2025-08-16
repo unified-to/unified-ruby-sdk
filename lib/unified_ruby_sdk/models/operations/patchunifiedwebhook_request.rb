@@ -13,22 +13,22 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-        # ID of the Webhook
-        field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
         # A webhook is used to POST new/updated information to your server.
         field :webhook, Models::Shared::Webhook, { 'request': { 'media_type': 'application/json' } }
+        # ID of the Webhook
+        field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
 
-
-        sig { params(id: ::String, webhook: Models::Shared::Webhook).void }
-        def initialize(id: nil, webhook: nil)
-          @id = id
+        sig { params(webhook: Models::Shared::Webhook, id: ::String).void }
+        def initialize(webhook:, id:)
           @webhook = webhook
+          @id = id
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @id == other.id
           return false unless @webhook == other.webhook
+          return false unless @id == other.id
           true
         end
       end

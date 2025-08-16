@@ -14,10 +14,9 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+        field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-        field :title, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
-
+        field :title, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
 
         sig { params(description: T.nilable(::String), title: T.nilable(::String)).void }
         def initialize(description: nil, title: nil)
@@ -25,6 +24,7 @@ module UnifiedRubySDK
           @title = title
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @description == other.description

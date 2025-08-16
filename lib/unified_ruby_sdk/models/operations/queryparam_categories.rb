@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class QueryParamCategories < T::Enum
+
+
         enums do
           PASSTHROUGH = new('passthrough')
           HRIS = new('hris')

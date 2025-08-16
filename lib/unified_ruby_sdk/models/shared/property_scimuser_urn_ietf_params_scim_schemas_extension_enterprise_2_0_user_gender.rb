@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender < T::Enum
+
+
         enums do
           MALE = new('male')
           FEMALE = new('female')

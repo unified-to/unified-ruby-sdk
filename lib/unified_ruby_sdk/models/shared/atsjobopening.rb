@@ -14,16 +14,15 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :application_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('application_id') } }
+        field :application_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('application_id') } }
 
-        field :close_reason, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('close_reason') } }
+        field :close_reason, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('close_reason') } }
 
-        field :closed_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :closed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :opened_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('opened_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :opened_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('opened_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :status, T.nilable(Models::Shared::AtsJobOpeningStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AtsJobOpeningStatus, true) } }
-
+        field :status, Crystalline::Nilable.new(Models::Shared::AtsJobOpeningStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AtsJobOpeningStatus, true) } }
 
         sig { params(application_id: T.nilable(::String), close_reason: T.nilable(::String), closed_at: T.nilable(::DateTime), opened_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::AtsJobOpeningStatus)).void }
         def initialize(application_id: nil, close_reason: nil, closed_at: nil, opened_at: nil, status: nil)
@@ -34,6 +33,7 @@ module UnifiedRubySDK
           @status = status
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @application_id == other.application_id

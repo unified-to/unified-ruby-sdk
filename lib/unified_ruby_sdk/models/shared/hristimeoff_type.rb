@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class HrisTimeoffType < T::Enum
+
+
         enums do
           PAID = new('PAID')
           UNPAID = new('UNPAID')

@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class Event < T::Enum
+
+
         enums do
           UPDATED = new('updated')
           CREATED = new('created')

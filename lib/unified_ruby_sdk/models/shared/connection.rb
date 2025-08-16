@@ -14,46 +14,44 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
         # The Integration categories that this connection supports
-        field :categories, T::Array[Models::Shared::PropertyConnectionCategories], { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('categories') } }
+        field :categories, Crystalline::Array.new(Models::Shared::PropertyConnectionCategories), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('categories'), required: true } }
 
-        field :integration_type, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('integration_type') } }
+        field :integration_type, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('integration_type'), required: true } }
 
-        field :permissions, T::Array[Models::Shared::PropertyConnectionPermissions], { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('permissions') } }
+        field :permissions, Crystalline::Array.new(Models::Shared::PropertyConnectionPermissions), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('permissions'), required: true } }
         # An authentication object that represents a specific authorized user's connection to an integration.
-        field :auth, T.nilable(Models::Shared::PropertyConnectionAuth), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('auth') } }
+        field :auth, Crystalline::Nilable.new(Models::Shared::PropertyConnectionAuth), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('auth') } }
 
-        field :auth_aws_arn, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('auth_aws_arn') } }
+        field :auth_aws_arn, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('auth_aws_arn') } }
 
-        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :environment, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('environment') } }
+        field :external_xref, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_xref') } }
 
-        field :external_xref, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_xref') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :integration_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('integration_name') } }
 
-        field :integration_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('integration_name') } }
+        field :is_paused, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_paused') } }
 
-        field :is_paused, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_paused') } }
+        field :last_healthy_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_healthy_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :last_healthy_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_healthy_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :last_unhealthy_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_unhealthy_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :last_unhealthy_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_unhealthy_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :workspace_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
 
-        field :workspace_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
+        field :environment, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('environment') } }
 
-
-        sig { params(categories: T::Array[Models::Shared::PropertyConnectionCategories], integration_type: ::String, permissions: T::Array[Models::Shared::PropertyConnectionPermissions], auth: T.nilable(Models::Shared::PropertyConnectionAuth), auth_aws_arn: T.nilable(::String), created_at: T.nilable(::DateTime), environment: T.nilable(::String), external_xref: T.nilable(::String), id: T.nilable(::String), integration_name: T.nilable(::String), is_paused: T.nilable(T::Boolean), last_healthy_at: T.nilable(::DateTime), last_unhealthy_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), workspace_id: T.nilable(::String)).void }
-        def initialize(categories: nil, integration_type: nil, permissions: nil, auth: nil, auth_aws_arn: nil, created_at: nil, environment: nil, external_xref: nil, id: nil, integration_name: nil, is_paused: nil, last_healthy_at: nil, last_unhealthy_at: nil, updated_at: nil, workspace_id: nil)
+        sig { params(categories: T::Array[Models::Shared::PropertyConnectionCategories], integration_type: ::String, permissions: T::Array[Models::Shared::PropertyConnectionPermissions], auth: T.nilable(Models::Shared::PropertyConnectionAuth), auth_aws_arn: T.nilable(::String), created_at: T.nilable(::DateTime), external_xref: T.nilable(::String), id: T.nilable(::String), integration_name: T.nilable(::String), is_paused: T.nilable(T::Boolean), last_healthy_at: T.nilable(::DateTime), last_unhealthy_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), workspace_id: T.nilable(::String), environment: T.nilable(::String)).void }
+        def initialize(categories:, integration_type:, permissions:, auth: nil, auth_aws_arn: nil, created_at: nil, external_xref: nil, id: nil, integration_name: nil, is_paused: nil, last_healthy_at: nil, last_unhealthy_at: nil, updated_at: nil, workspace_id: nil, environment: 'Production')
           @categories = categories
           @integration_type = integration_type
           @permissions = permissions
           @auth = auth
           @auth_aws_arn = auth_aws_arn
           @created_at = created_at
-          @environment = environment
           @external_xref = external_xref
           @id = id
           @integration_name = integration_name
@@ -62,8 +60,10 @@ module UnifiedRubySDK
           @last_unhealthy_at = last_unhealthy_at
           @updated_at = updated_at
           @workspace_id = workspace_id
+          @environment = environment
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @categories == other.categories
@@ -72,7 +72,6 @@ module UnifiedRubySDK
           return false unless @auth == other.auth
           return false unless @auth_aws_arn == other.auth_aws_arn
           return false unless @created_at == other.created_at
-          return false unless @environment == other.environment
           return false unless @external_xref == other.external_xref
           return false unless @id == other.id
           return false unless @integration_name == other.integration_name
@@ -81,6 +80,7 @@ module UnifiedRubySDK
           return false unless @last_unhealthy_at == other.last_unhealthy_at
           return false unless @updated_at == other.updated_at
           return false unless @workspace_id == other.workspace_id
+          return false unless @environment == other.environment
           true
         end
       end

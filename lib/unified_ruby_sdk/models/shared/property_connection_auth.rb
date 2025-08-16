@@ -14,54 +14,53 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :access_token, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('access_token') } }
+        field :access_token, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('access_token') } }
 
-        field :api_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('api_url') } }
+        field :api_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('api_url') } }
 
-        field :app_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('app_id') } }
+        field :app_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('app_id') } }
 
-        field :authorize_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('authorize_url') } }
+        field :authorize_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('authorize_url') } }
 
-        field :client_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('client_id') } }
+        field :client_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('client_id') } }
 
-        field :client_secret, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('client_secret') } }
+        field :client_secret, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('client_secret') } }
 
-        field :consumer_key, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('consumer_key') } }
+        field :consumer_key, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('consumer_key') } }
 
-        field :consumer_secret, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('consumer_secret') } }
+        field :consumer_secret, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('consumer_secret') } }
 
-        field :dev_api_key, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('dev_api_key') } }
+        field :dev_api_key, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('dev_api_key') } }
 
-        field :emails, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
+        field :emails, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
 
-        field :expires_in, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_in') } }
+        field :expires_in, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_in') } }
 
-        field :expiry_date, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expiry_date'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :expiry_date, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expiry_date'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :key, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('key') } }
+        field :key, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('key') } }
 
-        field :meta, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('meta') } }
+        field :meta, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('meta') } }
 
-        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # When integration.auth_type = "other", this field contains the authentication credentials in the same order as token_names
-        field :other_auth_info, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('other_auth_info') } }
+        field :other_auth_info, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('other_auth_info') } }
 
-        field :pem, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pem') } }
+        field :pem, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pem') } }
 
-        field :refresh_token, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refresh_token') } }
+        field :refresh_token, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refresh_token') } }
 
-        field :refresh_token_expires_date, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refresh_token_expires_date'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :refresh_token_expires_date, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refresh_token_expires_date'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :refresh_token_expires_in, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refresh_token_expires_in') } }
+        field :refresh_token_expires_in, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refresh_token_expires_in') } }
 
-        field :state, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('state') } }
+        field :state, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('state') } }
 
-        field :token, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('token') } }
+        field :token, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('token') } }
 
-        field :token_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('token_url') } }
+        field :token_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('token_url') } }
 
-        field :user_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
-
+        field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
         sig { params(access_token: T.nilable(::String), api_url: T.nilable(::String), app_id: T.nilable(::String), authorize_url: T.nilable(::String), client_id: T.nilable(::String), client_secret: T.nilable(::String), consumer_key: T.nilable(::String), consumer_secret: T.nilable(::String), dev_api_key: T.nilable(::String), emails: T.nilable(T::Array[::String]), expires_in: T.nilable(::Float), expiry_date: T.nilable(::DateTime), key: T.nilable(::String), meta: T.nilable(T::Hash[Symbol, ::Object]), name: T.nilable(::String), other_auth_info: T.nilable(T::Array[::String]), pem: T.nilable(::String), refresh_token: T.nilable(::String), refresh_token_expires_date: T.nilable(::DateTime), refresh_token_expires_in: T.nilable(::Float), state: T.nilable(::String), token: T.nilable(::String), token_url: T.nilable(::String), user_id: T.nilable(::String)).void }
         def initialize(access_token: nil, api_url: nil, app_id: nil, authorize_url: nil, client_id: nil, client_secret: nil, consumer_key: nil, consumer_secret: nil, dev_api_key: nil, emails: nil, expires_in: nil, expiry_date: nil, key: nil, meta: nil, name: nil, other_auth_info: nil, pem: nil, refresh_token: nil, refresh_token_expires_date: nil, refresh_token_expires_in: nil, state: nil, token: nil, token_url: nil, user_id: nil)
@@ -91,6 +90,7 @@ module UnifiedRubySDK
           @user_id = user_id
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @access_token == other.access_token

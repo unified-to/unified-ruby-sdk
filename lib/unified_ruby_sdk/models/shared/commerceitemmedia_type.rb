@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class CommerceItemMediaType < T::Enum
+
+
         enums do
           IMAGE = new('image')
           VIDEO = new('video')

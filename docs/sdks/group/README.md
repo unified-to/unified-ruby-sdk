@@ -24,20 +24,20 @@ Create a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.group.create_hris_group(hris_group=Models::Shared::HrisGroup.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.group.create_hris_group(hris_group: Models::Shared::HrisGroup.new(), connection_id: '<id>')
 
-if ! res.hris_group.nil?
+unless res.hris_group.nil?
   # handle response
 end
 
@@ -56,7 +56,11 @@ end
 
 **[T.nilable(Models::Operations::CreateHrisGroupResponse)](../../models/operations/createhrisgroupresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_scim_groups
 
@@ -64,20 +68,22 @@ Create group
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createScimGroups" method="post" path="/scim/{connection_id}/groups" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.group.create_scim_groups(scim_group=Models::Shared::ScimGroup.new(
-  display_name: "Bert89",
-), connection_id="<id>")
+res = s.group.create_scim_groups(scim_group: Models::Shared::ScimGroup.new(
+  display_name: 'Nina.Tremblay',
+), connection_id: '<id>')
 
-if ! res.scim_group.nil?
+unless res.scim_group.nil?
   # handle response
 end
 
@@ -94,7 +100,11 @@ end
 
 **[T.nilable(Models::Operations::CreateScimGroupsResponse)](../../models/operations/createscimgroupsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_hris_group
 
@@ -102,20 +112,20 @@ Retrieve a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getHrisGroup" method="get" path="/hris/{connection_id}/group/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.group.get_hris_group(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.group.get_hris_group(connection_id: '<id>', id: '<id>')
 
-if ! res.hris_group.nil?
+unless res.hris_group.nil?
   # handle response
 end
 
@@ -134,7 +144,11 @@ end
 
 **[T.nilable(Models::Operations::GetHrisGroupResponse)](../../models/operations/gethrisgroupresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_scim_groups
 
@@ -142,18 +156,20 @@ Get group
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getScimGroups" method="get" path="/scim/{connection_id}/groups/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.group.get_scim_groups(connection_id="<id>", id="<id>")
+res = s.group.get_scim_groups(connection_id: '<id>', id: '<id>')
 
-if ! res.scim_group.nil?
+unless res.scim_group.nil?
   # handle response
 end
 
@@ -170,7 +186,11 @@ end
 
 **[T.nilable(Models::Operations::GetScimGroupsResponse)](../../models/operations/getscimgroupsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_hris_groups
 
@@ -178,22 +198,24 @@ List all groups
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listHrisGroups" method="get" path="/hris/{connection_id}/group" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListHrisGroupsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.group.list_hris_groups(req)
+res = s.group.list_hris_groups(request: req)
 
-if ! res.hris_groups.nil?
+unless res.hris_groups.nil?
   # handle response
 end
 
@@ -209,7 +231,11 @@ end
 
 **[T.nilable(Models::Operations::ListHrisGroupsResponse)](../../models/operations/listhrisgroupsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_scim_groups
 
@@ -217,22 +243,24 @@ List groups
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listScimGroups" method="get" path="/scim/{connection_id}/groups" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListScimGroupsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.group.list_scim_groups(req)
+res = s.group.list_scim_groups(request: req)
 
-if ! res.scim_groups.nil?
+unless res.scim_groups.nil?
   # handle response
 end
 
@@ -248,7 +276,11 @@ end
 
 **[T.nilable(Models::Operations::ListScimGroupsResponse)](../../models/operations/listscimgroupsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_hris_group
 
@@ -256,24 +288,26 @@ Update a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchHrisGroupRequest.new(
   hris_group: Models::Shared::HrisGroup.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.group.patch_hris_group(req)
+res = s.group.patch_hris_group(request: req)
 
-if ! res.hris_group.nil?
+unless res.hris_group.nil?
   # handle response
 end
 
@@ -289,7 +323,11 @@ end
 
 **[T.nilable(Models::Operations::PatchHrisGroupResponse)](../../models/operations/patchhrisgroupresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_scim_groups
 
@@ -297,20 +335,22 @@ Update group
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchScimGroups" method="patch" path="/scim/{connection_id}/groups/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.group.patch_scim_groups(scim_group=Models::Shared::ScimGroup.new(
-  display_name: "Damon_Rutherford93",
-), connection_id="<id>", id="<id>")
+res = s.group.patch_scim_groups(scim_group: Models::Shared::ScimGroup.new(
+  display_name: 'Newell.Hoeger',
+), connection_id: '<id>', id: '<id>')
 
-if ! res.scim_group.nil?
+unless res.scim_group.nil?
   # handle response
 end
 
@@ -328,7 +368,11 @@ end
 
 **[T.nilable(Models::Operations::PatchScimGroupsResponse)](../../models/operations/patchscimgroupsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_hris_group
 
@@ -336,16 +380,18 @@ Remove a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeHrisGroup" method="delete" path="/hris/{connection_id}/group/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.group.remove_hris_group(connection_id="<id>", id="<id>")
+res = s.group.remove_hris_group(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -364,7 +410,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveHrisGroupResponse)](../../models/operations/removehrisgroupresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_scim_groups
 
@@ -372,16 +422,18 @@ Delete group
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeScimGroups" method="delete" path="/scim/{connection_id}/groups/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.group.remove_scim_groups(connection_id="<id>", id="<id>")
+res = s.group.remove_scim_groups(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -400,7 +452,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveScimGroupsResponse)](../../models/operations/removescimgroupsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_hris_group
 
@@ -408,24 +464,26 @@ Update a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateHrisGroupRequest.new(
   hris_group: Models::Shared::HrisGroup.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.group.update_hris_group(req)
+res = s.group.update_hris_group(request: req)
 
-if ! res.hris_group.nil?
+unless res.hris_group.nil?
   # handle response
 end
 
@@ -441,7 +499,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateHrisGroupResponse)](../../models/operations/updatehrisgroupresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_scim_groups
 
@@ -449,20 +511,22 @@ Update group
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateScimGroups" method="put" path="/scim/{connection_id}/groups/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.group.update_scim_groups(scim_group=Models::Shared::ScimGroup.new(
-  display_name: "Frederic.Reichel",
-), connection_id="<id>", id="<id>")
+res = s.group.update_scim_groups(scim_group: Models::Shared::ScimGroup.new(
+  display_name: 'Reynold90',
+), connection_id: '<id>', id: '<id>')
 
-if ! res.scim_group.nil?
+unless res.scim_group.nil?
   # handle response
 end
 
@@ -480,3 +544,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateScimGroupsResponse)](../../models/operations/updatescimgroupsresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

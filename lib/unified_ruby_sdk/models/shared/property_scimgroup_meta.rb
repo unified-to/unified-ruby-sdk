@@ -14,16 +14,15 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :created, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created') } }
+        field :created, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created') } }
 
-        field :last_modified, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lastModified') } }
+        field :last_modified, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lastModified') } }
 
-        field :location, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location') } }
+        field :location, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location') } }
 
-        field :resource_type, T.nilable(Models::Shared::ResourceType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('resourceType'), 'decoder': Utils.enum_from_string(Models::Shared::ResourceType, true) } }
+        field :resource_type, Crystalline::Nilable.new(Models::Shared::ResourceType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('resourceType'), 'decoder': Utils.enum_from_string(Models::Shared::ResourceType, true) } }
 
-        field :version, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('version') } }
-
+        field :version, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('version') } }
 
         sig { params(created: T.nilable(::String), last_modified: T.nilable(::String), location: T.nilable(::String), resource_type: T.nilable(Models::Shared::ResourceType), version: T.nilable(::String)).void }
         def initialize(created: nil, last_modified: nil, location: nil, resource_type: nil, version: nil)
@@ -34,6 +33,7 @@ module UnifiedRubySDK
           @version = version
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @created == other.created

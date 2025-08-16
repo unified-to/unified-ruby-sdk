@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class TaxExemption < T::Enum
+
+
         enums do
           FEDERAL_GOV = new('FEDERAL_GOV')
           REGION_GOV = new('REGION_GOV')

@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class HrisPayslipDetailType < T::Enum
+
+
         enums do
           EARNING_SALARY = new('EARNING_SALARY')
           EARNING_OVERTIME = new('EARNING_OVERTIME')

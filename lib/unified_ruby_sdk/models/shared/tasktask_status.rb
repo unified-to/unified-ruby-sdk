@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class TaskTaskStatus < T::Enum
+
+
         enums do
           OPENED = new('OPENED')
           IN_PROGRESS = new('IN_PROGRESS')

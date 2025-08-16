@@ -18,20 +18,20 @@ Create a note
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createTicketingNote" method="post" path="/ticketing/{connection_id}/note" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.note.create_ticketing_note(ticketing_note=Models::Shared::TicketingNote.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.note.create_ticketing_note(ticketing_note: Models::Shared::TicketingNote.new(), connection_id: '<id>')
 
-if ! res.ticketing_note.nil?
+unless res.ticketing_note.nil?
   # handle response
 end
 
@@ -50,7 +50,11 @@ end
 
 **[T.nilable(Models::Operations::CreateTicketingNoteResponse)](../../models/operations/createticketingnoteresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_ticketing_note
 
@@ -58,20 +62,20 @@ Retrieve a note
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getTicketingNote" method="get" path="/ticketing/{connection_id}/note/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.note.get_ticketing_note(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.note.get_ticketing_note(connection_id: '<id>', id: '<id>')
 
-if ! res.ticketing_note.nil?
+unless res.ticketing_note.nil?
   # handle response
 end
 
@@ -90,7 +94,11 @@ end
 
 **[T.nilable(Models::Operations::GetTicketingNoteResponse)](../../models/operations/getticketingnoteresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_ticketing_notes
 
@@ -98,22 +106,24 @@ List all notes
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listTicketingNotes" method="get" path="/ticketing/{connection_id}/note" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListTicketingNotesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.note.list_ticketing_notes(req)
+res = s.note.list_ticketing_notes(request: req)
 
-if ! res.ticketing_notes.nil?
+unless res.ticketing_notes.nil?
   # handle response
 end
 
@@ -129,7 +139,11 @@ end
 
 **[T.nilable(Models::Operations::ListTicketingNotesResponse)](../../models/operations/listticketingnotesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_ticketing_note
 
@@ -137,24 +151,26 @@ Update a note
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchTicketingNote" method="patch" path="/ticketing/{connection_id}/note/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchTicketingNoteRequest.new(
   ticketing_note: Models::Shared::TicketingNote.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.note.patch_ticketing_note(req)
+res = s.note.patch_ticketing_note(request: req)
 
-if ! res.ticketing_note.nil?
+unless res.ticketing_note.nil?
   # handle response
 end
 
@@ -170,7 +186,11 @@ end
 
 **[T.nilable(Models::Operations::PatchTicketingNoteResponse)](../../models/operations/patchticketingnoteresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_ticketing_note
 
@@ -178,16 +198,18 @@ Remove a note
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeTicketingNote" method="delete" path="/ticketing/{connection_id}/note/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.note.remove_ticketing_note(connection_id="<id>", id="<id>")
+res = s.note.remove_ticketing_note(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -206,7 +228,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveTicketingNoteResponse)](../../models/operations/removeticketingnoteresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_ticketing_note
 
@@ -214,24 +240,26 @@ Update a note
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateTicketingNote" method="put" path="/ticketing/{connection_id}/note/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateTicketingNoteRequest.new(
   ticketing_note: Models::Shared::TicketingNote.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.note.update_ticketing_note(req)
+res = s.note.update_ticketing_note(request: req)
 
-if ! res.ticketing_note.nil?
+unless res.ticketing_note.nil?
   # handle response
 end
 
@@ -247,3 +275,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateTicketingNoteResponse)](../../models/operations/updateticketingnoteresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

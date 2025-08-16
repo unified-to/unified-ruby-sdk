@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class Format < T::Enum
+
+
         enums do
           TEXT = new('TEXT')
           NUMBER = new('NUMBER')

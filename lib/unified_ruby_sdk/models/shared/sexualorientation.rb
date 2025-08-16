@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class SexualOrientation < T::Enum
+
+
         enums do
           QUEER = new('Queer')
           HETEROSEXUAL = new('Heterosexual')

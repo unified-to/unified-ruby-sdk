@@ -14,20 +14,20 @@ Retrieve a channel
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getMessagingChannel" method="get" path="/messaging/{connection_id}/channel/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.channel.get_messaging_channel(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.channel.get_messaging_channel(connection_id: '<id>', id: '<id>')
 
-if ! res.messaging_channel.nil?
+unless res.messaging_channel.nil?
   # handle response
 end
 
@@ -46,7 +46,11 @@ end
 
 **[T.nilable(Models::Operations::GetMessagingChannelResponse)](../../models/operations/getmessagingchannelresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_messaging_channels
 
@@ -54,22 +58,24 @@ List all channels
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listMessagingChannels" method="get" path="/messaging/{connection_id}/channel" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListMessagingChannelsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.channel.list_messaging_channels(req)
+res = s.channel.list_messaging_channels(request: req)
 
-if ! res.messaging_channels.nil?
+unless res.messaging_channels.nil?
   # handle response
 end
 
@@ -85,3 +91,8 @@ end
 
 **[T.nilable(Models::Operations::ListMessagingChannelsResponse)](../../models/operations/listmessagingchannelsresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

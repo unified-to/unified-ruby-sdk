@@ -4,7 +4,8 @@ plugins:
 AllCops:
   Exclude:
     - Rakefile
-  TargetRubyVersion: "3.0"
+    - bin/**/*
+  TargetRubyVersion: "3.2"
 Metrics:
   Enabled: false
 Style/IfInsideElse:

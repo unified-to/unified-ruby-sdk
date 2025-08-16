@@ -7,7 +7,10 @@ require 'rubocop/rake_task'
 
 RuboCop::RakeTask.new
 
-Minitest::TestTask.create
+Minitest::TestTask.create do |t|
+  # workaround to avoid throwing warnings from Janeway library circular require...
+  t.warning = false
+end
 
 task :default => :test
 

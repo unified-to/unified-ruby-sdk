@@ -14,23 +14,22 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :question, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('question') } }
+        field :question, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('question'), required: true } }
 
-        field :type, Models::Shared::AtsJobQuestionType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AtsJobQuestionType, false) } }
+        field :type, Models::Shared::AtsJobQuestionType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::AtsJobQuestionType, false) } }
 
-        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+        field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :options, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
+        field :options, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
 
-        field :prompt, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('prompt') } }
+        field :prompt, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('prompt') } }
 
-        field :required, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('required') } }
-
+        field :required, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('required') } }
 
         sig { params(question: ::String, type: Models::Shared::AtsJobQuestionType, description: T.nilable(::String), id: T.nilable(::String), options: T.nilable(T::Array[::String]), prompt: T.nilable(::String), required: T.nilable(T::Boolean)).void }
-        def initialize(question: nil, type: nil, description: nil, id: nil, options: nil, prompt: nil, required: nil)
+        def initialize(question:, type:, description: nil, id: nil, options: nil, prompt: nil, required: nil)
           @question = question
           @type = type
           @description = description
@@ -40,6 +39,7 @@ module UnifiedRubySDK
           @required = required
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @question == other.question

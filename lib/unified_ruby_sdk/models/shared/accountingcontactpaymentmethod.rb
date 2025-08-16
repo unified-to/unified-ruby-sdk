@@ -14,23 +14,23 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :type, Models::Shared::AccountingContactPaymentMethodType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingContactPaymentMethodType, false) } }
+        field :type, Models::Shared::AccountingContactPaymentMethodType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::AccountingContactPaymentMethodType, false) } }
 
-        field :default, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('default') } }
+        field :default, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('default') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         sig { params(type: Models::Shared::AccountingContactPaymentMethodType, default: T.nilable(T::Boolean), id: T.nilable(::String), name: T.nilable(::String)).void }
-        def initialize(type: nil, default: nil, id: nil, name: nil)
+        def initialize(type:, default: nil, id: nil, name: nil)
           @type = type
           @default = default
           @id = id
           @name = name
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @type == other.type

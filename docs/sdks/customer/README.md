@@ -18,20 +18,20 @@ Create a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createTicketingCustomer" method="post" path="/ticketing/{connection_id}/customer" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.customer.create_ticketing_customer(ticketing_customer=Models::Shared::TicketingCustomer.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.customer.create_ticketing_customer(ticketing_customer: Models::Shared::TicketingCustomer.new(), connection_id: '<id>')
 
-if ! res.ticketing_customer.nil?
+unless res.ticketing_customer.nil?
   # handle response
 end
 
@@ -50,7 +50,11 @@ end
 
 **[T.nilable(Models::Operations::CreateTicketingCustomerResponse)](../../models/operations/createticketingcustomerresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_ticketing_customer
 
@@ -58,20 +62,20 @@ Retrieve a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getTicketingCustomer" method="get" path="/ticketing/{connection_id}/customer/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.customer.get_ticketing_customer(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.customer.get_ticketing_customer(connection_id: '<id>', id: '<id>')
 
-if ! res.ticketing_customer.nil?
+unless res.ticketing_customer.nil?
   # handle response
 end
 
@@ -90,7 +94,11 @@ end
 
 **[T.nilable(Models::Operations::GetTicketingCustomerResponse)](../../models/operations/getticketingcustomerresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_ticketing_customers
 
@@ -98,22 +106,24 @@ List all customers
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listTicketingCustomers" method="get" path="/ticketing/{connection_id}/customer" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListTicketingCustomersRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.customer.list_ticketing_customers(req)
+res = s.customer.list_ticketing_customers(request: req)
 
-if ! res.ticketing_customers.nil?
+unless res.ticketing_customers.nil?
   # handle response
 end
 
@@ -129,7 +139,11 @@ end
 
 **[T.nilable(Models::Operations::ListTicketingCustomersResponse)](../../models/operations/listticketingcustomersresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_ticketing_customer
 
@@ -137,24 +151,26 @@ Update a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchTicketingCustomer" method="patch" path="/ticketing/{connection_id}/customer/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchTicketingCustomerRequest.new(
   ticketing_customer: Models::Shared::TicketingCustomer.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.customer.patch_ticketing_customer(req)
+res = s.customer.patch_ticketing_customer(request: req)
 
-if ! res.ticketing_customer.nil?
+unless res.ticketing_customer.nil?
   # handle response
 end
 
@@ -170,7 +186,11 @@ end
 
 **[T.nilable(Models::Operations::PatchTicketingCustomerResponse)](../../models/operations/patchticketingcustomerresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_ticketing_customer
 
@@ -178,16 +198,18 @@ Remove a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeTicketingCustomer" method="delete" path="/ticketing/{connection_id}/customer/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.customer.remove_ticketing_customer(connection_id="<id>", id="<id>")
+res = s.customer.remove_ticketing_customer(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -206,7 +228,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveTicketingCustomerResponse)](../../models/operations/removeticketingcustomerresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_ticketing_customer
 
@@ -214,24 +240,26 @@ Update a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateTicketingCustomer" method="put" path="/ticketing/{connection_id}/customer/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateTicketingCustomerRequest.new(
   ticketing_customer: Models::Shared::TicketingCustomer.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.customer.update_ticketing_customer(req)
+res = s.customer.update_ticketing_customer(request: req)
 
-if ! res.ticketing_customer.nil?
+unless res.ticketing_customer.nil?
   # handle response
 end
 
@@ -247,3 +275,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateTicketingCustomerResponse)](../../models/operations/updateticketingcustomerresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

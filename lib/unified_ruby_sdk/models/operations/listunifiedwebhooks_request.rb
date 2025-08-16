@@ -14,26 +14,25 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
         # Filter the results to just this integration
-        field :connection_id, T.nilable(::String), { 'query_param': { 'field_name': 'connection_id', 'style': 'form', 'explode': true } }
+        field :connection_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'connection_id', 'style': 'form', 'explode': true } }
         # Return only results whose created date is equal or less to this value
-        field :created_lte, T.nilable(::String), { 'query_param': { 'field_name': 'created_lte', 'style': 'form', 'explode': true } }
+        field :created_lte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'created_lte', 'style': 'form', 'explode': true } }
 
-        field :env, T.nilable(::String), { 'query_param': { 'field_name': 'env', 'style': 'form', 'explode': true } }
+        field :env, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'env', 'style': 'form', 'explode': true } }
         # Filter the results to just this integration
-        field :integration_type, T.nilable(::String), { 'query_param': { 'field_name': 'integration_type', 'style': 'form', 'explode': true } }
+        field :integration_type, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'integration_type', 'style': 'form', 'explode': true } }
 
-        field :limit, T.nilable(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
+        field :limit, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
         # Filter the results for webhooks for only this object
-        field :object, T.nilable(::String), { 'query_param': { 'field_name': 'object', 'style': 'form', 'explode': true } }
+        field :object, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'object', 'style': 'form', 'explode': true } }
 
-        field :offset, T.nilable(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
+        field :offset, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
 
-        field :order, T.nilable(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
+        field :order, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
 
-        field :sort, T.nilable(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
+        field :sort, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
         # Return only results whose updated date is equal or greater to this value
-        field :updated_gte, T.nilable(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
-
+        field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
         sig { params(connection_id: T.nilable(::String), created_lte: T.nilable(::String), env: T.nilable(::String), integration_type: T.nilable(::String), limit: T.nilable(::Float), object: T.nilable(::String), offset: T.nilable(::Float), order: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String)).void }
         def initialize(connection_id: nil, created_lte: nil, env: nil, integration_type: nil, limit: nil, object: nil, offset: nil, order: nil, sort: nil, updated_gte: nil)
@@ -49,6 +48,7 @@ module UnifiedRubySDK
           @updated_gte = updated_gte
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @connection_id == other.connection_id

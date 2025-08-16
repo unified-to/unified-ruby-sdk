@@ -18,22 +18,22 @@ Create a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.repository.create_repo_repository(repo_repository=Models::Shared::RepoRepository.new(
-  name: "<value>",
-), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.repository.create_repo_repository(repo_repository: Models::Shared::RepoRepository.new(
+  name: '<value>',
+), connection_id: '<id>')
 
-if ! res.repo_repository.nil?
+unless res.repo_repository.nil?
   # handle response
 end
 
@@ -52,7 +52,11 @@ end
 
 **[T.nilable(Models::Operations::CreateRepoRepositoryResponse)](../../models/operations/createreporepositoryresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_repo_repository
 
@@ -60,20 +64,20 @@ Retrieve a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getRepoRepository" method="get" path="/repo/{connection_id}/repository/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.repository.get_repo_repository(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.repository.get_repo_repository(connection_id: '<id>', id: '<id>')
 
-if ! res.repo_repository.nil?
+unless res.repo_repository.nil?
   # handle response
 end
 
@@ -92,7 +96,11 @@ end
 
 **[T.nilable(Models::Operations::GetRepoRepositoryResponse)](../../models/operations/getreporepositoryresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_repo_repositories
 
@@ -100,22 +108,24 @@ List all repositories
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listRepoRepositories" method="get" path="/repo/{connection_id}/repository" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListRepoRepositoriesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.repository.list_repo_repositories(req)
+res = s.repository.list_repo_repositories(request: req)
 
-if ! res.repo_repositories.nil?
+unless res.repo_repositories.nil?
   # handle response
 end
 
@@ -131,7 +141,11 @@ end
 
 **[T.nilable(Models::Operations::ListRepoRepositoriesResponse)](../../models/operations/listreporepositoriesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_repo_repository
 
@@ -139,26 +153,28 @@ Update a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchRepoRepositoryRequest.new(
   repo_repository: Models::Shared::RepoRepository.new(
-    name: "<value>",
+    name: '<value>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.repository.patch_repo_repository(req)
+res = s.repository.patch_repo_repository(request: req)
 
-if ! res.repo_repository.nil?
+unless res.repo_repository.nil?
   # handle response
 end
 
@@ -174,7 +190,11 @@ end
 
 **[T.nilable(Models::Operations::PatchRepoRepositoryResponse)](../../models/operations/patchreporepositoryresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_repo_repository
 
@@ -182,16 +202,18 @@ Remove a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeRepoRepository" method="delete" path="/repo/{connection_id}/repository/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.repository.remove_repo_repository(connection_id="<id>", id="<id>")
+res = s.repository.remove_repo_repository(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -210,7 +232,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveRepoRepositoryResponse)](../../models/operations/removereporepositoryresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_repo_repository
 
@@ -218,26 +244,28 @@ Update a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateRepoRepositoryRequest.new(
   repo_repository: Models::Shared::RepoRepository.new(
-    name: "<value>",
+    name: '<value>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.repository.update_repo_repository(req)
+res = s.repository.update_repo_repository(request: req)
 
-if ! res.repo_repository.nil?
+unless res.repo_repository.nil?
   # handle response
 end
 
@@ -253,3 +281,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateRepoRepositoryResponse)](../../models/operations/updatereporepositoryresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

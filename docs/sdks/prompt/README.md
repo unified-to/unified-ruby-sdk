@@ -13,20 +13,20 @@ Create a prompt
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createGenaiPrompt" method="post" path="/genai/{connection_id}/prompt" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.prompt.create_genai_prompt(genai_prompt=Models::Shared::GenaiPrompt.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.prompt.create_genai_prompt(genai_prompt: Models::Shared::GenaiPrompt.new(), connection_id: '<id>')
 
-if ! res.genai_prompt.nil?
+unless res.genai_prompt.nil?
   # handle response
 end
 
@@ -45,3 +45,8 @@ end
 
 **[T.nilable(Models::Operations::CreateGenaiPromptResponse)](../../models/operations/creategenaipromptresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

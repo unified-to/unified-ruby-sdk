@@ -14,20 +14,20 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :text, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('text') } }
+        field :text, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('text'), required: true } }
 
-        field :answer, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('answer') } }
+        field :answer, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('answer') } }
 
-        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
+        field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
         sig { params(text: ::String, answer: T.nilable(::String), description: T.nilable(::String)).void }
-        def initialize(text: nil, answer: nil, description: nil)
+        def initialize(text:, answer: nil, description: nil)
           @text = text
           @answer = answer
           @description = description
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @text == other.text

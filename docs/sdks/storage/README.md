@@ -18,20 +18,20 @@ Create a file
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createStorageFile" method="post" path="/storage/{connection_id}/file" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.storage.create_storage_file(storage_file=Models::Shared::StorageFile.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.storage.create_storage_file(storage_file: Models::Shared::StorageFile.new(), connection_id: '<id>')
 
-if ! res.storage_file.nil?
+unless res.storage_file.nil?
   # handle response
 end
 
@@ -50,7 +50,11 @@ end
 
 **[T.nilable(Models::Operations::CreateStorageFileResponse)](../../models/operations/createstoragefileresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_storage_file
 
@@ -58,20 +62,20 @@ Retrieve a file
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getStorageFile" method="get" path="/storage/{connection_id}/file/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.storage.get_storage_file(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.storage.get_storage_file(connection_id: '<id>', id: '<id>')
 
-if ! res.storage_file.nil?
+unless res.storage_file.nil?
   # handle response
 end
 
@@ -90,7 +94,11 @@ end
 
 **[T.nilable(Models::Operations::GetStorageFileResponse)](../../models/operations/getstoragefileresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_storage_files
 
@@ -98,22 +106,24 @@ List all files
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listStorageFiles" method="get" path="/storage/{connection_id}/file" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListStorageFilesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.storage.list_storage_files(req)
+res = s.storage.list_storage_files(request: req)
 
-if ! res.storage_files.nil?
+unless res.storage_files.nil?
   # handle response
 end
 
@@ -129,7 +139,11 @@ end
 
 **[T.nilable(Models::Operations::ListStorageFilesResponse)](../../models/operations/liststoragefilesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_storage_file
 
@@ -137,24 +151,26 @@ Update a file
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchStorageFile" method="patch" path="/storage/{connection_id}/file/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchStorageFileRequest.new(
   storage_file: Models::Shared::StorageFile.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.storage.patch_storage_file(req)
+res = s.storage.patch_storage_file(request: req)
 
-if ! res.storage_file.nil?
+unless res.storage_file.nil?
   # handle response
 end
 
@@ -170,7 +186,11 @@ end
 
 **[T.nilable(Models::Operations::PatchStorageFileResponse)](../../models/operations/patchstoragefileresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_storage_file
 
@@ -178,16 +198,18 @@ Remove a file
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeStorageFile" method="delete" path="/storage/{connection_id}/file/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.storage.remove_storage_file(connection_id="<id>", id="<id>")
+res = s.storage.remove_storage_file(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -206,7 +228,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveStorageFileResponse)](../../models/operations/removestoragefileresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_storage_file
 
@@ -214,24 +240,26 @@ Update a file
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateStorageFile" method="put" path="/storage/{connection_id}/file/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateStorageFileRequest.new(
   storage_file: Models::Shared::StorageFile.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.storage.update_storage_file(req)
+res = s.storage.update_storage_file(request: req)
 
-if ! res.storage_file.nil?
+unless res.storage_file.nil?
   # handle response
 end
 
@@ -247,3 +275,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateStorageFileResponse)](../../models/operations/updatestoragefileresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

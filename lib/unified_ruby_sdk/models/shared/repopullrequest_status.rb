@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class RepoPullrequestStatus < T::Enum
+
+
         enums do
           PENDING = new('PENDING')
           APPROVED = new('APPROVED')

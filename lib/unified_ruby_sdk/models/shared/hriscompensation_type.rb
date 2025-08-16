@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class HrisCompensationType < T::Enum
+
+
         enums do
           SALARY = new('SALARY')
           BONUS = new('BONUS')

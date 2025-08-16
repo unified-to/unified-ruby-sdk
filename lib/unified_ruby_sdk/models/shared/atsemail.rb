@@ -14,20 +14,20 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :email, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
+        field :email, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email'), required: true } }
 
-        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :type, T.nilable(Models::Shared::AtsEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AtsEmailType, true) } }
-
+        field :type, Crystalline::Nilable.new(Models::Shared::AtsEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AtsEmailType, true) } }
 
         sig { params(email: ::String, name: T.nilable(::String), type: T.nilable(Models::Shared::AtsEmailType)).void }
-        def initialize(email: nil, name: nil, type: nil)
+        def initialize(email:, name: nil, type: nil)
           @email = email
           @name = name
           @type = type
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @email == other.email

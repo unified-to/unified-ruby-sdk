@@ -14,20 +14,20 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id'), required: true } }
 
-        field :is_customer, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_customer') } }
+        field :is_customer, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_customer') } }
 
-        field :is_supplier, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_supplier') } }
-
+        field :is_supplier, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_supplier') } }
 
         sig { params(id: ::String, is_customer: T.nilable(T::Boolean), is_supplier: T.nilable(T::Boolean)).void }
-        def initialize(id: nil, is_customer: nil, is_supplier: nil)
+        def initialize(id:, is_customer: nil, is_supplier: nil)
           @id = id
           @is_customer = is_customer
           @is_supplier = is_supplier
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @id == other.id

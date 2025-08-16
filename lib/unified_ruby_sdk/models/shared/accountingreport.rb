@@ -14,30 +14,29 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :balance_sheet, T.nilable(Models::Shared::PropertyAccountingReportBalanceSheet), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('balance_sheet') } }
+        field :balance_sheet, Crystalline::Nilable.new(Models::Shared::PropertyAccountingReportBalanceSheet), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('balance_sheet') } }
 
-        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+        field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-        field :end_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :profit_and_loss, T.nilable(Models::Shared::PropertyAccountingReportProfitAndLoss), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profit_and_loss') } }
+        field :profit_and_loss, Crystalline::Nilable.new(Models::Shared::PropertyAccountingReportProfitAndLoss), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profit_and_loss') } }
 
-        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :start_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :trial_balance, T.nilable(Models::Shared::PropertyAccountingReportTrialBalance), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('trial_balance') } }
+        field :trial_balance, Crystalline::Nilable.new(Models::Shared::PropertyAccountingReportTrialBalance), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('trial_balance') } }
 
-        field :type, T.nilable(Models::Shared::AccountingReportType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingReportType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::AccountingReportType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingReportType, true) } }
 
-        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(balance_sheet: T.nilable(Models::Shared::PropertyAccountingReportBalanceSheet), created_at: T.nilable(::DateTime), currency: T.nilable(::String), end_at: T.nilable(::DateTime), id: T.nilable(::String), name: T.nilable(::String), profit_and_loss: T.nilable(Models::Shared::PropertyAccountingReportProfitAndLoss), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), trial_balance: T.nilable(Models::Shared::PropertyAccountingReportTrialBalance), type: T.nilable(Models::Shared::AccountingReportType), updated_at: T.nilable(::DateTime)).void }
         def initialize(balance_sheet: nil, created_at: nil, currency: nil, end_at: nil, id: nil, name: nil, profit_and_loss: nil, raw: nil, start_at: nil, trial_balance: nil, type: nil, updated_at: nil)
@@ -55,6 +54,7 @@ module UnifiedRubySDK
           @updated_at = updated_at
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @balance_sheet == other.balance_sheet

@@ -14,33 +14,32 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :status, Models::Shared::IssueStatus, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::IssueStatus, false) } }
+        field :status, Models::Shared::IssueStatus, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::IssueStatus, false) } }
 
-        field :ticket_ref, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ticket_ref') } }
+        field :ticket_ref, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ticket_ref'), required: true } }
 
-        field :title, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
+        field :title, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title'), required: true } }
 
-        field :workspace_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
+        field :workspace_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id'), required: true } }
 
-        field :created_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
+        field :created_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :importance, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('importance') } }
+        field :importance, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('importance') } }
 
-        field :resolution_time, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('resolution_time') } }
+        field :resolution_time, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('resolution_time') } }
 
-        field :size, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
+        field :size, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
 
-        field :type, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
+        field :type, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
 
-        field :updated_at, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
+        field :updated_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
 
-        field :url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
-
+        field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
         sig { params(status: Models::Shared::IssueStatus, ticket_ref: ::String, title: ::String, workspace_id: ::String, created_at: T.nilable(::String), id: T.nilable(::String), importance: T.nilable(::Float), resolution_time: T.nilable(::Float), size: T.nilable(::Float), type: T.nilable(T::Array[::String]), updated_at: T.nilable(::String), url: T.nilable(::String)).void }
-        def initialize(status: nil, ticket_ref: nil, title: nil, workspace_id: nil, created_at: nil, id: nil, importance: nil, resolution_time: nil, size: nil, type: nil, updated_at: nil, url: nil)
+        def initialize(status:, ticket_ref:, title:, workspace_id:, created_at: nil, id: nil, importance: nil, resolution_time: nil, size: nil, type: nil, updated_at: nil, url: nil)
           @status = status
           @ticket_ref = ticket_ref
           @title = title
@@ -55,6 +54,7 @@ module UnifiedRubySDK
           @url = url
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @status == other.status

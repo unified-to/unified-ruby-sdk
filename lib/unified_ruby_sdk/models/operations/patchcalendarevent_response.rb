@@ -15,27 +15,27 @@ module UnifiedRubySDK
 
         # HTTP response content type for this operation
         field :content_type, ::String
-        # Raw HTTP response; suitable for custom response parsing
-        field :raw_response, ::Faraday::Response
         # HTTP response status code for this operation
         field :status_code, ::Integer
+        # Raw HTTP response; suitable for custom response parsing
+        field :raw_response, ::Faraday::Response
         # Successful
-        field :calendar_event, T.nilable(Models::Shared::CalendarEvent)
+        field :calendar_event, Crystalline::Nilable.new(Models::Shared::CalendarEvent)
 
-
-        sig { params(content_type: ::String, raw_response: ::Faraday::Response, status_code: ::Integer, calendar_event: T.nilable(Models::Shared::CalendarEvent)).void }
-        def initialize(content_type: nil, raw_response: nil, status_code: nil, calendar_event: nil)
+        sig { params(content_type: ::String, status_code: ::Integer, raw_response: ::Faraday::Response, calendar_event: T.nilable(Models::Shared::CalendarEvent)).void }
+        def initialize(content_type:, status_code:, raw_response:, calendar_event: nil)
           @content_type = content_type
-          @raw_response = raw_response
           @status_code = status_code
+          @raw_response = raw_response
           @calendar_event = calendar_event
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @content_type == other.content_type
-          return false unless @raw_response == other.raw_response
           return false unless @status_code == other.status_code
+          return false unless @raw_response == other.raw_response
           return false unless @calendar_event == other.calendar_event
           true
         end

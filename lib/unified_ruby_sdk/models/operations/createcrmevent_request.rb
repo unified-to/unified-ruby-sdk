@@ -13,28 +13,28 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-        # ID of the connection
-        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
         # An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
         field :crm_event, Models::Shared::CrmEvent, { 'request': { 'media_type': 'application/json' } }
+        # ID of the connection
+        field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
         # Comma-delimited fields to return
-        field :fields_, T.nilable(T::Array[::String]), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
         # Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
-        field :raw, T.nilable(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
+        field :raw, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
-
-        sig { params(connection_id: ::String, crm_event: Models::Shared::CrmEvent, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String)).void }
-        def initialize(connection_id: nil, crm_event: nil, fields_: nil, raw: nil)
-          @connection_id = connection_id
+        sig { params(crm_event: Models::Shared::CrmEvent, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String)).void }
+        def initialize(crm_event:, connection_id:, fields_: nil, raw: nil)
           @crm_event = crm_event
+          @connection_id = connection_id
           @fields_ = fields_
           @raw = raw
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @connection_id == other.connection_id
           return false unless @crm_event == other.crm_event
+          return false unless @connection_id == other.connection_id
           return false unless @fields_ == other.fields_
           return false unless @raw == other.raw
           true

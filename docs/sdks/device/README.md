@@ -18,22 +18,22 @@ Create a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.device.create_hris_device(hris_device=Models::Shared::HrisDevice.new(
-  name: "<value>",
-), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.device.create_hris_device(hris_device: Models::Shared::HrisDevice.new(
+  name: '<value>',
+), connection_id: '<id>')
 
-if ! res.hris_device.nil?
+unless res.hris_device.nil?
   # handle response
 end
 
@@ -52,7 +52,11 @@ end
 
 **[T.nilable(Models::Operations::CreateHrisDeviceResponse)](../../models/operations/createhrisdeviceresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_hris_device
 
@@ -60,20 +64,20 @@ Retrieve a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getHrisDevice" method="get" path="/hris/{connection_id}/device/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.device.get_hris_device(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.device.get_hris_device(connection_id: '<id>', id: '<id>')
 
-if ! res.hris_device.nil?
+unless res.hris_device.nil?
   # handle response
 end
 
@@ -92,7 +96,11 @@ end
 
 **[T.nilable(Models::Operations::GetHrisDeviceResponse)](../../models/operations/gethrisdeviceresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_hris_devices
 
@@ -100,22 +108,24 @@ List all devices
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listHrisDevices" method="get" path="/hris/{connection_id}/device" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListHrisDevicesRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.device.list_hris_devices(req)
+res = s.device.list_hris_devices(request: req)
 
-if ! res.hris_devices.nil?
+unless res.hris_devices.nil?
   # handle response
 end
 
@@ -131,7 +141,11 @@ end
 
 **[T.nilable(Models::Operations::ListHrisDevicesResponse)](../../models/operations/listhrisdevicesresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_hris_device
 
@@ -139,26 +153,28 @@ Update a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchHrisDeviceRequest.new(
   hris_device: Models::Shared::HrisDevice.new(
-    name: "<value>",
+    name: '<value>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.device.patch_hris_device(req)
+res = s.device.patch_hris_device(request: req)
 
-if ! res.hris_device.nil?
+unless res.hris_device.nil?
   # handle response
 end
 
@@ -174,7 +190,11 @@ end
 
 **[T.nilable(Models::Operations::PatchHrisDeviceResponse)](../../models/operations/patchhrisdeviceresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_hris_device
 
@@ -182,16 +202,18 @@ Remove a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeHrisDevice" method="delete" path="/hris/{connection_id}/device/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.device.remove_hris_device(connection_id="<id>", id="<id>")
+res = s.device.remove_hris_device(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -210,7 +232,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveHrisDeviceResponse)](../../models/operations/removehrisdeviceresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_hris_device
 
@@ -218,26 +244,28 @@ Update a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateHrisDeviceRequest.new(
   hris_device: Models::Shared::HrisDevice.new(
-    name: "<value>",
+    name: '<value>',
   ),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.device.update_hris_device(req)
+res = s.device.update_hris_device(request: req)
 
-if ! res.hris_device.nil?
+unless res.hris_device.nil?
   # handle response
 end
 
@@ -253,3 +281,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateHrisDeviceResponse)](../../models/operations/updatehrisdeviceresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

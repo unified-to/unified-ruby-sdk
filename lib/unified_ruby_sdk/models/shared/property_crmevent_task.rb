@@ -14,16 +14,15 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+        field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-        field :due_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('due_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :due_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('due_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :priority, T.nilable(Models::Shared::Priority), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('priority'), 'decoder': Utils.enum_from_string(Models::Shared::Priority, true) } }
+        field :priority, Crystalline::Nilable.new(Models::Shared::Priority), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('priority'), 'decoder': Utils.enum_from_string(Models::Shared::Priority, true) } }
 
-        field :status, T.nilable(Models::Shared::PropertyCrmEventTaskStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyCrmEventTaskStatus, true) } }
-
+        field :status, Crystalline::Nilable.new(Models::Shared::PropertyCrmEventTaskStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyCrmEventTaskStatus, true) } }
 
         sig { params(description: T.nilable(::String), due_at: T.nilable(::DateTime), name: T.nilable(::String), priority: T.nilable(Models::Shared::Priority), status: T.nilable(Models::Shared::PropertyCrmEventTaskStatus)).void }
         def initialize(description: nil, due_at: nil, name: nil, priority: nil, status: nil)
@@ -34,6 +33,7 @@ module UnifiedRubySDK
           @status = status
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @description == other.description

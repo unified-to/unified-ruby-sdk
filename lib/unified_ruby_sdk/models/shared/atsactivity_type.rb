@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class AtsActivityType < T::Enum
+
+
         enums do
           NOTE = new('NOTE')
           TASK = new('TASK')

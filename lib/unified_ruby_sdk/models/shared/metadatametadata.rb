@@ -14,31 +14,30 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name'), required: true } }
 
-        field :object_type, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_type') } }
+        field :object_type, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_type'), required: true } }
 
-        field :created_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :format, T.nilable(Models::Shared::MetadataMetadataFormat), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('format'), 'decoder': Utils.enum_from_string(Models::Shared::MetadataMetadataFormat, true) } }
+        field :format, Crystalline::Nilable.new(Models::Shared::MetadataMetadataFormat), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('format'), 'decoder': Utils.enum_from_string(Models::Shared::MetadataMetadataFormat, true) } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :objects, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('objects') } }
+        field :objects, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('objects') } }
 
-        field :options, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
+        field :options, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
 
-        field :original_format, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('original_format') } }
+        field :original_format, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('original_format') } }
 
-        field :raw, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :slug, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('slug') } }
+        field :slug, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('slug') } }
 
-        field :updated_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(name: ::String, object_type: ::String, created_at: T.nilable(::DateTime), format: T.nilable(Models::Shared::MetadataMetadataFormat), id: T.nilable(::String), objects: T.nilable(T::Hash[Symbol, ::Object]), options: T.nilable(T::Array[::String]), original_format: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), slug: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(name: nil, object_type: nil, created_at: nil, format: nil, id: nil, objects: nil, options: nil, original_format: nil, raw: nil, slug: nil, updated_at: nil)
+        def initialize(name:, object_type:, created_at: nil, format: nil, id: nil, objects: nil, options: nil, original_format: nil, raw: nil, slug: nil, updated_at: nil)
           @name = name
           @object_type = object_type
           @created_at = created_at
@@ -52,6 +51,7 @@ module UnifiedRubySDK
           @updated_at = updated_at
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @name == other.name

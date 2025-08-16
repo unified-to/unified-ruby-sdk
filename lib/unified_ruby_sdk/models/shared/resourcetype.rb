@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class ResourceType < T::Enum
+
+
         enums do
           USER = new('User')
           GROUP = new('Group')

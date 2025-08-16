@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class AccountingContactPaymentMethodType < T::Enum
+
+
         enums do
           ACH = new('ACH')
           ALIPAY = new('ALIPAY')

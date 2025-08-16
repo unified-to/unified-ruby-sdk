@@ -13,26 +13,25 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
+
+        field :scim_user, Models::Shared::ScimUser, { 'request': { 'media_type': 'application/json' } }
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
 
-        field :scim_user, Models::Shared::ScimUser, { 'request': { 'media_type': 'application/json' } }
+        field :count, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'count', 'style': 'form', 'explode': true } }
 
-        field :count, T.nilable(::Float), { 'query_param': { 'field_name': 'count', 'style': 'form', 'explode': true } }
+        field :filter, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': true } }
 
-        field :filter, T.nilable(::String), { 'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': true } }
+        field :sort_by, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'sortBy', 'style': 'form', 'explode': true } }
 
-        field :sort_by, T.nilable(::String), { 'query_param': { 'field_name': 'sortBy', 'style': 'form', 'explode': true } }
+        field :sort_order, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'sortOrder', 'style': 'form', 'explode': true } }
 
-        field :sort_order, T.nilable(::String), { 'query_param': { 'field_name': 'sortOrder', 'style': 'form', 'explode': true } }
+        field :start_index, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'startIndex', 'style': 'form', 'explode': true } }
 
-        field :start_index, T.nilable(::Float), { 'query_param': { 'field_name': 'startIndex', 'style': 'form', 'explode': true } }
-
-
-        sig { params(connection_id: ::String, scim_user: Models::Shared::ScimUser, count: T.nilable(::Float), filter: T.nilable(::String), sort_by: T.nilable(::String), sort_order: T.nilable(::String), start_index: T.nilable(::Float)).void }
-        def initialize(connection_id: nil, scim_user: nil, count: nil, filter: nil, sort_by: nil, sort_order: nil, start_index: nil)
-          @connection_id = connection_id
+        sig { params(scim_user: Models::Shared::ScimUser, connection_id: ::String, count: T.nilable(::Float), filter: T.nilable(::String), sort_by: T.nilable(::String), sort_order: T.nilable(::String), start_index: T.nilable(::Float)).void }
+        def initialize(scim_user:, connection_id:, count: nil, filter: nil, sort_by: nil, sort_order: nil, start_index: nil)
           @scim_user = scim_user
+          @connection_id = connection_id
           @count = count
           @filter = filter
           @sort_by = sort_by
@@ -40,10 +39,11 @@ module UnifiedRubySDK
           @start_index = start_index
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @connection_id == other.connection_id
           return false unless @scim_user == other.scim_user
+          return false unless @connection_id == other.connection_id
           return false unless @count == other.count
           return false unless @filter == other.filter
           return false unless @sort_by == other.sort_by

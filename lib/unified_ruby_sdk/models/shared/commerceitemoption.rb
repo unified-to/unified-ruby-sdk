@@ -14,23 +14,23 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name'), required: true } }
 
-        field :values, T::Array[::String], { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('values') } }
+        field :values, Crystalline::Array.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('values'), required: true } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :position, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('position') } }
-
+        field :position, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('position') } }
 
         sig { params(name: ::String, values: T::Array[::String], id: T.nilable(::String), position: T.nilable(::Float)).void }
-        def initialize(name: nil, values: nil, id: nil, position: nil)
+        def initialize(name:, values:, id: nil, position: nil)
           @name = name
           @values = values
           @id = id
           @position = position
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @name == other.name

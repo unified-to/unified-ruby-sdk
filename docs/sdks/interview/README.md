@@ -18,20 +18,20 @@ Create an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.interview.create_ats_interview(ats_interview=Models::Shared::AtsInterview.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.interview.create_ats_interview(ats_interview: Models::Shared::AtsInterview.new(), connection_id: '<id>')
 
-if ! res.ats_interview.nil?
+unless res.ats_interview.nil?
   # handle response
 end
 
@@ -50,7 +50,11 @@ end
 
 **[T.nilable(Models::Operations::CreateAtsInterviewResponse)](../../models/operations/createatsinterviewresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_ats_interview
 
@@ -58,20 +62,20 @@ Retrieve an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getAtsInterview" method="get" path="/ats/{connection_id}/interview/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.interview.get_ats_interview(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.interview.get_ats_interview(connection_id: '<id>', id: '<id>')
 
-if ! res.ats_interview.nil?
+unless res.ats_interview.nil?
   # handle response
 end
 
@@ -90,7 +94,11 @@ end
 
 **[T.nilable(Models::Operations::GetAtsInterviewResponse)](../../models/operations/getatsinterviewresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_ats_interviews
 
@@ -98,22 +106,24 @@ List all interviews
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listAtsInterviews" method="get" path="/ats/{connection_id}/interview" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListAtsInterviewsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.interview.list_ats_interviews(req)
+res = s.interview.list_ats_interviews(request: req)
 
-if ! res.ats_interviews.nil?
+unless res.ats_interviews.nil?
   # handle response
 end
 
@@ -129,7 +139,11 @@ end
 
 **[T.nilable(Models::Operations::ListAtsInterviewsResponse)](../../models/operations/listatsinterviewsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_ats_interview
 
@@ -137,24 +151,26 @@ Update an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchAtsInterviewRequest.new(
   ats_interview: Models::Shared::AtsInterview.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.interview.patch_ats_interview(req)
+res = s.interview.patch_ats_interview(request: req)
 
-if ! res.ats_interview.nil?
+unless res.ats_interview.nil?
   # handle response
 end
 
@@ -170,7 +186,11 @@ end
 
 **[T.nilable(Models::Operations::PatchAtsInterviewResponse)](../../models/operations/patchatsinterviewresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_ats_interview
 
@@ -178,16 +198,18 @@ Remove an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeAtsInterview" method="delete" path="/ats/{connection_id}/interview/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.interview.remove_ats_interview(connection_id="<id>", id="<id>")
+res = s.interview.remove_ats_interview(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -206,7 +228,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveAtsInterviewResponse)](../../models/operations/removeatsinterviewresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_ats_interview
 
@@ -214,24 +240,26 @@ Update an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateAtsInterviewRequest.new(
   ats_interview: Models::Shared::AtsInterview.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.interview.update_ats_interview(req)
+res = s.interview.update_ats_interview(request: req)
 
-if ! res.ats_interview.nil?
+unless res.ats_interview.nil?
   # handle response
 end
 
@@ -247,3 +275,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateAtsInterviewResponse)](../../models/operations/updateatsinterviewresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

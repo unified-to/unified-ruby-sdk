@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class AccountingReportType < T::Enum
+
+
         enums do
           TRIAL_BALANCE = new('TRIAL_BALANCE')
           BALANCE_SHEET = new('BALANCE_SHEET')

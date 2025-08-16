@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class Status < T::Enum
+
+
         enums do
           ACTIVE = new('ACTIVE')
           ARCHIVED = new('ARCHIVED')

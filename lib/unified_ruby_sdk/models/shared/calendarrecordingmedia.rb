@@ -14,20 +14,19 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :attendees, T.nilable(T::Array[Models::Shared::CalendarAttendee]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attendees') } }
+        field :attendees, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CalendarAttendee)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attendees') } }
 
-        field :end_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :language, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language') } }
+        field :language, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language') } }
 
-        field :recording_download_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recording_download_url') } }
+        field :recording_download_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recording_download_url') } }
 
-        field :start_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :transcript_download_url, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('transcript_download_url') } }
+        field :transcript_download_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('transcript_download_url') } }
 
-        field :transcripts, T.nilable(T::Array[Models::Shared::CalendarRecordingTranscript]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('transcripts') } }
-
+        field :transcripts, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CalendarRecordingTranscript)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('transcripts') } }
 
         sig { params(attendees: T.nilable(T::Array[Models::Shared::CalendarAttendee]), end_at: T.nilable(::DateTime), language: T.nilable(::String), recording_download_url: T.nilable(::String), start_at: T.nilable(::DateTime), transcript_download_url: T.nilable(::String), transcripts: T.nilable(T::Array[Models::Shared::CalendarRecordingTranscript])).void }
         def initialize(attendees: nil, end_at: nil, language: nil, recording_download_url: nil, start_at: nil, transcript_download_url: nil, transcripts: nil)
@@ -40,6 +39,7 @@ module UnifiedRubySDK
           @transcripts = transcripts
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @attendees == other.attendees

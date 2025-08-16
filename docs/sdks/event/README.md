@@ -24,20 +24,20 @@ Create an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createCalendarEvent" method="post" path="/calendar/{connection_id}/event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.event.create_calendar_event(calendar_event=Models::Shared::CalendarEvent.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.event.create_calendar_event(calendar_event: Models::Shared::CalendarEvent.new(), connection_id: '<id>')
 
-if ! res.calendar_event.nil?
+unless res.calendar_event.nil?
   # handle response
 end
 
@@ -56,7 +56,11 @@ end
 
 **[T.nilable(Models::Operations::CreateCalendarEventResponse)](../../models/operations/createcalendareventresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_crm_event
 
@@ -64,20 +68,20 @@ Create an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="createCrmEvent" method="post" path="/crm/{connection_id}/event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.event.create_crm_event(crm_event=Models::Shared::CrmEvent.new(), connection_id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.event.create_crm_event(crm_event: Models::Shared::CrmEvent.new(), connection_id: '<id>')
 
-if ! res.crm_event.nil?
+unless res.crm_event.nil?
   # handle response
 end
 
@@ -96,7 +100,11 @@ end
 
 **[T.nilable(Models::Operations::CreateCrmEventResponse)](../../models/operations/createcrmeventresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_calendar_event
 
@@ -104,20 +112,20 @@ Retrieve an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getCalendarEvent" method="get" path="/calendar/{connection_id}/event/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.event.get_calendar_event(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.event.get_calendar_event(connection_id: '<id>', id: '<id>')
 
-if ! res.calendar_event.nil?
+unless res.calendar_event.nil?
   # handle response
 end
 
@@ -136,7 +144,11 @@ end
 
 **[T.nilable(Models::Operations::GetCalendarEventResponse)](../../models/operations/getcalendareventresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_crm_event
 
@@ -144,20 +156,20 @@ Retrieve an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="getCrmEvent" method="get" path="/crm/{connection_id}/event/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.event.get_crm_event(connection_id="<id>", id="<id>", fields_=[
-  "<value>",
-], raw="<value>")
+res = s.event.get_crm_event(connection_id: '<id>', id: '<id>')
 
-if ! res.crm_event.nil?
+unless res.crm_event.nil?
   # handle response
 end
 
@@ -176,7 +188,11 @@ end
 
 **[T.nilable(Models::Operations::GetCrmEventResponse)](../../models/operations/getcrmeventresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_calendar_events
 
@@ -184,22 +200,24 @@ List all events
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listCalendarEvents" method="get" path="/calendar/{connection_id}/event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListCalendarEventsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.event.list_calendar_events(req)
+res = s.event.list_calendar_events(request: req)
 
-if ! res.calendar_events.nil?
+unless res.calendar_events.nil?
   # handle response
 end
 
@@ -215,7 +233,11 @@ end
 
 **[T.nilable(Models::Operations::ListCalendarEventsResponse)](../../models/operations/listcalendareventsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## list_crm_events
 
@@ -223,22 +245,24 @@ List all events
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="listCrmEvents" method="get" path="/crm/{connection_id}/event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::ListCrmEventsRequest.new(
-  connection_id: "<id>",
+  connection_id: '<id>',
 )
 
-res = s.event.list_crm_events(req)
+res = s.event.list_crm_events(request: req)
 
-if ! res.crm_events.nil?
+unless res.crm_events.nil?
   # handle response
 end
 
@@ -254,7 +278,11 @@ end
 
 **[T.nilable(Models::Operations::ListCrmEventsResponse)](../../models/operations/listcrmeventsresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_calendar_event
 
@@ -262,24 +290,26 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchCalendarEvent" method="patch" path="/calendar/{connection_id}/event/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchCalendarEventRequest.new(
   calendar_event: Models::Shared::CalendarEvent.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.event.patch_calendar_event(req)
+res = s.event.patch_calendar_event(request: req)
 
-if ! res.calendar_event.nil?
+unless res.calendar_event.nil?
   # handle response
 end
 
@@ -295,7 +325,11 @@ end
 
 **[T.nilable(Models::Operations::PatchCalendarEventResponse)](../../models/operations/patchcalendareventresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## patch_crm_event
 
@@ -303,24 +337,26 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="patchCrmEvent" method="patch" path="/crm/{connection_id}/event/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::PatchCrmEventRequest.new(
   crm_event: Models::Shared::CrmEvent.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.event.patch_crm_event(req)
+res = s.event.patch_crm_event(request: req)
 
-if ! res.crm_event.nil?
+unless res.crm_event.nil?
   # handle response
 end
 
@@ -336,7 +372,11 @@ end
 
 **[T.nilable(Models::Operations::PatchCrmEventResponse)](../../models/operations/patchcrmeventresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_calendar_event
 
@@ -344,16 +384,18 @@ Remove an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeCalendarEvent" method="delete" path="/calendar/{connection_id}/event/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.event.remove_calendar_event(connection_id="<id>", id="<id>")
+res = s.event.remove_calendar_event(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -372,7 +414,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveCalendarEventResponse)](../../models/operations/removecalendareventresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## remove_crm_event
 
@@ -380,16 +426,18 @@ Remove an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="removeCrmEvent" method="delete" path="/crm/{connection_id}/event/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
-res = s.event.remove_crm_event(connection_id="<id>", id="<id>")
+res = s.event.remove_crm_event(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -408,7 +456,11 @@ end
 
 **[T.nilable(Models::Operations::RemoveCrmEventResponse)](../../models/operations/removecrmeventresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_calendar_event
 
@@ -416,24 +468,26 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateCalendarEvent" method="put" path="/calendar/{connection_id}/event/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateCalendarEventRequest.new(
   calendar_event: Models::Shared::CalendarEvent.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.event.update_calendar_event(req)
+res = s.event.update_calendar_event(request: req)
 
-if ! res.calendar_event.nil?
+unless res.calendar_event.nil?
   # handle response
 end
 
@@ -449,7 +503,11 @@ end
 
 **[T.nilable(Models::Operations::UpdateCalendarEventResponse)](../../models/operations/updatecalendareventresponse.md)**
 
+### Errors
 
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## update_crm_event
 
@@ -457,24 +515,26 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="ruby" operationID="updateCrmEvent" method="put" path="/crm/{connection_id}/event/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
+Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
       security: Models::Shared::Security.new(
-        jwt: "<YOUR_API_KEY_HERE>",
+        jwt: '<YOUR_API_KEY_HERE>',
       ),
     )
 
 req = Models::Operations::UpdateCrmEventRequest.new(
   crm_event: Models::Shared::CrmEvent.new(),
-  connection_id: "<id>",
-  id: "<id>",
+  connection_id: '<id>',
+  id: '<id>',
 )
 
-res = s.event.update_crm_event(req)
+res = s.event.update_crm_event(request: req)
 
-if ! res.crm_event.nil?
+unless res.crm_event.nil?
   # handle response
 end
 
@@ -490,3 +550,8 @@ end
 
 **[T.nilable(Models::Operations::UpdateCrmEventResponse)](../../models/operations/updatecrmeventresponse.md)**
 
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |

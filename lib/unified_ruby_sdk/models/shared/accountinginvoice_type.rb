@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class AccountingInvoiceType < T::Enum
+
+
         enums do
           BILL = new('BILL')
           INVOICE = new('INVOICE')

@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class AtsStatusStatus < T::Enum
+
+
         enums do
           NEW = new('NEW')
           REVIEWING = new('REVIEWING')

@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class HrisTelephoneType < T::Enum
+
+
         enums do
           WORK = new('WORK')
           HOME = new('HOME')

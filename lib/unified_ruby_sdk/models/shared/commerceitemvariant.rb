@@ -14,54 +14,53 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :available_at, T.nilable(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('available_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :available_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('available_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        field :description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+        field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-        field :height, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('height') } }
+        field :height, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('height') } }
 
-        field :id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :inventory_id, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('inventory_id') } }
+        field :inventory_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('inventory_id') } }
 
-        field :is_active, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
+        field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
-        field :is_featured, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_featured') } }
+        field :is_featured, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_featured') } }
 
-        field :is_visible, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_visible') } }
+        field :is_visible, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_visible') } }
 
-        field :length, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('length') } }
+        field :length, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('length') } }
 
-        field :media, T.nilable(T::Array[Models::Shared::CommerceItemMedia]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
+        field :media, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceItemMedia)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
 
-        field :metadata, T.nilable(T::Array[Models::Shared::CommerceMetadata]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
-        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :options, T.nilable(T::Array[Models::Shared::CommerceItemOption]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
+        field :options, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceItemOption)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
 
-        field :prices, T.nilable(T::Array[Models::Shared::CommerceItemPrice]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('prices') } }
+        field :prices, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceItemPrice)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('prices') } }
 
-        field :public_description, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('public_description') } }
+        field :public_description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('public_description') } }
 
-        field :public_name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('public_name') } }
+        field :public_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('public_name') } }
 
-        field :requires_shipping, T.nilable(T::Boolean), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('requires_shipping') } }
+        field :requires_shipping, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('requires_shipping') } }
 
-        field :size_unit, T.nilable(Models::Shared::SizeUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size_unit'), 'decoder': Utils.enum_from_string(Models::Shared::SizeUnit, true) } }
+        field :size_unit, Crystalline::Nilable.new(Models::Shared::SizeUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size_unit'), 'decoder': Utils.enum_from_string(Models::Shared::SizeUnit, true) } }
 
-        field :sku, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sku') } }
+        field :sku, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sku') } }
 
-        field :tags, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
+        field :tags, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
 
-        field :total_stock, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_stock') } }
+        field :total_stock, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_stock') } }
 
-        field :weight, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight') } }
+        field :weight, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight') } }
 
-        field :weight_unit, T.nilable(Models::Shared::WeightUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight_unit'), 'decoder': Utils.enum_from_string(Models::Shared::WeightUnit, true) } }
+        field :weight_unit, Crystalline::Nilable.new(Models::Shared::WeightUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight_unit'), 'decoder': Utils.enum_from_string(Models::Shared::WeightUnit, true) } }
 
-        field :width, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('width') } }
-
+        field :width, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('width') } }
 
         sig { params(available_at: T.nilable(::DateTime), description: T.nilable(::String), height: T.nilable(::Float), id: T.nilable(::String), inventory_id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_featured: T.nilable(T::Boolean), is_visible: T.nilable(T::Boolean), length: T.nilable(::Float), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), name: T.nilable(::String), options: T.nilable(T::Array[Models::Shared::CommerceItemOption]), prices: T.nilable(T::Array[Models::Shared::CommerceItemPrice]), public_description: T.nilable(::String), public_name: T.nilable(::String), requires_shipping: T.nilable(T::Boolean), size_unit: T.nilable(Models::Shared::SizeUnit), sku: T.nilable(::String), tags: T.nilable(T::Array[::String]), total_stock: T.nilable(::Float), weight: T.nilable(::Float), weight_unit: T.nilable(Models::Shared::WeightUnit), width: T.nilable(::Float)).void }
         def initialize(available_at: nil, description: nil, height: nil, id: nil, inventory_id: nil, is_active: nil, is_featured: nil, is_visible: nil, length: nil, media: nil, metadata: nil, name: nil, options: nil, prices: nil, public_description: nil, public_name: nil, requires_shipping: nil, size_unit: nil, sku: nil, tags: nil, total_stock: nil, weight: nil, weight_unit: nil, width: nil)
@@ -91,6 +90,7 @@ module UnifiedRubySDK
           @width = width
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @available_at == other.available_at

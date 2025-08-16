@@ -14,20 +14,20 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :price, ::Float, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price') } }
+        field :price, ::Float, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price'), required: true } }
 
-        field :compare_at_price, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('compare_at_price') } }
+        field :compare_at_price, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('compare_at_price') } }
 
-        field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
-
+        field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
         sig { params(price: ::Float, compare_at_price: T.nilable(::Float), currency: T.nilable(::String)).void }
-        def initialize(price: nil, compare_at_price: nil, currency: nil)
+        def initialize(price:, compare_at_price: nil, currency: nil)
           @price = price
           @compare_at_price = compare_at_price
           @currency = currency
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @price == other.price

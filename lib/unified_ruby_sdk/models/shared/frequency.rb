@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class Frequency < T::Enum
+
+
         enums do
           ONE_TIME = new('ONE_TIME')
           DAY = new('DAY')

@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class ApiCallType < T::Enum
+
+
         enums do
           LOGIN = new('login')
           WEBHOOK = new('webhook')

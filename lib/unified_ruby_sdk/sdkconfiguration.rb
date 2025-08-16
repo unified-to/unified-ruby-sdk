@@ -18,25 +18,51 @@ module UnifiedRubySDK
     'https://api-eu.unified.to', # 1 - European data region
     'https://api-au.unified.to', # 1 - Australian data region
   ].freeze
+  SERVERS = T.let(SERVERS, T::Array[String])
   # Contains the list of servers available to the SDK
 
   class SDKConfiguration
     extend T::Sig
-    include Crystalline::MetadataFields
 
+    sig { returns(T.nilable(Faraday::Connection)) }
+    attr_accessor :client
 
-    field :client, T.nilable(Faraday::Connection)
-    field :hooks, ::UnifiedRubySDK::SDKHooks::Hooks
-    field :retry_config, T.nilable(::UnifiedRubySDK::Utils::RetryConfig)
-    field :timeout, T.nilable(Float)
-    field :security_source, T.nilable(T.proc.returns(T.nilable(Models::Shared::Security)))
-    field :server_url, T.nilable(String)
-    field :server_idx, T.nilable(Integer)
-    field :language, String
-    field :openapi_doc_version, String
-    field :sdk_version, String
-    field :gen_version, String
-    field :user_agent, String
+    sig { returns(::UnifiedRubySDK::SDKHooks::Hooks) }
+    attr_accessor :hooks
+
+    sig { returns(T.nilable(::UnifiedRubySDK::Utils::RetryConfig)) }
+    attr_accessor :retry_config
+
+    sig { returns(T.nilable(Float)) }
+    attr_accessor :timeout
+
+    
+    sig { returns(T.nilable(T.proc.returns(T.nilable(Models::Shared::Security)))) }
+    attr_accessor :security_source
+
+    
+    sig { returns(T.nilable(String)) }
+    attr_accessor :server_url
+
+    
+    sig { returns(T.nilable(Integer)) }
+    attr_accessor :server_idx
+
+    
+    sig { returns(String) }
+    attr_accessor :language
+
+    sig { returns(String) }
+    attr_accessor :openapi_doc_version
+
+    sig { returns(String) }
+    attr_accessor :sdk_version
+
+    sig { returns(String) }
+    attr_accessor :gen_version
+
+    sig { returns(String) }
+    attr_accessor :user_agent
 
     sig do
       params(
@@ -65,15 +91,16 @@ module UnifiedRubySDK
       end
       @language = 'ruby'
       @openapi_doc_version = '1.0'
-      @sdk_version = '0.65.0'
-      @gen_version = '2.578.0'
-      @user_agent = 'speakeasy-sdk/ruby 0.65.0 2.578.0 1.0 unified_ruby_sdk'
+      @sdk_version = '0.66.0'
+      @gen_version = '2.684.0'
+      @user_agent = 'speakeasy-sdk/ruby 0.66.0 2.684.0 1.0 unified_ruby_sdk'
     end
 
     sig { returns([String, T::Hash[Symbol, String]]) }
     def get_server_details
       return [@server_url.delete_suffix('/'), {}] if !@server_url.nil?
-      [SERVERS[@server_idx], {}]
+      @server_idx = T.must(@server_idx)
+      [T.must(SERVERS[@server_idx]), {}]
     end
   end
 end

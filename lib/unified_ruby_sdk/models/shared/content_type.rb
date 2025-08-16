@@ -10,6 +10,8 @@ module UnifiedRubySDK
     
 
       class ContentType < T::Enum
+
+
         enums do
           HTML = new('HTML')
           MARKDOWN = new('MARKDOWN')

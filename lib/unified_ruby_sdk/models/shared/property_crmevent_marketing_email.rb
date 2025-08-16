@@ -14,20 +14,19 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :attachment_file_ids, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attachment_file_ids') } }
+        field :attachment_file_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attachment_file_ids') } }
 
-        field :body, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('body') } }
+        field :body, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('body') } }
         # The event email's cc name & email (name <test@test.com>)
-        field :cc, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cc') } }
+        field :cc, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cc') } }
 
-        field :from, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('from') } }
+        field :from, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('from') } }
 
-        field :name, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :subject, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subject') } }
+        field :subject, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subject') } }
         # The event email's "to" name & email (name <test@test.com>)
-        field :to, T.nilable(T::Array[::String]), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('to') } }
-
+        field :to, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('to') } }
 
         sig { params(attachment_file_ids: T.nilable(T::Array[::String]), body: T.nilable(::String), cc: T.nilable(T::Array[::String]), from: T.nilable(::String), name: T.nilable(::String), subject: T.nilable(::String), to: T.nilable(T::Array[::String])).void }
         def initialize(attachment_file_ids: nil, body: nil, cc: nil, from: nil, name: nil, subject: nil, to: nil)
@@ -40,6 +39,7 @@ module UnifiedRubySDK
           @to = to
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @attachment_file_ids == other.attachment_file_ids

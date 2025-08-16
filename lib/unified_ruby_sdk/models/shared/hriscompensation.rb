@@ -14,14 +14,13 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :amount, T.nilable(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
+        field :amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
 
-        field :currency, T.nilable(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+        field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-        field :frequency, T.nilable(Models::Shared::HrisCompensationFrequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency'), 'decoder': Utils.enum_from_string(Models::Shared::HrisCompensationFrequency, true) } }
+        field :frequency, Crystalline::Nilable.new(Models::Shared::HrisCompensationFrequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency'), 'decoder': Utils.enum_from_string(Models::Shared::HrisCompensationFrequency, true) } }
 
-        field :type, T.nilable(Models::Shared::HrisCompensationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisCompensationType, true) } }
-
+        field :type, Crystalline::Nilable.new(Models::Shared::HrisCompensationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisCompensationType, true) } }
 
         sig { params(amount: T.nilable(::Float), currency: T.nilable(::String), frequency: T.nilable(Models::Shared::HrisCompensationFrequency), type: T.nilable(Models::Shared::HrisCompensationType)).void }
         def initialize(amount: nil, currency: nil, frequency: nil, type: nil)
@@ -31,6 +30,7 @@ module UnifiedRubySDK
           @type = type
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @amount == other.amount

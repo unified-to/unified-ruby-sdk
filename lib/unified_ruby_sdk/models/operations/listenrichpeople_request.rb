@@ -16,19 +16,18 @@ module UnifiedRubySDK
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
         # The name of the company the person is associated with.  Not valid by itself.
-        field :company_name, T.nilable(::String), { 'query_param': { 'field_name': 'company_name', 'style': 'form', 'explode': true } }
+        field :company_name, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'company_name', 'style': 'form', 'explode': true } }
         # The email of the person to search
-        field :email, T.nilable(::String), { 'query_param': { 'field_name': 'email', 'style': 'form', 'explode': true } }
+        field :email, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'email', 'style': 'form', 'explode': true } }
         # The LinkedIn URL of the person to search
-        field :linkedin_url, T.nilable(::String), { 'query_param': { 'field_name': 'linkedin_url', 'style': 'form', 'explode': true } }
+        field :linkedin_url, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'linkedin_url', 'style': 'form', 'explode': true } }
         # The name of the person to search
-        field :name, T.nilable(::String), { 'query_param': { 'field_name': 'name', 'style': 'form', 'explode': true } }
+        field :name, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'name', 'style': 'form', 'explode': true } }
         # The twitter handle of the person to search
-        field :twitter, T.nilable(::String), { 'query_param': { 'field_name': 'twitter', 'style': 'form', 'explode': true } }
-
+        field :twitter, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'twitter', 'style': 'form', 'explode': true } }
 
         sig { params(connection_id: ::String, company_name: T.nilable(::String), email: T.nilable(::String), linkedin_url: T.nilable(::String), name: T.nilable(::String), twitter: T.nilable(::String)).void }
-        def initialize(connection_id: nil, company_name: nil, email: nil, linkedin_url: nil, name: nil, twitter: nil)
+        def initialize(connection_id:, company_name: nil, email: nil, linkedin_url: nil, name: nil, twitter: nil)
           @connection_id = connection_id
           @company_name = company_name
           @email = email
@@ -37,6 +36,7 @@ module UnifiedRubySDK
           @twitter = twitter
         end
 
+        sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @connection_id == other.connection_id
