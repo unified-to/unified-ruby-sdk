@@ -20,6 +20,8 @@ class UnifiedRubySDK::Models::Shared::Webhook
   def created_at=(str_); end
   def db_name_prefix(); end
   def db_name_prefix=(str_); end
+  def db_schema(); end
+  def db_schema=(str_); end
   def db_type(); end
   def db_type=(str_); end
   def db_url(); end

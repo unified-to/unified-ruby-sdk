@@ -26,6 +26,8 @@ module UnifiedRubySDK
 
         field :db_name_prefix, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('db_name_prefix') } }
 
+        field :db_schema, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('db_schema') } }
+
         field :db_type, Crystalline::Nilable.new(Models::Shared::DbType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('db_type'), 'decoder': Utils.enum_from_string(Models::Shared::DbType, true) } }
 
         field :db_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('db_url') } }
@@ -60,14 +62,15 @@ module UnifiedRubySDK
 
         field :environment, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('environment') } }
 
-        sig { params(connection_id: ::String, event: Models::Shared::Event, object_type: Models::Shared::ObjectType, checked_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), db_name_prefix: T.nilable(::String), db_type: T.nilable(Models::Shared::DbType), db_url: T.nilable(::String), fields_: T.nilable(::String), filters: T.nilable(T::Hash[Symbol, ::Object]), hook_url: T.nilable(::String), id: T.nilable(::String), integration_type: T.nilable(::String), interval: T.nilable(::Float), is_healthy: T.nilable(T::Boolean), is_paused: T.nilable(T::Boolean), meta: T.nilable(T::Hash[Symbol, ::Object]), page_max_limit: T.nilable(::Float), runs: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), webhook_type: T.nilable(Models::Shared::WebhookType), workspace_id: T.nilable(::String), environment: T.nilable(::String)).void }
-        def initialize(connection_id:, event:, object_type:, checked_at: nil, created_at: nil, db_name_prefix: nil, db_type: nil, db_url: nil, fields_: nil, filters: nil, hook_url: nil, id: nil, integration_type: nil, interval: nil, is_healthy: nil, is_paused: nil, meta: nil, page_max_limit: nil, runs: nil, updated_at: nil, webhook_type: nil, workspace_id: nil, environment: 'Production')
+        sig { params(connection_id: ::String, event: Models::Shared::Event, object_type: Models::Shared::ObjectType, checked_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), db_name_prefix: T.nilable(::String), db_schema: T.nilable(::String), db_type: T.nilable(Models::Shared::DbType), db_url: T.nilable(::String), fields_: T.nilable(::String), filters: T.nilable(T::Hash[Symbol, ::Object]), hook_url: T.nilable(::String), id: T.nilable(::String), integration_type: T.nilable(::String), interval: T.nilable(::Float), is_healthy: T.nilable(T::Boolean), is_paused: T.nilable(T::Boolean), meta: T.nilable(T::Hash[Symbol, ::Object]), page_max_limit: T.nilable(::Float), runs: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), webhook_type: T.nilable(Models::Shared::WebhookType), workspace_id: T.nilable(::String), environment: T.nilable(::String)).void }
+        def initialize(connection_id:, event:, object_type:, checked_at: nil, created_at: nil, db_name_prefix: nil, db_schema: nil, db_type: nil, db_url: nil, fields_: nil, filters: nil, hook_url: nil, id: nil, integration_type: nil, interval: nil, is_healthy: nil, is_paused: nil, meta: nil, page_max_limit: nil, runs: nil, updated_at: nil, webhook_type: nil, workspace_id: nil, environment: 'Production')
           @connection_id = connection_id
           @event = event
           @object_type = object_type
           @checked_at = checked_at
           @created_at = created_at
           @db_name_prefix = db_name_prefix
+          @db_schema = db_schema
           @db_type = db_type
           @db_url = db_url
           @fields_ = fields_
@@ -96,6 +99,7 @@ module UnifiedRubySDK
           return false unless @checked_at == other.checked_at
           return false unless @created_at == other.created_at
           return false unless @db_name_prefix == other.db_name_prefix
+          return false unless @db_schema == other.db_schema
           return false unless @db_type == other.db_type
           return false unless @db_url == other.db_url
           return false unless @fields_ == other.fields_

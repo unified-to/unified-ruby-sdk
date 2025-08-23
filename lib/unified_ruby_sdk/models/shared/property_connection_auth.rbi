@@ -48,6 +48,8 @@ class UnifiedRubySDK::Models::Shared::PropertyConnectionAuth
   def refresh_token_expires_date=(str_); end
   def refresh_token_expires_in(); end
   def refresh_token_expires_in=(str_); end
+  def refresh_url(); end
+  def refresh_url=(str_); end
   def state(); end
   def state=(str_); end
   def token(); end

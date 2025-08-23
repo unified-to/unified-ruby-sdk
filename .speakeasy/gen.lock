@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 190c325c2a6a2949d578db67163791d8
+  docChecksum: 4f3132855d15c32adf7ca6526ca7469f
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.66.0
-  configChecksum: 522a3350a5ecdc963973b6e2ae7046a0
+  releaseVersion: 0.66.1
+  configChecksum: 6826b7e5dcdbf7d1db2fb5e5d2f9540a
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -8805,9 +8805,3 @@ examples:
           text/plain: "<value>"
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: |
-  ## SDK Changes Detected:
-  * `unified_to.task.get_task_change()`: **Added**
-  * `unified_to.task.list_task_changes()`: **Added**
-  * `unified_to.change.get_task_change()`: **Added**
-  * `unified_to.change.list_task_changes()`: **Added**
