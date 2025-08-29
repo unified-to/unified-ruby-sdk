@@ -10,6 +10,10 @@ end
 class UnifiedRubySDK::Models::Operations::ListAccountingBalancesheetsRequest
   def connection_id(); end
   def connection_id=(str_); end
+  def category_id(); end
+  def category_id=(str_); end
+  def contact_id(); end
+  def contact_id=(str_); end
   def end_le(); end
   def end_le=(str_); end
   def fields_(); end

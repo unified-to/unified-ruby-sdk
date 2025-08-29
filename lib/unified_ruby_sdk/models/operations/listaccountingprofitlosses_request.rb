@@ -15,6 +15,10 @@ module UnifiedRubySDK
 
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # The category ID to filter by
+        field :category_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'category_id', 'style': 'form', 'explode': true } }
+        # The contact ID to filter by
+        field :contact_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'contact_id', 'style': 'form', 'explode': true } }
         # The end date to filter by
         field :end_le, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'end_le', 'style': 'form', 'explode': true } }
         # Comma-delimited fields to return
@@ -36,9 +40,11 @@ module UnifiedRubySDK
         # Return only results whose updated date is equal or greater to this value
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, end_le: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::String)).void }
-        def initialize(connection_id:, end_le: nil, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, start_gte: nil, updated_gte: nil)
+        sig { params(connection_id: ::String, category_id: T.nilable(::String), contact_id: T.nilable(::String), end_le: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::String)).void }
+        def initialize(connection_id:, category_id: nil, contact_id: nil, end_le: nil, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, start_gte: nil, updated_gte: nil)
           @connection_id = connection_id
+          @category_id = category_id
+          @contact_id = contact_id
           @end_le = end_le
           @fields_ = fields_
           @limit = limit
@@ -55,6 +61,8 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @connection_id == other.connection_id
+          return false unless @category_id == other.category_id
+          return false unless @contact_id == other.contact_id
           return false unless @end_le == other.end_le
           return false unless @fields_ == other.fields_
           return false unless @limit == other.limit

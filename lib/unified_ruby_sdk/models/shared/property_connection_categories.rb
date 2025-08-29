@@ -35,6 +35,7 @@ module UnifiedRubySDK
           REPO = new('repo')
           METADATA = new('metadata')
           CALENDAR = new('calendar')
+          VERIFICATION = new('verification')
         end
       end
     end

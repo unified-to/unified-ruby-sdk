@@ -16,7 +16,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :balancesheet, :bill, :category, :contact, :creditmemo, :invoice, :journal, :order, :organization, :profitloss, :purchaseorder, :report, :salesorder, :taxrate, :transaction, :trialbalance, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :event, :link, :recording, :commerce, :collection, :inventory, :item, :location, :review, :crm, :deal, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :device, :employee, :group, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :lms, :class_, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :storage, :file, :task, :change, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook
+    attr_accessor :accounting, :account, :balancesheet, :bill, :category, :contact, :creditmemo, :invoice, :journal, :order, :organization, :profitloss, :purchaseorder, :report, :salesorder, :taxrate, :transaction, :trialbalance, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :event, :link, :recording, :commerce, :collection, :inventory, :item, :location, :review, :crm, :deal, :lead, :pipeline, :enrich, :person, :genai, :model, :prompt, :hris, :device, :employee, :group, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :lms, :class_, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :storage, :file, :task, :change, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook, :verification, :package, :request
 
     sig do
       params(
@@ -179,6 +179,9 @@ module UnifiedRubySDK
       @login = Login.new(@sdk_configuration)
       @issue = Issue.new(@sdk_configuration)
       @webhook = Webhook.new(@sdk_configuration)
+      @verification = Verification.new(@sdk_configuration)
+      @package = Package.new(@sdk_configuration)
+      @request = Request.new(@sdk_configuration)
     end
 
     sig { params(base_url: String, url_variables: T.nilable(T::Hash[Symbol, T.any(String, T::Enum)])).returns(String) }

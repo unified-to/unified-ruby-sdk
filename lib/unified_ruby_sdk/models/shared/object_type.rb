@@ -40,6 +40,8 @@ module UnifiedRubySDK
           COMMERCE_INVENTORY = new('commerce_inventory')
           COMMERCE_LOCATION = new('commerce_location')
           COMMERCE_REVIEW = new('commerce_review')
+          VERIFICATION_PACKAGE = new('verification_package')
+          VERIFICATION_REQUEST = new('verification_request')
           ATS_ACTIVITY = new('ats_activity')
           ATS_APPLICATION = new('ats_application')
           ATS_APPLICATIONSTATUS = new('ats_applicationstatus')

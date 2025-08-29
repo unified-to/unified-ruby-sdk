@@ -107,6 +107,9 @@ module UnifiedRubySDK
   autoload :Login, 'unified_ruby_sdk/login'
   autoload :Issue, 'unified_ruby_sdk/issue'
   autoload :Webhook, 'unified_ruby_sdk/webhook'
+  autoload :Verification, 'unified_ruby_sdk/verification'
+  autoload :Package, 'unified_ruby_sdk/package'
+  autoload :Request, 'unified_ruby_sdk/request'
   module Models
     autoload :Shared, 'unified_ruby_sdk/models/shared'
     autoload :Operations, 'unified_ruby_sdk/models/operations'
