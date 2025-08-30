@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Shared::GenaiPrompt
   def max_tokens(); end
   def max_tokens=(str_); end
+  def mcp_url(); end
+  def mcp_url=(str_); end
   def messages(); end
   def messages=(str_); end
   def model_id(); end
