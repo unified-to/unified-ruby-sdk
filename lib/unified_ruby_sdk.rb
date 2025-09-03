@@ -51,6 +51,7 @@ module UnifiedRubySDK
   autoload :Enrich, 'unified_ruby_sdk/enrich'
   autoload :Person, 'unified_ruby_sdk/person'
   autoload :Genai, 'unified_ruby_sdk/genai'
+  autoload :Embedding, 'unified_ruby_sdk/embedding'
   autoload :Model, 'unified_ruby_sdk/model'
   autoload :Prompt, 'unified_ruby_sdk/prompt'
   autoload :Hris, 'unified_ruby_sdk/hris'

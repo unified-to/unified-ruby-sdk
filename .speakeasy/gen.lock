@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 422074ec49c609508b54a0d217c0ad82
+  docChecksum: a9003bf9eba5cb988acee2ba39aeae6f
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.66.3
-  configChecksum: e0771d9802d8f371dd05bbeab681c875
+  releaseVersion: 0.66.4
+  configChecksum: 98075d839750f752b26c3bd27d3078cb
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -95,6 +95,8 @@ generatedFiles:
   - docs/models/operations/createcrmleadresponse.md
   - docs/models/operations/createcrmpipelinerequest.md
   - docs/models/operations/createcrmpipelineresponse.md
+  - docs/models/operations/creategenaiembeddingrequest.md
+  - docs/models/operations/creategenaiembeddingresponse.md
   - docs/models/operations/creategenaipromptrequest.md
   - docs/models/operations/creategenaipromptresponse.md
   - docs/models/operations/createhriscompanyrequest.md
@@ -163,6 +165,8 @@ generatedFiles:
   - docs/models/operations/createtaskprojectresponse.md
   - docs/models/operations/createtasktaskrequest.md
   - docs/models/operations/createtasktaskresponse.md
+  - docs/models/operations/createticketingcategoryrequest.md
+  - docs/models/operations/createticketingcategoryresponse.md
   - docs/models/operations/createticketingcustomerrequest.md
   - docs/models/operations/createticketingcustomerresponse.md
   - docs/models/operations/createticketingnoterequest.md
@@ -260,6 +264,8 @@ generatedFiles:
   - docs/models/operations/getcrmleadresponse.md
   - docs/models/operations/getcrmpipelinerequest.md
   - docs/models/operations/getcrmpipelineresponse.md
+  - docs/models/operations/getgenaimodelrequest.md
+  - docs/models/operations/getgenaimodelresponse.md
   - docs/models/operations/gethriscompanyrequest.md
   - docs/models/operations/gethriscompanyresponse.md
   - docs/models/operations/gethrisdevicerequest.md
@@ -334,6 +340,8 @@ generatedFiles:
   - docs/models/operations/gettaskprojectresponse.md
   - docs/models/operations/gettasktaskrequest.md
   - docs/models/operations/gettasktaskresponse.md
+  - docs/models/operations/getticketingcategoryrequest.md
+  - docs/models/operations/getticketingcategoryresponse.md
   - docs/models/operations/getticketingcustomerrequest.md
   - docs/models/operations/getticketingcustomerresponse.md
   - docs/models/operations/getticketingnoterequest.md
@@ -526,6 +534,8 @@ generatedFiles:
   - docs/models/operations/listtaskprojectsresponse.md
   - docs/models/operations/listtasktasksrequest.md
   - docs/models/operations/listtasktasksresponse.md
+  - docs/models/operations/listticketingcategoriesrequest.md
+  - docs/models/operations/listticketingcategoriesresponse.md
   - docs/models/operations/listticketingcustomersrequest.md
   - docs/models/operations/listticketingcustomersresponse.md
   - docs/models/operations/listticketingnotesrequest.md
@@ -691,6 +701,8 @@ generatedFiles:
   - docs/models/operations/patchtaskprojectresponse.md
   - docs/models/operations/patchtasktaskrequest.md
   - docs/models/operations/patchtasktaskresponse.md
+  - docs/models/operations/patchticketingcategoryrequest.md
+  - docs/models/operations/patchticketingcategoryresponse.md
   - docs/models/operations/patchticketingcustomerrequest.md
   - docs/models/operations/patchticketingcustomerresponse.md
   - docs/models/operations/patchticketingnoterequest.md
@@ -844,6 +856,8 @@ generatedFiles:
   - docs/models/operations/removetaskprojectresponse.md
   - docs/models/operations/removetasktaskrequest.md
   - docs/models/operations/removetasktaskresponse.md
+  - docs/models/operations/removeticketingcategoryrequest.md
+  - docs/models/operations/removeticketingcategoryresponse.md
   - docs/models/operations/removeticketingcustomerrequest.md
   - docs/models/operations/removeticketingcustomerresponse.md
   - docs/models/operations/removeticketingnoterequest.md
@@ -996,6 +1010,8 @@ generatedFiles:
   - docs/models/operations/updatetaskprojectresponse.md
   - docs/models/operations/updatetasktaskrequest.md
   - docs/models/operations/updatetasktaskresponse.md
+  - docs/models/operations/updateticketingcategoryrequest.md
+  - docs/models/operations/updateticketingcategoryresponse.md
   - docs/models/operations/updateticketingcustomerrequest.md
   - docs/models/operations/updateticketingcustomerresponse.md
   - docs/models/operations/updateticketingnoterequest.md
@@ -1166,6 +1182,7 @@ generatedFiles:
   - docs/models/shared/dbtype.md
   - docs/models/shared/employmentstatus.md
   - docs/models/shared/employmenttype.md
+  - docs/models/shared/encondingformat.md
   - docs/models/shared/enrichcompany.md
   - docs/models/shared/enrichemail.md
   - docs/models/shared/enrichemailtype.md
@@ -1180,6 +1197,8 @@ generatedFiles:
   - docs/models/shared/format.md
   - docs/models/shared/frequency.md
   - docs/models/shared/genaicontent.md
+  - docs/models/shared/genaiembedding.md
+  - docs/models/shared/genaiembeddingcontent.md
   - docs/models/shared/genaimodel.md
   - docs/models/shared/genaiprompt.md
   - docs/models/shared/gender.md
@@ -1394,6 +1413,7 @@ generatedFiles:
   - docs/models/shared/tasktask.md
   - docs/models/shared/tasktaskstatus.md
   - docs/models/shared/taxexemption.md
+  - docs/models/shared/ticketingcategory.md
   - docs/models/shared/ticketingcustomer.md
   - docs/models/shared/ticketingemail.md
   - docs/models/shared/ticketingemailtype.md
@@ -1460,6 +1480,7 @@ generatedFiles:
   - docs/sdks/deal/README.md
   - docs/sdks/device/README.md
   - docs/sdks/document/README.md
+  - docs/sdks/embedding/README.md
   - docs/sdks/employee/README.md
   - docs/sdks/enrich/README.md
   - docs/sdks/event/README.md
@@ -1573,6 +1594,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/deal.rb
   - lib/unified_ruby_sdk/device.rb
   - lib/unified_ruby_sdk/document.rb
+  - lib/unified_ruby_sdk/embedding.rb
   - lib/unified_ruby_sdk/employee.rb
   - lib/unified_ruby_sdk/enrich.rb
   - lib/unified_ruby_sdk/event.rb
@@ -1745,6 +1767,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createcrmpipeline_request.rbi
   - lib/unified_ruby_sdk/models/operations/createcrmpipeline_response.rb
   - lib/unified_ruby_sdk/models/operations/createcrmpipeline_response.rbi
+  - lib/unified_ruby_sdk/models/operations/creategenaiembedding_request.rb
+  - lib/unified_ruby_sdk/models/operations/creategenaiembedding_request.rbi
+  - lib/unified_ruby_sdk/models/operations/creategenaiembedding_response.rb
+  - lib/unified_ruby_sdk/models/operations/creategenaiembedding_response.rbi
   - lib/unified_ruby_sdk/models/operations/creategenaiprompt_request.rb
   - lib/unified_ruby_sdk/models/operations/creategenaiprompt_request.rbi
   - lib/unified_ruby_sdk/models/operations/creategenaiprompt_response.rb
@@ -1881,6 +1907,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createtasktask_request.rbi
   - lib/unified_ruby_sdk/models/operations/createtasktask_response.rb
   - lib/unified_ruby_sdk/models/operations/createtasktask_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createticketingcategory_request.rb
+  - lib/unified_ruby_sdk/models/operations/createticketingcategory_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createticketingcategory_response.rb
+  - lib/unified_ruby_sdk/models/operations/createticketingcategory_response.rbi
   - lib/unified_ruby_sdk/models/operations/createticketingcustomer_request.rb
   - lib/unified_ruby_sdk/models/operations/createticketingcustomer_request.rbi
   - lib/unified_ruby_sdk/models/operations/createticketingcustomer_response.rb
@@ -2075,6 +2105,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getcrmpipeline_request.rbi
   - lib/unified_ruby_sdk/models/operations/getcrmpipeline_response.rb
   - lib/unified_ruby_sdk/models/operations/getcrmpipeline_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getgenaimodel_request.rb
+  - lib/unified_ruby_sdk/models/operations/getgenaimodel_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getgenaimodel_response.rb
+  - lib/unified_ruby_sdk/models/operations/getgenaimodel_response.rbi
   - lib/unified_ruby_sdk/models/operations/gethriscompany_request.rb
   - lib/unified_ruby_sdk/models/operations/gethriscompany_request.rbi
   - lib/unified_ruby_sdk/models/operations/gethriscompany_response.rb
@@ -2223,6 +2257,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/gettasktask_request.rbi
   - lib/unified_ruby_sdk/models/operations/gettasktask_response.rb
   - lib/unified_ruby_sdk/models/operations/gettasktask_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getticketingcategory_request.rb
+  - lib/unified_ruby_sdk/models/operations/getticketingcategory_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getticketingcategory_response.rb
+  - lib/unified_ruby_sdk/models/operations/getticketingcategory_response.rbi
   - lib/unified_ruby_sdk/models/operations/getticketingcustomer_request.rb
   - lib/unified_ruby_sdk/models/operations/getticketingcustomer_request.rbi
   - lib/unified_ruby_sdk/models/operations/getticketingcustomer_response.rb
@@ -2607,6 +2645,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listtasktasks_request.rbi
   - lib/unified_ruby_sdk/models/operations/listtasktasks_response.rb
   - lib/unified_ruby_sdk/models/operations/listtasktasks_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listticketingcategories_request.rb
+  - lib/unified_ruby_sdk/models/operations/listticketingcategories_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listticketingcategories_response.rb
+  - lib/unified_ruby_sdk/models/operations/listticketingcategories_response.rbi
   - lib/unified_ruby_sdk/models/operations/listticketingcustomers_request.rb
   - lib/unified_ruby_sdk/models/operations/listticketingcustomers_request.rbi
   - lib/unified_ruby_sdk/models/operations/listticketingcustomers_response.rb
@@ -2937,6 +2979,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchtasktask_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchtasktask_response.rb
   - lib/unified_ruby_sdk/models/operations/patchtasktask_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchticketingcategory_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchticketingcategory_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchticketingcategory_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchticketingcategory_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchticketingcustomer_request.rb
   - lib/unified_ruby_sdk/models/operations/patchticketingcustomer_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchticketingcustomer_response.rb
@@ -3243,6 +3289,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removetasktask_request.rbi
   - lib/unified_ruby_sdk/models/operations/removetasktask_response.rb
   - lib/unified_ruby_sdk/models/operations/removetasktask_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removeticketingcategory_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeticketingcategory_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removeticketingcategory_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeticketingcategory_response.rbi
   - lib/unified_ruby_sdk/models/operations/removeticketingcustomer_request.rb
   - lib/unified_ruby_sdk/models/operations/removeticketingcustomer_request.rbi
   - lib/unified_ruby_sdk/models/operations/removeticketingcustomer_response.rb
@@ -3547,6 +3597,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatetasktask_request.rbi
   - lib/unified_ruby_sdk/models/operations/updatetasktask_response.rb
   - lib/unified_ruby_sdk/models/operations/updatetasktask_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updateticketingcategory_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateticketingcategory_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updateticketingcategory_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateticketingcategory_response.rbi
   - lib/unified_ruby_sdk/models/operations/updateticketingcustomer_request.rb
   - lib/unified_ruby_sdk/models/operations/updateticketingcustomer_request.rbi
   - lib/unified_ruby_sdk/models/operations/updateticketingcustomer_response.rb
@@ -3888,6 +3942,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/employment_status.rbi
   - lib/unified_ruby_sdk/models/shared/employment_type.rb
   - lib/unified_ruby_sdk/models/shared/employment_type.rbi
+  - lib/unified_ruby_sdk/models/shared/enconding_format.rb
+  - lib/unified_ruby_sdk/models/shared/enconding_format.rbi
   - lib/unified_ruby_sdk/models/shared/enrichcompany.rb
   - lib/unified_ruby_sdk/models/shared/enrichcompany.rbi
   - lib/unified_ruby_sdk/models/shared/enrichemail.rb
@@ -3916,6 +3972,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/frequency.rbi
   - lib/unified_ruby_sdk/models/shared/genaicontent.rb
   - lib/unified_ruby_sdk/models/shared/genaicontent.rbi
+  - lib/unified_ruby_sdk/models/shared/genaiembedding.rb
+  - lib/unified_ruby_sdk/models/shared/genaiembedding.rbi
+  - lib/unified_ruby_sdk/models/shared/genaiembeddingcontent.rb
+  - lib/unified_ruby_sdk/models/shared/genaiembeddingcontent.rbi
   - lib/unified_ruby_sdk/models/shared/genaimodel.rb
   - lib/unified_ruby_sdk/models/shared/genaimodel.rbi
   - lib/unified_ruby_sdk/models/shared/genaiprompt.rb
@@ -4344,6 +4404,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/tasktask_status.rbi
   - lib/unified_ruby_sdk/models/shared/tax_exemption.rb
   - lib/unified_ruby_sdk/models/shared/tax_exemption.rbi
+  - lib/unified_ruby_sdk/models/shared/ticketingcategory.rb
+  - lib/unified_ruby_sdk/models/shared/ticketingcategory.rbi
   - lib/unified_ruby_sdk/models/shared/ticketingcustomer.rb
   - lib/unified_ruby_sdk/models/shared/ticketingcustomer.rbi
   - lib/unified_ruby_sdk/models/shared/ticketingemail.rb
@@ -8959,6 +9021,80 @@ examples:
           id: "<id>"
       requestBody:
         application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createTicketingCategory:
+    speakeasy-default-create-ticketing-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getTicketingCategory:
+    speakeasy-default-get-ticketing-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listTicketingCategories:
+    speakeasy-default-list-ticketing-categories:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchTicketingCategory:
+    speakeasy-default-patch-ticketing-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeTicketingCategory:
+    speakeasy-default-remove-ticketing-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateTicketingCategory:
+    speakeasy-default-update-ticketing-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createGenaiEmbedding:
+    speakeasy-default-create-genai-embedding:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getGenaiModel:
+    speakeasy-default-get-genai-model:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
       responses:
         "200":
           application/json: {}

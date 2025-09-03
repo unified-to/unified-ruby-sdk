@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Shared::TicketingTicket
   def category(); end
   def category=(str_); end
+  def category_id(); end
+  def category_id=(str_); end
   def closed_at(); end
   def closed_at=(str_); end
   def created_at(); end
