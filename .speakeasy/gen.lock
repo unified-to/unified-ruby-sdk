@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: a9003bf9eba5cb988acee2ba39aeae6f
+  docChecksum: 815d3eb3e63fd66f5050d707713e3c46
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.66.4
-  configChecksum: 98075d839750f752b26c3bd27d3078cb
+  releaseVersion: 0.66.5
+  configChecksum: c9f57e27bc842a5cf337e942efdb4c45
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -6923,10 +6923,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {}
+        application/json: {"employee_user_id": "<id>", "end_at": "2025-10-18T00:03:45.822Z", "start_at": "2024-06-03T05:33:48.715Z"}
       responses:
         "200":
-          application/json: {}
+          application/json: {"employee_user_id": "<id>", "end_at": "2025-04-02T06:29:45.209Z", "start_at": "2025-05-03T19:13:33.398Z"}
   getHrisDevice:
     speakeasy-default-get-hris-device:
       parameters:
@@ -6980,7 +6980,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {}
+          application/json: {"employee_user_id": "<id>", "end_at": "2025-02-02T20:47:43.029Z", "start_at": "2023-11-12T09:20:44.392Z"}
   listHrisDevices:
     speakeasy-default-list-hris-devices:
       parameters:
@@ -7028,7 +7028,7 @@ examples:
           connection_id: "<id>"
       responses:
         "200":
-          application/json: [{}]
+          application/json: [{"employee_user_id": "<id>", "end_at": "2025-03-16T00:40:56.364Z", "start_at": "2024-03-12T18:17:36.342Z"}]
   patchHrisDevice:
     speakeasy-default-patch-hris-device:
       parameters:
@@ -7069,10 +7069,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {}
+        application/json: {"employee_user_id": "<id>", "end_at": "2023-11-17T18:53:02.172Z", "start_at": "2023-01-19T02:48:41.002Z"}
       responses:
         "200":
-          application/json: {}
+          application/json: {"employee_user_id": "<id>", "end_at": "2023-05-16T07:27:26.608Z", "start_at": "2024-07-25T03:16:34.281Z"}
   removeHrisDevice:
     speakeasy-default-remove-hris-device:
       parameters:
@@ -7137,10 +7137,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {}
+        application/json: {"employee_user_id": "<id>", "end_at": "2025-03-03T22:04:09.340Z", "start_at": "2024-05-30T21:19:58.772Z"}
       responses:
         "200":
-          application/json: {}
+          application/json: {"employee_user_id": "<id>", "end_at": "2024-05-09T22:44:06.400Z", "start_at": "2023-11-14T18:28:16.870Z"}
   createScimGroups:
     speakeasy-default-create-scim-groups:
       parameters:

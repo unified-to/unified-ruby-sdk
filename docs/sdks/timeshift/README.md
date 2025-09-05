@@ -29,7 +29,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.timeshift.create_hris_timeshift(hris_timeshift: Models::Shared::HrisTimeshift.new(), connection_id: '<id>')
+res = s.timeshift.create_hris_timeshift(hris_timeshift: Models::Shared::HrisTimeshift.new(
+  employee_user_id: '<id>',
+  end_at: DateTime.iso8601('2025-10-18T00:03:45.822Z'),
+  start_at: DateTime.iso8601('2024-06-03T05:33:48.715Z'),
+), connection_id: '<id>')
 
 unless res.hris_timeshift.nil?
   # handle response
@@ -163,7 +167,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchHrisTimeshiftRequest.new(
-  hris_timeshift: Models::Shared::HrisTimeshift.new(),
+  hris_timeshift: Models::Shared::HrisTimeshift.new(
+    employee_user_id: '<id>',
+    end_at: DateTime.iso8601('2023-11-17T18:53:02.172Z'),
+    start_at: DateTime.iso8601('2023-01-19T02:48:41.002Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +260,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateHrisTimeshiftRequest.new(
-  hris_timeshift: Models::Shared::HrisTimeshift.new(),
+  hris_timeshift: Models::Shared::HrisTimeshift.new(
+    employee_user_id: '<id>',
+    end_at: DateTime.iso8601('2025-03-03T22:04:09.340Z'),
+    start_at: DateTime.iso8601('2024-05-30T21:19:58.772Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

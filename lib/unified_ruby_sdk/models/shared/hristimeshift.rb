@@ -14,6 +14,12 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
+        field :employee_user_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employee_user_id'), required: true } }
+
+        field :end_at, ::DateTime, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), required: true, 'decoder': Utils.datetime_from_iso_format(false) } }
+
+        field :start_at, ::DateTime, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), required: true, 'decoder': Utils.datetime_from_iso_format(false) } }
+
         field :approved_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('approved_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :approver_user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('approver_user_id') } }
@@ -23,10 +29,6 @@ module UnifiedRubySDK
         field :compensation, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisCompensation)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('compensation') } }
 
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
-        field :employee_user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employee_user_id') } }
-
-        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :group_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_id') } }
 
@@ -40,46 +42,44 @@ module UnifiedRubySDK
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), company_id: T.nilable(::String), compensation: T.nilable(T::Array[Models::Shared::HrisCompensation]), created_at: T.nilable(::DateTime), employee_user_id: T.nilable(::String), end_at: T.nilable(::DateTime), group_id: T.nilable(::String), hours: T.nilable(::Float), id: T.nilable(::String), is_approved: T.nilable(T::Boolean), location_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime)).void }
-        def initialize(approved_at: nil, approver_user_id: nil, company_id: nil, compensation: nil, created_at: nil, employee_user_id: nil, end_at: nil, group_id: nil, hours: nil, id: nil, is_approved: nil, location_id: nil, raw: nil, start_at: nil, updated_at: nil)
+        sig { params(employee_user_id: ::String, end_at: ::DateTime, start_at: ::DateTime, approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), company_id: T.nilable(::String), compensation: T.nilable(T::Array[Models::Shared::HrisCompensation]), created_at: T.nilable(::DateTime), group_id: T.nilable(::String), hours: T.nilable(::Float), id: T.nilable(::String), is_approved: T.nilable(T::Boolean), location_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(employee_user_id:, end_at:, start_at:, approved_at: nil, approver_user_id: nil, company_id: nil, compensation: nil, created_at: nil, group_id: nil, hours: nil, id: nil, is_approved: nil, location_id: nil, raw: nil, updated_at: nil)
+          @employee_user_id = employee_user_id
+          @end_at = end_at
+          @start_at = start_at
           @approved_at = approved_at
           @approver_user_id = approver_user_id
           @company_id = company_id
           @compensation = compensation
           @created_at = created_at
-          @employee_user_id = employee_user_id
-          @end_at = end_at
           @group_id = group_id
           @hours = hours
           @id = id
           @is_approved = is_approved
           @location_id = location_id
           @raw = raw
-          @start_at = start_at
           @updated_at = updated_at
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
+          return false unless @employee_user_id == other.employee_user_id
+          return false unless @end_at == other.end_at
+          return false unless @start_at == other.start_at
           return false unless @approved_at == other.approved_at
           return false unless @approver_user_id == other.approver_user_id
           return false unless @company_id == other.company_id
           return false unless @compensation == other.compensation
           return false unless @created_at == other.created_at
-          return false unless @employee_user_id == other.employee_user_id
-          return false unless @end_at == other.end_at
           return false unless @group_id == other.group_id
           return false unless @hours == other.hours
           return false unless @id == other.id
           return false unless @is_approved == other.is_approved
           return false unless @location_id == other.location_id
           return false unless @raw == other.raw
-          return false unless @start_at == other.start_at
           return false unless @updated_at == other.updated_at
           true
         end

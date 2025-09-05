@@ -8,6 +8,12 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::HrisTimeshift
+  def employee_user_id(); end
+  def employee_user_id=(str_); end
+  def end_at(); end
+  def end_at=(str_); end
+  def start_at(); end
+  def start_at=(str_); end
   def approved_at(); end
   def approved_at=(str_); end
   def approver_user_id(); end
@@ -18,10 +24,6 @@ class UnifiedRubySDK::Models::Shared::HrisTimeshift
   def compensation=(str_); end
   def created_at(); end
   def created_at=(str_); end
-  def employee_user_id(); end
-  def employee_user_id=(str_); end
-  def end_at(); end
-  def end_at=(str_); end
   def group_id(); end
   def group_id=(str_); end
   def hours(); end
@@ -34,8 +36,6 @@ class UnifiedRubySDK::Models::Shared::HrisTimeshift
   def location_id=(str_); end
   def raw(); end
   def raw=(str_); end
-  def start_at(); end
-  def start_at=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
 end
