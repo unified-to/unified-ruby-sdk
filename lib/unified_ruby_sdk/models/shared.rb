@@ -193,7 +193,6 @@ module UnifiedRubySDK
       autoload :HrisTelephoneType, 'unified_ruby_sdk/models/shared/hristelephone_type.rb'
       autoload :HrisTimeoff, 'unified_ruby_sdk/models/shared/hristimeoff.rb'
       autoload :HrisTimeoffStatus, 'unified_ruby_sdk/models/shared/hristimeoff_status.rb'
-      autoload :HrisTimeoffType, 'unified_ruby_sdk/models/shared/hristimeoff_type.rb'
       autoload :HrisTimeshift, 'unified_ruby_sdk/models/shared/hristimeshift.rb'
       autoload :Integration, 'unified_ruby_sdk/models/shared/integration.rb'
       autoload :Integration1, 'unified_ruby_sdk/models/shared/integration_1.rb'

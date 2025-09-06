@@ -24,12 +24,14 @@ class UnifiedRubySDK::Models::Shared::HrisTimeoff
   def end_at=(str_); end
   def id(); end
   def id=(str_); end
+  def is_paid(); end
+  def is_paid=(str_); end
   def raw(); end
   def raw=(str_); end
+  def reason(); end
+  def reason=(str_); end
   def status(); end
   def status=(str_); end
-  def type(); end
-  def type=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
   def user_id(); end

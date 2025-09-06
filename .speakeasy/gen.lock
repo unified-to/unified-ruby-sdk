@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 815d3eb3e63fd66f5050d707713e3c46
+  docChecksum: 8ed442c273cdb35b6056af069e0583c0
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.66.5
-  configChecksum: c9f57e27bc842a5cf337e942efdb4c45
+  releaseVersion: 0.66.6
+  configChecksum: ac5ffa7cd12439680b25cd4897bee238
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -1230,7 +1230,6 @@ generatedFiles:
   - docs/models/shared/hristelephonetype.md
   - docs/models/shared/hristimeoff.md
   - docs/models/shared/hristimeoffstatus.md
-  - docs/models/shared/hristimeofftype.md
   - docs/models/shared/hristimeshift.md
   - docs/models/shared/integration.md
   - docs/models/shared/integration1.md
@@ -4038,8 +4037,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/hristimeoff.rbi
   - lib/unified_ruby_sdk/models/shared/hristimeoff_status.rb
   - lib/unified_ruby_sdk/models/shared/hristimeoff_status.rbi
-  - lib/unified_ruby_sdk/models/shared/hristimeoff_type.rb
-  - lib/unified_ruby_sdk/models/shared/hristimeoff_type.rbi
   - lib/unified_ruby_sdk/models/shared/hristimeshift.rb
   - lib/unified_ruby_sdk/models/shared/hristimeshift.rbi
   - lib/unified_ruby_sdk/models/shared/integration.rb
