@@ -24,6 +24,8 @@ module UnifiedRubySDK
 
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
+        field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
+
         field :parent_page_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_page_id') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
@@ -34,13 +36,14 @@ module UnifiedRubySDK
 
         field :parent_space_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_space_id') } }
 
-        sig { params(name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), parent_page_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), parent_space_id: T.nilable(::String)).void }
-        def initialize(name:, created_at: nil, description: nil, id: nil, is_active: nil, parent_page_id: nil, raw: nil, updated_at: nil, user_id: nil, parent_space_id: 'sp')
+        sig { params(name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), parent_id: T.nilable(::String), parent_page_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), parent_space_id: T.nilable(::String)).void }
+        def initialize(name:, created_at: nil, description: nil, id: nil, is_active: nil, parent_id: nil, parent_page_id: nil, raw: nil, updated_at: nil, user_id: nil, parent_space_id: 'sp')
           @name = name
           @created_at = created_at
           @description = description
           @id = id
           @is_active = is_active
+          @parent_id = parent_id
           @parent_page_id = parent_page_id
           @raw = raw
           @updated_at = updated_at
@@ -56,6 +59,7 @@ module UnifiedRubySDK
           return false unless @description == other.description
           return false unless @id == other.id
           return false unless @is_active == other.is_active
+          return false unless @parent_id == other.parent_id
           return false unless @parent_page_id == other.parent_page_id
           return false unless @raw == other.raw
           return false unless @updated_at == other.updated_at

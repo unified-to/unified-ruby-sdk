@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Shared::UcComment
   def content(); end
   def content=(str_); end
+  def call_id(); end
+  def call_id=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def id(); end

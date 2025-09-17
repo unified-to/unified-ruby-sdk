@@ -5,6 +5,7 @@
 
 | Field                       | Type                        | Required                    | Description                 |
 | --------------------------- | --------------------------- | --------------------------- | --------------------------- |
+| `call_id`                   | *T.nilable(::String)*       | :heavy_minus_sign:          | N/A                         |
 | `content`                   | *::String*                  | :heavy_check_mark:          | N/A                         |
 | `created_at`                | *T.nilable(::String)*       | :heavy_minus_sign:          | N/A                         |
 | `id`                        | *T.nilable(::String)*       | :heavy_minus_sign:          | N/A                         |

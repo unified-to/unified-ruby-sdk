@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::KmsSpace
   def id=(str_); end
   def is_active(); end
   def is_active=(str_); end
+  def parent_id(); end
+  def parent_id=(str_); end
   def parent_page_id(); end
   def parent_page_id=(str_); end
   def raw(); end
