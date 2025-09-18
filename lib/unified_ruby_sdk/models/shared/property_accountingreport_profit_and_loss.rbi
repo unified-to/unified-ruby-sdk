@@ -8,6 +8,8 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::PropertyAccountingReportProfitAndLoss
+  def category_ids(); end
+  def category_ids=(str_); end
   def cost_of_goods_sold(); end
   def cost_of_goods_sold=(str_); end
   def cost_of_goods_sold_sections(); end
