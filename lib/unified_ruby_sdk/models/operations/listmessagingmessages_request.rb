@@ -19,8 +19,8 @@ module UnifiedRubySDK
         field :channel_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'channel_id', 'style': 'form', 'explode': true } }
         # The end date to filter by
         field :end_le, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'end_le', 'style': 'form', 'explode': true } }
-
-        field :expand, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'expand', 'style': 'form', 'explode': true } }
+        # Whether to flatten grouped or recurring items into individual entries.
+        field :expand, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'query_param': { 'field_name': 'expand', 'style': 'form', 'explode': true } }
         # Comma-delimited fields to return
         field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
@@ -42,7 +42,7 @@ module UnifiedRubySDK
         # Return only results whose updated date is equal or greater to this value
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, channel_id: T.nilable(::String), end_le: T.nilable(::String), expand: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::String)).void }
+        sig { params(connection_id: ::String, channel_id: T.nilable(::String), end_le: T.nilable(::String), expand: T.nilable(T::Boolean), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::String)).void }
         def initialize(connection_id:, channel_id: nil, end_le: nil, expand: nil, fields_: nil, limit: nil, offset: nil, order: nil, parent_id: nil, query: nil, raw: nil, sort: nil, start_gte: nil, updated_gte: nil)
           @connection_id = connection_id
           @channel_id = channel_id
