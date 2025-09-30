@@ -32,6 +32,8 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :is_unread, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_unread') } }
+
         field :mentioned_members, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MessagingMember)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mentioned_members') } }
 
         field :message, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message') } }
@@ -58,8 +60,8 @@ module UnifiedRubySDK
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(attachments: T.nilable(T::Array[Models::Shared::MessagingAttachment]), author_member: T.nilable(Models::Shared::PropertyMessagingMessageAuthorMember), channel_id: T.nilable(::String), channel_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), destination_members: T.nilable(T::Array[Models::Shared::MessagingMember]), has_children: T.nilable(T::Boolean), hidden_members: T.nilable(T::Array[Models::Shared::MessagingMember]), id: T.nilable(::String), mentioned_members: T.nilable(T::Array[Models::Shared::MessagingMember]), message: T.nilable(::String), message_html: T.nilable(::String), message_markdown: T.nilable(::String), parent_id: T.nilable(::String), parent_message_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reactions: T.nilable(T::Array[Models::Shared::MessagingReaction]), reference: T.nilable(::String), root_message_id: T.nilable(::String), subject: T.nilable(::String), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
-        def initialize(attachments: nil, author_member: nil, channel_id: nil, channel_ids: nil, created_at: nil, destination_members: nil, has_children: nil, hidden_members: nil, id: nil, mentioned_members: nil, message: nil, message_html: nil, message_markdown: nil, parent_id: nil, parent_message_id: nil, raw: nil, reactions: nil, reference: nil, root_message_id: nil, subject: nil, updated_at: nil, web_url: nil)
+        sig { params(attachments: T.nilable(T::Array[Models::Shared::MessagingAttachment]), author_member: T.nilable(Models::Shared::PropertyMessagingMessageAuthorMember), channel_id: T.nilable(::String), channel_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), destination_members: T.nilable(T::Array[Models::Shared::MessagingMember]), has_children: T.nilable(T::Boolean), hidden_members: T.nilable(T::Array[Models::Shared::MessagingMember]), id: T.nilable(::String), is_unread: T.nilable(T::Boolean), mentioned_members: T.nilable(T::Array[Models::Shared::MessagingMember]), message: T.nilable(::String), message_html: T.nilable(::String), message_markdown: T.nilable(::String), parent_id: T.nilable(::String), parent_message_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reactions: T.nilable(T::Array[Models::Shared::MessagingReaction]), reference: T.nilable(::String), root_message_id: T.nilable(::String), subject: T.nilable(::String), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
+        def initialize(attachments: nil, author_member: nil, channel_id: nil, channel_ids: nil, created_at: nil, destination_members: nil, has_children: nil, hidden_members: nil, id: nil, is_unread: nil, mentioned_members: nil, message: nil, message_html: nil, message_markdown: nil, parent_id: nil, parent_message_id: nil, raw: nil, reactions: nil, reference: nil, root_message_id: nil, subject: nil, updated_at: nil, web_url: nil)
           @attachments = attachments
           @author_member = author_member
           @channel_id = channel_id
@@ -69,6 +71,7 @@ module UnifiedRubySDK
           @has_children = has_children
           @hidden_members = hidden_members
           @id = id
+          @is_unread = is_unread
           @mentioned_members = mentioned_members
           @message = message
           @message_html = message_html
@@ -96,6 +99,7 @@ module UnifiedRubySDK
           return false unless @has_children == other.has_children
           return false unless @hidden_members == other.hidden_members
           return false unless @id == other.id
+          return false unless @is_unread == other.is_unread
           return false unless @mentioned_members == other.mentioned_members
           return false unless @message == other.message
           return false unless @message_html == other.message_html

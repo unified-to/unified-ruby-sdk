@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: c7b234a89c45d96ea050dc7c9d6d4030
+  docChecksum: 877b52162b06392093c3efbd89172e36
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.66.11
-  configChecksum: eac176bf1964e4d480e615dc23cb64c8
+  releaseVersion: 0.66.12
+  configChecksum: d05708d2bfa1812263f33aa40e904392
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -1236,6 +1236,8 @@ generatedFiles:
   - docs/models/shared/integration5.md
   - docs/models/shared/integrationschemas1.md
   - docs/models/shared/integrationschemas5.md
+  - docs/models/shared/integrationschemassaml1.md
+  - docs/models/shared/integrationschemassaml5.md
   - docs/models/shared/integrationschemassandbox1.md
   - docs/models/shared/integrationschemassandbox5.md
   - docs/models/shared/intervalunit.md
@@ -1369,6 +1371,7 @@ generatedFiles:
   - docs/models/shared/resourcetype.md
   - docs/models/shared/responsestatus.md
   - docs/models/shared/role.md
+  - docs/models/shared/saml.md
   - docs/models/shared/sandbox.md
   - docs/models/shared/scimaddress.md
   - docs/models/shared/scimaddresstype.md
@@ -4049,6 +4052,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/integration_schemas_1.rbi
   - lib/unified_ruby_sdk/models/shared/integration_schemas_5.rb
   - lib/unified_ruby_sdk/models/shared/integration_schemas_5.rbi
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_saml_1.rb
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_saml_1.rbi
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_saml_5.rb
+  - lib/unified_ruby_sdk/models/shared/integration_schemas_saml_5.rbi
   - lib/unified_ruby_sdk/models/shared/integration_schemas_sandbox_1.rb
   - lib/unified_ruby_sdk/models/shared/integration_schemas_sandbox_1.rbi
   - lib/unified_ruby_sdk/models/shared/integration_schemas_sandbox_5.rb
@@ -4315,6 +4322,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/response_status.rbi
   - lib/unified_ruby_sdk/models/shared/role.rb
   - lib/unified_ruby_sdk/models/shared/role.rbi
+  - lib/unified_ruby_sdk/models/shared/saml.rb
+  - lib/unified_ruby_sdk/models/shared/saml.rbi
   - lib/unified_ruby_sdk/models/shared/sandbox.rb
   - lib/unified_ruby_sdk/models/shared/sandbox.rbi
   - lib/unified_ruby_sdk/models/shared/scimaddress.rb

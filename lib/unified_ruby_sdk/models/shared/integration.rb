@@ -50,6 +50,8 @@ module UnifiedRubySDK
 
         field :rate_limit_description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rate_limit_description') } }
 
+        field :saml, Crystalline::Nilable.new(Crystalline::Union.new(Crystalline::Hash.new(Symbol, ::Object), ::String, ::Float, Crystalline::Boolean.new, Crystalline::Array.new(Crystalline::Union.new(Models::Shared::IntegrationSchemasSaml1, ::String, ::Float, Crystalline::Boolean.new)))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('saml') } }
+
         field :sandbox, Crystalline::Nilable.new(Crystalline::Union.new(Crystalline::Hash.new(Symbol, ::Object), ::String, ::Float, Crystalline::Boolean.new, Crystalline::Array.new(Crystalline::Union.new(Models::Shared::IntegrationSchemasSandbox1, ::String, ::Float, Crystalline::Boolean.new)))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sandbox') } }
 
         field :support, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('support') } }
@@ -66,8 +68,8 @@ module UnifiedRubySDK
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(categories: T::Array[Models::Shared::PropertyIntegrationCategories], name: ::String, type: ::String, active_healthy_connections: T.nilable(::Float), api: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::Integration1, ::String, ::Float, T::Boolean)])), api_docs_url: T.nilable(::String), beta: T.nilable(T::Boolean), color: T.nilable(::String), created_at: T.nilable(::String), description: T.nilable(::String), fa_icon: T.nilable(::String), featured: T.nilable(T::Boolean), in_progress: T.nilable(T::Boolean), is_active: T.nilable(T::Boolean), logo_url: T.nilable(::String), partnership: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::IntegrationSchemas1, ::String, ::Float, T::Boolean)])), popularity: T.nilable(::Float), rate_limit_description: T.nilable(::String), sandbox: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::IntegrationSchemasSandbox1, ::String, ::Float, T::Boolean)])), support: T.nilable(T::Hash[Symbol, ::Object]), tested_at: T.nilable(::DateTime), text_color: T.nilable(::String), token_instructions: T.nilable(T::Array[::String]), token_names: T.nilable(T::Array[::String]), updated_at: T.nilable(::String), web_url: T.nilable(::String)).void }
-        def initialize(categories:, name:, type:, active_healthy_connections: nil, api: nil, api_docs_url: nil, beta: nil, color: nil, created_at: nil, description: nil, fa_icon: nil, featured: nil, in_progress: nil, is_active: nil, logo_url: nil, partnership: nil, popularity: nil, rate_limit_description: nil, sandbox: nil, support: nil, tested_at: nil, text_color: nil, token_instructions: nil, token_names: nil, updated_at: nil, web_url: nil)
+        sig { params(categories: T::Array[Models::Shared::PropertyIntegrationCategories], name: ::String, type: ::String, active_healthy_connections: T.nilable(::Float), api: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::Integration1, ::String, ::Float, T::Boolean)])), api_docs_url: T.nilable(::String), beta: T.nilable(T::Boolean), color: T.nilable(::String), created_at: T.nilable(::String), description: T.nilable(::String), fa_icon: T.nilable(::String), featured: T.nilable(T::Boolean), in_progress: T.nilable(T::Boolean), is_active: T.nilable(T::Boolean), logo_url: T.nilable(::String), partnership: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::IntegrationSchemas1, ::String, ::Float, T::Boolean)])), popularity: T.nilable(::Float), rate_limit_description: T.nilable(::String), saml: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::IntegrationSchemasSaml1, ::String, ::Float, T::Boolean)])), sandbox: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::IntegrationSchemasSandbox1, ::String, ::Float, T::Boolean)])), support: T.nilable(T::Hash[Symbol, ::Object]), tested_at: T.nilable(::DateTime), text_color: T.nilable(::String), token_instructions: T.nilable(T::Array[::String]), token_names: T.nilable(T::Array[::String]), updated_at: T.nilable(::String), web_url: T.nilable(::String)).void }
+        def initialize(categories:, name:, type:, active_healthy_connections: nil, api: nil, api_docs_url: nil, beta: nil, color: nil, created_at: nil, description: nil, fa_icon: nil, featured: nil, in_progress: nil, is_active: nil, logo_url: nil, partnership: nil, popularity: nil, rate_limit_description: nil, saml: nil, sandbox: nil, support: nil, tested_at: nil, text_color: nil, token_instructions: nil, token_names: nil, updated_at: nil, web_url: nil)
           @categories = categories
           @name = name
           @type = type
@@ -86,6 +88,7 @@ module UnifiedRubySDK
           @partnership = partnership
           @popularity = popularity
           @rate_limit_description = rate_limit_description
+          @saml = saml
           @sandbox = sandbox
           @support = support
           @tested_at = tested_at
@@ -117,6 +120,7 @@ module UnifiedRubySDK
           return false unless @partnership == other.partnership
           return false unless @popularity == other.popularity
           return false unless @rate_limit_description == other.rate_limit_description
+          return false unless @saml == other.saml
           return false unless @sandbox == other.sandbox
           return false unless @support == other.support
           return false unless @tested_at == other.tested_at

@@ -26,6 +26,8 @@ class UnifiedRubySDK::Models::Shared::MessagingMessage
   def hidden_members=(str_); end
   def id(); end
   def id=(str_); end
+  def is_unread(); end
+  def is_unread=(str_); end
   def mentioned_members(); end
   def mentioned_members=(str_); end
   def message(); end
