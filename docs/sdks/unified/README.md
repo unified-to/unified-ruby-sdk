@@ -10,6 +10,7 @@
 * [get_unified_apicall](#get_unified_apicall) - Retrieve specific API Call by its ID
 * [get_unified_connection](#get_unified_connection) - Retrieve connection
 * [get_unified_integration_auth](#get_unified_integration_auth) - Authorize new connection
+* [get_unified_issue](#get_unified_issue) - Retrieve support issue
 * [get_unified_webhook](#get_unified_webhook) - Retrieve webhook by its ID
 * [list_unified_apicalls](#list_unified_apicalls) - Returns API Calls
 * [list_unified_connections](#list_unified_connections) - List all connections
@@ -240,6 +241,47 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetUnifiedIntegrationAuthResponse)](../../models/operations/getunifiedintegrationauthresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_unified_issue
+
+Retrieve support issue
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getUnifiedIssue" method="get" path="/unified/issue/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.unified.get_unified_issue(id: '<id>')
+
+unless res.issue.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `id`               | *::String*         | :heavy_check_mark: | ID of the Issue    |
+
+### Response
+
+**[T.nilable(Models::Operations::GetUnifiedIssueResponse)](../../models/operations/getunifiedissueresponse.md)**
 
 ### Errors
 

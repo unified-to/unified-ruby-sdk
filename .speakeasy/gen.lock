@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 877b52162b06392093c3efbd89172e36
+  docChecksum: 93627d104d7b0fff5c900b54ba7421e8
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.66.12
-  configChecksum: d05708d2bfa1812263f33aa40e904392
+  releaseVersion: 0.66.13
+  configChecksum: bda83d3800e8e275333d9bb13dad2df3
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -362,6 +362,8 @@ generatedFiles:
   - docs/models/operations/getunifiedintegrationauthresponse.md
   - docs/models/operations/getunifiedintegrationloginrequest.md
   - docs/models/operations/getunifiedintegrationloginresponse.md
+  - docs/models/operations/getunifiedissuerequest.md
+  - docs/models/operations/getunifiedissueresponse.md
   - docs/models/operations/getunifiedwebhookrequest.md
   - docs/models/operations/getunifiedwebhookresponse.md
   - docs/models/operations/getverificationpackagerequest.md
@@ -2303,6 +2305,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getunifiedintegrationlogin_request.rbi
   - lib/unified_ruby_sdk/models/operations/getunifiedintegrationlogin_response.rb
   - lib/unified_ruby_sdk/models/operations/getunifiedintegrationlogin_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getunifiedissue_request.rb
+  - lib/unified_ruby_sdk/models/operations/getunifiedissue_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getunifiedissue_response.rb
+  - lib/unified_ruby_sdk/models/operations/getunifiedissue_response.rbi
   - lib/unified_ruby_sdk/models/operations/getunifiedwebhook_request.rb
   - lib/unified_ruby_sdk/models/operations/getunifiedwebhook_request.rbi
   - lib/unified_ruby_sdk/models/operations/getunifiedwebhook_response.rb
@@ -9104,5 +9110,13 @@ examples:
       responses:
         "200":
           application/json: {}
+  getUnifiedIssue:
+    speakeasy-default-get-unified-issue:
+      parameters:
+        path:
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"status": "ON_HOLD", "ticket_ref": "<value>", "title": "<value>", "workspace_id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}

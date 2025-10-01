@@ -342,6 +342,8 @@ module UnifiedRubySDK
       autoload :GetUnifiedIntegrationAuthResponse, 'unified_ruby_sdk/models/operations/getunifiedintegrationauth_response.rb'
       autoload :GetUnifiedIntegrationLoginRequest, 'unified_ruby_sdk/models/operations/getunifiedintegrationlogin_request.rb'
       autoload :GetUnifiedIntegrationLoginResponse, 'unified_ruby_sdk/models/operations/getunifiedintegrationlogin_response.rb'
+      autoload :GetUnifiedIssueRequest, 'unified_ruby_sdk/models/operations/getunifiedissue_request.rb'
+      autoload :GetUnifiedIssueResponse, 'unified_ruby_sdk/models/operations/getunifiedissue_response.rb'
       autoload :GetUnifiedWebhookRequest, 'unified_ruby_sdk/models/operations/getunifiedwebhook_request.rb'
       autoload :GetUnifiedWebhookResponse, 'unified_ruby_sdk/models/operations/getunifiedwebhook_response.rb'
       autoload :GetVerificationPackageRequest, 'unified_ruby_sdk/models/operations/getverificationpackage_request.rb'
