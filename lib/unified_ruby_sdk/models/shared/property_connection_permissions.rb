@@ -79,6 +79,7 @@ module UnifiedRubySDK
           ATS_JOB_READ = new('ats_job_read')
           ATS_JOB_WRITE = new('ats_job_write')
           ATS_COMPANY_READ = new('ats_company_read')
+          ATS_COMPANY_WRITE = new('ats_company_write')
           ATS_DOCUMENT_READ = new('ats_document_read')
           ATS_DOCUMENT_WRITE = new('ats_document_write')
           ATS_SCORECARD_READ = new('ats_scorecard_read')
