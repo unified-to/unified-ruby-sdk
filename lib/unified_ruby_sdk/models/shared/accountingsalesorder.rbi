@@ -26,6 +26,8 @@ class UnifiedRubySDK::Models::Shared::AccountingSalesorder
   def posted_at=(str_); end
   def raw(); end
   def raw=(str_); end
+  def sales_channel(); end
+  def sales_channel=(str_); end
   def shipping_address(); end
   def shipping_address=(str_); end
   def status(); end

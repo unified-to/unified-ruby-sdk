@@ -16,6 +16,8 @@ class UnifiedRubySDK::Models::Shared::MessagingMessage
   def channel_id=(str_); end
   def channel_ids(); end
   def channel_ids=(str_); end
+  def channels(); end
+  def channels=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def destination_members(); end

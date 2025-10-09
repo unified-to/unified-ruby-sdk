@@ -16,13 +16,16 @@ module UnifiedRubySDK
 
         field :email, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
 
+        field :image_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('image_url') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(email: T.nilable(::String), name: T.nilable(::String), user_id: T.nilable(::String)).void }
-        def initialize(email: nil, name: nil, user_id: nil)
+        sig { params(email: T.nilable(::String), image_url: T.nilable(::String), name: T.nilable(::String), user_id: T.nilable(::String)).void }
+        def initialize(email: nil, image_url: nil, name: nil, user_id: nil)
           @email = email
+          @image_url = image_url
           @name = name
           @user_id = user_id
         end
@@ -31,6 +34,7 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @email == other.email
+          return false unless @image_url == other.image_url
           return false unless @name == other.name
           return false unless @user_id == other.user_id
           true

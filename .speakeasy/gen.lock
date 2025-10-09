@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 0b33a55547cf2ac860e6a35542823995
+  docChecksum: dc91eeac96415353b77e357c69ab74d6
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.66.14
-  configChecksum: 9143bfd15baa322577a5e7fd432af9ae
+  releaseVersion: 0.66.15
+  configChecksum: f9a8b476646091666399da1d09bfdb6d
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -1274,6 +1274,7 @@ generatedFiles:
   - docs/models/shared/marketingmember.md
   - docs/models/shared/messagingattachment.md
   - docs/models/shared/messagingchannel.md
+  - docs/models/shared/messagingchannelmessage.md
   - docs/models/shared/messagingmember.md
   - docs/models/shared/messagingmessage.md
   - docs/models/shared/messagingreaction.md
@@ -4130,6 +4131,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/messagingattachment.rbi
   - lib/unified_ruby_sdk/models/shared/messagingchannel.rb
   - lib/unified_ruby_sdk/models/shared/messagingchannel.rbi
+  - lib/unified_ruby_sdk/models/shared/messagingchannelmessage.rb
+  - lib/unified_ruby_sdk/models/shared/messagingchannelmessage.rbi
   - lib/unified_ruby_sdk/models/shared/messagingmember.rb
   - lib/unified_ruby_sdk/models/shared/messagingmember.rbi
   - lib/unified_ruby_sdk/models/shared/messagingmessage.rb

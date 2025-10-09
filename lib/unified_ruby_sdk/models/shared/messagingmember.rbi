@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Shared::MessagingMember
   def email(); end
   def email=(str_); end
+  def image_url(); end
+  def image_url=(str_); end
   def name(); end
   def name=(str_); end
   def user_id(); end

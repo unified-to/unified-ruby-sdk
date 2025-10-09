@@ -233,6 +233,7 @@ module UnifiedRubySDK
       autoload :MarketingMember, 'unified_ruby_sdk/models/shared/marketingmember.rb'
       autoload :MessagingAttachment, 'unified_ruby_sdk/models/shared/messagingattachment.rb'
       autoload :MessagingChannel, 'unified_ruby_sdk/models/shared/messagingchannel.rb'
+      autoload :MessagingChannelMessage, 'unified_ruby_sdk/models/shared/messagingchannelmessage.rb'
       autoload :MessagingMember, 'unified_ruby_sdk/models/shared/messagingmember.rb'
       autoload :MessagingMessage, 'unified_ruby_sdk/models/shared/messagingmessage.rb'
       autoload :MessagingReaction, 'unified_ruby_sdk/models/shared/messagingreaction.rb'
