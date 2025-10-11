@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Shared::CrmMetadata
   def extra_data(); end
   def extra_data=(str_); end
+  def format(); end
+  def format=(str_); end
   def id(); end
   def id=(str_); end
   def key(); end

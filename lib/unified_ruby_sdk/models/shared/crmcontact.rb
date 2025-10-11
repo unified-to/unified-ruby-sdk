@@ -23,10 +23,14 @@ module UnifiedRubySDK
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
         # An array of deal IDs associated with this contact
         field :deal_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('deal_ids') } }
+
+        field :department, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('department') } }
         # An array of email addresses for this contact
         field :emails, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CrmEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :image_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('image_url') } }
         # Additional URLs associated with the contact e.g., LinkedIn, website, etc
         field :link_urls, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('link_urls') } }
 
@@ -44,15 +48,17 @@ module UnifiedRubySDK
 
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyCrmContactAddress), company: T.nilable(::String), company_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), deal_ids: T.nilable(T::Array[::String]), emails: T.nilable(T::Array[Models::Shared::CrmEmail]), id: T.nilable(::String), link_urls: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::CrmMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::CrmTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(address: nil, company: nil, company_ids: nil, created_at: nil, deal_ids: nil, emails: nil, id: nil, link_urls: nil, metadata: nil, name: nil, raw: nil, telephones: nil, title: nil, updated_at: nil, user_id: nil)
+        sig { params(address: T.nilable(Models::Shared::PropertyCrmContactAddress), company: T.nilable(::String), company_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), deal_ids: T.nilable(T::Array[::String]), department: T.nilable(::String), emails: T.nilable(T::Array[Models::Shared::CrmEmail]), id: T.nilable(::String), image_url: T.nilable(::String), link_urls: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::CrmMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::CrmTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(address: nil, company: nil, company_ids: nil, created_at: nil, deal_ids: nil, department: nil, emails: nil, id: nil, image_url: nil, link_urls: nil, metadata: nil, name: nil, raw: nil, telephones: nil, title: nil, updated_at: nil, user_id: nil)
           @address = address
           @company = company
           @company_ids = company_ids
           @created_at = created_at
           @deal_ids = deal_ids
+          @department = department
           @emails = emails
           @id = id
+          @image_url = image_url
           @link_urls = link_urls
           @metadata = metadata
           @name = name
@@ -71,8 +77,10 @@ module UnifiedRubySDK
           return false unless @company_ids == other.company_ids
           return false unless @created_at == other.created_at
           return false unless @deal_ids == other.deal_ids
+          return false unless @department == other.department
           return false unless @emails == other.emails
           return false unless @id == other.id
+          return false unless @image_url == other.image_url
           return false unless @link_urls == other.link_urls
           return false unless @metadata == other.metadata
           return false unless @name == other.name

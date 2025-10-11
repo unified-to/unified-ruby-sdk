@@ -18,10 +18,14 @@ class UnifiedRubySDK::Models::Shared::CrmContact
   def created_at=(str_); end
   def deal_ids(); end
   def deal_ids=(str_); end
+  def department(); end
+  def department=(str_); end
   def emails(); end
   def emails=(str_); end
   def id(); end
   def id=(str_); end
+  def image_url(); end
+  def image_url=(str_); end
   def link_urls(); end
   def link_urls=(str_); end
   def metadata(); end

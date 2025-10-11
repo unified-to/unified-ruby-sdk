@@ -148,6 +148,7 @@ module UnifiedRubySDK
       autoload :CrmMetadataSchemas1, 'unified_ruby_sdk/models/shared/crmmetadata_schemas_1.rb'
       autoload :CrmMetadataSchemas5, 'unified_ruby_sdk/models/shared/crmmetadata_schemas_5.rb'
       autoload :CrmMetadataExtraData, 'unified_ruby_sdk/models/shared/crmmetadata_extra_data.rb'
+      autoload :CrmMetadataFormat, 'unified_ruby_sdk/models/shared/crmmetadata_format.rb'
       autoload :CrmMetadataValue, 'unified_ruby_sdk/models/shared/crmmetadata_value.rb'
       autoload :CrmPipeline, 'unified_ruby_sdk/models/shared/crmpipeline.rb'
       autoload :CrmStage, 'unified_ruby_sdk/models/shared/crmstage.rb'
