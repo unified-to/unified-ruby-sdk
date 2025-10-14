@@ -34,6 +34,10 @@ class UnifiedRubySDK::Models::Shared::AtsJob
   def language_locale=(str_); end
   def metadata(); end
   def metadata=(str_); end
+  def minimum_degree(); end
+  def minimum_degree=(str_); end
+  def minimum_experience_years(); end
+  def minimum_experience_years=(str_); end
   def name(); end
   def name=(str_); end
   def number_of_openings(); end
