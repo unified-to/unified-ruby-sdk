@@ -10,6 +10,7 @@
 * [create_accounting_category](#create_accounting_category) - Create a category
 * [create_accounting_contact](#create_accounting_contact) - Create a contact
 * [create_accounting_creditmemo](#create_accounting_creditmemo) - Create a creditmemo
+* [create_accounting_expense](#create_accounting_expense) - Create an expense
 * [create_accounting_invoice](#create_accounting_invoice) - Create an invoice
 * [create_accounting_journal](#create_accounting_journal) - Create a journal
 * [create_accounting_order](#create_accounting_order) - Create an order
@@ -23,6 +24,7 @@
 * [get_accounting_category](#get_accounting_category) - Retrieve a category
 * [get_accounting_contact](#get_accounting_contact) - Retrieve a contact
 * [get_accounting_creditmemo](#get_accounting_creditmemo) - Retrieve a creditmemo
+* [get_accounting_expense](#get_accounting_expense) - Retrieve an expense
 * [get_accounting_invoice](#get_accounting_invoice) - Retrieve an invoice
 * [get_accounting_journal](#get_accounting_journal) - Retrieve a journal
 * [get_accounting_order](#get_accounting_order) - Retrieve an order
@@ -40,6 +42,7 @@
 * [list_accounting_categories](#list_accounting_categories) - List all categories
 * [list_accounting_contacts](#list_accounting_contacts) - List all contacts
 * [list_accounting_creditmemoes](#list_accounting_creditmemoes) - List all creditmemoes
+* [list_accounting_expenses](#list_accounting_expenses) - List all expenses
 * [list_accounting_invoices](#list_accounting_invoices) - List all invoices
 * [list_accounting_journals](#list_accounting_journals) - List all journals
 * [list_accounting_orders](#list_accounting_orders) - List all orders
@@ -56,6 +59,7 @@
 * [patch_accounting_category](#patch_accounting_category) - Update a category
 * [patch_accounting_contact](#patch_accounting_contact) - Update a contact
 * [patch_accounting_creditmemo](#patch_accounting_creditmemo) - Update a creditmemo
+* [patch_accounting_expense](#patch_accounting_expense) - Update an expense
 * [patch_accounting_invoice](#patch_accounting_invoice) - Update an invoice
 * [patch_accounting_journal](#patch_accounting_journal) - Update a journal
 * [patch_accounting_order](#patch_accounting_order) - Update an order
@@ -68,6 +72,7 @@
 * [remove_accounting_category](#remove_accounting_category) - Remove a category
 * [remove_accounting_contact](#remove_accounting_contact) - Remove a contact
 * [remove_accounting_creditmemo](#remove_accounting_creditmemo) - Remove a creditmemo
+* [remove_accounting_expense](#remove_accounting_expense) - Remove an expense
 * [remove_accounting_invoice](#remove_accounting_invoice) - Remove an invoice
 * [remove_accounting_journal](#remove_accounting_journal) - Remove a journal
 * [remove_accounting_order](#remove_accounting_order) - Remove an order
@@ -80,6 +85,7 @@
 * [update_accounting_category](#update_accounting_category) - Update a category
 * [update_accounting_contact](#update_accounting_contact) - Update a contact
 * [update_accounting_creditmemo](#update_accounting_creditmemo) - Update a creditmemo
+* [update_accounting_expense](#update_accounting_expense) - Update an expense
 * [update_accounting_invoice](#update_accounting_invoice) - Update an invoice
 * [update_accounting_journal](#update_accounting_journal) - Update a journal
 * [update_accounting_order](#update_accounting_order) - Update an order
@@ -301,6 +307,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateAccountingCreditmemoResponse)](../../models/operations/createaccountingcreditmemoresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## create_accounting_expense
+
+Create an expense
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createAccountingExpense" method="post" path="/accounting/{connection_id}/expense" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.accounting.create_accounting_expense(accounting_expense: Models::Shared::AccountingExpense.new(), connection_id: '<id>')
+
+unless res.accounting_expense.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `accounting_expense`                                                                                                                             | [Models::Shared::AccountingExpense](../../models/shared/accountingexpense.md)                                                                    | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<*::String*>                                                                                                                             | :heavy_minus_sign:                                                                                                                               | Comma-delimited fields to return                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateAccountingExpenseResponse)](../../models/operations/createaccountingexpenseresponse.md)**
 
 ### Errors
 
@@ -873,6 +923,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetAccountingCreditmemoResponse)](../../models/operations/getaccountingcreditmemoresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_accounting_expense
+
+Retrieve an expense
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getAccountingExpense" method="get" path="/accounting/{connection_id}/expense/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.accounting.get_accounting_expense(connection_id: '<id>', id: '<id>')
+
+unless res.accounting_expense.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Expense                                                                                                                                |
+| `fields_`                                                                                                                                        | T::Array<*::String*>                                                                                                                             | :heavy_minus_sign:                                                                                                                               | Comma-delimited fields to return                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetAccountingExpenseResponse)](../../models/operations/getaccountingexpenseresponse.md)**
 
 ### Errors
 
@@ -1634,6 +1728,51 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_accounting_expenses
+
+List all expenses
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listAccountingExpenses" method="get" path="/accounting/{connection_id}/expense" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListAccountingExpensesRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.accounting.list_accounting_expenses(request: req)
+
+unless res.accounting_expenses.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [Models::Operations::ListAccountingExpensesRequest](../../models/operations/listaccountingexpensesrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+
+### Response
+
+**[T.nilable(Models::Operations::ListAccountingExpensesResponse)](../../models/operations/listaccountingexpensesresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_accounting_invoices
 
 List all invoices
@@ -2364,6 +2503,53 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## patch_accounting_expense
+
+Update an expense
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchAccountingExpense" method="patch" path="/accounting/{connection_id}/expense/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::PatchAccountingExpenseRequest.new(
+  accounting_expense: Models::Shared::AccountingExpense.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.accounting.patch_accounting_expense(request: req)
+
+unless res.accounting_expense.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [Models::Operations::PatchAccountingExpenseRequest](../../models/operations/patchaccountingexpenserequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchAccountingExpenseResponse)](../../models/operations/patchaccountingexpenseresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## patch_accounting_invoice
 
 Update an invoice
@@ -2903,6 +3089,48 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## remove_accounting_expense
+
+Remove an expense
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeAccountingExpense" method="delete" path="/accounting/{connection_id}/expense/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.accounting.remove_accounting_expense(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Expense    |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveAccountingExpenseResponse)](../../models/operations/removeaccountingexpenseresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## remove_accounting_invoice
 
 Remove an invoice
@@ -3425,6 +3653,53 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::UpdateAccountingCreditmemoResponse)](../../models/operations/updateaccountingcreditmemoresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_accounting_expense
+
+Update an expense
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateAccountingExpense" method="put" path="/accounting/{connection_id}/expense/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateAccountingExpenseRequest.new(
+  accounting_expense: Models::Shared::AccountingExpense.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.accounting.update_accounting_expense(request: req)
+
+unless res.accounting_expense.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [Models::Operations::UpdateAccountingExpenseRequest](../../models/operations/updateaccountingexpenserequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateAccountingExpenseResponse)](../../models/operations/updateaccountingexpenseresponse.md)**
 
 ### Errors
 

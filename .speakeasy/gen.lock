@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: a340dff9ff9a611e83b0ac8c9df95754
+  docChecksum: 5e991f57774a394989eb351c469cc219
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.66.17
-  configChecksum: 3ec1e763dd9d8450dc12f8a1d2d45ce8
+  releaseVersion: 0.66.18
+  configChecksum: 7d90841575760334b243fa9ee7ab5d36
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -37,6 +37,8 @@ generatedFiles:
   - docs/models/operations/createaccountingcontactresponse.md
   - docs/models/operations/createaccountingcreditmemorequest.md
   - docs/models/operations/createaccountingcreditmemoresponse.md
+  - docs/models/operations/createaccountingexpenserequest.md
+  - docs/models/operations/createaccountingexpenseresponse.md
   - docs/models/operations/createaccountinginvoicerequest.md
   - docs/models/operations/createaccountinginvoiceresponse.md
   - docs/models/operations/createaccountingjournalrequest.md
@@ -196,6 +198,8 @@ generatedFiles:
   - docs/models/operations/getaccountingcontactresponse.md
   - docs/models/operations/getaccountingcreditmemorequest.md
   - docs/models/operations/getaccountingcreditmemoresponse.md
+  - docs/models/operations/getaccountingexpenserequest.md
+  - docs/models/operations/getaccountingexpenseresponse.md
   - docs/models/operations/getaccountinginvoicerequest.md
   - docs/models/operations/getaccountinginvoiceresponse.md
   - docs/models/operations/getaccountingjournalrequest.md
@@ -382,6 +386,8 @@ generatedFiles:
   - docs/models/operations/listaccountingcontactsresponse.md
   - docs/models/operations/listaccountingcreditmemoesrequest.md
   - docs/models/operations/listaccountingcreditmemoesresponse.md
+  - docs/models/operations/listaccountingexpensesrequest.md
+  - docs/models/operations/listaccountingexpensesresponse.md
   - docs/models/operations/listaccountinginvoicesrequest.md
   - docs/models/operations/listaccountinginvoicesresponse.md
   - docs/models/operations/listaccountingjournalsrequest.md
@@ -579,6 +585,8 @@ generatedFiles:
   - docs/models/operations/patchaccountingcontactresponse.md
   - docs/models/operations/patchaccountingcreditmemorequest.md
   - docs/models/operations/patchaccountingcreditmemoresponse.md
+  - docs/models/operations/patchaccountingexpenserequest.md
+  - docs/models/operations/patchaccountingexpenseresponse.md
   - docs/models/operations/patchaccountinginvoicerequest.md
   - docs/models/operations/patchaccountinginvoiceresponse.md
   - docs/models/operations/patchaccountingjournalrequest.md
@@ -736,6 +744,8 @@ generatedFiles:
   - docs/models/operations/removeaccountingcontactresponse.md
   - docs/models/operations/removeaccountingcreditmemorequest.md
   - docs/models/operations/removeaccountingcreditmemoresponse.md
+  - docs/models/operations/removeaccountingexpenserequest.md
+  - docs/models/operations/removeaccountingexpenseresponse.md
   - docs/models/operations/removeaccountinginvoicerequest.md
   - docs/models/operations/removeaccountinginvoiceresponse.md
   - docs/models/operations/removeaccountingjournalrequest.md
@@ -888,6 +898,8 @@ generatedFiles:
   - docs/models/operations/updateaccountingcontactresponse.md
   - docs/models/operations/updateaccountingcreditmemorequest.md
   - docs/models/operations/updateaccountingcreditmemoresponse.md
+  - docs/models/operations/updateaccountingexpenserequest.md
+  - docs/models/operations/updateaccountingexpenseresponse.md
   - docs/models/operations/updateaccountinginvoicerequest.md
   - docs/models/operations/updateaccountinginvoiceresponse.md
   - docs/models/operations/updateaccountingjournalrequest.md
@@ -1050,6 +1062,7 @@ generatedFiles:
   - docs/models/shared/accountingcreditmemostatus.md
   - docs/models/shared/accountingemail.md
   - docs/models/shared/accountingemailtype.md
+  - docs/models/shared/accountingexpense.md
   - docs/models/shared/accountinginvoice.md
   - docs/models/shared/accountinginvoicepaymentcollectionmethod.md
   - docs/models/shared/accountinginvoicestatus.md
@@ -1490,6 +1503,7 @@ generatedFiles:
   - docs/sdks/employee/README.md
   - docs/sdks/enrich/README.md
   - docs/sdks/event/README.md
+  - docs/sdks/expense/README.md
   - docs/sdks/file/README.md
   - docs/sdks/genai/README.md
   - docs/sdks/group/README.md
@@ -1604,6 +1618,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/employee.rb
   - lib/unified_ruby_sdk/enrich.rb
   - lib/unified_ruby_sdk/event.rb
+  - lib/unified_ruby_sdk/expense.rb
   - lib/unified_ruby_sdk/file.rb
   - lib/unified_ruby_sdk/genai.rb
   - lib/unified_ruby_sdk/group.rb
@@ -1657,6 +1672,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createaccountingcreditmemo_request.rbi
   - lib/unified_ruby_sdk/models/operations/createaccountingcreditmemo_response.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingcreditmemo_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createaccountingexpense_request.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingexpense_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createaccountingexpense_response.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingexpense_response.rbi
   - lib/unified_ruby_sdk/models/operations/createaccountinginvoice_request.rb
   - lib/unified_ruby_sdk/models/operations/createaccountinginvoice_request.rbi
   - lib/unified_ruby_sdk/models/operations/createaccountinginvoice_response.rb
@@ -1975,6 +1994,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getaccountingcreditmemo_request.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountingcreditmemo_response.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingcreditmemo_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingexpense_request.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingexpense_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingexpense_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingexpense_response.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountinginvoice_request.rb
   - lib/unified_ruby_sdk/models/operations/getaccountinginvoice_request.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountinginvoice_response.rb
@@ -2347,6 +2370,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listaccountingcreditmemoes_request.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountingcreditmemoes_response.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingcreditmemoes_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingexpenses_request.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingexpenses_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingexpenses_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingexpenses_response.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountinginvoices_request.rb
   - lib/unified_ruby_sdk/models/operations/listaccountinginvoices_request.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountinginvoices_response.rb
@@ -2741,6 +2768,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchaccountingcreditmemo_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchaccountingcreditmemo_response.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingcreditmemo_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchaccountingexpense_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingexpense_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchaccountingexpense_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingexpense_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchaccountinginvoice_request.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountinginvoice_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchaccountinginvoice_response.rb
@@ -3055,6 +3086,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removeaccountingcreditmemo_request.rbi
   - lib/unified_ruby_sdk/models/operations/removeaccountingcreditmemo_response.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingcreditmemo_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removeaccountingexpense_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingexpense_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removeaccountingexpense_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingexpense_response.rbi
   - lib/unified_ruby_sdk/models/operations/removeaccountinginvoice_request.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountinginvoice_request.rbi
   - lib/unified_ruby_sdk/models/operations/removeaccountinginvoice_response.rb
@@ -3359,6 +3394,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updateaccountingcreditmemo_request.rbi
   - lib/unified_ruby_sdk/models/operations/updateaccountingcreditmemo_response.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingcreditmemo_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updateaccountingexpense_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingexpense_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updateaccountingexpense_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingexpense_response.rbi
   - lib/unified_ruby_sdk/models/operations/updateaccountinginvoice_request.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountinginvoice_request.rbi
   - lib/unified_ruby_sdk/models/operations/updateaccountinginvoice_response.rb
@@ -3684,6 +3723,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingemail.rbi
   - lib/unified_ruby_sdk/models/shared/accountingemail_type.rb
   - lib/unified_ruby_sdk/models/shared/accountingemail_type.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingexpense.rb
+  - lib/unified_ruby_sdk/models/shared/accountingexpense.rbi
   - lib/unified_ruby_sdk/models/shared/accountinginvoice.rb
   - lib/unified_ruby_sdk/models/shared/accountinginvoice.rbi
   - lib/unified_ruby_sdk/models/shared/accountinginvoice_payment_collection_method.rb
@@ -9124,5 +9165,60 @@ examples:
       responses:
         "200":
           application/json: {"status": "ON_HOLD", "ticket_ref": "<value>", "title": "<value>", "workspace_id": "<id>"}
+  createAccountingExpense:
+    speakeasy-default-create-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getAccountingExpense:
+    speakeasy-default-get-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listAccountingExpenses:
+    speakeasy-default-list-accounting-expenses:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchAccountingExpense:
+    speakeasy-default-patch-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeAccountingExpense:
+    speakeasy-default-remove-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateAccountingExpense:
+    speakeasy-default-update-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}

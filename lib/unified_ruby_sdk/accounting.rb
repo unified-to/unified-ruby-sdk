@@ -679,6 +679,134 @@ module UnifiedRubySDK
     end
 
 
+    sig { params(accounting_expense: Models::Shared::AccountingExpense, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingExpenseResponse) }
+    def create_accounting_expense(accounting_expense:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_accounting_expense - Create an expense
+      request = Models::Operations::CreateAccountingExpenseRequest.new(
+        accounting_expense: accounting_expense,
+        connection_id: connection_id,
+        fields_: fields_,
+        raw: raw
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        Models::Operations::CreateAccountingExpenseRequest,
+        base_url,
+        '/accounting/{connection_id}/expense',
+        request
+      )
+      headers = {}
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :accounting_expense, :json)
+      headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
+
+      if form
+        body = Utils.encode_form(form)
+      elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
+      else
+        body = data
+      end
+      query_params = Utils.get_query_params(Models::Operations::CreateAccountingExpenseRequest, request, nil)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      security = @sdk_configuration.security_source&.call
+
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+      
+
+      connection = @sdk_configuration.client
+
+      hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'createAccountingExpense',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      http_response = T.let(nil, T.nilable(Faraday::Response))
+      
+      
+      begin
+        http_response = T.must(connection).post(url) do |req|
+          req.body = body
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if http_response.nil? || Utils.error_status?(http_response.status)
+          http_response = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+        else
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+        end
+        
+        if http_response.nil?
+          raise error if !error.nil?
+          raise 'no response'
+        end
+      end
+      
+      content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
+      if Utils.match_status_code(http_response.status, ['200'])
+        if Utils.match_content_type(content_type, 'application/json')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingExpense)
+          response = Models::Operations::CreateAccountingExpenseResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            accounting_expense: T.unsafe(obj)
+          )
+
+          return response
+        else
+          raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'Unknown content type received'
+        end
+      elsif Utils.match_status_code(http_response.status, ['4XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
+      elsif Utils.match_status_code(http_response.status, ['5XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
+      else
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'Unknown status code received'
+
+      end
+    end
+
+
     sig { params(accounting_invoice: Models::Shared::AccountingInvoice, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingInvoiceResponse) }
     def create_accounting_invoice(accounting_invoice:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_invoice - Create an invoice
@@ -2254,6 +2382,122 @@ module UnifiedRubySDK
             content_type: content_type,
             raw_response: http_response,
             accounting_creditmemo: T.unsafe(obj)
+          )
+
+          return response
+        else
+          raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'Unknown content type received'
+        end
+      elsif Utils.match_status_code(http_response.status, ['4XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
+      elsif Utils.match_status_code(http_response.status, ['5XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
+      else
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'Unknown status code received'
+
+      end
+    end
+
+
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingExpenseResponse) }
+    def get_accounting_expense(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_accounting_expense - Retrieve an expense
+      request = Models::Operations::GetAccountingExpenseRequest.new(
+        connection_id: connection_id,
+        id: id,
+        fields_: fields_,
+        raw: raw
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        Models::Operations::GetAccountingExpenseRequest,
+        base_url,
+        '/accounting/{connection_id}/expense/{id}',
+        request
+      )
+      headers = {}
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::GetAccountingExpenseRequest, request, nil)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      security = @sdk_configuration.security_source&.call
+
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+      
+
+      connection = @sdk_configuration.client
+
+      hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'getAccountingExpense',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      http_response = T.let(nil, T.nilable(Faraday::Response))
+      
+      
+      begin
+        http_response = T.must(connection).get(url) do |req|
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if http_response.nil? || Utils.error_status?(http_response.status)
+          http_response = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+        else
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+        end
+        
+        if http_response.nil?
+          raise error if !error.nil?
+          raise 'no response'
+        end
+      end
+      
+      content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
+      if Utils.match_status_code(http_response.status, ['200'])
+        if Utils.match_content_type(content_type, 'application/json')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingExpense)
+          response = Models::Operations::GetAccountingExpenseResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            accounting_expense: T.unsafe(obj)
           )
 
           return response
@@ -4207,6 +4451,116 @@ module UnifiedRubySDK
     end
 
 
+    sig { params(request: Models::Operations::ListAccountingExpensesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingExpensesResponse) }
+    def list_accounting_expenses(request:, timeout_ms: nil)
+      # list_accounting_expenses - List all expenses
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        Models::Operations::ListAccountingExpensesRequest,
+        base_url,
+        '/accounting/{connection_id}/expense',
+        request
+      )
+      headers = {}
+      headers = T.cast(headers, T::Hash[String, String])
+      query_params = Utils.get_query_params(Models::Operations::ListAccountingExpensesRequest, request, nil)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      security = @sdk_configuration.security_source&.call
+
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+      
+
+      connection = @sdk_configuration.client
+
+      hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'listAccountingExpenses',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      http_response = T.let(nil, T.nilable(Faraday::Response))
+      
+      
+      begin
+        http_response = T.must(connection).get(url) do |req|
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if http_response.nil? || Utils.error_status?(http_response.status)
+          http_response = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+        else
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+        end
+        
+        if http_response.nil?
+          raise error if !error.nil?
+          raise 'no response'
+        end
+      end
+      
+      content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
+      if Utils.match_status_code(http_response.status, ['200'])
+        if Utils.match_content_type(content_type, 'application/json')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AccountingExpense))
+          response = Models::Operations::ListAccountingExpensesResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            accounting_expenses: T.unsafe(obj)
+          )
+
+          return response
+        else
+          raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'Unknown content type received'
+        end
+      elsif Utils.match_status_code(http_response.status, ['4XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
+      elsif Utils.match_status_code(http_response.status, ['5XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
+      else
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'Unknown status code received'
+
+      end
+    end
+
+
     sig { params(request: Models::Operations::ListAccountingInvoicesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingInvoicesResponse) }
     def list_accounting_invoices(request:, timeout_ms: nil)
       # list_accounting_invoices - List all invoices
@@ -6027,6 +6381,128 @@ module UnifiedRubySDK
     end
 
 
+    sig { params(request: Models::Operations::PatchAccountingExpenseRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingExpenseResponse) }
+    def patch_accounting_expense(request:, timeout_ms: nil)
+      # patch_accounting_expense - Update an expense
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        Models::Operations::PatchAccountingExpenseRequest,
+        base_url,
+        '/accounting/{connection_id}/expense/{id}',
+        request
+      )
+      headers = {}
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :accounting_expense, :json)
+      headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
+
+      if form
+        body = Utils.encode_form(form)
+      elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
+      else
+        body = data
+      end
+      query_params = Utils.get_query_params(Models::Operations::PatchAccountingExpenseRequest, request, nil)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      security = @sdk_configuration.security_source&.call
+
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+      
+
+      connection = @sdk_configuration.client
+
+      hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'patchAccountingExpense',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      http_response = T.let(nil, T.nilable(Faraday::Response))
+      
+      
+      begin
+        http_response = T.must(connection).patch(url) do |req|
+          req.body = body
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if http_response.nil? || Utils.error_status?(http_response.status)
+          http_response = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+        else
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+        end
+        
+        if http_response.nil?
+          raise error if !error.nil?
+          raise 'no response'
+        end
+      end
+      
+      content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
+      if Utils.match_status_code(http_response.status, ['200'])
+        if Utils.match_content_type(content_type, 'application/json')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingExpense)
+          response = Models::Operations::PatchAccountingExpenseResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            accounting_expense: T.unsafe(obj)
+          )
+
+          return response
+        else
+          raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'Unknown content type received'
+        end
+      elsif Utils.match_status_code(http_response.status, ['4XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
+      elsif Utils.match_status_code(http_response.status, ['5XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
+      else
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'Unknown status code received'
+
+      end
+    end
+
+
     sig { params(request: Models::Operations::PatchAccountingInvoiceRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingInvoiceResponse) }
     def patch_accounting_invoice(request:, timeout_ms: nil)
       # patch_accounting_invoice - Update an invoice
@@ -7451,6 +7927,120 @@ module UnifiedRubySDK
     end
 
 
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingExpenseResponse) }
+    def remove_accounting_expense(connection_id:, id:, timeout_ms: nil)
+      # remove_accounting_expense - Remove an expense
+      request = Models::Operations::RemoveAccountingExpenseRequest.new(
+        connection_id: connection_id,
+        id: id
+      )
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        Models::Operations::RemoveAccountingExpenseRequest,
+        base_url,
+        '/accounting/{connection_id}/expense/{id}',
+        request
+      )
+      headers = {}
+      headers = T.cast(headers, T::Hash[String, String])
+      headers['Accept'] = '*/*'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      security = @sdk_configuration.security_source&.call
+
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+      
+
+      connection = @sdk_configuration.client
+
+      hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'removeAccountingExpense',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      http_response = T.let(nil, T.nilable(Faraday::Response))
+      
+      
+      begin
+        http_response = T.must(connection).delete(url) do |req|
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if http_response.nil? || Utils.error_status?(http_response.status)
+          http_response = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+        else
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+        end
+        
+        if http_response.nil?
+          raise error if !error.nil?
+          raise 'no response'
+        end
+      end
+      
+      content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
+      if Utils.match_status_code(http_response.status, ['200'])
+        http_response = @sdk_configuration.hooks.after_success(
+          hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+            hook_ctx: hook_ctx
+          ),
+          response: http_response
+        )
+        return Models::Operations::RemoveAccountingExpenseResponse.new(
+          status_code: http_response.status,
+          content_type: content_type,
+          raw_response: http_response,
+          headers: {}
+        )
+      elsif Utils.match_status_code(http_response.status, ['4XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
+      elsif Utils.match_status_code(http_response.status, ['5XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
+      else
+        http_response = @sdk_configuration.hooks.after_success(
+          hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+            hook_ctx: hook_ctx
+          ),
+          response: http_response
+        )
+        return Models::Operations::RemoveAccountingExpenseResponse.new(
+          status_code: http_response.status,
+          content_type: content_type,
+          raw_response: http_response,
+          headers: {}
+        )
+      end
+    end
+
+
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingInvoiceResponse) }
     def remove_accounting_invoice(connection_id:, id:, timeout_ms: nil)
       # remove_accounting_invoice - Remove an invoice
@@ -8842,6 +9432,128 @@ module UnifiedRubySDK
             content_type: content_type,
             raw_response: http_response,
             accounting_creditmemo: T.unsafe(obj)
+          )
+
+          return response
+        else
+          raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'Unknown content type received'
+        end
+      elsif Utils.match_status_code(http_response.status, ['4XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
+      elsif Utils.match_status_code(http_response.status, ['5XX'])
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'API error occurred'
+      else
+        raise ::UnifiedRubySDK::Models::Errors::APIError.new(status_code: http_response.status, body: http_response.env.response_body, raw_response: http_response), 'Unknown status code received'
+
+      end
+    end
+
+
+    sig { params(request: Models::Operations::UpdateAccountingExpenseRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingExpenseResponse) }
+    def update_accounting_expense(request:, timeout_ms: nil)
+      # update_accounting_expense - Update an expense
+      url, params = @sdk_configuration.get_server_details
+      base_url = Utils.template_url(url, params)
+      url = Utils.generate_url(
+        Models::Operations::UpdateAccountingExpenseRequest,
+        base_url,
+        '/accounting/{connection_id}/expense/{id}',
+        request
+      )
+      headers = {}
+      headers = T.cast(headers, T::Hash[String, String])
+      req_content_type, data, form = Utils.serialize_request_body(request, false, false, :accounting_expense, :json)
+      headers['content-type'] = req_content_type
+      raise StandardError, 'request body is required' if data.nil? && form.nil?
+
+      if form
+        body = Utils.encode_form(form)
+      elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
+        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
+      else
+        body = data
+      end
+      query_params = Utils.get_query_params(Models::Operations::UpdateAccountingExpenseRequest, request, nil)
+      headers['Accept'] = 'application/json'
+      headers['user-agent'] = @sdk_configuration.user_agent
+
+      security = @sdk_configuration.security_source&.call
+
+      timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
+      timeout ||= @sdk_configuration.timeout
+      
+
+      connection = @sdk_configuration.client
+
+      hook_ctx = SDKHooks::HookContext.new(
+        config: @sdk_configuration,
+        base_url: base_url,
+        oauth2_scopes: [],
+        operation_id: 'updateAccountingExpense',
+        security_source: @sdk_configuration.security_source
+      )
+
+      error = T.let(nil, T.nilable(StandardError))
+      http_response = T.let(nil, T.nilable(Faraday::Response))
+      
+      
+      begin
+        http_response = T.must(connection).put(url) do |req|
+          req.body = body
+          req.headers.merge!(headers)
+          req.options.timeout = timeout unless timeout.nil?
+          req.params = query_params
+          Utils.configure_request_security(req, security)
+
+          @sdk_configuration.hooks.before_request(
+            hook_ctx: SDKHooks::BeforeRequestHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            request: req
+          )
+        end
+      rescue StandardError => e
+        error = e
+      ensure
+        if http_response.nil? || Utils.error_status?(http_response.status)
+          http_response = @sdk_configuration.hooks.after_error(
+            error: error,
+            hook_ctx: SDKHooks::AfterErrorHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+        else
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+        end
+        
+        if http_response.nil?
+          raise error if !error.nil?
+          raise 'no response'
+        end
+      end
+      
+      content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
+      if Utils.match_status_code(http_response.status, ['200'])
+        if Utils.match_content_type(content_type, 'application/json')
+          http_response = @sdk_configuration.hooks.after_success(
+            hook_ctx: SDKHooks::AfterSuccessHookContext.new(
+              hook_ctx: hook_ctx
+            ),
+            response: http_response
+          )
+          response_data = http_response.env.response_body
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingExpense)
+          response = Models::Operations::UpdateAccountingExpenseResponse.new(
+            status_code: http_response.status,
+            content_type: content_type,
+            raw_response: http_response,
+            accounting_expense: T.unsafe(obj)
           )
 
           return response

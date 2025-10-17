@@ -9,18 +9,12 @@ module UnifiedRubySDK
     module Operations
     
 
-      class ListMessagingMessagesRequest
+      class ListAccountingExpensesRequest
         extend T::Sig
         include Crystalline::MetadataFields
 
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-        # The channel ID to filter by
-        field :channel_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'channel_id', 'style': 'form', 'explode': true } }
-        # The end date to filter by
-        field :end_le, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'end_le', 'style': 'form', 'explode': true } }
-        # Whether to flatten grouped or recurring items into individual entries.
-        field :expand, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'query_param': { 'field_name': 'expand', 'style': 'form', 'explode': true } }
         # Comma-delimited fields to return
         field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
@@ -29,36 +23,27 @@ module UnifiedRubySDK
         field :offset, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
 
         field :order, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
-        # The parent ID to filter by
-        field :parent_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'parent_id', 'style': 'form', 'explode': true } }
         # Query string to search. eg. email address or name
         field :query, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
         # Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
         field :raw, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
         field :sort, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
-        # The start date to filter by
-        field :start_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'start_gte', 'style': 'form', 'explode': true } }
         # Return only results whose updated date is equal or greater to this value
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
         # The user/employee ID to filter by
         field :user_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, channel_id: T.nilable(::String), end_le: T.nilable(::String), expand: T.nilable(T::Boolean), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
-        def initialize(connection_id:, channel_id: nil, end_le: nil, expand: nil, fields_: nil, limit: nil, offset: nil, order: nil, parent_id: nil, query: nil, raw: nil, sort: nil, start_gte: nil, updated_gte: nil, user_id: nil)
+        sig { params(connection_id: ::String, fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
+        def initialize(connection_id:, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, updated_gte: nil, user_id: nil)
           @connection_id = connection_id
-          @channel_id = channel_id
-          @end_le = end_le
-          @expand = expand
           @fields_ = fields_
           @limit = limit
           @offset = offset
           @order = order
-          @parent_id = parent_id
           @query = query
           @raw = raw
           @sort = sort
-          @start_gte = start_gte
           @updated_gte = updated_gte
           @user_id = user_id
         end
@@ -67,18 +52,13 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @connection_id == other.connection_id
-          return false unless @channel_id == other.channel_id
-          return false unless @end_le == other.end_le
-          return false unless @expand == other.expand
           return false unless @fields_ == other.fields_
           return false unless @limit == other.limit
           return false unless @offset == other.offset
           return false unless @order == other.order
-          return false unless @parent_id == other.parent_id
           return false unless @query == other.query
           return false unless @raw == other.raw
           return false unless @sort == other.sort
-          return false unless @start_gte == other.start_gte
           return false unless @updated_gte == other.updated_gte
           return false unless @user_id == other.user_id
           true

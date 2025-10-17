@@ -12,6 +12,7 @@ module UnifiedRubySDK
   autoload :Category, 'unified_ruby_sdk/category'
   autoload :Contact, 'unified_ruby_sdk/contact'
   autoload :Creditmemo, 'unified_ruby_sdk/creditmemo'
+  autoload :Expense, 'unified_ruby_sdk/expense'
   autoload :Invoice, 'unified_ruby_sdk/invoice'
   autoload :Journal, 'unified_ruby_sdk/journal'
   autoload :Order, 'unified_ruby_sdk/order'

@@ -24,6 +24,7 @@ module UnifiedRubySDK
       autoload :AccountingCreditmemoStatus, 'unified_ruby_sdk/models/shared/accountingcreditmemo_status.rb'
       autoload :AccountingEmail, 'unified_ruby_sdk/models/shared/accountingemail.rb'
       autoload :AccountingEmailType, 'unified_ruby_sdk/models/shared/accountingemail_type.rb'
+      autoload :AccountingExpense, 'unified_ruby_sdk/models/shared/accountingexpense.rb'
       autoload :AccountingInvoice, 'unified_ruby_sdk/models/shared/accountinginvoice.rb'
       autoload :AccountingInvoicePaymentCollectionMethod, 'unified_ruby_sdk/models/shared/accountinginvoice_payment_collection_method.rb'
       autoload :AccountingInvoiceStatus, 'unified_ruby_sdk/models/shared/accountinginvoice_status.rb'

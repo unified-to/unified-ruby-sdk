@@ -27,6 +27,8 @@ module UnifiedRubySDK
           ACCOUNTING_CREDITMEMO_WRITE = new('accounting_creditmemo_write')
           ACCOUNTING_CONTACT_READ = new('accounting_contact_read')
           ACCOUNTING_CONTACT_WRITE = new('accounting_contact_write')
+          ACCOUNTING_EXPENSE_READ = new('accounting_expense_read')
+          ACCOUNTING_EXPENSE_WRITE = new('accounting_expense_write')
           ACCOUNTING_TAXRATE_READ = new('accounting_taxrate_read')
           ACCOUNTING_TAXRATE_WRITE = new('accounting_taxrate_write')
           ACCOUNTING_ORGANIZATION_READ = new('accounting_organization_read')
