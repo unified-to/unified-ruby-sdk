@@ -12,8 +12,12 @@ class UnifiedRubySDK::Models::Shared::MarketingMember
   def created_at=(str_); end
   def emails(); end
   def emails=(str_); end
+  def first_name(); end
+  def first_name=(str_); end
   def id(); end
   def id=(str_); end
+  def last_name(); end
+  def last_name=(str_); end
   def list_ids(); end
   def list_ids=(str_); end
   def name(); end

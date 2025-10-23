@@ -24,6 +24,8 @@ module UnifiedRubySDK
 
         field :emails, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
 
+        field :first_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('first_name') } }
+
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :identification, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('identification') } }
@@ -33,6 +35,8 @@ module UnifiedRubySDK
         field :is_customer, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_customer') } }
 
         field :is_supplier, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_supplier') } }
+
+        field :last_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_name') } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
@@ -54,18 +58,20 @@ module UnifiedRubySDK
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-        sig { params(associated_contacts: T.nilable(T::Array[Models::Shared::AccountingAssociatedContact]), billing_address: T.nilable(Models::Shared::PropertyAccountingContactBillingAddress), company_name: T.nilable(::String), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::AccountingEmail]), id: T.nilable(::String), identification: T.nilable(::String), is_active: T.nilable(T::Boolean), is_customer: T.nilable(T::Boolean), is_supplier: T.nilable(T::Boolean), name: T.nilable(::String), payment_methods: T.nilable(T::Array[Models::Shared::AccountingContactPaymentMethod]), portal_url: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), shipping_address: T.nilable(Models::Shared::PropertyAccountingContactShippingAddress), tax_exemption: T.nilable(Models::Shared::TaxExemption), tax_number: T.nilable(::String), telephones: T.nilable(T::Array[Models::Shared::AccountingTelephone]), updated_at: T.nilable(::DateTime), currency: T.nilable(::String)).void }
-        def initialize(associated_contacts: nil, billing_address: nil, company_name: nil, created_at: nil, emails: nil, id: nil, identification: nil, is_active: nil, is_customer: nil, is_supplier: nil, name: nil, payment_methods: nil, portal_url: nil, raw: nil, shipping_address: nil, tax_exemption: nil, tax_number: nil, telephones: nil, updated_at: nil, currency: 'USD')
+        sig { params(associated_contacts: T.nilable(T::Array[Models::Shared::AccountingAssociatedContact]), billing_address: T.nilable(Models::Shared::PropertyAccountingContactBillingAddress), company_name: T.nilable(::String), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::AccountingEmail]), first_name: T.nilable(::String), id: T.nilable(::String), identification: T.nilable(::String), is_active: T.nilable(T::Boolean), is_customer: T.nilable(T::Boolean), is_supplier: T.nilable(T::Boolean), last_name: T.nilable(::String), name: T.nilable(::String), payment_methods: T.nilable(T::Array[Models::Shared::AccountingContactPaymentMethod]), portal_url: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), shipping_address: T.nilable(Models::Shared::PropertyAccountingContactShippingAddress), tax_exemption: T.nilable(Models::Shared::TaxExemption), tax_number: T.nilable(::String), telephones: T.nilable(T::Array[Models::Shared::AccountingTelephone]), updated_at: T.nilable(::DateTime), currency: T.nilable(::String)).void }
+        def initialize(associated_contacts: nil, billing_address: nil, company_name: nil, created_at: nil, emails: nil, first_name: nil, id: nil, identification: nil, is_active: nil, is_customer: nil, is_supplier: nil, last_name: nil, name: nil, payment_methods: nil, portal_url: nil, raw: nil, shipping_address: nil, tax_exemption: nil, tax_number: nil, telephones: nil, updated_at: nil, currency: 'USD')
           @associated_contacts = associated_contacts
           @billing_address = billing_address
           @company_name = company_name
           @created_at = created_at
           @emails = emails
+          @first_name = first_name
           @id = id
           @identification = identification
           @is_active = is_active
           @is_customer = is_customer
           @is_supplier = is_supplier
+          @last_name = last_name
           @name = name
           @payment_methods = payment_methods
           @portal_url = portal_url
@@ -86,11 +92,13 @@ module UnifiedRubySDK
           return false unless @company_name == other.company_name
           return false unless @created_at == other.created_at
           return false unless @emails == other.emails
+          return false unless @first_name == other.first_name
           return false unless @id == other.id
           return false unless @identification == other.identification
           return false unless @is_active == other.is_active
           return false unless @is_customer == other.is_customer
           return false unless @is_supplier == other.is_supplier
+          return false unless @last_name == other.last_name
           return false unless @name == other.name
           return false unless @payment_methods == other.payment_methods
           return false unless @portal_url == other.portal_url

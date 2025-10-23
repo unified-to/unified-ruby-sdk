@@ -42,8 +42,6 @@ class UnifiedRubySDK::Models::Shared::Webhook
   def is_healthy=(str_); end
   def is_paused(); end
   def is_paused=(str_); end
-  def meta(); end
-  def meta=(str_); end
   def page_max_limit(); end
   def page_max_limit=(str_); end
   def runs(); end

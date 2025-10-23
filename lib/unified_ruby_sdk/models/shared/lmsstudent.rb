@@ -20,9 +20,13 @@ module UnifiedRubySDK
 
         field :emails, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LmsEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
 
+        field :first_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('first_name') } }
+
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :image_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('image_url') } }
+
+        field :last_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_name') } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
@@ -32,13 +36,15 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyLmsStudentAddress), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::LmsEmail]), id: T.nilable(::String), image_url: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::LmsTelephone]), updated_at: T.nilable(::DateTime)).void }
-        def initialize(address: nil, created_at: nil, emails: nil, id: nil, image_url: nil, name: nil, raw: nil, telephones: nil, updated_at: nil)
+        sig { params(address: T.nilable(Models::Shared::PropertyLmsStudentAddress), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::LmsEmail]), first_name: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), last_name: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::LmsTelephone]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(address: nil, created_at: nil, emails: nil, first_name: nil, id: nil, image_url: nil, last_name: nil, name: nil, raw: nil, telephones: nil, updated_at: nil)
           @address = address
           @created_at = created_at
           @emails = emails
+          @first_name = first_name
           @id = id
           @image_url = image_url
+          @last_name = last_name
           @name = name
           @raw = raw
           @telephones = telephones
@@ -51,8 +57,10 @@ module UnifiedRubySDK
           return false unless @address == other.address
           return false unless @created_at == other.created_at
           return false unless @emails == other.emails
+          return false unless @first_name == other.first_name
           return false unless @id == other.id
           return false unless @image_url == other.image_url
+          return false unless @last_name == other.last_name
           return false unless @name == other.name
           return false unless @raw == other.raw
           return false unless @telephones == other.telephones

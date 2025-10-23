@@ -24,6 +24,8 @@ class UnifiedRubySDK::Models::Shared::EnrichPerson
   def emails=(str_); end
   def facebook_url(); end
   def facebook_url=(str_); end
+  def first_name(); end
+  def first_name=(str_); end
   def gender(); end
   def gender=(str_); end
   def github_url(); end
@@ -34,6 +36,8 @@ class UnifiedRubySDK::Models::Shared::EnrichPerson
   def id=(str_); end
   def image_url(); end
   def image_url=(str_); end
+  def last_name(); end
+  def last_name=(str_); end
   def linkedin_url(); end
   def linkedin_url=(str_); end
   def name(); end

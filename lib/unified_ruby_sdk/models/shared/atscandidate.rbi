@@ -26,10 +26,14 @@ class UnifiedRubySDK::Models::Shared::AtsCandidate
   def experiences=(str_); end
   def external_identifier(); end
   def external_identifier=(str_); end
+  def first_name(); end
+  def first_name=(str_); end
   def id(); end
   def id=(str_); end
   def image_url(); end
   def image_url=(str_); end
+  def last_name(); end
+  def last_name=(str_); end
   def link_urls(); end
   def link_urls=(str_); end
   def metadata(); end

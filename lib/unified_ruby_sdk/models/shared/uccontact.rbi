@@ -14,8 +14,12 @@ class UnifiedRubySDK::Models::Shared::UcContact
   def created_at=(str_); end
   def emails(); end
   def emails=(str_); end
+  def first_name(); end
+  def first_name=(str_); end
   def id(); end
   def id=(str_); end
+  def last_name(); end
+  def last_name=(str_); end
   def name(); end
   def name=(str_); end
   def raw(); end

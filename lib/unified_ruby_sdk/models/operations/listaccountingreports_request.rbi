@@ -12,6 +12,8 @@ class UnifiedRubySDK::Models::Operations::ListAccountingReportsRequest
   def connection_id=(str_); end
   def end_le(); end
   def end_le=(str_); end
+  def end_lt(); end
+  def end_lt=(str_); end
   def fields_(); end
   def fields_=(str_); end
   def limit(); end

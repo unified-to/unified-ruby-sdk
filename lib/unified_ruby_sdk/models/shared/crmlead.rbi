@@ -22,10 +22,14 @@ class UnifiedRubySDK::Models::Shared::CrmLead
   def creator_user_id=(str_); end
   def emails(); end
   def emails=(str_); end
+  def first_name(); end
+  def first_name=(str_); end
   def id(); end
   def id=(str_); end
   def is_active(); end
   def is_active=(str_); end
+  def last_name(); end
+  def last_name=(str_); end
   def link_urls(); end
   def link_urls=(str_); end
   def metadata(); end

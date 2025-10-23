@@ -20,7 +20,11 @@ module UnifiedRubySDK
         # An array of email addresses for this contact
         field :emails, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::UcEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
 
+        field :first_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('first_name') } }
+
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :last_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_name') } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
@@ -32,12 +36,14 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(company: T.nilable(::String), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::UcEmail]), id: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::UcTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(company: nil, created_at: nil, emails: nil, id: nil, name: nil, raw: nil, telephones: nil, title: nil, updated_at: nil)
+        sig { params(company: T.nilable(::String), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::UcEmail]), first_name: T.nilable(::String), id: T.nilable(::String), last_name: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::UcTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(company: nil, created_at: nil, emails: nil, first_name: nil, id: nil, last_name: nil, name: nil, raw: nil, telephones: nil, title: nil, updated_at: nil)
           @company = company
           @created_at = created_at
           @emails = emails
+          @first_name = first_name
           @id = id
+          @last_name = last_name
           @name = name
           @raw = raw
           @telephones = telephones
@@ -51,7 +57,9 @@ module UnifiedRubySDK
           return false unless @company == other.company
           return false unless @created_at == other.created_at
           return false unless @emails == other.emails
+          return false unless @first_name == other.first_name
           return false unless @id == other.id
+          return false unless @last_name == other.last_name
           return false unless @name == other.name
           return false unless @raw == other.raw
           return false unless @telephones == other.telephones

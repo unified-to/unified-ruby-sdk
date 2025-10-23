@@ -36,6 +36,8 @@ class UnifiedRubySDK::Models::Shared::HrisEmployee
   def employment_status=(str_); end
   def employment_type(); end
   def employment_type=(str_); end
+  def first_name(); end
+  def first_name=(str_); end
   def gender(); end
   def gender=(str_); end
   def groups(); end
@@ -48,6 +50,8 @@ class UnifiedRubySDK::Models::Shared::HrisEmployee
   def image_url=(str_); end
   def language_locale(); end
   def language_locale=(str_); end
+  def last_name(); end
+  def last_name=(str_); end
   def location(); end
   def location=(str_); end
   def locations(); end

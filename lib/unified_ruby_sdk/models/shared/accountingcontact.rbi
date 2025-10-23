@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::AccountingContact
   def created_at=(str_); end
   def emails(); end
   def emails=(str_); end
+  def first_name(); end
+  def first_name=(str_); end
   def id(); end
   def id=(str_); end
   def identification(); end
@@ -28,6 +30,8 @@ class UnifiedRubySDK::Models::Shared::AccountingContact
   def is_customer=(str_); end
   def is_supplier(); end
   def is_supplier=(str_); end
+  def last_name(); end
+  def last_name=(str_); end
   def name(); end
   def name=(str_); end
   def payment_methods(); end

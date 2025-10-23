@@ -32,9 +32,13 @@ module UnifiedRubySDK
 
         field :external_identifier, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_identifier') } }
 
+        field :first_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('first_name') } }
+
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :image_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('image_url') } }
+
+        field :last_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_name') } }
         # URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)
         field :link_urls, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('link_urls') } }
 
@@ -62,8 +66,8 @@ module UnifiedRubySDK
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyAtsCandidateAddress), company_id: T.nilable(::String), company_name: T.nilable(::String), created_at: T.nilable(::DateTime), date_of_birth: T.nilable(::DateTime), education: T.nilable(T::Array[Models::Shared::AtsCandidateEducation]), emails: T.nilable(T::Array[Models::Shared::AtsEmail]), experiences: T.nilable(T::Array[Models::Shared::AtsCandidateExperience]), external_identifier: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), link_urls: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), name: T.nilable(::String), origin: T.nilable(Models::Shared::Origin), raw: T.nilable(T::Hash[Symbol, ::Object]), skills: T.nilable(T::Array[::String]), sources: T.nilable(T::Array[::String]), tags: T.nilable(T::Array[::String]), telephones: T.nilable(T::Array[Models::Shared::AtsTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), web_url: T.nilable(::String)).void }
-        def initialize(address: nil, company_id: nil, company_name: nil, created_at: nil, date_of_birth: nil, education: nil, emails: nil, experiences: nil, external_identifier: nil, id: nil, image_url: nil, link_urls: nil, metadata: nil, name: nil, origin: nil, raw: nil, skills: nil, sources: nil, tags: nil, telephones: nil, title: nil, updated_at: nil, user_id: nil, web_url: nil)
+        sig { params(address: T.nilable(Models::Shared::PropertyAtsCandidateAddress), company_id: T.nilable(::String), company_name: T.nilable(::String), created_at: T.nilable(::DateTime), date_of_birth: T.nilable(::DateTime), education: T.nilable(T::Array[Models::Shared::AtsCandidateEducation]), emails: T.nilable(T::Array[Models::Shared::AtsEmail]), experiences: T.nilable(T::Array[Models::Shared::AtsCandidateExperience]), external_identifier: T.nilable(::String), first_name: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), last_name: T.nilable(::String), link_urls: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), name: T.nilable(::String), origin: T.nilable(Models::Shared::Origin), raw: T.nilable(T::Hash[Symbol, ::Object]), skills: T.nilable(T::Array[::String]), sources: T.nilable(T::Array[::String]), tags: T.nilable(T::Array[::String]), telephones: T.nilable(T::Array[Models::Shared::AtsTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), web_url: T.nilable(::String)).void }
+        def initialize(address: nil, company_id: nil, company_name: nil, created_at: nil, date_of_birth: nil, education: nil, emails: nil, experiences: nil, external_identifier: nil, first_name: nil, id: nil, image_url: nil, last_name: nil, link_urls: nil, metadata: nil, name: nil, origin: nil, raw: nil, skills: nil, sources: nil, tags: nil, telephones: nil, title: nil, updated_at: nil, user_id: nil, web_url: nil)
           @address = address
           @company_id = company_id
           @company_name = company_name
@@ -73,8 +77,10 @@ module UnifiedRubySDK
           @emails = emails
           @experiences = experiences
           @external_identifier = external_identifier
+          @first_name = first_name
           @id = id
           @image_url = image_url
+          @last_name = last_name
           @link_urls = link_urls
           @metadata = metadata
           @name = name
@@ -102,8 +108,10 @@ module UnifiedRubySDK
           return false unless @emails == other.emails
           return false unless @experiences == other.experiences
           return false unless @external_identifier == other.external_identifier
+          return false unless @first_name == other.first_name
           return false unless @id == other.id
           return false unless @image_url == other.image_url
+          return false unless @last_name == other.last_name
           return false unless @link_urls == other.link_urls
           return false unless @metadata == other.metadata
           return false unless @name == other.name

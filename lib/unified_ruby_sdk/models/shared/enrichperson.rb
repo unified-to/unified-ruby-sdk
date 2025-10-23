@@ -30,6 +30,8 @@ module UnifiedRubySDK
 
         field :facebook_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('facebook_url') } }
 
+        field :first_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('first_name') } }
+
         field :gender, Crystalline::Nilable.new(Models::Shared::Gender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gender'), 'decoder': Utils.enum_from_string(Models::Shared::Gender, true) } }
 
         field :github_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('github_url') } }
@@ -40,10 +42,12 @@ module UnifiedRubySDK
 
         field :image_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('image_url') } }
 
+        field :last_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_name') } }
+
         field :linkedin_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('linkedin_url') } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-        # The raw data returned by the integration for this person
+
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # An array of telephones for this person
         field :telephones, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::EnrichTelephone)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
@@ -62,8 +66,8 @@ module UnifiedRubySDK
 
         field :work_histories, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::EnrichPersonWorkHistory)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('work_histories') } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyEnrichPersonAddress), bio: T.nilable(::String), birthdate: T.nilable(::String), company: T.nilable(::String), company_domain: T.nilable(::String), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::EnrichEmail]), facebook_url: T.nilable(::String), gender: T.nilable(Models::Shared::Gender), github_url: T.nilable(::String), github_username: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), linkedin_url: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::EnrichTelephone]), timezone: T.nilable(::String), title: T.nilable(::String), twitter_handle: T.nilable(::String), twitter_url: T.nilable(::String), updated_at: T.nilable(::DateTime), utc_offset: T.nilable(::Float), work_histories: T.nilable(T::Array[Models::Shared::EnrichPersonWorkHistory])).void }
-        def initialize(address: nil, bio: nil, birthdate: nil, company: nil, company_domain: nil, created_at: nil, emails: nil, facebook_url: nil, gender: nil, github_url: nil, github_username: nil, id: nil, image_url: nil, linkedin_url: nil, name: nil, raw: nil, telephones: nil, timezone: nil, title: nil, twitter_handle: nil, twitter_url: nil, updated_at: nil, utc_offset: nil, work_histories: nil)
+        sig { params(address: T.nilable(Models::Shared::PropertyEnrichPersonAddress), bio: T.nilable(::String), birthdate: T.nilable(::String), company: T.nilable(::String), company_domain: T.nilable(::String), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::EnrichEmail]), facebook_url: T.nilable(::String), first_name: T.nilable(::String), gender: T.nilable(Models::Shared::Gender), github_url: T.nilable(::String), github_username: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), last_name: T.nilable(::String), linkedin_url: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::EnrichTelephone]), timezone: T.nilable(::String), title: T.nilable(::String), twitter_handle: T.nilable(::String), twitter_url: T.nilable(::String), updated_at: T.nilable(::DateTime), utc_offset: T.nilable(::Float), work_histories: T.nilable(T::Array[Models::Shared::EnrichPersonWorkHistory])).void }
+        def initialize(address: nil, bio: nil, birthdate: nil, company: nil, company_domain: nil, created_at: nil, emails: nil, facebook_url: nil, first_name: nil, gender: nil, github_url: nil, github_username: nil, id: nil, image_url: nil, last_name: nil, linkedin_url: nil, name: nil, raw: nil, telephones: nil, timezone: nil, title: nil, twitter_handle: nil, twitter_url: nil, updated_at: nil, utc_offset: nil, work_histories: nil)
           @address = address
           @bio = bio
           @birthdate = birthdate
@@ -72,11 +76,13 @@ module UnifiedRubySDK
           @created_at = created_at
           @emails = emails
           @facebook_url = facebook_url
+          @first_name = first_name
           @gender = gender
           @github_url = github_url
           @github_username = github_username
           @id = id
           @image_url = image_url
+          @last_name = last_name
           @linkedin_url = linkedin_url
           @name = name
           @raw = raw
@@ -101,11 +107,13 @@ module UnifiedRubySDK
           return false unless @created_at == other.created_at
           return false unless @emails == other.emails
           return false unless @facebook_url == other.facebook_url
+          return false unless @first_name == other.first_name
           return false unless @gender == other.gender
           return false unless @github_url == other.github_url
           return false unless @github_username == other.github_username
           return false unless @id == other.id
           return false unless @image_url == other.image_url
+          return false unless @last_name == other.last_name
           return false unless @linkedin_url == other.linkedin_url
           return false unless @name == other.name
           return false unless @raw == other.raw
