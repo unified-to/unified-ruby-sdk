@@ -102,7 +102,6 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.repo.create_repo_commit(repo_commit: Models::Shared::RepoCommit.new(
   repo_id: '<id>',
-  user_id: '<id>',
 ), connection_id: '<id>')
 
 unless res.repo_commit.nil?
@@ -779,7 +778,6 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchRepoCommitRequest.new(
   repo_commit: Models::Shared::RepoCommit.new(
     repo_id: '<id>',
-    user_id: '<id>',
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1232,7 +1230,6 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateRepoCommitRequest.new(
   repo_commit: Models::Shared::RepoCommit.new(
     repo_id: '<id>',
-    user_id: '<id>',
   ),
   connection_id: '<id>',
   id: '<id>',

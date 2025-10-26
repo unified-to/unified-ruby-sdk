@@ -10,8 +10,6 @@ end
 class UnifiedRubySDK::Models::Shared::RepoCommit
   def repo_id(); end
   def repo_id=(str_); end
-  def user_id(); end
-  def user_id=(str_); end
   def branch_id(); end
   def branch_id=(str_); end
   def created_at(); end
@@ -24,4 +22,6 @@ class UnifiedRubySDK::Models::Shared::RepoCommit
   def raw=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
+  def user_id(); end
+  def user_id=(str_); end
 end

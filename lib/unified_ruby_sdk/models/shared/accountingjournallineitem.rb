@@ -16,9 +16,13 @@ module UnifiedRubySDK
 
         field :account_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_id') } }
 
+        field :category_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category_ids') } }
+
         field :contact_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+
+        field :group_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_id') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
@@ -26,18 +30,23 @@ module UnifiedRubySDK
 
         field :payment_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_id') } }
 
+        field :project_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('project_id') } }
+
         field :tax_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_amount') } }
 
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
 
-        sig { params(account_id: T.nilable(::String), contact_id: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), invoice_id: T.nilable(::String), payment_id: T.nilable(::String), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float)).void }
-        def initialize(account_id: nil, contact_id: nil, description: nil, id: nil, invoice_id: nil, payment_id: nil, tax_amount: nil, total_amount: nil)
+        sig { params(account_id: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), description: T.nilable(::String), group_id: T.nilable(::String), id: T.nilable(::String), invoice_id: T.nilable(::String), payment_id: T.nilable(::String), project_id: T.nilable(::String), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float)).void }
+        def initialize(account_id: nil, category_ids: nil, contact_id: nil, description: nil, group_id: nil, id: nil, invoice_id: nil, payment_id: nil, project_id: nil, tax_amount: nil, total_amount: nil)
           @account_id = account_id
+          @category_ids = category_ids
           @contact_id = contact_id
           @description = description
+          @group_id = group_id
           @id = id
           @invoice_id = invoice_id
           @payment_id = payment_id
+          @project_id = project_id
           @tax_amount = tax_amount
           @total_amount = total_amount
         end
@@ -46,11 +55,14 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @account_id == other.account_id
+          return false unless @category_ids == other.category_ids
           return false unless @contact_id == other.contact_id
           return false unless @description == other.description
+          return false unless @group_id == other.group_id
           return false unless @id == other.id
           return false unless @invoice_id == other.invoice_id
           return false unless @payment_id == other.payment_id
+          return false unless @project_id == other.project_id
           return false unless @tax_amount == other.tax_amount
           return false unless @total_amount == other.total_amount
           true
