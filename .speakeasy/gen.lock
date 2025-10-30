@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 018de8bfc3ab59a73a1c069f241e60a4
+  docChecksum: 488263b38991bc1af62a3a84968ffb52
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.66.20
-  configChecksum: 88cd9053cd97f7f5b20eb5e8cd1d8fda
+  releaseVersion: 0.66.21
+  configChecksum: 26a302c50e84a29a11a95d10df0e1e3b
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -192,6 +192,8 @@ generatedFiles:
   - docs/models/operations/getaccountingbalancesheetresponse.md
   - docs/models/operations/getaccountingbillrequest.md
   - docs/models/operations/getaccountingbillresponse.md
+  - docs/models/operations/getaccountingcashflowrequest.md
+  - docs/models/operations/getaccountingcashflowresponse.md
   - docs/models/operations/getaccountingcategoryrequest.md
   - docs/models/operations/getaccountingcategoryresponse.md
   - docs/models/operations/getaccountingcontactrequest.md
@@ -380,6 +382,8 @@ generatedFiles:
   - docs/models/operations/listaccountingbalancesheetsresponse.md
   - docs/models/operations/listaccountingbillsrequest.md
   - docs/models/operations/listaccountingbillsresponse.md
+  - docs/models/operations/listaccountingcashflowsrequest.md
+  - docs/models/operations/listaccountingcashflowsresponse.md
   - docs/models/operations/listaccountingcategoriesrequest.md
   - docs/models/operations/listaccountingcategoriesresponse.md
   - docs/models/operations/listaccountingcontactsrequest.md
@@ -1053,6 +1057,9 @@ generatedFiles:
   - docs/models/shared/accountingbalancesheetitem.md
   - docs/models/shared/accountingbill.md
   - docs/models/shared/accountingbillstatus.md
+  - docs/models/shared/accountingcashflow.md
+  - docs/models/shared/accountingcashflowitem.md
+  - docs/models/shared/accountingcashflowsection.md
   - docs/models/shared/accountingcategory.md
   - docs/models/shared/accountingcontact.md
   - docs/models/shared/accountingcontactpaymentmethod.md
@@ -1313,6 +1320,7 @@ generatedFiles:
   - docs/models/shared/priority.md
   - docs/models/shared/profilegender.md
   - docs/models/shared/propertyaccountingbalancesheetitemsubitems.md
+  - docs/models/shared/propertyaccountingcashflowitemsubitems.md
   - docs/models/shared/propertyaccountingcontactbillingaddress.md
   - docs/models/shared/propertyaccountingcontactshippingaddress.md
   - docs/models/shared/propertyaccountingorderbillingaddress.md
@@ -1481,6 +1489,7 @@ generatedFiles:
   - docs/sdks/calendar/README.md
   - docs/sdks/call/README.md
   - docs/sdks/candidate/README.md
+  - docs/sdks/cashflow/README.md
   - docs/sdks/category/README.md
   - docs/sdks/change/README.md
   - docs/sdks/channel/README.md
@@ -1596,6 +1605,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/calendar.rb
   - lib/unified_ruby_sdk/call.rb
   - lib/unified_ruby_sdk/candidate.rb
+  - lib/unified_ruby_sdk/cashflow.rb
   - lib/unified_ruby_sdk/category.rb
   - lib/unified_ruby_sdk/change.rb
   - lib/unified_ruby_sdk/channel.rb
@@ -1982,6 +1992,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getaccountingbill_request.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountingbill_response.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingbill_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingcashflow_request.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingcashflow_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingcashflow_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingcashflow_response.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountingcategory_request.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingcategory_request.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountingcategory_response.rb
@@ -2358,6 +2372,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listaccountingbills_request.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountingbills_response.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingbills_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingcashflows_request.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingcashflows_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingcashflows_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingcashflows_response.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountingcategories_request.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingcategories_request.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountingcategories_response.rb
@@ -3705,6 +3723,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingbill.rbi
   - lib/unified_ruby_sdk/models/shared/accountingbill_status.rb
   - lib/unified_ruby_sdk/models/shared/accountingbill_status.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingcashflow.rb
+  - lib/unified_ruby_sdk/models/shared/accountingcashflow.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingcashflowitem.rb
+  - lib/unified_ruby_sdk/models/shared/accountingcashflowitem.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingcashflowsection.rb
+  - lib/unified_ruby_sdk/models/shared/accountingcashflowsection.rbi
   - lib/unified_ruby_sdk/models/shared/accountingcategory.rb
   - lib/unified_ruby_sdk/models/shared/accountingcategory.rbi
   - lib/unified_ruby_sdk/models/shared/accountingcontact.rb
@@ -4225,6 +4249,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/profile_gender.rbi
   - lib/unified_ruby_sdk/models/shared/property_accountingbalancesheetitem_sub_items.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingbalancesheetitem_sub_items.rbi
+  - lib/unified_ruby_sdk/models/shared/property_accountingcashflowitem_sub_items.rb
+  - lib/unified_ruby_sdk/models/shared/property_accountingcashflowitem_sub_items.rbi
   - lib/unified_ruby_sdk/models/shared/property_accountingcontact_billing_address.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingcontact_billing_address.rbi
   - lib/unified_ruby_sdk/models/shared/property_accountingcontact_shipping_address.rb
@@ -9220,5 +9246,22 @@ examples:
       responses:
         "200":
           application/json: {}
+  getAccountingCashflow:
+    speakeasy-default-get-accounting-cashflow:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listAccountingCashflows:
+    speakeasy-default-list-accounting-cashflows:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}

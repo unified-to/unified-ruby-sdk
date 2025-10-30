@@ -50,6 +50,8 @@ module UnifiedRubySDK
           ACCOUNTING_CATEGORY_WRITE = new('accounting_category_write')
           PAYMENT_PAYMENT_READ = new('payment_payment_read')
           PAYMENT_PAYMENT_WRITE = new('payment_payment_write')
+          ACCOUNTING_CASHFLOW_READ = new('accounting_cashflow_read')
+          ACCOUNTING_CASHFLOW_WRITE = new('accounting_cashflow_write')
           PAYMENT_PAYOUT_READ = new('payment_payout_read')
           PAYMENT_REFUND_READ = new('payment_refund_read')
           PAYMENT_LINK_READ = new('payment_link_read')

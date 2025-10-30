@@ -1,0 +1,10 @@
+# AccountingCashflowSection
+
+
+## Fields
+
+| Field                                                                                             | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `items`                                                                                           | T::Array<[Models::Shared::AccountingCashflowItem](../../models/shared/accountingcashflowitem.md)> | :heavy_minus_sign:                                                                                | N/A                                                                                               |
+| `section_name`                                                                                    | *T.nilable(::String)*                                                                             | :heavy_minus_sign:                                                                                | N/A                                                                                               |
+| `total_amount`                                                                                    | *T.nilable(::Float)*                                                                              | :heavy_minus_sign:                                                                                | N/A                                                                                               |

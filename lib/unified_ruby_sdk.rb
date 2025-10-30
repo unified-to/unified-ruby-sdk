@@ -9,6 +9,7 @@ module UnifiedRubySDK
   autoload :Account, 'unified_ruby_sdk/account'
   autoload :Balancesheet, 'unified_ruby_sdk/balancesheet'
   autoload :Bill, 'unified_ruby_sdk/bill'
+  autoload :Cashflow, 'unified_ruby_sdk/cashflow'
   autoload :Category, 'unified_ruby_sdk/category'
   autoload :Contact, 'unified_ruby_sdk/contact'
   autoload :Creditmemo, 'unified_ruby_sdk/creditmemo'

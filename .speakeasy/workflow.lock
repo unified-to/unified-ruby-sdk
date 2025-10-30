@@ -2,20 +2,20 @@ speakeasyVersion: 1.605.0
 sources:
     my-source:
         sourceNamespace: my-source
-        sourceRevisionDigest: sha256:10e098988b1b5fdda6e51ce97f961d11830be219121b89401e113f4ea20ee62a
-        sourceBlobDigest: sha256:191a671ff090d2417f6bd61c0e3aef66793fa85d46dae4c857f844fc9d2411e9
+        sourceRevisionDigest: sha256:d0ae4d23b07c5c3e51f64d60748afe93efce784b176818375059a42508ccc4bb
+        sourceBlobDigest: sha256:6b0a453b22b4a8a0526b858c94facf49fbd7bbd0bf73e2ca83d4ca6c1811ba82
         tags:
             - latest
-            - speakeasy-sdk-regen-1761438011
+            - speakeasy-sdk-regen-1761783588
             - "1.0"
 targets:
     ruby-target:
         source: my-source
         sourceNamespace: my-source
-        sourceRevisionDigest: sha256:10e098988b1b5fdda6e51ce97f961d11830be219121b89401e113f4ea20ee62a
-        sourceBlobDigest: sha256:191a671ff090d2417f6bd61c0e3aef66793fa85d46dae4c857f844fc9d2411e9
+        sourceRevisionDigest: sha256:d0ae4d23b07c5c3e51f64d60748afe93efce784b176818375059a42508ccc4bb
+        sourceBlobDigest: sha256:6b0a453b22b4a8a0526b858c94facf49fbd7bbd0bf73e2ca83d4ca6c1811ba82
         codeSamplesNamespace: my-source-ruby-code-samples
-        codeSamplesRevisionDigest: sha256:cabc3f8e68e7d5a2f5f2845e5eb97095a7627e937919d6949305fae8071fd007
+        codeSamplesRevisionDigest: sha256:5b2ee25de3c0d2d684f70540a4aff3af1512691412850aeff0409d742cd336fc
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -23,7 +23,6 @@ workflow:
         my-source:
             inputs:
                 - location: https://api.unified.to/openapi.json
-                  authSecret: $openapi_doc_auth_token
             registry:
                 location: registry.speakeasyapi.dev/unified/unified/my-source
     targets:

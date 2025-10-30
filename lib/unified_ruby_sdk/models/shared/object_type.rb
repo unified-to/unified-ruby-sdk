@@ -31,6 +31,7 @@ module UnifiedRubySDK
           ACCOUNTING_TRIALBALANCE = new('accounting_trialbalance')
           ACCOUNTING_CATEGORY = new('accounting_category')
           ACCOUNTING_EXPENSE = new('accounting_expense')
+          ACCOUNTING_CASHFLOW = new('accounting_cashflow')
           PAYMENT_PAYMENT = new('payment_payment')
           PAYMENT_LINK = new('payment_link')
           PAYMENT_PAYOUT = new('payment_payout')
