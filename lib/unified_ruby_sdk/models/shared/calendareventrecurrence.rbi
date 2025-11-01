@@ -8,14 +8,16 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::CalendarEventRecurrence
-  def frequency(); end
-  def frequency=(str_); end
   def count(); end
   def count=(str_); end
   def end_at(); end
   def end_at=(str_); end
   def excluded_dates(); end
   def excluded_dates=(str_); end
+  def frequency(); end
+  def frequency=(str_); end
+  def included_dates(); end
+  def included_dates=(str_); end
   def interval(); end
   def interval=(str_); end
   def on_days(); end

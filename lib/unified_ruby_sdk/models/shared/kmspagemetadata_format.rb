@@ -26,6 +26,11 @@ module UnifiedRubySDK
           YES_NO = new('YES_NO')
           CURRENCY = new('CURRENCY')
           URL = new('URL')
+          PERCENT = new('PERCENT')
+          EMAIL = new('EMAIL')
+          PHONE = new('PHONE')
+          REFERENCE = new('REFERENCE')
+          TIME = new('TIME')
         end
       end
     end

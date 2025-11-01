@@ -14,13 +14,15 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :frequency, Models::Shared::CalendarEventRecurrenceFrequency, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::CalendarEventRecurrenceFrequency, false) } }
-
         field :count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('count') } }
 
         field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
         # dates to exclude from the recurrence, defaults to undefined (no exclusions)
         field :excluded_dates, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('excluded_dates') } }
+
+        field :frequency, Crystalline::Nilable.new(Models::Shared::CalendarEventRecurrenceFrequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency'), 'decoder': Utils.enum_from_string(Models::Shared::CalendarEventRecurrenceFrequency, true) } }
+        # dates to include in the recurrence, defaults to undefined (no inclusions)
+        field :included_dates, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('included_dates') } }
 
         field :interval, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('interval') } }
         # days of the week to repeat on, defaults to undefined (every day), only used if frequency is WEEKLY
@@ -33,17 +35,18 @@ module UnifiedRubySDK
         field :on_weeks, Crystalline::Nilable.new(Crystalline::Array.new(::Float)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('on_weeks') } }
         # days of the year to repeat on, defaults to undefined (every day), only used if frequency is YEARLY
         field :on_year_days, Crystalline::Nilable.new(Crystalline::Array.new(::Float)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('on_year_days') } }
-
-        field :timezone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
+        # timezone, defaults to undefined (no timezone)
+        field :timezone, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
 
         field :week_start, Crystalline::Nilable.new(Models::Shared::WeekStart), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('week_start'), 'decoder': Utils.enum_from_string(Models::Shared::WeekStart, true) } }
 
-        sig { params(frequency: Models::Shared::CalendarEventRecurrenceFrequency, count: T.nilable(::Float), end_at: T.nilable(::DateTime), excluded_dates: T.nilable(T::Array[::String]), interval: T.nilable(::Float), on_days: T.nilable(T::Array[Models::Shared::PropertyCalendarEventRecurrenceOnDays]), on_month_days: T.nilable(T::Array[::Float]), on_months: T.nilable(T::Array[::Float]), on_weeks: T.nilable(T::Array[::Float]), on_year_days: T.nilable(T::Array[::Float]), timezone: T.nilable(::String), week_start: T.nilable(Models::Shared::WeekStart)).void }
-        def initialize(frequency:, count: nil, end_at: nil, excluded_dates: nil, interval: nil, on_days: nil, on_month_days: nil, on_months: nil, on_weeks: nil, on_year_days: nil, timezone: nil, week_start: nil)
-          @frequency = frequency
+        sig { params(count: T.nilable(::Float), end_at: T.nilable(::DateTime), excluded_dates: T.nilable(T::Array[::String]), frequency: T.nilable(Models::Shared::CalendarEventRecurrenceFrequency), included_dates: T.nilable(T::Array[::String]), interval: T.nilable(::Float), on_days: T.nilable(T::Array[Models::Shared::PropertyCalendarEventRecurrenceOnDays]), on_month_days: T.nilable(T::Array[::Float]), on_months: T.nilable(T::Array[::Float]), on_weeks: T.nilable(T::Array[::Float]), on_year_days: T.nilable(T::Array[::Float]), timezone: T.nilable(T::Array[::String]), week_start: T.nilable(Models::Shared::WeekStart)).void }
+        def initialize(count: nil, end_at: nil, excluded_dates: nil, frequency: nil, included_dates: nil, interval: nil, on_days: nil, on_month_days: nil, on_months: nil, on_weeks: nil, on_year_days: nil, timezone: nil, week_start: nil)
           @count = count
           @end_at = end_at
           @excluded_dates = excluded_dates
+          @frequency = frequency
+          @included_dates = included_dates
           @interval = interval
           @on_days = on_days
           @on_month_days = on_month_days
@@ -57,10 +60,11 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @frequency == other.frequency
           return false unless @count == other.count
           return false unless @end_at == other.end_at
           return false unless @excluded_dates == other.excluded_dates
+          return false unless @frequency == other.frequency
+          return false unless @included_dates == other.included_dates
           return false unless @interval == other.interval
           return false unless @on_days == other.on_days
           return false unless @on_month_days == other.on_month_days
