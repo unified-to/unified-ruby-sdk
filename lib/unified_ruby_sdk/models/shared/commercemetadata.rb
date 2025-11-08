@@ -14,6 +14,8 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
+        field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+
         field :extra_data, Crystalline::Nilable.new(Crystalline::Union.new(Crystalline::Hash.new(Symbol, ::Object), ::String, ::Float, Crystalline::Boolean.new, Crystalline::Array.new(Crystalline::Union.new(Models::Shared::CommerceMetadata1, ::String, ::Float, Crystalline::Boolean.new)))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('extra_data') } }
 
         field :format, Crystalline::Nilable.new(Models::Shared::CommerceMetadataFormat), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('format'), 'decoder': Utils.enum_from_string(Models::Shared::CommerceMetadataFormat, true) } }
@@ -24,19 +26,23 @@ module UnifiedRubySDK
 
         field :namespace, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('namespace') } }
 
+        field :required, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('required') } }
+
         field :slug, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('slug') } }
 
         field :type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
 
         field :value, Crystalline::Nilable.new(Crystalline::Union.new(Crystalline::Hash.new(Symbol, ::Object), ::String, ::Float, Crystalline::Boolean.new, Crystalline::Array.new(Crystalline::Union.new(Models::Shared::CommerceMetadataSchemas1, ::String, ::Float, Crystalline::Boolean.new)))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 
-        sig { params(extra_data: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::CommerceMetadata1, ::String, ::Float, T::Boolean)])), format: T.nilable(Models::Shared::CommerceMetadataFormat), id: T.nilable(::String), key: T.nilable(::String), namespace: T.nilable(::String), slug: T.nilable(::String), type: T.nilable(::String), value: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::CommerceMetadataSchemas1, ::String, ::Float, T::Boolean)]))).void }
-        def initialize(extra_data: nil, format: nil, id: nil, key: nil, namespace: nil, slug: nil, type: nil, value: nil)
+        sig { params(description: T.nilable(::String), extra_data: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::CommerceMetadata1, ::String, ::Float, T::Boolean)])), format: T.nilable(Models::Shared::CommerceMetadataFormat), id: T.nilable(::String), key: T.nilable(::String), namespace: T.nilable(::String), required: T.nilable(T::Boolean), slug: T.nilable(::String), type: T.nilable(::String), value: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::CommerceMetadataSchemas1, ::String, ::Float, T::Boolean)]))).void }
+        def initialize(description: nil, extra_data: nil, format: nil, id: nil, key: nil, namespace: nil, required: nil, slug: nil, type: nil, value: nil)
+          @description = description
           @extra_data = extra_data
           @format = format
           @id = id
           @key = key
           @namespace = namespace
+          @required = required
           @slug = slug
           @type = type
           @value = value
@@ -45,11 +51,13 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
+          return false unless @description == other.description
           return false unless @extra_data == other.extra_data
           return false unless @format == other.format
           return false unless @id == other.id
           return false unless @key == other.key
           return false unless @namespace == other.namespace
+          return false unless @required == other.required
           return false unless @slug == other.slug
           return false unless @type == other.type
           return false unless @value == other.value
