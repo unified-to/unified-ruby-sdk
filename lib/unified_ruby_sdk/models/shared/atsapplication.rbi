@@ -40,4 +40,6 @@ class UnifiedRubySDK::Models::Shared::AtsApplication
   def status=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
+  def user_id(); end
+  def user_id=(str_); end
 end

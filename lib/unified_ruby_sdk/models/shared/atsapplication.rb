@@ -46,8 +46,10 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(answers: T.nilable(T::Array[Models::Shared::AtsApplicationAnswer]), applied_at: T.nilable(::DateTime), candidate_id: T.nilable(::String), created_at: T.nilable(::DateTime), hired_at: T.nilable(::DateTime), id: T.nilable(::String), job_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), offers: T.nilable(T::Array[Models::Shared::AtsOffer]), original_status: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), rejected_at: T.nilable(::DateTime), rejected_reason: T.nilable(::String), source: T.nilable(::String), status: T.nilable(Models::Shared::AtsApplicationStatus), updated_at: T.nilable(::DateTime)).void }
-        def initialize(answers: nil, applied_at: nil, candidate_id: nil, created_at: nil, hired_at: nil, id: nil, job_id: nil, metadata: nil, offers: nil, original_status: nil, raw: nil, rejected_at: nil, rejected_reason: nil, source: nil, status: nil, updated_at: nil)
+        field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
+
+        sig { params(answers: T.nilable(T::Array[Models::Shared::AtsApplicationAnswer]), applied_at: T.nilable(::DateTime), candidate_id: T.nilable(::String), created_at: T.nilable(::DateTime), hired_at: T.nilable(::DateTime), id: T.nilable(::String), job_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), offers: T.nilable(T::Array[Models::Shared::AtsOffer]), original_status: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), rejected_at: T.nilable(::DateTime), rejected_reason: T.nilable(::String), source: T.nilable(::String), status: T.nilable(Models::Shared::AtsApplicationStatus), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(answers: nil, applied_at: nil, candidate_id: nil, created_at: nil, hired_at: nil, id: nil, job_id: nil, metadata: nil, offers: nil, original_status: nil, raw: nil, rejected_at: nil, rejected_reason: nil, source: nil, status: nil, updated_at: nil, user_id: nil)
           @answers = answers
           @applied_at = applied_at
           @candidate_id = candidate_id
@@ -64,6 +66,7 @@ module UnifiedRubySDK
           @source = source
           @status = status
           @updated_at = updated_at
+          @user_id = user_id
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
@@ -85,6 +88,7 @@ module UnifiedRubySDK
           return false unless @source == other.source
           return false unless @status == other.status
           return false unless @updated_at == other.updated_at
+          return false unless @user_id == other.user_id
           true
         end
       end
