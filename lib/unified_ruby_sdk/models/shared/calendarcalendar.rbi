@@ -16,6 +16,8 @@ class UnifiedRubySDK::Models::Shared::CalendarCalendar
   def description=(str_); end
   def id(); end
   def id=(str_); end
+  def is_primary(); end
+  def is_primary=(str_); end
   def primary(); end
   def primary=(str_); end
   def raw(); end

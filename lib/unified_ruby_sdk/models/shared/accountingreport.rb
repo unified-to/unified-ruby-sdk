@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # @deprecated; use either AccountingProfitandloss, AccountingTrialbalance, AccountingBalancesheet, or AccountingCashflow instead
       class AccountingReport
         extend T::Sig
         include Crystalline::MetadataFields

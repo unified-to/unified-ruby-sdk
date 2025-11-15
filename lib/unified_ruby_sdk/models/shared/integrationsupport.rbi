@@ -198,6 +198,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_item_variant_id=(str_); end
   def virtual_webhook_job_id(); end
   def virtual_webhook_job_id=(str_); end
+  def virtual_webhook_lead_id(); end
+  def virtual_webhook_lead_id=(str_); end
   def virtual_webhook_limit(); end
   def virtual_webhook_limit=(str_); end
   def virtual_webhook_list_id(); end

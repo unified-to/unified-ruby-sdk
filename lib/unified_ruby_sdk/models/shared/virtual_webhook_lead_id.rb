@@ -9,14 +9,13 @@ module UnifiedRubySDK
     module Shared
     
 
-      class ApiCallType < T::Enum
+      class VirtualWebhookLeadId < T::Enum
 
 
         enums do
-          LOGIN = new('login')
-          WEBHOOK = new('webhook')
-          INBOUND = new('inbound')
-          MCP = new('mcp')
+          SUPPORTED_REQUIRED = new('supported-required')
+          SUPPORTED = new('supported')
+          NOT_SUPPORTED = new('not-supported')
         end
       end
     end

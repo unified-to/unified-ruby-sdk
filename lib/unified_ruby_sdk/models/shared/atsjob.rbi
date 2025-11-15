@@ -56,6 +56,8 @@ class UnifiedRubySDK::Models::Shared::AtsJob
   def recruiter_ids=(str_); end
   def remote(); end
   def remote=(str_); end
+  def skills(); end
+  def skills=(str_); end
   def status(); end
   def status=(str_); end
   def updated_at(); end

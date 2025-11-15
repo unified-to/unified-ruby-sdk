@@ -522,6 +522,7 @@ module UnifiedRubySDK
       autoload :VirtualWebhookItemId, 'unified_ruby_sdk/models/shared/virtual_webhook_item_id.rb'
       autoload :VirtualWebhookItemVariantId, 'unified_ruby_sdk/models/shared/virtual_webhook_item_variant_id.rb'
       autoload :VirtualWebhookJobId, 'unified_ruby_sdk/models/shared/virtual_webhook_job_id.rb'
+      autoload :VirtualWebhookLeadId, 'unified_ruby_sdk/models/shared/virtual_webhook_lead_id.rb'
       autoload :VirtualWebhookLimit, 'unified_ruby_sdk/models/shared/virtual_webhook_limit.rb'
       autoload :VirtualWebhookListId, 'unified_ruby_sdk/models/shared/virtual_webhook_list_id.rb'
       autoload :VirtualWebhookLocationId, 'unified_ruby_sdk/models/shared/virtual_webhook_location_id.rb'
