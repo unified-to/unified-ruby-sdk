@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 8e0da3e048dab0529dab732bc1eb6105
+  docChecksum: d3236800ede7509df7bab0e934cc59f0
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.66.27
-  configChecksum: fd69d8a50e4f1c561bb3436ee4d66fbe
+  releaseVersion: 0.66.28
+  configChecksum: d4abc79f11e0549a229d966d7820025b
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -354,6 +354,8 @@ generatedFiles:
   - docs/models/operations/getticketingnoteresponse.md
   - docs/models/operations/getticketingticketrequest.md
   - docs/models/operations/getticketingticketresponse.md
+  - docs/models/operations/getuccallrequest.md
+  - docs/models/operations/getuccallresponse.md
   - docs/models/operations/getuccommentrequest.md
   - docs/models/operations/getuccommentresponse.md
   - docs/models/operations/getuccontactrequest.md
@@ -2429,6 +2431,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getticketingticket_request.rbi
   - lib/unified_ruby_sdk/models/operations/getticketingticket_response.rb
   - lib/unified_ruby_sdk/models/operations/getticketingticket_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getuccall_request.rb
+  - lib/unified_ruby_sdk/models/operations/getuccall_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getuccall_response.rb
+  - lib/unified_ruby_sdk/models/operations/getuccall_response.rbi
   - lib/unified_ruby_sdk/models/operations/getuccomment_request.rb
   - lib/unified_ruby_sdk/models/operations/getuccomment_request.rbi
   - lib/unified_ruby_sdk/models/operations/getuccomment_response.rb
@@ -9602,5 +9608,14 @@ examples:
       responses:
         "200":
           application/json: [{}]
+  getUcCall:
+    speakeasy-default-get-uc-call:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}

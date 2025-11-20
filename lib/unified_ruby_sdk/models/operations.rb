@@ -334,6 +334,8 @@ module UnifiedRubySDK
       autoload :GetTicketingNoteResponse, 'unified_ruby_sdk/models/operations/getticketingnote_response.rb'
       autoload :GetTicketingTicketRequest, 'unified_ruby_sdk/models/operations/getticketingticket_request.rb'
       autoload :GetTicketingTicketResponse, 'unified_ruby_sdk/models/operations/getticketingticket_response.rb'
+      autoload :GetUcCallRequest, 'unified_ruby_sdk/models/operations/getuccall_request.rb'
+      autoload :GetUcCallResponse, 'unified_ruby_sdk/models/operations/getuccall_response.rb'
       autoload :GetUcCommentRequest, 'unified_ruby_sdk/models/operations/getuccomment_request.rb'
       autoload :GetUcCommentResponse, 'unified_ruby_sdk/models/operations/getuccomment_response.rb'
       autoload :GetUcContactRequest, 'unified_ruby_sdk/models/operations/getuccontact_request.rb'

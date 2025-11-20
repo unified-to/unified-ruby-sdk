@@ -24,6 +24,8 @@ module UnifiedRubySDK
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
+        field :domains, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('domains') } }
+
         field :emails, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CrmEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
 
         field :employees, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employees') } }
@@ -54,13 +56,14 @@ module UnifiedRubySDK
 
         field :websites, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('websites') } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyCrmCompanyAddress), contact_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), deal_ids: T.nilable(T::Array[::String]), description: T.nilable(::String), emails: T.nilable(T::Array[Models::Shared::CrmEmail]), employees: T.nilable(::Float), id: T.nilable(::String), industry: T.nilable(::String), is_active: T.nilable(T::Boolean), link_urls: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::CrmMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), tags: T.nilable(T::Array[::String]), telephones: T.nilable(T::Array[Models::Shared::CrmTelephone]), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), websites: T.nilable(T::Array[::String])).void }
-        def initialize(address: nil, contact_ids: nil, created_at: nil, deal_ids: nil, description: nil, emails: nil, employees: nil, id: nil, industry: nil, is_active: nil, link_urls: nil, metadata: nil, name: nil, raw: nil, tags: nil, telephones: nil, timezone: nil, updated_at: nil, user_id: nil, websites: nil)
+        sig { params(address: T.nilable(Models::Shared::PropertyCrmCompanyAddress), contact_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), deal_ids: T.nilable(T::Array[::String]), description: T.nilable(::String), domains: T.nilable(T::Array[::String]), emails: T.nilable(T::Array[Models::Shared::CrmEmail]), employees: T.nilable(::Float), id: T.nilable(::String), industry: T.nilable(::String), is_active: T.nilable(T::Boolean), link_urls: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::CrmMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), tags: T.nilable(T::Array[::String]), telephones: T.nilable(T::Array[Models::Shared::CrmTelephone]), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), websites: T.nilable(T::Array[::String])).void }
+        def initialize(address: nil, contact_ids: nil, created_at: nil, deal_ids: nil, description: nil, domains: nil, emails: nil, employees: nil, id: nil, industry: nil, is_active: nil, link_urls: nil, metadata: nil, name: nil, raw: nil, tags: nil, telephones: nil, timezone: nil, updated_at: nil, user_id: nil, websites: nil)
           @address = address
           @contact_ids = contact_ids
           @created_at = created_at
           @deal_ids = deal_ids
           @description = description
+          @domains = domains
           @emails = emails
           @employees = employees
           @id = id
@@ -86,6 +89,7 @@ module UnifiedRubySDK
           return false unless @created_at == other.created_at
           return false unless @deal_ids == other.deal_ids
           return false unless @description == other.description
+          return false unless @domains == other.domains
           return false unless @emails == other.emails
           return false unless @employees == other.employees
           return false unless @id == other.id

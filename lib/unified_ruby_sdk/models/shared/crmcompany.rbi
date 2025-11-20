@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::CrmCompany
   def deal_ids=(str_); end
   def description(); end
   def description=(str_); end
+  def domains(); end
+  def domains=(str_); end
   def emails(); end
   def emails=(str_); end
   def employees(); end
