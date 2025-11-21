@@ -16,6 +16,8 @@ class UnifiedRubySDK::Models::Shared::HrisPayslip
   def created_at=(str_); end
   def currency(); end
   def currency=(str_); end
+  def deduction(); end
+  def deduction=(str_); end
   def details(); end
   def details=(str_); end
   def end_at(); end

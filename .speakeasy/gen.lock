@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: d3236800ede7509df7bab0e934cc59f0
+  docChecksum: 67f7d6d0c66da74ba7cdc2b88db1c97d
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.66.28
-  configChecksum: d4abc79f11e0549a229d966d7820025b
+  releaseVersion: 0.66.29
+  configChecksum: 810380ebbc6c3b195777dfc055533794
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -101,8 +101,12 @@ generatedFiles:
   - docs/models/operations/creategenaiembeddingresponse.md
   - docs/models/operations/creategenaipromptrequest.md
   - docs/models/operations/creategenaipromptresponse.md
+  - docs/models/operations/createhrisbenefitrequest.md
+  - docs/models/operations/createhrisbenefitresponse.md
   - docs/models/operations/createhriscompanyrequest.md
   - docs/models/operations/createhriscompanyresponse.md
+  - docs/models/operations/createhrisdeductionrequest.md
+  - docs/models/operations/createhrisdeductionresponse.md
   - docs/models/operations/createhrisdevicerequest.md
   - docs/models/operations/createhrisdeviceresponse.md
   - docs/models/operations/createhrisemployeerequest.md
@@ -272,8 +276,12 @@ generatedFiles:
   - docs/models/operations/getcrmpipelineresponse.md
   - docs/models/operations/getgenaimodelrequest.md
   - docs/models/operations/getgenaimodelresponse.md
+  - docs/models/operations/gethrisbenefitrequest.md
+  - docs/models/operations/gethrisbenefitresponse.md
   - docs/models/operations/gethriscompanyrequest.md
   - docs/models/operations/gethriscompanyresponse.md
+  - docs/models/operations/gethrisdeductionrequest.md
+  - docs/models/operations/gethrisdeductionresponse.md
   - docs/models/operations/gethrisdevicerequest.md
   - docs/models/operations/gethrisdeviceresponse.md
   - docs/models/operations/gethrisemployeerequest.md
@@ -472,8 +480,12 @@ generatedFiles:
   - docs/models/operations/listenrichpeopleresponse.md
   - docs/models/operations/listgenaimodelsrequest.md
   - docs/models/operations/listgenaimodelsresponse.md
+  - docs/models/operations/listhrisbenefitsrequest.md
+  - docs/models/operations/listhrisbenefitsresponse.md
   - docs/models/operations/listhriscompaniesrequest.md
   - docs/models/operations/listhriscompaniesresponse.md
+  - docs/models/operations/listhrisdeductionsrequest.md
+  - docs/models/operations/listhrisdeductionsresponse.md
   - docs/models/operations/listhrisdevicesrequest.md
   - docs/models/operations/listhrisdevicesresponse.md
   - docs/models/operations/listhrisemployeesrequest.md
@@ -651,8 +663,12 @@ generatedFiles:
   - docs/models/operations/patchcrmleadresponse.md
   - docs/models/operations/patchcrmpipelinerequest.md
   - docs/models/operations/patchcrmpipelineresponse.md
+  - docs/models/operations/patchhrisbenefitrequest.md
+  - docs/models/operations/patchhrisbenefitresponse.md
   - docs/models/operations/patchhriscompanyrequest.md
   - docs/models/operations/patchhriscompanyresponse.md
+  - docs/models/operations/patchhrisdeductionrequest.md
+  - docs/models/operations/patchhrisdeductionresponse.md
   - docs/models/operations/patchhrisdevicerequest.md
   - docs/models/operations/patchhrisdeviceresponse.md
   - docs/models/operations/patchhrisemployeerequest.md
@@ -810,8 +826,12 @@ generatedFiles:
   - docs/models/operations/removecrmleadresponse.md
   - docs/models/operations/removecrmpipelinerequest.md
   - docs/models/operations/removecrmpipelineresponse.md
+  - docs/models/operations/removehrisbenefitrequest.md
+  - docs/models/operations/removehrisbenefitresponse.md
   - docs/models/operations/removehriscompanyrequest.md
   - docs/models/operations/removehriscompanyresponse.md
+  - docs/models/operations/removehrisdeductionrequest.md
+  - docs/models/operations/removehrisdeductionresponse.md
   - docs/models/operations/removehrisdevicerequest.md
   - docs/models/operations/removehrisdeviceresponse.md
   - docs/models/operations/removehrisemployeerequest.md
@@ -964,8 +984,12 @@ generatedFiles:
   - docs/models/operations/updatecrmleadresponse.md
   - docs/models/operations/updatecrmpipelinerequest.md
   - docs/models/operations/updatecrmpipelineresponse.md
+  - docs/models/operations/updatehrisbenefitrequest.md
+  - docs/models/operations/updatehrisbenefitresponse.md
   - docs/models/operations/updatehriscompanyrequest.md
   - docs/models/operations/updatehriscompanyresponse.md
+  - docs/models/operations/updatehrisdeductionrequest.md
+  - docs/models/operations/updatehrisdeductionresponse.md
   - docs/models/operations/updatehrisdevicerequest.md
   - docs/models/operations/updatehrisdeviceresponse.md
   - docs/models/operations/updatehrisemployeerequest.md
@@ -1090,6 +1114,7 @@ generatedFiles:
   - docs/models/shared/accountingprofitlosssubcategory.md
   - docs/models/shared/accountingpurchaseorder.md
   - docs/models/shared/accountingpurchaseorderstatus.md
+  - docs/models/shared/accountingreference.md
   - docs/models/shared/accountingreport.md
   - docs/models/shared/accountingreporttype.md
   - docs/models/shared/accountingsalesorder.md
@@ -1181,6 +1206,7 @@ generatedFiles:
   - docs/models/shared/commercereviewstatus.md
   - docs/models/shared/connection.md
   - docs/models/shared/contenttype.md
+  - docs/models/shared/coveragelevel.md
   - docs/models/shared/crmcompany.md
   - docs/models/shared/crmcontact.md
   - docs/models/shared/crmdeal.md
@@ -1205,6 +1231,7 @@ generatedFiles:
   - docs/models/shared/crmtelephone.md
   - docs/models/shared/crmtelephonetype.md
   - docs/models/shared/dbtype.md
+  - docs/models/shared/employercontributiontype.md
   - docs/models/shared/employmentstatus.md
   - docs/models/shared/employmenttype.md
   - docs/models/shared/encondingformat.md
@@ -1228,10 +1255,17 @@ generatedFiles:
   - docs/models/shared/genaimodel.md
   - docs/models/shared/genaiprompt.md
   - docs/models/shared/gender.md
+  - docs/models/shared/hrisbenefit.md
+  - docs/models/shared/hrisbenefitfrequency.md
+  - docs/models/shared/hrisbenefittype.md
   - docs/models/shared/hriscompany.md
   - docs/models/shared/hriscompensation.md
   - docs/models/shared/hriscompensationfrequency.md
   - docs/models/shared/hriscompensationtype.md
+  - docs/models/shared/hrisdeduction.md
+  - docs/models/shared/hrisdeductioncoveragelevel.md
+  - docs/models/shared/hrisdeductionfrequency.md
+  - docs/models/shared/hrisdeductiontype.md
   - docs/models/shared/hrisdevice.md
   - docs/models/shared/hrisemail.md
   - docs/models/shared/hrisemailtype.md
@@ -1322,6 +1356,7 @@ generatedFiles:
   - docs/models/shared/listpageid.md
   - docs/models/shared/listparentid.md
   - docs/models/shared/listpaymentid.md
+  - docs/models/shared/listpayslipid.md
   - docs/models/shared/listpipelineid.md
   - docs/models/shared/listprojectid.md
   - docs/models/shared/listquery.md
@@ -1341,6 +1376,7 @@ generatedFiles:
   - docs/models/shared/listtype.md
   - docs/models/shared/listupdatedgte.md
   - docs/models/shared/listuserid.md
+  - docs/models/shared/listusermentionedid.md
   - docs/models/shared/lmsclass.md
   - docs/models/shared/lmscourse.md
   - docs/models/shared/lmsemail.md
@@ -1434,6 +1470,10 @@ generatedFiles:
   - docs/models/shared/propertyhrisemployeeaddress.md
   - docs/models/shared/propertyhrisemployeeemployeeroles.md
   - docs/models/shared/propertyhrislocationaddress.md
+  - docs/models/shared/propertyhrispayslipdeduction.md
+  - docs/models/shared/propertyhrispayslipdeductioncoveragelevel.md
+  - docs/models/shared/propertyhrispayslipdeductionfrequency.md
+  - docs/models/shared/propertyhrispayslipdeductiontype.md
   - docs/models/shared/propertyintegrationcategories.md
   - docs/models/shared/propertyintegrationsupportwebhookevents.md
   - docs/models/shared/propertyintegrationsupportwebhookeventscreated.md
@@ -1517,6 +1557,7 @@ generatedFiles:
   - docs/models/shared/taskproject.md
   - docs/models/shared/tasktask.md
   - docs/models/shared/tasktaskstatus.md
+  - docs/models/shared/tax.md
   - docs/models/shared/taxexemption.md
   - docs/models/shared/ticketingcategory.md
   - docs/models/shared/ticketingcustomer.md
@@ -1585,6 +1626,7 @@ generatedFiles:
   - docs/models/shared/virtualwebhooktype.md
   - docs/models/shared/virtualwebhookupdatedgte.md
   - docs/models/shared/virtualwebhookuserid.md
+  - docs/models/shared/virtualwebhookusermentionedid.md
   - docs/models/shared/webhook.md
   - docs/models/shared/webhooktype.md
   - docs/models/shared/weekstart.md
@@ -1598,6 +1640,7 @@ generatedFiles:
   - docs/sdks/ats/README.md
   - docs/sdks/auth/README.md
   - docs/sdks/balancesheet/README.md
+  - docs/sdks/benefit/README.md
   - docs/sdks/bill/README.md
   - docs/sdks/branch/README.md
   - docs/sdks/busy/README.md
@@ -1621,6 +1664,7 @@ generatedFiles:
   - docs/sdks/crm/README.md
   - docs/sdks/customer/README.md
   - docs/sdks/deal/README.md
+  - docs/sdks/deduction/README.md
   - docs/sdks/device/README.md
   - docs/sdks/document/README.md
   - docs/sdks/embedding/README.md
@@ -1714,6 +1758,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/ats.rb
   - lib/unified_ruby_sdk/auth.rb
   - lib/unified_ruby_sdk/balancesheet.rb
+  - lib/unified_ruby_sdk/benefit.rb
   - lib/unified_ruby_sdk/bill.rb
   - lib/unified_ruby_sdk/branch.rb
   - lib/unified_ruby_sdk/busy.rb
@@ -1737,6 +1782,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/crm.rb
   - lib/unified_ruby_sdk/customer.rb
   - lib/unified_ruby_sdk/deal.rb
+  - lib/unified_ruby_sdk/deduction.rb
   - lib/unified_ruby_sdk/device.rb
   - lib/unified_ruby_sdk/document.rb
   - lib/unified_ruby_sdk/embedding.rb
@@ -1925,10 +1971,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/creategenaiprompt_request.rbi
   - lib/unified_ruby_sdk/models/operations/creategenaiprompt_response.rb
   - lib/unified_ruby_sdk/models/operations/creategenaiprompt_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createhrisbenefit_request.rb
+  - lib/unified_ruby_sdk/models/operations/createhrisbenefit_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createhrisbenefit_response.rb
+  - lib/unified_ruby_sdk/models/operations/createhrisbenefit_response.rbi
   - lib/unified_ruby_sdk/models/operations/createhriscompany_request.rb
   - lib/unified_ruby_sdk/models/operations/createhriscompany_request.rbi
   - lib/unified_ruby_sdk/models/operations/createhriscompany_response.rb
   - lib/unified_ruby_sdk/models/operations/createhriscompany_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createhrisdeduction_request.rb
+  - lib/unified_ruby_sdk/models/operations/createhrisdeduction_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createhrisdeduction_response.rb
+  - lib/unified_ruby_sdk/models/operations/createhrisdeduction_response.rbi
   - lib/unified_ruby_sdk/models/operations/createhrisdevice_request.rb
   - lib/unified_ruby_sdk/models/operations/createhrisdevice_request.rbi
   - lib/unified_ruby_sdk/models/operations/createhrisdevice_response.rb
@@ -2267,10 +2321,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getgenaimodel_request.rbi
   - lib/unified_ruby_sdk/models/operations/getgenaimodel_response.rb
   - lib/unified_ruby_sdk/models/operations/getgenaimodel_response.rbi
+  - lib/unified_ruby_sdk/models/operations/gethrisbenefit_request.rb
+  - lib/unified_ruby_sdk/models/operations/gethrisbenefit_request.rbi
+  - lib/unified_ruby_sdk/models/operations/gethrisbenefit_response.rb
+  - lib/unified_ruby_sdk/models/operations/gethrisbenefit_response.rbi
   - lib/unified_ruby_sdk/models/operations/gethriscompany_request.rb
   - lib/unified_ruby_sdk/models/operations/gethriscompany_request.rbi
   - lib/unified_ruby_sdk/models/operations/gethriscompany_response.rb
   - lib/unified_ruby_sdk/models/operations/gethriscompany_response.rbi
+  - lib/unified_ruby_sdk/models/operations/gethrisdeduction_request.rb
+  - lib/unified_ruby_sdk/models/operations/gethrisdeduction_request.rbi
+  - lib/unified_ruby_sdk/models/operations/gethrisdeduction_response.rb
+  - lib/unified_ruby_sdk/models/operations/gethrisdeduction_response.rbi
   - lib/unified_ruby_sdk/models/operations/gethrisdevice_request.rb
   - lib/unified_ruby_sdk/models/operations/gethrisdevice_request.rbi
   - lib/unified_ruby_sdk/models/operations/gethrisdevice_response.rb
@@ -2667,10 +2729,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listgenaimodels_request.rbi
   - lib/unified_ruby_sdk/models/operations/listgenaimodels_response.rb
   - lib/unified_ruby_sdk/models/operations/listgenaimodels_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listhrisbenefits_request.rb
+  - lib/unified_ruby_sdk/models/operations/listhrisbenefits_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listhrisbenefits_response.rb
+  - lib/unified_ruby_sdk/models/operations/listhrisbenefits_response.rbi
   - lib/unified_ruby_sdk/models/operations/listhriscompanies_request.rb
   - lib/unified_ruby_sdk/models/operations/listhriscompanies_request.rbi
   - lib/unified_ruby_sdk/models/operations/listhriscompanies_response.rb
   - lib/unified_ruby_sdk/models/operations/listhriscompanies_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listhrisdeductions_request.rb
+  - lib/unified_ruby_sdk/models/operations/listhrisdeductions_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listhrisdeductions_response.rb
+  - lib/unified_ruby_sdk/models/operations/listhrisdeductions_response.rbi
   - lib/unified_ruby_sdk/models/operations/listhrisdevices_request.rb
   - lib/unified_ruby_sdk/models/operations/listhrisdevices_request.rbi
   - lib/unified_ruby_sdk/models/operations/listhrisdevices_response.rb
@@ -3025,10 +3095,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchcrmpipeline_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchcrmpipeline_response.rb
   - lib/unified_ruby_sdk/models/operations/patchcrmpipeline_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchhrisbenefit_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchhrisbenefit_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchhrisbenefit_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchhrisbenefit_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchhriscompany_request.rb
   - lib/unified_ruby_sdk/models/operations/patchhriscompany_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchhriscompany_response.rb
   - lib/unified_ruby_sdk/models/operations/patchhriscompany_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchhrisdeduction_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchhrisdeduction_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchhrisdeduction_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchhrisdeduction_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchhrisdevice_request.rb
   - lib/unified_ruby_sdk/models/operations/patchhrisdevice_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchhrisdevice_response.rb
@@ -3343,10 +3421,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removecrmpipeline_request.rbi
   - lib/unified_ruby_sdk/models/operations/removecrmpipeline_response.rb
   - lib/unified_ruby_sdk/models/operations/removecrmpipeline_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removehrisbenefit_request.rb
+  - lib/unified_ruby_sdk/models/operations/removehrisbenefit_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removehrisbenefit_response.rb
+  - lib/unified_ruby_sdk/models/operations/removehrisbenefit_response.rbi
   - lib/unified_ruby_sdk/models/operations/removehriscompany_request.rb
   - lib/unified_ruby_sdk/models/operations/removehriscompany_request.rbi
   - lib/unified_ruby_sdk/models/operations/removehriscompany_response.rb
   - lib/unified_ruby_sdk/models/operations/removehriscompany_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removehrisdeduction_request.rb
+  - lib/unified_ruby_sdk/models/operations/removehrisdeduction_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removehrisdeduction_response.rb
+  - lib/unified_ruby_sdk/models/operations/removehrisdeduction_response.rbi
   - lib/unified_ruby_sdk/models/operations/removehrisdevice_request.rb
   - lib/unified_ruby_sdk/models/operations/removehrisdevice_request.rbi
   - lib/unified_ruby_sdk/models/operations/removehrisdevice_response.rb
@@ -3651,10 +3737,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatecrmpipeline_request.rbi
   - lib/unified_ruby_sdk/models/operations/updatecrmpipeline_response.rb
   - lib/unified_ruby_sdk/models/operations/updatecrmpipeline_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatehrisbenefit_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatehrisbenefit_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatehrisbenefit_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatehrisbenefit_response.rbi
   - lib/unified_ruby_sdk/models/operations/updatehriscompany_request.rb
   - lib/unified_ruby_sdk/models/operations/updatehriscompany_request.rbi
   - lib/unified_ruby_sdk/models/operations/updatehriscompany_response.rb
   - lib/unified_ruby_sdk/models/operations/updatehriscompany_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatehrisdeduction_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatehrisdeduction_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatehrisdeduction_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatehrisdeduction_response.rbi
   - lib/unified_ruby_sdk/models/operations/updatehrisdevice_request.rb
   - lib/unified_ruby_sdk/models/operations/updatehrisdevice_request.rbi
   - lib/unified_ruby_sdk/models/operations/updatehrisdevice_response.rb
@@ -3904,6 +3998,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingpurchaseorder.rbi
   - lib/unified_ruby_sdk/models/shared/accountingpurchaseorder_status.rb
   - lib/unified_ruby_sdk/models/shared/accountingpurchaseorder_status.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingreference.rb
+  - lib/unified_ruby_sdk/models/shared/accountingreference.rbi
   - lib/unified_ruby_sdk/models/shared/accountingreport.rb
   - lib/unified_ruby_sdk/models/shared/accountingreport.rbi
   - lib/unified_ruby_sdk/models/shared/accountingreport_type.rb
@@ -4086,6 +4182,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/connection.rbi
   - lib/unified_ruby_sdk/models/shared/content_type.rb
   - lib/unified_ruby_sdk/models/shared/content_type.rbi
+  - lib/unified_ruby_sdk/models/shared/coverage_level.rb
+  - lib/unified_ruby_sdk/models/shared/coverage_level.rbi
   - lib/unified_ruby_sdk/models/shared/crmcompany.rb
   - lib/unified_ruby_sdk/models/shared/crmcompany.rbi
   - lib/unified_ruby_sdk/models/shared/crmcontact.rb
@@ -4134,6 +4232,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/crmtelephone_type.rbi
   - lib/unified_ruby_sdk/models/shared/db_type.rb
   - lib/unified_ruby_sdk/models/shared/db_type.rbi
+  - lib/unified_ruby_sdk/models/shared/employer_contribution_type.rb
+  - lib/unified_ruby_sdk/models/shared/employer_contribution_type.rbi
   - lib/unified_ruby_sdk/models/shared/employment_status.rb
   - lib/unified_ruby_sdk/models/shared/employment_status.rbi
   - lib/unified_ruby_sdk/models/shared/employment_type.rb
@@ -4180,6 +4280,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/genaiprompt.rbi
   - lib/unified_ruby_sdk/models/shared/gender.rb
   - lib/unified_ruby_sdk/models/shared/gender.rbi
+  - lib/unified_ruby_sdk/models/shared/hrisbenefit.rb
+  - lib/unified_ruby_sdk/models/shared/hrisbenefit.rbi
+  - lib/unified_ruby_sdk/models/shared/hrisbenefit_frequency.rb
+  - lib/unified_ruby_sdk/models/shared/hrisbenefit_frequency.rbi
+  - lib/unified_ruby_sdk/models/shared/hrisbenefit_type.rb
+  - lib/unified_ruby_sdk/models/shared/hrisbenefit_type.rbi
   - lib/unified_ruby_sdk/models/shared/hriscompany.rb
   - lib/unified_ruby_sdk/models/shared/hriscompany.rbi
   - lib/unified_ruby_sdk/models/shared/hriscompensation.rb
@@ -4188,6 +4294,14 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/hriscompensation_frequency.rbi
   - lib/unified_ruby_sdk/models/shared/hriscompensation_type.rb
   - lib/unified_ruby_sdk/models/shared/hriscompensation_type.rbi
+  - lib/unified_ruby_sdk/models/shared/hrisdeduction.rb
+  - lib/unified_ruby_sdk/models/shared/hrisdeduction.rbi
+  - lib/unified_ruby_sdk/models/shared/hrisdeduction_coverage_level.rb
+  - lib/unified_ruby_sdk/models/shared/hrisdeduction_coverage_level.rbi
+  - lib/unified_ruby_sdk/models/shared/hrisdeduction_frequency.rb
+  - lib/unified_ruby_sdk/models/shared/hrisdeduction_frequency.rbi
+  - lib/unified_ruby_sdk/models/shared/hrisdeduction_type.rb
+  - lib/unified_ruby_sdk/models/shared/hrisdeduction_type.rbi
   - lib/unified_ruby_sdk/models/shared/hrisdevice.rb
   - lib/unified_ruby_sdk/models/shared/hrisdevice.rbi
   - lib/unified_ruby_sdk/models/shared/hrisemail.rb
@@ -4368,6 +4482,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_parent_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_payment_id.rb
   - lib/unified_ruby_sdk/models/shared/list_payment_id.rbi
+  - lib/unified_ruby_sdk/models/shared/list_payslip_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_payslip_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_pipeline_id.rb
   - lib/unified_ruby_sdk/models/shared/list_pipeline_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_project_id.rb
@@ -4406,6 +4522,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_updated_gte.rbi
   - lib/unified_ruby_sdk/models/shared/list_user_id.rb
   - lib/unified_ruby_sdk/models/shared/list_user_id.rbi
+  - lib/unified_ruby_sdk/models/shared/list_user_mentioned_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_user_mentioned_id.rbi
   - lib/unified_ruby_sdk/models/shared/lmsclass.rb
   - lib/unified_ruby_sdk/models/shared/lmsclass.rbi
   - lib/unified_ruby_sdk/models/shared/lmscourse.rb
@@ -4592,6 +4710,14 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_hrisemployee_employee_roles.rbi
   - lib/unified_ruby_sdk/models/shared/property_hrislocation_address.rb
   - lib/unified_ruby_sdk/models/shared/property_hrislocation_address.rbi
+  - lib/unified_ruby_sdk/models/shared/property_hrispayslip_deduction.rb
+  - lib/unified_ruby_sdk/models/shared/property_hrispayslip_deduction.rbi
+  - lib/unified_ruby_sdk/models/shared/property_hrispayslip_deduction_coverage_level.rb
+  - lib/unified_ruby_sdk/models/shared/property_hrispayslip_deduction_coverage_level.rbi
+  - lib/unified_ruby_sdk/models/shared/property_hrispayslip_deduction_frequency.rb
+  - lib/unified_ruby_sdk/models/shared/property_hrispayslip_deduction_frequency.rbi
+  - lib/unified_ruby_sdk/models/shared/property_hrispayslip_deduction_type.rb
+  - lib/unified_ruby_sdk/models/shared/property_hrispayslip_deduction_type.rbi
   - lib/unified_ruby_sdk/models/shared/property_integration_categories.rb
   - lib/unified_ruby_sdk/models/shared/property_integration_categories.rbi
   - lib/unified_ruby_sdk/models/shared/property_integrationsupport_webhook_events.rb
@@ -4758,6 +4884,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/tasktask.rbi
   - lib/unified_ruby_sdk/models/shared/tasktask_status.rb
   - lib/unified_ruby_sdk/models/shared/tasktask_status.rbi
+  - lib/unified_ruby_sdk/models/shared/tax.rb
+  - lib/unified_ruby_sdk/models/shared/tax.rbi
   - lib/unified_ruby_sdk/models/shared/tax_exemption.rb
   - lib/unified_ruby_sdk/models/shared/tax_exemption.rbi
   - lib/unified_ruby_sdk/models/shared/ticketingcategory.rb
@@ -4894,6 +5022,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_updated_gte.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_user_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_user_id.rbi
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_user_mentioned_id.rb
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_user_mentioned_id.rbi
   - lib/unified_ruby_sdk/models/shared/webhook.rb
   - lib/unified_ruby_sdk/models/shared/webhook.rbi
   - lib/unified_ruby_sdk/models/shared/webhook_type.rb
@@ -9614,6 +9744,116 @@ examples:
         path:
           connection_id: "<id>"
           id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  createHrisBenefit:
+    speakeasy-default-create-hris-benefit:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createHrisDeduction:
+    speakeasy-default-create-hris-deduction:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getHrisBenefit:
+    speakeasy-default-get-hris-benefit:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getHrisDeduction:
+    speakeasy-default-get-hris-deduction:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listHrisBenefits:
+    speakeasy-default-list-hris-benefits:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listHrisDeductions:
+    speakeasy-default-list-hris-deductions:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchHrisBenefit:
+    speakeasy-default-patch-hris-benefit:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchHrisDeduction:
+    speakeasy-default-patch-hris-deduction:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeHrisBenefit:
+    speakeasy-default-remove-hris-benefit:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeHrisDeduction:
+    speakeasy-default-remove-hris-deduction:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateHrisBenefit:
+    speakeasy-default-update-hris-benefit:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateHrisDeduction:
+    speakeasy-default-update-hris-deduction:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}

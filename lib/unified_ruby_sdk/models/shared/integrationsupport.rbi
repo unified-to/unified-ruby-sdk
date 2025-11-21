@@ -90,6 +90,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_parent_id=(str_); end
   def list_payment_id(); end
   def list_payment_id=(str_); end
+  def list_payslip_id(); end
+  def list_payslip_id=(str_); end
   def list_pipeline_id(); end
   def list_pipeline_id=(str_); end
   def list_project_id(); end
@@ -128,6 +130,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_updated_gte=(str_); end
   def list_user_id(); end
   def list_user_id=(str_); end
+  def list_user_mentioned_id(); end
+  def list_user_mentioned_id=(str_); end
   def methods(); end
   def methods=(str_); end
   def native_webhook_calendar_id(); end
@@ -234,6 +238,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_updated_gte=(str_); end
   def virtual_webhook_user_id(); end
   def virtual_webhook_user_id=(str_); end
+  def virtual_webhook_user_mentioned_id(); end
+  def virtual_webhook_user_mentioned_id=(str_); end
   def webhook_events(); end
   def webhook_events=(str_); end
 end

@@ -40,4 +40,6 @@ class UnifiedRubySDK::Models::Operations::ListMessagingMessagesRequest
   def updated_gte=(str_); end
   def user_id(); end
   def user_id=(str_); end
+  def user_mentioned_id(); end
+  def user_mentioned_id=(str_); end
 end

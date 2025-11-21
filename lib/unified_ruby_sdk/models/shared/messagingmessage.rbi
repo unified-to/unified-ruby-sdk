@@ -38,6 +38,8 @@ class UnifiedRubySDK::Models::Shared::MessagingMessage
   def message_html=(str_); end
   def message_markdown(); end
   def message_markdown=(str_); end
+  def message_thread_identifier(); end
+  def message_thread_identifier=(str_); end
   def parent_id(); end
   def parent_id=(str_); end
   def parent_message_id(); end

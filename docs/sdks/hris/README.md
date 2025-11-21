@@ -5,13 +5,17 @@
 
 ### Available Operations
 
+* [create_hris_benefit](#create_hris_benefit) - Create a benefit
 * [create_hris_company](#create_hris_company) - Create a company
+* [create_hris_deduction](#create_hris_deduction) - Create a deduction
 * [create_hris_device](#create_hris_device) - Create a device
 * [create_hris_employee](#create_hris_employee) - Create an employee
 * [create_hris_group](#create_hris_group) - Create a group
 * [create_hris_location](#create_hris_location) - Create a location
 * [create_hris_timeshift](#create_hris_timeshift) - Create a timeshift
+* [get_hris_benefit](#get_hris_benefit) - Retrieve a benefit
 * [get_hris_company](#get_hris_company) - Retrieve a company
+* [get_hris_deduction](#get_hris_deduction) - Retrieve a deduction
 * [get_hris_device](#get_hris_device) - Retrieve a device
 * [get_hris_employee](#get_hris_employee) - Retrieve an employee
 * [get_hris_group](#get_hris_group) - Retrieve a group
@@ -19,7 +23,9 @@
 * [get_hris_payslip](#get_hris_payslip) - Retrieve a payslip
 * [get_hris_timeoff](#get_hris_timeoff) - Retrieve a timeoff
 * [get_hris_timeshift](#get_hris_timeshift) - Retrieve a timeshift
+* [list_hris_benefits](#list_hris_benefits) - List all benefits
 * [list_hris_companies](#list_hris_companies) - List all companies
+* [list_hris_deductions](#list_hris_deductions) - List all deductions
 * [list_hris_devices](#list_hris_devices) - List all devices
 * [list_hris_employees](#list_hris_employees) - List all employees
 * [list_hris_groups](#list_hris_groups) - List all groups
@@ -27,24 +33,74 @@
 * [list_hris_payslips](#list_hris_payslips) - List all payslips
 * [list_hris_timeoffs](#list_hris_timeoffs) - List all timeoffs
 * [list_hris_timeshifts](#list_hris_timeshifts) - List all timeshifts
+* [patch_hris_benefit](#patch_hris_benefit) - Update a benefit
 * [patch_hris_company](#patch_hris_company) - Update a company
+* [patch_hris_deduction](#patch_hris_deduction) - Update a deduction
 * [patch_hris_device](#patch_hris_device) - Update a device
 * [patch_hris_employee](#patch_hris_employee) - Update an employee
 * [patch_hris_group](#patch_hris_group) - Update a group
 * [patch_hris_location](#patch_hris_location) - Update a location
 * [patch_hris_timeshift](#patch_hris_timeshift) - Update a timeshift
+* [remove_hris_benefit](#remove_hris_benefit) - Remove a benefit
 * [remove_hris_company](#remove_hris_company) - Remove a company
+* [remove_hris_deduction](#remove_hris_deduction) - Remove a deduction
 * [remove_hris_device](#remove_hris_device) - Remove a device
 * [remove_hris_employee](#remove_hris_employee) - Remove an employee
 * [remove_hris_group](#remove_hris_group) - Remove a group
 * [remove_hris_location](#remove_hris_location) - Remove a location
 * [remove_hris_timeshift](#remove_hris_timeshift) - Remove a timeshift
+* [update_hris_benefit](#update_hris_benefit) - Update a benefit
 * [update_hris_company](#update_hris_company) - Update a company
+* [update_hris_deduction](#update_hris_deduction) - Update a deduction
 * [update_hris_device](#update_hris_device) - Update a device
 * [update_hris_employee](#update_hris_employee) - Update an employee
 * [update_hris_group](#update_hris_group) - Update a group
 * [update_hris_location](#update_hris_location) - Update a location
 * [update_hris_timeshift](#update_hris_timeshift) - Update a timeshift
+
+## create_hris_benefit
+
+Create a benefit
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.hris.create_hris_benefit(hris_benefit: Models::Shared::HrisBenefit.new(), connection_id: '<id>')
+
+unless res.hris_benefit.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `hris_benefit`                                                                                                                                   | [Models::Shared::HrisBenefit](../../models/shared/hrisbenefit.md)                                                                                | :heavy_check_mark:                                                                                                                               | Company-wide benefit plans available to employees.                                                                                               |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<*::String*>                                                                                                                             | :heavy_minus_sign:                                                                                                                               | Comma-delimited fields to return                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateHrisBenefitResponse)](../../models/operations/createhrisbenefitresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_hris_company
 
@@ -83,6 +139,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateHrisCompanyResponse)](../../models/operations/createhriscompanyresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## create_hris_deduction
+
+Create a deduction
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createHrisDeduction" method="post" path="/hris/{connection_id}/deduction" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.hris.create_hris_deduction(hris_deduction: Models::Shared::HrisDeduction.new(), connection_id: '<id>')
+
+unless res.hris_deduction.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `hris_deduction`                                                                                                                                 | [Models::Shared::HrisDeduction](../../models/shared/hrisdeduction.md)                                                                            | :heavy_check_mark:                                                                                                                               | Employee-specific deduction/benefit enrolment.                                                                                                   |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<*::String*>                                                                                                                             | :heavy_minus_sign:                                                                                                                               | Comma-delimited fields to return                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateHrisDeductionResponse)](../../models/operations/createhrisdeductionresponse.md)**
 
 ### Errors
 
@@ -316,6 +416,50 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## get_hris_benefit
+
+Retrieve a benefit
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getHrisBenefit" method="get" path="/hris/{connection_id}/benefit/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.hris.get_hris_benefit(connection_id: '<id>', id: '<id>')
+
+unless res.hris_benefit.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Benefit                                                                                                                                |
+| `fields_`                                                                                                                                        | T::Array<*::String*>                                                                                                                             | :heavy_minus_sign:                                                                                                                               | Comma-delimited fields to return                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetHrisBenefitResponse)](../../models/operations/gethrisbenefitresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## get_hris_company
 
 Retrieve a company
@@ -353,6 +497,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetHrisCompanyResponse)](../../models/operations/gethriscompanyresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_hris_deduction
+
+Retrieve a deduction
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getHrisDeduction" method="get" path="/hris/{connection_id}/deduction/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.hris.get_hris_deduction(connection_id: '<id>', id: '<id>')
+
+unless res.hris_deduction.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Deduction                                                                                                                              |
+| `fields_`                                                                                                                                        | T::Array<*::String*>                                                                                                                             | :heavy_minus_sign:                                                                                                                               | Comma-delimited fields to return                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetHrisDeductionResponse)](../../models/operations/gethrisdeductionresponse.md)**
 
 ### Errors
 
@@ -668,6 +856,51 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_hris_benefits
+
+List all benefits
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listHrisBenefits" method="get" path="/hris/{connection_id}/benefit" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListHrisBenefitsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.hris.list_hris_benefits(request: req)
+
+unless res.hris_benefits.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::ListHrisBenefitsRequest](../../models/operations/listhrisbenefitsrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+
+### Response
+
+**[T.nilable(Models::Operations::ListHrisBenefitsResponse)](../../models/operations/listhrisbenefitsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_hris_companies
 
 List all companies
@@ -706,6 +939,51 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::ListHrisCompaniesResponse)](../../models/operations/listhriscompaniesresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_hris_deductions
+
+List all deductions
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listHrisDeductions" method="get" path="/hris/{connection_id}/deduction" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListHrisDeductionsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.hris.list_hris_deductions(request: req)
+
+unless res.hris_deductions.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::ListHrisDeductionsRequest](../../models/operations/listhrisdeductionsrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+
+### Response
+
+**[T.nilable(Models::Operations::ListHrisDeductionsResponse)](../../models/operations/listhrisdeductionsresponse.md)**
 
 ### Errors
 
@@ -1028,6 +1306,53 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## patch_hris_benefit
+
+Update a benefit
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::PatchHrisBenefitRequest.new(
+  hris_benefit: Models::Shared::HrisBenefit.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.hris.patch_hris_benefit(request: req)
+
+unless res.hris_benefit.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::PatchHrisBenefitRequest](../../models/operations/patchhrisbenefitrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchHrisBenefitResponse)](../../models/operations/patchhrisbenefitresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## patch_hris_company
 
 Update a company
@@ -1068,6 +1393,53 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::PatchHrisCompanyResponse)](../../models/operations/patchhriscompanyresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## patch_hris_deduction
+
+Update a deduction
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchHrisDeduction" method="patch" path="/hris/{connection_id}/deduction/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::PatchHrisDeductionRequest.new(
+  hris_deduction: Models::Shared::HrisDeduction.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.hris.patch_hris_deduction(request: req)
+
+unless res.hris_deduction.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::PatchHrisDeductionRequest](../../models/operations/patchhrisdeductionrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchHrisDeductionResponse)](../../models/operations/patchhrisdeductionresponse.md)**
 
 ### Errors
 
@@ -1316,6 +1688,48 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## remove_hris_benefit
+
+Remove a benefit
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeHrisBenefit" method="delete" path="/hris/{connection_id}/benefit/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.hris.remove_hris_benefit(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Benefit    |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveHrisBenefitResponse)](../../models/operations/removehrisbenefitresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## remove_hris_company
 
 Remove a company
@@ -1351,6 +1765,48 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::RemoveHrisCompanyResponse)](../../models/operations/removehriscompanyresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## remove_hris_deduction
+
+Remove a deduction
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeHrisDeduction" method="delete" path="/hris/{connection_id}/deduction/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.hris.remove_hris_deduction(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Deduction  |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveHrisDeductionResponse)](../../models/operations/removehrisdeductionresponse.md)**
 
 ### Errors
 
@@ -1568,6 +2024,53 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## update_hris_benefit
+
+Update a benefit
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateHrisBenefitRequest.new(
+  hris_benefit: Models::Shared::HrisBenefit.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.hris.update_hris_benefit(request: req)
+
+unless res.hris_benefit.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::UpdateHrisBenefitRequest](../../models/operations/updatehrisbenefitrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateHrisBenefitResponse)](../../models/operations/updatehrisbenefitresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## update_hris_company
 
 Update a company
@@ -1608,6 +2111,53 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::UpdateHrisCompanyResponse)](../../models/operations/updatehriscompanyresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_hris_deduction
+
+Update a deduction
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateHrisDeduction" method="put" path="/hris/{connection_id}/deduction/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateHrisDeductionRequest.new(
+  hris_deduction: Models::Shared::HrisDeduction.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.hris.update_hris_deduction(request: req)
+
+unless res.hris_deduction.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [Models::Operations::UpdateHrisDeductionRequest](../../models/operations/updatehrisdeductionrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateHrisDeductionResponse)](../../models/operations/updatehrisdeductionresponse.md)**
 
 ### Errors
 

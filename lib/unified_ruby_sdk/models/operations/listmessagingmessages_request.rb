@@ -15,7 +15,7 @@ module UnifiedRubySDK
 
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-        # The channel ID to filter by
+        # The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT
         field :channel_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'channel_id', 'style': 'form', 'explode': true } }
         # The end date to filter by (deprecated)
         field :end_le, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'end_le', 'style': 'form', 'explode': true } }
@@ -45,9 +45,11 @@ module UnifiedRubySDK
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
         # The user/employee ID to filter by
         field :user_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': true } }
+        # The user/employee ID to filter by
+        field :user_mentioned_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'user_mentioned_id', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, channel_id: T.nilable(::String), end_le: T.nilable(::String), end_lt: T.nilable(::String), expand: T.nilable(T::Boolean), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
-        def initialize(connection_id:, channel_id: nil, end_le: nil, end_lt: nil, expand: nil, fields_: nil, limit: nil, offset: nil, order: nil, parent_id: nil, query: nil, raw: nil, sort: nil, start_gte: nil, updated_gte: nil, user_id: nil)
+        sig { params(connection_id: ::String, channel_id: T.nilable(::String), end_le: T.nilable(::String), end_lt: T.nilable(::String), expand: T.nilable(T::Boolean), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String), user_mentioned_id: T.nilable(::String)).void }
+        def initialize(connection_id:, channel_id: nil, end_le: nil, end_lt: nil, expand: nil, fields_: nil, limit: nil, offset: nil, order: nil, parent_id: nil, query: nil, raw: nil, sort: nil, start_gte: nil, updated_gte: nil, user_id: nil, user_mentioned_id: nil)
           @connection_id = connection_id
           @channel_id = channel_id
           @end_le = end_le
@@ -64,6 +66,7 @@ module UnifiedRubySDK
           @start_gte = start_gte
           @updated_gte = updated_gte
           @user_id = user_id
+          @user_mentioned_id = user_mentioned_id
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
@@ -85,6 +88,7 @@ module UnifiedRubySDK
           return false unless @start_gte == other.start_gte
           return false unless @updated_gte == other.updated_gte
           return false unless @user_id == other.user_id
+          return false unless @user_mentioned_id == other.user_mentioned_id
           true
         end
       end

@@ -16,7 +16,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :balancesheet, :bill, :cashflow, :category, :contact, :creditmemo, :expense, :invoice, :journal, :order, :organization, :profitloss, :purchaseorder, :report, :salesorder, :taxrate, :transaction, :trialbalance, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :event, :link, :recording, :commerce, :collection, :inventory, :item, :location, :review, :crm, :deal, :lead, :pipeline, :enrich, :person, :genai, :embedding, :model, :prompt, :hris, :device, :employee, :group, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :lms, :class_, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :storage, :file, :task, :change, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook, :verification, :package, :request
+    attr_accessor :accounting, :account, :balancesheet, :bill, :cashflow, :category, :contact, :creditmemo, :expense, :invoice, :journal, :order, :organization, :profitloss, :purchaseorder, :report, :salesorder, :taxrate, :transaction, :trialbalance, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :event, :link, :recording, :commerce, :collection, :inventory, :item, :location, :review, :crm, :deal, :lead, :pipeline, :enrich, :person, :genai, :embedding, :model, :prompt, :hris, :benefit, :deduction, :device, :employee, :group, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :lms, :class_, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :storage, :file, :task, :change, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :integration, :auth, :login, :issue, :webhook, :verification, :package, :request
 
     sig do
       params(
@@ -129,6 +129,8 @@ module UnifiedRubySDK
       @model = Model.new(@sdk_configuration)
       @prompt = Prompt.new(@sdk_configuration)
       @hris = Hris.new(@sdk_configuration)
+      @benefit = Benefit.new(@sdk_configuration)
+      @deduction = Deduction.new(@sdk_configuration)
       @device = Device.new(@sdk_configuration)
       @employee = Employee.new(@sdk_configuration)
       @group = Group.new(@sdk_configuration)

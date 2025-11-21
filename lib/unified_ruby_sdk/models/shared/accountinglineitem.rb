@@ -32,6 +32,8 @@ module UnifiedRubySDK
 
         field :item_sku, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('item_sku') } }
 
+        field :locations, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingReference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('locations') } }
+
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
 
         field :refund_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refund_amount') } }
@@ -50,8 +52,8 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(account_id: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), discount_amount: T.nilable(::Float), id: T.nilable(::String), item_description: T.nilable(::String), item_id: T.nilable(::String), item_name: T.nilable(::String), item_sku: T.nilable(::String), notes: T.nilable(::String), refund_amount: T.nilable(::Float), refunded_at: T.nilable(::DateTime), tax_amount: T.nilable(::Float), taxrate_id: T.nilable(::String), total_amount: T.nilable(::Float), unit_amount: T.nilable(::Float), unit_quantity: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
-        def initialize(account_id: nil, category_ids: nil, created_at: nil, discount_amount: nil, id: nil, item_description: nil, item_id: nil, item_name: nil, item_sku: nil, notes: nil, refund_amount: nil, refunded_at: nil, tax_amount: nil, taxrate_id: nil, total_amount: nil, unit_amount: nil, unit_quantity: nil, updated_at: nil)
+        sig { params(account_id: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), discount_amount: T.nilable(::Float), id: T.nilable(::String), item_description: T.nilable(::String), item_id: T.nilable(::String), item_name: T.nilable(::String), item_sku: T.nilable(::String), locations: T.nilable(T::Array[Models::Shared::AccountingReference]), notes: T.nilable(::String), refund_amount: T.nilable(::Float), refunded_at: T.nilable(::DateTime), tax_amount: T.nilable(::Float), taxrate_id: T.nilable(::String), total_amount: T.nilable(::Float), unit_amount: T.nilable(::Float), unit_quantity: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        def initialize(account_id: nil, category_ids: nil, created_at: nil, discount_amount: nil, id: nil, item_description: nil, item_id: nil, item_name: nil, item_sku: nil, locations: nil, notes: nil, refund_amount: nil, refunded_at: nil, tax_amount: nil, taxrate_id: nil, total_amount: nil, unit_amount: nil, unit_quantity: nil, updated_at: nil)
           @account_id = account_id
           @category_ids = category_ids
           @created_at = created_at
@@ -61,6 +63,7 @@ module UnifiedRubySDK
           @item_id = item_id
           @item_name = item_name
           @item_sku = item_sku
+          @locations = locations
           @notes = notes
           @refund_amount = refund_amount
           @refunded_at = refunded_at
@@ -84,6 +87,7 @@ module UnifiedRubySDK
           return false unless @item_id == other.item_id
           return false unless @item_name == other.item_name
           return false unless @item_sku == other.item_sku
+          return false unless @locations == other.locations
           return false unless @notes == other.notes
           return false unless @refund_amount == other.refund_amount
           return false unless @refunded_at == other.refunded_at
