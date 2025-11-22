@@ -26,6 +26,8 @@ class UnifiedRubySDK::Models::Shared::AccountingLineitem
   def item_name=(str_); end
   def item_sku(); end
   def item_sku=(str_); end
+  def item_variants(); end
+  def item_variants=(str_); end
   def locations(); end
   def locations=(str_); end
   def notes(); end
