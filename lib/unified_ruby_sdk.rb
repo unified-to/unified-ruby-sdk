@@ -46,6 +46,7 @@ module UnifiedRubySDK
   autoload :Item, 'unified_ruby_sdk/item'
   autoload :Location, 'unified_ruby_sdk/location'
   autoload :Review, 'unified_ruby_sdk/review'
+  autoload :Saleschannel, 'unified_ruby_sdk/saleschannel'
   autoload :Crm, 'unified_ruby_sdk/crm'
   autoload :Deal, 'unified_ruby_sdk/deal'
   autoload :Lead, 'unified_ruby_sdk/lead'

@@ -68,6 +68,8 @@ module UnifiedRubySDK
           COMMERCE_LOCATION_WRITE = new('commerce_location_write')
           COMMERCE_REVIEW_READ = new('commerce_review_read')
           COMMERCE_REVIEW_WRITE = new('commerce_review_write')
+          COMMERCE_SALESCHANNEL_READ = new('commerce_saleschannel_read')
+          COMMERCE_SALESCHANNEL_WRITE = new('commerce_saleschannel_write')
           VERIFICATION_PACKAGE_READ = new('verification_package_read')
           VERIFICATION_REQUEST_READ = new('verification_request_read')
           VERIFICATION_REQUEST_WRITE = new('verification_request_write')

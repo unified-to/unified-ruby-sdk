@@ -8,8 +8,6 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::CommerceMetadata
-  def description(); end
-  def description=(str_); end
   def extra_data(); end
   def extra_data=(str_); end
   def format(); end
@@ -20,8 +18,6 @@ class UnifiedRubySDK::Models::Shared::CommerceMetadata
   def key=(str_); end
   def namespace(); end
   def namespace=(str_); end
-  def required(); end
-  def required=(str_); end
   def slug(); end
   def slug=(str_); end
   def type(); end

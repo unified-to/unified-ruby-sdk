@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: c6058565310b31d840e18ece25ff2318
+  docChecksum: 0cbfedd6f5ab2e89dc21eefa192c619d
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.66.30
-  configChecksum: a3dc6f4548e52c7ca137be1ee981e73a
+  releaseVersion: 0.66.31
+  configChecksum: a660cd3d7944b069d0d07c95c173d34a
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -85,6 +85,8 @@ generatedFiles:
   - docs/models/operations/createcommercelocationresponse.md
   - docs/models/operations/createcommercereviewrequest.md
   - docs/models/operations/createcommercereviewresponse.md
+  - docs/models/operations/createcommercesaleschannelrequest.md
+  - docs/models/operations/createcommercesaleschannelresponse.md
   - docs/models/operations/createcrmcompanyrequest.md
   - docs/models/operations/createcrmcompanyresponse.md
   - docs/models/operations/createcrmcontactrequest.md
@@ -262,6 +264,8 @@ generatedFiles:
   - docs/models/operations/getcommercelocationresponse.md
   - docs/models/operations/getcommercereviewrequest.md
   - docs/models/operations/getcommercereviewresponse.md
+  - docs/models/operations/getcommercesaleschannelrequest.md
+  - docs/models/operations/getcommercesaleschannelresponse.md
   - docs/models/operations/getcrmcompanyrequest.md
   - docs/models/operations/getcrmcompanyresponse.md
   - docs/models/operations/getcrmcontactrequest.md
@@ -462,6 +466,8 @@ generatedFiles:
   - docs/models/operations/listcommercelocationsresponse.md
   - docs/models/operations/listcommercereviewsrequest.md
   - docs/models/operations/listcommercereviewsresponse.md
+  - docs/models/operations/listcommercesaleschannelsrequest.md
+  - docs/models/operations/listcommercesaleschannelsresponse.md
   - docs/models/operations/listcrmcompaniesrequest.md
   - docs/models/operations/listcrmcompaniesresponse.md
   - docs/models/operations/listcrmcontactsrequest.md
@@ -651,6 +657,8 @@ generatedFiles:
   - docs/models/operations/patchcommercelocationresponse.md
   - docs/models/operations/patchcommercereviewrequest.md
   - docs/models/operations/patchcommercereviewresponse.md
+  - docs/models/operations/patchcommercesaleschannelrequest.md
+  - docs/models/operations/patchcommercesaleschannelresponse.md
   - docs/models/operations/patchcrmcompanyrequest.md
   - docs/models/operations/patchcrmcompanyresponse.md
   - docs/models/operations/patchcrmcontactrequest.md
@@ -814,6 +822,8 @@ generatedFiles:
   - docs/models/operations/removecommercelocationresponse.md
   - docs/models/operations/removecommercereviewrequest.md
   - docs/models/operations/removecommercereviewresponse.md
+  - docs/models/operations/removecommercesaleschannelrequest.md
+  - docs/models/operations/removecommercesaleschannelresponse.md
   - docs/models/operations/removecrmcompanyrequest.md
   - docs/models/operations/removecrmcompanyresponse.md
   - docs/models/operations/removecrmcontactrequest.md
@@ -972,6 +982,8 @@ generatedFiles:
   - docs/models/operations/updatecommercelocationresponse.md
   - docs/models/operations/updatecommercereviewrequest.md
   - docs/models/operations/updatecommercereviewresponse.md
+  - docs/models/operations/updatecommercesaleschannelrequest.md
+  - docs/models/operations/updatecommercesaleschannelresponse.md
   - docs/models/operations/updatecrmcompanyrequest.md
   - docs/models/operations/updatecrmcompanyresponse.md
   - docs/models/operations/updatecrmcontactrequest.md
@@ -1200,10 +1212,12 @@ generatedFiles:
   - docs/models/shared/commercemetadataschemas1.md
   - docs/models/shared/commercemetadataschemas5.md
   - docs/models/shared/commercemetadatavalue.md
+  - docs/models/shared/commercereference.md
   - docs/models/shared/commercereview.md
   - docs/models/shared/commercereviewcomment.md
   - docs/models/shared/commercereviewcommentstatus.md
   - docs/models/shared/commercereviewstatus.md
+  - docs/models/shared/commercesaleschannel.md
   - docs/models/shared/connection.md
   - docs/models/shared/contenttype.md
   - docs/models/shared/coveragelevel.md
@@ -1319,6 +1333,7 @@ generatedFiles:
   - docs/models/shared/kmsspace.md
   - docs/models/shared/listaccountid.md
   - docs/models/shared/listapplicationid.md
+  - docs/models/shared/listbenefitid.md
   - docs/models/shared/listbranchid.md
   - docs/models/shared/listcalendarid.md
   - docs/models/shared/listcallid.md
@@ -1363,6 +1378,7 @@ generatedFiles:
   - docs/models/shared/listrawfields.md
   - docs/models/shared/listrepoid.md
   - docs/models/shared/listrootid.md
+  - docs/models/shared/listsaleschannelid.md
   - docs/models/shared/listsortbycreatedat.md
   - docs/models/shared/listsortbyname.md
   - docs/models/shared/listsortbyupdatedat.md
@@ -1618,6 +1634,7 @@ generatedFiles:
   - docs/models/shared/virtualwebhookpipelineid.md
   - docs/models/shared/virtualwebhookprojectid.md
   - docs/models/shared/virtualwebhookrepoid.md
+  - docs/models/shared/virtualwebhooksaleschannelid.md
   - docs/models/shared/virtualwebhookspaceid.md
   - docs/models/shared/virtualwebhookstartgte.md
   - docs/models/shared/virtualwebhookstatus.md
@@ -1721,6 +1738,7 @@ generatedFiles:
   - docs/sdks/repository/README.md
   - docs/sdks/request/README.md
   - docs/sdks/review/README.md
+  - docs/sdks/saleschannel/README.md
   - docs/sdks/salesorder/README.md
   - docs/sdks/scim/README.md
   - docs/sdks/scorecard/README.md
@@ -1939,6 +1957,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createcommercereview_request.rbi
   - lib/unified_ruby_sdk/models/operations/createcommercereview_response.rb
   - lib/unified_ruby_sdk/models/operations/createcommercereview_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createcommercesaleschannel_request.rb
+  - lib/unified_ruby_sdk/models/operations/createcommercesaleschannel_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createcommercesaleschannel_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcommercesaleschannel_response.rbi
   - lib/unified_ruby_sdk/models/operations/createcrmcompany_request.rb
   - lib/unified_ruby_sdk/models/operations/createcrmcompany_request.rbi
   - lib/unified_ruby_sdk/models/operations/createcrmcompany_response.rb
@@ -2293,6 +2315,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getcommercereview_request.rbi
   - lib/unified_ruby_sdk/models/operations/getcommercereview_response.rb
   - lib/unified_ruby_sdk/models/operations/getcommercereview_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getcommercesaleschannel_request.rb
+  - lib/unified_ruby_sdk/models/operations/getcommercesaleschannel_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getcommercesaleschannel_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcommercesaleschannel_response.rbi
   - lib/unified_ruby_sdk/models/operations/getcrmcompany_request.rb
   - lib/unified_ruby_sdk/models/operations/getcrmcompany_request.rbi
   - lib/unified_ruby_sdk/models/operations/getcrmcompany_response.rb
@@ -2693,6 +2719,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listcommercereviews_request.rbi
   - lib/unified_ruby_sdk/models/operations/listcommercereviews_response.rb
   - lib/unified_ruby_sdk/models/operations/listcommercereviews_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listcommercesaleschannels_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcommercesaleschannels_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listcommercesaleschannels_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcommercesaleschannels_response.rbi
   - lib/unified_ruby_sdk/models/operations/listcrmcompanies_request.rb
   - lib/unified_ruby_sdk/models/operations/listcrmcompanies_request.rbi
   - lib/unified_ruby_sdk/models/operations/listcrmcompanies_response.rb
@@ -3071,6 +3101,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchcommercereview_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchcommercereview_response.rb
   - lib/unified_ruby_sdk/models/operations/patchcommercereview_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcommercesaleschannel_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchcommercesaleschannel_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcommercesaleschannel_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcommercesaleschannel_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchcrmcompany_request.rb
   - lib/unified_ruby_sdk/models/operations/patchcrmcompany_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchcrmcompany_response.rb
@@ -3397,6 +3431,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removecommercereview_request.rbi
   - lib/unified_ruby_sdk/models/operations/removecommercereview_response.rb
   - lib/unified_ruby_sdk/models/operations/removecommercereview_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removecommercesaleschannel_request.rb
+  - lib/unified_ruby_sdk/models/operations/removecommercesaleschannel_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removecommercesaleschannel_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecommercesaleschannel_response.rbi
   - lib/unified_ruby_sdk/models/operations/removecrmcompany_request.rb
   - lib/unified_ruby_sdk/models/operations/removecrmcompany_request.rbi
   - lib/unified_ruby_sdk/models/operations/removecrmcompany_response.rb
@@ -3713,6 +3751,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatecommercereview_request.rbi
   - lib/unified_ruby_sdk/models/operations/updatecommercereview_response.rb
   - lib/unified_ruby_sdk/models/operations/updatecommercereview_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecommercesaleschannel_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatecommercesaleschannel_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecommercesaleschannel_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecommercesaleschannel_response.rbi
   - lib/unified_ruby_sdk/models/operations/updatecrmcompany_request.rb
   - lib/unified_ruby_sdk/models/operations/updatecrmcompany_request.rbi
   - lib/unified_ruby_sdk/models/operations/updatecrmcompany_response.rb
@@ -4170,6 +4212,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/commercemetadata_schemas_5.rbi
   - lib/unified_ruby_sdk/models/shared/commercemetadata_value.rb
   - lib/unified_ruby_sdk/models/shared/commercemetadata_value.rbi
+  - lib/unified_ruby_sdk/models/shared/commercereference.rb
+  - lib/unified_ruby_sdk/models/shared/commercereference.rbi
   - lib/unified_ruby_sdk/models/shared/commercereview.rb
   - lib/unified_ruby_sdk/models/shared/commercereview.rbi
   - lib/unified_ruby_sdk/models/shared/commercereview_status.rb
@@ -4178,6 +4222,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/commercereviewcomment.rbi
   - lib/unified_ruby_sdk/models/shared/commercereviewcomment_status.rb
   - lib/unified_ruby_sdk/models/shared/commercereviewcomment_status.rbi
+  - lib/unified_ruby_sdk/models/shared/commercesaleschannel.rb
+  - lib/unified_ruby_sdk/models/shared/commercesaleschannel.rbi
   - lib/unified_ruby_sdk/models/shared/connection.rb
   - lib/unified_ruby_sdk/models/shared/connection.rbi
   - lib/unified_ruby_sdk/models/shared/content_type.rb
@@ -4408,6 +4454,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_account_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_application_id.rb
   - lib/unified_ruby_sdk/models/shared/list_application_id.rbi
+  - lib/unified_ruby_sdk/models/shared/list_benefit_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_benefit_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_branch_id.rb
   - lib/unified_ruby_sdk/models/shared/list_branch_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_calendar_id.rb
@@ -4496,6 +4544,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_repo_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_root_id.rb
   - lib/unified_ruby_sdk/models/shared/list_root_id.rbi
+  - lib/unified_ruby_sdk/models/shared/list_saleschannel_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_saleschannel_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_sort_by_created_at.rb
   - lib/unified_ruby_sdk/models/shared/list_sort_by_created_at.rbi
   - lib/unified_ruby_sdk/models/shared/list_sort_by_name.rb
@@ -5006,6 +5056,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_project_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_repo_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_repo_id.rbi
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_saleschannel_id.rb
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_saleschannel_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_space_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_space_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_start_gte.rb
@@ -5055,6 +5107,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/repository.rb
   - lib/unified_ruby_sdk/request.rb
   - lib/unified_ruby_sdk/review.rb
+  - lib/unified_ruby_sdk/saleschannel.rb
   - lib/unified_ruby_sdk/salesorder.rb
   - lib/unified_ruby_sdk/scim.rb
   - lib/unified_ruby_sdk/scorecard.rb
@@ -9848,6 +9901,61 @@ examples:
           application/json: {}
   updateHrisDeduction:
     speakeasy-default-update-hris-deduction:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createCommerceSaleschannel:
+    speakeasy-default-create-commerce-saleschannel:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getCommerceSaleschannel:
+    speakeasy-default-get-commerce-saleschannel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listCommerceSaleschannels:
+    speakeasy-default-list-commerce-saleschannels:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchCommerceSaleschannel:
+    speakeasy-default-patch-commerce-saleschannel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeCommerceSaleschannel:
+    speakeasy-default-remove-commerce-saleschannel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateCommerceSaleschannel:
+    speakeasy-default-update-commerce-saleschannel:
       parameters:
         path:
           connection_id: "<id>"

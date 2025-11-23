@@ -29,6 +29,8 @@ module UnifiedRubySDK
         field :query, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
         # Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
         field :raw, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
+        # The saleschannel ID to filter by
+        field :saleschannel_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'saleschannel_id', 'style': 'form', 'explode': true } }
 
         field :sort, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
 
@@ -36,8 +38,8 @@ module UnifiedRubySDK
         # Return only results whose updated date is equal or greater to this value
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), type: T.nilable(::String), updated_gte: T.nilable(::String)).void }
-        def initialize(connection_id:, fields_: nil, limit: nil, offset: nil, order: nil, parent_id: nil, query: nil, raw: nil, sort: nil, type: nil, updated_gte: nil)
+        sig { params(connection_id: ::String, fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), saleschannel_id: T.nilable(::String), sort: T.nilable(::String), type: T.nilable(::String), updated_gte: T.nilable(::String)).void }
+        def initialize(connection_id:, fields_: nil, limit: nil, offset: nil, order: nil, parent_id: nil, query: nil, raw: nil, saleschannel_id: nil, sort: nil, type: nil, updated_gte: nil)
           @connection_id = connection_id
           @fields_ = fields_
           @limit = limit
@@ -46,6 +48,7 @@ module UnifiedRubySDK
           @parent_id = parent_id
           @query = query
           @raw = raw
+          @saleschannel_id = saleschannel_id
           @sort = sort
           @type = type
           @updated_gte = updated_gte
@@ -62,6 +65,7 @@ module UnifiedRubySDK
           return false unless @parent_id == other.parent_id
           return false unless @query == other.query
           return false unless @raw == other.raw
+          return false unless @saleschannel_id == other.saleschannel_id
           return false unless @sort == other.sort
           return false unless @type == other.type
           return false unless @updated_gte == other.updated_gte

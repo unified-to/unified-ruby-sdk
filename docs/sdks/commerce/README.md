@@ -10,31 +10,37 @@
 * [create_commerce_item](#create_commerce_item) - Create an item
 * [create_commerce_location](#create_commerce_location) - Create a location
 * [create_commerce_review](#create_commerce_review) - Create a review
+* [create_commerce_saleschannel](#create_commerce_saleschannel) - Create a saleschannel
 * [get_commerce_collection](#get_commerce_collection) - Retrieve a collection
 * [get_commerce_inventory](#get_commerce_inventory) - Retrieve an inventory
 * [get_commerce_item](#get_commerce_item) - Retrieve an item
 * [get_commerce_location](#get_commerce_location) - Retrieve a location
 * [get_commerce_review](#get_commerce_review) - Retrieve a review
+* [get_commerce_saleschannel](#get_commerce_saleschannel) - Retrieve a saleschannel
 * [list_commerce_collections](#list_commerce_collections) - List all collections
 * [list_commerce_inventories](#list_commerce_inventories) - List all inventories
 * [list_commerce_items](#list_commerce_items) - List all items
 * [list_commerce_locations](#list_commerce_locations) - List all locations
 * [list_commerce_reviews](#list_commerce_reviews) - List all reviews
+* [list_commerce_saleschannels](#list_commerce_saleschannels) - List all saleschannels
 * [patch_commerce_collection](#patch_commerce_collection) - Update a collection
 * [patch_commerce_inventory](#patch_commerce_inventory) - Update an inventory
 * [patch_commerce_item](#patch_commerce_item) - Update an item
 * [patch_commerce_location](#patch_commerce_location) - Update a location
 * [patch_commerce_review](#patch_commerce_review) - Update a review
+* [patch_commerce_saleschannel](#patch_commerce_saleschannel) - Update a saleschannel
 * [remove_commerce_collection](#remove_commerce_collection) - Remove a collection
 * [remove_commerce_inventory](#remove_commerce_inventory) - Remove an inventory
 * [remove_commerce_item](#remove_commerce_item) - Remove an item
 * [remove_commerce_location](#remove_commerce_location) - Remove a location
 * [remove_commerce_review](#remove_commerce_review) - Remove a review
+* [remove_commerce_saleschannel](#remove_commerce_saleschannel) - Remove a saleschannel
 * [update_commerce_collection](#update_commerce_collection) - Update a collection
 * [update_commerce_inventory](#update_commerce_inventory) - Update an inventory
 * [update_commerce_item](#update_commerce_item) - Update an item
 * [update_commerce_location](#update_commerce_location) - Update a location
 * [update_commerce_review](#update_commerce_review) - Update a review
+* [update_commerce_saleschannel](#update_commerce_saleschannel) - Update a saleschannel
 
 ## create_commerce_collection
 
@@ -264,6 +270,50 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## create_commerce_saleschannel
+
+Create a saleschannel
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createCommerceSaleschannel" method="post" path="/commerce/{connection_id}/saleschannel" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.commerce.create_commerce_saleschannel(commerce_saleschannel: Models::Shared::CommerceSaleschannel.new(), connection_id: '<id>')
+
+unless res.commerce_saleschannel.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `commerce_saleschannel`                                                                                                                          | [Models::Shared::CommerceSaleschannel](../../models/shared/commercesaleschannel.md)                                                              | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<*::String*>                                                                                                                             | :heavy_minus_sign:                                                                                                                               | Comma-delimited fields to return                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateCommerceSaleschannelResponse)](../../models/operations/createcommercesaleschannelresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## get_commerce_collection
 
 Retrieve a collection
@@ -477,6 +527,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetCommerceReviewResponse)](../../models/operations/getcommercereviewresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_commerce_saleschannel
+
+Retrieve a saleschannel
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getCommerceSaleschannel" method="get" path="/commerce/{connection_id}/saleschannel/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.commerce.get_commerce_saleschannel(connection_id: '<id>', id: '<id>')
+
+unless res.commerce_saleschannel.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Saleschannel                                                                                                                           |
+| `fields_`                                                                                                                                        | T::Array<*::String*>                                                                                                                             | :heavy_minus_sign:                                                                                                                               | Comma-delimited fields to return                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetCommerceSaleschannelResponse)](../../models/operations/getcommercesaleschannelresponse.md)**
 
 ### Errors
 
@@ -702,6 +796,51 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::ListCommerceReviewsResponse)](../../models/operations/listcommercereviewsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_commerce_saleschannels
+
+List all saleschannels
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listCommerceSaleschannels" method="get" path="/commerce/{connection_id}/saleschannel" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListCommerceSaleschannelsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.commerce.list_commerce_saleschannels(request: req)
+
+unless res.commerce_saleschannels.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                           | [Models::Operations::ListCommerceSaleschannelsRequest](../../models/operations/listcommercesaleschannelsrequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+
+### Response
+
+**[T.nilable(Models::Operations::ListCommerceSaleschannelsResponse)](../../models/operations/listcommercesaleschannelsresponse.md)**
 
 ### Errors
 
@@ -952,6 +1091,53 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## patch_commerce_saleschannel
+
+Update a saleschannel
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchCommerceSaleschannel" method="patch" path="/commerce/{connection_id}/saleschannel/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::PatchCommerceSaleschannelRequest.new(
+  commerce_saleschannel: Models::Shared::CommerceSaleschannel.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.commerce.patch_commerce_saleschannel(request: req)
+
+unless res.commerce_saleschannel.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                           | [Models::Operations::PatchCommerceSaleschannelRequest](../../models/operations/patchcommercesaleschannelrequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchCommerceSaleschannelResponse)](../../models/operations/patchcommercesaleschannelresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## remove_commerce_collection
 
 Remove a collection
@@ -1155,6 +1341,48 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::RemoveCommerceReviewResponse)](../../models/operations/removecommercereviewresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## remove_commerce_saleschannel
+
+Remove a saleschannel
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeCommerceSaleschannel" method="delete" path="/commerce/{connection_id}/saleschannel/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.commerce.remove_commerce_saleschannel(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter              | Type                   | Required               | Description            |
+| ---------------------- | ---------------------- | ---------------------- | ---------------------- |
+| `connection_id`        | *::String*             | :heavy_check_mark:     | ID of the connection   |
+| `id`                   | *::String*             | :heavy_check_mark:     | ID of the Saleschannel |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveCommerceSaleschannelResponse)](../../models/operations/removecommercesaleschannelresponse.md)**
 
 ### Errors
 
@@ -1398,6 +1626,53 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::UpdateCommerceReviewResponse)](../../models/operations/updatecommercereviewresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_commerce_saleschannel
+
+Update a saleschannel
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateCommerceSaleschannel" method="put" path="/commerce/{connection_id}/saleschannel/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateCommerceSaleschannelRequest.new(
+  commerce_saleschannel: Models::Shared::CommerceSaleschannel.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.commerce.update_commerce_saleschannel(request: req)
+
+unless res.commerce_saleschannel.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                             | [Models::Operations::UpdateCommerceSaleschannelRequest](../../models/operations/updatecommercesaleschannelrequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateCommerceSaleschannelResponse)](../../models/operations/updatecommercesaleschannelresponse.md)**
 
 ### Errors
 

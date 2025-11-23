@@ -16,6 +16,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_account_id=(str_); end
   def list_application_id(); end
   def list_application_id=(str_); end
+  def list_benefit_id(); end
+  def list_benefit_id=(str_); end
   def list_branch_id(); end
   def list_branch_id=(str_); end
   def list_calendar_id(); end
@@ -104,6 +106,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_repo_id=(str_); end
   def list_root_id(); end
   def list_root_id=(str_); end
+  def list_saleschannel_id(); end
+  def list_saleschannel_id=(str_); end
   def list_sort_by_created_at(); end
   def list_sort_by_created_at=(str_); end
   def list_sort_by_name(); end
@@ -222,6 +226,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_project_id=(str_); end
   def virtual_webhook_repo_id(); end
   def virtual_webhook_repo_id=(str_); end
+  def virtual_webhook_saleschannel_id(); end
+  def virtual_webhook_saleschannel_id=(str_); end
   def virtual_webhook_space_id(); end
   def virtual_webhook_space_id=(str_); end
   def virtual_webhook_start_gte(); end

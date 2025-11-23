@@ -24,6 +24,8 @@ class UnifiedRubySDK::Models::Operations::ListCommerceCollectionsRequest
   def query=(str_); end
   def raw(); end
   def raw=(str_); end
+  def saleschannel_id(); end
+  def saleschannel_id=(str_); end
   def sort(); end
   def sort=(str_); end
   def type(); end

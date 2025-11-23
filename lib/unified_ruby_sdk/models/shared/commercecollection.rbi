@@ -22,8 +22,6 @@ class UnifiedRubySDK::Models::Shared::CommerceCollection
   def is_featured=(str_); end
   def is_visible(); end
   def is_visible=(str_); end
-  def item_metadata(); end
-  def item_metadata=(str_); end
   def media(); end
   def media=(str_); end
   def metadata(); end
