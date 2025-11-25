@@ -8,12 +8,16 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::CommerceMetadata
+  def description(); end
+  def description=(str_); end
   def extra_data(); end
   def extra_data=(str_); end
   def format(); end
   def format=(str_); end
   def id(); end
   def id=(str_); end
+  def is_required(); end
+  def is_required=(str_); end
   def key(); end
   def key=(str_); end
   def namespace(); end

@@ -18,8 +18,6 @@ class UnifiedRubySDK::Models::Shared::CommerceSaleschannel
   def id=(str_); end
   def is_active(); end
   def is_active=(str_); end
-  def item_metadata(); end
-  def item_metadata=(str_); end
   def raw(); end
   def raw=(str_); end
   def slug(); end

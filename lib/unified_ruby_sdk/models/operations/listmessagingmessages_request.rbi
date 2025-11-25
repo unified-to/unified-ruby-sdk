@@ -36,6 +36,8 @@ class UnifiedRubySDK::Models::Operations::ListMessagingMessagesRequest
   def sort=(str_); end
   def start_gte(); end
   def start_gte=(str_); end
+  def type(); end
+  def type=(str_); end
   def updated_gte(); end
   def updated_gte=(str_); end
   def user_id(); end

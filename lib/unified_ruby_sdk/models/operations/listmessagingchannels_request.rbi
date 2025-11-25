@@ -26,6 +26,8 @@ class UnifiedRubySDK::Models::Operations::ListMessagingChannelsRequest
   def raw=(str_); end
   def sort(); end
   def sort=(str_); end
+  def type(); end
+  def type=(str_); end
   def updated_gte(); end
   def updated_gte=(str_); end
 end

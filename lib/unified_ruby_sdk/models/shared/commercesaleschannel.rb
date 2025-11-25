@@ -24,22 +24,19 @@ module UnifiedRubySDK
 
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
-        field :item_metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('item_metadata') } }
-
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :slug, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('slug') } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(collections: T.nilable(T::Array[Models::Shared::CommerceReference]), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), item_metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), slug: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(collections: nil, created_at: nil, description: nil, id: nil, is_active: nil, item_metadata: nil, raw: nil, slug: nil, updated_at: nil)
+        sig { params(collections: T.nilable(T::Array[Models::Shared::CommerceReference]), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), raw: T.nilable(T::Hash[Symbol, ::Object]), slug: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(collections: nil, created_at: nil, description: nil, id: nil, is_active: nil, raw: nil, slug: nil, updated_at: nil)
           @collections = collections
           @created_at = created_at
           @description = description
           @id = id
           @is_active = is_active
-          @item_metadata = item_metadata
           @raw = raw
           @slug = slug
           @updated_at = updated_at
@@ -53,7 +50,6 @@ module UnifiedRubySDK
           return false unless @description == other.description
           return false unless @id == other.id
           return false unless @is_active == other.is_active
-          return false unless @item_metadata == other.item_metadata
           return false unless @raw == other.raw
           return false unless @slug == other.slug
           return false unless @updated_at == other.updated_at
