@@ -108,6 +108,7 @@ module UnifiedRubySDK
   autoload :Unified, 'unified_ruby_sdk/unified'
   autoload :Apicall, 'unified_ruby_sdk/apicall'
   autoload :Connection, 'unified_ruby_sdk/connection'
+  autoload :Environment, 'unified_ruby_sdk/environment'
   autoload :Integration, 'unified_ruby_sdk/integration'
   autoload :Auth, 'unified_ruby_sdk/auth'
   autoload :Login, 'unified_ruby_sdk/login'

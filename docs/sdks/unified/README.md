@@ -6,6 +6,7 @@
 ### Available Operations
 
 * [create_unified_connection](#create_unified_connection) - Create connection
+* [create_unified_environment](#create_unified_environment)
 * [create_unified_webhook](#create_unified_webhook) - Create webhook subscription
 * [get_unified_apicall](#get_unified_apicall) - Retrieve specific API Call by its ID
 * [get_unified_connection](#get_unified_connection) - Retrieve connection
@@ -14,6 +15,7 @@
 * [get_unified_webhook](#get_unified_webhook) - Retrieve webhook by its ID
 * [list_unified_apicalls](#list_unified_apicalls) - Returns API Calls
 * [list_unified_connections](#list_unified_connections) - List all connections
+* [list_unified_environments](#list_unified_environments)
 * [list_unified_integration_workspaces](#list_unified_integration_workspaces) - Returns all activated integrations in a workspace
 * [list_unified_integrations](#list_unified_integrations) - Returns all integrations
 * [list_unified_issues](#list_unified_issues) - List support issues
@@ -22,6 +24,7 @@
 * [patch_unified_webhook](#patch_unified_webhook) - Update webhook subscription
 * [patch_unified_webhook_trigger](#patch_unified_webhook_trigger) - Trigger webhook
 * [remove_unified_connection](#remove_unified_connection) - Remove connection
+* [remove_unified_environment](#remove_unified_environment)
 * [remove_unified_webhook](#remove_unified_webhook) - Remove webhook subscription
 * [update_unified_connection](#update_unified_connection) - Update connection
 * [update_unified_webhook](#update_unified_webhook) - Update webhook subscription
@@ -67,6 +70,47 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateUnifiedConnectionResponse)](../../models/operations/createunifiedconnectionresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## create_unified_environment
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createUnifiedEnvironment" method="post" path="/unified/environment" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = []
+
+res = s.unified.create_unified_environment(request: req)
+
+unless res.s.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                  | Type                                       | Required                                   | Description                                |
+| ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
+| `request`                                  | [T::Array[::String]](../../models//.md)    | :heavy_check_mark:                         | The request object to use for the request. |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateUnifiedEnvironmentResponse)](../../models/operations/createunifiedenvironmentresponse.md)**
 
 ### Errors
 
@@ -416,6 +460,39 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_unified_environments
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listUnifiedEnvironments" method="get" path="/unified/environment" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.unified.list_unified_environments()
+
+unless res.s.nil?
+  # handle response
+end
+
+```
+
+### Response
+
+**[T.nilable(Models::Operations::ListUnifiedEnvironmentsResponse)](../../models/operations/listunifiedenvironmentsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_unified_integration_workspaces
 
 No authentication required as this is to be used by front-end interface
@@ -757,6 +834,45 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::RemoveUnifiedConnectionResponse)](../../models/operations/removeunifiedconnectionresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## remove_unified_environment
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeUnifiedEnvironment" method="delete" path="/unified/environment/{env}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.unified.remove_unified_environment(env: '<value>')
+
+unless res.s.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `env`              | *::String*         | :heavy_check_mark: | N/A                |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveUnifiedEnvironmentResponse)](../../models/operations/removeunifiedenvironmentresponse.md)**
 
 ### Errors
 

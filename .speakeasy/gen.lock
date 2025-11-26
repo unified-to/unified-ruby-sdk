@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: e5fd42ded6b39076e927e9c9bcaeaeda
+  docChecksum: 7e48c8065cf75c07215a397f53c91620
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.66.32
-  configChecksum: 6bb1aed699480ba8741d160b3ecdc89e
+  releaseVersion: 0.66.33
+  configChecksum: efa07b561bdecf7232d7f31e5f2a226c
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -188,6 +188,7 @@ generatedFiles:
   - docs/models/operations/createucrecordingrequest.md
   - docs/models/operations/createucrecordingresponse.md
   - docs/models/operations/createunifiedconnectionresponse.md
+  - docs/models/operations/createunifiedenvironmentresponse.md
   - docs/models/operations/createunifiedwebhookrequest.md
   - docs/models/operations/createunifiedwebhookresponse.md
   - docs/models/operations/createverificationrequestrequest.md
@@ -586,6 +587,7 @@ generatedFiles:
   - docs/models/operations/listunifiedapicallsresponse.md
   - docs/models/operations/listunifiedconnectionsrequest.md
   - docs/models/operations/listunifiedconnectionsresponse.md
+  - docs/models/operations/listunifiedenvironmentsresponse.md
   - docs/models/operations/listunifiedintegrationsqueryparamcategories.md
   - docs/models/operations/listunifiedintegrationsrequest.md
   - docs/models/operations/listunifiedintegrationsresponse.md
@@ -920,6 +922,8 @@ generatedFiles:
   - docs/models/operations/removeucrecordingresponse.md
   - docs/models/operations/removeunifiedconnectionrequest.md
   - docs/models/operations/removeunifiedconnectionresponse.md
+  - docs/models/operations/removeunifiedenvironmentrequest.md
+  - docs/models/operations/removeunifiedenvironmentresponse.md
   - docs/models/operations/removeunifiedwebhookrequest.md
   - docs/models/operations/removeunifiedwebhookresponse.md
   - docs/models/operations/removeverificationrequestrequest.md
@@ -1687,6 +1691,7 @@ generatedFiles:
   - docs/sdks/embedding/README.md
   - docs/sdks/employee/README.md
   - docs/sdks/enrich/README.md
+  - docs/sdks/environment/README.md
   - docs/sdks/event/README.md
   - docs/sdks/expense/README.md
   - docs/sdks/file/README.md
@@ -1806,6 +1811,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/embedding.rb
   - lib/unified_ruby_sdk/employee.rb
   - lib/unified_ruby_sdk/enrich.rb
+  - lib/unified_ruby_sdk/environment.rb
   - lib/unified_ruby_sdk/event.rb
   - lib/unified_ruby_sdk/expense.rb
   - lib/unified_ruby_sdk/file.rb
@@ -2163,6 +2169,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createucrecording_response.rbi
   - lib/unified_ruby_sdk/models/operations/createunifiedconnection_response.rb
   - lib/unified_ruby_sdk/models/operations/createunifiedconnection_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createunifiedenvironment_response.rb
+  - lib/unified_ruby_sdk/models/operations/createunifiedenvironment_response.rbi
   - lib/unified_ruby_sdk/models/operations/createunifiedwebhook_request.rb
   - lib/unified_ruby_sdk/models/operations/createunifiedwebhook_request.rbi
   - lib/unified_ruby_sdk/models/operations/createunifiedwebhook_response.rb
@@ -2959,6 +2967,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listunifiedconnections_request.rbi
   - lib/unified_ruby_sdk/models/operations/listunifiedconnections_response.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedconnections_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listunifiedenvironments_response.rb
+  - lib/unified_ruby_sdk/models/operations/listunifiedenvironments_response.rbi
   - lib/unified_ruby_sdk/models/operations/listunifiedintegrations_queryparam_categories.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedintegrations_queryparam_categories.rbi
   - lib/unified_ruby_sdk/models/operations/listunifiedintegrations_request.rb
@@ -3627,6 +3637,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removeunifiedconnection_request.rbi
   - lib/unified_ruby_sdk/models/operations/removeunifiedconnection_response.rb
   - lib/unified_ruby_sdk/models/operations/removeunifiedconnection_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removeunifiedenvironment_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeunifiedenvironment_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removeunifiedenvironment_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeunifiedenvironment_response.rbi
   - lib/unified_ruby_sdk/models/operations/removeunifiedwebhook_request.rb
   - lib/unified_ruby_sdk/models/operations/removeunifiedwebhook_request.rbi
   - lib/unified_ruby_sdk/models/operations/removeunifiedwebhook_response.rb
@@ -9965,5 +9979,25 @@ examples:
       responses:
         "200":
           application/json: {}
+  createUnifiedEnvironment:
+    speakeasy-default-create-unified-environment:
+      requestBody:
+        application/json: []
+      responses:
+        "200":
+          application/json: ["<value 1>", "<value 2>", "<value 3>"]
+  listUnifiedEnvironments:
+    speakeasy-default-list-unified-environments:
+      responses:
+        "200":
+          application/json: ["<value 1>", "<value 2>", "<value 3>"]
+  removeUnifiedEnvironment:
+    speakeasy-default-remove-unified-environment:
+      parameters:
+        path:
+          env: "<value>"
+      responses:
+        "200":
+          application/json: ["<value 1>", "<value 2>", "<value 3>"]
 examplesVersion: 1.0.2
 generatedTests: {}
