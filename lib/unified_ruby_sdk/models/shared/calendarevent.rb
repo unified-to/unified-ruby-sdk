@@ -48,6 +48,8 @@ module UnifiedRubySDK
 
         field :recurring_event_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recurring_event_id') } }
 
+        field :send_notifications, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('send_notifications') } }
+
         field :start_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at') } }
 
         field :status, Crystalline::Nilable.new(Models::Shared::CalendarEventStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::CalendarEventStatus, true) } }
@@ -60,8 +62,8 @@ module UnifiedRubySDK
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(attachments: T.nilable(T::Array[Models::Shared::CalendarAttachment]), attendees: T.nilable(T::Array[Models::Shared::CalendarAttendee]), calendar_id: T.nilable(::String), conference: T.nilable(T::Array[Models::Shared::CalendarConference]), created_at: T.nilable(::String), end_at: T.nilable(::String), has_conference: T.nilable(T::Boolean), id: T.nilable(::String), is_all_day: T.nilable(T::Boolean), is_free: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), location: T.nilable(::String), notes: T.nilable(::String), organizer: T.nilable(Models::Shared::PropertyCalendarEventOrganizer), raw: T.nilable(T::Hash[Symbol, ::Object]), recurrence: T.nilable(T::Array[Models::Shared::CalendarEventRecurrence]), recurring_event_id: T.nilable(::String), start_at: T.nilable(::String), status: T.nilable(Models::Shared::CalendarEventStatus), subject: T.nilable(::String), timezone: T.nilable(::String), updated_at: T.nilable(::String), web_url: T.nilable(::String)).void }
-        def initialize(attachments: nil, attendees: nil, calendar_id: nil, conference: nil, created_at: nil, end_at: nil, has_conference: nil, id: nil, is_all_day: nil, is_free: nil, is_private: nil, location: nil, notes: nil, organizer: nil, raw: nil, recurrence: nil, recurring_event_id: nil, start_at: nil, status: nil, subject: nil, timezone: nil, updated_at: nil, web_url: nil)
+        sig { params(attachments: T.nilable(T::Array[Models::Shared::CalendarAttachment]), attendees: T.nilable(T::Array[Models::Shared::CalendarAttendee]), calendar_id: T.nilable(::String), conference: T.nilable(T::Array[Models::Shared::CalendarConference]), created_at: T.nilable(::String), end_at: T.nilable(::String), has_conference: T.nilable(T::Boolean), id: T.nilable(::String), is_all_day: T.nilable(T::Boolean), is_free: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), location: T.nilable(::String), notes: T.nilable(::String), organizer: T.nilable(Models::Shared::PropertyCalendarEventOrganizer), raw: T.nilable(T::Hash[Symbol, ::Object]), recurrence: T.nilable(T::Array[Models::Shared::CalendarEventRecurrence]), recurring_event_id: T.nilable(::String), send_notifications: T.nilable(T::Boolean), start_at: T.nilable(::String), status: T.nilable(Models::Shared::CalendarEventStatus), subject: T.nilable(::String), timezone: T.nilable(::String), updated_at: T.nilable(::String), web_url: T.nilable(::String)).void }
+        def initialize(attachments: nil, attendees: nil, calendar_id: nil, conference: nil, created_at: nil, end_at: nil, has_conference: nil, id: nil, is_all_day: nil, is_free: nil, is_private: nil, location: nil, notes: nil, organizer: nil, raw: nil, recurrence: nil, recurring_event_id: nil, send_notifications: nil, start_at: nil, status: nil, subject: nil, timezone: nil, updated_at: nil, web_url: nil)
           @attachments = attachments
           @attendees = attendees
           @calendar_id = calendar_id
@@ -79,6 +81,7 @@ module UnifiedRubySDK
           @raw = raw
           @recurrence = recurrence
           @recurring_event_id = recurring_event_id
+          @send_notifications = send_notifications
           @start_at = start_at
           @status = status
           @subject = subject
@@ -107,6 +110,7 @@ module UnifiedRubySDK
           return false unless @raw == other.raw
           return false unless @recurrence == other.recurrence
           return false unless @recurring_event_id == other.recurring_event_id
+          return false unless @send_notifications == other.send_notifications
           return false unless @start_at == other.start_at
           return false unless @status == other.status
           return false unless @subject == other.subject

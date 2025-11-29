@@ -42,6 +42,8 @@ class UnifiedRubySDK::Models::Shared::CalendarEvent
   def recurrence=(str_); end
   def recurring_event_id(); end
   def recurring_event_id=(str_); end
+  def send_notifications(); end
+  def send_notifications=(str_); end
   def start_at(); end
   def start_at=(str_); end
   def status(); end
