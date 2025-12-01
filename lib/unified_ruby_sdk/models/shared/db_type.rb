@@ -18,6 +18,7 @@ module UnifiedRubySDK
           POSTGRES = new('postgres')
           MSSQL = new('mssql')
           MARIADB = new('mariadb')
+          SUPABASE = new('supabase')
         end
       end
     end
