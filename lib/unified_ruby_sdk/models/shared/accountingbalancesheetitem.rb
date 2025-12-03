@@ -20,9 +20,9 @@ module UnifiedRubySDK
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :sub_items, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PropertyAccountingBalancesheetItemSubItems)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sub_items') } }
+        field :sub_items, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingBalancesheetItem)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sub_items') } }
 
-        sig { params(account_id: T.nilable(::String), amount: T.nilable(::Float), name: T.nilable(::String), sub_items: T.nilable(T::Array[Models::Shared::PropertyAccountingBalancesheetItemSubItems])).void }
+        sig { params(account_id: T.nilable(::String), amount: T.nilable(::Float), name: T.nilable(::String), sub_items: T.nilable(T::Array[Models::Shared::AccountingBalancesheetItem])).void }
         def initialize(account_id: nil, amount: nil, name: nil, sub_items: nil)
           @account_id = account_id
           @amount = amount

@@ -431,8 +431,6 @@ module UnifiedRubySDK
       autoload :PaymentType, 'unified_ruby_sdk/models/shared/payment_type.rb'
       autoload :Priority, 'unified_ruby_sdk/models/shared/priority.rb'
       autoload :ProfileGender, 'unified_ruby_sdk/models/shared/profile_gender.rb'
-      autoload :PropertyAccountingBalancesheetItemSubItems, 'unified_ruby_sdk/models/shared/property_accountingbalancesheetitem_sub_items.rb'
-      autoload :PropertyAccountingCashflowItemSubItems, 'unified_ruby_sdk/models/shared/property_accountingcashflowitem_sub_items.rb'
       autoload :PropertyAccountingContactBillingAddress, 'unified_ruby_sdk/models/shared/property_accountingcontact_billing_address.rb'
       autoload :PropertyAccountingContactShippingAddress, 'unified_ruby_sdk/models/shared/property_accountingcontact_shipping_address.rb'
       autoload :PropertyAccountingOrderBillingAddress, 'unified_ruby_sdk/models/shared/property_accountingorder_billing_address.rb'
