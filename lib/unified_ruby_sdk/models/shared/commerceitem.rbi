@@ -12,6 +12,8 @@ class UnifiedRubySDK::Models::Shared::CommerceItem
   def account_id=(str_); end
   def collection_ids(); end
   def collection_ids=(str_); end
+  def collections(); end
+  def collections=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def description(); end

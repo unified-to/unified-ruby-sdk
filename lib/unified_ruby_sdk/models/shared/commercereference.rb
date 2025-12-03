@@ -18,10 +18,13 @@ module UnifiedRubySDK
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        sig { params(id: T.nilable(::String), name: T.nilable(::String)).void }
-        def initialize(id: nil, name: nil)
+        field :type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
+
+        sig { params(id: T.nilable(::String), name: T.nilable(::String), type: T.nilable(::String)).void }
+        def initialize(id: nil, name: nil, type: nil)
           @id = id
           @name = name
+          @type = type
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
@@ -29,6 +32,7 @@ module UnifiedRubySDK
           return false unless other.is_a? self.class
           return false unless @id == other.id
           return false unless @name == other.name
+          return false unless @type == other.type
           true
         end
       end

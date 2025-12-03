@@ -15,8 +15,10 @@ module UnifiedRubySDK
 
 
         field :account_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_id') } }
-
+        #  @deprecated; use collections instead
         field :collection_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('collection_ids') } }
+        # points to Collection with id, name, and type fields
+        field :collections, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceReference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('collections') } }
 
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
@@ -54,10 +56,11 @@ module UnifiedRubySDK
 
         field :vendor_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('vendor_name') } }
 
-        sig { params(account_id: T.nilable(::String), collection_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), description: T.nilable(::String), global_code: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_taxable: T.nilable(T::Boolean), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), name: T.nilable(::String), public_description: T.nilable(::String), public_name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), slug: T.nilable(::String), tags: T.nilable(T::Array[::String]), type: T.nilable(::String), updated_at: T.nilable(::DateTime), variants: T.nilable(T::Array[Models::Shared::CommerceItemVariant]), vendor_name: T.nilable(::String)).void }
-        def initialize(account_id: nil, collection_ids: nil, created_at: nil, description: nil, global_code: nil, id: nil, is_active: nil, is_taxable: nil, media: nil, metadata: nil, name: nil, public_description: nil, public_name: nil, raw: nil, slug: nil, tags: nil, type: nil, updated_at: nil, variants: nil, vendor_name: nil)
+        sig { params(account_id: T.nilable(::String), collection_ids: T.nilable(T::Array[::String]), collections: T.nilable(T::Array[Models::Shared::CommerceReference]), created_at: T.nilable(::DateTime), description: T.nilable(::String), global_code: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_taxable: T.nilable(T::Boolean), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), name: T.nilable(::String), public_description: T.nilable(::String), public_name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), slug: T.nilable(::String), tags: T.nilable(T::Array[::String]), type: T.nilable(::String), updated_at: T.nilable(::DateTime), variants: T.nilable(T::Array[Models::Shared::CommerceItemVariant]), vendor_name: T.nilable(::String)).void }
+        def initialize(account_id: nil, collection_ids: nil, collections: nil, created_at: nil, description: nil, global_code: nil, id: nil, is_active: nil, is_taxable: nil, media: nil, metadata: nil, name: nil, public_description: nil, public_name: nil, raw: nil, slug: nil, tags: nil, type: nil, updated_at: nil, variants: nil, vendor_name: nil)
           @account_id = account_id
           @collection_ids = collection_ids
+          @collections = collections
           @created_at = created_at
           @description = description
           @global_code = global_code
@@ -83,6 +86,7 @@ module UnifiedRubySDK
           return false unless other.is_a? self.class
           return false unless @account_id == other.account_id
           return false unless @collection_ids == other.collection_ids
+          return false unless @collections == other.collections
           return false unless @created_at == other.created_at
           return false unless @description == other.description
           return false unless @global_code == other.global_code

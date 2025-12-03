@@ -12,4 +12,6 @@ class UnifiedRubySDK::Models::Shared::CommerceReference
   def id=(str_); end
   def name(); end
   def name=(str_); end
+  def type(); end
+  def type=(str_); end
 end
