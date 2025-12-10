@@ -44,6 +44,8 @@ class UnifiedRubySDK::Models::Shared::AccountingInvoice
   def posted_at=(str_); end
   def raw(); end
   def raw=(str_); end
+  def reference(); end
+  def reference=(str_); end
   def refund_amount(); end
   def refund_amount=(str_); end
   def refund_reason(); end
