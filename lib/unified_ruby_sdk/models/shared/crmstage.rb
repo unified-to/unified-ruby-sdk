@@ -24,17 +24,20 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :is_closed, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_closed') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(active: T.nilable(T::Boolean), created_at: T.nilable(::DateTime), deal_probability: T.nilable(::Float), display_order: T.nilable(::Float), id: T.nilable(::String), name: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(active: nil, created_at: nil, deal_probability: nil, display_order: nil, id: nil, name: nil, updated_at: nil)
+        sig { params(active: T.nilable(T::Boolean), created_at: T.nilable(::DateTime), deal_probability: T.nilable(::Float), display_order: T.nilable(::Float), id: T.nilable(::String), is_closed: T.nilable(T::Boolean), name: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(active: nil, created_at: nil, deal_probability: nil, display_order: nil, id: nil, is_closed: nil, name: nil, updated_at: nil)
           @active = active
           @created_at = created_at
           @deal_probability = deal_probability
           @display_order = display_order
           @id = id
+          @is_closed = is_closed
           @name = name
           @updated_at = updated_at
         end
@@ -47,6 +50,7 @@ module UnifiedRubySDK
           return false unless @deal_probability == other.deal_probability
           return false unless @display_order == other.display_order
           return false unless @id == other.id
+          return false unless @is_closed == other.is_closed
           return false unless @name == other.name
           return false unless @updated_at == other.updated_at
           true

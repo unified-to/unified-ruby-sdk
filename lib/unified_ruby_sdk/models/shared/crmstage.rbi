@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::CrmStage
   def display_order=(str_); end
   def id(); end
   def id=(str_); end
+  def is_closed(); end
+  def is_closed=(str_); end
   def name(); end
   def name=(str_); end
   def updated_at(); end
