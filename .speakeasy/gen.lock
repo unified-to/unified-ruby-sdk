@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: dbaf8b38742d89e3249fbd4c5a4e2a74
+  docChecksum: 4b755486531295c10ba7a2e07a4c42c1
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.2
-  configChecksum: af3744e33f267074cd1f62e86a2ceb71
+  releaseVersion: 0.67.3
+  configChecksum: 6616a25e3660dac53de34c98145efe1e
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -1291,6 +1291,8 @@ generatedFiles:
   - docs/models/shared/hrisemployee.md
   - docs/models/shared/hrisemployeeemploymenttype.md
   - docs/models/shared/hrisemployeegender.md
+  - docs/models/shared/hrisemployeerelationship.md
+  - docs/models/shared/hrisemployeerelationshiptype.md
   - docs/models/shared/hrisgroup.md
   - docs/models/shared/hrisgrouptype.md
   - docs/models/shared/hrislocation.md
@@ -1488,6 +1490,7 @@ generatedFiles:
   - docs/models/shared/propertyhriscompanyaddress.md
   - docs/models/shared/propertyhrisemployeeaddress.md
   - docs/models/shared/propertyhrisemployeeemployeeroles.md
+  - docs/models/shared/propertyhrisemployeerelationshipaddress.md
   - docs/models/shared/propertyhrislocationaddress.md
   - docs/models/shared/propertyhrispayslipdeduction.md
   - docs/models/shared/propertyhrispayslipdeductioncoveragelevel.md
@@ -4373,6 +4376,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/hrisemployee_employment_type.rbi
   - lib/unified_ruby_sdk/models/shared/hrisemployee_gender.rb
   - lib/unified_ruby_sdk/models/shared/hrisemployee_gender.rbi
+  - lib/unified_ruby_sdk/models/shared/hrisemployeerelationship.rb
+  - lib/unified_ruby_sdk/models/shared/hrisemployeerelationship.rbi
+  - lib/unified_ruby_sdk/models/shared/hrisemployeerelationship_type.rb
+  - lib/unified_ruby_sdk/models/shared/hrisemployeerelationship_type.rbi
   - lib/unified_ruby_sdk/models/shared/hrisgroup.rb
   - lib/unified_ruby_sdk/models/shared/hrisgroup.rbi
   - lib/unified_ruby_sdk/models/shared/hrisgroup_type.rb
@@ -4767,6 +4774,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_hrisemployee_address.rbi
   - lib/unified_ruby_sdk/models/shared/property_hrisemployee_employee_roles.rb
   - lib/unified_ruby_sdk/models/shared/property_hrisemployee_employee_roles.rbi
+  - lib/unified_ruby_sdk/models/shared/property_hrisemployeerelationship_address.rb
+  - lib/unified_ruby_sdk/models/shared/property_hrisemployeerelationship_address.rbi
   - lib/unified_ruby_sdk/models/shared/property_hrislocation_address.rb
   - lib/unified_ruby_sdk/models/shared/property_hrislocation_address.rbi
   - lib/unified_ruby_sdk/models/shared/property_hrispayslip_deduction.rb

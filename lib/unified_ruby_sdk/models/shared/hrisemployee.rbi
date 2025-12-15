@@ -68,6 +68,8 @@ class UnifiedRubySDK::Models::Shared::HrisEmployee
   def pronouns=(str_); end
   def raw(); end
   def raw=(str_); end
+  def relationships(); end
+  def relationships=(str_); end
   def salutation(); end
   def salutation=(str_); end
   def ssn_sin(); end
