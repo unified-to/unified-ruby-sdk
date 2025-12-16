@@ -16,6 +16,8 @@ module UnifiedRubySDK
 
         field :address, Crystalline::Nilable.new(Models::Shared::PropertyHrisLocationAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
 
+        field :company_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
+
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
@@ -44,9 +46,10 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyHrisLocationAddress), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), external_identifier: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_hq: T.nilable(T::Boolean), language_locale: T.nilable(::String), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::HrisTelephone]), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(address: nil, created_at: nil, currency: nil, description: nil, external_identifier: nil, id: nil, is_active: nil, is_hq: nil, language_locale: nil, name: nil, parent_id: nil, raw: nil, telephones: nil, timezone: nil, updated_at: nil)
+        sig { params(address: T.nilable(Models::Shared::PropertyHrisLocationAddress), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), external_identifier: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_hq: T.nilable(T::Boolean), language_locale: T.nilable(::String), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::HrisTelephone]), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(address: nil, company_id: nil, created_at: nil, currency: nil, description: nil, external_identifier: nil, id: nil, is_active: nil, is_hq: nil, language_locale: nil, name: nil, parent_id: nil, raw: nil, telephones: nil, timezone: nil, updated_at: nil)
           @address = address
+          @company_id = company_id
           @created_at = created_at
           @currency = currency
           @description = description
@@ -67,6 +70,7 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @address == other.address
+          return false unless @company_id == other.company_id
           return false unless @created_at == other.created_at
           return false unless @currency == other.currency
           return false unless @description == other.description

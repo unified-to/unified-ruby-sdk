@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Shared::HrisLocation
   def address(); end
   def address=(str_); end
+  def company_id(); end
+  def company_id=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def currency(); end
