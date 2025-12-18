@@ -10,8 +10,10 @@
 * [get_messaging_message](#get_messaging_message) - Retrieve a message
 * [list_messaging_channels](#list_messaging_channels) - List all channels
 * [list_messaging_messages](#list_messaging_messages) - List all messages
+* [patch_messaging_event](#patch_messaging_event) - Update an event
 * [patch_messaging_message](#patch_messaging_message) - Update a message
 * [remove_messaging_message](#remove_messaging_message) - Remove a message
+* [update_messaging_event](#update_messaging_event) - Update an event
 * [update_messaging_message](#update_messaging_message) - Update a message
 
 ## create_messaging_message
@@ -236,6 +238,55 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## patch_messaging_event
+
+Update an event
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchMessagingEvent" method="patch" path="/messaging/{connection_id}/event/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::PatchMessagingEventRequest.new(
+  messaging_event: Models::Shared::MessagingEvent.new(
+    type: Models::Shared::MessagingEventType::CHANNEL_JOINED,
+  ),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.messaging.patch_messaging_event(request: req)
+
+unless res.messaging_event.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [Models::Operations::PatchMessagingEventRequest](../../models/operations/patchmessagingeventrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchMessagingEventResponse)](../../models/operations/patchmessagingeventresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## patch_messaging_message
 
 Update a message
@@ -318,6 +369,55 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::RemoveMessagingMessageResponse)](../../models/operations/removemessagingmessageresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_messaging_event
+
+Update an event
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateMessagingEvent" method="put" path="/messaging/{connection_id}/event/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateMessagingEventRequest.new(
+  messaging_event: Models::Shared::MessagingEvent.new(
+    type: Models::Shared::MessagingEventType::CHANNEL_JOINED,
+  ),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.messaging.update_messaging_event(request: req)
+
+unless res.messaging_event.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [Models::Operations::UpdateMessagingEventRequest](../../models/operations/updatemessagingeventrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateMessagingEventResponse)](../../models/operations/updatemessagingeventresponse.md)**
 
 ### Errors
 

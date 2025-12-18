@@ -9,7 +9,7 @@ module UnifiedRubySDK
     module Shared
     
 
-      class MessagingChannelMessage
+      class MessagingReference
         extend T::Sig
         include Crystalline::MetadataFields
 

@@ -2,12 +2,12 @@
 # frozen_string_literal: true
 
 
-class UnifiedRubySDK::Models::Shared::MessagingMessage
+class UnifiedRubySDK::Models::Shared::PropertyMessagingEventMessage
   extend ::Crystalline::MetadataFields::ClassMethods
 end
 
 
-class UnifiedRubySDK::Models::Shared::MessagingMessage
+class UnifiedRubySDK::Models::Shared::PropertyMessagingEventMessage
   def attachments(); end
   def attachments=(str_); end
   def author_member(); end

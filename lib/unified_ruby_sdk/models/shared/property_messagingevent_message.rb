@@ -9,14 +9,14 @@ module UnifiedRubySDK
     module Shared
     
 
-      class MessagingMessage
+      class PropertyMessagingEventMessage
         extend T::Sig
         include Crystalline::MetadataFields
 
 
         field :attachments, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MessagingAttachment)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attachments') } }
 
-        field :author_member, Crystalline::Nilable.new(Models::Shared::PropertyMessagingMessageAuthorMember), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_member') } }
+        field :author_member, Crystalline::Nilable.new(Models::Shared::PropertyMessagingEventMessageAuthorMember), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_member') } }
 
         field :buttons, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MessagingButton)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('buttons') } }
 
@@ -66,7 +66,7 @@ module UnifiedRubySDK
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(attachments: T.nilable(T::Array[Models::Shared::MessagingAttachment]), author_member: T.nilable(Models::Shared::PropertyMessagingMessageAuthorMember), buttons: T.nilable(T::Array[Models::Shared::MessagingButton]), channel_id: T.nilable(::String), channel_ids: T.nilable(T::Array[::String]), channels: T.nilable(T::Array[Models::Shared::MessagingReference]), created_at: T.nilable(::DateTime), destination_members: T.nilable(T::Array[Models::Shared::MessagingMember]), has_children: T.nilable(T::Boolean), hidden_members: T.nilable(T::Array[Models::Shared::MessagingMember]), id: T.nilable(::String), is_unread: T.nilable(T::Boolean), mentioned_members: T.nilable(T::Array[Models::Shared::MessagingMember]), message: T.nilable(::String), message_html: T.nilable(::String), message_markdown: T.nilable(::String), message_thread_identifier: T.nilable(::String), parent_id: T.nilable(::String), parent_message_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reactions: T.nilable(T::Array[Models::Shared::MessagingReaction]), reference: T.nilable(::String), root_message_id: T.nilable(::String), subject: T.nilable(::String), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
+        sig { params(attachments: T.nilable(T::Array[Models::Shared::MessagingAttachment]), author_member: T.nilable(Models::Shared::PropertyMessagingEventMessageAuthorMember), buttons: T.nilable(T::Array[Models::Shared::MessagingButton]), channel_id: T.nilable(::String), channel_ids: T.nilable(T::Array[::String]), channels: T.nilable(T::Array[Models::Shared::MessagingReference]), created_at: T.nilable(::DateTime), destination_members: T.nilable(T::Array[Models::Shared::MessagingMember]), has_children: T.nilable(T::Boolean), hidden_members: T.nilable(T::Array[Models::Shared::MessagingMember]), id: T.nilable(::String), is_unread: T.nilable(T::Boolean), mentioned_members: T.nilable(T::Array[Models::Shared::MessagingMember]), message: T.nilable(::String), message_html: T.nilable(::String), message_markdown: T.nilable(::String), message_thread_identifier: T.nilable(::String), parent_id: T.nilable(::String), parent_message_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reactions: T.nilable(T::Array[Models::Shared::MessagingReaction]), reference: T.nilable(::String), root_message_id: T.nilable(::String), subject: T.nilable(::String), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
         def initialize(attachments: nil, author_member: nil, buttons: nil, channel_id: nil, channel_ids: nil, channels: nil, created_at: nil, destination_members: nil, has_children: nil, hidden_members: nil, id: nil, is_unread: nil, mentioned_members: nil, message: nil, message_html: nil, message_markdown: nil, message_thread_identifier: nil, parent_id: nil, parent_message_id: nil, raw: nil, reactions: nil, reference: nil, root_message_id: nil, subject: nil, updated_at: nil, web_url: nil)
           @attachments = attachments
           @author_member = author_member

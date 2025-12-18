@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 72dca536fc3e4387cdd9f33a075cc801
+  docChecksum: 1a896c50bc225151e4415d9bcea95f29
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.4
-  configChecksum: e5f570804ece1af18bc34a994cfa6b53
+  releaseVersion: 0.67.5
+  configChecksum: d5ceae7687b1b0a80ba69a0b03cd648f
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -708,6 +708,8 @@ generatedFiles:
   - docs/models/operations/patchmartechlistresponse.md
   - docs/models/operations/patchmartechmemberrequest.md
   - docs/models/operations/patchmartechmemberresponse.md
+  - docs/models/operations/patchmessagingeventrequest.md
+  - docs/models/operations/patchmessagingeventresponse.md
   - docs/models/operations/patchmessagingmessagerequest.md
   - docs/models/operations/patchmessagingmessageresponse.md
   - docs/models/operations/patchmetadatametadatarequest.md
@@ -1035,6 +1037,8 @@ generatedFiles:
   - docs/models/operations/updatemartechlistresponse.md
   - docs/models/operations/updatemartechmemberrequest.md
   - docs/models/operations/updatemartechmemberresponse.md
+  - docs/models/operations/updatemessagingeventrequest.md
+  - docs/models/operations/updatemessagingeventresponse.md
   - docs/models/operations/updatemessagingmessagerequest.md
   - docs/models/operations/updatemessagingmessageresponse.md
   - docs/models/operations/updatemetadatametadatarequest.md
@@ -1415,11 +1419,14 @@ generatedFiles:
   - docs/models/shared/marketinglist.md
   - docs/models/shared/marketingmember.md
   - docs/models/shared/messagingattachment.md
+  - docs/models/shared/messagingbutton.md
   - docs/models/shared/messagingchannel.md
-  - docs/models/shared/messagingchannelmessage.md
+  - docs/models/shared/messagingevent.md
+  - docs/models/shared/messagingeventtype.md
   - docs/models/shared/messagingmember.md
   - docs/models/shared/messagingmessage.md
   - docs/models/shared/messagingreaction.md
+  - docs/models/shared/messagingreference.md
   - docs/models/shared/metadatametadata.md
   - docs/models/shared/metadatametadataformat.md
   - docs/models/shared/nativewebhookcalendarid.md
@@ -1502,6 +1509,11 @@ generatedFiles:
   - docs/models/shared/propertyintegrationsupportwebhookeventsdeleted.md
   - docs/models/shared/propertyintegrationsupportwebhookeventsupdated.md
   - docs/models/shared/propertylmsstudentaddress.md
+  - docs/models/shared/propertymessagingeventbutton.md
+  - docs/models/shared/propertymessagingeventchannel.md
+  - docs/models/shared/propertymessagingeventmessage.md
+  - docs/models/shared/propertymessagingeventmessageauthormember.md
+  - docs/models/shared/propertymessagingeventuser.md
   - docs/models/shared/propertymessagingmessageauthormember.md
   - docs/models/shared/propertymessagingreactionmember.md
   - docs/models/shared/propertyscimgroupmeta.md
@@ -3209,6 +3221,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchmartechmember_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchmartechmember_response.rb
   - lib/unified_ruby_sdk/models/operations/patchmartechmember_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchmessagingevent_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchmessagingevent_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchmessagingevent_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchmessagingevent_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchmessagingmessage_request.rb
   - lib/unified_ruby_sdk/models/operations/patchmessagingmessage_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchmessagingmessage_response.rb
@@ -3863,6 +3879,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatemartechmember_request.rbi
   - lib/unified_ruby_sdk/models/operations/updatemartechmember_response.rb
   - lib/unified_ruby_sdk/models/operations/updatemartechmember_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatemessagingevent_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatemessagingevent_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatemessagingevent_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatemessagingevent_response.rbi
   - lib/unified_ruby_sdk/models/operations/updatemessagingmessage_request.rb
   - lib/unified_ruby_sdk/models/operations/updatemessagingmessage_request.rbi
   - lib/unified_ruby_sdk/models/operations/updatemessagingmessage_response.rb
@@ -4624,16 +4644,22 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/marketingmember.rbi
   - lib/unified_ruby_sdk/models/shared/messagingattachment.rb
   - lib/unified_ruby_sdk/models/shared/messagingattachment.rbi
+  - lib/unified_ruby_sdk/models/shared/messagingbutton.rb
+  - lib/unified_ruby_sdk/models/shared/messagingbutton.rbi
   - lib/unified_ruby_sdk/models/shared/messagingchannel.rb
   - lib/unified_ruby_sdk/models/shared/messagingchannel.rbi
-  - lib/unified_ruby_sdk/models/shared/messagingchannelmessage.rb
-  - lib/unified_ruby_sdk/models/shared/messagingchannelmessage.rbi
+  - lib/unified_ruby_sdk/models/shared/messagingevent.rb
+  - lib/unified_ruby_sdk/models/shared/messagingevent.rbi
+  - lib/unified_ruby_sdk/models/shared/messagingevent_type.rb
+  - lib/unified_ruby_sdk/models/shared/messagingevent_type.rbi
   - lib/unified_ruby_sdk/models/shared/messagingmember.rb
   - lib/unified_ruby_sdk/models/shared/messagingmember.rbi
   - lib/unified_ruby_sdk/models/shared/messagingmessage.rb
   - lib/unified_ruby_sdk/models/shared/messagingmessage.rbi
   - lib/unified_ruby_sdk/models/shared/messagingreaction.rb
   - lib/unified_ruby_sdk/models/shared/messagingreaction.rbi
+  - lib/unified_ruby_sdk/models/shared/messagingreference.rb
+  - lib/unified_ruby_sdk/models/shared/messagingreference.rbi
   - lib/unified_ruby_sdk/models/shared/metadatametadata.rb
   - lib/unified_ruby_sdk/models/shared/metadatametadata.rbi
   - lib/unified_ruby_sdk/models/shared/metadatametadata_format.rb
@@ -4798,6 +4824,16 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_integrationsupport_webhook_events_updated.rbi
   - lib/unified_ruby_sdk/models/shared/property_lmsstudent_address.rb
   - lib/unified_ruby_sdk/models/shared/property_lmsstudent_address.rbi
+  - lib/unified_ruby_sdk/models/shared/property_messagingevent_button.rb
+  - lib/unified_ruby_sdk/models/shared/property_messagingevent_button.rbi
+  - lib/unified_ruby_sdk/models/shared/property_messagingevent_channel.rb
+  - lib/unified_ruby_sdk/models/shared/property_messagingevent_channel.rbi
+  - lib/unified_ruby_sdk/models/shared/property_messagingevent_message.rb
+  - lib/unified_ruby_sdk/models/shared/property_messagingevent_message.rbi
+  - lib/unified_ruby_sdk/models/shared/property_messagingevent_message_author_member.rb
+  - lib/unified_ruby_sdk/models/shared/property_messagingevent_message_author_member.rbi
+  - lib/unified_ruby_sdk/models/shared/property_messagingevent_user.rb
+  - lib/unified_ruby_sdk/models/shared/property_messagingevent_user.rbi
   - lib/unified_ruby_sdk/models/shared/property_messagingmessage_author_member.rb
   - lib/unified_ruby_sdk/models/shared/property_messagingmessage_author_member.rbi
   - lib/unified_ruby_sdk/models/shared/property_messagingreaction_member.rb
@@ -10003,5 +10039,27 @@ examples:
       responses:
         "200":
           application/json: ["<value 1>", "<value 2>", "<value 3>"]
+  patchMessagingEvent:
+    speakeasy-default-patch-messaging-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {"type": "CHANNEL_JOINED"}
+      responses:
+        "200":
+          application/json: {"type": "USER_UPDATED"}
+  updateMessagingEvent:
+    speakeasy-default-update-messaging-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {"type": "CHANNEL_JOINED"}
+      responses:
+        "200":
+          application/json: {"type": "CHANNEL_LEFT"}
 examplesVersion: 1.0.2
 generatedTests: {}
