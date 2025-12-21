@@ -20,6 +20,7 @@ module UnifiedRubySDK
           PARTIALLY_PAID = new('PARTIALLY_PAID')
           PARTIALLY_REFUNDED = new('PARTIALLY_REFUNDED')
           REFUNDED = new('REFUNDED')
+          OVERDUE = new('OVERDUE')
         end
       end
     end
