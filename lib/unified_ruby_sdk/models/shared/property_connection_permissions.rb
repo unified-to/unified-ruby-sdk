@@ -151,6 +151,8 @@ module UnifiedRubySDK
           MESSAGING_MESSAGE_READ = new('messaging_message_read')
           MESSAGING_MESSAGE_WRITE = new('messaging_message_write')
           MESSAGING_CHANNEL_READ = new('messaging_channel_read')
+          MESSAGING_EVENT_READ = new('messaging_event_read')
+          MESSAGING_EVENT_WRITE = new('messaging_event_write')
           KMS_SPACE_READ = new('kms_space_read')
           KMS_SPACE_WRITE = new('kms_space_write')
           KMS_PAGE_READ = new('kms_page_read')

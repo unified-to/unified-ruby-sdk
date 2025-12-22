@@ -89,6 +89,7 @@ module UnifiedRubySDK
           GENAI_EMBEDDING = new('genai_embedding')
           MESSAGING_MESSAGE = new('messaging_message')
           MESSAGING_CHANNEL = new('messaging_channel')
+          MESSAGING_EVENT = new('messaging_event')
           KMS_SPACE = new('kms_space')
           KMS_PAGE = new('kms_page')
           KMS_COMMENT = new('kms_comment')
