@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 3030116e4bf9d3b64608579d9e62771f
+  docChecksum: 144f5d5f501c0fce0e82f956b77715bb
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.8
-  configChecksum: 1f574bf6e649cb33716968e868b26654
+  releaseVersion: 0.67.9
+  configChecksum: d1db7c350bdb0a04fa1f099ad01401e2
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -54,6 +54,14 @@ generatedFiles:
   - docs/models/operations/createaccountingtaxrateresponse.md
   - docs/models/operations/createaccountingtransactionrequest.md
   - docs/models/operations/createaccountingtransactionresponse.md
+  - docs/models/operations/createadsadrequest.md
+  - docs/models/operations/createadsadresponse.md
+  - docs/models/operations/createadscampaignrequest.md
+  - docs/models/operations/createadscampaignresponse.md
+  - docs/models/operations/createadsgrouprequest.md
+  - docs/models/operations/createadsgroupresponse.md
+  - docs/models/operations/createadsorganizationrequest.md
+  - docs/models/operations/createadsorganizationresponse.md
   - docs/models/operations/createatsactivityrequest.md
   - docs/models/operations/createatsactivityresponse.md
   - docs/models/operations/createatsapplicationrequest.md
@@ -232,6 +240,14 @@ generatedFiles:
   - docs/models/operations/getaccountingtransactionresponse.md
   - docs/models/operations/getaccountingtrialbalancerequest.md
   - docs/models/operations/getaccountingtrialbalanceresponse.md
+  - docs/models/operations/getadsadrequest.md
+  - docs/models/operations/getadsadresponse.md
+  - docs/models/operations/getadscampaignrequest.md
+  - docs/models/operations/getadscampaignresponse.md
+  - docs/models/operations/getadsgrouprequest.md
+  - docs/models/operations/getadsgroupresponse.md
+  - docs/models/operations/getadsorganizationrequest.md
+  - docs/models/operations/getadsorganizationresponse.md
   - docs/models/operations/getatsactivityrequest.md
   - docs/models/operations/getatsactivityresponse.md
   - docs/models/operations/getatsapplicationrequest.md
@@ -430,6 +446,16 @@ generatedFiles:
   - docs/models/operations/listaccountingtransactionsresponse.md
   - docs/models/operations/listaccountingtrialbalancesrequest.md
   - docs/models/operations/listaccountingtrialbalancesresponse.md
+  - docs/models/operations/listadsadsrequest.md
+  - docs/models/operations/listadsadsresponse.md
+  - docs/models/operations/listadscampaignsrequest.md
+  - docs/models/operations/listadscampaignsresponse.md
+  - docs/models/operations/listadsgroupsrequest.md
+  - docs/models/operations/listadsgroupsresponse.md
+  - docs/models/operations/listadsorganizationsrequest.md
+  - docs/models/operations/listadsorganizationsresponse.md
+  - docs/models/operations/listadsreportsrequest.md
+  - docs/models/operations/listadsreportsresponse.md
   - docs/models/operations/listatsactivitiesrequest.md
   - docs/models/operations/listatsactivitiesresponse.md
   - docs/models/operations/listatsapplicationsrequest.md
@@ -628,6 +654,14 @@ generatedFiles:
   - docs/models/operations/patchaccountingtaxrateresponse.md
   - docs/models/operations/patchaccountingtransactionrequest.md
   - docs/models/operations/patchaccountingtransactionresponse.md
+  - docs/models/operations/patchadsadrequest.md
+  - docs/models/operations/patchadsadresponse.md
+  - docs/models/operations/patchadscampaignrequest.md
+  - docs/models/operations/patchadscampaignresponse.md
+  - docs/models/operations/patchadsgrouprequest.md
+  - docs/models/operations/patchadsgroupresponse.md
+  - docs/models/operations/patchadsorganizationrequest.md
+  - docs/models/operations/patchadsorganizationresponse.md
   - docs/models/operations/patchatsactivityrequest.md
   - docs/models/operations/patchatsactivityresponse.md
   - docs/models/operations/patchatsapplicationrequest.md
@@ -795,6 +829,14 @@ generatedFiles:
   - docs/models/operations/removeaccountingtaxrateresponse.md
   - docs/models/operations/removeaccountingtransactionrequest.md
   - docs/models/operations/removeaccountingtransactionresponse.md
+  - docs/models/operations/removeadsadrequest.md
+  - docs/models/operations/removeadsadresponse.md
+  - docs/models/operations/removeadscampaignrequest.md
+  - docs/models/operations/removeadscampaignresponse.md
+  - docs/models/operations/removeadsgrouprequest.md
+  - docs/models/operations/removeadsgroupresponse.md
+  - docs/models/operations/removeadsorganizationrequest.md
+  - docs/models/operations/removeadsorganizationresponse.md
   - docs/models/operations/removeatsactivityrequest.md
   - docs/models/operations/removeatsactivityresponse.md
   - docs/models/operations/removeatsapplicationrequest.md
@@ -957,6 +999,14 @@ generatedFiles:
   - docs/models/operations/updateaccountingtaxrateresponse.md
   - docs/models/operations/updateaccountingtransactionrequest.md
   - docs/models/operations/updateaccountingtransactionresponse.md
+  - docs/models/operations/updateadsadrequest.md
+  - docs/models/operations/updateadsadresponse.md
+  - docs/models/operations/updateadscampaignrequest.md
+  - docs/models/operations/updateadscampaignresponse.md
+  - docs/models/operations/updateadsgrouprequest.md
+  - docs/models/operations/updateadsgroupresponse.md
+  - docs/models/operations/updateadsorganizationrequest.md
+  - docs/models/operations/updateadsorganizationresponse.md
   - docs/models/operations/updateatsactivityrequest.md
   - docs/models/operations/updateatsactivityresponse.md
   - docs/models/operations/updateatsapplicationrequest.md
@@ -1148,6 +1198,14 @@ generatedFiles:
   - docs/models/shared/accountingtransactionlineitem.md
   - docs/models/shared/accountingtrialbalance.md
   - docs/models/shared/accountingtrialbalancesubitem.md
+  - docs/models/shared/adsad.md
+  - docs/models/shared/adscampaign.md
+  - docs/models/shared/adsgroup.md
+  - docs/models/shared/adsorganization.md
+  - docs/models/shared/adsreport.md
+  - docs/models/shared/adsreportmetrics.md
+  - docs/models/shared/adsreportmetricstype.md
+  - docs/models/shared/adtype.md
   - docs/models/shared/api.md
   - docs/models/shared/apicall.md
   - docs/models/shared/apicalltype.md
@@ -1189,6 +1247,7 @@ generatedFiles:
   - docs/models/shared/atsstatusstatus.md
   - docs/models/shared/atstelephone.md
   - docs/models/shared/atstelephonetype.md
+  - docs/models/shared/budgetperiod.md
   - docs/models/shared/calendarattachment.md
   - docs/models/shared/calendarattendee.md
   - docs/models/shared/calendarattendeestatus.md
@@ -1343,11 +1402,13 @@ generatedFiles:
   - docs/models/shared/kmspagetype.md
   - docs/models/shared/kmsspace.md
   - docs/models/shared/listaccountid.md
+  - docs/models/shared/listadid.md
   - docs/models/shared/listapplicationid.md
   - docs/models/shared/listbenefitid.md
   - docs/models/shared/listbranchid.md
   - docs/models/shared/listcalendarid.md
   - docs/models/shared/listcallid.md
+  - docs/models/shared/listcampaignid.md
   - docs/models/shared/listcandidateid.md
   - docs/models/shared/listcategoryid.md
   - docs/models/shared/listchannelid.md
@@ -1364,6 +1425,7 @@ generatedFiles:
   - docs/models/shared/listeventid.md
   - docs/models/shared/listexpand.md
   - docs/models/shared/listexpandrecurringevents.md
+  - docs/models/shared/listgroupid.md
   - docs/models/shared/listinstructorid.md
   - docs/models/shared/listinterviewid.md
   - docs/models/shared/listinvoiceid.md
@@ -1466,6 +1528,17 @@ generatedFiles:
   - docs/models/shared/propertyaccountingreporttrialbalance.md
   - docs/models/shared/propertyaccountingsalesorderbillingaddress.md
   - docs/models/shared/propertyaccountingsalesordershippingaddress.md
+  - docs/models/shared/propertyadsadtargeting.md
+  - docs/models/shared/propertyadscampaigntargeting.md
+  - docs/models/shared/propertyadsgrouptargeting.md
+  - docs/models/shared/propertyadsreportmetricsad.md
+  - docs/models/shared/propertyadsreportmetricsadadtype.md
+  - docs/models/shared/propertyadsreportmetricsadtargeting.md
+  - docs/models/shared/propertyadsreportmetricscampaign.md
+  - docs/models/shared/propertyadsreportmetricscampaignbudgetperiod.md
+  - docs/models/shared/propertyadsreportmetricscampaigntargeting.md
+  - docs/models/shared/propertyadsreportmetricsgroup.md
+  - docs/models/shared/propertyadsreportmetricsgrouptargeting.md
   - docs/models/shared/propertyatsactivityfrom.md
   - docs/models/shared/propertyatsactivityfromtype.md
   - docs/models/shared/propertyatscandidateaddress.md
@@ -1623,10 +1696,12 @@ generatedFiles:
   - docs/models/shared/verificationrequest.md
   - docs/models/shared/verificationresponsedetail.md
   - docs/models/shared/verificationtime.md
+  - docs/models/shared/virtualwebhookadid.md
   - docs/models/shared/virtualwebhookapplicationid.md
   - docs/models/shared/virtualwebhookbranchid.md
   - docs/models/shared/virtualwebhookcalendarid.md
   - docs/models/shared/virtualwebhookcallid.md
+  - docs/models/shared/virtualwebhookcampaignid.md
   - docs/models/shared/virtualwebhookcandidateid.md
   - docs/models/shared/virtualwebhookchannelid.md
   - docs/models/shared/virtualwebhookcollectionid.md
@@ -1639,6 +1714,7 @@ generatedFiles:
   - docs/models/shared/virtualwebhookeventid.md
   - docs/models/shared/virtualwebhookexpand.md
   - docs/models/shared/virtualwebhookfields.md
+  - docs/models/shared/virtualwebhookgroupid.md
   - docs/models/shared/virtualwebhookitemid.md
   - docs/models/shared/virtualwebhookitemvariantid.md
   - docs/models/shared/virtualwebhookjobid.md
@@ -1669,6 +1745,8 @@ generatedFiles:
   - docs/sdks/account/README.md
   - docs/sdks/accounting/README.md
   - docs/sdks/activity/README.md
+  - docs/sdks/ad/README.md
+  - docs/sdks/ads/README.md
   - docs/sdks/apicall/README.md
   - docs/sdks/application/README.md
   - docs/sdks/applicationstatus/README.md
@@ -1681,6 +1759,7 @@ generatedFiles:
   - docs/sdks/busy/README.md
   - docs/sdks/calendar/README.md
   - docs/sdks/call/README.md
+  - docs/sdks/campaign/README.md
   - docs/sdks/candidate/README.md
   - docs/sdks/cashflow/README.md
   - docs/sdks/category/README.md
@@ -1789,6 +1868,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/account.rb
   - lib/unified_ruby_sdk/accounting.rb
   - lib/unified_ruby_sdk/activity.rb
+  - lib/unified_ruby_sdk/ad.rb
+  - lib/unified_ruby_sdk/ads.rb
   - lib/unified_ruby_sdk/apicall.rb
   - lib/unified_ruby_sdk/application.rb
   - lib/unified_ruby_sdk/applicationstatus.rb
@@ -1801,6 +1882,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/busy.rb
   - lib/unified_ruby_sdk/calendar.rb
   - lib/unified_ruby_sdk/call.rb
+  - lib/unified_ruby_sdk/campaign.rb
   - lib/unified_ruby_sdk/candidate.rb
   - lib/unified_ruby_sdk/cashflow.rb
   - lib/unified_ruby_sdk/category.rb
@@ -1913,6 +1995,22 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createaccountingtransaction_request.rbi
   - lib/unified_ruby_sdk/models/operations/createaccountingtransaction_response.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingtransaction_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createadsad_request.rb
+  - lib/unified_ruby_sdk/models/operations/createadsad_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createadsad_response.rb
+  - lib/unified_ruby_sdk/models/operations/createadsad_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createadscampaign_request.rb
+  - lib/unified_ruby_sdk/models/operations/createadscampaign_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createadscampaign_response.rb
+  - lib/unified_ruby_sdk/models/operations/createadscampaign_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createadsgroup_request.rb
+  - lib/unified_ruby_sdk/models/operations/createadsgroup_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createadsgroup_response.rb
+  - lib/unified_ruby_sdk/models/operations/createadsgroup_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createadsorganization_request.rb
+  - lib/unified_ruby_sdk/models/operations/createadsorganization_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createadsorganization_response.rb
+  - lib/unified_ruby_sdk/models/operations/createadsorganization_response.rbi
   - lib/unified_ruby_sdk/models/operations/createatsactivity_request.rb
   - lib/unified_ruby_sdk/models/operations/createatsactivity_request.rbi
   - lib/unified_ruby_sdk/models/operations/createatsactivity_response.rb
@@ -2269,6 +2367,22 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getaccountingtrialbalance_request.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountingtrialbalance_response.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingtrialbalance_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getadsad_request.rb
+  - lib/unified_ruby_sdk/models/operations/getadsad_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getadsad_response.rb
+  - lib/unified_ruby_sdk/models/operations/getadsad_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getadscampaign_request.rb
+  - lib/unified_ruby_sdk/models/operations/getadscampaign_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getadscampaign_response.rb
+  - lib/unified_ruby_sdk/models/operations/getadscampaign_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getadsgroup_request.rb
+  - lib/unified_ruby_sdk/models/operations/getadsgroup_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getadsgroup_response.rb
+  - lib/unified_ruby_sdk/models/operations/getadsgroup_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getadsorganization_request.rb
+  - lib/unified_ruby_sdk/models/operations/getadsorganization_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getadsorganization_response.rb
+  - lib/unified_ruby_sdk/models/operations/getadsorganization_response.rbi
   - lib/unified_ruby_sdk/models/operations/getatsactivity_request.rb
   - lib/unified_ruby_sdk/models/operations/getatsactivity_request.rbi
   - lib/unified_ruby_sdk/models/operations/getatsactivity_response.rb
@@ -2665,6 +2779,26 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listaccountingtrialbalances_request.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountingtrialbalances_response.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingtrialbalances_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listadsads_request.rb
+  - lib/unified_ruby_sdk/models/operations/listadsads_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listadsads_response.rb
+  - lib/unified_ruby_sdk/models/operations/listadsads_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listadscampaigns_request.rb
+  - lib/unified_ruby_sdk/models/operations/listadscampaigns_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listadscampaigns_response.rb
+  - lib/unified_ruby_sdk/models/operations/listadscampaigns_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listadsgroups_request.rb
+  - lib/unified_ruby_sdk/models/operations/listadsgroups_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listadsgroups_response.rb
+  - lib/unified_ruby_sdk/models/operations/listadsgroups_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listadsorganizations_request.rb
+  - lib/unified_ruby_sdk/models/operations/listadsorganizations_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listadsorganizations_response.rb
+  - lib/unified_ruby_sdk/models/operations/listadsorganizations_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listadsreports_request.rb
+  - lib/unified_ruby_sdk/models/operations/listadsreports_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listadsreports_response.rb
+  - lib/unified_ruby_sdk/models/operations/listadsreports_response.rbi
   - lib/unified_ruby_sdk/models/operations/listatsactivities_request.rb
   - lib/unified_ruby_sdk/models/operations/listatsactivities_request.rbi
   - lib/unified_ruby_sdk/models/operations/listatsactivities_response.rb
@@ -3061,6 +3195,22 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchaccountingtransaction_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchaccountingtransaction_response.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingtransaction_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchadsad_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchadsad_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchadsad_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchadsad_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchadscampaign_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchadscampaign_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchadscampaign_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchadscampaign_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchadsgroup_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchadsgroup_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchadsgroup_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchadsgroup_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchadsorganization_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchadsorganization_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchadsorganization_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchadsorganization_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchatsactivity_request.rb
   - lib/unified_ruby_sdk/models/operations/patchatsactivity_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchatsactivity_response.rb
@@ -3395,6 +3545,22 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removeaccountingtransaction_request.rbi
   - lib/unified_ruby_sdk/models/operations/removeaccountingtransaction_response.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingtransaction_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removeadsad_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeadsad_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removeadsad_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeadsad_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removeadscampaign_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeadscampaign_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removeadscampaign_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeadscampaign_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removeadsgroup_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeadsgroup_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removeadsgroup_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeadsgroup_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removeadsorganization_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeadsorganization_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removeadsorganization_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeadsorganization_response.rbi
   - lib/unified_ruby_sdk/models/operations/removeatsactivity_request.rb
   - lib/unified_ruby_sdk/models/operations/removeatsactivity_request.rbi
   - lib/unified_ruby_sdk/models/operations/removeatsactivity_response.rb
@@ -3719,6 +3885,22 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updateaccountingtransaction_request.rbi
   - lib/unified_ruby_sdk/models/operations/updateaccountingtransaction_response.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingtransaction_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updateadsad_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateadsad_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updateadsad_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateadsad_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updateadscampaign_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateadscampaign_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updateadscampaign_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateadscampaign_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updateadsgroup_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateadsgroup_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updateadsgroup_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateadsgroup_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updateadsorganization_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateadsorganization_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updateadsorganization_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateadsorganization_response.rbi
   - lib/unified_ruby_sdk/models/operations/updateatsactivity_request.rb
   - lib/unified_ruby_sdk/models/operations/updateatsactivity_request.rbi
   - lib/unified_ruby_sdk/models/operations/updateatsactivity_response.rb
@@ -4102,6 +4284,22 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingtrialbalance.rbi
   - lib/unified_ruby_sdk/models/shared/accountingtrialbalancesubitem.rb
   - lib/unified_ruby_sdk/models/shared/accountingtrialbalancesubitem.rbi
+  - lib/unified_ruby_sdk/models/shared/ad_type.rb
+  - lib/unified_ruby_sdk/models/shared/ad_type.rbi
+  - lib/unified_ruby_sdk/models/shared/adsad.rb
+  - lib/unified_ruby_sdk/models/shared/adsad.rbi
+  - lib/unified_ruby_sdk/models/shared/adscampaign.rb
+  - lib/unified_ruby_sdk/models/shared/adscampaign.rbi
+  - lib/unified_ruby_sdk/models/shared/adsgroup.rb
+  - lib/unified_ruby_sdk/models/shared/adsgroup.rbi
+  - lib/unified_ruby_sdk/models/shared/adsorganization.rb
+  - lib/unified_ruby_sdk/models/shared/adsorganization.rbi
+  - lib/unified_ruby_sdk/models/shared/adsreport.rb
+  - lib/unified_ruby_sdk/models/shared/adsreport.rbi
+  - lib/unified_ruby_sdk/models/shared/adsreportmetrics.rb
+  - lib/unified_ruby_sdk/models/shared/adsreportmetrics.rbi
+  - lib/unified_ruby_sdk/models/shared/adsreportmetrics_type.rb
+  - lib/unified_ruby_sdk/models/shared/adsreportmetrics_type.rbi
   - lib/unified_ruby_sdk/models/shared/api.rb
   - lib/unified_ruby_sdk/models/shared/api.rbi
   - lib/unified_ruby_sdk/models/shared/apicall.rb
@@ -4184,6 +4382,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/atstelephone.rbi
   - lib/unified_ruby_sdk/models/shared/atstelephone_type.rb
   - lib/unified_ruby_sdk/models/shared/atstelephone_type.rbi
+  - lib/unified_ruby_sdk/models/shared/budget_period.rb
+  - lib/unified_ruby_sdk/models/shared/budget_period.rbi
   - lib/unified_ruby_sdk/models/shared/calendarattachment.rb
   - lib/unified_ruby_sdk/models/shared/calendarattachment.rbi
   - lib/unified_ruby_sdk/models/shared/calendarattendee.rb
@@ -4492,6 +4692,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/kmsspace.rbi
   - lib/unified_ruby_sdk/models/shared/list_account_id.rb
   - lib/unified_ruby_sdk/models/shared/list_account_id.rbi
+  - lib/unified_ruby_sdk/models/shared/list_ad_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_ad_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_application_id.rb
   - lib/unified_ruby_sdk/models/shared/list_application_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_benefit_id.rb
@@ -4502,6 +4704,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_calendar_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_call_id.rb
   - lib/unified_ruby_sdk/models/shared/list_call_id.rbi
+  - lib/unified_ruby_sdk/models/shared/list_campaign_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_campaign_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_candidate_id.rb
   - lib/unified_ruby_sdk/models/shared/list_candidate_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_category_id.rb
@@ -4534,6 +4738,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_expand.rbi
   - lib/unified_ruby_sdk/models/shared/list_expand_recurring_events.rb
   - lib/unified_ruby_sdk/models/shared/list_expand_recurring_events.rbi
+  - lib/unified_ruby_sdk/models/shared/list_group_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_group_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_instructor_id.rb
   - lib/unified_ruby_sdk/models/shared/list_instructor_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_interview_id.rb
@@ -4738,6 +4944,28 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_accountingsalesorder_billing_address.rbi
   - lib/unified_ruby_sdk/models/shared/property_accountingsalesorder_shipping_address.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingsalesorder_shipping_address.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsad_targeting.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsad_targeting.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting.rb
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_ad.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_ad.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_ad_ad_type.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_ad_ad_type.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_ad_targeting.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_ad_targeting.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_budget_period.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_budget_period.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting.rbi
   - lib/unified_ruby_sdk/models/shared/property_atsactivity_from.rb
   - lib/unified_ruby_sdk/models/shared/property_atsactivity_from.rbi
   - lib/unified_ruby_sdk/models/shared/property_atsactivity_from_type.rb
@@ -5052,6 +5280,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/verificationresponsedetail.rbi
   - lib/unified_ruby_sdk/models/shared/verificationtime.rb
   - lib/unified_ruby_sdk/models/shared/verificationtime.rbi
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_ad_id.rb
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_ad_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_application_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_application_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_branch_id.rb
@@ -5060,6 +5290,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_calendar_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_call_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_call_id.rbi
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_campaign_id.rb
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_campaign_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_candidate_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_candidate_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_channel_id.rb
@@ -5084,6 +5316,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_expand.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_fields.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_fields.rbi
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_group_id.rb
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_group_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_item_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_item_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_item_variant_id.rb
@@ -10061,5 +10295,233 @@ examples:
       responses:
         "200":
           application/json: {"type": "CHANNEL_LEFT"}
+  createAdsOrganization:
+    speakeasy-default-create-ads-organization:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getAdsOrganization:
+    speakeasy-default-get-ads-organization:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listAdsOrganizations:
+    speakeasy-default-list-ads-organizations:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchAdsOrganization:
+    speakeasy-default-patch-ads-organization:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeAdsOrganization:
+    speakeasy-default-remove-ads-organization:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateAdsOrganization:
+    speakeasy-default-update-ads-organization:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  listAdsReports:
+    speakeasy-default-list-ads-reports:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  createAdsAd:
+    speakeasy-default-create-ads-ad:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createAdsCampaign:
+    speakeasy-default-create-ads-campaign:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createAdsGroup:
+    speakeasy-default-create-ads-group:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getAdsAd:
+    speakeasy-default-get-ads-ad:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getAdsCampaign:
+    speakeasy-default-get-ads-campaign:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getAdsGroup:
+    speakeasy-default-get-ads-group:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listAdsAds:
+    speakeasy-default-list-ads-ads:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listAdsCampaigns:
+    speakeasy-default-list-ads-campaigns:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listAdsGroups:
+    speakeasy-default-list-ads-groups:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchAdsAd:
+    speakeasy-default-patch-ads-ad:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchAdsCampaign:
+    speakeasy-default-patch-ads-campaign:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchAdsGroup:
+    speakeasy-default-patch-ads-group:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeAdsAd:
+    speakeasy-default-remove-ads-ad:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeAdsCampaign:
+    speakeasy-default-remove-ads-campaign:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeAdsGroup:
+    speakeasy-default-remove-ads-group:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateAdsAd:
+    speakeasy-default-update-ads-ad:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateAdsCampaign:
+    speakeasy-default-update-ads-campaign:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateAdsGroup:
+    speakeasy-default-update-ads-group:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}

@@ -7,6 +7,7 @@
 
 * [get_accounting_report](#get_accounting_report) - Retrieve a report
 * [list_accounting_reports](#list_accounting_reports) - List all reports
+* [list_ads_reports](#list_ads_reports) - List all reports
 
 ## get_accounting_report
 
@@ -90,6 +91,51 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::ListAccountingReportsResponse)](../../models/operations/listaccountingreportsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_ads_reports
+
+List all reports
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listAdsReports" method="get" path="/ads/{connection_id}/report" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListAdsReportsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.report.list_ads_reports(request: req)
+
+unless res.ads_reports.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [Models::Operations::ListAdsReportsRequest](../../models/operations/listadsreportsrequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[T.nilable(Models::Operations::ListAdsReportsResponse)](../../models/operations/listadsreportsresponse.md)**
 
 ### Errors
 

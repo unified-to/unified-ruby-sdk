@@ -14,6 +14,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def inbound_fields=(str_); end
   def list_account_id(); end
   def list_account_id=(str_); end
+  def list_ad_id(); end
+  def list_ad_id=(str_); end
   def list_application_id(); end
   def list_application_id=(str_); end
   def list_benefit_id(); end
@@ -24,6 +26,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_calendar_id=(str_); end
   def list_call_id(); end
   def list_call_id=(str_); end
+  def list_campaign_id(); end
+  def list_campaign_id=(str_); end
   def list_candidate_id(); end
   def list_candidate_id=(str_); end
   def list_category_id(); end
@@ -56,6 +60,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_expand=(str_); end
   def list_expand_recurring_events(); end
   def list_expand_recurring_events=(str_); end
+  def list_group_id(); end
+  def list_group_id=(str_); end
   def list_instructor_id(); end
   def list_instructor_id=(str_); end
   def list_interview_id(); end
@@ -168,6 +174,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def search_twitter=(str_); end
   def slow_fields(); end
   def slow_fields=(str_); end
+  def virtual_webhook_ad_id(); end
+  def virtual_webhook_ad_id=(str_); end
   def virtual_webhook_application_id(); end
   def virtual_webhook_application_id=(str_); end
   def virtual_webhook_branch_id(); end
@@ -176,6 +184,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_calendar_id=(str_); end
   def virtual_webhook_call_id(); end
   def virtual_webhook_call_id=(str_); end
+  def virtual_webhook_campaign_id(); end
+  def virtual_webhook_campaign_id=(str_); end
   def virtual_webhook_candidate_id(); end
   def virtual_webhook_candidate_id=(str_); end
   def virtual_webhook_channel_id(); end
@@ -200,6 +210,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_expand=(str_); end
   def virtual_webhook_fields(); end
   def virtual_webhook_fields=(str_); end
+  def virtual_webhook_group_id(); end
+  def virtual_webhook_group_id=(str_); end
   def virtual_webhook_item_id(); end
   def virtual_webhook_item_id=(str_); end
   def virtual_webhook_item_variant_id(); end

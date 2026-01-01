@@ -114,6 +114,11 @@ module UnifiedRubySDK
           CALENDAR_BUSY = new('calendar_busy')
           CALENDAR_LINK = new('calendar_link')
           CALENDAR_RECORDING = new('calendar_recording')
+          ADS_ORGANIZATION = new('ads_organization')
+          ADS_AD = new('ads_ad')
+          ADS_CAMPAIGN = new('ads_campaign')
+          ADS_REPORT = new('ads_report')
+          ADS_GROUP = new('ads_group')
         end
       end
     end

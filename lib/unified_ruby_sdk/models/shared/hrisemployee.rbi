@@ -42,6 +42,8 @@ class UnifiedRubySDK::Models::Shared::HrisEmployee
   def gender=(str_); end
   def groups(); end
   def groups=(str_); end
+  def has_mfa(); end
+  def has_mfa=(str_); end
   def hired_at(); end
   def hired_at=(str_); end
   def id(); end

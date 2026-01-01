@@ -201,6 +201,15 @@ module UnifiedRubySDK
           CALENDAR_RECORDING_WRITE = new('calendar_recording_write')
           ENRICH_PERSON_READ = new('enrich_person_read')
           ENRICH_COMPANY_READ = new('enrich_company_read')
+          ADS_AD_READ = new('ads_ad_read')
+          ADS_AD_WRITE = new('ads_ad_write')
+          ADS_CAMPAIGN_READ = new('ads_campaign_read')
+          ADS_CAMPAIGN_WRITE = new('ads_campaign_write')
+          ADS_GROUP_READ = new('ads_group_read')
+          ADS_GROUP_WRITE = new('ads_group_write')
+          ADS_REPORT_READ = new('ads_report_read')
+          ADS_ORGANIZATION_READ = new('ads_organization_read')
+          ADS_ORGANIZATION_WRITE = new('ads_organization_write')
         end
       end
     end

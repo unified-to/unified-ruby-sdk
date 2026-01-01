@@ -36,6 +36,7 @@ module UnifiedRubySDK
           METADATA = new('metadata')
           CALENDAR = new('calendar')
           VERIFICATION = new('verification')
+          ADS = new('ads')
         end
       end
     end
