@@ -22,6 +22,14 @@ module UnifiedRubySDK
           CONVERSION_VALUE = new('CONVERSION_VALUE')
           CPA = new('CPA')
           ROAS = new('ROAS')
+          CPM = new('CPM')
+          ECPM = new('ECPM')
+          ENGAGEMENT = new('ENGAGEMENT')
+          VIDEO_COMPLETIONS = new('VIDEO_COMPLETIONS')
+          VIDEO_VIEWS = new('VIDEO_VIEWS')
+          LEADS = new('LEADS')
+          ENGAGEMENTS = new('ENGAGEMENTS')
+          SAVES = new('SAVES')
         end
       end
     end

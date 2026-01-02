@@ -20,6 +20,8 @@ module UnifiedRubySDK
           SHOPPING = new('SHOPPING')
           APP = new('APP')
           CALL = new('CALL')
+          CAROUSEL = new('CAROUSEL')
+          SOCIAL = new('SOCIAL')
         end
       end
     end

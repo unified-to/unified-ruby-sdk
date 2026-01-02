@@ -14,9 +14,17 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
+        field :bid_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('bid_amount') } }
+
+        field :budget_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('budget_amount') } }
+
+        field :budget_period, Crystalline::Nilable.new(Models::Shared::AdsGroupBudgetPeriod), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('budget_period'), 'decoder': Utils.enum_from_string(Models::Shared::AdsGroupBudgetPeriod, true) } }
+
         field :campaign_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('campaign_id') } }
 
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
@@ -28,19 +36,26 @@ module UnifiedRubySDK
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
         field :targeting, Crystalline::Nilable.new(Models::Shared::PropertyAdsGroupTargeting), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('targeting') } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), organization_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), targeting: T.nilable(Models::Shared::PropertyAdsGroupTargeting), updated_at: T.nilable(::DateTime)).void }
-        def initialize(campaign_id: nil, created_at: nil, id: nil, is_active: nil, name: nil, organization_id: nil, raw: nil, targeting: nil, updated_at: nil)
+        sig { params(bid_amount: T.nilable(::Float), budget_amount: T.nilable(::Float), budget_period: T.nilable(Models::Shared::AdsGroupBudgetPeriod), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), organization_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), targeting: T.nilable(Models::Shared::PropertyAdsGroupTargeting), updated_at: T.nilable(::DateTime)).void }
+        def initialize(bid_amount: nil, budget_amount: nil, budget_period: nil, campaign_id: nil, created_at: nil, end_at: nil, id: nil, is_active: nil, name: nil, organization_id: nil, raw: nil, start_at: nil, targeting: nil, updated_at: nil)
+          @bid_amount = bid_amount
+          @budget_amount = budget_amount
+          @budget_period = budget_period
           @campaign_id = campaign_id
           @created_at = created_at
+          @end_at = end_at
           @id = id
           @is_active = is_active
           @name = name
           @organization_id = organization_id
           @raw = raw
+          @start_at = start_at
           @targeting = targeting
           @updated_at = updated_at
         end
@@ -48,13 +63,18 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
+          return false unless @bid_amount == other.bid_amount
+          return false unless @budget_amount == other.budget_amount
+          return false unless @budget_period == other.budget_period
           return false unless @campaign_id == other.campaign_id
           return false unless @created_at == other.created_at
+          return false unless @end_at == other.end_at
           return false unless @id == other.id
           return false unless @is_active == other.is_active
           return false unless @name == other.name
           return false unless @organization_id == other.organization_id
           return false unless @raw == other.raw
+          return false unless @start_at == other.start_at
           return false unless @targeting == other.targeting
           return false unless @updated_at == other.updated_at
           true

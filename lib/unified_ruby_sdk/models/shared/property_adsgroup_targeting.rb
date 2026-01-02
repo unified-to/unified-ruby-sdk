@@ -18,9 +18,23 @@ module UnifiedRubySDK
 
         field :audiences, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('audiences') } }
 
+        field :companies, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('companies') } }
+
+        field :company_sizes, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_sizes') } }
+
+        field :degrees, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('degrees') } }
+
         field :devices, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('devices') } }
 
         field :genders, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('genders') } }
+
+        field :industries, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('industries') } }
+
+        field :interests, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('interests') } }
+
+        field :job_functions, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('job_functions') } }
+
+        field :job_titles, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('job_titles') } }
 
         field :keywords, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('keywords') } }
 
@@ -30,16 +44,32 @@ module UnifiedRubySDK
 
         field :placements, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('placements') } }
 
-        sig { params(age_ranges: T.nilable(T::Array[::String]), audiences: T.nilable(T::Array[::String]), devices: T.nilable(T::Array[::String]), genders: T.nilable(T::Array[::String]), keywords: T.nilable(T::Array[::String]), languages: T.nilable(T::Array[::String]), locations: T.nilable(T::Array[::String]), placements: T.nilable(T::Array[::String])).void }
-        def initialize(age_ranges: nil, audiences: nil, devices: nil, genders: nil, keywords: nil, languages: nil, locations: nil, placements: nil)
+        field :schools, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('schools') } }
+
+        field :seniorities, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('seniorities') } }
+
+        field :skills, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('skills') } }
+
+        sig { params(age_ranges: T.nilable(T::Array[::String]), audiences: T.nilable(T::Array[::String]), companies: T.nilable(T::Array[::String]), company_sizes: T.nilable(T::Array[::String]), degrees: T.nilable(T::Array[::String]), devices: T.nilable(T::Array[::String]), genders: T.nilable(T::Array[::String]), industries: T.nilable(T::Array[::String]), interests: T.nilable(T::Array[::String]), job_functions: T.nilable(T::Array[::String]), job_titles: T.nilable(T::Array[::String]), keywords: T.nilable(T::Array[::String]), languages: T.nilable(T::Array[::String]), locations: T.nilable(T::Array[::String]), placements: T.nilable(T::Array[::String]), schools: T.nilable(T::Array[::String]), seniorities: T.nilable(T::Array[::String]), skills: T.nilable(T::Array[::String])).void }
+        def initialize(age_ranges: nil, audiences: nil, companies: nil, company_sizes: nil, degrees: nil, devices: nil, genders: nil, industries: nil, interests: nil, job_functions: nil, job_titles: nil, keywords: nil, languages: nil, locations: nil, placements: nil, schools: nil, seniorities: nil, skills: nil)
           @age_ranges = age_ranges
           @audiences = audiences
+          @companies = companies
+          @company_sizes = company_sizes
+          @degrees = degrees
           @devices = devices
           @genders = genders
+          @industries = industries
+          @interests = interests
+          @job_functions = job_functions
+          @job_titles = job_titles
           @keywords = keywords
           @languages = languages
           @locations = locations
           @placements = placements
+          @schools = schools
+          @seniorities = seniorities
+          @skills = skills
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
@@ -47,12 +77,22 @@ module UnifiedRubySDK
           return false unless other.is_a? self.class
           return false unless @age_ranges == other.age_ranges
           return false unless @audiences == other.audiences
+          return false unless @companies == other.companies
+          return false unless @company_sizes == other.company_sizes
+          return false unless @degrees == other.degrees
           return false unless @devices == other.devices
           return false unless @genders == other.genders
+          return false unless @industries == other.industries
+          return false unless @interests == other.interests
+          return false unless @job_functions == other.job_functions
+          return false unless @job_titles == other.job_titles
           return false unless @keywords == other.keywords
           return false unless @languages == other.languages
           return false unless @locations == other.locations
           return false unless @placements == other.placements
+          return false unless @schools == other.schools
+          return false unless @seniorities == other.seniorities
+          return false unless @skills == other.skills
           true
         end
       end

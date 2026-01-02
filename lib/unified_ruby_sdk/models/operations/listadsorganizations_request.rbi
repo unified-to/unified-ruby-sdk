@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Operations::ListAdsOrganizationsRequest
   def offset=(str_); end
   def order(); end
   def order=(str_); end
+  def parent_id(); end
+  def parent_id=(str_); end
   def query(); end
   def query=(str_); end
   def raw(); end

@@ -8,10 +8,18 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::PropertyAdsReportMetricsGroup
+  def bid_amount(); end
+  def bid_amount=(str_); end
+  def budget_amount(); end
+  def budget_amount=(str_); end
+  def budget_period(); end
+  def budget_period=(str_); end
   def campaign_id(); end
   def campaign_id=(str_); end
   def created_at(); end
   def created_at=(str_); end
+  def end_at(); end
+  def end_at=(str_); end
   def id(); end
   def id=(str_); end
   def is_active(); end
@@ -22,6 +30,8 @@ class UnifiedRubySDK::Models::Shared::PropertyAdsReportMetricsGroup
   def organization_id=(str_); end
   def raw(); end
   def raw=(str_); end
+  def start_at(); end
+  def start_at=(str_); end
   def targeting(); end
   def targeting=(str_); end
   def updated_at(); end

@@ -16,20 +16,26 @@ module UnifiedRubySDK
 
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+        field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
+        field :timezone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
+
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), id: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
-        def initialize(created_at: nil, id: nil, name: nil, raw: nil, updated_at: nil)
+        sig { params(created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(created_at: nil, currency: nil, id: nil, name: nil, raw: nil, timezone: nil, updated_at: nil)
           @created_at = created_at
+          @currency = currency
           @id = id
           @name = name
           @raw = raw
+          @timezone = timezone
           @updated_at = updated_at
         end
 
@@ -37,9 +43,11 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @created_at == other.created_at
+          return false unless @currency == other.currency
           return false unless @id == other.id
           return false unless @name == other.name
           return false unless @raw == other.raw
+          return false unless @timezone == other.timezone
           return false unless @updated_at == other.updated_at
           true
         end

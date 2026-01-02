@@ -12,6 +12,8 @@ class UnifiedRubySDK::Models::Shared::CrmDeal
   def amount=(str_); end
   def closed_at(); end
   def closed_at=(str_); end
+  def closing_at(); end
+  def closing_at=(str_); end
   def company_ids(); end
   def company_ids=(str_); end
   def contact_ids(); end
