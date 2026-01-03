@@ -22,18 +22,21 @@ module UnifiedRubySDK
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
+        field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
+
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :timezone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(created_at: nil, currency: nil, id: nil, name: nil, raw: nil, timezone: nil, updated_at: nil)
+        sig { params(created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(created_at: nil, currency: nil, id: nil, name: nil, parent_id: nil, raw: nil, timezone: nil, updated_at: nil)
           @created_at = created_at
           @currency = currency
           @id = id
           @name = name
+          @parent_id = parent_id
           @raw = raw
           @timezone = timezone
           @updated_at = updated_at
@@ -46,6 +49,7 @@ module UnifiedRubySDK
           return false unless @currency == other.currency
           return false unless @id == other.id
           return false unless @name == other.name
+          return false unless @parent_id == other.parent_id
           return false unless @raw == other.raw
           return false unless @timezone == other.timezone
           return false unless @updated_at == other.updated_at

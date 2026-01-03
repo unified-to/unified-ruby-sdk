@@ -16,6 +16,8 @@ class UnifiedRubySDK::Models::Shared::AdsOrganization
   def id=(str_); end
   def name(); end
   def name=(str_); end
+  def parent_id(); end
+  def parent_id=(str_); end
   def raw(); end
   def raw=(str_); end
   def timezone(); end

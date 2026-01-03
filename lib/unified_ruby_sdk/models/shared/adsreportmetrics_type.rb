@@ -30,6 +30,10 @@ module UnifiedRubySDK
           LEADS = new('LEADS')
           ENGAGEMENTS = new('ENGAGEMENTS')
           SAVES = new('SAVES')
+          LIKES = new('LIKES')
+          SHARES = new('SHARES')
+          COMMENTS = new('COMMENTS')
+          FOLLOWS = new('FOLLOWS')
         end
       end
     end
