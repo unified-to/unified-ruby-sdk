@@ -1,0 +1,15 @@
+# FormsSubmission
+
+
+## Fields
+
+| Field                                                                     | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `answers`                                                                 | T::Array<[Models::Shared::FormAnswer](../../models/shared/formanswer.md)> | :heavy_check_mark:                                                        | N/A                                                                       |
+| `created_at`                                                              | [Date](https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html)      | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `form_id`                                                                 | *::String*                                                                | :heavy_check_mark:                                                        | N/A                                                                       |
+| `id`                                                                      | *T.nilable(::String)*                                                     | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `raw`                                                                     | T::Hash[Symbol, *::Object*]                                               | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `respondent_email`                                                        | *T.nilable(::String)*                                                     | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `respondent_name`                                                         | *T.nilable(::String)*                                                     | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `updated_at`                                                              | [Date](https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html)      | :heavy_minus_sign:                                                        | N/A                                                                       |

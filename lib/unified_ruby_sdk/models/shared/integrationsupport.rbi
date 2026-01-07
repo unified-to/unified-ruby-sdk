@@ -60,6 +60,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_expand=(str_); end
   def list_expand_recurring_events(); end
   def list_expand_recurring_events=(str_); end
+  def list_form_id(); end
+  def list_form_id=(str_); end
   def list_group_id(); end
   def list_group_id=(str_); end
   def list_instructor_id(); end
@@ -152,6 +154,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def native_webhook_company_id=(str_); end
   def native_webhook_event_id(); end
   def native_webhook_event_id=(str_); end
+  def native_webhook_form_id(); end
+  def native_webhook_form_id=(str_); end
   def native_webhook_parent_id(); end
   def native_webhook_parent_id=(str_); end
   def native_webhook_project_id(); end
@@ -210,6 +214,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_expand=(str_); end
   def virtual_webhook_fields(); end
   def virtual_webhook_fields=(str_); end
+  def virtual_webhook_form_id(); end
+  def virtual_webhook_form_id=(str_); end
   def virtual_webhook_group_id(); end
   def virtual_webhook_group_id=(str_); end
   def virtual_webhook_item_id(); end

@@ -14,6 +14,6 @@ class UnifiedRubySDK::Models::Operations::CreateUnifiedEnvironmentResponse
   def status_code=(str_); end
   def raw_response(); end
   def raw_response=(str_); end
-  def s(); end
-  def s=(str_); end
+  def environments(); end
+  def environments=(str_); end
 end

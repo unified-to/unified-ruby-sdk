@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: e45c93544cf7d6ca65291c066f9ced13
+  docChecksum: 36fd3e807b1497df5d0dd4733453444f
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.11
-  configChecksum: 2dc38d624f99a38de0839201da1f6bad
+  releaseVersion: 0.67.12
+  configChecksum: 09d4112cbdc88a0472152cdc4040447e
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -108,6 +108,8 @@ generatedFiles:
   - docs/models/operations/createcrmleadresponse.md
   - docs/models/operations/createcrmpipelinerequest.md
   - docs/models/operations/createcrmpipelineresponse.md
+  - docs/models/operations/createformsformrequest.md
+  - docs/models/operations/createformsformresponse.md
   - docs/models/operations/creategenaiembeddingrequest.md
   - docs/models/operations/creategenaiembeddingresponse.md
   - docs/models/operations/creategenaipromptrequest.md
@@ -296,6 +298,10 @@ generatedFiles:
   - docs/models/operations/getcrmleadresponse.md
   - docs/models/operations/getcrmpipelinerequest.md
   - docs/models/operations/getcrmpipelineresponse.md
+  - docs/models/operations/getformsformrequest.md
+  - docs/models/operations/getformsformresponse.md
+  - docs/models/operations/getformssubmissionrequest.md
+  - docs/models/operations/getformssubmissionresponse.md
   - docs/models/operations/getgenaimodelrequest.md
   - docs/models/operations/getgenaimodelresponse.md
   - docs/models/operations/gethrisbenefitrequest.md
@@ -512,6 +518,10 @@ generatedFiles:
   - docs/models/operations/listenrichcompaniesresponse.md
   - docs/models/operations/listenrichpeoplerequest.md
   - docs/models/operations/listenrichpeopleresponse.md
+  - docs/models/operations/listformsformsrequest.md
+  - docs/models/operations/listformsformsresponse.md
+  - docs/models/operations/listformssubmissionsrequest.md
+  - docs/models/operations/listformssubmissionsresponse.md
   - docs/models/operations/listgenaimodelsrequest.md
   - docs/models/operations/listgenaimodelsresponse.md
   - docs/models/operations/listhrisbenefitsrequest.md
@@ -708,6 +718,8 @@ generatedFiles:
   - docs/models/operations/patchcrmleadresponse.md
   - docs/models/operations/patchcrmpipelinerequest.md
   - docs/models/operations/patchcrmpipelineresponse.md
+  - docs/models/operations/patchformsformrequest.md
+  - docs/models/operations/patchformsformresponse.md
   - docs/models/operations/patchhrisbenefitrequest.md
   - docs/models/operations/patchhrisbenefitresponse.md
   - docs/models/operations/patchhriscompanyrequest.md
@@ -883,6 +895,8 @@ generatedFiles:
   - docs/models/operations/removecrmleadresponse.md
   - docs/models/operations/removecrmpipelinerequest.md
   - docs/models/operations/removecrmpipelineresponse.md
+  - docs/models/operations/removeformsformrequest.md
+  - docs/models/operations/removeformsformresponse.md
   - docs/models/operations/removehrisbenefitrequest.md
   - docs/models/operations/removehrisbenefitresponse.md
   - docs/models/operations/removehriscompanyrequest.md
@@ -1053,6 +1067,8 @@ generatedFiles:
   - docs/models/operations/updatecrmleadresponse.md
   - docs/models/operations/updatecrmpipelinerequest.md
   - docs/models/operations/updatecrmpipelineresponse.md
+  - docs/models/operations/updateformsformrequest.md
+  - docs/models/operations/updateformsformresponse.md
   - docs/models/operations/updatehrisbenefitrequest.md
   - docs/models/operations/updatehrisbenefitresponse.md
   - docs/models/operations/updatehriscompanyrequest.md
@@ -1329,7 +1345,12 @@ generatedFiles:
   - docs/models/shared/event.md
   - docs/models/shared/extradata.md
   - docs/models/shared/five.md
+  - docs/models/shared/formanswer.md
   - docs/models/shared/format.md
+  - docs/models/shared/formfield.md
+  - docs/models/shared/formfieldtype.md
+  - docs/models/shared/formsform.md
+  - docs/models/shared/formssubmission.md
   - docs/models/shared/frequency.md
   - docs/models/shared/fromwebhook.md
   - docs/models/shared/genaicontent.md
@@ -1426,6 +1447,7 @@ generatedFiles:
   - docs/models/shared/listeventid.md
   - docs/models/shared/listexpand.md
   - docs/models/shared/listexpandrecurringevents.md
+  - docs/models/shared/listformid.md
   - docs/models/shared/listgroupid.md
   - docs/models/shared/listinstructorid.md
   - docs/models/shared/listinterviewid.md
@@ -1496,6 +1518,7 @@ generatedFiles:
   - docs/models/shared/nativewebhookchannelid.md
   - docs/models/shared/nativewebhookcompanyid.md
   - docs/models/shared/nativewebhookeventid.md
+  - docs/models/shared/nativewebhookformid.md
   - docs/models/shared/nativewebhookparentid.md
   - docs/models/shared/nativewebhookprojectid.md
   - docs/models/shared/nativewebhooktaskid.md
@@ -1716,6 +1739,7 @@ generatedFiles:
   - docs/models/shared/virtualwebhookeventid.md
   - docs/models/shared/virtualwebhookexpand.md
   - docs/models/shared/virtualwebhookfields.md
+  - docs/models/shared/virtualwebhookformid.md
   - docs/models/shared/virtualwebhookgroupid.md
   - docs/models/shared/virtualwebhookitemid.md
   - docs/models/shared/virtualwebhookitemvariantid.md
@@ -1790,6 +1814,8 @@ generatedFiles:
   - docs/sdks/event/README.md
   - docs/sdks/expense/README.md
   - docs/sdks/file/README.md
+  - docs/sdks/form/README.md
+  - docs/sdks/forms/README.md
   - docs/sdks/genai/README.md
   - docs/sdks/group/README.md
   - docs/sdks/hris/README.md
@@ -1845,6 +1871,7 @@ generatedFiles:
   - docs/sdks/space/README.md
   - docs/sdks/storage/README.md
   - docs/sdks/student/README.md
+  - docs/sdks/submission/README.md
   - docs/sdks/subscription/README.md
   - docs/sdks/task/README.md
   - docs/sdks/taxrate/README.md
@@ -1913,6 +1940,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/event.rb
   - lib/unified_ruby_sdk/expense.rb
   - lib/unified_ruby_sdk/file.rb
+  - lib/unified_ruby_sdk/form.rb
+  - lib/unified_ruby_sdk/forms.rb
   - lib/unified_ruby_sdk/genai.rb
   - lib/unified_ruby_sdk/group.rb
   - lib/unified_ruby_sdk/hris.rb
@@ -2105,6 +2134,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createcrmpipeline_request.rbi
   - lib/unified_ruby_sdk/models/operations/createcrmpipeline_response.rb
   - lib/unified_ruby_sdk/models/operations/createcrmpipeline_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createformsform_request.rb
+  - lib/unified_ruby_sdk/models/operations/createformsform_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createformsform_response.rb
+  - lib/unified_ruby_sdk/models/operations/createformsform_response.rbi
   - lib/unified_ruby_sdk/models/operations/creategenaiembedding_request.rb
   - lib/unified_ruby_sdk/models/operations/creategenaiembedding_request.rbi
   - lib/unified_ruby_sdk/models/operations/creategenaiembedding_response.rb
@@ -2481,6 +2514,14 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getcrmpipeline_request.rbi
   - lib/unified_ruby_sdk/models/operations/getcrmpipeline_response.rb
   - lib/unified_ruby_sdk/models/operations/getcrmpipeline_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getformsform_request.rb
+  - lib/unified_ruby_sdk/models/operations/getformsform_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getformsform_response.rb
+  - lib/unified_ruby_sdk/models/operations/getformsform_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getformssubmission_request.rb
+  - lib/unified_ruby_sdk/models/operations/getformssubmission_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getformssubmission_response.rb
+  - lib/unified_ruby_sdk/models/operations/getformssubmission_response.rbi
   - lib/unified_ruby_sdk/models/operations/getgenaimodel_request.rb
   - lib/unified_ruby_sdk/models/operations/getgenaimodel_request.rbi
   - lib/unified_ruby_sdk/models/operations/getgenaimodel_response.rb
@@ -2913,6 +2954,14 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listenrichpeople_request.rbi
   - lib/unified_ruby_sdk/models/operations/listenrichpeople_response.rb
   - lib/unified_ruby_sdk/models/operations/listenrichpeople_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listformsforms_request.rb
+  - lib/unified_ruby_sdk/models/operations/listformsforms_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listformsforms_response.rb
+  - lib/unified_ruby_sdk/models/operations/listformsforms_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listformssubmissions_request.rb
+  - lib/unified_ruby_sdk/models/operations/listformssubmissions_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listformssubmissions_response.rb
+  - lib/unified_ruby_sdk/models/operations/listformssubmissions_response.rbi
   - lib/unified_ruby_sdk/models/operations/listgenaimodels_request.rb
   - lib/unified_ruby_sdk/models/operations/listgenaimodels_request.rbi
   - lib/unified_ruby_sdk/models/operations/listgenaimodels_response.rb
@@ -3305,6 +3354,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchcrmpipeline_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchcrmpipeline_response.rb
   - lib/unified_ruby_sdk/models/operations/patchcrmpipeline_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchformsform_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchformsform_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchformsform_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchformsform_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchhrisbenefit_request.rb
   - lib/unified_ruby_sdk/models/operations/patchhrisbenefit_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchhrisbenefit_response.rb
@@ -3655,6 +3708,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removecrmpipeline_request.rbi
   - lib/unified_ruby_sdk/models/operations/removecrmpipeline_response.rb
   - lib/unified_ruby_sdk/models/operations/removecrmpipeline_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removeformsform_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeformsform_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removeformsform_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeformsform_response.rbi
   - lib/unified_ruby_sdk/models/operations/removehrisbenefit_request.rb
   - lib/unified_ruby_sdk/models/operations/removehrisbenefit_request.rbi
   - lib/unified_ruby_sdk/models/operations/removehrisbenefit_response.rb
@@ -3995,6 +4052,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatecrmpipeline_request.rbi
   - lib/unified_ruby_sdk/models/operations/updatecrmpipeline_response.rb
   - lib/unified_ruby_sdk/models/operations/updatecrmpipeline_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updateformsform_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateformsform_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updateformsform_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateformsform_response.rbi
   - lib/unified_ruby_sdk/models/operations/updatehrisbenefit_request.rb
   - lib/unified_ruby_sdk/models/operations/updatehrisbenefit_request.rbi
   - lib/unified_ruby_sdk/models/operations/updatehrisbenefit_response.rb
@@ -4548,8 +4609,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/extra_data.rbi
   - lib/unified_ruby_sdk/models/shared/five.rb
   - lib/unified_ruby_sdk/models/shared/five.rbi
+  - lib/unified_ruby_sdk/models/shared/formanswer.rb
+  - lib/unified_ruby_sdk/models/shared/formanswer.rbi
   - lib/unified_ruby_sdk/models/shared/format.rb
   - lib/unified_ruby_sdk/models/shared/format.rbi
+  - lib/unified_ruby_sdk/models/shared/formfield.rb
+  - lib/unified_ruby_sdk/models/shared/formfield.rbi
+  - lib/unified_ruby_sdk/models/shared/formfield_type.rb
+  - lib/unified_ruby_sdk/models/shared/formfield_type.rbi
+  - lib/unified_ruby_sdk/models/shared/formsform.rb
+  - lib/unified_ruby_sdk/models/shared/formsform.rbi
+  - lib/unified_ruby_sdk/models/shared/formssubmission.rb
+  - lib/unified_ruby_sdk/models/shared/formssubmission.rbi
   - lib/unified_ruby_sdk/models/shared/frequency.rb
   - lib/unified_ruby_sdk/models/shared/frequency.rbi
   - lib/unified_ruby_sdk/models/shared/from_webhook.rb
@@ -4742,6 +4813,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_expand.rbi
   - lib/unified_ruby_sdk/models/shared/list_expand_recurring_events.rb
   - lib/unified_ruby_sdk/models/shared/list_expand_recurring_events.rbi
+  - lib/unified_ruby_sdk/models/shared/list_form_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_form_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_group_id.rb
   - lib/unified_ruby_sdk/models/shared/list_group_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_instructor_id.rb
@@ -4882,6 +4955,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/native_webhook_company_id.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_event_id.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_event_id.rbi
+  - lib/unified_ruby_sdk/models/shared/native_webhook_form_id.rb
+  - lib/unified_ruby_sdk/models/shared/native_webhook_form_id.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_parent_id.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_parent_id.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_project_id.rb
@@ -5322,6 +5397,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_expand.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_fields.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_fields.rbi
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_form_id.rb
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_form_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_group_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_group_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_item_id.rb
@@ -5412,6 +5489,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/space.rb
   - lib/unified_ruby_sdk/storage.rb
   - lib/unified_ruby_sdk/student.rb
+  - lib/unified_ruby_sdk/submission.rb
   - lib/unified_ruby_sdk/subscription.rb
   - lib/unified_ruby_sdk/task.rb
   - lib/unified_ruby_sdk/taxrate.rb
@@ -10529,5 +10607,77 @@ examples:
       responses:
         "200":
           application/json: {}
+  createFormsForm:
+    speakeasy-default-create-forms-form:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  getFormsForm:
+    speakeasy-default-get-forms-form:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  getFormsSubmission:
+    speakeasy-default-get-forms-submission:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"answers": [{"field_id": "<id>"}], "form_id": "<id>"}
+  listFormsForms:
+    speakeasy-default-list-forms-forms:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{"name": "<value>"}]
+  listFormsSubmissions:
+    speakeasy-default-list-forms-submissions:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{"answers": [{"field_id": "<id>"}], "form_id": "<id>"}]
+  patchFormsForm:
+    speakeasy-default-patch-forms-form:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  removeFormsForm:
+    speakeasy-default-remove-forms-form:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateFormsForm:
+    speakeasy-default-update-forms-form:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
 examplesVersion: 1.0.2
 generatedTests: {}

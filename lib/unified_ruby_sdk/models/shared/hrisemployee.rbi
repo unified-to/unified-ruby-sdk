@@ -86,6 +86,8 @@ class UnifiedRubySDK::Models::Shared::HrisEmployee
   def telephones=(str_); end
   def terminated_at(); end
   def terminated_at=(str_); end
+  def termination_reason(); end
+  def termination_reason=(str_); end
   def timezone(); end
   def timezone=(str_); end
   def title(); end

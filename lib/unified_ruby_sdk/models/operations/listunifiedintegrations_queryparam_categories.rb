@@ -37,6 +37,7 @@ module UnifiedRubySDK
           CALENDAR = new('calendar')
           VERIFICATION = new('verification')
           ADS = new('ads')
+          FORMS = new('forms')
         end
       end
     end

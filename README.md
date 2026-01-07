@@ -693,9 +693,9 @@ end
 
 ### [environment](docs/sdks/environment/README.md)
 
-* [create_unified_environment](docs/sdks/environment/README.md#create_unified_environment)
-* [list_unified_environments](docs/sdks/environment/README.md#list_unified_environments)
-* [remove_unified_environment](docs/sdks/environment/README.md#remove_unified_environment)
+* [create_unified_environment](docs/sdks/environment/README.md#create_unified_environment) - Create new environments
+* [list_unified_environments](docs/sdks/environment/README.md#list_unified_environments) - Returns all environments
+* [remove_unified_environment](docs/sdks/environment/README.md#remove_unified_environment) - Remove an environment
 
 ### [event](docs/sdks/event/README.md)
 
@@ -731,6 +731,26 @@ end
 * [patch_storage_file](docs/sdks/file/README.md#patch_storage_file) - Update a file
 * [remove_storage_file](docs/sdks/file/README.md#remove_storage_file) - Remove a file
 * [update_storage_file](docs/sdks/file/README.md#update_storage_file) - Update a file
+
+### [form](docs/sdks/form/README.md)
+
+* [create_forms_form](docs/sdks/form/README.md#create_forms_form) - Create a form
+* [get_forms_form](docs/sdks/form/README.md#get_forms_form) - Retrieve a form
+* [list_forms_forms](docs/sdks/form/README.md#list_forms_forms) - List all forms
+* [patch_forms_form](docs/sdks/form/README.md#patch_forms_form) - Update a form
+* [remove_forms_form](docs/sdks/form/README.md#remove_forms_form) - Remove a form
+* [update_forms_form](docs/sdks/form/README.md#update_forms_form) - Update a form
+
+### [forms](docs/sdks/forms/README.md)
+
+* [create_forms_form](docs/sdks/forms/README.md#create_forms_form) - Create a form
+* [get_forms_form](docs/sdks/forms/README.md#get_forms_form) - Retrieve a form
+* [get_forms_submission](docs/sdks/forms/README.md#get_forms_submission) - Retrieve a submission
+* [list_forms_forms](docs/sdks/forms/README.md#list_forms_forms) - List all forms
+* [list_forms_submissions](docs/sdks/forms/README.md#list_forms_submissions) - List all submissions
+* [patch_forms_form](docs/sdks/forms/README.md#patch_forms_form) - Update a form
+* [remove_forms_form](docs/sdks/forms/README.md#remove_forms_form) - Remove a form
+* [update_forms_form](docs/sdks/forms/README.md#update_forms_form) - Update a form
 
 ### [genai](docs/sdks/genai/README.md)
 
@@ -1344,6 +1364,11 @@ end
 * [remove_lms_student](docs/sdks/student/README.md#remove_lms_student) - Remove a student
 * [update_lms_student](docs/sdks/student/README.md#update_lms_student) - Update a student
 
+### [submission](docs/sdks/submission/README.md)
+
+* [get_forms_submission](docs/sdks/submission/README.md#get_forms_submission) - Retrieve a submission
+* [list_forms_submissions](docs/sdks/submission/README.md#list_forms_submissions) - List all submissions
+
 ### [subscription](docs/sdks/subscription/README.md)
 
 * [create_payment_subscription](docs/sdks/subscription/README.md#create_payment_subscription) - Create a subscription
@@ -1475,7 +1500,7 @@ end
 ### [unified](docs/sdks/unified/README.md)
 
 * [create_unified_connection](docs/sdks/unified/README.md#create_unified_connection) - Create connection
-* [create_unified_environment](docs/sdks/unified/README.md#create_unified_environment)
+* [create_unified_environment](docs/sdks/unified/README.md#create_unified_environment) - Create new environments
 * [create_unified_webhook](docs/sdks/unified/README.md#create_unified_webhook) - Create webhook subscription
 * [get_unified_apicall](docs/sdks/unified/README.md#get_unified_apicall) - Retrieve specific API Call by its ID
 * [get_unified_connection](docs/sdks/unified/README.md#get_unified_connection) - Retrieve connection
@@ -1484,7 +1509,7 @@ end
 * [get_unified_webhook](docs/sdks/unified/README.md#get_unified_webhook) - Retrieve webhook by its ID
 * [list_unified_apicalls](docs/sdks/unified/README.md#list_unified_apicalls) - Returns API Calls
 * [list_unified_connections](docs/sdks/unified/README.md#list_unified_connections) - List all connections
-* [list_unified_environments](docs/sdks/unified/README.md#list_unified_environments)
+* [list_unified_environments](docs/sdks/unified/README.md#list_unified_environments) - Returns all environments
 * [list_unified_integration_workspaces](docs/sdks/unified/README.md#list_unified_integration_workspaces) - Returns all activated integrations in a workspace
 * [list_unified_integrations](docs/sdks/unified/README.md#list_unified_integrations) - Returns all integrations
 * [list_unified_issues](docs/sdks/unified/README.md#list_unified_issues) - List support issues
@@ -1493,7 +1518,7 @@ end
 * [patch_unified_webhook](docs/sdks/unified/README.md#patch_unified_webhook) - Update webhook subscription
 * [patch_unified_webhook_trigger](docs/sdks/unified/README.md#patch_unified_webhook_trigger) - Trigger webhook
 * [remove_unified_connection](docs/sdks/unified/README.md#remove_unified_connection) - Remove connection
-* [remove_unified_environment](docs/sdks/unified/README.md#remove_unified_environment)
+* [remove_unified_environment](docs/sdks/unified/README.md#remove_unified_environment) - Remove an environment
 * [remove_unified_webhook](docs/sdks/unified/README.md#remove_unified_webhook) - Remove webhook subscription
 * [update_unified_connection](docs/sdks/unified/README.md#update_unified_connection) - Update connection
 * [update_unified_webhook](docs/sdks/unified/README.md#update_unified_webhook) - Update webhook subscription

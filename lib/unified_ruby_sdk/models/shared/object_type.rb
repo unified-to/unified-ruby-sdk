@@ -119,6 +119,8 @@ module UnifiedRubySDK
           ADS_CAMPAIGN = new('ads_campaign')
           ADS_REPORT = new('ads_report')
           ADS_GROUP = new('ads_group')
+          FORMS_FORM = new('forms_form')
+          FORMS_SUBMISSION = new('forms_submission')
         end
       end
     end

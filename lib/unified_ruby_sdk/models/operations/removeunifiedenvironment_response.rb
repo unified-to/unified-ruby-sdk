@@ -20,14 +20,14 @@ module UnifiedRubySDK
         # Raw HTTP response; suitable for custom response parsing
         field :raw_response, ::Faraday::Response
         # Successful
-        field :s, Crystalline::Nilable.new(Crystalline::Array.new(::String))
+        field :environments, Crystalline::Nilable.new(Crystalline::Array.new(::String))
 
-        sig { params(content_type: ::String, status_code: ::Integer, raw_response: ::Faraday::Response, s: T.nilable(T::Array[::String])).void }
-        def initialize(content_type:, status_code:, raw_response:, s: nil)
+        sig { params(content_type: ::String, status_code: ::Integer, raw_response: ::Faraday::Response, environments: T.nilable(T::Array[::String])).void }
+        def initialize(content_type:, status_code:, raw_response:, environments: nil)
           @content_type = content_type
           @status_code = status_code
           @raw_response = raw_response
-          @s = s
+          @environments = environments
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
@@ -36,7 +36,7 @@ module UnifiedRubySDK
           return false unless @content_type == other.content_type
           return false unless @status_code == other.status_code
           return false unless @raw_response == other.raw_response
-          return false unless @s == other.s
+          return false unless @environments == other.environments
           true
         end
       end

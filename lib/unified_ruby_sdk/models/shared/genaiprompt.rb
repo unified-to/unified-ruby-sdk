@@ -16,6 +16,8 @@ module UnifiedRubySDK
 
         field :max_tokens, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_tokens') } }
 
+        field :mcp_deferred_tools, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mcp_deferred_tools') } }
+
         field :mcp_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mcp_url') } }
 
         field :messages, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::GenaiContent)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('messages') } }
@@ -30,9 +32,10 @@ module UnifiedRubySDK
 
         field :tokens_used, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tokens_used') } }
 
-        sig { params(max_tokens: T.nilable(::Float), mcp_url: T.nilable(::String), messages: T.nilable(T::Array[Models::Shared::GenaiContent]), model_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), responses: T.nilable(T::Array[::String]), temperature: T.nilable(::Float), tokens_used: T.nilable(::Float)).void }
-        def initialize(max_tokens: nil, mcp_url: nil, messages: nil, model_id: nil, raw: nil, responses: nil, temperature: nil, tokens_used: nil)
+        sig { params(max_tokens: T.nilable(::Float), mcp_deferred_tools: T.nilable(T::Array[::String]), mcp_url: T.nilable(::String), messages: T.nilable(T::Array[Models::Shared::GenaiContent]), model_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), responses: T.nilable(T::Array[::String]), temperature: T.nilable(::Float), tokens_used: T.nilable(::Float)).void }
+        def initialize(max_tokens: nil, mcp_deferred_tools: nil, mcp_url: nil, messages: nil, model_id: nil, raw: nil, responses: nil, temperature: nil, tokens_used: nil)
           @max_tokens = max_tokens
+          @mcp_deferred_tools = mcp_deferred_tools
           @mcp_url = mcp_url
           @messages = messages
           @model_id = model_id
@@ -46,6 +49,7 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @max_tokens == other.max_tokens
+          return false unless @mcp_deferred_tools == other.mcp_deferred_tools
           return false unless @mcp_url == other.mcp_url
           return false unless @messages == other.messages
           return false unless @model_id == other.model_id

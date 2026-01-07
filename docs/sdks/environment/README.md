@@ -5,11 +5,13 @@
 
 ### Available Operations
 
-* [create_unified_environment](#create_unified_environment)
-* [list_unified_environments](#list_unified_environments)
-* [remove_unified_environment](#remove_unified_environment)
+* [create_unified_environment](#create_unified_environment) - Create new environments
+* [list_unified_environments](#list_unified_environments) - Returns all environments
+* [remove_unified_environment](#remove_unified_environment) - Remove an environment
 
 ## create_unified_environment
+
+Create new environments
 
 ### Example Usage
 
@@ -28,7 +30,7 @@ req = []
 
 res = s.environment.create_unified_environment(request: req)
 
-unless res.s.nil?
+unless res.environments.nil?
   # handle response
 end
 
@@ -52,6 +54,8 @@ end
 
 ## list_unified_environments
 
+Returns all environments
+
 ### Example Usage
 
 <!-- UsageSnippet language="ruby" operationID="listUnifiedEnvironments" method="get" path="/unified/environment" -->
@@ -67,7 +71,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.environment.list_unified_environments()
 
-unless res.s.nil?
+unless res.environments.nil?
   # handle response
 end
 
@@ -85,6 +89,8 @@ end
 
 ## remove_unified_environment
 
+Remove an environment
+
 ### Example Usage
 
 <!-- UsageSnippet language="ruby" operationID="removeUnifiedEnvironment" method="delete" path="/unified/environment/{env}" -->
@@ -100,7 +106,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.environment.remove_unified_environment(env: '<value>')
 
-unless res.s.nil?
+unless res.environments.nil?
   # handle response
 end
 

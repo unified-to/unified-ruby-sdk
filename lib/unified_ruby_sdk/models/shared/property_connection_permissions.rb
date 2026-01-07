@@ -210,6 +210,10 @@ module UnifiedRubySDK
           ADS_REPORT_READ = new('ads_report_read')
           ADS_ORGANIZATION_READ = new('ads_organization_read')
           ADS_ORGANIZATION_WRITE = new('ads_organization_write')
+          FORMS_FORM_READ = new('forms_form_read')
+          FORMS_FORM_WRITE = new('forms_form_write')
+          FORMS_SUBMISSION_READ = new('forms_submission_read')
+          FORMS_SUBMISSION_WRITE = new('forms_submission_write')
         end
       end
     end

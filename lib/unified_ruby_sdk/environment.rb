@@ -41,7 +41,7 @@ module UnifiedRubySDK
 
     sig { params(request: T::Array[::String], timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUnifiedEnvironmentResponse) }
     def create_unified_environment(request:, timeout_ms: nil)
-
+      # create_unified_environment - Create new environments
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = "#{base_url}/unified/environment"
@@ -136,7 +136,7 @@ module UnifiedRubySDK
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            s: T.unsafe(obj)
+            environments: T.unsafe(obj)
           )
 
           return response
@@ -156,7 +156,7 @@ module UnifiedRubySDK
 
     sig { params(timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedEnvironmentsResponse) }
     def list_unified_environments(timeout_ms: nil)
-
+      # list_unified_environments - Returns all environments
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = "#{base_url}/unified/environment"
@@ -239,7 +239,7 @@ module UnifiedRubySDK
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            s: T.unsafe(obj)
+            environments: T.unsafe(obj)
           )
 
           return response
@@ -259,7 +259,7 @@ module UnifiedRubySDK
 
     sig { params(env: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveUnifiedEnvironmentResponse) }
     def remove_unified_environment(env:, timeout_ms: nil)
-
+      # remove_unified_environment - Remove an environment
       request = Models::Operations::RemoveUnifiedEnvironmentRequest.new(
         env: env
       )
@@ -350,7 +350,7 @@ module UnifiedRubySDK
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            s: T.unsafe(obj)
+            environments: T.unsafe(obj)
           )
 
           return response
