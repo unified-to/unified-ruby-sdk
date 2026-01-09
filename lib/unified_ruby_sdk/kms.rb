@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(kms_comment: Models::Shared::KmsComment, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateKmsCommentResponse) }
+    sig { params(kms_comment: Models::Shared::KmsComment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateKmsCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateKmsCommentResponse) }
     def create_kms_comment(kms_comment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_kms_comment - Create a comment
       request = Models::Operations::CreateKmsCommentRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(kms_page: Models::Shared::KmsPage, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateKmsPageResponse) }
+    sig { params(kms_page: Models::Shared::KmsPage, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateKmsPageQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateKmsPageResponse) }
     def create_kms_page(kms_page:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_kms_page - Create a page
       request = Models::Operations::CreateKmsPageRequest.new(
@@ -295,7 +295,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(kms_space: Models::Shared::KmsSpace, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateKmsSpaceResponse) }
+    sig { params(kms_space: Models::Shared::KmsSpace, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateKmsSpaceQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateKmsSpaceResponse) }
     def create_kms_space(kms_space:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_kms_space - Create a space
       request = Models::Operations::CreateKmsSpaceRequest.new(
@@ -423,7 +423,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetKmsCommentResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetKmsCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetKmsCommentResponse) }
     def get_kms_comment(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_kms_comment - Retrieve a comment
       request = Models::Operations::GetKmsCommentRequest.new(
@@ -539,7 +539,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetKmsPageResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetKmsPageQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetKmsPageResponse) }
     def get_kms_page(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_kms_page - Retrieve a page
       request = Models::Operations::GetKmsPageRequest.new(
@@ -655,7 +655,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetKmsSpaceResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetKmsSpaceQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetKmsSpaceResponse) }
     def get_kms_space(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_kms_space - Retrieve a space
       request = Models::Operations::GetKmsSpaceRequest.new(

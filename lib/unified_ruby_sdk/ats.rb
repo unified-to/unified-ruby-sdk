@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ats_activity: Models::Shared::AtsActivity, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsActivityResponse) }
+    sig { params(ats_activity: Models::Shared::AtsActivity, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsActivityQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsActivityResponse) }
     def create_ats_activity(ats_activity:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_activity - Create an activity
       request = Models::Operations::CreateAtsActivityRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ats_application: Models::Shared::AtsApplication, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsApplicationResponse) }
+    sig { params(ats_application: Models::Shared::AtsApplication, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsApplicationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsApplicationResponse) }
     def create_ats_application(ats_application:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_application - Create an application
       request = Models::Operations::CreateAtsApplicationRequest.new(
@@ -295,7 +295,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ats_candidate: Models::Shared::AtsCandidate, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsCandidateResponse) }
+    sig { params(ats_candidate: Models::Shared::AtsCandidate, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsCandidateQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsCandidateResponse) }
     def create_ats_candidate(ats_candidate:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_candidate - Create a candidate
       request = Models::Operations::CreateAtsCandidateRequest.new(
@@ -423,7 +423,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ats_company: Models::Shared::AtsCompany, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsCompanyResponse) }
+    sig { params(ats_company: Models::Shared::AtsCompany, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsCompanyQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsCompanyResponse) }
     def create_ats_company(ats_company:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_company - Create a company
       request = Models::Operations::CreateAtsCompanyRequest.new(
@@ -551,7 +551,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ats_document: Models::Shared::AtsDocument, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsDocumentResponse) }
+    sig { params(ats_document: Models::Shared::AtsDocument, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsDocumentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsDocumentResponse) }
     def create_ats_document(ats_document:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_document - Create a document
       request = Models::Operations::CreateAtsDocumentRequest.new(
@@ -679,7 +679,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ats_interview: Models::Shared::AtsInterview, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsInterviewResponse) }
+    sig { params(ats_interview: Models::Shared::AtsInterview, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsInterviewQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsInterviewResponse) }
     def create_ats_interview(ats_interview:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_interview - Create an interview
       request = Models::Operations::CreateAtsInterviewRequest.new(
@@ -807,7 +807,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ats_job: Models::Shared::AtsJob, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsJobResponse) }
+    sig { params(ats_job: Models::Shared::AtsJob, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsJobQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsJobResponse) }
     def create_ats_job(ats_job:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_job - Create a job
       request = Models::Operations::CreateAtsJobRequest.new(
@@ -935,7 +935,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ats_scorecard: Models::Shared::AtsScorecard, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsScorecardResponse) }
+    sig { params(ats_scorecard: Models::Shared::AtsScorecard, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsScorecardQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsScorecardResponse) }
     def create_ats_scorecard(ats_scorecard:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_scorecard - Create a scorecard
       request = Models::Operations::CreateAtsScorecardRequest.new(
@@ -1063,7 +1063,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsActivityResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsActivityQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsActivityResponse) }
     def get_ats_activity(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_activity - Retrieve an activity
       request = Models::Operations::GetAtsActivityRequest.new(
@@ -1179,7 +1179,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsApplicationResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsApplicationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsApplicationResponse) }
     def get_ats_application(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_application - Retrieve an application
       request = Models::Operations::GetAtsApplicationRequest.new(
@@ -1295,7 +1295,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsCandidateResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsCandidateQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsCandidateResponse) }
     def get_ats_candidate(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_candidate - Retrieve a candidate
       request = Models::Operations::GetAtsCandidateRequest.new(
@@ -1411,7 +1411,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsCompanyResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsCompanyQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsCompanyResponse) }
     def get_ats_company(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_company - Retrieve a company
       request = Models::Operations::GetAtsCompanyRequest.new(
@@ -1527,7 +1527,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsDocumentResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsDocumentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsDocumentResponse) }
     def get_ats_document(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_document - Retrieve a document
       request = Models::Operations::GetAtsDocumentRequest.new(
@@ -1643,7 +1643,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsInterviewResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsInterviewQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsInterviewResponse) }
     def get_ats_interview(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_interview - Retrieve an interview
       request = Models::Operations::GetAtsInterviewRequest.new(
@@ -1759,7 +1759,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsJobResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsJobQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsJobResponse) }
     def get_ats_job(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_job - Retrieve a job
       request = Models::Operations::GetAtsJobRequest.new(
@@ -1875,7 +1875,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsScorecardResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsScorecardQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsScorecardResponse) }
     def get_ats_scorecard(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_scorecard - Retrieve a scorecard
       request = Models::Operations::GetAtsScorecardRequest.new(

@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskChangeResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTaskChangeQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskChangeResponse) }
     def get_task_change(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_task_change - Retrieve a change
       request = Models::Operations::GetTaskChangeRequest.new(

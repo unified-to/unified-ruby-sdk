@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(task_comment: Models::Shared::TaskComment, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskCommentResponse) }
+    sig { params(task_comment: Models::Shared::TaskComment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTaskCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskCommentResponse) }
     def create_task_comment(task_comment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_task_comment - Create a comment
       request = Models::Operations::CreateTaskCommentRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(task_project: Models::Shared::TaskProject, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskProjectResponse) }
+    sig { params(task_project: Models::Shared::TaskProject, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTaskProjectQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskProjectResponse) }
     def create_task_project(task_project:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_task_project - Create a project
       request = Models::Operations::CreateTaskProjectRequest.new(
@@ -295,7 +295,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(task_task: Models::Shared::TaskTask, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskTaskResponse) }
+    sig { params(task_task: Models::Shared::TaskTask, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTaskTaskQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskTaskResponse) }
     def create_task_task(task_task:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_task_task - Create a task
       request = Models::Operations::CreateTaskTaskRequest.new(
@@ -423,7 +423,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskChangeResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTaskChangeQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskChangeResponse) }
     def get_task_change(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_task_change - Retrieve a change
       request = Models::Operations::GetTaskChangeRequest.new(
@@ -539,7 +539,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskCommentResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTaskCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskCommentResponse) }
     def get_task_comment(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_task_comment - Retrieve a comment
       request = Models::Operations::GetTaskCommentRequest.new(
@@ -655,7 +655,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskProjectResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTaskProjectQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskProjectResponse) }
     def get_task_project(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_task_project - Retrieve a project
       request = Models::Operations::GetTaskProjectRequest.new(
@@ -771,7 +771,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskTaskResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTaskTaskQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskTaskResponse) }
     def get_task_task(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_task_task - Retrieve a task
       request = Models::Operations::GetTaskTaskRequest.new(

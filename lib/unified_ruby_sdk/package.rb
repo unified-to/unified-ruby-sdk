@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetVerificationPackageResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetVerificationPackageQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetVerificationPackageResponse) }
     def get_verification_package(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_verification_package - Retrieve a package
       request = Models::Operations::GetVerificationPackageRequest.new(

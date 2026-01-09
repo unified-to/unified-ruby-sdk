@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ats_scorecard: Models::Shared::AtsScorecard, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsScorecardResponse) }
+    sig { params(ats_scorecard: Models::Shared::AtsScorecard, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsScorecardQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsScorecardResponse) }
     def create_ats_scorecard(ats_scorecard:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_scorecard - Create a scorecard
       request = Models::Operations::CreateAtsScorecardRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsScorecardResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsScorecardQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsScorecardResponse) }
     def get_ats_scorecard(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_scorecard - Retrieve a scorecard
       request = Models::Operations::GetAtsScorecardRequest.new(

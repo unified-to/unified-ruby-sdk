@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_benefit: Models::Shared::HrisBenefit, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisBenefitResponse) }
+    sig { params(hris_benefit: Models::Shared::HrisBenefit, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisBenefitQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisBenefitResponse) }
     def create_hris_benefit(hris_benefit:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_benefit - Create a benefit
       request = Models::Operations::CreateHrisBenefitRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisBenefitResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisBenefitQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisBenefitResponse) }
     def get_hris_benefit(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_benefit - Retrieve a benefit
       request = Models::Operations::GetHrisBenefitRequest.new(

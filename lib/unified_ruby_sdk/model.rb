@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetGenaiModelResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetGenaiModelQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetGenaiModelResponse) }
     def get_genai_model(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_genai_model - Retrieve a model
       request = Models::Operations::GetGenaiModelRequest.new(

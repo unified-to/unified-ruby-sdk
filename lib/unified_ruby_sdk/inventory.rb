@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(commerce_inventory: Models::Shared::CommerceInventory, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceInventoryResponse) }
+    sig { params(commerce_inventory: Models::Shared::CommerceInventory, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceInventoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceInventoryResponse) }
     def create_commerce_inventory(commerce_inventory:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_commerce_inventory - Create an inventory
       request = Models::Operations::CreateCommerceInventoryRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceInventoryResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceInventoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceInventoryResponse) }
     def get_commerce_inventory(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_commerce_inventory - Retrieve an inventory
       request = Models::Operations::GetCommerceInventoryRequest.new(

@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingReportResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingReportQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingReportResponse) }
     def get_accounting_report(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_report - Retrieve a report
       request = Models::Operations::GetAccountingReportRequest.new(

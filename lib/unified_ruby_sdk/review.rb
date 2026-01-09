@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(commerce_review: Models::Shared::CommerceReview, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceReviewResponse) }
+    sig { params(commerce_review: Models::Shared::CommerceReview, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceReviewQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceReviewResponse) }
     def create_commerce_review(commerce_review:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_commerce_review - Create a review
       request = Models::Operations::CreateCommerceReviewRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceReviewResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceReviewQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceReviewResponse) }
     def get_commerce_review(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_commerce_review - Retrieve a review
       request = Models::Operations::GetCommerceReviewRequest.new(

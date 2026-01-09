@@ -12,8 +12,6 @@ class UnifiedRubySDK::Models::Operations::ListCalendarBusiesRequest
   def connection_id=(str_); end
   def calendar_id(); end
   def calendar_id=(str_); end
-  def end_le(); end
-  def end_le=(str_); end
   def end_lt(); end
   def end_lt=(str_); end
   def fields_(); end

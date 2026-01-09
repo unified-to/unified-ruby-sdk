@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ads_ad: Models::Shared::AdsAd, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsAdResponse) }
+    sig { params(ads_ad: Models::Shared::AdsAd, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAdsAdQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsAdResponse) }
     def create_ads_ad(ads_ad:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ads_ad - Create an ad
       request = Models::Operations::CreateAdsAdRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ads_campaign: Models::Shared::AdsCampaign, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsCampaignResponse) }
+    sig { params(ads_campaign: Models::Shared::AdsCampaign, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAdsCampaignQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsCampaignResponse) }
     def create_ads_campaign(ads_campaign:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ads_campaign - Create a campaign
       request = Models::Operations::CreateAdsCampaignRequest.new(
@@ -295,7 +295,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ads_group: Models::Shared::AdsGroup, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsGroupResponse) }
+    sig { params(ads_group: Models::Shared::AdsGroup, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAdsGroupQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsGroupResponse) }
     def create_ads_group(ads_group:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ads_group - Create a group
       request = Models::Operations::CreateAdsGroupRequest.new(
@@ -423,7 +423,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ads_organization: Models::Shared::AdsOrganization, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsOrganizationResponse) }
+    sig { params(ads_organization: Models::Shared::AdsOrganization, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAdsOrganizationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsOrganizationResponse) }
     def create_ads_organization(ads_organization:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ads_organization - Create an organization
       request = Models::Operations::CreateAdsOrganizationRequest.new(
@@ -551,7 +551,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsAdResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsAdQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsAdResponse) }
     def get_ads_ad(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ads_ad - Retrieve an ad
       request = Models::Operations::GetAdsAdRequest.new(
@@ -667,7 +667,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsCampaignResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsCampaignQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsCampaignResponse) }
     def get_ads_campaign(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ads_campaign - Retrieve a campaign
       request = Models::Operations::GetAdsCampaignRequest.new(
@@ -783,7 +783,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsGroupResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsGroupQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsGroupResponse) }
     def get_ads_group(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ads_group - Retrieve a group
       request = Models::Operations::GetAdsGroupRequest.new(
@@ -899,7 +899,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsOrganizationResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsOrganizationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsOrganizationResponse) }
     def get_ads_organization(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ads_organization - Retrieve an organization
       request = Models::Operations::GetAdsOrganizationRequest.new(

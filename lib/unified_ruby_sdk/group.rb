@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ads_group: Models::Shared::AdsGroup, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsGroupResponse) }
+    sig { params(ads_group: Models::Shared::AdsGroup, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAdsGroupQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsGroupResponse) }
     def create_ads_group(ads_group:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ads_group - Create a group
       request = Models::Operations::CreateAdsGroupRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_group: Models::Shared::HrisGroup, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisGroupResponse) }
+    sig { params(hris_group: Models::Shared::HrisGroup, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisGroupQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisGroupResponse) }
     def create_hris_group(hris_group:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_group - Create a group
       request = Models::Operations::CreateHrisGroupRequest.new(
@@ -419,7 +419,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsGroupResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsGroupQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsGroupResponse) }
     def get_ads_group(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ads_group - Retrieve a group
       request = Models::Operations::GetAdsGroupRequest.new(
@@ -535,7 +535,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisGroupResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisGroupQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisGroupResponse) }
     def get_hris_group(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_group - Retrieve a group
       request = Models::Operations::GetHrisGroupRequest.new(

@@ -18,11 +18,11 @@ module UnifiedRubySDK
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
         # Comma-delimited fields to return
-        field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::CreateAtsScorecardQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
         # Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
         field :raw, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
-        sig { params(ats_scorecard: Models::Shared::AtsScorecard, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String)).void }
+        sig { params(ats_scorecard: Models::Shared::AtsScorecard, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsScorecardQueryParamFields]), raw: T.nilable(::String)).void }
         def initialize(ats_scorecard:, connection_id:, fields_: nil, raw: nil)
           @ats_scorecard = ats_scorecard
           @connection_id = connection_id

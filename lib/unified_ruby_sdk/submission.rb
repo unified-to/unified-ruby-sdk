@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetFormsSubmissionResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetFormsSubmissionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetFormsSubmissionResponse) }
     def get_forms_submission(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_forms_submission - Retrieve a submission
       request = Models::Operations::GetFormsSubmissionRequest.new(

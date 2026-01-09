@@ -17,10 +17,10 @@ module UnifiedRubySDK
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
         # The benefit ID to filter by
         field :benefit_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'benefit_id', 'style': 'form', 'explode': true } }
-        # The company ID to filter by
+        # The company ID to filter by (reference to HrisCompany)
         field :company_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'company_id', 'style': 'form', 'explode': true } }
         # Comma-delimited fields to return
-        field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::ListHrisDeductionsQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
         field :limit, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
 
@@ -35,12 +35,12 @@ module UnifiedRubySDK
         field :raw, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
         field :sort, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
-        # Return only results whose updated date is equal or greater to this value
+        # Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
-        # The user/employee ID to filter by
+        # The user/employee ID to filter by (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, benefit_id: T.nilable(::String), company_id: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), payslip_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
+        sig { params(connection_id: ::String, benefit_id: T.nilable(::String), company_id: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListHrisDeductionsQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), payslip_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
         def initialize(connection_id:, benefit_id: nil, company_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, payslip_id: nil, query: nil, raw: nil, sort: nil, updated_gte: nil, user_id: nil)
           @connection_id = connection_id
           @benefit_id = benefit_id

@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_employee: Models::Shared::HrisEmployee, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisEmployeeResponse) }
+    sig { params(hris_employee: Models::Shared::HrisEmployee, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisEmployeeQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisEmployeeResponse) }
     def create_hris_employee(hris_employee:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_employee - Create an employee
       request = Models::Operations::CreateHrisEmployeeRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisEmployeeResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisEmployeeQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisEmployeeResponse) }
     def get_hris_employee(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_employee - Retrieve an employee
       request = Models::Operations::GetHrisEmployeeRequest.new(

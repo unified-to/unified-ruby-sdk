@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_course: Models::Shared::LmsCourse, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsCourseResponse) }
+    sig { params(lms_course: Models::Shared::LmsCourse, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateLmsCourseQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsCourseResponse) }
     def create_lms_course(lms_course:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_lms_course - Create a course
       request = Models::Operations::CreateLmsCourseRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsCourseResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetLmsCourseQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsCourseResponse) }
     def get_lms_course(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_lms_course - Retrieve a course
       request = Models::Operations::GetLmsCourseRequest.new(

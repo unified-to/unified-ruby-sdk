@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_expense: Models::Shared::AccountingExpense, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingExpenseResponse) }
+    sig { params(accounting_expense: Models::Shared::AccountingExpense, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingExpenseQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingExpenseResponse) }
     def create_accounting_expense(accounting_expense:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_expense - Create an expense
       request = Models::Operations::CreateAccountingExpenseRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingExpenseResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingExpenseQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingExpenseResponse) }
     def get_accounting_expense(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_expense - Retrieve an expense
       request = Models::Operations::GetAccountingExpenseRequest.new(

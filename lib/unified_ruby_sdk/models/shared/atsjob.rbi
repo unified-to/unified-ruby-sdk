@@ -18,8 +18,6 @@ class UnifiedRubySDK::Models::Shared::AtsJob
   def compensation=(str_); end
   def created_at(); end
   def created_at=(str_); end
-  def departments(); end
-  def departments=(str_); end
   def description(); end
   def description=(str_); end
   def employment_type(); end

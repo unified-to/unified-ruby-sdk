@@ -22,10 +22,6 @@ class UnifiedRubySDK::Models::Shared::HrisEmployee
   def currency=(str_); end
   def date_of_birth(); end
   def date_of_birth=(str_); end
-  def department(); end
-  def department=(str_); end
-  def division(); end
-  def division=(str_); end
   def emails(); end
   def emails=(str_); end
   def employee_number(); end
@@ -54,8 +50,6 @@ class UnifiedRubySDK::Models::Shared::HrisEmployee
   def language_locale=(str_); end
   def last_name(); end
   def last_name=(str_); end
-  def location(); end
-  def location=(str_); end
   def locations(); end
   def locations=(str_); end
   def manager_id(); end

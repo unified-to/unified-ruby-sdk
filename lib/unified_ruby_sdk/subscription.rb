@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(payment_subscription: Models::Shared::PaymentSubscription, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePaymentSubscriptionResponse) }
+    sig { params(payment_subscription: Models::Shared::PaymentSubscription, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreatePaymentSubscriptionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePaymentSubscriptionResponse) }
     def create_payment_subscription(payment_subscription:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_payment_subscription - Create a subscription
       request = Models::Operations::CreatePaymentSubscriptionRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentSubscriptionResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetPaymentSubscriptionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentSubscriptionResponse) }
     def get_payment_subscription(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_payment_subscription - Retrieve a subscription
       request = Models::Operations::GetPaymentSubscriptionRequest.new(

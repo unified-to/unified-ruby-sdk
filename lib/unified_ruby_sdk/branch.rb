@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_branch: Models::Shared::RepoBranch, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoBranchResponse) }
+    sig { params(repo_branch: Models::Shared::RepoBranch, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoBranchQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoBranchResponse) }
     def create_repo_branch(repo_branch:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_repo_branch - Create a branch
       request = Models::Operations::CreateRepoBranchRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoBranchResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoBranchQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoBranchResponse) }
     def get_repo_branch(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_repo_branch - Retrieve a branch
       request = Models::Operations::GetRepoBranchRequest.new(

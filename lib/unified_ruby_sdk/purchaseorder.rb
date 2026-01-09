@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_purchaseorder: Models::Shared::AccountingPurchaseorder, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingPurchaseorderResponse) }
+    sig { params(accounting_purchaseorder: Models::Shared::AccountingPurchaseorder, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingPurchaseorderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingPurchaseorderResponse) }
     def create_accounting_purchaseorder(accounting_purchaseorder:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_purchaseorder - Create a purchaseorder
       request = Models::Operations::CreateAccountingPurchaseorderRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingPurchaseorderResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingPurchaseorderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingPurchaseorderResponse) }
     def get_accounting_purchaseorder(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_purchaseorder - Retrieve a purchaseorder
       request = Models::Operations::GetAccountingPurchaseorderRequest.new(

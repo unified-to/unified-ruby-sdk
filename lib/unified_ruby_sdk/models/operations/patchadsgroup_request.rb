@@ -20,11 +20,11 @@ module UnifiedRubySDK
         # ID of the Group
         field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
         # Comma-delimited fields to return
-        field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::PatchAdsGroupQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
         # Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
         field :raw, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
-        sig { params(ads_group: Models::Shared::AdsGroup, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String)).void }
+        sig { params(ads_group: Models::Shared::AdsGroup, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::PatchAdsGroupQueryParamFields]), raw: T.nilable(::String)).void }
         def initialize(ads_group:, connection_id:, id:, fields_: nil, raw: nil)
           @ads_group = ads_group
           @connection_id = connection_id

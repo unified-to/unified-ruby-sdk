@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_order: Models::Shared::AccountingOrder, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingOrderResponse) }
+    sig { params(accounting_order: Models::Shared::AccountingOrder, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingOrderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingOrderResponse) }
     def create_accounting_order(accounting_order:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_order - Create an order
       request = Models::Operations::CreateAccountingOrderRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingOrderResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingOrderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingOrderResponse) }
     def get_accounting_order(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_order - Retrieve an order
       request = Models::Operations::GetAccountingOrderRequest.new(

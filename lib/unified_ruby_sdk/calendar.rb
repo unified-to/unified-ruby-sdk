@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(calendar_calendar: Models::Shared::CalendarCalendar, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCalendarCalendarResponse) }
+    sig { params(calendar_calendar: Models::Shared::CalendarCalendar, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCalendarCalendarQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCalendarCalendarResponse) }
     def create_calendar_calendar(calendar_calendar:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_calendar_calendar - Create a calendar
       request = Models::Operations::CreateCalendarCalendarRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(calendar_event: Models::Shared::CalendarEvent, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCalendarEventResponse) }
+    sig { params(calendar_event: Models::Shared::CalendarEvent, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCalendarEventQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCalendarEventResponse) }
     def create_calendar_event(calendar_event:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_calendar_event - Create an event
       request = Models::Operations::CreateCalendarEventRequest.new(
@@ -295,7 +295,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(calendar_link: Models::Shared::CalendarLink, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCalendarLinkResponse) }
+    sig { params(calendar_link: Models::Shared::CalendarLink, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCalendarLinkQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCalendarLinkResponse) }
     def create_calendar_link(calendar_link:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_calendar_link - Create a link
       request = Models::Operations::CreateCalendarLinkRequest.new(
@@ -423,7 +423,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarCalendarResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCalendarCalendarQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarCalendarResponse) }
     def get_calendar_calendar(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_calendar_calendar - Retrieve a calendar
       request = Models::Operations::GetCalendarCalendarRequest.new(
@@ -539,7 +539,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarEventResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCalendarEventQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarEventResponse) }
     def get_calendar_event(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_calendar_event - Retrieve an event
       request = Models::Operations::GetCalendarEventRequest.new(
@@ -655,7 +655,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarLinkResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCalendarLinkQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarLinkResponse) }
     def get_calendar_link(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_calendar_link - Retrieve a link
       request = Models::Operations::GetCalendarLinkRequest.new(
@@ -771,7 +771,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarRecordingResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCalendarRecordingQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarRecordingResponse) }
     def get_calendar_recording(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_calendar_recording - Retrieve a recording
       request = Models::Operations::GetCalendarRecordingRequest.new(

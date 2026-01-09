@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(uc_comment: Models::Shared::UcComment, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUcCommentResponse) }
+    sig { params(uc_comment: Models::Shared::UcComment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateUcCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUcCommentResponse) }
     def create_uc_comment(uc_comment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_uc_comment - Create a comment
       request = Models::Operations::CreateUcCommentRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(uc_contact: Models::Shared::UcContact, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUcContactResponse) }
+    sig { params(uc_contact: Models::Shared::UcContact, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateUcContactQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUcContactResponse) }
     def create_uc_contact(uc_contact:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_uc_contact - Create a contact
       request = Models::Operations::CreateUcContactRequest.new(
@@ -295,7 +295,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(uc_recording: Models::Shared::UcRecording, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUcRecordingResponse) }
+    sig { params(uc_recording: Models::Shared::UcRecording, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateUcRecordingQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUcRecordingResponse) }
     def create_uc_recording(uc_recording:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_uc_recording - Create a recording
       request = Models::Operations::CreateUcRecordingRequest.new(
@@ -423,7 +423,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcCallResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetUcCallQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcCallResponse) }
     def get_uc_call(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_uc_call - Retrieve a call
       request = Models::Operations::GetUcCallRequest.new(
@@ -539,7 +539,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcCommentResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetUcCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcCommentResponse) }
     def get_uc_comment(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_uc_comment - Retrieve a comment
       request = Models::Operations::GetUcCommentRequest.new(
@@ -655,7 +655,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcContactResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetUcContactQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcContactResponse) }
     def get_uc_contact(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_uc_contact - Retrieve a contact
       request = Models::Operations::GetUcContactRequest.new(
@@ -771,7 +771,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcRecordingResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetUcRecordingQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcRecordingResponse) }
     def get_uc_recording(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_uc_recording - Retrieve a recording
       request = Models::Operations::GetUcRecordingRequest.new(

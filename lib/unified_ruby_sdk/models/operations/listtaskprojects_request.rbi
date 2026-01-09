@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Operations::ListTaskProjectsRequest
   def connection_id(); end
   def connection_id=(str_); end
+  def company_id(); end
+  def company_id=(str_); end
   def fields_(); end
   def fields_=(str_); end
   def limit(); end
@@ -18,8 +20,6 @@ class UnifiedRubySDK::Models::Operations::ListTaskProjectsRequest
   def offset=(str_); end
   def order(); end
   def order=(str_); end
-  def org_id(); end
-  def org_id=(str_); end
   def parent_id(); end
   def parent_id=(str_); end
   def query(); end
@@ -30,4 +30,6 @@ class UnifiedRubySDK::Models::Operations::ListTaskProjectsRequest
   def sort=(str_); end
   def updated_gte(); end
   def updated_gte=(str_); end
+  def user_id(); end
+  def user_id=(str_); end
 end

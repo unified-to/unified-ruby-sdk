@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(metadata_metadata: Models::Shared::MetadataMetadata, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMetadataMetadataResponse) }
+    sig { params(metadata_metadata: Models::Shared::MetadataMetadata, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateMetadataMetadataQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMetadataMetadataResponse) }
     def create_metadata_metadata(metadata_metadata:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_metadata_metadata - Create a metadata
       request = Models::Operations::CreateMetadataMetadataRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMetadataMetadataResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetMetadataMetadataQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMetadataMetadataResponse) }
     def get_metadata_metadata(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_metadata_metadata - Retrieve a metadata
       request = Models::Operations::GetMetadataMetadataRequest.new(

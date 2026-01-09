@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentRefundResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetPaymentRefundQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentRefundResponse) }
     def get_payment_refund(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_payment_refund - Retrieve a refund
       request = Models::Operations::GetPaymentRefundRequest.new(

@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(marketing_member: Models::Shared::MarketingMember, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMartechMemberResponse) }
+    sig { params(marketing_member: Models::Shared::MarketingMember, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateMartechMemberQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMartechMemberResponse) }
     def create_martech_member(marketing_member:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_martech_member - Create a member
       request = Models::Operations::CreateMartechMemberRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMartechMemberResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetMartechMemberQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMartechMemberResponse) }
     def get_martech_member(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_martech_member - Retrieve a member
       request = Models::Operations::GetMartechMemberRequest.new(

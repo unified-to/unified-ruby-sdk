@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(kms_comment: Models::Shared::KmsComment, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateKmsCommentResponse) }
+    sig { params(kms_comment: Models::Shared::KmsComment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateKmsCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateKmsCommentResponse) }
     def create_kms_comment(kms_comment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_kms_comment - Create a comment
       request = Models::Operations::CreateKmsCommentRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(task_comment: Models::Shared::TaskComment, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskCommentResponse) }
+    sig { params(task_comment: Models::Shared::TaskComment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTaskCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskCommentResponse) }
     def create_task_comment(task_comment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_task_comment - Create a comment
       request = Models::Operations::CreateTaskCommentRequest.new(
@@ -295,7 +295,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(uc_comment: Models::Shared::UcComment, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUcCommentResponse) }
+    sig { params(uc_comment: Models::Shared::UcComment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateUcCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUcCommentResponse) }
     def create_uc_comment(uc_comment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_uc_comment - Create a comment
       request = Models::Operations::CreateUcCommentRequest.new(
@@ -423,7 +423,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetKmsCommentResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetKmsCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetKmsCommentResponse) }
     def get_kms_comment(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_kms_comment - Retrieve a comment
       request = Models::Operations::GetKmsCommentRequest.new(
@@ -539,7 +539,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskCommentResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTaskCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskCommentResponse) }
     def get_task_comment(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_task_comment - Retrieve a comment
       request = Models::Operations::GetTaskCommentRequest.new(
@@ -655,7 +655,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcCommentResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetUcCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcCommentResponse) }
     def get_uc_comment(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_uc_comment - Retrieve a comment
       request = Models::Operations::GetUcCommentRequest.new(

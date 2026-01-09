@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(commerce_item: Models::Shared::CommerceItem, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceItemResponse) }
+    sig { params(commerce_item: Models::Shared::CommerceItem, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceItemQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceItemResponse) }
     def create_commerce_item(commerce_item:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_commerce_item - Create an item
       request = Models::Operations::CreateCommerceItemRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceItemResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceItemQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceItemResponse) }
     def get_commerce_item(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_commerce_item - Retrieve an item
       request = Models::Operations::GetCommerceItemRequest.new(

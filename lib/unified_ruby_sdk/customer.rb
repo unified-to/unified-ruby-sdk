@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ticketing_customer: Models::Shared::TicketingCustomer, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTicketingCustomerResponse) }
+    sig { params(ticketing_customer: Models::Shared::TicketingCustomer, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTicketingCustomerQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTicketingCustomerResponse) }
     def create_ticketing_customer(ticketing_customer:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ticketing_customer - Create a customer
       request = Models::Operations::CreateTicketingCustomerRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTicketingCustomerResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTicketingCustomerQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTicketingCustomerResponse) }
     def get_ticketing_customer(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ticketing_customer - Retrieve a customer
       request = Models::Operations::GetTicketingCustomerRequest.new(

@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(marketing_list: Models::Shared::MarketingList, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMartechListResponse) }
+    sig { params(marketing_list: Models::Shared::MarketingList, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateMartechListQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMartechListResponse) }
     def create_martech_list(marketing_list:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_martech_list - Create a list
       request = Models::Operations::CreateMartechListRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMartechListResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetMartechListQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMartechListResponse) }
     def get_martech_list(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_martech_list - Retrieve a list
       request = Models::Operations::GetMartechListRequest.new(

@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_timeshift: Models::Shared::HrisTimeshift, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisTimeshiftResponse) }
+    sig { params(hris_timeshift: Models::Shared::HrisTimeshift, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisTimeshiftQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisTimeshiftResponse) }
     def create_hris_timeshift(hris_timeshift:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_timeshift - Create a timeshift
       request = Models::Operations::CreateHrisTimeshiftRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisTimeshiftResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisTimeshiftQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisTimeshiftResponse) }
     def get_hris_timeshift(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_timeshift - Retrieve a timeshift
       request = Models::Operations::GetHrisTimeshiftRequest.new(

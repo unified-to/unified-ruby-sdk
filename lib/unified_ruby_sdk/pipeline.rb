@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_pipeline: Models::Shared::CrmPipeline, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmPipelineResponse) }
+    sig { params(crm_pipeline: Models::Shared::CrmPipeline, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCrmPipelineQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmPipelineResponse) }
     def create_crm_pipeline(crm_pipeline:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_crm_pipeline - Create a pipeline
       request = Models::Operations::CreateCrmPipelineRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmPipelineResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCrmPipelineQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmPipelineResponse) }
     def get_crm_pipeline(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_crm_pipeline - Retrieve a pipeline
       request = Models::Operations::GetCrmPipelineRequest.new(

@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_benefit: Models::Shared::HrisBenefit, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisBenefitResponse) }
+    sig { params(hris_benefit: Models::Shared::HrisBenefit, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisBenefitQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisBenefitResponse) }
     def create_hris_benefit(hris_benefit:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_benefit - Create a benefit
       request = Models::Operations::CreateHrisBenefitRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_company: Models::Shared::HrisCompany, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisCompanyResponse) }
+    sig { params(hris_company: Models::Shared::HrisCompany, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisCompanyQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisCompanyResponse) }
     def create_hris_company(hris_company:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_company - Create a company
       request = Models::Operations::CreateHrisCompanyRequest.new(
@@ -295,7 +295,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_deduction: Models::Shared::HrisDeduction, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisDeductionResponse) }
+    sig { params(hris_deduction: Models::Shared::HrisDeduction, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisDeductionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisDeductionResponse) }
     def create_hris_deduction(hris_deduction:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_deduction - Create a deduction
       request = Models::Operations::CreateHrisDeductionRequest.new(
@@ -423,7 +423,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_device: Models::Shared::HrisDevice, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisDeviceResponse) }
+    sig { params(hris_device: Models::Shared::HrisDevice, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisDeviceQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisDeviceResponse) }
     def create_hris_device(hris_device:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_device - Create a device
       request = Models::Operations::CreateHrisDeviceRequest.new(
@@ -551,7 +551,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_employee: Models::Shared::HrisEmployee, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisEmployeeResponse) }
+    sig { params(hris_employee: Models::Shared::HrisEmployee, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisEmployeeQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisEmployeeResponse) }
     def create_hris_employee(hris_employee:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_employee - Create an employee
       request = Models::Operations::CreateHrisEmployeeRequest.new(
@@ -679,7 +679,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_group: Models::Shared::HrisGroup, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisGroupResponse) }
+    sig { params(hris_group: Models::Shared::HrisGroup, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisGroupQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisGroupResponse) }
     def create_hris_group(hris_group:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_group - Create a group
       request = Models::Operations::CreateHrisGroupRequest.new(
@@ -807,7 +807,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_location: Models::Shared::HrisLocation, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisLocationResponse) }
+    sig { params(hris_location: Models::Shared::HrisLocation, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisLocationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisLocationResponse) }
     def create_hris_location(hris_location:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_location - Create a location
       request = Models::Operations::CreateHrisLocationRequest.new(
@@ -935,7 +935,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_timeshift: Models::Shared::HrisTimeshift, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisTimeshiftResponse) }
+    sig { params(hris_timeshift: Models::Shared::HrisTimeshift, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisTimeshiftQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisTimeshiftResponse) }
     def create_hris_timeshift(hris_timeshift:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_timeshift - Create a timeshift
       request = Models::Operations::CreateHrisTimeshiftRequest.new(
@@ -1063,7 +1063,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisBenefitResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisBenefitQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisBenefitResponse) }
     def get_hris_benefit(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_benefit - Retrieve a benefit
       request = Models::Operations::GetHrisBenefitRequest.new(
@@ -1179,7 +1179,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisCompanyResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisCompanyQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisCompanyResponse) }
     def get_hris_company(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_company - Retrieve a company
       request = Models::Operations::GetHrisCompanyRequest.new(
@@ -1295,7 +1295,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisDeductionResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisDeductionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisDeductionResponse) }
     def get_hris_deduction(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_deduction - Retrieve a deduction
       request = Models::Operations::GetHrisDeductionRequest.new(
@@ -1411,7 +1411,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisDeviceResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisDeviceQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisDeviceResponse) }
     def get_hris_device(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_device - Retrieve a device
       request = Models::Operations::GetHrisDeviceRequest.new(
@@ -1527,7 +1527,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisEmployeeResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisEmployeeQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisEmployeeResponse) }
     def get_hris_employee(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_employee - Retrieve an employee
       request = Models::Operations::GetHrisEmployeeRequest.new(
@@ -1643,7 +1643,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisGroupResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisGroupQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisGroupResponse) }
     def get_hris_group(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_group - Retrieve a group
       request = Models::Operations::GetHrisGroupRequest.new(
@@ -1759,7 +1759,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisLocationResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisLocationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisLocationResponse) }
     def get_hris_location(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_location - Retrieve a location
       request = Models::Operations::GetHrisLocationRequest.new(
@@ -1875,7 +1875,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisPayslipResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisPayslipQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisPayslipResponse) }
     def get_hris_payslip(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_payslip - Retrieve a payslip
       request = Models::Operations::GetHrisPayslipRequest.new(
@@ -1991,7 +1991,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisTimeoffResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisTimeoffQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisTimeoffResponse) }
     def get_hris_timeoff(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_timeoff - Retrieve a timeoff
       request = Models::Operations::GetHrisTimeoffRequest.new(
@@ -2107,7 +2107,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisTimeshiftResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisTimeshiftQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisTimeshiftResponse) }
     def get_hris_timeshift(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_timeshift - Retrieve a timeshift
       request = Models::Operations::GetHrisTimeshiftRequest.new(

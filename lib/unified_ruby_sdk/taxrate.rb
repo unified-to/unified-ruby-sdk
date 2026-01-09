@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_taxrate: Models::Shared::AccountingTaxrate, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingTaxrateResponse) }
+    sig { params(accounting_taxrate: Models::Shared::AccountingTaxrate, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingTaxrateQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingTaxrateResponse) }
     def create_accounting_taxrate(accounting_taxrate:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_taxrate - Create a taxrate
       request = Models::Operations::CreateAccountingTaxrateRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingTaxrateResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingTaxrateQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingTaxrateResponse) }
     def get_accounting_taxrate(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_taxrate - Retrieve a taxrate
       request = Models::Operations::GetAccountingTaxrateRequest.new(

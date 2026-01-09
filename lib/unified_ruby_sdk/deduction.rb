@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_deduction: Models::Shared::HrisDeduction, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisDeductionResponse) }
+    sig { params(hris_deduction: Models::Shared::HrisDeduction, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisDeductionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisDeductionResponse) }
     def create_hris_deduction(hris_deduction:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_deduction - Create a deduction
       request = Models::Operations::CreateHrisDeductionRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisDeductionResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisDeductionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisDeductionResponse) }
     def get_hris_deduction(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_deduction - Retrieve a deduction
       request = Models::Operations::GetHrisDeductionRequest.new(

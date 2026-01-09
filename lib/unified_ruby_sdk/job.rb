@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ats_job: Models::Shared::AtsJob, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsJobResponse) }
+    sig { params(ats_job: Models::Shared::AtsJob, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsJobQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsJobResponse) }
     def create_ats_job(ats_job:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_job - Create a job
       request = Models::Operations::CreateAtsJobRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsJobResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsJobQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsJobResponse) }
     def get_ats_job(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_job - Retrieve a job
       request = Models::Operations::GetAtsJobRequest.new(

@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_journal: Models::Shared::AccountingJournal, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingJournalResponse) }
+    sig { params(accounting_journal: Models::Shared::AccountingJournal, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingJournalQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingJournalResponse) }
     def create_accounting_journal(accounting_journal:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_journal - Create a journal
       request = Models::Operations::CreateAccountingJournalRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingJournalResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingJournalQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingJournalResponse) }
     def get_accounting_journal(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_journal - Retrieve a journal
       request = Models::Operations::GetAccountingJournalRequest.new(

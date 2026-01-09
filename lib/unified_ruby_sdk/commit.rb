@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_commit: Models::Shared::RepoCommit, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoCommitResponse) }
+    sig { params(repo_commit: Models::Shared::RepoCommit, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoCommitQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoCommitResponse) }
     def create_repo_commit(repo_commit:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_repo_commit - Create a commit
       request = Models::Operations::CreateRepoCommitRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoCommitResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoCommitQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoCommitResponse) }
     def get_repo_commit(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_repo_commit - Retrieve a commit
       request = Models::Operations::GetRepoCommitRequest.new(

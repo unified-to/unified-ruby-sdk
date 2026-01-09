@@ -15,18 +15,16 @@ module UnifiedRubySDK
 
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-        # The class ID to filter by
+        # The class ID to filter by (reference to LmsClass)
         field :class_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'class_id', 'style': 'form', 'explode': true } }
-        # The company ID to filter by
+        # The company ID to filter by (reference to HrisCompany)
         field :company_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'company_id', 'style': 'form', 'explode': true } }
-        # The course ID to filter by
+        # The course ID to filter by (reference to Course)
         field :course_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'course_id', 'style': 'form', 'explode': true } }
         # Comma-delimited fields to return
-        field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::ListLmsInstructorsQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
         field :limit, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
-        # The location ID to filter by
-        field :location_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'location_id', 'style': 'form', 'explode': true } }
 
         field :offset, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
 
@@ -37,18 +35,17 @@ module UnifiedRubySDK
         field :raw, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
         field :sort, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
-        # Return only results whose updated date is equal or greater to this value
+        # Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, class_id: T.nilable(::String), company_id: T.nilable(::String), course_id: T.nilable(::String), fields_: T.nilable(T::Array[::String]), limit: T.nilable(::Float), location_id: T.nilable(::String), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String)).void }
-        def initialize(connection_id:, class_id: nil, company_id: nil, course_id: nil, fields_: nil, limit: nil, location_id: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, updated_gte: nil)
+        sig { params(connection_id: ::String, class_id: T.nilable(::String), company_id: T.nilable(::String), course_id: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListLmsInstructorsQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String)).void }
+        def initialize(connection_id:, class_id: nil, company_id: nil, course_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, updated_gte: nil)
           @connection_id = connection_id
           @class_id = class_id
           @company_id = company_id
           @course_id = course_id
           @fields_ = fields_
           @limit = limit
-          @location_id = location_id
           @offset = offset
           @order = order
           @query = query
@@ -66,7 +63,6 @@ module UnifiedRubySDK
           return false unless @course_id == other.course_id
           return false unless @fields_ == other.fields_
           return false unless @limit == other.limit
-          return false unless @location_id == other.location_id
           return false unless @offset == other.offset
           return false unless @order == other.order
           return false unless @query == other.query

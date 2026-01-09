@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(messaging_message: Models::Shared::MessagingMessage, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMessagingMessageResponse) }
+    sig { params(messaging_message: Models::Shared::MessagingMessage, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateMessagingMessageQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMessagingMessageResponse) }
     def create_messaging_message(messaging_message:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_messaging_message - Create a message
       request = Models::Operations::CreateMessagingMessageRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMessagingMessageResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetMessagingMessageQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMessagingMessageResponse) }
     def get_messaging_message(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_messaging_message - Retrieve a message
       request = Models::Operations::GetMessagingMessageRequest.new(

@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_account: Models::Shared::AccountingAccount, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingAccountResponse) }
+    sig { params(accounting_account: Models::Shared::AccountingAccount, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::Fields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingAccountResponse) }
     def create_accounting_account(accounting_account:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_account - Create an account
       request = Models::Operations::CreateAccountingAccountRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_bill: Models::Shared::AccountingBill, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingBillResponse) }
+    sig { params(accounting_bill: Models::Shared::AccountingBill, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingBillQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingBillResponse) }
     def create_accounting_bill(accounting_bill:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_bill - Create a bill
       request = Models::Operations::CreateAccountingBillRequest.new(
@@ -295,7 +295,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_category: Models::Shared::AccountingCategory, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingCategoryResponse) }
+    sig { params(accounting_category: Models::Shared::AccountingCategory, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingCategoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingCategoryResponse) }
     def create_accounting_category(accounting_category:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_category - Create a category
       request = Models::Operations::CreateAccountingCategoryRequest.new(
@@ -423,7 +423,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_contact: Models::Shared::AccountingContact, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingContactResponse) }
+    sig { params(accounting_contact: Models::Shared::AccountingContact, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingContactQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingContactResponse) }
     def create_accounting_contact(accounting_contact:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_contact - Create a contact
       request = Models::Operations::CreateAccountingContactRequest.new(
@@ -551,7 +551,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_creditmemo: Models::Shared::AccountingCreditmemo, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingCreditmemoResponse) }
+    sig { params(accounting_creditmemo: Models::Shared::AccountingCreditmemo, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingCreditmemoQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingCreditmemoResponse) }
     def create_accounting_creditmemo(accounting_creditmemo:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_creditmemo - Create a creditmemo
       request = Models::Operations::CreateAccountingCreditmemoRequest.new(
@@ -679,7 +679,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_expense: Models::Shared::AccountingExpense, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingExpenseResponse) }
+    sig { params(accounting_expense: Models::Shared::AccountingExpense, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingExpenseQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingExpenseResponse) }
     def create_accounting_expense(accounting_expense:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_expense - Create an expense
       request = Models::Operations::CreateAccountingExpenseRequest.new(
@@ -807,7 +807,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_invoice: Models::Shared::AccountingInvoice, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingInvoiceResponse) }
+    sig { params(accounting_invoice: Models::Shared::AccountingInvoice, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingInvoiceQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingInvoiceResponse) }
     def create_accounting_invoice(accounting_invoice:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_invoice - Create an invoice
       request = Models::Operations::CreateAccountingInvoiceRequest.new(
@@ -935,7 +935,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_journal: Models::Shared::AccountingJournal, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingJournalResponse) }
+    sig { params(accounting_journal: Models::Shared::AccountingJournal, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingJournalQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingJournalResponse) }
     def create_accounting_journal(accounting_journal:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_journal - Create a journal
       request = Models::Operations::CreateAccountingJournalRequest.new(
@@ -1063,7 +1063,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_order: Models::Shared::AccountingOrder, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingOrderResponse) }
+    sig { params(accounting_order: Models::Shared::AccountingOrder, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingOrderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingOrderResponse) }
     def create_accounting_order(accounting_order:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_order - Create an order
       request = Models::Operations::CreateAccountingOrderRequest.new(
@@ -1191,7 +1191,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_purchaseorder: Models::Shared::AccountingPurchaseorder, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingPurchaseorderResponse) }
+    sig { params(accounting_purchaseorder: Models::Shared::AccountingPurchaseorder, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingPurchaseorderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingPurchaseorderResponse) }
     def create_accounting_purchaseorder(accounting_purchaseorder:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_purchaseorder - Create a purchaseorder
       request = Models::Operations::CreateAccountingPurchaseorderRequest.new(
@@ -1319,7 +1319,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_salesorder: Models::Shared::AccountingSalesorder, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingSalesorderResponse) }
+    sig { params(accounting_salesorder: Models::Shared::AccountingSalesorder, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingSalesorderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingSalesorderResponse) }
     def create_accounting_salesorder(accounting_salesorder:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_salesorder - Create a salesorder
       request = Models::Operations::CreateAccountingSalesorderRequest.new(
@@ -1447,7 +1447,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_taxrate: Models::Shared::AccountingTaxrate, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingTaxrateResponse) }
+    sig { params(accounting_taxrate: Models::Shared::AccountingTaxrate, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingTaxrateQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingTaxrateResponse) }
     def create_accounting_taxrate(accounting_taxrate:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_taxrate - Create a taxrate
       request = Models::Operations::CreateAccountingTaxrateRequest.new(
@@ -1575,7 +1575,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_transaction: Models::Shared::AccountingTransaction, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingTransactionResponse) }
+    sig { params(accounting_transaction: Models::Shared::AccountingTransaction, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingTransactionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingTransactionResponse) }
     def create_accounting_transaction(accounting_transaction:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_transaction - Create a transaction
       request = Models::Operations::CreateAccountingTransactionRequest.new(
@@ -1703,7 +1703,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingAccountResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingAccountResponse) }
     def get_accounting_account(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_account - Retrieve an account
       request = Models::Operations::GetAccountingAccountRequest.new(
@@ -1819,7 +1819,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingBalancesheetResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingBalancesheetQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingBalancesheetResponse) }
     def get_accounting_balancesheet(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_balancesheet - Retrieve a balancesheet
       request = Models::Operations::GetAccountingBalancesheetRequest.new(
@@ -1935,7 +1935,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingBillResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingBillQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingBillResponse) }
     def get_accounting_bill(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_bill - Retrieve a bill
       request = Models::Operations::GetAccountingBillRequest.new(
@@ -2051,7 +2051,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingCashflowResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingCashflowQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingCashflowResponse) }
     def get_accounting_cashflow(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_cashflow - Retrieve a cashflow
       request = Models::Operations::GetAccountingCashflowRequest.new(
@@ -2167,7 +2167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingCategoryResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingCategoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingCategoryResponse) }
     def get_accounting_category(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_category - Retrieve a category
       request = Models::Operations::GetAccountingCategoryRequest.new(
@@ -2283,7 +2283,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingContactResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingContactQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingContactResponse) }
     def get_accounting_contact(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_contact - Retrieve a contact
       request = Models::Operations::GetAccountingContactRequest.new(
@@ -2399,7 +2399,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingCreditmemoResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingCreditmemoQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingCreditmemoResponse) }
     def get_accounting_creditmemo(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_creditmemo - Retrieve a creditmemo
       request = Models::Operations::GetAccountingCreditmemoRequest.new(
@@ -2515,7 +2515,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingExpenseResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingExpenseQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingExpenseResponse) }
     def get_accounting_expense(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_expense - Retrieve an expense
       request = Models::Operations::GetAccountingExpenseRequest.new(
@@ -2631,7 +2631,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingInvoiceResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingInvoiceQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingInvoiceResponse) }
     def get_accounting_invoice(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_invoice - Retrieve an invoice
       request = Models::Operations::GetAccountingInvoiceRequest.new(
@@ -2747,7 +2747,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingJournalResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingJournalQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingJournalResponse) }
     def get_accounting_journal(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_journal - Retrieve a journal
       request = Models::Operations::GetAccountingJournalRequest.new(
@@ -2863,7 +2863,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingOrderResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingOrderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingOrderResponse) }
     def get_accounting_order(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_order - Retrieve an order
       request = Models::Operations::GetAccountingOrderRequest.new(
@@ -2979,7 +2979,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingOrganizationResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingOrganizationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingOrganizationResponse) }
     def get_accounting_organization(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_organization - Retrieve an organization
       request = Models::Operations::GetAccountingOrganizationRequest.new(
@@ -3095,7 +3095,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingProfitlossResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingProfitlossQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingProfitlossResponse) }
     def get_accounting_profitloss(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_profitloss - Retrieve a profitloss
       request = Models::Operations::GetAccountingProfitlossRequest.new(
@@ -3211,7 +3211,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingPurchaseorderResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingPurchaseorderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingPurchaseorderResponse) }
     def get_accounting_purchaseorder(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_purchaseorder - Retrieve a purchaseorder
       request = Models::Operations::GetAccountingPurchaseorderRequest.new(
@@ -3327,7 +3327,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingReportResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingReportQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingReportResponse) }
     def get_accounting_report(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_report - Retrieve a report
       request = Models::Operations::GetAccountingReportRequest.new(
@@ -3443,7 +3443,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingSalesorderResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingSalesorderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingSalesorderResponse) }
     def get_accounting_salesorder(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_salesorder - Retrieve a salesorder
       request = Models::Operations::GetAccountingSalesorderRequest.new(
@@ -3559,7 +3559,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingTaxrateResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingTaxrateQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingTaxrateResponse) }
     def get_accounting_taxrate(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_taxrate - Retrieve a taxrate
       request = Models::Operations::GetAccountingTaxrateRequest.new(
@@ -3675,7 +3675,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingTransactionResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingTransactionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingTransactionResponse) }
     def get_accounting_transaction(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_transaction - Retrieve a transaction
       request = Models::Operations::GetAccountingTransactionRequest.new(
@@ -3791,7 +3791,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingTrialbalanceResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingTrialbalanceQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingTrialbalanceResponse) }
     def get_accounting_trialbalance(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_trialbalance - Retrieve a trialbalance
       request = Models::Operations::GetAccountingTrialbalanceRequest.new(

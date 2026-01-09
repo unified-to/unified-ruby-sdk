@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(storage_file: Models::Shared::StorageFile, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateStorageFileResponse) }
+    sig { params(storage_file: Models::Shared::StorageFile, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateStorageFileQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateStorageFileResponse) }
     def create_storage_file(storage_file:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_storage_file - Create a file
       request = Models::Operations::CreateStorageFileRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetStorageFileResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetStorageFileQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetStorageFileResponse) }
     def get_storage_file(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_storage_file - Retrieve a file
       request = Models::Operations::GetStorageFileRequest.new(

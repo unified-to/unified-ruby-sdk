@@ -20,8 +20,6 @@ class UnifiedRubySDK::Models::Shared::AtsActivity
   def created_at=(str_); end
   def description(); end
   def description=(str_); end
-  def document_id(); end
-  def document_id=(str_); end
   def document_ids(); end
   def document_ids=(str_); end
   def from(); end

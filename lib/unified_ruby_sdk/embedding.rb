@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(genai_embedding: Models::Shared::GenaiEmbedding, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateGenaiEmbeddingResponse) }
+    sig { params(genai_embedding: Models::Shared::GenaiEmbedding, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateGenaiEmbeddingQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateGenaiEmbeddingResponse) }
     def create_genai_embedding(genai_embedding:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_genai_embedding - Create an embedding
       request = Models::Operations::CreateGenaiEmbeddingRequest.new(

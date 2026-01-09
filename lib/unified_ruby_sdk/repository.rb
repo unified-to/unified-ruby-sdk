@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_repository: Models::Shared::RepoRepository, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoRepositoryResponse) }
+    sig { params(repo_repository: Models::Shared::RepoRepository, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoRepositoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoRepositoryResponse) }
     def create_repo_repository(repo_repository:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_repo_repository - Create a repository
       request = Models::Operations::CreateRepoRepositoryRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoRepositoryResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoRepositoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoRepositoryResponse) }
     def get_repo_repository(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_repo_repository - Retrieve a repository
       request = Models::Operations::GetRepoRepositoryRequest.new(

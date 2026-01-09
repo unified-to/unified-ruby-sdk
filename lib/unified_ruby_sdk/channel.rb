@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMessagingChannelResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetMessagingChannelQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMessagingChannelResponse) }
     def get_messaging_channel(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_messaging_channel - Retrieve a channel
       request = Models::Operations::GetMessagingChannelRequest.new(

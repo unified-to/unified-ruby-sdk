@@ -22,7 +22,7 @@ module UnifiedRubySDK
         # The document ID to filter by
         field :document_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'document_id', 'style': 'form', 'explode': true } }
         # Comma-delimited fields to return
-        field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::ListAtsActivitiesQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
         # The interview ID to filter by
         field :interview_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'interview_id', 'style': 'form', 'explode': true } }
         # The job ID to filter by
@@ -41,12 +41,12 @@ module UnifiedRubySDK
         field :sort, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
         # The type to filter by
         field :type, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'type', 'style': 'form', 'explode': true } }
-        # Return only results whose updated date is equal or greater to this value
+        # Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
-        # The user/employee ID to filter by
+        # The user/employee ID to filter by (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, application_id: T.nilable(::String), candidate_id: T.nilable(::String), document_id: T.nilable(::String), fields_: T.nilable(T::Array[::String]), interview_id: T.nilable(::String), job_id: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), type: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
+        sig { params(connection_id: ::String, application_id: T.nilable(::String), candidate_id: T.nilable(::String), document_id: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListAtsActivitiesQueryParamFields]), interview_id: T.nilable(::String), job_id: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), type: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
         def initialize(connection_id:, application_id: nil, candidate_id: nil, document_id: nil, fields_: nil, interview_id: nil, job_id: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, type: nil, updated_gte: nil, user_id: nil)
           @connection_id = connection_id
           @application_id = application_id

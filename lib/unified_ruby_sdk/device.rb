@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_device: Models::Shared::HrisDevice, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisDeviceResponse) }
+    sig { params(hris_device: Models::Shared::HrisDevice, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisDeviceQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisDeviceResponse) }
     def create_hris_device(hris_device:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_device - Create a device
       request = Models::Operations::CreateHrisDeviceRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisDeviceResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisDeviceQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisDeviceResponse) }
     def get_hris_device(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_device - Retrieve a device
       request = Models::Operations::GetHrisDeviceRequest.new(

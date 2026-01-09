@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_deal: Models::Shared::CrmDeal, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmDealResponse) }
+    sig { params(crm_deal: Models::Shared::CrmDeal, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCrmDealQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmDealResponse) }
     def create_crm_deal(crm_deal:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_crm_deal - Create a deal
       request = Models::Operations::CreateCrmDealRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmDealResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCrmDealQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmDealResponse) }
     def get_crm_deal(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_crm_deal - Retrieve a deal
       request = Models::Operations::GetCrmDealRequest.new(

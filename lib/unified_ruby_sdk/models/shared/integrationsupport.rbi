@@ -50,16 +50,12 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_deal_id=(str_); end
   def list_document_id(); end
   def list_document_id=(str_); end
-  def list_end_le(); end
-  def list_end_le=(str_); end
   def list_end_lt(); end
   def list_end_lt=(str_); end
   def list_event_id(); end
   def list_event_id=(str_); end
   def list_expand(); end
   def list_expand=(str_); end
-  def list_expand_recurring_events(); end
-  def list_expand_recurring_events=(str_); end
   def list_form_id(); end
   def list_form_id=(str_); end
   def list_group_id(); end
@@ -204,8 +200,6 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_customer_id=(str_); end
   def virtual_webhook_deal_id(); end
   def virtual_webhook_deal_id=(str_); end
-  def virtual_webhook_end_le(); end
-  def virtual_webhook_end_le=(str_); end
   def virtual_webhook_end_lt(); end
   def virtual_webhook_end_lt=(str_); end
   def virtual_webhook_event_id(); end

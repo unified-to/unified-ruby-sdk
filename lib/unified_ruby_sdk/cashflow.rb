@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingCashflowResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingCashflowQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingCashflowResponse) }
     def get_accounting_cashflow(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_cashflow - Retrieve a cashflow
       request = Models::Operations::GetAccountingCashflowRequest.new(

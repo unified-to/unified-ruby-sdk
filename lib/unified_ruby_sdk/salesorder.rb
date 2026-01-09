@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_salesorder: Models::Shared::AccountingSalesorder, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingSalesorderResponse) }
+    sig { params(accounting_salesorder: Models::Shared::AccountingSalesorder, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingSalesorderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingSalesorderResponse) }
     def create_accounting_salesorder(accounting_salesorder:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_salesorder - Create a salesorder
       request = Models::Operations::CreateAccountingSalesorderRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingSalesorderResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingSalesorderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingSalesorderResponse) }
     def get_accounting_salesorder(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_salesorder - Retrieve a salesorder
       request = Models::Operations::GetAccountingSalesorderRequest.new(

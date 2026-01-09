@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ticketing_note: Models::Shared::TicketingNote, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTicketingNoteResponse) }
+    sig { params(ticketing_note: Models::Shared::TicketingNote, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTicketingNoteQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTicketingNoteResponse) }
     def create_ticketing_note(ticketing_note:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ticketing_note - Create a note
       request = Models::Operations::CreateTicketingNoteRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTicketingNoteResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTicketingNoteQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTicketingNoteResponse) }
     def get_ticketing_note(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ticketing_note - Retrieve a note
       request = Models::Operations::GetTicketingNoteRequest.new(

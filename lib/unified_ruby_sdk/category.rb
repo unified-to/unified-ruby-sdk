@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_category: Models::Shared::AccountingCategory, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingCategoryResponse) }
+    sig { params(accounting_category: Models::Shared::AccountingCategory, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingCategoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingCategoryResponse) }
     def create_accounting_category(accounting_category:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_category - Create a category
       request = Models::Operations::CreateAccountingCategoryRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ticketing_category: Models::Shared::TicketingCategory, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTicketingCategoryResponse) }
+    sig { params(ticketing_category: Models::Shared::TicketingCategory, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTicketingCategoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTicketingCategoryResponse) }
     def create_ticketing_category(ticketing_category:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ticketing_category - Create a category
       request = Models::Operations::CreateTicketingCategoryRequest.new(
@@ -295,7 +295,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingCategoryResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingCategoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingCategoryResponse) }
     def get_accounting_category(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_category - Retrieve a category
       request = Models::Operations::GetAccountingCategoryRequest.new(
@@ -411,7 +411,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTicketingCategoryResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTicketingCategoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTicketingCategoryResponse) }
     def get_ticketing_category(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ticketing_category - Retrieve a category
       request = Models::Operations::GetTicketingCategoryRequest.new(

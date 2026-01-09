@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingTrialbalanceResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingTrialbalanceQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingTrialbalanceResponse) }
     def get_accounting_trialbalance(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_trialbalance - Retrieve a trialbalance
       request = Models::Operations::GetAccountingTrialbalanceRequest.new(

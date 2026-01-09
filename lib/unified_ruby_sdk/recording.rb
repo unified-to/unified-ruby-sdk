@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(uc_recording: Models::Shared::UcRecording, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUcRecordingResponse) }
+    sig { params(uc_recording: Models::Shared::UcRecording, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateUcRecordingQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUcRecordingResponse) }
     def create_uc_recording(uc_recording:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_uc_recording - Create a recording
       request = Models::Operations::CreateUcRecordingRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarRecordingResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCalendarRecordingQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarRecordingResponse) }
     def get_calendar_recording(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_calendar_recording - Retrieve a recording
       request = Models::Operations::GetCalendarRecordingRequest.new(
@@ -283,7 +283,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcRecordingResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetUcRecordingQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcRecordingResponse) }
     def get_uc_recording(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_uc_recording - Retrieve a recording
       request = Models::Operations::GetUcRecordingRequest.new(

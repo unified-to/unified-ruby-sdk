@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_pullrequest: Models::Shared::RepoPullrequest, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoPullrequestResponse) }
+    sig { params(repo_pullrequest: Models::Shared::RepoPullrequest, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoPullrequestQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoPullrequestResponse) }
     def create_repo_pullrequest(repo_pullrequest:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_repo_pullrequest - Create a pullrequest
       request = Models::Operations::CreateRepoPullrequestRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoPullrequestResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoPullrequestQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoPullrequestResponse) }
     def get_repo_pullrequest(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_repo_pullrequest - Retrieve a pullrequest
       request = Models::Operations::GetRepoPullrequestRequest.new(

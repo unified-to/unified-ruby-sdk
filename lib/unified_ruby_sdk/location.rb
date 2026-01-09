@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(commerce_location: Models::Shared::CommerceLocation, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceLocationResponse) }
+    sig { params(commerce_location: Models::Shared::CommerceLocation, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceLocationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceLocationResponse) }
     def create_commerce_location(commerce_location:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_commerce_location - Create a location
       request = Models::Operations::CreateCommerceLocationRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_location: Models::Shared::HrisLocation, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisLocationResponse) }
+    sig { params(hris_location: Models::Shared::HrisLocation, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisLocationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisLocationResponse) }
     def create_hris_location(hris_location:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_location - Create a location
       request = Models::Operations::CreateHrisLocationRequest.new(
@@ -295,7 +295,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceLocationResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceLocationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceLocationResponse) }
     def get_commerce_location(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_commerce_location - Retrieve a location
       request = Models::Operations::GetCommerceLocationRequest.new(
@@ -411,7 +411,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisLocationResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisLocationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisLocationResponse) }
     def get_hris_location(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_location - Retrieve a location
       request = Models::Operations::GetHrisLocationRequest.new(

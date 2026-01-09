@@ -18,8 +18,6 @@ class UnifiedRubySDK::Models::Operations::ListLmsStudentsRequest
   def fields_=(str_); end
   def limit(); end
   def limit=(str_); end
-  def location_id(); end
-  def location_id=(str_); end
   def offset(); end
   def offset=(str_); end
   def order(); end

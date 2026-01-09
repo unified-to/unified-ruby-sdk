@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisTimeoffResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisTimeoffQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisTimeoffResponse) }
     def get_hris_timeoff(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_timeoff - Retrieve a timeoff
       request = Models::Operations::GetHrisTimeoffRequest.new(

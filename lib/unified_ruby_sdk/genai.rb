@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(genai_embedding: Models::Shared::GenaiEmbedding, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateGenaiEmbeddingResponse) }
+    sig { params(genai_embedding: Models::Shared::GenaiEmbedding, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateGenaiEmbeddingQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateGenaiEmbeddingResponse) }
     def create_genai_embedding(genai_embedding:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_genai_embedding - Create an embedding
       request = Models::Operations::CreateGenaiEmbeddingRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(genai_prompt: Models::Shared::GenaiPrompt, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateGenaiPromptResponse) }
+    sig { params(genai_prompt: Models::Shared::GenaiPrompt, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateGenaiPromptQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateGenaiPromptResponse) }
     def create_genai_prompt(genai_prompt:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_genai_prompt - Create a prompt
       request = Models::Operations::CreateGenaiPromptRequest.new(
@@ -295,7 +295,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetGenaiModelResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetGenaiModelQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetGenaiModelResponse) }
     def get_genai_model(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_genai_model - Retrieve a model
       request = Models::Operations::GetGenaiModelRequest.new(

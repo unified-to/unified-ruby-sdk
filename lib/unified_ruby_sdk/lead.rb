@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_lead: Models::Shared::CrmLead, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmLeadResponse) }
+    sig { params(crm_lead: Models::Shared::CrmLead, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCrmLeadQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmLeadResponse) }
     def create_crm_lead(crm_lead:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_crm_lead - Create a lead
       request = Models::Operations::CreateCrmLeadRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmLeadResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCrmLeadQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmLeadResponse) }
     def get_crm_lead(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_crm_lead - Retrieve a lead
       request = Models::Operations::GetCrmLeadRequest.new(

@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(commerce_saleschannel: Models::Shared::CommerceSaleschannel, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceSaleschannelResponse) }
+    sig { params(commerce_saleschannel: Models::Shared::CommerceSaleschannel, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceSaleschannelQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceSaleschannelResponse) }
     def create_commerce_saleschannel(commerce_saleschannel:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_commerce_saleschannel - Create a saleschannel
       request = Models::Operations::CreateCommerceSaleschannelRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceSaleschannelResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceSaleschannelQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceSaleschannelResponse) }
     def get_commerce_saleschannel(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_commerce_saleschannel - Retrieve a saleschannel
       request = Models::Operations::GetCommerceSaleschannelRequest.new(

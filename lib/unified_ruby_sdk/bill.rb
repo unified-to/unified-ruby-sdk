@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_bill: Models::Shared::AccountingBill, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingBillResponse) }
+    sig { params(accounting_bill: Models::Shared::AccountingBill, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingBillQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingBillResponse) }
     def create_accounting_bill(accounting_bill:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_bill - Create a bill
       request = Models::Operations::CreateAccountingBillRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingBillResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingBillQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingBillResponse) }
     def get_accounting_bill(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_bill - Retrieve a bill
       request = Models::Operations::GetAccountingBillRequest.new(

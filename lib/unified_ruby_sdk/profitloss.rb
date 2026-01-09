@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingProfitlossResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingProfitlossQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingProfitlossResponse) }
     def get_accounting_profitloss(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_profitloss - Retrieve a profitloss
       request = Models::Operations::GetAccountingProfitlossRequest.new(

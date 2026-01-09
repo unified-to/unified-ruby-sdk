@@ -31,7 +31,7 @@ module UnifiedRubySDK
         field :order, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
 
         field :sort, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
-        # Return only results whose updated date is equal or greater to this value
+        # Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
         sig { params(connection_id: T.nilable(::String), created_lte: T.nilable(::String), env: T.nilable(::String), integration_type: T.nilable(::String), limit: T.nilable(::Float), object: T.nilable(::String), offset: T.nilable(::Float), order: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String)).void }

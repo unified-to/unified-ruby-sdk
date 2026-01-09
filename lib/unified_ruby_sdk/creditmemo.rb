@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_creditmemo: Models::Shared::AccountingCreditmemo, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingCreditmemoResponse) }
+    sig { params(accounting_creditmemo: Models::Shared::AccountingCreditmemo, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingCreditmemoQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingCreditmemoResponse) }
     def create_accounting_creditmemo(accounting_creditmemo:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_creditmemo - Create a creditmemo
       request = Models::Operations::CreateAccountingCreditmemoRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingCreditmemoResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingCreditmemoQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingCreditmemoResponse) }
     def get_accounting_creditmemo(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_creditmemo - Retrieve a creditmemo
       request = Models::Operations::GetAccountingCreditmemoRequest.new(

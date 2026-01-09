@@ -14,8 +14,6 @@ class UnifiedRubySDK::Models::Operations::ListLmsCoursesRequest
   def class_id=(str_); end
   def company_id(); end
   def company_id=(str_); end
-  def course_id(); end
-  def course_id=(str_); end
   def fields_(); end
   def fields_=(str_); end
   def limit(); end

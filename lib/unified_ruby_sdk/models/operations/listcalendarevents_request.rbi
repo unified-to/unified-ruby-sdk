@@ -12,14 +12,10 @@ class UnifiedRubySDK::Models::Operations::ListCalendarEventsRequest
   def connection_id=(str_); end
   def calendar_id(); end
   def calendar_id=(str_); end
-  def end_le(); end
-  def end_le=(str_); end
   def end_lt(); end
   def end_lt=(str_); end
   def expand(); end
   def expand=(str_); end
-  def expand_recurring_events(); end
-  def expand_recurring_events=(str_); end
   def fields_(); end
   def fields_=(str_); end
   def limit(); end

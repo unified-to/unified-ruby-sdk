@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ads_ad: Models::Shared::AdsAd, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsAdResponse) }
+    sig { params(ads_ad: Models::Shared::AdsAd, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAdsAdQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsAdResponse) }
     def create_ads_ad(ads_ad:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ads_ad - Create an ad
       request = Models::Operations::CreateAdsAdRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsAdResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsAdQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsAdResponse) }
     def get_ads_ad(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ads_ad - Retrieve an ad
       request = Models::Operations::GetAdsAdRequest.new(

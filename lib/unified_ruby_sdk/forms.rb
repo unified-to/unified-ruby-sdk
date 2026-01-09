@@ -39,7 +39,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(forms_form: Models::Shared::FormsForm, connection_id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateFormsFormResponse) }
+    sig { params(forms_form: Models::Shared::FormsForm, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateFormsFormQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateFormsFormResponse) }
     def create_forms_form(forms_form:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_forms_form - Create a form
       request = Models::Operations::CreateFormsFormRequest.new(
@@ -167,7 +167,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetFormsFormResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetFormsFormQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetFormsFormResponse) }
     def get_forms_form(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_forms_form - Retrieve a form
       request = Models::Operations::GetFormsFormRequest.new(
@@ -283,7 +283,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[::String]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetFormsSubmissionResponse) }
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetFormsSubmissionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetFormsSubmissionResponse) }
     def get_forms_submission(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_forms_submission - Retrieve a submission
       request = Models::Operations::GetFormsSubmissionRequest.new(
