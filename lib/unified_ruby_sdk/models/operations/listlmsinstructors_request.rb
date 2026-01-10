@@ -21,7 +21,7 @@ module UnifiedRubySDK
         field :company_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'company_id', 'style': 'form', 'explode': true } }
         # The course ID to filter by (reference to Course)
         field :course_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'course_id', 'style': 'form', 'explode': true } }
-        # Comma-delimited fields to return
+        # Fields to return
         field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::ListLmsInstructorsQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
         field :limit, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }

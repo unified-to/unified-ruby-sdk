@@ -42,6 +42,8 @@ class UnifiedRubySDK::Models::Shared::CommerceItem
   def slug=(str_); end
   def tags(); end
   def tags=(str_); end
+  def taxrate_id(); end
+  def taxrate_id=(str_); end
   def type(); end
   def type=(str_); end
   def updated_at(); end

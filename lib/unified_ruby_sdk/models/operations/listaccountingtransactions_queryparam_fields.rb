@@ -20,7 +20,6 @@ module UnifiedRubySDK
           TOTAL_AMOUNT = new('total_amount')
           TAX_AMOUNT = new('tax_amount')
           ACCOUNT_ID = new('account_id')
-          CONTACT_ID = new('contact_id')
           REFERENCE = new('reference')
           SUB_TOTAL_AMOUNT = new('sub_total_amount')
           SPLIT_ACCOUNT_ID = new('split_account_id')

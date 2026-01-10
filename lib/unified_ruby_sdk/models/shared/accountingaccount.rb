@@ -32,8 +32,6 @@ module UnifiedRubySDK
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :parent_account_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_account_id') } }
-
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
@@ -50,8 +48,8 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(balance: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), customer_defined_code: T.nilable(::String), description: T.nilable(::String), group: T.nilable(::String), id: T.nilable(::String), is_payable: T.nilable(T::Boolean), name: T.nilable(::String), parent_account_id: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), section: T.nilable(::String), status: T.nilable(Models::Shared::Status), subgroup: T.nilable(::String), subsection: T.nilable(::String), type: T.nilable(Models::Shared::Type), updated_at: T.nilable(::DateTime)).void }
-        def initialize(balance: nil, created_at: nil, currency: nil, customer_defined_code: nil, description: nil, group: nil, id: nil, is_payable: nil, name: nil, parent_account_id: nil, parent_id: nil, raw: nil, section: nil, status: nil, subgroup: nil, subsection: nil, type: nil, updated_at: nil)
+        sig { params(balance: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), customer_defined_code: T.nilable(::String), description: T.nilable(::String), group: T.nilable(::String), id: T.nilable(::String), is_payable: T.nilable(T::Boolean), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), section: T.nilable(::String), status: T.nilable(Models::Shared::Status), subgroup: T.nilable(::String), subsection: T.nilable(::String), type: T.nilable(Models::Shared::Type), updated_at: T.nilable(::DateTime)).void }
+        def initialize(balance: nil, created_at: nil, currency: nil, customer_defined_code: nil, description: nil, group: nil, id: nil, is_payable: nil, name: nil, parent_id: nil, raw: nil, section: nil, status: nil, subgroup: nil, subsection: nil, type: nil, updated_at: nil)
           @balance = balance
           @created_at = created_at
           @currency = currency
@@ -61,7 +59,6 @@ module UnifiedRubySDK
           @id = id
           @is_payable = is_payable
           @name = name
-          @parent_account_id = parent_account_id
           @parent_id = parent_id
           @raw = raw
           @section = section
@@ -84,7 +81,6 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @is_payable == other.is_payable
           return false unless @name == other.name
-          return false unless @parent_account_id == other.parent_account_id
           return false unless @parent_id == other.parent_id
           return false unless @raw == other.raw
           return false unless @section == other.section

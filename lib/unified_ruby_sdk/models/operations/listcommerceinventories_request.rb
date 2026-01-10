@@ -15,7 +15,7 @@ module UnifiedRubySDK
 
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-        # Comma-delimited fields to return
+        # Fields to return
         field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::ListCommerceInventoriesQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
         # The item variant ID to filter by (reference to CommerceItemVariant)
         field :item_variant_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'item_variant_id', 'style': 'form', 'explode': true } }

@@ -26,8 +26,6 @@ class UnifiedRubySDK::Models::Shared::AccountingInvoice
   def due_at=(str_); end
   def id(); end
   def id=(str_); end
-  def invoice_at(); end
-  def invoice_at=(str_); end
   def invoice_number(); end
   def invoice_number=(str_); end
   def lineitems(); end

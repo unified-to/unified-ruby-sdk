@@ -26,8 +26,6 @@ class UnifiedRubySDK::Models::Shared::KmsPage
   def metadata=(str_); end
   def parent_id(); end
   def parent_id=(str_); end
-  def parent_page_id(); end
-  def parent_page_id=(str_); end
   def raw(); end
   def raw=(str_); end
   def space_id(); end

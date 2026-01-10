@@ -19,7 +19,7 @@ module UnifiedRubySDK
         field :end_lt, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'end_lt', 'style': 'form', 'explode': true } }
         # The event ID to filter by (reference to CalendarEvent)
         field :event_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'event_id', 'style': 'form', 'explode': true } }
-        # Comma-delimited fields to return
+        # Fields to return
         field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::ListCalendarRecordingsQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
         field :limit, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }

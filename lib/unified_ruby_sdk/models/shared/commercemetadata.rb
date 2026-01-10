@@ -24,27 +24,21 @@ module UnifiedRubySDK
 
         field :is_required, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_required') } }
 
-        field :key, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('key') } }
-
         field :namespace, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('namespace') } }
 
         field :slug, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('slug') } }
 
-        field :type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
-
         field :value, Crystalline::Nilable.new(Crystalline::Union.new(Crystalline::Hash.new(Symbol, ::Object), ::String, ::Float, Crystalline::Boolean.new, Crystalline::Array.new(Crystalline::Union.new(Models::Shared::CommerceMetadataSchemas1, ::String, ::Float, Crystalline::Boolean.new)))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 
-        sig { params(description: T.nilable(::String), extra_data: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::CommerceMetadata1, ::String, ::Float, T::Boolean)])), format: T.nilable(Models::Shared::CommerceMetadataFormat), id: T.nilable(::String), is_required: T.nilable(T::Boolean), key: T.nilable(::String), namespace: T.nilable(::String), slug: T.nilable(::String), type: T.nilable(::String), value: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::CommerceMetadataSchemas1, ::String, ::Float, T::Boolean)]))).void }
-        def initialize(description: nil, extra_data: nil, format: nil, id: nil, is_required: nil, key: nil, namespace: nil, slug: nil, type: nil, value: nil)
+        sig { params(description: T.nilable(::String), extra_data: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::CommerceMetadata1, ::String, ::Float, T::Boolean)])), format: T.nilable(Models::Shared::CommerceMetadataFormat), id: T.nilable(::String), is_required: T.nilable(T::Boolean), namespace: T.nilable(::String), slug: T.nilable(::String), value: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::CommerceMetadataSchemas1, ::String, ::Float, T::Boolean)]))).void }
+        def initialize(description: nil, extra_data: nil, format: nil, id: nil, is_required: nil, namespace: nil, slug: nil, value: nil)
           @description = description
           @extra_data = extra_data
           @format = format
           @id = id
           @is_required = is_required
-          @key = key
           @namespace = namespace
           @slug = slug
-          @type = type
           @value = value
         end
 
@@ -56,10 +50,8 @@ module UnifiedRubySDK
           return false unless @format == other.format
           return false unless @id == other.id
           return false unless @is_required == other.is_required
-          return false unless @key == other.key
           return false unless @namespace == other.namespace
           return false unless @slug == other.slug
-          return false unless @type == other.type
           return false unless @value == other.value
           true
         end

@@ -18,8 +18,6 @@ class UnifiedRubySDK::Models::Shared::CalendarCalendar
   def id=(str_); end
   def is_primary(); end
   def is_primary=(str_); end
-  def primary(); end
-  def primary=(str_); end
   def raw(); end
   def raw=(str_); end
   def timezone(); end

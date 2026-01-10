@@ -60,6 +60,8 @@ module UnifiedRubySDK
           PAYMENT_SUBSCRIPTION_WRITE = new('payment_subscription_write')
           COMMERCE_ITEM_READ = new('commerce_item_read')
           COMMERCE_ITEM_WRITE = new('commerce_item_write')
+          COMMERCE_ITEMVARIANT_READ = new('commerce_itemvariant_read')
+          COMMERCE_ITEMVARIANT_WRITE = new('commerce_itemvariant_write')
           COMMERCE_COLLECTION_READ = new('commerce_collection_read')
           COMMERCE_COLLECTION_WRITE = new('commerce_collection_write')
           COMMERCE_INVENTORY_READ = new('commerce_inventory_read')

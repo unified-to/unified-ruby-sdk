@@ -19,7 +19,7 @@ module UnifiedRubySDK
         field :application_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'application_id', 'style': 'form', 'explode': true } }
         # The candidate ID to filter by
         field :candidate_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'candidate_id', 'style': 'form', 'explode': true } }
-        # Comma-delimited fields to return
+        # Fields to return
         field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::ListAtsScorecardsQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
         # The interview ID to filter by
         field :interview_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'interview_id', 'style': 'form', 'explode': true } }

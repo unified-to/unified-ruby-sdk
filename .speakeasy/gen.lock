@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 120252df9eb4fcfa2b3217d344ea5ddb
+  docChecksum: 7b03b69904bf9eec3e4fd3b253871825
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.13
-  configChecksum: 5c088f1ddd3d13dbc538107c12952230
+  releaseVersion: 0.67.14
+  configChecksum: e8aff93de2efed7222a6eb55e2cd952d
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -120,6 +120,9 @@ generatedFiles:
   - docs/models/operations/createcommerceitemqueryparamfields.md
   - docs/models/operations/createcommerceitemrequest.md
   - docs/models/operations/createcommerceitemresponse.md
+  - docs/models/operations/createcommerceitemvariantqueryparamfields.md
+  - docs/models/operations/createcommerceitemvariantrequest.md
+  - docs/models/operations/createcommerceitemvariantresponse.md
   - docs/models/operations/createcommercelocationqueryparamfields.md
   - docs/models/operations/createcommercelocationrequest.md
   - docs/models/operations/createcommercelocationresponse.md
@@ -399,6 +402,9 @@ generatedFiles:
   - docs/models/operations/getcommerceitemqueryparamfields.md
   - docs/models/operations/getcommerceitemrequest.md
   - docs/models/operations/getcommerceitemresponse.md
+  - docs/models/operations/getcommerceitemvariantqueryparamfields.md
+  - docs/models/operations/getcommerceitemvariantrequest.md
+  - docs/models/operations/getcommerceitemvariantresponse.md
   - docs/models/operations/getcommercelocationqueryparamfields.md
   - docs/models/operations/getcommercelocationrequest.md
   - docs/models/operations/getcommercelocationresponse.md
@@ -715,6 +721,9 @@ generatedFiles:
   - docs/models/operations/listcommerceitemsqueryparamfields.md
   - docs/models/operations/listcommerceitemsrequest.md
   - docs/models/operations/listcommerceitemsresponse.md
+  - docs/models/operations/listcommerceitemvariantsqueryparamfields.md
+  - docs/models/operations/listcommerceitemvariantsrequest.md
+  - docs/models/operations/listcommerceitemvariantsresponse.md
   - docs/models/operations/listcommercelocationsqueryparamfields.md
   - docs/models/operations/listcommercelocationsrequest.md
   - docs/models/operations/listcommercelocationsresponse.md
@@ -1009,6 +1018,9 @@ generatedFiles:
   - docs/models/operations/patchcommerceitemqueryparamfields.md
   - docs/models/operations/patchcommerceitemrequest.md
   - docs/models/operations/patchcommerceitemresponse.md
+  - docs/models/operations/patchcommerceitemvariantqueryparamfields.md
+  - docs/models/operations/patchcommerceitemvariantrequest.md
+  - docs/models/operations/patchcommerceitemvariantresponse.md
   - docs/models/operations/patchcommercelocationqueryparamfields.md
   - docs/models/operations/patchcommercelocationrequest.md
   - docs/models/operations/patchcommercelocationresponse.md
@@ -1237,6 +1249,8 @@ generatedFiles:
   - docs/models/operations/removecommerceinventoryresponse.md
   - docs/models/operations/removecommerceitemrequest.md
   - docs/models/operations/removecommerceitemresponse.md
+  - docs/models/operations/removecommerceitemvariantrequest.md
+  - docs/models/operations/removecommerceitemvariantresponse.md
   - docs/models/operations/removecommercelocationrequest.md
   - docs/models/operations/removecommercelocationresponse.md
   - docs/models/operations/removecommercereviewrequest.md
@@ -1440,6 +1454,9 @@ generatedFiles:
   - docs/models/operations/updatecommerceitemqueryparamfields.md
   - docs/models/operations/updatecommerceitemrequest.md
   - docs/models/operations/updatecommerceitemresponse.md
+  - docs/models/operations/updatecommerceitemvariantqueryparamfields.md
+  - docs/models/operations/updatecommerceitemvariantrequest.md
+  - docs/models/operations/updatecommerceitemvariantresponse.md
   - docs/models/operations/updatecommercelocationqueryparamfields.md
   - docs/models/operations/updatecommercelocationrequest.md
   - docs/models/operations/updatecommercelocationresponse.md
@@ -1729,6 +1746,9 @@ generatedFiles:
   - docs/models/shared/commerceitemoption.md
   - docs/models/shared/commerceitemprice.md
   - docs/models/shared/commerceitemvariant.md
+  - docs/models/shared/commerceitemvariant1.md
+  - docs/models/shared/commerceitemvariantsizeunit.md
+  - docs/models/shared/commerceitemvariantweightunit.md
   - docs/models/shared/commercelocation.md
   - docs/models/shared/commercemetadata.md
   - docs/models/shared/commercemetadata1.md
@@ -2264,6 +2284,7 @@ generatedFiles:
   - docs/sdks/invoice/README.md
   - docs/sdks/issue/README.md
   - docs/sdks/item/README.md
+  - docs/sdks/itemvariant/README.md
   - docs/sdks/job/README.md
   - docs/sdks/journal/README.md
   - docs/sdks/kms/README.md
@@ -2390,6 +2411,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/invoice.rb
   - lib/unified_ruby_sdk/issue.rb
   - lib/unified_ruby_sdk/item.rb
+  - lib/unified_ruby_sdk/itemvariant.rb
   - lib/unified_ruby_sdk/job.rb
   - lib/unified_ruby_sdk/journal.rb
   - lib/unified_ruby_sdk/kms.rb
@@ -2596,6 +2618,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createcommerceitem_request.rbi
   - lib/unified_ruby_sdk/models/operations/createcommerceitem_response.rb
   - lib/unified_ruby_sdk/models/operations/createcommerceitem_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createcommerceitemvariant_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createcommerceitemvariant_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createcommerceitemvariant_request.rb
+  - lib/unified_ruby_sdk/models/operations/createcommerceitemvariant_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createcommerceitemvariant_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcommerceitemvariant_response.rbi
   - lib/unified_ruby_sdk/models/operations/createcommercelocation_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/createcommercelocation_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/createcommercelocation_request.rb
@@ -3154,6 +3182,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getcommerceitem_request.rbi
   - lib/unified_ruby_sdk/models/operations/getcommerceitem_response.rb
   - lib/unified_ruby_sdk/models/operations/getcommerceitem_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getcommerceitemvariant_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getcommerceitemvariant_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getcommerceitemvariant_request.rb
+  - lib/unified_ruby_sdk/models/operations/getcommerceitemvariant_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getcommerceitemvariant_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcommerceitemvariant_response.rbi
   - lib/unified_ruby_sdk/models/operations/getcommercelocation_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/getcommercelocation_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/getcommercelocation_request.rb
@@ -3786,6 +3820,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listcommerceitems_request.rbi
   - lib/unified_ruby_sdk/models/operations/listcommerceitems_response.rb
   - lib/unified_ruby_sdk/models/operations/listcommerceitems_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listcommerceitemvariants_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listcommerceitemvariants_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listcommerceitemvariants_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcommerceitemvariants_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listcommerceitemvariants_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcommerceitemvariants_response.rbi
   - lib/unified_ruby_sdk/models/operations/listcommercelocations_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listcommercelocations_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listcommercelocations_request.rb
@@ -4374,6 +4414,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchcommerceitem_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchcommerceitem_response.rb
   - lib/unified_ruby_sdk/models/operations/patchcommerceitem_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcommerceitemvariant_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchcommerceitemvariant_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcommerceitemvariant_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchcommerceitemvariant_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcommerceitemvariant_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcommerceitemvariant_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchcommercelocation_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/patchcommercelocation_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/patchcommercelocation_request.rb
@@ -4830,6 +4876,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removecommerceitem_request.rbi
   - lib/unified_ruby_sdk/models/operations/removecommerceitem_response.rb
   - lib/unified_ruby_sdk/models/operations/removecommerceitem_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removecommerceitemvariant_request.rb
+  - lib/unified_ruby_sdk/models/operations/removecommerceitemvariant_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removecommerceitemvariant_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecommerceitemvariant_response.rbi
   - lib/unified_ruby_sdk/models/operations/removecommercelocation_request.rb
   - lib/unified_ruby_sdk/models/operations/removecommercelocation_request.rbi
   - lib/unified_ruby_sdk/models/operations/removecommercelocation_response.rb
@@ -5236,6 +5286,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatecommerceitem_request.rbi
   - lib/unified_ruby_sdk/models/operations/updatecommerceitem_response.rb
   - lib/unified_ruby_sdk/models/operations/updatecommerceitem_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecommerceitemvariant_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updatecommerceitemvariant_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecommerceitemvariant_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatecommerceitemvariant_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecommerceitemvariant_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecommerceitemvariant_response.rbi
   - lib/unified_ruby_sdk/models/operations/updatecommercelocation_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/updatecommercelocation_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/updatecommercelocation_request.rb
@@ -5815,6 +5871,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/commerceitemprice.rbi
   - lib/unified_ruby_sdk/models/shared/commerceitemvariant.rb
   - lib/unified_ruby_sdk/models/shared/commerceitemvariant.rbi
+  - lib/unified_ruby_sdk/models/shared/commerceitemvariant1.rb
+  - lib/unified_ruby_sdk/models/shared/commerceitemvariant1.rbi
+  - lib/unified_ruby_sdk/models/shared/commerceitemvariant_size_unit.rb
+  - lib/unified_ruby_sdk/models/shared/commerceitemvariant_size_unit.rbi
+  - lib/unified_ruby_sdk/models/shared/commerceitemvariant_weight_unit.rb
+  - lib/unified_ruby_sdk/models/shared/commerceitemvariant_weight_unit.rbi
   - lib/unified_ruby_sdk/models/shared/commercelocation.rb
   - lib/unified_ruby_sdk/models/shared/commercelocation.rbi
   - lib/unified_ruby_sdk/models/shared/commercemetadata.rb
@@ -9521,10 +9583,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"name": "<value>", "parent_space_id": "sp"}
+        application/json: {"name": "<value>"}
       responses:
         "200":
-          application/json: {"name": "<value>", "parent_space_id": "sp"}
+          application/json: {"name": "<value>"}
   getKmsComment:
     speakeasy-default-get-kms-comment:
       parameters:
@@ -9551,7 +9613,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"name": "<value>", "parent_space_id": "sp"}
+          application/json: {"name": "<value>"}
   listKmsComments:
     speakeasy-default-list-kms-comments:
       parameters:
@@ -9575,7 +9637,7 @@ examples:
           connection_id: "<id>"
       responses:
         "200":
-          application/json: [{"name": "<value>", "parent_space_id": "sp"}]
+          application/json: [{"name": "<value>"}]
   patchKmsComment:
     speakeasy-default-patch-kms-comment:
       parameters:
@@ -9605,10 +9667,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>", "parent_space_id": "sp"}
+        application/json: {"name": "<value>"}
       responses:
         "200":
-          application/json: {"name": "<value>", "parent_space_id": "sp"}
+          application/json: {"name": "<value>"}
   removeKmsComment:
     speakeasy-default-remove-kms-comment:
       parameters:
@@ -9656,10 +9718,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>", "parent_space_id": "sp"}
+        application/json: {"name": "<value>"}
       responses:
         "200":
-          application/json: {"name": "<value>", "parent_space_id": "sp"}
+          application/json: {"name": "<value>"}
   createTaskComment:
     speakeasy-default-create-task-comment:
       parameters:
@@ -11993,5 +12055,60 @@ examples:
       responses:
         "200":
           application/json: {"name": "<value>"}
+  createCommerceItemvariant:
+    speakeasy-default-create-commerce-itemvariant:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getCommerceItemvariant:
+    speakeasy-default-get-commerce-itemvariant:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listCommerceItemvariants:
+    speakeasy-default-list-commerce-itemvariants:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchCommerceItemvariant:
+    speakeasy-default-patch-commerce-itemvariant:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeCommerceItemvariant:
+    speakeasy-default-remove-commerce-itemvariant:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateCommerceItemvariant:
+    speakeasy-default-update-commerce-itemvariant:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}

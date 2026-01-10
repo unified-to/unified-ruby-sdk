@@ -37,7 +37,6 @@ module UnifiedRubySDK
           STATUS = new('status')
           URL = new('url')
           PAYMENT_COLLECTION_METHOD = new('payment_collection_method')
-          INVOICE_AT = new('invoice_at')
           TYPE = new('type')
           ATTACHMENTS = new('attachments')
           SEND = new('send')

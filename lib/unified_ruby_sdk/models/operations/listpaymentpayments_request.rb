@@ -17,7 +17,7 @@ module UnifiedRubySDK
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
         # The contact ID to filter by (reference to AccountingContact)
         field :contact_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'contact_id', 'style': 'form', 'explode': true } }
-        # Comma-delimited fields to return
+        # Fields to return
         field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::ListPaymentPaymentsQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
         # The invoice ID to filter by (reference to AccountingInvoice)
         field :invoice_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'invoice_id', 'style': 'form', 'explode': true } }

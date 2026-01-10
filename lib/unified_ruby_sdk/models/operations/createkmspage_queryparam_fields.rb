@@ -19,7 +19,6 @@ module UnifiedRubySDK
           TITLE = new('title')
           TYPE = new('type')
           SPACE_ID = new('space_id')
-          PARENT_PAGE_ID = new('parent_page_id')
           PARENT_ID = new('parent_id')
           IS_ACTIVE = new('is_active')
           USER_ID = new('user_id')

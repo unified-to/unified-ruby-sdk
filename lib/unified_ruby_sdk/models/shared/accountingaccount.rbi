@@ -26,8 +26,6 @@ class UnifiedRubySDK::Models::Shared::AccountingAccount
   def is_payable=(str_); end
   def name(); end
   def name=(str_); end
-  def parent_account_id(); end
-  def parent_account_id=(str_); end
   def parent_id(); end
   def parent_id=(str_); end
   def raw(); end

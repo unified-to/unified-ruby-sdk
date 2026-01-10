@@ -32,8 +32,6 @@ module UnifiedRubySDK
 
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
-        field :parent_page_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_page_id') } }
-
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :space_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('space_id') } }
@@ -44,8 +42,8 @@ module UnifiedRubySDK
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(title: ::String, type: Models::Shared::KmsPageType, created_at: T.nilable(::DateTime), download_url: T.nilable(::String), has_children: T.nilable(T::Boolean), id: T.nilable(::String), is_active: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::KmsPageMetadata]), parent_id: T.nilable(::String), parent_page_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), space_id: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), web_url: T.nilable(::String)).void }
-        def initialize(title:, type:, created_at: nil, download_url: nil, has_children: nil, id: nil, is_active: nil, metadata: nil, parent_id: nil, parent_page_id: nil, raw: nil, space_id: nil, updated_at: nil, user_id: nil, web_url: nil)
+        sig { params(title: ::String, type: Models::Shared::KmsPageType, created_at: T.nilable(::DateTime), download_url: T.nilable(::String), has_children: T.nilable(T::Boolean), id: T.nilable(::String), is_active: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::KmsPageMetadata]), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), space_id: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), web_url: T.nilable(::String)).void }
+        def initialize(title:, type:, created_at: nil, download_url: nil, has_children: nil, id: nil, is_active: nil, metadata: nil, parent_id: nil, raw: nil, space_id: nil, updated_at: nil, user_id: nil, web_url: nil)
           @title = title
           @type = type
           @created_at = created_at
@@ -55,7 +53,6 @@ module UnifiedRubySDK
           @is_active = is_active
           @metadata = metadata
           @parent_id = parent_id
-          @parent_page_id = parent_page_id
           @raw = raw
           @space_id = space_id
           @updated_at = updated_at
@@ -75,7 +72,6 @@ module UnifiedRubySDK
           return false unless @is_active == other.is_active
           return false unless @metadata == other.metadata
           return false unless @parent_id == other.parent_id
-          return false unless @parent_page_id == other.parent_page_id
           return false unless @raw == other.raw
           return false unless @space_id == other.space_id
           return false unless @updated_at == other.updated_at

@@ -34,10 +34,8 @@ module UnifiedRubySDK
 
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        field :parent_space_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_space_id') } }
-
-        sig { params(name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), parent_id: T.nilable(::String), parent_page_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), parent_space_id: T.nilable(::String)).void }
-        def initialize(name:, created_at: nil, description: nil, id: nil, is_active: nil, parent_id: nil, parent_page_id: nil, raw: nil, updated_at: nil, user_id: nil, parent_space_id: 'sp')
+        sig { params(name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), parent_id: T.nilable(::String), parent_page_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(name:, created_at: nil, description: nil, id: nil, is_active: nil, parent_id: nil, parent_page_id: nil, raw: nil, updated_at: nil, user_id: nil)
           @name = name
           @created_at = created_at
           @description = description
@@ -48,7 +46,6 @@ module UnifiedRubySDK
           @raw = raw
           @updated_at = updated_at
           @user_id = user_id
-          @parent_space_id = parent_space_id
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
@@ -64,7 +61,6 @@ module UnifiedRubySDK
           return false unless @raw == other.raw
           return false unless @updated_at == other.updated_at
           return false unless @user_id == other.user_id
-          return false unless @parent_space_id == other.parent_space_id
           true
         end
       end

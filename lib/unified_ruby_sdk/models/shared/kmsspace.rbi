@@ -28,6 +28,4 @@ class UnifiedRubySDK::Models::Shared::KmsSpace
   def updated_at=(str_); end
   def user_id(); end
   def user_id=(str_); end
-  def parent_space_id(); end
-  def parent_space_id=(str_); end
 end

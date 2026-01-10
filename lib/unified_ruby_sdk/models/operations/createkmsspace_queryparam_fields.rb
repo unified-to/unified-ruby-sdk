@@ -18,7 +18,6 @@ module UnifiedRubySDK
           UPDATED_AT = new('updated_at')
           NAME = new('name')
           DESCRIPTION = new('description')
-          PARENT_SPACE_ID = new('parent_space_id')
           PARENT_ID = new('parent_id')
           IS_ACTIVE = new('is_active')
           USER_ID = new('user_id')

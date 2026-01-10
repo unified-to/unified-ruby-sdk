@@ -24,7 +24,6 @@ module UnifiedRubySDK
           CURRENCY = new('currency')
           CUSTOMER_DEFINED_CODE = new('customer_defined_code')
           IS_PAYABLE = new('is_payable')
-          PARENT_ACCOUNT_ID = new('parent_account_id')
           SECTION = new('section')
           SUBSECTION = new('subsection')
           GROUP = new('group')

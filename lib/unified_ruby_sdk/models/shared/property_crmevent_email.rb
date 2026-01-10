@@ -17,13 +17,13 @@ module UnifiedRubySDK
         field :attachment_file_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attachment_file_ids') } }
 
         field :body, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('body') } }
-        # The event email's cc name & email (name )
+        # The event email's cc name & email (name <test@test.com>)
         field :cc, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cc') } }
 
         field :from, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('from') } }
 
         field :subject, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subject') } }
-        # The event email's "to" name & email (name )
+        # The event email's "to" name & email (name <test@test.com>)
         field :to, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('to') } }
 
         sig { params(attachment_file_ids: T.nilable(T::Array[::String]), body: T.nilable(::String), cc: T.nilable(T::Array[::String]), from: T.nilable(::String), subject: T.nilable(::String), to: T.nilable(T::Array[::String])).void }

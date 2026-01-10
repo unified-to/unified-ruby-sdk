@@ -48,6 +48,7 @@ module UnifiedRubySDK
   autoload :Collection, 'unified_ruby_sdk/collection'
   autoload :Inventory, 'unified_ruby_sdk/inventory'
   autoload :Item, 'unified_ruby_sdk/item'
+  autoload :Itemvariant, 'unified_ruby_sdk/itemvariant'
   autoload :Location, 'unified_ruby_sdk/location'
   autoload :Review, 'unified_ruby_sdk/review'
   autoload :Saleschannel, 'unified_ruby_sdk/saleschannel'

@@ -24,22 +24,19 @@ module UnifiedRubySDK
 
         field :is_primary, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_primary') } }
 
-        field :primary, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('primary') } }
-
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :timezone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_primary: T.nilable(T::Boolean), primary: T.nilable(T::Boolean), raw: T.nilable(T::Hash[Symbol, ::Object]), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(name:, created_at: nil, description: nil, id: nil, is_primary: nil, primary: nil, raw: nil, timezone: nil, updated_at: nil)
+        sig { params(name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_primary: T.nilable(T::Boolean), raw: T.nilable(T::Hash[Symbol, ::Object]), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(name:, created_at: nil, description: nil, id: nil, is_primary: nil, raw: nil, timezone: nil, updated_at: nil)
           @name = name
           @created_at = created_at
           @description = description
           @id = id
           @is_primary = is_primary
-          @primary = primary
           @raw = raw
           @timezone = timezone
           @updated_at = updated_at
@@ -53,7 +50,6 @@ module UnifiedRubySDK
           return false unless @description == other.description
           return false unless @id == other.id
           return false unless @is_primary == other.is_primary
-          return false unless @primary == other.primary
           return false unless @raw == other.raw
           return false unless @timezone == other.timezone
           return false unless @updated_at == other.updated_at

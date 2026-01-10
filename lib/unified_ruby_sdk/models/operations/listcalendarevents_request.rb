@@ -21,7 +21,7 @@ module UnifiedRubySDK
         field :end_lt, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'end_lt', 'style': 'form', 'explode': true } }
         # Whether to flatten grouped or recurring items into individual entries.
         field :expand, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'query_param': { 'field_name': 'expand', 'style': 'form', 'explode': true } }
-        # Comma-delimited fields to return
+        # Fields to return
         field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::ListCalendarEventsQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
         field :limit, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }

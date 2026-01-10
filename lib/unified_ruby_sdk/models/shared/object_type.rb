@@ -38,6 +38,7 @@ module UnifiedRubySDK
           PAYMENT_REFUND = new('payment_refund')
           PAYMENT_SUBSCRIPTION = new('payment_subscription')
           COMMERCE_ITEM = new('commerce_item')
+          COMMERCE_ITEMVARIANT = new('commerce_itemvariant')
           COMMERCE_COLLECTION = new('commerce_collection')
           COMMERCE_INVENTORY = new('commerce_inventory')
           COMMERCE_LOCATION = new('commerce_location')

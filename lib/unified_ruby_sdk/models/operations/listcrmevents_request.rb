@@ -21,7 +21,7 @@ module UnifiedRubySDK
         field :contact_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'contact_id', 'style': 'form', 'explode': true } }
         # The deal ID to filter by (reference to CrmDeal)
         field :deal_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'deal_id', 'style': 'form', 'explode': true } }
-        # Comma-delimited fields to return
+        # Fields to return
         field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::ListCrmEventsQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
         # The CRM lead ID to filter by (reference to CrmLead)
         field :lead_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'lead_id', 'style': 'form', 'explode': true } }
