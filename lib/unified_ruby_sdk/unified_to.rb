@@ -16,7 +16,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :balancesheet, :bill, :cashflow, :category, :contact, :creditmemo, :expense, :invoice, :journal, :order, :organization, :profitloss, :purchaseorder, :report, :salesorder, :taxrate, :transaction, :trialbalance, :ads, :ad, :campaign, :group, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :event, :link, :recording, :commerce, :collection, :inventory, :item, :itemvariant, :location, :review, :saleschannel, :crm, :deal, :lead, :pipeline, :enrich, :person, :forms, :form, :submission, :genai, :embedding, :model, :prompt, :hris, :benefit, :deduction, :device, :employee, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :lms, :class_, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :storage, :file, :task, :change, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :environment, :integration, :auth, :login, :issue, :webhook, :verification, :package, :request
+    attr_accessor :accounting, :account, :balancesheet, :bill, :cashflow, :category, :contact, :creditmemo, :expense, :invoice, :journal, :order, :organization, :profitloss, :purchaseorder, :report, :salesorder, :taxrate, :transaction, :trialbalance, :ads, :ad, :campaign, :group, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :event, :link, :recording, :commerce, :collection, :inventory, :item, :itemvariant, :location, :review, :saleschannel, :crm, :deal, :lead, :pipeline, :enrich, :person, :forms, :form, :submission, :genai, :embedding, :model, :prompt, :hris, :benefit, :deduction, :device, :employee, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :lms, :class_, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :shipping, :carrier, :label, :rate, :shipment, :tracking, :storage, :file, :task, :change, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :environment, :integration, :auth, :login, :issue, :webhook, :verification, :package, :request
 
     sig do
       params(
@@ -173,6 +173,12 @@ module UnifiedRubySDK
       @repository = Repository.new(@sdk_configuration)
       @scim = Scim.new(@sdk_configuration)
       @user = User.new(@sdk_configuration)
+      @shipping = Shipping.new(@sdk_configuration)
+      @carrier = Carrier.new(@sdk_configuration)
+      @label = Label.new(@sdk_configuration)
+      @rate = Rate.new(@sdk_configuration)
+      @shipment = Shipment.new(@sdk_configuration)
+      @tracking = Tracking.new(@sdk_configuration)
       @storage = Storage.new(@sdk_configuration)
       @file = File.new(@sdk_configuration)
       @task = Task.new(@sdk_configuration)

@@ -1,0 +1,17 @@
+# PropertyShippingShipmentInsurance
+
+Insurance details
+
+
+## Fields
+
+| Field                                                                          | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `coverage_amount`                                                              | *T.nilable(::Float)*                                                           | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `coverage_type`                                                                | [T.nilable(Models::Shared::CoverageType)](../../models/shared/coveragetype.md) | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `currency`                                                                     | *T.nilable(::String)*                                                          | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `insurance_cost`                                                               | *T.nilable(::Float)*                                                           | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `insurance_cost_currency`                                                      | *T.nilable(::String)*                                                          | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `insurance_provider`                                                           | *T.nilable(::String)*                                                          | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `insurance_provider_code`                                                      | *T.nilable(::String)*                                                          | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `insured_value`                                                                | *T.nilable(::Float)*                                                           | :heavy_minus_sign:                                                             | N/A                                                                            |

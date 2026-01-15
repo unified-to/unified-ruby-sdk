@@ -38,12 +38,12 @@ module UnifiedRubySDK
           PAYMENT_REFUND = new('payment_refund')
           PAYMENT_SUBSCRIPTION = new('payment_subscription')
           COMMERCE_ITEM = new('commerce_item')
-          COMMERCE_ITEMVARIANT = new('commerce_itemvariant')
           COMMERCE_COLLECTION = new('commerce_collection')
           COMMERCE_INVENTORY = new('commerce_inventory')
           COMMERCE_LOCATION = new('commerce_location')
           COMMERCE_REVIEW = new('commerce_review')
           COMMERCE_SALESCHANNEL = new('commerce_saleschannel')
+          COMMERCE_ITEMVARIANT = new('commerce_itemvariant')
           VERIFICATION_PACKAGE = new('verification_package')
           VERIFICATION_REQUEST = new('verification_request')
           ATS_ACTIVITY = new('ats_activity')
@@ -122,6 +122,11 @@ module UnifiedRubySDK
           ADS_GROUP = new('ads_group')
           FORMS_FORM = new('forms_form')
           FORMS_SUBMISSION = new('forms_submission')
+          SHIPPING_CARRIER = new('shipping_carrier')
+          SHIPPING_RATE = new('shipping_rate')
+          SHIPPING_SHIPMENT = new('shipping_shipment')
+          SHIPPING_LABEL = new('shipping_label')
+          SHIPPING_TRACKING = new('shipping_tracking')
         end
       end
     end

@@ -20,6 +20,7 @@ module UnifiedRubySDK
           MESSAGE = new('message')
           BUTTON = new('button')
           USER = new('user')
+          IS_REPLACING_ORIGINAL = new('is_replacing_original')
           RAW = new('raw')
         end
       end

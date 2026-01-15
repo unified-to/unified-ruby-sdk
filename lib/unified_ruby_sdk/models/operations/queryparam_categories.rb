@@ -38,6 +38,7 @@ module UnifiedRubySDK
           VERIFICATION = new('verification')
           ADS = new('ads')
           FORMS = new('forms')
+          SHIPPING = new('shipping')
         end
       end
     end

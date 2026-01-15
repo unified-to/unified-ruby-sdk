@@ -30,6 +30,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_campaign_id=(str_); end
   def list_candidate_id(); end
   def list_candidate_id=(str_); end
+  def list_carrier_id(); end
+  def list_carrier_id=(str_); end
   def list_category_id(); end
   def list_category_id=(str_); end
   def list_channel_id(); end
@@ -72,6 +74,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_item_variant_id=(str_); end
   def list_job_id(); end
   def list_job_id=(str_); end
+  def list_label_id(); end
+  def list_label_id=(str_); end
   def list_lead_id(); end
   def list_lead_id=(str_); end
   def list_limit(); end
@@ -86,6 +90,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_offset=(str_); end
   def list_order(); end
   def list_order=(str_); end
+  def list_order_id(); end
+  def list_order_id=(str_); end
   def list_org_id(); end
   def list_org_id=(str_); end
   def list_package_id(); end
@@ -112,6 +118,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_root_id=(str_); end
   def list_saleschannel_id(); end
   def list_saleschannel_id=(str_); end
+  def list_shipment_id(); end
+  def list_shipment_id=(str_); end
   def list_sort_by_created_at(); end
   def list_sort_by_created_at=(str_); end
   def list_sort_by_name(); end
@@ -144,6 +152,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def methods=(str_); end
   def native_webhook_calendar_id(); end
   def native_webhook_calendar_id=(str_); end
+  def native_webhook_carrier_id(); end
+  def native_webhook_carrier_id=(str_); end
   def native_webhook_channel_id(); end
   def native_webhook_channel_id=(str_); end
   def native_webhook_company_id(); end
@@ -152,10 +162,16 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def native_webhook_event_id=(str_); end
   def native_webhook_form_id(); end
   def native_webhook_form_id=(str_); end
+  def native_webhook_label_id(); end
+  def native_webhook_label_id=(str_); end
+  def native_webhook_order_id(); end
+  def native_webhook_order_id=(str_); end
   def native_webhook_parent_id(); end
   def native_webhook_parent_id=(str_); end
   def native_webhook_project_id(); end
   def native_webhook_project_id=(str_); end
+  def native_webhook_shipment_id(); end
+  def native_webhook_shipment_id=(str_); end
   def native_webhook_task_id(); end
   def native_webhook_task_id=(str_); end
   def outbound_fields(); end
@@ -188,6 +204,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_campaign_id=(str_); end
   def virtual_webhook_candidate_id(); end
   def virtual_webhook_candidate_id=(str_); end
+  def virtual_webhook_carrier_id(); end
+  def virtual_webhook_carrier_id=(str_); end
   def virtual_webhook_channel_id(); end
   def virtual_webhook_channel_id=(str_); end
   def virtual_webhook_collection_id(); end
@@ -218,6 +236,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_item_variant_id=(str_); end
   def virtual_webhook_job_id(); end
   def virtual_webhook_job_id=(str_); end
+  def virtual_webhook_label_id(); end
+  def virtual_webhook_label_id=(str_); end
   def virtual_webhook_lead_id(); end
   def virtual_webhook_lead_id=(str_); end
   def virtual_webhook_limit(); end
@@ -226,6 +246,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_list_id=(str_); end
   def virtual_webhook_location_id(); end
   def virtual_webhook_location_id=(str_); end
+  def virtual_webhook_order_id(); end
+  def virtual_webhook_order_id=(str_); end
   def virtual_webhook_org_id(); end
   def virtual_webhook_org_id=(str_); end
   def virtual_webhook_page_id(); end
@@ -240,6 +262,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_repo_id=(str_); end
   def virtual_webhook_saleschannel_id(); end
   def virtual_webhook_saleschannel_id=(str_); end
+  def virtual_webhook_shipment_id(); end
+  def virtual_webhook_shipment_id=(str_); end
   def virtual_webhook_space_id(); end
   def virtual_webhook_space_id=(str_); end
   def virtual_webhook_start_gte(); end

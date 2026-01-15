@@ -14,8 +14,6 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :type, Models::Shared::MessagingEventType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::MessagingEventType, false) } }
-
         field :button, Crystalline::Nilable.new(Models::Shared::PropertyMessagingEventButton), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('button') } }
 
         field :channel, Crystalline::Nilable.new(Models::Shared::PropertyMessagingEventChannel), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('channel') } }
@@ -24,34 +22,40 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :is_replacing_original, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_replacing_original') } }
+
         field :message, Crystalline::Nilable.new(Models::Shared::PropertyMessagingEventMessage), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
+        field :type, Crystalline::Nilable.new(Models::Shared::MessagingEventType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::MessagingEventType, true) } }
+
         field :user, Crystalline::Nilable.new(Models::Shared::PropertyMessagingEventUser), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user') } }
 
-        sig { params(type: Models::Shared::MessagingEventType, button: T.nilable(Models::Shared::PropertyMessagingEventButton), channel: T.nilable(Models::Shared::PropertyMessagingEventChannel), created_at: T.nilable(::DateTime), id: T.nilable(::String), message: T.nilable(Models::Shared::PropertyMessagingEventMessage), raw: T.nilable(T::Hash[Symbol, ::Object]), user: T.nilable(Models::Shared::PropertyMessagingEventUser)).void }
-        def initialize(type:, button: nil, channel: nil, created_at: nil, id: nil, message: nil, raw: nil, user: nil)
-          @type = type
+        sig { params(button: T.nilable(Models::Shared::PropertyMessagingEventButton), channel: T.nilable(Models::Shared::PropertyMessagingEventChannel), created_at: T.nilable(::DateTime), id: T.nilable(::String), is_replacing_original: T.nilable(T::Boolean), message: T.nilable(Models::Shared::PropertyMessagingEventMessage), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::MessagingEventType), user: T.nilable(Models::Shared::PropertyMessagingEventUser)).void }
+        def initialize(button: nil, channel: nil, created_at: nil, id: nil, is_replacing_original: nil, message: nil, raw: nil, type: nil, user: nil)
           @button = button
           @channel = channel
           @created_at = created_at
           @id = id
+          @is_replacing_original = is_replacing_original
           @message = message
           @raw = raw
+          @type = type
           @user = user
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @type == other.type
           return false unless @button == other.button
           return false unless @channel == other.channel
           return false unless @created_at == other.created_at
           return false unless @id == other.id
+          return false unless @is_replacing_original == other.is_replacing_original
           return false unless @message == other.message
           return false unless @raw == other.raw
+          return false unless @type == other.type
           return false unless @user == other.user
           true
         end

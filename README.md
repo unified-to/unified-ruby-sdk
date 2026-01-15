@@ -402,6 +402,11 @@ end
 * [remove_ats_candidate](docs/sdks/candidate/README.md#remove_ats_candidate) - Remove a candidate
 * [update_ats_candidate](docs/sdks/candidate/README.md#update_ats_candidate) - Update a candidate
 
+### [carrier](docs/sdks/carrier/README.md)
+
+* [get_shipping_carrier](docs/sdks/carrier/README.md#get_shipping_carrier) - Retrieve a carrier
+* [list_shipping_carriers](docs/sdks/carrier/README.md#list_shipping_carriers) - List all carriers
+
 ### [cashflow](docs/sdks/cashflow/README.md)
 
 * [get_accounting_cashflow](docs/sdks/cashflow/README.md#get_accounting_cashflow) - Retrieve a cashflow
@@ -945,6 +950,13 @@ end
 * [update_kms_page](docs/sdks/kms/README.md#update_kms_page) - Update a page
 * [update_kms_space](docs/sdks/kms/README.md#update_kms_space) - Update a space
 
+### [label](docs/sdks/label/README.md)
+
+* [create_shipping_label](docs/sdks/label/README.md#create_shipping_label) - Create a label
+* [get_shipping_label](docs/sdks/label/README.md#get_shipping_label) - Retrieve a label
+* [list_shipping_labels](docs/sdks/label/README.md#list_shipping_labels) - List all labels
+* [remove_shipping_label](docs/sdks/label/README.md#remove_shipping_label) - Remove a label
+
 ### [lead](docs/sdks/lead/README.md)
 
 * [create_crm_lead](docs/sdks/lead/README.md#create_crm_lead) - Create a lead
@@ -1228,6 +1240,11 @@ end
 * [remove_accounting_purchaseorder](docs/sdks/purchaseorder/README.md#remove_accounting_purchaseorder) - Remove a purchaseorder
 * [update_accounting_purchaseorder](docs/sdks/purchaseorder/README.md#update_accounting_purchaseorder) - Update a purchaseorder
 
+### [rate](docs/sdks/rate/README.md)
+
+* [create_shipping_rate](docs/sdks/rate/README.md#create_shipping_rate) - Create a rate
+* [get_shipping_rate](docs/sdks/rate/README.md#get_shipping_rate) - Retrieve a rate
+
 ### [recording](docs/sdks/recording/README.md)
 
 * [create_uc_recording](docs/sdks/recording/README.md#create_uc_recording) - Create a recording
@@ -1352,6 +1369,35 @@ end
 * [remove_ats_scorecard](docs/sdks/scorecard/README.md#remove_ats_scorecard) - Remove a scorecard
 * [update_ats_scorecard](docs/sdks/scorecard/README.md#update_ats_scorecard) - Update a scorecard
 
+### [shipment](docs/sdks/shipment/README.md)
+
+* [create_shipping_shipment](docs/sdks/shipment/README.md#create_shipping_shipment) - Create a shipment
+* [get_shipping_shipment](docs/sdks/shipment/README.md#get_shipping_shipment) - Retrieve a shipment
+* [list_shipping_shipments](docs/sdks/shipment/README.md#list_shipping_shipments) - List all shipments
+* [patch_shipping_shipment](docs/sdks/shipment/README.md#patch_shipping_shipment) - Update a shipment
+* [remove_shipping_shipment](docs/sdks/shipment/README.md#remove_shipping_shipment) - Remove a shipment
+* [update_shipping_shipment](docs/sdks/shipment/README.md#update_shipping_shipment) - Update a shipment
+
+### [shipping](docs/sdks/shipping/README.md)
+
+* [create_shipping_label](docs/sdks/shipping/README.md#create_shipping_label) - Create a label
+* [create_shipping_rate](docs/sdks/shipping/README.md#create_shipping_rate) - Create a rate
+* [create_shipping_shipment](docs/sdks/shipping/README.md#create_shipping_shipment) - Create a shipment
+* [create_shipping_tracking](docs/sdks/shipping/README.md#create_shipping_tracking) - Create a tracking
+* [get_shipping_carrier](docs/sdks/shipping/README.md#get_shipping_carrier) - Retrieve a carrier
+* [get_shipping_label](docs/sdks/shipping/README.md#get_shipping_label) - Retrieve a label
+* [get_shipping_rate](docs/sdks/shipping/README.md#get_shipping_rate) - Retrieve a rate
+* [get_shipping_shipment](docs/sdks/shipping/README.md#get_shipping_shipment) - Retrieve a shipment
+* [get_shipping_tracking](docs/sdks/shipping/README.md#get_shipping_tracking) - Retrieve a tracking
+* [list_shipping_carriers](docs/sdks/shipping/README.md#list_shipping_carriers) - List all carriers
+* [list_shipping_labels](docs/sdks/shipping/README.md#list_shipping_labels) - List all labels
+* [list_shipping_shipments](docs/sdks/shipping/README.md#list_shipping_shipments) - List all shipments
+* [list_shipping_trackings](docs/sdks/shipping/README.md#list_shipping_trackings) - List all trackings
+* [patch_shipping_shipment](docs/sdks/shipping/README.md#patch_shipping_shipment) - Update a shipment
+* [remove_shipping_label](docs/sdks/shipping/README.md#remove_shipping_label) - Remove a label
+* [remove_shipping_shipment](docs/sdks/shipping/README.md#remove_shipping_shipment) - Remove a shipment
+* [update_shipping_shipment](docs/sdks/shipping/README.md#update_shipping_shipment) - Update a shipment
+
 ### [space](docs/sdks/space/README.md)
 
 * [create_kms_space](docs/sdks/space/README.md#create_kms_space) - Create a space
@@ -1474,6 +1520,12 @@ end
 * [patch_hris_timeshift](docs/sdks/timeshift/README.md#patch_hris_timeshift) - Update a timeshift
 * [remove_hris_timeshift](docs/sdks/timeshift/README.md#remove_hris_timeshift) - Remove a timeshift
 * [update_hris_timeshift](docs/sdks/timeshift/README.md#update_hris_timeshift) - Update a timeshift
+
+### [tracking](docs/sdks/tracking/README.md)
+
+* [create_shipping_tracking](docs/sdks/tracking/README.md#create_shipping_tracking) - Create a tracking
+* [get_shipping_tracking](docs/sdks/tracking/README.md#get_shipping_tracking) - Retrieve a tracking
+* [list_shipping_trackings](docs/sdks/tracking/README.md#list_shipping_trackings) - List all trackings
 
 ### [transaction](docs/sdks/transaction/README.md)
 

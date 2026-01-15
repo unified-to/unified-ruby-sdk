@@ -36,6 +36,8 @@ module UnifiedRubySDK
 
         field :list_candidate_id, Crystalline::Nilable.new(Models::Shared::ListCandidateId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_candidate_id'), 'decoder': Utils.enum_from_string(Models::Shared::ListCandidateId, true) } }
 
+        field :list_carrier_id, Crystalline::Nilable.new(Models::Shared::ListCarrierId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_carrier_id'), 'decoder': Utils.enum_from_string(Models::Shared::ListCarrierId, true) } }
+
         field :list_category_id, Crystalline::Nilable.new(Models::Shared::ListCategoryId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_category_id'), 'decoder': Utils.enum_from_string(Models::Shared::ListCategoryId, true) } }
 
         field :list_channel_id, Crystalline::Nilable.new(Models::Shared::ListChannelId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_channel_id'), 'decoder': Utils.enum_from_string(Models::Shared::ListChannelId, true) } }
@@ -78,6 +80,8 @@ module UnifiedRubySDK
 
         field :list_job_id, Crystalline::Nilable.new(Models::Shared::ListJobId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_job_id'), 'decoder': Utils.enum_from_string(Models::Shared::ListJobId, true) } }
 
+        field :list_label_id, Crystalline::Nilable.new(Models::Shared::ListLabelId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_label_id'), 'decoder': Utils.enum_from_string(Models::Shared::ListLabelId, true) } }
+
         field :list_lead_id, Crystalline::Nilable.new(Models::Shared::ListLeadId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_lead_id'), 'decoder': Utils.enum_from_string(Models::Shared::ListLeadId, true) } }
 
         field :list_limit, Crystalline::Nilable.new(Models::Shared::ListLimit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_limit'), 'decoder': Utils.enum_from_string(Models::Shared::ListLimit, true) } }
@@ -91,6 +95,8 @@ module UnifiedRubySDK
         field :list_offset, Crystalline::Nilable.new(Models::Shared::ListOffset), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_offset'), 'decoder': Utils.enum_from_string(Models::Shared::ListOffset, true) } }
 
         field :list_order, Crystalline::Nilable.new(Models::Shared::ListOrder), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_order'), 'decoder': Utils.enum_from_string(Models::Shared::ListOrder, true) } }
+
+        field :list_order_id, Crystalline::Nilable.new(Models::Shared::ListOrderId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_order_id'), 'decoder': Utils.enum_from_string(Models::Shared::ListOrderId, true) } }
 
         field :list_org_id, Crystalline::Nilable.new(Models::Shared::ListOrgId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_org_id'), 'decoder': Utils.enum_from_string(Models::Shared::ListOrgId, true) } }
 
@@ -117,6 +123,8 @@ module UnifiedRubySDK
         field :list_root_id, Crystalline::Nilable.new(Models::Shared::ListRootId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_root_id'), 'decoder': Utils.enum_from_string(Models::Shared::ListRootId, true) } }
 
         field :list_saleschannel_id, Crystalline::Nilable.new(Models::Shared::ListSaleschannelId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_saleschannel_id'), 'decoder': Utils.enum_from_string(Models::Shared::ListSaleschannelId, true) } }
+
+        field :list_shipment_id, Crystalline::Nilable.new(Models::Shared::ListShipmentId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_shipment_id'), 'decoder': Utils.enum_from_string(Models::Shared::ListShipmentId, true) } }
 
         field :list_sort_by_created_at, Crystalline::Nilable.new(Models::Shared::ListSortByCreatedAt), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_sort_by_created_at'), 'decoder': Utils.enum_from_string(Models::Shared::ListSortByCreatedAt, true) } }
 
@@ -150,6 +158,8 @@ module UnifiedRubySDK
 
         field :native_webhook_calendar_id, Crystalline::Nilable.new(Models::Shared::NativeWebhookCalendarId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('native_webhook_calendar_id'), 'decoder': Utils.enum_from_string(Models::Shared::NativeWebhookCalendarId, true) } }
 
+        field :native_webhook_carrier_id, Crystalline::Nilable.new(Models::Shared::NativeWebhookCarrierId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('native_webhook_carrier_id'), 'decoder': Utils.enum_from_string(Models::Shared::NativeWebhookCarrierId, true) } }
+
         field :native_webhook_channel_id, Crystalline::Nilable.new(Models::Shared::NativeWebhookChannelId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('native_webhook_channel_id'), 'decoder': Utils.enum_from_string(Models::Shared::NativeWebhookChannelId, true) } }
 
         field :native_webhook_company_id, Crystalline::Nilable.new(Models::Shared::NativeWebhookCompanyId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('native_webhook_company_id'), 'decoder': Utils.enum_from_string(Models::Shared::NativeWebhookCompanyId, true) } }
@@ -158,9 +168,15 @@ module UnifiedRubySDK
 
         field :native_webhook_form_id, Crystalline::Nilable.new(Models::Shared::NativeWebhookFormId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('native_webhook_form_id'), 'decoder': Utils.enum_from_string(Models::Shared::NativeWebhookFormId, true) } }
 
+        field :native_webhook_label_id, Crystalline::Nilable.new(Models::Shared::NativeWebhookLabelId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('native_webhook_label_id'), 'decoder': Utils.enum_from_string(Models::Shared::NativeWebhookLabelId, true) } }
+
+        field :native_webhook_order_id, Crystalline::Nilable.new(Models::Shared::NativeWebhookOrderId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('native_webhook_order_id'), 'decoder': Utils.enum_from_string(Models::Shared::NativeWebhookOrderId, true) } }
+
         field :native_webhook_parent_id, Crystalline::Nilable.new(Models::Shared::NativeWebhookParentId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('native_webhook_parent_id'), 'decoder': Utils.enum_from_string(Models::Shared::NativeWebhookParentId, true) } }
 
         field :native_webhook_project_id, Crystalline::Nilable.new(Models::Shared::NativeWebhookProjectId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('native_webhook_project_id'), 'decoder': Utils.enum_from_string(Models::Shared::NativeWebhookProjectId, true) } }
+
+        field :native_webhook_shipment_id, Crystalline::Nilable.new(Models::Shared::NativeWebhookShipmentId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('native_webhook_shipment_id'), 'decoder': Utils.enum_from_string(Models::Shared::NativeWebhookShipmentId, true) } }
 
         field :native_webhook_task_id, Crystalline::Nilable.new(Models::Shared::NativeWebhookTaskId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('native_webhook_task_id'), 'decoder': Utils.enum_from_string(Models::Shared::NativeWebhookTaskId, true) } }
 
@@ -194,6 +210,8 @@ module UnifiedRubySDK
 
         field :virtual_webhook_candidate_id, Crystalline::Nilable.new(Models::Shared::VirtualWebhookCandidateId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('virtual_webhook_candidate_id'), 'decoder': Utils.enum_from_string(Models::Shared::VirtualWebhookCandidateId, true) } }
 
+        field :virtual_webhook_carrier_id, Crystalline::Nilable.new(Models::Shared::VirtualWebhookCarrierId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('virtual_webhook_carrier_id'), 'decoder': Utils.enum_from_string(Models::Shared::VirtualWebhookCarrierId, true) } }
+
         field :virtual_webhook_channel_id, Crystalline::Nilable.new(Models::Shared::VirtualWebhookChannelId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('virtual_webhook_channel_id'), 'decoder': Utils.enum_from_string(Models::Shared::VirtualWebhookChannelId, true) } }
 
         field :virtual_webhook_collection_id, Crystalline::Nilable.new(Models::Shared::VirtualWebhookCollectionId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('virtual_webhook_collection_id'), 'decoder': Utils.enum_from_string(Models::Shared::VirtualWebhookCollectionId, true) } }
@@ -224,6 +242,8 @@ module UnifiedRubySDK
 
         field :virtual_webhook_job_id, Crystalline::Nilable.new(Models::Shared::VirtualWebhookJobId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('virtual_webhook_job_id'), 'decoder': Utils.enum_from_string(Models::Shared::VirtualWebhookJobId, true) } }
 
+        field :virtual_webhook_label_id, Crystalline::Nilable.new(Models::Shared::VirtualWebhookLabelId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('virtual_webhook_label_id'), 'decoder': Utils.enum_from_string(Models::Shared::VirtualWebhookLabelId, true) } }
+
         field :virtual_webhook_lead_id, Crystalline::Nilable.new(Models::Shared::VirtualWebhookLeadId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('virtual_webhook_lead_id'), 'decoder': Utils.enum_from_string(Models::Shared::VirtualWebhookLeadId, true) } }
 
         field :virtual_webhook_limit, Crystalline::Nilable.new(Models::Shared::VirtualWebhookLimit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('virtual_webhook_limit'), 'decoder': Utils.enum_from_string(Models::Shared::VirtualWebhookLimit, true) } }
@@ -231,6 +251,8 @@ module UnifiedRubySDK
         field :virtual_webhook_list_id, Crystalline::Nilable.new(Models::Shared::VirtualWebhookListId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('virtual_webhook_list_id'), 'decoder': Utils.enum_from_string(Models::Shared::VirtualWebhookListId, true) } }
 
         field :virtual_webhook_location_id, Crystalline::Nilable.new(Models::Shared::VirtualWebhookLocationId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('virtual_webhook_location_id'), 'decoder': Utils.enum_from_string(Models::Shared::VirtualWebhookLocationId, true) } }
+
+        field :virtual_webhook_order_id, Crystalline::Nilable.new(Models::Shared::VirtualWebhookOrderId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('virtual_webhook_order_id'), 'decoder': Utils.enum_from_string(Models::Shared::VirtualWebhookOrderId, true) } }
 
         field :virtual_webhook_org_id, Crystalline::Nilable.new(Models::Shared::VirtualWebhookOrgId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('virtual_webhook_org_id'), 'decoder': Utils.enum_from_string(Models::Shared::VirtualWebhookOrgId, true) } }
 
@@ -245,6 +267,8 @@ module UnifiedRubySDK
         field :virtual_webhook_repo_id, Crystalline::Nilable.new(Models::Shared::VirtualWebhookRepoId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('virtual_webhook_repo_id'), 'decoder': Utils.enum_from_string(Models::Shared::VirtualWebhookRepoId, true) } }
 
         field :virtual_webhook_saleschannel_id, Crystalline::Nilable.new(Models::Shared::VirtualWebhookSaleschannelId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('virtual_webhook_saleschannel_id'), 'decoder': Utils.enum_from_string(Models::Shared::VirtualWebhookSaleschannelId, true) } }
+
+        field :virtual_webhook_shipment_id, Crystalline::Nilable.new(Models::Shared::VirtualWebhookShipmentId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('virtual_webhook_shipment_id'), 'decoder': Utils.enum_from_string(Models::Shared::VirtualWebhookShipmentId, true) } }
 
         field :virtual_webhook_space_id, Crystalline::Nilable.new(Models::Shared::VirtualWebhookSpaceId), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('virtual_webhook_space_id'), 'decoder': Utils.enum_from_string(Models::Shared::VirtualWebhookSpaceId, true) } }
 
@@ -266,8 +290,8 @@ module UnifiedRubySDK
 
         field :webhook_events, Crystalline::Nilable.new(Models::Shared::PropertyIntegrationSupportWebhookEvents), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('webhook_events') } }
 
-        sig { params(from_webhook: T.nilable(Models::Shared::FromWebhook), inbound_fields: T.nilable(T::Hash[Symbol, ::String]), list_account_id: T.nilable(Models::Shared::ListAccountId), list_ad_id: T.nilable(Models::Shared::ListAdId), list_application_id: T.nilable(Models::Shared::ListApplicationId), list_benefit_id: T.nilable(Models::Shared::ListBenefitId), list_branch_id: T.nilable(Models::Shared::ListBranchId), list_calendar_id: T.nilable(Models::Shared::ListCalendarId), list_call_id: T.nilable(Models::Shared::ListCallId), list_campaign_id: T.nilable(Models::Shared::ListCampaignId), list_candidate_id: T.nilable(Models::Shared::ListCandidateId), list_category_id: T.nilable(Models::Shared::ListCategoryId), list_channel_id: T.nilable(Models::Shared::ListChannelId), list_class_id: T.nilable(Models::Shared::ListClassId), list_collection_id: T.nilable(Models::Shared::ListCollectionId), list_company_id: T.nilable(Models::Shared::ListCompanyId), list_contact_id: T.nilable(Models::Shared::ListContactId), list_course_id: T.nilable(Models::Shared::ListCourseId), list_customer_id: T.nilable(Models::Shared::ListCustomerId), list_deal_id: T.nilable(Models::Shared::ListDealId), list_document_id: T.nilable(Models::Shared::ListDocumentId), list_end_lt: T.nilable(Models::Shared::ListEndLt), list_event_id: T.nilable(Models::Shared::ListEventId), list_expand: T.nilable(Models::Shared::ListExpand), list_form_id: T.nilable(Models::Shared::ListFormId), list_group_id: T.nilable(Models::Shared::ListGroupId), list_instructor_id: T.nilable(Models::Shared::ListInstructorId), list_interview_id: T.nilable(Models::Shared::ListInterviewId), list_invoice_id: T.nilable(Models::Shared::ListInvoiceId), list_item_id: T.nilable(Models::Shared::ListItemId), list_item_variant_id: T.nilable(Models::Shared::ListItemVariantId), list_job_id: T.nilable(Models::Shared::ListJobId), list_lead_id: T.nilable(Models::Shared::ListLeadId), list_limit: T.nilable(Models::Shared::ListLimit), list_link_id: T.nilable(Models::Shared::ListLinkId), list_list_id: T.nilable(Models::Shared::ListListId), list_location_id: T.nilable(Models::Shared::ListLocationId), list_offset: T.nilable(Models::Shared::ListOffset), list_order: T.nilable(Models::Shared::ListOrder), list_org_id: T.nilable(Models::Shared::ListOrgId), list_package_id: T.nilable(Models::Shared::ListPackageId), list_page_id: T.nilable(Models::Shared::ListPageId), list_parent_id: T.nilable(Models::Shared::ListParentId), list_payment_id: T.nilable(Models::Shared::ListPaymentId), list_payslip_id: T.nilable(Models::Shared::ListPayslipId), list_pipeline_id: T.nilable(Models::Shared::ListPipelineId), list_project_id: T.nilable(Models::Shared::ListProjectId), list_query: T.nilable(Models::Shared::ListQuery), list_raw_fields: T.nilable(Models::Shared::ListRawFields), list_repo_id: T.nilable(Models::Shared::ListRepoId), list_root_id: T.nilable(Models::Shared::ListRootId), list_saleschannel_id: T.nilable(Models::Shared::ListSaleschannelId), list_sort_by_created_at: T.nilable(Models::Shared::ListSortByCreatedAt), list_sort_by_name: T.nilable(Models::Shared::ListSortByName), list_sort_by_updated_at: T.nilable(Models::Shared::ListSortByUpdatedAt), list_space_id: T.nilable(Models::Shared::ListSpaceId), list_start_gte: T.nilable(Models::Shared::ListStartGte), list_status: T.nilable(Models::Shared::ListStatus), list_student_id: T.nilable(Models::Shared::ListStudentId), list_task_id: T.nilable(Models::Shared::ListTaskId), list_teacher_id: T.nilable(Models::Shared::ListTeacherId), list_ticket_id: T.nilable(Models::Shared::ListTicketId), list_type: T.nilable(Models::Shared::ListType), list_updated_gte: T.nilable(Models::Shared::ListUpdatedGte), list_user_id: T.nilable(Models::Shared::ListUserId), list_user_mentioned_id: T.nilable(Models::Shared::ListUserMentionedId), methods: T.nilable(T::Hash[Symbol, T::Boolean]), native_webhook_calendar_id: T.nilable(Models::Shared::NativeWebhookCalendarId), native_webhook_channel_id: T.nilable(Models::Shared::NativeWebhookChannelId), native_webhook_company_id: T.nilable(Models::Shared::NativeWebhookCompanyId), native_webhook_event_id: T.nilable(Models::Shared::NativeWebhookEventId), native_webhook_form_id: T.nilable(Models::Shared::NativeWebhookFormId), native_webhook_parent_id: T.nilable(Models::Shared::NativeWebhookParentId), native_webhook_project_id: T.nilable(Models::Shared::NativeWebhookProjectId), native_webhook_task_id: T.nilable(Models::Shared::NativeWebhookTaskId), outbound_fields: T.nilable(T::Hash[Symbol, ::String]), raw_objects: T.nilable(T::Array[::String]), search_domain: T.nilable(Models::Shared::SearchDomain), search_email: T.nilable(Models::Shared::SearchEmail), search_linkedinurl: T.nilable(Models::Shared::SearchLinkedinurl), search_name: T.nilable(Models::Shared::SearchName), search_twitter: T.nilable(Models::Shared::SearchTwitter), slow_fields: T.nilable(T::Array[::String]), virtual_webhook_ad_id: T.nilable(Models::Shared::VirtualWebhookAdId), virtual_webhook_application_id: T.nilable(Models::Shared::VirtualWebhookApplicationId), virtual_webhook_branch_id: T.nilable(Models::Shared::VirtualWebhookBranchId), virtual_webhook_calendar_id: T.nilable(Models::Shared::VirtualWebhookCalendarId), virtual_webhook_call_id: T.nilable(Models::Shared::VirtualWebhookCallId), virtual_webhook_campaign_id: T.nilable(Models::Shared::VirtualWebhookCampaignId), virtual_webhook_candidate_id: T.nilable(Models::Shared::VirtualWebhookCandidateId), virtual_webhook_channel_id: T.nilable(Models::Shared::VirtualWebhookChannelId), virtual_webhook_collection_id: T.nilable(Models::Shared::VirtualWebhookCollectionId), virtual_webhook_company_id: T.nilable(Models::Shared::VirtualWebhookCompanyId), virtual_webhook_contact_id: T.nilable(Models::Shared::VirtualWebhookContactId), virtual_webhook_customer_id: T.nilable(Models::Shared::VirtualWebhookCustomerId), virtual_webhook_deal_id: T.nilable(Models::Shared::VirtualWebhookDealId), virtual_webhook_end_lt: T.nilable(Models::Shared::VirtualWebhookEndLt), virtual_webhook_event_id: T.nilable(Models::Shared::VirtualWebhookEventId), virtual_webhook_expand: T.nilable(Models::Shared::VirtualWebhookExpand), virtual_webhook_fields: T.nilable(Models::Shared::VirtualWebhookFields), virtual_webhook_form_id: T.nilable(Models::Shared::VirtualWebhookFormId), virtual_webhook_group_id: T.nilable(Models::Shared::VirtualWebhookGroupId), virtual_webhook_item_id: T.nilable(Models::Shared::VirtualWebhookItemId), virtual_webhook_item_variant_id: T.nilable(Models::Shared::VirtualWebhookItemVariantId), virtual_webhook_job_id: T.nilable(Models::Shared::VirtualWebhookJobId), virtual_webhook_lead_id: T.nilable(Models::Shared::VirtualWebhookLeadId), virtual_webhook_limit: T.nilable(Models::Shared::VirtualWebhookLimit), virtual_webhook_list_id: T.nilable(Models::Shared::VirtualWebhookListId), virtual_webhook_location_id: T.nilable(Models::Shared::VirtualWebhookLocationId), virtual_webhook_org_id: T.nilable(Models::Shared::VirtualWebhookOrgId), virtual_webhook_page_id: T.nilable(Models::Shared::VirtualWebhookPageId), virtual_webhook_parent_id: T.nilable(Models::Shared::VirtualWebhookParentId), virtual_webhook_pipeline_id: T.nilable(Models::Shared::VirtualWebhookPipelineId), virtual_webhook_project_id: T.nilable(Models::Shared::VirtualWebhookProjectId), virtual_webhook_repo_id: T.nilable(Models::Shared::VirtualWebhookRepoId), virtual_webhook_saleschannel_id: T.nilable(Models::Shared::VirtualWebhookSaleschannelId), virtual_webhook_space_id: T.nilable(Models::Shared::VirtualWebhookSpaceId), virtual_webhook_start_gte: T.nilable(Models::Shared::VirtualWebhookStartGte), virtual_webhook_status: T.nilable(Models::Shared::VirtualWebhookStatus), virtual_webhook_task_id: T.nilable(Models::Shared::VirtualWebhookTaskId), virtual_webhook_ticket_id: T.nilable(Models::Shared::VirtualWebhookTicketId), virtual_webhook_type: T.nilable(Models::Shared::VirtualWebhookType), virtual_webhook_updated_gte: T.nilable(Models::Shared::VirtualWebhookUpdatedGte), virtual_webhook_user_id: T.nilable(Models::Shared::VirtualWebhookUserId), virtual_webhook_user_mentioned_id: T.nilable(Models::Shared::VirtualWebhookUserMentionedId), webhook_events: T.nilable(Models::Shared::PropertyIntegrationSupportWebhookEvents)).void }
-        def initialize(from_webhook: nil, inbound_fields: nil, list_account_id: nil, list_ad_id: nil, list_application_id: nil, list_benefit_id: nil, list_branch_id: nil, list_calendar_id: nil, list_call_id: nil, list_campaign_id: nil, list_candidate_id: nil, list_category_id: nil, list_channel_id: nil, list_class_id: nil, list_collection_id: nil, list_company_id: nil, list_contact_id: nil, list_course_id: nil, list_customer_id: nil, list_deal_id: nil, list_document_id: nil, list_end_lt: nil, list_event_id: nil, list_expand: nil, list_form_id: nil, list_group_id: nil, list_instructor_id: nil, list_interview_id: nil, list_invoice_id: nil, list_item_id: nil, list_item_variant_id: nil, list_job_id: nil, list_lead_id: nil, list_limit: nil, list_link_id: nil, list_list_id: nil, list_location_id: nil, list_offset: nil, list_order: nil, list_org_id: nil, list_package_id: nil, list_page_id: nil, list_parent_id: nil, list_payment_id: nil, list_payslip_id: nil, list_pipeline_id: nil, list_project_id: nil, list_query: nil, list_raw_fields: nil, list_repo_id: nil, list_root_id: nil, list_saleschannel_id: nil, list_sort_by_created_at: nil, list_sort_by_name: nil, list_sort_by_updated_at: nil, list_space_id: nil, list_start_gte: nil, list_status: nil, list_student_id: nil, list_task_id: nil, list_teacher_id: nil, list_ticket_id: nil, list_type: nil, list_updated_gte: nil, list_user_id: nil, list_user_mentioned_id: nil, methods: nil, native_webhook_calendar_id: nil, native_webhook_channel_id: nil, native_webhook_company_id: nil, native_webhook_event_id: nil, native_webhook_form_id: nil, native_webhook_parent_id: nil, native_webhook_project_id: nil, native_webhook_task_id: nil, outbound_fields: nil, raw_objects: nil, search_domain: nil, search_email: nil, search_linkedinurl: nil, search_name: nil, search_twitter: nil, slow_fields: nil, virtual_webhook_ad_id: nil, virtual_webhook_application_id: nil, virtual_webhook_branch_id: nil, virtual_webhook_calendar_id: nil, virtual_webhook_call_id: nil, virtual_webhook_campaign_id: nil, virtual_webhook_candidate_id: nil, virtual_webhook_channel_id: nil, virtual_webhook_collection_id: nil, virtual_webhook_company_id: nil, virtual_webhook_contact_id: nil, virtual_webhook_customer_id: nil, virtual_webhook_deal_id: nil, virtual_webhook_end_lt: nil, virtual_webhook_event_id: nil, virtual_webhook_expand: nil, virtual_webhook_fields: nil, virtual_webhook_form_id: nil, virtual_webhook_group_id: nil, virtual_webhook_item_id: nil, virtual_webhook_item_variant_id: nil, virtual_webhook_job_id: nil, virtual_webhook_lead_id: nil, virtual_webhook_limit: nil, virtual_webhook_list_id: nil, virtual_webhook_location_id: nil, virtual_webhook_org_id: nil, virtual_webhook_page_id: nil, virtual_webhook_parent_id: nil, virtual_webhook_pipeline_id: nil, virtual_webhook_project_id: nil, virtual_webhook_repo_id: nil, virtual_webhook_saleschannel_id: nil, virtual_webhook_space_id: nil, virtual_webhook_start_gte: nil, virtual_webhook_status: nil, virtual_webhook_task_id: nil, virtual_webhook_ticket_id: nil, virtual_webhook_type: nil, virtual_webhook_updated_gte: nil, virtual_webhook_user_id: nil, virtual_webhook_user_mentioned_id: nil, webhook_events: nil)
+        sig { params(from_webhook: T.nilable(Models::Shared::FromWebhook), inbound_fields: T.nilable(T::Hash[Symbol, ::String]), list_account_id: T.nilable(Models::Shared::ListAccountId), list_ad_id: T.nilable(Models::Shared::ListAdId), list_application_id: T.nilable(Models::Shared::ListApplicationId), list_benefit_id: T.nilable(Models::Shared::ListBenefitId), list_branch_id: T.nilable(Models::Shared::ListBranchId), list_calendar_id: T.nilable(Models::Shared::ListCalendarId), list_call_id: T.nilable(Models::Shared::ListCallId), list_campaign_id: T.nilable(Models::Shared::ListCampaignId), list_candidate_id: T.nilable(Models::Shared::ListCandidateId), list_carrier_id: T.nilable(Models::Shared::ListCarrierId), list_category_id: T.nilable(Models::Shared::ListCategoryId), list_channel_id: T.nilable(Models::Shared::ListChannelId), list_class_id: T.nilable(Models::Shared::ListClassId), list_collection_id: T.nilable(Models::Shared::ListCollectionId), list_company_id: T.nilable(Models::Shared::ListCompanyId), list_contact_id: T.nilable(Models::Shared::ListContactId), list_course_id: T.nilable(Models::Shared::ListCourseId), list_customer_id: T.nilable(Models::Shared::ListCustomerId), list_deal_id: T.nilable(Models::Shared::ListDealId), list_document_id: T.nilable(Models::Shared::ListDocumentId), list_end_lt: T.nilable(Models::Shared::ListEndLt), list_event_id: T.nilable(Models::Shared::ListEventId), list_expand: T.nilable(Models::Shared::ListExpand), list_form_id: T.nilable(Models::Shared::ListFormId), list_group_id: T.nilable(Models::Shared::ListGroupId), list_instructor_id: T.nilable(Models::Shared::ListInstructorId), list_interview_id: T.nilable(Models::Shared::ListInterviewId), list_invoice_id: T.nilable(Models::Shared::ListInvoiceId), list_item_id: T.nilable(Models::Shared::ListItemId), list_item_variant_id: T.nilable(Models::Shared::ListItemVariantId), list_job_id: T.nilable(Models::Shared::ListJobId), list_label_id: T.nilable(Models::Shared::ListLabelId), list_lead_id: T.nilable(Models::Shared::ListLeadId), list_limit: T.nilable(Models::Shared::ListLimit), list_link_id: T.nilable(Models::Shared::ListLinkId), list_list_id: T.nilable(Models::Shared::ListListId), list_location_id: T.nilable(Models::Shared::ListLocationId), list_offset: T.nilable(Models::Shared::ListOffset), list_order: T.nilable(Models::Shared::ListOrder), list_order_id: T.nilable(Models::Shared::ListOrderId), list_org_id: T.nilable(Models::Shared::ListOrgId), list_package_id: T.nilable(Models::Shared::ListPackageId), list_page_id: T.nilable(Models::Shared::ListPageId), list_parent_id: T.nilable(Models::Shared::ListParentId), list_payment_id: T.nilable(Models::Shared::ListPaymentId), list_payslip_id: T.nilable(Models::Shared::ListPayslipId), list_pipeline_id: T.nilable(Models::Shared::ListPipelineId), list_project_id: T.nilable(Models::Shared::ListProjectId), list_query: T.nilable(Models::Shared::ListQuery), list_raw_fields: T.nilable(Models::Shared::ListRawFields), list_repo_id: T.nilable(Models::Shared::ListRepoId), list_root_id: T.nilable(Models::Shared::ListRootId), list_saleschannel_id: T.nilable(Models::Shared::ListSaleschannelId), list_shipment_id: T.nilable(Models::Shared::ListShipmentId), list_sort_by_created_at: T.nilable(Models::Shared::ListSortByCreatedAt), list_sort_by_name: T.nilable(Models::Shared::ListSortByName), list_sort_by_updated_at: T.nilable(Models::Shared::ListSortByUpdatedAt), list_space_id: T.nilable(Models::Shared::ListSpaceId), list_start_gte: T.nilable(Models::Shared::ListStartGte), list_status: T.nilable(Models::Shared::ListStatus), list_student_id: T.nilable(Models::Shared::ListStudentId), list_task_id: T.nilable(Models::Shared::ListTaskId), list_teacher_id: T.nilable(Models::Shared::ListTeacherId), list_ticket_id: T.nilable(Models::Shared::ListTicketId), list_type: T.nilable(Models::Shared::ListType), list_updated_gte: T.nilable(Models::Shared::ListUpdatedGte), list_user_id: T.nilable(Models::Shared::ListUserId), list_user_mentioned_id: T.nilable(Models::Shared::ListUserMentionedId), methods: T.nilable(T::Hash[Symbol, T::Boolean]), native_webhook_calendar_id: T.nilable(Models::Shared::NativeWebhookCalendarId), native_webhook_carrier_id: T.nilable(Models::Shared::NativeWebhookCarrierId), native_webhook_channel_id: T.nilable(Models::Shared::NativeWebhookChannelId), native_webhook_company_id: T.nilable(Models::Shared::NativeWebhookCompanyId), native_webhook_event_id: T.nilable(Models::Shared::NativeWebhookEventId), native_webhook_form_id: T.nilable(Models::Shared::NativeWebhookFormId), native_webhook_label_id: T.nilable(Models::Shared::NativeWebhookLabelId), native_webhook_order_id: T.nilable(Models::Shared::NativeWebhookOrderId), native_webhook_parent_id: T.nilable(Models::Shared::NativeWebhookParentId), native_webhook_project_id: T.nilable(Models::Shared::NativeWebhookProjectId), native_webhook_shipment_id: T.nilable(Models::Shared::NativeWebhookShipmentId), native_webhook_task_id: T.nilable(Models::Shared::NativeWebhookTaskId), outbound_fields: T.nilable(T::Hash[Symbol, ::String]), raw_objects: T.nilable(T::Array[::String]), search_domain: T.nilable(Models::Shared::SearchDomain), search_email: T.nilable(Models::Shared::SearchEmail), search_linkedinurl: T.nilable(Models::Shared::SearchLinkedinurl), search_name: T.nilable(Models::Shared::SearchName), search_twitter: T.nilable(Models::Shared::SearchTwitter), slow_fields: T.nilable(T::Array[::String]), virtual_webhook_ad_id: T.nilable(Models::Shared::VirtualWebhookAdId), virtual_webhook_application_id: T.nilable(Models::Shared::VirtualWebhookApplicationId), virtual_webhook_branch_id: T.nilable(Models::Shared::VirtualWebhookBranchId), virtual_webhook_calendar_id: T.nilable(Models::Shared::VirtualWebhookCalendarId), virtual_webhook_call_id: T.nilable(Models::Shared::VirtualWebhookCallId), virtual_webhook_campaign_id: T.nilable(Models::Shared::VirtualWebhookCampaignId), virtual_webhook_candidate_id: T.nilable(Models::Shared::VirtualWebhookCandidateId), virtual_webhook_carrier_id: T.nilable(Models::Shared::VirtualWebhookCarrierId), virtual_webhook_channel_id: T.nilable(Models::Shared::VirtualWebhookChannelId), virtual_webhook_collection_id: T.nilable(Models::Shared::VirtualWebhookCollectionId), virtual_webhook_company_id: T.nilable(Models::Shared::VirtualWebhookCompanyId), virtual_webhook_contact_id: T.nilable(Models::Shared::VirtualWebhookContactId), virtual_webhook_customer_id: T.nilable(Models::Shared::VirtualWebhookCustomerId), virtual_webhook_deal_id: T.nilable(Models::Shared::VirtualWebhookDealId), virtual_webhook_end_lt: T.nilable(Models::Shared::VirtualWebhookEndLt), virtual_webhook_event_id: T.nilable(Models::Shared::VirtualWebhookEventId), virtual_webhook_expand: T.nilable(Models::Shared::VirtualWebhookExpand), virtual_webhook_fields: T.nilable(Models::Shared::VirtualWebhookFields), virtual_webhook_form_id: T.nilable(Models::Shared::VirtualWebhookFormId), virtual_webhook_group_id: T.nilable(Models::Shared::VirtualWebhookGroupId), virtual_webhook_item_id: T.nilable(Models::Shared::VirtualWebhookItemId), virtual_webhook_item_variant_id: T.nilable(Models::Shared::VirtualWebhookItemVariantId), virtual_webhook_job_id: T.nilable(Models::Shared::VirtualWebhookJobId), virtual_webhook_label_id: T.nilable(Models::Shared::VirtualWebhookLabelId), virtual_webhook_lead_id: T.nilable(Models::Shared::VirtualWebhookLeadId), virtual_webhook_limit: T.nilable(Models::Shared::VirtualWebhookLimit), virtual_webhook_list_id: T.nilable(Models::Shared::VirtualWebhookListId), virtual_webhook_location_id: T.nilable(Models::Shared::VirtualWebhookLocationId), virtual_webhook_order_id: T.nilable(Models::Shared::VirtualWebhookOrderId), virtual_webhook_org_id: T.nilable(Models::Shared::VirtualWebhookOrgId), virtual_webhook_page_id: T.nilable(Models::Shared::VirtualWebhookPageId), virtual_webhook_parent_id: T.nilable(Models::Shared::VirtualWebhookParentId), virtual_webhook_pipeline_id: T.nilable(Models::Shared::VirtualWebhookPipelineId), virtual_webhook_project_id: T.nilable(Models::Shared::VirtualWebhookProjectId), virtual_webhook_repo_id: T.nilable(Models::Shared::VirtualWebhookRepoId), virtual_webhook_saleschannel_id: T.nilable(Models::Shared::VirtualWebhookSaleschannelId), virtual_webhook_shipment_id: T.nilable(Models::Shared::VirtualWebhookShipmentId), virtual_webhook_space_id: T.nilable(Models::Shared::VirtualWebhookSpaceId), virtual_webhook_start_gte: T.nilable(Models::Shared::VirtualWebhookStartGte), virtual_webhook_status: T.nilable(Models::Shared::VirtualWebhookStatus), virtual_webhook_task_id: T.nilable(Models::Shared::VirtualWebhookTaskId), virtual_webhook_ticket_id: T.nilable(Models::Shared::VirtualWebhookTicketId), virtual_webhook_type: T.nilable(Models::Shared::VirtualWebhookType), virtual_webhook_updated_gte: T.nilable(Models::Shared::VirtualWebhookUpdatedGte), virtual_webhook_user_id: T.nilable(Models::Shared::VirtualWebhookUserId), virtual_webhook_user_mentioned_id: T.nilable(Models::Shared::VirtualWebhookUserMentionedId), webhook_events: T.nilable(Models::Shared::PropertyIntegrationSupportWebhookEvents)).void }
+        def initialize(from_webhook: nil, inbound_fields: nil, list_account_id: nil, list_ad_id: nil, list_application_id: nil, list_benefit_id: nil, list_branch_id: nil, list_calendar_id: nil, list_call_id: nil, list_campaign_id: nil, list_candidate_id: nil, list_carrier_id: nil, list_category_id: nil, list_channel_id: nil, list_class_id: nil, list_collection_id: nil, list_company_id: nil, list_contact_id: nil, list_course_id: nil, list_customer_id: nil, list_deal_id: nil, list_document_id: nil, list_end_lt: nil, list_event_id: nil, list_expand: nil, list_form_id: nil, list_group_id: nil, list_instructor_id: nil, list_interview_id: nil, list_invoice_id: nil, list_item_id: nil, list_item_variant_id: nil, list_job_id: nil, list_label_id: nil, list_lead_id: nil, list_limit: nil, list_link_id: nil, list_list_id: nil, list_location_id: nil, list_offset: nil, list_order: nil, list_order_id: nil, list_org_id: nil, list_package_id: nil, list_page_id: nil, list_parent_id: nil, list_payment_id: nil, list_payslip_id: nil, list_pipeline_id: nil, list_project_id: nil, list_query: nil, list_raw_fields: nil, list_repo_id: nil, list_root_id: nil, list_saleschannel_id: nil, list_shipment_id: nil, list_sort_by_created_at: nil, list_sort_by_name: nil, list_sort_by_updated_at: nil, list_space_id: nil, list_start_gte: nil, list_status: nil, list_student_id: nil, list_task_id: nil, list_teacher_id: nil, list_ticket_id: nil, list_type: nil, list_updated_gte: nil, list_user_id: nil, list_user_mentioned_id: nil, methods: nil, native_webhook_calendar_id: nil, native_webhook_carrier_id: nil, native_webhook_channel_id: nil, native_webhook_company_id: nil, native_webhook_event_id: nil, native_webhook_form_id: nil, native_webhook_label_id: nil, native_webhook_order_id: nil, native_webhook_parent_id: nil, native_webhook_project_id: nil, native_webhook_shipment_id: nil, native_webhook_task_id: nil, outbound_fields: nil, raw_objects: nil, search_domain: nil, search_email: nil, search_linkedinurl: nil, search_name: nil, search_twitter: nil, slow_fields: nil, virtual_webhook_ad_id: nil, virtual_webhook_application_id: nil, virtual_webhook_branch_id: nil, virtual_webhook_calendar_id: nil, virtual_webhook_call_id: nil, virtual_webhook_campaign_id: nil, virtual_webhook_candidate_id: nil, virtual_webhook_carrier_id: nil, virtual_webhook_channel_id: nil, virtual_webhook_collection_id: nil, virtual_webhook_company_id: nil, virtual_webhook_contact_id: nil, virtual_webhook_customer_id: nil, virtual_webhook_deal_id: nil, virtual_webhook_end_lt: nil, virtual_webhook_event_id: nil, virtual_webhook_expand: nil, virtual_webhook_fields: nil, virtual_webhook_form_id: nil, virtual_webhook_group_id: nil, virtual_webhook_item_id: nil, virtual_webhook_item_variant_id: nil, virtual_webhook_job_id: nil, virtual_webhook_label_id: nil, virtual_webhook_lead_id: nil, virtual_webhook_limit: nil, virtual_webhook_list_id: nil, virtual_webhook_location_id: nil, virtual_webhook_order_id: nil, virtual_webhook_org_id: nil, virtual_webhook_page_id: nil, virtual_webhook_parent_id: nil, virtual_webhook_pipeline_id: nil, virtual_webhook_project_id: nil, virtual_webhook_repo_id: nil, virtual_webhook_saleschannel_id: nil, virtual_webhook_shipment_id: nil, virtual_webhook_space_id: nil, virtual_webhook_start_gte: nil, virtual_webhook_status: nil, virtual_webhook_task_id: nil, virtual_webhook_ticket_id: nil, virtual_webhook_type: nil, virtual_webhook_updated_gte: nil, virtual_webhook_user_id: nil, virtual_webhook_user_mentioned_id: nil, webhook_events: nil)
           @from_webhook = from_webhook
           @inbound_fields = inbound_fields
           @list_account_id = list_account_id
@@ -279,6 +303,7 @@ module UnifiedRubySDK
           @list_call_id = list_call_id
           @list_campaign_id = list_campaign_id
           @list_candidate_id = list_candidate_id
+          @list_carrier_id = list_carrier_id
           @list_category_id = list_category_id
           @list_channel_id = list_channel_id
           @list_class_id = list_class_id
@@ -300,6 +325,7 @@ module UnifiedRubySDK
           @list_item_id = list_item_id
           @list_item_variant_id = list_item_variant_id
           @list_job_id = list_job_id
+          @list_label_id = list_label_id
           @list_lead_id = list_lead_id
           @list_limit = list_limit
           @list_link_id = list_link_id
@@ -307,6 +333,7 @@ module UnifiedRubySDK
           @list_location_id = list_location_id
           @list_offset = list_offset
           @list_order = list_order
+          @list_order_id = list_order_id
           @list_org_id = list_org_id
           @list_package_id = list_package_id
           @list_page_id = list_page_id
@@ -320,6 +347,7 @@ module UnifiedRubySDK
           @list_repo_id = list_repo_id
           @list_root_id = list_root_id
           @list_saleschannel_id = list_saleschannel_id
+          @list_shipment_id = list_shipment_id
           @list_sort_by_created_at = list_sort_by_created_at
           @list_sort_by_name = list_sort_by_name
           @list_sort_by_updated_at = list_sort_by_updated_at
@@ -336,12 +364,16 @@ module UnifiedRubySDK
           @list_user_mentioned_id = list_user_mentioned_id
           @methods = methods
           @native_webhook_calendar_id = native_webhook_calendar_id
+          @native_webhook_carrier_id = native_webhook_carrier_id
           @native_webhook_channel_id = native_webhook_channel_id
           @native_webhook_company_id = native_webhook_company_id
           @native_webhook_event_id = native_webhook_event_id
           @native_webhook_form_id = native_webhook_form_id
+          @native_webhook_label_id = native_webhook_label_id
+          @native_webhook_order_id = native_webhook_order_id
           @native_webhook_parent_id = native_webhook_parent_id
           @native_webhook_project_id = native_webhook_project_id
+          @native_webhook_shipment_id = native_webhook_shipment_id
           @native_webhook_task_id = native_webhook_task_id
           @outbound_fields = outbound_fields
           @raw_objects = raw_objects
@@ -358,6 +390,7 @@ module UnifiedRubySDK
           @virtual_webhook_call_id = virtual_webhook_call_id
           @virtual_webhook_campaign_id = virtual_webhook_campaign_id
           @virtual_webhook_candidate_id = virtual_webhook_candidate_id
+          @virtual_webhook_carrier_id = virtual_webhook_carrier_id
           @virtual_webhook_channel_id = virtual_webhook_channel_id
           @virtual_webhook_collection_id = virtual_webhook_collection_id
           @virtual_webhook_company_id = virtual_webhook_company_id
@@ -373,10 +406,12 @@ module UnifiedRubySDK
           @virtual_webhook_item_id = virtual_webhook_item_id
           @virtual_webhook_item_variant_id = virtual_webhook_item_variant_id
           @virtual_webhook_job_id = virtual_webhook_job_id
+          @virtual_webhook_label_id = virtual_webhook_label_id
           @virtual_webhook_lead_id = virtual_webhook_lead_id
           @virtual_webhook_limit = virtual_webhook_limit
           @virtual_webhook_list_id = virtual_webhook_list_id
           @virtual_webhook_location_id = virtual_webhook_location_id
+          @virtual_webhook_order_id = virtual_webhook_order_id
           @virtual_webhook_org_id = virtual_webhook_org_id
           @virtual_webhook_page_id = virtual_webhook_page_id
           @virtual_webhook_parent_id = virtual_webhook_parent_id
@@ -384,6 +419,7 @@ module UnifiedRubySDK
           @virtual_webhook_project_id = virtual_webhook_project_id
           @virtual_webhook_repo_id = virtual_webhook_repo_id
           @virtual_webhook_saleschannel_id = virtual_webhook_saleschannel_id
+          @virtual_webhook_shipment_id = virtual_webhook_shipment_id
           @virtual_webhook_space_id = virtual_webhook_space_id
           @virtual_webhook_start_gte = virtual_webhook_start_gte
           @virtual_webhook_status = virtual_webhook_status
@@ -410,6 +446,7 @@ module UnifiedRubySDK
           return false unless @list_call_id == other.list_call_id
           return false unless @list_campaign_id == other.list_campaign_id
           return false unless @list_candidate_id == other.list_candidate_id
+          return false unless @list_carrier_id == other.list_carrier_id
           return false unless @list_category_id == other.list_category_id
           return false unless @list_channel_id == other.list_channel_id
           return false unless @list_class_id == other.list_class_id
@@ -431,6 +468,7 @@ module UnifiedRubySDK
           return false unless @list_item_id == other.list_item_id
           return false unless @list_item_variant_id == other.list_item_variant_id
           return false unless @list_job_id == other.list_job_id
+          return false unless @list_label_id == other.list_label_id
           return false unless @list_lead_id == other.list_lead_id
           return false unless @list_limit == other.list_limit
           return false unless @list_link_id == other.list_link_id
@@ -438,6 +476,7 @@ module UnifiedRubySDK
           return false unless @list_location_id == other.list_location_id
           return false unless @list_offset == other.list_offset
           return false unless @list_order == other.list_order
+          return false unless @list_order_id == other.list_order_id
           return false unless @list_org_id == other.list_org_id
           return false unless @list_package_id == other.list_package_id
           return false unless @list_page_id == other.list_page_id
@@ -451,6 +490,7 @@ module UnifiedRubySDK
           return false unless @list_repo_id == other.list_repo_id
           return false unless @list_root_id == other.list_root_id
           return false unless @list_saleschannel_id == other.list_saleschannel_id
+          return false unless @list_shipment_id == other.list_shipment_id
           return false unless @list_sort_by_created_at == other.list_sort_by_created_at
           return false unless @list_sort_by_name == other.list_sort_by_name
           return false unless @list_sort_by_updated_at == other.list_sort_by_updated_at
@@ -467,12 +507,16 @@ module UnifiedRubySDK
           return false unless @list_user_mentioned_id == other.list_user_mentioned_id
           return false unless @methods == other.methods
           return false unless @native_webhook_calendar_id == other.native_webhook_calendar_id
+          return false unless @native_webhook_carrier_id == other.native_webhook_carrier_id
           return false unless @native_webhook_channel_id == other.native_webhook_channel_id
           return false unless @native_webhook_company_id == other.native_webhook_company_id
           return false unless @native_webhook_event_id == other.native_webhook_event_id
           return false unless @native_webhook_form_id == other.native_webhook_form_id
+          return false unless @native_webhook_label_id == other.native_webhook_label_id
+          return false unless @native_webhook_order_id == other.native_webhook_order_id
           return false unless @native_webhook_parent_id == other.native_webhook_parent_id
           return false unless @native_webhook_project_id == other.native_webhook_project_id
+          return false unless @native_webhook_shipment_id == other.native_webhook_shipment_id
           return false unless @native_webhook_task_id == other.native_webhook_task_id
           return false unless @outbound_fields == other.outbound_fields
           return false unless @raw_objects == other.raw_objects
@@ -489,6 +533,7 @@ module UnifiedRubySDK
           return false unless @virtual_webhook_call_id == other.virtual_webhook_call_id
           return false unless @virtual_webhook_campaign_id == other.virtual_webhook_campaign_id
           return false unless @virtual_webhook_candidate_id == other.virtual_webhook_candidate_id
+          return false unless @virtual_webhook_carrier_id == other.virtual_webhook_carrier_id
           return false unless @virtual_webhook_channel_id == other.virtual_webhook_channel_id
           return false unless @virtual_webhook_collection_id == other.virtual_webhook_collection_id
           return false unless @virtual_webhook_company_id == other.virtual_webhook_company_id
@@ -504,10 +549,12 @@ module UnifiedRubySDK
           return false unless @virtual_webhook_item_id == other.virtual_webhook_item_id
           return false unless @virtual_webhook_item_variant_id == other.virtual_webhook_item_variant_id
           return false unless @virtual_webhook_job_id == other.virtual_webhook_job_id
+          return false unless @virtual_webhook_label_id == other.virtual_webhook_label_id
           return false unless @virtual_webhook_lead_id == other.virtual_webhook_lead_id
           return false unless @virtual_webhook_limit == other.virtual_webhook_limit
           return false unless @virtual_webhook_list_id == other.virtual_webhook_list_id
           return false unless @virtual_webhook_location_id == other.virtual_webhook_location_id
+          return false unless @virtual_webhook_order_id == other.virtual_webhook_order_id
           return false unless @virtual_webhook_org_id == other.virtual_webhook_org_id
           return false unless @virtual_webhook_page_id == other.virtual_webhook_page_id
           return false unless @virtual_webhook_parent_id == other.virtual_webhook_parent_id
@@ -515,6 +562,7 @@ module UnifiedRubySDK
           return false unless @virtual_webhook_project_id == other.virtual_webhook_project_id
           return false unless @virtual_webhook_repo_id == other.virtual_webhook_repo_id
           return false unless @virtual_webhook_saleschannel_id == other.virtual_webhook_saleschannel_id
+          return false unless @virtual_webhook_shipment_id == other.virtual_webhook_shipment_id
           return false unless @virtual_webhook_space_id == other.virtual_webhook_space_id
           return false unless @virtual_webhook_start_gte == other.virtual_webhook_start_gte
           return false unless @virtual_webhook_status == other.virtual_webhook_status

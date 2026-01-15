@@ -60,8 +60,6 @@ module UnifiedRubySDK
           PAYMENT_SUBSCRIPTION_WRITE = new('payment_subscription_write')
           COMMERCE_ITEM_READ = new('commerce_item_read')
           COMMERCE_ITEM_WRITE = new('commerce_item_write')
-          COMMERCE_ITEMVARIANT_READ = new('commerce_itemvariant_read')
-          COMMERCE_ITEMVARIANT_WRITE = new('commerce_itemvariant_write')
           COMMERCE_COLLECTION_READ = new('commerce_collection_read')
           COMMERCE_COLLECTION_WRITE = new('commerce_collection_write')
           COMMERCE_INVENTORY_READ = new('commerce_inventory_read')
@@ -72,6 +70,8 @@ module UnifiedRubySDK
           COMMERCE_REVIEW_WRITE = new('commerce_review_write')
           COMMERCE_SALESCHANNEL_READ = new('commerce_saleschannel_read')
           COMMERCE_SALESCHANNEL_WRITE = new('commerce_saleschannel_write')
+          COMMERCE_ITEMVARIANT_READ = new('commerce_itemvariant_read')
+          COMMERCE_ITEMVARIANT_WRITE = new('commerce_itemvariant_write')
           VERIFICATION_PACKAGE_READ = new('verification_package_read')
           VERIFICATION_REQUEST_READ = new('verification_request_read')
           VERIFICATION_REQUEST_WRITE = new('verification_request_write')
@@ -216,6 +216,13 @@ module UnifiedRubySDK
           FORMS_FORM_WRITE = new('forms_form_write')
           FORMS_SUBMISSION_READ = new('forms_submission_read')
           FORMS_SUBMISSION_WRITE = new('forms_submission_write')
+          SHIPPING_SHIPMENT_READ = new('shipping_shipment_read')
+          SHIPPING_SHIPMENT_WRITE = new('shipping_shipment_write')
+          SHIPPING_LABEL_READ = new('shipping_label_read')
+          SHIPPING_LABEL_WRITE = new('shipping_label_write')
+          SHIPPING_TRACKING_READ = new('shipping_tracking_read')
+          SHIPPING_RATE_READ = new('shipping_rate_read')
+          SHIPPING_CARRIER_READ = new('shipping_carrier_read')
         end
       end
     end

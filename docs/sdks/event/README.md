@@ -398,9 +398,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchMessagingEventRequest.new(
-  messaging_event: Models::Shared::MessagingEvent.new(
-    type: Models::Shared::MessagingEventType::CHANNEL_JOINED,
-  ),
+  messaging_event: Models::Shared::MessagingEvent.new(),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -625,9 +623,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateMessagingEventRequest.new(
-  messaging_event: Models::Shared::MessagingEvent.new(
-    type: Models::Shared::MessagingEventType::CHANNEL_JOINED,
-  ),
+  messaging_event: Models::Shared::MessagingEvent.new(),
   connection_id: '<id>',
   id: '<id>',
 )
