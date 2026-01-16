@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # for email systems, this field represents the From value
       class PropertyMessagingMessageAuthorMember
         extend T::Sig
         include Crystalline::MetadataFields
