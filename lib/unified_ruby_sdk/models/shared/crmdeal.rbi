@@ -34,6 +34,8 @@ class UnifiedRubySDK::Models::Shared::CrmDeal
   def pipeline=(str_); end
   def pipeline_id(); end
   def pipeline_id=(str_); end
+  def pipelines(); end
+  def pipelines=(str_); end
   def probability(); end
   def probability=(str_); end
   def raw(); end
@@ -44,6 +46,8 @@ class UnifiedRubySDK::Models::Shared::CrmDeal
   def stage=(str_); end
   def stage_id(); end
   def stage_id=(str_); end
+  def stages(); end
+  def stages=(str_); end
   def tags(); end
   def tags=(str_); end
   def updated_at(); end

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: efb9a6c3665234f4ced6bdd175a6f17e
+  docChecksum: ffa471bd7fa4f3990f03aef2cc210f38
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.17
-  configChecksum: 71a3245732f38bd48f4bd24ae55c2ccb
+  releaseVersion: 0.67.18
+  configChecksum: f904833babba52bcb4b6f9a9a8abee67
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -1838,6 +1838,7 @@ generatedFiles:
   - docs/models/shared/crmmetadataschemas5.md
   - docs/models/shared/crmmetadatavalue.md
   - docs/models/shared/crmpipeline.md
+  - docs/models/shared/crmreference.md
   - docs/models/shared/crmstage.md
   - docs/models/shared/crmtelephone.md
   - docs/models/shared/crmtelephonetype.md
@@ -6156,6 +6157,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/crmmetadata_value.rbi
   - lib/unified_ruby_sdk/models/shared/crmpipeline.rb
   - lib/unified_ruby_sdk/models/shared/crmpipeline.rbi
+  - lib/unified_ruby_sdk/models/shared/crmreference.rb
+  - lib/unified_ruby_sdk/models/shared/crmreference.rbi
   - lib/unified_ruby_sdk/models/shared/crmstage.rb
   - lib/unified_ruby_sdk/models/shared/crmstage.rbi
   - lib/unified_ruby_sdk/models/shared/crmtelephone.rb

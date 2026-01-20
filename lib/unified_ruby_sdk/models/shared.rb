@@ -169,6 +169,7 @@ module UnifiedRubySDK
       autoload :CrmMetadataFormat, 'unified_ruby_sdk/models/shared/crmmetadata_format.rb'
       autoload :CrmMetadataValue, 'unified_ruby_sdk/models/shared/crmmetadata_value.rb'
       autoload :CrmPipeline, 'unified_ruby_sdk/models/shared/crmpipeline.rb'
+      autoload :CrmReference, 'unified_ruby_sdk/models/shared/crmreference.rb'
       autoload :CrmStage, 'unified_ruby_sdk/models/shared/crmstage.rb'
       autoload :CrmTelephone, 'unified_ruby_sdk/models/shared/crmtelephone.rb'
       autoload :CrmTelephoneType, 'unified_ruby_sdk/models/shared/crmtelephone_type.rb'
