@@ -44,4 +44,6 @@ class UnifiedRubySDK::Models::Shared::VerificationPackage
   def tags=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
+  def valid_regions(); end
+  def valid_regions=(str_); end
 end

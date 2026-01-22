@@ -30,6 +30,7 @@ module UnifiedRubySDK
           CURRENCY = new('currency')
           MAX_SCORE = new('max_score')
           INFO_URL = new('info_url')
+          VALID_REGIONS = new('valid_regions')
           RAW = new('raw')
         end
       end
