@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    unified_ruby_sdk (0.67.19)
+    unified_ruby_sdk (0.67.20)
       base64 (>= 0.2.0, < 1.0)
       faraday
       faraday-multipart

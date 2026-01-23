@@ -15,18 +15,34 @@ module UnifiedRubySDK
 
 
         field :bid_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('bid_amount') } }
+        # YOUTUBE_AND_PARTNERS
+        field :bid_strategy, Crystalline::Nilable.new(Models::Shared::PropertyAdsGroupBidStrategy), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('bid_strategy') } }
+
+        field :budget_allocation_type, Crystalline::Nilable.new(Models::Shared::BudgetAllocationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('budget_allocation_type'), 'decoder': Utils.enum_from_string(Models::Shared::BudgetAllocationType, true) } }
 
         field :budget_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('budget_amount') } }
 
+        field :budget_max_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('budget_max_amount') } }
+
         field :budget_period, Crystalline::Nilable.new(Models::Shared::AdsGroupBudgetPeriod), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('budget_period'), 'decoder': Utils.enum_from_string(Models::Shared::AdsGroupBudgetPeriod, true) } }
+
+        field :budget_unit, Crystalline::Nilable.new(Models::Shared::BudgetUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('budget_unit'), 'decoder': Utils.enum_from_string(Models::Shared::BudgetUnit, true) } }
 
         field :campaign_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('campaign_id') } }
 
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+        field :creative_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('creative_ids') } }
+
         field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+        field :frequency_cap, Crystalline::Nilable.new(Models::Shared::PropertyAdsGroupFrequencyCap), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency_cap') } }
+
+        field :has_eu_political_ads, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_eu_political_ads') } }
+
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :insertionorder_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('insertionorder_id') } }
 
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
@@ -34,29 +50,49 @@ module UnifiedRubySDK
 
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
 
+        field :pacing, Crystalline::Nilable.new(Models::Shared::PropertyAdsGroupPacing), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pacing') } }
+
+        field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
+
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+        field :status, Crystalline::Nilable.new(Models::Shared::AdsGroupStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AdsGroupStatus, true) } }
+
         field :targeting, Crystalline::Nilable.new(Models::Shared::PropertyAdsGroupTargeting), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('targeting') } }
+
+        field :type, Crystalline::Nilable.new(Models::Shared::AdsGroupType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AdsGroupType, true) } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(bid_amount: T.nilable(::Float), budget_amount: T.nilable(::Float), budget_period: T.nilable(Models::Shared::AdsGroupBudgetPeriod), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), organization_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), targeting: T.nilable(Models::Shared::PropertyAdsGroupTargeting), updated_at: T.nilable(::DateTime)).void }
-        def initialize(bid_amount: nil, budget_amount: nil, budget_period: nil, campaign_id: nil, created_at: nil, end_at: nil, id: nil, is_active: nil, name: nil, organization_id: nil, raw: nil, start_at: nil, targeting: nil, updated_at: nil)
+        sig { params(bid_amount: T.nilable(::Float), bid_strategy: T.nilable(Models::Shared::PropertyAdsGroupBidStrategy), budget_allocation_type: T.nilable(Models::Shared::BudgetAllocationType), budget_amount: T.nilable(::Float), budget_max_amount: T.nilable(::Float), budget_period: T.nilable(Models::Shared::AdsGroupBudgetPeriod), budget_unit: T.nilable(Models::Shared::BudgetUnit), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), creative_ids: T.nilable(T::Array[::String]), end_at: T.nilable(::DateTime), frequency_cap: T.nilable(Models::Shared::PropertyAdsGroupFrequencyCap), has_eu_political_ads: T.nilable(T::Boolean), id: T.nilable(::String), insertionorder_id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), organization_id: T.nilable(::String), pacing: T.nilable(Models::Shared::PropertyAdsGroupPacing), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::AdsGroupStatus), targeting: T.nilable(Models::Shared::PropertyAdsGroupTargeting), type: T.nilable(Models::Shared::AdsGroupType), updated_at: T.nilable(::DateTime)).void }
+        def initialize(bid_amount: nil, bid_strategy: nil, budget_allocation_type: nil, budget_amount: nil, budget_max_amount: nil, budget_period: nil, budget_unit: nil, campaign_id: nil, created_at: nil, creative_ids: nil, end_at: nil, frequency_cap: nil, has_eu_political_ads: nil, id: nil, insertionorder_id: nil, is_active: nil, name: nil, organization_id: nil, pacing: nil, parent_id: nil, raw: nil, start_at: nil, status: nil, targeting: nil, type: nil, updated_at: nil)
           @bid_amount = bid_amount
+          @bid_strategy = bid_strategy
+          @budget_allocation_type = budget_allocation_type
           @budget_amount = budget_amount
+          @budget_max_amount = budget_max_amount
           @budget_period = budget_period
+          @budget_unit = budget_unit
           @campaign_id = campaign_id
           @created_at = created_at
+          @creative_ids = creative_ids
           @end_at = end_at
+          @frequency_cap = frequency_cap
+          @has_eu_political_ads = has_eu_political_ads
           @id = id
+          @insertionorder_id = insertionorder_id
           @is_active = is_active
           @name = name
           @organization_id = organization_id
+          @pacing = pacing
+          @parent_id = parent_id
           @raw = raw
           @start_at = start_at
+          @status = status
           @targeting = targeting
+          @type = type
           @updated_at = updated_at
         end
 
@@ -64,18 +100,30 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @bid_amount == other.bid_amount
+          return false unless @bid_strategy == other.bid_strategy
+          return false unless @budget_allocation_type == other.budget_allocation_type
           return false unless @budget_amount == other.budget_amount
+          return false unless @budget_max_amount == other.budget_max_amount
           return false unless @budget_period == other.budget_period
+          return false unless @budget_unit == other.budget_unit
           return false unless @campaign_id == other.campaign_id
           return false unless @created_at == other.created_at
+          return false unless @creative_ids == other.creative_ids
           return false unless @end_at == other.end_at
+          return false unless @frequency_cap == other.frequency_cap
+          return false unless @has_eu_political_ads == other.has_eu_political_ads
           return false unless @id == other.id
+          return false unless @insertionorder_id == other.insertionorder_id
           return false unless @is_active == other.is_active
           return false unless @name == other.name
           return false unless @organization_id == other.organization_id
+          return false unless @pacing == other.pacing
+          return false unless @parent_id == other.parent_id
           return false unless @raw == other.raw
           return false unless @start_at == other.start_at
+          return false unless @status == other.status
           return false unless @targeting == other.targeting
+          return false unless @type == other.type
           return false unless @updated_at == other.updated_at
           true
         end

@@ -18,7 +18,7 @@ module UnifiedRubySDK
           UPDATED_AT = new('updated_at')
           NAME = new('name')
           ORGANIZATION_ID = new('organization_id')
-          IS_ACTIVE = new('is_active')
+          STATUS = new('status')
           START_AT = new('start_at')
           END_AT = new('end_at')
           BUDGET_AMOUNT = new('budget_amount')
@@ -26,6 +26,10 @@ module UnifiedRubySDK
           TOTAL_SPEND_AMOUNT = new('total_spend_amount')
           TARGETING = new('targeting')
           RAW = new('raw')
+          GOAL = new('goal')
+          PLANNED_SPEND_AMOUNT = new('planned_spend_amount')
+          FREQUENCY_CAP = new('frequency_cap')
+          IS_ACTIVE = new('is_active')
         end
       end
     end

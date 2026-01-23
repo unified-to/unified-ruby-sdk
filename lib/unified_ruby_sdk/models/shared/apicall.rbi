@@ -36,6 +36,8 @@ class UnifiedRubySDK::Models::Shared::ApiCall
   def is_billable=(str_); end
   def size(); end
   def size=(str_); end
+  def user_agent(); end
+  def user_agent=(str_); end
   def webhook_id(); end
   def webhook_id=(str_); end
   def workspace_id(); end

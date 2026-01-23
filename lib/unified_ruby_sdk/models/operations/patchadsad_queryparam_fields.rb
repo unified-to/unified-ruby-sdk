@@ -19,9 +19,11 @@ module UnifiedRubySDK
           NAME = new('name')
           CAMPAIGN_ID = new('campaign_id')
           GROUP_ID = new('group_id')
+          ITEM_ID = new('item_id')
           ORGANIZATION_ID = new('organization_id')
-          IS_ACTIVE = new('is_active')
+          STATUS = new('status')
           AD_TYPE = new('ad_type')
+          CREATIVE_IDS = new('creative_ids')
           CREATIVE_ASSET_URL = new('creative_asset_url')
           AD_COPY = new('ad_copy')
           HEADLINE = new('headline')
@@ -29,6 +31,7 @@ module UnifiedRubySDK
           CTA = new('cta')
           FINAL_URL = new('final_url')
           TARGETING = new('targeting')
+          IS_ACTIVE = new('is_active')
           RAW = new('raw')
         end
       end

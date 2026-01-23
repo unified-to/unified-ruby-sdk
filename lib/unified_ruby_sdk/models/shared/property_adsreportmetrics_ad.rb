@@ -24,6 +24,8 @@ module UnifiedRubySDK
 
         field :creative_asset_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('creative_asset_url') } }
 
+        field :creative_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('creative_ids') } }
+
         field :cta, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cta') } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
@@ -38,23 +40,28 @@ module UnifiedRubySDK
 
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
+        field :item_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('item_id') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
+        field :status, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsAdStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsReportMetricsAdStatus, true) } }
+
         field :targeting, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsAdTargeting), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('targeting') } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(ad_copy: T.nilable(::String), ad_type: T.nilable(Models::Shared::PropertyAdsReportMetricsAdAdType), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), creative_asset_url: T.nilable(::String), cta: T.nilable(::String), description: T.nilable(::String), final_url: T.nilable(::String), group_id: T.nilable(::String), headline: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), organization_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), targeting: T.nilable(Models::Shared::PropertyAdsReportMetricsAdTargeting), updated_at: T.nilable(::DateTime)).void }
-        def initialize(ad_copy: nil, ad_type: nil, campaign_id: nil, created_at: nil, creative_asset_url: nil, cta: nil, description: nil, final_url: nil, group_id: nil, headline: nil, id: nil, is_active: nil, name: nil, organization_id: nil, raw: nil, targeting: nil, updated_at: nil)
+        sig { params(ad_copy: T.nilable(::String), ad_type: T.nilable(Models::Shared::PropertyAdsReportMetricsAdAdType), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), creative_asset_url: T.nilable(::String), creative_ids: T.nilable(T::Array[::String]), cta: T.nilable(::String), description: T.nilable(::String), final_url: T.nilable(::String), group_id: T.nilable(::String), headline: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), item_id: T.nilable(::String), name: T.nilable(::String), organization_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::PropertyAdsReportMetricsAdStatus), targeting: T.nilable(Models::Shared::PropertyAdsReportMetricsAdTargeting), updated_at: T.nilable(::DateTime)).void }
+        def initialize(ad_copy: nil, ad_type: nil, campaign_id: nil, created_at: nil, creative_asset_url: nil, creative_ids: nil, cta: nil, description: nil, final_url: nil, group_id: nil, headline: nil, id: nil, is_active: nil, item_id: nil, name: nil, organization_id: nil, raw: nil, status: nil, targeting: nil, updated_at: nil)
           @ad_copy = ad_copy
           @ad_type = ad_type
           @campaign_id = campaign_id
           @created_at = created_at
           @creative_asset_url = creative_asset_url
+          @creative_ids = creative_ids
           @cta = cta
           @description = description
           @final_url = final_url
@@ -62,9 +69,11 @@ module UnifiedRubySDK
           @headline = headline
           @id = id
           @is_active = is_active
+          @item_id = item_id
           @name = name
           @organization_id = organization_id
           @raw = raw
+          @status = status
           @targeting = targeting
           @updated_at = updated_at
         end
@@ -77,6 +86,7 @@ module UnifiedRubySDK
           return false unless @campaign_id == other.campaign_id
           return false unless @created_at == other.created_at
           return false unless @creative_asset_url == other.creative_asset_url
+          return false unless @creative_ids == other.creative_ids
           return false unless @cta == other.cta
           return false unless @description == other.description
           return false unless @final_url == other.final_url
@@ -84,9 +94,11 @@ module UnifiedRubySDK
           return false unless @headline == other.headline
           return false unless @id == other.id
           return false unless @is_active == other.is_active
+          return false unless @item_id == other.item_id
           return false unless @name == other.name
           return false unless @organization_id == other.organization_id
           return false unless @raw == other.raw
+          return false unless @status == other.status
           return false unless @targeting == other.targeting
           return false unless @updated_at == other.updated_at
           true

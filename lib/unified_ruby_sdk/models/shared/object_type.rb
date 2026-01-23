@@ -120,6 +120,8 @@ module UnifiedRubySDK
           ADS_CAMPAIGN = new('ads_campaign')
           ADS_REPORT = new('ads_report')
           ADS_GROUP = new('ads_group')
+          ADS_CREATIVE = new('ads_creative')
+          ADS_INSERTIONORDER = new('ads_insertionorder')
           FORMS_FORM = new('forms_form')
           FORMS_SUBMISSION = new('forms_submission')
           SHIPPING_CARRIER = new('shipping_carrier')

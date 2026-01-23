@@ -42,14 +42,16 @@ module UnifiedRubySDK
 
         field :size, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
 
+        field :user_agent, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_agent') } }
+
         field :webhook_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('webhook_id') } }
 
         field :workspace_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
 
         field :environment, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('environment') } }
 
-        sig { params(integration_type: ::String, method: ::String, name: ::String, path: ::String, status: ::String, type: Models::Shared::ApiCallType, connection_id: T.nilable(::String), created_at: T.nilable(::DateTime), error: T.nilable(::String), external_xref: T.nilable(::String), id: T.nilable(::String), ip_address: T.nilable(::String), is_billable: T.nilable(T::Boolean), size: T.nilable(::Float), webhook_id: T.nilable(::String), workspace_id: T.nilable(::String), environment: T.nilable(::String)).void }
-        def initialize(integration_type:, method:, name:, path:, status:, type:, connection_id: nil, created_at: nil, error: nil, external_xref: nil, id: nil, ip_address: nil, is_billable: nil, size: nil, webhook_id: nil, workspace_id: nil, environment: 'Production')
+        sig { params(integration_type: ::String, method: ::String, name: ::String, path: ::String, status: ::String, type: Models::Shared::ApiCallType, connection_id: T.nilable(::String), created_at: T.nilable(::DateTime), error: T.nilable(::String), external_xref: T.nilable(::String), id: T.nilable(::String), ip_address: T.nilable(::String), is_billable: T.nilable(T::Boolean), size: T.nilable(::Float), user_agent: T.nilable(::String), webhook_id: T.nilable(::String), workspace_id: T.nilable(::String), environment: T.nilable(::String)).void }
+        def initialize(integration_type:, method:, name:, path:, status:, type:, connection_id: nil, created_at: nil, error: nil, external_xref: nil, id: nil, ip_address: nil, is_billable: nil, size: nil, user_agent: nil, webhook_id: nil, workspace_id: nil, environment: 'Production')
           @integration_type = integration_type
           @method = method
           @name = name
@@ -64,6 +66,7 @@ module UnifiedRubySDK
           @ip_address = ip_address
           @is_billable = is_billable
           @size = size
+          @user_agent = user_agent
           @webhook_id = webhook_id
           @workspace_id = workspace_id
           @environment = environment
@@ -86,6 +89,7 @@ module UnifiedRubySDK
           return false unless @ip_address == other.ip_address
           return false unless @is_billable == other.is_billable
           return false unless @size == other.size
+          return false unless @user_agent == other.user_agent
           return false unless @webhook_id == other.webhook_id
           return false unless @workspace_id == other.workspace_id
           return false unless @environment == other.environment

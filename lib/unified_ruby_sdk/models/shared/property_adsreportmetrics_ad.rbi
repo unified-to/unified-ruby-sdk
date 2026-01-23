@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::PropertyAdsReportMetricsAd
   def created_at=(str_); end
   def creative_asset_url(); end
   def creative_asset_url=(str_); end
+  def creative_ids(); end
+  def creative_ids=(str_); end
   def cta(); end
   def cta=(str_); end
   def description(); end
@@ -32,12 +34,16 @@ class UnifiedRubySDK::Models::Shared::PropertyAdsReportMetricsAd
   def id=(str_); end
   def is_active(); end
   def is_active=(str_); end
+  def item_id(); end
+  def item_id=(str_); end
   def name(); end
   def name=(str_); end
   def organization_id(); end
   def organization_id=(str_); end
   def raw(); end
   def raw=(str_); end
+  def status(); end
+  def status=(str_); end
   def targeting(); end
   def targeting=(str_); end
   def updated_at(); end

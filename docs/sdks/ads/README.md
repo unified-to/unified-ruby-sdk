@@ -7,28 +7,40 @@
 
 * [create_ads_ad](#create_ads_ad) - Create an ad
 * [create_ads_campaign](#create_ads_campaign) - Create a campaign
+* [create_ads_creative](#create_ads_creative) - Create a creative
 * [create_ads_group](#create_ads_group) - Create a group
+* [create_ads_insertionorder](#create_ads_insertionorder) - Create an insertionorder
 * [create_ads_organization](#create_ads_organization) - Create an organization
 * [get_ads_ad](#get_ads_ad) - Retrieve an ad
 * [get_ads_campaign](#get_ads_campaign) - Retrieve a campaign
+* [get_ads_creative](#get_ads_creative) - Retrieve a creative
 * [get_ads_group](#get_ads_group) - Retrieve a group
+* [get_ads_insertionorder](#get_ads_insertionorder) - Retrieve an insertionorder
 * [get_ads_organization](#get_ads_organization) - Retrieve an organization
 * [list_ads_ads](#list_ads_ads) - List all ads
 * [list_ads_campaigns](#list_ads_campaigns) - List all campaigns
+* [list_ads_creatives](#list_ads_creatives) - List all creatives
 * [list_ads_groups](#list_ads_groups) - List all groups
+* [list_ads_insertionorders](#list_ads_insertionorders) - List all insertionorders
 * [list_ads_organizations](#list_ads_organizations) - List all organizations
 * [list_ads_reports](#list_ads_reports) - List all reports
 * [patch_ads_ad](#patch_ads_ad) - Update an ad
 * [patch_ads_campaign](#patch_ads_campaign) - Update a campaign
+* [patch_ads_creative](#patch_ads_creative) - Update a creative
 * [patch_ads_group](#patch_ads_group) - Update a group
+* [patch_ads_insertionorder](#patch_ads_insertionorder) - Update an insertionorder
 * [patch_ads_organization](#patch_ads_organization) - Update an organization
 * [remove_ads_ad](#remove_ads_ad) - Remove an ad
 * [remove_ads_campaign](#remove_ads_campaign) - Remove a campaign
+* [remove_ads_creative](#remove_ads_creative) - Remove a creative
 * [remove_ads_group](#remove_ads_group) - Remove a group
+* [remove_ads_insertionorder](#remove_ads_insertionorder) - Remove an insertionorder
 * [remove_ads_organization](#remove_ads_organization) - Remove an organization
 * [update_ads_ad](#update_ads_ad) - Update an ad
 * [update_ads_campaign](#update_ads_campaign) - Update a campaign
+* [update_ads_creative](#update_ads_creative) - Update a creative
 * [update_ads_group](#update_ads_group) - Update a group
+* [update_ads_insertionorder](#update_ads_insertionorder) - Update an insertionorder
 * [update_ads_organization](#update_ads_organization) - Update an organization
 
 ## create_ads_ad
@@ -119,6 +131,50 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## create_ads_creative
+
+Create a creative
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.ads.create_ads_creative(ads_creative: Models::Shared::AdsCreative.new(), connection_id: '<id>')
+
+unless res.ads_creative.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `ads_creative`                                                                                                                                   | [Models::Shared::AdsCreative](../../models/shared/adscreative.md)                                                                                | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateAdsCreativeQueryParamFields](../../models/operations/createadscreativequeryparamfields.md)>                  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateAdsCreativeResponse)](../../models/operations/createadscreativeresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## create_ads_group
 
 Create a group
@@ -156,6 +212,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateAdsGroupResponse)](../../models/operations/createadsgroupresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## create_ads_insertionorder
+
+Create an insertionorder
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.ads.create_ads_insertionorder(ads_insertionorder: Models::Shared::AdsInsertionorder.new(), connection_id: '<id>')
+
+unless res.ads_insertionorder.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `ads_insertionorder`                                                                                                                             | [Models::Shared::AdsInsertionorder](../../models/shared/adsinsertionorder.md)                                                                    | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateAdsInsertionorderQueryParamFields](../../models/operations/createadsinsertionorderqueryparamfields.md)>      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateAdsInsertionorderResponse)](../../models/operations/createadsinsertionorderresponse.md)**
 
 ### Errors
 
@@ -295,6 +395,50 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## get_ads_creative
+
+Retrieve a creative
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getAdsCreative" method="get" path="/ads/{connection_id}/creative/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.ads.get_ads_creative(connection_id: '<id>', id: '<id>')
+
+unless res.ads_creative.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Creative                                                                                                                               |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetAdsCreativeQueryParamFields](../../models/operations/getadscreativequeryparamfields.md)>                        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetAdsCreativeResponse)](../../models/operations/getadscreativeresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## get_ads_group
 
 Retrieve a group
@@ -332,6 +476,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetAdsGroupResponse)](../../models/operations/getadsgroupresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_ads_insertionorder
+
+Retrieve an insertionorder
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getAdsInsertionorder" method="get" path="/ads/{connection_id}/insertionorder/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.ads.get_ads_insertionorder(connection_id: '<id>', id: '<id>')
+
+unless res.ads_insertionorder.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Insertionorder                                                                                                                         |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetAdsInsertionorderQueryParamFields](../../models/operations/getadsinsertionorderqueryparamfields.md)>            | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetAdsInsertionorderResponse)](../../models/operations/getadsinsertionorderresponse.md)**
 
 ### Errors
 
@@ -473,6 +661,51 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_ads_creatives
+
+List all creatives
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listAdsCreatives" method="get" path="/ads/{connection_id}/creative" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListAdsCreativesRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.ads.list_ads_creatives(request: req)
+
+unless res.ads_creatives.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::ListAdsCreativesRequest](../../models/operations/listadscreativesrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+
+### Response
+
+**[T.nilable(Models::Operations::ListAdsCreativesResponse)](../../models/operations/listadscreativesresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_ads_groups
 
 List all groups
@@ -511,6 +744,51 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::ListAdsGroupsResponse)](../../models/operations/listadsgroupsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_ads_insertionorders
+
+List all insertionorders
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listAdsInsertionorders" method="get" path="/ads/{connection_id}/insertionorder" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListAdsInsertionordersRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.ads.list_ads_insertionorders(request: req)
+
+unless res.ads_insertionorders.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [Models::Operations::ListAdsInsertionordersRequest](../../models/operations/listadsinsertionordersrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+
+### Response
+
+**[T.nilable(Models::Operations::ListAdsInsertionordersResponse)](../../models/operations/listadsinsertionordersresponse.md)**
 
 ### Errors
 
@@ -702,6 +980,53 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## patch_ads_creative
+
+Update a creative
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::PatchAdsCreativeRequest.new(
+  ads_creative: Models::Shared::AdsCreative.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.ads.patch_ads_creative(request: req)
+
+unless res.ads_creative.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::PatchAdsCreativeRequest](../../models/operations/patchadscreativerequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchAdsCreativeResponse)](../../models/operations/patchadscreativeresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## patch_ads_group
 
 Update a group
@@ -742,6 +1067,53 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::PatchAdsGroupResponse)](../../models/operations/patchadsgroupresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## patch_ads_insertionorder
+
+Update an insertionorder
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::PatchAdsInsertionorderRequest.new(
+  ads_insertionorder: Models::Shared::AdsInsertionorder.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.ads.patch_ads_insertionorder(request: req)
+
+unless res.ads_insertionorder.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [Models::Operations::PatchAdsInsertionorderRequest](../../models/operations/patchadsinsertionorderrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchAdsInsertionorderResponse)](../../models/operations/patchadsinsertionorderresponse.md)**
 
 ### Errors
 
@@ -880,6 +1252,48 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## remove_ads_creative
+
+Remove a creative
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeAdsCreative" method="delete" path="/ads/{connection_id}/creative/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.ads.remove_ads_creative(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Creative   |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveAdsCreativeResponse)](../../models/operations/removeadscreativeresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## remove_ads_group
 
 Remove a group
@@ -915,6 +1329,48 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::RemoveAdsGroupResponse)](../../models/operations/removeadsgroupresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## remove_ads_insertionorder
+
+Remove an insertionorder
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeAdsInsertionorder" method="delete" path="/ads/{connection_id}/insertionorder/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.ads.remove_ads_insertionorder(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                | Type                     | Required                 | Description              |
+| ------------------------ | ------------------------ | ------------------------ | ------------------------ |
+| `connection_id`          | *::String*               | :heavy_check_mark:       | ID of the connection     |
+| `id`                     | *::String*               | :heavy_check_mark:       | ID of the Insertionorder |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveAdsInsertionorderResponse)](../../models/operations/removeadsinsertionorderresponse.md)**
 
 ### Errors
 
@@ -1058,6 +1514,53 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## update_ads_creative
+
+Update a creative
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateAdsCreativeRequest.new(
+  ads_creative: Models::Shared::AdsCreative.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.ads.update_ads_creative(request: req)
+
+unless res.ads_creative.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::UpdateAdsCreativeRequest](../../models/operations/updateadscreativerequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateAdsCreativeResponse)](../../models/operations/updateadscreativeresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## update_ads_group
 
 Update a group
@@ -1098,6 +1601,53 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::UpdateAdsGroupResponse)](../../models/operations/updateadsgroupresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_ads_insertionorder
+
+Update an insertionorder
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateAdsInsertionorderRequest.new(
+  ads_insertionorder: Models::Shared::AdsInsertionorder.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.ads.update_ads_insertionorder(request: req)
+
+unless res.ads_insertionorder.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [Models::Operations::UpdateAdsInsertionorderRequest](../../models/operations/updateadsinsertionorderrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateAdsInsertionorderResponse)](../../models/operations/updateadsinsertionorderresponse.md)**
 
 ### Errors
 
