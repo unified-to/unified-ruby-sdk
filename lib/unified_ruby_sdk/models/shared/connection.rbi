@@ -18,6 +18,12 @@ class UnifiedRubySDK::Models::Shared::Connection
   def auth=(str_); end
   def auth_aws_arn(); end
   def auth_aws_arn=(str_); end
+  def auth_azure_keyvault_id(); end
+  def auth_azure_keyvault_id=(str_); end
+  def auth_gcp_secret_name(); end
+  def auth_gcp_secret_name=(str_); end
+  def auth_hashi_vault_path(); end
+  def auth_hashi_vault_path=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def external_xref(); end

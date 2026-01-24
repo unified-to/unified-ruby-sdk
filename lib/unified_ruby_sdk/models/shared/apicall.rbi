@@ -24,6 +24,8 @@ class UnifiedRubySDK::Models::Shared::ApiCall
   def connection_id=(str_); end
   def created_at(); end
   def created_at=(str_); end
+  def endapi_response_time(); end
+  def endapi_response_time=(str_); end
   def error(); end
   def error=(str_); end
   def external_xref(); end
@@ -36,6 +38,8 @@ class UnifiedRubySDK::Models::Shared::ApiCall
   def is_billable=(str_); end
   def size(); end
   def size=(str_); end
+  def unified_response_time(); end
+  def unified_response_time=(str_); end
   def user_agent(); end
   def user_agent=(str_); end
   def webhook_id(); end

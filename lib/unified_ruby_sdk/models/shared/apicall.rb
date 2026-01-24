@@ -30,6 +30,8 @@ module UnifiedRubySDK
 
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+        field :endapi_response_time, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('endapi_response_time') } }
+
         field :error, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('error') } }
 
         field :external_xref, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_xref') } }
@@ -42,6 +44,8 @@ module UnifiedRubySDK
 
         field :size, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
 
+        field :unified_response_time, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unified_response_time') } }
+
         field :user_agent, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_agent') } }
 
         field :webhook_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('webhook_id') } }
@@ -50,8 +54,8 @@ module UnifiedRubySDK
 
         field :environment, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('environment') } }
 
-        sig { params(integration_type: ::String, method: ::String, name: ::String, path: ::String, status: ::String, type: Models::Shared::ApiCallType, connection_id: T.nilable(::String), created_at: T.nilable(::DateTime), error: T.nilable(::String), external_xref: T.nilable(::String), id: T.nilable(::String), ip_address: T.nilable(::String), is_billable: T.nilable(T::Boolean), size: T.nilable(::Float), user_agent: T.nilable(::String), webhook_id: T.nilable(::String), workspace_id: T.nilable(::String), environment: T.nilable(::String)).void }
-        def initialize(integration_type:, method:, name:, path:, status:, type:, connection_id: nil, created_at: nil, error: nil, external_xref: nil, id: nil, ip_address: nil, is_billable: nil, size: nil, user_agent: nil, webhook_id: nil, workspace_id: nil, environment: 'Production')
+        sig { params(integration_type: ::String, method: ::String, name: ::String, path: ::String, status: ::String, type: Models::Shared::ApiCallType, connection_id: T.nilable(::String), created_at: T.nilable(::DateTime), endapi_response_time: T.nilable(::Float), error: T.nilable(::String), external_xref: T.nilable(::String), id: T.nilable(::String), ip_address: T.nilable(::String), is_billable: T.nilable(T::Boolean), size: T.nilable(::Float), unified_response_time: T.nilable(::Float), user_agent: T.nilable(::String), webhook_id: T.nilable(::String), workspace_id: T.nilable(::String), environment: T.nilable(::String)).void }
+        def initialize(integration_type:, method:, name:, path:, status:, type:, connection_id: nil, created_at: nil, endapi_response_time: nil, error: nil, external_xref: nil, id: nil, ip_address: nil, is_billable: nil, size: nil, unified_response_time: nil, user_agent: nil, webhook_id: nil, workspace_id: nil, environment: 'Production')
           @integration_type = integration_type
           @method = method
           @name = name
@@ -60,12 +64,14 @@ module UnifiedRubySDK
           @type = type
           @connection_id = connection_id
           @created_at = created_at
+          @endapi_response_time = endapi_response_time
           @error = error
           @external_xref = external_xref
           @id = id
           @ip_address = ip_address
           @is_billable = is_billable
           @size = size
+          @unified_response_time = unified_response_time
           @user_agent = user_agent
           @webhook_id = webhook_id
           @workspace_id = workspace_id
@@ -83,12 +89,14 @@ module UnifiedRubySDK
           return false unless @type == other.type
           return false unless @connection_id == other.connection_id
           return false unless @created_at == other.created_at
+          return false unless @endapi_response_time == other.endapi_response_time
           return false unless @error == other.error
           return false unless @external_xref == other.external_xref
           return false unless @id == other.id
           return false unless @ip_address == other.ip_address
           return false unless @is_billable == other.is_billable
           return false unless @size == other.size
+          return false unless @unified_response_time == other.unified_response_time
           return false unless @user_agent == other.user_agent
           return false unless @webhook_id == other.webhook_id
           return false unless @workspace_id == other.workspace_id
