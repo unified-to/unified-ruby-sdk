@@ -9,7 +9,7 @@ module UnifiedRubySDK
     module Operations
     
 
-      class CreateShippingTrackingResponse
+      class PatchShippingLabelResponse
         extend T::Sig
         include Crystalline::MetadataFields
 
@@ -20,14 +20,14 @@ module UnifiedRubySDK
         # Raw HTTP response; suitable for custom response parsing
         field :raw_response, ::Faraday::Response
         # Successful
-        field :shipping_tracking, Crystalline::Nilable.new(Models::Shared::ShippingTracking)
+        field :shipping_label, Crystalline::Nilable.new(Models::Shared::ShippingLabel)
 
-        sig { params(content_type: ::String, status_code: ::Integer, raw_response: ::Faraday::Response, shipping_tracking: T.nilable(Models::Shared::ShippingTracking)).void }
-        def initialize(content_type:, status_code:, raw_response:, shipping_tracking: nil)
+        sig { params(content_type: ::String, status_code: ::Integer, raw_response: ::Faraday::Response, shipping_label: T.nilable(Models::Shared::ShippingLabel)).void }
+        def initialize(content_type:, status_code:, raw_response:, shipping_label: nil)
           @content_type = content_type
           @status_code = status_code
           @raw_response = raw_response
-          @shipping_tracking = shipping_tracking
+          @shipping_label = shipping_label
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
@@ -36,7 +36,7 @@ module UnifiedRubySDK
           return false unless @content_type == other.content_type
           return false unless @status_code == other.status_code
           return false unless @raw_response == other.raw_response
-          return false unless @shipping_tracking == other.shipping_tracking
+          return false unless @shipping_label == other.shipping_label
           true
         end
       end

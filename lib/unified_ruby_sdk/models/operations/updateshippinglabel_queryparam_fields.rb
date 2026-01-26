@@ -9,7 +9,7 @@ module UnifiedRubySDK
     module Operations
     
 
-      class CreateShippingTrackingQueryParamFields < T::Enum
+      class UpdateShippingLabelQueryParamFields < T::Enum
 
 
         enums do
@@ -18,14 +18,14 @@ module UnifiedRubySDK
           UPDATED_AT = new('updated_at')
           SHIPMENT_ID = new('shipment_id')
           TRACKING_NUMBER = new('tracking_number')
+          LABEL_URL = new('label_url')
+          LABEL_FORMAT = new('label_format')
           STATUS = new('status')
-          EVENTS = new('events')
-          ESTIMATED_DELIVERY = new('estimated_delivery')
-          ACTUAL_DELIVERY_AT = new('actual_delivery_at')
-          STATUS_DESCRIPTION = new('status_description')
-          CARRIER_ID = new('carrier_id')
-          CARRIER_STATUS_CODE = new('carrier_status_code')
-          CARRIER_STATUS_DESCRIPTION = new('carrier_status_description')
+          IS_VOIDED = new('is_voided')
+          LABEL_COST = new('label_cost')
+          LABEL_COST_CURRENCY = new('label_cost_currency')
+          RATE_ID = new('rate_id')
+          SERVICE_CODE = new('service_code')
           RAW = new('raw')
         end
       end

@@ -8,7 +8,9 @@
 * [create_shipping_label](#create_shipping_label) - Create a label
 * [get_shipping_label](#get_shipping_label) - Retrieve a label
 * [list_shipping_labels](#list_shipping_labels) - List all labels
+* [patch_shipping_label](#patch_shipping_label) - Update a label
 * [remove_shipping_label](#remove_shipping_label) - Remove a label
+* [update_shipping_label](#update_shipping_label) - Update a label
 
 ## create_shipping_label
 
@@ -143,6 +145,53 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## patch_shipping_label
+
+Update a label
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchShippingLabel" method="patch" path="/shipping/{connection_id}/label/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::PatchShippingLabelRequest.new(
+  shipping_label: Models::Shared::ShippingLabel.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.label.patch_shipping_label(request: req)
+
+unless res.shipping_label.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::PatchShippingLabelRequest](../../models/operations/patchshippinglabelrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchShippingLabelResponse)](../../models/operations/patchshippinglabelresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## remove_shipping_label
 
 Remove a label
@@ -178,6 +227,53 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::RemoveShippingLabelResponse)](../../models/operations/removeshippinglabelresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_shipping_label
+
+Update a label
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateShippingLabel" method="put" path="/shipping/{connection_id}/label/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateShippingLabelRequest.new(
+  shipping_label: Models::Shared::ShippingLabel.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.label.update_shipping_label(request: req)
+
+unless res.shipping_label.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [Models::Operations::UpdateShippingLabelRequest](../../models/operations/updateshippinglabelrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateShippingLabelResponse)](../../models/operations/updateshippinglabelresponse.md)**
 
 ### Errors
 

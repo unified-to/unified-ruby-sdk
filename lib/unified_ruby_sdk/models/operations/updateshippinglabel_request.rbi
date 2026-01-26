@@ -2,12 +2,14 @@
 # frozen_string_literal: true
 
 
-class UnifiedRubySDK::Models::Operations::GetShippingRateRequest
+class UnifiedRubySDK::Models::Operations::UpdateShippingLabelRequest
   extend ::Crystalline::MetadataFields::ClassMethods
 end
 
 
-class UnifiedRubySDK::Models::Operations::GetShippingRateRequest
+class UnifiedRubySDK::Models::Operations::UpdateShippingLabelRequest
+  def shipping_label(); end
+  def shipping_label=(str_); end
   def connection_id(); end
   def connection_id=(str_); end
   def id(); end

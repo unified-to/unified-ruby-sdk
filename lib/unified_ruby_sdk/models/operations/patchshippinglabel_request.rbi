@@ -2,16 +2,18 @@
 # frozen_string_literal: true
 
 
-class UnifiedRubySDK::Models::Operations::CreateShippingTrackingRequest
+class UnifiedRubySDK::Models::Operations::PatchShippingLabelRequest
   extend ::Crystalline::MetadataFields::ClassMethods
 end
 
 
-class UnifiedRubySDK::Models::Operations::CreateShippingTrackingRequest
-  def shipping_tracking(); end
-  def shipping_tracking=(str_); end
+class UnifiedRubySDK::Models::Operations::PatchShippingLabelRequest
+  def shipping_label(); end
+  def shipping_label=(str_); end
   def connection_id(); end
   def connection_id=(str_); end
+  def id(); end
+  def id=(str_); end
   def fields_(); end
   def fields_=(str_); end
   def raw(); end

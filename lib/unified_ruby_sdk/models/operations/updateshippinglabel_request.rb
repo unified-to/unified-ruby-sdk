@@ -9,23 +9,26 @@ module UnifiedRubySDK
     module Operations
     
 
-      class CreateShippingTrackingRequest
+      class UpdateShippingLabelRequest
         extend T::Sig
         include Crystalline::MetadataFields
 
 
-        field :shipping_tracking, Models::Shared::ShippingTracking, { 'request': { 'media_type': 'application/json' } }
+        field :shipping_label, Models::Shared::ShippingLabel, { 'request': { 'media_type': 'application/json' } }
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # ID of the Label
+        field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
         # Fields to return
-        field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::CreateShippingTrackingQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::UpdateShippingLabelQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
         # Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
         field :raw, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
-        sig { params(shipping_tracking: Models::Shared::ShippingTracking, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateShippingTrackingQueryParamFields]), raw: T.nilable(::String)).void }
-        def initialize(shipping_tracking:, connection_id:, fields_: nil, raw: nil)
-          @shipping_tracking = shipping_tracking
+        sig { params(shipping_label: Models::Shared::ShippingLabel, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::UpdateShippingLabelQueryParamFields]), raw: T.nilable(::String)).void }
+        def initialize(shipping_label:, connection_id:, id:, fields_: nil, raw: nil)
+          @shipping_label = shipping_label
           @connection_id = connection_id
+          @id = id
           @fields_ = fields_
           @raw = raw
         end
@@ -33,8 +36,9 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @shipping_tracking == other.shipping_tracking
+          return false unless @shipping_label == other.shipping_label
           return false unless @connection_id == other.connection_id
+          return false unless @id == other.id
           return false unless @fields_ == other.fields_
           return false unless @raw == other.raw
           true

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 85c371a0fa4d94ec3af46b9fe331307f
+  docChecksum: 409dad276455ac494bf49828ee2c63da
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.21
-  configChecksum: 1a61406984b17593530f3a4303a0f2b3
+  releaseVersion: 0.67.22
+  configChecksum: dba99e33bb33efb6dda1f1c202d62c65
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -263,9 +263,6 @@ generatedFiles:
   - docs/models/operations/createshippingshipmentqueryparamfields.md
   - docs/models/operations/createshippingshipmentrequest.md
   - docs/models/operations/createshippingshipmentresponse.md
-  - docs/models/operations/createshippingtrackingqueryparamfields.md
-  - docs/models/operations/createshippingtrackingrequest.md
-  - docs/models/operations/createshippingtrackingresponse.md
   - docs/models/operations/createstoragefilequeryparamfields.md
   - docs/models/operations/createstoragefilerequest.md
   - docs/models/operations/createstoragefileresponse.md
@@ -571,9 +568,6 @@ generatedFiles:
   - docs/models/operations/getshippinglabelqueryparamfields.md
   - docs/models/operations/getshippinglabelrequest.md
   - docs/models/operations/getshippinglabelresponse.md
-  - docs/models/operations/getshippingratequeryparamfields.md
-  - docs/models/operations/getshippingraterequest.md
-  - docs/models/operations/getshippingrateresponse.md
   - docs/models/operations/getshippingshipmentqueryparamfields.md
   - docs/models/operations/getshippingshipmentrequest.md
   - docs/models/operations/getshippingshipmentresponse.md
@@ -920,9 +914,6 @@ generatedFiles:
   - docs/models/operations/listshippingshipmentsqueryparamfields.md
   - docs/models/operations/listshippingshipmentsrequest.md
   - docs/models/operations/listshippingshipmentsresponse.md
-  - docs/models/operations/listshippingtrackingsqueryparamfields.md
-  - docs/models/operations/listshippingtrackingsrequest.md
-  - docs/models/operations/listshippingtrackingsresponse.md
   - docs/models/operations/liststoragefilesqueryparamfields.md
   - docs/models/operations/liststoragefilesrequest.md
   - docs/models/operations/liststoragefilesresponse.md
@@ -1206,6 +1197,9 @@ generatedFiles:
   - docs/models/operations/patchscimgroupsresponse.md
   - docs/models/operations/patchscimusersrequest.md
   - docs/models/operations/patchscimusersresponse.md
+  - docs/models/operations/patchshippinglabelqueryparamfields.md
+  - docs/models/operations/patchshippinglabelrequest.md
+  - docs/models/operations/patchshippinglabelresponse.md
   - docs/models/operations/patchshippingshipmentqueryparamfields.md
   - docs/models/operations/patchshippingshipmentrequest.md
   - docs/models/operations/patchshippingshipmentresponse.md
@@ -1659,6 +1653,9 @@ generatedFiles:
   - docs/models/operations/updatescimgroupsresponse.md
   - docs/models/operations/updatescimusersrequest.md
   - docs/models/operations/updatescimusersresponse.md
+  - docs/models/operations/updateshippinglabelqueryparamfields.md
+  - docs/models/operations/updateshippinglabelrequest.md
+  - docs/models/operations/updateshippinglabelresponse.md
   - docs/models/operations/updateshippingshipmentqueryparamfields.md
   - docs/models/operations/updateshippingshipmentrequest.md
   - docs/models/operations/updateshippingshipmentresponse.md
@@ -3096,12 +3093,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createshippingshipment_request.rbi
   - lib/unified_ruby_sdk/models/operations/createshippingshipment_response.rb
   - lib/unified_ruby_sdk/models/operations/createshippingshipment_response.rbi
-  - lib/unified_ruby_sdk/models/operations/createshippingtracking_queryparam_fields.rb
-  - lib/unified_ruby_sdk/models/operations/createshippingtracking_queryparam_fields.rbi
-  - lib/unified_ruby_sdk/models/operations/createshippingtracking_request.rb
-  - lib/unified_ruby_sdk/models/operations/createshippingtracking_request.rbi
-  - lib/unified_ruby_sdk/models/operations/createshippingtracking_response.rb
-  - lib/unified_ruby_sdk/models/operations/createshippingtracking_response.rbi
   - lib/unified_ruby_sdk/models/operations/createstoragefile_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/createstoragefile_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/createstoragefile_request.rb
@@ -3712,12 +3703,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getshippinglabel_request.rbi
   - lib/unified_ruby_sdk/models/operations/getshippinglabel_response.rb
   - lib/unified_ruby_sdk/models/operations/getshippinglabel_response.rbi
-  - lib/unified_ruby_sdk/models/operations/getshippingrate_queryparam_fields.rb
-  - lib/unified_ruby_sdk/models/operations/getshippingrate_queryparam_fields.rbi
-  - lib/unified_ruby_sdk/models/operations/getshippingrate_request.rb
-  - lib/unified_ruby_sdk/models/operations/getshippingrate_request.rbi
-  - lib/unified_ruby_sdk/models/operations/getshippingrate_response.rb
-  - lib/unified_ruby_sdk/models/operations/getshippingrate_response.rbi
   - lib/unified_ruby_sdk/models/operations/getshippingshipment_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/getshippingshipment_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/getshippingshipment_request.rb
@@ -4410,12 +4395,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listshippingshipments_request.rbi
   - lib/unified_ruby_sdk/models/operations/listshippingshipments_response.rb
   - lib/unified_ruby_sdk/models/operations/listshippingshipments_response.rbi
-  - lib/unified_ruby_sdk/models/operations/listshippingtrackings_queryparam_fields.rb
-  - lib/unified_ruby_sdk/models/operations/listshippingtrackings_queryparam_fields.rbi
-  - lib/unified_ruby_sdk/models/operations/listshippingtrackings_request.rb
-  - lib/unified_ruby_sdk/models/operations/listshippingtrackings_request.rbi
-  - lib/unified_ruby_sdk/models/operations/listshippingtrackings_response.rb
-  - lib/unified_ruby_sdk/models/operations/listshippingtrackings_response.rbi
   - lib/unified_ruby_sdk/models/operations/liststoragefiles_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/liststoragefiles_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/liststoragefiles_request.rb
@@ -4982,6 +4961,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchscimusers_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchscimusers_response.rb
   - lib/unified_ruby_sdk/models/operations/patchscimusers_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchshippinglabel_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchshippinglabel_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchshippinglabel_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchshippinglabel_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchshippinglabel_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchshippinglabel_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchshippingshipment_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/patchshippingshipment_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/patchshippingshipment_request.rb
@@ -5888,6 +5873,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatescimusers_request.rbi
   - lib/unified_ruby_sdk/models/operations/updatescimusers_response.rb
   - lib/unified_ruby_sdk/models/operations/updatescimusers_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updateshippinglabel_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updateshippinglabel_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updateshippinglabel_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateshippinglabel_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updateshippinglabel_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateshippinglabel_response.rbi
   - lib/unified_ruby_sdk/models/operations/updateshippingshipment_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/updateshippingshipment_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/updateshippingshipment_request.rb
@@ -12918,6 +12909,28 @@ examples:
           application/json: {}
   updateAdsInsertionorder:
     speakeasy-default-update-ads-insertionorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchShippingLabel:
+    speakeasy-default-patch-shipping-label:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateShippingLabel:
+    speakeasy-default-update-shipping-label:
       parameters:
         path:
           connection_id: "<id>"
