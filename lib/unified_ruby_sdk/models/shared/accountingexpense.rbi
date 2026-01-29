@@ -12,6 +12,8 @@ class UnifiedRubySDK::Models::Shared::AccountingExpense
   def approved_at=(str_); end
   def approver_user_id(); end
   def approver_user_id=(str_); end
+  def contact_id(); end
+  def contact_id=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def currency(); end

@@ -8,6 +8,8 @@
 | `account_id`          | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |
 | `category_ids`        | T::Array<*::String*>  | :heavy_minus_sign:    | N/A                   |
 | `contact_id`          | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |
+| `credit_amount`       | *T.nilable(::Float)*  | :heavy_minus_sign:    | N/A                   |
+| `debit_amount`        | *T.nilable(::Float)*  | :heavy_minus_sign:    | N/A                   |
 | `description`         | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |
 | `group_id`            | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |
 | `id`                  | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |

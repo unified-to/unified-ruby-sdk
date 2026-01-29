@@ -20,6 +20,10 @@ module UnifiedRubySDK
 
         field :contact_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
 
+        field :credit_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('credit_amount') } }
+
+        field :debit_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('debit_amount') } }
+
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
         field :group_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_id') } }
@@ -36,11 +40,13 @@ module UnifiedRubySDK
 
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
 
-        sig { params(account_id: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), description: T.nilable(::String), group_id: T.nilable(::String), id: T.nilable(::String), invoice_id: T.nilable(::String), payment_id: T.nilable(::String), project_id: T.nilable(::String), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float)).void }
-        def initialize(account_id: nil, category_ids: nil, contact_id: nil, description: nil, group_id: nil, id: nil, invoice_id: nil, payment_id: nil, project_id: nil, tax_amount: nil, total_amount: nil)
+        sig { params(account_id: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), credit_amount: T.nilable(::Float), debit_amount: T.nilable(::Float), description: T.nilable(::String), group_id: T.nilable(::String), id: T.nilable(::String), invoice_id: T.nilable(::String), payment_id: T.nilable(::String), project_id: T.nilable(::String), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float)).void }
+        def initialize(account_id: nil, category_ids: nil, contact_id: nil, credit_amount: nil, debit_amount: nil, description: nil, group_id: nil, id: nil, invoice_id: nil, payment_id: nil, project_id: nil, tax_amount: nil, total_amount: nil)
           @account_id = account_id
           @category_ids = category_ids
           @contact_id = contact_id
+          @credit_amount = credit_amount
+          @debit_amount = debit_amount
           @description = description
           @group_id = group_id
           @id = id
@@ -57,6 +63,8 @@ module UnifiedRubySDK
           return false unless @account_id == other.account_id
           return false unless @category_ids == other.category_ids
           return false unless @contact_id == other.contact_id
+          return false unless @credit_amount == other.credit_amount
+          return false unless @debit_amount == other.debit_amount
           return false unless @description == other.description
           return false unless @group_id == other.group_id
           return false unless @id == other.id

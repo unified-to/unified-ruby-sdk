@@ -18,6 +18,8 @@ module UnifiedRubySDK
 
         field :approver_user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('approver_user_id') } }
 
+        field :contact_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
+
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
@@ -42,10 +44,11 @@ module UnifiedRubySDK
 
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reimbursed_amount: T.nilable(::Float), reimbursed_at: T.nilable(::DateTime), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(approved_at: nil, approver_user_id: nil, created_at: nil, currency: nil, id: nil, lineitems: nil, name: nil, raw: nil, reimbursed_amount: nil, reimbursed_at: nil, tax_amount: nil, total_amount: nil, updated_at: nil, user_id: nil)
+        sig { params(approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reimbursed_amount: T.nilable(::Float), reimbursed_at: T.nilable(::DateTime), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(approved_at: nil, approver_user_id: nil, contact_id: nil, created_at: nil, currency: nil, id: nil, lineitems: nil, name: nil, raw: nil, reimbursed_amount: nil, reimbursed_at: nil, tax_amount: nil, total_amount: nil, updated_at: nil, user_id: nil)
           @approved_at = approved_at
           @approver_user_id = approver_user_id
+          @contact_id = contact_id
           @created_at = created_at
           @currency = currency
           @id = id
@@ -65,6 +68,7 @@ module UnifiedRubySDK
           return false unless other.is_a? self.class
           return false unless @approved_at == other.approved_at
           return false unless @approver_user_id == other.approver_user_id
+          return false unless @contact_id == other.contact_id
           return false unless @created_at == other.created_at
           return false unless @currency == other.currency
           return false unless @id == other.id

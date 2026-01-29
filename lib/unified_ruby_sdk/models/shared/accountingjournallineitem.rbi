@@ -14,6 +14,10 @@ class UnifiedRubySDK::Models::Shared::AccountingJournalLineitem
   def category_ids=(str_); end
   def contact_id(); end
   def contact_id=(str_); end
+  def credit_amount(); end
+  def credit_amount=(str_); end
+  def debit_amount(); end
+  def debit_amount=(str_); end
   def description(); end
   def description=(str_); end
   def group_id(); end

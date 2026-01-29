@@ -17,6 +17,7 @@ module UnifiedRubySDK
           CREATED_AT = new('created_at')
           UPDATED_AT = new('updated_at')
           USER_ID = new('user_id')
+          CONTACT_ID = new('contact_id')
           NAME = new('name')
           TOTAL_AMOUNT = new('total_amount')
           CURRENCY = new('currency')
