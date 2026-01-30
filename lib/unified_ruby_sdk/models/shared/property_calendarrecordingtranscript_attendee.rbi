@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Shared::PropertyCalendarRecordingTranscriptAttendee
   def email(); end
   def email=(str_); end
+  def is_cohost(); end
+  def is_cohost=(str_); end
   def name(); end
   def name=(str_); end
   def required(); end

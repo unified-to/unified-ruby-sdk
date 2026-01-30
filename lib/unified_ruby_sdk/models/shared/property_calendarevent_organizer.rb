@@ -16,6 +16,8 @@ module UnifiedRubySDK
 
         field :email, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
 
+        field :is_cohost, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_cohost') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :required, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('required') } }
@@ -24,9 +26,10 @@ module UnifiedRubySDK
 
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(email: T.nilable(::String), name: T.nilable(::String), required: T.nilable(T::Boolean), status: T.nilable(Models::Shared::PropertyCalendarEventOrganizerStatus), user_id: T.nilable(::String)).void }
-        def initialize(email: nil, name: nil, required: nil, status: nil, user_id: nil)
+        sig { params(email: T.nilable(::String), is_cohost: T.nilable(T::Boolean), name: T.nilable(::String), required: T.nilable(T::Boolean), status: T.nilable(Models::Shared::PropertyCalendarEventOrganizerStatus), user_id: T.nilable(::String)).void }
+        def initialize(email: nil, is_cohost: nil, name: nil, required: nil, status: nil, user_id: nil)
           @email = email
+          @is_cohost = is_cohost
           @name = name
           @required = required
           @status = status
@@ -37,6 +40,7 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @email == other.email
+          return false unless @is_cohost == other.is_cohost
           return false unless @name == other.name
           return false unless @required == other.required
           return false unless @status == other.status
