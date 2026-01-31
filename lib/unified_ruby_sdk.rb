@@ -46,6 +46,7 @@ module UnifiedRubySDK
   autoload :Event, 'unified_ruby_sdk/event'
   autoload :Link, 'unified_ruby_sdk/link'
   autoload :Recording, 'unified_ruby_sdk/recording'
+  autoload :Webinar, 'unified_ruby_sdk/webinar'
   autoload :Commerce, 'unified_ruby_sdk/commerce'
   autoload :Collection, 'unified_ruby_sdk/collection'
   autoload :Inventory, 'unified_ruby_sdk/inventory'

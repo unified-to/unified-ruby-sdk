@@ -16,7 +16,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :balancesheet, :bill, :cashflow, :category, :contact, :creditmemo, :expense, :invoice, :journal, :order, :organization, :profitloss, :purchaseorder, :report, :salesorder, :taxrate, :transaction, :trialbalance, :ads, :ad, :campaign, :creative, :group, :insertionorder, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :event, :link, :recording, :commerce, :collection, :inventory, :item, :itemvariant, :location, :review, :saleschannel, :crm, :deal, :lead, :pipeline, :enrich, :person, :forms, :form, :submission, :genai, :embedding, :model, :prompt, :hris, :benefit, :deduction, :device, :employee, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :lms, :class_, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :shipping, :carrier, :label, :rate, :shipment, :tracking, :storage, :file, :task, :change, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :environment, :integration, :auth, :login, :issue, :webhook, :verification, :package, :request
+    attr_accessor :accounting, :account, :balancesheet, :bill, :cashflow, :category, :contact, :creditmemo, :expense, :invoice, :journal, :order, :organization, :profitloss, :purchaseorder, :report, :salesorder, :taxrate, :transaction, :trialbalance, :ads, :ad, :campaign, :creative, :group, :insertionorder, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :event, :link, :recording, :webinar, :commerce, :collection, :inventory, :item, :itemvariant, :location, :review, :saleschannel, :crm, :deal, :lead, :pipeline, :enrich, :person, :forms, :form, :submission, :genai, :embedding, :model, :prompt, :hris, :benefit, :deduction, :device, :employee, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :lms, :class_, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :shipping, :carrier, :label, :rate, :shipment, :tracking, :storage, :file, :task, :change, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :environment, :integration, :auth, :login, :issue, :webhook, :verification, :package, :request
 
     sig do
       params(
@@ -118,6 +118,7 @@ module UnifiedRubySDK
       @event = Event.new(@sdk_configuration)
       @link = Link.new(@sdk_configuration)
       @recording = Recording.new(@sdk_configuration)
+      @webinar = Webinar.new(@sdk_configuration)
       @commerce = Commerce.new(@sdk_configuration)
       @collection = Collection.new(@sdk_configuration)
       @inventory = Inventory.new(@sdk_configuration)

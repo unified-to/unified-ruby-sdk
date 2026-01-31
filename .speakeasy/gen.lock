@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 92ddc604425066fbaa39dfc01dd91097
+  docChecksum: f1a8d59500c94e46966b2cfaf9ce5506
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.24
-  configChecksum: 885f3d51da131ce54f0b73c8b782b365
+  releaseVersion: 0.67.25
+  configChecksum: ee1c213473279bd98a4b56c64c5bd9e8
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -117,6 +117,9 @@ generatedFiles:
   - docs/models/operations/createcalendarlinkqueryparamfields.md
   - docs/models/operations/createcalendarlinkrequest.md
   - docs/models/operations/createcalendarlinkresponse.md
+  - docs/models/operations/createcalendarwebinarqueryparamfields.md
+  - docs/models/operations/createcalendarwebinarrequest.md
+  - docs/models/operations/createcalendarwebinarresponse.md
   - docs/models/operations/createcommercecollectionqueryparamfields.md
   - docs/models/operations/createcommercecollectionrequest.md
   - docs/models/operations/createcommercecollectionresponse.md
@@ -414,6 +417,9 @@ generatedFiles:
   - docs/models/operations/getcalendarrecordingqueryparamfields.md
   - docs/models/operations/getcalendarrecordingrequest.md
   - docs/models/operations/getcalendarrecordingresponse.md
+  - docs/models/operations/getcalendarwebinarqueryparamfields.md
+  - docs/models/operations/getcalendarwebinarrequest.md
+  - docs/models/operations/getcalendarwebinarresponse.md
   - docs/models/operations/getcommercecollectionqueryparamfields.md
   - docs/models/operations/getcommercecollectionrequest.md
   - docs/models/operations/getcommercecollectionresponse.md
@@ -751,6 +757,9 @@ generatedFiles:
   - docs/models/operations/listcalendarrecordingsqueryparamfields.md
   - docs/models/operations/listcalendarrecordingsrequest.md
   - docs/models/operations/listcalendarrecordingsresponse.md
+  - docs/models/operations/listcalendarwebinarsqueryparamfields.md
+  - docs/models/operations/listcalendarwebinarsrequest.md
+  - docs/models/operations/listcalendarwebinarsresponse.md
   - docs/models/operations/listcommercecollectionsqueryparamfields.md
   - docs/models/operations/listcommercecollectionsrequest.md
   - docs/models/operations/listcommercecollectionsresponse.md
@@ -1063,6 +1072,9 @@ generatedFiles:
   - docs/models/operations/patchcalendarlinkqueryparamfields.md
   - docs/models/operations/patchcalendarlinkrequest.md
   - docs/models/operations/patchcalendarlinkresponse.md
+  - docs/models/operations/patchcalendarwebinarqueryparamfields.md
+  - docs/models/operations/patchcalendarwebinarrequest.md
+  - docs/models/operations/patchcalendarwebinarresponse.md
   - docs/models/operations/patchcommercecollectionqueryparamfields.md
   - docs/models/operations/patchcommercecollectionrequest.md
   - docs/models/operations/patchcommercecollectionresponse.md
@@ -1307,6 +1319,8 @@ generatedFiles:
   - docs/models/operations/removecalendareventresponse.md
   - docs/models/operations/removecalendarlinkrequest.md
   - docs/models/operations/removecalendarlinkresponse.md
+  - docs/models/operations/removecalendarwebinarrequest.md
+  - docs/models/operations/removecalendarwebinarresponse.md
   - docs/models/operations/removecommercecollectionrequest.md
   - docs/models/operations/removecommercecollectionresponse.md
   - docs/models/operations/removecommerceinventoryrequest.md
@@ -1519,6 +1533,9 @@ generatedFiles:
   - docs/models/operations/updatecalendarlinkqueryparamfields.md
   - docs/models/operations/updatecalendarlinkrequest.md
   - docs/models/operations/updatecalendarlinkresponse.md
+  - docs/models/operations/updatecalendarwebinarqueryparamfields.md
+  - docs/models/operations/updatecalendarwebinarrequest.md
+  - docs/models/operations/updatecalendarwebinarresponse.md
   - docs/models/operations/updatecommercecollectionqueryparamfields.md
   - docs/models/operations/updatecommercecollectionrequest.md
   - docs/models/operations/updatecommercecollectionresponse.md
@@ -1829,6 +1846,11 @@ generatedFiles:
   - docs/models/shared/calendarrecording.md
   - docs/models/shared/calendarrecordingmedia.md
   - docs/models/shared/calendarrecordingtranscript.md
+  - docs/models/shared/calendarwebinar.md
+  - docs/models/shared/calendarwebinarpanelist.md
+  - docs/models/shared/calendarwebinarpaneliststatus.md
+  - docs/models/shared/calendarwebinarregistrant.md
+  - docs/models/shared/calendarwebinarstatus.md
   - docs/models/shared/commercecollection.md
   - docs/models/shared/commercecollectiontype.md
   - docs/models/shared/commerceinventory.md
@@ -2177,6 +2199,8 @@ generatedFiles:
   - docs/models/shared/propertycalendareventrecurrenceondays.md
   - docs/models/shared/propertycalendarrecordingtranscriptattendee.md
   - docs/models/shared/propertycalendarrecordingtranscriptattendeestatus.md
+  - docs/models/shared/propertycalendarwebinarorganizer.md
+  - docs/models/shared/propertycalendarwebinarorganizerstatus.md
   - docs/models/shared/propertycommercelocationaddress.md
   - docs/models/shared/propertyconnectionauth.md
   - docs/models/shared/propertyconnectioncategories.md
@@ -2243,6 +2267,7 @@ generatedFiles:
   - docs/models/shared/propertyuccalltelephone.md
   - docs/models/shared/propertyuccalltelephonetype.md
   - docs/models/shared/recommendation.md
+  - docs/models/shared/registrationstatus.md
   - docs/models/shared/repobranch.md
   - docs/models/shared/repocommit.md
   - docs/models/shared/repoorganization.md
@@ -2531,6 +2556,7 @@ generatedFiles:
   - docs/sdks/user/README.md
   - docs/sdks/verification/README.md
   - docs/sdks/webhook/README.md
+  - docs/sdks/webinar/README.md
   - extra.rbi
   - lib/crystalline.rb
   - lib/crystalline/metadata_fields.rb
@@ -2801,6 +2827,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createcalendarlink_request.rbi
   - lib/unified_ruby_sdk/models/operations/createcalendarlink_response.rb
   - lib/unified_ruby_sdk/models/operations/createcalendarlink_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createcalendarwebinar_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createcalendarwebinar_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createcalendarwebinar_request.rb
+  - lib/unified_ruby_sdk/models/operations/createcalendarwebinar_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createcalendarwebinar_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcalendarwebinar_response.rbi
   - lib/unified_ruby_sdk/models/operations/createcommercecollection_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/createcommercecollection_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/createcommercecollection_request.rb
@@ -3395,6 +3427,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getcalendarrecording_request.rbi
   - lib/unified_ruby_sdk/models/operations/getcalendarrecording_response.rb
   - lib/unified_ruby_sdk/models/operations/getcalendarrecording_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getcalendarwebinar_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getcalendarwebinar_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getcalendarwebinar_request.rb
+  - lib/unified_ruby_sdk/models/operations/getcalendarwebinar_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getcalendarwebinar_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcalendarwebinar_response.rbi
   - lib/unified_ruby_sdk/models/operations/getcommercecollection_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/getcommercecollection_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/getcommercecollection_request.rb
@@ -4069,6 +4107,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listcalendarrecordings_request.rbi
   - lib/unified_ruby_sdk/models/operations/listcalendarrecordings_response.rb
   - lib/unified_ruby_sdk/models/operations/listcalendarrecordings_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listcalendarwebinars_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listcalendarwebinars_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listcalendarwebinars_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcalendarwebinars_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listcalendarwebinars_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcalendarwebinars_response.rbi
   - lib/unified_ruby_sdk/models/operations/listcommercecollections_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listcommercecollections_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listcommercecollections_request.rb
@@ -4693,6 +4737,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchcalendarlink_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchcalendarlink_response.rb
   - lib/unified_ruby_sdk/models/operations/patchcalendarlink_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcalendarwebinar_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchcalendarwebinar_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcalendarwebinar_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchcalendarwebinar_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcalendarwebinar_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcalendarwebinar_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchcommercecollection_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/patchcommercecollection_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/patchcommercecollection_request.rb
@@ -5181,6 +5231,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removecalendarlink_request.rbi
   - lib/unified_ruby_sdk/models/operations/removecalendarlink_response.rb
   - lib/unified_ruby_sdk/models/operations/removecalendarlink_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removecalendarwebinar_request.rb
+  - lib/unified_ruby_sdk/models/operations/removecalendarwebinar_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removecalendarwebinar_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecalendarwebinar_response.rbi
   - lib/unified_ruby_sdk/models/operations/removecommercecollection_request.rb
   - lib/unified_ruby_sdk/models/operations/removecommercecollection_request.rbi
   - lib/unified_ruby_sdk/models/operations/removecommercecollection_response.rb
@@ -5605,6 +5659,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatecalendarlink_request.rbi
   - lib/unified_ruby_sdk/models/operations/updatecalendarlink_response.rb
   - lib/unified_ruby_sdk/models/operations/updatecalendarlink_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecalendarwebinar_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updatecalendarwebinar_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecalendarwebinar_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatecalendarwebinar_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecalendarwebinar_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecalendarwebinar_response.rbi
   - lib/unified_ruby_sdk/models/operations/updatecommercecollection_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/updatecommercecollection_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/updatecommercecollection_request.rb
@@ -6226,6 +6286,16 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/calendarrecordingmedia.rbi
   - lib/unified_ruby_sdk/models/shared/calendarrecordingtranscript.rb
   - lib/unified_ruby_sdk/models/shared/calendarrecordingtranscript.rbi
+  - lib/unified_ruby_sdk/models/shared/calendarwebinar.rb
+  - lib/unified_ruby_sdk/models/shared/calendarwebinar.rbi
+  - lib/unified_ruby_sdk/models/shared/calendarwebinar_status.rb
+  - lib/unified_ruby_sdk/models/shared/calendarwebinar_status.rbi
+  - lib/unified_ruby_sdk/models/shared/calendarwebinarpanelist.rb
+  - lib/unified_ruby_sdk/models/shared/calendarwebinarpanelist.rbi
+  - lib/unified_ruby_sdk/models/shared/calendarwebinarpanelist_status.rb
+  - lib/unified_ruby_sdk/models/shared/calendarwebinarpanelist_status.rbi
+  - lib/unified_ruby_sdk/models/shared/calendarwebinarregistrant.rb
+  - lib/unified_ruby_sdk/models/shared/calendarwebinarregistrant.rbi
   - lib/unified_ruby_sdk/models/shared/commercecollection.rb
   - lib/unified_ruby_sdk/models/shared/commercecollection.rbi
   - lib/unified_ruby_sdk/models/shared/commercecollection_type.rb
@@ -6922,6 +6992,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_calendarrecordingtranscript_attendee.rbi
   - lib/unified_ruby_sdk/models/shared/property_calendarrecordingtranscript_attendee_status.rb
   - lib/unified_ruby_sdk/models/shared/property_calendarrecordingtranscript_attendee_status.rbi
+  - lib/unified_ruby_sdk/models/shared/property_calendarwebinar_organizer.rb
+  - lib/unified_ruby_sdk/models/shared/property_calendarwebinar_organizer.rbi
+  - lib/unified_ruby_sdk/models/shared/property_calendarwebinar_organizer_status.rb
+  - lib/unified_ruby_sdk/models/shared/property_calendarwebinar_organizer_status.rbi
   - lib/unified_ruby_sdk/models/shared/property_commercelocation_address.rb
   - lib/unified_ruby_sdk/models/shared/property_commercelocation_address.rbi
   - lib/unified_ruby_sdk/models/shared/property_connection_auth.rb
@@ -7054,6 +7128,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_uccall_telephone_type.rbi
   - lib/unified_ruby_sdk/models/shared/recommendation.rb
   - lib/unified_ruby_sdk/models/shared/recommendation.rbi
+  - lib/unified_ruby_sdk/models/shared/registration_status.rb
+  - lib/unified_ruby_sdk/models/shared/registration_status.rbi
   - lib/unified_ruby_sdk/models/shared/repobranch.rb
   - lib/unified_ruby_sdk/models/shared/repobranch.rbi
   - lib/unified_ruby_sdk/models/shared/repocommit.rb
@@ -7436,6 +7512,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/utils/utils.rb
   - lib/unified_ruby_sdk/verification.rb
   - lib/unified_ruby_sdk/webhook.rb
+  - lib/unified_ruby_sdk/webinar.rb
   - sorbet/config
   - sorbet/rbi/annotations/.gitattributes
   - sorbet/rbi/gems/.gitattributes
@@ -12931,6 +13008,61 @@ examples:
           application/json: {}
   updateShippingLabel:
     speakeasy-default-update-shipping-label:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createCalendarWebinar:
+    speakeasy-default-create-calendar-webinar:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getCalendarWebinar:
+    speakeasy-default-get-calendar-webinar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listCalendarWebinars:
+    speakeasy-default-list-calendar-webinars:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchCalendarWebinar:
+    speakeasy-default-patch-calendar-webinar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeCalendarWebinar:
+    speakeasy-default-remove-calendar-webinar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateCalendarWebinar:
+    speakeasy-default-update-calendar-webinar:
       parameters:
         path:
           connection_id: "<id>"
