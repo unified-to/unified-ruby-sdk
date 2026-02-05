@@ -8,6 +8,8 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::AccountingExpense
+  def account_id(); end
+  def account_id=(str_); end
   def approved_at(); end
   def approved_at=(str_); end
   def approver_user_id(); end
@@ -24,6 +26,10 @@ class UnifiedRubySDK::Models::Shared::AccountingExpense
   def lineitems=(str_); end
   def name(); end
   def name=(str_); end
+  def payment_method(); end
+  def payment_method=(str_); end
+  def posted_at(); end
+  def posted_at=(str_); end
   def raw(); end
   def raw=(str_); end
   def reimbursed_amount(); end
