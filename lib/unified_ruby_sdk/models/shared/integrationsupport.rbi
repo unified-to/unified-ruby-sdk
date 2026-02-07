@@ -86,6 +86,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_list_id=(str_); end
   def list_location_id(); end
   def list_location_id=(str_); end
+  def list_member_id(); end
+  def list_member_id=(str_); end
   def list_offset(); end
   def list_offset=(str_); end
   def list_order(); end
@@ -246,6 +248,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_list_id=(str_); end
   def virtual_webhook_location_id(); end
   def virtual_webhook_location_id=(str_); end
+  def virtual_webhook_member_id(); end
+  def virtual_webhook_member_id=(str_); end
   def virtual_webhook_order_id(); end
   def virtual_webhook_order_id=(str_); end
   def virtual_webhook_org_id(); end

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 920d3864f2302ad5f3efefc595c4d0d8
+  docChecksum: 15ec18fc071c0aef95cddded62ccfdd3
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.26
-  configChecksum: 95a2fe2db2645e73c088164c6f36c5d2
+  releaseVersion: 0.67.27
+  configChecksum: 696ee3a8034405d4623af6dbdd66eaa7
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -213,6 +213,9 @@ generatedFiles:
   - docs/models/operations/createlmsstudentqueryparamfields.md
   - docs/models/operations/createlmsstudentrequest.md
   - docs/models/operations/createlmsstudentresponse.md
+  - docs/models/operations/createmartechcampaignqueryparamfields.md
+  - docs/models/operations/createmartechcampaignrequest.md
+  - docs/models/operations/createmartechcampaignresponse.md
   - docs/models/operations/createmartechlistqueryparamfields.md
   - docs/models/operations/createmartechlistrequest.md
   - docs/models/operations/createmartechlistresponse.md
@@ -519,6 +522,9 @@ generatedFiles:
   - docs/models/operations/getlmsstudentqueryparamfields.md
   - docs/models/operations/getlmsstudentrequest.md
   - docs/models/operations/getlmsstudentresponse.md
+  - docs/models/operations/getmartechcampaignqueryparamfields.md
+  - docs/models/operations/getmartechcampaignrequest.md
+  - docs/models/operations/getmartechcampaignresponse.md
   - docs/models/operations/getmartechlistqueryparamfields.md
   - docs/models/operations/getmartechlistrequest.md
   - docs/models/operations/getmartechlistresponse.md
@@ -863,12 +869,18 @@ generatedFiles:
   - docs/models/operations/listlmsstudentsqueryparamfields.md
   - docs/models/operations/listlmsstudentsrequest.md
   - docs/models/operations/listlmsstudentsresponse.md
+  - docs/models/operations/listmartechcampaignsqueryparamfields.md
+  - docs/models/operations/listmartechcampaignsrequest.md
+  - docs/models/operations/listmartechcampaignsresponse.md
   - docs/models/operations/listmartechlistsqueryparamfields.md
   - docs/models/operations/listmartechlistsrequest.md
   - docs/models/operations/listmartechlistsresponse.md
   - docs/models/operations/listmartechmembersqueryparamfields.md
   - docs/models/operations/listmartechmembersrequest.md
   - docs/models/operations/listmartechmembersresponse.md
+  - docs/models/operations/listmartechreportsqueryparamfields.md
+  - docs/models/operations/listmartechreportsrequest.md
+  - docs/models/operations/listmartechreportsresponse.md
   - docs/models/operations/listmessagingchannelsqueryparamfields.md
   - docs/models/operations/listmessagingchannelsrequest.md
   - docs/models/operations/listmessagingchannelsresponse.md
@@ -1162,6 +1174,9 @@ generatedFiles:
   - docs/models/operations/patchlmsstudentqueryparamfields.md
   - docs/models/operations/patchlmsstudentrequest.md
   - docs/models/operations/patchlmsstudentresponse.md
+  - docs/models/operations/patchmartechcampaignqueryparamfields.md
+  - docs/models/operations/patchmartechcampaignrequest.md
+  - docs/models/operations/patchmartechcampaignresponse.md
   - docs/models/operations/patchmartechlistqueryparamfields.md
   - docs/models/operations/patchmartechlistrequest.md
   - docs/models/operations/patchmartechlistresponse.md
@@ -1379,6 +1394,8 @@ generatedFiles:
   - docs/models/operations/removelmsinstructorresponse.md
   - docs/models/operations/removelmsstudentrequest.md
   - docs/models/operations/removelmsstudentresponse.md
+  - docs/models/operations/removemartechcampaignrequest.md
+  - docs/models/operations/removemartechcampaignresponse.md
   - docs/models/operations/removemartechlistrequest.md
   - docs/models/operations/removemartechlistresponse.md
   - docs/models/operations/removemartechmemberrequest.md
@@ -1623,6 +1640,9 @@ generatedFiles:
   - docs/models/operations/updatelmsstudentqueryparamfields.md
   - docs/models/operations/updatelmsstudentrequest.md
   - docs/models/operations/updatelmsstudentresponse.md
+  - docs/models/operations/updatemartechcampaignqueryparamfields.md
+  - docs/models/operations/updatemartechcampaignrequest.md
+  - docs/models/operations/updatemartechcampaignresponse.md
   - docs/models/operations/updatemartechlistqueryparamfields.md
   - docs/models/operations/updatemartechlistrequest.md
   - docs/models/operations/updatemartechlistresponse.md
@@ -2043,6 +2063,7 @@ generatedFiles:
   - docs/models/shared/listlinkid.md
   - docs/models/shared/listlistid.md
   - docs/models/shared/listlocationid.md
+  - docs/models/shared/listmemberid.md
   - docs/models/shared/listoffset.md
   - docs/models/shared/listorder.md
   - docs/models/shared/listorderid.md
@@ -2084,10 +2105,14 @@ generatedFiles:
   - docs/models/shared/lmstelephone.md
   - docs/models/shared/lmstelephonetype.md
   - docs/models/shared/maritalstatus.md
+  - docs/models/shared/marketingcampaign.md
+  - docs/models/shared/marketingcampaignstatus.md
   - docs/models/shared/marketingemail.md
   - docs/models/shared/marketingemailtype.md
   - docs/models/shared/marketinglist.md
   - docs/models/shared/marketingmember.md
+  - docs/models/shared/marketingreport.md
+  - docs/models/shared/marketingreportlink.md
   - docs/models/shared/messagingattachment.md
   - docs/models/shared/messagingbutton.md
   - docs/models/shared/messagingchannel.md
@@ -2405,6 +2430,7 @@ generatedFiles:
   - docs/models/shared/virtualwebhooklimit.md
   - docs/models/shared/virtualwebhooklistid.md
   - docs/models/shared/virtualwebhooklocationid.md
+  - docs/models/shared/virtualwebhookmemberid.md
   - docs/models/shared/virtualwebhookorderid.md
   - docs/models/shared/virtualwebhookorgid.md
   - docs/models/shared/virtualwebhookpageid.md
@@ -3019,6 +3045,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createlmsstudent_request.rbi
   - lib/unified_ruby_sdk/models/operations/createlmsstudent_response.rb
   - lib/unified_ruby_sdk/models/operations/createlmsstudent_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createmartechcampaign_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createmartechcampaign_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createmartechcampaign_request.rb
+  - lib/unified_ruby_sdk/models/operations/createmartechcampaign_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createmartechcampaign_response.rb
+  - lib/unified_ruby_sdk/models/operations/createmartechcampaign_response.rbi
   - lib/unified_ruby_sdk/models/operations/createmartechlist_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/createmartechlist_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/createmartechlist_request.rb
@@ -3631,6 +3663,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getlmsstudent_request.rbi
   - lib/unified_ruby_sdk/models/operations/getlmsstudent_response.rb
   - lib/unified_ruby_sdk/models/operations/getlmsstudent_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getmartechcampaign_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getmartechcampaign_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getmartechcampaign_request.rb
+  - lib/unified_ruby_sdk/models/operations/getmartechcampaign_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getmartechcampaign_response.rb
+  - lib/unified_ruby_sdk/models/operations/getmartechcampaign_response.rbi
   - lib/unified_ruby_sdk/models/operations/getmartechlist_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/getmartechlist_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/getmartechlist_request.rb
@@ -4319,6 +4357,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listlmsstudents_request.rbi
   - lib/unified_ruby_sdk/models/operations/listlmsstudents_response.rb
   - lib/unified_ruby_sdk/models/operations/listlmsstudents_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listmartechcampaigns_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listmartechcampaigns_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listmartechcampaigns_request.rb
+  - lib/unified_ruby_sdk/models/operations/listmartechcampaigns_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listmartechcampaigns_response.rb
+  - lib/unified_ruby_sdk/models/operations/listmartechcampaigns_response.rbi
   - lib/unified_ruby_sdk/models/operations/listmartechlists_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listmartechlists_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listmartechlists_request.rb
@@ -4331,6 +4375,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listmartechmembers_request.rbi
   - lib/unified_ruby_sdk/models/operations/listmartechmembers_response.rb
   - lib/unified_ruby_sdk/models/operations/listmartechmembers_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listmartechreports_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listmartechreports_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listmartechreports_request.rb
+  - lib/unified_ruby_sdk/models/operations/listmartechreports_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listmartechreports_response.rb
+  - lib/unified_ruby_sdk/models/operations/listmartechreports_response.rbi
   - lib/unified_ruby_sdk/models/operations/listmessagingchannels_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listmessagingchannels_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listmessagingchannels_request.rb
@@ -4917,6 +4967,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchlmsstudent_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchlmsstudent_response.rb
   - lib/unified_ruby_sdk/models/operations/patchlmsstudent_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchmartechcampaign_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchmartechcampaign_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchmartechcampaign_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchmartechcampaign_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchmartechcampaign_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchmartechcampaign_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchmartechlist_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/patchmartechlist_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/patchmartechlist_request.rb
@@ -5351,6 +5407,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removelmsstudent_request.rbi
   - lib/unified_ruby_sdk/models/operations/removelmsstudent_response.rb
   - lib/unified_ruby_sdk/models/operations/removelmsstudent_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removemartechcampaign_request.rb
+  - lib/unified_ruby_sdk/models/operations/removemartechcampaign_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removemartechcampaign_response.rb
+  - lib/unified_ruby_sdk/models/operations/removemartechcampaign_response.rbi
   - lib/unified_ruby_sdk/models/operations/removemartechlist_request.rb
   - lib/unified_ruby_sdk/models/operations/removemartechlist_request.rbi
   - lib/unified_ruby_sdk/models/operations/removemartechlist_response.rb
@@ -5839,6 +5899,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatelmsstudent_request.rbi
   - lib/unified_ruby_sdk/models/operations/updatelmsstudent_response.rb
   - lib/unified_ruby_sdk/models/operations/updatelmsstudent_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatemartechcampaign_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updatemartechcampaign_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updatemartechcampaign_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatemartechcampaign_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatemartechcampaign_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatemartechcampaign_response.rbi
   - lib/unified_ruby_sdk/models/operations/updatemartechlist_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/updatemartechlist_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/updatemartechlist_request.rb
@@ -6680,6 +6746,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_list_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_location_id.rb
   - lib/unified_ruby_sdk/models/shared/list_location_id.rbi
+  - lib/unified_ruby_sdk/models/shared/list_member_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_member_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_offset.rb
   - lib/unified_ruby_sdk/models/shared/list_offset.rbi
   - lib/unified_ruby_sdk/models/shared/list_order.rb
@@ -6762,6 +6830,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/lmstelephone_type.rbi
   - lib/unified_ruby_sdk/models/shared/marital_status.rb
   - lib/unified_ruby_sdk/models/shared/marital_status.rbi
+  - lib/unified_ruby_sdk/models/shared/marketingcampaign.rb
+  - lib/unified_ruby_sdk/models/shared/marketingcampaign.rbi
+  - lib/unified_ruby_sdk/models/shared/marketingcampaign_status.rb
+  - lib/unified_ruby_sdk/models/shared/marketingcampaign_status.rbi
   - lib/unified_ruby_sdk/models/shared/marketingemail.rb
   - lib/unified_ruby_sdk/models/shared/marketingemail.rbi
   - lib/unified_ruby_sdk/models/shared/marketingemail_type.rb
@@ -6770,6 +6842,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/marketinglist.rbi
   - lib/unified_ruby_sdk/models/shared/marketingmember.rb
   - lib/unified_ruby_sdk/models/shared/marketingmember.rbi
+  - lib/unified_ruby_sdk/models/shared/marketingreport.rb
+  - lib/unified_ruby_sdk/models/shared/marketingreport.rbi
+  - lib/unified_ruby_sdk/models/shared/marketingreportlink.rb
+  - lib/unified_ruby_sdk/models/shared/marketingreportlink.rbi
   - lib/unified_ruby_sdk/models/shared/messagingattachment.rb
   - lib/unified_ruby_sdk/models/shared/messagingattachment.rbi
   - lib/unified_ruby_sdk/models/shared/messagingbutton.rb
@@ -7404,6 +7480,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_list_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_location_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_location_id.rbi
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_member_id.rb
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_member_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_order_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_order_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_org_id.rb
@@ -13063,6 +13141,69 @@ examples:
           id: "<id>"
   updateCalendarWebinar:
     speakeasy-default-update-calendar-webinar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  listMartechReports:
+    speakeasy-default-list-martech-reports:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  createMartechCampaign:
+    speakeasy-default-create-martech-campaign:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getMartechCampaign:
+    speakeasy-default-get-martech-campaign:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listMartechCampaigns:
+    speakeasy-default-list-martech-campaigns:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchMartechCampaign:
+    speakeasy-default-patch-martech-campaign:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeMartechCampaign:
+    speakeasy-default-remove-martech-campaign:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateMartechCampaign:
+    speakeasy-default-update-martech-campaign:
       parameters:
         path:
           connection_id: "<id>"
