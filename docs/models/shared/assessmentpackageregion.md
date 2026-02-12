@@ -1,0 +1,11 @@
+# AssessmentPackageRegion
+
+
+## Fields
+
+| Field                                                                                | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `cost_amount`                                                                        | *::Float*                                                                            | :heavy_check_mark:                                                                   | N/A                                                                                  |
+| `currency`                                                                           | *T.nilable(::String)*                                                                | :heavy_minus_sign:                                                                   | N/A                                                                                  |
+| `processing_time`                                                                    | *T.nilable(::Float)*                                                                 | :heavy_minus_sign:                                                                   | N/A                                                                                  |
+| `regions`                                                                            | T::Array<*::String*>                                                                 | :heavy_check_mark:                                                                   | Countryregion codes where this package is available ({country}-{state} or {country}) |

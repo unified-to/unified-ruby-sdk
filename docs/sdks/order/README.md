@@ -9,8 +9,10 @@
 * [get_accounting_order](#get_accounting_order) - Retrieve an order
 * [list_accounting_orders](#list_accounting_orders) - List all orders
 * [patch_accounting_order](#patch_accounting_order) - Update an order
+* [patch_assessment_order](#patch_assessment_order) - Update an order
 * [remove_accounting_order](#remove_accounting_order) - Remove an order
 * [update_accounting_order](#update_accounting_order) - Update an order
+* [update_assessment_order](#update_assessment_order) - Update an order
 
 ## create_accounting_order
 
@@ -192,6 +194,56 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## patch_assessment_order
+
+Update an order
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchAssessmentOrder" method="patch" path="/assessment/{connection_id}/order/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::PatchAssessmentOrderRequest.new(
+  assessment_order: Models::Shared::AssessmentOrder.new(
+    connection_id: '<id>',
+    workspace_id: '<id>',
+  ),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.order.patch_assessment_order(request: req)
+
+unless res.assessment_order.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [Models::Operations::PatchAssessmentOrderRequest](../../models/operations/patchassessmentorderrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchAssessmentOrderResponse)](../../models/operations/patchassessmentorderresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## remove_accounting_order
 
 Remove an order
@@ -274,6 +326,56 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::UpdateAccountingOrderResponse)](../../models/operations/updateaccountingorderresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_assessment_order
+
+Update an order
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateAssessmentOrder" method="put" path="/assessment/{connection_id}/order/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateAssessmentOrderRequest.new(
+  assessment_order: Models::Shared::AssessmentOrder.new(
+    connection_id: '<id>',
+    workspace_id: '<id>',
+  ),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.order.update_assessment_order(request: req)
+
+unless res.assessment_order.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [Models::Operations::UpdateAssessmentOrderRequest](../../models/operations/updateassessmentorderrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateAssessmentOrderResponse)](../../models/operations/updateassessmentorderresponse.md)**
 
 ### Errors
 

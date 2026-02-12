@@ -166,6 +166,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def native_webhook_form_id=(str_); end
   def native_webhook_label_id(); end
   def native_webhook_label_id=(str_); end
+  def native_webhook_member_id(); end
+  def native_webhook_member_id=(str_); end
   def native_webhook_order_id(); end
   def native_webhook_order_id=(str_); end
   def native_webhook_parent_id(); end

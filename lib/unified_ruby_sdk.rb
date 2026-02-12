@@ -31,6 +31,8 @@ module UnifiedRubySDK
   autoload :Creative, 'unified_ruby_sdk/creative'
   autoload :Group, 'unified_ruby_sdk/group'
   autoload :Insertionorder, 'unified_ruby_sdk/insertionorder'
+  autoload :Assessment, 'unified_ruby_sdk/assessment'
+  autoload :Package, 'unified_ruby_sdk/package'
   autoload :Ats, 'unified_ruby_sdk/ats'
   autoload :Activity, 'unified_ruby_sdk/activity'
   autoload :Application, 'unified_ruby_sdk/application'
@@ -131,7 +133,6 @@ module UnifiedRubySDK
   autoload :Issue, 'unified_ruby_sdk/issue'
   autoload :Webhook, 'unified_ruby_sdk/webhook'
   autoload :Verification, 'unified_ruby_sdk/verification'
-  autoload :Package, 'unified_ruby_sdk/package'
   autoload :Request, 'unified_ruby_sdk/request'
   module Models
     autoload :Shared, 'unified_ruby_sdk/models/shared'

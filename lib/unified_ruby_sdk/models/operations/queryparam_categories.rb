@@ -39,6 +39,7 @@ module UnifiedRubySDK
           ADS = new('ads')
           FORMS = new('forms')
           SHIPPING = new('shipping')
+          ASSESSMENT = new('assessment')
         end
       end
     end

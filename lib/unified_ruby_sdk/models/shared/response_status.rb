@@ -13,10 +13,11 @@ module UnifiedRubySDK
 
 
         enums do
+          OPEN = new('OPEN')
+          IN_PROGRESS = new('IN_PROGRESS')
           COMPLETED = new('COMPLETED')
           FAILED = new('FAILED')
-          PASSED = new('PASSED')
-          PENDING = new('PENDING')
+          REJECTED = new('REJECTED')
         end
       end
     end

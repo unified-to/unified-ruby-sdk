@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 15ec18fc071c0aef95cddded62ccfdd3
+  docChecksum: a9dc2804b5a5bd156988be1a2361527a
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.27
-  configChecksum: 696ee3a8034405d4623af6dbdd66eaa7
+  releaseVersion: 0.67.28
+  configChecksum: 416eee2db9577d8a10ddb1eaa11dbdf8
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -84,6 +84,8 @@ generatedFiles:
   - docs/models/operations/createadsorganizationqueryparamfields.md
   - docs/models/operations/createadsorganizationrequest.md
   - docs/models/operations/createadsorganizationresponse.md
+  - docs/models/operations/createassessmentpackagerequest.md
+  - docs/models/operations/createassessmentpackageresponse.md
   - docs/models/operations/createatsactivityqueryparamfields.md
   - docs/models/operations/createatsactivityrequest.md
   - docs/models/operations/createatsactivityresponse.md
@@ -384,6 +386,8 @@ generatedFiles:
   - docs/models/operations/getadsorganizationqueryparamfields.md
   - docs/models/operations/getadsorganizationrequest.md
   - docs/models/operations/getadsorganizationresponse.md
+  - docs/models/operations/getassessmentpackagerequest.md
+  - docs/models/operations/getassessmentpackageresponse.md
   - docs/models/operations/getatsactivityqueryparamfields.md
   - docs/models/operations/getatsactivityrequest.md
   - docs/models/operations/getatsactivityresponse.md
@@ -721,6 +725,8 @@ generatedFiles:
   - docs/models/operations/listadsreportsqueryparamfields.md
   - docs/models/operations/listadsreportsrequest.md
   - docs/models/operations/listadsreportsresponse.md
+  - docs/models/operations/listassessmentpackagesrequest.md
+  - docs/models/operations/listassessmentpackagesresponse.md
   - docs/models/operations/listatsactivitiesqueryparamfields.md
   - docs/models/operations/listatsactivitiesrequest.md
   - docs/models/operations/listatsactivitiesresponse.md
@@ -1051,6 +1057,11 @@ generatedFiles:
   - docs/models/operations/patchadsorganizationqueryparamfields.md
   - docs/models/operations/patchadsorganizationrequest.md
   - docs/models/operations/patchadsorganizationresponse.md
+  - docs/models/operations/patchassessmentorderqueryparamfields.md
+  - docs/models/operations/patchassessmentorderrequest.md
+  - docs/models/operations/patchassessmentorderresponse.md
+  - docs/models/operations/patchassessmentpackagerequest.md
+  - docs/models/operations/patchassessmentpackageresponse.md
   - docs/models/operations/patchatsactivityqueryparamfields.md
   - docs/models/operations/patchatsactivityrequest.md
   - docs/models/operations/patchatsactivityresponse.md
@@ -1312,6 +1323,8 @@ generatedFiles:
   - docs/models/operations/removeadsinsertionorderresponse.md
   - docs/models/operations/removeadsorganizationrequest.md
   - docs/models/operations/removeadsorganizationresponse.md
+  - docs/models/operations/removeassessmentpackagerequest.md
+  - docs/models/operations/removeassessmentpackageresponse.md
   - docs/models/operations/removeatsactivityrequest.md
   - docs/models/operations/removeatsactivityresponse.md
   - docs/models/operations/removeatsapplicationrequest.md
@@ -1517,6 +1530,11 @@ generatedFiles:
   - docs/models/operations/updateadsorganizationqueryparamfields.md
   - docs/models/operations/updateadsorganizationrequest.md
   - docs/models/operations/updateadsorganizationresponse.md
+  - docs/models/operations/updateassessmentorderqueryparamfields.md
+  - docs/models/operations/updateassessmentorderrequest.md
+  - docs/models/operations/updateassessmentorderresponse.md
+  - docs/models/operations/updateassessmentpackagerequest.md
+  - docs/models/operations/updateassessmentpackageresponse.md
   - docs/models/operations/updateatsactivityqueryparamfields.md
   - docs/models/operations/updateatsactivityrequest.md
   - docs/models/operations/updateatsactivityresponse.md
@@ -1811,6 +1829,19 @@ generatedFiles:
   - docs/models/shared/api.md
   - docs/models/shared/apicall.md
   - docs/models/shared/apicalltype.md
+  - docs/models/shared/assessmentaddress.md
+  - docs/models/shared/assessmentattribute.md
+  - docs/models/shared/assessmentattributestatus.md
+  - docs/models/shared/assessmentattributetype.md
+  - docs/models/shared/assessmentorder.md
+  - docs/models/shared/assessmentorderstatus.md
+  - docs/models/shared/assessmentpackage.md
+  - docs/models/shared/assessmentpackageregion.md
+  - docs/models/shared/assessmentpackagetype.md
+  - docs/models/shared/assessmentparameter.md
+  - docs/models/shared/assessmentparameterinput.md
+  - docs/models/shared/assessmentparametertype.md
+  - docs/models/shared/assessmentresponsedetail.md
   - docs/models/shared/atsactivity.md
   - docs/models/shared/atsactivitytype.md
   - docs/models/shared/atsaddress.md
@@ -2131,6 +2162,7 @@ generatedFiles:
   - docs/models/shared/nativewebhookeventid.md
   - docs/models/shared/nativewebhookformid.md
   - docs/models/shared/nativewebhooklabelid.md
+  - docs/models/shared/nativewebhookmemberid.md
   - docs/models/shared/nativewebhookorderid.md
   - docs/models/shared/nativewebhookparentid.md
   - docs/models/shared/nativewebhookprojectid.md
@@ -2400,6 +2432,8 @@ generatedFiles:
   - docs/models/shared/verificationparameterinput.md
   - docs/models/shared/verificationparametertype.md
   - docs/models/shared/verificationrequest.md
+  - docs/models/shared/verificationrequestprofilegender.md
+  - docs/models/shared/verificationrequestresponsestatus.md
   - docs/models/shared/verificationresponsedetail.md
   - docs/models/shared/verificationtime.md
   - docs/models/shared/virtualwebhookadid.md
@@ -2462,6 +2496,7 @@ generatedFiles:
   - docs/sdks/apicall/README.md
   - docs/sdks/application/README.md
   - docs/sdks/applicationstatus/README.md
+  - docs/sdks/assessment/README.md
   - docs/sdks/ats/README.md
   - docs/sdks/auth/README.md
   - docs/sdks/balancesheet/README.md
@@ -2598,6 +2633,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/apicall.rb
   - lib/unified_ruby_sdk/application.rb
   - lib/unified_ruby_sdk/applicationstatus.rb
+  - lib/unified_ruby_sdk/assessment.rb
   - lib/unified_ruby_sdk/ats.rb
   - lib/unified_ruby_sdk/auth.rb
   - lib/unified_ruby_sdk/balancesheet.rb
@@ -2787,6 +2823,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createadsorganization_request.rbi
   - lib/unified_ruby_sdk/models/operations/createadsorganization_response.rb
   - lib/unified_ruby_sdk/models/operations/createadsorganization_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createassessmentpackage_request.rb
+  - lib/unified_ruby_sdk/models/operations/createassessmentpackage_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createassessmentpackage_response.rb
+  - lib/unified_ruby_sdk/models/operations/createassessmentpackage_response.rbi
   - lib/unified_ruby_sdk/models/operations/createatsactivity_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/createatsactivity_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/createatsactivity_request.rb
@@ -3387,6 +3427,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getadsorganization_request.rbi
   - lib/unified_ruby_sdk/models/operations/getadsorganization_response.rb
   - lib/unified_ruby_sdk/models/operations/getadsorganization_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getassessmentpackage_request.rb
+  - lib/unified_ruby_sdk/models/operations/getassessmentpackage_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getassessmentpackage_response.rb
+  - lib/unified_ruby_sdk/models/operations/getassessmentpackage_response.rbi
   - lib/unified_ruby_sdk/models/operations/getatsactivity_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/getatsactivity_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/getatsactivity_request.rb
@@ -4061,6 +4105,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listadsreports_request.rbi
   - lib/unified_ruby_sdk/models/operations/listadsreports_response.rb
   - lib/unified_ruby_sdk/models/operations/listadsreports_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listassessmentpackages_request.rb
+  - lib/unified_ruby_sdk/models/operations/listassessmentpackages_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listassessmentpackages_response.rb
+  - lib/unified_ruby_sdk/models/operations/listassessmentpackages_response.rbi
   - lib/unified_ruby_sdk/models/operations/listatsactivities_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listatsactivities_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listatsactivities_request.rb
@@ -4721,6 +4769,16 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchadsorganization_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchadsorganization_response.rb
   - lib/unified_ruby_sdk/models/operations/patchadsorganization_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchassessmentorder_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchassessmentorder_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchassessmentorder_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchassessmentorder_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchassessmentorder_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchassessmentorder_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchassessmentpackage_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchassessmentpackage_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchassessmentpackage_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchassessmentpackage_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchatsactivity_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/patchatsactivity_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/patchatsactivity_request.rb
@@ -5243,6 +5301,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removeadsorganization_request.rbi
   - lib/unified_ruby_sdk/models/operations/removeadsorganization_response.rb
   - lib/unified_ruby_sdk/models/operations/removeadsorganization_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removeassessmentpackage_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeassessmentpackage_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removeassessmentpackage_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeassessmentpackage_response.rbi
   - lib/unified_ruby_sdk/models/operations/removeatsactivity_request.rb
   - lib/unified_ruby_sdk/models/operations/removeatsactivity_request.rbi
   - lib/unified_ruby_sdk/models/operations/removeatsactivity_response.rb
@@ -5653,6 +5715,16 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updateadsorganization_request.rbi
   - lib/unified_ruby_sdk/models/operations/updateadsorganization_response.rb
   - lib/unified_ruby_sdk/models/operations/updateadsorganization_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updateassessmentorder_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updateassessmentorder_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updateassessmentorder_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateassessmentorder_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updateassessmentorder_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateassessmentorder_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updateassessmentpackage_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateassessmentpackage_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updateassessmentpackage_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateassessmentpackage_response.rbi
   - lib/unified_ruby_sdk/models/operations/updateatsactivity_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/updateatsactivity_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/updateatsactivity_request.rb
@@ -6242,6 +6314,32 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/apicall.rbi
   - lib/unified_ruby_sdk/models/shared/apicall_type.rb
   - lib/unified_ruby_sdk/models/shared/apicall_type.rbi
+  - lib/unified_ruby_sdk/models/shared/assessmentaddress.rb
+  - lib/unified_ruby_sdk/models/shared/assessmentaddress.rbi
+  - lib/unified_ruby_sdk/models/shared/assessmentattribute.rb
+  - lib/unified_ruby_sdk/models/shared/assessmentattribute.rbi
+  - lib/unified_ruby_sdk/models/shared/assessmentattribute_status.rb
+  - lib/unified_ruby_sdk/models/shared/assessmentattribute_status.rbi
+  - lib/unified_ruby_sdk/models/shared/assessmentattribute_type.rb
+  - lib/unified_ruby_sdk/models/shared/assessmentattribute_type.rbi
+  - lib/unified_ruby_sdk/models/shared/assessmentorder.rb
+  - lib/unified_ruby_sdk/models/shared/assessmentorder.rbi
+  - lib/unified_ruby_sdk/models/shared/assessmentorder_status.rb
+  - lib/unified_ruby_sdk/models/shared/assessmentorder_status.rbi
+  - lib/unified_ruby_sdk/models/shared/assessmentpackage.rb
+  - lib/unified_ruby_sdk/models/shared/assessmentpackage.rbi
+  - lib/unified_ruby_sdk/models/shared/assessmentpackage_type.rb
+  - lib/unified_ruby_sdk/models/shared/assessmentpackage_type.rbi
+  - lib/unified_ruby_sdk/models/shared/assessmentpackageregion.rb
+  - lib/unified_ruby_sdk/models/shared/assessmentpackageregion.rbi
+  - lib/unified_ruby_sdk/models/shared/assessmentparameter.rb
+  - lib/unified_ruby_sdk/models/shared/assessmentparameter.rbi
+  - lib/unified_ruby_sdk/models/shared/assessmentparameter_type.rb
+  - lib/unified_ruby_sdk/models/shared/assessmentparameter_type.rbi
+  - lib/unified_ruby_sdk/models/shared/assessmentparameterinput.rb
+  - lib/unified_ruby_sdk/models/shared/assessmentparameterinput.rbi
+  - lib/unified_ruby_sdk/models/shared/assessmentresponsedetail.rb
+  - lib/unified_ruby_sdk/models/shared/assessmentresponsedetail.rbi
   - lib/unified_ruby_sdk/models/shared/atsactivity.rb
   - lib/unified_ruby_sdk/models/shared/atsactivity.rbi
   - lib/unified_ruby_sdk/models/shared/atsactivity_type.rb
@@ -6882,6 +6980,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/native_webhook_form_id.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_label_id.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_label_id.rbi
+  - lib/unified_ruby_sdk/models/shared/native_webhook_member_id.rb
+  - lib/unified_ruby_sdk/models/shared/native_webhook_member_id.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_order_id.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_order_id.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_parent_id.rb
@@ -7420,6 +7520,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/verificationparameterinput.rbi
   - lib/unified_ruby_sdk/models/shared/verificationrequest.rb
   - lib/unified_ruby_sdk/models/shared/verificationrequest.rbi
+  - lib/unified_ruby_sdk/models/shared/verificationrequest_profile_gender.rb
+  - lib/unified_ruby_sdk/models/shared/verificationrequest_profile_gender.rbi
+  - lib/unified_ruby_sdk/models/shared/verificationrequest_response_status.rb
+  - lib/unified_ruby_sdk/models/shared/verificationrequest_response_status.rbi
   - lib/unified_ruby_sdk/models/shared/verificationresponsedetail.rb
   - lib/unified_ruby_sdk/models/shared/verificationresponsedetail.rbi
   - lib/unified_ruby_sdk/models/shared/verificationtime.rb
@@ -13213,5 +13317,82 @@ examples:
       responses:
         "200":
           application/json: {}
+  patchAssessmentOrder:
+    speakeasy-default-patch-assessment-order:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {"connection_id": "<id>", "workspace_id": "<id>"}
+      responses:
+        "200":
+          application/json: {"connection_id": "<id>", "workspace_id": "<id>"}
+  updateAssessmentOrder:
+    speakeasy-default-update-assessment-order:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {"connection_id": "<id>", "workspace_id": "<id>"}
+      responses:
+        "200":
+          application/json: {"connection_id": "<id>", "workspace_id": "<id>"}
+  createAssessmentPackage:
+    speakeasy-default-create-assessment-package:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {"id": "<id>", "name": "<value>", "type": "REFERENCE_CHECK"}
+      responses:
+        "200":
+          application/json: {"id": "<id>", "name": "<value>", "type": "OTHER"}
+  getAssessmentPackage:
+    speakeasy-default-get-assessment-package:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"id": "<id>", "name": "<value>", "type": "OTHER"}
+  listAssessmentPackages:
+    speakeasy-default-list-assessment-packages:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{"id": "<id>", "name": "<value>", "type": "VIDEO_INTERVIEW"}]
+  patchAssessmentPackage:
+    speakeasy-default-patch-assessment-package:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {"id": "<id>", "name": "<value>", "type": "BACKGROUND_CHECK"}
+      responses:
+        "200":
+          application/json: {"id": "<id>", "name": "<value>", "type": "SKILLS_TEST"}
+  removeAssessmentPackage:
+    speakeasy-default-remove-assessment-package:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateAssessmentPackage:
+    speakeasy-default-update-assessment-package:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {"id": "<id>", "name": "<value>", "type": "OTHER"}
+      responses:
+        "200":
+          application/json: {"id": "<id>", "name": "<value>", "type": "BEHAVIORAL_ASSESSMENT"}
 examplesVersion: 1.0.2
 generatedTests: {}
