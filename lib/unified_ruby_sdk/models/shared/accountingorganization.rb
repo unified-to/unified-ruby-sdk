@@ -14,8 +14,6 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name'), required: true } }
-
         field :address, Crystalline::Nilable.new(Models::Shared::PropertyAccountingOrganizationAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
 
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -28,7 +26,11 @@ module UnifiedRubySDK
 
         field :legal_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('legal_name') } }
 
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
         field :organization_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_code') } }
+
+        field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
@@ -40,16 +42,17 @@ module UnifiedRubySDK
 
         field :website, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('website') } }
 
-        sig { params(name: ::String, address: T.nilable(Models::Shared::PropertyAccountingOrganizationAddress), created_at: T.nilable(::DateTime), currency: T.nilable(::String), fiscal_year_end_month: T.nilable(::Float), id: T.nilable(::String), legal_name: T.nilable(::String), organization_code: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), tax_number: T.nilable(::String), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime), website: T.nilable(::String)).void }
-        def initialize(name:, address: nil, created_at: nil, currency: nil, fiscal_year_end_month: nil, id: nil, legal_name: nil, organization_code: nil, raw: nil, tax_number: nil, timezone: nil, updated_at: nil, website: nil)
-          @name = name
+        sig { params(address: T.nilable(Models::Shared::PropertyAccountingOrganizationAddress), created_at: T.nilable(::DateTime), currency: T.nilable(::String), fiscal_year_end_month: T.nilable(::Float), id: T.nilable(::String), legal_name: T.nilable(::String), name: T.nilable(::String), organization_code: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), tax_number: T.nilable(::String), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime), website: T.nilable(::String)).void }
+        def initialize(address: nil, created_at: nil, currency: nil, fiscal_year_end_month: nil, id: nil, legal_name: nil, name: nil, organization_code: nil, parent_id: nil, raw: nil, tax_number: nil, timezone: nil, updated_at: nil, website: nil)
           @address = address
           @created_at = created_at
           @currency = currency
           @fiscal_year_end_month = fiscal_year_end_month
           @id = id
           @legal_name = legal_name
+          @name = name
           @organization_code = organization_code
+          @parent_id = parent_id
           @raw = raw
           @tax_number = tax_number
           @timezone = timezone
@@ -60,14 +63,15 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @name == other.name
           return false unless @address == other.address
           return false unless @created_at == other.created_at
           return false unless @currency == other.currency
           return false unless @fiscal_year_end_month == other.fiscal_year_end_month
           return false unless @id == other.id
           return false unless @legal_name == other.legal_name
+          return false unless @name == other.name
           return false unless @organization_code == other.organization_code
+          return false unless @parent_id == other.parent_id
           return false unless @raw == other.raw
           return false unless @tax_number == other.tax_number
           return false unless @timezone == other.timezone

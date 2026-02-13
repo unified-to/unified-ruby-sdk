@@ -26,6 +26,8 @@ class UnifiedRubySDK::Models::Shared::AccountingJournalLineitem
   def id=(str_); end
   def invoice_id(); end
   def invoice_id=(str_); end
+  def organization_id(); end
+  def organization_id=(str_); end
   def payment_id(); end
   def payment_id=(str_); end
   def project_id(); end

@@ -20,7 +20,6 @@ module UnifiedRubySDK
           CHANNEL_IDS = new('channel_ids')
           CHANNELS = new('channels')
           PARENT_ID = new('parent_id')
-          PARENT_MESSAGE_ID = new('parent_message_id')
           ROOT_MESSAGE_ID = new('root_message_id')
           MESSAGE_THREAD_IDENTIFIER = new('message_thread_identifier')
           AUTHOR_MEMBER = new('author_member')

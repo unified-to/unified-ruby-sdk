@@ -38,6 +38,8 @@ class UnifiedRubySDK::Models::Shared::AccountingAccount
   def subgroup=(str_); end
   def subsection(); end
   def subsection=(str_); end
+  def taxonomy(); end
+  def taxonomy=(str_); end
   def type(); end
   def type=(str_); end
   def updated_at(); end

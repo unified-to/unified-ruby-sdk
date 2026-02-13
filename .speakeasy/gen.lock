@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: a9dc2804b5a5bd156988be1a2361527a
+  docChecksum: 32d6237e45310a593e6a74bae997cf21
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.28
-  configChecksum: 416eee2db9577d8a10ddb1eaa11dbdf8
+  releaseVersion: 0.67.29
+  configChecksum: 226d2f18fd96c0b02bdbdd25e59d0380
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -1757,6 +1757,8 @@ generatedFiles:
   - docs/models/operations/updateverificationrequestrequest.md
   - docs/models/operations/updateverificationrequestresponse.md
   - docs/models/shared/accountingaccount.md
+  - docs/models/shared/accountingaccounttaxonomy.md
+  - docs/models/shared/accountingaccounttaxonomytype.md
   - docs/models/shared/accountingassociatedcontact.md
   - docs/models/shared/accountingattachment.md
   - docs/models/shared/accountingbalancesheet.md
@@ -6170,6 +6172,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared.rb
   - lib/unified_ruby_sdk/models/shared/accountingaccount.rb
   - lib/unified_ruby_sdk/models/shared/accountingaccount.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingaccounttaxonomy.rb
+  - lib/unified_ruby_sdk/models/shared/accountingaccounttaxonomy.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingaccounttaxonomy_type.rb
+  - lib/unified_ruby_sdk/models/shared/accountingaccounttaxonomy_type.rbi
   - lib/unified_ruby_sdk/models/shared/accountingassociatedcontact.rb
   - lib/unified_ruby_sdk/models/shared/accountingassociatedcontact.rbi
   - lib/unified_ruby_sdk/models/shared/accountingattachment.rb
@@ -7911,7 +7917,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   getAccountingProfitloss:
     speakeasy-default-get-accounting-profitloss:
       parameters:

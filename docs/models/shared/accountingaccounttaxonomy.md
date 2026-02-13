@@ -1,0 +1,10 @@
+# AccountingAccountTaxonomy
+
+
+## Fields
+
+| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `original_type`                                                                                       | *T.nilable(::String)*                                                                                 | :heavy_minus_sign:                                                                                    | N/A                                                                                                   |
+| `type`                                                                                                | [Models::Shared::AccountingAccountTaxonomyType](../../models/shared/accountingaccounttaxonomytype.md) | :heavy_check_mark:                                                                                    | N/A                                                                                                   |
+| `value`                                                                                               | *::String*                                                                                            | :heavy_check_mark:                                                                                    | N/A                                                                                                   |

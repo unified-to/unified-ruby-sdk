@@ -9,6 +9,8 @@ module UnifiedRubySDK
       autoload :One, 'unified_ruby_sdk/models/shared/one.rb'
       autoload :Five, 'unified_ruby_sdk/models/shared/five.rb'
       autoload :AccountingAccount, 'unified_ruby_sdk/models/shared/accountingaccount.rb'
+      autoload :AccountingAccountTaxonomy, 'unified_ruby_sdk/models/shared/accountingaccounttaxonomy.rb'
+      autoload :AccountingAccountTaxonomyType, 'unified_ruby_sdk/models/shared/accountingaccounttaxonomy_type.rb'
       autoload :AccountingAssociatedContact, 'unified_ruby_sdk/models/shared/accountingassociatedcontact.rb'
       autoload :AccountingAttachment, 'unified_ruby_sdk/models/shared/accountingattachment.rb'
       autoload :AccountingBalancesheet, 'unified_ruby_sdk/models/shared/accountingbalancesheet.rb'

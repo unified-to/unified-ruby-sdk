@@ -29,6 +29,7 @@ module UnifiedRubySDK
           GROUP = new('group')
           SUBGROUP = new('subgroup')
           PARENT_ID = new('parent_id')
+          TAXONOMY = new('taxonomy')
           RAW = new('raw')
         end
       end

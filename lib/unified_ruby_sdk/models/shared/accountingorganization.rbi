@@ -8,8 +8,6 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::AccountingOrganization
-  def name(); end
-  def name=(str_); end
   def address(); end
   def address=(str_); end
   def created_at(); end
@@ -22,8 +20,12 @@ class UnifiedRubySDK::Models::Shared::AccountingOrganization
   def id=(str_); end
   def legal_name(); end
   def legal_name=(str_); end
+  def name(); end
+  def name=(str_); end
   def organization_code(); end
   def organization_code=(str_); end
+  def parent_id(); end
+  def parent_id=(str_); end
   def raw(); end
   def raw=(str_); end
   def tax_number(); end

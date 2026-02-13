@@ -44,8 +44,6 @@ class UnifiedRubySDK::Models::Shared::PropertyMessagingEventMessage
   def message_thread_identifier=(str_); end
   def parent_id(); end
   def parent_id=(str_); end
-  def parent_message_id(); end
-  def parent_message_id=(str_); end
   def raw(); end
   def raw=(str_); end
   def reactions(); end

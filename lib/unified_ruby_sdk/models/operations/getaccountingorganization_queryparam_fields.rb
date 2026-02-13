@@ -23,6 +23,7 @@ module UnifiedRubySDK
           TAX_NUMBER = new('tax_number')
           TIMEZONE = new('timezone')
           WEBSITE = new('website')
+          PARENT_ID = new('parent_id')
           FISCAL_YEAR_END_MONTH = new('fiscal_year_end_month')
           ORGANIZATION_CODE = new('organization_code')
           RAW = new('raw')

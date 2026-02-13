@@ -32,6 +32,8 @@ module UnifiedRubySDK
 
         field :invoice_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('invoice_id') } }
 
+        field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
+
         field :payment_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_id') } }
 
         field :project_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('project_id') } }
@@ -40,8 +42,8 @@ module UnifiedRubySDK
 
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
 
-        sig { params(account_id: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), credit_amount: T.nilable(::Float), debit_amount: T.nilable(::Float), description: T.nilable(::String), group_id: T.nilable(::String), id: T.nilable(::String), invoice_id: T.nilable(::String), payment_id: T.nilable(::String), project_id: T.nilable(::String), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float)).void }
-        def initialize(account_id: nil, category_ids: nil, contact_id: nil, credit_amount: nil, debit_amount: nil, description: nil, group_id: nil, id: nil, invoice_id: nil, payment_id: nil, project_id: nil, tax_amount: nil, total_amount: nil)
+        sig { params(account_id: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), credit_amount: T.nilable(::Float), debit_amount: T.nilable(::Float), description: T.nilable(::String), group_id: T.nilable(::String), id: T.nilable(::String), invoice_id: T.nilable(::String), organization_id: T.nilable(::String), payment_id: T.nilable(::String), project_id: T.nilable(::String), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float)).void }
+        def initialize(account_id: nil, category_ids: nil, contact_id: nil, credit_amount: nil, debit_amount: nil, description: nil, group_id: nil, id: nil, invoice_id: nil, organization_id: nil, payment_id: nil, project_id: nil, tax_amount: nil, total_amount: nil)
           @account_id = account_id
           @category_ids = category_ids
           @contact_id = contact_id
@@ -51,6 +53,7 @@ module UnifiedRubySDK
           @group_id = group_id
           @id = id
           @invoice_id = invoice_id
+          @organization_id = organization_id
           @payment_id = payment_id
           @project_id = project_id
           @tax_amount = tax_amount
@@ -69,6 +72,7 @@ module UnifiedRubySDK
           return false unless @group_id == other.group_id
           return false unless @id == other.id
           return false unless @invoice_id == other.invoice_id
+          return false unless @organization_id == other.organization_id
           return false unless @payment_id == other.payment_id
           return false unless @project_id == other.project_id
           return false unless @tax_amount == other.tax_amount
