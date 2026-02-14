@@ -16,6 +16,8 @@ module UnifiedRubySDK
 
         field :url, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url'), required: true } }
 
+        field :content, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
+
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
@@ -24,9 +26,10 @@ module UnifiedRubySDK
 
         field :type, Crystalline::Nilable.new(Models::Shared::LmsMediaType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::LmsMediaType, true) } }
 
-        sig { params(url: ::String, description: T.nilable(::String), name: T.nilable(::String), thumbnail_url: T.nilable(::String), type: T.nilable(Models::Shared::LmsMediaType)).void }
-        def initialize(url:, description: nil, name: nil, thumbnail_url: nil, type: nil)
+        sig { params(url: ::String, content: T.nilable(::String), description: T.nilable(::String), name: T.nilable(::String), thumbnail_url: T.nilable(::String), type: T.nilable(Models::Shared::LmsMediaType)).void }
+        def initialize(url:, content: nil, description: nil, name: nil, thumbnail_url: nil, type: nil)
           @url = url
+          @content = content
           @description = description
           @name = name
           @thumbnail_url = thumbnail_url
@@ -37,6 +40,7 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @url == other.url
+          return false unless @content == other.content
           return false unless @description == other.description
           return false unless @name == other.name
           return false unless @thumbnail_url == other.thumbnail_url

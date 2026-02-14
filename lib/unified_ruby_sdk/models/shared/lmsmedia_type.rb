@@ -18,6 +18,9 @@ module UnifiedRubySDK
           VIDEO = new('VIDEO')
           WEB = new('WEB')
           DOCUMENT = new('DOCUMENT')
+          TEXT = new('TEXT')
+          HTML = new('HTML')
+          MARKDOWN = new('MARKDOWN')
           OTHER = new('OTHER')
         end
       end

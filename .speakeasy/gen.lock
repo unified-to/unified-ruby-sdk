@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 32d6237e45310a593e6a74bae997cf21
+  docChecksum: bba5d3ebf913171b03ce2be8b22a3947
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.29
-  configChecksum: 226d2f18fd96c0b02bdbdd25e59d0380
+  releaseVersion: 0.67.30
+  configChecksum: afc7f56254e58f7f99aa02fb75a5513d
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -203,9 +203,18 @@ generatedFiles:
   - docs/models/operations/createkmsspacequeryparamfields.md
   - docs/models/operations/createkmsspacerequest.md
   - docs/models/operations/createkmsspaceresponse.md
+  - docs/models/operations/createlmsactivityqueryparamfields.md
+  - docs/models/operations/createlmsactivityrequest.md
+  - docs/models/operations/createlmsactivityresponse.md
   - docs/models/operations/createlmsclassqueryparamfields.md
   - docs/models/operations/createlmsclassrequest.md
   - docs/models/operations/createlmsclassresponse.md
+  - docs/models/operations/createlmscollectionqueryparamfields.md
+  - docs/models/operations/createlmscollectionrequest.md
+  - docs/models/operations/createlmscollectionresponse.md
+  - docs/models/operations/createlmscontentqueryparamfields.md
+  - docs/models/operations/createlmscontentrequest.md
+  - docs/models/operations/createlmscontentresponse.md
   - docs/models/operations/createlmscoursequeryparamfields.md
   - docs/models/operations/createlmscourserequest.md
   - docs/models/operations/createlmscourseresponse.md
@@ -514,9 +523,18 @@ generatedFiles:
   - docs/models/operations/getkmsspacequeryparamfields.md
   - docs/models/operations/getkmsspacerequest.md
   - docs/models/operations/getkmsspaceresponse.md
+  - docs/models/operations/getlmsactivityqueryparamfields.md
+  - docs/models/operations/getlmsactivityrequest.md
+  - docs/models/operations/getlmsactivityresponse.md
   - docs/models/operations/getlmsclassqueryparamfields.md
   - docs/models/operations/getlmsclassrequest.md
   - docs/models/operations/getlmsclassresponse.md
+  - docs/models/operations/getlmscollectionqueryparamfields.md
+  - docs/models/operations/getlmscollectionrequest.md
+  - docs/models/operations/getlmscollectionresponse.md
+  - docs/models/operations/getlmscontentqueryparamfields.md
+  - docs/models/operations/getlmscontentrequest.md
+  - docs/models/operations/getlmscontentresponse.md
   - docs/models/operations/getlmscoursequeryparamfields.md
   - docs/models/operations/getlmscourserequest.md
   - docs/models/operations/getlmscourseresponse.md
@@ -863,9 +881,18 @@ generatedFiles:
   - docs/models/operations/listkmsspacesqueryparamfields.md
   - docs/models/operations/listkmsspacesrequest.md
   - docs/models/operations/listkmsspacesresponse.md
+  - docs/models/operations/listlmsactivitiesqueryparamfields.md
+  - docs/models/operations/listlmsactivitiesrequest.md
+  - docs/models/operations/listlmsactivitiesresponse.md
   - docs/models/operations/listlmsclassesqueryparamfields.md
   - docs/models/operations/listlmsclassesrequest.md
   - docs/models/operations/listlmsclassesresponse.md
+  - docs/models/operations/listlmscollectionsqueryparamfields.md
+  - docs/models/operations/listlmscollectionsrequest.md
+  - docs/models/operations/listlmscollectionsresponse.md
+  - docs/models/operations/listlmscontentsqueryparamfields.md
+  - docs/models/operations/listlmscontentsrequest.md
+  - docs/models/operations/listlmscontentsresponse.md
   - docs/models/operations/listlmscoursesqueryparamfields.md
   - docs/models/operations/listlmscoursesrequest.md
   - docs/models/operations/listlmscoursesresponse.md
@@ -1173,9 +1200,18 @@ generatedFiles:
   - docs/models/operations/patchkmsspacequeryparamfields.md
   - docs/models/operations/patchkmsspacerequest.md
   - docs/models/operations/patchkmsspaceresponse.md
+  - docs/models/operations/patchlmsactivityqueryparamfields.md
+  - docs/models/operations/patchlmsactivityrequest.md
+  - docs/models/operations/patchlmsactivityresponse.md
   - docs/models/operations/patchlmsclassqueryparamfields.md
   - docs/models/operations/patchlmsclassrequest.md
   - docs/models/operations/patchlmsclassresponse.md
+  - docs/models/operations/patchlmscollectionqueryparamfields.md
+  - docs/models/operations/patchlmscollectionrequest.md
+  - docs/models/operations/patchlmscollectionresponse.md
+  - docs/models/operations/patchlmscontentqueryparamfields.md
+  - docs/models/operations/patchlmscontentrequest.md
+  - docs/models/operations/patchlmscontentresponse.md
   - docs/models/operations/patchlmscoursequeryparamfields.md
   - docs/models/operations/patchlmscourserequest.md
   - docs/models/operations/patchlmscourseresponse.md
@@ -1399,8 +1435,14 @@ generatedFiles:
   - docs/models/operations/removekmspageresponse.md
   - docs/models/operations/removekmsspacerequest.md
   - docs/models/operations/removekmsspaceresponse.md
+  - docs/models/operations/removelmsactivityrequest.md
+  - docs/models/operations/removelmsactivityresponse.md
   - docs/models/operations/removelmsclassrequest.md
   - docs/models/operations/removelmsclassresponse.md
+  - docs/models/operations/removelmscollectionrequest.md
+  - docs/models/operations/removelmscollectionresponse.md
+  - docs/models/operations/removelmscontentrequest.md
+  - docs/models/operations/removelmscontentresponse.md
   - docs/models/operations/removelmscourserequest.md
   - docs/models/operations/removelmscourseresponse.md
   - docs/models/operations/removelmsinstructorrequest.md
@@ -1646,9 +1688,18 @@ generatedFiles:
   - docs/models/operations/updatekmsspacequeryparamfields.md
   - docs/models/operations/updatekmsspacerequest.md
   - docs/models/operations/updatekmsspaceresponse.md
+  - docs/models/operations/updatelmsactivityqueryparamfields.md
+  - docs/models/operations/updatelmsactivityrequest.md
+  - docs/models/operations/updatelmsactivityresponse.md
   - docs/models/operations/updatelmsclassqueryparamfields.md
   - docs/models/operations/updatelmsclassrequest.md
   - docs/models/operations/updatelmsclassresponse.md
+  - docs/models/operations/updatelmscollectionqueryparamfields.md
+  - docs/models/operations/updatelmscollectionrequest.md
+  - docs/models/operations/updatelmscollectionresponse.md
+  - docs/models/operations/updatelmscontentqueryparamfields.md
+  - docs/models/operations/updatelmscontentrequest.md
+  - docs/models/operations/updatelmscontentresponse.md
   - docs/models/operations/updatelmscoursequeryparamfields.md
   - docs/models/operations/updatelmscourserequest.md
   - docs/models/operations/updatelmscourseresponse.md
@@ -2075,6 +2126,7 @@ generatedFiles:
   - docs/models/shared/listcollectionid.md
   - docs/models/shared/listcompanyid.md
   - docs/models/shared/listcontactid.md
+  - docs/models/shared/listcontentid.md
   - docs/models/shared/listcourseid.md
   - docs/models/shared/listcustomerid.md
   - docs/models/shared/listdealid.md
@@ -2128,7 +2180,11 @@ generatedFiles:
   - docs/models/shared/listupdatedgte.md
   - docs/models/shared/listuserid.md
   - docs/models/shared/listusermentionedid.md
+  - docs/models/shared/lmsactivity.md
   - docs/models/shared/lmsclass.md
+  - docs/models/shared/lmscollection.md
+  - docs/models/shared/lmscontent.md
+  - docs/models/shared/lmscontentshapelocalization.md
   - docs/models/shared/lmscourse.md
   - docs/models/shared/lmsemail.md
   - docs/models/shared/lmsinstructor.md
@@ -2161,6 +2217,7 @@ generatedFiles:
   - docs/models/shared/nativewebhookcarrierid.md
   - docs/models/shared/nativewebhookchannelid.md
   - docs/models/shared/nativewebhookcompanyid.md
+  - docs/models/shared/nativewebhookcourseid.md
   - docs/models/shared/nativewebhookeventid.md
   - docs/models/shared/nativewebhookformid.md
   - docs/models/shared/nativewebhooklabelid.md
@@ -2169,6 +2226,7 @@ generatedFiles:
   - docs/models/shared/nativewebhookparentid.md
   - docs/models/shared/nativewebhookprojectid.md
   - docs/models/shared/nativewebhookshipmentid.md
+  - docs/models/shared/nativewebhookstudentid.md
   - docs/models/shared/nativewebhooktaskid.md
   - docs/models/shared/nondeliveryoption.md
   - docs/models/shared/objecttype.md
@@ -2450,6 +2508,7 @@ generatedFiles:
   - docs/models/shared/virtualwebhookcollectionid.md
   - docs/models/shared/virtualwebhookcompanyid.md
   - docs/models/shared/virtualwebhookcontactid.md
+  - docs/models/shared/virtualwebhookcourseid.md
   - docs/models/shared/virtualwebhookcustomerid.md
   - docs/models/shared/virtualwebhookdealid.md
   - docs/models/shared/virtualwebhookendlt.md
@@ -2479,6 +2538,7 @@ generatedFiles:
   - docs/models/shared/virtualwebhookspaceid.md
   - docs/models/shared/virtualwebhookstartgte.md
   - docs/models/shared/virtualwebhookstatus.md
+  - docs/models/shared/virtualwebhookstudentid.md
   - docs/models/shared/virtualwebhooktaskid.md
   - docs/models/shared/virtualwebhookticketid.md
   - docs/models/shared/virtualwebhooktype.md
@@ -2523,6 +2583,7 @@ generatedFiles:
   - docs/sdks/company/README.md
   - docs/sdks/connection/README.md
   - docs/sdks/contact/README.md
+  - docs/sdks/content/README.md
   - docs/sdks/course/README.md
   - docs/sdks/creative/README.md
   - docs/sdks/creditmemo/README.md
@@ -2660,6 +2721,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/company.rb
   - lib/unified_ruby_sdk/connection.rb
   - lib/unified_ruby_sdk/contact.rb
+  - lib/unified_ruby_sdk/content.rb
   - lib/unified_ruby_sdk/course.rb
   - lib/unified_ruby_sdk/creative.rb
   - lib/unified_ruby_sdk/creditmemo.rb
@@ -3063,12 +3125,30 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createkmsspace_request.rbi
   - lib/unified_ruby_sdk/models/operations/createkmsspace_response.rb
   - lib/unified_ruby_sdk/models/operations/createkmsspace_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createlmsactivity_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createlmsactivity_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createlmsactivity_request.rb
+  - lib/unified_ruby_sdk/models/operations/createlmsactivity_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createlmsactivity_response.rb
+  - lib/unified_ruby_sdk/models/operations/createlmsactivity_response.rbi
   - lib/unified_ruby_sdk/models/operations/createlmsclass_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/createlmsclass_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/createlmsclass_request.rb
   - lib/unified_ruby_sdk/models/operations/createlmsclass_request.rbi
   - lib/unified_ruby_sdk/models/operations/createlmsclass_response.rb
   - lib/unified_ruby_sdk/models/operations/createlmsclass_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createlmscollection_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createlmscollection_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createlmscollection_request.rb
+  - lib/unified_ruby_sdk/models/operations/createlmscollection_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createlmscollection_response.rb
+  - lib/unified_ruby_sdk/models/operations/createlmscollection_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createlmscontent_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createlmscontent_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createlmscontent_request.rb
+  - lib/unified_ruby_sdk/models/operations/createlmscontent_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createlmscontent_response.rb
+  - lib/unified_ruby_sdk/models/operations/createlmscontent_response.rbi
   - lib/unified_ruby_sdk/models/operations/createlmscourse_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/createlmscourse_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/createlmscourse_request.rb
@@ -3685,12 +3765,30 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getkmsspace_request.rbi
   - lib/unified_ruby_sdk/models/operations/getkmsspace_response.rb
   - lib/unified_ruby_sdk/models/operations/getkmsspace_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getlmsactivity_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getlmsactivity_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getlmsactivity_request.rb
+  - lib/unified_ruby_sdk/models/operations/getlmsactivity_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getlmsactivity_response.rb
+  - lib/unified_ruby_sdk/models/operations/getlmsactivity_response.rbi
   - lib/unified_ruby_sdk/models/operations/getlmsclass_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/getlmsclass_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/getlmsclass_request.rb
   - lib/unified_ruby_sdk/models/operations/getlmsclass_request.rbi
   - lib/unified_ruby_sdk/models/operations/getlmsclass_response.rb
   - lib/unified_ruby_sdk/models/operations/getlmsclass_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getlmscollection_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getlmscollection_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getlmscollection_request.rb
+  - lib/unified_ruby_sdk/models/operations/getlmscollection_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getlmscollection_response.rb
+  - lib/unified_ruby_sdk/models/operations/getlmscollection_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getlmscontent_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getlmscontent_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getlmscontent_request.rb
+  - lib/unified_ruby_sdk/models/operations/getlmscontent_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getlmscontent_response.rb
+  - lib/unified_ruby_sdk/models/operations/getlmscontent_response.rbi
   - lib/unified_ruby_sdk/models/operations/getlmscourse_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/getlmscourse_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/getlmscourse_request.rb
@@ -4383,12 +4481,30 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listkmsspaces_request.rbi
   - lib/unified_ruby_sdk/models/operations/listkmsspaces_response.rb
   - lib/unified_ruby_sdk/models/operations/listkmsspaces_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listlmsactivities_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listlmsactivities_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listlmsactivities_request.rb
+  - lib/unified_ruby_sdk/models/operations/listlmsactivities_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listlmsactivities_response.rb
+  - lib/unified_ruby_sdk/models/operations/listlmsactivities_response.rbi
   - lib/unified_ruby_sdk/models/operations/listlmsclasses_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listlmsclasses_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listlmsclasses_request.rb
   - lib/unified_ruby_sdk/models/operations/listlmsclasses_request.rbi
   - lib/unified_ruby_sdk/models/operations/listlmsclasses_response.rb
   - lib/unified_ruby_sdk/models/operations/listlmsclasses_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listlmscollections_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listlmscollections_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listlmscollections_request.rb
+  - lib/unified_ruby_sdk/models/operations/listlmscollections_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listlmscollections_response.rb
+  - lib/unified_ruby_sdk/models/operations/listlmscollections_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listlmscontents_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listlmscontents_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listlmscontents_request.rb
+  - lib/unified_ruby_sdk/models/operations/listlmscontents_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listlmscontents_response.rb
+  - lib/unified_ruby_sdk/models/operations/listlmscontents_response.rbi
   - lib/unified_ruby_sdk/models/operations/listlmscourses_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listlmscourses_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listlmscourses_request.rb
@@ -5003,12 +5119,30 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchkmsspace_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchkmsspace_response.rb
   - lib/unified_ruby_sdk/models/operations/patchkmsspace_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchlmsactivity_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchlmsactivity_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchlmsactivity_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchlmsactivity_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchlmsactivity_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchlmsactivity_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchlmsclass_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/patchlmsclass_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/patchlmsclass_request.rb
   - lib/unified_ruby_sdk/models/operations/patchlmsclass_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchlmsclass_response.rb
   - lib/unified_ruby_sdk/models/operations/patchlmsclass_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchlmscollection_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchlmscollection_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchlmscollection_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchlmscollection_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchlmscollection_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchlmscollection_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchlmscontent_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchlmscontent_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchlmscontent_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchlmscontent_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchlmscontent_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchlmscontent_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchlmscourse_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/patchlmscourse_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/patchlmscourse_request.rb
@@ -5455,10 +5589,22 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removekmsspace_request.rbi
   - lib/unified_ruby_sdk/models/operations/removekmsspace_response.rb
   - lib/unified_ruby_sdk/models/operations/removekmsspace_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removelmsactivity_request.rb
+  - lib/unified_ruby_sdk/models/operations/removelmsactivity_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removelmsactivity_response.rb
+  - lib/unified_ruby_sdk/models/operations/removelmsactivity_response.rbi
   - lib/unified_ruby_sdk/models/operations/removelmsclass_request.rb
   - lib/unified_ruby_sdk/models/operations/removelmsclass_request.rbi
   - lib/unified_ruby_sdk/models/operations/removelmsclass_response.rb
   - lib/unified_ruby_sdk/models/operations/removelmsclass_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removelmscollection_request.rb
+  - lib/unified_ruby_sdk/models/operations/removelmscollection_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removelmscollection_response.rb
+  - lib/unified_ruby_sdk/models/operations/removelmscollection_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removelmscontent_request.rb
+  - lib/unified_ruby_sdk/models/operations/removelmscontent_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removelmscontent_response.rb
+  - lib/unified_ruby_sdk/models/operations/removelmscontent_response.rbi
   - lib/unified_ruby_sdk/models/operations/removelmscourse_request.rb
   - lib/unified_ruby_sdk/models/operations/removelmscourse_request.rbi
   - lib/unified_ruby_sdk/models/operations/removelmscourse_response.rb
@@ -5949,12 +6095,30 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatekmsspace_request.rbi
   - lib/unified_ruby_sdk/models/operations/updatekmsspace_response.rb
   - lib/unified_ruby_sdk/models/operations/updatekmsspace_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatelmsactivity_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updatelmsactivity_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updatelmsactivity_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatelmsactivity_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatelmsactivity_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatelmsactivity_response.rbi
   - lib/unified_ruby_sdk/models/operations/updatelmsclass_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/updatelmsclass_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/updatelmsclass_request.rb
   - lib/unified_ruby_sdk/models/operations/updatelmsclass_request.rbi
   - lib/unified_ruby_sdk/models/operations/updatelmsclass_response.rb
   - lib/unified_ruby_sdk/models/operations/updatelmsclass_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatelmscollection_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updatelmscollection_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updatelmscollection_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatelmscollection_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatelmscollection_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatelmscollection_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatelmscontent_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updatelmscontent_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updatelmscontent_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatelmscontent_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatelmscontent_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatelmscontent_response.rbi
   - lib/unified_ruby_sdk/models/operations/updatelmscourse_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/updatelmscourse_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/updatelmscourse_request.rb
@@ -6808,6 +6972,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_company_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_contact_id.rb
   - lib/unified_ruby_sdk/models/shared/list_contact_id.rbi
+  - lib/unified_ruby_sdk/models/shared/list_content_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_content_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_course_id.rb
   - lib/unified_ruby_sdk/models/shared/list_course_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_customer_id.rb
@@ -6914,8 +7080,16 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_user_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_user_mentioned_id.rb
   - lib/unified_ruby_sdk/models/shared/list_user_mentioned_id.rbi
+  - lib/unified_ruby_sdk/models/shared/lmsactivity.rb
+  - lib/unified_ruby_sdk/models/shared/lmsactivity.rbi
   - lib/unified_ruby_sdk/models/shared/lmsclass.rb
   - lib/unified_ruby_sdk/models/shared/lmsclass.rbi
+  - lib/unified_ruby_sdk/models/shared/lmscollection.rb
+  - lib/unified_ruby_sdk/models/shared/lmscollection.rbi
+  - lib/unified_ruby_sdk/models/shared/lmscontent.rb
+  - lib/unified_ruby_sdk/models/shared/lmscontent.rbi
+  - lib/unified_ruby_sdk/models/shared/lmscontentshapelocalization.rb
+  - lib/unified_ruby_sdk/models/shared/lmscontentshapelocalization.rbi
   - lib/unified_ruby_sdk/models/shared/lmscourse.rb
   - lib/unified_ruby_sdk/models/shared/lmscourse.rbi
   - lib/unified_ruby_sdk/models/shared/lmsemail.rb
@@ -6980,6 +7154,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/native_webhook_channel_id.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_company_id.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_company_id.rbi
+  - lib/unified_ruby_sdk/models/shared/native_webhook_course_id.rb
+  - lib/unified_ruby_sdk/models/shared/native_webhook_course_id.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_event_id.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_event_id.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_form_id.rb
@@ -6996,6 +7172,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/native_webhook_project_id.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_shipment_id.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_shipment_id.rbi
+  - lib/unified_ruby_sdk/models/shared/native_webhook_student_id.rb
+  - lib/unified_ruby_sdk/models/shared/native_webhook_student_id.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_task_id.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_task_id.rbi
   - lib/unified_ruby_sdk/models/shared/non_delivery_option.rb
@@ -7558,6 +7736,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_company_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_contact_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_contact_id.rbi
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_course_id.rb
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_course_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_customer_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_customer_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_deal_id.rb
@@ -7616,6 +7796,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_start_gte.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_status.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_status.rbi
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_student_id.rb
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_student_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_task_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_task_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_ticket_id.rb
@@ -13400,5 +13582,170 @@ examples:
       responses:
         "200":
           application/json: {"id": "<id>", "name": "<value>", "type": "BEHAVIORAL_ASSESSMENT"}
+  createLmsActivity:
+    speakeasy-default-create-lms-activity:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getLmsActivity:
+    speakeasy-default-get-lms-activity:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listLmsActivities:
+    speakeasy-default-list-lms-activities:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchLmsActivity:
+    speakeasy-default-patch-lms-activity:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeLmsActivity:
+    speakeasy-default-remove-lms-activity:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateLmsActivity:
+    speakeasy-default-update-lms-activity:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createLmsCollection:
+    speakeasy-default-create-lms-collection:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getLmsCollection:
+    speakeasy-default-get-lms-collection:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listLmsCollections:
+    speakeasy-default-list-lms-collections:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchLmsCollection:
+    speakeasy-default-patch-lms-collection:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeLmsCollection:
+    speakeasy-default-remove-lms-collection:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateLmsCollection:
+    speakeasy-default-update-lms-collection:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createLmsContent:
+    speakeasy-default-create-lms-content:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getLmsContent:
+    speakeasy-default-get-lms-content:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listLmsContents:
+    speakeasy-default-list-lms-contents:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchLmsContent:
+    speakeasy-default-patch-lms-content:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeLmsContent:
+    speakeasy-default-remove-lms-content:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateLmsContent:
+    speakeasy-default-update-lms-content:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}

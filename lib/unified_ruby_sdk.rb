@@ -84,6 +84,7 @@ module UnifiedRubySDK
   autoload :Space, 'unified_ruby_sdk/space'
   autoload :Lms, 'unified_ruby_sdk/lms'
   autoload :Class, 'unified_ruby_sdk/class_'
+  autoload :Content, 'unified_ruby_sdk/content'
   autoload :Course, 'unified_ruby_sdk/course'
   autoload :Instructor, 'unified_ruby_sdk/instructor'
   autoload :Student, 'unified_ruby_sdk/student'

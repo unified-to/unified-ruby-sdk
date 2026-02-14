@@ -44,6 +44,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_company_id=(str_); end
   def list_contact_id(); end
   def list_contact_id=(str_); end
+  def list_content_id(); end
+  def list_content_id=(str_); end
   def list_course_id(); end
   def list_course_id=(str_); end
   def list_customer_id(); end
@@ -160,6 +162,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def native_webhook_channel_id=(str_); end
   def native_webhook_company_id(); end
   def native_webhook_company_id=(str_); end
+  def native_webhook_course_id(); end
+  def native_webhook_course_id=(str_); end
   def native_webhook_event_id(); end
   def native_webhook_event_id=(str_); end
   def native_webhook_form_id(); end
@@ -176,6 +180,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def native_webhook_project_id=(str_); end
   def native_webhook_shipment_id(); end
   def native_webhook_shipment_id=(str_); end
+  def native_webhook_student_id(); end
+  def native_webhook_student_id=(str_); end
   def native_webhook_task_id(); end
   def native_webhook_task_id=(str_); end
   def outbound_fields(); end
@@ -218,6 +224,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_company_id=(str_); end
   def virtual_webhook_contact_id(); end
   def virtual_webhook_contact_id=(str_); end
+  def virtual_webhook_course_id(); end
+  def virtual_webhook_course_id=(str_); end
   def virtual_webhook_customer_id(); end
   def virtual_webhook_customer_id=(str_); end
   def virtual_webhook_deal_id(); end
@@ -276,6 +284,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_start_gte=(str_); end
   def virtual_webhook_status(); end
   def virtual_webhook_status=(str_); end
+  def virtual_webhook_student_id(); end
+  def virtual_webhook_student_id=(str_); end
   def virtual_webhook_task_id(); end
   def virtual_webhook_task_id=(str_); end
   def virtual_webhook_ticket_id(); end
