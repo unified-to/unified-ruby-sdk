@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: bba5d3ebf913171b03ce2be8b22a3947
+  docChecksum: d121c23b689164804bad4c9617517509
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.30
-  configChecksum: afc7f56254e58f7f99aa02fb75a5513d
+  releaseVersion: 0.67.31
+  configChecksum: 910f3bfc16ba59b567c30aa5075ec867
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -10722,10 +10722,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"task_id": "<id>", "text": "<value>"}
+        application/json: {"text": "<value>"}
       responses:
         "200":
-          application/json: {"task_id": "<id>", "text": "<value>"}
+          application/json: {"text": "<value>"}
   createUcComment:
     speakeasy-default-create-uc-comment:
       parameters:
@@ -10744,7 +10744,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"task_id": "<id>", "text": "<value>"}
+          application/json: {"text": "<value>"}
   getUcComment:
     speakeasy-default-get-uc-comment:
       parameters:
@@ -10777,10 +10777,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"task_id": "<id>", "text": "<value>"}
+        application/json: {"text": "<value>"}
       responses:
         "200":
-          application/json: {"task_id": "<id>", "text": "<value>"}
+          application/json: {"text": "<value>"}
   patchUcComment:
     speakeasy-default-patch-uc-comment:
       parameters:
@@ -10811,10 +10811,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"task_id": "<id>", "text": "<value>"}
+        application/json: {"text": "<value>"}
       responses:
         "200":
-          application/json: {"task_id": "<id>", "text": "<value>"}
+          application/json: {"text": "<value>"}
   updateUcComment:
     speakeasy-default-update-uc-comment:
       parameters:

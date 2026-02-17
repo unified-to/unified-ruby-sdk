@@ -14,8 +14,6 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :task_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('task_id'), required: true } }
-
         field :text, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('text'), required: true } }
 
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -24,19 +22,21 @@ module UnifiedRubySDK
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
+        field :task_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('task_id') } }
+
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
         field :user_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_name') } }
 
-        sig { params(task_id: ::String, text: ::String, created_at: T.nilable(::DateTime), id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), user_name: T.nilable(::String)).void }
-        def initialize(task_id:, text:, created_at: nil, id: nil, raw: nil, updated_at: nil, user_id: nil, user_name: nil)
-          @task_id = task_id
+        sig { params(text: ::String, created_at: T.nilable(::DateTime), id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), task_id: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), user_name: T.nilable(::String)).void }
+        def initialize(text:, created_at: nil, id: nil, raw: nil, task_id: nil, updated_at: nil, user_id: nil, user_name: nil)
           @text = text
           @created_at = created_at
           @id = id
           @raw = raw
+          @task_id = task_id
           @updated_at = updated_at
           @user_id = user_id
           @user_name = user_name
@@ -45,11 +45,11 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @task_id == other.task_id
           return false unless @text == other.text
           return false unless @created_at == other.created_at
           return false unless @id == other.id
           return false unless @raw == other.raw
+          return false unless @task_id == other.task_id
           return false unless @updated_at == other.updated_at
           return false unless @user_id == other.user_id
           return false unless @user_name == other.user_name

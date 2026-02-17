@@ -15,10 +15,16 @@ module UnifiedRubySDK
 
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # The ad ID to filter by
+        field :ad_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'ad_id', 'style': 'form', 'explode': true } }
         # The campaign ID to filter by
         field :campaign_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'campaign_id', 'style': 'form', 'explode': true } }
+        # The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+        field :end_lt, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'end_lt', 'style': 'form', 'explode': true } }
         # Fields to return
         field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::ListAdsReportsQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        # The group ID to filter by (reference to HrisGroup)
+        field :group_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'group_id', 'style': 'form', 'explode': true } }
 
         field :limit, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
 
@@ -33,16 +39,21 @@ module UnifiedRubySDK
         field :raw, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
         field :sort, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
+        # The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+        field :start_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'start_gte', 'style': 'form', 'explode': true } }
 
         field :type, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'type', 'style': 'form', 'explode': true } }
         # Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, campaign_id: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListAdsReportsQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), org_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), type: T.nilable(::String), updated_gte: T.nilable(::String)).void }
-        def initialize(connection_id:, campaign_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, org_id: nil, query: nil, raw: nil, sort: nil, type: nil, updated_gte: nil)
+        sig { params(connection_id: ::String, ad_id: T.nilable(::String), campaign_id: T.nilable(::String), end_lt: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListAdsReportsQueryParamFields]), group_id: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), org_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), type: T.nilable(::String), updated_gte: T.nilable(::String)).void }
+        def initialize(connection_id:, ad_id: nil, campaign_id: nil, end_lt: nil, fields_: nil, group_id: nil, limit: nil, offset: nil, order: nil, org_id: nil, query: nil, raw: nil, sort: nil, start_gte: nil, type: nil, updated_gte: nil)
           @connection_id = connection_id
+          @ad_id = ad_id
           @campaign_id = campaign_id
+          @end_lt = end_lt
           @fields_ = fields_
+          @group_id = group_id
           @limit = limit
           @offset = offset
           @order = order
@@ -50,6 +61,7 @@ module UnifiedRubySDK
           @query = query
           @raw = raw
           @sort = sort
+          @start_gte = start_gte
           @type = type
           @updated_gte = updated_gte
         end
@@ -58,8 +70,11 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @connection_id == other.connection_id
+          return false unless @ad_id == other.ad_id
           return false unless @campaign_id == other.campaign_id
+          return false unless @end_lt == other.end_lt
           return false unless @fields_ == other.fields_
+          return false unless @group_id == other.group_id
           return false unless @limit == other.limit
           return false unless @offset == other.offset
           return false unless @order == other.order
@@ -67,6 +82,7 @@ module UnifiedRubySDK
           return false unless @query == other.query
           return false unless @raw == other.raw
           return false unless @sort == other.sort
+          return false unless @start_gte == other.start_gte
           return false unless @type == other.type
           return false unless @updated_gte == other.updated_gte
           true

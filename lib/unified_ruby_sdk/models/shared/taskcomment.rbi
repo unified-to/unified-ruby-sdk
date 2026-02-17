@@ -8,8 +8,6 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::TaskComment
-  def task_id(); end
-  def task_id=(str_); end
   def text(); end
   def text=(str_); end
   def created_at(); end
@@ -18,6 +16,8 @@ class UnifiedRubySDK::Models::Shared::TaskComment
   def id=(str_); end
   def raw(); end
   def raw=(str_); end
+  def task_id(); end
+  def task_id=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
   def user_id(); end
