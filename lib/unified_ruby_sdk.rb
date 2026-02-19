@@ -71,6 +71,7 @@ module UnifiedRubySDK
   autoload :Model, 'unified_ruby_sdk/model'
   autoload :Prompt, 'unified_ruby_sdk/prompt'
   autoload :Hris, 'unified_ruby_sdk/hris'
+  autoload :Bankaccount, 'unified_ruby_sdk/bankaccount'
   autoload :Benefit, 'unified_ruby_sdk/benefit'
   autoload :Deduction, 'unified_ruby_sdk/deduction'
   autoload :Device, 'unified_ruby_sdk/device'

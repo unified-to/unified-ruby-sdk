@@ -26,6 +26,7 @@ module UnifiedRubySDK
           START_AT = new('start_at')
           END_AT = new('end_at')
           IS_ACTIVE = new('is_active')
+          NOTES = new('notes')
           RAW = new('raw')
         end
       end

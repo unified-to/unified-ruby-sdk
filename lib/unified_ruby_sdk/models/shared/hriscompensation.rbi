@@ -16,6 +16,8 @@ class UnifiedRubySDK::Models::Shared::HrisCompensation
   def frequency=(str_); end
   def group_id(); end
   def group_id=(str_); end
+  def notes(); end
+  def notes=(str_); end
   def type(); end
   def type=(str_); end
 end

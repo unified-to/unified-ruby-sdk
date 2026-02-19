@@ -22,14 +22,17 @@ module UnifiedRubySDK
 
         field :group_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_id') } }
 
+        field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
+
         field :type, Crystalline::Nilable.new(Models::Shared::HrisCompensationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisCompensationType, true) } }
 
-        sig { params(amount: T.nilable(::Float), currency: T.nilable(::String), frequency: T.nilable(Models::Shared::HrisCompensationFrequency), group_id: T.nilable(::String), type: T.nilable(Models::Shared::HrisCompensationType)).void }
-        def initialize(amount: nil, currency: nil, frequency: nil, group_id: nil, type: nil)
+        sig { params(amount: T.nilable(::Float), currency: T.nilable(::String), frequency: T.nilable(Models::Shared::HrisCompensationFrequency), group_id: T.nilable(::String), notes: T.nilable(::String), type: T.nilable(Models::Shared::HrisCompensationType)).void }
+        def initialize(amount: nil, currency: nil, frequency: nil, group_id: nil, notes: nil, type: nil)
           @amount = amount
           @currency = currency
           @frequency = frequency
           @group_id = group_id
+          @notes = notes
           @type = type
         end
 
@@ -40,6 +43,7 @@ module UnifiedRubySDK
           return false unless @currency == other.currency
           return false unless @frequency == other.frequency
           return false unless @group_id == other.group_id
+          return false unless @notes == other.notes
           return false unless @type == other.type
           true
         end

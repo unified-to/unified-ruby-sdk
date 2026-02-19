@@ -73,6 +73,7 @@ module UnifiedRubySDK
           HRIS_TIMESHIFT = new('hris_timeshift')
           HRIS_DEDUCTION = new('hris_deduction')
           HRIS_BENEFIT = new('hris_benefit')
+          HRIS_BANKACCOUNT = new('hris_bankaccount')
           MARTECH_LIST = new('martech_list')
           MARTECH_MEMBER = new('martech_member')
           MARTECH_CAMPAIGN = new('martech_campaign')

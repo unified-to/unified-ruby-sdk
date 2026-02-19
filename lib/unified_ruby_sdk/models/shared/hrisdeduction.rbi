@@ -26,6 +26,8 @@ class UnifiedRubySDK::Models::Shared::HrisDeduction
   def id=(str_); end
   def is_active(); end
   def is_active=(str_); end
+  def notes(); end
+  def notes=(str_); end
   def raw(); end
   def raw=(str_); end
   def start_at(); end

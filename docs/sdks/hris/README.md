@@ -5,6 +5,7 @@
 
 ### Available Operations
 
+* [create_hris_bankaccount](#create_hris_bankaccount) - Create a bankaccount
 * [create_hris_benefit](#create_hris_benefit) - Create a benefit
 * [create_hris_company](#create_hris_company) - Create a company
 * [create_hris_deduction](#create_hris_deduction) - Create a deduction
@@ -13,6 +14,7 @@
 * [create_hris_group](#create_hris_group) - Create a group
 * [create_hris_location](#create_hris_location) - Create a location
 * [create_hris_timeshift](#create_hris_timeshift) - Create a timeshift
+* [get_hris_bankaccount](#get_hris_bankaccount) - Retrieve a bankaccount
 * [get_hris_benefit](#get_hris_benefit) - Retrieve a benefit
 * [get_hris_company](#get_hris_company) - Retrieve a company
 * [get_hris_deduction](#get_hris_deduction) - Retrieve a deduction
@@ -23,6 +25,7 @@
 * [get_hris_payslip](#get_hris_payslip) - Retrieve a payslip
 * [get_hris_timeoff](#get_hris_timeoff) - Retrieve a timeoff
 * [get_hris_timeshift](#get_hris_timeshift) - Retrieve a timeshift
+* [list_hris_bankaccounts](#list_hris_bankaccounts) - List all bankaccounts
 * [list_hris_benefits](#list_hris_benefits) - List all benefits
 * [list_hris_companies](#list_hris_companies) - List all companies
 * [list_hris_deductions](#list_hris_deductions) - List all deductions
@@ -33,6 +36,7 @@
 * [list_hris_payslips](#list_hris_payslips) - List all payslips
 * [list_hris_timeoffs](#list_hris_timeoffs) - List all timeoffs
 * [list_hris_timeshifts](#list_hris_timeshifts) - List all timeshifts
+* [patch_hris_bankaccount](#patch_hris_bankaccount) - Update a bankaccount
 * [patch_hris_benefit](#patch_hris_benefit) - Update a benefit
 * [patch_hris_company](#patch_hris_company) - Update a company
 * [patch_hris_deduction](#patch_hris_deduction) - Update a deduction
@@ -41,6 +45,7 @@
 * [patch_hris_group](#patch_hris_group) - Update a group
 * [patch_hris_location](#patch_hris_location) - Update a location
 * [patch_hris_timeshift](#patch_hris_timeshift) - Update a timeshift
+* [remove_hris_bankaccount](#remove_hris_bankaccount) - Remove a bankaccount
 * [remove_hris_benefit](#remove_hris_benefit) - Remove a benefit
 * [remove_hris_company](#remove_hris_company) - Remove a company
 * [remove_hris_deduction](#remove_hris_deduction) - Remove a deduction
@@ -49,6 +54,7 @@
 * [remove_hris_group](#remove_hris_group) - Remove a group
 * [remove_hris_location](#remove_hris_location) - Remove a location
 * [remove_hris_timeshift](#remove_hris_timeshift) - Remove a timeshift
+* [update_hris_bankaccount](#update_hris_bankaccount) - Update a bankaccount
 * [update_hris_benefit](#update_hris_benefit) - Update a benefit
 * [update_hris_company](#update_hris_company) - Update a company
 * [update_hris_deduction](#update_hris_deduction) - Update a deduction
@@ -57,6 +63,50 @@
 * [update_hris_group](#update_hris_group) - Update a group
 * [update_hris_location](#update_hris_location) - Update a location
 * [update_hris_timeshift](#update_hris_timeshift) - Update a timeshift
+
+## create_hris_bankaccount
+
+Create a bankaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createHrisBankaccount" method="post" path="/hris/{connection_id}/bankaccount" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.hris.create_hris_bankaccount(hris_bankaccount: Models::Shared::HrisBankaccount.new(), connection_id: '<id>')
+
+unless res.hris_bankaccount.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `hris_bankaccount`                                                                                                                               | [Models::Shared::HrisBankaccount](../../models/shared/hrisbankaccount.md)                                                                        | :heavy_check_mark:                                                                                                                               | Employee payroll bank account for direct deposit.                                                                                                |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHrisBankaccountQueryParamFields](../../models/operations/createhrisbankaccountqueryparamfields.md)>          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateHrisBankaccountResponse)](../../models/operations/createhrisbankaccountresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_hris_benefit
 
@@ -409,6 +459,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateHrisTimeshiftResponse)](../../models/operations/createhristimeshiftresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_hris_bankaccount
+
+Retrieve a bankaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getHrisBankaccount" method="get" path="/hris/{connection_id}/bankaccount/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.hris.get_hris_bankaccount(connection_id: '<id>', id: '<id>')
+
+unless res.hris_bankaccount.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Bankaccount                                                                                                                            |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisBankaccountQueryParamFields](../../models/operations/gethrisbankaccountqueryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetHrisBankaccountResponse)](../../models/operations/gethrisbankaccountresponse.md)**
 
 ### Errors
 
@@ -849,6 +943,51 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetHrisTimeshiftResponse)](../../models/operations/gethristimeshiftresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_hris_bankaccounts
+
+List all bankaccounts
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listHrisBankaccounts" method="get" path="/hris/{connection_id}/bankaccount" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListHrisBankaccountsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.hris.list_hris_bankaccounts(request: req)
+
+unless res.hris_bankaccounts.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [Models::Operations::ListHrisBankaccountsRequest](../../models/operations/listhrisbankaccountsrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+
+### Response
+
+**[T.nilable(Models::Operations::ListHrisBankaccountsResponse)](../../models/operations/listhrisbankaccountsresponse.md)**
 
 ### Errors
 
@@ -1306,6 +1445,53 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## patch_hris_bankaccount
+
+Update a bankaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchHrisBankaccount" method="patch" path="/hris/{connection_id}/bankaccount/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::PatchHrisBankaccountRequest.new(
+  hris_bankaccount: Models::Shared::HrisBankaccount.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.hris.patch_hris_bankaccount(request: req)
+
+unless res.hris_bankaccount.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [Models::Operations::PatchHrisBankaccountRequest](../../models/operations/patchhrisbankaccountrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchHrisBankaccountResponse)](../../models/operations/patchhrisbankaccountresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## patch_hris_benefit
 
 Update a benefit
@@ -1688,6 +1874,48 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## remove_hris_bankaccount
+
+Remove a bankaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeHrisBankaccount" method="delete" path="/hris/{connection_id}/bankaccount/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.hris.remove_hris_bankaccount(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter             | Type                  | Required              | Description           |
+| --------------------- | --------------------- | --------------------- | --------------------- |
+| `connection_id`       | *::String*            | :heavy_check_mark:    | ID of the connection  |
+| `id`                  | *::String*            | :heavy_check_mark:    | ID of the Bankaccount |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveHrisBankaccountResponse)](../../models/operations/removehrisbankaccountresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## remove_hris_benefit
 
 Remove a benefit
@@ -2017,6 +2245,53 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::RemoveHrisTimeshiftResponse)](../../models/operations/removehristimeshiftresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_hris_bankaccount
+
+Update a bankaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateHrisBankaccount" method="put" path="/hris/{connection_id}/bankaccount/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateHrisBankaccountRequest.new(
+  hris_bankaccount: Models::Shared::HrisBankaccount.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.hris.update_hris_bankaccount(request: req)
+
+unless res.hris_bankaccount.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [Models::Operations::UpdateHrisBankaccountRequest](../../models/operations/updatehrisbankaccountrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateHrisBankaccountResponse)](../../models/operations/updatehrisbankaccountresponse.md)**
 
 ### Errors
 

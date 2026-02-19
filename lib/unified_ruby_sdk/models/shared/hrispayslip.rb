@@ -21,7 +21,7 @@ module UnifiedRubySDK
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
-        # // The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
+        # The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
         field :deduction, Crystalline::Nilable.new(Models::Shared::PropertyHrisPayslipDeduction), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('deduction') } }
 
         field :details, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisPayslipDetail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('details') } }

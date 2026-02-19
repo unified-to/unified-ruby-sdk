@@ -143,6 +143,8 @@ module UnifiedRubySDK
           HRIS_DEDUCTION_WRITE = new('hris_deduction_write')
           HRIS_BENEFIT_READ = new('hris_benefit_read')
           HRIS_BENEFIT_WRITE = new('hris_benefit_write')
+          HRIS_BANKACCOUNT_READ = new('hris_bankaccount_read')
+          HRIS_BANKACCOUNT_WRITE = new('hris_bankaccount_write')
           UC_CALL_READ = new('uc_call_read')
           UC_CONTACT_READ = new('uc_contact_read')
           UC_CONTACT_WRITE = new('uc_contact_write')

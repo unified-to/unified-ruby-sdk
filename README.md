@@ -353,6 +353,15 @@ end
 * [get_accounting_balancesheet](docs/sdks/balancesheet/README.md#get_accounting_balancesheet) - Retrieve a balancesheet
 * [list_accounting_balancesheets](docs/sdks/balancesheet/README.md#list_accounting_balancesheets) - List all balancesheets
 
+### [bankaccount](docs/sdks/bankaccount/README.md)
+
+* [create_hris_bankaccount](docs/sdks/bankaccount/README.md#create_hris_bankaccount) - Create a bankaccount
+* [get_hris_bankaccount](docs/sdks/bankaccount/README.md#get_hris_bankaccount) - Retrieve a bankaccount
+* [list_hris_bankaccounts](docs/sdks/bankaccount/README.md#list_hris_bankaccounts) - List all bankaccounts
+* [patch_hris_bankaccount](docs/sdks/bankaccount/README.md#patch_hris_bankaccount) - Update a bankaccount
+* [remove_hris_bankaccount](docs/sdks/bankaccount/README.md#remove_hris_bankaccount) - Remove a bankaccount
+* [update_hris_bankaccount](docs/sdks/bankaccount/README.md#update_hris_bankaccount) - Update a bankaccount
+
 ### [benefit](docs/sdks/benefit/README.md)
 
 * [create_hris_benefit](docs/sdks/benefit/README.md#create_hris_benefit) - Create a benefit
@@ -858,6 +867,7 @@ end
 
 ### [hris](docs/sdks/hris/README.md)
 
+* [create_hris_bankaccount](docs/sdks/hris/README.md#create_hris_bankaccount) - Create a bankaccount
 * [create_hris_benefit](docs/sdks/hris/README.md#create_hris_benefit) - Create a benefit
 * [create_hris_company](docs/sdks/hris/README.md#create_hris_company) - Create a company
 * [create_hris_deduction](docs/sdks/hris/README.md#create_hris_deduction) - Create a deduction
@@ -866,6 +876,7 @@ end
 * [create_hris_group](docs/sdks/hris/README.md#create_hris_group) - Create a group
 * [create_hris_location](docs/sdks/hris/README.md#create_hris_location) - Create a location
 * [create_hris_timeshift](docs/sdks/hris/README.md#create_hris_timeshift) - Create a timeshift
+* [get_hris_bankaccount](docs/sdks/hris/README.md#get_hris_bankaccount) - Retrieve a bankaccount
 * [get_hris_benefit](docs/sdks/hris/README.md#get_hris_benefit) - Retrieve a benefit
 * [get_hris_company](docs/sdks/hris/README.md#get_hris_company) - Retrieve a company
 * [get_hris_deduction](docs/sdks/hris/README.md#get_hris_deduction) - Retrieve a deduction
@@ -876,6 +887,7 @@ end
 * [get_hris_payslip](docs/sdks/hris/README.md#get_hris_payslip) - Retrieve a payslip
 * [get_hris_timeoff](docs/sdks/hris/README.md#get_hris_timeoff) - Retrieve a timeoff
 * [get_hris_timeshift](docs/sdks/hris/README.md#get_hris_timeshift) - Retrieve a timeshift
+* [list_hris_bankaccounts](docs/sdks/hris/README.md#list_hris_bankaccounts) - List all bankaccounts
 * [list_hris_benefits](docs/sdks/hris/README.md#list_hris_benefits) - List all benefits
 * [list_hris_companies](docs/sdks/hris/README.md#list_hris_companies) - List all companies
 * [list_hris_deductions](docs/sdks/hris/README.md#list_hris_deductions) - List all deductions
@@ -886,6 +898,7 @@ end
 * [list_hris_payslips](docs/sdks/hris/README.md#list_hris_payslips) - List all payslips
 * [list_hris_timeoffs](docs/sdks/hris/README.md#list_hris_timeoffs) - List all timeoffs
 * [list_hris_timeshifts](docs/sdks/hris/README.md#list_hris_timeshifts) - List all timeshifts
+* [patch_hris_bankaccount](docs/sdks/hris/README.md#patch_hris_bankaccount) - Update a bankaccount
 * [patch_hris_benefit](docs/sdks/hris/README.md#patch_hris_benefit) - Update a benefit
 * [patch_hris_company](docs/sdks/hris/README.md#patch_hris_company) - Update a company
 * [patch_hris_deduction](docs/sdks/hris/README.md#patch_hris_deduction) - Update a deduction
@@ -894,6 +907,7 @@ end
 * [patch_hris_group](docs/sdks/hris/README.md#patch_hris_group) - Update a group
 * [patch_hris_location](docs/sdks/hris/README.md#patch_hris_location) - Update a location
 * [patch_hris_timeshift](docs/sdks/hris/README.md#patch_hris_timeshift) - Update a timeshift
+* [remove_hris_bankaccount](docs/sdks/hris/README.md#remove_hris_bankaccount) - Remove a bankaccount
 * [remove_hris_benefit](docs/sdks/hris/README.md#remove_hris_benefit) - Remove a benefit
 * [remove_hris_company](docs/sdks/hris/README.md#remove_hris_company) - Remove a company
 * [remove_hris_deduction](docs/sdks/hris/README.md#remove_hris_deduction) - Remove a deduction
@@ -902,6 +916,7 @@ end
 * [remove_hris_group](docs/sdks/hris/README.md#remove_hris_group) - Remove a group
 * [remove_hris_location](docs/sdks/hris/README.md#remove_hris_location) - Remove a location
 * [remove_hris_timeshift](docs/sdks/hris/README.md#remove_hris_timeshift) - Remove a timeshift
+* [update_hris_bankaccount](docs/sdks/hris/README.md#update_hris_bankaccount) - Update a bankaccount
 * [update_hris_benefit](docs/sdks/hris/README.md#update_hris_benefit) - Update a benefit
 * [update_hris_company](docs/sdks/hris/README.md#update_hris_company) - Update a company
 * [update_hris_deduction](docs/sdks/hris/README.md#update_hris_deduction) - Update a deduction

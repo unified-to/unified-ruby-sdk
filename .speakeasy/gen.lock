@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: d121c23b689164804bad4c9617517509
+  docChecksum: 9e3f584ad566f757bc4ca573da1e88d2
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.31
-  configChecksum: 910f3bfc16ba59b567c30aa5075ec867
+  releaseVersion: 0.67.32
+  configChecksum: 3abc9e66d95df195b98ecc86857b9d33
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -170,6 +170,9 @@ generatedFiles:
   - docs/models/operations/creategenaipromptqueryparamfields.md
   - docs/models/operations/creategenaipromptrequest.md
   - docs/models/operations/creategenaipromptresponse.md
+  - docs/models/operations/createhrisbankaccountqueryparamfields.md
+  - docs/models/operations/createhrisbankaccountrequest.md
+  - docs/models/operations/createhrisbankaccountresponse.md
   - docs/models/operations/createhrisbenefitqueryparamfields.md
   - docs/models/operations/createhrisbenefitrequest.md
   - docs/models/operations/createhrisbenefitresponse.md
@@ -484,6 +487,9 @@ generatedFiles:
   - docs/models/operations/getgenaimodelqueryparamfields.md
   - docs/models/operations/getgenaimodelrequest.md
   - docs/models/operations/getgenaimodelresponse.md
+  - docs/models/operations/gethrisbankaccountqueryparamfields.md
+  - docs/models/operations/gethrisbankaccountrequest.md
+  - docs/models/operations/gethrisbankaccountresponse.md
   - docs/models/operations/gethrisbenefitqueryparamfields.md
   - docs/models/operations/gethrisbenefitrequest.md
   - docs/models/operations/gethrisbenefitresponse.md
@@ -842,6 +848,9 @@ generatedFiles:
   - docs/models/operations/listgenaimodelsqueryparamfields.md
   - docs/models/operations/listgenaimodelsrequest.md
   - docs/models/operations/listgenaimodelsresponse.md
+  - docs/models/operations/listhrisbankaccountsqueryparamfields.md
+  - docs/models/operations/listhrisbankaccountsrequest.md
+  - docs/models/operations/listhrisbankaccountsresponse.md
   - docs/models/operations/listhrisbenefitsqueryparamfields.md
   - docs/models/operations/listhrisbenefitsrequest.md
   - docs/models/operations/listhrisbenefitsresponse.md
@@ -1167,6 +1176,9 @@ generatedFiles:
   - docs/models/operations/patchformsformqueryparamfields.md
   - docs/models/operations/patchformsformrequest.md
   - docs/models/operations/patchformsformresponse.md
+  - docs/models/operations/patchhrisbankaccountqueryparamfields.md
+  - docs/models/operations/patchhrisbankaccountrequest.md
+  - docs/models/operations/patchhrisbankaccountresponse.md
   - docs/models/operations/patchhrisbenefitqueryparamfields.md
   - docs/models/operations/patchhrisbenefitrequest.md
   - docs/models/operations/patchhrisbenefitresponse.md
@@ -1413,6 +1425,8 @@ generatedFiles:
   - docs/models/operations/removecrmpipelineresponse.md
   - docs/models/operations/removeformsformrequest.md
   - docs/models/operations/removeformsformresponse.md
+  - docs/models/operations/removehrisbankaccountrequest.md
+  - docs/models/operations/removehrisbankaccountresponse.md
   - docs/models/operations/removehrisbenefitrequest.md
   - docs/models/operations/removehrisbenefitresponse.md
   - docs/models/operations/removehriscompanyrequest.md
@@ -1655,6 +1669,9 @@ generatedFiles:
   - docs/models/operations/updateformsformqueryparamfields.md
   - docs/models/operations/updateformsformrequest.md
   - docs/models/operations/updateformsformresponse.md
+  - docs/models/operations/updatehrisbankaccountqueryparamfields.md
+  - docs/models/operations/updatehrisbankaccountrequest.md
+  - docs/models/operations/updatehrisbankaccountresponse.md
   - docs/models/operations/updatehrisbenefitqueryparamfields.md
   - docs/models/operations/updatehrisbenefitrequest.md
   - docs/models/operations/updatehrisbenefitresponse.md
@@ -1860,6 +1877,7 @@ generatedFiles:
   - docs/models/shared/accountingtransactionlineitem.md
   - docs/models/shared/accountingtrialbalance.md
   - docs/models/shared/accountingtrialbalancesubitem.md
+  - docs/models/shared/accounttype.md
   - docs/models/shared/adsad.md
   - docs/models/shared/adsadstatus.md
   - docs/models/shared/adscampaign.md
@@ -2045,6 +2063,7 @@ generatedFiles:
   - docs/models/shared/gender.md
   - docs/models/shared/goal.md
   - docs/models/shared/hostingsource.md
+  - docs/models/shared/hrisbankaccount.md
   - docs/models/shared/hrisbenefit.md
   - docs/models/shared/hrisbenefitfrequency.md
   - docs/models/shared/hrisbenefittype.md
@@ -2562,6 +2581,7 @@ generatedFiles:
   - docs/sdks/ats/README.md
   - docs/sdks/auth/README.md
   - docs/sdks/balancesheet/README.md
+  - docs/sdks/bankaccount/README.md
   - docs/sdks/benefit/README.md
   - docs/sdks/bill/README.md
   - docs/sdks/branch/README.md
@@ -2700,6 +2720,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/ats.rb
   - lib/unified_ruby_sdk/auth.rb
   - lib/unified_ruby_sdk/balancesheet.rb
+  - lib/unified_ruby_sdk/bankaccount.rb
   - lib/unified_ruby_sdk/benefit.rb
   - lib/unified_ruby_sdk/bill.rb
   - lib/unified_ruby_sdk/branch.rb
@@ -3059,6 +3080,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/creategenaiprompt_request.rbi
   - lib/unified_ruby_sdk/models/operations/creategenaiprompt_response.rb
   - lib/unified_ruby_sdk/models/operations/creategenaiprompt_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createhrisbankaccount_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createhrisbankaccount_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createhrisbankaccount_request.rb
+  - lib/unified_ruby_sdk/models/operations/createhrisbankaccount_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createhrisbankaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/createhrisbankaccount_response.rbi
   - lib/unified_ruby_sdk/models/operations/createhrisbenefit_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/createhrisbenefit_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/createhrisbenefit_request.rb
@@ -3687,6 +3714,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getgenaimodel_request.rbi
   - lib/unified_ruby_sdk/models/operations/getgenaimodel_response.rb
   - lib/unified_ruby_sdk/models/operations/getgenaimodel_response.rbi
+  - lib/unified_ruby_sdk/models/operations/gethrisbankaccount_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/gethrisbankaccount_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/gethrisbankaccount_request.rb
+  - lib/unified_ruby_sdk/models/operations/gethrisbankaccount_request.rbi
+  - lib/unified_ruby_sdk/models/operations/gethrisbankaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/gethrisbankaccount_response.rbi
   - lib/unified_ruby_sdk/models/operations/gethrisbenefit_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/gethrisbenefit_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/gethrisbenefit_request.rb
@@ -4403,6 +4436,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listgenaimodels_request.rbi
   - lib/unified_ruby_sdk/models/operations/listgenaimodels_response.rb
   - lib/unified_ruby_sdk/models/operations/listgenaimodels_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listhrisbankaccounts_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listhrisbankaccounts_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listhrisbankaccounts_request.rb
+  - lib/unified_ruby_sdk/models/operations/listhrisbankaccounts_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listhrisbankaccounts_response.rb
+  - lib/unified_ruby_sdk/models/operations/listhrisbankaccounts_response.rbi
   - lib/unified_ruby_sdk/models/operations/listhrisbenefits_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listhrisbenefits_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listhrisbenefits_request.rb
@@ -5053,6 +5092,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchformsform_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchformsform_response.rb
   - lib/unified_ruby_sdk/models/operations/patchformsform_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchhrisbankaccount_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchhrisbankaccount_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchhrisbankaccount_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchhrisbankaccount_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchhrisbankaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchhrisbankaccount_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchhrisbenefit_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/patchhrisbenefit_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/patchhrisbenefit_request.rb
@@ -5545,6 +5590,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removeformsform_request.rbi
   - lib/unified_ruby_sdk/models/operations/removeformsform_response.rb
   - lib/unified_ruby_sdk/models/operations/removeformsform_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removehrisbankaccount_request.rb
+  - lib/unified_ruby_sdk/models/operations/removehrisbankaccount_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removehrisbankaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/removehrisbankaccount_response.rbi
   - lib/unified_ruby_sdk/models/operations/removehrisbenefit_request.rb
   - lib/unified_ruby_sdk/models/operations/removehrisbenefit_request.rbi
   - lib/unified_ruby_sdk/models/operations/removehrisbenefit_response.rb
@@ -6029,6 +6078,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updateformsform_request.rbi
   - lib/unified_ruby_sdk/models/operations/updateformsform_response.rb
   - lib/unified_ruby_sdk/models/operations/updateformsform_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatehrisbankaccount_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updatehrisbankaccount_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updatehrisbankaccount_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatehrisbankaccount_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatehrisbankaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatehrisbankaccount_response.rbi
   - lib/unified_ruby_sdk/models/operations/updatehrisbenefit_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/updatehrisbenefit_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/updatehrisbenefit_request.rb
@@ -6334,6 +6389,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updateverificationrequest_response.rb
   - lib/unified_ruby_sdk/models/operations/updateverificationrequest_response.rbi
   - lib/unified_ruby_sdk/models/shared.rb
+  - lib/unified_ruby_sdk/models/shared/account_type.rb
+  - lib/unified_ruby_sdk/models/shared/account_type.rbi
   - lib/unified_ruby_sdk/models/shared/accountingaccount.rb
   - lib/unified_ruby_sdk/models/shared/accountingaccount.rbi
   - lib/unified_ruby_sdk/models/shared/accountingaccounttaxonomy.rb
@@ -6810,6 +6867,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/goal.rbi
   - lib/unified_ruby_sdk/models/shared/hosting_source.rb
   - lib/unified_ruby_sdk/models/shared/hosting_source.rbi
+  - lib/unified_ruby_sdk/models/shared/hrisbankaccount.rb
+  - lib/unified_ruby_sdk/models/shared/hrisbankaccount.rbi
   - lib/unified_ruby_sdk/models/shared/hrisbenefit.rb
   - lib/unified_ruby_sdk/models/shared/hrisbenefit.rbi
   - lib/unified_ruby_sdk/models/shared/hrisbenefit_frequency.rb
@@ -13738,6 +13797,61 @@ examples:
           id: "<id>"
   updateLmsContent:
     speakeasy-default-update-lms-content:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createHrisBankaccount:
+    speakeasy-default-create-hris-bankaccount:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getHrisBankaccount:
+    speakeasy-default-get-hris-bankaccount:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listHrisBankaccounts:
+    speakeasy-default-list-hris-bankaccounts:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchHrisBankaccount:
+    speakeasy-default-patch-hris-bankaccount:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeHrisBankaccount:
+    speakeasy-default-remove-hris-bankaccount:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateHrisBankaccount:
+    speakeasy-default-update-hris-bankaccount:
       parameters:
         path:
           connection_id: "<id>"

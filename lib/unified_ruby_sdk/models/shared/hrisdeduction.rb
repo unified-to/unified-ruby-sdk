@@ -32,6 +32,8 @@ module UnifiedRubySDK
 
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
+        field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
+
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -42,8 +44,8 @@ module UnifiedRubySDK
 
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(amount: T.nilable(::Float), benefit_id: T.nilable(::String), company_id: T.nilable(::String), coverage_level: T.nilable(Models::Shared::HrisDeductionCoverageLevel), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), frequency: T.nilable(Models::Shared::HrisDeductionFrequency), id: T.nilable(::String), is_active: T.nilable(T::Boolean), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), type: T.nilable(Models::Shared::HrisDeductionType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(amount: nil, benefit_id: nil, company_id: nil, coverage_level: nil, created_at: nil, end_at: nil, frequency: nil, id: nil, is_active: nil, raw: nil, start_at: nil, type: nil, updated_at: nil, user_id: nil)
+        sig { params(amount: T.nilable(::Float), benefit_id: T.nilable(::String), company_id: T.nilable(::String), coverage_level: T.nilable(Models::Shared::HrisDeductionCoverageLevel), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), frequency: T.nilable(Models::Shared::HrisDeductionFrequency), id: T.nilable(::String), is_active: T.nilable(T::Boolean), notes: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), type: T.nilable(Models::Shared::HrisDeductionType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(amount: nil, benefit_id: nil, company_id: nil, coverage_level: nil, created_at: nil, end_at: nil, frequency: nil, id: nil, is_active: nil, notes: nil, raw: nil, start_at: nil, type: nil, updated_at: nil, user_id: nil)
           @amount = amount
           @benefit_id = benefit_id
           @company_id = company_id
@@ -53,6 +55,7 @@ module UnifiedRubySDK
           @frequency = frequency
           @id = id
           @is_active = is_active
+          @notes = notes
           @raw = raw
           @start_at = start_at
           @type = type
@@ -72,6 +75,7 @@ module UnifiedRubySDK
           return false unless @frequency == other.frequency
           return false unless @id == other.id
           return false unless @is_active == other.is_active
+          return false unless @notes == other.notes
           return false unless @raw == other.raw
           return false unless @start_at == other.start_at
           return false unless @type == other.type
