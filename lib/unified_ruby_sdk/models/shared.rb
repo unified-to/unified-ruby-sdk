@@ -531,6 +531,7 @@ module UnifiedRubySDK
       autoload :NativeWebhookShipmentId, 'unified_ruby_sdk/models/shared/native_webhook_shipment_id.rb'
       autoload :NativeWebhookStudentId, 'unified_ruby_sdk/models/shared/native_webhook_student_id.rb'
       autoload :NativeWebhookTaskId, 'unified_ruby_sdk/models/shared/native_webhook_task_id.rb'
+      autoload :NativeWebhookType, 'unified_ruby_sdk/models/shared/native_webhook_type.rb'
       autoload :NonDeliveryOption, 'unified_ruby_sdk/models/shared/non_delivery_option.rb'
       autoload :ObjectType, 'unified_ruby_sdk/models/shared/object_type.rb'
       autoload :Operation, 'unified_ruby_sdk/models/shared/operation.rb'

@@ -20,6 +20,8 @@ module UnifiedRubySDK
 
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+        field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+
         field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :frequency_cap, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsCampaignFrequencyCap), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency_cap') } }
@@ -48,11 +50,12 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(budget_amount: T.nilable(::Float), budget_period: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaignBudgetPeriod), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), frequency_cap: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaignFrequencyCap), goal: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaignGoal), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), organization_id: T.nilable(::String), planned_spend_amount: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaignStatus), targeting: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaignTargeting), total_spend_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
-        def initialize(budget_amount: nil, budget_period: nil, created_at: nil, end_at: nil, frequency_cap: nil, goal: nil, id: nil, is_active: nil, name: nil, organization_id: nil, planned_spend_amount: nil, raw: nil, start_at: nil, status: nil, targeting: nil, total_spend_amount: nil, updated_at: nil)
+        sig { params(budget_amount: T.nilable(::Float), budget_period: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaignBudgetPeriod), created_at: T.nilable(::DateTime), currency: T.nilable(::String), end_at: T.nilable(::DateTime), frequency_cap: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaignFrequencyCap), goal: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaignGoal), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), organization_id: T.nilable(::String), planned_spend_amount: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaignStatus), targeting: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaignTargeting), total_spend_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        def initialize(budget_amount: nil, budget_period: nil, created_at: nil, currency: nil, end_at: nil, frequency_cap: nil, goal: nil, id: nil, is_active: nil, name: nil, organization_id: nil, planned_spend_amount: nil, raw: nil, start_at: nil, status: nil, targeting: nil, total_spend_amount: nil, updated_at: nil)
           @budget_amount = budget_amount
           @budget_period = budget_period
           @created_at = created_at
+          @currency = currency
           @end_at = end_at
           @frequency_cap = frequency_cap
           @goal = goal
@@ -75,6 +78,7 @@ module UnifiedRubySDK
           return false unless @budget_amount == other.budget_amount
           return false unless @budget_period == other.budget_period
           return false unless @created_at == other.created_at
+          return false unless @currency == other.currency
           return false unless @end_at == other.end_at
           return false unless @frequency_cap == other.frequency_cap
           return false unless @goal == other.goal

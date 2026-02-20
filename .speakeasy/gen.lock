@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 9e3f584ad566f757bc4ca573da1e88d2
+  docChecksum: 0016420ba460156764e16b3acba7913d
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.32
-  configChecksum: 3abc9e66d95df195b98ecc86857b9d33
+  releaseVersion: 0.67.33
+  configChecksum: b5ea7a899b2542898a564db795a0c9f9
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -2247,6 +2247,7 @@ generatedFiles:
   - docs/models/shared/nativewebhookshipmentid.md
   - docs/models/shared/nativewebhookstudentid.md
   - docs/models/shared/nativewebhooktaskid.md
+  - docs/models/shared/nativewebhooktype.md
   - docs/models/shared/nondeliveryoption.md
   - docs/models/shared/objecttype.md
   - docs/models/shared/one.md
@@ -7235,6 +7236,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/native_webhook_student_id.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_task_id.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_task_id.rbi
+  - lib/unified_ruby_sdk/models/shared/native_webhook_type.rb
+  - lib/unified_ruby_sdk/models/shared/native_webhook_type.rbi
   - lib/unified_ruby_sdk/models/shared/non_delivery_option.rb
   - lib/unified_ruby_sdk/models/shared/non_delivery_option.rbi
   - lib/unified_ruby_sdk/models/shared/object_type.rb

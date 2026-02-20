@@ -28,6 +28,8 @@ class UnifiedRubySDK::Models::Shared::AdsGroup
   def created_at=(str_); end
   def creative_ids(); end
   def creative_ids=(str_); end
+  def currency(); end
+  def currency=(str_); end
   def end_at(); end
   def end_at=(str_); end
   def frequency_cap(); end

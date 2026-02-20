@@ -24,6 +24,7 @@ module UnifiedRubySDK
           STATUS = new('status')
           TARGETING = new('targeting')
           BID_AMOUNT = new('bid_amount')
+          CURRENCY = new('currency')
           BID_STRATEGY = new('bid_strategy')
           BUDGET_AMOUNT = new('budget_amount')
           BUDGET_PERIOD = new('budget_period')

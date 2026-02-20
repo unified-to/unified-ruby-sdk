@@ -34,6 +34,8 @@ module UnifiedRubySDK
 
         field :creative_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('creative_ids') } }
 
+        field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+
         field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :frequency_cap, Crystalline::Nilable.new(Models::Shared::PropertyAdsGroupFrequencyCap), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency_cap') } }
@@ -66,8 +68,8 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(bid_amount: T.nilable(::Float), bid_strategy: T.nilable(Models::Shared::PropertyAdsGroupBidStrategy), budget_allocation_type: T.nilable(Models::Shared::BudgetAllocationType), budget_amount: T.nilable(::Float), budget_max_amount: T.nilable(::Float), budget_period: T.nilable(Models::Shared::AdsGroupBudgetPeriod), budget_unit: T.nilable(Models::Shared::BudgetUnit), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), creative_ids: T.nilable(T::Array[::String]), end_at: T.nilable(::DateTime), frequency_cap: T.nilable(Models::Shared::PropertyAdsGroupFrequencyCap), has_eu_political_ads: T.nilable(T::Boolean), id: T.nilable(::String), insertionorder_id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), organization_id: T.nilable(::String), pacing: T.nilable(Models::Shared::PropertyAdsGroupPacing), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::AdsGroupStatus), targeting: T.nilable(Models::Shared::PropertyAdsGroupTargeting), type: T.nilable(Models::Shared::AdsGroupType), updated_at: T.nilable(::DateTime)).void }
-        def initialize(bid_amount: nil, bid_strategy: nil, budget_allocation_type: nil, budget_amount: nil, budget_max_amount: nil, budget_period: nil, budget_unit: nil, campaign_id: nil, created_at: nil, creative_ids: nil, end_at: nil, frequency_cap: nil, has_eu_political_ads: nil, id: nil, insertionorder_id: nil, is_active: nil, name: nil, organization_id: nil, pacing: nil, parent_id: nil, raw: nil, start_at: nil, status: nil, targeting: nil, type: nil, updated_at: nil)
+        sig { params(bid_amount: T.nilable(::Float), bid_strategy: T.nilable(Models::Shared::PropertyAdsGroupBidStrategy), budget_allocation_type: T.nilable(Models::Shared::BudgetAllocationType), budget_amount: T.nilable(::Float), budget_max_amount: T.nilable(::Float), budget_period: T.nilable(Models::Shared::AdsGroupBudgetPeriod), budget_unit: T.nilable(Models::Shared::BudgetUnit), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), creative_ids: T.nilable(T::Array[::String]), currency: T.nilable(::String), end_at: T.nilable(::DateTime), frequency_cap: T.nilable(Models::Shared::PropertyAdsGroupFrequencyCap), has_eu_political_ads: T.nilable(T::Boolean), id: T.nilable(::String), insertionorder_id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), organization_id: T.nilable(::String), pacing: T.nilable(Models::Shared::PropertyAdsGroupPacing), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::AdsGroupStatus), targeting: T.nilable(Models::Shared::PropertyAdsGroupTargeting), type: T.nilable(Models::Shared::AdsGroupType), updated_at: T.nilable(::DateTime)).void }
+        def initialize(bid_amount: nil, bid_strategy: nil, budget_allocation_type: nil, budget_amount: nil, budget_max_amount: nil, budget_period: nil, budget_unit: nil, campaign_id: nil, created_at: nil, creative_ids: nil, currency: nil, end_at: nil, frequency_cap: nil, has_eu_political_ads: nil, id: nil, insertionorder_id: nil, is_active: nil, name: nil, organization_id: nil, pacing: nil, parent_id: nil, raw: nil, start_at: nil, status: nil, targeting: nil, type: nil, updated_at: nil)
           @bid_amount = bid_amount
           @bid_strategy = bid_strategy
           @budget_allocation_type = budget_allocation_type
@@ -78,6 +80,7 @@ module UnifiedRubySDK
           @campaign_id = campaign_id
           @created_at = created_at
           @creative_ids = creative_ids
+          @currency = currency
           @end_at = end_at
           @frequency_cap = frequency_cap
           @has_eu_political_ads = has_eu_political_ads
@@ -109,6 +112,7 @@ module UnifiedRubySDK
           return false unless @campaign_id == other.campaign_id
           return false unless @created_at == other.created_at
           return false unless @creative_ids == other.creative_ids
+          return false unless @currency == other.currency
           return false unless @end_at == other.end_at
           return false unless @frequency_cap == other.frequency_cap
           return false unless @has_eu_political_ads == other.has_eu_political_ads

@@ -184,6 +184,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def native_webhook_student_id=(str_); end
   def native_webhook_task_id(); end
   def native_webhook_task_id=(str_); end
+  def native_webhook_type(); end
+  def native_webhook_type=(str_); end
   def outbound_fields(); end
   def outbound_fields=(str_); end
   def raw_objects(); end
