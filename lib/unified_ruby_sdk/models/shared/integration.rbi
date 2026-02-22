@@ -36,6 +36,8 @@ class UnifiedRubySDK::Models::Shared::Integration
   def in_progress=(str_); end
   def is_active(); end
   def is_active=(str_); end
+  def is_hidden(); end
+  def is_hidden=(str_); end
   def logo_url(); end
   def logo_url=(str_); end
   def partnership(); end
