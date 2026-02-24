@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Shared::GenaiPrompt
   def max_tokens(); end
   def max_tokens=(str_); end
+  def mcp_authorization_token(); end
+  def mcp_authorization_token=(str_); end
   def mcp_deferred_tools(); end
   def mcp_deferred_tools=(str_); end
   def mcp_url(); end
