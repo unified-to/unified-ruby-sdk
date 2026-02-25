@@ -23,6 +23,7 @@ module UnifiedRubySDK
           TAXRATE_ID = new('taxrate_id')
           DESCRIPTION = new('description')
           POSTED_AT = new('posted_at')
+          SOURCE = new('source')
           RAW = new('raw')
         end
       end

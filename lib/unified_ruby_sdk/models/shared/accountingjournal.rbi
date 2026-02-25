@@ -24,6 +24,8 @@ class UnifiedRubySDK::Models::Shared::AccountingJournal
   def raw=(str_); end
   def reference(); end
   def reference=(str_); end
+  def source(); end
+  def source=(str_); end
   def tax_amount(); end
   def tax_amount=(str_); end
   def taxrate_id(); end

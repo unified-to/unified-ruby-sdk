@@ -30,14 +30,16 @@ module UnifiedRubySDK
 
         field :reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference') } }
 
+        field :source, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source') } }
+
         field :tax_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_amount') } }
 
         field :taxrate_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('taxrate_id') } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingJournalLineitem]), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), tax_amount: T.nilable(::Float), taxrate_id: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(created_at: nil, currency: nil, description: nil, id: nil, lineitems: nil, posted_at: nil, raw: nil, reference: nil, tax_amount: nil, taxrate_id: nil, updated_at: nil)
+        sig { params(created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingJournalLineitem]), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), source: T.nilable(::String), tax_amount: T.nilable(::Float), taxrate_id: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(created_at: nil, currency: nil, description: nil, id: nil, lineitems: nil, posted_at: nil, raw: nil, reference: nil, source: nil, tax_amount: nil, taxrate_id: nil, updated_at: nil)
           @created_at = created_at
           @currency = currency
           @description = description
@@ -46,6 +48,7 @@ module UnifiedRubySDK
           @posted_at = posted_at
           @raw = raw
           @reference = reference
+          @source = source
           @tax_amount = tax_amount
           @taxrate_id = taxrate_id
           @updated_at = updated_at
@@ -62,6 +65,7 @@ module UnifiedRubySDK
           return false unless @posted_at == other.posted_at
           return false unless @raw == other.raw
           return false unless @reference == other.reference
+          return false unless @source == other.source
           return false unless @tax_amount == other.tax_amount
           return false unless @taxrate_id == other.taxrate_id
           return false unless @updated_at == other.updated_at
