@@ -24,6 +24,8 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :is_required, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_required') } }
+
         field :objects, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('objects') } }
 
         field :options, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
@@ -36,13 +38,14 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(name: ::String, object_type: ::String, created_at: T.nilable(::DateTime), format: T.nilable(Models::Shared::MetadataMetadataFormat), id: T.nilable(::String), objects: T.nilable(T::Hash[Symbol, ::Object]), options: T.nilable(T::Array[::String]), original_format: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), slug: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(name:, object_type:, created_at: nil, format: nil, id: nil, objects: nil, options: nil, original_format: nil, raw: nil, slug: nil, updated_at: nil)
+        sig { params(name: ::String, object_type: ::String, created_at: T.nilable(::DateTime), format: T.nilable(Models::Shared::MetadataMetadataFormat), id: T.nilable(::String), is_required: T.nilable(T::Boolean), objects: T.nilable(T::Hash[Symbol, ::Object]), options: T.nilable(T::Array[::String]), original_format: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), slug: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(name:, object_type:, created_at: nil, format: nil, id: nil, is_required: nil, objects: nil, options: nil, original_format: nil, raw: nil, slug: nil, updated_at: nil)
           @name = name
           @object_type = object_type
           @created_at = created_at
           @format = format
           @id = id
+          @is_required = is_required
           @objects = objects
           @options = options
           @original_format = original_format
@@ -59,6 +62,7 @@ module UnifiedRubySDK
           return false unless @created_at == other.created_at
           return false unless @format == other.format
           return false unless @id == other.id
+          return false unless @is_required == other.is_required
           return false unless @objects == other.objects
           return false unless @options == other.options
           return false unless @original_format == other.original_format

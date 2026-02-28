@@ -15,6 +15,8 @@ module UnifiedRubySDK
 
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # The bill ID to filter by
+        field :bill_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'bill_id', 'style': 'form', 'explode': true } }
         # The contact ID to filter by (reference to AccountingContact)
         field :contact_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'contact_id', 'style': 'form', 'explode': true } }
         # Fields to return
@@ -23,6 +25,8 @@ module UnifiedRubySDK
         field :invoice_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'invoice_id', 'style': 'form', 'explode': true } }
 
         field :limit, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
+        # The link ID to filter by
+        field :link_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'link_id', 'style': 'form', 'explode': true } }
 
         field :offset, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
 
@@ -33,21 +37,26 @@ module UnifiedRubySDK
         field :raw, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
         field :sort, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
+        # The type to filter by
+        field :type, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'type', 'style': 'form', 'explode': true } }
         # Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, contact_id: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListPaymentPaymentsQueryParamFields]), invoice_id: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String)).void }
-        def initialize(connection_id:, contact_id: nil, fields_: nil, invoice_id: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, updated_gte: nil)
+        sig { params(connection_id: ::String, bill_id: T.nilable(::String), contact_id: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListPaymentPaymentsQueryParamFields]), invoice_id: T.nilable(::String), limit: T.nilable(::Float), link_id: T.nilable(::String), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), type: T.nilable(::String), updated_gte: T.nilable(::String)).void }
+        def initialize(connection_id:, bill_id: nil, contact_id: nil, fields_: nil, invoice_id: nil, limit: nil, link_id: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, type: nil, updated_gte: nil)
           @connection_id = connection_id
+          @bill_id = bill_id
           @contact_id = contact_id
           @fields_ = fields_
           @invoice_id = invoice_id
           @limit = limit
+          @link_id = link_id
           @offset = offset
           @order = order
           @query = query
           @raw = raw
           @sort = sort
+          @type = type
           @updated_gte = updated_gte
         end
 
@@ -55,15 +64,18 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @connection_id == other.connection_id
+          return false unless @bill_id == other.bill_id
           return false unless @contact_id == other.contact_id
           return false unless @fields_ == other.fields_
           return false unless @invoice_id == other.invoice_id
           return false unless @limit == other.limit
+          return false unless @link_id == other.link_id
           return false unless @offset == other.offset
           return false unless @order == other.order
           return false unless @query == other.query
           return false unless @raw == other.raw
           return false unless @sort == other.sort
+          return false unless @type == other.type
           return false unless @updated_gte == other.updated_gte
           true
         end

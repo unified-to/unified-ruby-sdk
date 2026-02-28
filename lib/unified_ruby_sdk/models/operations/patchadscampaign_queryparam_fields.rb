@@ -23,14 +23,17 @@ module UnifiedRubySDK
           END_AT = new('end_at')
           BUDGET_AMOUNT = new('budget_amount')
           BUDGET_PERIOD = new('budget_period')
-          CURRENCY = new('currency')
           TOTAL_SPEND_AMOUNT = new('total_spend_amount')
           TARGETING = new('targeting')
-          RAW = new('raw')
           GOAL = new('goal')
           PLANNED_SPEND_AMOUNT = new('planned_spend_amount')
           FREQUENCY_CAP = new('frequency_cap')
-          IS_ACTIVE = new('is_active')
+          BID_STRATEGY = new('bid_strategy')
+          SPECIAL_AD_CATEGORIES = new('special_ad_categories')
+          ADVERTISING_CHANNEL_TYPE = new('advertising_channel_type')
+          CAMPAIGN_BUDGET_IDENTIFIER = new('campaign_budget_identifier')
+          CURRENCY = new('currency')
+          RAW = new('raw')
         end
       end
     end

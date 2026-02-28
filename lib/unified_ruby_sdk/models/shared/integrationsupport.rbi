@@ -20,6 +20,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_application_id=(str_); end
   def list_benefit_id(); end
   def list_benefit_id=(str_); end
+  def list_bill_id(); end
+  def list_bill_id=(str_); end
   def list_branch_id(); end
   def list_branch_id=(str_); end
   def list_calendar_id(); end
@@ -206,6 +208,10 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_ad_id=(str_); end
   def virtual_webhook_application_id(); end
   def virtual_webhook_application_id=(str_); end
+  def virtual_webhook_benefit_id(); end
+  def virtual_webhook_benefit_id=(str_); end
+  def virtual_webhook_bill_id(); end
+  def virtual_webhook_bill_id=(str_); end
   def virtual_webhook_branch_id(); end
   def virtual_webhook_branch_id=(str_); end
   def virtual_webhook_calendar_id(); end
@@ -244,6 +250,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_form_id=(str_); end
   def virtual_webhook_group_id(); end
   def virtual_webhook_group_id=(str_); end
+  def virtual_webhook_invoice_id(); end
+  def virtual_webhook_invoice_id=(str_); end
   def virtual_webhook_item_id(); end
   def virtual_webhook_item_id=(str_); end
   def virtual_webhook_item_variant_id(); end
@@ -256,6 +264,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_lead_id=(str_); end
   def virtual_webhook_limit(); end
   def virtual_webhook_limit=(str_); end
+  def virtual_webhook_link_id(); end
+  def virtual_webhook_link_id=(str_); end
   def virtual_webhook_list_id(); end
   def virtual_webhook_list_id=(str_); end
   def virtual_webhook_location_id(); end

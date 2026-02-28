@@ -16,11 +16,15 @@ module UnifiedRubySDK
         # Hosted asset mode (best-effort, provider-specific
         field :asset_urls, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('asset_urls') } }
 
+        field :body, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('body') } }
+
         field :campaign_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('campaign_id') } }
 
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :creative_type, Crystalline::Nilable.new(Models::Shared::CreativeType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('creative_type'), 'decoder': Utils.enum_from_string(Models::Shared::CreativeType, true) } }
+
+        field :cta, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cta') } }
 
         field :external_ad_reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_ad_reference') } }
 
@@ -36,11 +40,23 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :image_hash, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('image_hash') } }
+
         field :item_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('item_id') } }
+
+        field :link_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('link_url') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
+
+        field :page_identifier, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('page_identifier') } }
+
+        field :path1, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('path1') } }
+
+        field :path2, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('path2') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
@@ -48,18 +64,26 @@ module UnifiedRubySDK
 
         field :third_party_tag, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('third_party_tag') } }
 
+        field :thumbnail_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('thumbnail_url') } }
+
+        field :title, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
+
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :vast_tag_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('vast_tag_url') } }
 
+        field :video_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('video_id') } }
+
         field :width, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('width') } }
 
-        sig { params(asset_urls: T.nilable(T::Array[::String]), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), creative_type: T.nilable(Models::Shared::CreativeType), external_ad_reference: T.nilable(::String), external_creative_reference: T.nilable(::String), external_placement_reference: T.nilable(::String), group_id: T.nilable(::String), height: T.nilable(::Float), hosting_source: T.nilable(Models::Shared::HostingSource), id: T.nilable(::String), item_id: T.nilable(::String), name: T.nilable(::String), organization_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::AdsCreativeStatus), third_party_tag: T.nilable(::String), updated_at: T.nilable(::DateTime), vast_tag_url: T.nilable(::String), width: T.nilable(::Float)).void }
-        def initialize(asset_urls: nil, campaign_id: nil, created_at: nil, creative_type: nil, external_ad_reference: nil, external_creative_reference: nil, external_placement_reference: nil, group_id: nil, height: nil, hosting_source: nil, id: nil, item_id: nil, name: nil, organization_id: nil, raw: nil, status: nil, third_party_tag: nil, updated_at: nil, vast_tag_url: nil, width: nil)
+        sig { params(asset_urls: T.nilable(T::Array[::String]), body: T.nilable(::String), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), creative_type: T.nilable(Models::Shared::CreativeType), cta: T.nilable(::String), external_ad_reference: T.nilable(::String), external_creative_reference: T.nilable(::String), external_placement_reference: T.nilable(::String), group_id: T.nilable(::String), height: T.nilable(::Float), hosting_source: T.nilable(Models::Shared::HostingSource), id: T.nilable(::String), image_hash: T.nilable(::String), item_id: T.nilable(::String), link_url: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AdsMetadata]), name: T.nilable(::String), organization_id: T.nilable(::String), page_identifier: T.nilable(::String), path1: T.nilable(::String), path2: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::AdsCreativeStatus), third_party_tag: T.nilable(::String), thumbnail_url: T.nilable(::String), title: T.nilable(::String), updated_at: T.nilable(::DateTime), vast_tag_url: T.nilable(::String), video_id: T.nilable(::String), width: T.nilable(::Float)).void }
+        def initialize(asset_urls: nil, body: nil, campaign_id: nil, created_at: nil, creative_type: nil, cta: nil, external_ad_reference: nil, external_creative_reference: nil, external_placement_reference: nil, group_id: nil, height: nil, hosting_source: nil, id: nil, image_hash: nil, item_id: nil, link_url: nil, metadata: nil, name: nil, organization_id: nil, page_identifier: nil, path1: nil, path2: nil, raw: nil, status: nil, third_party_tag: nil, thumbnail_url: nil, title: nil, updated_at: nil, vast_tag_url: nil, video_id: nil, width: nil)
           @asset_urls = asset_urls
+          @body = body
           @campaign_id = campaign_id
           @created_at = created_at
           @creative_type = creative_type
+          @cta = cta
           @external_ad_reference = external_ad_reference
           @external_creative_reference = external_creative_reference
           @external_placement_reference = external_placement_reference
@@ -67,14 +91,23 @@ module UnifiedRubySDK
           @height = height
           @hosting_source = hosting_source
           @id = id
+          @image_hash = image_hash
           @item_id = item_id
+          @link_url = link_url
+          @metadata = metadata
           @name = name
           @organization_id = organization_id
+          @page_identifier = page_identifier
+          @path1 = path1
+          @path2 = path2
           @raw = raw
           @status = status
           @third_party_tag = third_party_tag
+          @thumbnail_url = thumbnail_url
+          @title = title
           @updated_at = updated_at
           @vast_tag_url = vast_tag_url
+          @video_id = video_id
           @width = width
         end
 
@@ -82,9 +115,11 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @asset_urls == other.asset_urls
+          return false unless @body == other.body
           return false unless @campaign_id == other.campaign_id
           return false unless @created_at == other.created_at
           return false unless @creative_type == other.creative_type
+          return false unless @cta == other.cta
           return false unless @external_ad_reference == other.external_ad_reference
           return false unless @external_creative_reference == other.external_creative_reference
           return false unless @external_placement_reference == other.external_placement_reference
@@ -92,14 +127,23 @@ module UnifiedRubySDK
           return false unless @height == other.height
           return false unless @hosting_source == other.hosting_source
           return false unless @id == other.id
+          return false unless @image_hash == other.image_hash
           return false unless @item_id == other.item_id
+          return false unless @link_url == other.link_url
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @organization_id == other.organization_id
+          return false unless @page_identifier == other.page_identifier
+          return false unless @path1 == other.path1
+          return false unless @path2 == other.path2
           return false unless @raw == other.raw
           return false unless @status == other.status
           return false unless @third_party_tag == other.third_party_tag
+          return false unless @thumbnail_url == other.thumbnail_url
+          return false unless @title == other.title
           return false unless @updated_at == other.updated_at
           return false unless @vast_tag_url == other.vast_tag_url
+          return false unless @video_id == other.video_id
           return false unless @width == other.width
           true
         end

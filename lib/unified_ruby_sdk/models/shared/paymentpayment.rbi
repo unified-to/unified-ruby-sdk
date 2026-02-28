@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Shared::PaymentPayment
   def account_id(); end
   def account_id=(str_); end
+  def bill_id(); end
+  def bill_id=(str_); end
   def contact_id(); end
   def contact_id=(str_); end
   def created_at(); end
@@ -28,6 +30,8 @@ class UnifiedRubySDK::Models::Shared::PaymentPayment
   def reference=(str_); end
   def total_amount(); end
   def total_amount=(str_); end
+  def type(); end
+  def type=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
   def currency(); end

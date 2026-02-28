@@ -13,8 +13,17 @@ module UnifiedRubySDK
 
 
         enums do
-          DISPLAY = new('DISPLAY')
+          TEXT = new('TEXT')
+          IMAGE = new('IMAGE')
           VIDEO = new('VIDEO')
+          RESPONSIVE = new('RESPONSIVE')
+          SHOPPING = new('SHOPPING')
+          APP = new('APP')
+          CALL = new('CALL')
+          CAROUSEL = new('CAROUSEL')
+          SOCIAL = new('SOCIAL')
+          DISPLAY = new('DISPLAY')
+          SEARCH = new('SEARCH')
           AUDIO = new('AUDIO')
           YOUTUBE = new('YOUTUBE')
         end

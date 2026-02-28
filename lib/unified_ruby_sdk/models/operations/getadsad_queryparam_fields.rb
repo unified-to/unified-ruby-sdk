@@ -32,6 +32,12 @@ module UnifiedRubySDK
           FINAL_URL = new('final_url')
           TARGETING = new('targeting')
           IS_ACTIVE = new('is_active')
+          END_AT = new('end_at')
+          START_AT = new('start_at')
+          DISPLAY_URL = new('display_url')
+          PATH1 = new('path1')
+          PATH2 = new('path2')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

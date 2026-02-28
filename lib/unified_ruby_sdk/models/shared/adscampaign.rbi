@@ -8,10 +8,16 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::AdsCampaign
+  def advertising_channel_type(); end
+  def advertising_channel_type=(str_); end
+  def bid_strategy(); end
+  def bid_strategy=(str_); end
   def budget_amount(); end
   def budget_amount=(str_); end
   def budget_period(); end
   def budget_period=(str_); end
+  def campaign_budget_identifier(); end
+  def campaign_budget_identifier=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def currency(); end
@@ -24,8 +30,6 @@ class UnifiedRubySDK::Models::Shared::AdsCampaign
   def goal=(str_); end
   def id(); end
   def id=(str_); end
-  def is_active(); end
-  def is_active=(str_); end
   def name(); end
   def name=(str_); end
   def organization_id(); end
@@ -34,6 +38,8 @@ class UnifiedRubySDK::Models::Shared::AdsCampaign
   def planned_spend_amount=(str_); end
   def raw(); end
   def raw=(str_); end
+  def special_ad_categories(); end
+  def special_ad_categories=(str_); end
   def start_at(); end
   def start_at=(str_); end
   def status(); end

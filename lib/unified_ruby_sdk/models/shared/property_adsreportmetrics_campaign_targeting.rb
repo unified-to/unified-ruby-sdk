@@ -18,13 +18,21 @@ module UnifiedRubySDK
 
         field :audiences, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('audiences') } }
 
+        field :behaviors, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('behaviors') } }
+
         field :companies, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('companies') } }
 
         field :company_sizes, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_sizes') } }
 
+        field :custom_audiences, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('custom_audiences') } }
+
         field :degrees, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('degrees') } }
 
         field :devices, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('devices') } }
+
+        field :excluded_audiences, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('excluded_audiences') } }
+
+        field :excluded_locations, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('excluded_locations') } }
 
         field :genders, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('genders') } }
 
@@ -50,14 +58,18 @@ module UnifiedRubySDK
 
         field :skills, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('skills') } }
 
-        sig { params(age_ranges: T.nilable(T::Array[::String]), audiences: T.nilable(T::Array[::String]), companies: T.nilable(T::Array[::String]), company_sizes: T.nilable(T::Array[::String]), degrees: T.nilable(T::Array[::String]), devices: T.nilable(T::Array[::String]), genders: T.nilable(T::Array[::String]), industries: T.nilable(T::Array[::String]), interests: T.nilable(T::Array[::String]), job_functions: T.nilable(T::Array[::String]), job_titles: T.nilable(T::Array[::String]), keywords: T.nilable(T::Array[::String]), languages: T.nilable(T::Array[::String]), locations: T.nilable(T::Array[::String]), placements: T.nilable(T::Array[::String]), schools: T.nilable(T::Array[::String]), seniorities: T.nilable(T::Array[::String]), skills: T.nilable(T::Array[::String])).void }
-        def initialize(age_ranges: nil, audiences: nil, companies: nil, company_sizes: nil, degrees: nil, devices: nil, genders: nil, industries: nil, interests: nil, job_functions: nil, job_titles: nil, keywords: nil, languages: nil, locations: nil, placements: nil, schools: nil, seniorities: nil, skills: nil)
+        sig { params(age_ranges: T.nilable(T::Array[::String]), audiences: T.nilable(T::Array[::String]), behaviors: T.nilable(T::Array[::String]), companies: T.nilable(T::Array[::String]), company_sizes: T.nilable(T::Array[::String]), custom_audiences: T.nilable(T::Array[::String]), degrees: T.nilable(T::Array[::String]), devices: T.nilable(T::Array[::String]), excluded_audiences: T.nilable(T::Array[::String]), excluded_locations: T.nilable(T::Array[::String]), genders: T.nilable(T::Array[::String]), industries: T.nilable(T::Array[::String]), interests: T.nilable(T::Array[::String]), job_functions: T.nilable(T::Array[::String]), job_titles: T.nilable(T::Array[::String]), keywords: T.nilable(T::Array[::String]), languages: T.nilable(T::Array[::String]), locations: T.nilable(T::Array[::String]), placements: T.nilable(T::Array[::String]), schools: T.nilable(T::Array[::String]), seniorities: T.nilable(T::Array[::String]), skills: T.nilable(T::Array[::String])).void }
+        def initialize(age_ranges: nil, audiences: nil, behaviors: nil, companies: nil, company_sizes: nil, custom_audiences: nil, degrees: nil, devices: nil, excluded_audiences: nil, excluded_locations: nil, genders: nil, industries: nil, interests: nil, job_functions: nil, job_titles: nil, keywords: nil, languages: nil, locations: nil, placements: nil, schools: nil, seniorities: nil, skills: nil)
           @age_ranges = age_ranges
           @audiences = audiences
+          @behaviors = behaviors
           @companies = companies
           @company_sizes = company_sizes
+          @custom_audiences = custom_audiences
           @degrees = degrees
           @devices = devices
+          @excluded_audiences = excluded_audiences
+          @excluded_locations = excluded_locations
           @genders = genders
           @industries = industries
           @interests = interests
@@ -77,10 +89,14 @@ module UnifiedRubySDK
           return false unless other.is_a? self.class
           return false unless @age_ranges == other.age_ranges
           return false unless @audiences == other.audiences
+          return false unless @behaviors == other.behaviors
           return false unless @companies == other.companies
           return false unless @company_sizes == other.company_sizes
+          return false unless @custom_audiences == other.custom_audiences
           return false unless @degrees == other.degrees
           return false unless @devices == other.devices
+          return false unless @excluded_audiences == other.excluded_audiences
+          return false unless @excluded_locations == other.excluded_locations
           return false unless @genders == other.genders
           return false unless @industries == other.industries
           return false unless @interests == other.interests

@@ -23,7 +23,7 @@ module UnifiedRubySDK
         field :offset, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
 
         field :order, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
-        # The org ID to filter by
+        # The org ID to filter by (reference to AccountingOrganization)
         field :org_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'org_id', 'style': 'form', 'explode': true } }
         # Query string to search. eg. email address or name
         field :query, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }

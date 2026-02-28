@@ -22,6 +22,8 @@ class UnifiedRubySDK::Models::Shared::PropertyAdsInsertionorderBidStrategy
   def performance_goal_type=(str_); end
   def raise_bid_for_deals(); end
   def raise_bid_for_deals=(str_); end
+  def target_roas(); end
+  def target_roas=(str_); end
   def youtube_and_partners_type(); end
   def youtube_and_partners_type=(str_); end
   def youtube_and_partners_value(); end

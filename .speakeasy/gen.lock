@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: ff9e98d56a3f5cf54e98753d7490862e
+  docChecksum: c49ff261f475ff6eee95b4805bd5de3f
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.37
-  configChecksum: 7a5e7ad77a3b0f13b95295dd4fcc218a
+  releaseVersion: 0.67.38
+  configChecksum: 2f5a0517b41f587aa4b5a96569f4891d
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -1892,11 +1892,13 @@ generatedFiles:
   - docs/models/shared/adsinsertionorderbudgetsegment.md
   - docs/models/shared/adsinsertionorderbudgetunit.md
   - docs/models/shared/adsinsertionorderstatus.md
+  - docs/models/shared/adsmetadata.md
   - docs/models/shared/adsorganization.md
   - docs/models/shared/adsreport.md
   - docs/models/shared/adsreportmetrics.md
   - docs/models/shared/adsreportmetricstype.md
   - docs/models/shared/adtype.md
+  - docs/models/shared/advertisingchanneltype.md
   - docs/models/shared/api.md
   - docs/models/shared/apicall.md
   - docs/models/shared/apicalltype.md
@@ -1943,6 +1945,9 @@ generatedFiles:
   - docs/models/shared/atsmetadata.md
   - docs/models/shared/atsmetadata1.md
   - docs/models/shared/atsmetadata5.md
+  - docs/models/shared/atsmetadataschemas1.md
+  - docs/models/shared/atsmetadataschemas5.md
+  - docs/models/shared/atsmetadatavalue.md
   - docs/models/shared/atsoffer.md
   - docs/models/shared/atsofferstatus.md
   - docs/models/shared/atsscorecard.md
@@ -2133,6 +2138,7 @@ generatedFiles:
   - docs/models/shared/listadid.md
   - docs/models/shared/listapplicationid.md
   - docs/models/shared/listbenefitid.md
+  - docs/models/shared/listbillid.md
   - docs/models/shared/listbranchid.md
   - docs/models/shared/listcalendarid.md
   - docs/models/shared/listcallid.md
@@ -2258,6 +2264,7 @@ generatedFiles:
   - docs/models/shared/paymentlineitem.md
   - docs/models/shared/paymentlink.md
   - docs/models/shared/paymentpayment.md
+  - docs/models/shared/paymentpaymenttype.md
   - docs/models/shared/paymentpayout.md
   - docs/models/shared/paymentpayoutstatus.md
   - docs/models/shared/paymentrefund.md
@@ -2282,10 +2289,14 @@ generatedFiles:
   - docs/models/shared/propertyaccountingsalesorderbillingaddress.md
   - docs/models/shared/propertyaccountingsalesordershippingaddress.md
   - docs/models/shared/propertyadsadtargeting.md
+  - docs/models/shared/propertyadscampaignbidstrategy.md
+  - docs/models/shared/propertyadscampaignbidstrategytype.md
   - docs/models/shared/propertyadscampaignfrequencycap.md
   - docs/models/shared/propertyadscampaigntargeting.md
   - docs/models/shared/propertyadsgroupbidstrategy.md
+  - docs/models/shared/propertyadsgroupbidstrategyperformancegoaltype.md
   - docs/models/shared/propertyadsgroupbidstrategytype.md
+  - docs/models/shared/propertyadsgroupbidstrategyyoutubeandpartnerstype.md
   - docs/models/shared/propertyadsgroupfrequencycap.md
   - docs/models/shared/propertyadsgroupfrequencycaptimeunit.md
   - docs/models/shared/propertyadsgrouppacing.md
@@ -2305,6 +2316,11 @@ generatedFiles:
   - docs/models/shared/propertyadsreportmetricsadstatus.md
   - docs/models/shared/propertyadsreportmetricsadtargeting.md
   - docs/models/shared/propertyadsreportmetricscampaign.md
+  - docs/models/shared/propertyadsreportmetricscampaignadvertisingchanneltype.md
+  - docs/models/shared/propertyadsreportmetricscampaignbidstrategy.md
+  - docs/models/shared/propertyadsreportmetricscampaignbidstrategyperformancegoaltype.md
+  - docs/models/shared/propertyadsreportmetricscampaignbidstrategytype.md
+  - docs/models/shared/propertyadsreportmetricscampaignbidstrategyyoutubeandpartnerstype.md
   - docs/models/shared/propertyadsreportmetricscampaignbudgetperiod.md
   - docs/models/shared/propertyadsreportmetricscampaignfrequencycap.md
   - docs/models/shared/propertyadsreportmetricscampaignfrequencycaptimeunit.md
@@ -2518,6 +2534,7 @@ generatedFiles:
   - docs/models/shared/verificationtime.md
   - docs/models/shared/virtualwebhookadid.md
   - docs/models/shared/virtualwebhookapplicationid.md
+  - docs/models/shared/virtualwebhookbillid.md
   - docs/models/shared/virtualwebhookbranchid.md
   - docs/models/shared/virtualwebhookcalendarid.md
   - docs/models/shared/virtualwebhookcallid.md
@@ -2537,12 +2554,14 @@ generatedFiles:
   - docs/models/shared/virtualwebhookfields.md
   - docs/models/shared/virtualwebhookformid.md
   - docs/models/shared/virtualwebhookgroupid.md
+  - docs/models/shared/virtualwebhookinvoiceid.md
   - docs/models/shared/virtualwebhookitemid.md
   - docs/models/shared/virtualwebhookitemvariantid.md
   - docs/models/shared/virtualwebhookjobid.md
   - docs/models/shared/virtualwebhooklabelid.md
   - docs/models/shared/virtualwebhookleadid.md
   - docs/models/shared/virtualwebhooklimit.md
+  - docs/models/shared/virtualwebhooklinkid.md
   - docs/models/shared/virtualwebhooklistid.md
   - docs/models/shared/virtualwebhooklocationid.md
   - docs/models/shared/virtualwebhookmemberid.md
@@ -6528,6 +6547,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/adsinsertionorder_status.rbi
   - lib/unified_ruby_sdk/models/shared/adsinsertionorderbudgetsegment.rb
   - lib/unified_ruby_sdk/models/shared/adsinsertionorderbudgetsegment.rbi
+  - lib/unified_ruby_sdk/models/shared/adsmetadata.rb
+  - lib/unified_ruby_sdk/models/shared/adsmetadata.rbi
   - lib/unified_ruby_sdk/models/shared/adsorganization.rb
   - lib/unified_ruby_sdk/models/shared/adsorganization.rbi
   - lib/unified_ruby_sdk/models/shared/adsreport.rb
@@ -6536,6 +6557,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/adsreportmetrics.rbi
   - lib/unified_ruby_sdk/models/shared/adsreportmetrics_type.rb
   - lib/unified_ruby_sdk/models/shared/adsreportmetrics_type.rbi
+  - lib/unified_ruby_sdk/models/shared/advertising_channel_type.rb
+  - lib/unified_ruby_sdk/models/shared/advertising_channel_type.rbi
   - lib/unified_ruby_sdk/models/shared/api.rb
   - lib/unified_ruby_sdk/models/shared/api.rbi
   - lib/unified_ruby_sdk/models/shared/apicall.rb
@@ -6628,6 +6651,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/atsmetadata_1.rbi
   - lib/unified_ruby_sdk/models/shared/atsmetadata_5.rb
   - lib/unified_ruby_sdk/models/shared/atsmetadata_5.rbi
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_schemas_1.rb
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_schemas_1.rbi
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_schemas_5.rb
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_schemas_5.rbi
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_value.rb
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_value.rbi
   - lib/unified_ruby_sdk/models/shared/atsoffer.rb
   - lib/unified_ruby_sdk/models/shared/atsoffer.rbi
   - lib/unified_ruby_sdk/models/shared/atsoffer_status.rb
@@ -7008,6 +7037,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_application_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_benefit_id.rb
   - lib/unified_ruby_sdk/models/shared/list_benefit_id.rbi
+  - lib/unified_ruby_sdk/models/shared/list_bill_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_bill_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_branch_id.rb
   - lib/unified_ruby_sdk/models/shared/list_branch_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_calendar_id.rb
@@ -7260,6 +7291,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/paymentlink.rbi
   - lib/unified_ruby_sdk/models/shared/paymentpayment.rb
   - lib/unified_ruby_sdk/models/shared/paymentpayment.rbi
+  - lib/unified_ruby_sdk/models/shared/paymentpayment_type.rb
+  - lib/unified_ruby_sdk/models/shared/paymentpayment_type.rbi
   - lib/unified_ruby_sdk/models/shared/paymentpayout.rb
   - lib/unified_ruby_sdk/models/shared/paymentpayout.rbi
   - lib/unified_ruby_sdk/models/shared/paymentpayout_status.rb
@@ -7306,14 +7339,22 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_accountingsalesorder_shipping_address.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsad_targeting.rb
   - lib/unified_ruby_sdk/models/shared/property_adsad_targeting.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_bid_strategy.rb
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_bid_strategy.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_bid_strategy_type.rb
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_bid_strategy_type.rbi
   - lib/unified_ruby_sdk/models/shared/property_adscampaign_frequency_cap.rb
   - lib/unified_ruby_sdk/models/shared/property_adscampaign_frequency_cap.rbi
   - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting.rb
   - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_bid_strategy.rb
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_bid_strategy.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_bid_strategy_performance_goal_type.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_bid_strategy_performance_goal_type.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_bid_strategy_type.rb
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_bid_strategy_type.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_bid_strategy_youtube_and_partners_type.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_bid_strategy_youtube_and_partners_type.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_frequency_cap.rb
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_frequency_cap.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_frequency_cap_time_unit.rb
@@ -7352,6 +7393,16 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_ad_targeting.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_advertising_channel_type.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_advertising_channel_type.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_bid_strategy.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_bid_strategy.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_bid_strategy_performance_goal_type.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_bid_strategy_performance_goal_type.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_bid_strategy_type.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_bid_strategy_type.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_bid_strategy_youtube_and_partners_type.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_bid_strategy_youtube_and_partners_type.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_budget_period.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_budget_period.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_frequency_cap.rb
@@ -7778,6 +7829,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_ad_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_application_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_application_id.rbi
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_bill_id.rb
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_bill_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_branch_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_branch_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_calendar_id.rb
@@ -7816,6 +7869,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_form_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_group_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_group_id.rbi
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_invoice_id.rb
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_invoice_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_item_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_item_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_item_variant_id.rb
@@ -7828,6 +7883,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_lead_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_limit.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_limit.rbi
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_link_id.rb
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_link_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_list_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_list_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_location_id.rb

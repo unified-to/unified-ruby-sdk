@@ -24,7 +24,6 @@ module UnifiedRubySDK
           STATUS = new('status')
           TARGETING = new('targeting')
           BID_AMOUNT = new('bid_amount')
-          CURRENCY = new('currency')
           BID_STRATEGY = new('bid_strategy')
           BUDGET_AMOUNT = new('budget_amount')
           BUDGET_PERIOD = new('budget_period')
@@ -38,7 +37,13 @@ module UnifiedRubySDK
           PACING = new('pacing')
           FREQUENCY_CAP = new('frequency_cap')
           CREATIVE_IDS = new('creative_ids')
-          IS_ACTIVE = new('is_active')
+          OPTIMIZATION_GOAL = new('optimization_goal')
+          BILLING_EVENT = new('billing_event')
+          DAILY_SPEND_CAP = new('daily_spend_cap')
+          LIFETIME_SPEND_CAP = new('lifetime_spend_cap')
+          AD_GROUP_TYPE = new('ad_group_type')
+          CURRENCY = new('currency')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

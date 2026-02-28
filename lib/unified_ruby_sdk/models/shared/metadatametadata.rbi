@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::MetadataMetadata
   def format=(str_); end
   def id(); end
   def id=(str_); end
+  def is_required(); end
+  def is_required=(str_); end
   def objects(); end
   def objects=(str_); end
   def options(); end

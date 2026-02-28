@@ -23,6 +23,7 @@ module UnifiedRubySDK
           OPTIONS = new('options')
           OBJECT_TYPE = new('object_type')
           OBJECTS = new('objects')
+          IS_REQUIRED = new('is_required')
           RAW = new('raw')
         end
       end

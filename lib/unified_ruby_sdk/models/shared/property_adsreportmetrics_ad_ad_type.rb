@@ -22,6 +22,10 @@ module UnifiedRubySDK
           CALL = new('CALL')
           CAROUSEL = new('CAROUSEL')
           SOCIAL = new('SOCIAL')
+          DISPLAY = new('DISPLAY')
+          SEARCH = new('SEARCH')
+          AUDIO = new('AUDIO')
+          YOUTUBE = new('YOUTUBE')
         end
       end
     end
