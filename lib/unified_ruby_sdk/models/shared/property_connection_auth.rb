@@ -20,6 +20,8 @@ module UnifiedRubySDK
 
         field :app_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('app_id') } }
 
+        field :audience, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('audience') } }
+
         field :authorize_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('authorize_url') } }
 
         field :client_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('client_id') } }
@@ -64,11 +66,12 @@ module UnifiedRubySDK
 
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(access_token: T.nilable(::String), api_url: T.nilable(::String), app_id: T.nilable(::String), authorize_url: T.nilable(::String), client_id: T.nilable(::String), client_secret: T.nilable(::String), consumer_key: T.nilable(::String), consumer_secret: T.nilable(::String), dev_api_key: T.nilable(::String), emails: T.nilable(T::Array[::String]), expires_in: T.nilable(::Float), expiry_date: T.nilable(::DateTime), key: T.nilable(::String), meta: T.nilable(T::Hash[Symbol, ::Object]), name: T.nilable(::String), other_auth_info: T.nilable(T::Array[::String]), pem: T.nilable(::String), refresh_token: T.nilable(::String), refresh_token_expires_date: T.nilable(::DateTime), refresh_token_expires_in: T.nilable(::Float), refresh_url: T.nilable(::String), state: T.nilable(::String), token: T.nilable(::String), token_url: T.nilable(::String), user_id: T.nilable(::String)).void }
-        def initialize(access_token: nil, api_url: nil, app_id: nil, authorize_url: nil, client_id: nil, client_secret: nil, consumer_key: nil, consumer_secret: nil, dev_api_key: nil, emails: nil, expires_in: nil, expiry_date: nil, key: nil, meta: nil, name: nil, other_auth_info: nil, pem: nil, refresh_token: nil, refresh_token_expires_date: nil, refresh_token_expires_in: nil, refresh_url: nil, state: nil, token: nil, token_url: nil, user_id: nil)
+        sig { params(access_token: T.nilable(::String), api_url: T.nilable(::String), app_id: T.nilable(::String), audience: T.nilable(::String), authorize_url: T.nilable(::String), client_id: T.nilable(::String), client_secret: T.nilable(::String), consumer_key: T.nilable(::String), consumer_secret: T.nilable(::String), dev_api_key: T.nilable(::String), emails: T.nilable(T::Array[::String]), expires_in: T.nilable(::Float), expiry_date: T.nilable(::DateTime), key: T.nilable(::String), meta: T.nilable(T::Hash[Symbol, ::Object]), name: T.nilable(::String), other_auth_info: T.nilable(T::Array[::String]), pem: T.nilable(::String), refresh_token: T.nilable(::String), refresh_token_expires_date: T.nilable(::DateTime), refresh_token_expires_in: T.nilable(::Float), refresh_url: T.nilable(::String), state: T.nilable(::String), token: T.nilable(::String), token_url: T.nilable(::String), user_id: T.nilable(::String)).void }
+        def initialize(access_token: nil, api_url: nil, app_id: nil, audience: nil, authorize_url: nil, client_id: nil, client_secret: nil, consumer_key: nil, consumer_secret: nil, dev_api_key: nil, emails: nil, expires_in: nil, expiry_date: nil, key: nil, meta: nil, name: nil, other_auth_info: nil, pem: nil, refresh_token: nil, refresh_token_expires_date: nil, refresh_token_expires_in: nil, refresh_url: nil, state: nil, token: nil, token_url: nil, user_id: nil)
           @access_token = access_token
           @api_url = api_url
           @app_id = app_id
+          @audience = audience
           @authorize_url = authorize_url
           @client_id = client_id
           @client_secret = client_secret
@@ -99,6 +102,7 @@ module UnifiedRubySDK
           return false unless @access_token == other.access_token
           return false unless @api_url == other.api_url
           return false unless @app_id == other.app_id
+          return false unless @audience == other.audience
           return false unless @authorize_url == other.authorize_url
           return false unless @client_id == other.client_id
           return false unless @client_secret == other.client_secret

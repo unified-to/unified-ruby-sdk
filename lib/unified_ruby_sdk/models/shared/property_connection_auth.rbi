@@ -14,6 +14,8 @@ class UnifiedRubySDK::Models::Shared::PropertyConnectionAuth
   def api_url=(str_); end
   def app_id(); end
   def app_id=(str_); end
+  def audience(); end
+  def audience=(str_); end
   def authorize_url(); end
   def authorize_url=(str_); end
   def client_id(); end
