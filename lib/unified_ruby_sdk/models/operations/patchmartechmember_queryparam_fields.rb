@@ -22,6 +22,7 @@ module UnifiedRubySDK
           EMAILS = new('emails')
           LIST_IDS = new('list_ids')
           TAGS = new('tags')
+          STATUS = new('status')
           RAW = new('raw')
         end
       end

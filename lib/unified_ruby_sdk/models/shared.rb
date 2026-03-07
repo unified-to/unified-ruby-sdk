@@ -307,6 +307,7 @@ module UnifiedRubySDK
       autoload :MarketingEmailType, 'unified_ruby_sdk/models/shared/marketingemail_type.rb'
       autoload :MarketingList, 'unified_ruby_sdk/models/shared/marketinglist.rb'
       autoload :MarketingMember, 'unified_ruby_sdk/models/shared/marketingmember.rb'
+      autoload :MarketingMemberStatus, 'unified_ruby_sdk/models/shared/marketingmember_status.rb'
       autoload :MarketingReport, 'unified_ruby_sdk/models/shared/marketingreport.rb'
       autoload :MarketingReportLink, 'unified_ruby_sdk/models/shared/marketingreportlink.rb'
       autoload :MessagingAttachment, 'unified_ruby_sdk/models/shared/messagingattachment.rb'

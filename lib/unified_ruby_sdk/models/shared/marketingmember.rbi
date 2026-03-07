@@ -24,6 +24,8 @@ class UnifiedRubySDK::Models::Shared::MarketingMember
   def name=(str_); end
   def raw(); end
   def raw=(str_); end
+  def status(); end
+  def status=(str_); end
   def tags(); end
   def tags=(str_); end
   def updated_at(); end

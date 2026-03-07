@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: d0897cf78de3efc63587534d3e4d713b
+  docChecksum: b3881b35f991a103d30f955376d3b4f5
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.39
-  configChecksum: 5ec83d26a1cd29ee9e9b85ce49dc9e79
+  releaseVersion: 0.67.40
+  configChecksum: f1d4b85900a3c054d2d49b44c8dcd531
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -2225,6 +2225,7 @@ generatedFiles:
   - docs/models/shared/marketingemailtype.md
   - docs/models/shared/marketinglist.md
   - docs/models/shared/marketingmember.md
+  - docs/models/shared/marketingmemberstatus.md
   - docs/models/shared/marketingreport.md
   - docs/models/shared/marketingreportlink.md
   - docs/models/shared/messagingattachment.md
@@ -7211,6 +7212,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/marketinglist.rbi
   - lib/unified_ruby_sdk/models/shared/marketingmember.rb
   - lib/unified_ruby_sdk/models/shared/marketingmember.rbi
+  - lib/unified_ruby_sdk/models/shared/marketingmember_status.rb
+  - lib/unified_ruby_sdk/models/shared/marketingmember_status.rbi
   - lib/unified_ruby_sdk/models/shared/marketingreport.rb
   - lib/unified_ruby_sdk/models/shared/marketingreport.rbi
   - lib/unified_ruby_sdk/models/shared/marketingreportlink.rb
