@@ -280,6 +280,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_page_id=(str_); end
   def virtual_webhook_parent_id(); end
   def virtual_webhook_parent_id=(str_); end
+  def virtual_webhook_payment_id(); end
+  def virtual_webhook_payment_id=(str_); end
   def virtual_webhook_pipeline_id(); end
   def virtual_webhook_pipeline_id=(str_); end
   def virtual_webhook_project_id(); end
