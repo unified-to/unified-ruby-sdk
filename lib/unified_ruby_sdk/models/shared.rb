@@ -666,6 +666,7 @@ module UnifiedRubySDK
       autoload :PropertyIntegrationSupportWebhookEventsUpdated, 'unified_ruby_sdk/models/shared/property_integrationsupport_webhook_events_updated.rb'
       autoload :PropertyIntegrationCategories, 'unified_ruby_sdk/models/shared/property_integration_categories.rb'
       autoload :PropertyLmsStudentAddress, 'unified_ruby_sdk/models/shared/property_lmsstudent_address.rb'
+      autoload :PropertyMarketingListAddress, 'unified_ruby_sdk/models/shared/property_marketinglist_address.rb'
       autoload :PropertyMessagingEventButton, 'unified_ruby_sdk/models/shared/property_messagingevent_button.rb'
       autoload :PropertyMessagingEventChannel, 'unified_ruby_sdk/models/shared/property_messagingevent_channel.rb'
       autoload :PropertyMessagingEventMessage, 'unified_ruby_sdk/models/shared/property_messagingevent_message.rb'

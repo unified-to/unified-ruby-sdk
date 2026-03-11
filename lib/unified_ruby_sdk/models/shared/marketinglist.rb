@@ -14,15 +14,23 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
+        field :address, Crystalline::Nilable.new(Models::Shared::PropertyMarketingListAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
+
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
         field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+        field :from_email, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('from_email') } }
+
+        field :from_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('from_name') } }
+
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
+
+        field :language, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language') } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
@@ -30,20 +38,30 @@ module UnifiedRubySDK
 
         field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+        field :state, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('state') } }
+
+        field :subject, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subject') } }
+
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), end_at: T.nilable(::DateTime), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(created_at: nil, description: nil, end_at: nil, id: nil, is_active: nil, name: nil, raw: nil, start_at: nil, updated_at: nil, user_id: nil)
+        sig { params(address: T.nilable(Models::Shared::PropertyMarketingListAddress), created_at: T.nilable(::DateTime), description: T.nilable(::String), end_at: T.nilable(::DateTime), from_email: T.nilable(::String), from_name: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), language: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), state: T.nilable(::String), subject: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(address: nil, created_at: nil, description: nil, end_at: nil, from_email: nil, from_name: nil, id: nil, is_active: nil, language: nil, name: nil, raw: nil, start_at: nil, state: nil, subject: nil, updated_at: nil, user_id: nil)
+          @address = address
           @created_at = created_at
           @description = description
           @end_at = end_at
+          @from_email = from_email
+          @from_name = from_name
           @id = id
           @is_active = is_active
+          @language = language
           @name = name
           @raw = raw
           @start_at = start_at
+          @state = state
+          @subject = subject
           @updated_at = updated_at
           @user_id = user_id
         end
@@ -51,14 +69,20 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
+          return false unless @address == other.address
           return false unless @created_at == other.created_at
           return false unless @description == other.description
           return false unless @end_at == other.end_at
+          return false unless @from_email == other.from_email
+          return false unless @from_name == other.from_name
           return false unless @id == other.id
           return false unless @is_active == other.is_active
+          return false unless @language == other.language
           return false unless @name == other.name
           return false unless @raw == other.raw
           return false unless @start_at == other.start_at
+          return false unless @state == other.state
+          return false unless @subject == other.subject
           return false unless @updated_at == other.updated_at
           return false unless @user_id == other.user_id
           true

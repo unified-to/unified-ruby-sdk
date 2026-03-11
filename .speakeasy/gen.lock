@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: fca06522dcf65afa5ed17304efc0ad81
+  docChecksum: 315310e99bbf744b8760ffffe72f4d01
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.41
-  configChecksum: 01951484aab6fcede84f5ee6a2c281c1
+  releaseVersion: 0.67.42
+  configChecksum: 76ea065a342d147d0de23420fbb11968
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -2392,6 +2392,7 @@ generatedFiles:
   - docs/models/shared/propertyintegrationsupportwebhookeventsdeleted.md
   - docs/models/shared/propertyintegrationsupportwebhookeventsupdated.md
   - docs/models/shared/propertylmsstudentaddress.md
+  - docs/models/shared/propertymarketinglistaddress.md
   - docs/models/shared/propertymessagingeventbutton.md
   - docs/models/shared/propertymessagingeventchannel.md
   - docs/models/shared/propertymessagingeventmessage.md
@@ -7552,6 +7553,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_integrationsupport_webhook_events_updated.rbi
   - lib/unified_ruby_sdk/models/shared/property_lmsstudent_address.rb
   - lib/unified_ruby_sdk/models/shared/property_lmsstudent_address.rbi
+  - lib/unified_ruby_sdk/models/shared/property_marketinglist_address.rb
+  - lib/unified_ruby_sdk/models/shared/property_marketinglist_address.rbi
   - lib/unified_ruby_sdk/models/shared/property_messagingevent_button.rb
   - lib/unified_ruby_sdk/models/shared/property_messagingevent_button.rbi
   - lib/unified_ruby_sdk/models/shared/property_messagingevent_channel.rb
