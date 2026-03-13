@@ -34,8 +34,6 @@ class UnifiedRubySDK::Models::Shared::AdsCreative
   def hosting_source=(str_); end
   def id(); end
   def id=(str_); end
-  def image_hash(); end
-  def image_hash=(str_); end
   def item_id(); end
   def item_id=(str_); end
   def link_url(); end
@@ -46,8 +44,6 @@ class UnifiedRubySDK::Models::Shared::AdsCreative
   def name=(str_); end
   def organization_id(); end
   def organization_id=(str_); end
-  def page_identifier(); end
-  def page_identifier=(str_); end
   def path1(); end
   def path1=(str_); end
   def path2(); end
@@ -58,16 +54,12 @@ class UnifiedRubySDK::Models::Shared::AdsCreative
   def status=(str_); end
   def third_party_tag(); end
   def third_party_tag=(str_); end
-  def thumbnail_url(); end
-  def thumbnail_url=(str_); end
   def title(); end
   def title=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
   def vast_tag_url(); end
   def vast_tag_url=(str_); end
-  def video_id(); end
-  def video_id=(str_); end
   def width(); end
   def width=(str_); end
 end

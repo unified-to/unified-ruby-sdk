@@ -24,17 +24,17 @@ module UnifiedRubySDK
 
         field :performance_goal_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('performance_goal_amount') } }
 
-        field :performance_goal_type, Crystalline::Nilable.new(Models::Shared::PropertyAdsGroupBidStrategyPerformanceGoalType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('performance_goal_type'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsGroupBidStrategyPerformanceGoalType, true) } }
+        field :performance_goal_type, Crystalline::Nilable.new(Models::Shared::PerformanceGoalType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('performance_goal_type'), 'decoder': Utils.enum_from_string(Models::Shared::PerformanceGoalType, true) } }
 
         field :raise_bid_for_deals, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raise_bid_for_deals') } }
 
         field :target_roas, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('target_roas') } }
 
-        field :youtube_and_partners_type, Crystalline::Nilable.new(Models::Shared::PropertyAdsGroupBidStrategyYoutubeAndPartnersType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('youtube_and_partners_type'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsGroupBidStrategyYoutubeAndPartnersType, true) } }
+        field :youtube_and_partners_type, Crystalline::Nilable.new(Models::Shared::YoutubeAndPartnersType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('youtube_and_partners_type'), 'decoder': Utils.enum_from_string(Models::Shared::YoutubeAndPartnersType, true) } }
 
         field :youtube_and_partners_value, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('youtube_and_partners_value') } }
 
-        sig { params(type: Models::Shared::PropertyAdsGroupBidStrategyType, custom_bidding_algorithm_id: T.nilable(::String), fixed_bid_amount: T.nilable(::Float), max_average_cpm_bid_amount: T.nilable(::Float), performance_goal_amount: T.nilable(::Float), performance_goal_type: T.nilable(Models::Shared::PropertyAdsGroupBidStrategyPerformanceGoalType), raise_bid_for_deals: T.nilable(T::Boolean), target_roas: T.nilable(::Float), youtube_and_partners_type: T.nilable(Models::Shared::PropertyAdsGroupBidStrategyYoutubeAndPartnersType), youtube_and_partners_value: T.nilable(::String)).void }
+        sig { params(type: Models::Shared::PropertyAdsGroupBidStrategyType, custom_bidding_algorithm_id: T.nilable(::String), fixed_bid_amount: T.nilable(::Float), max_average_cpm_bid_amount: T.nilable(::Float), performance_goal_amount: T.nilable(::Float), performance_goal_type: T.nilable(Models::Shared::PerformanceGoalType), raise_bid_for_deals: T.nilable(T::Boolean), target_roas: T.nilable(::Float), youtube_and_partners_type: T.nilable(Models::Shared::YoutubeAndPartnersType), youtube_and_partners_value: T.nilable(::String)).void }
         def initialize(type:, custom_bidding_algorithm_id: nil, fixed_bid_amount: nil, max_average_cpm_bid_amount: nil, performance_goal_amount: nil, performance_goal_type: nil, raise_bid_for_deals: nil, target_roas: nil, youtube_and_partners_type: nil, youtube_and_partners_value: nil)
           @type = type
           @custom_bidding_algorithm_id = custom_bidding_algorithm_id

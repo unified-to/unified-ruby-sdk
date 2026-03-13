@@ -14,7 +14,7 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :commerce_itemvariant, Models::Shared::CommerceItemvariant1, { 'request': { 'media_type': 'application/json' } }
+        field :commerce_itemvariant, Models::Shared::CommerceItemvariant, { 'request': { 'media_type': 'application/json' } }
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
         # ID of the Itemvariant
@@ -24,7 +24,7 @@ module UnifiedRubySDK
         # Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
         field :raw, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
-        sig { params(commerce_itemvariant: Models::Shared::CommerceItemvariant1, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::PatchCommerceItemvariantQueryParamFields]), raw: T.nilable(::String)).void }
+        sig { params(commerce_itemvariant: Models::Shared::CommerceItemvariant, connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::PatchCommerceItemvariantQueryParamFields]), raw: T.nilable(::String)).void }
         def initialize(commerce_itemvariant:, connection_id:, id:, fields_: nil, raw: nil)
           @commerce_itemvariant = commerce_itemvariant
           @connection_id = connection_id

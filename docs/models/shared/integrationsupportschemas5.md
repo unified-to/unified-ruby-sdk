@@ -1,2 +1,0 @@
-# IntegrationSupportSchemas5
-

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-      # Employee payroll bank account for direct deposit.
+
       class HrisBankaccount
         extend T::Sig
         include Crystalline::MetadataFields

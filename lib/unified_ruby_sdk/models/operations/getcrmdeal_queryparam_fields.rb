@@ -26,6 +26,7 @@ module UnifiedRubySDK
           PIPELINE = new('pipeline')
           PIPELINE_ID = new('pipeline_id')
           STAGES = new('stages')
+          PIPELINES = new('pipelines')
           SOURCE = new('source')
           PROBABILITY = new('probability')
           TAGS = new('tags')
@@ -36,7 +37,6 @@ module UnifiedRubySDK
           COMPANY_IDS = new('company_ids')
           METADATA = new('metadata')
           RAW = new('raw')
-          PIPELINES = new('pipelines')
         end
       end
     end

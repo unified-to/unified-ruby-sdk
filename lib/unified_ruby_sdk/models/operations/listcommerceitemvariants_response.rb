@@ -20,9 +20,9 @@ module UnifiedRubySDK
         # Raw HTTP response; suitable for custom response parsing
         field :raw_response, ::Faraday::Response
         # Successful
-        field :commerce_itemvariants, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceItemvariant1))
+        field :commerce_itemvariants, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceItemvariant))
 
-        sig { params(content_type: ::String, status_code: ::Integer, raw_response: ::Faraday::Response, commerce_itemvariants: T.nilable(T::Array[Models::Shared::CommerceItemvariant1])).void }
+        sig { params(content_type: ::String, status_code: ::Integer, raw_response: ::Faraday::Response, commerce_itemvariants: T.nilable(T::Array[Models::Shared::CommerceItemvariant])).void }
         def initialize(content_type:, status_code:, raw_response:, commerce_itemvariants: nil)
           @content_type = content_type
           @status_code = status_code

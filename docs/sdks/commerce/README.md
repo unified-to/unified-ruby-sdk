@@ -201,7 +201,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.create_commerce_itemvariant(commerce_itemvariant: Models::Shared::CommerceItemvariant1.new(), connection_id: '<id>')
+res = s.commerce.create_commerce_itemvariant(commerce_itemvariant: Models::Shared::CommerceItemvariant.new(), connection_id: '<id>')
 
 unless res.commerce_itemvariant.nil?
   # handle response
@@ -213,7 +213,7 @@ end
 
 | Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `commerce_itemvariant`                                                                                                                           | [Models::Shared::CommerceItemvariant1](../../models/shared/commerceitemvariant1.md)                                                              | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `commerce_itemvariant`                                                                                                                           | [Models::Shared::CommerceItemvariant](../../models/shared/commerceitemvariant.md)                                                                | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateCommerceItemvariantQueryParamFields](../../models/operations/createcommerceitemvariantqueryparamfields.md)>  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
@@ -1150,7 +1150,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchCommerceItemvariantRequest.new(
-  commerce_itemvariant: Models::Shared::CommerceItemvariant1.new(),
+  commerce_itemvariant: Models::Shared::CommerceItemvariant.new(),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1781,7 +1781,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateCommerceItemvariantRequest.new(
-  commerce_itemvariant: Models::Shared::CommerceItemvariant1.new(),
+  commerce_itemvariant: Models::Shared::CommerceItemvariant.new(),
   connection_id: '<id>',
   id: '<id>',
 )

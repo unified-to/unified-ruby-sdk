@@ -18,6 +18,7 @@
 | `PIPELINE`    | pipeline      |
 | `PIPELINE_ID` | pipeline_id   |
 | `STAGES`      | stages        |
+| `PIPELINES`   | pipelines     |
 | `SOURCE`      | source        |
 | `PROBABILITY` | probability   |
 | `TAGS`        | tags          |
@@ -28,4 +29,3 @@
 | `COMPANY_IDS` | company_ids   |
 | `METADATA`    | metadata      |
 | `RAW`         | raw           |
-| `PIPELINES`   | pipelines     |

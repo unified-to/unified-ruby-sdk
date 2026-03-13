@@ -20,7 +20,6 @@ module UnifiedRubySDK
           PUBLIC_NAME = new('public_name')
           SLUG = new('slug')
           DESCRIPTION = new('description')
-          TAXRATE_ID = new('taxrate_id')
           GLOBAL_CODE = new('global_code')
           PUBLIC_DESCRIPTION = new('public_description')
           IS_ACTIVE = new('is_active')
@@ -33,8 +32,9 @@ module UnifiedRubySDK
           COLLECTION_IDS = new('collection_ids')
           ACCOUNT_ID = new('account_id')
           METADATA = new('metadata')
-          RAW = new('raw')
           COLLECTIONS = new('collections')
+          TAXRATE_ID = new('taxrate_id')
+          RAW = new('raw')
         end
       end
     end

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-      # A marketing campaign or email send
+
       class MarketingCampaign
         extend T::Sig
         include Crystalline::MetadataFields
@@ -21,7 +21,7 @@ module UnifiedRubySDK
         field :from_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('from_name') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-        # Associated list/audience IDs
+        # Associated listaudience IDs
         field :list_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_ids') } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }

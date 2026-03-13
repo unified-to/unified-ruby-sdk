@@ -8,8 +8,6 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::AdsGroup
-  def ad_group_type(); end
-  def ad_group_type=(str_); end
   def bid_amount(); end
   def bid_amount=(str_); end
   def bid_strategy(); end
@@ -34,8 +32,6 @@ class UnifiedRubySDK::Models::Shared::AdsGroup
   def creative_ids=(str_); end
   def currency(); end
   def currency=(str_); end
-  def daily_spend_cap(); end
-  def daily_spend_cap=(str_); end
   def end_at(); end
   def end_at=(str_); end
   def frequency_cap(); end
@@ -46,8 +42,6 @@ class UnifiedRubySDK::Models::Shared::AdsGroup
   def id=(str_); end
   def insertionorder_id(); end
   def insertionorder_id=(str_); end
-  def lifetime_spend_cap(); end
-  def lifetime_spend_cap=(str_); end
   def metadata(); end
   def metadata=(str_); end
   def name(); end

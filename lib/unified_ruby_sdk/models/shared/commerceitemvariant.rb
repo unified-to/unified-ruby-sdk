@@ -9,12 +9,14 @@ module UnifiedRubySDK
     module Shared
     
 
-      class CommerceItemVariant
+      class CommerceItemvariant
         extend T::Sig
         include Crystalline::MetadataFields
 
 
         field :available_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('available_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
@@ -29,6 +31,8 @@ module UnifiedRubySDK
         field :is_featured, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_featured') } }
 
         field :is_visible, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_visible') } }
+        # references CommerceItem
+        field :items, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceReference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('items') } }
 
         field :length, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('length') } }
 
@@ -46,6 +50,8 @@ module UnifiedRubySDK
 
         field :public_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('public_name') } }
 
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
         field :requires_shipping, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('requires_shipping') } }
 
         field :size_unit, Crystalline::Nilable.new(Models::Shared::SizeUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size_unit'), 'decoder': Utils.enum_from_string(Models::Shared::SizeUnit, true) } }
@@ -56,15 +62,18 @@ module UnifiedRubySDK
 
         field :total_stock, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_stock') } }
 
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
         field :weight, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight') } }
 
         field :weight_unit, Crystalline::Nilable.new(Models::Shared::WeightUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight_unit'), 'decoder': Utils.enum_from_string(Models::Shared::WeightUnit, true) } }
 
         field :width, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('width') } }
 
-        sig { params(available_at: T.nilable(::DateTime), description: T.nilable(::String), height: T.nilable(::Float), id: T.nilable(::String), inventory_id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_featured: T.nilable(T::Boolean), is_visible: T.nilable(T::Boolean), length: T.nilable(::Float), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), name: T.nilable(::String), options: T.nilable(T::Array[Models::Shared::CommerceItemOption]), prices: T.nilable(T::Array[Models::Shared::CommerceItemPrice]), public_description: T.nilable(::String), public_name: T.nilable(::String), requires_shipping: T.nilable(T::Boolean), size_unit: T.nilable(Models::Shared::SizeUnit), sku: T.nilable(::String), tags: T.nilable(T::Array[::String]), total_stock: T.nilable(::Float), weight: T.nilable(::Float), weight_unit: T.nilable(Models::Shared::WeightUnit), width: T.nilable(::Float)).void }
-        def initialize(available_at: nil, description: nil, height: nil, id: nil, inventory_id: nil, is_active: nil, is_featured: nil, is_visible: nil, length: nil, media: nil, metadata: nil, name: nil, options: nil, prices: nil, public_description: nil, public_name: nil, requires_shipping: nil, size_unit: nil, sku: nil, tags: nil, total_stock: nil, weight: nil, weight_unit: nil, width: nil)
+        sig { params(available_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), description: T.nilable(::String), height: T.nilable(::Float), id: T.nilable(::String), inventory_id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_featured: T.nilable(T::Boolean), is_visible: T.nilable(T::Boolean), items: T.nilable(T::Array[Models::Shared::CommerceReference]), length: T.nilable(::Float), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), name: T.nilable(::String), options: T.nilable(T::Array[Models::Shared::CommerceItemOption]), prices: T.nilable(T::Array[Models::Shared::CommerceItemPrice]), public_description: T.nilable(::String), public_name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), requires_shipping: T.nilable(T::Boolean), size_unit: T.nilable(Models::Shared::SizeUnit), sku: T.nilable(::String), tags: T.nilable(T::Array[::String]), total_stock: T.nilable(::Float), updated_at: T.nilable(::DateTime), weight: T.nilable(::Float), weight_unit: T.nilable(Models::Shared::WeightUnit), width: T.nilable(::Float)).void }
+        def initialize(available_at: nil, created_at: nil, description: nil, height: nil, id: nil, inventory_id: nil, is_active: nil, is_featured: nil, is_visible: nil, items: nil, length: nil, media: nil, metadata: nil, name: nil, options: nil, prices: nil, public_description: nil, public_name: nil, raw: nil, requires_shipping: nil, size_unit: nil, sku: nil, tags: nil, total_stock: nil, updated_at: nil, weight: nil, weight_unit: nil, width: nil)
           @available_at = available_at
+          @created_at = created_at
           @description = description
           @height = height
           @id = id
@@ -72,6 +81,7 @@ module UnifiedRubySDK
           @is_active = is_active
           @is_featured = is_featured
           @is_visible = is_visible
+          @items = items
           @length = length
           @media = media
           @metadata = metadata
@@ -80,11 +90,13 @@ module UnifiedRubySDK
           @prices = prices
           @public_description = public_description
           @public_name = public_name
+          @raw = raw
           @requires_shipping = requires_shipping
           @size_unit = size_unit
           @sku = sku
           @tags = tags
           @total_stock = total_stock
+          @updated_at = updated_at
           @weight = weight
           @weight_unit = weight_unit
           @width = width
@@ -94,6 +106,7 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @available_at == other.available_at
+          return false unless @created_at == other.created_at
           return false unless @description == other.description
           return false unless @height == other.height
           return false unless @id == other.id
@@ -101,6 +114,7 @@ module UnifiedRubySDK
           return false unless @is_active == other.is_active
           return false unless @is_featured == other.is_featured
           return false unless @is_visible == other.is_visible
+          return false unless @items == other.items
           return false unless @length == other.length
           return false unless @media == other.media
           return false unless @metadata == other.metadata
@@ -109,11 +123,13 @@ module UnifiedRubySDK
           return false unless @prices == other.prices
           return false unless @public_description == other.public_description
           return false unless @public_name == other.public_name
+          return false unless @raw == other.raw
           return false unless @requires_shipping == other.requires_shipping
           return false unless @size_unit == other.size_unit
           return false unless @sku == other.sku
           return false unless @tags == other.tags
           return false unless @total_stock == other.total_stock
+          return false unless @updated_at == other.updated_at
           return false unless @weight == other.weight
           return false unless @weight_unit == other.weight_unit
           return false unless @width == other.width

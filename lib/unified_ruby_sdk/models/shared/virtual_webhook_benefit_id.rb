@@ -9,18 +9,13 @@ module UnifiedRubySDK
     module Shared
     
 
-      class VirtualWebhookBenefitId
-        extend T::Sig
-        include Crystalline::MetadataFields
+      class VirtualWebhookBenefitId < T::Enum
 
 
-        
-        def initialize; end
-
-        sig { params(other: T.untyped).returns(T::Boolean) }
-        def ==(other)
-          return false unless other.is_a? self.class
-          true
+        enums do
+          SUPPORTED_REQUIRED = new('supported-required')
+          SUPPORTED = new('supported')
+          NOT_SUPPORTED = new('not-supported')
         end
       end
     end

@@ -17,7 +17,6 @@ module UnifiedRubySDK
           CREATED_AT = new('created_at')
           UPDATED_AT = new('updated_at')
           NAME = new('name')
-          ITEMS = new('items')
           PUBLIC_NAME = new('public_name')
           DESCRIPTION = new('description')
           PUBLIC_DESCRIPTION = new('public_description')
@@ -40,6 +39,7 @@ module UnifiedRubySDK
           INVENTORY_ID = new('inventory_id')
           REQUIRES_SHIPPING = new('requires_shipping')
           METADATA = new('metadata')
+          ITEMS = new('items')
           RAW = new('raw')
         end
       end

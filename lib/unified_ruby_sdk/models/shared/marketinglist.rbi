@@ -16,10 +16,6 @@ class UnifiedRubySDK::Models::Shared::MarketingList
   def description=(str_); end
   def end_at(); end
   def end_at=(str_); end
-  def from_email(); end
-  def from_email=(str_); end
-  def from_name(); end
-  def from_name=(str_); end
   def id(); end
   def id=(str_); end
   def is_active(); end
@@ -30,10 +26,16 @@ class UnifiedRubySDK::Models::Shared::MarketingList
   def name=(str_); end
   def raw(); end
   def raw=(str_); end
+  def sender_company(); end
+  def sender_company=(str_); end
+  def sender_email(); end
+  def sender_email=(str_); end
+  def sender_name(); end
+  def sender_name=(str_); end
+  def sender_phone(); end
+  def sender_phone=(str_); end
   def start_at(); end
   def start_at=(str_); end
-  def state(); end
-  def state=(str_); end
   def subject(); end
   def subject=(str_); end
   def updated_at(); end

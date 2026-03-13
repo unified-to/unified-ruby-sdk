@@ -13,7 +13,7 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-        # Employee payroll bank account for direct deposit.
+
         field :hris_bankaccount, Models::Shared::HrisBankaccount, { 'request': { 'media_type': 'application/json' } }
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }

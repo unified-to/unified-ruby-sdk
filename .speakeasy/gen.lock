@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 315310e99bbf744b8760ffffe72f4d01
+  docChecksum: f4616b1bed10ff19984980d59c784b0b
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.42
-  configChecksum: 76ea065a342d147d0de23420fbb11968
+  releaseVersion: 0.67.43
+  configChecksum: 4ef0cbeaeb586f6c9912b2a4cbbed302
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -1987,9 +1987,6 @@ generatedFiles:
   - docs/models/shared/commerceitemoption.md
   - docs/models/shared/commerceitemprice.md
   - docs/models/shared/commerceitemvariant.md
-  - docs/models/shared/commerceitemvariant1.md
-  - docs/models/shared/commerceitemvariantsizeunit.md
-  - docs/models/shared/commerceitemvariantweightunit.md
   - docs/models/shared/commercelocation.md
   - docs/models/shared/commercemetadata.md
   - docs/models/shared/commercemetadata1.md
@@ -2117,10 +2114,6 @@ generatedFiles:
   - docs/models/shared/integrationschemassandbox1.md
   - docs/models/shared/integrationschemassandbox5.md
   - docs/models/shared/integrationsupport.md
-  - docs/models/shared/integrationsupport1.md
-  - docs/models/shared/integrationsupport5.md
-  - docs/models/shared/integrationsupportschemas1.md
-  - docs/models/shared/integrationsupportschemas5.md
   - docs/models/shared/intervalunit.md
   - docs/models/shared/issue.md
   - docs/models/shared/issuestatus.md
@@ -2293,15 +2286,10 @@ generatedFiles:
   - docs/models/shared/propertyaccountingreporttrialbalance.md
   - docs/models/shared/propertyaccountingsalesorderbillingaddress.md
   - docs/models/shared/propertyaccountingsalesordershippingaddress.md
-  - docs/models/shared/propertyadsadtargeting.md
-  - docs/models/shared/propertyadscampaignbidstrategy.md
-  - docs/models/shared/propertyadscampaignbidstrategytype.md
   - docs/models/shared/propertyadscampaignfrequencycap.md
   - docs/models/shared/propertyadscampaigntargeting.md
   - docs/models/shared/propertyadsgroupbidstrategy.md
-  - docs/models/shared/propertyadsgroupbidstrategyperformancegoaltype.md
   - docs/models/shared/propertyadsgroupbidstrategytype.md
-  - docs/models/shared/propertyadsgroupbidstrategyyoutubeandpartnerstype.md
   - docs/models/shared/propertyadsgroupfrequencycap.md
   - docs/models/shared/propertyadsgroupfrequencycaptimeunit.md
   - docs/models/shared/propertyadsgrouppacing.md
@@ -2319,13 +2307,8 @@ generatedFiles:
   - docs/models/shared/propertyadsreportmetricsad.md
   - docs/models/shared/propertyadsreportmetricsadadtype.md
   - docs/models/shared/propertyadsreportmetricsadstatus.md
-  - docs/models/shared/propertyadsreportmetricsadtargeting.md
   - docs/models/shared/propertyadsreportmetricscampaign.md
   - docs/models/shared/propertyadsreportmetricscampaignadvertisingchanneltype.md
-  - docs/models/shared/propertyadsreportmetricscampaignbidstrategy.md
-  - docs/models/shared/propertyadsreportmetricscampaignbidstrategyperformancegoaltype.md
-  - docs/models/shared/propertyadsreportmetricscampaignbidstrategytype.md
-  - docs/models/shared/propertyadsreportmetricscampaignbidstrategyyoutubeandpartnerstype.md
   - docs/models/shared/propertyadsreportmetricscampaignbudgetperiod.md
   - docs/models/shared/propertyadsreportmetricscampaignfrequencycap.md
   - docs/models/shared/propertyadsreportmetricscampaignfrequencycaptimeunit.md
@@ -6743,12 +6726,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/commerceitemprice.rbi
   - lib/unified_ruby_sdk/models/shared/commerceitemvariant.rb
   - lib/unified_ruby_sdk/models/shared/commerceitemvariant.rbi
-  - lib/unified_ruby_sdk/models/shared/commerceitemvariant1.rb
-  - lib/unified_ruby_sdk/models/shared/commerceitemvariant1.rbi
-  - lib/unified_ruby_sdk/models/shared/commerceitemvariant_size_unit.rb
-  - lib/unified_ruby_sdk/models/shared/commerceitemvariant_size_unit.rbi
-  - lib/unified_ruby_sdk/models/shared/commerceitemvariant_weight_unit.rb
-  - lib/unified_ruby_sdk/models/shared/commerceitemvariant_weight_unit.rbi
   - lib/unified_ruby_sdk/models/shared/commercelocation.rb
   - lib/unified_ruby_sdk/models/shared/commercelocation.rbi
   - lib/unified_ruby_sdk/models/shared/commercemetadata.rb
@@ -7003,14 +6980,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/integration_schemas_sandbox_5.rbi
   - lib/unified_ruby_sdk/models/shared/integrationsupport.rb
   - lib/unified_ruby_sdk/models/shared/integrationsupport.rbi
-  - lib/unified_ruby_sdk/models/shared/integrationsupport_1.rb
-  - lib/unified_ruby_sdk/models/shared/integrationsupport_1.rbi
-  - lib/unified_ruby_sdk/models/shared/integrationsupport_5.rb
-  - lib/unified_ruby_sdk/models/shared/integrationsupport_5.rbi
-  - lib/unified_ruby_sdk/models/shared/integrationsupport_schemas_1.rb
-  - lib/unified_ruby_sdk/models/shared/integrationsupport_schemas_1.rbi
-  - lib/unified_ruby_sdk/models/shared/integrationsupport_schemas_5.rb
-  - lib/unified_ruby_sdk/models/shared/integrationsupport_schemas_5.rbi
   - lib/unified_ruby_sdk/models/shared/interval_unit.rb
   - lib/unified_ruby_sdk/models/shared/interval_unit.rbi
   - lib/unified_ruby_sdk/models/shared/issue.rb
@@ -7355,24 +7324,14 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_accountingsalesorder_billing_address.rbi
   - lib/unified_ruby_sdk/models/shared/property_accountingsalesorder_shipping_address.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingsalesorder_shipping_address.rbi
-  - lib/unified_ruby_sdk/models/shared/property_adsad_targeting.rb
-  - lib/unified_ruby_sdk/models/shared/property_adsad_targeting.rbi
-  - lib/unified_ruby_sdk/models/shared/property_adscampaign_bid_strategy.rb
-  - lib/unified_ruby_sdk/models/shared/property_adscampaign_bid_strategy.rbi
-  - lib/unified_ruby_sdk/models/shared/property_adscampaign_bid_strategy_type.rb
-  - lib/unified_ruby_sdk/models/shared/property_adscampaign_bid_strategy_type.rbi
   - lib/unified_ruby_sdk/models/shared/property_adscampaign_frequency_cap.rb
   - lib/unified_ruby_sdk/models/shared/property_adscampaign_frequency_cap.rbi
   - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting.rb
   - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_bid_strategy.rb
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_bid_strategy.rbi
-  - lib/unified_ruby_sdk/models/shared/property_adsgroup_bid_strategy_performance_goal_type.rb
-  - lib/unified_ruby_sdk/models/shared/property_adsgroup_bid_strategy_performance_goal_type.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_bid_strategy_type.rb
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_bid_strategy_type.rbi
-  - lib/unified_ruby_sdk/models/shared/property_adsgroup_bid_strategy_youtube_and_partners_type.rb
-  - lib/unified_ruby_sdk/models/shared/property_adsgroup_bid_strategy_youtube_and_partners_type.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_frequency_cap.rb
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_frequency_cap.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_frequency_cap_time_unit.rb
@@ -7407,20 +7366,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_ad_ad_type.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_ad_status.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_ad_status.rbi
-  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_ad_targeting.rb
-  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_ad_targeting.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_advertising_channel_type.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_advertising_channel_type.rbi
-  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_bid_strategy.rb
-  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_bid_strategy.rbi
-  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_bid_strategy_performance_goal_type.rb
-  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_bid_strategy_performance_goal_type.rbi
-  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_bid_strategy_type.rb
-  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_bid_strategy_type.rbi
-  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_bid_strategy_youtube_and_partners_type.rb
-  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_bid_strategy_youtube_and_partners_type.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_budget_period.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_budget_period.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_frequency_cap.rb

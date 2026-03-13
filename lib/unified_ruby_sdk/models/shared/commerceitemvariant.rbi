@@ -2,14 +2,16 @@
 # frozen_string_literal: true
 
 
-class UnifiedRubySDK::Models::Shared::CommerceItemVariant
+class UnifiedRubySDK::Models::Shared::CommerceItemvariant
   extend ::Crystalline::MetadataFields::ClassMethods
 end
 
 
-class UnifiedRubySDK::Models::Shared::CommerceItemVariant
+class UnifiedRubySDK::Models::Shared::CommerceItemvariant
   def available_at(); end
   def available_at=(str_); end
+  def created_at(); end
+  def created_at=(str_); end
   def description(); end
   def description=(str_); end
   def height(); end
@@ -24,6 +26,8 @@ class UnifiedRubySDK::Models::Shared::CommerceItemVariant
   def is_featured=(str_); end
   def is_visible(); end
   def is_visible=(str_); end
+  def items(); end
+  def items=(str_); end
   def length(); end
   def length=(str_); end
   def media(); end
@@ -40,6 +44,8 @@ class UnifiedRubySDK::Models::Shared::CommerceItemVariant
   def public_description=(str_); end
   def public_name(); end
   def public_name=(str_); end
+  def raw(); end
+  def raw=(str_); end
   def requires_shipping(); end
   def requires_shipping=(str_); end
   def size_unit(); end
@@ -50,6 +56,8 @@ class UnifiedRubySDK::Models::Shared::CommerceItemVariant
   def tags=(str_); end
   def total_stock(); end
   def total_stock=(str_); end
+  def updated_at(); end
+  def updated_at=(str_); end
   def weight(); end
   def weight=(str_); end
   def weight_unit(); end

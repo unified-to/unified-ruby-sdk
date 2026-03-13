@@ -24,8 +24,6 @@ class UnifiedRubySDK::Models::Shared::PropertyMessagingEventChannel
   def is_private=(str_); end
   def members(); end
   def members=(str_); end
-  def parent_channel_id(); end
-  def parent_channel_id=(str_); end
   def parent_id(); end
   def parent_id=(str_); end
   def raw(); end

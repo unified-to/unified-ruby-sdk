@@ -11,7 +11,6 @@
 | `NAME`               | name                 |
 | `CAMPAIGN_ID`        | campaign_id          |
 | `GROUP_ID`           | group_id             |
-| `ITEM_ID`            | item_id              |
 | `ORGANIZATION_ID`    | organization_id      |
 | `STATUS`             | status               |
 | `AD_TYPE`            | ad_type              |
@@ -22,10 +21,6 @@
 | `DESCRIPTION`        | description          |
 | `CTA`                | cta                  |
 | `FINAL_URL`          | final_url            |
-| `TARGETING`          | targeting            |
-| `IS_ACTIVE`          | is_active            |
-| `END_AT`             | end_at               |
-| `START_AT`           | start_at             |
 | `DISPLAY_URL`        | display_url          |
 | `PATH1`              | path1                |
 | `PATH2`              | path2                |

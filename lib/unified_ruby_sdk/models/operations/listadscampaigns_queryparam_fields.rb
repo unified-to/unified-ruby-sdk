@@ -28,8 +28,6 @@ module UnifiedRubySDK
           GOAL = new('goal')
           PLANNED_SPEND_AMOUNT = new('planned_spend_amount')
           FREQUENCY_CAP = new('frequency_cap')
-          BID_STRATEGY = new('bid_strategy')
-          SPECIAL_AD_CATEGORIES = new('special_ad_categories')
           ADVERTISING_CHANNEL_TYPE = new('advertising_channel_type')
           CAMPAIGN_BUDGET_IDENTIFIER = new('campaign_budget_identifier')
           CURRENCY = new('currency')

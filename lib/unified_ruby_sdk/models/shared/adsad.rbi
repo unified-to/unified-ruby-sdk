@@ -26,8 +26,6 @@ class UnifiedRubySDK::Models::Shared::AdsAd
   def description=(str_); end
   def display_url(); end
   def display_url=(str_); end
-  def end_at(); end
-  def end_at=(str_); end
   def final_url(); end
   def final_url=(str_); end
   def group_id(); end
@@ -36,10 +34,6 @@ class UnifiedRubySDK::Models::Shared::AdsAd
   def headline=(str_); end
   def id(); end
   def id=(str_); end
-  def is_active(); end
-  def is_active=(str_); end
-  def item_id(); end
-  def item_id=(str_); end
   def metadata(); end
   def metadata=(str_); end
   def name(); end
@@ -52,12 +46,8 @@ class UnifiedRubySDK::Models::Shared::AdsAd
   def path2=(str_); end
   def raw(); end
   def raw=(str_); end
-  def start_at(); end
-  def start_at=(str_); end
   def status(); end
   def status=(str_); end
-  def targeting(); end
-  def targeting=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
 end

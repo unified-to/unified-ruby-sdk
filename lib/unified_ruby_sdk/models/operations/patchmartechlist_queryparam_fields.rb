@@ -22,12 +22,13 @@ module UnifiedRubySDK
           END_AT = new('end_at')
           USER_ID = new('user_id')
           IS_ACTIVE = new('is_active')
-          STATE = new('state')
-          FROM_NAME = new('from_name')
-          FROM_EMAIL = new('from_email')
-          SUBJECT = new('subject')
-          LANGUAGE = new('language')
           ADDRESS = new('address')
+          SUBJECT = new('subject')
+          SENDER_NAME = new('sender_name')
+          SENDER_EMAIL = new('sender_email')
+          LANGUAGE = new('language')
+          SENDER_COMPANY = new('sender_company')
+          SENDER_PHONE = new('sender_phone')
           RAW = new('raw')
         end
       end

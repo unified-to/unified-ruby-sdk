@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-      # Campaign performance report
+
       class MarketingReport
         extend T::Sig
         include Crystalline::MetadataFields

@@ -20,38 +20,23 @@ module UnifiedRubySDK
 
         field :city, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('city') } }
 
-        field :company, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company') } }
-
         field :country, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('country') } }
 
-        field :from_email, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('from_email') } }
+        field :country_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('country_code') } }
 
-        field :from_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('from_name') } }
+        field :postal_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('postal_code') } }
 
-        field :language, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language') } }
+        field :region, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('region') } }
 
-        field :phone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('phone') } }
-
-        field :state, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('state') } }
-
-        field :subject, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subject') } }
-
-        field :zip, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('zip') } }
-
-        sig { params(address1: T.nilable(::String), address2: T.nilable(::String), city: T.nilable(::String), company: T.nilable(::String), country: T.nilable(::String), from_email: T.nilable(::String), from_name: T.nilable(::String), language: T.nilable(::String), phone: T.nilable(::String), state: T.nilable(::String), subject: T.nilable(::String), zip: T.nilable(::String)).void }
-        def initialize(address1: nil, address2: nil, city: nil, company: nil, country: nil, from_email: nil, from_name: nil, language: nil, phone: nil, state: nil, subject: nil, zip: nil)
+        sig { params(address1: T.nilable(::String), address2: T.nilable(::String), city: T.nilable(::String), country: T.nilable(::String), country_code: T.nilable(::String), postal_code: T.nilable(::String), region: T.nilable(::String)).void }
+        def initialize(address1: nil, address2: nil, city: nil, country: nil, country_code: nil, postal_code: nil, region: nil)
           @address1 = address1
           @address2 = address2
           @city = city
-          @company = company
           @country = country
-          @from_email = from_email
-          @from_name = from_name
-          @language = language
-          @phone = phone
-          @state = state
-          @subject = subject
-          @zip = zip
+          @country_code = country_code
+          @postal_code = postal_code
+          @region = region
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
@@ -60,15 +45,10 @@ module UnifiedRubySDK
           return false unless @address1 == other.address1
           return false unless @address2 == other.address2
           return false unless @city == other.city
-          return false unless @company == other.company
           return false unless @country == other.country
-          return false unless @from_email == other.from_email
-          return false unless @from_name == other.from_name
-          return false unless @language == other.language
-          return false unless @phone == other.phone
-          return false unless @state == other.state
-          return false unless @subject == other.subject
-          return false unless @zip == other.zip
+          return false unless @country_code == other.country_code
+          return false unless @postal_code == other.postal_code
+          return false unless @region == other.region
           true
         end
       end

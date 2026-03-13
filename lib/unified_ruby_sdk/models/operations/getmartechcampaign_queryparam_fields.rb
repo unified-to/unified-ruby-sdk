@@ -14,6 +14,8 @@ module UnifiedRubySDK
 
         enums do
           ID = new('id')
+          CREATED_AT = new('created_at')
+          UPDATED_AT = new('updated_at')
           NAME = new('name')
           TYPE = new('type')
           STATUS = new('status')
@@ -24,8 +26,6 @@ module UnifiedRubySDK
           FROM_EMAIL = new('from_email')
           REPLY_TO_EMAIL = new('reply_to_email')
           SEND_AT = new('send_at')
-          CREATED_AT = new('created_at')
-          UPDATED_AT = new('updated_at')
           RAW = new('raw')
         end
       end

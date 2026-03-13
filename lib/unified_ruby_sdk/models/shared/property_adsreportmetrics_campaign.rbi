@@ -10,8 +10,6 @@ end
 class UnifiedRubySDK::Models::Shared::PropertyAdsReportMetricsCampaign
   def advertising_channel_type(); end
   def advertising_channel_type=(str_); end
-  def bid_strategy(); end
-  def bid_strategy=(str_); end
   def budget_amount(); end
   def budget_amount=(str_); end
   def budget_period(); end
@@ -38,8 +36,6 @@ class UnifiedRubySDK::Models::Shared::PropertyAdsReportMetricsCampaign
   def planned_spend_amount=(str_); end
   def raw(); end
   def raw=(str_); end
-  def special_ad_categories(); end
-  def special_ad_categories=(str_); end
   def start_at(); end
   def start_at=(str_); end
   def status(); end

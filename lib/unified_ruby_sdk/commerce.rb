@@ -423,7 +423,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(commerce_itemvariant: Models::Shared::CommerceItemvariant1, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceItemvariantQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceItemvariantResponse) }
+    sig { params(commerce_itemvariant: Models::Shared::CommerceItemvariant, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceItemvariantQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceItemvariantResponse) }
     def create_commerce_itemvariant(commerce_itemvariant:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_commerce_itemvariant - Create an itemvariant
       request = Models::Operations::CreateCommerceItemvariantRequest.new(
@@ -528,7 +528,7 @@ module UnifiedRubySDK
             response: http_response
           )
           response_data = http_response.env.response_body
-          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceItemvariant1)
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceItemvariant)
           response = Models::Operations::CreateCommerceItemvariantResponse.new(
             status_code: http_response.status,
             content_type: content_type,
@@ -1376,7 +1376,7 @@ module UnifiedRubySDK
             response: http_response
           )
           response_data = http_response.env.response_body
-          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceItemvariant1)
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceItemvariant)
           response = Models::Operations::GetCommerceItemvariantResponse.new(
             status_code: http_response.status,
             content_type: content_type,
@@ -2164,7 +2164,7 @@ module UnifiedRubySDK
             response: http_response
           )
           response_data = http_response.env.response_body
-          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::CommerceItemvariant1))
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::CommerceItemvariant))
           response = Models::Operations::ListCommerceItemvariantsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
@@ -2982,7 +2982,7 @@ module UnifiedRubySDK
             response: http_response
           )
           response_data = http_response.env.response_body
-          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceItemvariant1)
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceItemvariant)
           response = Models::Operations::PatchCommerceItemvariantResponse.new(
             status_code: http_response.status,
             content_type: content_type,
@@ -4634,7 +4634,7 @@ module UnifiedRubySDK
             response: http_response
           )
           response_data = http_response.env.response_body
-          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceItemvariant1)
+          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceItemvariant)
           response = Models::Operations::UpdateCommerceItemvariantResponse.new(
             status_code: http_response.status,
             content_type: content_type,

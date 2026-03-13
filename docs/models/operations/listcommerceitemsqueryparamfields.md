@@ -12,7 +12,6 @@
 | `PUBLIC_NAME`        | public_name          |
 | `SLUG`               | slug                 |
 | `DESCRIPTION`        | description          |
-| `TAXRATE_ID`         | taxrate_id           |
 | `GLOBAL_CODE`        | global_code          |
 | `PUBLIC_DESCRIPTION` | public_description   |
 | `IS_ACTIVE`          | is_active            |
@@ -25,5 +24,6 @@
 | `COLLECTION_IDS`     | collection_ids       |
 | `ACCOUNT_ID`         | account_id           |
 | `METADATA`           | metadata             |
-| `RAW`                | raw                  |
 | `COLLECTIONS`        | collections          |
+| `TAXRATE_ID`         | taxrate_id           |
+| `RAW`                | raw                  |

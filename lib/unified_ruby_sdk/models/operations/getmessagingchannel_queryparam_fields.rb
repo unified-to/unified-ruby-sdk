@@ -18,7 +18,6 @@ module UnifiedRubySDK
           UPDATED_AT = new('updated_at')
           NAME = new('name')
           DESCRIPTION = new('description')
-          PARENT_CHANNEL_ID = new('parent_channel_id')
           PARENT_ID = new('parent_id')
           HAS_SUBCHANNELS = new('has_subchannels')
           MEMBERS = new('members')
