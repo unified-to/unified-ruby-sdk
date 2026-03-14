@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: f4616b1bed10ff19984980d59c784b0b
+  docChecksum: 1ecbe864c08b26a953eed6ae60fbd088
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.43
-  configChecksum: 4ef0cbeaeb586f6c9912b2a4cbbed302
+  releaseVersion: 0.67.44
+  configChecksum: 5524b8a86479d970b315319ca2a60606
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -2157,6 +2157,7 @@ generatedFiles:
   - docs/models/shared/listeventid.md
   - docs/models/shared/listexpand.md
   - docs/models/shared/listformid.md
+  - docs/models/shared/listfulltext.md
   - docs/models/shared/listgroupid.md
   - docs/models/shared/listinstructorid.md
   - docs/models/shared/listinterviewid.md
@@ -7066,6 +7067,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_expand.rbi
   - lib/unified_ruby_sdk/models/shared/list_form_id.rb
   - lib/unified_ruby_sdk/models/shared/list_form_id.rbi
+  - lib/unified_ruby_sdk/models/shared/list_fulltext.rb
+  - lib/unified_ruby_sdk/models/shared/list_fulltext.rbi
   - lib/unified_ruby_sdk/models/shared/list_group_id.rb
   - lib/unified_ruby_sdk/models/shared/list_group_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_instructor_id.rb

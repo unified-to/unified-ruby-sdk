@@ -475,6 +475,7 @@ module UnifiedRubySDK
       autoload :ListEventId, 'unified_ruby_sdk/models/shared/list_event_id.rb'
       autoload :ListExpand, 'unified_ruby_sdk/models/shared/list_expand.rb'
       autoload :ListFormId, 'unified_ruby_sdk/models/shared/list_form_id.rb'
+      autoload :ListFulltext, 'unified_ruby_sdk/models/shared/list_fulltext.rb'
       autoload :ListGroupId, 'unified_ruby_sdk/models/shared/list_group_id.rb'
       autoload :ListInstructorId, 'unified_ruby_sdk/models/shared/list_instructor_id.rb'
       autoload :ListInterviewId, 'unified_ruby_sdk/models/shared/list_interview_id.rb'

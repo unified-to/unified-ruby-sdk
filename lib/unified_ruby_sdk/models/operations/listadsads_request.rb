@@ -19,7 +19,7 @@ module UnifiedRubySDK
         field :campaign_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'campaign_id', 'style': 'form', 'explode': true } }
         # Fields to return
         field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::ListAdsAdsQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
-        # The group ID to filter by (reference to HrisGroup)
+        # The group ID to filter by (reference to AdsGroup)
         field :group_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'group_id', 'style': 'form', 'explode': true } }
 
         field :limit, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }

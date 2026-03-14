@@ -10,8 +10,12 @@ end
 class UnifiedRubySDK::Models::Operations::ListStorageFilesRequest
   def connection_id(); end
   def connection_id=(str_); end
+  def expand(); end
+  def expand=(str_); end
   def fields_(); end
   def fields_=(str_); end
+  def fulltext(); end
+  def fulltext=(str_); end
   def limit(); end
   def limit=(str_); end
   def offset(); end
