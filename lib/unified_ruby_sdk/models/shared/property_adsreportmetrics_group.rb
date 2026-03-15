@@ -18,7 +18,7 @@ module UnifiedRubySDK
         # YOUTUBE_AND_PARTNERS
         field :bid_strategy, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroupBidStrategy), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('bid_strategy') } }
 
-        field :billing_event, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('billing_event') } }
+        field :billing_event, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroupBillingEvent), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('billing_event'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsReportMetricsGroupBillingEvent, true) } }
 
         field :budget_allocation_type, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroupBudgetAllocationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('budget_allocation_type'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsReportMetricsGroupBudgetAllocationType, true) } }
 
@@ -48,17 +48,17 @@ module UnifiedRubySDK
 
         field :insertionorder_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('insertionorder_id') } }
 
-        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
-
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :optimization_goal, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('optimization_goal') } }
+        field :optimization_goal, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroupOptimizationGoal), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('optimization_goal'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsReportMetricsGroupOptimizationGoal, true) } }
 
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
 
         field :pacing, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroupPacing), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pacing') } }
 
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
+
+        field :promoted, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdsPromoted)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('promoted') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
@@ -72,8 +72,8 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(bid_amount: T.nilable(::Float), bid_strategy: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupBidStrategy), billing_event: T.nilable(::String), budget_allocation_type: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupBudgetAllocationType), budget_amount: T.nilable(::Float), budget_max_amount: T.nilable(::Float), budget_period: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupBudgetPeriod), budget_unit: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupBudgetUnit), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), creative_ids: T.nilable(T::Array[::String]), currency: T.nilable(::String), end_at: T.nilable(::DateTime), frequency_cap: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupFrequencyCap), has_eu_political_ads: T.nilable(T::Boolean), id: T.nilable(::String), insertionorder_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AdsMetadata]), name: T.nilable(::String), optimization_goal: T.nilable(::String), organization_id: T.nilable(::String), pacing: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupPacing), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupStatus), targeting: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupTargeting), type: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupType), updated_at: T.nilable(::DateTime)).void }
-        def initialize(bid_amount: nil, bid_strategy: nil, billing_event: nil, budget_allocation_type: nil, budget_amount: nil, budget_max_amount: nil, budget_period: nil, budget_unit: nil, campaign_id: nil, created_at: nil, creative_ids: nil, currency: nil, end_at: nil, frequency_cap: nil, has_eu_political_ads: nil, id: nil, insertionorder_id: nil, metadata: nil, name: nil, optimization_goal: nil, organization_id: nil, pacing: nil, parent_id: nil, raw: nil, start_at: nil, status: nil, targeting: nil, type: nil, updated_at: nil)
+        sig { params(bid_amount: T.nilable(::Float), bid_strategy: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupBidStrategy), billing_event: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupBillingEvent), budget_allocation_type: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupBudgetAllocationType), budget_amount: T.nilable(::Float), budget_max_amount: T.nilable(::Float), budget_period: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupBudgetPeriod), budget_unit: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupBudgetUnit), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), creative_ids: T.nilable(T::Array[::String]), currency: T.nilable(::String), end_at: T.nilable(::DateTime), frequency_cap: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupFrequencyCap), has_eu_political_ads: T.nilable(T::Boolean), id: T.nilable(::String), insertionorder_id: T.nilable(::String), name: T.nilable(::String), optimization_goal: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupOptimizationGoal), organization_id: T.nilable(::String), pacing: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupPacing), parent_id: T.nilable(::String), promoted: T.nilable(T::Array[Models::Shared::AdsPromoted]), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupStatus), targeting: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupTargeting), type: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupType), updated_at: T.nilable(::DateTime)).void }
+        def initialize(bid_amount: nil, bid_strategy: nil, billing_event: nil, budget_allocation_type: nil, budget_amount: nil, budget_max_amount: nil, budget_period: nil, budget_unit: nil, campaign_id: nil, created_at: nil, creative_ids: nil, currency: nil, end_at: nil, frequency_cap: nil, has_eu_political_ads: nil, id: nil, insertionorder_id: nil, name: nil, optimization_goal: nil, organization_id: nil, pacing: nil, parent_id: nil, promoted: nil, raw: nil, start_at: nil, status: nil, targeting: nil, type: nil, updated_at: nil)
           @bid_amount = bid_amount
           @bid_strategy = bid_strategy
           @billing_event = billing_event
@@ -91,12 +91,12 @@ module UnifiedRubySDK
           @has_eu_political_ads = has_eu_political_ads
           @id = id
           @insertionorder_id = insertionorder_id
-          @metadata = metadata
           @name = name
           @optimization_goal = optimization_goal
           @organization_id = organization_id
           @pacing = pacing
           @parent_id = parent_id
+          @promoted = promoted
           @raw = raw
           @start_at = start_at
           @status = status
@@ -125,12 +125,12 @@ module UnifiedRubySDK
           return false unless @has_eu_political_ads == other.has_eu_political_ads
           return false unless @id == other.id
           return false unless @insertionorder_id == other.insertionorder_id
-          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @optimization_goal == other.optimization_goal
           return false unless @organization_id == other.organization_id
           return false unless @pacing == other.pacing
           return false unless @parent_id == other.parent_id
+          return false unless @promoted == other.promoted
           return false unless @raw == other.raw
           return false unless @start_at == other.start_at
           return false unless @status == other.status

@@ -40,7 +40,7 @@ module UnifiedRubySDK
           OPTIMIZATION_GOAL = new('optimization_goal')
           BILLING_EVENT = new('billing_event')
           CURRENCY = new('currency')
-          METADATA = new('metadata')
+          PROMOTED = new('promoted')
           RAW = new('raw')
         end
       end

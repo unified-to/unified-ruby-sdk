@@ -19,7 +19,7 @@ module UnifiedRubySDK
         field :expand, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'query_param': { 'field_name': 'expand', 'style': 'form', 'explode': true } }
         # Fields to return
         field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::ListStorageFilesQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
-
+        # The fulltext to filter by
         field :fulltext, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'fulltext', 'style': 'form', 'explode': true } }
 
         field :limit, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }

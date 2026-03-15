@@ -31,6 +31,8 @@ module UnifiedRubySDK
   autoload :Creative, 'unified_ruby_sdk/creative'
   autoload :Group, 'unified_ruby_sdk/group'
   autoload :Insertionorder, 'unified_ruby_sdk/insertionorder'
+  autoload :Promoted, 'unified_ruby_sdk/promoted'
+  autoload :Target, 'unified_ruby_sdk/target'
   autoload :Assessment, 'unified_ruby_sdk/assessment'
   autoload :Package, 'unified_ruby_sdk/package'
   autoload :Ats, 'unified_ruby_sdk/ats'

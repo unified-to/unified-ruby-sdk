@@ -233,6 +233,8 @@ module UnifiedRubySDK
           ADS_CREATIVE_WRITE = new('ads_creative_write')
           ADS_INSERTIONORDER_READ = new('ads_insertionorder_read')
           ADS_INSERTIONORDER_WRITE = new('ads_insertionorder_write')
+          ADS_TARGET_READ = new('ads_target_read')
+          ADS_PROMOTED_READ = new('ads_promoted_read')
           FORMS_FORM_READ = new('forms_form_read')
           FORMS_FORM_WRITE = new('forms_form_write')
           FORMS_SUBMISSION_READ = new('forms_submission_read')

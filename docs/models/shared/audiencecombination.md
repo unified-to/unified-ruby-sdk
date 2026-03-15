@@ -1,0 +1,11 @@
+# AudienceCombination
+
+
+## Fields
+
+| Field                                                                               | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `behaviors`                                                                         | T::Array<[Models::Shared::AudienceSegment](../../models/shared/audiencesegment.md)> | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `demographics`                                                                      | T::Array<[Models::Shared::AudienceSegment](../../models/shared/audiencesegment.md)> | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `interests`                                                                         | T::Array<[Models::Shared::AudienceSegment](../../models/shared/audiencesegment.md)> | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `life_events`                                                                       | T::Array<[Models::Shared::AudienceSegment](../../models/shared/audiencesegment.md)> | :heavy_minus_sign:                                                                  | N/A                                                                                 |

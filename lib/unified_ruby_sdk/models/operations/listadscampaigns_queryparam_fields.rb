@@ -31,6 +31,7 @@ module UnifiedRubySDK
           ADVERTISING_CHANNEL_TYPE = new('advertising_channel_type')
           CAMPAIGN_BUDGET_IDENTIFIER = new('campaign_budget_identifier')
           CURRENCY = new('currency')
+          CATEGORY = new('category')
           RAW = new('raw')
         end
       end

@@ -38,8 +38,6 @@ class UnifiedRubySDK::Models::Shared::AdsCreative
   def item_id=(str_); end
   def link_url(); end
   def link_url=(str_); end
-  def metadata(); end
-  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def organization_id(); end
@@ -48,6 +46,8 @@ class UnifiedRubySDK::Models::Shared::AdsCreative
   def path1=(str_); end
   def path2(); end
   def path2=(str_); end
+  def promoted(); end
+  def promoted=(str_); end
   def raw(); end
   def raw=(str_); end
   def status(); end

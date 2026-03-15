@@ -14,101 +14,53 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :age_ranges, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('age_ranges') } }
+        field :audience, Crystalline::Nilable.new(Models::Shared::PropertyAdsCampaignTargetingAudience), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('audience') } }
+        # Brand safety (Meta: excluded_publisher_categories, etc.; Google
+        field :brand_safety, Crystalline::Nilable.new(Models::Shared::PropertyAdsCampaignTargetingBrandSafety), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('brand_safety') } }
 
-        field :audiences, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('audiences') } }
+        field :content, Crystalline::Nilable.new(Models::Shared::PropertyAdsCampaignTargetingContent), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
+        # Demographic targeting (Meta: age_min, age_max, genders)
+        field :demographic, Crystalline::Nilable.new(Models::Shared::PropertyAdsCampaignTargetingDemographic), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('demographic') } }
 
-        field :behaviors, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('behaviors') } }
+        field :device, Crystalline::Nilable.new(Models::Shared::PropertyAdsCampaignTargetingDevice), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('device') } }
 
-        field :companies, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('companies') } }
+        field :geographic, Crystalline::Nilable.new(Models::Shared::PropertyAdsCampaignTargetingGeographic), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('geographic') } }
+        # Language targeting (Meta
+        field :language, Crystalline::Nilable.new(Models::Shared::PropertyAdsCampaignTargetingLanguage), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language') } }
+        # Optimization (Meta: targeting_automation; Google: observation vs targeting mode)
+        field :optimization, Crystalline::Nilable.new(Models::Shared::PropertyAdsCampaignTargetingOptimization), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('optimization') } }
 
-        field :company_sizes, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_sizes') } }
+        field :placement, Crystalline::Nilable.new(Models::Shared::PropertyAdsCampaignTargetingPlacement), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('placement') } }
 
-        field :custom_audiences, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('custom_audiences') } }
+        field :schedule, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdSchedule)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('schedule') } }
 
-        field :degrees, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('degrees') } }
-
-        field :devices, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('devices') } }
-
-        field :excluded_audiences, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('excluded_audiences') } }
-
-        field :excluded_locations, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('excluded_locations') } }
-
-        field :genders, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('genders') } }
-
-        field :industries, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('industries') } }
-
-        field :interests, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('interests') } }
-
-        field :job_functions, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('job_functions') } }
-
-        field :job_titles, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('job_titles') } }
-
-        field :keywords, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('keywords') } }
-
-        field :languages, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('languages') } }
-
-        field :locations, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('locations') } }
-
-        field :placements, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('placements') } }
-
-        field :schools, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('schools') } }
-
-        field :seniorities, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('seniorities') } }
-
-        field :skills, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('skills') } }
-
-        sig { params(age_ranges: T.nilable(T::Array[::String]), audiences: T.nilable(T::Array[::String]), behaviors: T.nilable(T::Array[::String]), companies: T.nilable(T::Array[::String]), company_sizes: T.nilable(T::Array[::String]), custom_audiences: T.nilable(T::Array[::String]), degrees: T.nilable(T::Array[::String]), devices: T.nilable(T::Array[::String]), excluded_audiences: T.nilable(T::Array[::String]), excluded_locations: T.nilable(T::Array[::String]), genders: T.nilable(T::Array[::String]), industries: T.nilable(T::Array[::String]), interests: T.nilable(T::Array[::String]), job_functions: T.nilable(T::Array[::String]), job_titles: T.nilable(T::Array[::String]), keywords: T.nilable(T::Array[::String]), languages: T.nilable(T::Array[::String]), locations: T.nilable(T::Array[::String]), placements: T.nilable(T::Array[::String]), schools: T.nilable(T::Array[::String]), seniorities: T.nilable(T::Array[::String]), skills: T.nilable(T::Array[::String])).void }
-        def initialize(age_ranges: nil, audiences: nil, behaviors: nil, companies: nil, company_sizes: nil, custom_audiences: nil, degrees: nil, devices: nil, excluded_audiences: nil, excluded_locations: nil, genders: nil, industries: nil, interests: nil, job_functions: nil, job_titles: nil, keywords: nil, languages: nil, locations: nil, placements: nil, schools: nil, seniorities: nil, skills: nil)
-          @age_ranges = age_ranges
-          @audiences = audiences
-          @behaviors = behaviors
-          @companies = companies
-          @company_sizes = company_sizes
-          @custom_audiences = custom_audiences
-          @degrees = degrees
-          @devices = devices
-          @excluded_audiences = excluded_audiences
-          @excluded_locations = excluded_locations
-          @genders = genders
-          @industries = industries
-          @interests = interests
-          @job_functions = job_functions
-          @job_titles = job_titles
-          @keywords = keywords
-          @languages = languages
-          @locations = locations
-          @placements = placements
-          @schools = schools
-          @seniorities = seniorities
-          @skills = skills
+        sig { params(audience: T.nilable(Models::Shared::PropertyAdsCampaignTargetingAudience), brand_safety: T.nilable(Models::Shared::PropertyAdsCampaignTargetingBrandSafety), content: T.nilable(Models::Shared::PropertyAdsCampaignTargetingContent), demographic: T.nilable(Models::Shared::PropertyAdsCampaignTargetingDemographic), device: T.nilable(Models::Shared::PropertyAdsCampaignTargetingDevice), geographic: T.nilable(Models::Shared::PropertyAdsCampaignTargetingGeographic), language: T.nilable(Models::Shared::PropertyAdsCampaignTargetingLanguage), optimization: T.nilable(Models::Shared::PropertyAdsCampaignTargetingOptimization), placement: T.nilable(Models::Shared::PropertyAdsCampaignTargetingPlacement), schedule: T.nilable(T::Array[Models::Shared::AdSchedule])).void }
+        def initialize(audience: nil, brand_safety: nil, content: nil, demographic: nil, device: nil, geographic: nil, language: nil, optimization: nil, placement: nil, schedule: nil)
+          @audience = audience
+          @brand_safety = brand_safety
+          @content = content
+          @demographic = demographic
+          @device = device
+          @geographic = geographic
+          @language = language
+          @optimization = optimization
+          @placement = placement
+          @schedule = schedule
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @age_ranges == other.age_ranges
-          return false unless @audiences == other.audiences
-          return false unless @behaviors == other.behaviors
-          return false unless @companies == other.companies
-          return false unless @company_sizes == other.company_sizes
-          return false unless @custom_audiences == other.custom_audiences
-          return false unless @degrees == other.degrees
-          return false unless @devices == other.devices
-          return false unless @excluded_audiences == other.excluded_audiences
-          return false unless @excluded_locations == other.excluded_locations
-          return false unless @genders == other.genders
-          return false unless @industries == other.industries
-          return false unless @interests == other.interests
-          return false unless @job_functions == other.job_functions
-          return false unless @job_titles == other.job_titles
-          return false unless @keywords == other.keywords
-          return false unless @languages == other.languages
-          return false unless @locations == other.locations
-          return false unless @placements == other.placements
-          return false unless @schools == other.schools
-          return false unless @seniorities == other.seniorities
-          return false unless @skills == other.skills
+          return false unless @audience == other.audience
+          return false unless @brand_safety == other.brand_safety
+          return false unless @content == other.content
+          return false unless @demographic == other.demographic
+          return false unless @device == other.device
+          return false unless @geographic == other.geographic
+          return false unless @language == other.language
+          return false unless @optimization == other.optimization
+          return false unless @placement == other.placement
+          return false unless @schedule == other.schedule
           true
         end
       end

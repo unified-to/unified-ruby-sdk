@@ -16,6 +16,8 @@ class UnifiedRubySDK::Models::Shared::AdsCampaign
   def budget_period=(str_); end
   def campaign_budget_identifier(); end
   def campaign_budget_identifier=(str_); end
+  def category(); end
+  def category=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def currency(); end

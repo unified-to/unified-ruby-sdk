@@ -44,8 +44,6 @@ module UnifiedRubySDK
 
         field :link_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('link_url') } }
 
-        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
-
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
@@ -53,6 +51,8 @@ module UnifiedRubySDK
         field :path1, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('path1') } }
 
         field :path2, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('path2') } }
+
+        field :promoted, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdsPromoted)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('promoted') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
@@ -68,8 +68,8 @@ module UnifiedRubySDK
 
         field :width, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('width') } }
 
-        sig { params(asset_urls: T.nilable(T::Array[::String]), body: T.nilable(::String), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), creative_type: T.nilable(Models::Shared::CreativeType), cta: T.nilable(::String), external_ad_reference: T.nilable(::String), external_creative_reference: T.nilable(::String), external_placement_reference: T.nilable(::String), group_id: T.nilable(::String), height: T.nilable(::Float), hosting_source: T.nilable(Models::Shared::HostingSource), id: T.nilable(::String), item_id: T.nilable(::String), link_url: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AdsMetadata]), name: T.nilable(::String), organization_id: T.nilable(::String), path1: T.nilable(::String), path2: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::AdsCreativeStatus), third_party_tag: T.nilable(::String), title: T.nilable(::String), updated_at: T.nilable(::DateTime), vast_tag_url: T.nilable(::String), width: T.nilable(::Float)).void }
-        def initialize(asset_urls: nil, body: nil, campaign_id: nil, created_at: nil, creative_type: nil, cta: nil, external_ad_reference: nil, external_creative_reference: nil, external_placement_reference: nil, group_id: nil, height: nil, hosting_source: nil, id: nil, item_id: nil, link_url: nil, metadata: nil, name: nil, organization_id: nil, path1: nil, path2: nil, raw: nil, status: nil, third_party_tag: nil, title: nil, updated_at: nil, vast_tag_url: nil, width: nil)
+        sig { params(asset_urls: T.nilable(T::Array[::String]), body: T.nilable(::String), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), creative_type: T.nilable(Models::Shared::CreativeType), cta: T.nilable(::String), external_ad_reference: T.nilable(::String), external_creative_reference: T.nilable(::String), external_placement_reference: T.nilable(::String), group_id: T.nilable(::String), height: T.nilable(::Float), hosting_source: T.nilable(Models::Shared::HostingSource), id: T.nilable(::String), item_id: T.nilable(::String), link_url: T.nilable(::String), name: T.nilable(::String), organization_id: T.nilable(::String), path1: T.nilable(::String), path2: T.nilable(::String), promoted: T.nilable(T::Array[Models::Shared::AdsPromoted]), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::AdsCreativeStatus), third_party_tag: T.nilable(::String), title: T.nilable(::String), updated_at: T.nilable(::DateTime), vast_tag_url: T.nilable(::String), width: T.nilable(::Float)).void }
+        def initialize(asset_urls: nil, body: nil, campaign_id: nil, created_at: nil, creative_type: nil, cta: nil, external_ad_reference: nil, external_creative_reference: nil, external_placement_reference: nil, group_id: nil, height: nil, hosting_source: nil, id: nil, item_id: nil, link_url: nil, name: nil, organization_id: nil, path1: nil, path2: nil, promoted: nil, raw: nil, status: nil, third_party_tag: nil, title: nil, updated_at: nil, vast_tag_url: nil, width: nil)
           @asset_urls = asset_urls
           @body = body
           @campaign_id = campaign_id
@@ -85,11 +85,11 @@ module UnifiedRubySDK
           @id = id
           @item_id = item_id
           @link_url = link_url
-          @metadata = metadata
           @name = name
           @organization_id = organization_id
           @path1 = path1
           @path2 = path2
+          @promoted = promoted
           @raw = raw
           @status = status
           @third_party_tag = third_party_tag
@@ -117,11 +117,11 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @item_id == other.item_id
           return false unless @link_url == other.link_url
-          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @organization_id == other.organization_id
           return false unless @path1 == other.path1
           return false unless @path2 == other.path2
+          return false unless @promoted == other.promoted
           return false unless @raw == other.raw
           return false unless @status == other.status
           return false unless @third_party_tag == other.third_party_tag

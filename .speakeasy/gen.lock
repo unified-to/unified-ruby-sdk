@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 1ecbe864c08b26a953eed6ae60fbd088
+  docChecksum: 63ab4de5c2de6c20799399d339ad2b41
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.44
-  configChecksum: 5524b8a86479d970b315319ca2a60606
+  releaseVersion: 0.67.45
+  configChecksum: 4e045c3ac1e86d156d43eb3a28915710
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -746,9 +746,15 @@ generatedFiles:
   - docs/models/operations/listadsorganizationsqueryparamfields.md
   - docs/models/operations/listadsorganizationsrequest.md
   - docs/models/operations/listadsorganizationsresponse.md
+  - docs/models/operations/listadspromotedesqueryparamfields.md
+  - docs/models/operations/listadspromotedesrequest.md
+  - docs/models/operations/listadspromotedesresponse.md
   - docs/models/operations/listadsreportsqueryparamfields.md
   - docs/models/operations/listadsreportsrequest.md
   - docs/models/operations/listadsreportsresponse.md
+  - docs/models/operations/listadstargetsqueryparamfields.md
+  - docs/models/operations/listadstargetsrequest.md
+  - docs/models/operations/listadstargetsresponse.md
   - docs/models/operations/listassessmentpackagesrequest.md
   - docs/models/operations/listassessmentpackagesresponse.md
   - docs/models/operations/listatsactivitiesqueryparamfields.md
@@ -1882,6 +1888,7 @@ generatedFiles:
   - docs/models/shared/adsadstatus.md
   - docs/models/shared/adscampaign.md
   - docs/models/shared/adscampaignstatus.md
+  - docs/models/shared/adschedule.md
   - docs/models/shared/adscreative.md
   - docs/models/shared/adscreativestatus.md
   - docs/models/shared/adsgroup.md
@@ -1892,11 +1899,15 @@ generatedFiles:
   - docs/models/shared/adsinsertionorderbudgetsegment.md
   - docs/models/shared/adsinsertionorderbudgetunit.md
   - docs/models/shared/adsinsertionorderstatus.md
-  - docs/models/shared/adsmetadata.md
+  - docs/models/shared/adskeyword.md
   - docs/models/shared/adsorganization.md
+  - docs/models/shared/adspromoted.md
+  - docs/models/shared/adspromotedtype.md
   - docs/models/shared/adsreport.md
   - docs/models/shared/adsreportmetrics.md
   - docs/models/shared/adsreportmetricstype.md
+  - docs/models/shared/adstarget.md
+  - docs/models/shared/adstargettype.md
   - docs/models/shared/adtype.md
   - docs/models/shared/advertisingchanneltype.md
   - docs/models/shared/api.md
@@ -1945,9 +1956,6 @@ generatedFiles:
   - docs/models/shared/atsmetadata.md
   - docs/models/shared/atsmetadata1.md
   - docs/models/shared/atsmetadata5.md
-  - docs/models/shared/atsmetadataschemas1.md
-  - docs/models/shared/atsmetadataschemas5.md
-  - docs/models/shared/atsmetadatavalue.md
   - docs/models/shared/atsoffer.md
   - docs/models/shared/atsofferstatus.md
   - docs/models/shared/atsscorecard.md
@@ -1956,6 +1964,9 @@ generatedFiles:
   - docs/models/shared/atsstatusstatus.md
   - docs/models/shared/atstelephone.md
   - docs/models/shared/atstelephonetype.md
+  - docs/models/shared/audiencecombination.md
+  - docs/models/shared/audiencesegment.md
+  - docs/models/shared/billingevent.md
   - docs/models/shared/budgetallocationtype.md
   - docs/models/shared/budgetperiod.md
   - docs/models/shared/budgetunit.md
@@ -1978,6 +1989,7 @@ generatedFiles:
   - docs/models/shared/calendarwebinarpaneliststatus.md
   - docs/models/shared/calendarwebinarregistrant.md
   - docs/models/shared/calendarwebinarstatus.md
+  - docs/models/shared/citytarget.md
   - docs/models/shared/commercecollection.md
   - docs/models/shared/commercecollectiontype.md
   - docs/models/shared/commerceinventory.md
@@ -2032,6 +2044,7 @@ generatedFiles:
   - docs/models/shared/crmstage.md
   - docs/models/shared/crmtelephone.md
   - docs/models/shared/crmtelephonetype.md
+  - docs/models/shared/dayofweek.md
   - docs/models/shared/dbtype.md
   - docs/models/shared/dutiespaidby.md
   - docs/models/shared/employercontributiontype.md
@@ -2216,6 +2229,7 @@ generatedFiles:
   - docs/models/shared/lmsstudent.md
   - docs/models/shared/lmstelephone.md
   - docs/models/shared/lmstelephonetype.md
+  - docs/models/shared/lookalikeaudience.md
   - docs/models/shared/maritalstatus.md
   - docs/models/shared/marketingcampaign.md
   - docs/models/shared/marketingcampaignstatus.md
@@ -2226,6 +2240,7 @@ generatedFiles:
   - docs/models/shared/marketingmemberstatus.md
   - docs/models/shared/marketingreport.md
   - docs/models/shared/marketingreportlink.md
+  - docs/models/shared/matchtype.md
   - docs/models/shared/messagingattachment.md
   - docs/models/shared/messagingbutton.md
   - docs/models/shared/messagingchannel.md
@@ -2237,6 +2252,7 @@ generatedFiles:
   - docs/models/shared/messagingreference.md
   - docs/models/shared/metadatametadata.md
   - docs/models/shared/metadatametadataformat.md
+  - docs/models/shared/mode.md
   - docs/models/shared/nativewebhookcalendarid.md
   - docs/models/shared/nativewebhookcarrierid.md
   - docs/models/shared/nativewebhookchannelid.md
@@ -2257,6 +2273,7 @@ generatedFiles:
   - docs/models/shared/objecttype.md
   - docs/models/shared/one.md
   - docs/models/shared/operation.md
+  - docs/models/shared/optimizationgoal.md
   - docs/models/shared/origin.md
   - docs/models/shared/partnership.md
   - docs/models/shared/paymentcollectionmethod.md
@@ -2273,6 +2290,7 @@ generatedFiles:
   - docs/models/shared/paymenttype.md
   - docs/models/shared/performancegoaltype.md
   - docs/models/shared/period.md
+  - docs/models/shared/presencetype.md
   - docs/models/shared/priority.md
   - docs/models/shared/profilegender.md
   - docs/models/shared/propertyaccountingcontactbillingaddress.md
@@ -2289,12 +2307,44 @@ generatedFiles:
   - docs/models/shared/propertyaccountingsalesordershippingaddress.md
   - docs/models/shared/propertyadscampaignfrequencycap.md
   - docs/models/shared/propertyadscampaigntargeting.md
+  - docs/models/shared/propertyadscampaigntargetingaudience.md
+  - docs/models/shared/propertyadscampaigntargetingbrandsafety.md
+  - docs/models/shared/propertyadscampaigntargetingbrandsafetypublishervisibilitycategories.md
+  - docs/models/shared/propertyadscampaigntargetingcontent.md
+  - docs/models/shared/propertyadscampaigntargetingcontentvideo.md
+  - docs/models/shared/propertyadscampaigntargetingcontentvideodurations.md
+  - docs/models/shared/propertyadscampaigntargetingcontentvideoplayersizes.md
+  - docs/models/shared/propertyadscampaigntargetingcontentvideopositions.md
+  - docs/models/shared/propertyadscampaigntargetingdemographic.md
+  - docs/models/shared/propertyadscampaigntargetingdevice.md
+  - docs/models/shared/propertyadscampaigntargetinggeographic.md
+  - docs/models/shared/propertyadscampaigntargetinggeographiclocationtypes.md
+  - docs/models/shared/propertyadscampaigntargetinglanguage.md
+  - docs/models/shared/propertyadscampaigntargetingoptimization.md
+  - docs/models/shared/propertyadscampaigntargetingplacement.md
   - docs/models/shared/propertyadsgroupbidstrategy.md
   - docs/models/shared/propertyadsgroupbidstrategytype.md
   - docs/models/shared/propertyadsgroupfrequencycap.md
   - docs/models/shared/propertyadsgroupfrequencycaptimeunit.md
   - docs/models/shared/propertyadsgrouppacing.md
   - docs/models/shared/propertyadsgrouptargeting.md
+  - docs/models/shared/propertyadsgrouptargetingaudience.md
+  - docs/models/shared/propertyadsgrouptargetingbrandsafety.md
+  - docs/models/shared/propertyadsgrouptargetingbrandsafetypublishervisibilitycategories.md
+  - docs/models/shared/propertyadsgrouptargetingcontent.md
+  - docs/models/shared/propertyadsgrouptargetingcontentvideo.md
+  - docs/models/shared/propertyadsgrouptargetingcontentvideodurations.md
+  - docs/models/shared/propertyadsgrouptargetingcontentvideoplayersizes.md
+  - docs/models/shared/propertyadsgrouptargetingcontentvideopositions.md
+  - docs/models/shared/propertyadsgrouptargetingdemographic.md
+  - docs/models/shared/propertyadsgrouptargetingdevice.md
+  - docs/models/shared/propertyadsgrouptargetinggeographic.md
+  - docs/models/shared/propertyadsgrouptargetinggeographiclocationtypes.md
+  - docs/models/shared/propertyadsgrouptargetinggeographicpresencetype.md
+  - docs/models/shared/propertyadsgrouptargetinglanguage.md
+  - docs/models/shared/propertyadsgrouptargetingoptimization.md
+  - docs/models/shared/propertyadsgrouptargetingoptimizationmode.md
+  - docs/models/shared/propertyadsgrouptargetingplacement.md
   - docs/models/shared/propertyadsinsertionorderbidstrategy.md
   - docs/models/shared/propertyadsinsertionorderbidstrategyperformancegoaltype.md
   - docs/models/shared/propertyadsinsertionorderbidstrategytype.md
@@ -2316,20 +2366,56 @@ generatedFiles:
   - docs/models/shared/propertyadsreportmetricscampaigngoal.md
   - docs/models/shared/propertyadsreportmetricscampaignstatus.md
   - docs/models/shared/propertyadsreportmetricscampaigntargeting.md
+  - docs/models/shared/propertyadsreportmetricscampaigntargetingaudience.md
+  - docs/models/shared/propertyadsreportmetricscampaigntargetingbrandsafety.md
+  - docs/models/shared/propertyadsreportmetricscampaigntargetingbrandsafetypublishervisibilitycategories.md
+  - docs/models/shared/propertyadsreportmetricscampaigntargetingcontent.md
+  - docs/models/shared/propertyadsreportmetricscampaigntargetingcontentvideo.md
+  - docs/models/shared/propertyadsreportmetricscampaigntargetingcontentvideodurations.md
+  - docs/models/shared/propertyadsreportmetricscampaigntargetingcontentvideoplayersizes.md
+  - docs/models/shared/propertyadsreportmetricscampaigntargetingcontentvideopositions.md
+  - docs/models/shared/propertyadsreportmetricscampaigntargetingdemographic.md
+  - docs/models/shared/propertyadsreportmetricscampaigntargetingdevice.md
+  - docs/models/shared/propertyadsreportmetricscampaigntargetinggeographic.md
+  - docs/models/shared/propertyadsreportmetricscampaigntargetinggeographiclocationtypes.md
+  - docs/models/shared/propertyadsreportmetricscampaigntargetinggeographicpresencetype.md
+  - docs/models/shared/propertyadsreportmetricscampaigntargetinglanguage.md
+  - docs/models/shared/propertyadsreportmetricscampaigntargetingoptimization.md
+  - docs/models/shared/propertyadsreportmetricscampaigntargetingoptimizationmode.md
+  - docs/models/shared/propertyadsreportmetricscampaigntargetingplacement.md
   - docs/models/shared/propertyadsreportmetricsgroup.md
   - docs/models/shared/propertyadsreportmetricsgroupbidstrategy.md
   - docs/models/shared/propertyadsreportmetricsgroupbidstrategyperformancegoaltype.md
   - docs/models/shared/propertyadsreportmetricsgroupbidstrategytype.md
   - docs/models/shared/propertyadsreportmetricsgroupbidstrategyyoutubeandpartnerstype.md
+  - docs/models/shared/propertyadsreportmetricsgroupbillingevent.md
   - docs/models/shared/propertyadsreportmetricsgroupbudgetallocationtype.md
   - docs/models/shared/propertyadsreportmetricsgroupbudgetperiod.md
   - docs/models/shared/propertyadsreportmetricsgroupbudgetunit.md
   - docs/models/shared/propertyadsreportmetricsgroupfrequencycap.md
   - docs/models/shared/propertyadsreportmetricsgroupfrequencycaptimeunit.md
+  - docs/models/shared/propertyadsreportmetricsgroupoptimizationgoal.md
   - docs/models/shared/propertyadsreportmetricsgrouppacing.md
   - docs/models/shared/propertyadsreportmetricsgrouppacingperiod.md
   - docs/models/shared/propertyadsreportmetricsgroupstatus.md
   - docs/models/shared/propertyadsreportmetricsgrouptargeting.md
+  - docs/models/shared/propertyadsreportmetricsgrouptargetingaudience.md
+  - docs/models/shared/propertyadsreportmetricsgrouptargetingbrandsafety.md
+  - docs/models/shared/propertyadsreportmetricsgrouptargetingbrandsafetypublishervisibilitycategories.md
+  - docs/models/shared/propertyadsreportmetricsgrouptargetingcontent.md
+  - docs/models/shared/propertyadsreportmetricsgrouptargetingcontentvideo.md
+  - docs/models/shared/propertyadsreportmetricsgrouptargetingcontentvideodurations.md
+  - docs/models/shared/propertyadsreportmetricsgrouptargetingcontentvideoplayersizes.md
+  - docs/models/shared/propertyadsreportmetricsgrouptargetingcontentvideopositions.md
+  - docs/models/shared/propertyadsreportmetricsgrouptargetingdemographic.md
+  - docs/models/shared/propertyadsreportmetricsgrouptargetingdevice.md
+  - docs/models/shared/propertyadsreportmetricsgrouptargetinggeographic.md
+  - docs/models/shared/propertyadsreportmetricsgrouptargetinggeographiclocationtypes.md
+  - docs/models/shared/propertyadsreportmetricsgrouptargetinggeographicpresencetype.md
+  - docs/models/shared/propertyadsreportmetricsgrouptargetinglanguage.md
+  - docs/models/shared/propertyadsreportmetricsgrouptargetingoptimization.md
+  - docs/models/shared/propertyadsreportmetricsgrouptargetingoptimizationmode.md
+  - docs/models/shared/propertyadsreportmetricsgrouptargetingplacement.md
   - docs/models/shared/propertyadsreportmetricsgrouptype.md
   - docs/models/shared/propertyatsactivityfrom.md
   - docs/models/shared/propertyatsactivityfromtype.md
@@ -2409,7 +2495,9 @@ generatedFiles:
   - docs/models/shared/propertystoragepermissionroles.md
   - docs/models/shared/propertyuccalltelephone.md
   - docs/models/shared/propertyuccalltelephonetype.md
+  - docs/models/shared/radiusunit.md
   - docs/models/shared/recommendation.md
+  - docs/models/shared/regiontarget.md
   - docs/models/shared/registrationstatus.md
   - docs/models/shared/repobranch.md
   - docs/models/shared/repocommit.md
@@ -2675,6 +2763,7 @@ generatedFiles:
   - docs/sdks/pipeline/README.md
   - docs/sdks/profitloss/README.md
   - docs/sdks/project/README.md
+  - docs/sdks/promoted/README.md
   - docs/sdks/prompt/README.md
   - docs/sdks/pullrequest/README.md
   - docs/sdks/purchaseorder/README.md
@@ -2697,6 +2786,7 @@ generatedFiles:
   - docs/sdks/student/README.md
   - docs/sdks/submission/README.md
   - docs/sdks/subscription/README.md
+  - docs/sdks/target/README.md
   - docs/sdks/task/README.md
   - docs/sdks/taxrate/README.md
   - docs/sdks/ticket/README.md
@@ -4244,12 +4334,24 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listadsorganizations_request.rbi
   - lib/unified_ruby_sdk/models/operations/listadsorganizations_response.rb
   - lib/unified_ruby_sdk/models/operations/listadsorganizations_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listadspromotedes_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listadspromotedes_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listadspromotedes_request.rb
+  - lib/unified_ruby_sdk/models/operations/listadspromotedes_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listadspromotedes_response.rb
+  - lib/unified_ruby_sdk/models/operations/listadspromotedes_response.rbi
   - lib/unified_ruby_sdk/models/operations/listadsreports_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listadsreports_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listadsreports_request.rb
   - lib/unified_ruby_sdk/models/operations/listadsreports_request.rbi
   - lib/unified_ruby_sdk/models/operations/listadsreports_response.rb
   - lib/unified_ruby_sdk/models/operations/listadsreports_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listadstargets_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listadstargets_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listadstargets_request.rb
+  - lib/unified_ruby_sdk/models/operations/listadstargets_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listadstargets_response.rb
+  - lib/unified_ruby_sdk/models/operations/listadstargets_response.rbi
   - lib/unified_ruby_sdk/models/operations/listassessmentpackages_request.rb
   - lib/unified_ruby_sdk/models/operations/listassessmentpackages_request.rbi
   - lib/unified_ruby_sdk/models/operations/listassessmentpackages_response.rb
@@ -6519,6 +6621,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/adscampaign.rbi
   - lib/unified_ruby_sdk/models/shared/adscampaign_status.rb
   - lib/unified_ruby_sdk/models/shared/adscampaign_status.rbi
+  - lib/unified_ruby_sdk/models/shared/adschedule.rb
+  - lib/unified_ruby_sdk/models/shared/adschedule.rbi
   - lib/unified_ruby_sdk/models/shared/adscreative.rb
   - lib/unified_ruby_sdk/models/shared/adscreative.rbi
   - lib/unified_ruby_sdk/models/shared/adscreative_status.rb
@@ -6539,16 +6643,24 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/adsinsertionorder_status.rbi
   - lib/unified_ruby_sdk/models/shared/adsinsertionorderbudgetsegment.rb
   - lib/unified_ruby_sdk/models/shared/adsinsertionorderbudgetsegment.rbi
-  - lib/unified_ruby_sdk/models/shared/adsmetadata.rb
-  - lib/unified_ruby_sdk/models/shared/adsmetadata.rbi
+  - lib/unified_ruby_sdk/models/shared/adskeyword.rb
+  - lib/unified_ruby_sdk/models/shared/adskeyword.rbi
   - lib/unified_ruby_sdk/models/shared/adsorganization.rb
   - lib/unified_ruby_sdk/models/shared/adsorganization.rbi
+  - lib/unified_ruby_sdk/models/shared/adspromoted.rb
+  - lib/unified_ruby_sdk/models/shared/adspromoted.rbi
+  - lib/unified_ruby_sdk/models/shared/adspromoted_type.rb
+  - lib/unified_ruby_sdk/models/shared/adspromoted_type.rbi
   - lib/unified_ruby_sdk/models/shared/adsreport.rb
   - lib/unified_ruby_sdk/models/shared/adsreport.rbi
   - lib/unified_ruby_sdk/models/shared/adsreportmetrics.rb
   - lib/unified_ruby_sdk/models/shared/adsreportmetrics.rbi
   - lib/unified_ruby_sdk/models/shared/adsreportmetrics_type.rb
   - lib/unified_ruby_sdk/models/shared/adsreportmetrics_type.rbi
+  - lib/unified_ruby_sdk/models/shared/adstarget.rb
+  - lib/unified_ruby_sdk/models/shared/adstarget.rbi
+  - lib/unified_ruby_sdk/models/shared/adstarget_type.rb
+  - lib/unified_ruby_sdk/models/shared/adstarget_type.rbi
   - lib/unified_ruby_sdk/models/shared/advertising_channel_type.rb
   - lib/unified_ruby_sdk/models/shared/advertising_channel_type.rbi
   - lib/unified_ruby_sdk/models/shared/api.rb
@@ -6643,12 +6755,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/atsmetadata_1.rbi
   - lib/unified_ruby_sdk/models/shared/atsmetadata_5.rb
   - lib/unified_ruby_sdk/models/shared/atsmetadata_5.rbi
-  - lib/unified_ruby_sdk/models/shared/atsmetadata_schemas_1.rb
-  - lib/unified_ruby_sdk/models/shared/atsmetadata_schemas_1.rbi
-  - lib/unified_ruby_sdk/models/shared/atsmetadata_schemas_5.rb
-  - lib/unified_ruby_sdk/models/shared/atsmetadata_schemas_5.rbi
-  - lib/unified_ruby_sdk/models/shared/atsmetadata_value.rb
-  - lib/unified_ruby_sdk/models/shared/atsmetadata_value.rbi
   - lib/unified_ruby_sdk/models/shared/atsoffer.rb
   - lib/unified_ruby_sdk/models/shared/atsoffer.rbi
   - lib/unified_ruby_sdk/models/shared/atsoffer_status.rb
@@ -6665,6 +6771,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/atstelephone.rbi
   - lib/unified_ruby_sdk/models/shared/atstelephone_type.rb
   - lib/unified_ruby_sdk/models/shared/atstelephone_type.rbi
+  - lib/unified_ruby_sdk/models/shared/audiencecombination.rb
+  - lib/unified_ruby_sdk/models/shared/audiencecombination.rbi
+  - lib/unified_ruby_sdk/models/shared/audiencesegment.rb
+  - lib/unified_ruby_sdk/models/shared/audiencesegment.rbi
+  - lib/unified_ruby_sdk/models/shared/billing_event.rb
+  - lib/unified_ruby_sdk/models/shared/billing_event.rbi
   - lib/unified_ruby_sdk/models/shared/budget_allocation_type.rb
   - lib/unified_ruby_sdk/models/shared/budget_allocation_type.rbi
   - lib/unified_ruby_sdk/models/shared/budget_period.rb
@@ -6709,6 +6821,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/calendarwebinarpanelist_status.rbi
   - lib/unified_ruby_sdk/models/shared/calendarwebinarregistrant.rb
   - lib/unified_ruby_sdk/models/shared/calendarwebinarregistrant.rbi
+  - lib/unified_ruby_sdk/models/shared/citytarget.rb
+  - lib/unified_ruby_sdk/models/shared/citytarget.rbi
   - lib/unified_ruby_sdk/models/shared/commercecollection.rb
   - lib/unified_ruby_sdk/models/shared/commercecollection.rbi
   - lib/unified_ruby_sdk/models/shared/commercecollection_type.rb
@@ -6817,6 +6931,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/crmtelephone.rbi
   - lib/unified_ruby_sdk/models/shared/crmtelephone_type.rb
   - lib/unified_ruby_sdk/models/shared/crmtelephone_type.rbi
+  - lib/unified_ruby_sdk/models/shared/day_of_week.rb
+  - lib/unified_ruby_sdk/models/shared/day_of_week.rbi
   - lib/unified_ruby_sdk/models/shared/db_type.rb
   - lib/unified_ruby_sdk/models/shared/db_type.rbi
   - lib/unified_ruby_sdk/models/shared/duties_paid_by.rb
@@ -7185,6 +7301,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/lmstelephone.rbi
   - lib/unified_ruby_sdk/models/shared/lmstelephone_type.rb
   - lib/unified_ruby_sdk/models/shared/lmstelephone_type.rbi
+  - lib/unified_ruby_sdk/models/shared/lookalikeaudience.rb
+  - lib/unified_ruby_sdk/models/shared/lookalikeaudience.rbi
   - lib/unified_ruby_sdk/models/shared/marital_status.rb
   - lib/unified_ruby_sdk/models/shared/marital_status.rbi
   - lib/unified_ruby_sdk/models/shared/marketingcampaign.rb
@@ -7205,6 +7323,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/marketingreport.rbi
   - lib/unified_ruby_sdk/models/shared/marketingreportlink.rb
   - lib/unified_ruby_sdk/models/shared/marketingreportlink.rbi
+  - lib/unified_ruby_sdk/models/shared/match_type.rb
+  - lib/unified_ruby_sdk/models/shared/match_type.rbi
   - lib/unified_ruby_sdk/models/shared/messagingattachment.rb
   - lib/unified_ruby_sdk/models/shared/messagingattachment.rbi
   - lib/unified_ruby_sdk/models/shared/messagingbutton.rb
@@ -7227,6 +7347,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/metadatametadata.rbi
   - lib/unified_ruby_sdk/models/shared/metadatametadata_format.rb
   - lib/unified_ruby_sdk/models/shared/metadatametadata_format.rbi
+  - lib/unified_ruby_sdk/models/shared/mode.rb
+  - lib/unified_ruby_sdk/models/shared/mode.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_calendar_id.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_calendar_id.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_carrier_id.rb
@@ -7267,6 +7389,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/one.rbi
   - lib/unified_ruby_sdk/models/shared/operation.rb
   - lib/unified_ruby_sdk/models/shared/operation.rbi
+  - lib/unified_ruby_sdk/models/shared/optimization_goal.rb
+  - lib/unified_ruby_sdk/models/shared/optimization_goal.rbi
   - lib/unified_ruby_sdk/models/shared/origin.rb
   - lib/unified_ruby_sdk/models/shared/origin.rbi
   - lib/unified_ruby_sdk/models/shared/partnership.rb
@@ -7299,6 +7423,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/performance_goal_type.rbi
   - lib/unified_ruby_sdk/models/shared/period.rb
   - lib/unified_ruby_sdk/models/shared/period.rbi
+  - lib/unified_ruby_sdk/models/shared/presence_type.rb
+  - lib/unified_ruby_sdk/models/shared/presence_type.rbi
   - lib/unified_ruby_sdk/models/shared/priority.rb
   - lib/unified_ruby_sdk/models/shared/priority.rbi
   - lib/unified_ruby_sdk/models/shared/profile_gender.rb
@@ -7331,6 +7457,36 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_adscampaign_frequency_cap.rbi
   - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting.rb
   - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_audience.rb
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_audience.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_brand_safety.rb
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_brand_safety.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_brand_safety_publisher_visibility_categories.rb
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_brand_safety_publisher_visibility_categories.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_content.rb
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_content.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_content_video.rb
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_content_video.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_content_video_durations.rb
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_content_video_durations.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_content_video_player_sizes.rb
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_content_video_player_sizes.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_content_video_positions.rb
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_content_video_positions.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_demographic.rb
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_demographic.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_device.rb
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_device.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_geographic.rb
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_geographic.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_geographic_location_types.rb
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_geographic_location_types.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_language.rb
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_language.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_optimization.rb
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_optimization.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_placement.rb
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_placement.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_bid_strategy.rb
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_bid_strategy.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_bid_strategy_type.rb
@@ -7343,6 +7499,40 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_pacing.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting.rb
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_audience.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_audience.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_brand_safety.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_brand_safety.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_brand_safety_publisher_visibility_categories.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_brand_safety_publisher_visibility_categories.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_content.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_content.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_content_video.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_content_video.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_content_video_durations.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_content_video_durations.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_content_video_player_sizes.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_content_video_player_sizes.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_content_video_positions.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_content_video_positions.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_demographic.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_demographic.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_device.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_device.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_geographic.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_geographic.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_geographic_location_types.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_geographic_location_types.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_geographic_presence_type.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_geographic_presence_type.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_language.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_language.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_optimization.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_optimization.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_optimization_mode.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_optimization_mode.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_placement.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_placement.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsinsertionorder_bid_strategy.rb
   - lib/unified_ruby_sdk/models/shared/property_adsinsertionorder_bid_strategy.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsinsertionorder_bid_strategy_performance_goal_type.rb
@@ -7385,6 +7575,40 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_status.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_audience.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_audience.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_brand_safety.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_brand_safety.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_brand_safety_publisher_visibility_categories.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_brand_safety_publisher_visibility_categories.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_content.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_content.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_content_video.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_content_video.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_content_video_durations.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_content_video_durations.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_content_video_player_sizes.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_content_video_player_sizes.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_content_video_positions.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_content_video_positions.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_demographic.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_demographic.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_device.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_device.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_geographic.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_geographic.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_geographic_location_types.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_geographic_location_types.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_geographic_presence_type.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_geographic_presence_type.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_language.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_language.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_optimization.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_optimization.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_optimization_mode.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_optimization_mode.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_placement.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_placement.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_bid_strategy.rb
@@ -7395,6 +7619,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_bid_strategy_type.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_bid_strategy_youtube_and_partners_type.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_bid_strategy_youtube_and_partners_type.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_billing_event.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_billing_event.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_budget_allocation_type.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_budget_allocation_type.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_budget_period.rb
@@ -7405,6 +7631,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_frequency_cap.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_frequency_cap_time_unit.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_frequency_cap_time_unit.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_optimization_goal.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_optimization_goal.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_pacing.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_pacing.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_pacing_period.rb
@@ -7413,6 +7641,40 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_status.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_audience.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_audience.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_brand_safety.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_brand_safety.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_brand_safety_publisher_visibility_categories.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_brand_safety_publisher_visibility_categories.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_content.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_content.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_content_video.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_content_video.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_content_video_durations.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_content_video_durations.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_content_video_player_sizes.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_content_video_player_sizes.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_content_video_positions.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_content_video_positions.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_demographic.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_demographic.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_device.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_device.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_geographic.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_geographic.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_geographic_location_types.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_geographic_location_types.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_geographic_presence_type.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_geographic_presence_type.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_language.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_language.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_optimization.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_optimization.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_optimization_mode.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_optimization_mode.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_placement.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_placement.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_type.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_type.rbi
   - lib/unified_ruby_sdk/models/shared/property_atsactivity_from.rb
@@ -7571,8 +7833,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_uccall_telephone.rbi
   - lib/unified_ruby_sdk/models/shared/property_uccall_telephone_type.rb
   - lib/unified_ruby_sdk/models/shared/property_uccall_telephone_type.rbi
+  - lib/unified_ruby_sdk/models/shared/radius_unit.rb
+  - lib/unified_ruby_sdk/models/shared/radius_unit.rbi
   - lib/unified_ruby_sdk/models/shared/recommendation.rb
   - lib/unified_ruby_sdk/models/shared/recommendation.rbi
+  - lib/unified_ruby_sdk/models/shared/regiontarget.rb
+  - lib/unified_ruby_sdk/models/shared/regiontarget.rbi
   - lib/unified_ruby_sdk/models/shared/registration_status.rb
   - lib/unified_ruby_sdk/models/shared/registration_status.rbi
   - lib/unified_ruby_sdk/models/shared/repobranch.rb
@@ -7928,6 +8194,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/pipeline.rb
   - lib/unified_ruby_sdk/profitloss.rb
   - lib/unified_ruby_sdk/project.rb
+  - lib/unified_ruby_sdk/promoted.rb
   - lib/unified_ruby_sdk/prompt.rb
   - lib/unified_ruby_sdk/pullrequest.rb
   - lib/unified_ruby_sdk/purchaseorder.rb
@@ -7954,6 +8221,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/student.rb
   - lib/unified_ruby_sdk/submission.rb
   - lib/unified_ruby_sdk/subscription.rb
+  - lib/unified_ruby_sdk/target.rb
   - lib/unified_ruby_sdk/task.rb
   - lib/unified_ruby_sdk/taxrate.rb
   - lib/unified_ruby_sdk/ticket.rb
@@ -13897,5 +14165,21 @@ examples:
       responses:
         "200":
           application/json: {}
+  listAdsPromotedes:
+    speakeasy-default-list-ads-promotedes:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{"id": "<id>", "type": "AD_GROUP_TYPE"}]
+  listAdsTargets:
+    speakeasy-default-list-ads-targets:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{"id": "<id>", "value": "<value>"}]
 examplesVersion: 1.0.2
 generatedTests: {}

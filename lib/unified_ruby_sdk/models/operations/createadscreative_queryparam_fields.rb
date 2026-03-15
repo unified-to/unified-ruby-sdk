@@ -36,7 +36,7 @@ module UnifiedRubySDK
           EXTERNAL_CREATIVE_REFERENCE = new('external_creative_reference')
           EXTERNAL_PLACEMENT_REFERENCE = new('external_placement_reference')
           EXTERNAL_AD_REFERENCE = new('external_ad_reference')
-          METADATA = new('metadata')
+          PROMOTED = new('promoted')
           PATH1 = new('path1')
           PATH2 = new('path2')
           RAW = new('raw')

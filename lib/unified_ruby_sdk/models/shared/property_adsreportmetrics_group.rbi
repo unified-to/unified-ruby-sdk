@@ -42,8 +42,6 @@ class UnifiedRubySDK::Models::Shared::PropertyAdsReportMetricsGroup
   def id=(str_); end
   def insertionorder_id(); end
   def insertionorder_id=(str_); end
-  def metadata(); end
-  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def optimization_goal(); end
@@ -54,6 +52,8 @@ class UnifiedRubySDK::Models::Shared::PropertyAdsReportMetricsGroup
   def pacing=(str_); end
   def parent_id(); end
   def parent_id=(str_); end
+  def promoted(); end
+  def promoted=(str_); end
   def raw(); end
   def raw=(str_); end
   def start_at(); end

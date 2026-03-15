@@ -40,8 +40,6 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
-
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
@@ -50,14 +48,16 @@ module UnifiedRubySDK
 
         field :path2, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('path2') } }
 
+        field :promoted, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdsPromoted)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('promoted') } }
+
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :status, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsAdStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsReportMetricsAdStatus, true) } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(ad_copy: T.nilable(::String), ad_type: T.nilable(Models::Shared::PropertyAdsReportMetricsAdAdType), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), creative_asset_url: T.nilable(::String), creative_ids: T.nilable(T::Array[::String]), cta: T.nilable(::String), description: T.nilable(::String), display_url: T.nilable(::String), final_url: T.nilable(::String), group_id: T.nilable(::String), headline: T.nilable(::String), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AdsMetadata]), name: T.nilable(::String), organization_id: T.nilable(::String), path1: T.nilable(::String), path2: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::PropertyAdsReportMetricsAdStatus), updated_at: T.nilable(::DateTime)).void }
-        def initialize(ad_copy: nil, ad_type: nil, campaign_id: nil, created_at: nil, creative_asset_url: nil, creative_ids: nil, cta: nil, description: nil, display_url: nil, final_url: nil, group_id: nil, headline: nil, id: nil, metadata: nil, name: nil, organization_id: nil, path1: nil, path2: nil, raw: nil, status: nil, updated_at: nil)
+        sig { params(ad_copy: T.nilable(::String), ad_type: T.nilable(Models::Shared::PropertyAdsReportMetricsAdAdType), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), creative_asset_url: T.nilable(::String), creative_ids: T.nilable(T::Array[::String]), cta: T.nilable(::String), description: T.nilable(::String), display_url: T.nilable(::String), final_url: T.nilable(::String), group_id: T.nilable(::String), headline: T.nilable(::String), id: T.nilable(::String), name: T.nilable(::String), organization_id: T.nilable(::String), path1: T.nilable(::String), path2: T.nilable(::String), promoted: T.nilable(T::Array[Models::Shared::AdsPromoted]), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::PropertyAdsReportMetricsAdStatus), updated_at: T.nilable(::DateTime)).void }
+        def initialize(ad_copy: nil, ad_type: nil, campaign_id: nil, created_at: nil, creative_asset_url: nil, creative_ids: nil, cta: nil, description: nil, display_url: nil, final_url: nil, group_id: nil, headline: nil, id: nil, name: nil, organization_id: nil, path1: nil, path2: nil, promoted: nil, raw: nil, status: nil, updated_at: nil)
           @ad_copy = ad_copy
           @ad_type = ad_type
           @campaign_id = campaign_id
@@ -71,11 +71,11 @@ module UnifiedRubySDK
           @group_id = group_id
           @headline = headline
           @id = id
-          @metadata = metadata
           @name = name
           @organization_id = organization_id
           @path1 = path1
           @path2 = path2
+          @promoted = promoted
           @raw = raw
           @status = status
           @updated_at = updated_at
@@ -97,11 +97,11 @@ module UnifiedRubySDK
           return false unless @group_id == other.group_id
           return false unless @headline == other.headline
           return false unless @id == other.id
-          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @organization_id == other.organization_id
           return false unless @path1 == other.path1
           return false unless @path2 == other.path2
+          return false unless @promoted == other.promoted
           return false unless @raw == other.raw
           return false unless @status == other.status
           return false unless @updated_at == other.updated_at

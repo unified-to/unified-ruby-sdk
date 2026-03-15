@@ -32,7 +32,7 @@ module UnifiedRubySDK
           DISPLAY_URL = new('display_url')
           PATH1 = new('path1')
           PATH2 = new('path2')
-          METADATA = new('metadata')
+          PROMOTED = new('promoted')
           RAW = new('raw')
         end
       end
