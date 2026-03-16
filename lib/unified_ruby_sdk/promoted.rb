@@ -39,20 +39,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAdsPromotedesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsPromotedesResponse) }
-    def list_ads_promotedes(request:, timeout_ms: nil)
-      # list_ads_promotedes - List all promotedes
+    sig { params(request: Models::Operations::ListAdsPromotedsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsPromotedsResponse) }
+    def list_ads_promoteds(request:, timeout_ms: nil)
+      # list_ads_promoteds - List all promoteds
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAdsPromotedesRequest,
+        Models::Operations::ListAdsPromotedsRequest,
         base_url,
         '/ads/{connection_id}/promoted',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAdsPromotedesRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAdsPromotedsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -68,7 +68,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAdsPromotedes',
+        operation_id: 'listAdsPromoteds',
         security_source: @sdk_configuration.security_source
       )
 
@@ -127,11 +127,11 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AdsPromoted))
-          response = Models::Operations::ListAdsPromotedesResponse.new(
+          response = Models::Operations::ListAdsPromotedsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
-            ads_promotedes: T.unsafe(obj)
+            ads_promoteds: T.unsafe(obj)
           )
 
           return response

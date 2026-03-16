@@ -2,12 +2,12 @@
 # frozen_string_literal: true
 
 
-class UnifiedRubySDK::Models::Operations::ListAdsPromotedesRequest
+class UnifiedRubySDK::Models::Operations::ListAdsPromotedsRequest
   extend ::Crystalline::MetadataFields::ClassMethods
 end
 
 
-class UnifiedRubySDK::Models::Operations::ListAdsPromotedesRequest
+class UnifiedRubySDK::Models::Operations::ListAdsPromotedsRequest
   def connection_id(); end
   def connection_id=(str_); end
   def fields_(); end

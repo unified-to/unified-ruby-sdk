@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 63ab4de5c2de6c20799399d339ad2b41
+  docChecksum: 6eefdfc44825d8c4165b112c6392dc3c
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.45
-  configChecksum: 4e045c3ac1e86d156d43eb3a28915710
+  releaseVersion: 0.67.46
+  configChecksum: 3e8c53371992ba9d5189a0dfbb41b7b6
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -746,9 +746,9 @@ generatedFiles:
   - docs/models/operations/listadsorganizationsqueryparamfields.md
   - docs/models/operations/listadsorganizationsrequest.md
   - docs/models/operations/listadsorganizationsresponse.md
-  - docs/models/operations/listadspromotedesqueryparamfields.md
-  - docs/models/operations/listadspromotedesrequest.md
-  - docs/models/operations/listadspromotedesresponse.md
+  - docs/models/operations/listadspromotedsqueryparamfields.md
+  - docs/models/operations/listadspromotedsrequest.md
+  - docs/models/operations/listadspromotedsresponse.md
   - docs/models/operations/listadsreportsqueryparamfields.md
   - docs/models/operations/listadsreportsrequest.md
   - docs/models/operations/listadsreportsresponse.md
@@ -4334,12 +4334,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listadsorganizations_request.rbi
   - lib/unified_ruby_sdk/models/operations/listadsorganizations_response.rb
   - lib/unified_ruby_sdk/models/operations/listadsorganizations_response.rbi
-  - lib/unified_ruby_sdk/models/operations/listadspromotedes_queryparam_fields.rb
-  - lib/unified_ruby_sdk/models/operations/listadspromotedes_queryparam_fields.rbi
-  - lib/unified_ruby_sdk/models/operations/listadspromotedes_request.rb
-  - lib/unified_ruby_sdk/models/operations/listadspromotedes_request.rbi
-  - lib/unified_ruby_sdk/models/operations/listadspromotedes_response.rb
-  - lib/unified_ruby_sdk/models/operations/listadspromotedes_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listadspromoteds_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listadspromoteds_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listadspromoteds_request.rb
+  - lib/unified_ruby_sdk/models/operations/listadspromoteds_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listadspromoteds_response.rb
+  - lib/unified_ruby_sdk/models/operations/listadspromoteds_response.rbi
   - lib/unified_ruby_sdk/models/operations/listadsreports_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listadsreports_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listadsreports_request.rb
@@ -14181,5 +14181,13 @@ examples:
       responses:
         "200":
           application/json: [{"id": "<id>", "value": "<value>"}]
+  listAdsPromoteds:
+    speakeasy-default-list-ads-promoteds:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{"id": "<id>", "type": "CUSTOM_CONVERSION_ID"}]
 examplesVersion: 1.0.2
 generatedTests: {}

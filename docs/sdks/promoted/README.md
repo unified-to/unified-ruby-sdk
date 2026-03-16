@@ -5,15 +5,15 @@
 
 ### Available Operations
 
-* [list_ads_promotedes](#list_ads_promotedes) - List all promotedes
+* [list_ads_promoteds](#list_ads_promoteds) - List all promoteds
 
-## list_ads_promotedes
+## list_ads_promoteds
 
-List all promotedes
+List all promoteds
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listAdsPromotedes" method="get" path="/ads/{connection_id}/promoted" -->
+<!-- UsageSnippet language="ruby" operationID="listAdsPromoteds" method="get" path="/ads/{connection_id}/promoted" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -24,13 +24,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListAdsPromotedesRequest.new(
+req = Models::Operations::ListAdsPromotedsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.promoted.list_ads_promotedes(request: req)
+res = s.promoted.list_ads_promoteds(request: req)
 
-unless res.ads_promotedes.nil?
+unless res.ads_promoteds.nil?
   # handle response
 end
 
@@ -38,13 +38,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [Models::Operations::ListAdsPromotedesRequest](../../models/operations/listadspromotedesrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::ListAdsPromotedsRequest](../../models/operations/listadspromotedsrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListAdsPromotedesResponse)](../../models/operations/listadspromotedesresponse.md)**
+**[T.nilable(Models::Operations::ListAdsPromotedsResponse)](../../models/operations/listadspromotedsresponse.md)**
 
 ### Errors
 

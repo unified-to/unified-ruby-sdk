@@ -2,18 +2,18 @@
 # frozen_string_literal: true
 
 
-class UnifiedRubySDK::Models::Operations::ListAdsPromotedesResponse
+class UnifiedRubySDK::Models::Operations::ListAdsPromotedsResponse
   extend ::Crystalline::MetadataFields::ClassMethods
 end
 
 
-class UnifiedRubySDK::Models::Operations::ListAdsPromotedesResponse
+class UnifiedRubySDK::Models::Operations::ListAdsPromotedsResponse
   def content_type(); end
   def content_type=(str_); end
   def status_code(); end
   def status_code=(str_); end
   def raw_response(); end
   def raw_response=(str_); end
-  def ads_promotedes(); end
-  def ads_promotedes=(str_); end
+  def ads_promoteds(); end
+  def ads_promoteds=(str_); end
 end
