@@ -35,6 +35,14 @@ module UnifiedRubySDK
           COLLECTIONS = new('collections')
           TAXRATE_ID = new('taxrate_id')
           RAW = new('raw')
+          IS_VISIBLE = new('is_visible')
+          IS_FEATURED = new('is_featured')
+          WEIGHT = new('weight')
+          WEIGHT_UNIT = new('weight_unit')
+          REQUIRES_SHIPPING = new('requires_shipping')
+          PRICES = new('prices')
+          INVENTORY_ID = new('inventory_id')
+          TOTAL_STOCK = new('total_stock')
         end
       end
     end

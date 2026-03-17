@@ -28,9 +28,15 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :inventory_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('inventory_id') } }
+
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
+        field :is_featured, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_featured') } }
+
         field :is_taxable, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_taxable') } }
+
+        field :is_visible, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_visible') } }
 
         field :media, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceItemMedia)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
 
@@ -38,17 +44,23 @@ module UnifiedRubySDK
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
+        field :prices, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceItemPrice)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('prices') } }
+
         field :public_description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('public_description') } }
 
         field :public_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('public_name') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
+        field :requires_shipping, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('requires_shipping') } }
+
         field :slug, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('slug') } }
 
         field :tags, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
 
         field :taxrate_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('taxrate_id') } }
+
+        field :total_stock, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_stock') } }
 
         field :type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
 
@@ -58,8 +70,12 @@ module UnifiedRubySDK
 
         field :vendor_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('vendor_name') } }
 
-        sig { params(account_id: T.nilable(::String), collection_ids: T.nilable(T::Array[::String]), collections: T.nilable(T::Array[Models::Shared::CommerceReference]), created_at: T.nilable(::DateTime), description: T.nilable(::String), global_code: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_taxable: T.nilable(T::Boolean), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), name: T.nilable(::String), public_description: T.nilable(::String), public_name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), slug: T.nilable(::String), tags: T.nilable(T::Array[::String]), taxrate_id: T.nilable(::String), type: T.nilable(::String), updated_at: T.nilable(::DateTime), variants: T.nilable(T::Array[Models::Shared::CommerceItemvariant]), vendor_name: T.nilable(::String)).void }
-        def initialize(account_id: nil, collection_ids: nil, collections: nil, created_at: nil, description: nil, global_code: nil, id: nil, is_active: nil, is_taxable: nil, media: nil, metadata: nil, name: nil, public_description: nil, public_name: nil, raw: nil, slug: nil, tags: nil, taxrate_id: nil, type: nil, updated_at: nil, variants: nil, vendor_name: nil)
+        field :weight, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight') } }
+
+        field :weight_unit, Crystalline::Nilable.new(Models::Shared::WeightUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight_unit'), 'decoder': Utils.enum_from_string(Models::Shared::WeightUnit, true) } }
+
+        sig { params(account_id: T.nilable(::String), collection_ids: T.nilable(T::Array[::String]), collections: T.nilable(T::Array[Models::Shared::CommerceReference]), created_at: T.nilable(::DateTime), description: T.nilable(::String), global_code: T.nilable(::String), id: T.nilable(::String), inventory_id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_featured: T.nilable(T::Boolean), is_taxable: T.nilable(T::Boolean), is_visible: T.nilable(T::Boolean), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), name: T.nilable(::String), prices: T.nilable(T::Array[Models::Shared::CommerceItemPrice]), public_description: T.nilable(::String), public_name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), requires_shipping: T.nilable(T::Boolean), slug: T.nilable(::String), tags: T.nilable(T::Array[::String]), taxrate_id: T.nilable(::String), total_stock: T.nilable(::Float), type: T.nilable(::String), updated_at: T.nilable(::DateTime), variants: T.nilable(T::Array[Models::Shared::CommerceItemvariant]), vendor_name: T.nilable(::String), weight: T.nilable(::Float), weight_unit: T.nilable(Models::Shared::WeightUnit)).void }
+        def initialize(account_id: nil, collection_ids: nil, collections: nil, created_at: nil, description: nil, global_code: nil, id: nil, inventory_id: nil, is_active: nil, is_featured: nil, is_taxable: nil, is_visible: nil, media: nil, metadata: nil, name: nil, prices: nil, public_description: nil, public_name: nil, raw: nil, requires_shipping: nil, slug: nil, tags: nil, taxrate_id: nil, total_stock: nil, type: nil, updated_at: nil, variants: nil, vendor_name: nil, weight: nil, weight_unit: nil)
           @account_id = account_id
           @collection_ids = collection_ids
           @collections = collections
@@ -67,21 +83,29 @@ module UnifiedRubySDK
           @description = description
           @global_code = global_code
           @id = id
+          @inventory_id = inventory_id
           @is_active = is_active
+          @is_featured = is_featured
           @is_taxable = is_taxable
+          @is_visible = is_visible
           @media = media
           @metadata = metadata
           @name = name
+          @prices = prices
           @public_description = public_description
           @public_name = public_name
           @raw = raw
+          @requires_shipping = requires_shipping
           @slug = slug
           @tags = tags
           @taxrate_id = taxrate_id
+          @total_stock = total_stock
           @type = type
           @updated_at = updated_at
           @variants = variants
           @vendor_name = vendor_name
+          @weight = weight
+          @weight_unit = weight_unit
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
@@ -94,21 +118,29 @@ module UnifiedRubySDK
           return false unless @description == other.description
           return false unless @global_code == other.global_code
           return false unless @id == other.id
+          return false unless @inventory_id == other.inventory_id
           return false unless @is_active == other.is_active
+          return false unless @is_featured == other.is_featured
           return false unless @is_taxable == other.is_taxable
+          return false unless @is_visible == other.is_visible
           return false unless @media == other.media
           return false unless @metadata == other.metadata
           return false unless @name == other.name
+          return false unless @prices == other.prices
           return false unless @public_description == other.public_description
           return false unless @public_name == other.public_name
           return false unless @raw == other.raw
+          return false unless @requires_shipping == other.requires_shipping
           return false unless @slug == other.slug
           return false unless @tags == other.tags
           return false unless @taxrate_id == other.taxrate_id
+          return false unless @total_stock == other.total_stock
           return false unless @type == other.type
           return false unless @updated_at == other.updated_at
           return false unless @variants == other.variants
           return false unless @vendor_name == other.vendor_name
+          return false unless @weight == other.weight
+          return false unless @weight_unit == other.weight_unit
           true
         end
       end

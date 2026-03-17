@@ -22,28 +22,40 @@ class UnifiedRubySDK::Models::Shared::CommerceItem
   def global_code=(str_); end
   def id(); end
   def id=(str_); end
+  def inventory_id(); end
+  def inventory_id=(str_); end
   def is_active(); end
   def is_active=(str_); end
+  def is_featured(); end
+  def is_featured=(str_); end
   def is_taxable(); end
   def is_taxable=(str_); end
+  def is_visible(); end
+  def is_visible=(str_); end
   def media(); end
   def media=(str_); end
   def metadata(); end
   def metadata=(str_); end
   def name(); end
   def name=(str_); end
+  def prices(); end
+  def prices=(str_); end
   def public_description(); end
   def public_description=(str_); end
   def public_name(); end
   def public_name=(str_); end
   def raw(); end
   def raw=(str_); end
+  def requires_shipping(); end
+  def requires_shipping=(str_); end
   def slug(); end
   def slug=(str_); end
   def tags(); end
   def tags=(str_); end
   def taxrate_id(); end
   def taxrate_id=(str_); end
+  def total_stock(); end
+  def total_stock=(str_); end
   def type(); end
   def type=(str_); end
   def updated_at(); end
@@ -52,4 +64,8 @@ class UnifiedRubySDK::Models::Shared::CommerceItem
   def variants=(str_); end
   def vendor_name(); end
   def vendor_name=(str_); end
+  def weight(); end
+  def weight=(str_); end
+  def weight_unit(); end
+  def weight_unit=(str_); end
 end

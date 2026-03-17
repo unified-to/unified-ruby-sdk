@@ -169,6 +169,7 @@ module UnifiedRubySDK
       autoload :CommerceItemOption, 'unified_ruby_sdk/models/shared/commerceitemoption.rb'
       autoload :CommerceItemPrice, 'unified_ruby_sdk/models/shared/commerceitemprice.rb'
       autoload :CommerceItemvariant, 'unified_ruby_sdk/models/shared/commerceitemvariant.rb'
+      autoload :CommerceItemvariantWeightUnit, 'unified_ruby_sdk/models/shared/commerceitemvariant_weight_unit.rb'
       autoload :CommerceLocation, 'unified_ruby_sdk/models/shared/commercelocation.rb'
       autoload :CommerceMetadata, 'unified_ruby_sdk/models/shared/commercemetadata.rb'
       autoload :CommerceMetadata1, 'unified_ruby_sdk/models/shared/commercemetadata_1.rb'

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 6eefdfc44825d8c4165b112c6392dc3c
+  docChecksum: aac12ad0156f27f49fe3971109dbafae
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.46
-  configChecksum: 3e8c53371992ba9d5189a0dfbb41b7b6
+  releaseVersion: 0.67.47
+  configChecksum: d763d1a7a9b2a9fcdbd73ff7fc20d65d
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -1999,6 +1999,7 @@ generatedFiles:
   - docs/models/shared/commerceitemoption.md
   - docs/models/shared/commerceitemprice.md
   - docs/models/shared/commerceitemvariant.md
+  - docs/models/shared/commerceitemvariantweightunit.md
   - docs/models/shared/commercelocation.md
   - docs/models/shared/commercemetadata.md
   - docs/models/shared/commercemetadata1.md
@@ -6841,6 +6842,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/commerceitemprice.rbi
   - lib/unified_ruby_sdk/models/shared/commerceitemvariant.rb
   - lib/unified_ruby_sdk/models/shared/commerceitemvariant.rbi
+  - lib/unified_ruby_sdk/models/shared/commerceitemvariant_weight_unit.rb
+  - lib/unified_ruby_sdk/models/shared/commerceitemvariant_weight_unit.rbi
   - lib/unified_ruby_sdk/models/shared/commercelocation.rb
   - lib/unified_ruby_sdk/models/shared/commercelocation.rbi
   - lib/unified_ruby_sdk/models/shared/commercemetadata.rb
