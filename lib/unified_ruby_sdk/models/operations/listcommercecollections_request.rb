@@ -23,6 +23,8 @@ module UnifiedRubySDK
         field :offset, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
 
         field :order, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
+        # The org ID to filter by (reference to AccountingOrganization)
+        field :org_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'org_id', 'style': 'form', 'explode': true } }
         # The parent ID to filter by
         field :parent_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'parent_id', 'style': 'form', 'explode': true } }
         # Query string to search. eg. email address or name
@@ -38,13 +40,14 @@ module UnifiedRubySDK
         # Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::ListCommerceCollectionsQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), saleschannel_id: T.nilable(::String), sort: T.nilable(::String), type: T.nilable(::String), updated_gte: T.nilable(::String)).void }
-        def initialize(connection_id:, fields_: nil, limit: nil, offset: nil, order: nil, parent_id: nil, query: nil, raw: nil, saleschannel_id: nil, sort: nil, type: nil, updated_gte: nil)
+        sig { params(connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::ListCommerceCollectionsQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), org_id: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), saleschannel_id: T.nilable(::String), sort: T.nilable(::String), type: T.nilable(::String), updated_gte: T.nilable(::String)).void }
+        def initialize(connection_id:, fields_: nil, limit: nil, offset: nil, order: nil, org_id: nil, parent_id: nil, query: nil, raw: nil, saleschannel_id: nil, sort: nil, type: nil, updated_gte: nil)
           @connection_id = connection_id
           @fields_ = fields_
           @limit = limit
           @offset = offset
           @order = order
+          @org_id = org_id
           @parent_id = parent_id
           @query = query
           @raw = raw
@@ -62,6 +65,7 @@ module UnifiedRubySDK
           return false unless @limit == other.limit
           return false unless @offset == other.offset
           return false unless @order == other.order
+          return false unless @org_id == other.org_id
           return false unless @parent_id == other.parent_id
           return false unless @query == other.query
           return false unless @raw == other.raw

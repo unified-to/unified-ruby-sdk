@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Operations::ListCommerceCollectionsRequest
   def offset=(str_); end
   def order(); end
   def order=(str_); end
+  def org_id(); end
+  def org_id=(str_); end
   def parent_id(); end
   def parent_id=(str_); end
   def query(); end

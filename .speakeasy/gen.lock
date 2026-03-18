@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: aac12ad0156f27f49fe3971109dbafae
+  docChecksum: 5785ce1e8e28607921462e4fb16bfe6d
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.47
-  configChecksum: d763d1a7a9b2a9fcdbd73ff7fc20d65d
+  releaseVersion: 0.67.48
+  configChecksum: 5b8dfa5495de383e48cbc24f24da64e2
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -2176,6 +2176,7 @@ generatedFiles:
   - docs/models/shared/listinstructorid.md
   - docs/models/shared/listinterviewid.md
   - docs/models/shared/listinvoiceid.md
+  - docs/models/shared/listioid.md
   - docs/models/shared/listitemid.md
   - docs/models/shared/listitemvariantid.md
   - docs/models/shared/listjobid.md
@@ -2261,6 +2262,7 @@ generatedFiles:
   - docs/models/shared/nativewebhookcourseid.md
   - docs/models/shared/nativewebhookeventid.md
   - docs/models/shared/nativewebhookformid.md
+  - docs/models/shared/nativewebhookioid.md
   - docs/models/shared/nativewebhooklabelid.md
   - docs/models/shared/nativewebhookmemberid.md
   - docs/models/shared/nativewebhookorderid.md
@@ -2635,6 +2637,7 @@ generatedFiles:
   - docs/models/shared/virtualwebhookformid.md
   - docs/models/shared/virtualwebhookgroupid.md
   - docs/models/shared/virtualwebhookinvoiceid.md
+  - docs/models/shared/virtualwebhookioid.md
   - docs/models/shared/virtualwebhookitemid.md
   - docs/models/shared/virtualwebhookitemvariantid.md
   - docs/models/shared/virtualwebhookjobid.md
@@ -7196,6 +7199,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_interview_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_invoice_id.rb
   - lib/unified_ruby_sdk/models/shared/list_invoice_id.rbi
+  - lib/unified_ruby_sdk/models/shared/list_io_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_io_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_item_id.rb
   - lib/unified_ruby_sdk/models/shared/list_item_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_item_variant_id.rb
@@ -7366,6 +7371,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/native_webhook_event_id.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_form_id.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_form_id.rbi
+  - lib/unified_ruby_sdk/models/shared/native_webhook_io_id.rb
+  - lib/unified_ruby_sdk/models/shared/native_webhook_io_id.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_label_id.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_label_id.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_member_id.rb
@@ -8114,6 +8121,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_group_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_invoice_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_invoice_id.rbi
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_io_id.rb
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_io_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_item_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_item_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_item_variant_id.rb

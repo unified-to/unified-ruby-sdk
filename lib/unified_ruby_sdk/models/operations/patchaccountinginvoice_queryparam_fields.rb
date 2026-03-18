@@ -40,6 +40,7 @@ module UnifiedRubySDK
           TYPE = new('type')
           ATTACHMENTS = new('attachments')
           SEND = new('send')
+          ORGANIZATION_ID = new('organization_id')
           RAW = new('raw')
         end
       end

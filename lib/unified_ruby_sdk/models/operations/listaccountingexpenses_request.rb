@@ -31,6 +31,8 @@ module UnifiedRubySDK
         field :offset, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
 
         field :order, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
+        # The org ID to filter by (reference to AccountingOrganization)
+        field :org_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'org_id', 'style': 'form', 'explode': true } }
         # Query string to search. eg. email address or name
         field :query, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
         # Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -44,8 +46,8 @@ module UnifiedRubySDK
         # The user/employee ID to filter by (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, category_id: T.nilable(::String), contact_id: T.nilable(::String), end_lt: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListAccountingExpensesQueryParamFields]), group_id: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
-        def initialize(connection_id:, category_id: nil, contact_id: nil, end_lt: nil, fields_: nil, group_id: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, start_gte: nil, updated_gte: nil, user_id: nil)
+        sig { params(connection_id: ::String, category_id: T.nilable(::String), contact_id: T.nilable(::String), end_lt: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListAccountingExpensesQueryParamFields]), group_id: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), org_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
+        def initialize(connection_id:, category_id: nil, contact_id: nil, end_lt: nil, fields_: nil, group_id: nil, limit: nil, offset: nil, order: nil, org_id: nil, query: nil, raw: nil, sort: nil, start_gte: nil, updated_gte: nil, user_id: nil)
           @connection_id = connection_id
           @category_id = category_id
           @contact_id = contact_id
@@ -55,6 +57,7 @@ module UnifiedRubySDK
           @limit = limit
           @offset = offset
           @order = order
+          @org_id = org_id
           @query = query
           @raw = raw
           @sort = sort
@@ -75,6 +78,7 @@ module UnifiedRubySDK
           return false unless @limit == other.limit
           return false unless @offset == other.offset
           return false unless @order == other.order
+          return false unless @org_id == other.org_id
           return false unless @query == other.query
           return false unless @raw == other.raw
           return false unless @sort == other.sort

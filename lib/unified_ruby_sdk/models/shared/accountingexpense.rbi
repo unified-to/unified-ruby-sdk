@@ -26,6 +26,8 @@ class UnifiedRubySDK::Models::Shared::AccountingExpense
   def lineitems=(str_); end
   def name(); end
   def name=(str_); end
+  def organization_id(); end
+  def organization_id=(str_); end
   def payment_method(); end
   def payment_method=(str_); end
   def posted_at(); end

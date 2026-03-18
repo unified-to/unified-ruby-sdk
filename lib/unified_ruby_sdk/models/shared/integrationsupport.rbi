@@ -74,6 +74,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_interview_id=(str_); end
   def list_invoice_id(); end
   def list_invoice_id=(str_); end
+  def list_io_id(); end
+  def list_io_id=(str_); end
   def list_item_id(); end
   def list_item_id=(str_); end
   def list_item_variant_id(); end
@@ -172,6 +174,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def native_webhook_event_id=(str_); end
   def native_webhook_form_id(); end
   def native_webhook_form_id=(str_); end
+  def native_webhook_io_id(); end
+  def native_webhook_io_id=(str_); end
   def native_webhook_label_id(); end
   def native_webhook_label_id=(str_); end
   def native_webhook_member_id(); end
@@ -254,6 +258,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_group_id=(str_); end
   def virtual_webhook_invoice_id(); end
   def virtual_webhook_invoice_id=(str_); end
+  def virtual_webhook_io_id(); end
+  def virtual_webhook_io_id=(str_); end
   def virtual_webhook_item_id(); end
   def virtual_webhook_item_id=(str_); end
   def virtual_webhook_item_variant_id(); end

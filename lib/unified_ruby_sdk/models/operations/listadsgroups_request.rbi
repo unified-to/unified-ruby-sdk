@@ -14,6 +14,8 @@ class UnifiedRubySDK::Models::Operations::ListAdsGroupsRequest
   def campaign_id=(str_); end
   def fields_(); end
   def fields_=(str_); end
+  def io_id(); end
+  def io_id=(str_); end
   def limit(); end
   def limit=(str_); end
   def offset(); end

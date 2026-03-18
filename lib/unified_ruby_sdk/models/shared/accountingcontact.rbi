@@ -34,6 +34,8 @@ class UnifiedRubySDK::Models::Shared::AccountingContact
   def last_name=(str_); end
   def name(); end
   def name=(str_); end
+  def organization_id(); end
+  def organization_id=(str_); end
   def payment_methods(); end
   def payment_methods=(str_); end
   def portal_url(); end

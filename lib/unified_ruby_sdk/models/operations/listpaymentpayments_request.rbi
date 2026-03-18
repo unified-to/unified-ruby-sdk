@@ -28,6 +28,8 @@ class UnifiedRubySDK::Models::Operations::ListPaymentPaymentsRequest
   def offset=(str_); end
   def order(); end
   def order=(str_); end
+  def org_id(); end
+  def org_id=(str_); end
   def query(); end
   def query=(str_); end
   def raw(); end
