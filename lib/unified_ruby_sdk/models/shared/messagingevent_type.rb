@@ -22,6 +22,7 @@ module UnifiedRubySDK
           CHANNEL_LEFT = new('CHANNEL_LEFT')
           CHANNEL_CREATED = new('CHANNEL_CREATED')
           CHANNEL_DELETED = new('CHANNEL_DELETED')
+          CHANNEL_RENAMED = new('CHANNEL_RENAMED')
           USER_CREATED = new('USER_CREATED')
           USER_DELETED = new('USER_DELETED')
           USER_UPDATED = new('USER_UPDATED')

@@ -36,8 +36,12 @@ module UnifiedRubySDK
 
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(contact_id: T.nilable(::String), contacts: T.nilable(T::Array[Models::Shared::UcContact]), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), id: T.nilable(::String), is_private: T.nilable(T::Boolean), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), telephone: T.nilable(Models::Shared::PropertyUcCallTelephone), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(contact_id: nil, contacts: nil, created_at: nil, end_at: nil, id: nil, is_private: nil, raw: nil, start_at: nil, telephone: nil, updated_at: nil, user_id: nil)
+        field :user_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_name') } }
+
+        field :user_phone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_phone') } }
+
+        sig { params(contact_id: T.nilable(::String), contacts: T.nilable(T::Array[Models::Shared::UcContact]), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), id: T.nilable(::String), is_private: T.nilable(T::Boolean), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), telephone: T.nilable(Models::Shared::PropertyUcCallTelephone), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), user_name: T.nilable(::String), user_phone: T.nilable(::String)).void }
+        def initialize(contact_id: nil, contacts: nil, created_at: nil, end_at: nil, id: nil, is_private: nil, raw: nil, start_at: nil, telephone: nil, updated_at: nil, user_id: nil, user_name: nil, user_phone: nil)
           @contact_id = contact_id
           @contacts = contacts
           @created_at = created_at
@@ -49,6 +53,8 @@ module UnifiedRubySDK
           @telephone = telephone
           @updated_at = updated_at
           @user_id = user_id
+          @user_name = user_name
+          @user_phone = user_phone
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
@@ -65,6 +71,8 @@ module UnifiedRubySDK
           return false unless @telephone == other.telephone
           return false unless @updated_at == other.updated_at
           return false unless @user_id == other.user_id
+          return false unless @user_name == other.user_name
+          return false unless @user_phone == other.user_phone
           true
         end
       end

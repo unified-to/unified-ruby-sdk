@@ -27,6 +27,8 @@ module UnifiedRubySDK
           USER_ID = new('user_id')
           MEDIA = new('media')
           RAW = new('raw')
+          USER_NAME = new('user_name')
+          USER_PHONE = new('user_phone')
         end
       end
     end

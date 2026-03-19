@@ -34,6 +34,10 @@ class UnifiedRubySDK::Models::Shared::UcRecording
   def updated_at=(str_); end
   def user_id(); end
   def user_id=(str_); end
+  def user_name(); end
+  def user_name=(str_); end
+  def user_phone(); end
+  def user_phone=(str_); end
   def web_url(); end
   def web_url=(str_); end
 end

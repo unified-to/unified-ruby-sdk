@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Operations::ListAccountingTransactionsRequest
   def connection_id(); end
   def connection_id=(str_); end
+  def account_id(); end
+  def account_id=(str_); end
   def contact_id(); end
   def contact_id=(str_); end
   def end_lt(); end
@@ -22,6 +24,8 @@ class UnifiedRubySDK::Models::Operations::ListAccountingTransactionsRequest
   def offset=(str_); end
   def order(); end
   def order=(str_); end
+  def org_id(); end
+  def org_id=(str_); end
   def query(); end
   def query=(str_); end
   def raw(); end

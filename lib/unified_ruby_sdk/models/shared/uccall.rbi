@@ -30,4 +30,8 @@ class UnifiedRubySDK::Models::Shared::UcCall
   def updated_at=(str_); end
   def user_id(); end
   def user_id=(str_); end
+  def user_name(); end
+  def user_name=(str_); end
+  def user_phone(); end
+  def user_phone=(str_); end
 end

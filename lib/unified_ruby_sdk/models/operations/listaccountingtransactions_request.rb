@@ -15,6 +15,8 @@ module UnifiedRubySDK
 
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # The account ID to filter by (reference to AccountingAccount)
+        field :account_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'account_id', 'style': 'form', 'explode': true } }
         # The contact ID to filter by (reference to AccountingContact)
         field :contact_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'contact_id', 'style': 'form', 'explode': true } }
         # The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -27,6 +29,8 @@ module UnifiedRubySDK
         field :offset, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
 
         field :order, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
+        # The org ID to filter by (reference to AccountingOrganization)
+        field :org_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'org_id', 'style': 'form', 'explode': true } }
         # Query string to search. eg. email address or name
         field :query, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
         # Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -38,15 +42,17 @@ module UnifiedRubySDK
         # Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, contact_id: T.nilable(::String), end_lt: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListAccountingTransactionsQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::String)).void }
-        def initialize(connection_id:, contact_id: nil, end_lt: nil, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, start_gte: nil, updated_gte: nil)
+        sig { params(connection_id: ::String, account_id: T.nilable(::String), contact_id: T.nilable(::String), end_lt: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListAccountingTransactionsQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), org_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::String)).void }
+        def initialize(connection_id:, account_id: nil, contact_id: nil, end_lt: nil, fields_: nil, limit: nil, offset: nil, order: nil, org_id: nil, query: nil, raw: nil, sort: nil, start_gte: nil, updated_gte: nil)
           @connection_id = connection_id
+          @account_id = account_id
           @contact_id = contact_id
           @end_lt = end_lt
           @fields_ = fields_
           @limit = limit
           @offset = offset
           @order = order
+          @org_id = org_id
           @query = query
           @raw = raw
           @sort = sort
@@ -58,12 +64,14 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @connection_id == other.connection_id
+          return false unless @account_id == other.account_id
           return false unless @contact_id == other.contact_id
           return false unless @end_lt == other.end_lt
           return false unless @fields_ == other.fields_
           return false unless @limit == other.limit
           return false unless @offset == other.offset
           return false unless @order == other.order
+          return false unless @org_id == other.org_id
           return false unless @query == other.query
           return false unless @raw == other.raw
           return false unless @sort == other.sort
