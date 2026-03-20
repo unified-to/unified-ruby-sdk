@@ -30,8 +30,8 @@ module UnifiedRubySDK
           APPROVED_AT = new('approved_at')
           APPROVER_USER_ID = new('approver_user_id')
           LINEITEMS = new('lineitems')
-          ORGANIZATION_ID = new('organization_id')
           RAW = new('raw')
+          ORGANIZATION_ID = new('organization_id')
         end
       end
     end

@@ -20,6 +20,8 @@ module UnifiedRubySDK
 
         field :cost_center, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('costCenter') } }
 
+        field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+
         field :department, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('department') } }
 
         field :division, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('division') } }
@@ -40,11 +42,12 @@ module UnifiedRubySDK
 
         field :start_date, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('startDate'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(additional_managers: T.nilable(T::Array[Models::Shared::ScimManager]), birthday: T.nilable(::DateTime), cost_center: T.nilable(::String), department: T.nilable(::String), division: T.nilable(::String), employee_number: T.nilable(::String), end_date: T.nilable(::DateTime), gender: T.nilable(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender), level: T.nilable(::String), location: T.nilable(::String), manager: T.nilable(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager), organization: T.nilable(::String), start_date: T.nilable(::DateTime)).void }
-        def initialize(additional_managers: nil, birthday: nil, cost_center: nil, department: nil, division: nil, employee_number: nil, end_date: nil, gender: nil, level: nil, location: nil, manager: nil, organization: nil, start_date: nil)
+        sig { params(additional_managers: T.nilable(T::Array[Models::Shared::ScimManager]), birthday: T.nilable(::DateTime), cost_center: T.nilable(::String), currency: T.nilable(::String), department: T.nilable(::String), division: T.nilable(::String), employee_number: T.nilable(::String), end_date: T.nilable(::DateTime), gender: T.nilable(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender), level: T.nilable(::String), location: T.nilable(::String), manager: T.nilable(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager), organization: T.nilable(::String), start_date: T.nilable(::DateTime)).void }
+        def initialize(additional_managers: nil, birthday: nil, cost_center: nil, currency: nil, department: nil, division: nil, employee_number: nil, end_date: nil, gender: nil, level: nil, location: nil, manager: nil, organization: nil, start_date: nil)
           @additional_managers = additional_managers
           @birthday = birthday
           @cost_center = cost_center
+          @currency = currency
           @department = department
           @division = division
           @employee_number = employee_number
@@ -63,6 +66,7 @@ module UnifiedRubySDK
           return false unless @additional_managers == other.additional_managers
           return false unless @birthday == other.birthday
           return false unless @cost_center == other.cost_center
+          return false unless @currency == other.currency
           return false unless @department == other.department
           return false unless @division == other.division
           return false unless @employee_number == other.employee_number

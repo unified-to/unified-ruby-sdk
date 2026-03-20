@@ -34,8 +34,8 @@ module UnifiedRubySDK
           COMPANY_NAME = new('company_name')
           IDENTIFICATION = new('identification')
           ASSOCIATED_CONTACTS = new('associated_contacts')
-          ORGANIZATION_ID = new('organization_id')
           RAW = new('raw')
+          ORGANIZATION_ID = new('organization_id')
         end
       end
     end

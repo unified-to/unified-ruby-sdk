@@ -14,6 +14,8 @@ class UnifiedRubySDK::Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasEx
   def birthday=(str_); end
   def cost_center(); end
   def cost_center=(str_); end
+  def currency(); end
+  def currency=(str_); end
   def department(); end
   def department=(str_); end
   def division(); end
