@@ -28,6 +28,8 @@ class UnifiedRubySDK::Models::Shared::PropertyAdsReportMetricsCampaign
   def frequency_cap=(str_); end
   def goal(); end
   def goal=(str_); end
+  def has_eu_political_ads(); end
+  def has_eu_political_ads=(str_); end
   def id(); end
   def id=(str_); end
   def name(); end

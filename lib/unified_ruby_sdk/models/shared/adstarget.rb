@@ -20,13 +20,16 @@ module UnifiedRubySDK
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
         field :type, Crystalline::Nilable.new(Models::Shared::AdsTargetType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AdsTargetType, true) } }
 
-        sig { params(id: ::String, value: ::String, name: T.nilable(::String), type: T.nilable(Models::Shared::AdsTargetType)).void }
-        def initialize(id:, value:, name: nil, type: nil)
+        sig { params(id: ::String, value: ::String, name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::AdsTargetType)).void }
+        def initialize(id:, value:, name: nil, raw: nil, type: nil)
           @id = id
           @value = value
           @name = name
+          @raw = raw
           @type = type
         end
 
@@ -36,6 +39,7 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @value == other.value
           return false unless @name == other.name
+          return false unless @raw == other.raw
           return false unless @type == other.type
           true
         end

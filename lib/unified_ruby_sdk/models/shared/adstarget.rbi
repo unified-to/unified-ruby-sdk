@@ -14,6 +14,8 @@ class UnifiedRubySDK::Models::Shared::AdsTarget
   def value=(str_); end
   def name(); end
   def name=(str_); end
+  def raw(); end
+  def raw=(str_); end
   def type(); end
   def type=(str_); end
 end

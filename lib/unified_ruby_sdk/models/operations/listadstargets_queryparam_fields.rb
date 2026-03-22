@@ -17,6 +17,7 @@ module UnifiedRubySDK
           NAME = new('name')
           VALUE = new('value')
           TYPE = new('type')
+          RAW = new('raw')
         end
       end
     end

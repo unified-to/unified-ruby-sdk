@@ -32,6 +32,7 @@ module UnifiedRubySDK
           CAMPAIGN_BUDGET_IDENTIFIER = new('campaign_budget_identifier')
           CURRENCY = new('currency')
           CATEGORY = new('category')
+          HAS_EU_POLITICAL_ADS = new('has_eu_political_ads')
           RAW = new('raw')
         end
       end
