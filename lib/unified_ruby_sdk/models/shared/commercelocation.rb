@@ -18,6 +18,8 @@ module UnifiedRubySDK
 
         field :address, Crystalline::Nilable.new(Models::Shared::PropertyCommerceLocationAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
 
+        field :categories, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('categories') } }
+
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
@@ -26,29 +28,60 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :image_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('image_url') } }
+
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
         field :language_locale, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language_locale') } }
 
+        field :latitude, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('latitude') } }
+
+        field :location_type, Crystalline::Nilable.new(Models::Shared::LocationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location_type'), 'decoder': Utils.enum_from_string(Models::Shared::LocationType, true) } }
+
+        field :longitude, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('longitude') } }
+
+        field :media, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceItemMedia)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
+
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
+
+        field :price_level, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price_level') } }
+
+        field :rating, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rating') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
+        field :review_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('review_count') } }
+
+        field :telephones, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceTelephone)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
+
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(name: ::String, address: T.nilable(Models::Shared::PropertyCommerceLocationAddress), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), language_locale: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
-        def initialize(name:, address: nil, created_at: nil, currency: nil, description: nil, id: nil, is_active: nil, language_locale: nil, parent_id: nil, raw: nil, updated_at: nil)
+        field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
+
+        sig { params(name: ::String, address: T.nilable(Models::Shared::PropertyCommerceLocationAddress), categories: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), is_active: T.nilable(T::Boolean), language_locale: T.nilable(::String), latitude: T.nilable(::Float), location_type: T.nilable(Models::Shared::LocationType), longitude: T.nilable(::Float), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), parent_id: T.nilable(::String), price_level: T.nilable(::String), rating: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), review_count: T.nilable(::Float), telephones: T.nilable(T::Array[Models::Shared::CommerceTelephone]), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
+        def initialize(name:, address: nil, categories: nil, created_at: nil, currency: nil, description: nil, id: nil, image_url: nil, is_active: nil, language_locale: nil, latitude: nil, location_type: nil, longitude: nil, media: nil, parent_id: nil, price_level: nil, rating: nil, raw: nil, review_count: nil, telephones: nil, updated_at: nil, web_url: nil)
           @name = name
           @address = address
+          @categories = categories
           @created_at = created_at
           @currency = currency
           @description = description
           @id = id
+          @image_url = image_url
           @is_active = is_active
           @language_locale = language_locale
+          @latitude = latitude
+          @location_type = location_type
+          @longitude = longitude
+          @media = media
           @parent_id = parent_id
+          @price_level = price_level
+          @rating = rating
           @raw = raw
+          @review_count = review_count
+          @telephones = telephones
           @updated_at = updated_at
+          @web_url = web_url
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
@@ -56,15 +89,26 @@ module UnifiedRubySDK
           return false unless other.is_a? self.class
           return false unless @name == other.name
           return false unless @address == other.address
+          return false unless @categories == other.categories
           return false unless @created_at == other.created_at
           return false unless @currency == other.currency
           return false unless @description == other.description
           return false unless @id == other.id
+          return false unless @image_url == other.image_url
           return false unless @is_active == other.is_active
           return false unless @language_locale == other.language_locale
+          return false unless @latitude == other.latitude
+          return false unless @location_type == other.location_type
+          return false unless @longitude == other.longitude
+          return false unless @media == other.media
           return false unless @parent_id == other.parent_id
+          return false unless @price_level == other.price_level
+          return false unless @rating == other.rating
           return false unless @raw == other.raw
+          return false unless @review_count == other.review_count
+          return false unless @telephones == other.telephones
           return false unless @updated_at == other.updated_at
+          return false unless @web_url == other.web_url
           true
         end
       end

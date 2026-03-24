@@ -41,6 +41,8 @@ module UnifiedRubySDK
         field :is_verified, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_verified') } }
 
         field :item_variant_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('item_variant_id') } }
+
+        field :location_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location_id') } }
         # Photosvideos attached to the review
         field :media, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceItemMedia)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
 
@@ -58,10 +60,12 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+        field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
+
         field :verified_purchase, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('verified_purchase') } }
 
-        sig { params(item_id: ::String, author_avatar_url: T.nilable(::String), author_email: T.nilable(::String), author_location: T.nilable(::String), author_name: T.nilable(::String), comments: T.nilable(T::Array[Models::Shared::CommerceReviewComment]), content: T.nilable(::String), created_at: T.nilable(::DateTime), helpful_votes: T.nilable(::Float), id: T.nilable(::String), is_featured: T.nilable(T::Boolean), is_public: T.nilable(T::Boolean), is_verified: T.nilable(T::Boolean), item_variant_id: T.nilable(::String), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), rating: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::CommerceReviewStatus), title: T.nilable(::String), unhelpful_votes: T.nilable(::Float), updated_at: T.nilable(::DateTime), verified_purchase: T.nilable(T::Boolean)).void }
-        def initialize(item_id:, author_avatar_url: nil, author_email: nil, author_location: nil, author_name: nil, comments: nil, content: nil, created_at: nil, helpful_votes: nil, id: nil, is_featured: nil, is_public: nil, is_verified: nil, item_variant_id: nil, media: nil, metadata: nil, rating: nil, raw: nil, status: nil, title: nil, unhelpful_votes: nil, updated_at: nil, verified_purchase: nil)
+        sig { params(item_id: ::String, author_avatar_url: T.nilable(::String), author_email: T.nilable(::String), author_location: T.nilable(::String), author_name: T.nilable(::String), comments: T.nilable(T::Array[Models::Shared::CommerceReviewComment]), content: T.nilable(::String), created_at: T.nilable(::DateTime), helpful_votes: T.nilable(::Float), id: T.nilable(::String), is_featured: T.nilable(T::Boolean), is_public: T.nilable(T::Boolean), is_verified: T.nilable(T::Boolean), item_variant_id: T.nilable(::String), location_id: T.nilable(::String), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), rating: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::CommerceReviewStatus), title: T.nilable(::String), unhelpful_votes: T.nilable(::Float), updated_at: T.nilable(::DateTime), url: T.nilable(::String), verified_purchase: T.nilable(T::Boolean)).void }
+        def initialize(item_id:, author_avatar_url: nil, author_email: nil, author_location: nil, author_name: nil, comments: nil, content: nil, created_at: nil, helpful_votes: nil, id: nil, is_featured: nil, is_public: nil, is_verified: nil, item_variant_id: nil, location_id: nil, media: nil, metadata: nil, rating: nil, raw: nil, status: nil, title: nil, unhelpful_votes: nil, updated_at: nil, url: nil, verified_purchase: nil)
           @item_id = item_id
           @author_avatar_url = author_avatar_url
           @author_email = author_email
@@ -76,6 +80,7 @@ module UnifiedRubySDK
           @is_public = is_public
           @is_verified = is_verified
           @item_variant_id = item_variant_id
+          @location_id = location_id
           @media = media
           @metadata = metadata
           @rating = rating
@@ -84,6 +89,7 @@ module UnifiedRubySDK
           @title = title
           @unhelpful_votes = unhelpful_votes
           @updated_at = updated_at
+          @url = url
           @verified_purchase = verified_purchase
         end
 
@@ -104,6 +110,7 @@ module UnifiedRubySDK
           return false unless @is_public == other.is_public
           return false unless @is_verified == other.is_verified
           return false unless @item_variant_id == other.item_variant_id
+          return false unless @location_id == other.location_id
           return false unless @media == other.media
           return false unless @metadata == other.metadata
           return false unless @rating == other.rating
@@ -112,6 +119,7 @@ module UnifiedRubySDK
           return false unless @title == other.title
           return false unless @unhelpful_votes == other.unhelpful_votes
           return false unless @updated_at == other.updated_at
+          return false unless @url == other.url
           return false unless @verified_purchase == other.verified_purchase
           true
         end

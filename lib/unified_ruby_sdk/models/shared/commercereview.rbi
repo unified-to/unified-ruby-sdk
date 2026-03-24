@@ -36,6 +36,8 @@ class UnifiedRubySDK::Models::Shared::CommerceReview
   def is_verified=(str_); end
   def item_variant_id(); end
   def item_variant_id=(str_); end
+  def location_id(); end
+  def location_id=(str_); end
   def media(); end
   def media=(str_); end
   def metadata(); end
@@ -52,6 +54,8 @@ class UnifiedRubySDK::Models::Shared::CommerceReview
   def unhelpful_votes=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
+  def url(); end
+  def url=(str_); end
   def verified_purchase(); end
   def verified_purchase=(str_); end
 end

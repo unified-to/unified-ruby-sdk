@@ -1,0 +1,14 @@
+# CommerceAvailability
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `end_at`                                                             | [Date](https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html) | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `item_id`                                                            | *T.nilable(::String)*                                                | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `location_id`                                                        | *T.nilable(::String)*                                                | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `raw`                                                                | T::Hash[Symbol, *::Object*]                                          | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `size`                                                               | *T.nilable(::Float)*                                                 | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `staff_user_id`                                                      | *T.nilable(::String)*                                                | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `start_at`                                                           | [Date](https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html) | :heavy_minus_sign:                                                   | N/A                                                                  |

@@ -24,6 +24,8 @@ module UnifiedRubySDK
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
+        field :duration, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('duration') } }
+
         field :global_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('global_code') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
@@ -37,6 +39,8 @@ module UnifiedRubySDK
         field :is_taxable, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_taxable') } }
 
         field :is_visible, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_visible') } }
+
+        field :location_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location_id') } }
 
         field :media, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceItemMedia)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
 
@@ -74,13 +78,14 @@ module UnifiedRubySDK
 
         field :weight_unit, Crystalline::Nilable.new(Models::Shared::WeightUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight_unit'), 'decoder': Utils.enum_from_string(Models::Shared::WeightUnit, true) } }
 
-        sig { params(account_id: T.nilable(::String), collection_ids: T.nilable(T::Array[::String]), collections: T.nilable(T::Array[Models::Shared::CommerceReference]), created_at: T.nilable(::DateTime), description: T.nilable(::String), global_code: T.nilable(::String), id: T.nilable(::String), inventory_id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_featured: T.nilable(T::Boolean), is_taxable: T.nilable(T::Boolean), is_visible: T.nilable(T::Boolean), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), name: T.nilable(::String), prices: T.nilable(T::Array[Models::Shared::CommerceItemPrice]), public_description: T.nilable(::String), public_name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), requires_shipping: T.nilable(T::Boolean), slug: T.nilable(::String), tags: T.nilable(T::Array[::String]), taxrate_id: T.nilable(::String), total_stock: T.nilable(::Float), type: T.nilable(::String), updated_at: T.nilable(::DateTime), variants: T.nilable(T::Array[Models::Shared::CommerceItemvariant]), vendor_name: T.nilable(::String), weight: T.nilable(::Float), weight_unit: T.nilable(Models::Shared::WeightUnit)).void }
-        def initialize(account_id: nil, collection_ids: nil, collections: nil, created_at: nil, description: nil, global_code: nil, id: nil, inventory_id: nil, is_active: nil, is_featured: nil, is_taxable: nil, is_visible: nil, media: nil, metadata: nil, name: nil, prices: nil, public_description: nil, public_name: nil, raw: nil, requires_shipping: nil, slug: nil, tags: nil, taxrate_id: nil, total_stock: nil, type: nil, updated_at: nil, variants: nil, vendor_name: nil, weight: nil, weight_unit: nil)
+        sig { params(account_id: T.nilable(::String), collection_ids: T.nilable(T::Array[::String]), collections: T.nilable(T::Array[Models::Shared::CommerceReference]), created_at: T.nilable(::DateTime), description: T.nilable(::String), duration: T.nilable(::Float), global_code: T.nilable(::String), id: T.nilable(::String), inventory_id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_featured: T.nilable(T::Boolean), is_taxable: T.nilable(T::Boolean), is_visible: T.nilable(T::Boolean), location_id: T.nilable(::String), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), name: T.nilable(::String), prices: T.nilable(T::Array[Models::Shared::CommerceItemPrice]), public_description: T.nilable(::String), public_name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), requires_shipping: T.nilable(T::Boolean), slug: T.nilable(::String), tags: T.nilable(T::Array[::String]), taxrate_id: T.nilable(::String), total_stock: T.nilable(::Float), type: T.nilable(::String), updated_at: T.nilable(::DateTime), variants: T.nilable(T::Array[Models::Shared::CommerceItemvariant]), vendor_name: T.nilable(::String), weight: T.nilable(::Float), weight_unit: T.nilable(Models::Shared::WeightUnit)).void }
+        def initialize(account_id: nil, collection_ids: nil, collections: nil, created_at: nil, description: nil, duration: nil, global_code: nil, id: nil, inventory_id: nil, is_active: nil, is_featured: nil, is_taxable: nil, is_visible: nil, location_id: nil, media: nil, metadata: nil, name: nil, prices: nil, public_description: nil, public_name: nil, raw: nil, requires_shipping: nil, slug: nil, tags: nil, taxrate_id: nil, total_stock: nil, type: nil, updated_at: nil, variants: nil, vendor_name: nil, weight: nil, weight_unit: nil)
           @account_id = account_id
           @collection_ids = collection_ids
           @collections = collections
           @created_at = created_at
           @description = description
+          @duration = duration
           @global_code = global_code
           @id = id
           @inventory_id = inventory_id
@@ -88,6 +93,7 @@ module UnifiedRubySDK
           @is_featured = is_featured
           @is_taxable = is_taxable
           @is_visible = is_visible
+          @location_id = location_id
           @media = media
           @metadata = metadata
           @name = name
@@ -116,6 +122,7 @@ module UnifiedRubySDK
           return false unless @collections == other.collections
           return false unless @created_at == other.created_at
           return false unless @description == other.description
+          return false unless @duration == other.duration
           return false unless @global_code == other.global_code
           return false unless @id == other.id
           return false unless @inventory_id == other.inventory_id
@@ -123,6 +130,7 @@ module UnifiedRubySDK
           return false unless @is_featured == other.is_featured
           return false unless @is_taxable == other.is_taxable
           return false unless @is_visible == other.is_visible
+          return false unless @location_id == other.location_id
           return false unless @media == other.media
           return false unless @metadata == other.metadata
           return false unless @name == other.name

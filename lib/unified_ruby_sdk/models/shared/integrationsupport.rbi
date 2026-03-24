@@ -130,6 +130,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_saleschannel_id=(str_); end
   def list_shipment_id(); end
   def list_shipment_id=(str_); end
+  def list_size(); end
+  def list_size=(str_); end
   def list_sort_by_created_at(); end
   def list_sort_by_created_at=(str_); end
   def list_sort_by_name(); end
@@ -174,6 +176,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def native_webhook_event_id=(str_); end
   def native_webhook_form_id(); end
   def native_webhook_form_id=(str_); end
+  def native_webhook_io_id(); end
+  def native_webhook_io_id=(str_); end
   def native_webhook_label_id(); end
   def native_webhook_label_id=(str_); end
   def native_webhook_member_id(); end

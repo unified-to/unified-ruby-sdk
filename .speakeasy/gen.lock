@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: ad0da19a48c2c6324b0575fb8bbcbe79
+  docChecksum: 4b6bb302afd17171c278cb7394f80ddb
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.51
-  configChecksum: fc6130bc2190bdaee98e0231f04e0190
+  releaseVersion: 0.67.52
+  configChecksum: 3c97661894a460a1ee7bc08782ca4add
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -137,6 +137,9 @@ generatedFiles:
   - docs/models/operations/createcommercelocationqueryparamfields.md
   - docs/models/operations/createcommercelocationrequest.md
   - docs/models/operations/createcommercelocationresponse.md
+  - docs/models/operations/createcommercereservationqueryparamfields.md
+  - docs/models/operations/createcommercereservationrequest.md
+  - docs/models/operations/createcommercereservationresponse.md
   - docs/models/operations/createcommercereviewqueryparamfields.md
   - docs/models/operations/createcommercereviewrequest.md
   - docs/models/operations/createcommercereviewresponse.md
@@ -454,6 +457,9 @@ generatedFiles:
   - docs/models/operations/getcommercelocationqueryparamfields.md
   - docs/models/operations/getcommercelocationrequest.md
   - docs/models/operations/getcommercelocationresponse.md
+  - docs/models/operations/getcommercereservationqueryparamfields.md
+  - docs/models/operations/getcommercereservationrequest.md
+  - docs/models/operations/getcommercereservationresponse.md
   - docs/models/operations/getcommercereviewqueryparamfields.md
   - docs/models/operations/getcommercereviewrequest.md
   - docs/models/operations/getcommercereviewresponse.md
@@ -802,6 +808,9 @@ generatedFiles:
   - docs/models/operations/listcalendarwebinarsqueryparamfields.md
   - docs/models/operations/listcalendarwebinarsrequest.md
   - docs/models/operations/listcalendarwebinarsresponse.md
+  - docs/models/operations/listcommerceavailabilitiesqueryparamfields.md
+  - docs/models/operations/listcommerceavailabilitiesrequest.md
+  - docs/models/operations/listcommerceavailabilitiesresponse.md
   - docs/models/operations/listcommercecollectionsqueryparamfields.md
   - docs/models/operations/listcommercecollectionsrequest.md
   - docs/models/operations/listcommercecollectionsresponse.md
@@ -817,6 +826,9 @@ generatedFiles:
   - docs/models/operations/listcommercelocationsqueryparamfields.md
   - docs/models/operations/listcommercelocationsrequest.md
   - docs/models/operations/listcommercelocationsresponse.md
+  - docs/models/operations/listcommercereservationsqueryparamfields.md
+  - docs/models/operations/listcommercereservationsrequest.md
+  - docs/models/operations/listcommercereservationsresponse.md
   - docs/models/operations/listcommercereviewsqueryparamfields.md
   - docs/models/operations/listcommercereviewsrequest.md
   - docs/models/operations/listcommercereviewsresponse.md
@@ -1155,6 +1167,9 @@ generatedFiles:
   - docs/models/operations/patchcommercelocationqueryparamfields.md
   - docs/models/operations/patchcommercelocationrequest.md
   - docs/models/operations/patchcommercelocationresponse.md
+  - docs/models/operations/patchcommercereservationqueryparamfields.md
+  - docs/models/operations/patchcommercereservationrequest.md
+  - docs/models/operations/patchcommercereservationresponse.md
   - docs/models/operations/patchcommercereviewqueryparamfields.md
   - docs/models/operations/patchcommercereviewrequest.md
   - docs/models/operations/patchcommercereviewresponse.md
@@ -1413,6 +1428,8 @@ generatedFiles:
   - docs/models/operations/removecommerceitemvariantresponse.md
   - docs/models/operations/removecommercelocationrequest.md
   - docs/models/operations/removecommercelocationresponse.md
+  - docs/models/operations/removecommercereservationrequest.md
+  - docs/models/operations/removecommercereservationresponse.md
   - docs/models/operations/removecommercereviewrequest.md
   - docs/models/operations/removecommercereviewresponse.md
   - docs/models/operations/removecommercesaleschannelrequest.md
@@ -1648,6 +1665,9 @@ generatedFiles:
   - docs/models/operations/updatecommercelocationqueryparamfields.md
   - docs/models/operations/updatecommercelocationrequest.md
   - docs/models/operations/updatecommercelocationresponse.md
+  - docs/models/operations/updatecommercereservationqueryparamfields.md
+  - docs/models/operations/updatecommercereservationrequest.md
+  - docs/models/operations/updatecommercereservationresponse.md
   - docs/models/operations/updatecommercereviewqueryparamfields.md
   - docs/models/operations/updatecommercereviewrequest.md
   - docs/models/operations/updatecommercereviewresponse.md
@@ -1990,6 +2010,7 @@ generatedFiles:
   - docs/models/shared/calendarwebinarregistrant.md
   - docs/models/shared/calendarwebinarstatus.md
   - docs/models/shared/citytarget.md
+  - docs/models/shared/commerceavailability.md
   - docs/models/shared/commercecollection.md
   - docs/models/shared/commercecollectiontype.md
   - docs/models/shared/commerceinventory.md
@@ -2010,11 +2031,15 @@ generatedFiles:
   - docs/models/shared/commercemetadataschemas5.md
   - docs/models/shared/commercemetadatavalue.md
   - docs/models/shared/commercereference.md
+  - docs/models/shared/commercereservation.md
+  - docs/models/shared/commercereservationstatus.md
   - docs/models/shared/commercereview.md
   - docs/models/shared/commercereviewcomment.md
   - docs/models/shared/commercereviewcommentstatus.md
   - docs/models/shared/commercereviewstatus.md
   - docs/models/shared/commercesaleschannel.md
+  - docs/models/shared/commercetelephone.md
+  - docs/models/shared/commercetelephonetype.md
   - docs/models/shared/connection.md
   - docs/models/shared/contentstype.md
   - docs/models/shared/contenttype.md
@@ -2204,6 +2229,7 @@ generatedFiles:
   - docs/models/shared/listrootid.md
   - docs/models/shared/listsaleschannelid.md
   - docs/models/shared/listshipmentid.md
+  - docs/models/shared/listsize.md
   - docs/models/shared/listsortbycreatedat.md
   - docs/models/shared/listsortbyname.md
   - docs/models/shared/listsortbyupdatedat.md
@@ -2231,6 +2257,7 @@ generatedFiles:
   - docs/models/shared/lmsstudent.md
   - docs/models/shared/lmstelephone.md
   - docs/models/shared/lmstelephonetype.md
+  - docs/models/shared/locationtype.md
   - docs/models/shared/lookalikeaudience.md
   - docs/models/shared/maritalstatus.md
   - docs/models/shared/marketingcampaign.md
@@ -2262,6 +2289,7 @@ generatedFiles:
   - docs/models/shared/nativewebhookcourseid.md
   - docs/models/shared/nativewebhookeventid.md
   - docs/models/shared/nativewebhookformid.md
+  - docs/models/shared/nativewebhookioid.md
   - docs/models/shared/nativewebhooklabelid.md
   - docs/models/shared/nativewebhookmemberid.md
   - docs/models/shared/nativewebhookorderid.md
@@ -2683,6 +2711,7 @@ generatedFiles:
   - docs/sdks/assessment/README.md
   - docs/sdks/ats/README.md
   - docs/sdks/auth/README.md
+  - docs/sdks/availability/README.md
   - docs/sdks/balancesheet/README.md
   - docs/sdks/bankaccount/README.md
   - docs/sdks/benefit/README.md
@@ -2777,6 +2806,7 @@ generatedFiles:
   - docs/sdks/report/README.md
   - docs/sdks/repository/README.md
   - docs/sdks/request/README.md
+  - docs/sdks/reservation/README.md
   - docs/sdks/review/README.md
   - docs/sdks/saleschannel/README.md
   - docs/sdks/salesorder/README.md
@@ -2824,6 +2854,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/assessment.rb
   - lib/unified_ruby_sdk/ats.rb
   - lib/unified_ruby_sdk/auth.rb
+  - lib/unified_ruby_sdk/availability.rb
   - lib/unified_ruby_sdk/balancesheet.rb
   - lib/unified_ruby_sdk/bankaccount.rb
   - lib/unified_ruby_sdk/benefit.rb
@@ -3119,6 +3150,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createcommercelocation_request.rbi
   - lib/unified_ruby_sdk/models/operations/createcommercelocation_response.rb
   - lib/unified_ruby_sdk/models/operations/createcommercelocation_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createcommercereservation_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createcommercereservation_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createcommercereservation_request.rb
+  - lib/unified_ruby_sdk/models/operations/createcommercereservation_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createcommercereservation_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcommercereservation_response.rbi
   - lib/unified_ruby_sdk/models/operations/createcommercereview_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/createcommercereview_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/createcommercereview_request.rb
@@ -3753,6 +3790,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getcommercelocation_request.rbi
   - lib/unified_ruby_sdk/models/operations/getcommercelocation_response.rb
   - lib/unified_ruby_sdk/models/operations/getcommercelocation_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getcommercereservation_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getcommercereservation_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getcommercereservation_request.rb
+  - lib/unified_ruby_sdk/models/operations/getcommercereservation_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getcommercereservation_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcommercereservation_response.rbi
   - lib/unified_ruby_sdk/models/operations/getcommercereview_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/getcommercereview_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/getcommercereview_request.rb
@@ -4449,6 +4492,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listcalendarwebinars_request.rbi
   - lib/unified_ruby_sdk/models/operations/listcalendarwebinars_response.rb
   - lib/unified_ruby_sdk/models/operations/listcalendarwebinars_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listcommerceavailabilities_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listcommerceavailabilities_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listcommerceavailabilities_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcommerceavailabilities_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listcommerceavailabilities_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcommerceavailabilities_response.rbi
   - lib/unified_ruby_sdk/models/operations/listcommercecollections_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listcommercecollections_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listcommercecollections_request.rb
@@ -4479,6 +4528,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listcommercelocations_request.rbi
   - lib/unified_ruby_sdk/models/operations/listcommercelocations_response.rb
   - lib/unified_ruby_sdk/models/operations/listcommercelocations_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listcommercereservations_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listcommercereservations_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listcommercereservations_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcommercereservations_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listcommercereservations_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcommercereservations_response.rbi
   - lib/unified_ruby_sdk/models/operations/listcommercereviews_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listcommercereviews_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listcommercereviews_request.rb
@@ -5155,6 +5210,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchcommercelocation_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchcommercelocation_response.rb
   - lib/unified_ruby_sdk/models/operations/patchcommercelocation_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcommercereservation_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchcommercereservation_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcommercereservation_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchcommercereservation_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcommercereservation_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcommercereservation_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchcommercereview_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/patchcommercereview_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/patchcommercereview_request.rb
@@ -5671,6 +5732,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removecommercelocation_request.rbi
   - lib/unified_ruby_sdk/models/operations/removecommercelocation_response.rb
   - lib/unified_ruby_sdk/models/operations/removecommercelocation_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removecommercereservation_request.rb
+  - lib/unified_ruby_sdk/models/operations/removecommercereservation_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removecommercereservation_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecommercereservation_response.rbi
   - lib/unified_ruby_sdk/models/operations/removecommercereview_request.rb
   - lib/unified_ruby_sdk/models/operations/removecommercereview_request.rbi
   - lib/unified_ruby_sdk/models/operations/removecommercereview_response.rb
@@ -6141,6 +6206,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatecommercelocation_request.rbi
   - lib/unified_ruby_sdk/models/operations/updatecommercelocation_response.rb
   - lib/unified_ruby_sdk/models/operations/updatecommercelocation_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecommercereservation_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updatecommercereservation_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecommercereservation_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatecommercereservation_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecommercereservation_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecommercereservation_response.rbi
   - lib/unified_ruby_sdk/models/operations/updatecommercereview_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/updatecommercereview_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/updatecommercereview_request.rb
@@ -6826,6 +6897,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/calendarwebinarregistrant.rbi
   - lib/unified_ruby_sdk/models/shared/citytarget.rb
   - lib/unified_ruby_sdk/models/shared/citytarget.rbi
+  - lib/unified_ruby_sdk/models/shared/commerceavailability.rb
+  - lib/unified_ruby_sdk/models/shared/commerceavailability.rbi
   - lib/unified_ruby_sdk/models/shared/commercecollection.rb
   - lib/unified_ruby_sdk/models/shared/commercecollection.rbi
   - lib/unified_ruby_sdk/models/shared/commercecollection_type.rb
@@ -6866,6 +6939,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/commercemetadata_value.rbi
   - lib/unified_ruby_sdk/models/shared/commercereference.rb
   - lib/unified_ruby_sdk/models/shared/commercereference.rbi
+  - lib/unified_ruby_sdk/models/shared/commercereservation.rb
+  - lib/unified_ruby_sdk/models/shared/commercereservation.rbi
+  - lib/unified_ruby_sdk/models/shared/commercereservation_status.rb
+  - lib/unified_ruby_sdk/models/shared/commercereservation_status.rbi
   - lib/unified_ruby_sdk/models/shared/commercereview.rb
   - lib/unified_ruby_sdk/models/shared/commercereview.rbi
   - lib/unified_ruby_sdk/models/shared/commercereview_status.rb
@@ -6876,6 +6953,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/commercereviewcomment_status.rbi
   - lib/unified_ruby_sdk/models/shared/commercesaleschannel.rb
   - lib/unified_ruby_sdk/models/shared/commercesaleschannel.rbi
+  - lib/unified_ruby_sdk/models/shared/commercetelephone.rb
+  - lib/unified_ruby_sdk/models/shared/commercetelephone.rbi
+  - lib/unified_ruby_sdk/models/shared/commercetelephone_type.rb
+  - lib/unified_ruby_sdk/models/shared/commercetelephone_type.rbi
   - lib/unified_ruby_sdk/models/shared/connection.rb
   - lib/unified_ruby_sdk/models/shared/connection.rbi
   - lib/unified_ruby_sdk/models/shared/content_type.rb
@@ -7254,6 +7335,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_saleschannel_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_shipment_id.rb
   - lib/unified_ruby_sdk/models/shared/list_shipment_id.rbi
+  - lib/unified_ruby_sdk/models/shared/list_size.rb
+  - lib/unified_ruby_sdk/models/shared/list_size.rbi
   - lib/unified_ruby_sdk/models/shared/list_sort_by_created_at.rb
   - lib/unified_ruby_sdk/models/shared/list_sort_by_created_at.rbi
   - lib/unified_ruby_sdk/models/shared/list_sort_by_name.rb
@@ -7308,6 +7391,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/lmstelephone.rbi
   - lib/unified_ruby_sdk/models/shared/lmstelephone_type.rb
   - lib/unified_ruby_sdk/models/shared/lmstelephone_type.rbi
+  - lib/unified_ruby_sdk/models/shared/location_type.rb
+  - lib/unified_ruby_sdk/models/shared/location_type.rbi
   - lib/unified_ruby_sdk/models/shared/lookalikeaudience.rb
   - lib/unified_ruby_sdk/models/shared/lookalikeaudience.rbi
   - lib/unified_ruby_sdk/models/shared/marital_status.rb
@@ -7370,6 +7455,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/native_webhook_event_id.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_form_id.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_form_id.rbi
+  - lib/unified_ruby_sdk/models/shared/native_webhook_io_id.rb
+  - lib/unified_ruby_sdk/models/shared/native_webhook_io_id.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_label_id.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_label_id.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_member_id.rb
@@ -8214,6 +8301,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/report.rb
   - lib/unified_ruby_sdk/repository.rb
   - lib/unified_ruby_sdk/request.rb
+  - lib/unified_ruby_sdk/reservation.rb
   - lib/unified_ruby_sdk/review.rb
   - lib/unified_ruby_sdk/saleschannel.rb
   - lib/unified_ruby_sdk/salesorder.rb
@@ -14198,5 +14286,68 @@ examples:
       responses:
         "200":
           application/json: [{"id": "<id>", "type": "CUSTOM_CONVERSION_ID"}]
+  createCommerceReservation:
+    speakeasy-default-create-commerce-reservation:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getCommerceReservation:
+    speakeasy-default-get-commerce-reservation:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listCommerceAvailabilities:
+    speakeasy-default-list-commerce-availabilities:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listCommerceReservations:
+    speakeasy-default-list-commerce-reservations:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchCommerceReservation:
+    speakeasy-default-patch-commerce-reservation:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeCommerceReservation:
+    speakeasy-default-remove-commerce-reservation:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateCommerceReservation:
+    speakeasy-default-update-commerce-reservation:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}

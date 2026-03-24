@@ -16,7 +16,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :balancesheet, :bill, :cashflow, :category, :contact, :creditmemo, :expense, :invoice, :journal, :order, :organization, :profitloss, :purchaseorder, :report, :salesorder, :taxrate, :transaction, :trialbalance, :ads, :ad, :campaign, :creative, :group, :insertionorder, :promoted, :target, :assessment, :package, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :event, :link, :recording, :webinar, :commerce, :collection, :inventory, :item, :itemvariant, :location, :review, :saleschannel, :crm, :deal, :lead, :pipeline, :enrich, :person, :forms, :form, :submission, :genai, :embedding, :model, :prompt, :hris, :bankaccount, :benefit, :deduction, :device, :employee, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :lms, :class_, :content, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :shipping, :carrier, :label, :rate, :shipment, :tracking, :storage, :file, :task, :change, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :environment, :integration, :auth, :login, :issue, :webhook, :verification, :request
+    attr_accessor :accounting, :account, :balancesheet, :bill, :cashflow, :category, :contact, :creditmemo, :expense, :invoice, :journal, :order, :organization, :profitloss, :purchaseorder, :report, :salesorder, :taxrate, :transaction, :trialbalance, :ads, :ad, :campaign, :creative, :group, :insertionorder, :promoted, :target, :assessment, :package, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :event, :link, :recording, :webinar, :commerce, :availability, :collection, :inventory, :item, :itemvariant, :location, :reservation, :review, :saleschannel, :crm, :deal, :lead, :pipeline, :enrich, :person, :forms, :form, :submission, :genai, :embedding, :model, :prompt, :hris, :bankaccount, :benefit, :deduction, :device, :employee, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :lms, :class_, :content, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :shipping, :carrier, :label, :rate, :shipment, :tracking, :storage, :file, :task, :change, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :environment, :integration, :auth, :login, :issue, :webhook, :verification, :request
 
     sig do
       params(
@@ -124,11 +124,13 @@ module UnifiedRubySDK
       @recording = Recording.new(@sdk_configuration)
       @webinar = Webinar.new(@sdk_configuration)
       @commerce = Commerce.new(@sdk_configuration)
+      @availability = Availability.new(@sdk_configuration)
       @collection = Collection.new(@sdk_configuration)
       @inventory = Inventory.new(@sdk_configuration)
       @item = Item.new(@sdk_configuration)
       @itemvariant = Itemvariant.new(@sdk_configuration)
       @location = Location.new(@sdk_configuration)
+      @reservation = Reservation.new(@sdk_configuration)
       @review = Review.new(@sdk_configuration)
       @saleschannel = Saleschannel.new(@sdk_configuration)
       @crm = Crm.new(@sdk_configuration)

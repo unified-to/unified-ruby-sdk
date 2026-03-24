@@ -23,6 +23,8 @@ module UnifiedRubySDK
         field :item_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'item_id', 'style': 'form', 'explode': true } }
 
         field :limit, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
+        # The location ID to filter by (reference to CommerceLocation)
+        field :location_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'location_id', 'style': 'form', 'explode': true } }
 
         field :offset, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
 
@@ -36,13 +38,14 @@ module UnifiedRubySDK
         # Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, contact_id: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListCommerceReviewsQueryParamFields]), item_id: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String)).void }
-        def initialize(connection_id:, contact_id: nil, fields_: nil, item_id: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, updated_gte: nil)
+        sig { params(connection_id: ::String, contact_id: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListCommerceReviewsQueryParamFields]), item_id: T.nilable(::String), limit: T.nilable(::Float), location_id: T.nilable(::String), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String)).void }
+        def initialize(connection_id:, contact_id: nil, fields_: nil, item_id: nil, limit: nil, location_id: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, updated_gte: nil)
           @connection_id = connection_id
           @contact_id = contact_id
           @fields_ = fields_
           @item_id = item_id
           @limit = limit
+          @location_id = location_id
           @offset = offset
           @order = order
           @query = query
@@ -59,6 +62,7 @@ module UnifiedRubySDK
           return false unless @fields_ == other.fields_
           return false unless @item_id == other.item_id
           return false unless @limit == other.limit
+          return false unless @location_id == other.location_id
           return false unless @offset == other.offset
           return false unless @order == other.order
           return false unless @query == other.query

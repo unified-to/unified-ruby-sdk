@@ -23,7 +23,18 @@ module UnifiedRubySDK
           LANGUAGE_LOCALE = new('language_locale')
           PARENT_ID = new('parent_id')
           CURRENCY = new('currency')
+          LOCATION_TYPE = new('location_type')
+          TELEPHONES = new('telephones')
+          RATING = new('rating')
+          REVIEW_COUNT = new('review_count')
+          PRICE_LEVEL = new('price_level')
+          LATITUDE = new('latitude')
+          LONGITUDE = new('longitude')
+          IMAGE_URL = new('image_url')
+          WEB_URL = new('web_url')
+          MEDIA = new('media')
           RAW = new('raw')
+          CATEGORIES = new('categories')
         end
       end
     end

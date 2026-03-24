@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::CommerceItem
   def created_at=(str_); end
   def description(); end
   def description=(str_); end
+  def duration(); end
+  def duration=(str_); end
   def global_code(); end
   def global_code=(str_); end
   def id(); end
@@ -32,6 +34,8 @@ class UnifiedRubySDK::Models::Shared::CommerceItem
   def is_taxable=(str_); end
   def is_visible(); end
   def is_visible=(str_); end
+  def location_id(); end
+  def location_id=(str_); end
   def media(); end
   def media=(str_); end
   def metadata(); end

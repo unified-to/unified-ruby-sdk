@@ -18,6 +18,7 @@ module UnifiedRubySDK
           UPDATED_AT = new('updated_at')
           ITEM_ID = new('item_id')
           ITEM_VARIANT_ID = new('item_variant_id')
+          LOCATION_ID = new('location_id')
           RATING = new('rating')
           TITLE = new('title')
           CONTENT = new('content')
@@ -35,6 +36,7 @@ module UnifiedRubySDK
           IS_PUBLIC = new('is_public')
           COMMENTS = new('comments')
           METADATA = new('metadata')
+          URL = new('url')
           RAW = new('raw')
         end
       end
