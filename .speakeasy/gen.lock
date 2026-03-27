@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 4b6bb302afd17171c278cb7394f80ddb
+  docChecksum: f77412ae0427c7004cdb97ca98cb5828
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.52
-  configChecksum: 3c97661894a460a1ee7bc08782ca4add
+  releaseVersion: 0.67.53
+  configChecksum: 822d4f7382a2bb841f5108f2f44d1c2d
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -2619,6 +2619,7 @@ generatedFiles:
   - docs/models/shared/timeunit.md
   - docs/models/shared/type.md
   - docs/models/shared/uccall.md
+  - docs/models/shared/uccalltype.md
   - docs/models/shared/uccomment.md
   - docs/models/shared/uccontact.md
   - docs/models/shared/ucemail.md
@@ -2626,6 +2627,7 @@ generatedFiles:
   - docs/models/shared/ucrecording.md
   - docs/models/shared/ucrecordingmedia.md
   - docs/models/shared/ucrecordingtranscript.md
+  - docs/models/shared/ucrecordingtype.md
   - docs/models/shared/uctelephone.md
   - docs/models/shared/uctelephonetype.md
   - docs/models/shared/value.md
@@ -8115,6 +8117,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/type.rbi
   - lib/unified_ruby_sdk/models/shared/uccall.rb
   - lib/unified_ruby_sdk/models/shared/uccall.rbi
+  - lib/unified_ruby_sdk/models/shared/uccall_type.rb
+  - lib/unified_ruby_sdk/models/shared/uccall_type.rbi
   - lib/unified_ruby_sdk/models/shared/uccomment.rb
   - lib/unified_ruby_sdk/models/shared/uccomment.rbi
   - lib/unified_ruby_sdk/models/shared/uccontact.rb
@@ -8125,6 +8129,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/ucemail_type.rbi
   - lib/unified_ruby_sdk/models/shared/ucrecording.rb
   - lib/unified_ruby_sdk/models/shared/ucrecording.rbi
+  - lib/unified_ruby_sdk/models/shared/ucrecording_type.rb
+  - lib/unified_ruby_sdk/models/shared/ucrecording_type.rbi
   - lib/unified_ruby_sdk/models/shared/ucrecordingmedia.rb
   - lib/unified_ruby_sdk/models/shared/ucrecordingmedia.rbi
   - lib/unified_ruby_sdk/models/shared/ucrecordingtranscript.rb

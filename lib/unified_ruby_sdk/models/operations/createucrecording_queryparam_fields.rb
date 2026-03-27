@@ -26,9 +26,10 @@ module UnifiedRubySDK
           CONTACT_PHONE = new('contact_phone')
           USER_ID = new('user_id')
           MEDIA = new('media')
-          RAW = new('raw')
           USER_NAME = new('user_name')
           USER_PHONE = new('user_phone')
+          TYPE = new('type')
+          RAW = new('raw')
         end
       end
     end

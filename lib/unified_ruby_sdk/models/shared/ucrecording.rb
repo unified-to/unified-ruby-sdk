@@ -36,6 +36,8 @@ module UnifiedRubySDK
 
         field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+        field :type, Crystalline::Nilable.new(Models::Shared::UcRecordingType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::UcRecordingType, true) } }
+
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
@@ -46,8 +48,8 @@ module UnifiedRubySDK
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(call_id: T.nilable(::String), contact_id: T.nilable(::String), contact_name: T.nilable(::String), contact_phone: T.nilable(::String), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), expires_at: T.nilable(::DateTime), id: T.nilable(::String), media: T.nilable(T::Array[Models::Shared::UcRecordingMedia]), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), user_name: T.nilable(::String), user_phone: T.nilable(::String), web_url: T.nilable(::String)).void }
-        def initialize(call_id: nil, contact_id: nil, contact_name: nil, contact_phone: nil, created_at: nil, end_at: nil, expires_at: nil, id: nil, media: nil, raw: nil, start_at: nil, updated_at: nil, user_id: nil, user_name: nil, user_phone: nil, web_url: nil)
+        sig { params(call_id: T.nilable(::String), contact_id: T.nilable(::String), contact_name: T.nilable(::String), contact_phone: T.nilable(::String), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), expires_at: T.nilable(::DateTime), id: T.nilable(::String), media: T.nilable(T::Array[Models::Shared::UcRecordingMedia]), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), type: T.nilable(Models::Shared::UcRecordingType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), user_name: T.nilable(::String), user_phone: T.nilable(::String), web_url: T.nilable(::String)).void }
+        def initialize(call_id: nil, contact_id: nil, contact_name: nil, contact_phone: nil, created_at: nil, end_at: nil, expires_at: nil, id: nil, media: nil, raw: nil, start_at: nil, type: nil, updated_at: nil, user_id: nil, user_name: nil, user_phone: nil, web_url: nil)
           @call_id = call_id
           @contact_id = contact_id
           @contact_name = contact_name
@@ -59,6 +61,7 @@ module UnifiedRubySDK
           @media = media
           @raw = raw
           @start_at = start_at
+          @type = type
           @updated_at = updated_at
           @user_id = user_id
           @user_name = user_name
@@ -80,6 +83,7 @@ module UnifiedRubySDK
           return false unless @media == other.media
           return false unless @raw == other.raw
           return false unless @start_at == other.start_at
+          return false unless @type == other.type
           return false unless @updated_at == other.updated_at
           return false unless @user_id == other.user_id
           return false unless @user_name == other.user_name

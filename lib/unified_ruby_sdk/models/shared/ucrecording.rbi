@@ -30,6 +30,8 @@ class UnifiedRubySDK::Models::Shared::UcRecording
   def raw=(str_); end
   def start_at(); end
   def start_at=(str_); end
+  def type(); end
+  def type=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
   def user_id(); end
