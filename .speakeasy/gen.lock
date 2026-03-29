@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: f77412ae0427c7004cdb97ca98cb5828
+  docChecksum: 5123fef2d7f9f12ba6135b87f82ae573
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.53
-  configChecksum: 822d4f7382a2bb841f5108f2f44d1c2d
+  releaseVersion: 0.67.54
+  configChecksum: 16bead329d2d14e706c15f0267c6f88a
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -197,6 +197,9 @@ generatedFiles:
   - docs/models/operations/createhrislocationqueryparamfields.md
   - docs/models/operations/createhrislocationrequest.md
   - docs/models/operations/createhrislocationresponse.md
+  - docs/models/operations/createhristimeoffqueryparamfields.md
+  - docs/models/operations/createhristimeoffrequest.md
+  - docs/models/operations/createhristimeoffresponse.md
   - docs/models/operations/createhristimeshiftqueryparamfields.md
   - docs/models/operations/createhristimeshiftrequest.md
   - docs/models/operations/createhristimeshiftresponse.md
@@ -1221,6 +1224,9 @@ generatedFiles:
   - docs/models/operations/patchhrislocationqueryparamfields.md
   - docs/models/operations/patchhrislocationrequest.md
   - docs/models/operations/patchhrislocationresponse.md
+  - docs/models/operations/patchhristimeoffqueryparamfields.md
+  - docs/models/operations/patchhristimeoffrequest.md
+  - docs/models/operations/patchhristimeoffresponse.md
   - docs/models/operations/patchhristimeshiftqueryparamfields.md
   - docs/models/operations/patchhristimeshiftrequest.md
   - docs/models/operations/patchhristimeshiftresponse.md
@@ -1464,6 +1470,8 @@ generatedFiles:
   - docs/models/operations/removehrisgroupresponse.md
   - docs/models/operations/removehrislocationrequest.md
   - docs/models/operations/removehrislocationresponse.md
+  - docs/models/operations/removehristimeoffrequest.md
+  - docs/models/operations/removehristimeoffresponse.md
   - docs/models/operations/removehristimeshiftrequest.md
   - docs/models/operations/removehristimeshiftresponse.md
   - docs/models/operations/removekmscommentrequest.md
@@ -1719,6 +1727,9 @@ generatedFiles:
   - docs/models/operations/updatehrislocationqueryparamfields.md
   - docs/models/operations/updatehrislocationrequest.md
   - docs/models/operations/updatehrislocationresponse.md
+  - docs/models/operations/updatehristimeoffqueryparamfields.md
+  - docs/models/operations/updatehristimeoffrequest.md
+  - docs/models/operations/updatehristimeoffresponse.md
   - docs/models/operations/updatehristimeshiftqueryparamfields.md
   - docs/models/operations/updatehristimeshiftrequest.md
   - docs/models/operations/updatehristimeshiftresponse.md
@@ -3272,6 +3283,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createhrislocation_request.rbi
   - lib/unified_ruby_sdk/models/operations/createhrislocation_response.rb
   - lib/unified_ruby_sdk/models/operations/createhrislocation_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createhristimeoff_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createhristimeoff_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createhristimeoff_request.rb
+  - lib/unified_ruby_sdk/models/operations/createhristimeoff_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createhristimeoff_response.rb
+  - lib/unified_ruby_sdk/models/operations/createhristimeoff_response.rbi
   - lib/unified_ruby_sdk/models/operations/createhristimeshift_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/createhristimeshift_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/createhristimeshift_request.rb
@@ -5320,6 +5337,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchhrislocation_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchhrislocation_response.rb
   - lib/unified_ruby_sdk/models/operations/patchhrislocation_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchhristimeoff_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchhristimeoff_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchhristimeoff_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchhristimeoff_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchhristimeoff_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchhristimeoff_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchhristimeshift_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/patchhristimeshift_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/patchhristimeshift_request.rb
@@ -5806,6 +5829,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removehrislocation_request.rbi
   - lib/unified_ruby_sdk/models/operations/removehrislocation_response.rb
   - lib/unified_ruby_sdk/models/operations/removehrislocation_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removehristimeoff_request.rb
+  - lib/unified_ruby_sdk/models/operations/removehristimeoff_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removehristimeoff_response.rb
+  - lib/unified_ruby_sdk/models/operations/removehristimeoff_response.rbi
   - lib/unified_ruby_sdk/models/operations/removehristimeshift_request.rb
   - lib/unified_ruby_sdk/models/operations/removehristimeshift_request.rbi
   - lib/unified_ruby_sdk/models/operations/removehristimeshift_response.rb
@@ -6316,6 +6343,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatehrislocation_request.rbi
   - lib/unified_ruby_sdk/models/operations/updatehrislocation_response.rb
   - lib/unified_ruby_sdk/models/operations/updatehrislocation_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatehristimeoff_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updatehristimeoff_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updatehristimeoff_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatehristimeoff_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatehristimeoff_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatehristimeoff_response.rbi
   - lib/unified_ruby_sdk/models/operations/updatehristimeshift_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/updatehristimeshift_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/updatehristimeshift_request.rb
@@ -10792,7 +10825,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"start_at": "2024-10-20T08:12:47.408Z"}
+          application/json: {}
   getHrisTimeshift:
     speakeasy-default-get-hris-timeshift:
       parameters:
@@ -14346,6 +14379,44 @@ examples:
           id: "<id>"
   updateCommerceReservation:
     speakeasy-default-update-commerce-reservation:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createHrisTimeoff:
+    speakeasy-default-create-hris-timeoff:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchHrisTimeoff:
+    speakeasy-default-patch-hris-timeoff:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeHrisTimeoff:
+    speakeasy-default-remove-hris-timeoff:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateHrisTimeoff:
+    speakeasy-default-update-hris-timeoff:
       parameters:
         path:
           connection_id: "<id>"

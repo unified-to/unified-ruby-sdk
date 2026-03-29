@@ -14,8 +14,6 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :start_at, ::DateTime, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), required: true, 'decoder': Utils.datetime_from_iso_format(false) } }
-
         field :approved_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('approved_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :approver_user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('approver_user_id') } }
@@ -36,15 +34,16 @@ module UnifiedRubySDK
 
         field :reason, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reason') } }
 
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
         field :status, Crystalline::Nilable.new(Models::Shared::HrisTimeoffStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::HrisTimeoffStatus, true) } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(start_at: ::DateTime, approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), comments: T.nilable(::String), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), id: T.nilable(::String), is_paid: T.nilable(T::Boolean), raw: T.nilable(T::Hash[Symbol, ::Object]), reason: T.nilable(::String), status: T.nilable(Models::Shared::HrisTimeoffStatus), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(start_at:, approved_at: nil, approver_user_id: nil, comments: nil, company_id: nil, created_at: nil, end_at: nil, id: nil, is_paid: nil, raw: nil, reason: nil, status: nil, updated_at: nil, user_id: nil)
-          @start_at = start_at
+        sig { params(approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), comments: T.nilable(::String), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), id: T.nilable(::String), is_paid: T.nilable(T::Boolean), raw: T.nilable(T::Hash[Symbol, ::Object]), reason: T.nilable(::String), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HrisTimeoffStatus), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(approved_at: nil, approver_user_id: nil, comments: nil, company_id: nil, created_at: nil, end_at: nil, id: nil, is_paid: nil, raw: nil, reason: nil, start_at: nil, status: nil, updated_at: nil, user_id: nil)
           @approved_at = approved_at
           @approver_user_id = approver_user_id
           @comments = comments
@@ -55,6 +54,7 @@ module UnifiedRubySDK
           @is_paid = is_paid
           @raw = raw
           @reason = reason
+          @start_at = start_at
           @status = status
           @updated_at = updated_at
           @user_id = user_id
@@ -63,7 +63,6 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @start_at == other.start_at
           return false unless @approved_at == other.approved_at
           return false unless @approver_user_id == other.approver_user_id
           return false unless @comments == other.comments
@@ -74,6 +73,7 @@ module UnifiedRubySDK
           return false unless @is_paid == other.is_paid
           return false unless @raw == other.raw
           return false unless @reason == other.reason
+          return false unless @start_at == other.start_at
           return false unless @status == other.status
           return false unless @updated_at == other.updated_at
           return false unless @user_id == other.user_id
