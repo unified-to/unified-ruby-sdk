@@ -300,7 +300,7 @@ module UnifiedRubySDK
       autoload :LmsClass, 'unified_ruby_sdk/models/shared/lmsclass.rb'
       autoload :LmsCollection, 'unified_ruby_sdk/models/shared/lmscollection.rb'
       autoload :LmsContent, 'unified_ruby_sdk/models/shared/lmscontent.rb'
-      autoload :LmsContentShapeLocalization, 'unified_ruby_sdk/models/shared/lmscontentshapelocalization.rb'
+      autoload :LmsContentLocalization, 'unified_ruby_sdk/models/shared/lmscontentlocalization.rb'
       autoload :LmsCourse, 'unified_ruby_sdk/models/shared/lmscourse.rb'
       autoload :LmsEmail, 'unified_ruby_sdk/models/shared/lmsemail.rb'
       autoload :LmsInstructor, 'unified_ruby_sdk/models/shared/lmsinstructor.rb'

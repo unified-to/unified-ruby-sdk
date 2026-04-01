@@ -20,6 +20,7 @@ module UnifiedRubySDK
           COURSE_ID = new('course_id')
           STUDENT_ID = new('student_id')
           DURATION_MINUTES = new('duration_minutes')
+          ASSIGNED_GRADE = new('assigned_grade')
           IS_COMPLETED = new('is_completed')
           PROGRESS_PERCENTAGE = new('progress_percentage')
           STARTED_AT = new('started_at')

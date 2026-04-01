@@ -23,6 +23,7 @@ module UnifiedRubySDK
           DESCRIPTION = new('description')
           HAS_TASKS = new('has_tasks')
           HAS_CHILDREN = new('has_children')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

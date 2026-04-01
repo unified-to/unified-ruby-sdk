@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 4b271fa62ae0cc77a25c0a077d2a284f
+  docChecksum: 3f87f13a8de294c45cde18ca6ba78168
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.55
-  configChecksum: 757a813a03a892e0973e7816487d7368
+  releaseVersion: 0.67.56
+  configChecksum: 1f357cef7b63f98555b108984b7fd8e6
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -2259,7 +2259,7 @@ generatedFiles:
   - docs/models/shared/lmsclass.md
   - docs/models/shared/lmscollection.md
   - docs/models/shared/lmscontent.md
-  - docs/models/shared/lmscontentshapelocalization.md
+  - docs/models/shared/lmscontentlocalization.md
   - docs/models/shared/lmscourse.md
   - docs/models/shared/lmsemail.md
   - docs/models/shared/lmsinstructor.md
@@ -7408,8 +7408,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/lmscollection.rbi
   - lib/unified_ruby_sdk/models/shared/lmscontent.rb
   - lib/unified_ruby_sdk/models/shared/lmscontent.rbi
-  - lib/unified_ruby_sdk/models/shared/lmscontentshapelocalization.rb
-  - lib/unified_ruby_sdk/models/shared/lmscontentshapelocalization.rbi
+  - lib/unified_ruby_sdk/models/shared/lmscontentlocalization.rb
+  - lib/unified_ruby_sdk/models/shared/lmscontentlocalization.rbi
   - lib/unified_ruby_sdk/models/shared/lmscourse.rb
   - lib/unified_ruby_sdk/models/shared/lmscourse.rbi
   - lib/unified_ruby_sdk/models/shared/lmsemail.rb

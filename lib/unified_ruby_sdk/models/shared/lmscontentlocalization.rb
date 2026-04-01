@@ -9,7 +9,7 @@ module UnifiedRubySDK
     module Shared
     
 
-      class LmsContentShapeLocalization
+      class LmsContentLocalization
         extend T::Sig
         include Crystalline::MetadataFields
 
@@ -20,14 +20,11 @@ module UnifiedRubySDK
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :tags, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
-
-        sig { params(description: T.nilable(::String), language: T.nilable(::String), name: T.nilable(::String), tags: T.nilable(T::Array[::String])).void }
-        def initialize(description: nil, language: nil, name: nil, tags: nil)
+        sig { params(description: T.nilable(::String), language: T.nilable(::String), name: T.nilable(::String)).void }
+        def initialize(description: nil, language: nil, name: nil)
           @description = description
           @language = language
           @name = name
-          @tags = tags
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
@@ -36,7 +33,6 @@ module UnifiedRubySDK
           return false unless @description == other.description
           return false unless @language == other.language
           return false unless @name == other.name
-          return false unless @tags == other.tags
           true
         end
       end

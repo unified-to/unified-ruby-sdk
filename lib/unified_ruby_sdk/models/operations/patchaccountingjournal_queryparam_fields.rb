@@ -24,6 +24,7 @@ module UnifiedRubySDK
           DESCRIPTION = new('description')
           POSTED_AT = new('posted_at')
           SOURCE = new('source')
+          ORGANIZATION_ID = new('organization_id')
           RAW = new('raw')
         end
       end

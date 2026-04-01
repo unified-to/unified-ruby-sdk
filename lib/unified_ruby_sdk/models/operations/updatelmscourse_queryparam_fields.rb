@@ -27,6 +27,10 @@ module UnifiedRubySDK
           MEDIA = new('media')
           INSTRUCTOR_IDS = new('instructor_ids')
           STUDENT_IDS = new('student_ids')
+          CONTENT_IDS = new('content_ids')
+          SKILLS = new('skills')
+          DURATION_MINUTES = new('duration_minutes')
+          PROVIDER_NAME = new('provider_name')
           RAW = new('raw')
         end
       end

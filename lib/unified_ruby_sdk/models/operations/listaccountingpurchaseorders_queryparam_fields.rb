@@ -25,6 +25,7 @@ module UnifiedRubySDK
           BILLING_ADDRESS = new('billing_address')
           STATUS = new('status')
           LINEITEMS = new('lineitems')
+          ORGANIZATION_ID = new('organization_id')
           RAW = new('raw')
         end
       end

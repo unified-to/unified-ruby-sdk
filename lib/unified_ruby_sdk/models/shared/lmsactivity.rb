@@ -14,6 +14,8 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
+        field :assigned_grade, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('assigned_grade') } }
+
         field :completed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('completed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :content_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content_id') } }
@@ -38,8 +40,9 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(completed_at: T.nilable(::DateTime), content_id: T.nilable(::String), course_id: T.nilable(::String), created_at: T.nilable(::DateTime), duration_minutes: T.nilable(::Float), id: T.nilable(::String), is_completed: T.nilable(T::Boolean), progress_percentage: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), started_at: T.nilable(::DateTime), student_id: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(completed_at: nil, content_id: nil, course_id: nil, created_at: nil, duration_minutes: nil, id: nil, is_completed: nil, progress_percentage: nil, raw: nil, started_at: nil, student_id: nil, updated_at: nil)
+        sig { params(assigned_grade: T.nilable(::String), completed_at: T.nilable(::DateTime), content_id: T.nilable(::String), course_id: T.nilable(::String), created_at: T.nilable(::DateTime), duration_minutes: T.nilable(::Float), id: T.nilable(::String), is_completed: T.nilable(T::Boolean), progress_percentage: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), started_at: T.nilable(::DateTime), student_id: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(assigned_grade: nil, completed_at: nil, content_id: nil, course_id: nil, created_at: nil, duration_minutes: nil, id: nil, is_completed: nil, progress_percentage: nil, raw: nil, started_at: nil, student_id: nil, updated_at: nil)
+          @assigned_grade = assigned_grade
           @completed_at = completed_at
           @content_id = content_id
           @course_id = course_id
@@ -57,6 +60,7 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
+          return false unless @assigned_grade == other.assigned_grade
           return false unless @completed_at == other.completed_at
           return false unless @content_id == other.content_id
           return false unless @course_id == other.course_id

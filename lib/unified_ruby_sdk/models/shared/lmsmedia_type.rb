@@ -20,7 +20,6 @@ module UnifiedRubySDK
           DOCUMENT = new('DOCUMENT')
           TEXT = new('TEXT')
           HTML = new('HTML')
-          MARKDOWN = new('MARKDOWN')
           OTHER = new('OTHER')
         end
       end

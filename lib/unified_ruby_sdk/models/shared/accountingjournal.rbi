@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::AccountingJournal
   def id=(str_); end
   def lineitems(); end
   def lineitems=(str_); end
+  def organization_id(); end
+  def organization_id=(str_); end
   def posted_at(); end
   def posted_at=(str_); end
   def raw(); end

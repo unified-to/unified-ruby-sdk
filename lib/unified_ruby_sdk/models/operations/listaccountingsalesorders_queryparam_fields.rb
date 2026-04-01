@@ -26,6 +26,7 @@ module UnifiedRubySDK
           STATUS = new('status')
           LINEITEMS = new('lineitems')
           SALES_CHANNEL = new('sales_channel')
+          ORGANIZATION_ID = new('organization_id')
           RAW = new('raw')
         end
       end

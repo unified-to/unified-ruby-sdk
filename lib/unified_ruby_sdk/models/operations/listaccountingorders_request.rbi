@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Operations::ListAccountingOrdersRequest
   def connection_id(); end
   def connection_id=(str_); end
+  def contact_id(); end
+  def contact_id=(str_); end
   def fields_(); end
   def fields_=(str_); end
   def limit(); end

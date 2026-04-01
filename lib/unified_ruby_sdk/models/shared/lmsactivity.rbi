@@ -8,6 +8,8 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::LmsActivity
+  def assigned_grade(); end
+  def assigned_grade=(str_); end
   def completed_at(); end
   def completed_at=(str_); end
   def content_id(); end

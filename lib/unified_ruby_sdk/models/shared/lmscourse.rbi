@@ -12,12 +12,16 @@ class UnifiedRubySDK::Models::Shared::LmsCourse
   def name=(str_); end
   def categories(); end
   def categories=(str_); end
+  def content_ids(); end
+  def content_ids=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def currency(); end
   def currency=(str_); end
   def description(); end
   def description=(str_); end
+  def duration_minutes(); end
+  def duration_minutes=(str_); end
   def id(); end
   def id=(str_); end
   def instructor_ids(); end
@@ -32,8 +36,12 @@ class UnifiedRubySDK::Models::Shared::LmsCourse
   def media=(str_); end
   def price_amount(); end
   def price_amount=(str_); end
+  def provider_name(); end
+  def provider_name=(str_); end
   def raw(); end
   def raw=(str_); end
+  def skills(); end
+  def skills=(str_); end
   def student_ids(); end
   def student_ids=(str_); end
   def updated_at(); end

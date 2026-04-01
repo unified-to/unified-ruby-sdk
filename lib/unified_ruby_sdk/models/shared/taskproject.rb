@@ -26,6 +26,8 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TaskMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
@@ -36,14 +38,15 @@ module UnifiedRubySDK
 
         field :user_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
 
-        sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), group_ids: T.nilable(T::Array[::String]), has_children: T.nilable(T::Boolean), has_tasks: T.nilable(T::Boolean), id: T.nilable(::String), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
-        def initialize(created_at: nil, description: nil, group_ids: nil, has_children: nil, has_tasks: nil, id: nil, name: nil, parent_id: nil, raw: nil, updated_at: nil, user_ids: nil)
+        sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), group_ids: T.nilable(T::Array[::String]), has_children: T.nilable(T::Boolean), has_tasks: T.nilable(T::Boolean), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::TaskMetadata]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
+        def initialize(created_at: nil, description: nil, group_ids: nil, has_children: nil, has_tasks: nil, id: nil, metadata: nil, name: nil, parent_id: nil, raw: nil, updated_at: nil, user_ids: nil)
           @created_at = created_at
           @description = description
           @group_ids = group_ids
           @has_children = has_children
           @has_tasks = has_tasks
           @id = id
+          @metadata = metadata
           @name = name
           @parent_id = parent_id
           @raw = raw
@@ -60,6 +63,7 @@ module UnifiedRubySDK
           return false unless @has_children == other.has_children
           return false unless @has_tasks == other.has_tasks
           return false unless @id == other.id
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @parent_id == other.parent_id
           return false unless @raw == other.raw

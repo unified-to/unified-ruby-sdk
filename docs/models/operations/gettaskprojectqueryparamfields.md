@@ -15,4 +15,5 @@
 | `DESCRIPTION`  | description    |
 | `HAS_TASKS`    | has_tasks      |
 | `HAS_CHILDREN` | has_children   |
+| `METADATA`     | metadata       |
 | `RAW`          | raw            |

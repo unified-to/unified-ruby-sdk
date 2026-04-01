@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Operations::ListAccountingJournalsRequest
   def connection_id(); end
   def connection_id=(str_); end
+  def account_id(); end
+  def account_id=(str_); end
   def fields_(); end
   def fields_=(str_); end
   def limit(); end

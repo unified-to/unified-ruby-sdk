@@ -49,7 +49,7 @@ module UnifiedRubySDK
         field :tags, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-        # {country}-{stateprovince/territory} or just {country} 2-digit ISO codes
+        # {country}-{state/province/territory} or just {country} 2-digit ISO codes
         field :valid_regions, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('valid_regions') } }
 
         sig { params(id: ::String, name: ::String, type: Models::Shared::VerificationPackageType, aliases: T.nilable(T::Array[::String]), average_processing_times: T.nilable(T::Array[Models::Shared::VerificationTime]), cost_amount: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), has_redirect_url: T.nilable(T::Boolean), has_target_url: T.nilable(T::Boolean), info_url: T.nilable(::String), max_score: T.nilable(::Float), needs_ip_address: T.nilable(T::Boolean), parameters: T.nilable(T::Array[Models::Shared::VerificationParameter]), raw: T.nilable(T::Hash[Symbol, ::Object]), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), valid_regions: T.nilable(T::Array[::String])).void }
