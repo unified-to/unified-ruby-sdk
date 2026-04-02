@@ -28,8 +28,10 @@ module UnifiedRubySDK
 
         field :region, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('region') } }
 
-        sig { params(address1: T.nilable(::String), address2: T.nilable(::String), city: T.nilable(::String), country: T.nilable(::String), country_code: T.nilable(::String), postal_code: T.nilable(::String), region: T.nilable(::String)).void }
-        def initialize(address1: nil, address2: nil, city: nil, country: nil, country_code: nil, postal_code: nil, region: nil)
+        field :region_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('region_code') } }
+
+        sig { params(address1: T.nilable(::String), address2: T.nilable(::String), city: T.nilable(::String), country: T.nilable(::String), country_code: T.nilable(::String), postal_code: T.nilable(::String), region: T.nilable(::String), region_code: T.nilable(::String)).void }
+        def initialize(address1: nil, address2: nil, city: nil, country: nil, country_code: nil, postal_code: nil, region: nil, region_code: nil)
           @address1 = address1
           @address2 = address2
           @city = city
@@ -37,6 +39,7 @@ module UnifiedRubySDK
           @country_code = country_code
           @postal_code = postal_code
           @region = region
+          @region_code = region_code
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
@@ -49,6 +52,7 @@ module UnifiedRubySDK
           return false unless @country_code == other.country_code
           return false unless @postal_code == other.postal_code
           return false unless @region == other.region
+          return false unless @region_code == other.region_code
           true
         end
       end

@@ -22,4 +22,6 @@ class UnifiedRubySDK::Models::Shared::PropertyMarketingListAddress
   def postal_code=(str_); end
   def region(); end
   def region=(str_); end
+  def region_code(); end
+  def region_code=(str_); end
 end
