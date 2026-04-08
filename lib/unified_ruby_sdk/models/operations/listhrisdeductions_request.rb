@@ -19,6 +19,8 @@ module UnifiedRubySDK
         field :benefit_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'benefit_id', 'style': 'form', 'explode': true } }
         # The company ID to filter by (reference to HrisCompany)
         field :company_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'company_id', 'style': 'form', 'explode': true } }
+        # The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+        field :end_lt, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'end_lt', 'style': 'form', 'explode': true } }
         # Fields to return
         field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::ListHrisDeductionsQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
@@ -35,16 +37,19 @@ module UnifiedRubySDK
         field :raw, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
         field :sort, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
+        # The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+        field :start_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'start_gte', 'style': 'form', 'explode': true } }
         # Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
         # The user/employee ID to filter by (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, benefit_id: T.nilable(::String), company_id: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListHrisDeductionsQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), payslip_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
-        def initialize(connection_id:, benefit_id: nil, company_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, payslip_id: nil, query: nil, raw: nil, sort: nil, updated_gte: nil, user_id: nil)
+        sig { params(connection_id: ::String, benefit_id: T.nilable(::String), company_id: T.nilable(::String), end_lt: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListHrisDeductionsQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), payslip_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
+        def initialize(connection_id:, benefit_id: nil, company_id: nil, end_lt: nil, fields_: nil, limit: nil, offset: nil, order: nil, payslip_id: nil, query: nil, raw: nil, sort: nil, start_gte: nil, updated_gte: nil, user_id: nil)
           @connection_id = connection_id
           @benefit_id = benefit_id
           @company_id = company_id
+          @end_lt = end_lt
           @fields_ = fields_
           @limit = limit
           @offset = offset
@@ -53,6 +58,7 @@ module UnifiedRubySDK
           @query = query
           @raw = raw
           @sort = sort
+          @start_gte = start_gte
           @updated_gte = updated_gte
           @user_id = user_id
         end
@@ -63,6 +69,7 @@ module UnifiedRubySDK
           return false unless @connection_id == other.connection_id
           return false unless @benefit_id == other.benefit_id
           return false unless @company_id == other.company_id
+          return false unless @end_lt == other.end_lt
           return false unless @fields_ == other.fields_
           return false unless @limit == other.limit
           return false unless @offset == other.offset
@@ -71,6 +78,7 @@ module UnifiedRubySDK
           return false unless @query == other.query
           return false unless @raw == other.raw
           return false unless @sort == other.sort
+          return false unless @start_gte == other.start_gte
           return false unless @updated_gte == other.updated_gte
           return false unless @user_id == other.user_id
           true
