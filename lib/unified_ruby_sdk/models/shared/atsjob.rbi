@@ -26,6 +26,8 @@ class UnifiedRubySDK::Models::Shared::AtsJob
   def groups=(str_); end
   def hiring_manager_ids(); end
   def hiring_manager_ids=(str_); end
+  def hiring_managers(); end
+  def hiring_managers=(str_); end
   def id(); end
   def id=(str_); end
   def language_locale(); end

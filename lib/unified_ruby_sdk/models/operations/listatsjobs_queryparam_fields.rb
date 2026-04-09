@@ -20,6 +20,7 @@ module UnifiedRubySDK
           DESCRIPTION = new('description')
           RECRUITER_IDS = new('recruiter_ids')
           HIRING_MANAGER_IDS = new('hiring_manager_ids')
+          HIRING_MANAGERS = new('hiring_managers')
           STATUS = new('status')
           CLOSED_AT = new('closed_at')
           ADDRESSES = new('addresses')

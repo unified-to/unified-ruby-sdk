@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 5aadf962c09ceec8ee8c741b10920bd7
+  docChecksum: 185e3f9bf567bcfb80297100b1c48628
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.58
-  configChecksum: 96c9e187ee1928f121aec546c5f421fa
+  releaseVersion: 0.67.59
+  configChecksum: 3f127a73ced4fa9aa060d3673ed890a2
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -1989,6 +1989,7 @@ generatedFiles:
   - docs/models/shared/atsmetadata5.md
   - docs/models/shared/atsoffer.md
   - docs/models/shared/atsofferstatus.md
+  - docs/models/shared/atsreference.md
   - docs/models/shared/atsscorecard.md
   - docs/models/shared/atsscorecardquestion.md
   - docs/models/shared/atsstatus.md
@@ -6868,6 +6869,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/atsoffer.rbi
   - lib/unified_ruby_sdk/models/shared/atsoffer_status.rb
   - lib/unified_ruby_sdk/models/shared/atsoffer_status.rbi
+  - lib/unified_ruby_sdk/models/shared/atsreference.rb
+  - lib/unified_ruby_sdk/models/shared/atsreference.rbi
   - lib/unified_ruby_sdk/models/shared/atsscorecard.rb
   - lib/unified_ruby_sdk/models/shared/atsscorecard.rbi
   - lib/unified_ruby_sdk/models/shared/atsscorecardquestion.rb

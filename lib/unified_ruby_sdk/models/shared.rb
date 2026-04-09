@@ -132,6 +132,7 @@ module UnifiedRubySDK
       autoload :AtsMetadata5, 'unified_ruby_sdk/models/shared/atsmetadata_5.rb'
       autoload :AtsOffer, 'unified_ruby_sdk/models/shared/atsoffer.rb'
       autoload :AtsOfferStatus, 'unified_ruby_sdk/models/shared/atsoffer_status.rb'
+      autoload :AtsReference, 'unified_ruby_sdk/models/shared/atsreference.rb'
       autoload :AtsScorecard, 'unified_ruby_sdk/models/shared/atsscorecard.rb'
       autoload :AtsScorecardQuestion, 'unified_ruby_sdk/models/shared/atsscorecardquestion.rb'
       autoload :AtsStatus, 'unified_ruby_sdk/models/shared/atsstatus.rb'
