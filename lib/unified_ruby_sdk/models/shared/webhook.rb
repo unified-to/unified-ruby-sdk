@@ -44,6 +44,8 @@ module UnifiedRubySDK
 
         field :interval, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('interval') } }
 
+        field :is_beta, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_beta') } }
+
         field :is_healthy, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_healthy') } }
 
         field :is_paused, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_paused') } }
@@ -60,8 +62,8 @@ module UnifiedRubySDK
 
         field :environment, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('environment') } }
 
-        sig { params(connection_id: ::String, event: Models::Shared::Event, object_type: Models::Shared::ObjectType, checked_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), db_name_prefix: T.nilable(::String), db_schema: T.nilable(::String), db_type: T.nilable(Models::Shared::DbType), db_url: T.nilable(::String), fields_: T.nilable(::String), filters: T.nilable(T::Hash[Symbol, ::String]), hook_url: T.nilable(::String), id: T.nilable(::String), integration_type: T.nilable(::String), interval: T.nilable(::Float), is_healthy: T.nilable(T::Boolean), is_paused: T.nilable(T::Boolean), page_max_limit: T.nilable(::Float), runs: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), webhook_type: T.nilable(Models::Shared::WebhookType), workspace_id: T.nilable(::String), environment: T.nilable(::String)).void }
-        def initialize(connection_id:, event:, object_type:, checked_at: nil, created_at: nil, db_name_prefix: nil, db_schema: nil, db_type: nil, db_url: nil, fields_: nil, filters: nil, hook_url: nil, id: nil, integration_type: nil, interval: nil, is_healthy: nil, is_paused: nil, page_max_limit: nil, runs: nil, updated_at: nil, webhook_type: nil, workspace_id: nil, environment: 'Production')
+        sig { params(connection_id: ::String, event: Models::Shared::Event, object_type: Models::Shared::ObjectType, checked_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), db_name_prefix: T.nilable(::String), db_schema: T.nilable(::String), db_type: T.nilable(Models::Shared::DbType), db_url: T.nilable(::String), fields_: T.nilable(::String), filters: T.nilable(T::Hash[Symbol, ::String]), hook_url: T.nilable(::String), id: T.nilable(::String), integration_type: T.nilable(::String), interval: T.nilable(::Float), is_beta: T.nilable(T::Boolean), is_healthy: T.nilable(T::Boolean), is_paused: T.nilable(T::Boolean), page_max_limit: T.nilable(::Float), runs: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), webhook_type: T.nilable(Models::Shared::WebhookType), workspace_id: T.nilable(::String), environment: T.nilable(::String)).void }
+        def initialize(connection_id:, event:, object_type:, checked_at: nil, created_at: nil, db_name_prefix: nil, db_schema: nil, db_type: nil, db_url: nil, fields_: nil, filters: nil, hook_url: nil, id: nil, integration_type: nil, interval: nil, is_beta: nil, is_healthy: nil, is_paused: nil, page_max_limit: nil, runs: nil, updated_at: nil, webhook_type: nil, workspace_id: nil, environment: 'Production')
           @connection_id = connection_id
           @event = event
           @object_type = object_type
@@ -77,6 +79,7 @@ module UnifiedRubySDK
           @id = id
           @integration_type = integration_type
           @interval = interval
+          @is_beta = is_beta
           @is_healthy = is_healthy
           @is_paused = is_paused
           @page_max_limit = page_max_limit
@@ -105,6 +108,7 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @integration_type == other.integration_type
           return false unless @interval == other.interval
+          return false unless @is_beta == other.is_beta
           return false unless @is_healthy == other.is_healthy
           return false unless @is_paused == other.is_paused
           return false unless @page_max_limit == other.page_max_limit

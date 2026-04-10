@@ -38,6 +38,8 @@ class UnifiedRubySDK::Models::Shared::Webhook
   def integration_type=(str_); end
   def interval(); end
   def interval=(str_); end
+  def is_beta(); end
+  def is_beta=(str_); end
   def is_healthy(); end
   def is_healthy=(str_); end
   def is_paused(); end
