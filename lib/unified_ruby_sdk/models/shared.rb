@@ -554,6 +554,7 @@ module UnifiedRubySDK
       autoload :NativeWebhookFormId, 'unified_ruby_sdk/models/shared/native_webhook_form_id.rb'
       autoload :NativeWebhookIoId, 'unified_ruby_sdk/models/shared/native_webhook_io_id.rb'
       autoload :NativeWebhookLabelId, 'unified_ruby_sdk/models/shared/native_webhook_label_id.rb'
+      autoload :NativeWebhookListId, 'unified_ruby_sdk/models/shared/native_webhook_list_id.rb'
       autoload :NativeWebhookMemberId, 'unified_ruby_sdk/models/shared/native_webhook_member_id.rb'
       autoload :NativeWebhookOrderId, 'unified_ruby_sdk/models/shared/native_webhook_order_id.rb'
       autoload :NativeWebhookParentId, 'unified_ruby_sdk/models/shared/native_webhook_parent_id.rb'
