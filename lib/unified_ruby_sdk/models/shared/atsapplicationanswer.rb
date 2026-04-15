@@ -18,10 +18,13 @@ module UnifiedRubySDK
 
         field :question_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('question_id'), required: true } }
 
-        sig { params(answers: T::Array[::String], question_id: ::String).void }
-        def initialize(answers:, question_id:)
+        field :question, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('question') } }
+
+        sig { params(answers: T::Array[::String], question_id: ::String, question: T.nilable(::String)).void }
+        def initialize(answers:, question_id:, question: nil)
           @answers = answers
           @question_id = question_id
+          @question = question
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
@@ -29,6 +32,7 @@ module UnifiedRubySDK
           return false unless other.is_a? self.class
           return false unless @answers == other.answers
           return false unless @question_id == other.question_id
+          return false unless @question == other.question
           true
         end
       end

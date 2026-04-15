@@ -12,4 +12,6 @@ class UnifiedRubySDK::Models::Shared::AtsApplicationAnswer
   def answers=(str_); end
   def question_id(); end
   def question_id=(str_); end
+  def question(); end
+  def question=(str_); end
 end
