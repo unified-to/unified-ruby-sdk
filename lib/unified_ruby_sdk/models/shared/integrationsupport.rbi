@@ -150,6 +150,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_task_id=(str_); end
   def list_teacher_id(); end
   def list_teacher_id=(str_); end
+  def list_template_id(); end
+  def list_template_id=(str_); end
   def list_ticket_id(); end
   def list_ticket_id=(str_); end
   def list_type(); end
@@ -196,6 +198,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def native_webhook_student_id=(str_); end
   def native_webhook_task_id(); end
   def native_webhook_task_id=(str_); end
+  def native_webhook_template_id(); end
+  def native_webhook_template_id=(str_); end
   def native_webhook_type(); end
   def native_webhook_type=(str_); end
   def outbound_fields(); end
@@ -314,6 +318,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_student_id=(str_); end
   def virtual_webhook_task_id(); end
   def virtual_webhook_task_id=(str_); end
+  def virtual_webhook_template_id(); end
+  def virtual_webhook_template_id=(str_); end
   def virtual_webhook_ticket_id(); end
   def virtual_webhook_ticket_id=(str_); end
   def virtual_webhook_type(); end

@@ -250,6 +250,11 @@ module UnifiedRubySDK
           SHIPPING_TRACKING_READ = new('shipping_tracking_read')
           SHIPPING_RATE_READ = new('shipping_rate_read')
           SHIPPING_CARRIER_READ = new('shipping_carrier_read')
+          SIGNING_DOCUMENT_READ = new('signing_document_read')
+          SIGNING_DOCUMENT_WRITE = new('signing_document_write')
+          SIGNING_SIGNATORY_READ = new('signing_signatory_read')
+          SIGNING_SIGNATORY_WRITE = new('signing_signatory_write')
+          SIGNING_TEMPLATE_READ = new('signing_template_read')
         end
       end
     end

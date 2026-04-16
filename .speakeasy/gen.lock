@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 97059ed622bfecd9741a74a3557254e7
+  docChecksum: 58164d1126b2fb763cc3eb594b45f20d
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.62
-  configChecksum: b1cd6e9f359f168d1d5a8bc91baabc81
+  releaseVersion: 0.67.63
+  configChecksum: f1d8949538b59f062352166a02e5e1ce
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -289,6 +289,12 @@ generatedFiles:
   - docs/models/operations/createshippingshipmentqueryparamfields.md
   - docs/models/operations/createshippingshipmentrequest.md
   - docs/models/operations/createshippingshipmentresponse.md
+  - docs/models/operations/createsigningdocumentqueryparamfields.md
+  - docs/models/operations/createsigningdocumentrequest.md
+  - docs/models/operations/createsigningdocumentresponse.md
+  - docs/models/operations/createsigningsignatoryqueryparamfields.md
+  - docs/models/operations/createsigningsignatoryrequest.md
+  - docs/models/operations/createsigningsignatoryresponse.md
   - docs/models/operations/createstoragefilequeryparamfields.md
   - docs/models/operations/createstoragefilerequest.md
   - docs/models/operations/createstoragefileresponse.md
@@ -623,6 +629,15 @@ generatedFiles:
   - docs/models/operations/getshippingtrackingqueryparamfields.md
   - docs/models/operations/getshippingtrackingrequest.md
   - docs/models/operations/getshippingtrackingresponse.md
+  - docs/models/operations/getsigningdocumentqueryparamfields.md
+  - docs/models/operations/getsigningdocumentrequest.md
+  - docs/models/operations/getsigningdocumentresponse.md
+  - docs/models/operations/getsigningsignatoryqueryparamfields.md
+  - docs/models/operations/getsigningsignatoryrequest.md
+  - docs/models/operations/getsigningsignatoryresponse.md
+  - docs/models/operations/getsigningtemplatequeryparamfields.md
+  - docs/models/operations/getsigningtemplaterequest.md
+  - docs/models/operations/getsigningtemplateresponse.md
   - docs/models/operations/getstoragefilequeryparamfields.md
   - docs/models/operations/getstoragefilerequest.md
   - docs/models/operations/getstoragefileresponse.md
@@ -998,6 +1013,15 @@ generatedFiles:
   - docs/models/operations/listshippingshipmentsqueryparamfields.md
   - docs/models/operations/listshippingshipmentsrequest.md
   - docs/models/operations/listshippingshipmentsresponse.md
+  - docs/models/operations/listsigningdocumentsqueryparamfields.md
+  - docs/models/operations/listsigningdocumentsrequest.md
+  - docs/models/operations/listsigningdocumentsresponse.md
+  - docs/models/operations/listsigningsignatoriesqueryparamfields.md
+  - docs/models/operations/listsigningsignatoriesrequest.md
+  - docs/models/operations/listsigningsignatoriesresponse.md
+  - docs/models/operations/listsigningtemplatesqueryparamfields.md
+  - docs/models/operations/listsigningtemplatesrequest.md
+  - docs/models/operations/listsigningtemplatesresponse.md
   - docs/models/operations/liststoragefilesqueryparamfields.md
   - docs/models/operations/liststoragefilesrequest.md
   - docs/models/operations/liststoragefilesresponse.md
@@ -1316,6 +1340,12 @@ generatedFiles:
   - docs/models/operations/patchshippingshipmentqueryparamfields.md
   - docs/models/operations/patchshippingshipmentrequest.md
   - docs/models/operations/patchshippingshipmentresponse.md
+  - docs/models/operations/patchsigningdocumentqueryparamfields.md
+  - docs/models/operations/patchsigningdocumentrequest.md
+  - docs/models/operations/patchsigningdocumentresponse.md
+  - docs/models/operations/patchsigningsignatoryqueryparamfields.md
+  - docs/models/operations/patchsigningsignatoryrequest.md
+  - docs/models/operations/patchsigningsignatoryresponse.md
   - docs/models/operations/patchstoragefilequeryparamfields.md
   - docs/models/operations/patchstoragefilerequest.md
   - docs/models/operations/patchstoragefileresponse.md
@@ -1530,6 +1560,10 @@ generatedFiles:
   - docs/models/operations/removeshippinglabelresponse.md
   - docs/models/operations/removeshippingshipmentrequest.md
   - docs/models/operations/removeshippingshipmentresponse.md
+  - docs/models/operations/removesigningdocumentrequest.md
+  - docs/models/operations/removesigningdocumentresponse.md
+  - docs/models/operations/removesigningsignatoryrequest.md
+  - docs/models/operations/removesigningsignatoryresponse.md
   - docs/models/operations/removestoragefilerequest.md
   - docs/models/operations/removestoragefileresponse.md
   - docs/models/operations/removetaskcommentrequest.md
@@ -1819,6 +1853,12 @@ generatedFiles:
   - docs/models/operations/updateshippingshipmentqueryparamfields.md
   - docs/models/operations/updateshippingshipmentrequest.md
   - docs/models/operations/updateshippingshipmentresponse.md
+  - docs/models/operations/updatesigningdocumentqueryparamfields.md
+  - docs/models/operations/updatesigningdocumentrequest.md
+  - docs/models/operations/updatesigningdocumentresponse.md
+  - docs/models/operations/updatesigningsignatoryqueryparamfields.md
+  - docs/models/operations/updatesigningsignatoryrequest.md
+  - docs/models/operations/updatesigningsignatoryresponse.md
   - docs/models/operations/updatestoragefilequeryparamfields.md
   - docs/models/operations/updatestoragefilerequest.md
   - docs/models/operations/updatestoragefileresponse.md
@@ -2251,6 +2291,7 @@ generatedFiles:
   - docs/models/shared/liststudentid.md
   - docs/models/shared/listtaskid.md
   - docs/models/shared/listteacherid.md
+  - docs/models/shared/listtemplateid.md
   - docs/models/shared/listticketid.md
   - docs/models/shared/listtype.md
   - docs/models/shared/listupdatedgte.md
@@ -2311,6 +2352,7 @@ generatedFiles:
   - docs/models/shared/nativewebhookshipmentid.md
   - docs/models/shared/nativewebhookstudentid.md
   - docs/models/shared/nativewebhooktaskid.md
+  - docs/models/shared/nativewebhooktemplateid.md
   - docs/models/shared/nativewebhooktype.md
   - docs/models/shared/nondeliveryoption.md
   - docs/models/shared/objecttype.md
@@ -2598,6 +2640,12 @@ generatedFiles:
   - docs/models/shared/shippingtrackingevent.md
   - docs/models/shared/shippingtrackingeventstatus.md
   - docs/models/shared/shippingtrackingstatus.md
+  - docs/models/shared/signingdocument.md
+  - docs/models/shared/signingdocumentstatus.md
+  - docs/models/shared/signingsignatory.md
+  - docs/models/shared/signingsignatoryrole.md
+  - docs/models/shared/signingsignatorystatus.md
+  - docs/models/shared/signingtemplate.md
   - docs/models/shared/sizeunit.md
   - docs/models/shared/status.md
   - docs/models/shared/storagefile.md
@@ -2705,6 +2753,7 @@ generatedFiles:
   - docs/models/shared/virtualwebhookstatus.md
   - docs/models/shared/virtualwebhookstudentid.md
   - docs/models/shared/virtualwebhooktaskid.md
+  - docs/models/shared/virtualwebhooktemplateid.md
   - docs/models/shared/virtualwebhookticketid.md
   - docs/models/shared/virtualwebhooktype.md
   - docs/models/shared/virtualwebhookupdatedgte.md
@@ -2829,6 +2878,8 @@ generatedFiles:
   - docs/sdks/scorecard/README.md
   - docs/sdks/shipment/README.md
   - docs/sdks/shipping/README.md
+  - docs/sdks/signatory/README.md
+  - docs/sdks/signing/README.md
   - docs/sdks/space/README.md
   - docs/sdks/storage/README.md
   - docs/sdks/student/README.md
@@ -2837,6 +2888,7 @@ generatedFiles:
   - docs/sdks/target/README.md
   - docs/sdks/task/README.md
   - docs/sdks/taxrate/README.md
+  - docs/sdks/template/README.md
   - docs/sdks/ticket/README.md
   - docs/sdks/ticketing/README.md
   - docs/sdks/timeoff/README.md
@@ -3469,6 +3521,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createshippingshipment_request.rbi
   - lib/unified_ruby_sdk/models/operations/createshippingshipment_response.rb
   - lib/unified_ruby_sdk/models/operations/createshippingshipment_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createsigningdocument_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createsigningdocument_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createsigningdocument_request.rb
+  - lib/unified_ruby_sdk/models/operations/createsigningdocument_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createsigningdocument_response.rb
+  - lib/unified_ruby_sdk/models/operations/createsigningdocument_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createsigningsignatory_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createsigningsignatory_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createsigningsignatory_request.rb
+  - lib/unified_ruby_sdk/models/operations/createsigningsignatory_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createsigningsignatory_response.rb
+  - lib/unified_ruby_sdk/models/operations/createsigningsignatory_response.rbi
   - lib/unified_ruby_sdk/models/operations/createstoragefile_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/createstoragefile_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/createstoragefile_request.rb
@@ -4137,6 +4201,24 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getshippingtracking_request.rbi
   - lib/unified_ruby_sdk/models/operations/getshippingtracking_response.rb
   - lib/unified_ruby_sdk/models/operations/getshippingtracking_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getsigningdocument_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getsigningdocument_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getsigningdocument_request.rb
+  - lib/unified_ruby_sdk/models/operations/getsigningdocument_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getsigningdocument_response.rb
+  - lib/unified_ruby_sdk/models/operations/getsigningdocument_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getsigningsignatory_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getsigningsignatory_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getsigningsignatory_request.rb
+  - lib/unified_ruby_sdk/models/operations/getsigningsignatory_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getsigningsignatory_response.rb
+  - lib/unified_ruby_sdk/models/operations/getsigningsignatory_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getsigningtemplate_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getsigningtemplate_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getsigningtemplate_request.rb
+  - lib/unified_ruby_sdk/models/operations/getsigningtemplate_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getsigningtemplate_response.rb
+  - lib/unified_ruby_sdk/models/operations/getsigningtemplate_response.rbi
   - lib/unified_ruby_sdk/models/operations/getstoragefile_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/getstoragefile_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/getstoragefile_request.rb
@@ -4887,6 +4969,24 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listshippingshipments_request.rbi
   - lib/unified_ruby_sdk/models/operations/listshippingshipments_response.rb
   - lib/unified_ruby_sdk/models/operations/listshippingshipments_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listsigningdocuments_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listsigningdocuments_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listsigningdocuments_request.rb
+  - lib/unified_ruby_sdk/models/operations/listsigningdocuments_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listsigningdocuments_response.rb
+  - lib/unified_ruby_sdk/models/operations/listsigningdocuments_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listsigningsignatories_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listsigningsignatories_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listsigningsignatories_request.rb
+  - lib/unified_ruby_sdk/models/operations/listsigningsignatories_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listsigningsignatories_response.rb
+  - lib/unified_ruby_sdk/models/operations/listsigningsignatories_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listsigningtemplates_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listsigningtemplates_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listsigningtemplates_request.rb
+  - lib/unified_ruby_sdk/models/operations/listsigningtemplates_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listsigningtemplates_response.rb
+  - lib/unified_ruby_sdk/models/operations/listsigningtemplates_response.rbi
   - lib/unified_ruby_sdk/models/operations/liststoragefiles_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/liststoragefiles_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/liststoragefiles_request.rb
@@ -5523,6 +5623,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchshippingshipment_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchshippingshipment_response.rb
   - lib/unified_ruby_sdk/models/operations/patchshippingshipment_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchsigningdocument_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchsigningdocument_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchsigningdocument_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchsigningdocument_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchsigningdocument_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchsigningdocument_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchsigningsignatory_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchsigningsignatory_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchsigningsignatory_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchsigningsignatory_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchsigningsignatory_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchsigningsignatory_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchstoragefile_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/patchstoragefile_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/patchstoragefile_request.rb
@@ -5951,6 +6063,14 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removeshippingshipment_request.rbi
   - lib/unified_ruby_sdk/models/operations/removeshippingshipment_response.rb
   - lib/unified_ruby_sdk/models/operations/removeshippingshipment_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removesigningdocument_request.rb
+  - lib/unified_ruby_sdk/models/operations/removesigningdocument_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removesigningdocument_response.rb
+  - lib/unified_ruby_sdk/models/operations/removesigningdocument_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removesigningsignatory_request.rb
+  - lib/unified_ruby_sdk/models/operations/removesigningsignatory_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removesigningsignatory_response.rb
+  - lib/unified_ruby_sdk/models/operations/removesigningsignatory_response.rbi
   - lib/unified_ruby_sdk/models/operations/removestoragefile_request.rb
   - lib/unified_ruby_sdk/models/operations/removestoragefile_request.rbi
   - lib/unified_ruby_sdk/models/operations/removestoragefile_response.rb
@@ -6529,6 +6649,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updateshippingshipment_request.rbi
   - lib/unified_ruby_sdk/models/operations/updateshippingshipment_response.rb
   - lib/unified_ruby_sdk/models/operations/updateshippingshipment_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatesigningdocument_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updatesigningdocument_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updatesigningdocument_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatesigningdocument_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatesigningdocument_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatesigningdocument_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatesigningsignatory_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updatesigningsignatory_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updatesigningsignatory_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatesigningsignatory_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatesigningsignatory_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatesigningsignatory_response.rbi
   - lib/unified_ruby_sdk/models/operations/updatestoragefile_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/updatestoragefile_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/updatestoragefile_request.rb
@@ -7394,6 +7526,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_task_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_teacher_id.rb
   - lib/unified_ruby_sdk/models/shared/list_teacher_id.rbi
+  - lib/unified_ruby_sdk/models/shared/list_template_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_template_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_ticket_id.rb
   - lib/unified_ruby_sdk/models/shared/list_ticket_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_type.rb
@@ -7514,6 +7648,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/native_webhook_student_id.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_task_id.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_task_id.rbi
+  - lib/unified_ruby_sdk/models/shared/native_webhook_template_id.rb
+  - lib/unified_ruby_sdk/models/shared/native_webhook_template_id.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_type.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_type.rbi
   - lib/unified_ruby_sdk/models/shared/non_delivery_option.rb
@@ -8088,6 +8224,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/shippingtrackingevent.rbi
   - lib/unified_ruby_sdk/models/shared/shippingtrackingevent_status.rb
   - lib/unified_ruby_sdk/models/shared/shippingtrackingevent_status.rbi
+  - lib/unified_ruby_sdk/models/shared/signingdocument.rb
+  - lib/unified_ruby_sdk/models/shared/signingdocument.rbi
+  - lib/unified_ruby_sdk/models/shared/signingdocument_status.rb
+  - lib/unified_ruby_sdk/models/shared/signingdocument_status.rbi
+  - lib/unified_ruby_sdk/models/shared/signingsignatory.rb
+  - lib/unified_ruby_sdk/models/shared/signingsignatory.rbi
+  - lib/unified_ruby_sdk/models/shared/signingsignatory_role.rb
+  - lib/unified_ruby_sdk/models/shared/signingsignatory_role.rbi
+  - lib/unified_ruby_sdk/models/shared/signingsignatory_status.rb
+  - lib/unified_ruby_sdk/models/shared/signingsignatory_status.rbi
+  - lib/unified_ruby_sdk/models/shared/signingtemplate.rb
+  - lib/unified_ruby_sdk/models/shared/signingtemplate.rbi
   - lib/unified_ruby_sdk/models/shared/size_unit.rb
   - lib/unified_ruby_sdk/models/shared/size_unit.rbi
   - lib/unified_ruby_sdk/models/shared/status.rb
@@ -8302,6 +8450,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_student_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_task_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_task_id.rbi
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_template_id.rb
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_template_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_ticket_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_ticket_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_type.rb
@@ -8358,6 +8508,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/sdkconfiguration.rbi
   - lib/unified_ruby_sdk/shipment.rb
   - lib/unified_ruby_sdk/shipping.rb
+  - lib/unified_ruby_sdk/signatory.rb
+  - lib/unified_ruby_sdk/signing.rb
   - lib/unified_ruby_sdk/space.rb
   - lib/unified_ruby_sdk/storage.rb
   - lib/unified_ruby_sdk/student.rb
@@ -8366,6 +8518,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/target.rb
   - lib/unified_ruby_sdk/task.rb
   - lib/unified_ruby_sdk/taxrate.rb
+  - lib/unified_ruby_sdk/template.rb
   - lib/unified_ruby_sdk/ticket.rb
   - lib/unified_ruby_sdk/ticketing.rb
   - lib/unified_ruby_sdk/timeoff.rb
@@ -14423,6 +14576,133 @@ examples:
           id: "<id>"
   updateHrisTimeoff:
     speakeasy-default-update-hris-timeoff:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createSigningDocument:
+    speakeasy-default-create-signing-document:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getSigningDocument:
+    speakeasy-default-get-signing-document:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listSigningDocuments:
+    speakeasy-default-list-signing-documents:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchSigningDocument:
+    speakeasy-default-patch-signing-document:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeSigningDocument:
+    speakeasy-default-remove-signing-document:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateSigningDocument:
+    speakeasy-default-update-signing-document:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createSigningSignatory:
+    speakeasy-default-create-signing-signatory:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getSigningSignatory:
+    speakeasy-default-get-signing-signatory:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getSigningTemplate:
+    speakeasy-default-get-signing-template:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listSigningSignatories:
+    speakeasy-default-list-signing-signatories:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listSigningTemplates:
+    speakeasy-default-list-signing-templates:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchSigningSignatory:
+    speakeasy-default-patch-signing-signatory:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeSigningSignatory:
+    speakeasy-default-remove-signing-signatory:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateSigningSignatory:
+    speakeasy-default-update-signing-signatory:
       parameters:
         path:
           connection_id: "<id>"

@@ -40,6 +40,7 @@ module UnifiedRubySDK
           FORMS = new('forms')
           SHIPPING = new('shipping')
           ASSESSMENT = new('assessment')
+          SIGNING = new('signing')
         end
       end
     end

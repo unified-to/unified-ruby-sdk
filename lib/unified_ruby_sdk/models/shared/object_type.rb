@@ -142,6 +142,9 @@ module UnifiedRubySDK
           SHIPPING_SHIPMENT = new('shipping_shipment')
           SHIPPING_LABEL = new('shipping_label')
           SHIPPING_TRACKING = new('shipping_tracking')
+          SIGNING_DOCUMENT = new('signing_document')
+          SIGNING_SIGNATORY = new('signing_signatory')
+          SIGNING_TEMPLATE = new('signing_template')
         end
       end
     end
