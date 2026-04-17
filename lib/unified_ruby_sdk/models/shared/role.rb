@@ -15,6 +15,7 @@ module UnifiedRubySDK
         enums do
           SYSTEM = new('SYSTEM')
           USER = new('USER')
+          ASSISTANT = new('ASSISTANT')
         end
       end
     end

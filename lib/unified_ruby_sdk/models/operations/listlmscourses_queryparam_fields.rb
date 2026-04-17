@@ -26,12 +26,16 @@ module UnifiedRubySDK
           CURRENCY = new('currency')
           MEDIA = new('media')
           INSTRUCTOR_IDS = new('instructor_ids')
+          INSTRUCTORS = new('instructors')
           STUDENT_IDS = new('student_ids')
+          STUDENTS = new('students')
           CONTENT_IDS = new('content_ids')
           SKILLS = new('skills')
           DURATION_MINUTES = new('duration_minutes')
           PROVIDER_NAME = new('provider_name')
           RAW = new('raw')
+          PUBLISHED_AT = new('published_at')
+          TIME_ESTIMATE_MINUTES = new('time_estimate_minutes')
         end
       end
     end

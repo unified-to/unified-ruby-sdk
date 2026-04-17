@@ -27,8 +27,6 @@ module UnifiedRubySDK
         field :expires_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-        # Custom key-value pairs
-        field :metadata, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
@@ -42,8 +40,8 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(completed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), creator_id: T.nilable(::String), description: T.nilable(::String), download_url: T.nilable(::String), expires_at: T.nilable(::DateTime), id: T.nilable(::String), metadata: T.nilable(T::Hash[Symbol, ::String]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), sent_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::SigningDocumentStatus), template_id: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(completed_at: nil, created_at: nil, creator_id: nil, description: nil, download_url: nil, expires_at: nil, id: nil, metadata: nil, name: nil, raw: nil, sent_at: nil, status: nil, template_id: nil, updated_at: nil)
+        sig { params(completed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), creator_id: T.nilable(::String), description: T.nilable(::String), download_url: T.nilable(::String), expires_at: T.nilable(::DateTime), id: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), sent_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::SigningDocumentStatus), template_id: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(completed_at: nil, created_at: nil, creator_id: nil, description: nil, download_url: nil, expires_at: nil, id: nil, name: nil, raw: nil, sent_at: nil, status: nil, template_id: nil, updated_at: nil)
           @completed_at = completed_at
           @created_at = created_at
           @creator_id = creator_id
@@ -51,7 +49,6 @@ module UnifiedRubySDK
           @download_url = download_url
           @expires_at = expires_at
           @id = id
-          @metadata = metadata
           @name = name
           @raw = raw
           @sent_at = sent_at
@@ -70,7 +67,6 @@ module UnifiedRubySDK
           return false unless @download_url == other.download_url
           return false unless @expires_at == other.expires_at
           return false unless @id == other.id
-          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @raw == other.raw
           return false unless @sent_at == other.sent_at

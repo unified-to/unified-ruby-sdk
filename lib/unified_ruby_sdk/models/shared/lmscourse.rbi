@@ -26,6 +26,8 @@ class UnifiedRubySDK::Models::Shared::LmsCourse
   def id=(str_); end
   def instructor_ids(); end
   def instructor_ids=(str_); end
+  def instructors(); end
+  def instructors=(str_); end
   def is_active(); end
   def is_active=(str_); end
   def is_private(); end
@@ -38,12 +40,18 @@ class UnifiedRubySDK::Models::Shared::LmsCourse
   def price_amount=(str_); end
   def provider_name(); end
   def provider_name=(str_); end
+  def published_at(); end
+  def published_at=(str_); end
   def raw(); end
   def raw=(str_); end
   def skills(); end
   def skills=(str_); end
   def student_ids(); end
   def student_ids=(str_); end
+  def students(); end
+  def students=(str_); end
+  def time_estimate_minutes(); end
+  def time_estimate_minutes=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
 end

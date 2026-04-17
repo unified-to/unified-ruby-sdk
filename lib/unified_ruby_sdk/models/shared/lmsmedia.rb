@@ -14,11 +14,11 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :url, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url'), required: true } }
-
         field :content, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+
+        field :languages, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('languages') } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
@@ -26,25 +26,29 @@ module UnifiedRubySDK
 
         field :type, Crystalline::Nilable.new(Models::Shared::LmsMediaType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::LmsMediaType, true) } }
 
-        sig { params(url: ::String, content: T.nilable(::String), description: T.nilable(::String), name: T.nilable(::String), thumbnail_url: T.nilable(::String), type: T.nilable(Models::Shared::LmsMediaType)).void }
-        def initialize(url:, content: nil, description: nil, name: nil, thumbnail_url: nil, type: nil)
-          @url = url
+        field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
+
+        sig { params(content: T.nilable(::String), description: T.nilable(::String), languages: T.nilable(T::Array[::String]), name: T.nilable(::String), thumbnail_url: T.nilable(::String), type: T.nilable(Models::Shared::LmsMediaType), url: T.nilable(::String)).void }
+        def initialize(content: nil, description: nil, languages: nil, name: nil, thumbnail_url: nil, type: nil, url: nil)
           @content = content
           @description = description
+          @languages = languages
           @name = name
           @thumbnail_url = thumbnail_url
           @type = type
+          @url = url
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @url == other.url
           return false unless @content == other.content
           return false unless @description == other.description
+          return false unless @languages == other.languages
           return false unless @name == other.name
           return false unless @thumbnail_url == other.thumbnail_url
           return false unless @type == other.type
+          return false unless @url == other.url
           true
         end
       end

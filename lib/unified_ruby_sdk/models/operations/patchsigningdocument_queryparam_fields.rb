@@ -25,7 +25,6 @@ module UnifiedRubySDK
           TEMPLATE_ID = new('template_id')
           DOWNLOAD_URL = new('download_url')
           CREATOR_ID = new('creator_id')
-          METADATA = new('metadata')
           RAW = new('raw')
         end
       end
