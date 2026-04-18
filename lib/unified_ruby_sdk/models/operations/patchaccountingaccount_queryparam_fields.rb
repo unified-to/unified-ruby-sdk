@@ -30,8 +30,8 @@ module UnifiedRubySDK
           SUBGROUP = new('subgroup')
           PARENT_ID = new('parent_id')
           TAXONOMY = new('taxonomy')
-          RAW = new('raw')
           ORGANIZATION_ID = new('organization_id')
+          RAW = new('raw')
         end
       end
     end

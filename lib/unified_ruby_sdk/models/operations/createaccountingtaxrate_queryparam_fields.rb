@@ -20,6 +20,7 @@ module UnifiedRubySDK
           DESCRIPTION = new('description')
           RATE = new('rate')
           IS_ACTIVE = new('is_active')
+          ORGANIZATION_ID = new('organization_id')
           RAW = new('raw')
         end
       end

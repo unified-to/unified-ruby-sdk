@@ -32,6 +32,8 @@ class UnifiedRubySDK::Models::Shared::AccountingCreditmemo
   def lineitems=(str_); end
   def notes(); end
   def notes=(str_); end
+  def organization_id(); end
+  def organization_id=(str_); end
   def paid_amount(); end
   def paid_amount=(str_); end
   def paid_at(); end

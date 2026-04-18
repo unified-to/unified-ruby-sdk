@@ -30,6 +30,7 @@ module UnifiedRubySDK
           LINEITEMS = new('lineitems')
           CURRENCY = new('currency')
           CONTACTS = new('contacts')
+          ORGANIZATION_ID = new('organization_id')
           RAW = new('raw')
         end
       end

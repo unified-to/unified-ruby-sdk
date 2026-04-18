@@ -24,6 +24,8 @@ class UnifiedRubySDK::Models::Shared::AccountingTransaction
   def lineitems=(str_); end
   def memo(); end
   def memo=(str_); end
+  def organization_id(); end
+  def organization_id=(str_); end
   def payment_method(); end
   def payment_method=(str_); end
   def payment_terms(); end

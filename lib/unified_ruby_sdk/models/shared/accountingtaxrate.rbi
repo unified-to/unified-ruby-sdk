@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::AccountingTaxrate
   def is_active=(str_); end
   def name(); end
   def name=(str_); end
+  def organization_id(); end
+  def organization_id=(str_); end
   def rate(); end
   def rate=(str_); end
   def raw(); end

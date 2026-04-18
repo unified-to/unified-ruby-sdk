@@ -30,6 +30,8 @@ module UnifiedRubySDK
 
         field :memo, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('memo') } }
 
+        field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
+
         field :payment_method, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_method') } }
 
         field :payment_terms, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_terms') } }
@@ -50,8 +52,8 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(account_id: T.nilable(::String), contacts: T.nilable(T::Array[Models::Shared::AccountingTransactionContact]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), customer_message: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingTransactionLineItem]), memo: T.nilable(::String), payment_method: T.nilable(::String), payment_terms: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), split_account_id: T.nilable(::String), sub_total_amount: T.nilable(::Float), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float), type: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(account_id: nil, contacts: nil, created_at: nil, currency: nil, customer_message: nil, id: nil, lineitems: nil, memo: nil, payment_method: nil, payment_terms: nil, raw: nil, reference: nil, split_account_id: nil, sub_total_amount: nil, tax_amount: nil, total_amount: nil, type: nil, updated_at: nil)
+        sig { params(account_id: T.nilable(::String), contacts: T.nilable(T::Array[Models::Shared::AccountingTransactionContact]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), customer_message: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingTransactionLineItem]), memo: T.nilable(::String), organization_id: T.nilable(::String), payment_method: T.nilable(::String), payment_terms: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), split_account_id: T.nilable(::String), sub_total_amount: T.nilable(::Float), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float), type: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(account_id: nil, contacts: nil, created_at: nil, currency: nil, customer_message: nil, id: nil, lineitems: nil, memo: nil, organization_id: nil, payment_method: nil, payment_terms: nil, raw: nil, reference: nil, split_account_id: nil, sub_total_amount: nil, tax_amount: nil, total_amount: nil, type: nil, updated_at: nil)
           @account_id = account_id
           @contacts = contacts
           @created_at = created_at
@@ -60,6 +62,7 @@ module UnifiedRubySDK
           @id = id
           @lineitems = lineitems
           @memo = memo
+          @organization_id = organization_id
           @payment_method = payment_method
           @payment_terms = payment_terms
           @raw = raw
@@ -83,6 +86,7 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @lineitems == other.lineitems
           return false unless @memo == other.memo
+          return false unless @organization_id == other.organization_id
           return false unless @payment_method == other.payment_method
           return false unless @payment_terms == other.payment_terms
           return false unless @raw == other.raw

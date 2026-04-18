@@ -17,7 +17,7 @@ module UnifiedRubySDK
         field :content, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
+        # ISO 2-digit language codes
         field :languages, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('languages') } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }

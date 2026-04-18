@@ -24,19 +24,22 @@ module UnifiedRubySDK
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
+        field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
+
         field :rate, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rate') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), rate: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
-        def initialize(created_at: nil, description: nil, id: nil, is_active: nil, name: nil, rate: nil, raw: nil, updated_at: nil)
+        sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), organization_id: T.nilable(::String), rate: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(created_at: nil, description: nil, id: nil, is_active: nil, name: nil, organization_id: nil, rate: nil, raw: nil, updated_at: nil)
           @created_at = created_at
           @description = description
           @id = id
           @is_active = is_active
           @name = name
+          @organization_id = organization_id
           @rate = rate
           @raw = raw
           @updated_at = updated_at
@@ -50,6 +53,7 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @is_active == other.is_active
           return false unless @name == other.name
+          return false unless @organization_id == other.organization_id
           return false unless @rate == other.rate
           return false unless @raw == other.raw
           return false unless @updated_at == other.updated_at

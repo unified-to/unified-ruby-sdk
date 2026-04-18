@@ -38,6 +38,7 @@ module UnifiedRubySDK
           PAYMENT_COLLECTION_METHOD = new('payment_collection_method')
           ATTACHMENTS = new('attachments')
           SEND = new('send')
+          ORGANIZATION_ID = new('organization_id')
           RAW = new('raw')
         end
       end
