@@ -29,6 +29,7 @@ module UnifiedRubySDK
           DATA = new('data')
           VERSION = new('version')
           WEB_URL = new('web_url')
+          REFERENCES = new('references')
           RAW = new('raw')
         end
       end

@@ -122,6 +122,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_query=(str_); end
   def list_raw_fields(); end
   def list_raw_fields=(str_); end
+  def list_reference(); end
+  def list_reference=(str_); end
   def list_repo_id(); end
   def list_repo_id=(str_); end
   def list_root_id(); end
@@ -302,6 +304,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_pipeline_id=(str_); end
   def virtual_webhook_project_id(); end
   def virtual_webhook_project_id=(str_); end
+  def virtual_webhook_reference(); end
+  def virtual_webhook_reference=(str_); end
   def virtual_webhook_repo_id(); end
   def virtual_webhook_repo_id=(str_); end
   def virtual_webhook_saleschannel_id(); end

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 9c34a18bf1356dbfed617d519163c300
+  docChecksum: 556f285080267fd6b3d58b8990f5704b
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.65
-  configChecksum: 23e8854f44a73fc81cbfdbdb552a005f
+  releaseVersion: 0.67.66
+  configChecksum: 2890fbe29482bd16c11d02282be54967
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -2277,6 +2277,7 @@ generatedFiles:
   - docs/models/shared/listprojectid.md
   - docs/models/shared/listquery.md
   - docs/models/shared/listrawfields.md
+  - docs/models/shared/listreference.md
   - docs/models/shared/listrepoid.md
   - docs/models/shared/listrootid.md
   - docs/models/shared/listsaleschannelid.md
@@ -2651,6 +2652,7 @@ generatedFiles:
   - docs/models/shared/storagefile.md
   - docs/models/shared/storagefiletype.md
   - docs/models/shared/storagepermission.md
+  - docs/models/shared/storagereference.md
   - docs/models/shared/taskchange.md
   - docs/models/shared/taskchangeitem.md
   - docs/models/shared/taskcomment.md
@@ -2745,6 +2747,7 @@ generatedFiles:
   - docs/models/shared/virtualwebhookpaymentid.md
   - docs/models/shared/virtualwebhookpipelineid.md
   - docs/models/shared/virtualwebhookprojectid.md
+  - docs/models/shared/virtualwebhookreference.md
   - docs/models/shared/virtualwebhookrepoid.md
   - docs/models/shared/virtualwebhooksaleschannelid.md
   - docs/models/shared/virtualwebhookshipmentid.md
@@ -7498,6 +7501,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_query.rbi
   - lib/unified_ruby_sdk/models/shared/list_raw_fields.rb
   - lib/unified_ruby_sdk/models/shared/list_raw_fields.rbi
+  - lib/unified_ruby_sdk/models/shared/list_reference.rb
+  - lib/unified_ruby_sdk/models/shared/list_reference.rbi
   - lib/unified_ruby_sdk/models/shared/list_repo_id.rb
   - lib/unified_ruby_sdk/models/shared/list_repo_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_root_id.rb
@@ -8246,6 +8251,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/storagefile_type.rbi
   - lib/unified_ruby_sdk/models/shared/storagepermission.rb
   - lib/unified_ruby_sdk/models/shared/storagepermission.rbi
+  - lib/unified_ruby_sdk/models/shared/storagereference.rb
+  - lib/unified_ruby_sdk/models/shared/storagereference.rbi
   - lib/unified_ruby_sdk/models/shared/taskchange.rb
   - lib/unified_ruby_sdk/models/shared/taskchange.rbi
   - lib/unified_ruby_sdk/models/shared/taskchangeitem.rb
@@ -8434,6 +8441,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_pipeline_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_project_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_project_id.rbi
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_reference.rb
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_reference.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_repo_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_repo_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_saleschannel_id.rb

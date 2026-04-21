@@ -33,6 +33,8 @@ module UnifiedRubySDK
         field :query, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
         # Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
         field :raw, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
+        # The referenced entity ID to filter by (e.g. linked accounting record for storage_file)
+        field :reference, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'reference', 'style': 'form', 'explode': true } }
 
         field :sort, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
         # The type to filter by
@@ -40,8 +42,8 @@ module UnifiedRubySDK
         # Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, expand: T.nilable(T::Boolean), fields_: T.nilable(T::Array[Models::Operations::ListStorageFilesQueryParamFields]), fulltext: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), type: T.nilable(::String), updated_gte: T.nilable(::String)).void }
-        def initialize(connection_id:, expand: nil, fields_: nil, fulltext: nil, limit: nil, offset: nil, order: nil, parent_id: nil, query: nil, raw: nil, sort: nil, type: nil, updated_gte: nil)
+        sig { params(connection_id: ::String, expand: T.nilable(T::Boolean), fields_: T.nilable(T::Array[Models::Operations::ListStorageFilesQueryParamFields]), fulltext: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), reference: T.nilable(::String), sort: T.nilable(::String), type: T.nilable(::String), updated_gte: T.nilable(::String)).void }
+        def initialize(connection_id:, expand: nil, fields_: nil, fulltext: nil, limit: nil, offset: nil, order: nil, parent_id: nil, query: nil, raw: nil, reference: nil, sort: nil, type: nil, updated_gte: nil)
           @connection_id = connection_id
           @expand = expand
           @fields_ = fields_
@@ -52,6 +54,7 @@ module UnifiedRubySDK
           @parent_id = parent_id
           @query = query
           @raw = raw
+          @reference = reference
           @sort = sort
           @type = type
           @updated_gte = updated_gte
@@ -70,6 +73,7 @@ module UnifiedRubySDK
           return false unless @parent_id == other.parent_id
           return false unless @query == other.query
           return false unless @raw == other.raw
+          return false unless @reference == other.reference
           return false unless @sort == other.sort
           return false unless @type == other.type
           return false unless @updated_gte == other.updated_gte

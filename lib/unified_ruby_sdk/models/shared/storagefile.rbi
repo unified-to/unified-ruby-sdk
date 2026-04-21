@@ -30,6 +30,8 @@ class UnifiedRubySDK::Models::Shared::StorageFile
   def permissions=(str_); end
   def raw(); end
   def raw=(str_); end
+  def references(); end
+  def references=(str_); end
   def size(); end
   def size=(str_); end
   def type(); end

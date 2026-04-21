@@ -32,13 +32,13 @@ module UnifiedRubySDK
           CURRENCY = new('currency')
           NOTES = new('notes')
           REFUND_REASON = new('refund_reason')
+          ORGANIZATION_ID = new('organization_id')
           LINEITEMS = new('lineitems')
           STATUS = new('status')
           URL = new('url')
           PAYMENT_COLLECTION_METHOD = new('payment_collection_method')
           ATTACHMENTS = new('attachments')
           SEND = new('send')
-          ORGANIZATION_ID = new('organization_id')
           RAW = new('raw')
         end
       end

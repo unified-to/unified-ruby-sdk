@@ -28,6 +28,8 @@ class UnifiedRubySDK::Models::Operations::ListStorageFilesRequest
   def query=(str_); end
   def raw(); end
   def raw=(str_); end
+  def reference(); end
+  def reference=(str_); end
   def sort(); end
   def sort=(str_); end
   def type(); end
