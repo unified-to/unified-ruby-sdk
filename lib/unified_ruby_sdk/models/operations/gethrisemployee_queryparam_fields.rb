@@ -52,6 +52,8 @@ module UnifiedRubySDK
           STORAGE_QUOTA_AVAILABLE = new('storage_quota_available')
           RELATIONSHIPS = new('relationships')
           HAS_MFA = new('has_mfa')
+          TIMEOFF_DAYS_TOTAL = new('timeoff_days_total')
+          TIMEOFF_DAYS_USED = new('timeoff_days_used')
           RAW = new('raw')
         end
       end

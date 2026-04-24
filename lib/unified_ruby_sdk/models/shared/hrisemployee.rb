@@ -88,14 +88,18 @@ module UnifiedRubySDK
 
         field :termination_reason, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('termination_reason') } }
 
+        field :timeoff_days_total, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timeoff_days_total') } }
+
+        field :timeoff_days_used, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timeoff_days_used') } }
+
         field :timezone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
 
         field :title, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyHrisEmployeeAddress), bio: T.nilable(::String), company_id: T.nilable(::String), compensation: T.nilable(T::Array[Models::Shared::HrisCompensation]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), date_of_birth: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::HrisEmail]), employee_number: T.nilable(::String), employee_roles: T.nilable(T::Array[Models::Shared::PropertyHrisEmployeeEmployeeRoles]), employment_status: T.nilable(Models::Shared::EmploymentStatus), employment_type: T.nilable(Models::Shared::HrisEmployeeEmploymentType), first_name: T.nilable(::String), gender: T.nilable(Models::Shared::HrisEmployeeGender), groups: T.nilable(T::Array[Models::Shared::HrisGroup]), has_mfa: T.nilable(T::Boolean), hired_at: T.nilable(::DateTime), id: T.nilable(::String), image_url: T.nilable(::String), language_locale: T.nilable(::String), last_name: T.nilable(::String), locations: T.nilable(T::Array[Models::Shared::HrisLocation]), manager_id: T.nilable(::String), marital_status: T.nilable(Models::Shared::MaritalStatus), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), name: T.nilable(::String), pronouns: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), relationships: T.nilable(T::Array[Models::Shared::HrisEmployeerelationship]), salutation: T.nilable(::String), ssn_sin: T.nilable(::String), storage_quota_allocated: T.nilable(::Float), storage_quota_available: T.nilable(::Float), storage_quota_used: T.nilable(::Float), telephones: T.nilable(T::Array[Models::Shared::HrisTelephone]), terminated_at: T.nilable(::DateTime), termination_reason: T.nilable(::String), timezone: T.nilable(::String), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(address: nil, bio: nil, company_id: nil, compensation: nil, created_at: nil, currency: nil, date_of_birth: nil, emails: nil, employee_number: nil, employee_roles: nil, employment_status: nil, employment_type: nil, first_name: nil, gender: nil, groups: nil, has_mfa: nil, hired_at: nil, id: nil, image_url: nil, language_locale: nil, last_name: nil, locations: nil, manager_id: nil, marital_status: nil, metadata: nil, name: nil, pronouns: nil, raw: nil, relationships: nil, salutation: nil, ssn_sin: nil, storage_quota_allocated: nil, storage_quota_available: nil, storage_quota_used: nil, telephones: nil, terminated_at: nil, termination_reason: nil, timezone: nil, title: nil, updated_at: nil)
+        sig { params(address: T.nilable(Models::Shared::PropertyHrisEmployeeAddress), bio: T.nilable(::String), company_id: T.nilable(::String), compensation: T.nilable(T::Array[Models::Shared::HrisCompensation]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), date_of_birth: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::HrisEmail]), employee_number: T.nilable(::String), employee_roles: T.nilable(T::Array[Models::Shared::PropertyHrisEmployeeEmployeeRoles]), employment_status: T.nilable(Models::Shared::EmploymentStatus), employment_type: T.nilable(Models::Shared::HrisEmployeeEmploymentType), first_name: T.nilable(::String), gender: T.nilable(Models::Shared::HrisEmployeeGender), groups: T.nilable(T::Array[Models::Shared::HrisGroup]), has_mfa: T.nilable(T::Boolean), hired_at: T.nilable(::DateTime), id: T.nilable(::String), image_url: T.nilable(::String), language_locale: T.nilable(::String), last_name: T.nilable(::String), locations: T.nilable(T::Array[Models::Shared::HrisLocation]), manager_id: T.nilable(::String), marital_status: T.nilable(Models::Shared::MaritalStatus), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), name: T.nilable(::String), pronouns: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), relationships: T.nilable(T::Array[Models::Shared::HrisEmployeerelationship]), salutation: T.nilable(::String), ssn_sin: T.nilable(::String), storage_quota_allocated: T.nilable(::Float), storage_quota_available: T.nilable(::Float), storage_quota_used: T.nilable(::Float), telephones: T.nilable(T::Array[Models::Shared::HrisTelephone]), terminated_at: T.nilable(::DateTime), termination_reason: T.nilable(::String), timeoff_days_total: T.nilable(::Float), timeoff_days_used: T.nilable(::Float), timezone: T.nilable(::String), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(address: nil, bio: nil, company_id: nil, compensation: nil, created_at: nil, currency: nil, date_of_birth: nil, emails: nil, employee_number: nil, employee_roles: nil, employment_status: nil, employment_type: nil, first_name: nil, gender: nil, groups: nil, has_mfa: nil, hired_at: nil, id: nil, image_url: nil, language_locale: nil, last_name: nil, locations: nil, manager_id: nil, marital_status: nil, metadata: nil, name: nil, pronouns: nil, raw: nil, relationships: nil, salutation: nil, ssn_sin: nil, storage_quota_allocated: nil, storage_quota_available: nil, storage_quota_used: nil, telephones: nil, terminated_at: nil, termination_reason: nil, timeoff_days_total: nil, timeoff_days_used: nil, timezone: nil, title: nil, updated_at: nil)
           @address = address
           @bio = bio
           @company_id = company_id
@@ -133,6 +137,8 @@ module UnifiedRubySDK
           @telephones = telephones
           @terminated_at = terminated_at
           @termination_reason = termination_reason
+          @timeoff_days_total = timeoff_days_total
+          @timeoff_days_used = timeoff_days_used
           @timezone = timezone
           @title = title
           @updated_at = updated_at
@@ -178,6 +184,8 @@ module UnifiedRubySDK
           return false unless @telephones == other.telephones
           return false unless @terminated_at == other.terminated_at
           return false unless @termination_reason == other.termination_reason
+          return false unless @timeoff_days_total == other.timeoff_days_total
+          return false unless @timeoff_days_used == other.timeoff_days_used
           return false unless @timezone == other.timezone
           return false unless @title == other.title
           return false unless @updated_at == other.updated_at

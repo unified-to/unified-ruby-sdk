@@ -82,6 +82,10 @@ class UnifiedRubySDK::Models::Shared::HrisEmployee
   def terminated_at=(str_); end
   def termination_reason(); end
   def termination_reason=(str_); end
+  def timeoff_days_total(); end
+  def timeoff_days_total=(str_); end
+  def timeoff_days_used(); end
+  def timeoff_days_used=(str_); end
   def timezone(); end
   def timezone=(str_); end
   def title(); end
