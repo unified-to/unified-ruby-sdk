@@ -13,18 +13,18 @@ module UnifiedRubySDK
 
 
         enums do
-          INTERESTS = new('interests')
-          BEHAVIORS = new('behaviors')
-          LOCALES = new('locales')
-          COUNTRIES = new('countries')
-          REGIONS = new('regions')
-          CITIES = new('cities')
-          ZIPS = new('zips')
-          US_DMAS = new('us_dmas')
-          TOPICS = new('topics')
-          USER_LISTS = new('user_lists')
-          AGE_RANGES = new('age_ranges')
-          GENDERS = new('genders')
+          INTERESTS = new('INTERESTS')
+          BEHAVIORS = new('BEHAVIORS')
+          LOCALES = new('LOCALES')
+          COUNTRIES = new('COUNTRIES')
+          REGIONS = new('REGIONS')
+          CITIES = new('CITIES')
+          ZIPS = new('ZIPS')
+          US_DMAS = new('US_DMAS')
+          TOPICS = new('TOPICS')
+          USER_LISTS = new('USER_LISTS')
+          AGE_RANGES = new('AGE_RANGES')
+          GENDERS = new('GENDERS')
         end
       end
     end
