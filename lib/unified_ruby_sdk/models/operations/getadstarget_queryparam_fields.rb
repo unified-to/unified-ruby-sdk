@@ -9,7 +9,7 @@ module UnifiedRubySDK
     module Operations
     
 
-      class ListAdsTargetsQueryParamFields < T::Enum
+      class GetAdsTargetQueryParamFields < T::Enum
 
 
         enums do

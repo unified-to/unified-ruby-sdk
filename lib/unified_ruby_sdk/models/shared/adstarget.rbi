@@ -10,10 +10,12 @@ end
 class UnifiedRubySDK::Models::Shared::AdsTarget
   def id(); end
   def id=(str_); end
-  def value(); end
-  def value=(str_); end
+  def is_active(); end
+  def is_active=(str_); end
   def name(); end
   def name=(str_); end
+  def parent_id(); end
+  def parent_id=(str_); end
   def raw(); end
   def raw=(str_); end
   def type(); end

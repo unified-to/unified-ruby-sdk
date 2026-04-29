@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: a690f95a42bb9813e1ec1b14dce3b416
+  docChecksum: 4f04f49fd35700b0721981b97c1208ae
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.68
-  configChecksum: c69ef7ca0f55b43ebdd4745b18ccbfa8
+  releaseVersion: 0.67.69
+  configChecksum: da4b1fe442d7847f68722caf9510e681
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -410,6 +410,12 @@ generatedFiles:
   - docs/models/operations/getadsorganizationqueryparamfields.md
   - docs/models/operations/getadsorganizationrequest.md
   - docs/models/operations/getadsorganizationresponse.md
+  - docs/models/operations/getadspromotedqueryparamfields.md
+  - docs/models/operations/getadspromotedrequest.md
+  - docs/models/operations/getadspromotedresponse.md
+  - docs/models/operations/getadstargetqueryparamfields.md
+  - docs/models/operations/getadstargetrequest.md
+  - docs/models/operations/getadstargetresponse.md
   - docs/models/operations/getassessmentpackagerequest.md
   - docs/models/operations/getassessmentpackageresponse.md
   - docs/models/operations/getatsactivityqueryparamfields.md
@@ -3766,6 +3772,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getadsorganization_request.rbi
   - lib/unified_ruby_sdk/models/operations/getadsorganization_response.rb
   - lib/unified_ruby_sdk/models/operations/getadsorganization_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getadspromoted_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getadspromoted_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getadspromoted_request.rb
+  - lib/unified_ruby_sdk/models/operations/getadspromoted_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getadspromoted_response.rb
+  - lib/unified_ruby_sdk/models/operations/getadspromoted_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getadstarget_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getadstarget_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getadstarget_request.rb
+  - lib/unified_ruby_sdk/models/operations/getadstarget_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getadstarget_response.rb
+  - lib/unified_ruby_sdk/models/operations/getadstarget_response.rbi
   - lib/unified_ruby_sdk/models/operations/getassessmentpackage_request.rb
   - lib/unified_ruby_sdk/models/operations/getassessmentpackage_request.rbi
   - lib/unified_ruby_sdk/models/operations/getassessmentpackage_response.rb
@@ -14484,7 +14502,7 @@ examples:
           connection_id: "<id>"
       responses:
         "200":
-          application/json: [{"id": "<id>", "value": "<value>"}]
+          application/json: [{"id": "<id>"}]
   listAdsPromoteds:
     speakeasy-default-list-ads-promoteds:
       parameters:
@@ -14721,5 +14739,23 @@ examples:
       responses:
         "200":
           application/json: {}
+  getAdsPromoted:
+    speakeasy-default-get-ads-promoted:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"id": "<id>", "type": "PRODUCT_ID"}
+  getAdsTarget:
+    speakeasy-default-get-ads-target:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}

@@ -16,19 +16,22 @@ module UnifiedRubySDK
 
         field :id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id'), required: true } }
 
-        field :value, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value'), required: true } }
+        field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
+        field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :type, Crystalline::Nilable.new(Models::Shared::AdsTargetType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AdsTargetType, true) } }
 
-        sig { params(id: ::String, value: ::String, name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::AdsTargetType)).void }
-        def initialize(id:, value:, name: nil, raw: nil, type: nil)
+        sig { params(id: ::String, is_active: T.nilable(T::Boolean), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::AdsTargetType)).void }
+        def initialize(id:, is_active: nil, name: nil, parent_id: nil, raw: nil, type: nil)
           @id = id
-          @value = value
+          @is_active = is_active
           @name = name
+          @parent_id = parent_id
           @raw = raw
           @type = type
         end
@@ -37,8 +40,9 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @id == other.id
-          return false unless @value == other.value
+          return false unless @is_active == other.is_active
           return false unless @name == other.name
+          return false unless @parent_id == other.parent_id
           return false unless @raw == other.raw
           return false unless @type == other.type
           true

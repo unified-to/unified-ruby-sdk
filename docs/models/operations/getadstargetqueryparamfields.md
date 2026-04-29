@@ -1,4 +1,4 @@
-# ListAdsTargetsQueryParamFields
+# GetAdsTargetQueryParamFields
 
 
 ## Values

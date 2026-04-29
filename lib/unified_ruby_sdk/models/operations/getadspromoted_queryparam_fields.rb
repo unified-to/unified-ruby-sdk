@@ -9,15 +9,13 @@ module UnifiedRubySDK
     module Operations
     
 
-      class ListAdsTargetsQueryParamFields < T::Enum
+      class GetAdsPromotedQueryParamFields < T::Enum
 
 
         enums do
           ID = new('id')
           NAME = new('name')
           TYPE = new('type')
-          IS_ACTIVE = new('is_active')
-          PARENT_ID = new('parent_id')
           RAW = new('raw')
         end
       end

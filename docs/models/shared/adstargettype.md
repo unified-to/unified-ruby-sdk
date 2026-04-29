@@ -3,17 +3,20 @@
 
 ## Values
 
-| Name         | Value        |
-| ------------ | ------------ |
-| `INTERESTS`  | INTERESTS    |
-| `BEHAVIORS`  | BEHAVIORS    |
-| `LOCALES`    | LOCALES      |
-| `COUNTRIES`  | COUNTRIES    |
-| `REGIONS`    | REGIONS      |
-| `CITIES`     | CITIES       |
-| `ZIPS`       | ZIPS         |
-| `US_DMAS`    | US_DMAS      |
-| `TOPICS`     | TOPICS       |
-| `USER_LISTS` | USER_LISTS   |
-| `AGE_RANGES` | AGE_RANGES   |
-| `GENDERS`    | GENDERS      |
+| Name           | Value          |
+| -------------- | -------------- |
+| `INTEREST`     | INTEREST       |
+| `BEHAVIOR`     | BEHAVIOR       |
+| `LOCALE`       | LOCALE         |
+| `COUNTRY`      | COUNTRY        |
+| `REGION`       | REGION         |
+| `CITY`         | CITY           |
+| `ZIP`          | ZIP            |
+| `US_DMA`       | US_DMA         |
+| `TOPIC`        | TOPIC          |
+| `USER_LIST`    | USER_LIST      |
+| `AGE_RANGE`    | AGE_RANGE      |
+| `GENDER`       | GENDER         |
+| `CARRIER`      | CARRIER        |
+| `DEVICE_MODEL` | DEVICE_MODEL   |
+| `OS_VERSION`   | OS_VERSION     |

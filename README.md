@@ -236,6 +236,8 @@ end
 * [get_ads_group](docs/sdks/ads/README.md#get_ads_group) - Retrieve a group
 * [get_ads_insertionorder](docs/sdks/ads/README.md#get_ads_insertionorder) - Retrieve an insertionorder
 * [get_ads_organization](docs/sdks/ads/README.md#get_ads_organization) - Retrieve an organization
+* [get_ads_promoted](docs/sdks/ads/README.md#get_ads_promoted) - Retrieve a promoted
+* [get_ads_target](docs/sdks/ads/README.md#get_ads_target) - Retrieve a target
 * [list_ads_ads](docs/sdks/ads/README.md#list_ads_ads) - List all ads
 * [list_ads_campaigns](docs/sdks/ads/README.md#list_ads_campaigns) - List all campaigns
 * [list_ads_creatives](docs/sdks/ads/README.md#list_ads_creatives) - List all creatives
@@ -1367,6 +1369,7 @@ end
 
 ### [promoted](docs/sdks/promoted/README.md)
 
+* [get_ads_promoted](docs/sdks/promoted/README.md#get_ads_promoted) - Retrieve a promoted
 * [list_ads_promoteds](docs/sdks/promoted/README.md#list_ads_promoteds) - List all promoteds
 
 ### [prompt](docs/sdks/prompt/README.md)
@@ -1626,6 +1629,7 @@ end
 
 ### [target](docs/sdks/target/README.md)
 
+* [get_ads_target](docs/sdks/target/README.md#get_ads_target) - Retrieve a target
 * [list_ads_targets](docs/sdks/target/README.md#list_ads_targets) - List all targets
 
 ### [task](docs/sdks/task/README.md)

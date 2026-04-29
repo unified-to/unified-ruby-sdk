@@ -1,4 +1,4 @@
-# ListAdsPromotedsQueryParamFields
+# GetAdsPromotedQueryParamFields
 
 
 ## Values
