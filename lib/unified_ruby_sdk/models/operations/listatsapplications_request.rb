@@ -35,11 +35,13 @@ module UnifiedRubySDK
         field :raw, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
         field :sort, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
+        # The status to filter by
+        field :status, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'status', 'style': 'form', 'explode': true } }
         # Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, candidate_id: T.nilable(::String), company_id: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListAtsApplicationsQueryParamFields]), job_id: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String)).void }
-        def initialize(connection_id:, candidate_id: nil, company_id: nil, fields_: nil, job_id: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, updated_gte: nil)
+        sig { params(connection_id: ::String, candidate_id: T.nilable(::String), company_id: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListAtsApplicationsQueryParamFields]), job_id: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), status: T.nilable(::String), updated_gte: T.nilable(::String)).void }
+        def initialize(connection_id:, candidate_id: nil, company_id: nil, fields_: nil, job_id: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, status: nil, updated_gte: nil)
           @connection_id = connection_id
           @candidate_id = candidate_id
           @company_id = company_id
@@ -51,6 +53,7 @@ module UnifiedRubySDK
           @query = query
           @raw = raw
           @sort = sort
+          @status = status
           @updated_gte = updated_gte
         end
 
@@ -68,6 +71,7 @@ module UnifiedRubySDK
           return false unless @query == other.query
           return false unless @raw == other.raw
           return false unless @sort == other.sort
+          return false unless @status == other.status
           return false unless @updated_gte == other.updated_gte
           true
         end

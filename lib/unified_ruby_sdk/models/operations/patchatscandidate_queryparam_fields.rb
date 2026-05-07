@@ -37,6 +37,7 @@ module UnifiedRubySDK
           EXPERIENCES = new('experiences')
           EDUCATION = new('education')
           SKILLS = new('skills')
+          JOB_IDS = new('job_ids')
           METADATA = new('metadata')
           RAW = new('raw')
         end

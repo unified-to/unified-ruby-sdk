@@ -32,6 +32,8 @@ class UnifiedRubySDK::Models::Shared::AtsCandidate
   def id=(str_); end
   def image_url(); end
   def image_url=(str_); end
+  def job_ids(); end
+  def job_ids=(str_); end
   def last_name(); end
   def last_name=(str_); end
   def link_urls(); end
