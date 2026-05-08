@@ -32,6 +32,8 @@ class UnifiedRubySDK::Models::Shared::HrisTimeoff
   def reason=(str_); end
   def status(); end
   def status=(str_); end
+  def type(); end
+  def type=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
   def user_id(); end

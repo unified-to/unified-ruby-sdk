@@ -38,12 +38,14 @@ module UnifiedRubySDK
 
         field :status, Crystalline::Nilable.new(Models::Shared::HrisTimeoffStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::HrisTimeoffStatus, true) } }
 
+        field :type, Crystalline::Nilable.new(Models::Shared::HrisTimeoffType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisTimeoffType, true) } }
+
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(start_at: ::DateTime, approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), comments: T.nilable(::String), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), id: T.nilable(::String), is_paid: T.nilable(T::Boolean), raw: T.nilable(T::Hash[Symbol, ::Object]), reason: T.nilable(::String), status: T.nilable(Models::Shared::HrisTimeoffStatus), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(start_at:, approved_at: nil, approver_user_id: nil, comments: nil, company_id: nil, created_at: nil, end_at: nil, id: nil, is_paid: nil, raw: nil, reason: nil, status: nil, updated_at: nil, user_id: nil)
+        sig { params(start_at: ::DateTime, approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), comments: T.nilable(::String), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), id: T.nilable(::String), is_paid: T.nilable(T::Boolean), raw: T.nilable(T::Hash[Symbol, ::Object]), reason: T.nilable(::String), status: T.nilable(Models::Shared::HrisTimeoffStatus), type: T.nilable(Models::Shared::HrisTimeoffType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(start_at:, approved_at: nil, approver_user_id: nil, comments: nil, company_id: nil, created_at: nil, end_at: nil, id: nil, is_paid: nil, raw: nil, reason: nil, status: nil, type: nil, updated_at: nil, user_id: nil)
           @start_at = start_at
           @approved_at = approved_at
           @approver_user_id = approver_user_id
@@ -56,6 +58,7 @@ module UnifiedRubySDK
           @raw = raw
           @reason = reason
           @status = status
+          @type = type
           @updated_at = updated_at
           @user_id = user_id
         end
@@ -75,6 +78,7 @@ module UnifiedRubySDK
           return false unless @raw == other.raw
           return false unless @reason == other.reason
           return false unless @status == other.status
+          return false unless @type == other.type
           return false unless @updated_at == other.updated_at
           return false unless @user_id == other.user_id
           true

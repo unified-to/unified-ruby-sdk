@@ -25,8 +25,9 @@ module UnifiedRubySDK
           APPROVER_USER_ID = new('approver_user_id')
           APPROVED_AT = new('approved_at')
           COMMENTS = new('comments')
-          RAW = new('raw')
           REASON = new('reason')
+          TYPE = new('type')
+          RAW = new('raw')
         end
       end
     end
