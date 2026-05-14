@@ -220,6 +220,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def search_twitter=(str_); end
   def slow_fields(); end
   def slow_fields=(str_); end
+  def virtual_webhook_account_id(); end
+  def virtual_webhook_account_id=(str_); end
   def virtual_webhook_ad_id(); end
   def virtual_webhook_ad_id=(str_); end
   def virtual_webhook_application_id(); end

@@ -812,6 +812,7 @@ module UnifiedRubySDK
       autoload :TimeUnit, 'unified_ruby_sdk/models/shared/time_unit.rb'
       autoload :Type, 'unified_ruby_sdk/models/shared/type.rb'
       autoload :Value, 'unified_ruby_sdk/models/shared/value.rb'
+      autoload :VirtualWebhookAccountId, 'unified_ruby_sdk/models/shared/virtual_webhook_account_id.rb'
       autoload :VirtualWebhookAdId, 'unified_ruby_sdk/models/shared/virtual_webhook_ad_id.rb'
       autoload :VirtualWebhookApplicationId, 'unified_ruby_sdk/models/shared/virtual_webhook_application_id.rb'
       autoload :VirtualWebhookBenefitId, 'unified_ruby_sdk/models/shared/virtual_webhook_benefit_id.rb'

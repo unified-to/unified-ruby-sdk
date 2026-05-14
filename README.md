@@ -1553,6 +1553,7 @@ end
 * [list_shipping_carriers](docs/sdks/shipping/README.md#list_shipping_carriers) - List all carriers
 * [list_shipping_labels](docs/sdks/shipping/README.md#list_shipping_labels) - List all labels
 * [list_shipping_shipments](docs/sdks/shipping/README.md#list_shipping_shipments) - List all shipments
+* [list_shipping_trackings](docs/sdks/shipping/README.md#list_shipping_trackings) - List all trackings
 * [patch_shipping_label](docs/sdks/shipping/README.md#patch_shipping_label) - Update a label
 * [patch_shipping_shipment](docs/sdks/shipping/README.md#patch_shipping_shipment) - Update a shipment
 * [remove_shipping_label](docs/sdks/shipping/README.md#remove_shipping_label) - Remove a label
@@ -1726,6 +1727,7 @@ end
 ### [tracking](docs/sdks/tracking/README.md)
 
 * [get_shipping_tracking](docs/sdks/tracking/README.md#get_shipping_tracking) - Retrieve a tracking
+* [list_shipping_trackings](docs/sdks/tracking/README.md#list_shipping_trackings) - List all trackings
 
 ### [transaction](docs/sdks/transaction/README.md)
 

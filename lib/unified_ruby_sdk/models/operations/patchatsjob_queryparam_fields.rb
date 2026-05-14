@@ -39,6 +39,7 @@ module UnifiedRubySDK
           MINIMUM_DEGREE = new('minimum_degree')
           SKILLS = new('skills')
           METADATA = new('metadata')
+          USER_ID = new('user_id')
           RAW = new('raw')
         end
       end

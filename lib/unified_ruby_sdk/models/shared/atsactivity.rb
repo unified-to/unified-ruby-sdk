@@ -22,6 +22,8 @@ module UnifiedRubySDK
 
         field :cc, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cc') } }
 
+        field :company_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
+
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
@@ -52,12 +54,13 @@ module UnifiedRubySDK
         # id values of the recruiters associated with the activity.
         field :user_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
 
-        sig { params(application_id: T.nilable(::String), bcc: T.nilable(T::Array[Models::Shared::AtsEmail]), candidate_id: T.nilable(::String), cc: T.nilable(T::Array[Models::Shared::AtsEmail]), created_at: T.nilable(::DateTime), description: T.nilable(::String), document_ids: T.nilable(T::Array[::String]), from: T.nilable(Models::Shared::PropertyAtsActivityFrom), id: T.nilable(::String), interview_id: T.nilable(::String), is_private: T.nilable(T::Boolean), job_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), sub_type: T.nilable(::String), title: T.nilable(::String), to: T.nilable(T::Array[Models::Shared::AtsEmail]), type: T.nilable(Models::Shared::AtsActivityType), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
-        def initialize(application_id: nil, bcc: nil, candidate_id: nil, cc: nil, created_at: nil, description: nil, document_ids: nil, from: nil, id: nil, interview_id: nil, is_private: nil, job_id: nil, raw: nil, sub_type: nil, title: nil, to: nil, type: nil, updated_at: nil, user_ids: nil)
+        sig { params(application_id: T.nilable(::String), bcc: T.nilable(T::Array[Models::Shared::AtsEmail]), candidate_id: T.nilable(::String), cc: T.nilable(T::Array[Models::Shared::AtsEmail]), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), document_ids: T.nilable(T::Array[::String]), from: T.nilable(Models::Shared::PropertyAtsActivityFrom), id: T.nilable(::String), interview_id: T.nilable(::String), is_private: T.nilable(T::Boolean), job_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), sub_type: T.nilable(::String), title: T.nilable(::String), to: T.nilable(T::Array[Models::Shared::AtsEmail]), type: T.nilable(Models::Shared::AtsActivityType), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
+        def initialize(application_id: nil, bcc: nil, candidate_id: nil, cc: nil, company_id: nil, created_at: nil, description: nil, document_ids: nil, from: nil, id: nil, interview_id: nil, is_private: nil, job_id: nil, raw: nil, sub_type: nil, title: nil, to: nil, type: nil, updated_at: nil, user_ids: nil)
           @application_id = application_id
           @bcc = bcc
           @candidate_id = candidate_id
           @cc = cc
+          @company_id = company_id
           @created_at = created_at
           @description = description
           @document_ids = document_ids
@@ -82,6 +85,7 @@ module UnifiedRubySDK
           return false unless @bcc == other.bcc
           return false unless @candidate_id == other.candidate_id
           return false unless @cc == other.cc
+          return false unless @company_id == other.company_id
           return false unless @created_at == other.created_at
           return false unless @description == other.description
           return false unless @document_ids == other.document_ids

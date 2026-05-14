@@ -9,49 +9,40 @@ module UnifiedRubySDK
     module Operations
     
 
-      class ListKmsPagesRequest
+      class ListShippingTrackingsRequest
         extend T::Sig
         include Crystalline::MetadataFields
 
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
         # Fields to return
-        field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::ListKmsPagesQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::ListShippingTrackingsQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
         field :limit, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
 
         field :offset, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
 
         field :order, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
-        # The parent ID to filter by
-        field :parent_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'parent_id', 'style': 'form', 'explode': true } }
         # Query string to search. eg. email address or name
         field :query, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
         # Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
         field :raw, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'raw', 'style': 'form', 'explode': true } }
 
         field :sort, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': true } }
-        # The space ID to filter by (reference to KmsSpace)
-        field :space_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'space_id', 'style': 'form', 'explode': true } }
         # Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
-        # The user/employee ID to filter by (reference to HrisEmployee)
-        field :user_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::ListKmsPagesQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), space_id: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
-        def initialize(connection_id:, fields_: nil, limit: nil, offset: nil, order: nil, parent_id: nil, query: nil, raw: nil, sort: nil, space_id: nil, updated_gte: nil, user_id: nil)
+        sig { params(connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::ListShippingTrackingsQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String)).void }
+        def initialize(connection_id:, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, updated_gte: nil)
           @connection_id = connection_id
           @fields_ = fields_
           @limit = limit
           @offset = offset
           @order = order
-          @parent_id = parent_id
           @query = query
           @raw = raw
           @sort = sort
-          @space_id = space_id
           @updated_gte = updated_gte
-          @user_id = user_id
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
@@ -62,13 +53,10 @@ module UnifiedRubySDK
           return false unless @limit == other.limit
           return false unless @offset == other.offset
           return false unless @order == other.order
-          return false unless @parent_id == other.parent_id
           return false unless @query == other.query
           return false unless @raw == other.raw
           return false unless @sort == other.sort
-          return false unless @space_id == other.space_id
           return false unless @updated_gte == other.updated_gte
-          return false unless @user_id == other.user_id
           true
         end
       end

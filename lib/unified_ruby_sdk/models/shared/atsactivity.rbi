@@ -16,6 +16,8 @@ class UnifiedRubySDK::Models::Shared::AtsActivity
   def candidate_id=(str_); end
   def cc(); end
   def cc=(str_); end
+  def company_id(); end
+  def company_id=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def description(); end

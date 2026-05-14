@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 1a8d1590728cad21bdabd6d8e81d61e1
+  docChecksum: d0c51f91b1e66262f9489b66ca8d3b1f
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.72
-  configChecksum: 6dc4997189c22e4999a96a0c7b5f4a2d
+  releaseVersion: 0.67.73
+  configChecksum: dce948e4c0da2e568ffaf59ce340b053
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -1019,6 +1019,9 @@ generatedFiles:
   - docs/models/operations/listshippingshipmentsqueryparamfields.md
   - docs/models/operations/listshippingshipmentsrequest.md
   - docs/models/operations/listshippingshipmentsresponse.md
+  - docs/models/operations/listshippingtrackingsqueryparamfields.md
+  - docs/models/operations/listshippingtrackingsrequest.md
+  - docs/models/operations/listshippingtrackingsresponse.md
   - docs/models/operations/listsigningdocumentsqueryparamfields.md
   - docs/models/operations/listsigningdocumentsrequest.md
   - docs/models/operations/listsigningdocumentsresponse.md
@@ -2712,6 +2715,7 @@ generatedFiles:
   - docs/models/shared/verificationrequestresponsestatus.md
   - docs/models/shared/verificationresponsedetail.md
   - docs/models/shared/verificationtime.md
+  - docs/models/shared/virtualwebhookaccountid.md
   - docs/models/shared/virtualwebhookadid.md
   - docs/models/shared/virtualwebhookapplicationid.md
   - docs/models/shared/virtualwebhookbenefitid.md
@@ -4991,6 +4995,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listshippingshipments_request.rbi
   - lib/unified_ruby_sdk/models/operations/listshippingshipments_response.rb
   - lib/unified_ruby_sdk/models/operations/listshippingshipments_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listshippingtrackings_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listshippingtrackings_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listshippingtrackings_request.rb
+  - lib/unified_ruby_sdk/models/operations/listshippingtrackings_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listshippingtrackings_response.rb
+  - lib/unified_ruby_sdk/models/operations/listshippingtrackings_response.rbi
   - lib/unified_ruby_sdk/models/operations/listsigningdocuments_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listsigningdocuments_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listsigningdocuments_request.rb
@@ -8378,6 +8388,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/verificationresponsedetail.rbi
   - lib/unified_ruby_sdk/models/shared/verificationtime.rb
   - lib/unified_ruby_sdk/models/shared/verificationtime.rbi
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_account_id.rb
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_account_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_ad_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_ad_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_application_id.rb
@@ -11014,7 +11026,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"start_at": "2025-10-20T08:12:47.408Z"}
+          application/json: {}
   getHrisTimeshift:
     speakeasy-default-get-hris-timeshift:
       parameters:
@@ -14583,10 +14595,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"start_at": "2024-09-03T22:31:51.863Z"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"start_at": "2026-06-15T05:46:27.150Z"}
+          application/json: {}
   patchHrisTimeoff:
     speakeasy-default-patch-hris-timeoff:
       parameters:
@@ -14594,10 +14606,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"start_at": "2024-01-26T05:49:44.056Z"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"start_at": "2024-11-03T06:01:35.702Z"}
+          application/json: {}
   removeHrisTimeoff:
     speakeasy-default-remove-hris-timeoff:
       parameters:
@@ -14611,10 +14623,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"start_at": "2026-02-26T01:59:20.061Z"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"start_at": "2025-05-04T04:02:48.766Z"}
+          application/json: {}
   createSigningDocument:
     speakeasy-default-create-signing-document:
       parameters:

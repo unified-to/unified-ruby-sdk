@@ -31,6 +31,7 @@ module UnifiedRubySDK
           CC = new('cc')
           BCC = new('bcc')
           SUB_TYPE = new('sub_type')
+          COMPANY_ID = new('company_id')
           RAW = new('raw')
         end
       end

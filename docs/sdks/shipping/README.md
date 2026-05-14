@@ -15,6 +15,7 @@
 * [list_shipping_carriers](#list_shipping_carriers) - List all carriers
 * [list_shipping_labels](#list_shipping_labels) - List all labels
 * [list_shipping_shipments](#list_shipping_shipments) - List all shipments
+* [list_shipping_trackings](#list_shipping_trackings) - List all trackings
 * [patch_shipping_label](#patch_shipping_label) - Update a label
 * [patch_shipping_shipment](#patch_shipping_shipment) - Update a shipment
 * [remove_shipping_label](#remove_shipping_label) - Remove a label
@@ -458,6 +459,51 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::ListShippingShipmentsResponse)](../../models/operations/listshippingshipmentsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_shipping_trackings
+
+List all trackings
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listShippingTrackings" method="get" path="/shipping/{connection_id}/tracking" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListShippingTrackingsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.shipping.list_shipping_trackings(request: req)
+
+unless res.shipping_trackings.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [Models::Operations::ListShippingTrackingsRequest](../../models/operations/listshippingtrackingsrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+
+### Response
+
+**[T.nilable(Models::Operations::ListShippingTrackingsResponse)](../../models/operations/listshippingtrackingsresponse.md)**
 
 ### Errors
 
