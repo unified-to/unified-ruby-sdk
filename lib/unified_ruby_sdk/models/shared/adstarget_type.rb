@@ -23,8 +23,6 @@ module UnifiedRubySDK
           US_DMA = new('US_DMA')
           TOPIC = new('TOPIC')
           USER_LIST = new('USER_LIST')
-          AGE_RANGE = new('AGE_RANGE')
-          GENDER = new('GENDER')
           CARRIER = new('CARRIER')
           DEVICE_MODEL = new('DEVICE_MODEL')
           OS_VERSION = new('OS_VERSION')

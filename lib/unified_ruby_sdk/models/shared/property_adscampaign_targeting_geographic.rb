@@ -16,29 +16,29 @@ module UnifiedRubySDK
 
         field :cities, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CityTarget)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cities') } }
 
-        field :countries, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('countries') } }
+        field :countries, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::GeoTarget)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('countries') } }
 
         field :excluded_cities, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CityTarget)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('excluded_cities') } }
 
-        field :excluded_countries, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('excluded_countries') } }
+        field :excluded_countries, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::GeoTarget)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('excluded_countries') } }
 
-        field :excluded_postal_codes, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('excluded_postal_codes') } }
+        field :excluded_postal_codes, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::GeoTarget)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('excluded_postal_codes') } }
 
         field :excluded_regions, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::RegionTarget)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('excluded_regions') } }
 
-        field :excluded_us_dmas, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('excluded_us_dmas') } }
+        field :excluded_us_dmas, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::GeoTarget)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('excluded_us_dmas') } }
 
         field :location_types, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PropertyAdsCampaignTargetingGeographicLocationTypes)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location_types') } }
 
-        field :postal_codes, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('postal_codes') } }
+        field :postal_codes, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::GeoTarget)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('postal_codes') } }
 
         field :presence_type, Crystalline::Nilable.new(Models::Shared::PresenceType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('presence_type'), 'decoder': Utils.enum_from_string(Models::Shared::PresenceType, true) } }
 
         field :regions, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::RegionTarget)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('regions') } }
 
-        field :us_dmas, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('us_dmas') } }
+        field :us_dmas, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::GeoTarget)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('us_dmas') } }
 
-        sig { params(cities: T.nilable(T::Array[Models::Shared::CityTarget]), countries: T.nilable(T::Array[::String]), excluded_cities: T.nilable(T::Array[Models::Shared::CityTarget]), excluded_countries: T.nilable(T::Array[::String]), excluded_postal_codes: T.nilable(T::Array[::String]), excluded_regions: T.nilable(T::Array[Models::Shared::RegionTarget]), excluded_us_dmas: T.nilable(T::Array[::String]), location_types: T.nilable(T::Array[Models::Shared::PropertyAdsCampaignTargetingGeographicLocationTypes]), postal_codes: T.nilable(T::Array[::String]), presence_type: T.nilable(Models::Shared::PresenceType), regions: T.nilable(T::Array[Models::Shared::RegionTarget]), us_dmas: T.nilable(T::Array[::String])).void }
+        sig { params(cities: T.nilable(T::Array[Models::Shared::CityTarget]), countries: T.nilable(T::Array[Models::Shared::GeoTarget]), excluded_cities: T.nilable(T::Array[Models::Shared::CityTarget]), excluded_countries: T.nilable(T::Array[Models::Shared::GeoTarget]), excluded_postal_codes: T.nilable(T::Array[Models::Shared::GeoTarget]), excluded_regions: T.nilable(T::Array[Models::Shared::RegionTarget]), excluded_us_dmas: T.nilable(T::Array[Models::Shared::GeoTarget]), location_types: T.nilable(T::Array[Models::Shared::PropertyAdsCampaignTargetingGeographicLocationTypes]), postal_codes: T.nilable(T::Array[Models::Shared::GeoTarget]), presence_type: T.nilable(Models::Shared::PresenceType), regions: T.nilable(T::Array[Models::Shared::RegionTarget]), us_dmas: T.nilable(T::Array[Models::Shared::GeoTarget])).void }
         def initialize(cities: nil, countries: nil, excluded_cities: nil, excluded_countries: nil, excluded_postal_codes: nil, excluded_regions: nil, excluded_us_dmas: nil, location_types: nil, postal_codes: nil, presence_type: nil, regions: nil, us_dmas: nil)
           @cities = cities
           @countries = countries

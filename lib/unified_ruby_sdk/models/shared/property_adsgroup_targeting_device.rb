@@ -14,15 +14,15 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :carriers, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('carriers') } }
+        field :carriers, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::DeviceTarget)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('carriers') } }
 
-        field :types, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('types') } }
+        field :types, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::DeviceTarget)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('types') } }
 
-        field :user_device, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_device') } }
+        field :user_device, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::DeviceTarget)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_device') } }
 
-        field :user_os, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_os') } }
+        field :user_os, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::DeviceTarget)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_os') } }
 
-        sig { params(carriers: T.nilable(T::Array[::String]), types: T.nilable(T::Array[::String]), user_device: T.nilable(T::Array[::String]), user_os: T.nilable(T::Array[::String])).void }
+        sig { params(carriers: T.nilable(T::Array[Models::Shared::DeviceTarget]), types: T.nilable(T::Array[Models::Shared::DeviceTarget]), user_device: T.nilable(T::Array[Models::Shared::DeviceTarget]), user_os: T.nilable(T::Array[Models::Shared::DeviceTarget])).void }
         def initialize(carriers: nil, types: nil, user_device: nil, user_os: nil)
           @carriers = carriers
           @types = types

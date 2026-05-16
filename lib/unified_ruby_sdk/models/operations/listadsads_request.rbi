@@ -30,6 +30,8 @@ class UnifiedRubySDK::Models::Operations::ListAdsAdsRequest
   def raw=(str_); end
   def sort(); end
   def sort=(str_); end
+  def status(); end
+  def status=(str_); end
   def updated_gte(); end
   def updated_gte=(str_); end
 end
