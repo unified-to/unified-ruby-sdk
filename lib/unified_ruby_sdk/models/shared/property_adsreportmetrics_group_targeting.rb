@@ -25,8 +25,8 @@ module UnifiedRubySDK
         field :device, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroupTargetingDevice), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('device') } }
 
         field :geographic, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroupTargetingGeographic), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('geographic') } }
-        # Language targeting (Meta
-        field :language, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroupTargetingLanguage), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language') } }
+
+        field :language, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TargetRef)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language') } }
         # Optimization (Meta: targeting_automation; Google: observation vs targeting mode)
         field :optimization, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroupTargetingOptimization), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('optimization') } }
 
@@ -34,7 +34,7 @@ module UnifiedRubySDK
 
         field :schedule, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdSchedule)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('schedule') } }
 
-        sig { params(audience: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupTargetingAudience), brand_safety: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupTargetingBrandSafety), content: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupTargetingContent), demographic: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupTargetingDemographic), device: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupTargetingDevice), geographic: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupTargetingGeographic), language: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupTargetingLanguage), optimization: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupTargetingOptimization), placement: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupTargetingPlacement), schedule: T.nilable(T::Array[Models::Shared::AdSchedule])).void }
+        sig { params(audience: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupTargetingAudience), brand_safety: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupTargetingBrandSafety), content: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupTargetingContent), demographic: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupTargetingDemographic), device: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupTargetingDevice), geographic: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupTargetingGeographic), language: T.nilable(T::Array[Models::Shared::TargetRef]), optimization: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupTargetingOptimization), placement: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupTargetingPlacement), schedule: T.nilable(T::Array[Models::Shared::AdSchedule])).void }
         def initialize(audience: nil, brand_safety: nil, content: nil, demographic: nil, device: nil, geographic: nil, language: nil, optimization: nil, placement: nil, schedule: nil)
           @audience = audience
           @brand_safety = brand_safety

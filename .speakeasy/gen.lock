@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 2ec27bf791820bf9fbebce89bdbe69b7
+  docChecksum: 98553c5a9c26bbe1e089cc9d09e3a8f2
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.74
-  configChecksum: 68851965b87bca8073152850ef6b54d8
+  releaseVersion: 0.67.75
+  configChecksum: c29f0f23eb16c871dc6c1efab9a49dd5
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -2046,7 +2046,6 @@ generatedFiles:
   - docs/models/shared/atstelephone.md
   - docs/models/shared/atstelephonetype.md
   - docs/models/shared/audiencecombination.md
-  - docs/models/shared/audiencesegment.md
   - docs/models/shared/billingevent.md
   - docs/models/shared/budgetallocationtype.md
   - docs/models/shared/budgetperiod.md
@@ -2133,7 +2132,6 @@ generatedFiles:
   - docs/models/shared/crmtelephonetype.md
   - docs/models/shared/dayofweek.md
   - docs/models/shared/dbtype.md
-  - docs/models/shared/devicetarget.md
   - docs/models/shared/dutiespaidby.md
   - docs/models/shared/employercontributiontype.md
   - docs/models/shared/employmentstatus.md
@@ -2164,7 +2162,6 @@ generatedFiles:
   - docs/models/shared/genaimodel.md
   - docs/models/shared/genaiprompt.md
   - docs/models/shared/gender.md
-  - docs/models/shared/geotarget.md
   - docs/models/shared/goal.md
   - docs/models/shared/hostingsource.md
   - docs/models/shared/hrisbankaccount.md
@@ -2417,7 +2414,6 @@ generatedFiles:
   - docs/models/shared/propertyadscampaigntargetingdevice.md
   - docs/models/shared/propertyadscampaigntargetinggeographic.md
   - docs/models/shared/propertyadscampaigntargetinggeographiclocationtypes.md
-  - docs/models/shared/propertyadscampaigntargetinglanguage.md
   - docs/models/shared/propertyadscampaigntargetingoptimization.md
   - docs/models/shared/propertyadscampaigntargetingplacement.md
   - docs/models/shared/propertyadsgroupbidstrategy.md
@@ -2439,7 +2435,6 @@ generatedFiles:
   - docs/models/shared/propertyadsgrouptargetinggeographic.md
   - docs/models/shared/propertyadsgrouptargetinggeographiclocationtypes.md
   - docs/models/shared/propertyadsgrouptargetinggeographicpresencetype.md
-  - docs/models/shared/propertyadsgrouptargetinglanguage.md
   - docs/models/shared/propertyadsgrouptargetingoptimization.md
   - docs/models/shared/propertyadsgrouptargetingoptimizationmode.md
   - docs/models/shared/propertyadsgrouptargetingplacement.md
@@ -2477,7 +2472,6 @@ generatedFiles:
   - docs/models/shared/propertyadsreportmetricscampaigntargetinggeographic.md
   - docs/models/shared/propertyadsreportmetricscampaigntargetinggeographiclocationtypes.md
   - docs/models/shared/propertyadsreportmetricscampaigntargetinggeographicpresencetype.md
-  - docs/models/shared/propertyadsreportmetricscampaigntargetinglanguage.md
   - docs/models/shared/propertyadsreportmetricscampaigntargetingoptimization.md
   - docs/models/shared/propertyadsreportmetricscampaigntargetingoptimizationmode.md
   - docs/models/shared/propertyadsreportmetricscampaigntargetingplacement.md
@@ -2510,7 +2504,6 @@ generatedFiles:
   - docs/models/shared/propertyadsreportmetricsgrouptargetinggeographic.md
   - docs/models/shared/propertyadsreportmetricsgrouptargetinggeographiclocationtypes.md
   - docs/models/shared/propertyadsreportmetricsgrouptargetinggeographicpresencetype.md
-  - docs/models/shared/propertyadsreportmetricsgrouptargetinglanguage.md
   - docs/models/shared/propertyadsreportmetricsgrouptargetingoptimization.md
   - docs/models/shared/propertyadsreportmetricsgrouptargetingoptimizationmode.md
   - docs/models/shared/propertyadsreportmetricsgrouptargetingplacement.md
@@ -2595,7 +2588,6 @@ generatedFiles:
   - docs/models/shared/propertyuccalltelephonetype.md
   - docs/models/shared/radiusunit.md
   - docs/models/shared/recommendation.md
-  - docs/models/shared/regiontarget.md
   - docs/models/shared/registrationstatus.md
   - docs/models/shared/repobranch.md
   - docs/models/shared/repocommit.md
@@ -2665,6 +2657,7 @@ generatedFiles:
   - docs/models/shared/storagefiletype.md
   - docs/models/shared/storagepermission.md
   - docs/models/shared/storagereference.md
+  - docs/models/shared/targetref.md
   - docs/models/shared/taskchange.md
   - docs/models/shared/taskchangeitem.md
   - docs/models/shared/taskcomment.md
@@ -2692,7 +2685,6 @@ generatedFiles:
   - docs/models/shared/ticketingticket.md
   - docs/models/shared/ticketingticketstatus.md
   - docs/models/shared/timeunit.md
-  - docs/models/shared/topictarget.md
   - docs/models/shared/type.md
   - docs/models/shared/uccall.md
   - docs/models/shared/uccalltype.md
@@ -7053,8 +7045,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/atstelephone_type.rbi
   - lib/unified_ruby_sdk/models/shared/audiencecombination.rb
   - lib/unified_ruby_sdk/models/shared/audiencecombination.rbi
-  - lib/unified_ruby_sdk/models/shared/audiencesegment.rb
-  - lib/unified_ruby_sdk/models/shared/audiencesegment.rbi
   - lib/unified_ruby_sdk/models/shared/billing_event.rb
   - lib/unified_ruby_sdk/models/shared/billing_event.rbi
   - lib/unified_ruby_sdk/models/shared/budget_allocation_type.rb
@@ -7227,8 +7217,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/day_of_week.rbi
   - lib/unified_ruby_sdk/models/shared/db_type.rb
   - lib/unified_ruby_sdk/models/shared/db_type.rbi
-  - lib/unified_ruby_sdk/models/shared/devicetarget.rb
-  - lib/unified_ruby_sdk/models/shared/devicetarget.rbi
   - lib/unified_ruby_sdk/models/shared/duties_paid_by.rb
   - lib/unified_ruby_sdk/models/shared/duties_paid_by.rbi
   - lib/unified_ruby_sdk/models/shared/employer_contribution_type.rb
@@ -7289,8 +7277,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/genaiprompt.rbi
   - lib/unified_ruby_sdk/models/shared/gender.rb
   - lib/unified_ruby_sdk/models/shared/gender.rbi
-  - lib/unified_ruby_sdk/models/shared/geotarget.rb
-  - lib/unified_ruby_sdk/models/shared/geotarget.rbi
   - lib/unified_ruby_sdk/models/shared/goal.rb
   - lib/unified_ruby_sdk/models/shared/goal.rbi
   - lib/unified_ruby_sdk/models/shared/hosting_source.rb
@@ -7795,8 +7781,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_geographic.rbi
   - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_geographic_location_types.rb
   - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_geographic_location_types.rbi
-  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_language.rb
-  - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_language.rbi
   - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_optimization.rb
   - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_optimization.rbi
   - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_placement.rb
@@ -7839,8 +7823,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_geographic_location_types.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_geographic_presence_type.rb
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_geographic_presence_type.rbi
-  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_language.rb
-  - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_language.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_optimization.rb
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_optimization.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_optimization_mode.rb
@@ -7915,8 +7897,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_geographic_location_types.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_geographic_presence_type.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_geographic_presence_type.rbi
-  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_language.rb
-  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_language.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_optimization.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_optimization.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_optimization_mode.rb
@@ -7981,8 +7961,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_geographic_location_types.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_geographic_presence_type.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_geographic_presence_type.rbi
-  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_language.rb
-  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_language.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_optimization.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_optimization.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_optimization_mode.rb
@@ -8151,8 +8129,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/radius_unit.rbi
   - lib/unified_ruby_sdk/models/shared/recommendation.rb
   - lib/unified_ruby_sdk/models/shared/recommendation.rbi
-  - lib/unified_ruby_sdk/models/shared/regiontarget.rb
-  - lib/unified_ruby_sdk/models/shared/regiontarget.rbi
   - lib/unified_ruby_sdk/models/shared/registration_status.rb
   - lib/unified_ruby_sdk/models/shared/registration_status.rbi
   - lib/unified_ruby_sdk/models/shared/repobranch.rb
@@ -8291,6 +8267,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/storagepermission.rbi
   - lib/unified_ruby_sdk/models/shared/storagereference.rb
   - lib/unified_ruby_sdk/models/shared/storagereference.rbi
+  - lib/unified_ruby_sdk/models/shared/targetref.rb
+  - lib/unified_ruby_sdk/models/shared/targetref.rbi
   - lib/unified_ruby_sdk/models/shared/taskchange.rb
   - lib/unified_ruby_sdk/models/shared/taskchange.rbi
   - lib/unified_ruby_sdk/models/shared/taskchangeitem.rb
@@ -8345,8 +8323,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/ticketingticket_status.rbi
   - lib/unified_ruby_sdk/models/shared/time_unit.rb
   - lib/unified_ruby_sdk/models/shared/time_unit.rbi
-  - lib/unified_ruby_sdk/models/shared/topictarget.rb
-  - lib/unified_ruby_sdk/models/shared/topictarget.rbi
   - lib/unified_ruby_sdk/models/shared/type.rb
   - lib/unified_ruby_sdk/models/shared/type.rbi
   - lib/unified_ruby_sdk/models/shared/uccall.rb

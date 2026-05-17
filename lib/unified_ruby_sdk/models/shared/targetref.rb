@@ -8,18 +8,18 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-      # device / OS / carrier id from ads_target list
-      class DeviceTarget
+
+      class TargetRef
         extend T::Sig
         include Crystalline::MetadataFields
 
 
-        field :id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id'), required: true } }
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        sig { params(id: ::String, name: T.nilable(::String)).void }
-        def initialize(id:, name: nil)
+        sig { params(id: T.nilable(::String), name: T.nilable(::String)).void }
+        def initialize(id: nil, name: nil)
           @id = id
           @name = name
         end

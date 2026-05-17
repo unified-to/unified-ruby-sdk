@@ -10,6 +10,10 @@ end
 class UnifiedRubySDK::Models::Shared::AdsTarget
   def id(); end
   def id=(str_); end
+  def audience_count_max(); end
+  def audience_count_max=(str_); end
+  def audience_count_min(); end
+  def audience_count_min=(str_); end
   def is_active(); end
   def is_active=(str_); end
   def name(); end

@@ -14,23 +14,23 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :behaviors, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AudienceSegment)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('behaviors') } }
+        field :behaviors, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TargetRef)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('behaviors') } }
 
         field :combination_spec, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AudienceCombination)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('combination_spec') } }
 
-        field :custom_audiences, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AudienceSegment)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('custom_audiences') } }
+        field :custom_audiences, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TargetRef)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('custom_audiences') } }
 
-        field :excluded_behaviors, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AudienceSegment)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('excluded_behaviors') } }
+        field :excluded_behaviors, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TargetRef)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('excluded_behaviors') } }
 
-        field :excluded_custom_audiences, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AudienceSegment)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('excluded_custom_audiences') } }
+        field :excluded_custom_audiences, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TargetRef)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('excluded_custom_audiences') } }
 
-        field :excluded_interests, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AudienceSegment)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('excluded_interests') } }
+        field :excluded_interests, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TargetRef)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('excluded_interests') } }
 
-        field :interests, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AudienceSegment)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('interests') } }
+        field :interests, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TargetRef)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('interests') } }
 
         field :lookalike_audiences, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LookalikeAudience)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lookalike_audiences') } }
 
-        sig { params(behaviors: T.nilable(T::Array[Models::Shared::AudienceSegment]), combination_spec: T.nilable(T::Array[Models::Shared::AudienceCombination]), custom_audiences: T.nilable(T::Array[Models::Shared::AudienceSegment]), excluded_behaviors: T.nilable(T::Array[Models::Shared::AudienceSegment]), excluded_custom_audiences: T.nilable(T::Array[Models::Shared::AudienceSegment]), excluded_interests: T.nilable(T::Array[Models::Shared::AudienceSegment]), interests: T.nilable(T::Array[Models::Shared::AudienceSegment]), lookalike_audiences: T.nilable(T::Array[Models::Shared::LookalikeAudience])).void }
+        sig { params(behaviors: T.nilable(T::Array[Models::Shared::TargetRef]), combination_spec: T.nilable(T::Array[Models::Shared::AudienceCombination]), custom_audiences: T.nilable(T::Array[Models::Shared::TargetRef]), excluded_behaviors: T.nilable(T::Array[Models::Shared::TargetRef]), excluded_custom_audiences: T.nilable(T::Array[Models::Shared::TargetRef]), excluded_interests: T.nilable(T::Array[Models::Shared::TargetRef]), interests: T.nilable(T::Array[Models::Shared::TargetRef]), lookalike_audiences: T.nilable(T::Array[Models::Shared::LookalikeAudience])).void }
         def initialize(behaviors: nil, combination_spec: nil, custom_audiences: nil, excluded_behaviors: nil, excluded_custom_audiences: nil, excluded_interests: nil, interests: nil, lookalike_audiences: nil)
           @behaviors = behaviors
           @combination_spec = combination_spec

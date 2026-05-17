@@ -18,6 +18,8 @@ module UnifiedRubySDK
           TYPE = new('type')
           IS_ACTIVE = new('is_active')
           PARENT_ID = new('parent_id')
+          AUDIENCE_COUNT_MIN = new('audience_count_min')
+          AUDIENCE_COUNT_MAX = new('audience_count_max')
           RAW = new('raw')
         end
       end

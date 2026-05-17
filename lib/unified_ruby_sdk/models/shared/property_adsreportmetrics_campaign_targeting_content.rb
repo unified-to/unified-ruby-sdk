@@ -16,19 +16,19 @@ module UnifiedRubySDK
 
         field :excluded_keywords, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdsKeyword)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('excluded_keywords') } }
 
-        field :excluded_topics, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TopicTarget)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('excluded_topics') } }
+        field :excluded_topics, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TargetRef)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('excluded_topics') } }
 
         field :excluded_urls, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('excluded_urls') } }
 
         field :keywords, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdsKeyword)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('keywords') } }
 
-        field :topics, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TopicTarget)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('topics') } }
+        field :topics, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TargetRef)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('topics') } }
 
         field :urls, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('urls') } }
 
         field :video, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsCampaignTargetingContentVideo), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('video') } }
 
-        sig { params(excluded_keywords: T.nilable(T::Array[Models::Shared::AdsKeyword]), excluded_topics: T.nilable(T::Array[Models::Shared::TopicTarget]), excluded_urls: T.nilable(T::Array[::String]), keywords: T.nilable(T::Array[Models::Shared::AdsKeyword]), topics: T.nilable(T::Array[Models::Shared::TopicTarget]), urls: T.nilable(T::Array[::String]), video: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaignTargetingContentVideo)).void }
+        sig { params(excluded_keywords: T.nilable(T::Array[Models::Shared::AdsKeyword]), excluded_topics: T.nilable(T::Array[Models::Shared::TargetRef]), excluded_urls: T.nilable(T::Array[::String]), keywords: T.nilable(T::Array[Models::Shared::AdsKeyword]), topics: T.nilable(T::Array[Models::Shared::TargetRef]), urls: T.nilable(T::Array[::String]), video: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaignTargetingContentVideo)).void }
         def initialize(excluded_keywords: nil, excluded_topics: nil, excluded_urls: nil, keywords: nil, topics: nil, urls: nil, video: nil)
           @excluded_keywords = excluded_keywords
           @excluded_topics = excluded_topics

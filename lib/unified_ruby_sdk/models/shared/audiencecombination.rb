@@ -14,29 +14,29 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :behaviors, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AudienceSegment)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('behaviors') } }
+        field :behaviors, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TargetRef)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('behaviors') } }
 
-        field :demographics, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AudienceSegment)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('demographics') } }
+        field :interests, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TargetRef)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('interests') } }
 
-        field :interests, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AudienceSegment)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('interests') } }
+        field :life_events, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TargetRef)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('life_events') } }
 
-        field :life_events, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AudienceSegment)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('life_events') } }
+        field :references, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TargetRef)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('references') } }
 
-        sig { params(behaviors: T.nilable(T::Array[Models::Shared::AudienceSegment]), demographics: T.nilable(T::Array[Models::Shared::AudienceSegment]), interests: T.nilable(T::Array[Models::Shared::AudienceSegment]), life_events: T.nilable(T::Array[Models::Shared::AudienceSegment])).void }
-        def initialize(behaviors: nil, demographics: nil, interests: nil, life_events: nil)
+        sig { params(behaviors: T.nilable(T::Array[Models::Shared::TargetRef]), interests: T.nilable(T::Array[Models::Shared::TargetRef]), life_events: T.nilable(T::Array[Models::Shared::TargetRef]), references: T.nilable(T::Array[Models::Shared::TargetRef])).void }
+        def initialize(behaviors: nil, interests: nil, life_events: nil, references: nil)
           @behaviors = behaviors
-          @demographics = demographics
           @interests = interests
           @life_events = life_events
+          @references = references
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @behaviors == other.behaviors
-          return false unless @demographics == other.demographics
           return false unless @interests == other.interests
           return false unless @life_events == other.life_events
+          return false unless @references == other.references
           true
         end
       end
