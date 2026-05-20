@@ -29,7 +29,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.timeoff.create_hris_timeoff(hris_timeoff: Models::Shared::HrisTimeoff.new(), connection_id: '<id>')
+res = s.timeoff.create_hris_timeoff(hris_timeoff: Models::Shared::HrisTimeoff.new(
+  start_at: DateTime.iso8601('2024-09-03T22:31:51.863Z'),
+), connection_id: '<id>')
 
 unless res.hris_timeoff.nil?
   # handle response
@@ -163,7 +165,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchHrisTimeoffRequest.new(
-  hris_timeoff: Models::Shared::HrisTimeoff.new(),
+  hris_timeoff: Models::Shared::HrisTimeoff.new(
+    start_at: DateTime.iso8601('2024-01-26T05:49:44.056Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +256,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateHrisTimeoffRequest.new(
-  hris_timeoff: Models::Shared::HrisTimeoff.new(),
+  hris_timeoff: Models::Shared::HrisTimeoff.new(
+    start_at: DateTime.iso8601('2026-02-26T01:59:20.061Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
