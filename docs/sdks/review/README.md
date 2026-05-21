@@ -29,9 +29,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceReview.new(
-  item_id: '<id>',
-), connection_id: '<id>')
+res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceReview.new(), connection_id: '<id>')
 
 unless res.commerce_review.nil?
   # handle response
@@ -165,9 +163,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchCommerceReviewRequest.new(
-  commerce_review: Models::Shared::CommerceReview.new(
-    item_id: '<id>',
-  ),
+  commerce_review: Models::Shared::CommerceReview.new(),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -256,9 +252,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateCommerceReviewRequest.new(
-  commerce_review: Models::Shared::CommerceReview.new(
-    item_id: '<id>',
-  ),
+  commerce_review: Models::Shared::CommerceReview.new(),
   connection_id: '<id>',
   id: '<id>',
 )

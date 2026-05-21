@@ -32,8 +32,6 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.package.create_assessment_package(assessment_package: Models::Shared::AssessmentPackage.new(
-  id: '<id>',
-  name: '<value>',
   type: Models::Shared::AssessmentPackageType::REFERENCE_CHECK,
 ), connection_id: '<id>')
 
@@ -252,8 +250,6 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.package.patch_assessment_package(assessment_package: Models::Shared::AssessmentPackage.new(
-  id: '<id>',
-  name: '<value>',
   type: Models::Shared::AssessmentPackageType::BACKGROUND_CHECK,
 ), connection_id: '<id>', id: '<id>')
 
@@ -341,8 +337,6 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.package.update_assessment_package(assessment_package: Models::Shared::AssessmentPackage.new(
-  id: '<id>',
-  name: '<value>',
   type: Models::Shared::AssessmentPackageType::OTHER,
 ), connection_id: '<id>', id: '<id>')
 

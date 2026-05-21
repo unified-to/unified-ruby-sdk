@@ -8,10 +8,6 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::AssessmentPackage
-  def id(); end
-  def id=(str_); end
-  def name(); end
-  def name=(str_); end
   def type(); end
   def type=(str_); end
   def aliases(); end
@@ -26,12 +22,16 @@ class UnifiedRubySDK::Models::Shared::AssessmentPackage
   def has_redirect_url=(str_); end
   def has_target_url(); end
   def has_target_url=(str_); end
+  def id(); end
+  def id=(str_); end
   def info_url(); end
   def info_url=(str_); end
   def integration_types(); end
   def integration_types=(str_); end
   def max_score(); end
   def max_score=(str_); end
+  def name(); end
+  def name=(str_); end
   def needs_ip_address(); end
   def needs_ip_address=(str_); end
   def parameters(); end

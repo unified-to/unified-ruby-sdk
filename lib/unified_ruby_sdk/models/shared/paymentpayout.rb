@@ -14,8 +14,6 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :total_amount, ::Float, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount'), required: true } }
-
         field :created_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
@@ -28,30 +26,32 @@ module UnifiedRubySDK
 
         field :status, Crystalline::Nilable.new(Models::Shared::PaymentPayoutStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentPayoutStatus, true) } }
 
+        field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
+
         field :updated_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
 
-        sig { params(total_amount: ::Float, created_at: T.nilable(::String), currency: T.nilable(::String), id: T.nilable(::String), notes: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::PaymentPayoutStatus), updated_at: T.nilable(::String)).void }
-        def initialize(total_amount:, created_at: nil, currency: nil, id: nil, notes: nil, raw: nil, status: nil, updated_at: nil)
-          @total_amount = total_amount
+        sig { params(created_at: T.nilable(::String), currency: T.nilable(::String), id: T.nilable(::String), notes: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::PaymentPayoutStatus), total_amount: T.nilable(::Float), updated_at: T.nilable(::String)).void }
+        def initialize(created_at: nil, currency: nil, id: nil, notes: nil, raw: nil, status: nil, total_amount: nil, updated_at: nil)
           @created_at = created_at
           @currency = currency
           @id = id
           @notes = notes
           @raw = raw
           @status = status
+          @total_amount = total_amount
           @updated_at = updated_at
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @total_amount == other.total_amount
           return false unless @created_at == other.created_at
           return false unless @currency == other.currency
           return false unless @id == other.id
           return false unless @notes == other.notes
           return false unless @raw == other.raw
           return false unless @status == other.status
+          return false unless @total_amount == other.total_amount
           return false unless @updated_at == other.updated_at
           true
         end

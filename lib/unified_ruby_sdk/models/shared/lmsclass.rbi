@@ -10,8 +10,6 @@ end
 class UnifiedRubySDK::Models::Shared::LmsClass
   def course_id(); end
   def course_id=(str_); end
-  def name(); end
-  def name=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def description(); end
@@ -24,6 +22,8 @@ class UnifiedRubySDK::Models::Shared::LmsClass
   def languages=(str_); end
   def media(); end
   def media=(str_); end
+  def name(); end
+  def name=(str_); end
   def raw(); end
   def raw=(str_); end
   def student_ids(); end

@@ -8,8 +8,6 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::VerificationPackage
-  def id(); end
-  def id=(str_); end
   def name(); end
   def name=(str_); end
   def type(); end
@@ -30,6 +28,8 @@ class UnifiedRubySDK::Models::Shared::VerificationPackage
   def has_redirect_url=(str_); end
   def has_target_url(); end
   def has_target_url=(str_); end
+  def id(); end
+  def id=(str_); end
   def info_url(); end
   def info_url=(str_); end
   def max_score(); end

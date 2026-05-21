@@ -8,14 +8,14 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::AssessmentParameter
-  def name(); end
-  def name=(str_); end
   def file_types(); end
   def file_types=(str_); end
   def id(); end
   def id=(str_); end
   def is_required(); end
   def is_required=(str_); end
+  def name(); end
+  def name=(str_); end
   def options(); end
   def options=(str_); end
   def public_question(); end

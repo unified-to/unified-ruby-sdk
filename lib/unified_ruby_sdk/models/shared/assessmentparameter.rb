@@ -13,14 +13,14 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
-        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name'), required: true } }
         # Valid file MIME types for FILE type
         field :file_types, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('file_types') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :is_required, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_required') } }
+
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # Options for MULTIPLE_CHOICE and MULTIPLE_SELECT
         field :options, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
 
@@ -30,12 +30,12 @@ module UnifiedRubySDK
         # Regions where this parameter is valid ({country}-{state} or {country})
         field :valid_regions, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('valid_regions') } }
 
-        sig { params(name: ::String, file_types: T.nilable(T::Array[::String]), id: T.nilable(::String), is_required: T.nilable(T::Boolean), options: T.nilable(T::Array[::String]), public_question: T.nilable(::String), type: T.nilable(Models::Shared::AssessmentParameterType), valid_regions: T.nilable(T::Array[::String])).void }
-        def initialize(name:, file_types: nil, id: nil, is_required: nil, options: nil, public_question: nil, type: nil, valid_regions: nil)
-          @name = name
+        sig { params(file_types: T.nilable(T::Array[::String]), id: T.nilable(::String), is_required: T.nilable(T::Boolean), name: T.nilable(::String), options: T.nilable(T::Array[::String]), public_question: T.nilable(::String), type: T.nilable(Models::Shared::AssessmentParameterType), valid_regions: T.nilable(T::Array[::String])).void }
+        def initialize(file_types: nil, id: nil, is_required: nil, name: nil, options: nil, public_question: nil, type: nil, valid_regions: nil)
           @file_types = file_types
           @id = id
           @is_required = is_required
+          @name = name
           @options = options
           @public_question = public_question
           @type = type
@@ -45,10 +45,10 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @name == other.name
           return false unless @file_types == other.file_types
           return false unless @id == other.id
           return false unless @is_required == other.is_required
+          return false unless @name == other.name
           return false unless @options == other.options
           return false unless @public_question == other.public_question
           return false unless @type == other.type

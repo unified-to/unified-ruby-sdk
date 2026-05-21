@@ -8,8 +8,6 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::KmsSpace
-  def name(); end
-  def name=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def description(); end
@@ -18,6 +16,8 @@ class UnifiedRubySDK::Models::Shared::KmsSpace
   def id=(str_); end
   def is_active(); end
   def is_active=(str_); end
+  def name(); end
+  def name=(str_); end
   def parent_id(); end
   def parent_id=(str_); end
   def parent_page_id(); end

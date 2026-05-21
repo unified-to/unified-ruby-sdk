@@ -50,9 +50,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.calendar.create_calendar_calendar(calendar_calendar: Models::Shared::CalendarCalendar.new(
-  name: '<value>',
-), connection_id: '<id>')
+res = s.calendar.create_calendar_calendar(calendar_calendar: Models::Shared::CalendarCalendar.new(), connection_id: '<id>')
 
 unless res.calendar_calendar.nil?
   # handle response
@@ -721,9 +719,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchCalendarCalendarRequest.new(
-  calendar_calendar: Models::Shared::CalendarCalendar.new(
-    name: '<value>',
-  ),
+  calendar_calendar: Models::Shared::CalendarCalendar.new(),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1081,9 +1077,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateCalendarCalendarRequest.new(
-  calendar_calendar: Models::Shared::CalendarCalendar.new(
-    name: '<value>',
-  ),
+  calendar_calendar: Models::Shared::CalendarCalendar.new(),
   connection_id: '<id>',
   id: '<id>',
 )

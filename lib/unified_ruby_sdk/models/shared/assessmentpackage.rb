@@ -14,10 +14,6 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id'), required: true } }
-
-        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name'), required: true } }
-
         field :type, Models::Shared::AssessmentPackageType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::AssessmentPackageType, false) } }
         # Alternative namesidentifiers for this package
         field :aliases, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('aliases') } }
@@ -32,11 +28,15 @@ module UnifiedRubySDK
 
         field :has_target_url, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_target_url') } }
 
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
         field :info_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('info_url') } }
         # Integration types that support this package
         field :integration_types, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('integration_types') } }
 
         field :max_score, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_score') } }
+
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :needs_ip_address, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('needs_ip_address') } }
         # Questionsinputs needed for this assessment (aligned with verification)
@@ -52,10 +52,8 @@ module UnifiedRubySDK
 
         field :workspace_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
 
-        sig { params(id: ::String, name: ::String, type: Models::Shared::AssessmentPackageType, aliases: T.nilable(T::Array[::String]), connection_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), has_redirect_url: T.nilable(T::Boolean), has_target_url: T.nilable(T::Boolean), info_url: T.nilable(::String), integration_types: T.nilable(T::Array[::String]), max_score: T.nilable(::Float), needs_ip_address: T.nilable(T::Boolean), parameters: T.nilable(T::Array[Models::Shared::AssessmentParameter]), raw: T.nilable(T::Hash[Symbol, ::Object]), regions: T.nilable(T::Array[Models::Shared::AssessmentPackageRegion]), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), workspace_id: T.nilable(::String)).void }
-        def initialize(id:, name:, type:, aliases: nil, connection_id: nil, created_at: nil, description: nil, has_redirect_url: nil, has_target_url: nil, info_url: nil, integration_types: nil, max_score: nil, needs_ip_address: nil, parameters: nil, raw: nil, regions: nil, tags: nil, updated_at: nil, workspace_id: nil)
-          @id = id
-          @name = name
+        sig { params(type: Models::Shared::AssessmentPackageType, aliases: T.nilable(T::Array[::String]), connection_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), has_redirect_url: T.nilable(T::Boolean), has_target_url: T.nilable(T::Boolean), id: T.nilable(::String), info_url: T.nilable(::String), integration_types: T.nilable(T::Array[::String]), max_score: T.nilable(::Float), name: T.nilable(::String), needs_ip_address: T.nilable(T::Boolean), parameters: T.nilable(T::Array[Models::Shared::AssessmentParameter]), raw: T.nilable(T::Hash[Symbol, ::Object]), regions: T.nilable(T::Array[Models::Shared::AssessmentPackageRegion]), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), workspace_id: T.nilable(::String)).void }
+        def initialize(type:, aliases: nil, connection_id: nil, created_at: nil, description: nil, has_redirect_url: nil, has_target_url: nil, id: nil, info_url: nil, integration_types: nil, max_score: nil, name: nil, needs_ip_address: nil, parameters: nil, raw: nil, regions: nil, tags: nil, updated_at: nil, workspace_id: nil)
           @type = type
           @aliases = aliases
           @connection_id = connection_id
@@ -63,9 +61,11 @@ module UnifiedRubySDK
           @description = description
           @has_redirect_url = has_redirect_url
           @has_target_url = has_target_url
+          @id = id
           @info_url = info_url
           @integration_types = integration_types
           @max_score = max_score
+          @name = name
           @needs_ip_address = needs_ip_address
           @parameters = parameters
           @raw = raw
@@ -78,8 +78,6 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @id == other.id
-          return false unless @name == other.name
           return false unless @type == other.type
           return false unless @aliases == other.aliases
           return false unless @connection_id == other.connection_id
@@ -87,9 +85,11 @@ module UnifiedRubySDK
           return false unless @description == other.description
           return false unless @has_redirect_url == other.has_redirect_url
           return false unless @has_target_url == other.has_target_url
+          return false unless @id == other.id
           return false unless @info_url == other.info_url
           return false unless @integration_types == other.integration_types
           return false unless @max_score == other.max_score
+          return false unless @name == other.name
           return false unless @needs_ip_address == other.needs_ip_address
           return false unless @parameters == other.parameters
           return false unless @raw == other.raw

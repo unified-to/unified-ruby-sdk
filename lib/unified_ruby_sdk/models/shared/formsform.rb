@@ -14,8 +14,6 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name'), required: true } }
-
         field :confirmation_message, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('confirmation_message') } }
 
         field :confirmation_redirect_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('confirmation_redirect_url') } }
@@ -36,6 +34,8 @@ module UnifiedRubySDK
 
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
         field :published_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('published_url') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
@@ -44,9 +44,8 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(name: ::String, confirmation_message: T.nilable(::String), confirmation_redirect_url: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), fields_: T.nilable(T::Array[Models::Shared::FormField]), has_multiple_submissions: T.nilable(T::Boolean), has_progress_bar: T.nilable(T::Boolean), has_shuffle_questions: T.nilable(T::Boolean), id: T.nilable(::String), is_active: T.nilable(T::Boolean), published_url: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), response_count: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
-        def initialize(name:, confirmation_message: nil, confirmation_redirect_url: nil, created_at: nil, description: nil, fields_: nil, has_multiple_submissions: nil, has_progress_bar: nil, has_shuffle_questions: nil, id: nil, is_active: nil, published_url: nil, raw: nil, response_count: nil, updated_at: nil)
-          @name = name
+        sig { params(confirmation_message: T.nilable(::String), confirmation_redirect_url: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), fields_: T.nilable(T::Array[Models::Shared::FormField]), has_multiple_submissions: T.nilable(T::Boolean), has_progress_bar: T.nilable(T::Boolean), has_shuffle_questions: T.nilable(T::Boolean), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), published_url: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), response_count: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        def initialize(confirmation_message: nil, confirmation_redirect_url: nil, created_at: nil, description: nil, fields_: nil, has_multiple_submissions: nil, has_progress_bar: nil, has_shuffle_questions: nil, id: nil, is_active: nil, name: nil, published_url: nil, raw: nil, response_count: nil, updated_at: nil)
           @confirmation_message = confirmation_message
           @confirmation_redirect_url = confirmation_redirect_url
           @created_at = created_at
@@ -57,6 +56,7 @@ module UnifiedRubySDK
           @has_shuffle_questions = has_shuffle_questions
           @id = id
           @is_active = is_active
+          @name = name
           @published_url = published_url
           @raw = raw
           @response_count = response_count
@@ -66,7 +66,6 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @name == other.name
           return false unless @confirmation_message == other.confirmation_message
           return false unless @confirmation_redirect_url == other.confirmation_redirect_url
           return false unless @created_at == other.created_at
@@ -77,6 +76,7 @@ module UnifiedRubySDK
           return false unless @has_shuffle_questions == other.has_shuffle_questions
           return false unless @id == other.id
           return false unless @is_active == other.is_active
+          return false unless @name == other.name
           return false unless @published_url == other.published_url
           return false unless @raw == other.raw
           return false unless @response_count == other.response_count

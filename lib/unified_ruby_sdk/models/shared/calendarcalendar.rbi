@@ -8,8 +8,6 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::CalendarCalendar
-  def name(); end
-  def name=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def description(); end
@@ -18,6 +16,8 @@ class UnifiedRubySDK::Models::Shared::CalendarCalendar
   def id=(str_); end
   def is_primary(); end
   def is_primary=(str_); end
+  def name(); end
+  def name=(str_); end
   def raw(); end
   def raw=(str_); end
   def timezone(); end

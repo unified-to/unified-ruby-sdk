@@ -14,8 +14,6 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name'), required: true } }
-
         field :address, Crystalline::Nilable.new(Models::Shared::PropertyCommerceLocationAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
 
         field :categories, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('categories') } }
@@ -42,6 +40,8 @@ module UnifiedRubySDK
 
         field :media, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceItemMedia)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
 
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
         field :price_level, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price_level') } }
@@ -58,9 +58,8 @@ module UnifiedRubySDK
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(name: ::String, address: T.nilable(Models::Shared::PropertyCommerceLocationAddress), categories: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), is_active: T.nilable(T::Boolean), language_locale: T.nilable(::String), latitude: T.nilable(::Float), location_type: T.nilable(Models::Shared::LocationType), longitude: T.nilable(::Float), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), parent_id: T.nilable(::String), price_level: T.nilable(::String), rating: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), review_count: T.nilable(::Float), telephones: T.nilable(T::Array[Models::Shared::CommerceTelephone]), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
-        def initialize(name:, address: nil, categories: nil, created_at: nil, currency: nil, description: nil, id: nil, image_url: nil, is_active: nil, language_locale: nil, latitude: nil, location_type: nil, longitude: nil, media: nil, parent_id: nil, price_level: nil, rating: nil, raw: nil, review_count: nil, telephones: nil, updated_at: nil, web_url: nil)
-          @name = name
+        sig { params(address: T.nilable(Models::Shared::PropertyCommerceLocationAddress), categories: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), is_active: T.nilable(T::Boolean), language_locale: T.nilable(::String), latitude: T.nilable(::Float), location_type: T.nilable(Models::Shared::LocationType), longitude: T.nilable(::Float), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), name: T.nilable(::String), parent_id: T.nilable(::String), price_level: T.nilable(::String), rating: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), review_count: T.nilable(::Float), telephones: T.nilable(T::Array[Models::Shared::CommerceTelephone]), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
+        def initialize(address: nil, categories: nil, created_at: nil, currency: nil, description: nil, id: nil, image_url: nil, is_active: nil, language_locale: nil, latitude: nil, location_type: nil, longitude: nil, media: nil, name: nil, parent_id: nil, price_level: nil, rating: nil, raw: nil, review_count: nil, telephones: nil, updated_at: nil, web_url: nil)
           @address = address
           @categories = categories
           @created_at = created_at
@@ -74,6 +73,7 @@ module UnifiedRubySDK
           @location_type = location_type
           @longitude = longitude
           @media = media
+          @name = name
           @parent_id = parent_id
           @price_level = price_level
           @rating = rating
@@ -87,7 +87,6 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @name == other.name
           return false unless @address == other.address
           return false unless @categories == other.categories
           return false unless @created_at == other.created_at
@@ -101,6 +100,7 @@ module UnifiedRubySDK
           return false unless @location_type == other.location_type
           return false unless @longitude == other.longitude
           return false unless @media == other.media
+          return false unless @name == other.name
           return false unless @parent_id == other.parent_id
           return false unless @price_level == other.price_level
           return false unless @rating == other.rating

@@ -14,8 +14,6 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id'), required: true } }
-
         field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name'), required: true } }
 
         field :type, Models::Shared::VerificationPackageType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::VerificationPackageType, false) } }
@@ -36,6 +34,8 @@ module UnifiedRubySDK
 
         field :has_target_url, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_target_url') } }
 
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
         field :info_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('info_url') } }
 
         field :max_score, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_score') } }
@@ -52,9 +52,8 @@ module UnifiedRubySDK
         # {country}-{state/province/territory} or just {country} 2-digit ISO codes
         field :valid_regions, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('valid_regions') } }
 
-        sig { params(id: ::String, name: ::String, type: Models::Shared::VerificationPackageType, aliases: T.nilable(T::Array[::String]), average_processing_times: T.nilable(T::Array[Models::Shared::VerificationTime]), cost_amount: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), has_redirect_url: T.nilable(T::Boolean), has_target_url: T.nilable(T::Boolean), info_url: T.nilable(::String), max_score: T.nilable(::Float), needs_ip_address: T.nilable(T::Boolean), parameters: T.nilable(T::Array[Models::Shared::VerificationParameter]), raw: T.nilable(T::Hash[Symbol, ::Object]), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), valid_regions: T.nilable(T::Array[::String])).void }
-        def initialize(id:, name:, type:, aliases: nil, average_processing_times: nil, cost_amount: nil, created_at: nil, currency: nil, description: nil, has_redirect_url: nil, has_target_url: nil, info_url: nil, max_score: nil, needs_ip_address: nil, parameters: nil, raw: nil, tags: nil, updated_at: nil, valid_regions: nil)
-          @id = id
+        sig { params(name: ::String, type: Models::Shared::VerificationPackageType, aliases: T.nilable(T::Array[::String]), average_processing_times: T.nilable(T::Array[Models::Shared::VerificationTime]), cost_amount: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), has_redirect_url: T.nilable(T::Boolean), has_target_url: T.nilable(T::Boolean), id: T.nilable(::String), info_url: T.nilable(::String), max_score: T.nilable(::Float), needs_ip_address: T.nilable(T::Boolean), parameters: T.nilable(T::Array[Models::Shared::VerificationParameter]), raw: T.nilable(T::Hash[Symbol, ::Object]), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), valid_regions: T.nilable(T::Array[::String])).void }
+        def initialize(name:, type:, aliases: nil, average_processing_times: nil, cost_amount: nil, created_at: nil, currency: nil, description: nil, has_redirect_url: nil, has_target_url: nil, id: nil, info_url: nil, max_score: nil, needs_ip_address: nil, parameters: nil, raw: nil, tags: nil, updated_at: nil, valid_regions: nil)
           @name = name
           @type = type
           @aliases = aliases
@@ -65,6 +64,7 @@ module UnifiedRubySDK
           @description = description
           @has_redirect_url = has_redirect_url
           @has_target_url = has_target_url
+          @id = id
           @info_url = info_url
           @max_score = max_score
           @needs_ip_address = needs_ip_address
@@ -78,7 +78,6 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @id == other.id
           return false unless @name == other.name
           return false unless @type == other.type
           return false unless @aliases == other.aliases
@@ -89,6 +88,7 @@ module UnifiedRubySDK
           return false unless @description == other.description
           return false unless @has_redirect_url == other.has_redirect_url
           return false unless @has_target_url == other.has_target_url
+          return false unless @id == other.id
           return false unless @info_url == other.info_url
           return false unless @max_score == other.max_score
           return false unless @needs_ip_address == other.needs_ip_address

@@ -261,9 +261,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.create_hris_device(hris_device: Models::Shared::HrisDevice.new(
-  name: '<value>',
-), connection_id: '<id>')
+res = s.hris.create_hris_device(hris_device: Models::Shared::HrisDevice.new(), connection_id: '<id>')
 
 unless res.hris_device.nil?
   # handle response
@@ -440,7 +438,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.hris.create_hris_timeoff(hris_timeoff: Models::Shared::HrisTimeoff.new(
-  start_at: DateTime.iso8601('2024-09-03T22:31:51.863Z'),
+  user_id: '<id>',
 ), connection_id: '<id>')
 
 unless res.hris_timeoff.nil?
@@ -1699,9 +1697,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchHrisDeviceRequest.new(
-  hris_device: Models::Shared::HrisDevice.new(
-    name: '<value>',
-  ),
+  hris_device: Models::Shared::HrisDevice.new(),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1890,7 +1886,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchHrisTimeoffRequest.new(
   hris_timeoff: Models::Shared::HrisTimeoff.new(
-    start_at: DateTime.iso8601('2024-01-26T05:49:44.056Z'),
+    user_id: '<id>',
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2595,9 +2591,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateHrisDeviceRequest.new(
-  hris_device: Models::Shared::HrisDevice.new(
-    name: '<value>',
-  ),
+  hris_device: Models::Shared::HrisDevice.new(),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -2786,7 +2780,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateHrisTimeoffRequest.new(
   hris_timeoff: Models::Shared::HrisTimeoff.new(
-    start_at: DateTime.iso8601('2026-02-26T01:59:20.061Z'),
+    user_id: '<id>',
   ),
   connection_id: '<id>',
   id: '<id>',

@@ -14,29 +14,29 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :cost_amount, ::Float, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cost_amount'), required: true } }
-        # Countryregion codes where this package is available ({country}-{state} or {country})
-        field :regions, Crystalline::Array.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('regions'), required: true } }
+        field :cost_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cost_amount') } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
         field :processing_time, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('processing_time') } }
+        # Countryregion codes where this package is available ({country}-{state} or {country})
+        field :regions, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('regions') } }
 
-        sig { params(cost_amount: ::Float, regions: T::Array[::String], currency: T.nilable(::String), processing_time: T.nilable(::Float)).void }
-        def initialize(cost_amount:, regions:, currency: nil, processing_time: nil)
+        sig { params(cost_amount: T.nilable(::Float), currency: T.nilable(::String), processing_time: T.nilable(::Float), regions: T.nilable(T::Array[::String])).void }
+        def initialize(cost_amount: nil, currency: nil, processing_time: nil, regions: nil)
           @cost_amount = cost_amount
-          @regions = regions
           @currency = currency
           @processing_time = processing_time
+          @regions = regions
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @cost_amount == other.cost_amount
-          return false unless @regions == other.regions
           return false unless @currency == other.currency
           return false unless @processing_time == other.processing_time
+          return false unless @regions == other.regions
           true
         end
       end

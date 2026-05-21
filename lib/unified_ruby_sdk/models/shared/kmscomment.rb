@@ -14,7 +14,7 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :content, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content'), required: true } }
+        field :content, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
 
         field :content_type, Crystalline::Nilable.new(Models::Shared::ContentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content_type'), 'decoder': Utils.enum_from_string(Models::Shared::ContentType, true) } }
 
@@ -34,8 +34,8 @@ module UnifiedRubySDK
 
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(content: ::String, content_type: T.nilable(Models::Shared::ContentType), created_at: T.nilable(::DateTime), id: T.nilable(::String), page_id: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::KmsCommentType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(content:, content_type: nil, created_at: nil, id: nil, page_id: nil, parent_id: nil, raw: nil, type: nil, updated_at: nil, user_id: nil)
+        sig { params(content: T.nilable(::String), content_type: T.nilable(Models::Shared::ContentType), created_at: T.nilable(::DateTime), id: T.nilable(::String), page_id: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::KmsCommentType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(content: nil, content_type: nil, created_at: nil, id: nil, page_id: nil, parent_id: nil, raw: nil, type: nil, updated_at: nil, user_id: nil)
           @content = content
           @content_type = content_type
           @created_at = created_at

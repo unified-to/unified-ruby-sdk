@@ -29,9 +29,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.device.create_hris_device(hris_device: Models::Shared::HrisDevice.new(
-  name: '<value>',
-), connection_id: '<id>')
+res = s.device.create_hris_device(hris_device: Models::Shared::HrisDevice.new(), connection_id: '<id>')
 
 unless res.hris_device.nil?
   # handle response
@@ -165,9 +163,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchHrisDeviceRequest.new(
-  hris_device: Models::Shared::HrisDevice.new(
-    name: '<value>',
-  ),
+  hris_device: Models::Shared::HrisDevice.new(),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -256,9 +252,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateHrisDeviceRequest.new(
-  hris_device: Models::Shared::HrisDevice.new(
-    name: '<value>',
-  ),
+  hris_device: Models::Shared::HrisDevice.new(),
   connection_id: '<id>',
   id: '<id>',
 )

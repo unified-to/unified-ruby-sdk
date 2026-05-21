@@ -41,9 +41,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.comment.create_kms_comment(kms_comment: Models::Shared::KmsComment.new(
-  content: '<value>',
-), connection_id: '<id>')
+res = s.comment.create_kms_comment(kms_comment: Models::Shared::KmsComment.new(), connection_id: '<id>')
 
 unless res.kms_comment.nil?
   # handle response
@@ -87,9 +85,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.comment.create_task_comment(task_comment: Models::Shared::TaskComment.new(
-  text: '<value>',
-), connection_id: '<id>')
+res = s.comment.create_task_comment(task_comment: Models::Shared::TaskComment.new(), connection_id: '<id>')
 
 unless res.task_comment.nil?
   # handle response
@@ -133,9 +129,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.comment.create_uc_comment(uc_comment: Models::Shared::UcComment.new(
-  content: '<value>',
-), connection_id: '<id>')
+res = s.comment.create_uc_comment(uc_comment: Models::Shared::UcComment.new(), connection_id: '<id>')
 
 unless res.uc_comment.nil?
   # handle response
@@ -447,9 +441,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchKmsCommentRequest.new(
-  kms_comment: Models::Shared::KmsComment.new(
-    content: '<value>',
-  ),
+  kms_comment: Models::Shared::KmsComment.new(),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -496,9 +488,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchTaskCommentRequest.new(
-  task_comment: Models::Shared::TaskComment.new(
-    text: '<value>',
-  ),
+  task_comment: Models::Shared::TaskComment.new(),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -545,9 +535,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchUcCommentRequest.new(
-  uc_comment: Models::Shared::UcComment.new(
-    content: '<value>',
-  ),
+  uc_comment: Models::Shared::UcComment.new(),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -720,9 +708,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateKmsCommentRequest.new(
-  kms_comment: Models::Shared::KmsComment.new(
-    content: '<value>',
-  ),
+  kms_comment: Models::Shared::KmsComment.new(),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -769,9 +755,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateTaskCommentRequest.new(
-  task_comment: Models::Shared::TaskComment.new(
-    text: '<value>',
-  ),
+  task_comment: Models::Shared::TaskComment.new(),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -818,9 +802,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateUcCommentRequest.new(
-  uc_comment: Models::Shared::UcComment.new(
-    content: '<value>',
-  ),
+  uc_comment: Models::Shared::UcComment.new(),
   connection_id: '<id>',
   id: '<id>',
 )

@@ -14,8 +14,6 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :raw, Crystalline::Hash.new(Symbol, ::Object), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw'), required: true } }
-
         field :company_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
 
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -38,15 +36,16 @@ module UnifiedRubySDK
 
         field :payment_type, Crystalline::Nilable.new(Models::Shared::PaymentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_type'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentType, true) } }
 
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+
         field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(raw: T::Hash[Symbol, ::Object], company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), deduction: T.nilable(Models::Shared::PropertyHrisPayslipDeduction), details: T.nilable(T::Array[Models::Shared::HrisPayslipDetail]), end_at: T.nilable(::DateTime), gross_amount: T.nilable(::Float), id: T.nilable(::String), net_amount: T.nilable(::Float), paid_at: T.nilable(::DateTime), payment_type: T.nilable(Models::Shared::PaymentType), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(raw:, company_id: nil, created_at: nil, currency: nil, deduction: nil, details: nil, end_at: nil, gross_amount: nil, id: nil, net_amount: nil, paid_at: nil, payment_type: nil, start_at: nil, updated_at: nil, user_id: nil)
-          @raw = raw
+        sig { params(company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), deduction: T.nilable(Models::Shared::PropertyHrisPayslipDeduction), details: T.nilable(T::Array[Models::Shared::HrisPayslipDetail]), end_at: T.nilable(::DateTime), gross_amount: T.nilable(::Float), id: T.nilable(::String), net_amount: T.nilable(::Float), paid_at: T.nilable(::DateTime), payment_type: T.nilable(Models::Shared::PaymentType), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(company_id: nil, created_at: nil, currency: nil, deduction: nil, details: nil, end_at: nil, gross_amount: nil, id: nil, net_amount: nil, paid_at: nil, payment_type: nil, raw: nil, start_at: nil, updated_at: nil, user_id: nil)
           @company_id = company_id
           @created_at = created_at
           @currency = currency
@@ -58,6 +57,7 @@ module UnifiedRubySDK
           @net_amount = net_amount
           @paid_at = paid_at
           @payment_type = payment_type
+          @raw = raw
           @start_at = start_at
           @updated_at = updated_at
           @user_id = user_id
@@ -66,7 +66,6 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @raw == other.raw
           return false unless @company_id == other.company_id
           return false unless @created_at == other.created_at
           return false unless @currency == other.currency
@@ -78,6 +77,7 @@ module UnifiedRubySDK
           return false unless @net_amount == other.net_amount
           return false unless @paid_at == other.paid_at
           return false unless @payment_type == other.payment_type
+          return false unless @raw == other.raw
           return false unless @start_at == other.start_at
           return false unless @updated_at == other.updated_at
           return false unless @user_id == other.user_id

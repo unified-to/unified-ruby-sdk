@@ -8,8 +8,6 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::CommerceReviewComment
-  def content(); end
-  def content=(str_); end
   def author_avatar_url(); end
   def author_avatar_url=(str_); end
   def author_email(); end
@@ -18,6 +16,8 @@ class UnifiedRubySDK::Models::Shared::CommerceReviewComment
   def author_location=(str_); end
   def author_name(); end
   def author_name=(str_); end
+  def content(); end
+  def content=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def helpful_votes(); end

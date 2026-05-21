@@ -8,8 +8,6 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::PaymentPayout
-  def total_amount(); end
-  def total_amount=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def currency(); end
@@ -22,6 +20,8 @@ class UnifiedRubySDK::Models::Shared::PaymentPayout
   def raw=(str_); end
   def status(); end
   def status=(str_); end
+  def total_amount(); end
+  def total_amount=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
 end

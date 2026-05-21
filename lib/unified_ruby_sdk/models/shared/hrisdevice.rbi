@@ -8,8 +8,6 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::HrisDevice
-  def name(); end
-  def name=(str_); end
   def admin_user_ids(); end
   def admin_user_ids=(str_); end
   def asset_tag(); end
@@ -36,6 +34,8 @@ class UnifiedRubySDK::Models::Shared::HrisDevice
   def manufacturer=(str_); end
   def model(); end
   def model=(str_); end
+  def name(); end
+  def name=(str_); end
   def os(); end
   def os=(str_); end
   def os_version(); end

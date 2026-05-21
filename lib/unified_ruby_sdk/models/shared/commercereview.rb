@@ -14,8 +14,6 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :item_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('item_id'), required: true } }
-
         field :author_avatar_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_avatar_url') } }
 
         field :author_email, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_email') } }
@@ -39,6 +37,8 @@ module UnifiedRubySDK
         field :is_public, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_public') } }
 
         field :is_verified, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_verified') } }
+
+        field :item_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('item_id') } }
 
         field :item_variant_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('item_variant_id') } }
 
@@ -64,9 +64,8 @@ module UnifiedRubySDK
 
         field :verified_purchase, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('verified_purchase') } }
 
-        sig { params(item_id: ::String, author_avatar_url: T.nilable(::String), author_email: T.nilable(::String), author_location: T.nilable(::String), author_name: T.nilable(::String), comments: T.nilable(T::Array[Models::Shared::CommerceReviewComment]), content: T.nilable(::String), created_at: T.nilable(::DateTime), helpful_votes: T.nilable(::Float), id: T.nilable(::String), is_featured: T.nilable(T::Boolean), is_public: T.nilable(T::Boolean), is_verified: T.nilable(T::Boolean), item_variant_id: T.nilable(::String), location_id: T.nilable(::String), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), rating: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::CommerceReviewStatus), title: T.nilable(::String), unhelpful_votes: T.nilable(::Float), updated_at: T.nilable(::DateTime), url: T.nilable(::String), verified_purchase: T.nilable(T::Boolean)).void }
-        def initialize(item_id:, author_avatar_url: nil, author_email: nil, author_location: nil, author_name: nil, comments: nil, content: nil, created_at: nil, helpful_votes: nil, id: nil, is_featured: nil, is_public: nil, is_verified: nil, item_variant_id: nil, location_id: nil, media: nil, metadata: nil, rating: nil, raw: nil, status: nil, title: nil, unhelpful_votes: nil, updated_at: nil, url: nil, verified_purchase: nil)
-          @item_id = item_id
+        sig { params(author_avatar_url: T.nilable(::String), author_email: T.nilable(::String), author_location: T.nilable(::String), author_name: T.nilable(::String), comments: T.nilable(T::Array[Models::Shared::CommerceReviewComment]), content: T.nilable(::String), created_at: T.nilable(::DateTime), helpful_votes: T.nilable(::Float), id: T.nilable(::String), is_featured: T.nilable(T::Boolean), is_public: T.nilable(T::Boolean), is_verified: T.nilable(T::Boolean), item_id: T.nilable(::String), item_variant_id: T.nilable(::String), location_id: T.nilable(::String), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), rating: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::CommerceReviewStatus), title: T.nilable(::String), unhelpful_votes: T.nilable(::Float), updated_at: T.nilable(::DateTime), url: T.nilable(::String), verified_purchase: T.nilable(T::Boolean)).void }
+        def initialize(author_avatar_url: nil, author_email: nil, author_location: nil, author_name: nil, comments: nil, content: nil, created_at: nil, helpful_votes: nil, id: nil, is_featured: nil, is_public: nil, is_verified: nil, item_id: nil, item_variant_id: nil, location_id: nil, media: nil, metadata: nil, rating: nil, raw: nil, status: nil, title: nil, unhelpful_votes: nil, updated_at: nil, url: nil, verified_purchase: nil)
           @author_avatar_url = author_avatar_url
           @author_email = author_email
           @author_location = author_location
@@ -79,6 +78,7 @@ module UnifiedRubySDK
           @is_featured = is_featured
           @is_public = is_public
           @is_verified = is_verified
+          @item_id = item_id
           @item_variant_id = item_variant_id
           @location_id = location_id
           @media = media
@@ -96,7 +96,6 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @item_id == other.item_id
           return false unless @author_avatar_url == other.author_avatar_url
           return false unless @author_email == other.author_email
           return false unless @author_location == other.author_location
@@ -109,6 +108,7 @@ module UnifiedRubySDK
           return false unless @is_featured == other.is_featured
           return false unless @is_public == other.is_public
           return false unless @is_verified == other.is_verified
+          return false unless @item_id == other.item_id
           return false unless @item_variant_id == other.item_variant_id
           return false unless @location_id == other.location_id
           return false unless @media == other.media

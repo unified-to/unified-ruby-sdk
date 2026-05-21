@@ -8,8 +8,6 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::CommerceLocation
-  def name(); end
-  def name=(str_); end
   def address(); end
   def address=(str_); end
   def categories(); end
@@ -36,6 +34,8 @@ class UnifiedRubySDK::Models::Shared::CommerceLocation
   def longitude=(str_); end
   def media(); end
   def media=(str_); end
+  def name(); end
+  def name=(str_); end
   def parent_id(); end
   def parent_id=(str_); end
   def price_level(); end

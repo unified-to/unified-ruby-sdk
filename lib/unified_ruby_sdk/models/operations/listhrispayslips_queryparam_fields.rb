@@ -26,8 +26,8 @@ module UnifiedRubySDK
           GROSS_AMOUNT = new('gross_amount')
           NET_AMOUNT = new('net_amount')
           DETAILS = new('details')
-          RAW = new('raw')
           DEDUCTION = new('deduction')
+          RAW = new('raw')
         end
       end
     end

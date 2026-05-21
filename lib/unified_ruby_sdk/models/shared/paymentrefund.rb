@@ -14,10 +14,6 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :payment_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_id'), required: true } }
-
-        field :total_amount, ::Float, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount'), required: true } }
-
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
@@ -26,40 +22,44 @@ module UnifiedRubySDK
 
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
 
+        field :payment_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_id') } }
+
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference') } }
 
         field :status, Crystalline::Nilable.new(Models::Shared::PaymentRefundStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentRefundStatus, true) } }
 
+        field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
+
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(payment_id: ::String, total_amount: ::Float, created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), notes: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), status: T.nilable(Models::Shared::PaymentRefundStatus), updated_at: T.nilable(::DateTime)).void }
-        def initialize(payment_id:, total_amount:, created_at: nil, currency: nil, id: nil, notes: nil, raw: nil, reference: nil, status: nil, updated_at: nil)
-          @payment_id = payment_id
-          @total_amount = total_amount
+        sig { params(created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), notes: T.nilable(::String), payment_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), status: T.nilable(Models::Shared::PaymentRefundStatus), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        def initialize(created_at: nil, currency: nil, id: nil, notes: nil, payment_id: nil, raw: nil, reference: nil, status: nil, total_amount: nil, updated_at: nil)
           @created_at = created_at
           @currency = currency
           @id = id
           @notes = notes
+          @payment_id = payment_id
           @raw = raw
           @reference = reference
           @status = status
+          @total_amount = total_amount
           @updated_at = updated_at
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @payment_id == other.payment_id
-          return false unless @total_amount == other.total_amount
           return false unless @created_at == other.created_at
           return false unless @currency == other.currency
           return false unless @id == other.id
           return false unless @notes == other.notes
+          return false unless @payment_id == other.payment_id
           return false unless @raw == other.raw
           return false unless @reference == other.reference
           return false unless @status == other.status
+          return false unless @total_amount == other.total_amount
           return false unless @updated_at == other.updated_at
           true
         end

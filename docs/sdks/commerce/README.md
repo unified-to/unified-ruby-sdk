@@ -118,9 +118,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.create_commerce_inventory(commerce_inventory: Models::Shared::CommerceInventory.new(
-  available: 7_463.62,
-), connection_id: '<id>')
+res = s.commerce.create_commerce_inventory(commerce_inventory: Models::Shared::CommerceInventory.new(), connection_id: '<id>')
 
 unless res.commerce_inventory.nil?
   # handle response
@@ -252,9 +250,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.create_commerce_location(commerce_location: Models::Shared::CommerceLocation.new(
-  name: '<value>',
-), connection_id: '<id>')
+res = s.commerce.create_commerce_location(commerce_location: Models::Shared::CommerceLocation.new(), connection_id: '<id>')
 
 unless res.commerce_location.nil?
   # handle response
@@ -342,9 +338,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.create_commerce_review(commerce_review: Models::Shared::CommerceReview.new(
-  item_id: '<id>',
-), connection_id: '<id>')
+res = s.commerce.create_commerce_review(commerce_review: Models::Shared::CommerceReview.new(), connection_id: '<id>')
 
 unless res.commerce_review.nil?
   # handle response
@@ -1239,9 +1233,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchCommerceInventoryRequest.new(
-  commerce_inventory: Models::Shared::CommerceInventory.new(
-    available: 7_859.84,
-  ),
+  commerce_inventory: Models::Shared::CommerceInventory.new(),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1382,9 +1374,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchCommerceLocationRequest.new(
-  commerce_location: Models::Shared::CommerceLocation.new(
-    name: '<value>',
-  ),
+  commerce_location: Models::Shared::CommerceLocation.new(),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1478,9 +1468,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchCommerceReviewRequest.new(
-  commerce_review: Models::Shared::CommerceReview.new(
-    item_id: '<id>',
-  ),
+  commerce_review: Models::Shared::CommerceReview.new(),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1959,9 +1947,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateCommerceInventoryRequest.new(
-  commerce_inventory: Models::Shared::CommerceInventory.new(
-    available: 4_497.29,
-  ),
+  commerce_inventory: Models::Shared::CommerceInventory.new(),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -2102,9 +2088,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateCommerceLocationRequest.new(
-  commerce_location: Models::Shared::CommerceLocation.new(
-    name: '<value>',
-  ),
+  commerce_location: Models::Shared::CommerceLocation.new(),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -2198,9 +2182,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateCommerceReviewRequest.new(
-  commerce_review: Models::Shared::CommerceReview.new(
-    item_id: '<id>',
-  ),
+  commerce_review: Models::Shared::CommerceReview.new(),
   connection_id: '<id>',
   id: '<id>',
 )

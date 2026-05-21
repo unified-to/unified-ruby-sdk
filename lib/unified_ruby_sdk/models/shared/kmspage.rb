@@ -14,8 +14,6 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :title, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title'), required: true } }
-
         field :type, Models::Shared::KmsPageType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::KmsPageType, false) } }
 
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -36,15 +34,16 @@ module UnifiedRubySDK
 
         field :space_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('space_id') } }
 
+        field :title, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
+
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(title: ::String, type: Models::Shared::KmsPageType, created_at: T.nilable(::DateTime), download_url: T.nilable(::String), has_children: T.nilable(T::Boolean), id: T.nilable(::String), is_active: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::KmsPageMetadata]), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), space_id: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), web_url: T.nilable(::String)).void }
-        def initialize(title:, type:, created_at: nil, download_url: nil, has_children: nil, id: nil, is_active: nil, metadata: nil, parent_id: nil, raw: nil, space_id: nil, updated_at: nil, user_id: nil, web_url: nil)
-          @title = title
+        sig { params(type: Models::Shared::KmsPageType, created_at: T.nilable(::DateTime), download_url: T.nilable(::String), has_children: T.nilable(T::Boolean), id: T.nilable(::String), is_active: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::KmsPageMetadata]), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), space_id: T.nilable(::String), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), web_url: T.nilable(::String)).void }
+        def initialize(type:, created_at: nil, download_url: nil, has_children: nil, id: nil, is_active: nil, metadata: nil, parent_id: nil, raw: nil, space_id: nil, title: nil, updated_at: nil, user_id: nil, web_url: nil)
           @type = type
           @created_at = created_at
           @download_url = download_url
@@ -55,6 +54,7 @@ module UnifiedRubySDK
           @parent_id = parent_id
           @raw = raw
           @space_id = space_id
+          @title = title
           @updated_at = updated_at
           @user_id = user_id
           @web_url = web_url
@@ -63,7 +63,6 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @title == other.title
           return false unless @type == other.type
           return false unless @created_at == other.created_at
           return false unless @download_url == other.download_url
@@ -74,6 +73,7 @@ module UnifiedRubySDK
           return false unless @parent_id == other.parent_id
           return false unless @raw == other.raw
           return false unless @space_id == other.space_id
+          return false unless @title == other.title
           return false unless @updated_at == other.updated_at
           return false unless @user_id == other.user_id
           return false unless @web_url == other.web_url

@@ -8,8 +8,6 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::KmsPage
-  def title(); end
-  def title=(str_); end
   def type(); end
   def type=(str_); end
   def created_at(); end
@@ -30,6 +28,8 @@ class UnifiedRubySDK::Models::Shared::KmsPage
   def raw=(str_); end
   def space_id(); end
   def space_id=(str_); end
+  def title(); end
+  def title=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
   def user_id(); end

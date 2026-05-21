@@ -8,8 +8,8 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::HrisTimeoff
-  def start_at(); end
-  def start_at=(str_); end
+  def user_id(); end
+  def user_id=(str_); end
   def approved_at(); end
   def approved_at=(str_); end
   def approver_user_id(); end
@@ -30,12 +30,12 @@ class UnifiedRubySDK::Models::Shared::HrisTimeoff
   def raw=(str_); end
   def reason(); end
   def reason=(str_); end
+  def start_at(); end
+  def start_at=(str_); end
   def status(); end
   def status=(str_); end
   def type(); end
   def type=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
-  def user_id(); end
-  def user_id=(str_); end
 end

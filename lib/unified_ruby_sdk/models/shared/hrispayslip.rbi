@@ -8,8 +8,6 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::HrisPayslip
-  def raw(); end
-  def raw=(str_); end
   def company_id(); end
   def company_id=(str_); end
   def created_at(); end
@@ -32,6 +30,8 @@ class UnifiedRubySDK::Models::Shared::HrisPayslip
   def paid_at=(str_); end
   def payment_type(); end
   def payment_type=(str_); end
+  def raw(); end
+  def raw=(str_); end
   def start_at(); end
   def start_at=(str_); end
   def updated_at(); end

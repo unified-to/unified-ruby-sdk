@@ -30,7 +30,6 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.page.create_kms_page(kms_page: Models::Shared::KmsPage.new(
-  title: '<value>',
   type: Models::Shared::KmsPageType::TEXT,
 ), connection_id: '<id>')
 
@@ -167,7 +166,6 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchKmsPageRequest.new(
   kms_page: Models::Shared::KmsPage.new(
-    title: '<value>',
     type: Models::Shared::KmsPageType::OTHER,
   ),
   connection_id: '<id>',
@@ -259,7 +257,6 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateKmsPageRequest.new(
   kms_page: Models::Shared::KmsPage.new(
-    title: '<value>',
     type: Models::Shared::KmsPageType::OTHER,
   ),
   connection_id: '<id>',

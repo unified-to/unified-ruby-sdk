@@ -14,9 +14,9 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :content, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content'), required: true } }
-
         field :call_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('call_id') } }
+
+        field :content, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
 
         field :created_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
 
@@ -28,10 +28,10 @@ module UnifiedRubySDK
 
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(content: ::String, call_id: T.nilable(::String), created_at: T.nilable(::String), id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::String), user_id: T.nilable(::String)).void }
-        def initialize(content:, call_id: nil, created_at: nil, id: nil, raw: nil, updated_at: nil, user_id: nil)
-          @content = content
+        sig { params(call_id: T.nilable(::String), content: T.nilable(::String), created_at: T.nilable(::String), id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::String), user_id: T.nilable(::String)).void }
+        def initialize(call_id: nil, content: nil, created_at: nil, id: nil, raw: nil, updated_at: nil, user_id: nil)
           @call_id = call_id
+          @content = content
           @created_at = created_at
           @id = id
           @raw = raw
@@ -42,8 +42,8 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @content == other.content
           return false unless @call_id == other.call_id
+          return false unless @content == other.content
           return false unless @created_at == other.created_at
           return false unless @id == other.id
           return false unless @raw == other.raw

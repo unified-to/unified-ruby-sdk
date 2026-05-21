@@ -29,9 +29,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.form.create_forms_form(forms_form: Models::Shared::FormsForm.new(
-  name: '<value>',
-), connection_id: '<id>')
+res = s.form.create_forms_form(forms_form: Models::Shared::FormsForm.new(), connection_id: '<id>')
 
 unless res.forms_form.nil?
   # handle response
@@ -165,9 +163,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchFormsFormRequest.new(
-  forms_form: Models::Shared::FormsForm.new(
-    name: '<value>',
-  ),
+  forms_form: Models::Shared::FormsForm.new(),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -256,9 +252,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateFormsFormRequest.new(
-  forms_form: Models::Shared::FormsForm.new(
-    name: '<value>',
-  ),
+  forms_form: Models::Shared::FormsForm.new(),
   connection_id: '<id>',
   id: '<id>',
 )

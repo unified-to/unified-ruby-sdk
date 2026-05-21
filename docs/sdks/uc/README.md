@@ -43,9 +43,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.uc.create_uc_comment(uc_comment: Models::Shared::UcComment.new(
-  content: '<value>',
-), connection_id: '<id>')
+res = s.uc.create_uc_comment(uc_comment: Models::Shared::UcComment.new(), connection_id: '<id>')
 
 unless res.uc_comment.nil?
   # handle response
@@ -534,9 +532,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchUcCommentRequest.new(
-  uc_comment: Models::Shared::UcComment.new(
-    content: '<value>',
-  ),
+  uc_comment: Models::Shared::UcComment.new(),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -803,9 +799,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateUcCommentRequest.new(
-  uc_comment: Models::Shared::UcComment.new(
-    content: '<value>',
-  ),
+  uc_comment: Models::Shared::UcComment.new(),
   connection_id: '<id>',
   id: '<id>',
 )

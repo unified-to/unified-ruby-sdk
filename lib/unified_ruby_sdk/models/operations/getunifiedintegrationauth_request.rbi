@@ -22,6 +22,8 @@ class UnifiedRubySDK::Models::Operations::GetUnifiedIntegrationAuthRequest
   def lang=(str_); end
   def redirect(); end
   def redirect=(str_); end
+  def region(); end
+  def region=(str_); end
   def scopes(); end
   def scopes=(str_); end
   def state(); end

@@ -14,8 +14,6 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name'), required: true } }
-
         field :categories, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('categories') } }
 
         field :content_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content_ids') } }
@@ -42,6 +40,8 @@ module UnifiedRubySDK
 
         field :media, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LmsMedia)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
 
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
         field :price_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price_amount') } }
 
         field :provider_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('provider_name') } }
@@ -60,9 +60,8 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(name: ::String, categories: T.nilable(T::Array[::String]), content_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), duration_minutes: T.nilable(::Float), id: T.nilable(::String), instructor_ids: T.nilable(T::Array[::String]), instructors: T.nilable(T::Array[Models::Shared::LmsInstructor]), is_active: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), languages: T.nilable(T::Array[::String]), media: T.nilable(T::Array[Models::Shared::LmsMedia]), price_amount: T.nilable(::Float), provider_name: T.nilable(::String), published_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), skills: T.nilable(T::Array[::String]), student_ids: T.nilable(T::Array[::String]), students: T.nilable(T::Array[Models::Shared::LmsStudent]), time_estimate_minutes: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
-        def initialize(name:, categories: nil, content_ids: nil, created_at: nil, currency: nil, description: nil, duration_minutes: nil, id: nil, instructor_ids: nil, instructors: nil, is_active: nil, is_private: nil, languages: nil, media: nil, price_amount: nil, provider_name: nil, published_at: nil, raw: nil, skills: nil, student_ids: nil, students: nil, time_estimate_minutes: nil, updated_at: nil)
-          @name = name
+        sig { params(categories: T.nilable(T::Array[::String]), content_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), duration_minutes: T.nilable(::Float), id: T.nilable(::String), instructor_ids: T.nilable(T::Array[::String]), instructors: T.nilable(T::Array[Models::Shared::LmsInstructor]), is_active: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), languages: T.nilable(T::Array[::String]), media: T.nilable(T::Array[Models::Shared::LmsMedia]), name: T.nilable(::String), price_amount: T.nilable(::Float), provider_name: T.nilable(::String), published_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), skills: T.nilable(T::Array[::String]), student_ids: T.nilable(T::Array[::String]), students: T.nilable(T::Array[Models::Shared::LmsStudent]), time_estimate_minutes: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        def initialize(categories: nil, content_ids: nil, created_at: nil, currency: nil, description: nil, duration_minutes: nil, id: nil, instructor_ids: nil, instructors: nil, is_active: nil, is_private: nil, languages: nil, media: nil, name: nil, price_amount: nil, provider_name: nil, published_at: nil, raw: nil, skills: nil, student_ids: nil, students: nil, time_estimate_minutes: nil, updated_at: nil)
           @categories = categories
           @content_ids = content_ids
           @created_at = created_at
@@ -76,6 +75,7 @@ module UnifiedRubySDK
           @is_private = is_private
           @languages = languages
           @media = media
+          @name = name
           @price_amount = price_amount
           @provider_name = provider_name
           @published_at = published_at
@@ -90,7 +90,6 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @name == other.name
           return false unless @categories == other.categories
           return false unless @content_ids == other.content_ids
           return false unless @created_at == other.created_at
@@ -104,6 +103,7 @@ module UnifiedRubySDK
           return false unless @is_private == other.is_private
           return false unless @languages == other.languages
           return false unless @media == other.media
+          return false unless @name == other.name
           return false unless @price_amount == other.price_amount
           return false unless @provider_name == other.provider_name
           return false unless @published_at == other.published_at

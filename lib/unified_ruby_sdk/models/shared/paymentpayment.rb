@@ -26,7 +26,11 @@ module UnifiedRubySDK
 
         field :invoice_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('invoice_id') } }
 
+        field :link_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('link_id') } }
+
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
+
+        field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
 
         field :payment_method, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_method') } }
 
@@ -42,15 +46,17 @@ module UnifiedRubySDK
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-        sig { params(account_id: T.nilable(::String), bill_id: T.nilable(::String), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), invoice_id: T.nilable(::String), notes: T.nilable(::String), payment_method: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), total_amount: T.nilable(::Float), type: T.nilable(Models::Shared::PaymentPaymentType), updated_at: T.nilable(::DateTime), currency: T.nilable(::String)).void }
-        def initialize(account_id: nil, bill_id: nil, contact_id: nil, created_at: nil, id: nil, invoice_id: nil, notes: nil, payment_method: nil, raw: nil, reference: nil, total_amount: nil, type: nil, updated_at: nil, currency: 'USD')
+        sig { params(account_id: T.nilable(::String), bill_id: T.nilable(::String), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), invoice_id: T.nilable(::String), link_id: T.nilable(::String), notes: T.nilable(::String), organization_id: T.nilable(::String), payment_method: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), total_amount: T.nilable(::Float), type: T.nilable(Models::Shared::PaymentPaymentType), updated_at: T.nilable(::DateTime), currency: T.nilable(::String)).void }
+        def initialize(account_id: nil, bill_id: nil, contact_id: nil, created_at: nil, id: nil, invoice_id: nil, link_id: nil, notes: nil, organization_id: nil, payment_method: nil, raw: nil, reference: nil, total_amount: nil, type: nil, updated_at: nil, currency: 'USD')
           @account_id = account_id
           @bill_id = bill_id
           @contact_id = contact_id
           @created_at = created_at
           @id = id
           @invoice_id = invoice_id
+          @link_id = link_id
           @notes = notes
+          @organization_id = organization_id
           @payment_method = payment_method
           @raw = raw
           @reference = reference
@@ -69,7 +75,9 @@ module UnifiedRubySDK
           return false unless @created_at == other.created_at
           return false unless @id == other.id
           return false unless @invoice_id == other.invoice_id
+          return false unless @link_id == other.link_id
           return false unless @notes == other.notes
+          return false unless @organization_id == other.organization_id
           return false unless @payment_method == other.payment_method
           return false unless @raw == other.raw
           return false unless @reference == other.reference

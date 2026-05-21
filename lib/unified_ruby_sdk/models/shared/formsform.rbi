@@ -8,8 +8,6 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::FormsForm
-  def name(); end
-  def name=(str_); end
   def confirmation_message(); end
   def confirmation_message=(str_); end
   def confirmation_redirect_url(); end
@@ -30,6 +28,8 @@ class UnifiedRubySDK::Models::Shared::FormsForm
   def id=(str_); end
   def is_active(); end
   def is_active=(str_); end
+  def name(); end
+  def name=(str_); end
   def published_url(); end
   def published_url=(str_); end
   def raw(); end

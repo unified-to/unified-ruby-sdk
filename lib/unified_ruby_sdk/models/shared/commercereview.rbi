@@ -8,8 +8,6 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::CommerceReview
-  def item_id(); end
-  def item_id=(str_); end
   def author_avatar_url(); end
   def author_avatar_url=(str_); end
   def author_email(); end
@@ -34,6 +32,8 @@ class UnifiedRubySDK::Models::Shared::CommerceReview
   def is_public=(str_); end
   def is_verified(); end
   def is_verified=(str_); end
+  def item_id(); end
+  def item_id=(str_); end
   def item_variant_id(); end
   def item_variant_id=(str_); end
   def location_id(); end

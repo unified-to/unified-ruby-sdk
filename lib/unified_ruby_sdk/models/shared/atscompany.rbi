@@ -8,8 +8,6 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::AtsCompany
-  def name(); end
-  def name=(str_); end
   def address(); end
   def address=(str_); end
   def created_at(); end
@@ -18,6 +16,8 @@ class UnifiedRubySDK::Models::Shared::AtsCompany
   def id=(str_); end
   def metadata(); end
   def metadata=(str_); end
+  def name(); end
+  def name=(str_); end
   def parent_id(); end
   def parent_id=(str_); end
   def phone(); end

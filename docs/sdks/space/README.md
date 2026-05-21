@@ -29,9 +29,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.space.create_kms_space(kms_space: Models::Shared::KmsSpace.new(
-  name: '<value>',
-), connection_id: '<id>')
+res = s.space.create_kms_space(kms_space: Models::Shared::KmsSpace.new(), connection_id: '<id>')
 
 unless res.kms_space.nil?
   # handle response
@@ -165,9 +163,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchKmsSpaceRequest.new(
-  kms_space: Models::Shared::KmsSpace.new(
-    name: '<value>',
-  ),
+  kms_space: Models::Shared::KmsSpace.new(),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -256,9 +252,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateKmsSpaceRequest.new(
-  kms_space: Models::Shared::KmsSpace.new(
-    name: '<value>',
-  ),
+  kms_space: Models::Shared::KmsSpace.new(),
   connection_id: '<id>',
   id: '<id>',
 )

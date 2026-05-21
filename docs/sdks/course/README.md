@@ -29,9 +29,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.course.create_lms_course(lms_course: Models::Shared::LmsCourse.new(
-  name: '<value>',
-), connection_id: '<id>')
+res = s.course.create_lms_course(lms_course: Models::Shared::LmsCourse.new(), connection_id: '<id>')
 
 unless res.lms_course.nil?
   # handle response
@@ -165,9 +163,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchLmsCourseRequest.new(
-  lms_course: Models::Shared::LmsCourse.new(
-    name: '<value>',
-  ),
+  lms_course: Models::Shared::LmsCourse.new(),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -256,9 +252,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateLmsCourseRequest.new(
-  lms_course: Models::Shared::LmsCourse.new(
-    name: '<value>',
-  ),
+  lms_course: Models::Shared::LmsCourse.new(),
   connection_id: '<id>',
   id: '<id>',
 )

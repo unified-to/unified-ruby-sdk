@@ -18,5 +18,5 @@
 | `GROSS_AMOUNT` | gross_amount   |
 | `NET_AMOUNT`   | net_amount     |
 | `DETAILS`      | details        |
-| `RAW`          | raw            |
 | `DEDUCTION`    | deduction      |
+| `RAW`          | raw            |

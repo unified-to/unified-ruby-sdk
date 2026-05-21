@@ -14,8 +14,6 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :content, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content'), required: true } }
-
         field :author_avatar_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_avatar_url') } }
 
         field :author_email, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_email') } }
@@ -23,6 +21,8 @@ module UnifiedRubySDK
         field :author_location, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_location') } }
 
         field :author_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_name') } }
+
+        field :content, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
 
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
@@ -44,13 +44,13 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(content: ::String, author_avatar_url: T.nilable(::String), author_email: T.nilable(::String), author_location: T.nilable(::String), author_name: T.nilable(::String), created_at: T.nilable(::DateTime), helpful_votes: T.nilable(::Float), id: T.nilable(::String), is_public: T.nilable(T::Boolean), is_verified: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::CommerceReviewCommentStatus), unhelpful_votes: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
-        def initialize(content:, author_avatar_url: nil, author_email: nil, author_location: nil, author_name: nil, created_at: nil, helpful_votes: nil, id: nil, is_public: nil, is_verified: nil, metadata: nil, raw: nil, status: nil, unhelpful_votes: nil, updated_at: nil)
-          @content = content
+        sig { params(author_avatar_url: T.nilable(::String), author_email: T.nilable(::String), author_location: T.nilable(::String), author_name: T.nilable(::String), content: T.nilable(::String), created_at: T.nilable(::DateTime), helpful_votes: T.nilable(::Float), id: T.nilable(::String), is_public: T.nilable(T::Boolean), is_verified: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::CommerceReviewCommentStatus), unhelpful_votes: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        def initialize(author_avatar_url: nil, author_email: nil, author_location: nil, author_name: nil, content: nil, created_at: nil, helpful_votes: nil, id: nil, is_public: nil, is_verified: nil, metadata: nil, raw: nil, status: nil, unhelpful_votes: nil, updated_at: nil)
           @author_avatar_url = author_avatar_url
           @author_email = author_email
           @author_location = author_location
           @author_name = author_name
+          @content = content
           @created_at = created_at
           @helpful_votes = helpful_votes
           @id = id
@@ -66,11 +66,11 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @content == other.content
           return false unless @author_avatar_url == other.author_avatar_url
           return false unless @author_email == other.author_email
           return false unless @author_location == other.author_location
           return false unless @author_name == other.author_name
+          return false unless @content == other.content
           return false unless @created_at == other.created_at
           return false unless @helpful_votes == other.helpful_votes
           return false unless @id == other.id

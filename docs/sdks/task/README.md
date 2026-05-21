@@ -43,9 +43,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.task.create_task_comment(task_comment: Models::Shared::TaskComment.new(
-  text: '<value>',
-), connection_id: '<id>')
+res = s.task.create_task_comment(task_comment: Models::Shared::TaskComment.new(), connection_id: '<id>')
 
 unless res.task_comment.nil?
   # handle response
@@ -534,9 +532,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchTaskCommentRequest.new(
-  task_comment: Models::Shared::TaskComment.new(
-    text: '<value>',
-  ),
+  task_comment: Models::Shared::TaskComment.new(),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -803,9 +799,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateTaskCommentRequest.new(
-  task_comment: Models::Shared::TaskComment.new(
-    text: '<value>',
-  ),
+  task_comment: Models::Shared::TaskComment.new(),
   connection_id: '<id>',
   id: '<id>',
 )

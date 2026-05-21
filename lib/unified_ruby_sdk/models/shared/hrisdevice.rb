@@ -14,8 +14,6 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name'), required: true } }
-
         field :admin_user_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('admin_user_ids') } }
 
         field :asset_tag, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('asset_tag') } }
@@ -42,6 +40,8 @@ module UnifiedRubySDK
 
         field :model, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('model') } }
 
+        field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+
         field :os, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('os') } }
 
         field :os_version, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('os_version') } }
@@ -54,9 +54,8 @@ module UnifiedRubySDK
 
         field :version, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('version') } }
 
-        sig { params(name: ::String, admin_user_ids: T.nilable(T::Array[::String]), asset_tag: T.nilable(::String), created_at: T.nilable(::DateTime), has_antivirus: T.nilable(T::Boolean), has_firewall: T.nilable(T::Boolean), has_hd_encrypted: T.nilable(T::Boolean), has_password_manager: T.nilable(T::Boolean), has_screenlock: T.nilable(T::Boolean), id: T.nilable(::String), is_missing: T.nilable(T::Boolean), location_id: T.nilable(::String), manufacturer: T.nilable(::String), model: T.nilable(::String), os: T.nilable(::String), os_version: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String]), version: T.nilable(::String)).void }
-        def initialize(name:, admin_user_ids: nil, asset_tag: nil, created_at: nil, has_antivirus: nil, has_firewall: nil, has_hd_encrypted: nil, has_password_manager: nil, has_screenlock: nil, id: nil, is_missing: nil, location_id: nil, manufacturer: nil, model: nil, os: nil, os_version: nil, raw: nil, updated_at: nil, user_ids: nil, version: nil)
-          @name = name
+        sig { params(admin_user_ids: T.nilable(T::Array[::String]), asset_tag: T.nilable(::String), created_at: T.nilable(::DateTime), has_antivirus: T.nilable(T::Boolean), has_firewall: T.nilable(T::Boolean), has_hd_encrypted: T.nilable(T::Boolean), has_password_manager: T.nilable(T::Boolean), has_screenlock: T.nilable(T::Boolean), id: T.nilable(::String), is_missing: T.nilable(T::Boolean), location_id: T.nilable(::String), manufacturer: T.nilable(::String), model: T.nilable(::String), name: T.nilable(::String), os: T.nilable(::String), os_version: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String]), version: T.nilable(::String)).void }
+        def initialize(admin_user_ids: nil, asset_tag: nil, created_at: nil, has_antivirus: nil, has_firewall: nil, has_hd_encrypted: nil, has_password_manager: nil, has_screenlock: nil, id: nil, is_missing: nil, location_id: nil, manufacturer: nil, model: nil, name: nil, os: nil, os_version: nil, raw: nil, updated_at: nil, user_ids: nil, version: nil)
           @admin_user_ids = admin_user_ids
           @asset_tag = asset_tag
           @created_at = created_at
@@ -70,6 +69,7 @@ module UnifiedRubySDK
           @location_id = location_id
           @manufacturer = manufacturer
           @model = model
+          @name = name
           @os = os
           @os_version = os_version
           @raw = raw
@@ -81,7 +81,6 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @name == other.name
           return false unless @admin_user_ids == other.admin_user_ids
           return false unless @asset_tag == other.asset_tag
           return false unless @created_at == other.created_at
@@ -95,6 +94,7 @@ module UnifiedRubySDK
           return false unless @location_id == other.location_id
           return false unless @manufacturer == other.manufacturer
           return false unless @model == other.model
+          return false unless @name == other.name
           return false unless @os == other.os
           return false unless @os_version == other.os_version
           return false unless @raw == other.raw

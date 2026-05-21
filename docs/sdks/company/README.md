@@ -42,9 +42,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.company.create_ats_company(ats_company: Models::Shared::AtsCompany.new(
-  name: '<value>',
-), connection_id: '<id>')
+res = s.company.create_ats_company(ats_company: Models::Shared::AtsCompany.new(), connection_id: '<id>')
 
 unless res.ats_company.nil?
   # handle response
@@ -487,9 +485,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAtsCompanyRequest.new(
-  ats_company: Models::Shared::AtsCompany.new(
-    name: '<value>',
-  ),
+  ats_company: Models::Shared::AtsCompany.new(),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -756,9 +752,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAtsCompanyRequest.new(
-  ats_company: Models::Shared::AtsCompany.new(
-    name: '<value>',
-  ),
+  ats_company: Models::Shared::AtsCompany.new(),
   connection_id: '<id>',
   id: '<id>',
 )

@@ -20,8 +20,12 @@ class UnifiedRubySDK::Models::Shared::PaymentPayment
   def id=(str_); end
   def invoice_id(); end
   def invoice_id=(str_); end
+  def link_id(); end
+  def link_id=(str_); end
   def notes(); end
   def notes=(str_); end
+  def organization_id(); end
+  def organization_id=(str_); end
   def payment_method(); end
   def payment_method=(str_); end
   def raw(); end

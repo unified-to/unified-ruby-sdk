@@ -27,6 +27,8 @@ module UnifiedRubySDK
         field :lang, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': true } }
 
         field :redirect, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'query_param': { 'field_name': 'redirect', 'style': 'form', 'explode': true } }
+        # Optional region index (into the integration api.urls array) selected by the end-user. Set automatically by the auth widget when the workspace integration has prompt_region=true.
+        field :region, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'region', 'style': 'form', 'explode': true } }
 
         field :scopes, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'query_param': { 'field_name': 'scopes', 'style': 'form', 'explode': true } }
         # Extra state to send back to your success URL
@@ -36,8 +38,8 @@ module UnifiedRubySDK
         # The URL where you want the user to be redirect to after a successful authorization.  The connection ID will be appended with (id=<connectionId>) to this URL, as will the state that was provided.
         field :success_redirect, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'success_redirect', 'style': 'form', 'explode': true } }
 
-        sig { params(integration_type: ::String, workspace_id: ::String, env: T.nilable(::String), external_xref: T.nilable(::String), failure_redirect: T.nilable(::String), lang: T.nilable(::String), redirect: T.nilable(T::Boolean), scopes: T.nilable(T::Array[::String]), state: T.nilable(::String), subdomain: T.nilable(::String), success_redirect: T.nilable(::String)).void }
-        def initialize(integration_type:, workspace_id:, env: nil, external_xref: nil, failure_redirect: nil, lang: nil, redirect: nil, scopes: nil, state: nil, subdomain: nil, success_redirect: nil)
+        sig { params(integration_type: ::String, workspace_id: ::String, env: T.nilable(::String), external_xref: T.nilable(::String), failure_redirect: T.nilable(::String), lang: T.nilable(::String), redirect: T.nilable(T::Boolean), region: T.nilable(::String), scopes: T.nilable(T::Array[::String]), state: T.nilable(::String), subdomain: T.nilable(::String), success_redirect: T.nilable(::String)).void }
+        def initialize(integration_type:, workspace_id:, env: nil, external_xref: nil, failure_redirect: nil, lang: nil, redirect: nil, region: nil, scopes: nil, state: nil, subdomain: nil, success_redirect: nil)
           @integration_type = integration_type
           @workspace_id = workspace_id
           @env = env
@@ -45,6 +47,7 @@ module UnifiedRubySDK
           @failure_redirect = failure_redirect
           @lang = lang
           @redirect = redirect
+          @region = region
           @scopes = scopes
           @state = state
           @subdomain = subdomain
@@ -61,6 +64,7 @@ module UnifiedRubySDK
           return false unless @failure_redirect == other.failure_redirect
           return false unless @lang == other.lang
           return false unless @redirect == other.redirect
+          return false unless @region == other.region
           return false unless @scopes == other.scopes
           return false unless @state == other.state
           return false unless @subdomain == other.subdomain

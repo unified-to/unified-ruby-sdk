@@ -35,9 +35,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.location.create_commerce_location(commerce_location: Models::Shared::CommerceLocation.new(
-  name: '<value>',
-), connection_id: '<id>')
+res = s.location.create_commerce_location(commerce_location: Models::Shared::CommerceLocation.new(), connection_id: '<id>')
 
 unless res.commerce_location.nil?
   # handle response
@@ -304,9 +302,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchCommerceLocationRequest.new(
-  commerce_location: Models::Shared::CommerceLocation.new(
-    name: '<value>',
-  ),
+  commerce_location: Models::Shared::CommerceLocation.new(),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -484,9 +480,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateCommerceLocationRequest.new(
-  commerce_location: Models::Shared::CommerceLocation.new(
-    name: '<value>',
-  ),
+  commerce_location: Models::Shared::CommerceLocation.new(),
   connection_id: '<id>',
   id: '<id>',
 )

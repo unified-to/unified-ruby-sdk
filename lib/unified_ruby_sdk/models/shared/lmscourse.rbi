@@ -8,8 +8,6 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::LmsCourse
-  def name(); end
-  def name=(str_); end
   def categories(); end
   def categories=(str_); end
   def content_ids(); end
@@ -36,6 +34,8 @@ class UnifiedRubySDK::Models::Shared::LmsCourse
   def languages=(str_); end
   def media(); end
   def media=(str_); end
+  def name(); end
+  def name=(str_); end
   def price_amount(); end
   def price_amount=(str_); end
   def provider_name(); end
