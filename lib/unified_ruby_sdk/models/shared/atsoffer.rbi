@@ -20,8 +20,6 @@ class UnifiedRubySDK::Models::Shared::AtsOffer
   def employee_user_id=(str_); end
   def id(); end
   def id=(str_); end
-  def raw(); end
-  def raw=(str_); end
   def rejected_at(); end
   def rejected_at=(str_); end
   def sent_at(); end
