@@ -41,6 +41,7 @@ module UnifiedRubySDK
           SHIPPING = new('shipping')
           ASSESSMENT = new('assessment')
           SIGNING = new('signing')
+          CLUBS = new('clubs')
         end
       end
     end

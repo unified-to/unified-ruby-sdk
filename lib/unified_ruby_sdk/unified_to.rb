@@ -16,7 +16,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :balancesheet, :bill, :cashflow, :category, :contact, :creditmemo, :expense, :invoice, :journal, :order, :organization, :profitloss, :purchaseorder, :report, :salesorder, :taxrate, :transaction, :trialbalance, :ads, :ad, :campaign, :creative, :group, :insertionorder, :promoted, :target, :assessment, :package, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :event, :link, :recording, :webinar, :commerce, :availability, :collection, :inventory, :item, :itemvariant, :location, :reservation, :review, :saleschannel, :crm, :deal, :lead, :pipeline, :enrich, :person, :forms, :form, :submission, :genai, :embedding, :model, :prompt, :hris, :bankaccount, :benefit, :deduction, :device, :employee, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :lms, :class_, :content, :course, :instructor, :student, :martech, :list, :member, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :shipping, :carrier, :label, :rate, :shipment, :tracking, :signing, :signatory, :template, :storage, :file, :task, :change, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :environment, :integration, :auth, :login, :issue, :webhook, :verification, :request
+    attr_accessor :accounting, :account, :balancesheet, :bill, :cashflow, :category, :contact, :creditmemo, :expense, :invoice, :journal, :order, :organization, :profitloss, :purchaseorder, :report, :salesorder, :taxrate, :transaction, :trialbalance, :ads, :ad, :campaign, :creative, :group, :insertionorder, :promoted, :target, :assessment, :package, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :event, :link, :recording, :webinar, :clubs, :location, :member, :commerce, :availability, :collection, :inventory, :item, :itemvariant, :reservation, :review, :saleschannel, :crm, :deal, :lead, :pipeline, :enrich, :person, :forms, :form, :submission, :genai, :embedding, :model, :prompt, :hris, :bankaccount, :benefit, :deduction, :device, :employee, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :lms, :class_, :content, :course, :instructor, :student, :martech, :list, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :shipping, :carrier, :label, :rate, :shipment, :tracking, :signing, :signatory, :template, :storage, :file, :task, :change, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :environment, :integration, :auth, :login, :issue, :webhook, :verification, :request
 
     sig do
       params(
@@ -123,13 +123,15 @@ module UnifiedRubySDK
       @link = Link.new(@sdk_configuration)
       @recording = Recording.new(@sdk_configuration)
       @webinar = Webinar.new(@sdk_configuration)
+      @clubs = Clubs.new(@sdk_configuration)
+      @location = Location.new(@sdk_configuration)
+      @member = Member.new(@sdk_configuration)
       @commerce = Commerce.new(@sdk_configuration)
       @availability = Availability.new(@sdk_configuration)
       @collection = Collection.new(@sdk_configuration)
       @inventory = Inventory.new(@sdk_configuration)
       @item = Item.new(@sdk_configuration)
       @itemvariant = Itemvariant.new(@sdk_configuration)
-      @location = Location.new(@sdk_configuration)
       @reservation = Reservation.new(@sdk_configuration)
       @review = Review.new(@sdk_configuration)
       @saleschannel = Saleschannel.new(@sdk_configuration)
@@ -167,7 +169,6 @@ module UnifiedRubySDK
       @student = Student.new(@sdk_configuration)
       @martech = Martech.new(@sdk_configuration)
       @list = List.new(@sdk_configuration)
-      @member = Member.new(@sdk_configuration)
       @messaging = Messaging.new(@sdk_configuration)
       @channel = Channel.new(@sdk_configuration)
       @message = Message.new(@sdk_configuration)

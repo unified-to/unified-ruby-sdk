@@ -255,6 +255,16 @@ module UnifiedRubySDK
           SIGNING_SIGNATORY_READ = new('signing_signatory_read')
           SIGNING_SIGNATORY_WRITE = new('signing_signatory_write')
           SIGNING_TEMPLATE_READ = new('signing_template_read')
+          CLUBS_GROUP_READ = new('clubs_group_read')
+          CLUBS_GROUP_WRITE = new('clubs_group_write')
+          CLUBS_MEMBER_READ = new('clubs_member_read')
+          CLUBS_MEMBER_WRITE = new('clubs_member_write')
+          CLUBS_ACTIVITY_READ = new('clubs_activity_read')
+          CLUBS_ACTIVITY_WRITE = new('clubs_activity_write')
+          CLUBS_LOCATION_READ = new('clubs_location_read')
+          CLUBS_LOCATION_WRITE = new('clubs_location_write')
+          CLUBS_EVENT_READ = new('clubs_event_read')
+          CLUBS_EVENT_WRITE = new('clubs_event_write')
         end
       end
     end

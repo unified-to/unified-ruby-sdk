@@ -44,14 +44,18 @@ module UnifiedRubySDK
 
         field :last_unhealthy_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_unhealthy_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+        field :secretsmanager_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('secretsmanager_id') } }
+
+        field :secretsmanager_key, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('secretsmanager_key') } }
+
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :workspace_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
 
         field :environment, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('environment') } }
 
-        sig { params(categories: T::Array[Models::Shared::PropertyConnectionCategories], integration_type: ::String, permissions: T::Array[Models::Shared::PropertyConnectionPermissions], auth: T.nilable(Models::Shared::PropertyConnectionAuth), auth_aws_arn: T.nilable(::String), auth_azure_keyvault_id: T.nilable(::String), auth_gcp_secret_name: T.nilable(::String), auth_hashi_vault_path: T.nilable(::String), created_at: T.nilable(::DateTime), external_xref: T.nilable(::String), id: T.nilable(::String), integration_name: T.nilable(::String), is_paused: T.nilable(T::Boolean), last_healthy_at: T.nilable(::DateTime), last_unhealthy_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), workspace_id: T.nilable(::String), environment: T.nilable(::String)).void }
-        def initialize(categories:, integration_type:, permissions:, auth: nil, auth_aws_arn: nil, auth_azure_keyvault_id: nil, auth_gcp_secret_name: nil, auth_hashi_vault_path: nil, created_at: nil, external_xref: nil, id: nil, integration_name: nil, is_paused: nil, last_healthy_at: nil, last_unhealthy_at: nil, updated_at: nil, workspace_id: nil, environment: 'Production')
+        sig { params(categories: T::Array[Models::Shared::PropertyConnectionCategories], integration_type: ::String, permissions: T::Array[Models::Shared::PropertyConnectionPermissions], auth: T.nilable(Models::Shared::PropertyConnectionAuth), auth_aws_arn: T.nilable(::String), auth_azure_keyvault_id: T.nilable(::String), auth_gcp_secret_name: T.nilable(::String), auth_hashi_vault_path: T.nilable(::String), created_at: T.nilable(::DateTime), external_xref: T.nilable(::String), id: T.nilable(::String), integration_name: T.nilable(::String), is_paused: T.nilable(T::Boolean), last_healthy_at: T.nilable(::DateTime), last_unhealthy_at: T.nilable(::DateTime), secretsmanager_id: T.nilable(::String), secretsmanager_key: T.nilable(::String), updated_at: T.nilable(::DateTime), workspace_id: T.nilable(::String), environment: T.nilable(::String)).void }
+        def initialize(categories:, integration_type:, permissions:, auth: nil, auth_aws_arn: nil, auth_azure_keyvault_id: nil, auth_gcp_secret_name: nil, auth_hashi_vault_path: nil, created_at: nil, external_xref: nil, id: nil, integration_name: nil, is_paused: nil, last_healthy_at: nil, last_unhealthy_at: nil, secretsmanager_id: nil, secretsmanager_key: nil, updated_at: nil, workspace_id: nil, environment: 'Production')
           @categories = categories
           @integration_type = integration_type
           @permissions = permissions
@@ -67,6 +71,8 @@ module UnifiedRubySDK
           @is_paused = is_paused
           @last_healthy_at = last_healthy_at
           @last_unhealthy_at = last_unhealthy_at
+          @secretsmanager_id = secretsmanager_id
+          @secretsmanager_key = secretsmanager_key
           @updated_at = updated_at
           @workspace_id = workspace_id
           @environment = environment
@@ -90,6 +96,8 @@ module UnifiedRubySDK
           return false unless @is_paused == other.is_paused
           return false unless @last_healthy_at == other.last_healthy_at
           return false unless @last_unhealthy_at == other.last_unhealthy_at
+          return false unless @secretsmanager_id == other.secretsmanager_id
+          return false unless @secretsmanager_key == other.secretsmanager_key
           return false unless @updated_at == other.updated_at
           return false unless @workspace_id == other.workspace_id
           return false unless @environment == other.environment

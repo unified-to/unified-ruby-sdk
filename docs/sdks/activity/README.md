@@ -8,8 +8,10 @@
 * [create_ats_activity](#create_ats_activity) - Create an activity
 * [create_lms_activity](#create_lms_activity) - Create an activity
 * [get_ats_activity](#get_ats_activity) - Retrieve an activity
+* [get_clubs_activity](#get_clubs_activity) - Retrieve an activity
 * [get_lms_activity](#get_lms_activity) - Retrieve an activity
 * [list_ats_activities](#list_ats_activities) - List all activities
+* [list_clubs_activities](#list_clubs_activities) - List all activities
 * [list_lms_activities](#list_lms_activities) - List all activities
 * [patch_ats_activity](#patch_ats_activity) - Update an activity
 * [patch_lms_activity](#patch_lms_activity) - Update an activity
@@ -150,6 +152,50 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## get_clubs_activity
+
+Retrieve an activity
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getClubsActivity" method="get" path="/clubs/{connection_id}/activity/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.activity.get_clubs_activity(connection_id: '<id>', id: '<id>')
+
+unless res.clubs_activity.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Activity                                                                                                                               |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetClubsActivityQueryParamFields](../../models/operations/getclubsactivityqueryparamfields.md)>                    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetClubsActivityResponse)](../../models/operations/getclubsactivityresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## get_lms_activity
 
 Retrieve an activity
@@ -232,6 +278,51 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::ListAtsActivitiesResponse)](../../models/operations/listatsactivitiesresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_clubs_activities
+
+List all activities
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listClubsActivities" method="get" path="/clubs/{connection_id}/activity" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListClubsActivitiesRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.activity.list_clubs_activities(request: req)
+
+unless res.clubs_activities.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [Models::Operations::ListClubsActivitiesRequest](../../models/operations/listclubsactivitiesrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+
+### Response
+
+**[T.nilable(Models::Operations::ListClubsActivitiesResponse)](../../models/operations/listclubsactivitiesresponse.md)**
 
 ### Errors
 

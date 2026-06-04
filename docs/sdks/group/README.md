@@ -9,9 +9,11 @@
 * [create_hris_group](#create_hris_group) - Create a group
 * [create_scim_groups](#create_scim_groups) - Create group
 * [get_ads_group](#get_ads_group) - Retrieve a group
+* [get_clubs_group](#get_clubs_group) - Retrieve a group
 * [get_hris_group](#get_hris_group) - Retrieve a group
 * [get_scim_groups](#get_scim_groups) - Get group
 * [list_ads_groups](#list_ads_groups) - List all groups
+* [list_clubs_groups](#list_clubs_groups) - List all groups
 * [list_hris_groups](#list_hris_groups) - List all groups
 * [list_scim_groups](#list_scim_groups) - List groups
 * [patch_ads_group](#patch_ads_group) - Update a group
@@ -200,6 +202,50 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## get_clubs_group
+
+Retrieve a group
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getClubsGroup" method="get" path="/clubs/{connection_id}/group/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.group.get_clubs_group(connection_id: '<id>', id: '<id>')
+
+unless res.clubs_group.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Group                                                                                                                                  |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetClubsGroupQueryParamFields](../../models/operations/getclubsgroupqueryparamfields.md)>                          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetClubsGroupResponse)](../../models/operations/getclubsgroupresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## get_hris_group
 
 Retrieve a group
@@ -324,6 +370,51 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::ListAdsGroupsResponse)](../../models/operations/listadsgroupsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_clubs_groups
+
+List all groups
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listClubsGroups" method="get" path="/clubs/{connection_id}/group" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListClubsGroupsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.group.list_clubs_groups(request: req)
+
+unless res.clubs_groups.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [Models::Operations::ListClubsGroupsRequest](../../models/operations/listclubsgroupsrequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+
+### Response
+
+**[T.nilable(Models::Operations::ListClubsGroupsResponse)](../../models/operations/listclubsgroupsresponse.md)**
 
 ### Errors
 

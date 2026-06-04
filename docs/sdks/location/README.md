@@ -7,8 +7,10 @@
 
 * [create_commerce_location](#create_commerce_location) - Create a location
 * [create_hris_location](#create_hris_location) - Create a location
+* [get_clubs_location](#get_clubs_location) - Retrieve a location
 * [get_commerce_location](#get_commerce_location) - Retrieve a location
 * [get_hris_location](#get_hris_location) - Retrieve a location
+* [list_clubs_locations](#list_clubs_locations) - List all locations
 * [list_commerce_locations](#list_commerce_locations) - List all locations
 * [list_hris_locations](#list_hris_locations) - List all locations
 * [patch_commerce_location](#patch_commerce_location) - Update a location
@@ -106,6 +108,50 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## get_clubs_location
+
+Retrieve a location
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getClubsLocation" method="get" path="/clubs/{connection_id}/location/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.location.get_clubs_location(connection_id: '<id>', id: '<id>')
+
+unless res.clubs_location.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Location                                                                                                                               |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetClubsLocationQueryParamFields](../../models/operations/getclubslocationqueryparamfields.md)>                    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetClubsLocationResponse)](../../models/operations/getclubslocationresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## get_commerce_location
 
 Retrieve a location
@@ -187,6 +233,51 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetHrisLocationResponse)](../../models/operations/gethrislocationresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_clubs_locations
+
+List all locations
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listClubsLocations" method="get" path="/clubs/{connection_id}/location" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListClubsLocationsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.location.list_clubs_locations(request: req)
+
+unless res.clubs_locations.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::ListClubsLocationsRequest](../../models/operations/listclubslocationsrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+
+### Response
+
+**[T.nilable(Models::Operations::ListClubsLocationsResponse)](../../models/operations/listclubslocationsresponse.md)**
 
 ### Errors
 

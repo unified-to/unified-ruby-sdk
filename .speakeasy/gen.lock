@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 9ca4a9cacf171e8ac7c743dfb096d506
+  docChecksum: 1e1eded8b22781b031016e09bbf41ef9
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.78
-  configChecksum: 49363e2252f82e09e1af250f7e334504
+  releaseVersion: 0.67.79
+  configChecksum: 45cd89bd93e030a6518f6bfb9ee7d4f6
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -457,6 +457,21 @@ generatedFiles:
   - docs/models/operations/getcalendarwebinarqueryparamfields.md
   - docs/models/operations/getcalendarwebinarrequest.md
   - docs/models/operations/getcalendarwebinarresponse.md
+  - docs/models/operations/getclubsactivityqueryparamfields.md
+  - docs/models/operations/getclubsactivityrequest.md
+  - docs/models/operations/getclubsactivityresponse.md
+  - docs/models/operations/getclubseventqueryparamfields.md
+  - docs/models/operations/getclubseventrequest.md
+  - docs/models/operations/getclubseventresponse.md
+  - docs/models/operations/getclubsgroupqueryparamfields.md
+  - docs/models/operations/getclubsgrouprequest.md
+  - docs/models/operations/getclubsgroupresponse.md
+  - docs/models/operations/getclubslocationqueryparamfields.md
+  - docs/models/operations/getclubslocationrequest.md
+  - docs/models/operations/getclubslocationresponse.md
+  - docs/models/operations/getclubsmemberqueryparamfields.md
+  - docs/models/operations/getclubsmemberrequest.md
+  - docs/models/operations/getclubsmemberresponse.md
   - docs/models/operations/getcommercecollectionqueryparamfields.md
   - docs/models/operations/getcommercecollectionrequest.md
   - docs/models/operations/getcommercecollectionresponse.md
@@ -832,6 +847,21 @@ generatedFiles:
   - docs/models/operations/listcalendarwebinarsqueryparamfields.md
   - docs/models/operations/listcalendarwebinarsrequest.md
   - docs/models/operations/listcalendarwebinarsresponse.md
+  - docs/models/operations/listclubsactivitiesqueryparamfields.md
+  - docs/models/operations/listclubsactivitiesrequest.md
+  - docs/models/operations/listclubsactivitiesresponse.md
+  - docs/models/operations/listclubseventsqueryparamfields.md
+  - docs/models/operations/listclubseventsrequest.md
+  - docs/models/operations/listclubseventsresponse.md
+  - docs/models/operations/listclubsgroupsqueryparamfields.md
+  - docs/models/operations/listclubsgroupsrequest.md
+  - docs/models/operations/listclubsgroupsresponse.md
+  - docs/models/operations/listclubslocationsqueryparamfields.md
+  - docs/models/operations/listclubslocationsrequest.md
+  - docs/models/operations/listclubslocationsresponse.md
+  - docs/models/operations/listclubsmembersqueryparamfields.md
+  - docs/models/operations/listclubsmembersrequest.md
+  - docs/models/operations/listclubsmembersresponse.md
   - docs/models/operations/listcommerceavailabilitiesqueryparamfields.md
   - docs/models/operations/listcommerceavailabilitiesrequest.md
   - docs/models/operations/listcommerceavailabilitiesresponse.md
@@ -2070,6 +2100,15 @@ generatedFiles:
   - docs/models/shared/calendarwebinarregistrant.md
   - docs/models/shared/calendarwebinarstatus.md
   - docs/models/shared/citytarget.md
+  - docs/models/shared/clubsactivity.md
+  - docs/models/shared/clubsactivitytype.md
+  - docs/models/shared/clubsevent.md
+  - docs/models/shared/clubseventstatus.md
+  - docs/models/shared/clubseventtype.md
+  - docs/models/shared/clubsgroup.md
+  - docs/models/shared/clubslocation.md
+  - docs/models/shared/clubsmember.md
+  - docs/models/shared/clubsmembermembershipstatus.md
   - docs/models/shared/commerceavailability.md
   - docs/models/shared/commercecollection.md
   - docs/models/shared/commercecollectiontype.md
@@ -2163,6 +2202,7 @@ generatedFiles:
   - docs/models/shared/genaiprompt.md
   - docs/models/shared/gender.md
   - docs/models/shared/goal.md
+  - docs/models/shared/grouptype.md
   - docs/models/shared/hostingsource.md
   - docs/models/shared/hrisbankaccount.md
   - docs/models/shared/hrisbenefit.md
@@ -2333,6 +2373,7 @@ generatedFiles:
   - docs/models/shared/marketingreport.md
   - docs/models/shared/marketingreportlink.md
   - docs/models/shared/matchtype.md
+  - docs/models/shared/membershipstatus.md
   - docs/models/shared/messagingattachment.md
   - docs/models/shared/messagingbutton.md
   - docs/models/shared/messagingchannel.md
@@ -2520,6 +2561,8 @@ generatedFiles:
   - docs/models/shared/propertycalendarrecordingtranscriptattendeestatus.md
   - docs/models/shared/propertycalendarwebinarorganizer.md
   - docs/models/shared/propertycalendarwebinarorganizerstatus.md
+  - docs/models/shared/propertyclubsgroupaddress.md
+  - docs/models/shared/propertyclubslocationaddress.md
   - docs/models/shared/propertycommercelocationaddress.md
   - docs/models/shared/propertyconnectionauth.md
   - docs/models/shared/propertyconnectioncategories.md
@@ -2652,6 +2695,7 @@ generatedFiles:
   - docs/models/shared/signingsignatorystatus.md
   - docs/models/shared/signingtemplate.md
   - docs/models/shared/sizeunit.md
+  - docs/models/shared/sporttype.md
   - docs/models/shared/status.md
   - docs/models/shared/storagefile.md
   - docs/models/shared/storagefiletype.md
@@ -2801,6 +2845,7 @@ generatedFiles:
   - docs/sdks/change/README.md
   - docs/sdks/channel/README.md
   - docs/sdks/class/README.md
+  - docs/sdks/clubs/README.md
   - docs/sdks/collection/README.md
   - docs/sdks/comment/README.md
   - docs/sdks/commerce/README.md
@@ -2947,6 +2992,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/change.rb
   - lib/unified_ruby_sdk/channel.rb
   - lib/unified_ruby_sdk/class_.rb
+  - lib/unified_ruby_sdk/clubs.rb
   - lib/unified_ruby_sdk/collection.rb
   - lib/unified_ruby_sdk/comment.rb
   - lib/unified_ruby_sdk/commerce.rb
@@ -3866,6 +3912,36 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getcalendarwebinar_request.rbi
   - lib/unified_ruby_sdk/models/operations/getcalendarwebinar_response.rb
   - lib/unified_ruby_sdk/models/operations/getcalendarwebinar_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getclubsactivity_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getclubsactivity_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getclubsactivity_request.rb
+  - lib/unified_ruby_sdk/models/operations/getclubsactivity_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getclubsactivity_response.rb
+  - lib/unified_ruby_sdk/models/operations/getclubsactivity_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getclubsevent_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getclubsevent_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getclubsevent_request.rb
+  - lib/unified_ruby_sdk/models/operations/getclubsevent_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getclubsevent_response.rb
+  - lib/unified_ruby_sdk/models/operations/getclubsevent_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getclubsgroup_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getclubsgroup_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getclubsgroup_request.rb
+  - lib/unified_ruby_sdk/models/operations/getclubsgroup_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getclubsgroup_response.rb
+  - lib/unified_ruby_sdk/models/operations/getclubsgroup_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getclubslocation_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getclubslocation_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getclubslocation_request.rb
+  - lib/unified_ruby_sdk/models/operations/getclubslocation_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getclubslocation_response.rb
+  - lib/unified_ruby_sdk/models/operations/getclubslocation_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getclubsmember_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getclubsmember_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getclubsmember_request.rb
+  - lib/unified_ruby_sdk/models/operations/getclubsmember_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getclubsmember_response.rb
+  - lib/unified_ruby_sdk/models/operations/getclubsmember_response.rbi
   - lib/unified_ruby_sdk/models/operations/getcommercecollection_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/getcommercecollection_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/getcommercecollection_request.rb
@@ -4616,6 +4692,36 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listcalendarwebinars_request.rbi
   - lib/unified_ruby_sdk/models/operations/listcalendarwebinars_response.rb
   - lib/unified_ruby_sdk/models/operations/listcalendarwebinars_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listclubsactivities_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listclubsactivities_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listclubsactivities_request.rb
+  - lib/unified_ruby_sdk/models/operations/listclubsactivities_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listclubsactivities_response.rb
+  - lib/unified_ruby_sdk/models/operations/listclubsactivities_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listclubsevents_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listclubsevents_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listclubsevents_request.rb
+  - lib/unified_ruby_sdk/models/operations/listclubsevents_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listclubsevents_response.rb
+  - lib/unified_ruby_sdk/models/operations/listclubsevents_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listclubsgroups_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listclubsgroups_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listclubsgroups_request.rb
+  - lib/unified_ruby_sdk/models/operations/listclubsgroups_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listclubsgroups_response.rb
+  - lib/unified_ruby_sdk/models/operations/listclubsgroups_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listclubslocations_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listclubslocations_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listclubslocations_request.rb
+  - lib/unified_ruby_sdk/models/operations/listclubslocations_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listclubslocations_response.rb
+  - lib/unified_ruby_sdk/models/operations/listclubslocations_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listclubsmembers_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listclubsmembers_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listclubsmembers_request.rb
+  - lib/unified_ruby_sdk/models/operations/listclubsmembers_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listclubsmembers_response.rb
+  - lib/unified_ruby_sdk/models/operations/listclubsmembers_response.rbi
   - lib/unified_ruby_sdk/models/operations/listcommerceavailabilities_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listcommerceavailabilities_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listcommerceavailabilities_request.rb
@@ -7093,6 +7199,24 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/calendarwebinarregistrant.rbi
   - lib/unified_ruby_sdk/models/shared/citytarget.rb
   - lib/unified_ruby_sdk/models/shared/citytarget.rbi
+  - lib/unified_ruby_sdk/models/shared/clubsactivity.rb
+  - lib/unified_ruby_sdk/models/shared/clubsactivity.rbi
+  - lib/unified_ruby_sdk/models/shared/clubsactivity_type.rb
+  - lib/unified_ruby_sdk/models/shared/clubsactivity_type.rbi
+  - lib/unified_ruby_sdk/models/shared/clubsevent.rb
+  - lib/unified_ruby_sdk/models/shared/clubsevent.rbi
+  - lib/unified_ruby_sdk/models/shared/clubsevent_status.rb
+  - lib/unified_ruby_sdk/models/shared/clubsevent_status.rbi
+  - lib/unified_ruby_sdk/models/shared/clubsevent_type.rb
+  - lib/unified_ruby_sdk/models/shared/clubsevent_type.rbi
+  - lib/unified_ruby_sdk/models/shared/clubsgroup.rb
+  - lib/unified_ruby_sdk/models/shared/clubsgroup.rbi
+  - lib/unified_ruby_sdk/models/shared/clubslocation.rb
+  - lib/unified_ruby_sdk/models/shared/clubslocation.rbi
+  - lib/unified_ruby_sdk/models/shared/clubsmember.rb
+  - lib/unified_ruby_sdk/models/shared/clubsmember.rbi
+  - lib/unified_ruby_sdk/models/shared/clubsmember_membership_status.rb
+  - lib/unified_ruby_sdk/models/shared/clubsmember_membership_status.rbi
   - lib/unified_ruby_sdk/models/shared/commerceavailability.rb
   - lib/unified_ruby_sdk/models/shared/commerceavailability.rbi
   - lib/unified_ruby_sdk/models/shared/commercecollection.rb
@@ -7279,6 +7403,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/gender.rbi
   - lib/unified_ruby_sdk/models/shared/goal.rb
   - lib/unified_ruby_sdk/models/shared/goal.rbi
+  - lib/unified_ruby_sdk/models/shared/group_type.rb
+  - lib/unified_ruby_sdk/models/shared/group_type.rbi
   - lib/unified_ruby_sdk/models/shared/hosting_source.rb
   - lib/unified_ruby_sdk/models/shared/hosting_source.rbi
   - lib/unified_ruby_sdk/models/shared/hrisbankaccount.rb
@@ -7619,6 +7745,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/marketingreportlink.rbi
   - lib/unified_ruby_sdk/models/shared/match_type.rb
   - lib/unified_ruby_sdk/models/shared/match_type.rbi
+  - lib/unified_ruby_sdk/models/shared/membership_status.rb
+  - lib/unified_ruby_sdk/models/shared/membership_status.rbi
   - lib/unified_ruby_sdk/models/shared/messagingattachment.rb
   - lib/unified_ruby_sdk/models/shared/messagingattachment.rbi
   - lib/unified_ruby_sdk/models/shared/messagingbutton.rb
@@ -7993,6 +8121,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_calendarwebinar_organizer.rbi
   - lib/unified_ruby_sdk/models/shared/property_calendarwebinar_organizer_status.rb
   - lib/unified_ruby_sdk/models/shared/property_calendarwebinar_organizer_status.rbi
+  - lib/unified_ruby_sdk/models/shared/property_clubsgroup_address.rb
+  - lib/unified_ruby_sdk/models/shared/property_clubsgroup_address.rbi
+  - lib/unified_ruby_sdk/models/shared/property_clubslocation_address.rb
+  - lib/unified_ruby_sdk/models/shared/property_clubslocation_address.rbi
   - lib/unified_ruby_sdk/models/shared/property_commercelocation_address.rb
   - lib/unified_ruby_sdk/models/shared/property_commercelocation_address.rbi
   - lib/unified_ruby_sdk/models/shared/property_connection_auth.rb
@@ -8257,6 +8389,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/signingtemplate.rbi
   - lib/unified_ruby_sdk/models/shared/size_unit.rb
   - lib/unified_ruby_sdk/models/shared/size_unit.rbi
+  - lib/unified_ruby_sdk/models/shared/sport_type.rb
+  - lib/unified_ruby_sdk/models/shared/sport_type.rbi
   - lib/unified_ruby_sdk/models/shared/status.rb
   - lib/unified_ruby_sdk/models/shared/status.rbi
   - lib/unified_ruby_sdk/models/shared/storagefile.rb
@@ -14757,5 +14891,90 @@ examples:
       responses:
         "200":
           application/json: {"id": "<id>"}
+  getClubsGroup:
+    speakeasy-default-get-clubs-group:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listClubsGroups:
+    speakeasy-default-list-clubs-groups:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  getClubsActivity:
+    speakeasy-default-get-clubs-activity:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listClubsActivities:
+    speakeasy-default-list-clubs-activities:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  getClubsEvent:
+    speakeasy-default-get-clubs-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listClubsEvents:
+    speakeasy-default-list-clubs-events:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  getClubsLocation:
+    speakeasy-default-get-clubs-location:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getClubsMember:
+    speakeasy-default-get-clubs-member:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listClubsLocations:
+    speakeasy-default-list-clubs-locations:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listClubsMembers:
+    speakeasy-default-list-clubs-members:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}

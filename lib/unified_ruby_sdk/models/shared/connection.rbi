@@ -38,6 +38,10 @@ class UnifiedRubySDK::Models::Shared::Connection
   def last_healthy_at=(str_); end
   def last_unhealthy_at(); end
   def last_unhealthy_at=(str_); end
+  def secretsmanager_id(); end
+  def secretsmanager_id=(str_); end
+  def secretsmanager_key(); end
+  def secretsmanager_key=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
   def workspace_id(); end

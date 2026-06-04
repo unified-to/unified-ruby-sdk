@@ -8,8 +8,10 @@
 * [create_calendar_event](#create_calendar_event) - Create an event
 * [create_crm_event](#create_crm_event) - Create an event
 * [get_calendar_event](#get_calendar_event) - Retrieve an event
+* [get_clubs_event](#get_clubs_event) - Retrieve an event
 * [get_crm_event](#get_crm_event) - Retrieve an event
 * [list_calendar_events](#list_calendar_events) - List all events
+* [list_clubs_events](#list_clubs_events) - List all events
 * [list_crm_events](#list_crm_events) - List all events
 * [patch_calendar_event](#patch_calendar_event) - Update an event
 * [patch_crm_event](#patch_crm_event) - Update an event
@@ -152,6 +154,50 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## get_clubs_event
+
+Retrieve an event
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getClubsEvent" method="get" path="/clubs/{connection_id}/event/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.event.get_clubs_event(connection_id: '<id>', id: '<id>')
+
+unless res.clubs_event.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Event                                                                                                                                  |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetClubsEventQueryParamFields](../../models/operations/getclubseventqueryparamfields.md)>                          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetClubsEventResponse)](../../models/operations/getclubseventresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## get_crm_event
 
 Retrieve an event
@@ -234,6 +280,51 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::ListCalendarEventsResponse)](../../models/operations/listcalendareventsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_clubs_events
+
+List all events
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listClubsEvents" method="get" path="/clubs/{connection_id}/event" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListClubsEventsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.event.list_clubs_events(request: req)
+
+unless res.clubs_events.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [Models::Operations::ListClubsEventsRequest](../../models/operations/listclubseventsrequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+
+### Response
+
+**[T.nilable(Models::Operations::ListClubsEventsResponse)](../../models/operations/listclubseventsresponse.md)**
 
 ### Errors
 

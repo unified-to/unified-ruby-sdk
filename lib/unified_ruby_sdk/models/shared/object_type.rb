@@ -145,6 +145,11 @@ module UnifiedRubySDK
           SIGNING_DOCUMENT = new('signing_document')
           SIGNING_SIGNATORY = new('signing_signatory')
           SIGNING_TEMPLATE = new('signing_template')
+          CLUBS_GROUP = new('clubs_group')
+          CLUBS_MEMBER = new('clubs_member')
+          CLUBS_ACTIVITY = new('clubs_activity')
+          CLUBS_LOCATION = new('clubs_location')
+          CLUBS_EVENT = new('clubs_event')
         end
       end
     end

@@ -6,7 +6,9 @@
 ### Available Operations
 
 * [create_martech_member](#create_martech_member) - Create a member
+* [get_clubs_member](#get_clubs_member) - Retrieve a member
 * [get_martech_member](#get_martech_member) - Retrieve a member
+* [list_clubs_members](#list_clubs_members) - List all members
 * [list_martech_members](#list_martech_members) - List all members
 * [patch_martech_member](#patch_martech_member) - Update a member
 * [remove_martech_member](#remove_martech_member) - Remove a member
@@ -56,6 +58,50 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## get_clubs_member
+
+Retrieve a member
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getClubsMember" method="get" path="/clubs/{connection_id}/member/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.member.get_clubs_member(connection_id: '<id>', id: '<id>')
+
+unless res.clubs_member.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Member                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetClubsMemberQueryParamFields](../../models/operations/getclubsmemberqueryparamfields.md)>                        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetClubsMemberResponse)](../../models/operations/getclubsmemberresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## get_martech_member
 
 Retrieve a member
@@ -93,6 +139,51 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetMartechMemberResponse)](../../models/operations/getmartechmemberresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_clubs_members
+
+List all members
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listClubsMembers" method="get" path="/clubs/{connection_id}/member" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListClubsMembersRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.member.list_clubs_members(request: req)
+
+unless res.clubs_members.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::ListClubsMembersRequest](../../models/operations/listclubsmembersrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+
+### Response
+
+**[T.nilable(Models::Operations::ListClubsMembersResponse)](../../models/operations/listclubsmembersresponse.md)**
 
 ### Errors
 
