@@ -22,6 +22,7 @@ module UnifiedRubySDK
           ITEM_ID = new('item_id')
           ORGANIZATION_ID = new('organization_id')
           STATUS = new('status')
+          DATA = new('data')
           CREATIVE_TYPE = new('creative_type')
           HOSTING_SOURCE = new('hosting_source')
           WIDTH = new('width')

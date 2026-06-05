@@ -20,6 +20,8 @@ class UnifiedRubySDK::Models::Shared::AdsCreative
   def creative_type=(str_); end
   def cta(); end
   def cta=(str_); end
+  def data(); end
+  def data=(str_); end
   def external_ad_reference(); end
   def external_ad_reference=(str_); end
   def external_creative_reference(); end

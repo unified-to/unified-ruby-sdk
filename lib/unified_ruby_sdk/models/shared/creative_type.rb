@@ -18,7 +18,9 @@ module UnifiedRubySDK
           EXPANDABLE = new('EXPANDABLE')
           VIDEO = new('VIDEO')
           NATIVE = new('NATIVE')
+          IMAGE = new('IMAGE')
           AUDIO = new('AUDIO')
+          DOCUMENT = new('DOCUMENT')
           PUBLISHER_HOSTED = new('PUBLISHER_HOSTED')
           ASSET_BASED = new('ASSET_BASED')
         end
